@@ -8,8 +8,8 @@ in
 {
   core = fetch {
     repo = "corepkgs";
-    rev = "7f4e2ddd8922722f92f9f13a7eba3e36d2cc0387";
-    sha256 = "0wk2h2q20gcgrwg2qhqlxbqmiqdcg84xv3dsrgjkl51wx8svh9ag";
+    rev = "1a4d78747497766d3e205e091b9090dc941c8549";
+    sha256 = "03hkwjbpi7b6fszhca9kvvz2waazch3439mpmcyv4jbfg2f5zy8m";
   };
   python = fetch {
     repo = "python-pkgs";
