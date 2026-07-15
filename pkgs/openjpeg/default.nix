@@ -5,6 +5,7 @@
   cmake,
   pkg-config,
   libpng,
+  libtiff,
   zlib,
   lcms2,
 }:
@@ -44,8 +45,7 @@ stdenv.mkDerivation rec {
 
   buildInputs = [
     libpng
-    # TODO(ekapkgs): libtiff fails to build (lerc dep issue), re-enable when fixed
-    # libtiff
+    libtiff
     zlib
     lcms2
   ];

@@ -23,8 +23,7 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [
-    # TODO(ekapkgs): libtiff fails to build (lerc dep issue), re-enable when fixed
-    # libtiff
+    libtiff
     libjpeg
     zlib
   ];
