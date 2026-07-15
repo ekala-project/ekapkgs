@@ -8,33 +8,28 @@
 #   modules  — all upstream NixOS modules (for downstream to include)
 let
   pins = import ./pins.nix;
-
-  inherit (pins) lib;
+  lib = import pins.lib;
 
   # Import upstream pkgs-modules
   pythonPkgsModule = import (pins.python + "/pkgs-module.nix");
   haskellPkgsModule = import (pins.haskell + "/pkgs-module.nix");
-  nodePkgsModule = import (pins.node + "/pkgs-module.nix");
+  # nodePkgsModule = import (pins.node + "/pkgs-module.nix");
 
   allPkgsModules = [
     pythonPkgsModule
-    haskellPkgsModule
-    nodePkgsModule
+    # haskellPkgsModule
+    # nodePkgsModule
   ];
 
-  upstreamOverlays = builtins.concatLists (map (m: m.overlays) allPkgsModules);
-  upstreamModules = map (m: m.module) allPkgsModules;
-
   # ekapkgs' own overlays
-  ekapkgsOverlay = lib.mkAutoCalledPackageDir ./pkgs;
+  # ekapkgsOverlay = lib.packageSets.mkAutoCalledPackageDir ./pkgs;
   toplevelOverlay = import ./top-level.nix;
 in
 {
-  overlays = upstreamOverlays ++ [ toplevelOverlay ekapkgsOverlay ];
+  imports = allPkgsModules;
 
-  module = { ... }: {
-    _file = "ekapkgs/pkgs-module.nix";
-  };
-
-  modules = upstreamModules;
+  overlays.pkgs = [
+    # ekapkgsOverlay
+    toplevelOverlay
+  ];
 }
