@@ -1,0 +1,36 @@
+{
+  lib,
+  stdenv,
+  autoconf,
+  automake,
+  fetchFromGitHub,
+  pkg-config,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "mypaint-brushes";
+  version = "2.0.2";
+
+  src = fetchFromGitHub {
+    owner = "mypaint";
+    repo = "mypaint-brushes";
+    rev = "v${finalAttrs.version}";
+    sha256 = "0kcqz13vzpy24dhmrx9hbs6s7hqb8y305vciznm15h277sabpmw9";
+  };
+
+  nativeBuildInputs = [
+    autoconf
+    automake
+    pkg-config
+  ];
+
+  preConfigure = "./autogen.sh";
+
+  meta = {
+    homepage = "http://mypaint.org/";
+    description = "Brushes used by MyPaint and other software using libmypaint";
+    license = lib.licenses.cc0;
+    maintainers = [ ];
+    platforms = lib.platforms.unix;
+  };
+})
