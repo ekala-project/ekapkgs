@@ -1,0 +1,39 @@
+{
+  lib,
+  stdenv,
+  fetchurl,
+  libx11,
+  glib,
+  pkg-config,
+  libxmu,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "wmctrl";
+  version = "1.07";
+
+  src = fetchurl {
+    url = "https://sites.google.com/site/tstyblo/wmctrl/wmctrl-${finalAttrs.version}.tar.gz";
+    sha256 = "1afclc57b9017a73mfs9w7lbdvdipmf9q0xdk116f61gnvyix2np";
+  };
+
+  strictDeps = true;
+  depsBuildBuild = [ pkg-config ];
+  nativeBuildInputs = [ glib.dev ];
+  buildInputs = [
+    libx11
+    libxmu
+    glib
+  ];
+
+  patches = [ ./64-bit-data.patch ];
+
+  meta = {
+    homepage = "https://sites.google.com/site/tstyblo/wmctrl";
+    description = "CLI tool to interact with EWMH/NetWM compatible X Window Managers";
+    license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.all;
+    maintainers = [ ];
+    mainProgram = "wmctrl";
+  };
+})
