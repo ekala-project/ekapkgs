@@ -1,0 +1,39 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  meson,
+  ninja,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "c-stdaux";
+  version = "1.6.0";
+
+  src = fetchFromGitHub {
+    owner = "c-util";
+    repo = "c-stdaux";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-/15lop+WUkTW9v9h7BBdwRSpJgcBXaJNtMM7LXgcQE4=";
+  };
+
+  nativeBuildInputs = [
+    meson
+    meson.configurePhaseHook
+    ninja
+  ];
+
+  doCheck = true;
+
+  meta = {
+    homepage = "https://github.com/c-util/c-stdaux";
+    description = "Auxiliary macros and functions for the C standard library";
+    changelog = "https://github.com/c-util/c-stdaux/releases/tag/v${finalAttrs.version}";
+    license = with lib.licenses; [
+      asl20
+      lgpl2Plus
+    ];
+    maintainers = [ ];
+    platforms = lib.platforms.unix;
+  };
+})
