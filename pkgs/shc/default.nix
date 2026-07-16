@@ -1,0 +1,26 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "shc";
+  version = "4.0.3";
+
+  src = fetchFromGitHub {
+    owner = "neurobin";
+    repo = "shc";
+    tag = finalAttrs.version;
+    sha256 = "0bfn404plsssa14q89k9l3s5lxq3df0sny5lis4j2w75qrkqx694";
+  };
+
+  meta = {
+    homepage = "https://neurobin.org/projects/softwares/unix/shc/";
+    description = "Shell Script Compiler";
+    mainProgram = "shc";
+    platforms = lib.platforms.all;
+    license = lib.licenses.gpl3;
+    maintainers = [ ];
+  };
+})
