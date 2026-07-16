@@ -5,6 +5,12 @@ final: prev: {
   wafHook = final.waf.hook;
   at-spi2-atk = final.atk;
   at-spi2-core = final.atk;
+  wrapGAppsHook3 = final.wrapGAppsNoGuiHook.override {
+    isGraphical = true;
+  };
+  dconf = prev.dconf.overrideAttrs (old: {
+    nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
+  });
   gdk-pixbuf = prev.gdk-pixbuf.overrideAttrs (old: {
     nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
   });
