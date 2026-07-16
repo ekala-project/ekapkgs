@@ -1,0 +1,34 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "aha";
+  version = "0.5.1";
+
+  src = fetchFromGitHub {
+    sha256 = "1gywad0rvvz3c5balz8cxsnx0562hj2ngzqyr8zsy2mb4pn0lpgv";
+    tag = finalAttrs.version;
+    repo = "aha";
+    owner = "theZiz";
+  };
+
+  makeFlags = [ "PREFIX=$(out)" ];
+
+  enableParallelBuilding = true;
+
+  meta = {
+    description = "ANSI HTML Adapter";
+    mainProgram = "aha";
+    homepage = "https://github.com/theZiz/aha";
+    changelog = "https://github.com/theZiz/aha/blob/${finalAttrs.version}/CHANGELOG";
+    license = with lib.licenses; [
+      lgpl2Plus
+      mpl11
+    ];
+    maintainers = [ ];
+    platforms = lib.platforms.all;
+  };
+})
