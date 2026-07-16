@@ -1,6 +1,6 @@
 {
-  stdenv,
   lib,
+  stdenv,
   fetchurl,
   meson,
   ninja,
@@ -16,7 +16,7 @@
   gettext,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "libwnck";
   version = "43.3";
 
@@ -24,10 +24,9 @@ stdenv.mkDerivation rec {
     "out"
     "dev"
   ];
-  outputBin = "dev";
 
   src = fetchurl {
-    url = "mirror://gnome/sources/libwnck/${lib.versions.major version}/libwnck-${version}.tar.xz";
+    url = "mirror://gnome/sources/libwnck/${lib.versions.major finalAttrs.version}/libwnck-${finalAttrs.version}.tar.xz";
     sha256 = "avisQajwZ63h08qu0lSoNCO19hrT96Rg/Ky6wuGSvfc=";
   };
 
@@ -55,13 +54,13 @@ stdenv.mkDerivation rec {
 
   mesonFlags = [
     "-Dgtk_doc=false"
-    "-Dintrospection=disabled"
+    (lib.mesonEnable "introspection" false)
   ];
 
   meta = {
     description = "Library to manage X windows and workspaces (via pagers, tasklists, etc.)";
     license = lib.licenses.lgpl21Plus;
-    platforms = lib.platforms.linux;
     maintainers = [ ];
+    platforms = lib.platforms.linux;
   };
-}
+})
