@@ -2,66 +2,39 @@
   lib,
   stdenv,
   fetchurl,
-  fetchpatch2,
-  meson,
-  ninja,
   pkg-config,
   atk,
   cairo,
   glib,
   gtk3,
   pango,
-  fribidi,
   libxml2,
   perl,
+  intltool,
   gettext,
   shared-mime-info,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "gtksourceview";
-  version = "4.8.4";
+  version = "3.24.11";
 
   outputs = [
     "out"
     "dev"
   ];
 
-  src =
-    let
-      inherit (finalAttrs) pname version;
-    in
-    fetchurl {
-      url = "mirror://gnome/sources/gtksourceview/${lib.versions.majorMinor version}/gtksourceview-${version}.tar.xz";
-      sha256 = "fsnRj7KD0fhKOj7/O3pysJoQycAGWXs/uru1lYQgqH0=";
-    };
+  src = fetchurl {
+    url = "mirror://gnome/sources/gtksourceview/${lib.versions.majorMinor finalAttrs.version}/gtksourceview-${finalAttrs.version}.tar.xz";
+    sha256 = "1zbpj283b5ycz767hqz5kdq02wzsga65pp4fykvhg8xj6x50f6v9";
+  };
 
-  patches = [
-    ./4.x-nix_share_path.patch
-
-    (fetchpatch2 {
-      url = "https://gitlab.gnome.org/GNOME/gtksourceview/-/commit/685b3bd08869c2aefe33fad696a7f5f2dc831016.patch";
-      hash = "sha256-yeYXJ2l/QS857C4UXOnMFyh0JsptA0TQt0lfD7wN5ic=";
-    })
-
-    (fetchpatch2 {
-      url = "https://gitlab.gnome.org/GNOME/gtksourceview/-/commit/1dbbb01da98140e0b2d5d0c6c2df29247650ed83.patch";
-      hash = "sha256-6HxLKQyI5DDvmKhmldQlwVPV62RfFa2gwWbcHA2cICs=";
-    })
-  ];
+  patches = [ ./nix_share_path.patch ];
 
   nativeBuildInputs = [
-    meson
-    meson.configurePhaseHook
-    ninja
     pkg-config
-    gettext
+    intltool
     perl
-  ];
-
-  mesonFlags = [
-    "-Dgir=false"
-    "-Dvapi=false"
   ];
 
   buildInputs = [
@@ -69,8 +42,8 @@ stdenv.mkDerivation (finalAttrs: {
     cairo
     glib
     pango
-    fribidi
     libxml2
+    gettext
   ];
 
   propagatedBuildInputs = [
@@ -78,14 +51,23 @@ stdenv.mkDerivation (finalAttrs: {
     shared-mime-info
   ];
 
+  preBuild = ''
+    substituteInPlace gtksourceview/gtksourceview-utils.c --replace "@NIX_SHARE_PATH@" "$out/share"
+  '';
+
+  env = lib.optionalAttrs stdenv.cc.isGNU {
+    NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
+  };
+
+  enableParallelBuilding = true;
+
   doCheck = false;
 
   meta = {
-    description = "Source code editing widget for GTK";
+    description = "Text editor widget for GTK based on GtkTextView";
     homepage = "https://gitlab.gnome.org/GNOME/gtksourceview";
-    pkgConfigModules = [ "gtksourceview-4" ];
-    platforms = lib.platforms.unix;
-    license = lib.licenses.lgpl21Plus;
+    license = lib.licenses.lgpl21;
     maintainers = [ ];
+    platforms = lib.platforms.unix;
   };
 })
