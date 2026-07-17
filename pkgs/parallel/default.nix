@@ -1,7 +1,7 @@
 {
+  fetchurl,
   lib,
   stdenv,
-  fetchurl,
   perl,
   makeWrapper,
   procps,
