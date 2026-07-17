@@ -1,0 +1,60 @@
+{
+  stdenv,
+  lib,
+  fetchFromGitHub,
+  parted,
+  systemd,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "f3";
+  version = "10.0";
+
+  src = fetchFromGitHub {
+    owner = "AltraMayor";
+    repo = "f3";
+    rev = "v${finalAttrs.version}";
+    sha256 = "sha256-AyNk6qjPIu/Dodq9NLVgVQdslDnoeY7htqvXZCnj3a8=";
+  };
+
+  postPatch = ''
+    sed -i 's/-oroot -groot//' Makefile
+
+    for f in scripts/{f3write.h2w,log-f3wr}; do
+     substituteInPlace $f \
+       --replace '$(dirname $0)' $out/bin
+    done
+  '';
+
+  buildInputs =
+    lib.optionals stdenv.hostPlatform.isLinux [
+      systemd
+      parted
+    ];
+
+  buildFlags = [
+    "all"
+  ]
+  ++ lib.optional stdenv.hostPlatform.isLinux "extra";
+
+  installFlags = [
+    "PREFIX=${placeholder "out"}"
+  ];
+
+  installTargets = [
+    "install"
+  ]
+  ++ lib.optional stdenv.hostPlatform.isLinux "install-extra";
+
+  postInstall = ''
+    install -Dm555 -t $out/bin scripts/{f3write.h2w,log-f3wr}
+    install -Dm444 -t $out/share/doc/f3 LICENSE README.rst
+  '';
+
+  meta = {
+    description = "Fight Flash Fraud";
+    homepage = "https://fight-flash-fraud.readthedocs.io/en/stable/";
+    license = lib.licenses.gpl3Plus;
+    maintainers = [ ];
+  };
+})
