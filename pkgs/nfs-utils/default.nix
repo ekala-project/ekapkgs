@@ -1,0 +1,165 @@
+{
+  stdenv,
+  fetchurl,
+  fetchpatch,
+  lib,
+  pkg-config,
+  util-linux,
+  libcap,
+  libtirpc,
+  libevent,
+  libnl,
+  sqlite,
+  libkrb5,
+  kmod,
+  libuuid,
+  keyutils,
+  lvm2,
+  systemd,
+  coreutils,
+  python3,
+  buildPackages,
+  rpcsvc-proto,
+  openldap,
+  cyrus_sasl,
+  libxml2,
+  readline,
+  enablePython ? true,
+  enableLdap ? true,
+}:
+
+let
+  statdPath = lib.makeBinPath [
+    systemd
+    util-linux
+    coreutils
+  ];
+in
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "nfs-utils";
+  version = "2.9.1";
+
+  src = fetchurl {
+    url = "mirror://kernel/linux/utils/nfs-utils/${finalAttrs.version}/nfs-utils-${finalAttrs.version}.tar.xz";
+    hash = "sha256-MChGNDv1Cfj4hMI729D+hTt/fLtlcgYKkIInnROyGiw=";
+  };
+
+  outputs = [
+    "out"
+    "dev"
+    "lib"
+    "man"
+  ];
+
+  nativeBuildInputs = [
+    pkg-config
+    buildPackages.stdenv.cc
+    rpcsvc-proto
+  ];
+
+  buildInputs = [
+    libtirpc
+    libcap
+    libevent
+    libnl
+    sqlite
+    lvm2
+    libuuid
+    keyutils
+    libkrb5
+    libxml2
+    readline
+  ]
+  ++ lib.optional enablePython python3
+  ++ lib.optionals enableLdap [
+    openldap
+    cyrus_sasl
+  ];
+
+  enableParallelBuilding = true;
+
+  preConfigure = ''
+    substituteInPlace configure \
+      --replace '$dir/include/gssapi' ${lib.getDev libkrb5}/include/gssapi \
+      --replace '$dir/bin/krb5-config' ${lib.getDev libkrb5}/bin/krb5-config
+  '';
+
+  configureFlags = [
+    "--with-start-statd=${placeholder "out"}/bin/start-statd"
+    "--enable-gss"
+    "--enable-svcgss"
+    "--with-statedir=/var/lib/nfs"
+    "--with-krb5=${lib.getLib libkrb5}"
+    "--with-systemd=${placeholder "out"}/etc/systemd/system"
+    "--enable-libmount-mount"
+    "--with-pluginpath=${placeholder "lib"}/lib/libnfsidmap"
+    "--with-rpcgen=${buildPackages.rpcsvc-proto}/bin/rpcgen"
+    "--with-modprobedir=${placeholder "out"}/etc/modprobe.d"
+  ]
+  ++ lib.optional enableLdap "--enable-ldap";
+
+  patches = lib.optionals stdenv.hostPlatform.isMusl [
+    (fetchpatch {
+      url = "https://raw.githubusercontent.com/alpinelinux/aports/cb880042d48d77af412d4688f24b8310ae44f55f/main/nfs-utils/musl-getservbyport.patch";
+      sha256 = "1fqws9dz8n1d9a418c54r11y3w330qgy2652dpwcy96cm44sqyhf";
+    })
+  ];
+
+  postPatch = ''
+    patchShebangs tests
+    sed -i "s,/usr/sbin,$out/bin,g" utils/statd/statd.c
+    sed -i "s,^PATH=.*,PATH=$out/bin:${statdPath}," utils/statd/start-statd
+
+    substituteInPlace systemd/nfs-utils.service \
+      --replace "/bin/true" "${coreutils}/bin/true"
+
+    substituteInPlace tools/nfsrahead/Makefile.in systemd/Makefile.in \
+      --replace "/usr/lib/udev/rules.d/" "$out/lib/udev/rules.d/"
+
+    substituteInPlace utils/mount/Makefile.in \
+      --replace-fail "chmod 4711" "chmod 0711"
+
+    sed '1i#include <stdint.h>' -i support/nsm/rpc.c
+  '';
+
+  makeFlags = [
+    "sbindir=$(out)/bin"
+    "generator_dir=$(out)/etc/systemd/system-generators"
+  ];
+
+  installFlags = [
+    "statedir=$(TMPDIR)"
+    "statdpath=$(TMPDIR)"
+  ];
+
+  stripDebugList = [
+    "lib"
+    "libexec"
+    "bin"
+    "etc/systemd/system-generators"
+  ];
+
+  postInstall = ''
+    sed -i \
+      -e "s,/sbin/modprobe,${kmod}/bin/modprobe,g" \
+      -e "s,/usr/sbin,$out/bin,g" \
+      $out/etc/systemd/system/*
+  ''
+  + lib.optionalString (!enablePython) ''
+    grep -l /usr/bin/python $out/bin/* | xargs -I {} rm -v {}
+  '';
+
+  doCheck = false;
+
+  disallowedReferences = [ (lib.getDev libkrb5) ];
+
+  meta = {
+    description = "Linux user-space NFS utilities";
+    changelog = "https://www.kernel.org/pub/linux/utils/nfs-utils/${finalAttrs.version}/${finalAttrs.version}-Changelog";
+    homepage = "https://linux-nfs.org/";
+    license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.linux;
+    maintainers = [ ];
+  };
+})
