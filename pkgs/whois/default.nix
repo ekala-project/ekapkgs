@@ -1,0 +1,64 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  fetchpatch,
+  perl,
+  gettext,
+  pkg-config,
+  libidn2,
+  libiconv,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  version = "5.6.6";
+  pname = "whois";
+
+  src = fetchFromGitHub {
+    owner = "rfc1036";
+    repo = "whois";
+    rev = "v${finalAttrs.version}";
+    hash = "sha256-RKiXQJoyy3wd/KXphhgjikdmIHl8nmjEzibjk5FKpBQ=";
+  };
+
+  patches = [
+    (fetchpatch {
+      url = "https://github.com/macports/macports-ports/raw/93de4e9fc1e5e8427bf98f48209e783a5e8fab57/net/whois/files/implicit.patch";
+      extraPrefix = "";
+      hash = "sha256-ogVylQz//tpXxPNIWIHkhghvToU1z1D1FfnUBdZLyRY=";
+    })
+  ];
+
+  nativeBuildInputs = [
+    perl
+    gettext
+    pkg-config
+  ];
+  buildInputs = [
+    libidn2
+    libiconv
+  ];
+
+  preConfigure = ''
+    for i in Makefile po/Makefile; do
+      substituteInPlace $i --replace "prefix = /usr" "prefix = $out"
+    done
+  '';
+
+  makeFlags = [
+    "HAVE_ICONV=1"
+    "CONFIG_FILE=/etc/whois.conf"
+  ];
+  buildFlags = [ "whois" ];
+
+  installTargets = [ "install-whois" ];
+
+  meta = {
+    description = "Intelligent WHOIS client from Debian";
+    homepage = "https://packages.qa.debian.org/w/whois.html";
+    license = lib.licenses.gpl2Plus;
+    maintainers = [ ];
+    platforms = lib.platforms.unix;
+    mainProgram = "whois";
+  };
+})
