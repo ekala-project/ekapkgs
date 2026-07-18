@@ -26,17 +26,12 @@ let
     hash = "sha256-RKjw3H1z02bl6730xsbo38yjMaOCsHZP9xJOQbmWpnw=";
   };
 in
+
 stdenv.mkDerivation rec {
   pname = "shaderc";
   version = "2024.0";
 
-  outputs = [
-    "out"
-    "lib"
-    "bin"
-    "dev"
-    "static"
-  ];
+  outputs = [ "out" "lib" "bin" "dev" "static" ];
 
   src = fetchFromGitHub {
     owner = "google";
@@ -71,8 +66,8 @@ stdenv.mkDerivation rec {
   '';
 
   meta = {
+    inherit (src.meta) homepage;
     description = "Collection of tools, libraries and tests for shader compilation";
-    homepage = "https://github.com/google/shaderc";
     platforms = lib.platforms.all;
     license = [ lib.licenses.asl20 ];
     maintainers = [ ];
