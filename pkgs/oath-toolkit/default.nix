@@ -1,0 +1,33 @@
+{
+  lib,
+  stdenv,
+  fetchurl,
+  pam,
+  xmlsec,
+}:
+
+let
+  securityDependency = if stdenv.hostPlatform.isDarwin then xmlsec else pam;
+in
+stdenv.mkDerivation rec {
+  pname = "oath-toolkit";
+  version = "2.6.12";
+
+  src = fetchurl {
+    url = "mirror://savannah/${pname}/${pname}-${version}.tar.gz";
+    hash = "sha256-yv33ObHsSydkQcau2uZBFDS72HAHH2YVS5CcxuLZ6Lo=";
+  };
+
+  buildInputs = [ securityDependency ];
+
+  configureFlags = lib.optionals stdenv.hostPlatform.isDarwin [ "--disable-pam" ];
+
+  meta = {
+    description = "Components for building one-time password authentication systems";
+    homepage = "https://www.nongnu.org/oath-toolkit/";
+    license = lib.licenses.lgpl2Plus;
+    maintainers = [ ];
+    platforms = with lib.platforms; linux ++ darwin;
+    mainProgram = "oathtool";
+  };
+}
