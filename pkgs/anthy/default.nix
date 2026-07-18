@@ -2,7 +2,6 @@
   lib,
   stdenv,
   fetchurl,
-  buildPackages,
 }:
 
 stdenv.mkDerivation rec {
@@ -14,32 +13,9 @@ stdenv.mkDerivation rec {
     sha256 = "0ism4zibcsa5nl77wwi12vdsfjys3waxcphn1p5s7d0qy1sz0mnj";
   };
 
-  postPatch = lib.optionalString (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
-    cp -r "${buildPackages.anthy.dev}"/lib/internals/{mkdepgraph,.libs} depgraph/
-    cp -r "${buildPackages.anthy.dev}"/lib/internals/{mkworddic,.libs} mkworddic/
-    cp -r "${buildPackages.anthy.dev}"/lib/internals/{calctrans,.libs} calctrans/
-    cp -r "${buildPackages.anthy.dev}"/lib/internals/{mkfiledic,.libs} mkanthydic/
-    substituteInPlace mkworddic/Makefile.in \
-      --replace-fail 'anthy.wdic : mkworddic' 'anthy.wdic : ' \
-      --replace-fail 'all: ' 'all: anthy.wdic #'
-    substituteInPlace calctrans/Makefile.in \
-      --replace-fail '$(dict_source_files): $(srcdir)/corpus_info $(srcdir)/weak_words calctrans' \
-                     '$(dict_source_files): $(srcdir)/corpus_info $(srcdir)/weak_words' \
-      --replace-fail 'all-am: Makefile $(PROGRAMS) $(DATA)' 'all-am: $(DATA)'
-    substituteInPlace depgraph/Makefile.in \
-      --replace-fail 'anthy.dep : mkdepgraph' 'anthy.dep : ' \
-      --replace-fail 'all-am: Makefile $(PROGRAMS) $(DATA)' 'all-am: $(DATA)'
-    substituteInPlace mkanthydic/Makefile.in \
-      --replace-fail 'anthy.dic : mkfiledic' 'anthy.dic : ' \
-      --replace-fail 'all-am: Makefile $(PROGRAMS) $(SCRIPTS) $(DATA)' 'all-am: $(DATA)'
-  '';
+  outputs = [ "out" "dev" ];
 
-  outputs = [
-    "out"
-    "dev"
-  ];
-
-  postFixup = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
+  postFixup = ''
     mkdir "$dev/lib/internals"
     cp -r depgraph/{mkdepgraph,.libs} mkworddic/{mkworddic,.libs} calctrans/{calctrans,.libs} mkanthydic/{mkfiledic,.libs} "$dev/lib/internals"
   '';
