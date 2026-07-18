@@ -30,10 +30,10 @@ stdenv.mkDerivation rec {
     librevenge
   ];
 
-  meta = {
+  meta = with lib; {
     description = "Base library for generating ODF documents";
-    license = lib.licenses.mpl20;
+    license = licenses.mpl20;
     maintainers = [ ];
-    platforms = lib.platforms.unix;
+    platforms = platforms.unix;
   };
 }
