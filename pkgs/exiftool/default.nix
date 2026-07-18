@@ -1,0 +1,42 @@
+{
+  lib,
+  perlPackages,
+  fetchurl,
+}:
+
+perlPackages.buildPerlPackage rec {
+  pname = "Image-ExifTool";
+  version = "13.25";
+
+  src = fetchurl {
+    url = "https://exiftool.org/Image-ExifTool-${version}.tar.gz";
+    hash = "sha256-HNVVFEhGooKYeDvr86tFIjUnPHg1hBCBPj1Ok8ZTsfo=";
+  };
+
+  postPatch = ''
+    patchShebangs exiftool
+  '';
+
+  meta = {
+    description = "Tool to read, write and edit EXIF meta information";
+    longDescription = ''
+      ExifTool is a platform-independent Perl library plus a command-line
+      application for reading, writing and editing meta information in a wide
+      variety of files. ExifTool supports many different metadata formats
+      including EXIF, GPS, IPTC, XMP, JFIF, GeoTIFF, ICC Profile, Photoshop
+      IRB, FlashPix, AFCP and ID3, as well as the maker notes of many digital
+      cameras by Canon, Casio, DJI, FLIR, FujiFilm, GE, GoPro, HP,
+      JVC/Victor, Kodak, Leaf, Minolta/Konica-Minolta, Motorola, Nikon,
+      Nintendo, Olympus/Epson, Panasonic/Leica, Pentax/Asahi, Phase One,
+      Reconyx, Ricoh, Samsung, Sanyo, Sigma/Foveon and Sony.
+    '';
+    homepage = "https://exiftool.org/";
+    changelog = "https://exiftool.org/history.html";
+    license = with lib.licenses; [
+      gpl1Plus
+      artistic2
+    ];
+    mainProgram = "exiftool";
+    maintainers = [ ];
+  };
+}
