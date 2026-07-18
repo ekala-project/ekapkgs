@@ -1,0 +1,45 @@
+{
+  lib,
+  stdenv,
+  fetchurl,
+  glib,
+  pkg-config,
+  perl,
+  gettext,
+  gobject-introspection,
+  gtk-doc,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "libgtop";
+  version = "2.41.3";
+
+  outputs = [
+    "out"
+    "dev"
+  ];
+
+  src = fetchurl {
+    url = "mirror://gnome/sources/libgtop/${lib.versions.majorMinor finalAttrs.version}/libgtop-${finalAttrs.version}.tar.xz";
+    hash = "sha256-d1Z235WOLqJFL3Vo8osupYEGPTEnc91cC3Ykwbmy2ow=";
+  };
+
+  nativeBuildInputs = [
+    pkg-config
+    gtk-doc
+    perl
+    gettext
+    gobject-introspection
+  ];
+
+  propagatedBuildInputs = [
+    glib
+  ];
+
+  meta = {
+    description = "Library that reads information about processes and the running system";
+    license = lib.licenses.gpl2Plus;
+    maintainers = [ ];
+    platforms = lib.platforms.unix;
+  };
+})
