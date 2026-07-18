@@ -8,6 +8,7 @@ final: prev: {
   wrapGAppsHook3 = final.wrapGAppsNoGuiHook.override {
     isGraphical = true;
   };
+  libfm-extra = final.libfm.override { extraOnly = true; };
   dconf = prev.dconf.overrideAttrs (old: {
     nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
   });
