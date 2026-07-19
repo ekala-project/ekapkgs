@@ -1,7 +1,11 @@
 {
+  fetchurl,
   lib,
   stdenv,
-  fetchurl,
+  libconfuse,
+  yajl,
+  alsa-lib,
+  libnl,
   meson,
   ninja,
   perl,
@@ -10,24 +14,15 @@
   xmlto,
   docbook_xml_dtd_45,
   docbook_xsl,
-  libconfuse,
-  yajl,
-  alsa-lib,
-  pulseaudio,
-  libnl,
 }:
 
-let
-  libpulseaudio = pulseaudio.override { libOnly = true; };
-in
-
-stdenv.mkDerivation (finalAttrs: {
+stdenv.mkDerivation rec {
   pname = "i3status";
   version = "2.15";
 
   src = fetchurl {
-    url = "https://i3wm.org/i3status/i3status-${finalAttrs.version}.tar.xz";
-    hash = "sha256-bGf1LK5PE533ZK0cxzZWK+D5d1B5G8IStT80wG6vIgU=";
+    url = "https://i3wm.org/i3status/i3status-${version}.tar.xz";
+    sha256 = "sha256-bGf1LK5PE533ZK0cxzZWK+D5d1B5G8IStT80wG6vIgU=";
   };
 
   nativeBuildInputs = [
@@ -46,16 +41,19 @@ stdenv.mkDerivation (finalAttrs: {
     libconfuse
     yajl
     alsa-lib
-    libpulseaudio
     libnl
+  ];
+
+  mesonFlags = [
+    "-Dpulseaudio=false"
   ];
 
   meta = {
     description = "Generates a status line for i3bar, dzen2, xmobar or lemonbar";
     homepage = "https://i3wm.org";
-    license = lib.licenses.bsd3;
     maintainers = [ ];
-    platforms = lib.platforms.linux;
+    license = lib.licenses.bsd3;
+    platforms = lib.platforms.all;
     mainProgram = "i3status";
   };
-})
+}
