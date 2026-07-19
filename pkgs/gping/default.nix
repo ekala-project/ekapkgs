@@ -1,0 +1,45 @@
+{
+  lib,
+  stdenv,
+  rustPlatform,
+  fetchFromGitHub,
+  installShellFiles,
+  iputils,
+}:
+
+rustPlatform.buildRustPackage (finalAttrs: {
+  pname = "gping";
+  version = "1.20.1";
+
+  src = fetchFromGitHub {
+    owner = "orf";
+    repo = "gping";
+    tag = "gping-v${finalAttrs.version}";
+    hash = "sha256-whHbGZnxOQ/ISyWMl6miuogppZahgXxO3XmhcP6ymIo=";
+  };
+
+  cargoHash = "sha256-F0QBL7tCCdjnavClqrw8yYxFrY8y4f8h/gcHSpEqBiM=";
+
+  nativeBuildInputs = [ installShellFiles ];
+
+  nativeCheckInputs = lib.optionals stdenv.hostPlatform.isLinux [ iputils ];
+
+  postInstall = ''
+    installManPage gping.1
+  '';
+
+  checkFlags = [
+    "--skip=test::tests::test_integration_any"
+    "--skip=test::tests::test_integration_ip6"
+    "--skip=test::tests::test_integration_ipv4"
+  ];
+
+  meta = {
+    description = "Ping, but with a graph";
+    homepage = "https://github.com/orf/gping";
+    changelog = "https://github.com/orf/gping/releases/tag/gping-v${finalAttrs.version}";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+    mainProgram = "gping";
+  };
+})

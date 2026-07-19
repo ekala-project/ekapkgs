@@ -22,14 +22,14 @@ let
   ];
 
   # ekapkgs' own overlays
-  # ekapkgsOverlay = lib.packageSets.mkAutoCalledPackageDir ./pkgs;
-  toplevelOverlay = import ./top-level.nix;
+  pkgsOverlay = lib.packageSets.mkAutoCalledPackageDir ./pkgs;
+  pkgsOverrides = import ./top-level.nix;
 in
 {
   imports = allPkgsModules;
 
   overlays.pkgs = [
-    # ekapkgsOverlay
-    toplevelOverlay
+    pkgsOverlay
+    pkgsOverrides
   ];
 }

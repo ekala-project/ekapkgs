@@ -1,0 +1,38 @@
+{
+  lib,
+  stdenv,
+  fetchurl,
+  curl,
+  icu,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "xerces-c";
+  version = "3.3.0";
+
+  src = fetchurl {
+    url = "mirror://apache/xerces/c/3/sources/xerces-c-${finalAttrs.version}.tar.gz";
+    sha256 = "sha256-lVXx0G+CmH+7RliGJwVRV0BBT9NLTbatLtdqLcCNO94=";
+  };
+
+  buildInputs = [
+    curl
+    icu
+  ];
+
+  configureFlags = [
+    "--disable-sse2"
+    "--enable-netaccessor-curl"
+    "--enable-transcoder-icu"
+  ];
+
+  enableParallelBuilding = true;
+
+  meta = {
+    description = "Validating XML parser written in a portable subset of C++";
+    homepage = "https://xerces.apache.org/xerces-c/";
+    license = lib.licenses.asl20;
+    maintainers = [ ];
+    platforms = lib.platforms.linux ++ lib.platforms.darwin;
+  };
+})

@@ -1,0 +1,93 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  openssl,
+  tcl,
+  buildPackages,
+  readline,
+  ncurses,
+  zlib,
+  sqlite,
+  util-linux,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "sqlcipher";
+  version = "4.16.0";
+
+  src = fetchFromGitHub {
+    owner = "sqlcipher";
+    repo = "sqlcipher";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-hvgdKpgyj2vD8rxCzS9gM5pKANgMFW4IV0M/c7eapNM=";
+  };
+
+  nativeBuildInputs = [
+    tcl
+    util-linux
+  ];
+
+  buildInputs = [
+    readline
+    ncurses
+    openssl
+    zlib
+  ];
+
+  depsBuildBuild = [
+    buildPackages.stdenv.cc
+  ];
+
+  configureFlags = [
+    "--enable-threadsafe"
+    "--with-readline-inc=-I${lib.getDev readline}/include"
+    "--enable-load-extension"
+  ];
+
+  env = {
+    NIX_CFLAGS_COMPILE = toString [
+      sqlite.NIX_CFLAGS_COMPILE
+      "-DSQLITE_HAS_CODEC"
+      "-DSQLITE_EXTRA_INIT=sqlcipher_extra_init"
+      "-DSQLITE_EXTRA_SHUTDOWN=sqlcipher_extra_shutdown"
+      "-DSQLITE_TEMP_STORE=3"
+    ];
+    LDFLAGS = toString [
+      "-lssl"
+      "-lcrypto"
+    ];
+    BUILD_CC = "$(CC_FOR_BUILD)";
+    TCLLIBDIR = "${placeholder "out"}/lib/tcl${lib.versions.majorMinor tcl.version}";
+  };
+
+  postInstall = ''
+    mv $out/bin/{sqlite3,sqlcipher}
+    mkdir $out/include/sqlcipher
+    mv $out/include/sqlite3.h $out/include/sqlcipher/sqlite3.h
+    mv $out/include/sqlite3ext.h $out/include/sqlcipher/sqlite3ext.h
+    mv $out/lib/lib{sqlite3,sqlcipher}.a
+    rm -f $out/lib/libsqlite3.so $out/lib/libsqlite3.so.0
+    rename libsqlite3 libsqlcipher $out/lib/libsqlite3*
+    mv $out/lib/pkgconfig/{sqlite3,sqlcipher}.pc
+    mv $out/share/man/man1/{sqlite3,sqlcipher}.1
+    substituteInPlace $out/lib/pkgconfig/sqlcipher.pc \
+      --replace-fail "-lsqlite3" "-lsqlcipher" \
+      --replace-fail "-lz" "-lz -lcrypto" \
+      --replace-fail "includedir}" "includedir}/sqlcipher"
+  ''
+  + lib.optionalString stdenv.hostPlatform.isLinux ''
+    f=$(echo $out/lib/libsqlcipher.so.*)
+    ln --symbolic --force "$f" $out/lib/libsqlcipher.so.0
+    ln --symbolic --force "$f" $out/lib/libsqlcipher.so
+  '';
+
+  meta = {
+    description = "SQLite extension that provides 256 bit AES encryption of database files";
+    mainProgram = "sqlcipher";
+    homepage = "https://www.zetetic.net/sqlcipher/";
+    license = lib.licenses.bsd3;
+    maintainers = [ ];
+    platforms = lib.platforms.unix;
+  };
+})

@@ -1,0 +1,35 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  autoreconfHook,
+  zlib,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "advancecomp";
+  version = "2.6";
+
+  src = fetchFromGitHub {
+    owner = "amadvance";
+    repo = "advancecomp";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-MwXdXT/ZEvTcYV4DjhCUFflrPKBFu0fk5PmaWt4MMOU=";
+  };
+
+  nativeBuildInputs = [ autoreconfHook ];
+  buildInputs = [ zlib ];
+
+  postPatch = ''
+    echo "${finalAttrs.version}" >.version
+  '';
+
+  meta = {
+    description = "Set of tools to optimize deflate-compressed files";
+    license = lib.licenses.gpl3;
+    platforms = lib.platforms.linux ++ lib.platforms.darwin;
+    homepage = "https://github.com/amadvance/advancecomp";
+    changelog = "https://github.com/amadvance/advancecomp/blob/v${finalAttrs.version}/HISTORY";
+    maintainers = [ ];
+  };
+})
