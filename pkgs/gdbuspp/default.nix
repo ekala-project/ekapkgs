@@ -1,0 +1,49 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  meson,
+  ninja,
+  glib,
+  pkg-config,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "gdbuspp";
+  version = "3";
+  src = fetchFromGitHub {
+    owner = "OpenVPN";
+    repo = "gdbuspp";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-LwEUNBQ7BUyoTm8tBgE4hwL7AbimCY/grQus8lWSI/M=";
+  };
+
+  postPatch = ''
+    patchShebangs --build ./scripts/get-git-ref
+  '';
+
+  nativeBuildInputs = [
+    meson
+    meson.configurePhaseHook
+    ninja
+    pkg-config
+  ];
+
+  buildInputs = [ glib ];
+
+  # fix build for gcc 15
+  env.NIX_CFLAGS_COMPILE = "-Wno-error=free-nonheap-object";
+  meta = {
+    description = "GDBus++ - a glib2 D-Bus wrapper for C++";
+    longDescription = ''
+      This library provides a simpler C++ based interface to implement D-Bus
+      into applications in a more C++ approach, based on the C++17 standard.
+    '';
+    homepage = "https://codeberg.org/OpenVPN/gdbuspp";
+    changelog = "https://codeberg.org/OpenVPN/gdbuspp/releases/tag/v${finalAttrs.version}";
+    license = lib.licenses.agpl3Only;
+    sourceProvenance = [ lib.sourceTypes.fromSource ];
+    maintainers = [ ];
+    platforms = lib.platforms.linux;
+  };
+})
