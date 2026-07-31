@@ -6,19 +6,19 @@
 #   overlays — all top-level overlays (upstream + ekapkgs)
 #   module   — NixOS module for config.overlays.* (currently empty for ekapkgs itself)
 #   modules  — all upstream NixOS modules (for downstream to include)
+{ lib, ... }:
 let
   pins = import ./pins.nix;
-  lib = import pins.lib;
 
   # Import upstream pkgs-modules
   pythonPkgsModule = import (pins.python + "/pkgs-module.nix");
   haskellPkgsModule = import (pins.haskell + "/pkgs-module.nix");
-  # nodePkgsModule = import (pins.node + "/pkgs-module.nix");
+  cudaPkgsModule = import (pins.cuda + "/pkgs-module.nix");
 
   allPkgsModules = [
     pythonPkgsModule
-    # haskellPkgsModule
-    # nodePkgsModule
+    haskellPkgsModule
+    cudaPkgsModule
   ];
 
   # ekapkgs' own overlays
