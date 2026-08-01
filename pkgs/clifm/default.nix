@@ -1,0 +1,49 @@
+{
+  stdenv,
+  lib,
+  fetchFromGitHub,
+  libcap,
+  acl,
+  file,
+  readline,
+  python3,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "clifm";
+  version = "1.28";
+
+  src = fetchFromGitHub {
+    owner = "leo-arch";
+    repo = "clifm";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-w2hUwyQvGlYrSfpKNkUhs7WHsn+WgBk2t7t9dUOGST4=";
+  };
+
+  buildInputs = [
+    libcap
+    acl
+    file
+    readline
+    python3
+  ];
+
+  makeFlags = [
+    "PREFIX=${placeholder "out"}"
+    "DATADIR=${placeholder "out"}/share"
+  ];
+
+  enableParallelBuilding = true;
+
+  doCheck = true;
+
+  meta = {
+    homepage = "https://github.com/leo-arch/clifm";
+    changelog = "https://github.com/leo-arch/clifm/releases/tag/v${finalAttrs.version}";
+    description = "CLI-based, shell-like, and non-curses terminal file manager";
+    license = lib.licenses.gpl2Plus;
+    maintainers = [ ];
+    platforms = lib.platforms.unix;
+    mainProgram = "clifm";
+  };
+})
