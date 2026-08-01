@@ -1,0 +1,31 @@
+{
+  lib,
+  stdenv,
+  fetchurl,
+  bdftopcf,
+  mkfontscale,
+}:
+stdenv.mkDerivation (finalAttrs: {
+  pname = "font-isas-misc";
+  version = "1.0.4";
+
+  src = fetchurl {
+    url = "mirror://xorg/individual/font/font-isas-misc-${finalAttrs.version}.tar.xz";
+    hash = "sha256-R+WVu+baREufb8qiZTmrx7oZieI6+mzcSeIuSEzEOPw=";
+  };
+
+  strictDeps = true;
+
+  nativeBuildInputs = [
+    bdftopcf
+    mkfontscale
+  ];
+
+  meta = {
+    description = "Isas Fangsong ti & Song ti pcf fonts";
+    homepage = "https://gitlab.freedesktop.org/xorg/font/isas-misc";
+    license = lib.licenses.hpnd;
+    maintainers = [ ];
+    platforms = lib.platforms.unix;
+  };
+})
