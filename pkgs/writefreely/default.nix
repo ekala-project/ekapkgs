@@ -1,0 +1,40 @@
+{
+  lib,
+  buildGoModule,
+  fetchFromGitHub,
+}:
+
+buildGoModule (finalAttrs: {
+  pname = "writefreely";
+  version = "0.17.1";
+
+  src = fetchFromGitHub {
+    owner = "writefreely";
+    repo = "writefreely";
+    rev = "v${finalAttrs.version}";
+    sha256 = "sha256-N6AKDNGeUhJOUPHK3eXhrNi1hC3Wl2YXPawBeFPhVw0=";
+  };
+
+  vendorHash = "sha256-e9usNyJHwmRNMjovhuL7Z4Ll7f58DgA1v1/hfJTZ4pg=";
+
+  ldflags = [
+    "-s"
+    "-w"
+    "-X github.com/writefreely/writefreely.softwareVer=${finalAttrs.version}"
+  ];
+
+  tags = [ "sqlite" ];
+
+  subPackages = [ "cmd/writefreely" ];
+
+  passthru.tests = {
+  };
+
+  meta = {
+    description = "Build a digital writing community";
+    homepage = "https://github.com/writefreely/writefreely";
+    license = lib.licenses.agpl3Only;
+    maintainers = [ ];
+    mainProgram = "writefreely";
+  };
+})
