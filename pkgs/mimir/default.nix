@@ -1,0 +1,60 @@
+{
+  lib,
+  buildGoModule,
+  fetchFromGitHub,
+}:
+buildGoModule (finalAttrs: {
+  pname = "mimir";
+  version = "3.1.4";
+
+  src = fetchFromGitHub {
+    rev = "mimir-${finalAttrs.version}";
+    owner = "grafana";
+    repo = "mimir";
+    hash = "sha256-FjIInTNyHS0M4TIKblj4JOfgCyBRoQbexGG1l5tuSps=";
+  };
+
+  vendorHash = null;
+
+  subPackages = [
+    "cmd/mimir"
+    "cmd/mimirtool"
+  ]
+  ++ (map (pathName: "tools/${pathName}") [
+    "compaction-planner"
+    "copyblocks"
+    "copyprefix"
+    "delete-objects"
+    "list-deduplicated-blocks"
+    "listblocks"
+    "mark-blocks"
+    "splitblocks"
+    "tenant-injector"
+    "undelete-blocks"
+  ]);
+
+  passthru = {
+    tests = {
+    };
+  };
+
+  ldflags =
+    let
+      t = "github.com/grafana/mimir/pkg/util/version";
+    in
+    [
+      "-s"
+      "-w"
+      "-X ${t}.Version=${finalAttrs.version}"
+      "-X ${t}.Revision=unknown"
+      "-X ${t}.Branch=unknown"
+    ];
+
+  meta = {
+    description = "Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus. ";
+    homepage = "https://github.com/grafana/mimir";
+    changelog = "https://github.com/grafana/mimir/releases/tag/mimir-${finalAttrs.version}";
+    license = lib.licenses.agpl3Only;
+    maintainers = [ ];
+  };
+})

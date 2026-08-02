@@ -1,0 +1,34 @@
+{
+  lib,
+  buildGoModule,
+  fetchFromGitHub,
+}:
+
+buildGoModule rec {
+  pname = "flannel";
+  version = "0.28.8";
+  rev = "v${version}";
+
+  vendorHash = "sha256-qBRsqeW7FxyefQoJZ44FgPMUD20y7izWlXgwb6xJT5s=";
+
+  src = fetchFromGitHub {
+    inherit rev;
+    owner = "flannel-io";
+    repo = "flannel";
+    sha256 = "sha256-f1ZMf45lQ9lRYLu6mlyDrcFl7VG6E2dG9UoqP9bOI4U=";
+  };
+
+  ldflags = [ "-X github.com/flannel-io/flannel/pkg/version.Version=${rev}" ];
+
+  # TestRouteCache/TestV6RouteCache fail with "Failed to create newns: operation not permitted"
+  doCheck = false;
+
+  meta = {
+    description = "Network fabric for containers, designed for Kubernetes";
+    license = lib.licenses.asl20;
+    homepage = "https://github.com/flannel-io/flannel";
+    maintainers = [ ];
+    platforms = with lib.platforms; linux;
+    mainProgram = "flannel";
+  };
+}

@@ -1,0 +1,47 @@
+{
+  lib,
+  fetchFromGitHub,
+  stdenv,
+  testers,
+  validatePkgConfig,
+  cmake,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "miniz";
+  version = "3.1.2";
+
+  src = fetchFromGitHub {
+    owner = "richgel999";
+    repo = "miniz";
+    rev = finalAttrs.version;
+    hash = "sha256-/MAJWZXZ+pbelFduGE75rK/x9qEzxSFEj8RJWe3JUv0=";
+  };
+
+  strictDeps = true;
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+    validatePkgConfig
+  ];
+
+  postFixup = ''
+    substituteInPlace "$out"/lib/pkgconfig/miniz.pc \
+      --replace-fail '=''${prefix}//' '=/' \
+      --replace-fail '=''${exec_prefix}//' '=/'
+  '';
+
+  passthru.tests.pkg-config = testers.hasPkgConfigModules {
+    package = finalAttrs.finalPackage;
+    versionCheck = true;
+  };
+
+  meta = {
+    description = "Single C source file zlib-replacement library";
+    homepage = "https://github.com/richgel999/miniz";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+    platforms = lib.platforms.unix;
+    pkgConfigModules = [ "miniz" ];
+  };
+})

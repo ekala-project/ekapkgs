@@ -1,0 +1,55 @@
+{
+  lib,
+  stdenv,
+  buildGoModule,
+  fetchFromGitHub,
+  installShellFiles,
+}:
+
+buildGoModule (finalAttrs: {
+  pname = "talm";
+  version = "0.23.1";
+
+  src = fetchFromGitHub {
+    owner = "cozystack";
+    repo = "talm";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-bxyYDCWQJZ+MrfV30Q3xBMggGU+F7Hs486g3BhQlDtI=";
+  };
+
+  vendorHash = "sha256-jDp1WVETDbCtSq+v0BrIiTqoR2cnmI7JXdy5ydnt5wA=";
+
+  nativeBuildInputs = [ installShellFiles ];
+
+  # go.mod requires 1.25.6 but nixpkgs has 1.25.5
+  preBuild = ''
+    substituteInPlace go.mod --replace-fail "go 1.25.6" "go 1.25.5"
+  '';
+
+  ldflags = [
+    "-s"
+    "-X main.Version=v${finalAttrs.version}"
+  ];
+
+  # Skip DNS test that fails in sandbox
+  checkFlags = [ "-skip=^TestRenderWithDNS$" ];
+
+  postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
+    installShellCompletion --cmd talm \
+      --bash <($out/bin/talm completion bash) \
+      --fish <($out/bin/talm completion fish) \
+      --zsh <($out/bin/talm completion zsh)
+  '';
+
+  nativeInstallCheckInputs = [
+  ];
+  doInstallCheck = true;
+  meta = {
+    description = "Manage Talos Linux the GitOps way";
+    homepage = "https://github.com/cozystack/talm";
+    changelog = "https://github.com/cozystack/talm/releases/tag/${finalAttrs.src.tag}";
+    license = lib.licenses.asl20;
+    maintainers = [ ];
+    mainProgram = "talm";
+  };
+})

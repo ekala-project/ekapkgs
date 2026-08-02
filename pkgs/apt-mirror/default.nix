@@ -1,0 +1,49 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  perl,
+  wget,
+  makeWrapper,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "apt-mirror";
+  version = "0.5.4";
+
+  src = fetchFromGitHub {
+    owner = "apt-mirror";
+    repo = "apt-mirror";
+    rev = finalAttrs.version;
+    hash = "sha256-GNsyXP/O56Y+8QhoSfMm+ig5lK/K3Cm085jxRt9ZRmI=";
+  };
+
+  strictDeps = true;
+
+  nativeBuildInputs = [
+    makeWrapper
+    perl # pod2man
+  ];
+
+  buildInputs = [ perl ];
+
+  makeFlags = [
+    "DESTDIR=$(out)"
+    "PREFIX=''"
+  ];
+
+  postInstall = ''
+    wrapProgram $out/bin/apt-mirror \
+      --prefix PATH : ${lib.makeBinPath [ wget ]}
+  '';
+
+  meta = {
+    description = "Tool that provides the ability to mirror any parts of apt sources";
+    homepage = "https://github.com/apt-mirror/apt-mirror";
+    changelog = "https://github.com/apt-mirror/apt-mirror/blob/${finalAttrs.src.rev}/CHANGELOG";
+    license = lib.licenses.gpl2Only;
+    maintainers = [ ];
+    mainProgram = "apt-mirror";
+    platforms = lib.platforms.all;
+  };
+})
