@@ -1,0 +1,46 @@
+{
+  lib,
+  buildGoModule,
+  fetchFromGitHub,
+}:
+
+buildGoModule (finalAttrs: {
+  pname = "xc";
+  version = "0.9.0";
+
+  src = fetchFromGitHub {
+    owner = "joerdav";
+    repo = "xc";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-hOwRPTH7vE8/U8UuT1z0yyRZvCGvKSX/Ncs4lFwVGVU=";
+  };
+
+  vendorHash = "sha256-EbIuktQ2rExa2DawyCamTrKRC1yXXMleRB8/pcKFY5c=";
+
+  subPackages = [ "cmd/xc" ];
+
+  env.CGO_ENABLED = 0;
+
+  ldflags = [
+    "-s"
+    "-w"
+    "-X=main.version=${finalAttrs.version}"
+  ];
+
+  postInstallCheck = ''
+    cp ${./example.md} example.md
+    $out/bin/xc -file ./example.md example
+    if ! [[ -f test ]] then
+      echo "example.md didn't do anything" >&2
+      return 1
+    fi
+  '';
+  meta = {
+    description = "Markdown defined task runner";
+    mainProgram = "xc";
+    homepage = "https://xcfile.dev/";
+    changelog = "https://github.com/joerdav/xc/releases/tag/${finalAttrs.src.tag}";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+})
