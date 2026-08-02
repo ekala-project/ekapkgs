@@ -1,0 +1,37 @@
+{
+  lib,
+  rustPlatform,
+  fetchFromGitHub,
+  stdenv,
+}:
+
+rustPlatform.buildRustPackage (finalAttrs: {
+  pname = "tailspin";
+  version = "5.5.0";
+
+  src = fetchFromGitHub {
+    owner = "bensadeh";
+    repo = "tailspin";
+    tag = finalAttrs.version;
+    hash = "sha256-coatx8Ud6iLnXvr+/X9hUEe3+0j9jnP5N3+aHQ+eWV8=";
+  };
+
+  cargoHash = "sha256-7N/vkhytkDF2ef0T6RJv8YzCpjzi+hjg061Uz9dyEM0=";
+
+  postPatch = ''
+    substituteInPlace tests/utils.rs --replace-fail \
+      'target/debug' "target/${stdenv.hostPlatform.rust.rustcTargetSpec}/$cargoCheckType"
+  '';
+
+  versionCheckProgram = "${placeholder "out"}/bin/tspin";
+  doInstallCheck = true;
+
+  meta = {
+    description = "Log file highlighter";
+    homepage = "https://github.com/bensadeh/tailspin";
+    changelog = "https://github.com/bensadeh/tailspin/blob/${finalAttrs.version}/CHANGELOG.md";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+    mainProgram = "tspin";
+  };
+})
