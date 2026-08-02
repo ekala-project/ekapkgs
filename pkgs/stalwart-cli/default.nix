@@ -1,0 +1,36 @@
+{
+  lib,
+  cacert,
+  fetchFromGitHub,
+  rustPlatform,
+}:
+rustPlatform.buildRustPackage (finalAttrs: {
+  pname = "stalwart-cli";
+  version = "1.0.12";
+  src = fetchFromGitHub {
+    owner = "stalwartlabs";
+    repo = "cli";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-Pf/Nriu0uRWNHHhWebrAlv+TRQgzUHDDrXhaWY6lz9M=";
+  };
+  cargoHash = "sha256-CesZQ/rDcQS1hxgUAwTzAKsuKq4MuIqUpGlEHcIdx5o=";
+  __structuredAttrs = true;
+  # `Result::unwrap()` on an `Err` value: Network(reqwest::Error { kind: Builder, source: General("No CA certificates were loaded from the system") })
+  nativeCheckInputs = [ cacert ];
+  doInstallCheck = true;
+  meta = {
+    description = "Stalwart Command Line Interface";
+    longDescription = ''
+      A schema-driven command line tool for administering Stalwart Mail and Collaboration Server over its JMAP API.
+
+      The tool fetches the server's schema on first use and derives every command, validation rule, and rendered view from it. The same binary works against any compatible Stalwart deployment without recompilation.
+    '';
+    homepage = "https://github.com/stalwartlabs/cli";
+    changelog = "https://github.com/stalwartlabs/cli/blob/${finalAttrs.src.tag}/CHANGELOG.md";
+    license = with lib.licenses; [
+      agpl3Only
+    ];
+    mainProgram = "stalwart-cli";
+    maintainers = [ ];
+  };
+})
