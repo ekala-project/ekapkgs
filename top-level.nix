@@ -20,14 +20,8 @@ final: prev: {
   gdk-pixbuf = prev.gdk-pixbuf.overrideAttrs (old: {
     nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
   });
-  # Stub for GStreamer until it's properly ported
-  gst_all_1 = {
-    gstreamer = null;
-    gst-plugins-base = null;
-    gst-plugins-bad = null;
-    gst-plugins-good = null;
-    gst-plugins-ugly = null;
-  };
+  # Legacy alias
+  gst_all_1 = final.gstreamer;
   # Stub for tinysparql until tracker is ported
   tinysparql = null;
   gtk4 =
@@ -37,8 +31,6 @@ final: prev: {
     }).overrideAttrs
       (old: {
         nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
-        mesonFlags = (old.mesonFlags or [ ]) ++ [ "-Dmedia-gstreamer=disabled" ];
-        buildInputs = builtins.filter (x: x != null) old.buildInputs;
       });
   gtk3 =
     (prev.gtk3.override {

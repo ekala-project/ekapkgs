@@ -2,6 +2,7 @@
   lib,
   stdenvNoCC,
   fetchgit,
+  majorVersion ? null,
 }:
 
 stdenvNoCC.mkDerivation {
