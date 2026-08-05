@@ -14,11 +14,14 @@ let
   pythonPkgsModule = import (pins.python + "/pkgs-module.nix");
   haskellPkgsModule = import (pins.haskell + "/pkgs-module.nix");
   cudaPkgsModule = import (pins.cuda + "/pkgs-module.nix");
+  rPkgsModule = import (pins.r-pkgs + "/pkgs-module.nix");
 
   allPkgsModules = [
+    cudaPkgsModule
     pythonPkgsModule
     haskellPkgsModule
-    cudaPkgsModule
+    haskellPkgsModule
+    rPkgsModule
   ];
 
   # ekapkgs' own overlays

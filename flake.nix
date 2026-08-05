@@ -1,56 +1,41 @@
 {
-  description = "Core packages flake";
+  description = "Ekapkgs flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    systems.url = "github:nix-systems/default";
-    treefmt-nix.url = "github:numtide/treefmt-nix";
-    lib.url = "github:ekala-project/nix-lib";
-    core.url = "github:ekala-project/corepkgs";
-    core.flake = false;
-    haskell.url = "github:ekala-project/haskell-pkgs";
-    haskell.flake = false;
+    corepkgs.url = "github:ekala-project/corepkgs";
     cuda.url = "github:ekala-project/cuda-pkgs";
     cuda.flake = false;
+    haskell.url = "github:ekala-project/haskell-pkgs";
+    haskell.flake = false;
+    nix-lib.url = "github:ekala-project/nix-lib";
     python.url = "github:ekala-project/python-pkgs";
     python.flake = false;
+    r-pkgs.url = "github:ekala-project/r-pkgs";
+    r-pkgs.flake = false;
+    systems.follows = "corepkgs/systems";
   };
 
   outputs =
     {
+      corepkgs,
+      nix-lib,
       self,
       systems,
-      nixpkgs,
-      treefmt-nix,
       ...
     }:
     let
-      forAllSystems = nixpkgs.lib.genAttrs (import systems);
-      mkTreefmt =
-        pkgs:
-        let
-          fmt = treefmt-nix.lib.evalModule pkgs {
-            projectRootFile = "flake.nix";
-            programs.nixfmt.enable = true;
-            programs.keep-sorted = {
-              enable = true;
-              includes = [
-                "*.nix"
-                "maintainers/scripts/sync-with-nixpkgs/script.py"
-              ];
-            };
-          };
-        in
-        fmt.config.build.wrapper;
+      forAllSystems = nix-lib.lib.genAttrs (import systems);
+      pkgsModule = import ./pkgs-module.nix;
     in
     {
       legacyPackages = forAllSystems (
         system:
         import ./. {
           inherit system;
+          modules = [ pkgsModule ];
         }
       );
-      formatter = forAllSystems (system: mkTreefmt nixpkgs.legacyPackages.${system});
+      formatter = corepkgs.formatter;
       nixConfig = {
         extra-substituters = [ "https://ekala-corepkgs.cachix.org" ];
         extra-trusted-public-keys = [
