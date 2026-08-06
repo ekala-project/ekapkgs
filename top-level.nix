@@ -1,5 +1,13 @@
 # These will be added to the pkgs scope
 final: prev: {
+  makeDesktopItem = final.lib.makeOverridable (
+    import ./build-support/make-desktopitem.nix {
+      inherit (final) lib writeTextFile buildPackages;
+    }
+  );
+  copyDesktopItems = final.makeSetupHook {
+    name = "copy-desktop-items-hook";
+  } ./build-support/copy-desktop-items.sh;
   libmpg123 = final.mpg123;
   docbook_xsl = final.docbook-xsl;
   wafHook = final.waf.hook;
