@@ -28,6 +28,14 @@ final: prev: {
   gdk-pixbuf = prev.gdk-pixbuf.overrideAttrs (old: {
     nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
   });
+  # FFTW precision variants
+  fftwSinglePrec = final.fftw.override { precision = "single"; };
+  fftwFloat = final.fftwSinglePrec;
+  fftwLongDouble = final.fftw.override { precision = "long-double"; };
+  # PulseAudio: libpulseaudio is library-only variant
+  libpulseaudio = final.pulseaudio.override { libOnly = true; };
+  # JACK2: libjack2 is library-only variant
+  libjack2 = final.jack2.override { prefix = "lib"; };
   # Legacy alias
   gst_all_1 = final.gstreamer;
   # Stub for tinysparql until tracker is ported
