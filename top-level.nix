@@ -38,6 +38,12 @@ final: prev: {
   libjack2 = final.jack2.override { prefix = "lib"; };
   # Legacy alias
   gst_all_1 = final.gstreamer;
+  # libpsl.minimal alias (corepkgs curl expects it)
+  libpsl = prev.libpsl.overrideAttrs (old: {
+    passthru = (old.passthru or { }) // {
+      minimal = prev.libpsl;
+    };
+  });
   # Stub for tinysparql until tracker is ported
   tinysparql = null;
   gtk4 =
