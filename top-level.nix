@@ -46,20 +46,6 @@ final: prev: {
   });
   # Stub for tinysparql until tracker is ported
   tinysparql = null;
-  # Fix lxml: in the python scope, libxml2/libxslt resolve to their -py output,
-  # but lxml needs the C development headers (dev output).
-  python3 = prev.python3.override {
-    packageOverrides = pyFinal: pyPrev: {
-      lxml = pyPrev.lxml.overrideAttrs (old: {
-        buildInputs = [
-          final.libxml2.dev
-          final.libxslt.dev
-          final.zlib.dev
-        ];
-      });
-    };
-  };
-  python3Packages = final.python3.pkgs;
   gtk4 =
     (prev.gtk4.override {
       trackerSupport = false;
