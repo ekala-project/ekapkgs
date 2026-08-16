@@ -1,0 +1,88 @@
+{
+  stdenv,
+  lib,
+  fetchFromGitLab,
+  gettext,
+  pkg-config,
+  xfce4-dev-tools,
+  wrapGAppsNoGuiHook,
+  ffmpegthumbnailer ? null,
+  gdk-pixbuf,
+  glib,
+  freetype,
+  libgepub ? null,
+  libgsf,
+  libheif,
+  libjxl,
+  libopenraw,
+  librsvg,
+  poppler,
+  gst_all_1,
+  webp-pixbuf-loader,
+  libxfce4util,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "tumbler";
+  version = "4.20.2";
+
+  src = fetchFromGitLab {
+    domain = "gitlab.xfce.org";
+    owner = "xfce";
+    repo = "tumbler";
+    tag = "tumbler-${finalAttrs.version}";
+    hash = "sha256-jLSJr3QUl6f1gpdfKw8ycb2+hw9sr1cudBeBwJWI1mk=";
+  };
+
+  nativeBuildInputs = [
+    gettext
+    pkg-config
+    xfce4-dev-tools
+    wrapGAppsNoGuiHook
+  ];
+
+  buildInputs = [
+    libxfce4util
+    freetype
+    gdk-pixbuf
+    glib
+    gst_all_1.gst-plugins-base
+    libgsf
+    libopenraw
+    poppler
+  ]
+  ++ lib.optional (ffmpegthumbnailer != null) ffmpegthumbnailer
+  ++ lib.optional (libgepub != null) libgepub;
+
+  preFixup = ''
+    gappsWrapperArgs+=(
+      # Thumbnailers
+      --prefix XDG_DATA_DIRS : "${
+        lib.makeSearchPath "share" [
+          libheif.out
+          libjxl
+          librsvg
+          webp-pixbuf-loader
+        ]
+      }"
+      # For heif-thumbnailer in heif.thumbnailer
+      --prefix PATH : "${lib.makeBinPath [ libheif ]}"
+    )
+  '';
+
+  # WrapGAppsHook won't touch this binary automatically, so we wrap manually.
+  postFixup = ''
+    wrapGApp $out/lib/tumbler-1/tumblerd
+  '';
+
+  configureFlags = [ "--enable-maintainer-mode" ];
+  enableParallelBuilding = true;
+
+  meta = {
+    description = "D-Bus thumbnailer service";
+    homepage = "https://gitlab.xfce.org/xfce/tumbler";
+    license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.linux;
+    maintainers = [ ];
+  };
+})
