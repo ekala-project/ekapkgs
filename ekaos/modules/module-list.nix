@@ -4,9 +4,13 @@
   ./programs/act.nix
   ./programs/age-plugin-yubikey.nix
   ./programs/alacritty.nix
+  ./programs/angle-grinder.nix
   ./programs/argocd.nix
+  ./programs/aria2.nix
   ./programs/asciinema.nix
+  ./programs/atool.nix
   ./programs/atuin.nix
+  ./programs/axel.nix
   ./programs/bandwhich.nix
   ./programs/bat.nix
   ./programs/bazelisk.nix
@@ -17,17 +21,24 @@
   ./programs/broot.nix
   ./programs/btop.nix
   ./programs/buf.nix
+  ./programs/byobu.nix
+  ./programs/cabextract.nix
   ./programs/calcurse.nix
   ./programs/chezmoi.nix
   ./programs/choose.nix
   ./programs/cloudflared.nix
   ./programs/cmatrix.nix
+  ./programs/cocogitto.nix
   ./programs/comrak.nix
   ./programs/consul.nix
   ./programs/cowsay.nix
+  ./programs/cpufetch.nix
+  ./programs/croc.nix
   ./programs/cronie.nix
   ./programs/csvlens.nix
   ./programs/csvtk.nix
+  ./programs/ctop.nix
+  ./programs/dasel.nix
   ./programs/ddclient.nix
   ./programs/delta.nix
   ./programs/difftastic.nix
@@ -41,6 +52,8 @@
   ./programs/doggo.nix
   ./programs/dog.nix
   ./programs/dool.nix
+  ./programs/dprint.nix
+  ./programs/dtach.nix
   ./programs/dua.nix
   ./programs/duf.nix
   ./programs/dunst.nix
@@ -48,21 +61,34 @@
   ./programs/editorconfig.nix
   ./programs/eksctl.nix
   ./programs/elvish.nix
+  ./programs/entr.nix
   ./programs/erdtree.nix
   ./programs/exercism.nix
   ./programs/eza.nix
+  ./programs/fcp.nix
+  ./programs/fdupes.nix
+  ./programs/ffuf.nix
   ./programs/figlet.nix
   ./programs/fish.nix
   ./programs/fluidsynth.nix
   ./programs/fzf.nix
   ./programs/git-absorb.nix
+  ./programs/git-branchless.nix
+  ./programs/git-bug.nix
+  ./programs/git-chglog.nix
+  ./programs/git-cliff.nix
+  ./programs/git-interactive-rebase-tool.nix
   ./programs/gitui.nix
   ./programs/gitu.nix
   ./programs/glow.nix
   ./programs/gnuplot.nix
+  ./programs/gotop.nix
   ./programs/greetd.nix
+  ./programs/grim.nix
   ./programs/grpcui.nix
   ./programs/grpcurl.nix
+  ./programs/gum.nix
+  ./programs/headscale.nix
   ./programs/helix.nix
   ./programs/helm-docs.nix
   ./programs/hexyl.nix
@@ -70,11 +96,15 @@
   ./programs/httpx.nix
   ./programs/hugo.nix
   ./programs/hyperfine.nix
+  ./programs/hysteria.nix
   ./programs/i3.nix
   ./programs/imagemagick.nix
+  ./programs/inxi.nix
   ./programs/iotop-c.nix
   ./programs/iperf3.nix
   ./programs/irssi.nix
+  ./programs/jdupes.nix
+  ./programs/joshuto.nix
   ./programs/kanshi.nix
   ./programs/ko.nix
   ./programs/kubectl-cnpg.nix
@@ -86,9 +116,11 @@
   ./programs/lsof.nix
   ./programs/lxterminal.nix
   ./programs/lynx.nix
+  ./programs/macchina.nix
   ./programs/mako.nix
   ./programs/man-db.nix
   ./programs/mcfly.nix
+  ./programs/mc.nix
   ./programs/mdbook-mermaid.nix
   ./programs/mdbook-toc.nix
   ./programs/meson.nix
@@ -97,7 +129,9 @@
   ./programs/mise.nix
   ./programs/most.nix
   ./programs/mtr.nix
+  ./programs/mupdf.nix
   ./programs/mutt.nix
+  ./programs/ncdu.nix
   ./programs/ncmpcpp.nix
   ./programs/newsboat.nix
   ./programs/ngrep.nix
@@ -112,7 +146,9 @@
   ./programs/oath-toolkit.nix
   ./programs/oh-my-posh.nix
   ./programs/onefetch.nix
+  ./programs/pass-git-helper.nix
   ./programs/pass.nix
+  ./programs/peco.nix
   ./programs/pfetch.nix
   ./programs/picom.nix
   ./programs/podman-compose.nix
@@ -125,20 +161,28 @@
   ./programs/prometheus-node-exporter.nix
   ./programs/rage.nix
   ./programs/ranger.nix
+  ./programs/rdfind.nix
   ./programs/redshift.nix
+  ./programs/reflex.nix
   ./programs/restic.nix
   ./programs/ripgrep.nix
+  ./programs/rm-improved.nix
   ./programs/rofi.nix
   ./programs/rustscan.nix
   ./programs/rxvt-unicode.nix
+  ./programs/scdoc.nix
   ./programs/screen.nix
   ./programs/sd.nix
+  ./programs/shellharden.nix
   ./programs/shfmt.nix
+  ./programs/sing-box.nix
   ./programs/skaffold.nix
   ./programs/slides.nix
   ./programs/sl.nix
+  ./programs/slurp.nix
   ./programs/smartmontools.nix
   ./programs/socat.nix
+  ./programs/soft-serve.nix
   ./programs/sops.nix
   ./programs/sox.nix
   ./programs/ssh-audit.nix
@@ -150,12 +194,15 @@
   ./programs/st.nix
   ./programs/streamripper.nix
   ./programs/stylua.nix
+  ./programs/swappy.nix
   ./programs/swaybg.nix
   ./programs/sway-launcher-desktop.nix
   ./programs/swaylock.nix
+  ./programs/swayr.nix
   ./programs/sxhkd.nix
   ./programs/syncthing.nix
   ./programs/sysstat.nix
+  ./programs/taplo.nix
   ./programs/tcptraceroute.nix
   ./programs/tealdeer.nix
   ./programs/terraform-ls.nix
@@ -168,25 +215,37 @@
   ./programs/toilet.nix
   ./programs/tokei.nix
   ./programs/topgrade.nix
+  ./programs/trash-cli.nix
   ./programs/tre-command.nix
+  ./programs/tree.nix
   ./programs/trippy.nix
   ./programs/trufflehog.nix
+  ./programs/unrar.nix
+  ./programs/viddy.nix
+  ./programs/vifm.nix
   ./programs/vim.nix
   ./programs/vivid.nix
+  ./programs/watchexec.nix
   ./programs/way-displays.nix
+  ./programs/wayshot.nix
   ./programs/websocat.nix
+  ./programs/wev.nix
   ./programs/wlogout.nix
   ./programs/wlr-randr.nix
   ./programs/wlsunset.nix
   ./programs/wofi.nix
+  ./programs/wtype.nix
   ./programs/xautolock.nix
   ./programs/xclip.nix
   ./programs/xdotool.nix
   ./programs/xh.nix
+  ./programs/xplr.nix
   ./programs/xsel.nix
   ./programs/xss-lock.nix
+  ./programs/yamlfmt.nix
   ./programs/yazi.nix
   ./programs/yubikey-agent.nix
+  ./programs/zathura.nix
   ./programs/zoxide.nix
   ./programs/zsh.nix
 ]
