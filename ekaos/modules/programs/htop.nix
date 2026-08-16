@@ -45,9 +45,8 @@ in
     environment.systemPackages = [ cfg.package ];
 
     environment.etc."htoprc" = mkIf (cfg.settings != { }) {
-      text = concatStringsSep "\n" (
-        mapAttrsToList (key: value: "${key}=${toString value}") cfg.settings
-      ) + "\n";
+      text =
+        concatStringsSep "\n" (mapAttrsToList (key: value: "${key}=${toString value}") cfg.settings) + "\n";
     };
   };
 }
