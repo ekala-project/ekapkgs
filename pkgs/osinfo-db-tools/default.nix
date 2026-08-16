@@ -15,7 +15,7 @@
   bzip2,
   xz,
   json-glib,
-  libsoup,
+  libsoup_3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -45,7 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
     libarchive
     bzip2
     xz
-    libsoup
+    libsoup_3
   ];
 
   meta = {
