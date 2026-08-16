@@ -3,33 +3,65 @@
 [
   ./programs/alacritty.nix
   ./programs/atuin.nix
+  ./programs/bandwhich.nix
   ./programs/bat.nix
+  ./programs/bemenu.nix
+  ./programs/borgbackup.nix
+  ./programs/brightnessctl.nix
   ./programs/broot.nix
   ./programs/btop.nix
   ./programs/chezmoi.nix
   ./programs/delta.nix
   ./programs/difftastic.nix
   ./programs/direnv.nix
+  ./programs/dmenu.nix
+  ./programs/dnsmasq.nix
+  ./programs/dunst.nix
+  ./programs/earlyoom.nix
+  ./programs/editorconfig.nix
   ./programs/eza.nix
   ./programs/fzf.nix
   ./programs/git-absorb.nix
+  ./programs/glow.nix
   ./programs/helix.nix
   ./programs/htop.nix
+  ./programs/i3.nix
+  ./programs/kanshi.nix
   ./programs/lazygit.nix
   ./programs/lf.nix
+  ./programs/mako.nix
   ./programs/mcfly.nix
+  ./programs/micro.nix
   ./programs/mise.nix
+  ./programs/mtr.nix
+  ./programs/ncmpcpp.nix
   ./programs/newsboat.nix
+  ./programs/nmap.nix
   ./programs/nnn.nix
   ./programs/oh-my-posh.nix
+  ./programs/onefetch.nix
   ./programs/pass.nix
+  ./programs/polybar.nix
+  ./programs/privoxy.nix
   ./programs/ranger.nix
+  ./programs/restic.nix
   ./programs/ripgrep.nix
+  ./programs/rofi.nix
   ./programs/screen.nix
+  ./programs/shfmt.nix
+  ./programs/smartmontools.nix
+  ./programs/ssh-audit.nix
   ./programs/starship.nix
+  ./programs/stylua.nix
+  ./programs/syncthing.nix
+  ./programs/tealdeer.nix
+  ./programs/tofi.nix
+  ./programs/tokei.nix
+  ./programs/topgrade.nix
   ./programs/tmuxinator.nix
   ./programs/vim.nix
   ./programs/vivid.nix
+  ./programs/wofi.nix
   ./programs/yazi.nix
   ./programs/zoxide.nix
 ]
