@@ -1,0 +1,44 @@
+{
+  lib,
+  stdenv,
+  fetchurl,
+  pkg-config,
+  xorgproto,
+  libx11,
+  libxext,
+  writeScript,
+}:
+stdenv.mkDerivation (finalAttrs: {
+  pname = "libxscrnsaver";
+  version = "1.2.5";
+
+  src = fetchurl {
+    url = "mirror://xorg/individual/lib/libXScrnSaver-${finalAttrs.version}.tar.xz";
+    hash = "sha256-UFc2X4RyU+DidYcUQeEP94RsgyKl2I4eGH0ybeHNjQA=";
+  };
+
+  strictDeps = true;
+
+  nativeBuildInputs = [ pkg-config ];
+
+  buildInputs = [
+    xorgproto
+    libx11
+    libxext
+  ];
+
+  propagatedBuildInputs = [ xorgproto ];
+
+  configureFlags = lib.optional (
+    stdenv.hostPlatform != stdenv.buildPlatform
+  ) "--enable-malloc0returnsnull";
+
+  meta = {
+    description = "X11 Screen Saver extension client library";
+    homepage = "https://gitlab.freedesktop.org/xorg/lib/libxscrnsaver";
+    license = lib.licenses.x11;
+    maintainers = [ ];
+    pkgConfigModules = [ "xscrnsaver" ];
+    platforms = lib.platforms.unix;
+  };
+})
