@@ -44,6 +44,8 @@ final: prev: {
       minimal = prev.libpsl;
     };
   });
+  # libsoup v3 alias (libsoup is already v3)
+  libsoup_3 = final.libsoup;
   # Stub for tinysparql until tracker is ported
   tinysparql = null;
   gtk4 =
