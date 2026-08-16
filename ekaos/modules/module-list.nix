@@ -1,14 +1,35 @@
 # List of ekapkgs-specific EkaOS modules
 # Loaded in addition to core-pkgs' base modules
 [
+  ./programs/alacritty.nix
+  ./programs/atuin.nix
   ./programs/bat.nix
+  ./programs/broot.nix
+  ./programs/btop.nix
+  ./programs/chezmoi.nix
+  ./programs/delta.nix
+  ./programs/difftastic.nix
   ./programs/direnv.nix
   ./programs/eza.nix
   ./programs/fzf.nix
+  ./programs/git-absorb.nix
+  ./programs/helix.nix
   ./programs/htop.nix
+  ./programs/lazygit.nix
+  ./programs/lf.nix
+  ./programs/mcfly.nix
+  ./programs/mise.nix
+  ./programs/newsboat.nix
+  ./programs/nnn.nix
+  ./programs/oh-my-posh.nix
+  ./programs/pass.nix
+  ./programs/ranger.nix
   ./programs/ripgrep.nix
   ./programs/screen.nix
   ./programs/starship.nix
+  ./programs/tmuxinator.nix
   ./programs/vim.nix
+  ./programs/vivid.nix
+  ./programs/yazi.nix
   ./programs/zoxide.nix
 ]
