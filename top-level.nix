@@ -46,6 +46,9 @@ final: prev: {
   });
   # libsoup v3 alias (libsoup is already v3)
   libsoup_3 = final.libsoup;
+  # GSSDP/GUPnP version aliases
+  gssdp_1_6 = final.gssdp;
+  gupnp_1_6 = final.gupnp;
   # Stub for tinysparql until tracker is ported
   tinysparql = null;
   gtk4 =
