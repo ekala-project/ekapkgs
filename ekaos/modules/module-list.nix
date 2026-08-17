@@ -3,6 +3,7 @@
 [
   ./programs/act.nix
   ./programs/age-plugin-yubikey.nix
+  ./programs/aide.nix
   ./programs/alacritty.nix
   ./programs/angle-grinder.nix
   ./programs/argocd.nix
@@ -10,27 +11,44 @@
   ./programs/asciinema.nix
   ./programs/atool.nix
   ./programs/atuin.nix
+  ./programs/autossh.nix
   ./programs/axel.nix
   ./programs/bandwhich.nix
   ./programs/bat.nix
   ./programs/bazelisk.nix
   ./programs/below.nix
   ./programs/bemenu.nix
+  ./programs/binsider.nix
   ./programs/borgbackup.nix
   ./programs/brightnessctl.nix
   ./programs/broot.nix
+  ./programs/bspwm.nix
   ./programs/btop.nix
   ./programs/buf.nix
   ./programs/byobu.nix
   ./programs/cabextract.nix
   ./programs/calcurse.nix
+  ./programs/cargo-audit.nix
+  ./programs/cargo-bloat.nix
+  ./programs/cargo-deny.nix
+  ./programs/cargo-expand.nix
+  ./programs/cargo-hack.nix
+  ./programs/cargo-insta.nix
+  ./programs/cargo-make.nix
+  ./programs/cargo-outdated.nix
+  ./programs/cargo-tarpaulin.nix
+  ./programs/cargo-watch.nix
+  ./programs/cbonsai.nix
+  ./programs/cheat.nix
   ./programs/chezmoi.nix
   ./programs/choose.nix
   ./programs/cloudflared.nix
   ./programs/cmatrix.nix
+  ./programs/cmus.nix
   ./programs/cocogitto.nix
   ./programs/comrak.nix
   ./programs/consul.nix
+  ./programs/containerd.nix
   ./programs/cowsay.nix
   ./programs/cpufetch.nix
   ./programs/croc.nix
@@ -40,11 +58,13 @@
   ./programs/ctop.nix
   ./programs/dasel.nix
   ./programs/ddclient.nix
+  ./programs/ddns-go.nix
   ./programs/delta.nix
   ./programs/difftastic.nix
   ./programs/direnv.nix
   ./programs/dive.nix
   ./programs/dmenu.nix
+  ./programs/dmidecode.nix
   ./programs/dnscrypt-proxy.nix
   ./programs/dnsmasq.nix
   ./programs/docker-compose.nix
@@ -55,23 +75,30 @@
   ./programs/dprint.nix
   ./programs/dtach.nix
   ./programs/dua.nix
+  ./programs/du-dust.nix
   ./programs/duf.nix
   ./programs/dunst.nix
+  ./programs/duplicity.nix
   ./programs/earlyoom.nix
   ./programs/editorconfig.nix
   ./programs/eksctl.nix
   ./programs/elvish.nix
   ./programs/entr.nix
   ./programs/erdtree.nix
+  ./programs/ethtool.nix
   ./programs/exercism.nix
   ./programs/eza.nix
+  ./programs/fail2ban.nix
   ./programs/fcp.nix
   ./programs/fdupes.nix
   ./programs/ffuf.nix
   ./programs/figlet.nix
   ./programs/fish.nix
+  ./programs/flashrom.nix
   ./programs/fluidsynth.nix
   ./programs/fzf.nix
+  ./programs/genact.nix
+  ./programs/gh-dash.nix
   ./programs/git-absorb.nix
   ./programs/git-branchless.nix
   ./programs/git-bug.nix
@@ -80,14 +107,20 @@
   ./programs/git-interactive-rebase-tool.nix
   ./programs/gitui.nix
   ./programs/gitu.nix
+  ./programs/glab.nix
   ./programs/glow.nix
   ./programs/gnuplot.nix
+  ./programs/gomplate.nix
+  ./programs/goreleaser.nix
+  ./programs/go-task.nix
   ./programs/gotop.nix
   ./programs/greetd.nix
   ./programs/grim.nix
   ./programs/grpcui.nix
   ./programs/grpcurl.nix
   ./programs/gum.nix
+  ./programs/haproxy.nix
+  ./programs/hdparm.nix
   ./programs/headscale.nix
   ./programs/helix.nix
   ./programs/helm-docs.nix
@@ -99,13 +132,16 @@
   ./programs/hysteria.nix
   ./programs/i3.nix
   ./programs/imagemagick.nix
+  ./programs/inadyn.nix
   ./programs/inxi.nix
   ./programs/iotop-c.nix
   ./programs/iperf3.nix
+  ./programs/ipmitool.nix
   ./programs/irssi.nix
   ./programs/jdupes.nix
   ./programs/joshuto.nix
   ./programs/kanshi.nix
+  ./programs/keychain.nix
   ./programs/ko.nix
   ./programs/kubectl-cnpg.nix
   ./programs/kubeseal.nix
@@ -113,8 +149,12 @@
   ./programs/lazygit.nix
   ./programs/less.nix
   ./programs/lf.nix
+  ./programs/lighttpd.nix
+  ./programs/lsd.nix
+  ./programs/lshw.nix
   ./programs/lsof.nix
   ./programs/lxterminal.nix
+  ./programs/lynis.nix
   ./programs/lynx.nix
   ./programs/macchina.nix
   ./programs/mako.nix
@@ -123,10 +163,13 @@
   ./programs/mc.nix
   ./programs/mdbook-mermaid.nix
   ./programs/mdbook-toc.nix
+  ./programs/mediainfo.nix
+  ./programs/memtester.nix
   ./programs/meson.nix
   ./programs/micro.nix
   ./programs/miller.nix
   ./programs/mise.nix
+  ./programs/mosh.nix
   ./programs/most.nix
   ./programs/mtr.nix
   ./programs/mupdf.nix
@@ -134,6 +177,7 @@
   ./programs/ncdu.nix
   ./programs/ncmpcpp.nix
   ./programs/newsboat.nix
+  ./programs/nginx.nix
   ./programs/ngrep.nix
   ./programs/nikto.nix
   ./programs/nitrocli.nix
@@ -146,14 +190,20 @@
   ./programs/oath-toolkit.nix
   ./programs/oh-my-posh.nix
   ./programs/onefetch.nix
+  ./programs/openvpn.nix
+  ./programs/pam_u2f.nix
   ./programs/pass-git-helper.nix
   ./programs/pass.nix
+  ./programs/peaclock.nix
   ./programs/peco.nix
   ./programs/pfetch.nix
   ./programs/picom.nix
+  ./programs/pinentry.nix
+  ./programs/pipes-rs.nix
   ./programs/podman-compose.nix
   ./programs/podman-tui.nix
   ./programs/polybar.nix
+  ./programs/ponysay.nix
   ./programs/powertop.nix
   ./programs/privoxy.nix
   ./programs/procs.nix
@@ -185,14 +235,19 @@
   ./programs/soft-serve.nix
   ./programs/sops.nix
   ./programs/sox.nix
+  ./programs/spectrwm.nix
   ./programs/ssh-audit.nix
   ./programs/sshguard.nix
+  ./programs/sshpass.nix
+  ./programs/sshuttle.nix
   ./programs/stalonetray.nix
   ./programs/starship.nix
   ./programs/step-cli.nix
   ./programs/stgit.nix
   ./programs/st.nix
   ./programs/streamripper.nix
+  ./programs/stress-ng.nix
+  ./programs/stress.nix
   ./programs/stylua.nix
   ./programs/swappy.nix
   ./programs/swaybg.nix
@@ -202,13 +257,17 @@
   ./programs/sxhkd.nix
   ./programs/syncthing.nix
   ./programs/sysstat.nix
+  ./programs/tailspin.nix
   ./programs/taplo.nix
+  ./programs/taskwarrior.nix
   ./programs/tcptraceroute.nix
   ./programs/tealdeer.nix
   ./programs/terraform-ls.nix
   ./programs/terragrunt.nix
+  ./programs/texlab.nix
   ./programs/thermald.nix
   ./programs/tig.nix
+  ./programs/timewarrior.nix
   ./programs/tmuxinator.nix
   ./programs/tmux-mem-cpu-load.nix
   ./programs/tofi.nix
@@ -220,6 +279,8 @@
   ./programs/tree.nix
   ./programs/trippy.nix
   ./programs/trufflehog.nix
+  ./programs/tty-clock.nix
+  ./programs/umoci.nix
   ./programs/unrar.nix
   ./programs/viddy.nix
   ./programs/vifm.nix
