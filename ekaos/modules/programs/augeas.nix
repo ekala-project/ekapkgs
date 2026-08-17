@@ -1,0 +1,33 @@
+# System-wide augeas configuration
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+
+with lib;
+
+let
+  cfg = config.programs.augeas;
+in
+
+{
+  options.programs.augeas = {
+    enable = mkOption {
+      type = types.bool;
+      default = false;
+      description = "Whether to install augeas system-wide.";
+    };
+
+    package = mkOption {
+      type = types.package;
+      default = pkgs.augeas;
+      description = "augeas package to use.";
+    };
+  };
+
+  config = mkIf cfg.enable {
+    environment.systemPackages = [ cfg.package ];
+  };
+}
