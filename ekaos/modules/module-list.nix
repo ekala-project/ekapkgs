@@ -643,6 +643,7 @@
   ./programs/xss-lock.nix
   ./programs/yamlfmt.nix
   ./programs/yazi.nix
+  ./programs/ydotool.nix
   ./programs/yj.nix
   ./programs/yubikey-agent.nix
   ./programs/zathura.nix
