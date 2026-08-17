@@ -80,6 +80,8 @@
   ./programs/apt-mirror.nix
   ./programs/apt-swarm.nix
   ./programs/aragorn.nix
+  ./programs/aranym.nix
+  ./programs/archimedes.nix
   ./programs/archivemount.nix
   ./programs/argc.nix
   ./programs/argocd-autopilot.nix
@@ -93,26 +95,108 @@
   ./programs/arpoison.nix
   ./programs/arp-scan.nix
   ./programs/artem.nix
+  ./programs/asar.nix
   ./programs/asciidoctorj.nix
+  ./programs/asciijump.nix
+  ./programs/asciinema-agg.nix
   ./programs/asciinema.nix
+  ./programs/ascii.nix
+  ./programs/asciiquarium.nix
+  ./programs/asdf-vm.nix
+  ./programs/askalono.nix
+  ./programs/asleap.nix
+  ./programs/asmfmt.nix
+  ./programs/asm-lsp.nix
+  ./programs/asn1c.nix
+  ./programs/assimp.nix
+  ./programs/astroterm.nix
+  ./programs/astyle.nix
+  ./programs/asuka.nix
+  ./programs/asunder.nix
+  ./programs/async-profiler.nix
+  ./programs/ataripp.nix
+  ./programs/atf.nix
+  ./programs/atlantis.nix
+  ./programs/atlas.nix
   ./programs/at.nix
+  ./programs/atomicparsley.nix
+  ./programs/atomix.nix
   ./programs/atool.nix
   ./programs/atuin.nix
+  ./programs/aucatctl.nix
+  ./programs/audiowaveform.nix
+  ./programs/augeas.nix
+  ./programs/augustus.nix
+  ./programs/autocutsel.nix
+  ./programs/autojump.nix
+  ./programs/autologin.nix
+  ./programs/automaticcomponenttoolkit.nix
+  ./programs/autorandr.nix
+  ./programs/autorestic.nix
   ./programs/autossh.nix
+  ./programs/autotrace.nix
+  ./programs/avra.nix
+  ./programs/avrdude.nix
+  ./programs/aws-c-s3.nix
+  ./programs/aws-iam-authenticator.nix
+  ./programs/awslogs.nix
+  ./programs/aws-nuke.nix
+  ./programs/awstats.nix
   ./programs/aws-vault.nix
+  ./programs/awww.nix
   ./programs/axel.nix
+  ./programs/b43-fwcutter.nix
+  ./programs/babeld.nix
+  ./programs/babl.nix
+  ./programs/bam.nix
+  ./programs/bamtools.nix
   ./programs/bandwhich.nix
   ./programs/banner.nix
   ./programs/bar.nix
+  ./programs/barrage.nix
+  ./programs/bartib.nix
+  ./programs/base16384.nix
+  ./programs/bashdb.nix
+  ./programs/bash_unit.nix
+  ./programs/basiliskii.nix
   ./programs/bastet.nix
+  ./programs/basu.nix
+  ./programs/batmon.nix
   ./programs/bat.nix
+  ./programs/batsignal.nix
+  ./programs/bats.nix
   ./programs/bazelisk.nix
+  ./programs/bbe.nix
+  ./programs/bb.nix
+  ./programs/bcache-tools.nix
+  ./programs/bcal.nix
+  ./programs/bchunk.nix
   ./programs/bc.nix
+  ./programs/bdf2psf.nix
+  ./programs/bdf2sfd.nix
+  ./programs/bdfresize.nix
   ./programs/bdftopcf.nix
+  ./programs/beanstalkd.nix
+  ./programs/bear.nix
+  ./programs/bed.nix
+  ./programs/beep.nix
   ./programs/below.nix
   ./programs/bemenu.nix
+  ./programs/bettercap.nix
+  ./programs/betterleaks.nix
   ./programs/bfs.nix
+  ./programs/bftpd.nix
+  ./programs/bgpdump.nix
+  ./programs/bgpq3.nix
+  ./programs/bgpq4.nix
+  ./programs/bgs.nix
+  ./programs/biber.nix
+  ./programs/bibtool.nix
+  ./programs/bingrep.nix
+  ./programs/binocle.nix
   ./programs/binsider.nix
+  ./programs/bioawk.nix
+  ./programs/biosdevname.nix
   ./programs/bluetui.nix
   ./programs/bluetuith.nix
   ./programs/bmon.nix
