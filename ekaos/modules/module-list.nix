@@ -122,6 +122,7 @@
   ./programs/atomicparsley.nix
   ./programs/atomix.nix
   ./programs/atool.nix
+  ./programs/atop.nix
   ./programs/atuin.nix
   ./programs/aucatctl.nix
   ./programs/audiowaveform.nix
@@ -289,6 +290,7 @@
   ./programs/drill.nix
   ./programs/dtach.nix
   ./programs/dua.nix
+  ./programs/dublin-traceroute.nix
   ./programs/du-dust.nix
   ./programs/duf.nix
   ./programs/dumb-init.nix
@@ -312,6 +314,7 @@
   ./programs/fdupes.nix
   ./programs/ffuf.nix
   ./programs/figlet.nix
+  ./programs/firejail.nix
   ./programs/fish.nix
   ./programs/flac.nix
   ./programs/flashrom.nix
@@ -369,6 +372,7 @@
   ./programs/hugo.nix
   ./programs/hyperfine.nix
   ./programs/hysteria.nix
+  ./programs/i3lock.nix
   ./programs/i3.nix
   ./programs/iftop.nix
   ./programs/ijq.nix
@@ -451,6 +455,7 @@
   ./programs/nload.nix
   ./programs/nmap.nix
   ./programs/nnn.nix
+  ./programs/noisetorch.nix
   ./programs/nomad.nix
   ./programs/nuclei.nix
   ./programs/numactl.nix
@@ -511,6 +516,7 @@
   ./programs/rofi.nix
   ./programs/rosenpass.nix
   ./programs/rsnapshot.nix
+  ./programs/rush.nix
   ./programs/rustscan.nix
   ./programs/rust-script.nix
   ./programs/rxvt-unicode.nix
@@ -528,6 +534,7 @@
   ./programs/skaffold.nix
   ./programs/slides.nix
   ./programs/sl.nix
+  ./programs/slock.nix
   ./programs/slurp.nix
   ./programs/smartmontools.nix
   ./programs/socat.nix
@@ -598,6 +605,7 @@
   ./programs/umoci.nix
   ./programs/units.nix
   ./programs/unrar.nix
+  ./programs/usbtop.nix
   ./programs/usbutils.nix
   ./programs/vale.nix
   ./programs/vegeta.nix
