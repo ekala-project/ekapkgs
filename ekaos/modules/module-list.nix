@@ -1,19 +1,99 @@
 # List of ekapkgs-specific EkaOS modules
 # Loaded in addition to core-pkgs' base modules
 [
+  ./programs/_0xffff.nix
+  ./programs/_1password-cli.nix
+  ./programs/_3cpio.nix
+  ./programs/_3mux.nix
+  ./programs/_4th.nix
+  ./programs/_6tunnel.nix
+  ./programs/_915resolution.nix
+  ./programs/_9menu.nix
+  ./programs/a52dec.nix
+  ./programs/aacgain.nix
+  ./programs/aaphoto.nix
+  ./programs/abbaye-des-morts.nix
+  ./programs/abc-verifier.nix
+  ./programs/abiword.nix
+  ./programs/abook.nix
+  ./programs/ace.nix
+  ./programs/aces-container.nix
+  ./programs/acme-client.nix
+  ./programs/acme.nix
+  ./programs/acpilight.nix
   ./programs/acpi.nix
   ./programs/acpitool.nix
+  ./programs/activate-linux.nix
+  ./programs/activemq.nix
+  ./programs/actkbd.nix
   ./programs/act.nix
+  ./programs/adcli.nix
+  ./programs/add-determinism.nix
+  ./programs/addlicense.nix
+  ./programs/adguardian.nix
+  ./programs/aesfix.nix
+  ./programs/aeskeyfind.nix
+  ./programs/afetch.nix
+  ./programs/afio.nix
+  ./programs/agate.nix
+  ./programs/agedu.nix
   ./programs/age-plugin-yubikey.nix
+  ./programs/aha.nix
+  ./programs/ahcpd.nix
   ./programs/aichat.nix
   ./programs/aide.nix
+  ./programs/airshipper.nix
   ./programs/alacritty.nix
+  ./programs/aldo.nix
   ./programs/ali.nix
+  ./programs/aliyun-cli.nix
+  ./programs/alock.nix
+  ./programs/alsa-oss.nix
+  ./programs/altermime.nix
   ./programs/amdgpu_top.nix
+  ./programs/amfora.nix
+  ./programs/amneziawg-go.nix
+  ./programs/amneziawg-tools.nix
   ./programs/amp.nix
+  ./programs/analog.nix
+  ./programs/anchor.nix
+  ./programs/andi.nix
   ./programs/angle-grinder.nix
+  ./programs/ansifilter.nix
+  ./programs/ansilove.nix
+  ./programs/antigravity-cli.nix
+  ./programs/ant.nix
+  ./programs/apache-directory-server.nix
+  ./programs/apbs.nix
+  ./programs/apfs-fuse.nix
+  ./programs/apkeep.nix
+  ./programs/apko.nix
+  ./programs/apngasm.nix
+  ./programs/apparix.nix
+  ./programs/appres.nix
+  ./programs/appstream.nix
+  ./programs/apr.nix
+  ./programs/aprx.nix
+  ./programs/apt-cacher-ng.nix
+  ./programs/apt-dater.nix
+  ./programs/aptdec.nix
+  ./programs/apt-mirror.nix
+  ./programs/apt-swarm.nix
+  ./programs/aragorn.nix
+  ./programs/archivemount.nix
+  ./programs/argc.nix
+  ./programs/argocd-autopilot.nix
   ./programs/argocd.nix
   ./programs/aria2.nix
+  ./programs/aribb25.nix
+  ./programs/ario.nix
+  ./programs/arkade.nix
+  ./programs/armips.nix
+  ./programs/arping.nix
+  ./programs/arpoison.nix
+  ./programs/arp-scan.nix
+  ./programs/artem.nix
+  ./programs/asciidoctorj.nix
   ./programs/asciinema.nix
   ./programs/at.nix
   ./programs/atool.nix
