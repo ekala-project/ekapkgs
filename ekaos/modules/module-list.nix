@@ -320,6 +320,7 @@
   ./programs/fonttosfnt.nix
   ./programs/fpp.nix
   ./programs/freesweep.nix
+  ./programs/freetds.nix
   ./programs/fx.nix
   ./programs/fyi.nix
   ./programs/fzf.nix
@@ -418,6 +419,7 @@
   ./programs/mc.nix
   ./programs/mdbook-mermaid.nix
   ./programs/mdbook-toc.nix
+  ./programs/mdevctl.nix
   ./programs/mediainfo.nix
   ./programs/memtester.nix
   ./programs/meson.nix
@@ -433,6 +435,7 @@
   ./programs/mosh.nix
   ./programs/mosquitto.nix
   ./programs/most.nix
+  ./programs/msmtp.nix
   ./programs/mtr.nix
   ./programs/mupdf.nix
   ./programs/mutt.nix
@@ -558,6 +561,7 @@
   ./programs/sxhkd.nix
   ./programs/syncthing.nix
   ./programs/sysstat.nix
+  ./programs/tack.nix
   ./programs/tailspin.nix
   ./programs/taplo.nix
   ./programs/taskwarrior.nix
