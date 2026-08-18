@@ -5,7 +5,6 @@
   fetchFromGitHub,
   rustPlatform,
   installShellFiles,
-  libiconv,
 }:
 
 rustPlatform.buildRustPackage (finalAttrs: {
@@ -23,8 +22,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   nativeBuildInputs = [
     installShellFiles
-  ]
-  ++ lib.optionals stdenv.hostPlatform.isDarwin [ rustPlatform.bindgenHook ];
+  ];
 
   postInstall = ''
     for shell in bash fish zsh; do
@@ -32,10 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     done
     installShellCompletion procs.{bash,fish} --zsh _procs
   '';
-
-  buildInputs = lib.optionals stdenv.hostPlatform.isDarwin [
-    libiconv
-  ];
 
   meta = {
     description = "Modern replacement for ps written in Rust";
