@@ -1,97 +1,143 @@
 {
-  lib,
   stdenv,
+  lib,
   fetchurl,
   fetchpatch,
+  desktop-file-utils,
   gettext,
   pkg-config,
   meson,
   ninja,
   glib,
   gtk3,
+  gtk4 ? null,
+  gtkVersion ? "3",
+  gobject-introspection,
+  vala,
   python3,
+  gi-docgen,
   libxml2,
   gnutls,
   gperf,
   pango,
   pcre2,
   cairo,
+  fmt,
   fribidi,
-  zlib,
+  lz4,
   icu,
+  simdutf,
+  systemd,
+  systemdSupport ? lib.meta.availableOn stdenv.hostPlatform systemd,
+  fast-float,
+  withApp ? true,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "vte";
-  version = "0.74.2";
+  version = "0.84.1";
 
   outputs = [
     "out"
     "dev"
-  ];
+  ]
+  ++ lib.optional (gtkVersion != null) "devdoc";
 
   src = fetchurl {
     url = "mirror://gnome/sources/vte/${lib.versions.majorMinor finalAttrs.version}/vte-${finalAttrs.version}.tar.xz";
-    sha256 = "sha256-pTX7Kpj+qKJEnNGgLMz1GQEx3d/1LnFa/azj/rU26uc=";
+    hash = "sha256-rKHKqEeK6827HWeJf7NRHrdgHeuuaBDhahW2+iXzGsg=";
   };
 
   patches = [
+    # VTE needs a small patch to work with musl:
+    # https://gitlab.gnome.org/GNOME/vte/issues/72
+    # Taken from https://git.alpinelinux.org/aports/tree/community/vte3
     (fetchpatch {
       name = "0001-Add-W_EXITCODE-macro-for-non-glibc-systems.patch";
       url = "https://git.alpinelinux.org/aports/plain/community/vte3/fix-W_EXITCODE.patch?id=4d35c076ce77bfac7655f60c4c3e4c86933ab7dd";
-      sha256 = "FkVyhsM0mRUzZmS2Gh172oqwcfXv6PyD6IEgjBhy2uU=";
+      hash = "sha256-FkVyhsM0mRUzZmS2Gh172oqwcfXv6PyD6IEgjBhy2uU=";
     })
   ];
 
   nativeBuildInputs = [
+    desktop-file-utils # for desktop-file-validate
     gettext
+    gobject-introspection
     gperf
     libxml2
     meson
     meson.configurePhaseHook
     ninja
     pkg-config
+    vala
     python3
+    gi-docgen
   ];
 
   buildInputs = [
     cairo
+    fmt
     fribidi
     gnutls
-    pango
+    pango # duplicated with propagatedBuildInputs to support gtkVersion == null
     pcre2
-    zlib
+    lz4
     icu
+    fast-float
+    simdutf
+  ]
+  ++ lib.optionals systemdSupport [
+    systemd
   ];
 
-  propagatedBuildInputs = [
-    gtk3
+  # Required by vte-2.91.pc.
+  propagatedBuildInputs = lib.optionals (gtkVersion != null) [
+    (
+      assert (gtkVersion == "3" || gtkVersion == "4");
+      if gtkVersion == "3" then gtk3 else gtk4
+    )
     glib
     pango
   ];
 
   mesonFlags = [
-    "-Ddocs=false"
-    (lib.mesonBool "gtk3" true)
-    (lib.mesonBool "gtk4" false)
-    "-D_systemd=false"
-    (lib.mesonBool "gir" false)
-    (lib.mesonBool "vapi" false)
-    (lib.mesonBool "glade" false)
+    "-Ddocs=true"
+    (lib.mesonBool "app" withApp)
+    (lib.mesonBool "gtk3" (gtkVersion == "3"))
+    (lib.mesonBool "gtk4" (gtkVersion == "4"))
+    (lib.mesonBool "_systemd" systemdSupport)
   ];
 
-  env.NIX_CFLAGS_COMPILE = lib.optionalString stdenv.hostPlatform.isMusl "-Wno-unused-command-line-argument";
+  # error: argument unused during compilation: '-pie' [-Werror,-Wunused-command-line-argument]
+  env.NIX_CFLAGS_COMPILE = toString (
+    lib.optional stdenv.hostPlatform.isMusl "-Wno-unused-command-line-argument"
+    ++ lib.optional stdenv.cc.isClang "-Wno-cast-function-type-strict"
+  );
 
   postPatch = ''
-    patchShebangs perf/* || true
-    patchShebangs src/box_drawing_generate.sh || true
-    patchShebangs src/parser-seq.py
-    patchShebangs src/modes.py
+    patchShebangs perf/* \
+      src/app/meson_desktopfile.py \
+      src/parser-seq.py \
+      src/minifont-coverage.py \
+      src/modes.py
+  '';
+
+  postFixup = ''
+    # Cannot be in postInstall, otherwise _multioutDocs hook in preFixup will move right back.
+    moveToOutput "share/doc" "$devdoc"
   '';
 
   meta = {
     homepage = "https://www.gnome.org/";
     description = "Library implementing a terminal emulator widget for GTK";
+    longDescription = ''
+      VTE is a library (libvte) implementing a terminal emulator widget for
+      GTK, and a minimal sample application (vte) using that.  Vte is
+      mainly used in gnome-terminal, but can also be used to embed a
+      console/terminal in games, editors, IDEs, etc. VTE supports Unicode and
+      character set conversion, as well as emulating any terminal known to
+      the system's terminfo database.
+    '';
     license = lib.licenses.lgpl3Plus;
     maintainers = [ ];
     platforms = lib.platforms.unix;
