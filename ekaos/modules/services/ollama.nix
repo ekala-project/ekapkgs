@@ -135,8 +135,12 @@ in
         port = cfg.port;
         protocol = "tcp";
         transport = "http";
+        hostname = null;
+        path = "/";
         internal = cfg.host == "127.0.0.1";
         openFirewall = cfg.openFirewall;
+        tls = { enable = false; forceRedirect = true; acme = false; };
+        healthCheck = { path = null; interval = 30; };
       };
 
       systemd = {

@@ -116,65 +116,101 @@ in
           port = 32400;
           protocol = "tcp";
           transport = "http";
+          hostname = null;
+          path = "/";
           internal = false;
           openFirewall = cfg.openFirewall;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
       } // optionalAttrs cfg.openFirewall {
         companion = {
           port = 3005;
           protocol = "tcp";
           transport = "tcp";
+          hostname = null;
+          path = "/";
           internal = false;
           openFirewall = true;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
         roku = {
           port = 8324;
           protocol = "tcp";
           transport = "tcp";
+          hostname = null;
+          path = "/";
           internal = false;
           openFirewall = true;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
         dlna-tcp = {
           port = 32469;
           protocol = "tcp";
           transport = "tcp";
+          hostname = null;
+          path = "/";
           internal = false;
           openFirewall = true;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
         dlna-udp = {
           port = 1900;
           protocol = "udp";
           transport = "udp";
+          hostname = null;
+          path = "/";
           internal = false;
           openFirewall = true;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
         gdm1 = {
           port = 32410;
           protocol = "udp";
           transport = "udp";
+          hostname = null;
+          path = "/";
           internal = false;
           openFirewall = true;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
         gdm2 = {
           port = 32412;
           protocol = "udp";
           transport = "udp";
+          hostname = null;
+          path = "/";
           internal = false;
           openFirewall = true;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
         gdm3 = {
           port = 32413;
           protocol = "udp";
           transport = "udp";
+          hostname = null;
+          path = "/";
           internal = false;
           openFirewall = true;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
         gdm4 = {
           port = 32414;
           protocol = "udp";
           transport = "udp";
+          hostname = null;
+          path = "/";
           internal = false;
           openFirewall = true;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
       };
 

@@ -217,24 +217,36 @@ in
           port = 4001;
           protocol = "tcp";
           transport = "tcp";
+          hostname = null;
+          path = "/";
           internal = false;
           openFirewall = true;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
 
         gateway = {
           port = 8080;
           protocol = "tcp";
           transport = "http";
+          hostname = null;
+          path = "/";
           internal = false;
           openFirewall = true;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
 
         api = {
           port = 5001;
           protocol = "tcp";
           transport = "http";
+          hostname = null;
+          path = "/";
           internal = true;
           openFirewall = true;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
       };
 

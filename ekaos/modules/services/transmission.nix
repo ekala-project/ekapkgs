@@ -189,22 +189,34 @@ in
           port = cfg.settings.rpcPort;
           protocol = "tcp";
           transport = "http";
+          hostname = null;
+          path = "/";
           internal = true;
           openFirewall = false;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
         peer-tcp = {
           port = cfg.settings.peerPort;
           protocol = "tcp";
           transport = "tcp";
+          hostname = null;
+          path = "/";
           internal = false;
           openFirewall = cfg.openFirewall;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
         peer-udp = {
           port = cfg.settings.peerPort;
           protocol = "udp";
           transport = "udp";
+          hostname = null;
+          path = "/";
           internal = false;
           openFirewall = cfg.openFirewall;
+          tls = { enable = false; forceRedirect = true; acme = false; };
+          healthCheck = { path = null; interval = 30; };
         };
       };
 
