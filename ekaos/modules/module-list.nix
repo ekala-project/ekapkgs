@@ -649,4 +649,7 @@
   ./programs/zathura.nix
   ./programs/zoxide.nix
   ./programs/zsh.nix
+
+  # Services
+  ./services/kubo.nix
 ]
