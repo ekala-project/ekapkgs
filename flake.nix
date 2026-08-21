@@ -7,7 +7,7 @@
     cuda.flake = false;
     haskell.url = "github:ekala-project/haskell-pkgs";
     haskell.flake = false;
-    nix-lib.url = "github:ekala-project/nix-lib";
+    nix-lib.follows = "corepkgs/nix-lib";
     python.url = "github:ekala-project/python-pkgs";
     python.flake = false;
     r-pkgs.url = "github:ekala-project/r-pkgs";
@@ -57,10 +57,12 @@
               lib = pkgs.lib;
               inherit pkgs;
             })
-              ({
-                modules = ekapkgsModules ++ modules;
-              }
-              // extraArgs);
+              (
+                {
+                  modules = ekapkgsModules ++ modules;
+                }
+                // extraArgs
+              );
         in
         eval;
 
