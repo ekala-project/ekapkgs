@@ -656,4 +656,5 @@
   ./services/plex.nix
   ./services/transmission.nix
   ./services/libvirtd.nix
+  ./services/xserver.nix
 ]
