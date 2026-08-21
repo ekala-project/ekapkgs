@@ -24,16 +24,15 @@ stdenv.mkDerivation rec {
     cmake.configurePhaseHook
   ];
 
-  buildInputs =
-    [
-      zlib
-      libpng
-    ]
-    ++ lib.optionals (!stdenv.hostPlatform.isDarwin) [
-      libGL
-      libGLU
-      freeglut
-    ];
+  buildInputs = [
+    zlib
+    libpng
+  ]
+  ++ lib.optionals (!stdenv.hostPlatform.isDarwin) [
+    libGL
+    libGLU
+    freeglut
+  ];
 
   meta = {
     homepage = "http://geuz.org/gl2ps";

@@ -29,8 +29,7 @@ stdenv.mkDerivation rec {
     pkg-config
   ];
 
-  configureFlags =
-    lib.optional stdenv.hostPlatform.isAarch64 "--disable-neon";
+  configureFlags = lib.optional stdenv.hostPlatform.isAarch64 "--disable-neon";
 
   meta = {
     homepage = "https://www.speex.org/";

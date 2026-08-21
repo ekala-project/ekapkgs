@@ -33,7 +33,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     libmpdclient
-  ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ libiconv ];
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [ libiconv ];
 
   env = lib.optionalAttrs stdenv.hostPlatform.isDarwin { NIX_LDFLAGS = "-liconv"; };
 

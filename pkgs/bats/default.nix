@@ -37,17 +37,19 @@ stdenv.mkDerivation rec {
 
   postInstall = ''
     wrapProgram "$out/bin/bats" \
-      --prefix PATH : ${lib.makeBinPath [
-        bash
-        coreutils
-        gnugrep
-        ncurses
-        findutils
-        hostname
-        parallel
-        util-linux
-        procps
-      ]}
+      --prefix PATH : ${
+        lib.makeBinPath [
+          bash
+          coreutils
+          gnugrep
+          ncurses
+          findutils
+          hostname
+          parallel
+          util-linux
+          procps
+        ]
+      }
   '';
 
   meta = with lib; {

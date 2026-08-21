@@ -25,7 +25,8 @@ stdenv.mkDerivation (finalAttrs: {
   makeFlags = [
     "AR:=$(AR)"
     "RANLIB:=$(RANLIB)"
-  ] ++ lib.optional (stdenv.buildPlatform != stdenv.hostPlatform) "-o test";
+  ]
+  ++ lib.optional (stdenv.buildPlatform != stdenv.hostPlatform) "-o test";
 
   meta = {
     description = "Audio processing plugin system for plugins that extract descriptive information from audio data";

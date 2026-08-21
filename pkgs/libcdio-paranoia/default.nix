@@ -26,7 +26,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     libcdio
-  ] ++ lib.optionals stdenv.hostPlatform.isDarwin [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [
     libiconv
   ];
 

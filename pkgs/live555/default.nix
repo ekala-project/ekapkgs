@@ -52,14 +52,14 @@ stdenv.mkDerivation (finalAttrs: {
   # required for whitespaces in makeFlags
   __structuredAttrs = true;
 
-  postPatch =
-    ''
-      sed -i -e 's|/bin/rm|rm|g' genMakefiles
-      sed -i \
-        -e 's/$(INCLUDES) -I. -O2 -DSOCKLEN_T/$(INCLUDES) -I. -O2 -I. -fPIC -DRTSPCLIENT_SYNCHRONOUS_INTERFACE=1 -DSOCKLEN_T/g' \
-        config.linux
-    ''
-    + lib.optionalString
+  postPatch = ''
+    sed -i -e 's|/bin/rm|rm|g' genMakefiles
+    sed -i \
+      -e 's/$(INCLUDES) -I. -O2 -DSOCKLEN_T/$(INCLUDES) -I. -O2 -I. -fPIC -DRTSPCLIENT_SYNCHRONOUS_INTERFACE=1 -DSOCKLEN_T/g' \
+      config.linux
+  ''
+  +
+    lib.optionalString
       (lib.elem stdenv.hostPlatform.libc [
         "glibc"
         "musl"

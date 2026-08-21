@@ -23,7 +23,8 @@ stdenv.mkDerivation (finalAttrs: {
       url = "https://gitlab.archlinux.org/archlinux/packaging/packages/jbigkit/-/raw/main/0015-jbg_newlen-check-for-end-of-file-within-MARKER_NEWLE.patch";
       hash = "sha256-F3qA/btR9D9NfzrNY76X4Z6vG6NrisI36SjCDjS+F5s=";
     })
-  ] ++ lib.optionals stdenv.hostPlatform.isLinux [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     (fetchpatch {
       url = "https://gitlab.archlinux.org/archlinux/packaging/packages/jbigkit/-/raw/main/jbigkit-2.1-shared_lib.patch";
       hash = "sha256-+efeeKg3FJ/TjSOj58kD+DwnaCm3zhGzKLfUes/d5rg=";
@@ -63,16 +64,19 @@ stdenv.mkDerivation (finalAttrs: {
     install -vDm 644 libjbig/*.h -t "$out/include/"
     install -vDm 755 pbmtools/{jbgtopbm{,85},pbmtojbg{,85}} -t "$out/bin/"
     install -vDm 644 pbmtools/*.1* -t "$out/share/man/man1/"
-  '' + lib.optionalString stdenv.hostPlatform.isDarwin ''
+  ''
+  + lib.optionalString stdenv.hostPlatform.isDarwin ''
     install -vDm 644 libjbig/libjbig*.a -t "$out/lib/"
-  '' + lib.optionalString stdenv.hostPlatform.isLinux ''
+  ''
+  + lib.optionalString stdenv.hostPlatform.isLinux ''
     install -vDm 755 libjbig/*.so.* -t "$out/lib/"
 
     for lib in libjbig.so libjbig85.so; do
       ln -sv "$lib.${finalAttrs.version}" "$out/lib/$lib"
       ln -sv "$out/lib/$lib.${finalAttrs.version}" "$out/lib/$lib.0"
     done
-  '' + ''
+  ''
+  + ''
     runHook postInstall
   '';
 

@@ -35,7 +35,8 @@ stdenv.mkDerivation rec {
 
   env = {
     AUTOMATED_TESTING = true;
-  } // lib.optionalAttrs stdenv.hostPlatform.is32bit {
+  }
+  // lib.optionalAttrs stdenv.hostPlatform.is32bit {
     NIX_CFLAGS_COMPILE = "-fpermissive";
   };
 

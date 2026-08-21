@@ -68,9 +68,12 @@ stdenv.mkDerivation (finalAttrs: {
 
   env = {
     PYTHON_CONFIG = "/invalid";
-  } // lib.optionalAttrs (stdenv.cc.bintools.isLLVM && lib.versionAtLeast stdenv.cc.bintools.version "17") {
-    NIX_LDFLAGS = "--undefined-version";
-  };
+  }
+  //
+    lib.optionalAttrs (stdenv.cc.bintools.isLLVM && lib.versionAtLeast stdenv.cc.bintools.version "17")
+      {
+        NIX_LDFLAGS = "--undefined-version";
+      };
 
   meta = {
     description = "Trivial database";

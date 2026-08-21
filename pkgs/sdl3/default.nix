@@ -78,11 +78,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     ninja
     validatePkgConfig
-  ] ++ lib.optional waylandSupport wayland-scanner;
+  ]
+  ++ lib.optional waylandSupport wayland-scanner;
 
-  buildInputs =
-    finalAttrs.dlopenBuildInputs
-    ++ lib.optional waylandSupport zenity;
+  buildInputs = finalAttrs.dlopenBuildInputs ++ lib.optional waylandSupport zenity;
 
   dlopenBuildInputs =
     lib.optionals stdenv.hostPlatform.isLinux [

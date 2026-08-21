@@ -49,7 +49,7 @@ let
         description = "Descent ${toString ver} assets from GOG";
         homepage = "https://www.dxx-rebirth.com/";
         license = lib.licenses.unfree;
-        maintainers = with lib.maintainers; [ peterhoeg ];
+        maintainers = [ ];
         hydraPlatforms = [ ];
       };
     });

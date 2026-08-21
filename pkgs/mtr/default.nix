@@ -41,7 +41,8 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     ncurses
     jansson
-  ] ++ lib.optional stdenv.hostPlatform.isLinux libcap;
+  ]
+  ++ lib.optional stdenv.hostPlatform.isLinux libcap;
 
   enableParallelBuilding = true;
 

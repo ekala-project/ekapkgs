@@ -28,19 +28,18 @@ stdenv.mkDerivation rec {
   ];
 
   nativeBuildInputs = [ pkg-config ];
-  buildInputs =
-    [
-      libevent
-      openssl
-      zlib
-      xz
-      zstd
-    ]
-    ++ lib.optionals stdenv.hostPlatform.isLinux [
-      libseccomp
-      systemd
-      libcap
-    ];
+  buildInputs = [
+    libevent
+    openssl
+    zlib
+    xz
+    zstd
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
+    libseccomp
+    systemd
+    libcap
+  ];
 
   patches = [ ./disable-monotonic-timer-tests.patch ];
 

@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/jceb/dex";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl3Plus;
-    maintainers = with lib.maintainers; [ nickcao ];
+    maintainers = [ ];
     mainProgram = "dex";
   };
 })

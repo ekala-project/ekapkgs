@@ -40,7 +40,8 @@ stdenv.mkDerivation (finalAttrs: {
     libx11
     libxau
     libxt
-  ] ++ lib.optionals stdenv.hostPlatform.isLinux [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     gpm
   ];
 

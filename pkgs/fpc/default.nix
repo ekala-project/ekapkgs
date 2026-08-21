@@ -39,16 +39,15 @@ stdenv.mkDerivation rec {
 
   glibc = stdenv.cc.libc.out;
 
-  patches =
-    [
-      ./mark-paths.patch
-    ]
-    ++ lib.optional stdenv.hostPlatform.isAarch64 (fetchpatch {
-      url = "https://gitlab.com/freepascal.org/fpc/source/-/commit/a20a7e3497bccf3415bf47ccc55f133eb9d6d6a0.patch";
-      hash = "sha256-xKTBwuOxOwX9KCazQbBNLhMXCqkuJgIFvlXewHY63GM=";
-      stripLen = 1;
-      extraPrefix = "fpcsrc/";
-    });
+  patches = [
+    ./mark-paths.patch
+  ]
+  ++ lib.optional stdenv.hostPlatform.isAarch64 (fetchpatch {
+    url = "https://gitlab.com/freepascal.org/fpc/source/-/commit/a20a7e3497bccf3415bf47ccc55f133eb9d6d6a0.patch";
+    hash = "sha256-xKTBwuOxOwX9KCazQbBNLhMXCqkuJgIFvlXewHY63GM=";
+    stripLen = 1;
+    extraPrefix = "fpcsrc/";
+  });
 
   postPatch = ''
     substituteInPlace fpcsrc/compiler/systems/t_linux.pas --subst-var-by dynlinker-prefix "${glibc}"

@@ -47,7 +47,7 @@ buildGoModule {
     changelog = "https://github.com/shenwei356/csvtk/releases/tag/v${version}";
     homepage = "https://github.com/shenwei356/csvtk";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [ luftmensch-luftmensch ];
+    maintainers = [ ];
     mainProgram = "csvtk";
   };
 }

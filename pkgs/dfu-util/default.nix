@@ -6,18 +6,17 @@
   libusb1,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "dfu-util";
   version = "0.11";
 
+  nativeBuildInputs = [ pkg-config ];
+  buildInputs = [ libusb1 ];
+
   src = fetchurl {
-    url = "https://dfu-util.sourceforge.net/releases/${pname}-${version}.tar.gz";
+    url = "https://dfu-util.sourceforge.net/releases/dfu-util-${finalAttrs.version}.tar.gz";
     sha256 = "sha256-tLU7ohqC7349TEffKVKt9fpJT0mbawtXxYxdBK6P8Z4=";
   };
-
-  nativeBuildInputs = [ pkg-config ];
-
-  buildInputs = [ libusb1 ];
 
   meta = {
     description = "Device firmware update (DFU) USB programmer";
@@ -32,7 +31,7 @@ stdenv.mkDerivation rec {
     '';
     homepage = "https://dfu-util.sourceforge.net";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
+    maintainers = [ ];
   };
-}
+})

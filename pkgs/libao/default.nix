@@ -44,12 +44,11 @@ stdenv.mkDerivation (finalAttrs: {
     "doc"
   ];
 
-  buildInputs =
-    lib.optionals stdenv.hostPlatform.isLinux [
-      alsa-lib
-      libcap
-      libpulseaudio
-    ];
+  buildInputs = lib.optionals stdenv.hostPlatform.isLinux [
+    alsa-lib
+    libcap
+    libpulseaudio
+  ];
 
   nativeBuildInputs = [
     autoreconfHook

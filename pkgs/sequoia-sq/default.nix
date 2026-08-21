@@ -1,0 +1,73 @@
+{
+  fetchFromGitLab,
+  lib,
+  nettle,
+  rustPlatform,
+  pkg-config,
+  capnproto,
+  installShellFiles,
+  openssl,
+  cacert,
+  sqlite,
+}:
+
+rustPlatform.buildRustPackage (finalAttrs: {
+  pname = "sequoia-sq";
+  version = "1.4.0";
+
+  src = fetchFromGitLab {
+    owner = "sequoia-pgp";
+    repo = "sequoia-sq";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-+6QVRp0zDJIIv23YlAI/cspHuGc+YcWdPfJZIOxQRW8=";
+  };
+
+  cargoHash = "sha256-I6hPpRpILV+iU9erfVBQOXuICx4IvWvGyHWdep7jRm4=";
+
+  strictDeps = true;
+  __structuredAttrs = true;
+
+  nativeBuildInputs = [
+    pkg-config
+    rustPlatform.bindgenHook
+    capnproto
+    installShellFiles
+  ];
+
+  buildInputs = [
+    openssl
+    sqlite
+    nettle
+  ];
+
+  # Needed for tests to be able to create a ~/.local/share/sequoia directory
+  # Needed for avoiding "OpenSSL error" since 1.2.0
+  preCheck = ''
+    export HOME=$(mktemp -d)
+    export SSL_CERT_FILE=${cacert}/etc/ssl/certs/ca-bundle.crt
+  '';
+
+  env.ASSET_OUT_DIR = "target";
+
+  doCheck = true;
+  doInstallCheck = true;
+  versionCheckProgramArg = "version";
+
+  postInstall = ''
+    installManPage ${finalAttrs.env.ASSET_OUT_DIR}/man-pages/*.*
+    installShellCompletion \
+      --cmd sq \
+      --bash ${finalAttrs.env.ASSET_OUT_DIR}/shell-completions/sq.bash \
+      --fish ${finalAttrs.env.ASSET_OUT_DIR}/shell-completions/sq.fish \
+      --zsh ${finalAttrs.env.ASSET_OUT_DIR}/shell-completions/_sq
+  '';
+
+  meta = {
+    description = "Command line application exposing a useful set of OpenPGP functionality for common tasks";
+    homepage = "https://sequoia-pgp.org/";
+    changelog = "https://gitlab.com/sequoia-pgp/sequoia-sq/-/blob/v${finalAttrs.version}/NEWS";
+    license = lib.licenses.lgpl2Plus;
+    maintainers = [ ];
+    mainProgram = "sq";
+  };
+})

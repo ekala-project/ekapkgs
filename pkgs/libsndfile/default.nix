@@ -48,7 +48,8 @@ stdenv.mkDerivation (finalAttrs: {
     libogg
     libopus
     libvorbis
-  ] ++ lib.optionals stdenv.hostPlatform.isLinux [ alsa-lib ];
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ alsa-lib ];
 
   enableParallelBuilding = true;
 

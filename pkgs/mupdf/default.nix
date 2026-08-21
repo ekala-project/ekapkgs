@@ -39,19 +39,18 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ pkg-config ];
 
-  buildInputs =
-    [
-      freetype
-      harfbuzz
-      openjpeg
-      jbig2dec
-      libjpeg
-      gumbo
-    ]
-    ++ lib.optionals enableCurl [
-      curl
-      openssl
-    ];
+  buildInputs = [
+    freetype
+    harfbuzz
+    openjpeg
+    jbig2dec
+    libjpeg
+    gumbo
+  ]
+  ++ lib.optionals enableCurl [
+    curl
+    openssl
+  ];
 
   outputs = [
     "bin"

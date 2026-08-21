@@ -41,16 +41,20 @@ stdenv.mkDerivation (finalAttrs: {
     "--disable-doc"
   ]
   ++ lib.optional (precision != "double") "--enable-${precision}"
-  ++ lib.optionals (stdenv.hostPlatform.isx86_64 && (precision == "single" || precision == "double")) [
-    "--enable-sse2"
-    "--enable-avx"
-    "--enable-avx2"
-    "--enable-avx512"
-    "--enable-avx128-fma"
-  ]
-  ++ lib.optionals (stdenv.hostPlatform.isAarch64 && (precision == "single" || precision == "double")) [
-    "--enable-neon"
-  ];
+  ++
+    lib.optionals (stdenv.hostPlatform.isx86_64 && (precision == "single" || precision == "double"))
+      [
+        "--enable-sse2"
+        "--enable-avx"
+        "--enable-avx2"
+        "--enable-avx512"
+        "--enable-avx128-fma"
+      ]
+  ++
+    lib.optionals (stdenv.hostPlatform.isAarch64 && (precision == "single" || precision == "double"))
+      [
+        "--enable-neon"
+      ];
 
   postPatch = ''
     substituteInPlace configure --replace-fail "-mtune=native" "-mtune=generic"

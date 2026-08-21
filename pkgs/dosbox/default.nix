@@ -43,7 +43,8 @@ stdenv.mkDerivation rec {
     SDL_net
     SDL_sound
     libpng
-  ] ++ lib.optionals (!stdenv.hostPlatform.isDarwin) [
+  ]
+  ++ lib.optionals (!stdenv.hostPlatform.isDarwin) [
     libGL
     libGLU
   ];

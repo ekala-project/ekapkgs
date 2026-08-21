@@ -27,6 +27,7 @@ let
   # ekapkgs' own overlays
   pkgsOverlay = lib.packageSets.mkAutoCalledPackageDir ./pkgs;
   pkgsOverrides = import ./top-level.nix;
+  pythonOverrides = import ./python-packages.nix;
 in
 {
   imports = allPkgsModules;
@@ -34,5 +35,9 @@ in
   overlays.pkgs = [
     pkgsOverlay
     pkgsOverrides
+  ];
+
+  overlays.python = [
+    pythonOverrides
   ];
 }

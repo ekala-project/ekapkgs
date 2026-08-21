@@ -23,26 +23,24 @@ stdenv.mkDerivation rec {
     hash = "sha256-kWW9ID/eYZH0O/Ge8pf3Cso4yu644R5EiQFYfZMcizs=";
   };
 
-  configureFlags =
-    [
-      (lib.enableFeature enableSystemd "systemd")
-    ]
-    ++ lib.optionals (!lib.systems.equals stdenv.buildPlatform stdenv.hostPlatform) [
-      "ac_cv_func_malloc_0_nonnull=yes"
-      "ac_cv_func_realloc_0_nonnull=yes"
-    ];
+  configureFlags = [
+    (lib.enableFeature enableSystemd "systemd")
+  ]
+  ++ lib.optionals (!lib.systems.equals stdenv.buildPlatform stdenv.hostPlatform) [
+    "ac_cv_func_malloc_0_nonnull=yes"
+    "ac_cv_func_realloc_0_nonnull=yes"
+  ];
 
   nativeBuildInputs = [
     autoreconfHook
     bison
     flex
   ];
-  buildInputs =
-    [
-      pam
-    ]
-    ++ lib.optional enableSystemd systemdLibs
-    ++ lib.optional stdenv.hostPlatform.isMusl musl-fts;
+  buildInputs = [
+    pam
+  ]
+  ++ lib.optional enableSystemd systemdLibs
+  ++ lib.optional stdenv.hostPlatform.isMusl musl-fts;
 
   postPatch = ''
     substituteInPlace src/tools/Makefile.am \

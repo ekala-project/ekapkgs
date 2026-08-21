@@ -50,17 +50,16 @@ stdenv.mkDerivation rec {
     "--with-udev-dir=${placeholder "out"}/lib/udev"
   ];
 
-  nativeBuildInputs =
-    [
-      autoreconfHook
-      gtk-doc
-      intltool
-      pkg-config
-    ]
-    ++ (with perlPackages; [
-      perl
-      XMLParser
-    ]);
+  nativeBuildInputs = [
+    autoreconfHook
+    gtk-doc
+    intltool
+    pkg-config
+  ]
+  ++ (with perlPackages; [
+    perl
+    XMLParser
+  ]);
 
   buildInputs = [
     libxml2

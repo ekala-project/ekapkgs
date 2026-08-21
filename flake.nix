@@ -7,7 +7,7 @@
     cuda.flake = false;
     haskell.url = "github:ekala-project/haskell-pkgs";
     haskell.flake = false;
-    nix-lib.url = "github:ekala-project/nix-lib";
+    nix-lib.follows = "corepkgs/nix-lib";
     python.url = "github:ekala-project/python-pkgs";
     python.flake = false;
     r-pkgs.url = "github:ekala-project/r-pkgs";
@@ -35,6 +35,37 @@
           modules = [ pkgsModule ];
         }
       );
+
+      ekaosSystem =
+        {
+          modules ? [ ],
+          system ? "x86_64-linux",
+          ...
+        }@args:
+        let
+          pkgs = import ./. {
+            inherit system;
+            modules = [ pkgsModule ];
+          };
+          ekapkgsModules = import ./ekaos/modules/module-list.nix;
+          extraArgs = builtins.removeAttrs args [
+            "modules"
+            "system"
+          ];
+          eval =
+            (import (corepkgs + "/ekaos/eval-config.nix") {
+              lib = pkgs.lib;
+              inherit pkgs;
+            })
+              (
+                {
+                  modules = ekapkgsModules ++ modules;
+                }
+                // extraArgs
+              );
+        in
+        eval;
+
       formatter = corepkgs.formatter;
       nixConfig = {
         extra-substituters = [ "https://ekala-corepkgs.cachix.org" ];

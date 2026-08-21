@@ -1,0 +1,50 @@
+{
+  lib,
+  buildPackages,
+  stdenv,
+  rustPlatform,
+  fetchCrate,
+  cargo-c,
+  nasm,
+}:
+
+rustPlatform.buildRustPackage (finalAttrs: {
+  pname = "rav1e";
+  version = "0.8.1";
+
+  src = fetchCrate {
+    inherit (finalAttrs) pname version;
+    hash = "sha256-GCfh2v3w5C8h4GuPKkTMUAhPspT1W0drrRpELCJWeTI=";
+  };
+
+  cargoHash = "sha256-KQsAEs608OyzwZtJRXw7Zwh5X+4yFJpacOMoij58vh0=";
+
+  nativeBuildInputs = [
+    cargo-c
+    nasm
+  ];
+
+  postPatch = ''
+    # remove feature that requires libgit2 and is only used to print a version string
+    substituteInPlace Cargo.toml --replace-fail '"git_version",' ""
+  '';
+
+  checkType = "debug";
+
+  postBuild = ''
+    ${buildPackages.rust.envVars.setEnv} cargo cbuild --release --frozen --prefix=${placeholder "out"} --target ${stdenv.hostPlatform.rust.rustcTarget}
+  '';
+
+  postInstall = ''
+    ${buildPackages.rust.envVars.setEnv} cargo cinstall --release --frozen --prefix=${placeholder "out"} --target ${stdenv.hostPlatform.rust.rustcTarget}
+  '';
+
+  meta = {
+    description = "Fastest and safest AV1 encoder";
+    homepage = "https://github.com/xiph/rav1e";
+    changelog = "https://github.com/xiph/rav1e/releases/tag/v${finalAttrs.version}";
+    license = lib.licenses.bsd2;
+    maintainers = [ ];
+    mainProgram = "rav1e";
+  };
+})

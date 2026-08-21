@@ -1,0 +1,53 @@
+{
+  lib,
+  buildGo126Module,
+  fetchFromGitHub,
+  mockgen,
+}:
+buildGo126Module (finalAttrs: {
+  pname = "terragrunt";
+  version = "1.0.4";
+
+  src = fetchFromGitHub {
+    owner = "gruntwork-io";
+    repo = "terragrunt";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-uOX+PTNL6VPu+QN9RiWNonV+WRWYNEadRLvljy49M5Q=";
+  };
+
+  nativeBuildInputs = [
+    mockgen
+  ];
+
+  proxyVendor = true;
+
+  preBuild = ''
+    make generate-mocks
+  '';
+
+  vendorHash = "sha256-LqkHHkX1kMuF4XtpxFPc6Xwas4B+jSMfMxSyv1nzerc=";
+
+  excludedPackages = [ "test/flake" ];
+
+  doCheck = false;
+
+  ldflags = [
+    "-s"
+    "-X github.com/gruntwork-io/go-commons/version.Version=v${finalAttrs.version}"
+    "-extldflags '-static'"
+  ];
+
+  nativeInstallCheckInputs = [
+  ];
+  versionCheckProgramArg = "--version";
+  doInstallCheck = true;
+
+  meta = {
+    homepage = "https://terragrunt.gruntwork.io";
+    changelog = "https://github.com/gruntwork-io/terragrunt/releases/tag/v${finalAttrs.version}";
+    description = "Thin wrapper for Terraform that supports locking for Terraform state and enforces best practices";
+    mainProgram = "terragrunt";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+})

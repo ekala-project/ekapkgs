@@ -1,0 +1,33 @@
+# System-wide joshuto configuration
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+
+with lib;
+
+let
+  cfg = config.programs.joshuto;
+in
+
+{
+  options.programs.joshuto = {
+    enable = mkOption {
+      type = types.bool;
+      default = false;
+      description = "Whether to install joshuto system-wide.";
+    };
+
+    package = mkOption {
+      type = types.package;
+      default = pkgs.joshuto;
+      description = "joshuto package to use.";
+    };
+  };
+
+  config = mkIf cfg.enable {
+    environment.systemPackages = [ cfg.package ];
+  };
+}

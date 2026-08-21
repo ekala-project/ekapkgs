@@ -46,7 +46,8 @@ stdenv.mkDerivation rec {
 
   postInstall = ''
     moveToOutput bin "$bin"
-  '' + ''
+  ''
+  + ''
     mkdir -p "$dev/lib/pkgconfig"
     cat > "$dev/lib/pkgconfig/lmdb.pc" <<EOF
     Name: lmdb

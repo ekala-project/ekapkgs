@@ -54,27 +54,25 @@ stdenv.mkDerivation rec {
     pkg-config
   ];
 
-  buildInputs =
-    [
-      boost
-      libmpdclient
-      ncurses
-      readline
-      libiconv
-      icu
-      curl
-    ]
-    ++ lib.optional visualizerSupport fftw
-    ++ lib.optional taglibSupport taglib;
+  buildInputs = [
+    boost
+    libmpdclient
+    ncurses
+    readline
+    libiconv
+    icu
+    curl
+  ]
+  ++ lib.optional visualizerSupport fftw
+  ++ lib.optional taglibSupport taglib;
 
-  preConfigure =
-    ''
-      autoreconf -fiv
-    ''
-    + lib.optionalString stdenv.hostPlatform.isDarwin ''
-      substituteInPlace ./configure \
-        --replace-fail "std=c++20" "std=c++17"
-    '';
+  preConfigure = ''
+    autoreconf -fiv
+  ''
+  + lib.optionalString stdenv.hostPlatform.isDarwin ''
+    substituteInPlace ./configure \
+      --replace-fail "std=c++20" "std=c++17"
+  '';
 
   meta = {
     description = "Featureful ncurses based MPD client inspired by ncmpc";

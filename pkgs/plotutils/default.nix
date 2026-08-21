@@ -17,9 +17,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ autoreconfHook ];
   buildInputs = [ libpng ];
-  patches =
-    map fetchurl (import ./debian-patches.nix)
-    ++ [ ./c++17-register-usage-fix.patch ];
+  patches = map fetchurl (import ./debian-patches.nix) ++ [ ./c++17-register-usage-fix.patch ];
 
   preBuild = ''
     # Fix parallel building.

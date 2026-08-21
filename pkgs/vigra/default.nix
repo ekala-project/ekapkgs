@@ -48,15 +48,14 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs --build config/run_test.sh.in
   '';
 
-  cmakeFlags =
-    [
-      "-DWITH_OPENEXR=1"
-      "-DWITH_VIGRANUMPY=0"
-    ]
-    ++ lib.optionals (stdenv.hostPlatform.system == "x86_64-linux") [
-      "-DCMAKE_CXX_FLAGS=-fPIC"
-      "-DCMAKE_C_FLAGS=-fPIC"
-    ];
+  cmakeFlags = [
+    "-DWITH_OPENEXR=1"
+    "-DWITH_VIGRANUMPY=0"
+  ]
+  ++ lib.optionals (stdenv.hostPlatform.system == "x86_64-linux") [
+    "-DCMAKE_CXX_FLAGS=-fPIC"
+    "-DCMAKE_C_FLAGS=-fPIC"
+  ];
 
   enableParallelBuilding = true;
 

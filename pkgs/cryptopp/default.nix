@@ -29,7 +29,10 @@ stdenv.mkDerivation rec {
 
   makeFlags = [ "PREFIX=${placeholder "out"}" ];
 
-  buildFlags = [ "shared" "libcryptopp.pc" ];
+  buildFlags = [
+    "shared"
+    "libcryptopp.pc"
+  ];
 
   enableParallelBuilding = true;
   hardeningDisable = [ "fortify" ];

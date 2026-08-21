@@ -1,5 +1,13 @@
 # These will be added to the pkgs scope
 final: prev: {
+  makeDesktopItem = final.lib.makeOverridable (
+    import ./build-support/make-desktopitem.nix {
+      inherit (final) lib writeTextFile buildPackages;
+    }
+  );
+  copyDesktopItems = final.makeSetupHook {
+    name = "copy-desktop-items-hook";
+  } ./build-support/copy-desktop-items.sh;
   libmpg123 = final.mpg123;
   docbook_xsl = final.docbook-xsl;
   wafHook = final.waf.hook;
@@ -7,6 +15,10 @@ final: prev: {
   at-spi2-core = final.atk;
   wrapGAppsHook3 = final.wrapGAppsNoGuiHook.override {
     isGraphical = true;
+  };
+  wrapGAppsHook4 = final.wrapGAppsNoGuiHook.override {
+    isGraphical = true;
+    gtk3 = final.gtk4;
   };
   libxcb-renderutil = final.xcbutilrenderutil;
   libfm-extra = final.libfm.override { extraOnly = true; };
@@ -16,10 +28,43 @@ final: prev: {
   gdk-pixbuf = prev.gdk-pixbuf.overrideAttrs (old: {
     nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
   });
-  gtk3 = (prev.gtk3.override {
-    trackerSupport = false;
-    withIntrospection = false;
-  }).overrideAttrs (old: {
-    nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
+  # FFTW precision variants
+  fftwSinglePrec = final.fftw.override { precision = "single"; };
+  fftwFloat = final.fftwSinglePrec;
+  fftwLongDouble = final.fftw.override { precision = "long-double"; };
+  # PulseAudio: libpulseaudio is library-only variant
+  libpulseaudio = final.pulseaudio.override { libOnly = true; };
+  # JACK2: libjack2 is library-only variant
+  libjack2 = final.jack2.override { prefix = "lib"; };
+  # Legacy alias
+  gst_all_1 = final.gstreamer;
+  # libpsl.minimal alias (corepkgs curl expects it)
+  libpsl = prev.libpsl.overrideAttrs (old: {
+    passthru = (old.passthru or { }) // {
+      minimal = prev.libpsl;
+    };
   });
+  # libsoup v3 alias (libsoup is already v3)
+  libsoup_3 = final.libsoup;
+  # GSSDP/GUPnP version aliases
+  gssdp_1_6 = final.gssdp;
+  gupnp_1_6 = final.gupnp;
+  # Stub for tinysparql until tracker is ported
+  tinysparql = null;
+  gtk4 =
+    (prev.gtk4.override {
+      trackerSupport = false;
+      vulkanSupport = false;
+    }).overrideAttrs
+      (old: {
+        nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
+      });
+  gtk3 =
+    (prev.gtk3.override {
+      trackerSupport = false;
+      withIntrospection = false;
+    }).overrideAttrs
+      (old: {
+        nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
+      });
 }

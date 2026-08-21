@@ -25,7 +25,8 @@ stdenv.mkDerivation (finalAttrs: {
   preConfigure = ''
     # Configure script is not in the root of the source directory
     cd build/generic
-  '' + lib.optionalString stdenv.hostPlatform.isDarwin ''
+  ''
+  + lib.optionalString stdenv.hostPlatform.isDarwin ''
     substituteInPlace configure --replace "-no-cpp-precomp" ""
   '';
 

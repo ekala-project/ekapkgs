@@ -25,8 +25,10 @@ makeSetupHook {
       librsvg
       gtk3
     ]
-    ++ lib.optionals (!stdenv.targetPlatform.isDarwin && lib.meta.availableOn stdenv.targetPlatform dconf) [
-      dconf.lib
-    ];
+    ++
+      lib.optionals (!stdenv.targetPlatform.isDarwin && lib.meta.availableOn stdenv.targetPlatform dconf)
+        [
+          dconf.lib
+        ];
   meta.license = lib.licenses.mit;
 } ./wrap-gapps-hook.sh

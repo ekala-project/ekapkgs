@@ -63,15 +63,15 @@ stdenv.mkDerivation rec {
     libxcrypt
   ];
 
-  env = lib.optionalAttrs
-    (stdenv.cc.isGNU && (lib.versionAtLeast (lib.getVersion stdenv.cc.cc) "14"))
-    {
-      NIX_CFLAGS_COMPILE = toString [
-        "-Wno-error=deprecated-declarations"
-        "-Wno-error=implicit-function-declaration"
-        "-Wno-error=return-mismatch"
-      ];
-    };
+  env =
+    lib.optionalAttrs (stdenv.cc.isGNU && (lib.versionAtLeast (lib.getVersion stdenv.cc.cc) "14"))
+      {
+        NIX_CFLAGS_COMPILE = toString [
+          "-Wno-error=deprecated-declarations"
+          "-Wno-error=implicit-function-declaration"
+          "-Wno-error=return-mismatch"
+        ];
+      };
 
   mesonFlags = [
     "-Dadmin_group=wheel"

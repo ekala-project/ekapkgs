@@ -30,20 +30,19 @@ stdenv.mkDerivation rec {
 
   separateDebugInfo = true;
 
-  buildInputs =
-    [
-      libepoxy
-    ]
-    ++ lib.optionals vaapiSupport [ libva ]
-    ++ lib.optionals vulkanSupport [
-      vulkan-headers
-      vulkan-loader
-    ]
-    ++ lib.optionals stdenv.hostPlatform.isLinux [
-      libGLU
-      libdrm
-      libgbm
-    ];
+  buildInputs = [
+    libepoxy
+  ]
+  ++ lib.optionals vaapiSupport [ libva ]
+  ++ lib.optionals vulkanSupport [
+    vulkan-headers
+    vulkan-loader
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
+    libGLU
+    libdrm
+    libgbm
+  ];
 
   nativeBuildInputs = [
     meson
@@ -55,11 +54,10 @@ stdenv.mkDerivation rec {
     ]))
   ];
 
-  mesonFlags =
-    [
-      (lib.mesonBool "video" vaapiSupport)
-      (lib.mesonBool "venus" vulkanSupport)
-    ];
+  mesonFlags = [
+    (lib.mesonBool "video" vaapiSupport)
+    (lib.mesonBool "venus" vulkanSupport)
+  ];
 
   meta = {
     description = "Virtual 3D GPU library that allows a qemu guest to use the host GPU for accelerated 3D rendering";

@@ -43,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/dhcpdump-org/dhcpdump";
     changelog = "https://github.com/dhcpdump-org/dhcpdump/releases/tag/v${finalAttrs.version}";
     platforms = lib.platforms.linux;
-    maintainers = with lib.maintainers; [ nickcao ];
+    maintainers = [ ];
     license = lib.licenses.bsd2;
     mainProgram = "dhcpdump";
   };

@@ -47,7 +47,8 @@ stdenv.mkDerivation rec {
     vulkan-headers
     vulkan-loader
     vulkan-volk
-  ] ++ lib.optionals (!stdenv.hostPlatform.isDarwin) [
+  ]
+  ++ lib.optionals (!stdenv.hostPlatform.isDarwin) [
     libffi
     libx11
     libxau

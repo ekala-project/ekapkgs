@@ -66,7 +66,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [
     "--enable-completion"
-  ] ++ lib.optional withUtempter "--with-utempter";
+  ]
+  ++ lib.optional withUtempter "--with-utempter";
 
   postInstall = ''
     wrapProgram $out/bin/mosh --prefix PERL5LIB : $PERL5LIB

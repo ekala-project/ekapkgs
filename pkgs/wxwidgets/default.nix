@@ -73,7 +73,8 @@ stdenv.mkDerivation rec {
     libsecret
     libxkbcommon
     xorgproto
-  ] ++ lib.optional withMesa libGLU;
+  ]
+  ++ lib.optional withMesa libGLU;
 
   configureFlags = [
     "--disable-precomp-headers"
@@ -86,9 +87,10 @@ stdenv.mkDerivation rec {
     "--disable-webview"
     (if compat28 then "--enable-compat28" else "--disable-compat28")
     (if compat30 then "--enable-compat30" else "--disable-compat30")
-  ] ++ lib.optional unicode "--enable-unicode"
-    ++ lib.optional withMesa "--with-opengl"
-    ++ [
+  ]
+  ++ lib.optional unicode "--enable-unicode"
+  ++ lib.optional withMesa "--with-opengl"
+  ++ [
     "--with-libcurl"
   ];
 

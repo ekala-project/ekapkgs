@@ -40,7 +40,8 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
     libburn
     libisofs
-  ] ++ lib.optionals stdenv.hostPlatform.isLinux [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     acl
     attr
   ];

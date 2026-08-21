@@ -28,7 +28,8 @@ stdenv.mkDerivation (finalAttrs: {
     lz4
     lzo
     openssl
-  ] ++ lib.optionals stdenv.hostPlatform.isLinux [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     libcap_ng
     libnl
     pam

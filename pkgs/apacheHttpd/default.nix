@@ -56,7 +56,8 @@ stdenv.mkDerivation rec {
     openssl
     libxml2
     openldap
-  ] ++ lib.optional stdenv.hostPlatform.isDarwin libiconv;
+  ]
+  ++ lib.optional stdenv.hostPlatform.isDarwin libiconv;
 
   postPatch = ''
     sed -i config.layout -e "s|installbuilddir:.*|installbuilddir: $dev/share/build|"
@@ -83,7 +84,8 @@ stdenv.mkDerivation rec {
     "--enable-ssl"
     "--with-libxml2=${libxml2.dev}/include/libxml2"
     "--docdir=$(doc)/share/doc"
-  ] ++ lib.optionals (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) [
+  ]
+  ++ lib.optionals (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) [
     "ap_cv_void_ptr_lt_long=no"
   ];
 

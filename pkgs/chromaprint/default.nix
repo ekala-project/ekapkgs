@@ -33,7 +33,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     ffmpeg-headless
-  ] ++ lib.optionals stdenv.hostPlatform.isDarwin [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [
     zlib
   ];
 

@@ -34,15 +34,14 @@ stdenv.mkDerivation (finalAttrs: {
   # re-export PKG_CHECK_MODULES m4 macro used by sdl.m4
   propagatedNativeBuildInputs = [ pkg-config-unwrapped ];
 
-  buildInputs =
-    [
-      xorg.libX11
-      SDL2
-    ]
-    ++ lib.optionals stdenv.hostPlatform.isDarwin [
-      libiconv
-    ]
-    ++ lib.optionals openglSupport [ libGLU ];
+  buildInputs = [
+    xorg.libX11
+    SDL2
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [
+    libiconv
+  ]
+  ++ lib.optionals openglSupport [ libGLU ];
 
   postPatch = ''
     substituteInPlace CMakeLists.txt \

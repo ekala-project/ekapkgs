@@ -52,7 +52,8 @@ stdenv.mkDerivation rec {
     unbound
     openssl
     pcsclite
-  ] ++ lib.optionals stdenv.hostPlatform.isLinux [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     systemd.dev
     pam
     iptables
@@ -96,7 +97,8 @@ stdenv.mkDerivation rec {
     "--enable-unbound"
     "--enable-chapoly"
     "--enable-curl"
-  ] ++ lib.optionals stdenv.hostPlatform.isLinux [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     "--enable-farp"
     "--enable-dhcp"
     "--enable-systemd"
@@ -105,10 +107,12 @@ stdenv.mkDerivation rec {
     "--enable-forecast"
     "--enable-connmark"
     "--enable-af-alg"
-  ] ++ lib.optionals stdenv.hostPlatform.isx86_64 [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isx86_64 [
     "--enable-aesni"
     "--enable-rdrand"
-  ] ++ lib.optional (stdenv.hostPlatform.system == "i686-linux") "--enable-padlock";
+  ]
+  ++ lib.optional (stdenv.hostPlatform.system == "i686-linux") "--enable-padlock";
 
   installFlags = [
     "sysconfdir=${placeholder "out"}/etc"

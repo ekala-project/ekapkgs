@@ -46,32 +46,31 @@ stdenv.mkDerivation rec {
     python3.pkgs.pyparsing
   ];
 
-  buildInputs =
-    [
-      cyrus_sasl
-      glib
-      xorg.libXext
-      xorg.libXfixes
-      xorg.libXinerama
-      xorg.libXrandr
-      xorg.libXrender
-      libcacard
-      libjpeg
-      libopus
-      lz4
-      openssl
-      orc
-      pixman
-      python3.pkgs.pyparsing
-      spice-protocol
-      zlib
-    ]
-    ++ lib.optionals stdenv.hostPlatform.isLinux [
-      alsa-lib
-    ]
-    ++ lib.optionals stdenv.hostPlatform.isDarwin [
-      gdk-pixbuf
-    ];
+  buildInputs = [
+    cyrus_sasl
+    glib
+    xorg.libXext
+    xorg.libXfixes
+    xorg.libXinerama
+    xorg.libXrandr
+    xorg.libXrender
+    libcacard
+    libjpeg
+    libopus
+    lz4
+    openssl
+    orc
+    pixman
+    python3.pkgs.pyparsing
+    spice-protocol
+    zlib
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
+    alsa-lib
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [
+    gdk-pixbuf
+  ];
 
   env.NIX_CFLAGS_COMPILE = "-fno-stack-protector";
 

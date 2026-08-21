@@ -9,7 +9,8 @@
 }:
 
 let
-  numaSupport = stdenv.hostPlatform.isLinux && (stdenv.hostPlatform.isx86 || stdenv.hostPlatform.isAarch64);
+  numaSupport =
+    stdenv.hostPlatform.isLinux && (stdenv.hostPlatform.isx86 || stdenv.hostPlatform.isAarch64);
   multibitdepthSupport = stdenv.hostPlatform.is64bit;
   isCross = stdenv.buildPlatform != stdenv.hostPlatform;
 in
@@ -63,14 +64,16 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
     nasm
-  ] ++ lib.optionals numaSupport [ numactl ];
+  ]
+  ++ lib.optionals numaSupport [ numactl ];
 
   cmakeFlags = [
     (lib.cmakeBool "ENABLE_ALPHA" true)
     (lib.cmakeBool "ENABLE_MULTIVIEW" true)
     (lib.cmakeBool "ENABLE_SCC_EXT" true)
     "-Wno-dev"
-  ] ++ lib.optionals stdenv.hostPlatform.isPower [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isPower [
     (lib.cmakeBool "ENABLE_ALTIVEC" false)
     (lib.cmakeBool "CPU_POWER8" (stdenv.hostPlatform.isPower64 && stdenv.hostPlatform.isLittleEndian))
   ];
@@ -80,7 +83,8 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.cmakeBool "ENABLE_CLI" false)
     (lib.cmakeBool "ENABLE_SHARED" false)
     (lib.cmakeBool "EXPORT_C_API" false)
-  ] ++ lib.optionals isCross [
+  ]
+  ++ lib.optionals isCross [
     (lib.cmakeBool "CROSS_COMPILE_ARM" stdenv.hostPlatform.isAarch32)
     (lib.cmakeBool "CROSS_COMPILE_ARM64" stdenv.hostPlatform.isAarch64)
   ];

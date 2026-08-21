@@ -29,7 +29,8 @@ stdenv.mkDerivation (finalAttrs: {
     boost
     libGL
     libGLU
-  ] ++ lib.optional stdenv.hostPlatform.isLinux xorg.libX11;
+  ]
+  ++ lib.optional stdenv.hostPlatform.isLinux xorg.libX11;
 
   cmakeFlags = [ "-DCOIN_USE_CPACK=OFF" ];
 

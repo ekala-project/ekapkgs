@@ -30,7 +30,7 @@ let
           free
           unfree
         ];
-        maintainers = with lib.maintainers; [ peterhoeg ];
+        maintainers = [ ];
         platforms = with lib.platforms; linux;
         hydraPlatforms = [ ];
       };

@@ -55,7 +55,8 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     libsepol
     pcre2
-  ] ++ lib.optionals (fts != null) [ fts ];
+  ]
+  ++ lib.optionals (fts != null) [ fts ];
 
   # drop fortify here since package uses it by default, leading to compile error:
   # command-line>:0:0: error: "_FORTIFY_SOURCE" redefined [-Werror]
@@ -63,11 +64,12 @@ stdenv.mkDerivation (finalAttrs: {
 
   env = {
     NIX_CFLAGS_COMPILE = "-Wno-error -D_FILE_OFFSET_BITS=64";
-  } // lib.optionalAttrs
-    (stdenv.cc.bintools.isLLVM && lib.versionAtLeast stdenv.cc.bintools.version "17")
-    {
-      NIX_LDFLAGS = "--undefined-version";
-    };
+  }
+  //
+    lib.optionalAttrs (stdenv.cc.bintools.isLLVM && lib.versionAtLeast stdenv.cc.bintools.version "17")
+      {
+        NIX_LDFLAGS = "--undefined-version";
+      };
 
   makeFlags = [
     "PREFIX=$(out)"
@@ -81,9 +83,11 @@ stdenv.mkDerivation (finalAttrs: {
 
     "LIBSEPOLA=${lib.getLib libsepol}/lib/libsepol.a"
     "ARCH=${stdenv.hostPlatform.linuxArch}"
-  ] ++ lib.optionals (fts != null) [
+  ]
+  ++ lib.optionals (fts != null) [
     "FTS_LDLIBS=-lfts"
-  ] ++ lib.optionals stdenv.hostPlatform.isStatic [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isStatic [
     "DISABLE_SHARED=y"
   ];
 

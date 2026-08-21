@@ -85,76 +85,72 @@ stdenv.mkDerivation rec {
     buildPackages.stdenv.cc
   ];
 
-  nativeBuildInputs =
-    [
-      pkg-config
-      autoconf
-      zlib
-    ]
-    ++ lib.optional cupsSupport cups;
+  nativeBuildInputs = [
+    pkg-config
+    autoconf
+    zlib
+  ]
+  ++ lib.optional cupsSupport cups;
 
-  buildInputs =
-    [
-      zlib
-      expat
-      openssl
-      libjpeg
-      libpng
-      libtiff
-      freetype
-      fontconfig
-      libpaper
-      jbig2dec
-      libiconv
-      lcms2
-      bash
-      openjpeg
-    ]
-    ++ lib.optionals x11Support [
-      xorg.libICE
-      xorg.libX11
-      xorg.libXext
-      xorg.libXt
-    ]
-    ++ lib.optional cupsSupport cups;
+  buildInputs = [
+    zlib
+    expat
+    openssl
+    libjpeg
+    libpng
+    libtiff
+    freetype
+    fontconfig
+    libpaper
+    jbig2dec
+    libiconv
+    lcms2
+    bash
+    openjpeg
+  ]
+  ++ lib.optionals x11Support [
+    xorg.libICE
+    xorg.libX11
+    xorg.libXext
+    xorg.libXt
+  ]
+  ++ lib.optional cupsSupport cups;
 
-  preConfigure =
-    ''
-      # https://ghostscript.com/doc/current/Make.htm
-      export CCAUX=$CC_FOR_BUILD
-      ${lib.optionalString cupsSupport ''export CUPSCONFIG="${cups.dev}/bin/cups-config"''}
+  preConfigure = ''
+    # https://ghostscript.com/doc/current/Make.htm
+    export CCAUX=$CC_FOR_BUILD
+    ${lib.optionalString cupsSupport ''export CUPSCONFIG="${cups.dev}/bin/cups-config"''}
 
-      rm -rf jpeg libpng zlib jasper expat tiff lcms2mt jbig2dec freetype cups/libs openjpeg
+    rm -rf jpeg libpng zlib jasper expat tiff lcms2mt jbig2dec freetype cups/libs openjpeg
 
-      sed "s@if ( test -f \$(INCLUDE)[^ ]* )@if ( true )@; s@INCLUDE=/usr/include@INCLUDE=/no-such-path@" -i base/unix-aux.mak
-      sed "s@^ZLIBDIR=.*@ZLIBDIR=${zlib.dev}/include@" -i configure.ac
+    sed "s@if ( test -f \$(INCLUDE)[^ ]* )@if ( true )@; s@INCLUDE=/usr/include@INCLUDE=/no-such-path@" -i base/unix-aux.mak
+    sed "s@^ZLIBDIR=.*@ZLIBDIR=${zlib.dev}/include@" -i configure.ac
 
-      # Sidestep a bug in autoconf-2.69 that sets the compiler for all checks to
-      # $CXX after the part for the vendored copy of tesseract.
-      substituteInPlace configure.ac \
-        --replace-fail "--without-x" "--without-x --without-tesseract"
+    # Sidestep a bug in autoconf-2.69 that sets the compiler for all checks to
+    # $CXX after the part for the vendored copy of tesseract.
+    substituteInPlace configure.ac \
+      --replace-fail "--without-x" "--without-x --without-tesseract"
 
-      autoconf
-    ''
-    + lib.optionalString stdenv.hostPlatform.isDarwin ''
-      export DARWIN_LDFLAGS_SO_PREFIX=$out/lib/
-    '';
+    autoconf
+  ''
+  + lib.optionalString stdenv.hostPlatform.isDarwin ''
+    export DARWIN_LDFLAGS_SO_PREFIX=$out/lib/
+  '';
 
-  configureFlags =
-    [
-      "--with-system-libtiff"
-      "--without-tesseract"
-    ]
-    ++ lib.optionals dynamicDrivers [
-      "--enable-dynamic"
-      "--disable-hidden-visibility"
-    ]
-    ++ lib.optionals x11Support [
-      "--with-x"
-    ]
-    ++ lib.optionals cupsSupport [
-      "--enable-cups"
-    ];
+  configureFlags = [
+    "--with-system-libtiff"
+    "--without-tesseract"
+  ]
+  ++ lib.optionals dynamicDrivers [
+    "--enable-dynamic"
+    "--disable-hidden-visibility"
+  ]
+  ++ lib.optionals x11Support [
+    "--with-x"
+  ]
+  ++ lib.optionals cupsSupport [
+    "--enable-cups"
+  ];
 
   # make check does nothing useful
   doCheck = false;

@@ -26,16 +26,15 @@ stdenv.mkDerivation rec {
 
   pythonPath = [ ];
 
-  nativeBuildInputs =
-    [
-      bison
-      cmake
-      cmake.configurePhaseHook
-      flex
-      pkg-config
-      python3
-      python3.pkgs.setuptools
-    ];
+  nativeBuildInputs = [
+    bison
+    cmake
+    cmake.configurePhaseHook
+    flex
+    pkg-config
+    python3
+    python3.pkgs.setuptools
+  ];
 
   buildInputs = [
     boost
@@ -82,16 +81,15 @@ stdenv.mkDerivation rec {
     })
   ];
 
-  cmakeFlags =
-    [
-      "-DBUILD_JAVASCRIPT:BOOL=OFF"
-      "-DBUILD_NODEJS:BOOL=OFF"
-      "-DBUILD_TESTING:BOOL=OFF"
-    ]
-    ++ lib.optionals static [
-      "-DWITH_STATIC_LIB:BOOL=ON"
-      "-DOPENSSL_USE_STATIC_LIBS=ON"
-    ];
+  cmakeFlags = [
+    "-DBUILD_JAVASCRIPT:BOOL=OFF"
+    "-DBUILD_NODEJS:BOOL=OFF"
+    "-DBUILD_TESTING:BOOL=OFF"
+  ]
+  ++ lib.optionals static [
+    "-DWITH_STATIC_LIB:BOOL=ON"
+    "-DOPENSSL_USE_STATIC_LIBS=ON"
+  ];
 
   disabledTests = [
     "PythonTestSSLSocket"

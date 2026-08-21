@@ -31,7 +31,8 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   buildInputs = [
     libgit2
-  ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ zlib ];
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [ zlib ];
 
   buildFeatures = [ "clipboard" ];
 
