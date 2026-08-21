@@ -66,6 +66,11 @@
         in
         eval;
 
+      ekaosConfigurations.jonringer = self.ekaosSystem {
+        system = "x86_64-linux";
+        modules = [ ./ekaos/configuration.nix ];
+      };
+
       formatter = corepkgs.formatter;
       nixConfig = {
         extra-substituters = [ "https://ekala-corepkgs.cachix.org" ];
