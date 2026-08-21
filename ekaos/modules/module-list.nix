@@ -657,4 +657,5 @@
   ./services/transmission.nix
   ./services/libvirtd.nix
   ./services/xserver.nix
+  ./services/lightdm.nix
 ]
