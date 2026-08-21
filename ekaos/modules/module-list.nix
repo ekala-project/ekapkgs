@@ -655,4 +655,5 @@
   ./services/ollama.nix
   ./services/plex.nix
   ./services/transmission.nix
+  ./services/libvirtd.nix
 ]
