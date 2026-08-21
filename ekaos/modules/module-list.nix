@@ -653,4 +653,5 @@
   # Services
   ./services/kubo.nix
   ./services/ollama.nix
+  ./services/plex.nix
 ]
