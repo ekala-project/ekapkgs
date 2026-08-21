@@ -253,14 +253,14 @@ in
     };
 
     # Install X.org utilities
-    environment.systemPackages = with pkgs.xorg; [
-      xorgserver
-      xauth
-      xinit
-      xrandr
-      xset
-      xkbcomp
-      xkeyboardconfig
+    environment.systemPackages = [
+      pkgs.xorg.xorgserver
+      pkgs.xauth
+      pkgs.xorg.xinit
+      pkgs.xrandr
+      pkgs.xset
+      pkgs.xkbcomp
+      pkgs.xkeyboard-config
     ] ++ cfg.modules
       ++ optional cfg.libinput.enable pkgs.xorg.xf86inputlibinput;
 

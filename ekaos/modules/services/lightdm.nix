@@ -11,8 +11,7 @@ with lib;
 let
   cfg = config.services.xserver.displayManager.lightdm;
 
-  # Generate lightdm.conf
-  lightdmConf = pkgs.writeText "lightdm.conf" ''
+  lightdmConf = ''
     [LightDM]
     minimum-vt=7
 
@@ -43,7 +42,7 @@ in
     greeter = {
       package = mkOption {
         type = types.package;
-        default = pkgs.lightdm-gtk-greeter;
+        default = pkgs.lightdm-gtk-greeter or pkgs.lightdm;
         description = "Greeter package to use with LightDM.";
       };
 
@@ -63,7 +62,7 @@ in
     extraSeatDefaults = mkOption {
       type = types.lines;
       default = "";
-      description = "Extra lines appended to the [Seat:*] section of lightdm.conf.";
+      description = "Extra lines appended to the [Seat:*] section.";
     };
   };
 
@@ -75,46 +74,21 @@ in
       }
     ];
 
-    # Implicitly enable the X server when LightDM is enabled
     services.xserver.enable = mkDefault true;
 
-    # Register lightdm as a service contract
-    services.lightdm = {
-      enable = true;
-      description = "LightDM Display Manager";
-      command = "${cfg.package}/bin/lightdm";
-      args = [ "--config" "/etc/lightdm/lightdm.conf" ];
-      user = "root";
-      restartPolicy = "always";
-
-      systemd = {
-        after = [ "systemd-udev-settle.service" "getty@tty7.service" ];
-        wantedBy = [ "graphical.target" ];
-        serviceConfig = {
-          Type = "simple";
-        };
-      };
-    };
-
-    # Write lightdm.conf
     environment.etc."lightdm/lightdm.conf" = {
-      text = builtins.readFile lightdmConf;
+      text = lightdmConf;
       mode = "0644";
     };
 
-    # PAM configuration for lightdm
     security.pam.services.lightdm = {
       text = ''
-        # PAM configuration for lightdm
         auth      required    pam_env.so
         auth      required    pam_unix.so nullok
         auth      required    pam_deny.so
-
         account   required    pam_unix.so
         account   required    pam_nologin.so
-
         password  required    pam_unix.so sha512 shadow
-
         session   required    pam_unix.so
         session   required    pam_limits.so
         session   optional    pam_systemd.so
@@ -124,20 +98,15 @@ in
 
     security.pam.services.lightdm-greeter = {
       text = ''
-        # PAM configuration for lightdm-greeter
         auth      required    pam_env.so
         auth      sufficient  pam_permit.so
-
         account   required    pam_permit.so
-
         password  required    pam_deny.so
-
         session   required    pam_unix.so
         session   optional    pam_systemd.so
       '';
     };
 
-    # Create lightdm user and group
     users.users.lightdm = {
       isSystemUser = true;
       home = "/var/lib/lightdm";
@@ -146,25 +115,15 @@ in
     };
     users.groups.lightdm = { };
 
-    # Install LightDM and greeter packages
     environment.systemPackages = [
       cfg.package
       cfg.greeter.package
     ];
 
-    # Create required directories
     system.activationScripts.lightdm = stringAfter [ "etc" "users" ] ''
-      mkdir -p /var/lib/lightdm
-      mkdir -p /var/log/lightdm
-      mkdir -p /var/cache/lightdm
-
-      chown lightdm:lightdm /var/lib/lightdm
-      chown lightdm:lightdm /var/log/lightdm
-      chown lightdm:lightdm /var/cache/lightdm
-
-      chmod 750 /var/lib/lightdm
-      chmod 750 /var/log/lightdm
-      chmod 750 /var/cache/lightdm
+      mkdir -p /var/lib/lightdm /var/log/lightdm /var/cache/lightdm
+      chown lightdm:lightdm /var/lib/lightdm /var/log/lightdm /var/cache/lightdm
+      chmod 750 /var/lib/lightdm /var/log/lightdm /var/cache/lightdm
     '';
   };
 }

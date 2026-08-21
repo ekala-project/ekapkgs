@@ -1,5 +1,5 @@
 # AT-SPI2 accessibility service
-# D-Bus activated — no service contract needed
+# D-Bus activated — installs package and sets environment
 {
   config,
   lib,
@@ -29,16 +29,11 @@ in
   };
 
   config = mkIf cfg.enable {
-    # Install at-spi2-core package
     environment.systemPackages = [ cfg.package ];
 
-    # Set accessibility environment variables
     environment.variables = {
       NO_AT_BRIDGE = "0";
       GTK_A11Y = "atspi";
     };
-
-    # Ensure D-Bus can find the at-spi2 service files
-    services.dbus.packages = [ cfg.package ];
   };
 }

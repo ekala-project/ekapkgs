@@ -39,63 +39,31 @@ in
       qemuPackage = mkOption {
         type = types.nullOr types.package;
         default = if hasQemu then pkgs.qemu else null;
-        description = ''
-          QEMU package to use for KVM virtual machines.
-
-          Set to null to disable QEMU support.
-        '';
+        description = "QEMU package to use for KVM virtual machines.";
       };
 
       allowedBridges = mkOption {
         type = types.listOf types.str;
         default = [ "virbr0" ];
-        example = [ "virbr0" "br0" ];
-        description = ''
-          List of bridge interfaces that QEMU is allowed to use.
-        '';
+        description = "List of bridge interfaces QEMU is allowed to use.";
       };
 
       onBoot = mkOption {
         type = types.enum [ "start" "ignore" ];
         default = "start";
-        description = ''
-          Action to take on VMs when the host boots.
-
-          "start" will resume VMs that were running before shutdown.
-          "ignore" will leave VMs in their current state.
-        '';
+        description = "Action to take on VMs when the host boots.";
       };
 
       onShutdown = mkOption {
         type = types.enum [ "shutdown" "suspend" ];
         default = "suspend";
-        description = ''
-          Action to take on VMs when the host shuts down.
-
-          "shutdown" will attempt a clean shutdown of all running VMs.
-          "suspend" will save the state of running VMs to disk.
-        '';
+        description = "Action to take on VMs when the host shuts down.";
       };
     };
   };
 
   config = mkIf cfg.enable {
-    # Register as a service so the systemd service manager picks it up
-    services.libvirtd = {
-      enable = true;
-      description = "Libvirt Virtualization Daemon";
-      command = "${cfg.package}/bin/libvirtd";
-      args = [ "--daemon=no" ];
-      user = "root";
-      restartPolicy = "on-failure";
-
-      systemd = {
-        after = [ "network.target" "dbus.service" ];
-        wantedBy = [ "multi-user.target" ];
-      };
-    };
-
-    # Create libvirtd group (users in this group can manage VMs)
+    # Create libvirtd group
     users.groups.libvirtd = { };
 
     # Add libvirt and optionally qemu to system packages
@@ -107,16 +75,9 @@ in
 
     # Create required directories
     system.activationScripts.libvirtd = stringAfter [ "etc" "users" ] ''
-      # Create libvirt directories
-      mkdir -p /var/lib/libvirt
-      mkdir -p /var/lib/libvirt/images
-      mkdir -p /var/lib/libvirt/qemu
-      mkdir -p /var/lib/libvirt/network
-      mkdir -p /var/log/libvirt
-      mkdir -p /var/log/libvirt/qemu
+      mkdir -p /var/lib/libvirt /var/lib/libvirt/images /var/lib/libvirt/qemu
+      mkdir -p /var/lib/libvirt/network /var/log/libvirt /var/log/libvirt/qemu
       mkdir -p /run/libvirt
-
-      # Set proper permissions
       chmod 755 /var/lib/libvirt
       chmod 711 /var/lib/libvirt/images
       chmod 750 /var/log/libvirt
