@@ -46,8 +46,8 @@ stdenv.mkDerivation rec {
     "--disable-oss"
     "--disable-gstreamer"
     "--with-builtin=dso"
-  ] ++ lib.optional stdenv.hostPlatform.isLinux
-    "--with-systemdsystemunitdir=${placeholder "out"}/lib/systemd/system";
+  ]
+  ++ lib.optional stdenv.hostPlatform.isLinux "--with-systemdsystemunitdir=${placeholder "out"}/lib/systemd/system";
 
   patches = [
     (fetchpatch {

@@ -73,7 +73,8 @@ stdenv.mkDerivation (finalAttrs: {
     librsvg
     check
     json-glib
-  ] ++ lib.optional stdenv.hostPlatform.isLinux libseccomp;
+  ]
+  ++ lib.optional stdenv.hostPlatform.isLinux libseccomp;
 
   doCheck = false;
 

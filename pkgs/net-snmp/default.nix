@@ -33,7 +33,8 @@ stdenv.mkDerivation rec {
     "--with-openssl=${openssl.dev}"
     "--disable-embedded-perl"
     "--without-perl-modules"
-  ] ++ lib.optional stdenv.hostPlatform.isLinux "--with-mnttab=/proc/mounts";
+  ]
+  ++ lib.optional stdenv.hostPlatform.isLinux "--with-mnttab=/proc/mounts";
 
   postConfigure = ''
     # libraries contain configure options. Mangle store paths out from

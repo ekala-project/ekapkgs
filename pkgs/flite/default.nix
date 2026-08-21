@@ -40,7 +40,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [
     "--enable-shared"
-  ] ++ lib.optionals stdenv.hostPlatform.isLinux [ "--with-audio=alsa" ];
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ "--with-audio=alsa" ];
 
   enableParallelBuilding = false;
 

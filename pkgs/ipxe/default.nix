@@ -63,14 +63,16 @@ stdenv.mkDerivation (finalAttrs: {
     "ECHO_E_BIN_ECHO=echo"
     "ECHO_E_BIN_ECHO_E=echo"
     "CROSS=${stdenv.cc.targetPrefix}"
-  ] ++ lib.optional (embedScript != null) "EMBED=${embedScript}";
+  ]
+  ++ lib.optional (embedScript != null) "EMBED=${embedScript}";
 
   enabledOptions = [
     "PING_CMD"
     "IMAGE_TRUST_CMD"
     "DOWNLOAD_PROTO_HTTP"
     "DOWNLOAD_PROTO_HTTPS"
-  ] ++ additionalOptions;
+  ]
+  ++ additionalOptions;
 
   configurePhase = ''
     runHook preConfigure

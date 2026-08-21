@@ -31,7 +31,13 @@ stdenv.mkDerivation rec {
   pname = "shaderc";
   version = "2024.0";
 
-  outputs = [ "out" "lib" "bin" "dev" "static" ];
+  outputs = [
+    "out"
+    "lib"
+    "bin"
+    "dev"
+    "static"
+  ];
 
   src = fetchFromGitHub {
     owner = "google";

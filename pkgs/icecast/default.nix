@@ -32,7 +32,6 @@ stdenv.mkDerivation rec {
     libopus
   ];
 
-
   meta = {
     description = "Server software for streaming multimedia";
     mainProgram = "icecast";

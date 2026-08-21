@@ -43,7 +43,8 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     makeWrapper
     python3
-  ] ++ lib.optionals withIntrospection [
+  ]
+  ++ lib.optionals withIntrospection [
     gobject-introspection
   ];
 
@@ -65,7 +66,8 @@ stdenv.mkDerivation (finalAttrs: {
   mesonFlags = [
     "-Ddbus_daemon=/run/current-system/sw/bin/dbus-daemon"
     "-Duse_systemd=false"
-  ] ++ lib.optionals (!withIntrospection) [
+  ]
+  ++ lib.optionals (!withIntrospection) [
     (lib.mesonEnable "introspection" false)
   ];
 

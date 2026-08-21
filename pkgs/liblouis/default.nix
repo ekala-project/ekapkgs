@@ -16,14 +16,13 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "liblouis";
   version = "3.33.0";
 
-  outputs =
-    [
-      "out"
-      "dev"
-      "info"
-      "doc"
-    ]
-    ++ lib.optionals (stdenv.hostPlatform == stdenv.buildPlatform) [ "man" ];
+  outputs = [
+    "out"
+    "dev"
+    "info"
+    "doc"
+  ]
+  ++ lib.optionals (stdenv.hostPlatform == stdenv.buildPlatform) [ "man" ];
 
   src = fetchFromGitHub {
     owner = "liblouis";

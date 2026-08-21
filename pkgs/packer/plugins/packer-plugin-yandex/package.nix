@@ -22,6 +22,6 @@ mkPackerPlugin (finalAttrs: {
     description = "Packer plugin for Yandex Cloud";
     homepage = "https://github.com/hashicorp/packer-plugin-yandex";
     license = lib.licenses.mpl20;
-    maintainers = with lib.maintainers; [ jlesquembre ];
+    maintainers = [ ];
   };
 })

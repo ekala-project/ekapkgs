@@ -22,6 +22,6 @@ mkPackerPlugin (finalAttrs: {
     description = "Packer plugin for KubeVirt";
     homepage = "https://github.com/hashicorp/packer-plugin-kubevirt";
     license = lib.licenses.mpl20;
-    maintainers = with lib.maintainers; [ jlesquembre ];
+    maintainers = [ ];
   };
 })

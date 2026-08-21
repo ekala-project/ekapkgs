@@ -26,11 +26,10 @@ stdenv.mkDerivation (finalAttrs: {
     done
   '';
 
-  buildInputs =
-    lib.optionals stdenv.hostPlatform.isLinux [
-      systemd
-      parted
-    ];
+  buildInputs = lib.optionals stdenv.hostPlatform.isLinux [
+    systemd
+    parted
+  ];
 
   buildFlags = [
     "all"

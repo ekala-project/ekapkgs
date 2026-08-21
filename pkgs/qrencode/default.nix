@@ -52,7 +52,8 @@ stdenv.mkDerivation (finalAttrs: {
     tests = finalAttrs.finalPackage.overrideAttrs {
       configureFlags = [ "--with-tests" ];
       doCheck = true;
-    };  };
+    };
+  };
 
   meta = {
     homepage = "https://fukuchi.org/works/qrencode/";

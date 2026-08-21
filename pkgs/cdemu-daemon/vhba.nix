@@ -41,6 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://cdemu.sourceforge.io/about/vhba/";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Plus;
-    maintainers = with lib.maintainers; [ bendlas ];
+    maintainers = [ ];
   };
 })

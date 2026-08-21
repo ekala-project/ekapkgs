@@ -22,6 +22,6 @@ mkPackerPlugin (finalAttrs: {
     description = "Packer plugin for HyperOne";
     homepage = "https://github.com/hashicorp/packer-plugin-hyperone";
     license = lib.licenses.mpl20;
-    maintainers = with lib.maintainers; [ jlesquembre ];
+    maintainers = [ ];
   };
 })

@@ -26,7 +26,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     openssl
-  ] ++ lib.optionals systemdSupport [
+  ]
+  ++ lib.optionals systemdSupport [
     systemdLibs
   ];
 

@@ -34,13 +34,12 @@ stdenv.mkDerivation rec {
     tcl
   ];
 
-  buildInputs =
-    [
-      bluez
-      ncurses.dev
-    ]
-    ++ lib.optional alsaSupport alsa-lib
-    ++ lib.optional systemdSupport systemd;
+  buildInputs = [
+    bluez
+    ncurses.dev
+  ]
+  ++ lib.optional alsaSupport alsa-lib
+  ++ lib.optional systemdSupport systemd;
 
   makeFlags = [
     "PYTHON_PREFIX=$(out)"

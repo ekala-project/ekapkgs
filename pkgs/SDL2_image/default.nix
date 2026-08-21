@@ -31,32 +31,30 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  buildInputs =
-    [
-      SDL2
-      libtiff
-      libwebp
-      zlib
-    ]
-    ++ lib.optionals (!enableSTB) [
-      libjpeg
-      libpng
-    ];
+  buildInputs = [
+    SDL2
+    libtiff
+    libwebp
+    zlib
+  ]
+  ++ lib.optionals (!enableSTB) [
+    libjpeg
+    libpng
+  ];
 
-  configureFlags =
-    [
-      # Disable dynamically loaded dependencies
-      (lib.enableFeature false "jpg-shared")
-      (lib.enableFeature false "png-shared")
-      (lib.enableFeature false "tif-shared")
-      (lib.enableFeature false "webp-shared")
-      (lib.enableFeature enableSTB "stb-image")
-      (lib.enableFeature enableSdltest "sdltest")
-    ]
-    ++ lib.optionals stdenv.hostPlatform.isDarwin [
-      # Don't use native macOS frameworks
-      (lib.enableFeature false "imageio")
-    ];
+  configureFlags = [
+    # Disable dynamically loaded dependencies
+    (lib.enableFeature false "jpg-shared")
+    (lib.enableFeature false "png-shared")
+    (lib.enableFeature false "tif-shared")
+    (lib.enableFeature false "webp-shared")
+    (lib.enableFeature enableSTB "stb-image")
+    (lib.enableFeature enableSdltest "sdltest")
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [
+    # Don't use native macOS frameworks
+    (lib.enableFeature false "imageio")
+  ];
 
   strictDeps = true;
 

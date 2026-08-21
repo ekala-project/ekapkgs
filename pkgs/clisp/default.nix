@@ -20,15 +20,14 @@
   threadSupport ? stdenv.hostPlatform.isx86,
   x11Support ? stdenv.hostPlatform.isx86,
   dllSupport ? true,
-  withModules ?
-    [
-      "asdf"
-      "pcre"
-      "rawsock"
-      "bindings/glibc"
-      "zlib"
-    ]
-    ++ lib.optional x11Support "clx/new-clx",
+  withModules ? [
+    "asdf"
+    "pcre"
+    "rawsock"
+    "bindings/glibc"
+    "zlib"
+  ]
+  ++ lib.optional x11Support "clx/new-clx",
 }:
 
 let
@@ -64,7 +63,8 @@ stdenv.mkDerivation {
     readline
     libffi
     libffcall
-  ] ++ lib.optionals x11Support [
+  ]
+  ++ lib.optionals x11Support [
     xorg.libX11
     xorg.libXau
     xorg.libXt

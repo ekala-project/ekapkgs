@@ -49,7 +49,8 @@ stdenv.mkDerivation (finalAttrs: {
     goffice
     gtk3
     adwaita-icon-theme
-  ] ++ (with perlPackages; [
+  ]
+  ++ (with perlPackages; [
     perl
     XMLParser
   ]);

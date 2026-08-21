@@ -22,6 +22,6 @@ mkPackerPlugin (finalAttrs: {
     description = "Packer plugin for Vagrant";
     homepage = "https://github.com/hashicorp/packer-plugin-vagrant";
     license = lib.licenses.mpl20;
-    maintainers = with lib.maintainers; [ jlesquembre ];
+    maintainers = [ ];
   };
 })

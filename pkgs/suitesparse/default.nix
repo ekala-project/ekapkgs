@@ -47,7 +47,8 @@ stdenv.mkDerivation rec {
     "INSTALL_INCLUDE=${placeholder "dev"}/include"
     "JOBS=$(NIX_BUILD_CORES)"
     "MY_METIS_LIB=-lmetis"
-  ] ++ lib.optionals blas.isILP64 [
+  ]
+  ++ lib.optionals blas.isILP64 [
     "CFLAGS=-DBLAS64"
   ];
 

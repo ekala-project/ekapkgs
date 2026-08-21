@@ -27,10 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [
     "--with-audio=${
-      lib.concatStringsSep "," (
-        lib.optional stdenv.hostPlatform.isLinux "alsa"
-        ++ [ "dummy" ]
-      )
+      lib.concatStringsSep "," (lib.optional stdenv.hostPlatform.isLinux "alsa" ++ [ "dummy" ])
     }"
   ];
 

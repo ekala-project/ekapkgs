@@ -41,7 +41,8 @@ stdenv.mkDerivation (finalAttrs: {
   outputs = [
     "out"
     "man"
-  ] ++ lib.optionals stdenv.hostPlatform.isLinux [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     "python"
   ];
 

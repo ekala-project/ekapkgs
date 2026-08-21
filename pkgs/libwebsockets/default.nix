@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail '"''${CMAKE_INSTALL_PREFIX}/''${LWS_INSTALL_LIB_DIR}"' '"''${CMAKE_INSTALL_FULL_LIBDIR}"'
   '';
 
-
   meta = {
     description = "Light, portable C library for websockets";
     homepage = "https://libwebsockets.org/";

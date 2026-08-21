@@ -39,19 +39,18 @@ stdenv.mkDerivation (finalAttrs: {
     python3
   ];
 
-  buildInputs =
-    [
-      jansson
-      pcre
-      libxcrypt
-    ]
-    ++ lib.optionals (stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isAarch64) [
-      expat
-      zlib
-    ]
-    ++ lib.optional withPAM pam
-    ++ lib.optional withSystemd systemd
-    ++ lib.optional withCap libcap;
+  buildInputs = [
+    jansson
+    pcre
+    libxcrypt
+  ]
+  ++ lib.optionals (stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isAarch64) [
+    expat
+    zlib
+  ]
+  ++ lib.optional withPAM pam
+  ++ lib.optional withSystemd systemd
+  ++ lib.optional withCap libcap;
 
   basePlugins = lib.concatStringsSep "," (
     lib.optional withPAM "pam" ++ lib.optional withSystemd "systemd_logger"

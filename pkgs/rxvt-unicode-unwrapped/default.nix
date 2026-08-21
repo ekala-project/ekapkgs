@@ -30,22 +30,21 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [ pkg-config ];
-  buildInputs =
-    [
-      libx11
-      libxt
-      libxft
-      ncurses
-      fontconfig
-      freetype
-      libxrender
-      libptytty
-    ]
-    ++ lib.optionals perlSupport [
-      perl
-      libxext
-    ]
-    ++ lib.optional gdkPixbufSupport gdk-pixbuf;
+  buildInputs = [
+    libx11
+    libxt
+    libxft
+    ncurses
+    fontconfig
+    freetype
+    libxrender
+    libptytty
+  ]
+  ++ lib.optionals perlSupport [
+    perl
+    libxext
+  ]
+  ++ lib.optional gdkPixbufSupport gdk-pixbuf;
 
   outputs = [
     "out"
@@ -55,7 +54,8 @@ stdenv.mkDerivation rec {
   patches = [
     ./patches/9.06-font-width.patch
     ./patches/256-color-resources.patch
-  ] ++ lib.optional (perlSupport && lib.versionAtLeast perl.version "5.38") (fetchpatch {
+  ]
+  ++ lib.optional (perlSupport && lib.versionAtLeast perl.version "5.38") (fetchpatch {
     name = "perl538-locale-c.patch";
     url = "https://github.com/exg/rxvt-unicode/commit/16634bc8dd5fc4af62faf899687dfa8f27768d15.patch";
     excludes = [ "Changes" ];
@@ -76,18 +76,17 @@ stdenv.mkDerivation rec {
   ];
   CFLAGS = [ "-I${freetype.dev}/include/freetype2" ];
 
-  preConfigure =
-    ''
-      # without this the terminfo won't be compiled by tic, see man tic
-      mkdir -p $terminfo/share/terminfo
-      export TERMINFO=$terminfo/share/terminfo
-    ''
-    + lib.optionalString perlSupport ''
-      # make urxvt find its perl file lib/perl5/site_perl
-      # is added to PERL5LIB automatically
-      mkdir -p $out/$(dirname ${perl.libPrefix})
-      ln -s $out/lib/urxvt $out/${perl.libPrefix}
-    '';
+  preConfigure = ''
+    # without this the terminfo won't be compiled by tic, see man tic
+    mkdir -p $terminfo/share/terminfo
+    export TERMINFO=$terminfo/share/terminfo
+  ''
+  + lib.optionalString perlSupport ''
+    # make urxvt find its perl file lib/perl5/site_perl
+    # is added to PERL5LIB automatically
+    mkdir -p $out/$(dirname ${perl.libPrefix})
+    ln -s $out/lib/urxvt $out/${perl.libPrefix}
+  '';
 
   postInstall = ''
     mkdir -p $out/nix-support

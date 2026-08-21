@@ -38,7 +38,8 @@ stdenv.mkDerivation (finalAttrs: {
     groff
     texinfo
     pkg-config
-  ] ++ lib.optionals stdenv.hostPlatform.isLinux [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     util-linuxMinimal
     # TODO(ekapkgs): yodl missing, man pages may not build
   ];

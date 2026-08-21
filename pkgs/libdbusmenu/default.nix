@@ -34,7 +34,8 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     dbus-glib
     json-glib
-  ] ++ lib.optional (gtkVersion == "3") gtk3;
+  ]
+  ++ lib.optional (gtkVersion == "3") gtk3;
 
   patches = [
     ./requires-glib.patch
@@ -58,7 +59,8 @@ stdenv.mkDerivation (finalAttrs: {
     "--localstatedir=/var"
     (if gtkVersion == null then "--disable-gtk" else "--with-gtk=${gtkVersion}")
     "--disable-scrollkeeper"
-  ] ++ lib.optional (gtkVersion != "2") "--disable-dumper";
+  ]
+  ++ lib.optional (gtkVersion != "2") "--disable-dumper";
 
   doCheck = false;
 

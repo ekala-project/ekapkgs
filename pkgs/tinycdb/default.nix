@@ -27,7 +27,8 @@ stdenv.mkDerivation (finalAttrs: {
     "out"
     "dev"
     "man"
-  ] ++ lib.optional (!static) "lib";
+  ]
+  ++ lib.optional (!static) "lib";
 
   separateDebugInfo = true;
 
@@ -41,20 +42,25 @@ stdenv.mkDerivation (finalAttrs: {
     "AR=${ar}"
     "RANLIB=${ranlib}"
     "static"
-  ] ++ lib.optional (!static) "shared";
+  ]
+  ++ lib.optional (!static) "shared";
 
   postInstall = ''
     mkdir -p $dev/lib $out/bin
     mv $out/lib/libcdb.a $dev/lib
     rm --recursive $out/lib
-  '' + (
-    if static then ''
-      cp cdb $out/bin/cdb
-    '' else ''
-      mkdir -p $lib/lib
-      cp libcdb.so* $lib/lib
-      cp cdb-shared $out/bin/cdb
-    ''
+  ''
+  + (
+    if static then
+      ''
+        cp cdb $out/bin/cdb
+      ''
+    else
+      ''
+        mkdir -p $lib/lib
+        cp libcdb.so* $lib/lib
+        cp cdb-shared $out/bin/cdb
+      ''
   );
 
   meta = {

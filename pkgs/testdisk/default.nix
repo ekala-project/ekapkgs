@@ -31,15 +31,14 @@ stdenv.mkDerivation rec {
 
   enableParallelBuilding = true;
 
-  buildInputs =
-    [
-      ncurses
-      libuuid
-      libjpeg
-      zlib
-    ]
-    ++ lib.optional enableNtfs ntfs3g
-    ++ lib.optional enableExtFs e2fsprogs;
+  buildInputs = [
+    ncurses
+    libuuid
+    libjpeg
+    zlib
+  ]
+  ++ lib.optional enableNtfs ntfs3g
+  ++ lib.optional enableExtFs e2fsprogs;
 
   nativeBuildInputs = [ pkg-config ];
 

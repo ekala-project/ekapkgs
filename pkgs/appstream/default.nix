@@ -84,7 +84,8 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     itstool
     gperf
-  ] ++ lib.optionals withIntrospection [
+  ]
+  ++ lib.optionals withIntrospection [
     gobject-introspection
     vala
   ];
@@ -101,7 +102,8 @@ stdenv.mkDerivation (finalAttrs: {
     gdk-pixbuf
     pango
     librsvg
-  ] ++ lib.optionals withSystemd [
+  ]
+  ++ lib.optionals withSystemd [
     systemd
   ];
 
@@ -112,7 +114,8 @@ stdenv.mkDerivation (finalAttrs: {
     "-Dvapi=true"
     "-Dcompose=true"
     (lib.mesonBool "gir" withIntrospection)
-  ] ++ lib.optionals (!withSystemd) [
+  ]
+  ++ lib.optionals (!withSystemd) [
     "-Dsystemd=false"
   ];
 

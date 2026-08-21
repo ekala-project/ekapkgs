@@ -22,20 +22,19 @@ stdenv.mkDerivation (self: {
     sha256 = "sha256-XxS07ZKUKp44dZT6wAC5bbdGfpzlYTBn/8CSPfPsIHI=";
   };
 
-  nativeBuildInputs =
+  nativeBuildInputs = [
+    texinfo
+  ]
+  ++ lib.optionals self.doCheck (
     [
-      texinfo
+      which
+      writableTmpDirAsHomeHook
     ]
-    ++ lib.optionals self.doCheck (
-      [
-        which
-        writableTmpDirAsHomeHook
-      ]
-      ++ lib.optionals (builtins.elem stdenv.system strace.meta.platforms) [
-        strace
-      ]
-      ++ [ ps ]
-    );
+    ++ lib.optionals (builtins.elem stdenv.system strace.meta.platforms) [
+      strace
+    ]
+    ++ [ ps ]
+  );
 
   buildInputs = lib.optionals self.coreCompression [ zstd ];
 
@@ -51,23 +50,24 @@ stdenv.mkDerivation (self: {
   disableImmobileSpace = false;
   linkableRuntime = stdenv.hostPlatform.isx86;
 
-  disabledTestFiles =
-    [ "debug.impure.lisp" ]
-    ++
-      lib.optionals
-        (builtins.elem stdenv.hostPlatform.system [
-          "x86_64-linux"
-          "aarch64-linux"
-        ])
-        [
-          "foreign-stack-alignment.impure.lisp"
-          "compiler.pure.lisp"
-          "float.pure.lisp"
-        ]
-    ++ lib.optionals (stdenv.hostPlatform.system == "aarch64-linux") [
-      "traceroot.impure.lisp"
-      "futex-wait.test.sh"
-    ];
+  disabledTestFiles = [
+    "debug.impure.lisp"
+  ]
+  ++
+    lib.optionals
+      (builtins.elem stdenv.hostPlatform.system [
+        "x86_64-linux"
+        "aarch64-linux"
+      ])
+      [
+        "foreign-stack-alignment.impure.lisp"
+        "compiler.pure.lisp"
+        "float.pure.lisp"
+      ]
+  ++ lib.optionals (stdenv.hostPlatform.system == "aarch64-linux") [
+    "traceroot.impure.lisp"
+    "futex-wait.test.sh"
+  ];
 
   patches = [
     ./dynamic-space-size-envvar-2.5.3-feature.patch
@@ -108,16 +108,15 @@ stdenv.mkDerivation (self: {
       "compact-instance-header"
     ];
 
-  buildArgs =
-    [
-      "--prefix=$out"
-      "--xc-host=${lib.escapeShellArg "${lib.getExe ecl} --norc"}"
-    ]
-    ++ builtins.map (x: "--with-${x}") self.enableFeatures
-    ++ builtins.map (x: "--without-${x}") self.disableFeatures
-    ++ lib.optionals (stdenv.hostPlatform.system == "aarch64-darwin") [
-      "--arch=arm64"
-    ];
+  buildArgs = [
+    "--prefix=$out"
+    "--xc-host=${lib.escapeShellArg "${lib.getExe ecl} --norc"}"
+  ]
+  ++ builtins.map (x: "--with-${x}") self.enableFeatures
+  ++ builtins.map (x: "--without-${x}") self.disableFeatures
+  ++ lib.optionals (stdenv.hostPlatform.system == "aarch64-darwin") [
+    "--arch=arm64"
+  ];
 
   # Fails to find `O_LARGEFILE` otherwise.
   env.NIX_CFLAGS_COMPILE = "-D_GNU_SOURCE";

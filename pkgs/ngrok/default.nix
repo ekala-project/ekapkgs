@@ -53,7 +53,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   passthru = {
     platforms = builtins.attrNames sources;
-    inherit sources;  };
+    inherit sources;
+  };
 
   # Stripping causes SEGFAULT on darwin
   dontStrip = stdenv.hostPlatform.isDarwin;

@@ -32,10 +32,12 @@ stdenv.mkDerivation rec {
 
   buildInputs = [
     libxml2
-  ] ++ (with perlPackages; [
+  ]
+  ++ (with perlPackages; [
     perl
     IOStringy
-  ]) ++ lib.optionals stdenv.hostPlatform.isDarwin [ libintl ];
+  ])
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [ libintl ];
 
   configureFlags = [
     "--disable-ocaml"

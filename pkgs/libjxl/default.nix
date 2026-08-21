@@ -86,11 +86,14 @@ stdenv.mkDerivation rec {
     "-DJPEGXL_FORCE_SYSTEM_GTEST=ON"
     "-DJPEGXL_ENABLE_SKCMS=OFF"
     "-DJPEGXL_FORCE_SYSTEM_LCMS2=ON"
-  ] ++ lib.optionals enablePlugins [
+  ]
+  ++ lib.optionals enablePlugins [
     "-DJPEGXL_ENABLE_PLUGINS=ON"
-  ] ++ lib.optionals stdenv.hostPlatform.isStatic [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isStatic [
     "-DJPEGXL_STATIC=ON"
-  ] ++ lib.optionals stdenv.hostPlatform.isAarch32 [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isAarch32 [
     "-DJPEGXL_FORCE_NEON=ON"
   ];
 

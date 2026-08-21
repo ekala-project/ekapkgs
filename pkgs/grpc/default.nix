@@ -40,7 +40,8 @@ stdenv.mkDerivation rec {
     cmake
     cmake.configurePhaseHook
     pkg-config
-  ] ++ lib.optional (stdenv.hostPlatform != stdenv.buildPlatform) grpc;
+  ]
+  ++ lib.optional (stdenv.hostPlatform != stdenv.buildPlatform) grpc;
 
   propagatedBuildInputs = [
     c-ares
@@ -52,22 +53,22 @@ stdenv.mkDerivation rec {
   buildInputs = [
     openssl
     protobuf
-  ] ++ lib.optionals stdenv.hostPlatform.isLinux [ libnsl ];
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ libnsl ];
 
-  cmakeFlags =
-    [
-      "-DgRPC_ZLIB_PROVIDER=package"
-      "-DgRPC_CARES_PROVIDER=package"
-      "-DgRPC_RE2_PROVIDER=package"
-      "-DgRPC_SSL_PROVIDER=package"
-      "-DgRPC_PROTOBUF_PROVIDER=package"
-      "-DgRPC_ABSL_PROVIDER=package"
-      "-DBUILD_SHARED_LIBS=ON"
-    ]
-    ++ lib.optionals (stdenv.hostPlatform != stdenv.buildPlatform) [
-      "-D_gRPC_PROTOBUF_PROTOC_EXECUTABLE=${buildPackages.protobuf}/bin/protoc"
-      "-D_gRPC_CPP_PLUGIN=${buildPackages.grpc}/bin/grpc_cpp_plugin"
-    ];
+  cmakeFlags = [
+    "-DgRPC_ZLIB_PROVIDER=package"
+    "-DgRPC_CARES_PROVIDER=package"
+    "-DgRPC_RE2_PROVIDER=package"
+    "-DgRPC_SSL_PROVIDER=package"
+    "-DgRPC_PROTOBUF_PROVIDER=package"
+    "-DgRPC_ABSL_PROVIDER=package"
+    "-DBUILD_SHARED_LIBS=ON"
+  ]
+  ++ lib.optionals (stdenv.hostPlatform != stdenv.buildPlatform) [
+    "-D_gRPC_PROTOBUF_PROTOC_EXECUTABLE=${buildPackages.protobuf}/bin/protoc"
+    "-D_gRPC_CPP_PLUGIN=${buildPackages.grpc}/bin/grpc_cpp_plugin"
+  ];
 
   postPatch = ''
     # Fix missing include for std::any_of

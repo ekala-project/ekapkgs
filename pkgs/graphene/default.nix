@@ -51,7 +51,8 @@ stdenv.mkDerivation (finalAttrs: {
     "-Dgtk_doc=false"
     "-Dintrospection=disabled"
     "-Dinstalled_tests=false"
-  ] ++ lib.optionals stdenv.hostPlatform.isAarch32 [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isAarch32 [
     "-Darm_neon=false"
   ];
 

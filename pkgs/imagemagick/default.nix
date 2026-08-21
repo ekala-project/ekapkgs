@@ -27,9 +27,13 @@ let
   arch =
     if stdenv.hostPlatform.system == "i686-linux" then
       "i686"
-    else if stdenv.hostPlatform.system == "x86_64-linux" || stdenv.hostPlatform.system == "x86_64-darwin" then
+    else if
+      stdenv.hostPlatform.system == "x86_64-linux" || stdenv.hostPlatform.system == "x86_64-darwin"
+    then
       "x86-64"
-    else if stdenv.hostPlatform.system == "aarch64-linux" || stdenv.hostPlatform.system == "aarch64-darwin" then
+    else if
+      stdenv.hostPlatform.system == "aarch64-linux" || stdenv.hostPlatform.system == "aarch64-darwin"
+    then
       "aarch64"
     else
       null;

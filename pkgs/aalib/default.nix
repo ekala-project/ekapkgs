@@ -34,7 +34,8 @@ stdenv.mkDerivation (finalAttrs: {
       "--bindir=$bin/bin" \
       "--includedir=$dev/include" \
       "--libdir=$out/lib"
-  '' + ''
+  ''
+  + ''
     substituteInPlace ltconfig \
       --replace-fail 'powerpc*) dynamic_linker=no ;;' ""
   '';

@@ -54,13 +54,12 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/cisco/openh264/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd2;
     maintainers = [ ];
-    platforms =
-      lib.intersectLists (
-        lib.platforms.x86
-        ++ lib.platforms.arm
-        ++ lib.platforms.aarch64
-        ++ lib.platforms.loongarch64
-        ++ lib.platforms.riscv64
-      ) lib.platforms.unix;
+    platforms = lib.intersectLists (
+      lib.platforms.x86
+      ++ lib.platforms.arm
+      ++ lib.platforms.aarch64
+      ++ lib.platforms.loongarch64
+      ++ lib.platforms.riscv64
+    ) lib.platforms.unix;
   };
 })

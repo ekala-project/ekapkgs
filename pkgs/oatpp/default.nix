@@ -16,8 +16,10 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-pTQ0DD4naE9m+6FfCVGg/i3WpNbtaR+38yyqjqN0uH0=";
   };
 
-  nativeBuildInputs = [ cmake
-    cmake.configurePhaseHook ];
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
 
   # Tests fail on darwin. See https://github.com/NixOS/nixpkgs/pull/105419#issuecomment-735826894
   doCheck = !stdenv.hostPlatform.isDarwin;

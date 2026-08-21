@@ -76,16 +76,19 @@ stdenv.mkDerivation rec {
     "--http-fastcgi-temp-path=/tmp/nginx_fastcgi"
     "--http-uwsgi-temp-path=/tmp/nginx_uwsgi"
     "--http-scgi-temp-path=/tmp/nginx_scgi"
-  ] ++ lib.optionals withStream [
+  ]
+  ++ lib.optionals withStream [
     "--with-stream"
     "--with-stream_realip_module"
     "--with-stream_ssl_module"
     "--with-stream_ssl_preread_module"
-  ] ++ lib.optionals withPerl [
+  ]
+  ++ lib.optionals withPerl [
     "--with-http_perl_module"
     "--with-perl=${perl}/bin/perl"
     "--with-perl_modules_path=lib/perl5"
-  ] ++ lib.optional (with stdenv.hostPlatform; isLinux || isFreeBSD) "--with-file-aio";
+  ]
+  ++ lib.optional (with stdenv.hostPlatform; isLinux || isFreeBSD) "--with-file-aio";
 
   env.NIX_CFLAGS_COMPILE = toString [
     "-I${libxml2.dev}/include/libxml2"
