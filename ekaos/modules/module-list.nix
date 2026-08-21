@@ -652,4 +652,5 @@
 
   # Services
   ./services/kubo.nix
+  ./services/ollama.nix
 ]
