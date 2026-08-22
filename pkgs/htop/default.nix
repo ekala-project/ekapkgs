@@ -1,6 +1,7 @@
 {
   lib,
   fetchFromGitHub,
+  fetchpatch2,
   stdenv,
   autoreconfHook,
   pkg-config,
@@ -11,12 +12,13 @@
   lm_sensors,
   systemdSupport ? lib.meta.availableOn stdenv.hostPlatform systemd,
   systemd,
+  withVimKeys ? false,
 }:
 
 assert systemdSupport -> stdenv.hostPlatform.isLinux;
 
 stdenv.mkDerivation rec {
-  pname = "htop";
+  pname = "htop" + lib.optionalString withVimKeys "-vim";
   version = "3.4.1";
 
   src = fetchFromGitHub {
@@ -25,6 +27,12 @@ stdenv.mkDerivation rec {
     rev = version;
     hash = "sha256-fVqQwXbJus2IVE1Bzf3yJJpKK4qcZN/SCTX1XYkiHhU=";
   };
+
+  patches = lib.optional withVimKeys (fetchpatch2 {
+    name = "vim-keybindings.patch";
+    url = "https://aur.archlinux.org/cgit/aur.git/plain/vim-keybindings.patch?h=htop-vim&id=d10f022b3ca1207200187a55f5b116a5bd8224f7";
+    hash = "sha256-fZDTA2dCOmXxUYD6Wm41q7TxL7fgQOj8a/8yJC7Zags=";
+  });
 
   # upstream removed pkg-config support and uses dlopen now
   postPatch =
@@ -72,8 +80,10 @@ stdenv.mkDerivation rec {
     '';
 
   meta = {
-    description = "Interactive process viewer";
-    homepage = "https://htop.dev";
+    description =
+      "Interactive process viewer" + lib.optionalString withVimKeys ", with vim-style keybindings";
+    homepage =
+      if withVimKeys then "https://aur.archlinux.org/packages/htop-vim" else "https://htop.dev";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.all;
     changelog = "https://github.com/htop-dev/htop/blob/${version}/ChangeLog";
