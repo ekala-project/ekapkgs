@@ -23,13 +23,12 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   cargoHash = "sha256-mDsAZvnBGXhEl2Qbww2svPznl6k9b44zGdMkeejIWVU=";
 
-  nativeBuildInputs =
-    [
-      installShellFiles
-      pkg-config
-      copyDesktopItems
-    ]
-    ++ lib.optional (pandoc != null) pandoc;
+  nativeBuildInputs = [
+    installShellFiles
+    pkg-config
+    copyDesktopItems
+  ]
+  ++ lib.optional (pandoc != null) pandoc;
 
   buildInputs = [
     pkg-config
