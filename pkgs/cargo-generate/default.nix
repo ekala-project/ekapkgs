@@ -5,7 +5,6 @@
   pkg-config,
   libgit2,
   openssl,
-  gitMinimal,
 }:
 
 rustPlatform.buildRustPackage (finalAttrs: {
@@ -28,15 +27,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     openssl
   ];
 
-  nativeCheckInputs = [ gitMinimal ];
-
   buildNoDefaultFeatures = true;
-
-  preCheck = ''
-    export HOME=$(mktemp -d) USER=nixbld
-    git config --global user.name Nixbld
-    git config --global user.email nixbld@localhost.localnet
-  '';
 
   checkFlags = [
     "--skip=favorites::favorites_default_to_git_if_not_defined"
