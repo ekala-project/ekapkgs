@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "transmission";
     repo = "transmission";
     tag = finalAttrs.version;
-    hash = lib.fakeHash;
+    hash = "sha256-KBXvBFgrJ3njIoXrxHbHHLsiocwfd7Eba/GNI8uZA38=";
     fetchSubmodules = true;
   };
 
