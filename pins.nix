@@ -28,4 +28,5 @@ in
   haskell = getInfo "haskell";
   cuda = getInfo "cuda";
   r-pkgs = getInfo "r-pkgs";
+  vim-plugins = getInfo "vim-plugins";
 }

@@ -15,6 +15,7 @@ let
   haskellPkgsModule = import (pins.haskell + "/pkgs-module.nix");
   cudaPkgsModule = import (pins.cuda + "/pkgs-module.nix");
   rPkgsModule = import (pins.r-pkgs + "/pkgs-module.nix");
+  vimModule = import (pins.vim-plugins + "/pkgs-module.nix");
 
   allPkgsModules = [
     cudaPkgsModule
@@ -22,6 +23,7 @@ let
     haskellPkgsModule
     haskellPkgsModule
     rPkgsModule
+    vimModule
   ];
 
   # ekapkgs' own overlays

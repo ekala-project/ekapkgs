@@ -12,6 +12,8 @@
     python.flake = false;
     r-pkgs.url = "github:ekala-project/r-pkgs";
     r-pkgs.flake = false;
+    vim-plugins.url = "github:ekala-project/vim-plugins";
+    vim-plugins.flake = false;
     systems.follows = "corepkgs/systems";
   };
 
