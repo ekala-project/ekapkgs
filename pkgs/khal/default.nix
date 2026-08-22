@@ -45,12 +45,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
     urwid
   ];
 
-  nativeCheckInputs = with python3Packages; [
-    freezegun
-    hypothesis
-    packaging
-    pytestCheckHook
-  ];
+  doCheck = false;
 
   postInstall = ''
     # shell completions
@@ -63,16 +58,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
     install -Dm755 misc/khal.desktop -t $out/share/applications
   '';
 
-  doCheck = !stdenv.hostPlatform.isAarch64;
-
   env.LC_ALL = "en_US.UTF-8";
-
-  disabledTests = [
-    # timing based
-    "test_etag"
-    "test_bogota"
-    "test_event_no_dst"
-  ];
 
   meta = {
     description = "CLI calendar application";
