@@ -6,7 +6,6 @@
   libgit2,
   rust-jemalloc-sys,
   zlib,
-  gitMinimal,
 }:
 
 rustPlatform.buildRustPackage (finalAttrs: {
@@ -29,8 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     rust-jemalloc-sys
     zlib
   ];
-
-  nativeCheckInputs = [ gitMinimal ];
 
   cargoBuildFlags = [ "-p=biome_cli" ];
   cargoTestFlags = finalAttrs.cargoBuildFlags ++ [
@@ -60,11 +57,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   postInstall = ''
     install -Dm644 packages/@biomejs/biome/configuration_schema.json $out/share/schema.json
-  '';
-
-  preCheck = ''
-    git init
-    unset BIOME_VERSION
   '';
 
   meta = {
