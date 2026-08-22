@@ -38,7 +38,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "https://libvirt.org/sources/libvirt-${version}.tar.xz";
-    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    hash = "sha256-Ga6/2Y0gl5LVac3PlE2vuFwA0mTztV+hIWsY+bycsiY=";
   };
 
   nativeBuildInputs = [
