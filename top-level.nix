@@ -49,6 +49,8 @@ final: prev: {
   # GSSDP/GUPnP version aliases
   gssdp_1_6 = final.gssdp;
   gupnp_1_6 = final.gupnp;
+  # bluez5 alias (bluez is already v5)
+  bluez5 = final.bluez;
   # Stub for tinysparql until tracker is ported
   tinysparql = null;
   gtk4 =
