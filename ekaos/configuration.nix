@@ -71,10 +71,11 @@
       runtimeMaxUse = "100M";
     };
 
-    ollama = {
-      enable = true;
-      package = pkgs.ollama;
-    };
+    # ollama build has CGo/llama.cpp complexity — needs vendorHash fix
+    # ollama = {
+    #   enable = true;
+    #   package = pkgs.ollama;
+    # };
 
     postgresql = {
       enable = true;
@@ -107,11 +108,12 @@
       autoMount = true;
     };
 
-    plex = {
-      enable = true;
-      group = "users";
-      openFirewall = true;
-    };
+    # plex download URL returns 403 — package needs version/hash fix
+    # plex = {
+    #   enable = true;
+    #   group = "users";
+    #   openFirewall = true;
+    # };
 
     # factorio - needs package and complex module
     # factorio.enable = true;
