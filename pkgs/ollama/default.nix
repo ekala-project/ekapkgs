@@ -15,7 +15,7 @@ buildGoModule rec {
     owner = "ollama";
     repo = "ollama";
     rev = "v${version}";
-    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    hash = "sha256-+8UHE9M2JWUARuuIRdKwNkn1hoxtuitVH7do5V5uEg0=";
     fetchSubmodules = true;
   };
 
