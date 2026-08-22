@@ -58,6 +58,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     ldcBootstrap
     lit
     lit.python
