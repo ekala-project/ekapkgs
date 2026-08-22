@@ -52,6 +52,7 @@ buildGo126Module (finalAttrs: {
         ${lib.optionalString (runtimePath != "") "--prefix PATH : \"${runtimePath}\""} \
         ${lib.optionalString (cniPath != "") "--prefix CNI_PATH : \"${cniPath}\""}
 
+      export HOME=$(mktemp -d)
       installShellCompletion --cmd nerdctl \
         --bash <($out/bin/nerdctl completion bash) \
         --fish <($out/bin/nerdctl completion fish) \

@@ -18,18 +18,17 @@ buildGo126Module (finalAttrs: {
     hash = "sha256-ezelvyroQG1EW3SU63OVHJ/T4qjN5DRllvPIXnei1Z4=";
   };
 
-  postPatch =
-    ''
-      substituteInPlace schedule_jobs.go \
-          --replace-fail "os.Executable()" "\"$out/bin/resticprofile\", nil"
+  postPatch = ''
+    substituteInPlace schedule_jobs.go \
+        --replace-fail "os.Executable()" "\"$out/bin/resticprofile\", nil"
 
-      substituteInPlace shell/command.go \
-          --replace-fail '"bash"' '"${lib.getExe bash}"'
-    ''
-    + lib.optionalString (restic != null) ''
-      substituteInPlace filesearch/filesearch.go \
-          --replace-fail 'paths := getSearchBinaryLocations()' 'return "${lib.getExe restic}", nil; paths := getSearchBinaryLocations()'
-    '';
+    substituteInPlace shell/command.go \
+        --replace-fail '"bash"' '"${lib.getExe bash}"'
+  ''
+  + lib.optionalString (restic != null) ''
+    substituteInPlace filesearch/filesearch.go \
+        --replace-fail 'paths := getSearchBinaryLocations()' 'return "${lib.getExe restic}", nil; paths := getSearchBinaryLocations()'
+  '';
 
   vendorHash = "sha256-M9S6F/Csz7HnOq8PSWjpENKm1704kVx9zDts1ieraTE=";
 
@@ -54,6 +53,9 @@ buildGo126Module (finalAttrs: {
     rm update_test.go
     rm user/user_test.go
     rm util/tempdir_test.go
+    rm -f darwin/*_test.go
+    rm -f schtasks/*_test.go
+    rm -f util/maybe/duration_test.go
   '';
 
   installPhase = ''

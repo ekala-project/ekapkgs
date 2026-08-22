@@ -4,7 +4,6 @@
   stdenv,
   fetchFromGitHub,
   installShellFiles,
-  asciidoc ? null,
   databasePath ? "/etc/secureboot",
   pkg-config,
   pcsclite ? null,
@@ -33,29 +32,21 @@ buildGo126Module (finalAttrs: {
   nativeBuildInputs = [
     installShellFiles
     pkg-config
-  ] ++ lib.optionals (asciidoc != null) [ asciidoc ];
+  ];
 
   buildInputs = lib.optionals (pcsclite != null) [ pcsclite ];
-
-  postBuild = lib.optionalString (asciidoc != null) ''
-    make docs/sbctl.conf.5 docs/sbctl.8
-  '';
 
   checkFlags = [
     "-skip"
     "github.com/google/go-tpm-tools/.*"
   ];
 
-  postInstall =
-    lib.optionalString (asciidoc != null) ''
-      installManPage docs/sbctl.conf.5 docs/sbctl.8
-    ''
-    + lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
-      installShellCompletion --cmd sbctl \
-        --bash <($out/bin/sbctl completion bash) \
-        --fish <($out/bin/sbctl completion fish) \
-        --zsh <($out/bin/sbctl completion zsh)
-    '';
+  postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
+    installShellCompletion --cmd sbctl \
+      --bash <($out/bin/sbctl completion bash) \
+      --fish <($out/bin/sbctl completion fish) \
+      --zsh <($out/bin/sbctl completion zsh)
+  '';
 
   meta = {
     description = "Secure Boot key manager";

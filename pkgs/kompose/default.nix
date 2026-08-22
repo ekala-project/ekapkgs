@@ -4,7 +4,7 @@
   buildGo126Module,
   fetchFromGitHub,
   installShellFiles,
-  git,
+  gitMinimal,
 }:
 
 buildGo126Module (finalAttrs: {
@@ -22,7 +22,7 @@ buildGo126Module (finalAttrs: {
 
   nativeBuildInputs = [
     installShellFiles
-    git
+    gitMinimal
   ];
 
   ldflags = [
