@@ -110,7 +110,7 @@ stdenv.mkDerivation {
     license = lib.licenses.gpl3Plus;
 
     maintainers = [ ];
-    teams = [ lib.teams.security-review ];
+    teams = [ ];
     platforms = lib.platforms.all;
     mainProgram = "grep";
     identifiers.cpeParts = lib.meta.cpeFullVersionWithVendor "gnu" version // {
