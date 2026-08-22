@@ -36,16 +36,15 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   nativeBuildInputs = [ pkg-config ] ++ lib.optional withClipboard python3;
 
-  buildInputs =
-    [
-      ncurses
-      openssl
-    ]
-    ++ lib.optional withALSA alsa-lib
-    ++ lib.optional withClipboard libxcb
-    ++ lib.optional (withCover && ueberzug != null) ueberzug
-    ++ lib.optional (withMPRIS || withNotify) dbus
-    ++ lib.optional (withPulseAudio && libpulseaudio != null) libpulseaudio;
+  buildInputs = [
+    ncurses
+    openssl
+  ]
+  ++ lib.optional withALSA alsa-lib
+  ++ lib.optional withClipboard libxcb
+  ++ lib.optional (withCover && ueberzug != null) ueberzug
+  ++ lib.optional (withMPRIS || withNotify) dbus
+  ++ lib.optional (withPulseAudio && libpulseaudio != null) libpulseaudio;
 
   buildNoDefaultFeatures = true;
 
