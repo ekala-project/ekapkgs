@@ -19,7 +19,7 @@ buildGoModule rec {
     fetchSubmodules = true;
   };
 
-  vendorHash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+  vendorHash = "sha256-t7+GLNC6mRcXq9ErxN6gGki5WWWoEcMfzRVjta4fddA=";
 
   # Ollama has complex build with CGo and llama.cpp
   # For simplicity, this builds the basic CPU-only version

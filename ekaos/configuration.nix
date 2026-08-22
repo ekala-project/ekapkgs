@@ -71,11 +71,10 @@
       runtimeMaxUse = "100M";
     };
 
-    # ollama build has CGo/llama.cpp complexity — needs vendorHash fix
-    # ollama = {
-    #   enable = true;
-    #   package = pkgs.ollama;
-    # };
+    ollama = {
+      enable = true;
+      package = pkgs.ollama;
+    };
 
     postgresql = {
       enable = true;
