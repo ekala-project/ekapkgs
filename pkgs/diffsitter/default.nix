@@ -42,14 +42,13 @@ rustPlatform.buildRustPackage rec {
     makeWrapper
   ];
 
-  postInstall =
-    ''
-      rm $out/bin/diffsitter_completions
-    ''
-    + lib.optionalString (libPath != null) ''
-      wrapProgram "$out/bin/diffsitter" \
-        --prefix LD_LIBRARY_PATH : "${libPath}"
-    '';
+  postInstall = ''
+    rm $out/bin/diffsitter_completions
+  ''
+  + lib.optionalString (libPath != null) ''
+    wrapProgram "$out/bin/diffsitter" \
+      --prefix LD_LIBRARY_PATH : "${libPath}"
+  '';
 
   doCheck = false;
 
