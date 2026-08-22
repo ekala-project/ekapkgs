@@ -5,11 +5,10 @@
   python3,
   meson,
   ninja,
-  git,
   btor2tools ? null,
   symfpu ? null,
   gtest ? null,
-  gmp,
+  gmpxx,
   cadical,
   cadical' ? cadical,
   cryptominisat ? null,
@@ -37,32 +36,29 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     meson
     pkg-config
-    git
     ninja
     cmake
   ];
 
-  buildInputs =
-    [
-      cadical'
-      gmp
-      zlib
-      mpfr
-    ]
-    ++ lib.optional (cryptominisat != null) cryptominisat
-    ++ lib.optional (btor2tools != null) btor2tools
-    ++ lib.optional (symfpu != null) symfpu
-    ++ lib.optional (kissat != null) kissat
-    ++ lib.optional (aiger != null) aiger;
+  buildInputs = [
+    cadical'
+    gmpxx
+    zlib
+    mpfr
+  ]
+  ++ lib.optional (cryptominisat != null) cryptominisat
+  ++ lib.optional (btor2tools != null) btor2tools
+  ++ lib.optional (symfpu != null) symfpu
+  ++ lib.optional (kissat != null) kissat
+  ++ lib.optional (aiger != null) aiger;
 
-  mesonFlags =
-    [
-      "-Ddefault_library=shared"
-      (lib.strings.mesonEnable "testing" finalAttrs.finalPackage.doCheck)
-    ]
-    ++ lib.optional (cryptominisat != null) "-Dcryptominisat=true"
-    ++ lib.optional (kissat != null) "-Dkissat=true"
-    ++ lib.optional (aiger != null) "-Daiger=true";
+  mesonFlags = [
+    "-Ddefault_library=shared"
+    (lib.strings.mesonEnable "testing" finalAttrs.finalPackage.doCheck)
+  ]
+  ++ lib.optional (cryptominisat != null) "-Dcryptominisat=true"
+  ++ lib.optional (kissat != null) "-Dkissat=true"
+  ++ lib.optional (aiger != null) "-Daiger=true";
 
   nativeCheckInputs = [ python3 ];
   checkInputs = lib.optional (gtest != null) gtest;
