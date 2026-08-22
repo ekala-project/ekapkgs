@@ -22,7 +22,10 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
   ];
 
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
   buildInputs = [ zlib ];
 
   cmakeFlags = [
