@@ -5,7 +5,6 @@
   installFonts,
   fontforge,
   python3,
-  ttfautohint,
 }:
 
 stdenvNoCC.mkDerivation (finalAttrs: {
@@ -28,12 +27,14 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     installFonts
     fontforge
     python3
-    ttfautohint
   ];
 
   postPatch = ''
     substituteInPlace Makefile \
       --replace-fail "@\$(SFNTTOOL) -w \$< \$@" "@fontforge -lang=ff -c 'Open(\$\$1); Generate(\$\$2)' \$< \$@"
+    # Remove ttfautohint dependency (not available)
+    sed -i '/ttfautohint/d' Makefile
+    sed -i '/@mv \$@.tmp \$@/d' Makefile
   '';
 
   buildPhase = ''
