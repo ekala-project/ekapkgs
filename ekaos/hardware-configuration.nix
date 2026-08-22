@@ -9,7 +9,7 @@
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
-  # boot.extraModulePackages = [ ];  # TODO: option not in EkaOS yet
+  boot.extraModulePackages = [ ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/09aec90e-876f-4f7a-8e6b-1436eebc3c2a";
@@ -27,11 +27,9 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-  # swapDevices is called `swap` in EkaOS
-  # swap.devices = [ ];
+  # swap.devices = [ ];  # EkaOS uses `swap` not `swapDevices`
 
   networking.useDHCP = lib.mkDefault true;
 
-  # nixpkgs.hostPlatform handled via ekaosSystem { system = "x86_64-linux"; }
-  # hardware.cpu.amd.updateMicrocode not available yet
+  # hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;  # needs amd-microcode package
 }

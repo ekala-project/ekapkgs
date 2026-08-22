@@ -7,22 +7,20 @@
   # Imports {{{
   imports = [
     ./hardware-configuration.nix
-    # ./prometheus-metrics.nix  # TODO: needs services.prometheus module
-    # ./web.nix                 # TODO: needs services.nginx module
-    # ./snix.nix                # TODO: needs queued-build-hook, systemd.services, etc.
+    # ./prometheus-metrics.nix  # TODO: needs services.prometheus wiring
+    # ./web.nix                 # TODO: needs services.nginx virtualHosts wiring
+    # ./snix.nix                # TODO: needs snix package + cachix + jq
   ];
   # }}}
 
   # Boot {{{
   boot = {
-    kernelPackages = pkgs.linux.pkgs;
-
     kernel.sysctl."net.core.rmem_max" = lib.mkForce 4150000;
     kernel.sysctl."vm.swappiness" = 0;
 
     loader.systemd-boot = {
       enable = true;
-      # memtest86.enable = true;  # TODO: not in EkaOS yet
+      memtest86.enable = true;
     };
 
     loader.efi.canTouchEfiVariables = true;
@@ -32,10 +30,11 @@
       tmpfsSize = "40%";
     };
 
-    initrd.kernelModules = [ "zfs" ];
-    initrd.supportedFilesystems = [ "zfs" ];
-    # boot.supportedFilesystems not in EkaOS yet
-    # zfs.extraPools = [ "tank" ];  # TODO: needs boot/zfs.nix module
+    # ZFS needs zfs package
+    # initrd.kernelModules = [ "zfs" ];
+    # initrd.supportedFilesystems = [ "zfs" ];
+    # zfs.extraPools = [ "tank" ];
+    extraModulePackages = [ ];
     extraModprobeConfig = ''
       options kvm-amd nested=1
       options kvm ignore_msrs=1
@@ -45,53 +44,61 @@
 
   # Services {{{
   services = {
-    # grafana - disabled, needs stub
-    # grafana.enable = false;
+    grafana.enable = false;
+    grafana.settings = {
+      server = {
+        http_addr = "0.0.0.0";
+        http_port = 3050;
+      };
+      "auth.anonymous".enabled = true;
+    };
 
-    # nix-serve - disabled, needs stub
-    # nix-serve.enable = false;
+    nix-serve = {
+      enable = false;
+      secretKeyFile = "/var/cache-priv-key.pem";
+    };
 
-    # zfs.trim.enable = true;  # TODO: needs ZFS module
+    # zfs.trim.enable = true;  # needs zfs package
 
-    # earlyoom is under programs.earlyoom in ekapkgs, not services
-    # See programs section below
+    earlyoom = {
+      enable = true;
+      freeMemThreshold = 2;
+    };
 
     journald.settings = {
-      maxRetentionSec = 1814400; # 3 weeks in seconds
+      maxRetentionSec = "3week";
       systemMaxUse = "200M";
       runtimeMaxUse = "100M";
     };
 
     ollama = {
       enable = true;
-      package = pkgs.ollama;  # ollama-rocm not available yet
+      package = pkgs.ollama;
     };
 
-    # postgresql port contract missing fields in corepkgs
-    # postgresql = {
-    #   enable = true;
-    #   package = pkgs.postgresql;
-    # };
+    postgresql = {
+      enable = true;
+      package = pkgs.postgresql;
+    };
 
-    # hydra - disabled, needs stub
-    # hydra.enable = false;
+    # hydra - disabled, needs stub for port reference
+    hydra = {
+      enable = false;
+      port = 3100;
+    };
 
     fstrim.enable = true;
 
     openssh = {
       enable = true;
       settings = {
-        # EkaOS openssh has single port; use extraConfig for additional ports
-        ports = 22;
+        ports = [ 22 2222 3000 9100 ];
         extraConfig = ''
-          Port 2222
-          Port 3000
-          Port 9100
           StreamLocalBindUnlink yes
         '';
         passwordAuthentication = false;
+        authorizedKeysFiles = ["/etc/ssh/extra_authorized_keys"];
       };
-      # authorizedKeysFiles not available in EkaOS yet
     };
 
     kubo = {
@@ -100,12 +107,11 @@
       autoMount = true;
     };
 
-    # plex requires allowUnfree which is not yet configurable in EkaOS
-    # plex = {
-    #   enable = true;
-    #   group = "users";
-    #   openFirewall = true;
-    # };
+    plex = {
+      enable = true;
+      group = "users";
+      openFirewall = true;
+    };
 
     # factorio - needs package and complex module
     # factorio.enable = true;
@@ -136,10 +142,10 @@
       };
     };
 
-    # Desktop - Plasma 6 not available yet
-    # desktopManager.plasma6.enable = true;
+    desktopManager.plasma6.enable = true;
 
-    # xserver blocked by corepkgs xorg.xtrans missing from xorg scope
+    # xserver blocked: corepkgs xorg scope missing many packages
+    # (libpciaccess, xtrans, libxcvt, pixman, etc. not exposed in xorg set)
     # xserver.enable = true;
     # xserver.displayManager.lightdm.enable = true;
 
@@ -148,7 +154,7 @@
   # }}}
 
   # NetworkManager for wireless (wlo2) {{{
-  # networking.networkmanager not available in EkaOS yet
+  # networking.networkmanager needs networkmanager package
   # networking.networkmanager = {
   #   enable = true;
   #   unmanaged = [ "enp67s0" "enp68s0" ];
@@ -161,19 +167,14 @@
 
     zsh = {
       enable = true;
-      # syntaxHighlighting.enable = true;  # TODO: not in EkaOS zsh module
+      # syntaxHighlighting not in ekapkgs zsh module yet
       interactiveShellInit = ''
         source ${pkgs.grml-zsh-config}/etc/zsh/zshrc
       '';
-      promptInit = ""; # otherwise it'll override the grml prompt
+      promptInit = "";
     };
 
     fish.enable = true;
-
-    earlyoom = {
-      enable = true;
-      freeMemThreshold = 2;
-    };
   };
   # }}}
 
@@ -186,10 +187,10 @@
     #   enp68s0.useDHCP = true;
     # };
 
-    # hostId = "b5b5bea7";  # TODO: needs networking.hostId option
+    hostId = "b5b5bea7";
     firewall.allowedTCPPorts = [
-      # config.services.hydra.port  # hydra not available
-      # config.services.grafana.settings.server.http_port  # grafana not available
+      config.services.hydra.port
+      config.services.grafana.settings.server.http_port
       80
       443
       9091
@@ -203,6 +204,8 @@
 
   # Nix&Nixpkgs {{{
   nix = {
+    nrBuildUsers = 450;
+
     settings = {
       allowed-uris = ["git+https://" "https://" "github.com:jonringer/"];
       auto-optimise-store = true;
@@ -228,30 +231,32 @@
       ];
     };
 
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
     gc = {
       automatic = true;
-      schedule = "weekly";
+      dates = "*-*-1,4,7,10,13,16,19,22,25,28,31 00:00:00";
     };
+
+    nixPath = ["nixpkgs=/etc/nix/inputs/nixpkgs"];
   };
 
-  # nixpkgs options not available in EkaOS
-  # nixpkgs = {
-  #   config.allowUnfree = true;
-  #   overlays = [];
-  # };
+  nixpkgs = {
+    config.allowUnfree = true;
+  };
   # }}}
 
   # Environment {{{
   environment = {
-    # pin nixpkgs channel - environment.etc needs .source support
-    # etc."nix/inputs/nixpkgs".source = pkgs.path;
+    # etc."nix/inputs/nixpkgs".source = pkgs.path;  # pkgs.path not available
 
     systemPackages = with pkgs; [
       wget
       vim
       git
       htop
-      # lm_sensors  # not in ekapkgs
+      # lm_sensors  # not in ekapkgs yet
       tmux
     ];
   };
@@ -266,7 +271,7 @@
           "wheel"
           "plex"
           "libvirtd"
-          # "networkmanager"  # NM not available
+          # "networkmanager"  # needs networkmanager package
         ];
       };
 
@@ -423,17 +428,24 @@
   # Misc {{{
   system.stateVersion = "19.09";
 
-  # hardware.cpu.amd.updateMicrocode = true;  # TODO: needs hardware/cpu module
+  # hardware.cpu.amd.updateMicrocode = true;  # needs amd-microcode package
   virtualisation.libvirtd.enable = true;
   time.timeZone = "America/Los_Angeles";
 
-  # services.snix.enable = true;  # TODO: needs snix dependencies
+  # services.snix.enable = true;  # TODO: needs snix package + cachix + jq
 
-  # systemd.services overrides not available in EkaOS
+  # systemd.services overrides - not available in EkaOS service contract model
   # systemd.services.nix-daemon.serviceConfig.LimitNOFILE = lib.mkForce 1048576;
+  # systemd.services.factorio.serviceConfig = { ... };
 
-  # security.pam.loginLimits not in EkaOS yet
-  # security.pam.loginLimits = [ ... ];
+  security.pam.loginLimits = [
+    {
+      domain = "*";
+      type = "soft";
+      item = "nofile";
+      value = "4096";
+    }
+  ];
   # }}}
 }
 # vim: fdm=marker

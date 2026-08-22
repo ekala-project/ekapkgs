@@ -6,15 +6,20 @@ let
     let
       node = lock.nodes.${attr}.locked;
     in
-    builtins.fetchTree {
-      inherit (node)
-        type
-        owner
-        repo
-        narHash
-        rev
-        ;
-    };
+    if node.type == "path" then
+      builtins.fetchTree {
+        inherit (node) type path narHash;
+      }
+    else
+      builtins.fetchTree {
+        inherit (node)
+          type
+          owner
+          repo
+          narHash
+          rev
+          ;
+      };
 in
 {
   lib = getInfo "lib";
