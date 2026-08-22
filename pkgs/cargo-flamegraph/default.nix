@@ -2,8 +2,6 @@
   lib,
   fetchFromGitHub,
   rustPlatform,
-  makeWrapper,
-  perf ? null,
 }:
 
 rustPlatform.buildRustPackage (finalAttrs: {
@@ -18,15 +16,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   cargoHash = "sha256-OxPvye1HjcQOazAWn7VIa+twWC7uKXeyXkicPiWVe6I=";
-
-  nativeBuildInputs = [ makeWrapper ];
-
-  postFixup = lib.optionalString (perf != null) ''
-    wrapProgram $out/bin/cargo-flamegraph \
-      --set-default PERF ${perf}/bin/perf
-    wrapProgram $out/bin/flamegraph \
-      --set-default PERF ${perf}/bin/perf
-  '';
 
   meta = {
     description = "Easy flamegraphs for Rust projects and everything else, without Perl or pipes <3";
