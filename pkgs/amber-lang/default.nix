@@ -46,14 +46,13 @@ rustPlatform.buildRustPackage rec {
     "--skip=tests::stdlib::test_stdlib_src_tests_stdlib_http_fetch_ab"
   ];
 
-  postInstall =
-    ''
-      wrapProgram "$out/bin/amber" --prefix PATH : "${lib.makeBinPath [ bc ]}"
-    ''
-    + lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
-      installShellCompletion --cmd amber \
-        --bash <($out/bin/amber completion)
-    '';
+  postInstall = ''
+    wrapProgram "$out/bin/amber" --prefix PATH : "${lib.makeBinPath [ bc ]}"
+  ''
+  + lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
+    installShellCompletion --cmd amber \
+      --bash <($out/bin/amber completion)
+  '';
 
   meta = {
     description = "Programming language compiled to bash";
