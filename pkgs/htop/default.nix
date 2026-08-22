@@ -1,7 +1,7 @@
 {
   lib,
   fetchFromGitHub,
-  fetchpatch2,
+  fetchurl,
   stdenv,
   autoreconfHook,
   pkg-config,
@@ -28,10 +28,10 @@ stdenv.mkDerivation rec {
     hash = "sha256-fVqQwXbJus2IVE1Bzf3yJJpKK4qcZN/SCTX1XYkiHhU=";
   };
 
-  patches = lib.optional withVimKeys (fetchpatch2 {
+  patches = lib.optional withVimKeys (fetchurl {
     name = "vim-keybindings.patch";
     url = "https://aur.archlinux.org/cgit/aur.git/plain/vim-keybindings.patch?h=htop-vim&id=d10f022b3ca1207200187a55f5b116a5bd8224f7";
-    hash = "sha256-fZDTA2dCOmXxUYD6Wm41q7TxL7fgQOj8a/8yJC7Zags=";
+    hash = "sha256-kGd2RumORGPQ/kgnLjbW6SznSxksbOxgBlsQq2NXbd8=";
   });
 
   # upstream removed pkg-config support and uses dlopen now
