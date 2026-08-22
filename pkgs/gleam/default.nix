@@ -2,7 +2,6 @@
   lib,
   rustPlatform,
   fetchFromGitHub,
-  git,
   pkg-config,
   beamPackages ? null,
 }:
@@ -22,11 +21,8 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-  ] ++ lib.optional (beamPackages != null) beamPackages.erlang;
-
-  nativeCheckInputs = [
-    git
-  ];
+  ]
+  ++ lib.optional (beamPackages != null) beamPackages.erlang;
 
   checkFlags = [
     "--skip=tests::echo::echo_dict"
