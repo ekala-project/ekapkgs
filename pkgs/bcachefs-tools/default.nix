@@ -69,21 +69,20 @@ stdenv.mkDerivation (finalAttrs: {
     installShellFiles
   ];
 
-  buildInputs =
-    [
-      libaio
-      keyutils
-      lz4
-      libsodium
-      libunwind
-      liburcu
-      libuuid
-      zstd
-      zlib
-      attr
-      udev
-    ]
-    ++ lib.optional fuseSupport fuse3;
+  buildInputs = [
+    libaio
+    keyutils
+    lz4
+    libsodium
+    libunwind
+    liburcu
+    libuuid
+    zstd
+    zlib
+    attr
+    udev
+  ]
+  ++ lib.optional fuseSupport fuse3;
 
   makeFlags = [
     "PREFIX=${placeholder "out"}"
@@ -92,7 +91,8 @@ stdenv.mkDerivation (finalAttrs: {
     "DKMSDIR=${placeholder "out"}/src"
     "PKGCONFIG_SERVICEDIR=$(out)/lib/systemd/system"
     "PKGCONFIG_UDEVDIR=$(out)/lib/udev"
-  ] ++ lib.optional fuseSupport "BCACHEFS_FUSE=1";
+  ]
+  ++ lib.optional fuseSupport "BCACHEFS_FUSE=1";
 
   enableParallelBuilding = true;
 
