@@ -7,9 +7,9 @@
   # Imports {{{
   imports = [
     ./hardware-configuration.nix
-    # ./prometheus-metrics.nix  # TODO: needs services.prometheus wiring
-    # ./web.nix                 # TODO: needs services.nginx virtualHosts wiring
-    # ./snix.nix                # TODO: needs snix package + cachix + jq
+    ./prometheus-metrics.nix
+    ./web.nix
+    # ./snix.nix                # TODO: needs snix package + cachix
   ];
   # }}}
 
@@ -168,9 +168,9 @@
 
     zsh = {
       enable = true;
-      # syntaxHighlighting not in ekapkgs zsh module yet
       interactiveShellInit = ''
         source ${pkgs.grml-zsh-config}/etc/zsh/zshrc
+        source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
       '';
       promptInit = "";
     };
@@ -182,11 +182,10 @@
   # Networking {{{
   networking = {
     useDHCP = false;
-    # interfaces not in EkaOS networking module
-    # interfaces = {
-    #   enp67s0.useDHCP = true;
-    #   enp68s0.useDHCP = true;
-    # };
+    interfaces = {
+      enp67s0.useDHCP = true;
+      enp68s0.useDHCP = true;
+    };
 
     hostId = "b5b5bea7";
     firewall.allowedTCPPorts = [
@@ -257,7 +256,7 @@
       vim
       git
       htop
-      # lm_sensors  # not in ekapkgs yet
+      lm_sensors
       tmux
     ];
   };
