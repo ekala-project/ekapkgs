@@ -10,13 +10,13 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "aws-c-compression";
   # nixpkgs-update: no auto update
-  version = "0.3.1";
+  version = "0.3.3";
 
   src = fetchFromGitHub {
     owner = "awslabs";
     repo = "aws-c-compression";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-gpru+hnppgLHhcPfVBOaMdcT6e8wUjZmY7Caaa/KAW4=";
+    sha256 = "sha256-rYyodLQtfYwIICGTkEYJ/kOh/9gTWzLQPo5Pz1bbsRw=";
   };
 
   nativeBuildInputs = [
