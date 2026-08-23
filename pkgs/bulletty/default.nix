@@ -8,13 +8,13 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "bulletty";
-  version = "0.2.2";
+  version = "0.3.0";
 
   src = fetchFromGitHub {
     owner = "CrociDB";
     repo = "bulletty";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-Keo7Xl8dU5ZnUxXilf93qVv0tjx5O2JfWU1obzrprxo=";
+    hash = "sha256-ZuNug06zL89D7EWh6UFLiT/Xs/bQOEKY/UiDdkU091M=";
   };
 
   patches = [
@@ -22,13 +22,19 @@ rustPlatform.buildRustPackage (finalAttrs: {
     ./remove-rustfmt-exec.patch
   ];
 
-  cargoHash = "sha256-bwQcmA0/wQmwEobhDkDCi5s3MgxxCi0I4m2yuQ2/XZo=";
+  cargoHash = "sha256-fOuUBp5ij0ZqcRhhEIl3pAinsheIHF9VW9Uw3RB4pCI=";
 
   nativeBuildInputs = [ pkg-config ];
 
   buildInputs = [ openssl ];
 
   env.OPENSSL_NO_VENDOR = true;
+
+  checkFlags = [
+    # requires network access (CA certificates not available in sandbox)
+    "--skip=core::feed::feedparser::tests::get_feed_entries_trims_trailing_response_whitespace"
+  ];
+
   doInstallCheck = true;
 
   meta = {
