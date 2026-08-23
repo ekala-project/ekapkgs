@@ -21,6 +21,7 @@ let
   };
   src =
     srcs.${stdenv.hostPlatform.system} or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
+
 in
 buildFHSEnv {
   inherit pname version;
