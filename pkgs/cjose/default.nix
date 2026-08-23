@@ -2,7 +2,6 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  fetchpatch,
   autoreconfHook,
   pkg-config,
   doxygen,
@@ -13,22 +12,14 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "cjose";
-  version = "0.6.2.2";
+  version = "0.6.2.8";
 
   src = fetchFromGitHub {
     owner = "OpenIDC";
     repo = "cjose";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-vDvCxMpgCdteGvNxy2HCNRaxbhxOuTadL0nM2wkFHtk=";
+    sha256 = "sha256-6Z1mbjoKBmt2xfr6NHqHlaksZCLAELnMMNlrqZagR/c=";
   };
-
-  patches = [
-    # avoid using empty prototypes; support Clang 15 and XCode 14.3 - https://github.com/OpenIDC/cjose/pull/19
-    (fetchpatch {
-      url = "https://github.com/OpenIDC/cjose/commit/63e90cf464d6a470e26886435e8d7d96a66747f6.patch";
-      hash = "sha256-+C5AIejb9InOGiOgUNfuP89J18O71rnq1pXyroxEDFQ=";
-    })
-  ];
 
   nativeBuildInputs = [
     autoreconfHook
