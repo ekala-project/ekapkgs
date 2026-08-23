@@ -1,0 +1,147 @@
+{
+  lib,
+  SDL2,
+  curl,
+  docbook_xml_dtd_45,
+  docbook_xsl,
+  fetchurl,
+  gtk3,
+  libGL,
+  libGLU,
+  libx11,
+  libxpm,
+  libtool,
+  ncurses,
+  pkg-config,
+  readline,
+  stdenv,
+  wget,
+  wxwidgets_3_2 ? null,
+  enableSDL2 ? true,
+  enableTerm ? true,
+  enableWx ? false,
+  enableX11 ? true,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "bochs";
+  version = "3.0";
+
+  src = fetchurl {
+    url = "mirror://sourceforge/project/bochs/bochs/${finalAttrs.version}/bochs-${finalAttrs.version}.tar.gz";
+    hash = "sha256-y29UK1HzWizJIGsqmA21YCt80bfPLk7U8Ras1VB3gao=";
+  };
+
+  nativeBuildInputs = [
+    docbook_xml_dtd_45
+    docbook_xsl
+    libtool
+    pkg-config
+  ];
+
+  buildInputs = [
+    curl
+    readline
+    wget
+  ]
+  ++ lib.optionals enableSDL2 [
+    SDL2
+  ]
+  ++ lib.optionals enableTerm [
+    ncurses
+  ]
+  ++ lib.optionals enableWx [
+    gtk3
+    wxwidgets_3_2
+  ]
+  ++ lib.optionals enableX11 [
+    libGL
+    libGLU
+    libx11
+    libxpm
+  ];
+
+  configureFlags = [
+    (lib.withFeature false "rfb")
+    (lib.withFeature false "vncsrv")
+    (lib.withFeature true "nogui")
+
+    (lib.enableFeature true "ltdl-install")
+    (lib.enableFeature true "readline")
+    (lib.enableFeature true "all-optimizations")
+    (lib.enableFeature true "logging")
+    (lib.enableFeature true "xpm")
+
+    (lib.enableFeature false "cpp")
+    (lib.enableFeature false "instrumentation")
+
+    (lib.enableFeature false "docbook")
+
+    (lib.enableFeature true "a20-pin")
+    (lib.enableFeature true "avx")
+    (lib.enableFeature true "busmouse")
+    (lib.enableFeature true "cdrom")
+    (lib.enableFeature true "clgd54xx")
+    (lib.enableFeature true "configurable-msrs")
+    (lib.enableFeatureAs true "cpu-level" "6")
+    (lib.enableFeature true "debugger")
+    (lib.enableFeature true "debugger-gui")
+    (lib.enableFeature true "evex")
+    (lib.enableFeature true "fpu")
+    (lib.enableFeature false "gdb-stub")
+    (lib.enableFeature true "handlers-chaining")
+    (lib.enableFeature true "idle-hack")
+    (lib.enableFeature true "iodebug")
+    (lib.enableFeature true "large-ramfile")
+    (lib.enableFeature true "largefile")
+    (lib.enableFeature true "pci")
+    (lib.enableFeature true "repeat-speedups")
+    (lib.enableFeature true "show-ips")
+    (lib.enableFeature true "smp")
+    (lib.enableFeatureAs true "vmx" "2")
+    (lib.enableFeature true "svm")
+    (lib.enableFeature true "trace-linking")
+    (lib.enableFeature true "usb")
+    (lib.enableFeature true "usb-ehci")
+    (lib.enableFeature true "usb-ohci")
+    (lib.enableFeature true "usb-xhci")
+    (lib.enableFeature true "voodoo")
+    (lib.enableFeature true "x86-64")
+    (lib.enableFeature true "x86-debugger")
+
+    (lib.enableFeature true "e1000")
+    (lib.enableFeature true "es1370")
+    (lib.enableFeature true "ne2000")
+    (lib.enableFeature true "plugins")
+    (lib.enableFeature true "pnic")
+    (lib.enableFeature true "sb16")
+  ]
+  ++ lib.optionals enableSDL2 [
+    (lib.withFeature true "sdl2")
+  ]
+  ++ lib.optionals enableTerm [
+    (lib.withFeature true "term")
+  ]
+  ++ lib.optionals enableWx [
+    (lib.withFeature true "wx")
+  ]
+  ++ lib.optionals enableX11 [
+    (lib.withFeature true "x")
+    (lib.withFeature true "x11")
+  ];
+
+  enableParallelBuilding = true;
+
+  meta = {
+    homepage = "https://bochs.sourceforge.io/";
+    description = "Open-source IA-32 (x86) PC emulator";
+    longDescription = ''
+      Bochs is an open-source (LGPL), highly portable IA-32 PC emulator, written
+      in C++, that runs on most popular platforms. It includes emulation of the
+      Intel x86 CPU, common I/O devices, and a custom BIOS.
+    '';
+    license = lib.licenses.lgpl2Plus;
+    maintainers = [ ];
+    platforms = lib.platforms.unix;
+  };
+})
