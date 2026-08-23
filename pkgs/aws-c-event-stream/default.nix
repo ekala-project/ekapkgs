@@ -15,13 +15,13 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "aws-c-event-stream";
   # nixpkgs-update: no auto update
-  version = "0.7.0";
+  version = "0.7.2";
 
   src = fetchFromGitHub {
     owner = "awslabs";
     repo = "aws-c-event-stream";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-jMtLJjKC7TuNZ0c0Nc3+KRh226RBl0omkiKNXXBltoc=";
+    hash = "sha256-u59aCx8w1hI/l1Xmvmydd7L6zQr8ZSP4NnntZ8X/yfQ=";
   };
 
   nativeBuildInputs = [
