@@ -14,13 +14,13 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "aws-c-http";
   # nixpkgs-update: no auto update
-  version = "0.11.0";
+  version = "0.11.1";
 
   src = fetchFromGitHub {
     owner = "awslabs";
     repo = "aws-c-http";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-SCdZfGIIHU6f0OArygZm0yY0wE6Hdx/JWvHZcK1DQOw=";
+    hash = "sha256-SY18VoxXu/YUIvnrfR+uE/xegS3vuXfZzG0eYG2rN8Q=";
   };
 
   nativeBuildInputs = [
