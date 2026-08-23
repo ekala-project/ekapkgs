@@ -7,6 +7,7 @@
   bmake,
   enableShared ? !stdenv.hostPlatform.isStatic,
   enableStatic ? stdenv.hostPlatform.isStatic,
+  enableDarwinSandbox ? true,
 }:
 
 stdenv.mkDerivation rec {

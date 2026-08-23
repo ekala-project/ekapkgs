@@ -81,7 +81,6 @@
       package = pkgs.postgresql;
     };
 
-    # hydra - disabled, needs stub for port reference
     hydra = {
       enable = false;
       port = 3100;
@@ -107,7 +106,7 @@
       autoMount = true;
     };
 
-    # plex download URL returns 403 — package needs version/hash fix
+    # plex download URL returns 403 — version needs updating
     # plex = {
     #   enable = true;
     #   group = "users";
@@ -143,10 +142,8 @@
       };
     };
 
-    desktopManager.plasma6.enable = true;
-
-    # xserver blocked: corepkgs xorg scope missing many packages
-    # (libpciaccess, xtrans, libxcvt, pixman, etc. not exposed in xorg set)
+    # xserver blocked: corepkgs xorg scope still missing xorg.xauth etc.
+    # desktopManager.plasma6.enable = true;
     # xserver.enable = true;
     # xserver.displayManager.lightdm.enable = true;
 
@@ -428,11 +425,11 @@
   # Misc {{{
   system.stateVersion = "19.09";
 
-  # hardware.cpu.amd.updateMicrocode = true;  # needs amd-microcode package
+  hardware.cpu.amd.updateMicrocode = true;
   virtualisation.libvirtd.enable = true;
   time.timeZone = "America/Los_Angeles";
 
-  # services.snix.enable = true;  # TODO: needs snix package + cachix + jq
+  # services.snix.enable = true;  # TODO: needs snix package + cachix
 
   # systemd.services overrides - not available in EkaOS service contract model
   # systemd.services.nix-daemon.serviceConfig.LimitNOFILE = lib.mkForce 1048576;
