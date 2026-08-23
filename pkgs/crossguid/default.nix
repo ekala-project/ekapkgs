@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation {
   pname = "crossguid";
-  version = "0.2.2-unstable-2019-05-29";
+  version = "0.2.2";
 
   src = fetchFromGitHub {
     owner = "graeme-hill";
