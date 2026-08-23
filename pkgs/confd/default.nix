@@ -6,7 +6,7 @@
 
 buildGoModule {
   pname = "confd";
-  version = "0.16-unstable-2023-12-09";
+  version = "0.16.0";
 
   src = fetchFromGitHub {
     owner = "kelseyhightower";
