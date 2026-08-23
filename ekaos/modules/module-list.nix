@@ -658,5 +658,4 @@
   ./services/xserver.nix
   ./services/lightdm.nix
   ./services/at-spi2-core.nix
-  ./services/plasma6.nix
 ]
