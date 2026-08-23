@@ -28,18 +28,23 @@ buildGo126Module (finalAttrs: {
 
   vendorHash = "sha256-+NPwL4p0p/s74m1Ld0z2GEcsWk5FqhcLbHrTNP3yEzk=";
 
-  npmDeps = if hasNpm then fetchNpmDeps {
-    name = "anubis-npm-deps";
-    inherit (finalAttrs) src;
-    hash = "sha256-SPoI66jy2XS4FM6BaJPt18dV1QM12nIOdeD5sAMaOzQ=";
-  } else null;
+  npmDeps =
+    if hasNpm then
+      fetchNpmDeps {
+        name = "anubis-npm-deps";
+        inherit (finalAttrs) src;
+        hash = "sha256-SPoI66jy2XS4FM6BaJPt18dV1QM12nIOdeD5sAMaOzQ=";
+      }
+    else
+      null;
 
   nativeBuildInputs = [
     esbuild
     brotli
     zstd
     nodejs
-  ] ++ lib.optionals hasNpm [ npmHooks.npmConfigHook ];
+  ]
+  ++ lib.optionals hasNpm [ npmHooks.npmConfigHook ];
 
   subPackages = [ "cmd/anubis" ];
 
