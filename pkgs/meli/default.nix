@@ -38,12 +38,14 @@ rustPlatform.buildRustPackage rec {
     pkg-config
     installShellFiles
     makeWrapper
-  ] ++ lib.optionals (mandoc != null) [ mandoc ];
+  ]
+  ++ lib.optionals (mandoc != null) [ mandoc ];
 
   buildInputs = [
     openssl
     sqlite
-  ] ++ lib.optionals (dbus != null) [ dbus ];
+  ]
+  ++ lib.optionals (dbus != null) [ dbus ];
 
   postInstall = ''
     installManPage meli/docs/*.{1,5,7}
@@ -51,8 +53,7 @@ rustPlatform.buildRustPackage rec {
     wrapProgram $out/bin/meli \
       --prefix LD_LIBRARY_PATH : ${
         lib.makeLibraryPath (
-          lib.optional (gpgme != null) gpgme
-          ++ lib.optional (withNotmuch && notmuch != null) notmuch
+          lib.optional (gpgme != null) gpgme ++ lib.optional (withNotmuch && notmuch != null) notmuch
         )
       } \
       --prefix PATH : ${lib.makeBinPath (lib.optional (gnum4 != null) gnum4)}
