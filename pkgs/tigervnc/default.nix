@@ -2,14 +2,13 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  xorg-server ? null,
+  xorg,
   util-macros,
   tab-window-manager ? null,
   libxtst,
   libxrandr,
   libxi,
   libxft,
-  libxfont_2 ? null,
   libxext,
   libxdamage,
   libx11,
@@ -22,7 +21,6 @@
   xauth,
   libxkbfile,
   libpciaccess,
-  xkeyboard_config ? null,
   zlib,
   libjpeg_turbo,
   pixman,
@@ -47,8 +45,15 @@
   pipewire,
   wayland,
   wayland-scanner,
+  xkeyboard-config,
   waylandSupport ? stdenv.hostPlatform.isLinux,
 }:
+
+let
+  xorg-server = xorg.xorgserver;
+  xkeyboard_config = xkeyboard-config;
+  libxfont_2 = xorg.libXfont2 or null;
+in
 
 stdenv.mkDerivation (finalAttrs: {
   version = "1.16.2";
@@ -75,15 +80,14 @@ stdenv.mkDerivation (finalAttrs: {
 
   dontUseCmakeBuildDir = true;
 
-  cmakeFlags =
-    [
-      (lib.cmakeFeature "CMAKE_INSTALL_PREFIX" (placeholder "out"))
-      (lib.cmakeFeature "CMAKE_INSTALL_SBINDIR" "${placeholder "out"}/bin")
-      (lib.cmakeFeature "CMAKE_INSTALL_LIBEXECDIR" "${placeholder "out"}/bin")
-    ]
-    ++ lib.optionals stdenv.hostPlatform.isLinux [
-      (lib.cmakeBool "ENABLE_WAYLAND" waylandSupport)
-    ];
+  cmakeFlags = [
+    (lib.cmakeFeature "CMAKE_INSTALL_PREFIX" (placeholder "out"))
+    (lib.cmakeFeature "CMAKE_INSTALL_SBINDIR" "${placeholder "out"}/bin")
+    (lib.cmakeFeature "CMAKE_INSTALL_LIBEXECDIR" "${placeholder "out"}/bin")
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
+    (lib.cmakeBool "ENABLE_WAYLAND" waylandSupport)
+  ];
 
   env.NIX_CFLAGS_COMPILE = toString [
     "-Wno-error=array-bounds"
@@ -137,58 +141,56 @@ stdenv.mkDerivation (finalAttrs: {
       }
   '';
 
-  buildInputs =
-    [
-      fltk
-      gnutls
-      libjpeg_turbo
-      pixman
-      gawk
-      ffmpeg
-      nettle
-      pam
-      perl
-      xorgproto
-      util-macros
-      libxtst
-      libxext
-      libx11
-      libxext
-      libice
-      libxi
-      libsm
-      libxft
-      libxkbfile
-      libxfont_2
-      libpciaccess
-      libGLU
-      libxrandr
-      libxdamage
-    ]
-    ++ xorg-server.buildInputs
-    ++ lib.optionals waylandSupport [
-      libuuid
-      libxkbcommon
-      pipewire
-      wayland
-    ];
+  buildInputs = [
+    fltk
+    gnutls
+    libjpeg_turbo
+    pixman
+    gawk
+    ffmpeg
+    nettle
+    pam
+    perl
+    xorgproto
+    util-macros
+    libxtst
+    libxext
+    libx11
+    libxext
+    libice
+    libxi
+    libsm
+    libxft
+    libxkbfile
+    libpciaccess
+    libGLU
+    libxrandr
+    libxdamage
+  ]
+  ++ lib.optionals (libxfont_2 != null) [ libxfont_2 ]
+  ++ xorg-server.buildInputs
+  ++ lib.optionals waylandSupport [
+    libuuid
+    libxkbcommon
+    pipewire
+    wayland
+  ];
 
-  nativeBuildInputs =
-    [
-      cmake
-      gettext
-      autoconf
-      automake
-      font-util
-      libtool
-      makeWrapper
-      util-macros
-      zlib
-    ]
-    ++ xorg-server.nativeBuildInputs
-    ++ lib.optionals waylandSupport [
-      wayland-scanner
-    ];
+  nativeBuildInputs = [
+    cmake
+    gettext
+    autoconf
+    automake
+    font-util
+    libtool
+    makeWrapper
+    util-macros
+    zlib
+  ]
+  ++ xorg-server.nativeBuildInputs
+  ++ lib.optionals waylandSupport [
+    wayland-scanner
+  ];
 
   propagatedBuildInputs = xorg-server.propagatedBuildInputs;
 
