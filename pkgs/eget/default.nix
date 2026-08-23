@@ -27,11 +27,13 @@ buildGo126Module (finalAttrs: {
 
   nativeBuildInputs = [
     installShellFiles
-  ] ++ lib.optionals (pandoc != null) [ pandoc ];
+  ]
+  ++ lib.optionals (pandoc != null) [ pandoc ];
 
   postInstall = ''
     rm $out/bin/{test,tools}
-  '' + lib.optionalString (pandoc != null) ''
+  ''
+  + lib.optionalString (pandoc != null) ''
     pandoc man/eget.md -s -t man -o eget.1
     installManPage eget.1
   '';
