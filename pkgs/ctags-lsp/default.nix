@@ -9,17 +9,21 @@
 }:
 buildGo126Module (finalAttrs: {
   pname = "ctags-lsp";
-  version = "0.10.2";
+  version = "0.11.0";
   vendorHash = null;
 
   src = fetchFromGitHub {
     owner = "netmute";
     repo = "ctags-lsp";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-8cknVcXIuV7mmRMm87jn2l3qrfaY3CGzCZ0VW5Vb9xk=";
+    hash = "sha256-9VKXdffK46gl7MLN1kpSpQRIoJzu4nTS9C1r//qsOuo=";
   };
 
   nativeBuildInputs = [ makeWrapper ];
+
+  # Tests require a functioning LSP server setup with writer initialization
+  # that doesn't work in the Nix sandbox (nil pointer in sendResponse)
+  doCheck = false;
 
   ldflags = [
     "-s"
