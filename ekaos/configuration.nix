@@ -152,7 +152,7 @@
   # }}}
 
   # NetworkManager for wireless (wlo2) {{{
-  # networking.networkmanager needs networkmanager package
+  # networkmanager package evaluates to null — still being ported
   # networking.networkmanager = {
   #   enable = true;
   #   unmanaged = [ "enp67s0" "enp68s0" ];
@@ -268,7 +268,7 @@
           "wheel"
           "plex"
           "libvirtd"
-          # "networkmanager"  # needs networkmanager package
+          # "networkmanager"  # package still being ported
         ];
       };
 
