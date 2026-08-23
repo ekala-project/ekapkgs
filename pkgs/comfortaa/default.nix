@@ -7,7 +7,7 @@
 
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "comfortaa";
-  version = "3.101-unstable-2021-07-29";
+  version = "3.101";
 
   outputs = [
     "out"
