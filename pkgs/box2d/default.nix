@@ -7,13 +7,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "box2d";
-  version = "2.4.2";
+  version = "3.1.1";
 
   src = fetchFromGitHub {
     owner = "erincatto";
     repo = "box2d";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-yvhpgiZpjTPeSY7Ma1bh4LwIokUUKB10v2WHlamL9D8=";
+    hash = "sha256-IqQy9A8fWLG9H8ZPmOXeFZDaaks84miRuzXaFlNwm0g=";
   };
 
   nativeBuildInputs = [
@@ -22,8 +22,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeFlags = [
-    "-DBOX2D_BUILD_UNIT_TESTS=OFF"
-    "-DBOX2D_BUILD_TESTBED=OFF"
+    "-DBOX2D_UNIT_TESTS=OFF"
+    "-DBOX2D_SAMPLES=OFF"
+    "-DBOX2D_BENCHMARKS=OFF"
   ];
 
   meta = {
