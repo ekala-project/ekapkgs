@@ -11,22 +11,14 @@
 stdenv.mkDerivation (finalAttrs: {
 
   pname = "biblesync";
-  version = "2.1.0";
+  version = "2.2.0";
 
   src = fetchFromGitHub {
     owner = "karlkleinpaste";
     repo = "biblesync";
     tag = finalAttrs.version;
-    sha256 = "0prmd12jq2cjdhsph5v89y38j7hhd51dr3r1hivgkhczr3m5hf4s";
+    sha256 = "sha256-8CPP0ndrnJrGhNR7Y3lX3td5jXNE8VuwEiD8C2D4K5I=";
   };
-
-  patches = [
-    (fetchpatch {
-      name = "cmake-4.patch";
-      url = "https://github.com/karlkleinpaste/biblesync/commit/4b00f9fd3d0c858947eee18206ef44f9f6bd2283.patch?full_index=1";
-      hash = "sha256-CVYhYBDneLN3Ogvye01EQCc9zxjSwaKBzk1fBaKINug=";
-    })
-  ];
 
   nativeBuildInputs = [
     pkg-config
