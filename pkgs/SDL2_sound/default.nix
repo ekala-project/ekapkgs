@@ -2,9 +2,8 @@
   stdenv,
   lib,
   fetchFromGitHub,
-  fetchpatch,
   cmake,
-  SDL2,
+  sdl3,
   flac,
   libmikmod,
   libvorbis,
@@ -12,23 +11,14 @@
 
 stdenv.mkDerivation rec {
   pname = "SDL2_sound";
-  version = "2.0.1";
+  version = "3.2.0";
 
   src = fetchFromGitHub {
     owner = "icculus";
     repo = "SDL_sound";
     rev = "v${version}";
-    hash = "sha256-N2znqy58tMHgYa07vEsSedWLRhoJzDoINcsUu0UYLnA=";
+    hash = "sha256-Ael8OTLqmPNsX+Q+NwbXgVB9xZ0Wzv1p+IpIDWw1q+s=";
   };
-
-  patches = [
-    (fetchpatch {
-      # https://github.com/icculus/SDL_sound/pull/32 - fix build on darwin
-      url = "https://github.com/icculus/SDL_sound/commit/c15d75b7720113b28639baad284f45f943846294.patch";
-      hash = "sha256-4GL8unsZ7eNkzjLXq9QdaxFQMzX2tdP0cBR1jTaRLc0=";
-    })
-  ];
-
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
@@ -37,7 +27,7 @@ stdenv.mkDerivation rec {
   cmakeFlags = [ "-DSDLSOUND_DECODER_MIDI=0" ];
 
   buildInputs = [
-    SDL2
+    sdl3
     flac
     libmikmod
     libvorbis
