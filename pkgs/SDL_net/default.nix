@@ -10,7 +10,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "SDL_net";
-  version = "1.2.8-unstable-2025-04-21";
+  version = "3.2.0";
 
   src = fetchFromGitHub {
     owner = "libsdl-org";
