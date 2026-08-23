@@ -6,12 +6,12 @@
 
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "b4";
-  version = "0.15.2";
+  version = "0.16.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-uBXyrtIohxjP4qFMdkIaALxPCRjqMrRd0WRcmZ/dpp0=";
+    hash = "sha256-BxgjoekEUIpv2ar4zC+akml+HfonAAC00RMAFbVvQTc=";
   };
 
   doCheck = false;
@@ -19,6 +19,8 @@ python3Packages.buildPythonApplication (finalAttrs: {
   pythonRemoveDeps = [
     "patatt"
     "git-filter-repo"
+    "ezgb"
+    "liblore"
   ];
 
   build-system = with python3Packages; [
@@ -29,6 +31,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
     requests
     dnspython
     dkimpy
+    pygit2
     textual
   ];
 
