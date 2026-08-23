@@ -17,7 +17,7 @@
   libjpeg,
   libopus,
   nasm,
-  xorg-server ? null,
+  xorg,
   libxrandr,
   libxfixes,
   libx11,
@@ -28,6 +28,8 @@
 }:
 
 let
+  xorg-server = xorg.xorgserver;
+
   xorgxrdp = stdenv.mkDerivation rec {
     pname = "xorgxrdp";
     version = "0.10.5";
@@ -49,8 +51,9 @@ let
     ];
 
     buildInputs = [
+      xorg-server
       libdrm
-    ] ++ lib.optionals (xorg-server != null) [ xorg-server ];
+    ];
 
     postPatch = ''
       # patch from Debian, allows to run xrdp daemon under unprivileged user
@@ -161,9 +164,9 @@ let
       cat >> $out/etc/xrdp/sesman.ini <<EOF
 
       [Xorg]
-      ${lib.optionalString (xorg-server != null) "param=${xorg-server}/bin/Xorg"}
+      param=${xorg-server}/bin/Xorg
       param=-modulepath
-      param=${xorgxrdp}/lib/xorg/modules${lib.optionalString (xorg-server != null) ",${xorg-server}/lib/xorg/modules"}
+      param=${xorgxrdp}/lib/xorg/modules,${xorg-server}/lib/xorg/modules
       param=-config
       param=${xorgxrdp}/etc/X11/xrdp/xorg.conf
       param=-noreset
