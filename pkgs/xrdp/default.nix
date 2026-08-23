@@ -1,0 +1,192 @@
+{
+  lib,
+  stdenv,
+  applyPatches,
+  fetchFromGitHub,
+  pkg-config,
+  which,
+  perl,
+  autoconf,
+  automake,
+  libtool,
+  openssl,
+  systemd,
+  pam,
+  fuse3,
+  libdrm,
+  libjpeg,
+  libopus,
+  nasm,
+  xorg-server ? null,
+  libxrandr,
+  libxfixes,
+  libx11,
+  xauth,
+  lame,
+  pixman,
+  libjpeg_turbo,
+}:
+
+let
+  xorgxrdp = stdenv.mkDerivation rec {
+    pname = "xorgxrdp";
+    version = "0.10.5";
+
+    src = fetchFromGitHub {
+      owner = "neutrinolabs";
+      repo = "xorgxrdp";
+      rev = "v${version}";
+      hash = "sha256-P7mgdHIq7/Vkk5CR4mUYtQ0xBjh3J2QrYAobKbw1KXM=";
+    };
+
+    nativeBuildInputs = [
+      pkg-config
+      autoconf
+      automake
+      which
+      libtool
+      nasm
+    ];
+
+    buildInputs = [
+      libdrm
+    ] ++ lib.optionals (xorg-server != null) [ xorg-server ];
+
+    postPatch = ''
+      # patch from Debian, allows to run xrdp daemon under unprivileged user
+      substituteInPlace module/rdpClientCon.c \
+        --replace 'g_sck_listen(dev->listen_sck);' 'g_sck_listen(dev->listen_sck); g_chmod_hex(dev->uds_data, 0x0660);'
+
+      substituteInPlace configure.ac \
+        --replace 'moduledir=`pkg-config xorg-server --variable=moduledir`' "moduledir=$out/lib/xorg/modules" \
+        --replace 'sysconfdir="/etc"' "sysconfdir=$out/etc"
+    '';
+
+    preConfigure = ''
+      ./bootstrap
+      export XRDP_CFLAGS="-I${xrdp.src}/common -I${libdrm.dev}/include -I${libdrm.dev}/include/libdrm"
+    '';
+
+    enableParallelBuilding = true;
+  };
+
+  xrdp = stdenv.mkDerivation rec {
+    pname = "xrdp";
+    version = "0.10.6";
+
+    src = applyPatches {
+      inherit version;
+      patches = [ ./dynamic_config.patch ];
+      name = "xrdp-patched-${version}";
+      src = fetchFromGitHub {
+        owner = "neutrinolabs";
+        repo = "xrdp";
+        rev = "v${version}";
+        fetchSubmodules = true;
+        hash = "sha256-BoIpWafUWznRHN8BaZmld8vVbZtywaGiooGPnDtDCjM=";
+      };
+    };
+
+    nativeBuildInputs = [
+      pkg-config
+      autoconf
+      automake
+      which
+      libtool
+      nasm
+      perl
+    ];
+
+    buildInputs = [
+      fuse3
+      lame
+      libjpeg
+      libjpeg_turbo
+      libopus
+      openssl
+      pam
+      pixman
+      systemd
+      libx11
+      libxfixes
+      libxrandr
+    ];
+
+    postPatch = ''
+      substituteInPlace sesman/sesexec/xauth.c --replace "xauth -q" "${xauth}/bin/xauth -q"
+
+      substituteInPlace configure.ac --replace /usr/include/ ""
+    '';
+
+    preConfigure = ''
+      (cd librfxcodec && ./bootstrap && ./configure --prefix=$out --enable-static --disable-shared)
+      ./bootstrap
+    '';
+    dontDisableStatic = true;
+    configureFlags = [
+      "--with-systemdsystemunitdir=/var/empty"
+      "--enable-fuse"
+      "--enable-ipv6"
+      "--enable-jpeg"
+      "--enable-mp3lame"
+      "--enable-opus"
+      "--enable-pam-config=unix"
+      "--enable-pixman"
+      "--enable-rdpsndaudin"
+      "--enable-rfxcodec"
+      "--enable-tjpeg"
+      "--enable-vsock"
+    ];
+
+    installFlags = [
+      "DESTDIR=$(out)"
+      "prefix="
+    ];
+
+    postInstall = ''
+      # remove generated keys (as non-deterministic)
+      rm $out/etc/xrdp/{rsakeys.ini,key.pem,cert.pem}
+
+      cp $src/keygen/openssl.conf $out/share/xrdp/openssl.conf
+
+      substituteInPlace $out/etc/xrdp/sesman.ini --replace-fail /etc/xrdp/pulse $out/etc/xrdp/pulse
+      substituteInPlace $out/etc/xrdp/sesman.ini --replace-fail '#SessionSockdirGroup=xrdp' 'SessionSockdirGroup=xrdp'
+
+      # remove all session types except Xorg (they are not supported by this setup)
+      perl -i -ne 'print unless /\[(X11rdp|Xvnc|console|vnc-any|sesman-any|rdp-any|neutrinordp-any)\]/ .. /^$/' $out/etc/xrdp/xrdp.ini
+
+      # remove all session types and then add Xorg
+      perl -i -ne 'print unless /\[(X11rdp|Xvnc|Xorg)\]/ .. /^$/' $out/etc/xrdp/sesman.ini
+
+      cat >> $out/etc/xrdp/sesman.ini <<EOF
+
+      [Xorg]
+      ${lib.optionalString (xorg-server != null) "param=${xorg-server}/bin/Xorg"}
+      param=-modulepath
+      param=${xorgxrdp}/lib/xorg/modules${lib.optionalString (xorg-server != null) ",${xorg-server}/lib/xorg/modules"}
+      param=-config
+      param=${xorgxrdp}/etc/X11/xrdp/xorg.conf
+      param=-noreset
+      param=-nolisten
+      param=tcp
+      param=-logfile
+      param=.xorgxrdp.%s.log
+      EOF
+    '';
+
+    enableParallelBuilding = true;
+
+    passthru = {
+      inherit xorgxrdp;
+    };
+
+    meta = {
+      description = "Open source RDP server";
+      homepage = "https://github.com/neutrinolabs/xrdp";
+      license = lib.licenses.asl20;
+      maintainers = [ ];
+      platforms = lib.platforms.linux;
+    };
+  };
+in
+xrdp
