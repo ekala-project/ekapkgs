@@ -13,13 +13,13 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "cgns";
-  version = "4.5.1";
+  version = "4.5.2";
 
   src = fetchFromGitHub {
     owner = "cgns";
     repo = "cgns";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-0cZtq8nVAHAubHD6IDofnh8N7xiNHQkbhXR5OpdhPQU=";
+    hash = "sha256-3Ak0ttt6gtJbKzXF37Q++wJP8lqGEYDMsgmf2xo1HmU=";
   };
 
   patches = [
