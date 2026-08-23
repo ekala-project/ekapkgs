@@ -1,0 +1,74 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  file,
+  python3Packages,
+  rsync,
+}:
+
+python3Packages.buildPythonApplication (finalAttrs: {
+  pname = "barman";
+  version = "3.19.1";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "EnterpriseDB";
+    repo = "barman";
+    tag = "release/${finalAttrs.version}";
+    hash = "sha256-7K7ibg2/hr5wBzGR8cW5FZNtPPFEBA7xPwmOl2c1fOU=";
+  };
+
+  patches = [
+    ./unwrap-subprocess.patch
+  ];
+
+  postPatch = ''
+    substituteInPlace barman/encryption.py \
+      --replace-fail '"file"' '"${lib.getExe file}"'
+  '';
+
+  build-system = with python3Packages; [
+    distutils
+    setuptools
+  ];
+
+  dependencies = with python3Packages; [
+    argcomplete
+    azure-identity
+    azure-mgmt-compute
+    azure-storage-blob
+    boto3
+    distutils
+    google-cloud-compute
+    google-cloud-storage
+    grpcio
+    psycopg2
+    python-dateutil
+    python-snappy
+  ];
+
+  nativeCheckInputs = [
+    python3Packages.lz4
+    python3Packages.mock
+    python3Packages.pytestCheckHook
+    python3Packages.zstandard
+    rsync
+  ];
+
+  disabledTests = [
+    "test_help_output"
+    "test_exits_on_unsupported_target"
+    "test_resolve_mounted_volume_failure"
+  ];
+
+  meta = {
+    description = "Backup and Recovery Manager for PostgreSQL";
+    homepage = "https://www.pgbarman.org/";
+    changelog = "https://github.com/EnterpriseDB/barman/blob/${finalAttrs.src.tag}/RELNOTES.md";
+    mainProgram = "barman";
+    license = lib.licenses.gpl3Plus;
+    maintainers = [ ];
+    platforms = lib.platforms.unix;
+  };
+})
