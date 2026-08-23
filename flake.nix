@@ -38,44 +38,6 @@
         }
       );
 
-      ekaosSystem =
-        {
-          modules ? [ ],
-          system ? "x86_64-linux",
-          config ? { },
-          ...
-        }@args:
-        let
-          pkgs = import ./. {
-            inherit system config;
-            modules = [ pkgsModule ];
-          };
-          ekapkgsModules = import ./ekaos/modules/module-list.nix;
-          extraArgs = builtins.removeAttrs args [
-            "modules"
-            "system"
-            "config"
-          ];
-          eval =
-            (import (corepkgs + "/ekaos/eval-config.nix") {
-              lib = pkgs.lib;
-              inherit pkgs;
-            })
-              (
-                {
-                  modules = ekapkgsModules ++ modules;
-                }
-                // extraArgs
-              );
-        in
-        eval;
-
-      ekaosConfigurations.jonringer = self.ekaosSystem {
-        system = "x86_64-linux";
-        config.allowUnfree = true;
-        modules = [ ./ekaos/configuration.nix ];
-      };
-
       formatter = corepkgs.formatter;
       nixConfig = {
         extra-substituters = [ "https://ekala-corepkgs.cachix.org" ];
