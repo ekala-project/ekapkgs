@@ -7,8 +7,8 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1787486572,
-        "narHash": "sha256-yzwgVqAAiSma9Bk9PZyhPEIFNt4sekw9SGpZOmnMiVU=",
+        "lastModified": 1787490696,
+        "narHash": "sha256-RUOX8qh2/rHy7YgwQhREMFj/prm1euI/s3PukMOM/z8=",
         "path": "/home/jon/projects/core-pkgs",
         "type": "path"
       },

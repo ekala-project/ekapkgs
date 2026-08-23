@@ -117,7 +117,7 @@
     # factorio.enable = true;
 
     transmission = {
-      enable = true;
+      enable = false;  # miniupnpc API mismatch
       group = "users";
       package = pkgs.transmission;
       settings = {
@@ -426,7 +426,7 @@
   system.stateVersion = "19.09";
 
   hardware.cpu.amd.updateMicrocode = true;
-  virtualisation.libvirtd.enable = true;
+  # virtualisation.libvirtd.enable = true;  # libvirt package needs more deps
   time.timeZone = "America/Los_Angeles";
 
   # services.snix.enable = true;  # TODO: needs snix package + cachix
