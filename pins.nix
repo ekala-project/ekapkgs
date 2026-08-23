@@ -22,7 +22,7 @@ let
       };
 in
 {
-  lib = getInfo "lib";
+  lib = getInfo "nix-lib";
   corepkgs = getInfo "corepkgs";
   python = getInfo "python";
   haskell = getInfo "haskell";
