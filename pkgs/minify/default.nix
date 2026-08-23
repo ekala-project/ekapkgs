@@ -1,0 +1,44 @@
+{
+  lib,
+  buildGo126Module,
+  fetchFromGitHub,
+  installShellFiles,
+}:
+
+buildGo126Module (finalAttrs: {
+  pname = "minify";
+  version = "2.24.14";
+
+  src = fetchFromGitHub {
+    owner = "tdewolff";
+    repo = "minify";
+    rev = "v${finalAttrs.version}";
+    hash = "sha256-Gur0IFYTJWqazAADuFdOXuFiA04k1vCIdRT+6208cso=";
+  };
+
+  vendorHash = "sha256-Ja3Ew3VtFXgWjasnjZd+gJ7duJvsJqo5sVsp8FbxdBc=";
+
+  nativeBuildInputs = [ installShellFiles ];
+
+  ldflags = [
+    "-s"
+    "-w"
+    "-X main.Version=${finalAttrs.version}"
+  ];
+
+  subPackages = [ "cmd/minify" ];
+
+  postInstall = ''
+    installShellCompletion --cmd minify --bash cmd/minify/bash_completion
+  '';
+
+  meta = {
+    description = "Go minifiers for web formats";
+    homepage = "https://go.tacodewolff.nl/minify";
+    downloadPage = "https://github.com/tdewolff/minify";
+    changelog = "https://github.com/tdewolff/minify/releases/tag/v${finalAttrs.version}";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+    mainProgram = "minify";
+  };
+})
