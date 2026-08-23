@@ -9,12 +9,13 @@
   file,
   wget,
   python3,
-  qemu-utils,
+  qemu,
   e2fsprogs,
   cdrkit,
   gptfdisk,
 }:
 let
+  qemu-utils = qemu.override { toolsOnly = true; };
   guestDeps = [
     e2fsprogs
     gptfdisk
@@ -31,13 +32,13 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "cloud-utils";
-  version = "0.33";
+  version = "0.34";
 
   src = fetchFromGitHub {
     owner = "canonical";
     repo = "cloud-utils";
     tag = finalAttrs.version;
-    hash = "sha256-YqfkmYclPZu6Mc2bFYxtiuH7uvfa3V4YlD0aHuKn1hw=";
+    hash = "sha256-egnJxXA8huG8IK06Z6v6uA2dbjlChLbEGMtJRhMlFZw=";
   };
 
   nativeBuildInputs = [ makeWrapper ];
