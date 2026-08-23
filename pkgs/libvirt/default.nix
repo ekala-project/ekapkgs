@@ -30,6 +30,9 @@
   bash,
   gettext,
   docutils,
+  libxslt,
+  attr,
+  acl,
 }:
 
 stdenv.mkDerivation rec {
@@ -42,12 +45,13 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [
-    meson ninja pkg-config python3 perl gettext docutils rpcsvc-proto
+    meson meson.configurePhaseHook ninja pkg-config python3 perl gettext docutils rpcsvc-proto libxslt
   ];
 
   buildInputs = [
     libxml2 gnutls libgcrypt dbus libnl libpciaccess yajl
     libtirpc readline numactl systemd libpcap libtasn1 curl bash
+    attr acl
   ];
 
   mesonFlags = [
@@ -55,12 +59,28 @@ stdenv.mkDerivation rec {
     "-Ddriver_libvirtd=enabled"
     "-Dstorage_dir=enabled"
     "-Dstorage_fs=enabled"
-    "-Dstorage_disk=enabled"
-    "-Dstorage_logical=enabled"
     "-Ddocs=disabled"
     "-Dtests=disabled"
     "-Dinit_script=systemd"
     "-Drunstatedir=/run"
+    "-Dapparmor=disabled"
+    "-Dapparmor_profiles=disabled"
+    "-Dselinux=disabled"
+    "-Daudit=disabled"
+    "-Dwireshark_dissector=disabled"
+    "-Dlibssh=disabled"
+    "-Dlibssh2=disabled"
+    "-Dsasl=disabled"
+    "-Dpolkit=disabled"
+    "-Dsanlock=disabled"
+    "-Dlibiscsi=disabled"
+    "-Dglusterfs=disabled"
+    "-Dopenwsman=disabled"
+    "-Dnbdkit=disabled"
+    # "-Dnbd=disabled"
+    "-Dfuse=disabled"
+    "-Dblkid=disabled"
+    "-Dbash_completion=disabled"
   ];
 
   meta = {
