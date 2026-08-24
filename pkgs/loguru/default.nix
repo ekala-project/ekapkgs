@@ -8,7 +8,7 @@
 
 stdenv.mkDerivation {
   pname = "loguru";
-  version = "2.1.0-unstable-2023-04-06";
+  version = "2.1.0";
 
   src = fetchFromGitHub {
     owner = "emilk";
