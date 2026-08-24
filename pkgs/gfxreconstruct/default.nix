@@ -18,7 +18,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "gfxreconstruct";
-  version = "1.0.4-unstable-2026-04-29";
+  version = "1.0.4";
 
   src = fetchFromGitHub {
     owner = "LunarG";
