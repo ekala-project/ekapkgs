@@ -22,14 +22,14 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "engrampa";
-  version = "1.28.3";
+  version = "1.28.5";
 
   src = fetchFromGitHub {
     owner = "mate-desktop";
     repo = "engrampa";
     tag = "v${finalAttrs.version}";
     fetchSubmodules = true;
-    hash = "sha256-bmqCsbGz49wda1sMiAvG3XTGpFEwMvDx8ojuzxZ9MAI=";
+    hash = "sha256-v23uDb9WC7t0fIAGK20z+7I3NzbgWPH+POuE28jBfSk=";
   };
 
   nativeBuildInputs = [
@@ -56,9 +56,11 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   configureFlags =
-    lib.optionals (caja != null) [
+    (if caja != null then [
       "--with-cajadir=$$out/lib/caja/extensions-2.0"
-    ]
+    ] else [
+      "--disable-caja-actions"
+    ])
     ++ lib.optionals withMagic [
       "--enable-magic"
     ];
