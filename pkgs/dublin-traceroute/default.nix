@@ -12,7 +12,7 @@
 
 stdenv.mkDerivation {
   pname = "dublin-traceroute";
-  version = "0.4.2-unstable-2024-04-11";
+  version = "0.4.2";
 
   src = fetchFromGitHub {
     owner = "insomniacslk";
