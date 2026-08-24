@@ -7,14 +7,14 @@
 
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "pre-commit";
-  version = "4.5.1";
+  version = "4.6.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pre-commit";
     repo = "pre-commit";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-3E/haU7TzTr+Qj3KadC7BYwuECZPa2Q+NvG5e4SSKSA=";
+    hash = "sha256-aCEN9dVz/3lB2gy7U+6dVj3jSM7cmVsstOp+LHvYRsU=";
   };
 
   patches = [
