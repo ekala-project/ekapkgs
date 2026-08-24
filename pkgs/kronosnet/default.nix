@@ -21,13 +21,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "kronosnet";
-  version = "1.33";
+  version = "1.35";
 
   src = fetchFromGitHub {
     owner = "kronosnet";
     repo = "kronosnet";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-lo+zM6qS+0m3Umtu3MY2hKk5kXkeEioG7fMDa6hpUog=";
+    hash = "sha256-dlokVXqm1U9tt7/X07TQ7076yYXVjarHq01+R3sqCJM=";
   };
 
   nativeBuildInputs = [
@@ -35,6 +35,8 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     doxygen
   ];
+
+  configureFlags = [ "--disable-wireshark-dissector" ];
 
   buildInputs = [
     libqb
