@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation {
   pname = "pystring";
-  version = "1.1.4-unstable-2025-10-07";
+  version = "1.2.0";
 
   src = fetchFromGitHub {
     owner = "imageworks";
