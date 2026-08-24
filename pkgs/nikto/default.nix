@@ -8,7 +8,7 @@
 }:
 
 let
-  version = "2.6.0";
+  version = "2.6.1";
 in
 stdenv.mkDerivation rec {
   pname = "nikto";
@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
     owner = "sullo";
     repo = "nikto";
     rev = version;
-    sha256 = "sha256-iHOdMlfcKhvQCsCjWge6K+0h8kkgXa0Uii9o3YRQP5w=";
+    sha256 = "sha256-jMbVJ35f1uPNQ7xmBnOhBMmh+u4Ewpd5GJFMg8ZKIxw=";
   };
 
   # Nikto searches its configuration file based on its current path
