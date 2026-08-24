@@ -10,7 +10,7 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "rathole";
-  version = "0.5.0-unstable-2025-07-29";
+  version = "0.5.0";
 
   src = fetchFromGitHub {
     owner = "rathole-org";
