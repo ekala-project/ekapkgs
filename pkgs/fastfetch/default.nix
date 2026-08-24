@@ -2,7 +2,6 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  chafa,
   cmake,
   dbus,
   dconf,
@@ -41,7 +40,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "fastfetch";
-  version = "2.66.0";
+  version = "2.67.1";
 
   strictDeps = true;
 
@@ -49,7 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "fastfetch-cli";
     repo = "fastfetch";
     tag = finalAttrs.version;
-    hash = "sha256-ttszEPEywszDGHoYKZYXM2WAUcuOSIj589LeEWxtRaU=";
+    hash = "sha256-o4jjRkwrsfnnKiXxJZhTevw5x5zoXAn3XNprxEFWMmU=";
   };
 
   nativeBuildInputs = [
@@ -60,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    chafa
     imagemagick
     sqlite
     yyjson
@@ -99,6 +97,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeFlags = [
     (lib.cmakeOptionType "filepath" "CMAKE_INSTALL_SYSCONFDIR" "${placeholder "out"}/etc")
+    (lib.cmakeBool "ENABLE_CHAFA" false)
     (lib.cmakeBool "ENABLE_DIRECTX_HEADERS" false)
     (lib.cmakeBool "ENABLE_SYSTEM_YYJSON" true)
     (lib.cmakeBool "ENABLE_IMAGEMAGICK6" false)
