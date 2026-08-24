@@ -10,7 +10,7 @@
 
 stdenv.mkDerivation {
   pname = "OttoMatic";
-  version = "4.0.1-unstable-2025-09-28";
+  version = "4.0.1";
 
   src = fetchFromGitHub {
     owner = "jorio";
