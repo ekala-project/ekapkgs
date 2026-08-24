@@ -6,7 +6,7 @@
 
 buildGo126Module {
   pname = "mmark";
-  version = "2.2.32";
+  version = "2.2.48";
 
   src = fetchFromGitHub {
     owner = "mmarkdown";
