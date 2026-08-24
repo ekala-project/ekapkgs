@@ -7,14 +7,14 @@
 
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "pipx";
-  version = "1.16.6";
+  version = "1.16.7";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pypa";
     repo = "pipx";
     tag = finalAttrs.version;
-    hash = "sha256-2su1kJHrSYGnTKCXvWCWRQUMlR0oEhno90D57UIOCJU=";
+    hash = "sha256-9u1YvQ717AoAG+//NPh/LdFq84mNwBHstcH+qNrnie0=";
   };
 
   build-system = with python3Packages; [
