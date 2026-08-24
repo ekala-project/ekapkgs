@@ -8,7 +8,7 @@
 
 stdenv.mkDerivation {
   pname = "webfs";
-  version = "1.21-unstable-2021-02-24";
+  version = "1.21";
 
   src = fetchFromGitHub {
     owner = "ourway";
