@@ -2,7 +2,6 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  fetchpatch2,
   pkg-config,
   pkgsBuildBuild,
   python3,
@@ -65,7 +64,7 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "fwupd";
-  version = "2.1.6";
+  version = "2.1.7";
 
   outputs = [
     "out"
@@ -80,17 +79,13 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "fwupd";
     repo = "fwupd";
     tag = finalAttrs.version;
-    hash = "sha256-K8n1rPiLuHDybWPoAUQA7RY4J+Ga1fwNiaj48fHAh9A=";
+    hash = "sha256-TkF6Bdg4iFnjlLnRysU2+jXlfpg/3yN/hugntaI2xYE=";
   };
 
   patches = [
     ./0001-Install-fwupdplugin-to-out.patch
     ./0002-Add-output-for-installed-tests.patch
     ./0003-Add-option-for-installation-sysconfdir.patch
-    (fetchpatch2 {
-      url = "https://github.com/fwupd/fwupd/commit/c2ff6e0bf9e3fea5b8502ed12fdc9ab604a51518.patch";
-      hash = "sha256-Y8YbECfUGqvpNTlKCLOXgRSIZYO+MsZYIMcMgIQfkIs=";
-    })
   ];
 
   postPatch = ''
