@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation {
   pname = "vid.stab";
-  version = "1.1.1-unstable-2025-08-21";
+  version = "1.1.2";
 
   src = fetchFromGitHub {
     owner = "georgmartius";
