@@ -23,19 +23,14 @@
 
 stdenv.mkDerivation rec {
   pname = "opencolorio";
-  version = "2.4.2";
+  version = "2.5.2";
 
   src = fetchFromGitHub {
     owner = "AcademySoftwareFoundation";
     repo = "OpenColorIO";
     rev = "v${version}";
-    hash = "sha256-+P7T8UZuQEVmsMykSWtUxg0vC7Sr4fQJpovCU5sKtsA=";
+    hash = "sha256-b4tdQ9VH9M7hAD5Uuxu4QKwwpaVwroj/Bvg+Zsy0M1M=";
   };
-
-  patches = [
-    # Fix incorrect line number in test
-    ./line-numbers.patch
-  ];
 
   postPatch = lib.optionalString stdenv.hostPlatform.isDarwin ''
     # these tests don't like being run headless on darwin. no builtin
