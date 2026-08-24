@@ -6,16 +6,20 @@
 
 buildGo126Module (finalAttrs: {
   pname = "zvm";
-  version = "0.8.22";
+  version = "0.9.1";
 
   src = fetchFromGitHub {
     owner = "tristanisham";
     repo = "zvm";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-uKn4ysaNuvWpV4fhrpm7pdS61pQJTYr6WfIhBzTfNT8=";
+    hash = "sha256-J6LDlXkTAdHvtQZimVJ3EPgAzSCvSnVSy+eZe3OwhPg=";
   };
 
-  vendorHash = "sha256-kJrCUxzbpyxEUF9UQeAI28tWKA+T7zT1DBI1wf3pjjM=";
+  vendorHash = "sha256-ouRaZ/mrB84e0T2aGJwYPsLoB3a1/kk7WS5rlKBfImU=";
+
+  preCheck = ''
+    export HOME=$(mktemp -d)
+  '';
 
   meta = {
     homepage = "https://www.zvm.app/";
