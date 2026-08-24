@@ -4,25 +4,20 @@
   fetchFromGitHub,
   fetchpatch2,
   cmake,
-  doctest,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "foonathan-memory";
-  version = "0.7-4";
+  version = "0.7";
 
   src = fetchFromGitHub {
     owner = "foonathan";
     repo = "memory";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-qGbI7SL6lDbJzn2hkqaYw35QAyvSPxcZTb0ltDkPUSo=";
+    hash = "sha256-4AO662ck492aMJJWMFgbYWBrBFMioDp827WHtxOXB6Y=";
   };
 
   patches = [
-    # do not download doctest, use the system doctest instead
-    # originally from: https://sources.debian.org/data/main/f/foonathan-memory/0.7.3-2/debian/patches/0001-Use-system-doctest.patch
-    ./0001-Use-system-doctest.patch.patch
-
     (fetchpatch2 {
       # Fix build under clang on Darwin
       # https://github.com/foonathan/memory/pull/192
@@ -47,9 +42,8 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  doCheck = true;
-
-  checkInputs = [ doctest ];
+  # Tests try to download Catch2 at build time, which doesn't work in the sandbox
+  doCheck = false;
 
   # fix a circular dependency between "out" and "dev" outputs
   postInstall = ''
