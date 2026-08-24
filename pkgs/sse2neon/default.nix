@@ -6,13 +6,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "sse2neon";
-  version = "1.8.0";
+  version = "1.9.1";
 
   src = fetchFromGitHub {
     owner = "DLTcollab";
     repo = "sse2neon";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-vb9k+KjiGodVngza0R18LjfPTlsqFbzqXZqefm6KHj0=";
+    hash = "sha256-eD2Z4ZCybbqURHArENyiYVOFXHUEvpP5T3li/Bp8a24=";
   };
 
   hardeningDisable = [ "fortify" ];
