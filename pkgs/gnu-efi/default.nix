@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "gnu-efi";
-  version = "4.0.2";
+  version = "4.0.4";
 
   src = fetchFromGitHub {
     owner = "ncroxon";
     repo = "gnu-efi";
     tag = finalAttrs.version;
-    hash = "sha256-oIj0aNY4xU5OcO69TTjh5FcWzzkFd6jbenwzVvTXjqo=";
+    hash = "sha256-d0ndzFxhpxa6tqX9211y3mI4OFg7JZUvuCzGiPuhEAo=";
   };
 
   buildInputs = [ pciutils ];
