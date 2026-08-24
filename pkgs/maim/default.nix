@@ -22,13 +22,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "maim";
-  version = "5.8.1";
+  version = "5.8.2";
 
   src = fetchFromGitHub {
     owner = "naelstrof";
     repo = "maim";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-bbjV3+41cxAlKCEd1/nvnZ19GhctWOr5Lu4X+Vg3EAk=";
+    hash = "sha256-V2+yw747t2w3AgxJaRfRvwaEpRGUB+Bl7G2QpLP764E=";
   };
 
   cmakeFlags = [ "-DCMAKE_POLICY_VERSION_MINIMUM=3.10" ];
