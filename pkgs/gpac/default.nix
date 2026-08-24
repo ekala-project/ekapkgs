@@ -2,7 +2,6 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  fetchpatch2,
   pkg-config,
   zlib,
   ffmpeg-headless ? null,
@@ -35,13 +34,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "gpac";
-  version = "26.02.0";
+  version = "26.07.0";
 
   src = fetchFromGitHub {
     owner = "gpac";
     repo = "gpac";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-UtL+KG3dsp6dD7cfTK7e17ngt/RHKJL0s5IopTM3VOk=";
+    hash = "sha256-L4GKXCFsKVxWXZJJeiAegXJySoS9+/V+/cuzEJEse+I=";
   };
 
   nativeBuildInputs = [
@@ -81,13 +80,6 @@ stdenv.mkDerivation (finalAttrs: {
       curl
     ]
   );
-
-  patches = [
-    (fetchpatch2 {
-      url = "https://github.com/gpac/gpac/commit/cf6ac48c972eaaee2af270adc3f36615325deb3e.patch?full_index=1";
-      hash = "sha256-JaJiQAQvzdB74ag2/aZTiQa2NqlgqgMYS1tsk/R+wiI=";
-    })
-  ];
 
   enableParallelBuilding = true;
 
