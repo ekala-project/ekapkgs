@@ -6,7 +6,7 @@
 
 buildGoModule {
   pname = "ethr";
-  version = "1.0.0-unstable-2025-12-10";
+  version = "1.0.0";
 
   src = fetchFromGitHub {
     owner = "microsoft";
