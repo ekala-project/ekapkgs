@@ -41,7 +41,7 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "znapzend";
-  version = "0.23.2";
+  version = "0.23.6";
 
   src = fetchFromGitHub {
     owner = "oetiker";
@@ -50,7 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     # confusing fetchFromGitHub. Working around this by prefixing
     # with `refs/tags/`.
     tag = "v${finalAttrs.version}";
-    hash = "sha256-UvaYzzV+5mZAAwSSMzq4fjCu/mzjeSyQdwQRTZGNktM=";
+    hash = "sha256-IalZGMU5FtRCjpoItQdwajNniWtkBz9A+rooowO4VtY=";
   };
 
   outputs = [
