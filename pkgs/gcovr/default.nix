@@ -9,14 +9,14 @@
 
 python3Packages.buildPythonPackage (finalAttrs: {
   pname = "gcovr";
-  version = "8.4";
+  version = "8.6";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "gcovr";
     repo = "gcovr";
     tag = finalAttrs.version;
-    hash = "sha256-v3jNODYD9qa3mwttfuldhhIHrfR5LcsZ+WNWiOWb35E=";
+    hash = "sha256-DugV3Pcu6VKT/ID1iWFuajQpo+D3h8zpZmKe9Or8BGw=";
   };
 
   build-system = with python3Packages; [
@@ -28,11 +28,11 @@ python3Packages.buildPythonPackage (finalAttrs: {
   # pythonRelaxDeps do not work on pyproject.toml
   preBuild = ''
     substituteInPlace pyproject.toml \
-      --replace-fail "hatchling==1.26.3" "hatchling"
+      --replace-fail "hatchling==1.27.0" "hatchling"
     substituteInPlace pyproject.toml \
-      --replace-fail "hatch-fancy-pypi-readme==24.1.0" "hatch-fancy-pypi-readme>=24.1.0"
+      --replace-fail "hatch-fancy-pypi-readme==25.1.0" "hatch-fancy-pypi-readme>=25.1.0"
     substituteInPlace pyproject.toml \
-      --replace-fail "hatch-vcs==0.4.0" "hatch-vcs>=0.4.0"
+      --replace-fail "hatch-vcs==0.5.0" "hatch-vcs>=0.5.0"
   '';
 
   dependencies = with python3Packages; [
