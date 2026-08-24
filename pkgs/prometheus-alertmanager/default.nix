@@ -8,16 +8,16 @@
 
 buildGo126Module (finalAttrs: {
   pname = "alertmanager";
-  version = "0.33.1";
+  version = "0.34.0";
 
   src = fetchFromGitHub {
     owner = "prometheus";
     repo = "alertmanager";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-LGjBuZ7kbtABunEk2YyCKILsPS/0FlS/6Mf/2qVpseI=";
+    hash = "sha256-/sh1MXMHNo8Rh+pIp9G/8rnEn4cWhe9Yn4fBiQ8LK4o=";
   };
 
-  vendorHash = "sha256-t5jQtccln3dfcHlnEOnLQHfjzfU9kY9Y7q+r4AigvBE=";
+  vendorHash = "sha256-f2oKca3FJ3EvS8jF4+MA3H6x3u5nITwVBkXY7wk2B3s=";
 
   postPatch = ''
     # Create minimal UI dist directory so Go embed directive succeeds
