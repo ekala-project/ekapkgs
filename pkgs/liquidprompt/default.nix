@@ -7,13 +7,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "liquidprompt";
-  version = "2.2.1";
+  version = "2.3.0";
 
   src = fetchFromGitHub {
     owner = "liquidprompt";
     repo = "liquidprompt";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-ZVzFGe3ItWsN23iyGpxZEN2KtviYKI8x/sDa2MRio/Y=";
+    hash = "sha256-vLGbaYp1AFmM2wlVfeYDzZ4DU37ejNroJkam4mzULpU=";
   };
 
   strictDeps = true;
