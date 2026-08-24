@@ -12,7 +12,7 @@
 
 stdenv.mkDerivation rec {
   pname = "openvdb";
-  version = "12.0.1";
+  version = "13.0.0";
 
   outputs = [
     "out"
@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
     owner = "AcademySoftwareFoundation";
     repo = "openvdb";
     tag = "v${version}";
-    hash = "sha256-ofVhwULBDzjA+bfhkW12tgTMnFB/Mku2P2jDm74rutY=";
+    hash = "sha256-+tfdZfir8pPZd5oehpHoYMtYmJWXgJYG5kB6JyuKOWE=";
   };
 
   nativeBuildInputs = [
