@@ -1,0 +1,30 @@
+{ lib
+, buildGo126Module
+, fetchFromGitHub
+,
+}:
+
+buildGo126Module (finalAttrs: {
+  pname = "wappalyzergo";
+  version = "0.2.94";
+
+  src = fetchFromGitHub {
+    owner = "projectdiscovery";
+    repo = "wappalyzergo";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-hRZ0zITdt87OeN/t0SB1qxaQsW6BSAfjj/YjX/v6IJo=";
+  };
+
+  vendorHash = "sha256-KicCQ184+ybGcxTdOjVpgxZ4XzELvVqLyJJXIdiImII=";
+
+  ldflags = [ "-s" ];
+
+  meta = {
+    description = "Implementation of the Wappalyzer Technology Detection Library";
+    homepage = "https://github.com/projectdiscovery/wappalyzergo";
+    changelog = "https://github.com/projectdiscovery/wappalyzergo/releases/tag/v${finalAttrs.version}";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+    mainProgram = "wappalyzergo";
+  };
+})
