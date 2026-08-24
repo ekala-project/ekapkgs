@@ -12,7 +12,7 @@ let
 in
 stdenv.mkDerivation {
   pname = "mongoose";
-  version = "3.3.6";
+  version = "7.14.0";
 
   outputs = [
     "bin"
