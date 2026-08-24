@@ -9,7 +9,6 @@
   libpng,
   curl,
   libexif,
-  jpegexiforient,
   perl,
   enableAutoreload ? !stdenv.hostPlatform.isDarwin,
 }:
@@ -56,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     wrapProgram "$out/bin/feh" --prefix PATH : "${
       lib.makeBinPath [
         libjpeg
-        jpegexiforient
       ]
     }" \
                                --add-flags '--theme=feh'

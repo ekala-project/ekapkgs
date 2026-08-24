@@ -4,24 +4,50 @@
   fetchFromGitHub,
   pkg-config,
   libtool,
+  bzip2Support ? true,
   bzip2,
+  zlibSupport ? true,
   zlib,
-  libx11,
-  libxt,
+  libX11Support ? !stdenv.hostPlatform.isMinGW,
+  libX11,
+  libXtSupport ? !stdenv.hostPlatform.isMinGW,
+  libXt,
+  fontconfigSupport ? true,
   fontconfig,
+  freetypeSupport ? true,
   freetype,
+  ghostscriptSupport ? false,
+  libjpegSupport ? true,
   libjpeg,
+  djvulibreSupport ? false,
+  lcms2Support ? true,
   lcms2,
+  openexrSupport ? !stdenv.hostPlatform.isMinGW,
   openexr,
+  libjxlSupport ? false,
+  libpngSupport ? true,
   libpng,
+  liblqr1Support ? false,
+  librsvgSupport ? false,
+  libraqmSupport ? false,
+  librawSupport ? false,
+  libtiffSupport ? true,
   libtiff,
+  libxml2Support ? true,
   libxml2,
+  openjpegSupport ? !stdenv.hostPlatform.isMinGW,
   openjpeg,
+  libwebpSupport ? !stdenv.hostPlatform.isMinGW,
   libwebp,
+  libheifSupport ? false,
+  libde265Support ? false,
+  fftwSupport ? true,
   fftw,
   coreutils,
   curl,
 }:
+
+assert libXtSupport -> libX11Support;
 
 let
   arch =
@@ -70,7 +96,7 @@ stdenv.mkDerivation (finalAttrs: {
     "--without-jxl"
     "--without-uhdr"
     "--without-gslib"
-    "--with-fftw"
+    (lib.withFeature fftwSupport "fftw")
   ];
 
   nativeBuildInputs = [
@@ -78,27 +104,26 @@ stdenv.mkDerivation (finalAttrs: {
     libtool
   ];
 
-  buildInputs = [
-    zlib
-    fontconfig
-    libpng
-    libtiff
-    libxml2
-    openexr
-    openjpeg
-  ];
+  buildInputs =
+    lib.optional zlibSupport zlib
+    ++ lib.optional fontconfigSupport fontconfig
+    ++ lib.optional libpngSupport libpng
+    ++ lib.optional libtiffSupport libtiff
+    ++ lib.optional libxml2Support libxml2
+    ++ lib.optional openexrSupport openexr
+    ++ lib.optional openjpegSupport openjpeg;
 
   propagatedBuildInputs = [
     curl
-    bzip2
-    freetype
-    libjpeg
-    lcms2
-    libx11
-    libxt
-    libwebp
-    fftw
-  ];
+  ]
+  ++ lib.optional bzip2Support bzip2
+  ++ lib.optional freetypeSupport freetype
+  ++ lib.optional libjpegSupport libjpeg
+  ++ lib.optional lcms2Support lcms2
+  ++ lib.optional libX11Support libX11
+  ++ lib.optional libXtSupport libXt
+  ++ lib.optional libwebpSupport libwebp
+  ++ lib.optional fftwSupport fftw;
 
   postInstall = ''
     (cd "$dev/include" && ln -s ImageMagick* ImageMagick)
