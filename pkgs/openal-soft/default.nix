@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation rec {
   pname = "openal-soft";
-  version = "1.24.2";
+  version = "1.25.2";
 
   src = fetchFromGitHub {
     owner = "kcat";
     repo = "openal-soft";
     rev = version;
-    sha256 = "sha256-ECrIkxMACPsWehtJWwTmoYj6hGcsdxwVuTiQywG36Y8=";
+    sha256 = "sha256-+yG5qB5sg86RgmFIaPNNsLZZ1IM0AvNdzWPVN/PQLGw=";
   };
 
   strictDeps = true;
