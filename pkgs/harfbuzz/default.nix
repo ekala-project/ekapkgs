@@ -12,11 +12,11 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "harfbuzz";
-  version = "13.2.1";
+  version = "14.3.1";
 
   src = fetchurl {
     url = "https://github.com/harfbuzz/harfbuzz/releases/download/${finalAttrs.version}/harfbuzz-${finalAttrs.version}.tar.xz";
-    hash = "sha256-ZpXaPrfhvgqjCS/k2BQzoztH9FGSWcdZ1ynjqaVcFCk=";
+    hash = "sha256-na6VOKri/99wzsMfLCe/aOKq7q4xEmiEZ2l9X69hlPc=";
   };
 
   patches = [ ./disable-check-symbols-test.patch ];
