@@ -6,16 +6,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "rdap";
-  version = "0.10.0";
+  version = "0.10.1";
 
   src = fetchFromGitHub {
     owner = "openrdap";
     repo = "rdap";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-dlRIKf/NikCxiKub6qFmC+e3J1XllaVodzVZvUyvycE=";
+    hash = "sha256-LE9cTRXphTt045sCJTv25uVXkomRhhN7YI45OupitGs=";
   };
 
-  vendorHash = "sha256-F9kwlUwrV6cUT9C/xZx5TyDPoqTt8mt/uh+QYaSCiUw=";
+  vendorHash = "sha256-huy7C24dLuQxXisCHMMRufnfk8aPAE73sj4YrzmxlNA=";
 
   doCheck = false;
 
