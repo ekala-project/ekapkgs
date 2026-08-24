@@ -11,7 +11,7 @@
 
 stdenv.mkDerivation {
   pname = "git-secret";
-  version = "0.5.0-unstable-2024-12-09";
+  version = "0.5.0";
 
   src = fetchFromGitHub {
     repo = "git-secret";
