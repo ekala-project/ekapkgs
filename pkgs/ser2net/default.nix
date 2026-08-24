@@ -3,6 +3,7 @@
   fetchFromGitHub,
   gensio,
   lib,
+  libxcrypt,
   libyaml,
   pkg-config,
   stdenv,
@@ -10,13 +11,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "ser2net";
-  version = "4.6.7";
+  version = "4.6.8";
 
   src = fetchFromGitHub {
     owner = "cminyard";
     repo = "ser2net";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-Axo3qa+QoBqFOLkxA6ZnEYu0M1p9LSM9h/oS8JsdwOY=";
+    hash = "sha256-9PK+P9LO5X4M1q1ExiWngkqRRflJbg70rCoSJ0fqdWk=";
   };
 
   nativeBuildInputs = [
@@ -26,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     gensio
+    libxcrypt
     libyaml
   ];
 
