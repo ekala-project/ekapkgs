@@ -21,13 +21,13 @@
 
 stdenv.mkDerivation rec {
   pname = "elinks";
-  version = "0.18.0";
+  version = "0.20.0";
 
   src = fetchFromGitHub {
     owner = "rkd77";
     repo = "elinks";
     rev = "v${version}";
-    hash = "sha256-TTb/v24gIWKiCQCESHo0Pz6rvRtw5anoXK0b35dzfLM=";
+    hash = "sha256-oh9nArQ8dkYL4fLSjnnCHbSnxNxJnQmAWD/6Nu7OiiQ=";
   };
 
   buildInputs = [
