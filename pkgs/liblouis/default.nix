@@ -14,13 +14,12 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "liblouis";
-  version = "3.33.0";
+  version = "3.38.0";
 
   outputs = [
     "out"
     "dev"
     "info"
-    "doc"
   ]
   ++ lib.optionals (stdenv.hostPlatform == stdenv.buildPlatform) [ "man" ];
 
@@ -28,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "liblouis";
     repo = "liblouis";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-+p/2eLbQ5aYtxQIkoHaVE1xDqstveedf+56aRNX9C7M=";
+    hash = "sha256-OmYMldo2id2HKAM0Hxi6r86khSUnzu22CkJhGBhaaL8=";
   };
 
   strictDeps = true;
