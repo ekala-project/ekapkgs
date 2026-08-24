@@ -14,7 +14,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "opencryptoki";
-  version = "3.26.0-unstable-2026-04-09";
+  version = "3.27.0";
 
   src = fetchFromGitHub {
     owner = "opencryptoki";
