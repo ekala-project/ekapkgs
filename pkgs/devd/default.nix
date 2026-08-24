@@ -7,7 +7,7 @@
 
 buildGoModule {
   pname = "devd";
-  version = "0.9-unstable-2020-04-27";
+  version = "0.9";
 
   src = fetchFromGitHub {
     owner = "cortesi";
