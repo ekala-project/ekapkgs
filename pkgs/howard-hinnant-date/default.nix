@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "howard-hinnant-date";
-  version = "3.0.3";
+  version = "3.0.5";
 
   src = fetchFromGitHub {
     owner = "HowardHinnant";
     repo = "date";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-qfrmH3NRyrDVmHRmmWzM5Zz37E7RFXJqaV1Rq2E59qs=";
+    hash = "sha256-GTWSnBvLM6W7Z2+dvl2aa31fFsrBp5/qlsuKT26IaKo=";
   };
 
   patches = [
