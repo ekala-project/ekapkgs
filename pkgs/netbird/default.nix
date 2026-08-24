@@ -7,17 +7,17 @@
 
 buildGo126Module (finalAttrs: {
   pname = "netbird";
-  version = "0.76.3";
+  version = "0.77.1";
 
   src = fetchFromGitHub {
     owner = "netbirdio";
     repo = "netbird";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-ebzv1s1r9RPmaysthlRX6isYWDCpSegnp04QKRaGWs0=";
+    hash = "sha256-uGyo2J/3berl6yBCs+Qy0mXKMZNRM8o6gclBeiDxon8=";
   };
 
   proxyVendor = true;
-  vendorHash = "sha256-36XD5NxkDoEwfFeZwHmqVJBy2RonaU1g1Sjy8GgZAD4=";
+  vendorHash = "sha256-IGCfMhcrZqHye83zcJuDf1Hyv7X4rKybxWOiyxGuYtY=";
 
   nativeBuildInputs = [
     installShellFiles
