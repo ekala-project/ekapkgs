@@ -8,7 +8,7 @@
 
 stdenv.mkDerivation {
   pname = "fasttext";
-  version = "0.9.2-unstable-2023-11-28";
+  version = "0.9.2";
 
   src = fetchFromGitHub {
     owner = "facebookresearch";
