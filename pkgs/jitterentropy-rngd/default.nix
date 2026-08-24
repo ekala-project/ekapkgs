@@ -2,27 +2,18 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  fetchpatch,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "jitterentropy-rngd";
-  version = "1.3.1";
+  version = "1.3.2";
 
   src = fetchFromGitHub {
     owner = "smuellerDD";
     repo = "jitterentropy-rngd";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-iXpeN0PAPk8mcaNXwj6TlyK57NSFNOVs/XmEmUG1gIg=";
+    hash = "sha256-0t9j2R6AT9RynZFMWYb19wWLZx+Sdg1EVv8jLEslQM4=";
   };
-
-  patches = [
-    # Allow the systemd service to mlock the daemon's entropy buffer.
-    (fetchpatch {
-      url = "https://github.com/smuellerDD/jitterentropy-rngd/compare/v1.3.1...cee0c7a035e9564d161053012c6ea36b2ce27383.patch";
-      hash = "sha256-zwcY9z9EikrhxZa39p4+gl+/EeZ4sAKaItQfrL1DFSo=";
-    })
-  ];
 
   enableParallelBuilding = true;
 
