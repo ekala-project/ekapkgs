@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "xevd";
-  version = "0.5.0";
+  version = "0.7.0";
 
   src = fetchFromGitHub {
     owner = "mpeg5";
     repo = "xevd";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-Dc2V77t+DrZo9252FAL0eczrmikrseU02ob2RLBdVvU=";
+    hash = "sha256-MMqtgXEcIYLr5gyIpGj1p0aPiEW0zb6ZAQ+75kHhyxU=";
   };
 
   patches = lib.optionals (!lib.versionOlder "0.5.0" finalAttrs.version) (
