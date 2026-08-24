@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "haiti";
-  version = "3.0.0";
+  version = "4.0.0";
 
   src = fetchFromGitHub {
     owner = "noraj";
     repo = "haiti";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-1PGGlnbw8zg2sNEc85Un7no7elS5aPSfjzfmqovmiHk=";
+    hash = "sha256-l/9E8Y2o5VTLkEZdB3qYIDFAvQDimd9MUB3yLQSTL9E=";
   };
 
   nativeBuildInputs = [
