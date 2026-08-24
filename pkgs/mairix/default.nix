@@ -10,7 +10,7 @@
 
 stdenv.mkDerivation {
   pname = "mairix";
-  version = "0.24-unstable-2024-09-14";
+  version = "0.24";
 
   src = fetchFromGitHub {
     owner = "vandry";
