@@ -8,13 +8,13 @@
 
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "git-up";
-  version = "2.3.0";
+  version = "2.5.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "git_up";
     inherit (finalAttrs) version;
-    hash = "sha256-SncbnK6LxsleKRa/sSCm/8dsgPw/XJGvYfkcIeWYDy4=";
+    hash = "sha256-c0HbJMJ63RLMFqx84EjBqahR2UWwvk2KSPk8ixpp+D8=";
   };
 
   pythonRelaxDeps = [
@@ -22,7 +22,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   ];
 
   build-system = with python3Packages; [
-    poetry-core
+    hatchling
   ];
 
   # required in PATH for tool to work
