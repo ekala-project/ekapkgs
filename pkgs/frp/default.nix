@@ -6,16 +6,16 @@
 
 buildGo126Module (finalAttrs: {
   pname = "frp";
-  version = "0.70.1";
+  version = "0.71.0";
 
   src = fetchFromGitHub {
     owner = "fatedier";
     repo = "frp";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-QV+Ti54JIWzBDm6urUSnkMQAxV8eewsIEbVm/hvcx3k=";
+    hash = "sha256-q6E77uwV28CUR9LXPDp4DXuBiIvfonybyKIi+aZQvEE=";
   };
 
-  vendorHash = "sha256-TCXiZP8MpkIRqSAoDviHsIBFQuOdhCWzSvXt84rs+bE=";
+  vendorHash = "sha256-TrO0ZVLazqtUpGREb6kjGiTZhGo3R1QK5iHFlojE7po=";
 
   doCheck = false;
 
