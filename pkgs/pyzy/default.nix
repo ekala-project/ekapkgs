@@ -12,7 +12,7 @@
 
 stdenv.mkDerivation {
   pname = "pyzy";
-  version = "1.1-unstable-2026-02-28";
+  version = "1.1";
 
   src = fetchFromGitHub {
     owner = "openSUSE";
