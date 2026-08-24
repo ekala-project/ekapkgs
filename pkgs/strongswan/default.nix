@@ -23,13 +23,13 @@
 
 stdenv.mkDerivation rec {
   pname = "strongswan";
-  version = "5.9.14";
+  version = "6.0.7";
 
   src = fetchFromGitHub {
     owner = "strongswan";
     repo = "strongswan";
     rev = version;
-    hash = "sha256-qFM7ErfqiDlUsZdGXJQVW3nJoh+I6tEdKRwzrKteRVY=";
+    hash = "sha256-OgLvCrAwFJA2t78pu+p+3DrsD53QizVotQqTiNoY1dk=";
   };
 
   dontPatchELF = true;
