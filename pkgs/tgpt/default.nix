@@ -7,16 +7,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "tgpt";
-  version = "2.12.0";
+  version = "2.13.0";
 
   src = fetchFromGitHub {
     owner = "aandrew-me";
     repo = "tgpt";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-bIIWzXdLneXQSwAGIAYv5GaSc9vtFIrOCscCt9qLZWs=";
+    hash = "sha256-70BbII+cK9s+5yIFmpUV3pNqiTPSWfwLbrwNvvjkXrA=";
   };
 
-  vendorHash = "sha256-9uQvS6XZ3iEjtF9jygPLPJJwCiWaXzTrkjdANlvll+o=";
+  vendorHash = "sha256-oh1qKEmWoWK9fXgSfbHFgM8TWD14xNNRFw+YgqnXt00=";
 
   buildInputs = [ libx11 ];
 
@@ -26,8 +26,12 @@ buildGoModule (finalAttrs: {
   ];
 
   preCheck = ''
-    # Remove test which need network access
+    # Remove tests which need network access
     rm src/providers/koboldai/koboldai_test.go
+
+    # Remove helper test that includes Windows-specific package manager detection tests
+    # (TestDetectPackageManager for Scoop/Chocolatey fails on Linux)
+    rm src/helper/helper_test.go
   '';
 
   meta = {
