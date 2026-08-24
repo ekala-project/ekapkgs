@@ -13,19 +13,12 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "htslib";
-  version = "1.22";
+  version = "1.23.2";
 
   src = fetchurl {
     url = "https://github.com/samtools/htslib/releases/download/${finalAttrs.version}/htslib-${finalAttrs.version}.tar.bz2";
-    hash = "sha256-YlDB3yl9tHdRbmCsjfRe11plLR8lsPN/EvWxcmnq/ek=";
+    hash = "sha256-Wkj7NliXRMOAJ/eTRHc8cEDLdrkKKN5O3t8g10jc/eM=";
   };
-
-  patches = [
-    (fetchpatch {
-      url = "https://github.com/samtools/htslib/commit/31006e1c8edd02eb6321ed9be76b84fca5d20cb6.patch";
-      hash = "sha256-sbnkVmXIbs/Cn/msUUrJpJZCI2DHX5kpGSka2cccZIQ=";
-    })
-  ];
 
   # perl is only used during the check phase.
   nativeBuildInputs = [ perl ];

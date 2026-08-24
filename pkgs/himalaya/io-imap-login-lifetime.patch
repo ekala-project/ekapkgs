@@ -1,0 +1,24 @@
+Fix lifetime inference failure in io-imap's async login method.
+
+Newer Rust compilers (>= 1.95) fail to unify Capability<'static> with
+Capability<'_> when the result of self.run() is awaited inside an async
+move block in a trait default method (rust-lang/rust#90149). Replacing
+the async block with a Pin<Box<dyn Future>> makes the output type
+concrete and breaks the inference cycle.
+
+--- a/src/client.rs
++++ b/src/client.rs
+@@ -376,9 +376,13 @@
+                 password: &str,
+                 opts: ImapLoginOptions,
+-            ) -> impl Future<Output = Result<Vec<Capability<'static>>, ImapClientError>> + Send
++            ) -> core::pin::Pin<Box<dyn Future<Output = Result<Vec<Capability<'static>>, ImapClientError>> + Send + '_>>
+             {
+-                async move { self.run(ImapLogin::new(user, password, opts)?).await }
++                match ImapLogin::new(user, password, opts) {
++                    Ok(coroutine) => Box::pin(self.run(coroutine)),
++                    Err(err) => Box::pin(core::future::ready(Err(err.into()))),
++                }
+             }
+
+             /// Sends one or more caller-tagged command lines
