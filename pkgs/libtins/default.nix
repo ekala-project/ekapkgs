@@ -11,13 +11,13 @@
 
 stdenv.mkDerivation rec {
   pname = "libtins";
-  version = "4.5";
+  version = "4.6";
 
   src = fetchFromGitHub {
     owner = "mfontanini";
     repo = "libtins";
     rev = "v${version}";
-    sha256 = "sha256-zL4C2Cgs9Y3NebL8MPQBO5j8Bm6xhl8ZggQBPJLRn0o=";
+    sha256 = "sha256-Y5cszXGAkpDBIRzu70IjtyxT5fAVhmIgbj5GVscDBtw=";
   };
 
   patches = [
@@ -28,7 +28,6 @@ stdenv.mkDerivation rec {
     ./0001-force-cpp-17.patch
     # Update CMake minimum required version for CMake 4 compatibility
     # https://github.com/mfontanini/libtins/pull/553
-    ./cmake-3.10.patch
   ];
 
   postPatch = ''
