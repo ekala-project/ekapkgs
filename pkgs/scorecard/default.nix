@@ -9,13 +9,13 @@
 
 buildGo126Module (finalAttrs: {
   pname = "scorecard";
-  version = "5.4.0";
+  version = "5.5.0";
 
   src = fetchFromGitHub {
     owner = "ossf";
     repo = "scorecard";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-RfOunjr4QeMFlMHkOOhHB8vb5XDNLNEmdDe9KSL/kP8=";
+    hash = "sha256-JoniiCPz6YvBXGZTxmrcka5zerzmJnb+bAKuIW6/evQ=";
     leaveDotGit = true;
     postFetch = ''
       cd "$out"
@@ -25,7 +25,7 @@ buildGo126Module (finalAttrs: {
     '';
   };
 
-  vendorHash = "sha256-hzOGN6l7cxP+m4UWtrHV0Oihx3QIwZ09WR/Vi2HGwIg=";
+  vendorHash = "sha256-MWliMIMjNR6cgkyi2KYemswtFitM8ypnz4qka/WoO0g=";
 
   nativeBuildInputs = [ installShellFiles ];
 
