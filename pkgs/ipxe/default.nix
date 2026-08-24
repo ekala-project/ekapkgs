@@ -30,7 +30,7 @@ in
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "ipxe";
-  version = "1.21.1-unstable-2025-06-02";
+  version = "2.0.0";
 
   nativeBuildInputs = [
     mtools
