@@ -38,7 +38,7 @@ assert lib.assertMsg (withOpenLDAPAsHDBModule -> withOpenLDAP) ''
 
 stdenv.mkDerivation {
   pname = "heimdal";
-  version = "7.8.0-unstable-2024-09-10";
+  version = "7.8.0";
 
   src = fetchFromGitHub {
     owner = "heimdal";
