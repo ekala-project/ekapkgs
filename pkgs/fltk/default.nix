@@ -24,13 +24,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "fltk";
-  version = "1.3.11";
+  version = "1.4.5";
 
   src = fetchFromGitHub {
     owner = "fltk";
     repo = "fltk";
     rev = "release-${finalAttrs.version}";
-    hash = "sha256-aN0WdHDjxb9O4OgTfBncIj12tRYfeltKev6pgSMu6/E=";
+    hash = "sha256-8Go/UNuZ1LEn8BniAyBbAPk7jdvSs5QvXxin9LAFvhU=";
   };
 
   outputs = [
