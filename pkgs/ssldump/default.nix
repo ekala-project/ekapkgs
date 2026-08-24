@@ -11,7 +11,7 @@
 
 stdenv.mkDerivation {
   pname = "ssldump";
-  version = "1.8-unstable-2024-10-16";
+  version = "1.9";
 
   src = fetchFromGitHub {
     owner = "adulau";
