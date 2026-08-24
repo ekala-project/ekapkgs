@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation {
   pname = "innoextract";
-  version = "1.9-unstable-2025-02-06";
+  version = "1.9";
 
   src = fetchFromGitHub {
     owner = "dscharrer";
