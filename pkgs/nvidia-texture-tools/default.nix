@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation {
   pname = "nvidia-texture-tools";
-  version = "2.1.2-unstable-2020-12-21";
+  version = "2.1.2";
 
   src = fetchFromGitHub {
     owner = "castano";
