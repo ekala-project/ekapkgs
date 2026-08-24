@@ -23,13 +23,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "scummvm";
-  version = "2026.1.0";
+  version = "2026.3.0";
 
   src = fetchFromGitHub {
     owner = "scummvm";
     repo = "scummvm";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-wgMOhQ6yHk4dG94J4EdHTxsaCqapyFhJU1GjRuQY8TY=";
+    hash = "sha256-wFEYg3hRVNVlxpw3xP8O8s4ILKy487k5hyWENaLiOlw=";
   };
 
   nativeBuildInputs = [ nasm ];
@@ -67,7 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
     sed -i "s/-c -s/-c -s --strip-program=''${STRIP@Q}/" ports.mk
   '';
 
-  env.NIX_CFLAGS_COMPILE = toString [ "-fpermissive" ];
+  env.NIX_CFLAGS_COMPILE = toString [ "-fpermissive" "-Wno-error=format-security" ];
 
   meta = {
     description = "Program to run certain classic graphical point-and-click adventure games (such as Monkey Island)";
