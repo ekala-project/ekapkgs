@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  fetchpatch2,
+
   automake,
   autoconf,
   libtool,
@@ -11,23 +11,18 @@
 }:
 stdenv.mkDerivation rec {
   pname = "givaro";
-  version = "4.2.1";
+  version = "4.2.2";
 
   src = fetchFromGitHub {
     owner = "linbox-team";
     repo = "givaro";
     tag = "v${version}";
-    sha256 = "sha256-vSkWmKqpbVk1qdsqCU7qF7o+YgV5YRc9p4mlgl6yrto=";
+    sha256 = "sha256-ctHj8up7ha5md5k2HEFUGpBBZeSF3ZInhfXdUI9NOGo=";
   };
 
   patches = [
     # skip gmp version check for cross-compiling, our version is new enough
     ./skip-gmp-check.patch
-    (fetchpatch2 {
-      name = "libc++-support.patch";
-      url = "https://github.com/linbox-team/givaro/commit/464d53db36038c36a72bbad48c97bc141f62e161.diff?full_index=1";
-      hash = "sha256-aI9PPjIQCvt9QKywxid+FVx71Buo8d6U7d+PLsKR4+k=";
-    })
   ];
 
   enableParallelBuilding = true;
