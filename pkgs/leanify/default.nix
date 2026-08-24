@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation {
   pname = "leanify";
-  version = "0.4.3-unstable-2026-06-05";
+  version = "0.4.3";
 
   src = fetchFromGitHub {
     owner = "JayXon";
