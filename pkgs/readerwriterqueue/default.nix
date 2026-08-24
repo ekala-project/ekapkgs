@@ -9,7 +9,7 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "readerwriterqueue";
   # Not using a stable version since this one produces
   # readerwriterqueueConfig.cmake needed by dependent packages.
-  version = "1.0.6-2024-07-09";
+  version = "1.0.7";
 
   src = fetchFromGitHub {
     owner = "cameron314";
