@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "lexbor";
-  version = "3.0.0-unstable-2026-07-15";
+  version = "3.0.0";
 
   src = fetchFromGitHub {
     owner = "lexbor";
