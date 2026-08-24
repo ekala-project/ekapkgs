@@ -12,11 +12,11 @@
 
 stdenv.mkDerivation rec {
   pname = "libass";
-  version = "0.17.3";
+  version = "0.17.5";
 
   src = fetchurl {
     url = "https://github.com/libass/libass/releases/download/${version}/${pname}-${version}.tar.xz";
-    hash = "sha256-6uQl2lDwAVwh97OpxyYqkQ8CGK9GniLikxRi/tPFCVk=";
+    hash = "sha256-LcolwODIN93wC1IBGz+CysHk3dOtAYIngGsMIoiGSsw=";
   };
 
   outputs = [
