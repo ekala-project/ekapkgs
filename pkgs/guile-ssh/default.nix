@@ -13,13 +13,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "guile-ssh";
-  version = "0.18.0";
+  version = "1.0.0";
 
   src = fetchFromGitHub {
     owner = "artyom-poptsov";
     repo = "guile-ssh";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-q7P/ehafnDtJhHOAWbswOfztkKHVtEw8OgcXKufVAX4=";
+    hash = "sha256-gaCFQxn69KENqdET/331Bnznl9uNwgUO2xuIE4Zpxgo=";
   };
 
   patches = [
