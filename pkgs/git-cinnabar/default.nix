@@ -13,13 +13,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "git-cinnabar";
-  version = "0.7.3";
+  version = "0.7.4";
 
   src = fetchFromGitHub {
     owner = "glandium";
     repo = "git-cinnabar";
     tag = finalAttrs.version;
-    hash = "sha256-qE9LvOX2n+ylQry79CsmRCUzUEgwYZne3tbNDCoynzk=";
+    hash = "sha256-wZrRcuQMKRPtiJC59E54jXhp8yFPb63yuNfTwVDBCPQ=";
     fetchSubmodules = true;
   };
 
@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit (finalAttrs) src;
-    hash = "sha256-IVizzc2dKZ83dz3KBMDDiaFNdnS40cS++k8AywyvakQ=";
+    hash = "sha256-+6/UwbOYE7Ik4sdTU2WI3jDhKNh74hF3Cbm+9V5uizc=";
   };
 
   env.ZSTD_SYS_USE_PKG_CONFIG = true;
