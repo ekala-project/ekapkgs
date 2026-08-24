@@ -8,16 +8,18 @@
 
 buildGo126Module (finalAttrs: {
   pname = "kubelogin";
-  version = "0.2.14";
+  version = "0.2.19";
 
   src = fetchFromGitHub {
     owner = "Azure";
     repo = "kubelogin";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-s9W5wvA4L0Qbn5vimLU03oqx10XqCybE3YvC9gV3y7A=";
+    sha256 = "sha256-Gmbrcnr0kyJaUK1ubutBqxYe4WgyCM/cCYcTLpGQECQ=";
   };
 
-  vendorHash = "sha256-CWgvbN8NnroSVqfKF8UG6kXqVWrQ0TmKwri1f218K+M=";
+  vendorHash = "sha256-/oJRl4s8XN8xPwE5VTLZ3XKuUQYgz1tMsL9zPgjgVFs=";
+
+  subPackages = [ "." ];
 
   ldflags = [
     "-X main.gitTag=v${finalAttrs.version}"
