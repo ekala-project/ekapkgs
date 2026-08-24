@@ -6,16 +6,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "hey";
-  version = "0.1.4";
+  version = "0.1.5";
 
   src = fetchFromGitHub {
     owner = "rakyll";
     repo = "hey";
     rev = "v${finalAttrs.version}";
-    sha256 = "0gsdksrzlwpba14a43ayyy41l1hxpw4ayjpvqyd4ycakddlkvgzb";
+    sha256 = "sha256-fF3N/jDzpMFu6kXuHFDNaIjhFWJQWZAmZp5UTtMUmoU=";
   };
 
-  vendorHash = null;
+  vendorHash = "sha256-7lDArYNtCezHFijx1nr8+cF+10rLj67KuqjzdfCKXJ4=";
 
   meta = {
     description = "HTTP load generator, ApacheBench (ab) replacement";
