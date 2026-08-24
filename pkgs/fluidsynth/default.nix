@@ -10,15 +10,36 @@
   pulseaudio,
 }:
 
+let
+  signalsmith-linear = fetchFromGitHub {
+    owner = "Signalsmith-Audio";
+    repo = "linear";
+    tag = "0.3.1";
+    hash = "sha256-m8zQJeZCQcHIwcGq17F2bmuZc4g7mFsxzRCUEpUrkr4=";
+  };
+  signalsmith-dsp = fetchFromGitHub {
+    owner = "Signalsmith-Audio";
+    repo = "dsp";
+    tag = "v1.7.1";
+    hash = "sha256-6TCk3PDJApVnzv6YYDMlqEt5ydmEvYJWmcE8LrD0XEg=";
+  };
+  signalsmith-hilbert = fetchFromGitHub {
+    owner = "Signalsmith-Audio";
+    repo = "hilbert-iir";
+    tag = "1.0.0";
+    hash = "sha256-QSwj1hNdR60GK446jdlH7PPc5HEjmXihZdUfW/ZSC04=";
+  };
+in
+
 stdenv.mkDerivation (finalAttrs: {
   pname = "fluidsynth";
-  version = "2.5.3";
+  version = "2.6.0";
 
   src = fetchFromGitHub {
     owner = "FluidSynth";
     repo = "fluidsynth";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-k8IHS6Mh1b1iMSuBg3svlf7A2dsg6VHEKqlDhvyJnbo=";
+    hash = "sha256-eL+QLtdV5veGTkiWvsrxMLIu8cuHvVCJMLLD8fosuDY=";
     fetchSubmodules = true;
   };
 
@@ -45,6 +66,9 @@ stdenv.mkDerivation (finalAttrs: {
     "-Dosal=cpp11"
     "-Denable-libinstpatch=0"
     "-Denable-jack=0"
+    "-DFETCHCONTENT_SOURCE_DIR_SIGNALSMITH-LINEAR=${signalsmith-linear}"
+    "-DFETCHCONTENT_SOURCE_DIR_SIGNALSMITH-DSP=${signalsmith-dsp}"
+    "-DFETCHCONTENT_SOURCE_DIR_SIGNALSMITH-HILBERT=${signalsmith-hilbert}"
   ];
 
   meta = {
