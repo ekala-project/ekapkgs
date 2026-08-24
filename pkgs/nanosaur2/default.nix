@@ -10,7 +10,7 @@
 
 stdenv.mkDerivation {
   pname = "nanosaur2";
-  version = "2.1.0-unstable-2023-05-21";
+  version = "2.1.0";
 
   src = fetchFromGitHub {
     owner = "jorio";
