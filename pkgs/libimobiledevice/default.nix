@@ -15,7 +15,7 @@
 
 stdenv.mkDerivation rec {
   pname = "libimobiledevice";
-  version = "1.3.0-unstable-2024-05-20";
+  version = "1.4.0";
 
   src = fetchFromGitHub {
     owner = "libimobiledevice";
