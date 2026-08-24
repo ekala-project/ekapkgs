@@ -14,7 +14,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "sundials";
-  version = "7.6.0";
+  version = "7.8.0";
 
   outputs = [
     "out"
@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "LLNL";
     repo = "sundials";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-DdVZXFfQXpJ9z5ikaK1ZQ/ZkL/vAGdlNsE9MJsIkLdM=";
+    hash = "sha256-TW5LoDEU4y1xSawJsEn5/CoaeiikB6kQQ4xKnON6M0I=";
   };
 
   nativeBuildInputs = [
@@ -63,6 +63,11 @@ stdenv.mkDerivation (finalAttrs: {
   ++ [
     (lib.cmakeFeature "SUNDIALS_INDEX_SIZE" (toString (if blas.isILP64 then 64 else 32)))
   ];
+
+  postInstall = ''
+    mkdir -p $examples/share
+    mv $out/examples $examples/share/examples
+  '';
 
   doCheck = true;
   checkTarget = "test";
