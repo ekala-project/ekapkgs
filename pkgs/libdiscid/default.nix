@@ -8,14 +8,21 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libdiscid";
-  version = "0.6.5";
+  version = "0.7.0";
 
   src = fetchFromGitHub {
     owner = "metabrainz";
     repo = "libdiscid";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-lGq2iGt7c4h8HntEPeQcd7X+IykRLm0kvjrLswRWSSs=";
+    hash = "sha256-ynQuEzHblXnqvV6bKtjJNFuwUkd/ACVCy+jFfUAD+jo=";
   };
+
+  # Fix broken .pc file paths when CMAKE_INSTALL_LIBDIR/INCLUDEDIR are absolute
+  postPatch = ''
+    sed -i CMakeLists.txt \
+      -e '/SET(includedir/s|.*|SET(includedir ''${CMAKE_INSTALL_FULL_INCLUDEDIR})|' \
+      -e '/SET(libdir/s|.*|SET(libdir ''${CMAKE_INSTALL_FULL_LIBDIR})|'
+  '';
 
   nativeBuildInputs = [
     cmake
