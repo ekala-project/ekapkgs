@@ -16,6 +16,7 @@ let
   pkgsModule = import ./pkgs-module.nix;
   pkgs = import ./. {
     inherit system;
+    config = { allowUnfree = true; };
     modules = [ pkgsModule ];
   };
 
@@ -53,23 +54,22 @@ let
     "cudaPackages_12_8"
     "cudaPackages_13_3"
     "haskellPackages"
-    # "linuxPackages"  # deep eval issues (bcachefs.kernelModule missing)
-    # "perlPackages"  # missing patch paths
-    # "perl538Packages"
-    # "perl540Packages"
-    # python*Packages have callPackageWith aborts for missing deps
-    # "python3Packages"
-    # "python310Packages"
-    # "python311Packages"
-    # "python312Packages"
-    # "python313Packages"
-    # "python314Packages"
-    # "python315Packages"
-    # "rPackages"  # callPackageWith aborts for missing deps
+    "linuxPackages"
+    "perlPackages"
+    "perl538Packages"
+    "perl540Packages"
+    "python3Packages"
+    "python310Packages"
+    "python311Packages"
+    "python312Packages"
+    "python313Packages"
+    "python314Packages"
+    "python315Packages"
+    "rPackages"
     "texlive"
     "texlivePackages"
     "vimPlugins"
-    # "xorg"  # mkfontscale missing, breaks scope construction
+    "xorg"
   ];
 
   # Collect derivations from top-level pkgs
@@ -86,8 +86,6 @@ let
     ) (attrNames pkgs));
 
   # Collect derivations from a named scope
-  # Uses builtins.seq to force name evaluation before tryEval on the value,
-  # which helps catch aborts during scope fixed-point construction.
   collectScope = scopeName:
     let
       scope = tryAttr pkgs.${scopeName};
@@ -99,7 +97,6 @@ let
         name:
         let
           fullName = "${scopeName}.${name}";
-          # Two-phase eval: first try to access the attr, catching any abort
           rawResult = tryEval (builtins.seq scope.${name} scope.${name});
         in
         if !rawResult.success then [ ]

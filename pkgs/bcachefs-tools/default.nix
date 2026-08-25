@@ -88,13 +88,18 @@ stdenv.mkDerivation (finalAttrs: {
     "PREFIX=${placeholder "out"}"
     "VERSION=${finalAttrs.version}"
     "INITRAMFS_DIR=${placeholder "out"}/etc/initramfs-tools"
-    "DKMSDIR=${placeholder "out"}/src"
+    "DKMSDIR=${placeholder "dkms"}"
     "PKGCONFIG_SERVICEDIR=$(out)/lib/systemd/system"
     "PKGCONFIG_UDEVDIR=$(out)/lib/udev"
   ]
   ++ lib.optional fuseSupport "BCACHEFS_FUSE=1";
 
   enableParallelBuilding = true;
+
+  installFlags = [
+    "install"
+    "install_dkms"
+  ];
 
   env = {
     CARGO_BUILD_TARGET = stdenv.hostPlatform.rust.rustcTargetSpec;
@@ -114,6 +119,15 @@ stdenv.mkDerivation (finalAttrs: {
       --zsh  <($out/sbin/bcachefs completions zsh) \
       --fish <($out/sbin/bcachefs completions fish)
   '';
+
+  outputs = [
+    "out"
+    "dkms"
+  ];
+
+  passthru = {
+    kernelModule = import ./kernel-module.nix finalAttrs.finalPackage;
+  };
 
   meta = {
     description = "Tool for managing bcachefs filesystems";

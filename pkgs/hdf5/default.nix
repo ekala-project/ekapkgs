@@ -76,6 +76,11 @@ stdenv.mkDerivation rec {
     popd
   '';
 
+  passthru = {
+    mpiSupport = false;
+    mpi = null;
+  };
+
   enableParallelBuilding = true;
 
   meta = {
