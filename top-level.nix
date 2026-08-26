@@ -61,6 +61,13 @@ final: prev: {
       (old: {
         nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
       });
+  # sdbus-cpp v2 variant
+  sdbus-cpp_2 = final.sdbus-cpp.override { version = "2.2.1"; };
+  # xwayland with correct dep names
+  xwayland = final.callPackage ./pkgs/xwayland {
+    libxfont_2 = final.xorg.libXfont2;
+    xkeyboard_config = final.xkeyboard-config;
+  };
   gtk3 =
     (prev.gtk3.override {
       trackerSupport = false;
