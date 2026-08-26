@@ -102,11 +102,11 @@
     "r-pkgs": {
       "flake": false,
       "locked": {
-        "lastModified": 1784398918,
-        "narHash": "sha256-1Q61yB8SRuO+3AnVEvXbyGTsPNGrqtYUWMLowOIJjCA=",
+        "lastModified": 1787667829,
+        "narHash": "sha256-9BfOSMN4gnDEnSVRvpKNHnNfAbJF+PEH7xGiKz/5rMQ=",
         "owner": "ekala-project",
         "repo": "r-pkgs",
-        "rev": "2e591f0daa5b3035499a167d4f4f1af58d7601a6",
+        "rev": "3dce8be145a252f59bdc2bc5d96ad24f51be4870",
         "type": "github"
       },
       "original": {
