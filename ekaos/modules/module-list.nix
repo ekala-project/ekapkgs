@@ -371,6 +371,10 @@
   ./programs/httrack.nix
   ./programs/hugo.nix
   ./programs/hyperfine.nix
+  ./programs/hyprland.nix
+  ./programs/hyprlock.nix
+  ./programs/hyprpaper.nix
+  ./programs/hyprpicker.nix
   ./programs/hysteria.nix
   ./programs/i3lock.nix
   ./programs/i3.nix
@@ -632,6 +636,7 @@
   ./programs/wofi.nix
   ./programs/wtype.nix
   ./programs/wush.nix
+  ./programs/xwayland.nix
   ./programs/xautolock.nix
   ./programs/xclip.nix
   ./programs/xdotool.nix
@@ -650,12 +655,17 @@
   ./programs/zoxide.nix
   ./programs/zsh.nix
 
+  # Config
+  ./config/xdg/portals/wlr.nix
+
   # Services
+  ./services/at-spi2-core.nix
+  ./services/hypridle.nix
+  ./services/hyprland.nix
   ./services/kubo.nix
+  ./services/lightdm.nix
   ./services/ollama.nix
   ./services/plex.nix
   ./services/transmission.nix
   ./services/xserver.nix
-  ./services/lightdm.nix
-  ./services/at-spi2-core.nix
 ]
