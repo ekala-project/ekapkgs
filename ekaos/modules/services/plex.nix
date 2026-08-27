@@ -120,10 +120,18 @@ in
           path = "/";
           internal = false;
           openFirewall = cfg.openFirewall;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
-      } // optionalAttrs cfg.openFirewall {
+      }
+      // optionalAttrs cfg.openFirewall {
         companion = {
           port = 3005;
           protocol = "tcp";
@@ -132,8 +140,15 @@ in
           path = "/";
           internal = false;
           openFirewall = true;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
         roku = {
           port = 8324;
@@ -143,8 +158,15 @@ in
           path = "/";
           internal = false;
           openFirewall = true;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
         dlna-tcp = {
           port = 32469;
@@ -154,8 +176,15 @@ in
           path = "/";
           internal = false;
           openFirewall = true;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
         dlna-udp = {
           port = 1900;
@@ -165,8 +194,15 @@ in
           path = "/";
           internal = false;
           openFirewall = true;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
         gdm1 = {
           port = 32410;
@@ -176,8 +212,15 @@ in
           path = "/";
           internal = false;
           openFirewall = true;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
         gdm2 = {
           port = 32412;
@@ -187,8 +230,15 @@ in
           path = "/";
           internal = false;
           openFirewall = true;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
         gdm3 = {
           port = 32413;
@@ -198,8 +248,15 @@ in
           path = "/";
           internal = false;
           openFirewall = true;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
         gdm4 = {
           port = 32414;
@@ -209,8 +266,15 @@ in
           path = "/";
           internal = false;
           openFirewall = true;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
       };
 

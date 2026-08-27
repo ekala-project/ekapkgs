@@ -1,7 +1,7 @@
-{ lib
-, buildGo126Module
-, fetchFromGitHub
-,
+{
+  lib,
+  buildGo126Module,
+  fetchFromGitHub,
 }:
 
 buildGo126Module (finalAttrs: {

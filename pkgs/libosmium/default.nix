@@ -51,6 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
       "https://github.com/osmcode/libosmium/blob/v${finalAttrs.version}/CHANGELOG.md"
     ];
     maintainers = [ ];
-    teams = [ lib.teams.geospatial ];
+    teams = [ ];
   };
 })

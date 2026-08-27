@@ -63,7 +63,9 @@ stdenv.mkDerivation (finalAttrs: {
     gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-ugly
-  ] ++ lib.optional (gst_all_1 ? gst-rtsp-server) gst_all_1.gst-rtsp-server ++ [
+  ]
+  ++ lib.optional (gst_all_1 ? gst-rtsp-server) gst_all_1.gst-rtsp-server
+  ++ [
     pipewire
     networkmanager
     json-glib
@@ -72,7 +74,9 @@ stdenv.mkDerivation (finalAttrs: {
     # required for TLS. See https://github.com/NixOS/nixpkgs/issues/502092
     glib-networking
     libadwaita
-  ] ++ lib.optional (libportal-gtk4 != null) libportal-gtk4 ++ [
+  ]
+  ++ lib.optional (libportal-gtk4 != null) libportal-gtk4
+  ++ [
     libpulseaudio
     libsoup_3
     protobufc

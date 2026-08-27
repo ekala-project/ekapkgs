@@ -35,18 +35,17 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  buildInputs =
-    [
-      openssl
-      curl
-      libevent
-      zlib
-      miniupnpc
-    ]
-    ++ lib.optionals stdenv.hostPlatform.isLinux [
-      systemd
-      inotify-tools
-    ];
+  buildInputs = [
+    openssl
+    curl
+    libevent
+    zlib
+    miniupnpc
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
+    systemd
+    inotify-tools
+  ];
 
   cmakeFlags = [
     "-DENABLE_DAEMON=ON"

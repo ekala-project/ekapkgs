@@ -41,7 +41,8 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     perl
     pkg-config
-  ] ++ lib.optionals withIntrospection [
+  ]
+  ++ lib.optionals withIntrospection [
     gobject-introspection
     vala
   ];

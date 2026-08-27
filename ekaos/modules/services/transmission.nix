@@ -12,33 +12,35 @@ let
   cfg = config.services.transmission;
 
   # Render settings to JSON for settings.json
-  settingsFile = pkgs.writeText "settings.json" (builtins.toJSON (
-    {
-      # Directories
-      download-dir = "${cfg.home}/Downloads";
-      incomplete-dir = "${cfg.home}/.incomplete";
-      incomplete-dir-enabled = true;
+  settingsFile = pkgs.writeText "settings.json" (
+    builtins.toJSON (
+      {
+        # Directories
+        download-dir = "${cfg.home}/Downloads";
+        incomplete-dir = "${cfg.home}/.incomplete";
+        incomplete-dir-enabled = true;
 
-      # RPC / web interface
-      rpc-enabled = true;
-      rpc-bind-address = "0.0.0.0";
-      rpc-port = cfg.settings.rpcPort;
-      rpc-whitelist-enabled = cfg.settings.rpcWhitelistEnabled;
-      rpc-whitelist = cfg.settings.rpcWhitelist;
-      rpc-host-whitelist-enabled = false;
+        # RPC / web interface
+        rpc-enabled = true;
+        rpc-bind-address = "0.0.0.0";
+        rpc-port = cfg.settings.rpcPort;
+        rpc-whitelist-enabled = cfg.settings.rpcWhitelistEnabled;
+        rpc-whitelist = cfg.settings.rpcWhitelist;
+        rpc-host-whitelist-enabled = false;
 
-      # Peer settings
-      peer-port = cfg.settings.peerPort;
-      peer-port-random-on-start = false;
+        # Peer settings
+        peer-port = cfg.settings.peerPort;
+        peer-port-random-on-start = false;
 
-      # Protocol
-      dht-enabled = true;
-      pex-enabled = true;
-      utp-enabled = true;
-      encryption = 1;
-    }
-    // cfg.settings.extraSettings
-  ));
+        # Protocol
+        dht-enabled = true;
+        pex-enabled = true;
+        utp-enabled = true;
+        encryption = 1;
+      }
+      // cfg.settings.extraSettings
+    )
+  );
 
 in
 
@@ -193,8 +195,15 @@ in
           path = "/";
           internal = true;
           openFirewall = false;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
         peer-tcp = {
           port = cfg.settings.peerPort;
@@ -204,8 +213,15 @@ in
           path = "/";
           internal = false;
           openFirewall = cfg.openFirewall;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
         peer-udp = {
           port = cfg.settings.peerPort;
@@ -215,8 +231,15 @@ in
           path = "/";
           internal = false;
           openFirewall = cfg.openFirewall;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
       };
 

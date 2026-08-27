@@ -25,7 +25,8 @@ buildGoModule rec {
   # For simplicity, this builds the basic CPU-only version
 
   ldflags = [
-    "-s" "-w"
+    "-s"
+    "-w"
     "-X=github.com/ollama/ollama/version.Version=${version}"
   ];
 

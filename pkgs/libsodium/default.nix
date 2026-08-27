@@ -53,7 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://doc.libsodium.org/";
     license = lib.licenses.isc;
     maintainers = [ ];
-    teams = [ lib.teams.security-review ];
+    teams = [ ];
     pkgConfigModules = [ "libsodium" ];
     platforms = lib.platforms.all;
   };

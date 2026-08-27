@@ -54,15 +54,17 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     (gst_all_1.gst-plugins-bad.override { enableZbar = true; }) # for zbar plug-in
   ];
 
-  propagatedBuildInputs = (with python3.pkgs; [
-    dbus-python
-    # TODO: gpg (python bindings for gpgme) not yet available in ekapkgs
-    gpg
-    pybluez
-    qrcode
-    requests
-    twisted
-  ]) ++ lib.optional (python3.pkgs ? magic-wormhole) python3.pkgs.magic-wormhole
+  propagatedBuildInputs =
+    (with python3.pkgs; [
+      dbus-python
+      # TODO: gpg (python bindings for gpgme) not yet available in ekapkgs
+      gpg
+      pybluez
+      qrcode
+      requests
+      twisted
+    ])
+    ++ lib.optional (python3.pkgs ? magic-wormhole) python3.pkgs.magic-wormhole
     ++ lib.optional (python3.pkgs ? pygobject3) python3.pkgs.pygobject3;
 
   # bunch of linting

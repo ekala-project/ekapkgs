@@ -1,3 +1,1 @@
-{ python3Packages }:
-with python3Packages;
-toPythonApplication hatch
+{ python3Packages }: with python3Packages; toPythonApplication hatch

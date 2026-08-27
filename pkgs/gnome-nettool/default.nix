@@ -50,7 +50,8 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     glib
     gtk3
-  ] ++ lib.optional (libgtop != null) libgtop;
+  ]
+  ++ lib.optional (libgtop != null) libgtop;
 
   postPatch = ''
     chmod +x postinstall.py

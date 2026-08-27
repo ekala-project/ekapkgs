@@ -41,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Build vector tilesets from large collections of GeoJSON features";
     homepage = "https://github.com/felt/tippecanoe";
     license = lib.licenses.bsd2;
-    teams = [ lib.teams.geospatial ];
+    teams = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "tippecanoe";
   };

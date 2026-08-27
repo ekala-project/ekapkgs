@@ -46,7 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.xfce.org/apps/gigolo";
     license = lib.licenses.gpl2Plus;
     mainProgram = "gigolo";
-    teams = [ lib.teams.xfce ];
+    teams = [ ];
     platforms = lib.platforms.linux;
   };
 })

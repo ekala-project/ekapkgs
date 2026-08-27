@@ -62,21 +62,24 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     webkitgtk_6_0
   ];
 
-  dependencies = (with python3.pkgs; [
-    beautifulsoup4
-    humanize
-    python-dateutil
-  ]) ++ lib.optional (python3.pkgs ? syndication-domination) python3.pkgs.syndication-domination
+  dependencies =
+    (with python3.pkgs; [
+      beautifulsoup4
+      humanize
+      python-dateutil
+    ])
+    ++ lib.optional (python3.pkgs ? syndication-domination) python3.pkgs.syndication-domination
     ++ lib.optional (python3.pkgs ? python-magic) python3.pkgs.python-magic
     ++ (with python3.pkgs; [
-    pillow
-    pygments
-  ]) ++ lib.optional (python3.pkgs ? pygobject3) python3.pkgs.pygobject3
+      pillow
+      pygments
+    ])
+    ++ lib.optional (python3.pkgs ? pygobject3) python3.pkgs.pygobject3
     ++ lib.optional (python3.pkgs ? readability-lxml) python3.pkgs.readability-lxml
     ++ (with python3.pkgs; [
-    pytz
-    requests
-  ]);
+      pytz
+      requests
+    ]);
 
   dontWrapGApps = true;
 

@@ -60,7 +60,9 @@ stdenv.mkDerivation (finalAttrs: {
     libuuid
     curl
     libhandy
-  ] ++ lib.optional (webkitgtk_4_1 != null) webkitgtk_4_1 ++ [
+  ]
+  ++ lib.optional (webkitgtk_4_1 != null) webkitgtk_4_1
+  ++ [
     tinysparql
     gnome-online-accounts
     gsettings-desktop-schemas

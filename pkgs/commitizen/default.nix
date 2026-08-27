@@ -58,18 +58,17 @@ python3Packages.buildPythonPackage rec {
     (lib.makeBinPath [ gitMinimal ])
   ];
 
-  nativeCheckInputs =
-    [
-      gitMinimal
-    ]
-    ++ (with python3Packages; [
-      argcomplete
-      py
-      pytest-freezer
-      pytest-mock
-      pytest-regressions
-      pytestCheckHook
-    ]);
+  nativeCheckInputs = [
+    gitMinimal
+  ]
+  ++ (with python3Packages; [
+    argcomplete
+    py
+    pytest-freezer
+    pytest-mock
+    pytest-regressions
+    pytestCheckHook
+  ]);
 
   pythonImportsCheck = [ "commitizen" ];
 

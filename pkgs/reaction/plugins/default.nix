@@ -28,7 +28,7 @@
           mainProgram = name;
           maintainers = [ ];
           platforms = lib.platforms.unix;
-          teams = [ lib.teams.ngi ];
+          teams = [ ];
         };
       }
       // extra

@@ -45,13 +45,36 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [
-    meson meson.configurePhaseHook ninja pkg-config python3 perl gettext docutils rpcsvc-proto libxslt
+    meson
+    meson.configurePhaseHook
+    ninja
+    pkg-config
+    python3
+    perl
+    gettext
+    docutils
+    rpcsvc-proto
+    libxslt
   ];
 
   buildInputs = [
-    libxml2 gnutls libgcrypt dbus libnl libpciaccess yajl
-    libtirpc readline numactl systemd libpcap libtasn1 curl bash
-    attr acl
+    libxml2
+    gnutls
+    libgcrypt
+    dbus
+    libnl
+    libpciaccess
+    yajl
+    libtirpc
+    readline
+    numactl
+    systemd
+    libpcap
+    libtasn1
+    curl
+    bash
+    attr
+    acl
   ];
 
   mesonFlags = [

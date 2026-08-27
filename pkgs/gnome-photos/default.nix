@@ -60,7 +60,8 @@ stdenv.mkDerivation rec {
     ninja
     pkg-config
     (python3.withPackages (
-      pkgs: lib.filter (p: p != null) [
+      pkgs:
+      lib.filter (p: p != null) [
         (pkgs.dogtail or null)
         (pkgs.pygobject3 or null)
         (pkgs.pyatspi or null)
@@ -72,7 +73,9 @@ stdenv.mkDerivation rec {
   buildInputs = [
     babl
     dbus
-  ] ++ lib.optional (dleyna != null) dleyna ++ [
+  ]
+  ++ lib.optional (dleyna != null) dleyna
+  ++ [
     gdk-pixbuf
     gegl
     geocode-glib_2
@@ -82,7 +85,9 @@ stdenv.mkDerivation rec {
     gsettings-desktop-schemas
     gtk3
     libdazzle
-  ] ++ lib.optional (libportal-gtk3 != null) libportal-gtk3 ++ [
+  ]
+  ++ lib.optional (libportal-gtk3 != null) libportal-gtk3
+  ++ [
     libhandy
     tinysparql
     localsearch # For 'org.freedesktop.Tracker.Miner.Files' GSettings schema

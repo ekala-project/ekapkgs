@@ -16,9 +16,7 @@ let
   settingsJson = pkgs.writeText "ipfs-config-overrides.json" (builtins.toJSON cfg.settings);
 
   # Build daemon args
-  daemonArgs =
-    [ "daemon" ]
-    ++ optional cfg.autoMount "--mount";
+  daemonArgs = [ "daemon" ] ++ optional cfg.autoMount "--mount";
 
 in
 
@@ -221,8 +219,15 @@ in
           path = "/";
           internal = false;
           openFirewall = true;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
 
         gateway = {
@@ -233,8 +238,15 @@ in
           path = "/";
           internal = false;
           openFirewall = true;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
 
         api = {
@@ -245,8 +257,15 @@ in
           path = "/";
           internal = true;
           openFirewall = true;
-          tls = { enable = false; forceRedirect = true; acme = false; };
-          healthCheck = { path = null; interval = 30; };
+          tls = {
+            enable = false;
+            forceRedirect = true;
+            acme = false;
+          };
+          healthCheck = {
+            path = null;
+            interval = 30;
+          };
         };
       };
 
@@ -258,7 +277,13 @@ in
           # Hardening
           NoNewPrivileges = true;
           ProtectSystem = "strict";
-          ReadWritePaths = [ cfg.dataDir ] ++ optionals cfg.autoMount [ "/ipfs" "/ipns" ];
+          ReadWritePaths = [
+            cfg.dataDir
+          ]
+          ++ optionals cfg.autoMount [
+            "/ipfs"
+            "/ipns"
+          ];
         };
       };
     };

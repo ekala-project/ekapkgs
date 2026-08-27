@@ -67,9 +67,12 @@
 }:
 
 let
-  pythonEnv = python3.withPackages (ps: lib.filter (p: p != null) [
-    (ps.pygobject3 or null)
-  ]);
+  pythonEnv = python3.withPackages (
+    ps:
+    lib.filter (p: p != null) [
+      (ps.pygobject3 or null)
+    ]
+  );
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "gnome-shell";

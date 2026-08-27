@@ -48,6 +48,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://github.com/gradle/gradle-completion";
     changelog = "https://github.com/gradle/gradle-completion/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    teams = [ lib.teams.java ];
+    teams = [ ];
   };
 })

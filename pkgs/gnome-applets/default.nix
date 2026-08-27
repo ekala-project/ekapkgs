@@ -56,7 +56,9 @@ stdenv.mkDerivation (finalAttrs: {
     upower
     adwaita-icon-theme
     libgweather
-  ] ++ lib.optional (gucharmap != null) gucharmap ++ [
+  ]
+  ++ lib.optional (gucharmap != null) gucharmap
+  ++ [
     tinysparql
     polkit
     wirelesstools

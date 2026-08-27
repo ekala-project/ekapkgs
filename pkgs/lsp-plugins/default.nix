@@ -61,19 +61,18 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  buildInputs =
-    [
-      cairo
-      gst_all_1.gst-plugins-base
-      gst_all_1.gstreamer
-      libjack2
-      libGL
-      libGLU
-      libsndfile
-      lv2
-    ]
-    ++ lib.optional (ladspa-header != null) ladspa-header
-    ++ lib.optional (libxrandr != null) libxrandr;
+  buildInputs = [
+    cairo
+    gst_all_1.gst-plugins-base
+    gst_all_1.gstreamer
+    libjack2
+    libGL
+    libGLU
+    libsndfile
+    lv2
+  ]
+  ++ lib.optional (ladspa-header != null) ladspa-header
+  ++ lib.optional (libxrandr != null) libxrandr;
 
   makeFlags = [
     "ETCDIR=${placeholder "out"}/etc"

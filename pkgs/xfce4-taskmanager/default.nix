@@ -56,7 +56,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.xfce.org/apps/xfce4-taskmanager";
     license = lib.licenses.gpl2Plus;
     mainProgram = "xfce4-taskmanager";
-    teams = [ lib.teams.xfce ];
+    teams = [ ];
     platforms = lib.platforms.linux;
   };
 })

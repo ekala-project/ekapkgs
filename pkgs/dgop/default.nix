@@ -37,7 +37,7 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/AvengeMedia/dgop";
     changelog = "https://github.com/AvengeMedia/dgop/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    teams = [ lib.teams.danklinux ];
+    teams = [ ];
     mainProgram = "dgop";
     platforms = lib.platforms.unix;
   };

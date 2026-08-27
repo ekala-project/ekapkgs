@@ -19,20 +19,19 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-0oLIHccG7+pGZIGhOfmwso0sHqagofV912GmvBG5nOI=";
   };
 
-  nativeBuildInputs =
+  nativeBuildInputs = [
+    cpio
+    e2fsprogs
+    perl
+    pkg-config
+  ]
+  ++ lib.optionals (ocaml-ng != null) (
+    with ocaml-ng.ocamlPackages_4_14;
     [
-      cpio
-      e2fsprogs
-      perl
-      pkg-config
+      findlib
+      ocaml
     ]
-    ++ lib.optionals (ocaml-ng != null) (
-      with ocaml-ng.ocamlPackages_4_14;
-      [
-        findlib
-        ocaml
-      ]
-    );
+  );
 
   buildInputs = lib.optionals stdenv.hostPlatform.isGnu [
     glibc

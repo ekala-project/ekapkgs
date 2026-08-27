@@ -100,7 +100,8 @@ stdenv.mkDerivation (finalAttrs: {
   mesonFlags = [
     "-Dinstalled_test_prefix=${placeholder "installedTests"}"
     (lib.mesonBool "skip_gtk_tests" (!finalAttrs.finalPackage.doCheck))
-  ] ++ lib.optionals (!stdenv.hostPlatform.isLinux || stdenv.hostPlatform.isMusl) [
+  ]
+  ++ lib.optionals (!stdenv.hostPlatform.isLinux || stdenv.hostPlatform.isMusl) [
     "-Dprofiler=disabled"
   ];
 
@@ -111,7 +112,8 @@ stdenv.mkDerivation (finalAttrs: {
   postPatch = ''
     patchShebangs build/choose-tests-locale.sh
     substituteInPlace installed-tests/debugger-test.sh --subst-var-by gjsConsole $out/bin/gjs-console
-  '' + lib.optionalString stdenv.hostPlatform.isMusl ''
+  ''
+  + lib.optionalString stdenv.hostPlatform.isMusl ''
     substituteInPlace installed-tests/js/meson.build \
       --replace "'Encoding'," "#'Encoding',"
   '';

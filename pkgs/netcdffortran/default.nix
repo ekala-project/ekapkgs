@@ -19,7 +19,10 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-k3cPO293Qc+YGlRI1Lz73zuGPP1A+m+VfOk5hBgeDoM=";
   };
 
-  nativeBuildInputs = [ gfortran m4 ];
+  nativeBuildInputs = [
+    gfortran
+    m4
+  ];
   buildInputs = [
     netcdf
     hdf5

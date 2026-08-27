@@ -67,7 +67,10 @@ stdenv.mkDerivation (finalAttrs: {
     sed -i "s/-c -s/-c -s --strip-program=''${STRIP@Q}/" ports.mk
   '';
 
-  env.NIX_CFLAGS_COMPILE = toString [ "-fpermissive" "-Wno-error=format-security" ];
+  env.NIX_CFLAGS_COMPILE = toString [
+    "-fpermissive"
+    "-Wno-error=format-security"
+  ];
 
   meta = {
     description = "Program to run certain classic graphical point-and-click adventure games (such as Monkey Island)";

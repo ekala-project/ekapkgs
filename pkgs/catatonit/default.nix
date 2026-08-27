@@ -34,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/openSUSE/catatonit";
     license = lib.licenses.gpl2Plus;
     maintainers = [ ];
-    teams = [ lib.teams.podman ];
+    teams = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "catatonit";
   };

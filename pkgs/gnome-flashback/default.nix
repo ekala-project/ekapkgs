@@ -85,7 +85,9 @@ stdenv.mkDerivation (finalAttrs: {
     gsettings-desktop-schemas
     gtk3
     ibus
-  ] ++ lib.optional (libcanberra-gtk3 != null) libcanberra-gtk3 ++ [
+  ]
+  ++ lib.optional (libcanberra-gtk3 != null) libcanberra-gtk3
+  ++ [
     libpulseaudio
     libxkbfile
     libxxf86vm

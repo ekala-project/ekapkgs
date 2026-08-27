@@ -117,6 +117,6 @@ buildGo126Module (finalAttrs: {
     license = lib.licenses.mit;
     mainProgram = "gitlab-runner";
     maintainers = [ ];
-    teams = [ lib.teams.gitlab ];
+    teams = [ ];
   };
 })

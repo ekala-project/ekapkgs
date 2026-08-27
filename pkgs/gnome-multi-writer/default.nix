@@ -41,7 +41,9 @@ stdenv.mkDerivation rec {
     glib
     gtk3
     gusb
-  ] ++ lib.optional (libcanberra-gtk3 != null) libcanberra-gtk3 ++ [
+  ]
+  ++ lib.optional (libcanberra-gtk3 != null) libcanberra-gtk3
+  ++ [
     libgudev
     polkit
     udisks

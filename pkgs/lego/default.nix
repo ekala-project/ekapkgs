@@ -31,7 +31,7 @@ buildGoModule (finalAttrs: {
     description = "Let's Encrypt client and ACME library written in Go";
     license = lib.licenses.mit;
     homepage = "https://go-acme.github.io/lego/";
-    teams = [ lib.teams.acme ];
+    teams = [ ];
     mainProgram = "lego";
   };
 

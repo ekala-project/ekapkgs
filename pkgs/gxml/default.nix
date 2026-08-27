@@ -64,6 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
     maintainers = [ ];
-    teams = [ lib.teams.gnome ];
+    teams = [ ];
   };
 })

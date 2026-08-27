@@ -49,23 +49,20 @@ python3Packages.buildPythonApplication rec {
 
   env.PYO3_USE_ABI3_FORWARD_COMPATIBILITY = 1;
 
-  propagatedBuildInputs =
-    lib.optional re2Support google-re2
-    ++ [ pygments ];
-  nativeBuildInputs =
-    [
-      makeWrapper
-      gettext
-      installShellFiles
-      setuptools
-      setuptools-scm
-      pip
-    ]
-    ++ lib.optionals rustSupport [
-      rustPlatform.cargoSetupHook
-      cargo
-      rustc
-    ];
+  propagatedBuildInputs = lib.optional re2Support google-re2 ++ [ pygments ];
+  nativeBuildInputs = [
+    makeWrapper
+    gettext
+    installShellFiles
+    setuptools
+    setuptools-scm
+    pip
+  ]
+  ++ lib.optionals rustSupport [
+    rustPlatform.cargoSetupHook
+    cargo
+    rustc
+  ];
   buildInputs = [ docutils ];
 
   makeFlags = [ "PREFIX=$(out)" ] ++ lib.optional rustSupport "PURE=--rust";

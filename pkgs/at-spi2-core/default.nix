@@ -22,7 +22,10 @@ stdenv.mkDerivation rec {
   pname = "at-spi2-core";
   version = "2.54.2";
 
-  outputs = [ "out" "dev" ];
+  outputs = [
+    "out"
+    "dev"
+  ];
 
   src = fetchurl {
     url = "mirror://gnome/sources/at-spi2-core/${lib.versions.majorMinor version}/at-spi2-core-${version}.tar.xz";
@@ -30,11 +33,23 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [
-    meson ninja pkg-config gobject-introspection gettext python3
+    meson
+    ninja
+    pkg-config
+    gobject-introspection
+    gettext
+    python3
   ];
 
   buildInputs = [
-    glib dbus libxml2 libXtst libXi libXext libX11 systemd
+    glib
+    dbus
+    libxml2
+    libXtst
+    libXi
+    libXext
+    libX11
+    systemd
   ];
 
   mesonFlags = [

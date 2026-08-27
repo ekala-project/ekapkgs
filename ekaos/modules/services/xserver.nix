@@ -32,28 +32,28 @@ let
     EndSection
 
     ${optionalString cfg.libinput.enable ''
-    Section "InputClass"
-      Identifier "libinput touchpad"
-      MatchIsTouchpad "on"
-      Driver "libinput"
-    EndSection
+      Section "InputClass"
+        Identifier "libinput touchpad"
+        MatchIsTouchpad "on"
+        Driver "libinput"
+      EndSection
     ''}
 
     ${concatMapStringsSep "\n" (driver: ''
-    Section "Device"
-      Identifier "Device-${driver}"
-      Driver "${driver}"
-    EndSection
+      Section "Device"
+        Identifier "Device-${driver}"
+        Driver "${driver}"
+      EndSection
     '') cfg.videoDrivers}
 
     Section "Screen"
       Identifier "Screen0"
       DefaultDepth ${toString cfg.defaultDepth}
-      ${optionalString (cfg.resolutions != []) ''
-      SubSection "Display"
-        Depth ${toString cfg.defaultDepth}
-        Modes ${concatMapStringsSep " " (res: ''"${toString res.x}x${toString res.y}"'') cfg.resolutions}
-      EndSubSection
+      ${optionalString (cfg.resolutions != [ ]) ''
+        SubSection "Display"
+          Depth ${toString cfg.defaultDepth}
+          Modes ${concatMapStringsSep " " (res: ''"${toString res.x}x${toString res.y}"'') cfg.resolutions}
+        EndSubSection
       ''}
     EndSection
 
@@ -64,11 +64,16 @@ let
   serverArgs = [
     ":0"
     "vt7"
-    "-logfile" "/var/log/X.0.log"
-    "-config" "/etc/X11/xorg.conf"
-    "-nolisten" "tcp"
-  ] ++ optionals (cfg.dpi != null) [
-    "-dpi" (toString cfg.dpi)
+    "-logfile"
+    "/var/log/X.0.log"
+    "-config"
+    "/etc/X11/xorg.conf"
+    "-nolisten"
+    "tcp"
+  ]
+  ++ optionals (cfg.dpi != null) [
+    "-dpi"
+    (toString cfg.dpi)
   ];
 
 in
@@ -171,7 +176,10 @@ in
     videoDrivers = mkOption {
       type = types.listOf types.str;
       default = [ ];
-      example = [ "modesetting" "nvidia" ];
+      example = [
+        "modesetting"
+        "nvidia"
+      ];
       description = ''
         Video drivers to configure in xorg.conf.
         An empty list lets X auto-detect the appropriate driver.
@@ -212,7 +220,16 @@ in
     resolutions = mkOption {
       type = types.listOf (types.attrsOf types.anything);
       default = [ ];
-      example = [ { x = 1920; y = 1080; } { x = 1280; y = 720; } ];
+      example = [
+        {
+          x = 1920;
+          y = 1080;
+        }
+        {
+          x = 1280;
+          y = 720;
+        }
+      ];
       description = "List of screen resolutions. Each entry should have x and y attributes.";
     };
 
@@ -261,8 +278,9 @@ in
       pkgs.xset
       pkgs.xkbcomp
       pkgs.xkeyboard-config
-    ] ++ cfg.modules
-      ++ optional cfg.libinput.enable pkgs.xorg.xf86inputlibinput;
+    ]
+    ++ cfg.modules
+    ++ optional cfg.libinput.enable pkgs.xorg.xf86inputlibinput;
 
     # Load kernel modules commonly needed for graphics
     boot.kernelModules = [ "i2c_dev" ];

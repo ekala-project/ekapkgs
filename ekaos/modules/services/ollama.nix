@@ -129,7 +129,8 @@ in
       environment = {
         OLLAMA_HOST = "${cfg.host}:${toString cfg.port}";
         OLLAMA_MODELS = "${cfg.dataDir}/models";
-      } // cfg.environmentVariables;
+      }
+      // cfg.environmentVariables;
 
       ports.api = {
         port = cfg.port;
@@ -139,8 +140,15 @@ in
         path = "/";
         internal = cfg.host == "127.0.0.1";
         openFirewall = cfg.openFirewall;
-        tls = { enable = false; forceRedirect = true; acme = false; };
-        healthCheck = { path = null; interval = 30; };
+        tls = {
+          enable = false;
+          forceRedirect = true;
+          acme = false;
+        };
+        healthCheck = {
+          path = null;
+          interval = 30;
+        };
       };
 
       systemd = {

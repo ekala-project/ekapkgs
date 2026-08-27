@@ -30,18 +30,17 @@ python3Packages.buildPythonApplication (finalAttrs: {
     installShellFiles
   ];
 
-  propagatedBuildInputs =
-    [
-      python3Packages.configargparse
-    ]
-    ++ lib.optionals waylandSupport [
-      wl-clipboard
-      wtype
-    ]
-    ++ lib.optionals x11Support [
-      xdotool
-      xsel
-    ];
+  propagatedBuildInputs = [
+    python3Packages.configargparse
+  ]
+  ++ lib.optionals waylandSupport [
+    wl-clipboard
+    wtype
+  ]
+  ++ lib.optionals x11Support [
+    xdotool
+    xsel
+  ];
 
   # The 'extractors' sub-module is used for development
   # and has additional dependencies.

@@ -74,10 +74,13 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     # TODO: gst-plugins-good, gst-plugins-bad, gst-plugins-ugly, gst-libav not in ekapkgs
   ]);
 
-  pythonPath = with python3.pkgs; [
-    pycairo
-    dbus-python
-  ] ++ lib.optional (python3.pkgs ? pygobject3) python3.pkgs.pygobject3;
+  pythonPath =
+    with python3.pkgs;
+    [
+      pycairo
+      dbus-python
+    ]
+    ++ lib.optional (python3.pkgs ? pygobject3) python3.pkgs.pygobject3;
 
   # Prevent double wrapping, let the Python wrapper use the args in preFixup.
   dontWrapGApps = true;

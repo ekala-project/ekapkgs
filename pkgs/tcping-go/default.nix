@@ -1,7 +1,7 @@
-{ lib
-, fetchFromGitHub
-, buildGo126Module
-,
+{
+  lib,
+  fetchFromGitHub,
+  buildGo126Module,
 }:
 
 buildGo126Module {

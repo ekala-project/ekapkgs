@@ -1,8 +1,8 @@
-{ lib
-, buildGo126Module
-, fetchFromGitLab ? null
-, installShellFiles
-,
+{
+  lib,
+  buildGo126Module,
+  fetchFromGitLab ? null,
+  installShellFiles,
 }:
 
 buildGo126Module (finalAttrs: {

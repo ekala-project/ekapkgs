@@ -56,11 +56,16 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   configureFlags =
-    (if caja != null then [
-      "--with-cajadir=$$out/lib/caja/extensions-2.0"
-    ] else [
-      "--disable-caja-actions"
-    ])
+    (
+      if caja != null then
+        [
+          "--with-cajadir=$$out/lib/caja/extensions-2.0"
+        ]
+      else
+        [
+          "--disable-caja-actions"
+        ]
+    )
     ++ lib.optionals withMagic [
       "--enable-magic"
     ];

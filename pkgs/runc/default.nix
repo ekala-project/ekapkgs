@@ -69,7 +69,7 @@ buildGo126Module (finalAttrs: {
     description = "CLI tool for spawning and running containers according to the OCI specification";
     license = lib.licenses.asl20;
     maintainers = [ ];
-    teams = [ lib.teams.podman ];
+    teams = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "runc";
   };

@@ -36,7 +36,8 @@ buildGo126Module rec {
       runtimeDependencies = [
         bash
         getent
-      ] ++ lib.optionals (systemd != null) [ systemd ];
+      ]
+      ++ lib.optionals (systemd != null) [ systemd ];
     in
     ''
       wrapProgram $out/bin/goss \

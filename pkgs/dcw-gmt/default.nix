@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.lgpl3Plus;
     maintainers = [ ];
-    teams = [ lib.teams.geospatial ];
+    teams = [ ];
   };
 
 })

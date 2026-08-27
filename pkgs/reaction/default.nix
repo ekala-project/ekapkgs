@@ -74,6 +74,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "reaction";
     maintainers = [ ];
     platforms = lib.platforms.unix;
-    teams = [ lib.teams.ngi ];
+    teams = [ ];
   };
 })

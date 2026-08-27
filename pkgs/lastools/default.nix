@@ -36,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://lastools.org/";
     license = lib.licenses.unfree;
     maintainers = [ ];
-    teams = [ lib.teams.geospatial ];
+    teams = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -22,7 +22,8 @@ buildGo126Module (finalAttrs: {
 
   nativeBuildInputs = [
     installShellFiles
-  ] ++ lib.optionals (pandoc != null) [ pandoc ];
+  ]
+  ++ lib.optionals (pandoc != null) [ pandoc ];
 
   ldflags = [
     "-s"

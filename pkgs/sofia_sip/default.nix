@@ -98,7 +98,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/freeswitch/sofia-sip";
     platforms = lib.platforms.unix;
     license = lib.licenses.lgpl2Plus;
-    teams = [ lib.teams.ngi ];
+    teams = [ ];
     pkgConfigModules = [
       "sofia-sip-ua"
       "sofia-sip-ua-glib"

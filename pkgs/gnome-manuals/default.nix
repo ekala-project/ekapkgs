@@ -46,7 +46,9 @@ stdenv.mkDerivation (finalAttrs: {
     gtk4
     libadwaita
     libdex
-  ] ++ lib.optional (libfoundry != null) libfoundry ++ [
+  ]
+  ++ lib.optional (libfoundry != null) libfoundry
+  ++ [
     libpanel
     webkitgtk_6_0
   ];

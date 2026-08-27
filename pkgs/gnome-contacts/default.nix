@@ -60,18 +60,22 @@ stdenv.mkDerivation (finalAttrs: {
     pipewire # pipewiresrc
     gtk4
     glib
-  ] ++ lib.optional (libportal-gtk4 != null) libportal-gtk4 ++ [
+  ]
+  ++ lib.optional (libportal-gtk4 != null) libportal-gtk4
+  ++ [
     evolution-data-server-gtk4
     gsettings-desktop-schemas
     folks
     libadwaita
-  ] ++ lib.optional (libglycin != null) libglycin
-    ++ lib.optional (libglycin-gtk4 != null) libglycin-gtk4
-    ++ [
+  ]
+  ++ lib.optional (libglycin != null) libglycin
+  ++ lib.optional (libglycin-gtk4 != null) libglycin-gtk4
+  ++ [
     libxml2
     gnome-online-accounts
     qrencode
-  ] ++ lib.optional (glycin-loaders != null) glycin-loaders;
+  ]
+  ++ lib.optional (glycin-loaders != null) glycin-loaders;
 
   doCheck = true;
 

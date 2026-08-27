@@ -42,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Program for calculating with L-functions";
     mainProgram = "lcalc";
     license = lib.licenses.gpl2;
-    teams = [ lib.teams.sage ];
+    teams = [ ];
     platforms = lib.platforms.all;
   };
 })

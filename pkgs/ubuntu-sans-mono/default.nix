@@ -1,8 +1,8 @@
-{ lib
-, stdenvNoCC
-, fetchFromGitHub
-, rename ? null
-,
+{
+  lib,
+  stdenvNoCC,
+  fetchFromGitHub,
+  rename ? null,
 }:
 
 stdenvNoCC.mkDerivation (finalAttrs: {

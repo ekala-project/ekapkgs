@@ -42,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/BRiAl/BRiAl";
     description = "Legacy version of PolyBoRi maintained by sagemath developers";
     license = lib.licenses.gpl2Plus;
-    teams = [ lib.teams.sage ];
+    teams = [ ];
     platforms = lib.platforms.unix;
   };
 })

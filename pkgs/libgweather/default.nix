@@ -70,7 +70,8 @@ stdenv.mkDerivation rec {
     libxml2
     json-glib
     geocode-glib_2
-  ] ++ lib.optionals (gweather-locations != null) [
+  ]
+  ++ lib.optionals (gweather-locations != null) [
     gweather-locations
   ];
 

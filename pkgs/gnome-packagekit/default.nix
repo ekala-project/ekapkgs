@@ -36,7 +36,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     gtk3
-  ] ++ lib.optional (packagekit != null) packagekit ++ [
+  ]
+  ++ lib.optional (packagekit != null) packagekit
+  ++ [
     # TODO: systemd not yet ported to ekapkgs
     # systemd
     polkit

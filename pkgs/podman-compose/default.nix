@@ -42,7 +42,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
     maintainers = [ ];
-    teams = [ lib.teams.podman ];
+    teams = [ ];
     mainProgram = "podman-compose";
   };
 })
