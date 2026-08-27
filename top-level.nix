@@ -51,8 +51,14 @@ final: prev: {
   gupnp_1_6 = final.gupnp;
   # bluez5 alias (bluez is already v5)
   bluez5 = final.bluez;
-  # Stub for tinysparql until tracker is ported
-  tinysparql = null;
+  # rest/librest version aliases
+  rest_1_0 = final.rest; # rest 0.10.x (librest 1.0 API)
+
+  # evolution-data-server GTK4 variant
+  evolution-data-server-gtk4 = final.evolution-data-server.override {
+    withGtk3 = false;
+    withGtk4 = true;
+  };
   gtk4 =
     (prev.gtk4.override {
       trackerSupport = false;
@@ -76,4 +82,21 @@ final: prev: {
       (old: {
         nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
       });
+  # GNOME Shell extensions convenience set
+  gnomeExtensions = {
+    appindicator = final.gnome-shell-extension-appindicator;
+    dash-to-panel = final.gnome-shell-extension-dash-to-panel;
+    caffeine = final.gnome-shell-extension-caffeine;
+    gsconnect = final.gnome-shell-extension-gsconnect;
+    blur-my-shell = final.gnome-shell-extension-blur-my-shell;
+    dash-to-dock = final.gnome-shell-extension-dash-to-dock;
+    no-overview = final.gnome-shell-extension-no-overview;
+    just-perfection = final.gnome-shell-extension-just-perfection;
+    pop-shell = final.gnome-shell-extension-pop-shell;
+    vertical-workspaces = final.gnome-shell-extension-vertical-workspaces;
+    paperwm = final.gnome-shell-extension-paperwm;
+    clipboard-indicator = final.gnome-shell-extension-clipboard-indicator;
+    kimpanel = final.gnome-shell-extension-kimpanel;
+    freon = final.gnome-shell-extension-freon;
+  };
 }
