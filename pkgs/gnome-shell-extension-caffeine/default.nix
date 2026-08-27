@@ -1,0 +1,17 @@
+{
+  callPackage,
+}:
+
+let
+  buildGnomeExtension = callPackage ../buildGnomeExtension { };
+in
+buildGnomeExtension {
+  uuid = "caffeine@patapon.info";
+  pname = "caffeine";
+  version = "60";
+  sha256 = "1y9jiwsncsx4sq6yazz5gc5yf0k8ligpp8k6pmqpzc41fg7lj9yb";
+  metadata = "ewogICJfZ2VuZXJhdGVkIjogIkdlbmVyYXRlZCBieSBTd2VldFRvb3RoLCBkbyBub3QgZWRpdCIsCiAgImRlc2NyaXB0aW9uIjogIkRpc2FibGUgdGhlIHNjcmVlbnNhdmVyIGFuZCBhdXRvIHN1c3BlbmQiLAogICJkb25hdGlvbnMiOiB7CiAgICAicGF5cGFsIjogWwogICAgICAiZW9ucGF0YXBvbiIsCiAgICAgICJzdHVhcnRhaGF5aHVyc3QiLAogICAgICAicGFrYW9yYWtpIgogICAgXQogIH0sCiAgImdldHRleHQtZG9tYWluIjogImdub21lLXNoZWxsLWV4dGVuc2lvbi1jYWZmZWluZSIsCiAgIm5hbWUiOiAiQ2FmZmVpbmUiLAogICJzZXNzaW9uLW1vZGVzIjogWwogICAgInVubG9jay1kaWFsb2ciLAogICAgInVzZXIiCiAgXSwKICAic2V0dGluZ3Mtc2NoZW1hIjogIm9yZy5nbm9tZS5zaGVsbC5leHRlbnNpb25zLmNhZmZlaW5lIiwKICAic2hlbGwtdmVyc2lvbiI6IFsKICAgICI0NSIsCiAgICAiNDYiLAogICAgIjQ3IiwKICAgICI0OCIsCiAgICAiNDkiLAogICAgIjUwIgogIF0sCiAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vZW9ucGF0YXBvbi9nbm9tZS1zaGVsbC1leHRlbnNpb24tY2FmZmVpbmUiLAogICJ1dWlkIjogImNhZmZlaW5lQHBhdGFwb24uaW5mbyIsCiAgInZlcnNpb24iOiA2MAp9";
+  description = "Disable the screensaver and auto suspend";
+  homepage = "https://extensions.gnome.org/extension/517/caffeine/";
+  # TODO: gnome-shell dependency (being ported)
+}
