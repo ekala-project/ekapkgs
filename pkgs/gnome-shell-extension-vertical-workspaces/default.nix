@@ -1,0 +1,17 @@
+{
+  callPackage,
+}:
+
+let
+  buildGnomeExtension = callPackage ../buildGnomeExtension { };
+in
+buildGnomeExtension {
+  uuid = "vertical-workspaces@G-dH.github.com";
+  pname = "vertical-workspaces";
+  version = "112";
+  sha256 = "0gijypcdvbihv0b3vwvvgv6j6117rhf6gbag5pidjfqi0swp3r19";
+  metadata = "ewogICJfZ2VuZXJhdGVkIjogIkdlbmVyYXRlZCBieSBTd2VldFRvb3RoLCBkbyBub3QgZWRpdCIsCiAgImRlc2NyaXB0aW9uIjogIkN1c3RvbWl6ZSB5b3VyIEdOT01FIFNoZWxsIFVYIHRvIHN1aXQgeW91ciB3b3JrZmxvdywgd2hldGhlciB5b3UgbGlrZSBob3Jpem9udGFsbHkgb3IgdmVydGljYWxseSBzdGFja2VkIHdvcmtzcGFjZXMuIiwKICAiZG9uYXRpb25zIjogewogICAgImJ1eW1lYWNvZmZlZSI6ICJnZW9yZ2RoIgogIH0sCiAgImdldHRleHQtZG9tYWluIjogInZlcnRpY2FsLXdvcmtzcGFjZXMiLAogICJuYW1lIjogIlYtU2hlbGwiLAogICJzZXNzaW9uLW1vZGVzIjogWwogICAgInVubG9jay1kaWFsb2ciLAogICAgInVzZXIiCiAgXSwKICAic2V0dGluZ3Mtc2NoZW1hIjogIm9yZy5nbm9tZS5zaGVsbC5leHRlbnNpb25zLnZlcnRpY2FsLXdvcmtzcGFjZXMiLAogICJzaGVsbC12ZXJzaW9uIjogWwogICAgIjQ1IiwKICAgICI0NiIsCiAgICAiNDciLAogICAgIjQ4IiwKICAgICI0OSIsCiAgICAiNTAiCiAgXSwKICAidXJsIjogImh0dHBzOi8vZ2l0aHViLmNvbS9HLWRIL3ZlcnRpY2FsLXdvcmtzcGFjZXMiLAogICJ1dWlkIjogInZlcnRpY2FsLXdvcmtzcGFjZXNARy1kSC5naXRodWIuY29tIiwKICAidmVyc2lvbiI6IDExMiwKICAidmVyc2lvbi1uYW1lIjogIjUwLjMiCn0=";
+  description = "Customize your GNOME Shell UX to suit your workflow, with vertical or horizontal workspaces";
+  homepage = "https://extensions.gnome.org/extension/5177/vertical-workspaces/";
+  # TODO: gnome-shell dependency (being ported)
+}
