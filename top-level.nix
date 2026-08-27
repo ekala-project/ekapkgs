@@ -54,6 +54,9 @@ final: prev: {
   # rest/librest version aliases
   rest_1_0 = final.rest; # rest 0.10.x (librest 1.0 API)
 
+  # wlroots version alias (wlroots is now 0.20)
+  wlroots_0_20 = final.wlroots;
+
   # evolution-data-server GTK4 variant
   evolution-data-server-gtk4 = final.evolution-data-server.override {
     withGtk3 = false;

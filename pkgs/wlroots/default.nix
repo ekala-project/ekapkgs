@@ -33,7 +33,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "wlroots";
-  version = "0.19.3";
+  version = "0.20.2";
 
   inherit enableXWayland;
 
@@ -42,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "wlroots";
     repo = "wlroots";
     rev = finalAttrs.version;
-    hash = "sha256-J+wSVUtuizaCyCn523chFbE8VtbPjyu5XYv5eLT+GM0=";
+    hash = "sha256-VdYymvzYp6/R255AK20j4xTd+JbCZgNiRfgeRJD+UZY=";
   };
 
   outputs = [
