@@ -54,6 +54,12 @@ final: prev: {
   # rest/librest version aliases
   rest_1_0 = final.rest; # rest 0.10.x (librest 1.0 API)
 
+  # stub for packages that reference nixosTests
+  nixosTests = { };
+
+  # libxcrypt-legacy (all hash algorithms enabled)
+  libxcrypt-legacy = final.libxcrypt.override { enableHashes = "all"; };
+
   # wlroots version alias (wlroots is now 0.20)
   wlroots_0_20 = final.wlroots;
 
