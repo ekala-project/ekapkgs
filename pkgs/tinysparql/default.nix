@@ -3,11 +3,11 @@
   lib,
   fetchurl,
   fetchpatch,
-  gettext,
+  gettext, # TODO: not in confirmed available deps list; verify availability
   meson,
   ninja,
   pkg-config,
-  asciidoc,
+  asciidoc, # TODO: not in confirmed available deps list; verify availability
   gobject-introspection,
   buildPackages,
   withIntrospection ?
@@ -17,16 +17,16 @@
   python3,
   libxml2,
   glib,
-  wrapGAppsNoGuiHook ? null,
+  wrapGAppsNoGuiHook, # TODO: not in confirmed available deps list; verify availability
   sqlite,
-  libstemmer ? null,
+  libstemmer, # TODO: not in confirmed available deps list; verify availability
   icu,
-  libuuid,
+  libuuid, # TODO: not in confirmed available deps list; verify availability
   libsoup_3,
   json-glib,
-  avahi ? null,
+  avahi, # TODO: not in confirmed available deps list; verify availability
   dbus,
-  man-db ? null,
+  man-db, # TODO: not in confirmed available deps list; verify availability
   writeText,
 }:
 
@@ -48,6 +48,10 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   patches = [
+    # sqlite changed the precision of float <-> text conversions, causing
+    # failures in the test suite. patch here until this appears in a release.
+    # https://gitlab.gnome.org/GNOME/tinysparql/-/work_items/496
+    # https://gitlab.gnome.org/GNOME/tinysparql/-/merge_requests/811
     (fetchpatch {
       name = "tinysparql-sqlite-double-value-precision.patch";
       url = "https://gitlab.gnome.org/GNOME/tinysparql/-/commit/47d5bf9313d0ccb1feb7169eed9047d0e1597a39.patch";
@@ -69,7 +73,9 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     glib
     wrapGAppsNoGuiHook
-    (python3.pythonOnBuildForHost.withPackages (p: [ p.pygobject3 ]))
+    python3
+    # TODO: pygobject3 not available in ekapkgs python packages
+    # (python3.pythonOnBuildForHost.withPackages (p: [ p.pygobject3 ]))
   ]
   ++ lib.optionals withIntrospection [
     gobject-introspection
@@ -101,6 +107,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ (
     let
+      # https://gitlab.gnome.org/GNOME/tinysparql/-/blob/3.7.3/meson.build#L170
       crossFile = writeText "cross-file.conf" ''
         [properties]
         sqlite3_has_fts5 = '${lib.boolToString (lib.hasInfix "-DSQLITE_ENABLE_FTS3" sqlite.NIX_CFLAGS_COMPILE)}'
@@ -117,6 +124,9 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs \
       utils/data-generators/cc/generate
 
+    # File "/build/tinysparql-3.8.0/tests/functional-tests/test_cli.py", line 233, in test_help
+    # self.assertIn("TINYSPARQL-IMPORT(1)", output, "Manpage not found")
+    # AssertionError: 'TINYSPARQL-IMPORT(1)' not found in '\x1b[4mTINYSPARQL-IMPORT\x1b[24m(1) ...'
     substituteInPlace tests/functional-tests/test_cli.py --replace-fail "TINYSPARQL-IMPORT(1)" "TINYSPARQL-IMPORT"
   '';
 
@@ -126,8 +136,13 @@ stdenv.mkDerivation (finalAttrs: {
       extension = stdenv.hostPlatform.extensions.sharedLibrary;
     in
     ''
+      # (tracker-store:6194): Tracker-CRITICAL **: 09:34:07.722: Cannot initialize database: Could not open sqlite3 database:'/homeless-shelter/.cache/tracker/meta.db': unable to open database file
       export HOME=$(mktemp -d)
 
+      # Our gobject-introspection patches make the shared library paths absolute
+      # in the GIR files. When running functional tests, the library is not yet installed,
+      # though, so we need to replace the absolute path with a local one during build.
+      # We are using a symlink that will be overridden during installation.
       mkdir -p $out/lib
       ln -s $PWD/src/libtinysparql/libtinysparql-3.0${extension} $out/lib/libtinysparql-3.0${extension}${linuxDot0}
     '';
@@ -135,6 +150,7 @@ stdenv.mkDerivation (finalAttrs: {
   checkPhase = ''
     runHook preCheck
 
+    # The "tinysparql:core / service" test can take 180s+ when builder is in high load.
     dbus-run-session \
       --config-file=${dbus}/share/dbus-1/session.conf \
       meson test \
@@ -145,10 +161,12 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   postCheck = ''
+    # Clean up out symlinks
     rm -r $out/lib
   '';
 
   postFixup = ''
+    # Cannot be in postInstall, otherwise _multioutDocs hook in preFixup will move right back.
     moveToOutput "share/doc" "$devdoc"
   '';
 
