@@ -660,6 +660,12 @@
 
   # Services
   ./services/at-spi2-core.nix
+  ./services/gdm.nix
+  ./services/gnome-browser-connector.nix
+  ./services/gnome-keyring.nix
+  ./services/gnome-online-accounts.nix
+  ./services/gnome-remote-desktop.nix
+  ./services/gnome-settings-daemon.nix
   ./services/hypridle.nix
   ./services/hyprland.nix
   ./services/kubo.nix
