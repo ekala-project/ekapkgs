@@ -60,7 +60,9 @@ final: prev: {
   # libxcrypt-legacy (all hash algorithms enabled)
   libxcrypt-legacy = final.libxcrypt.override { enableHashes = "all"; };
 
-  # wlroots version alias (wlroots is now 0.20)
+  # wlroots version aliases (wlroots is now 0.20, older versions removed)
+  wlroots_0_18 = null;
+  wlroots_0_19 = null;
   wlroots_0_20 = final.wlroots;
 
   # evolution-data-server GTK4 variant
