@@ -8,6 +8,12 @@
   meson,
   ninja,
   python3,
+  graphite2 ? null,
+  withGraphite2 ? true,
+  withIcu ? false,
+  icu ? null,
+  testers ? null,
+  pango ? null,
 }:
 
 stdenv.mkDerivation (finalAttrs: {

@@ -12,6 +12,9 @@
   bzip2,
   pkg-config,
   x11Support ? true,
+  webpSupport ? true,
+  jxlSupport ? false,
+  libjxl ? null,
   libxft,
   libxext,
 }:
