@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "PDF converter to SVG format";
     homepage = "http://www.cityinthesky.co.uk/opensource/pdf2svg";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "pdf2svg";
   };

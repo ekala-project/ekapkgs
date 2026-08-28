@@ -34,6 +34,5 @@ buildGo126Module {
     mainProgram = "zztgo";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

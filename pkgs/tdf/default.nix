@@ -39,7 +39,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Tui-based PDF viewer";
     homepage = "https://github.com/itsjunetime/tdf";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
     mainProgram = "tdf";
     platforms = lib.platforms.unix;
   };

@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://git.sr.ht/~herrhotzenplotz/gcli/tree/v${finalAttrs.version}/item/Changelog.md";
     license = lib.licenses.bsd2;
     mainProgram = "gcli";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -22,7 +22,6 @@ buildGoModule (finalAttrs: {
     description = "Measures round-trip time, one-way delay and other metrics using UDP";
     homepage = "https://github.com/heistp/irtt";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "irtt";
     platforms = lib.platforms.linux;
   };

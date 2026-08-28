@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Hyprland version of wayland-scanner in and for C++";
     changelog = "https://github.com/hyprwm/hyprwayland-scanner/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "hyprwayland-scanner";
     platforms = lib.platforms.linux;
   };

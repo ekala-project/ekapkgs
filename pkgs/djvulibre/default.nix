@@ -48,7 +48,6 @@ stdenv.mkDerivation rec {
     description = "Big set of CLI tools to make/modify/optimize/show/export DJVU files";
     homepage = "https://djvu.sourceforge.net";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

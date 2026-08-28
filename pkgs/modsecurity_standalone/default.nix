@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Open source, cross-platform web application firewall (WAF)";
     license = lib.licenses.asl20;
     homepage = "https://github.com/owasp-modsecurity/ModSecurity";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

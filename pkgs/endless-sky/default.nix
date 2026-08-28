@@ -75,7 +75,6 @@ stdenv.mkDerivation (finalAttrs: {
       cc-by-sa-40
       publicDomain
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

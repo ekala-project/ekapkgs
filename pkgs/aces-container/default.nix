@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Reference Implementation of SMPTE ST2065-4";
     homepage = "https://github.com/aces-aswf/aces_container";
     license = lib.licenses.ampas;
-    maintainers = [ ];
     mainProgram = "aces-container";
     platforms = lib.platforms.all;
   };

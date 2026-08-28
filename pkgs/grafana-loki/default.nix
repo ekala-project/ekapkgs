@@ -47,6 +47,5 @@ buildGo126Module (finalAttrs: {
     ];
     homepage = "https://grafana.com/oss/loki/";
     changelog = "https://github.com/grafana/loki/releases/tag/v${finalAttrs.version}";
-    maintainers = [ ];
   };
 })

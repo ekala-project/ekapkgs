@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/baruch/diskscan";
     description = "Scan HDD/SSD for failed and near failed sectors";
     platforms = with lib.platforms; linux;
-    maintainers = [ ];
     license = lib.licenses.gpl3;
     mainProgram = "diskscan";
   };

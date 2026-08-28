@@ -21,7 +21,6 @@ buildGoModule (finalAttrs: {
     description = "TUI for Mastodon with vim inspired keys";
     homepage = "https://github.com/RasmusLindroth/tut";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "tut";
   };
 })

@@ -31,6 +31,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "MS-Word/Excel/PowerPoint to text converter";
     platforms = lib.platforms.all;
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 })

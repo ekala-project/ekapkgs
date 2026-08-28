@@ -28,6 +28,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://mediaarea.net/";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

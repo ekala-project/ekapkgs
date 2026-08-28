@@ -33,6 +33,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Programming language for several LEGO MINDSTORMS products including the RCX, CyberMaster, and Scout";
     platforms = lib.platforms.linux;
     license = lib.licenses.mpl10;
-    maintainers = [ ];
   };
 })

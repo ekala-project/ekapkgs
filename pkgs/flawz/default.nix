@@ -72,7 +72,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
     ];
     mainProgram = "flawz";
-    maintainers = [ ];
     platforms = with lib.platforms; unix ++ windows;
   };
 })

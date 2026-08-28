@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
       - The data have been reformatted to save space and are distributed as a single deflated netCDF-4 file.
     '';
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     teams = [ ];
   };
 

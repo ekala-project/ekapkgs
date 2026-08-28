@@ -40,7 +40,6 @@ stdenv.mkDerivation rec {
     description = "Implementation of the Intelligent Platform Management Interface";
     homepage = "https://www.gnu.org/software/freeipmi/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.gnu ++ lib.platforms.linux;
   };
 }

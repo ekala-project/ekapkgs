@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Git history statistics generator";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "gitstats";
   };
 })

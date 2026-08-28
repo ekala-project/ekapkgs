@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/jarro2783/cxxopts";
     description = "Lightweight C++ GNU-style option parser library";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Gepetto/collada-dom";
     changelog = "https://github.com/Gepetto/collada-dom/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

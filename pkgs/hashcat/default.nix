@@ -87,6 +87,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://hashcat.net/hashcat/";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

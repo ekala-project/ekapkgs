@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/stressapptest/stressapptest";
     changelog = "https://github.com/stressapptest/stressapptest/releases/tag/v${finalAttrs.version}";
     license = with lib.licenses; [ asl20 ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "stressapptest";
   };

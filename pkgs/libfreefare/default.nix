@@ -36,7 +36,6 @@ stdenv.mkDerivation {
     description = "Convenient API for MIFARE card manipulations";
     license = lib.licenses.lgpl3;
     homepage = "https://github.com/nfc-tools/libfreefare";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

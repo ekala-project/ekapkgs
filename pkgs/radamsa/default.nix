@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "radamsa";
     longDescription = "Radamsa is a general purpose data fuzzer. It reads data from given sample files, or standard input if none are given, and outputs modified data. It is usually used to generate malformed data for testing programs.";
     homepage = "https://gitlab.com/akihe/radamsa";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
   };

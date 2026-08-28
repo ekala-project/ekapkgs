@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/nemtrif/utfcpp";
     description = "UTF-8 with C++ in a Portable Way";
     license = lib.licenses.boost;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

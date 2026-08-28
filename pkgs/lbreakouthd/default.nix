@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Widescreen Breakout clone";
     license = lib.licenses.gpl2Plus;
     mainProgram = "lbreakouthd";
-    maintainers = [ ];
     inherit (SDL2.meta) platforms;
   };
 })

@@ -44,6 +44,5 @@ stdenv.mkDerivation {
     homepage = "https://github.com/magicmonty/bash-git-prompt";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

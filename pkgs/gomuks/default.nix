@@ -29,6 +29,5 @@ buildGo126Module rec {
     description = "Terminal based Matrix client written in Go";
     mainProgram = "gomuks";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
   };
 }

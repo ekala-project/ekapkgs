@@ -27,6 +27,5 @@ buildGo126Module (finalAttrs: {
     description = "GRPC to JSON proxy generator plugin for Google Protocol Buffers";
     homepage = "https://github.com/grpc-ecosystem/grpc-gateway";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

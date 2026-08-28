@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Optimize JPEG files";
     homepage = "https://www.kokkonen.net/tjko/projects.html";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "jpegoptim";
   };

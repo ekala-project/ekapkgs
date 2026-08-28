@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://zmap.io/";
     license = lib.licenses.asl20;
     description = "Fast single packet network scanner designed for Internet-wide network surveys";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

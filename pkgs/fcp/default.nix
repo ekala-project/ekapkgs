@@ -34,7 +34,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/svetlitski/fcp/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "fcp";
   };
 })

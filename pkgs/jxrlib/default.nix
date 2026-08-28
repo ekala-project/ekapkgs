@@ -42,6 +42,5 @@ stdenv.mkDerivation {
     homepage = "https://jxrlib.codeplex.com";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

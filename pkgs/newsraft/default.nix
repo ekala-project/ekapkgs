@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://codeberg.org/newsraft/newsraft";
     changelog = "https://codeberg.org/newsraft/newsraft/releases/tag/newsraft-${finalAttrs.version}";
     license = lib.licenses.isc;
-    maintainers = [ ];
     mainProgram = "newsraft";
     platforms = lib.platforms.all;
   };

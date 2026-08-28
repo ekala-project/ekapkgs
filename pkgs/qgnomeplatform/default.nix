@@ -71,7 +71,6 @@ stdenv.mkDerivation rec {
     description = "QPlatformTheme for a better Qt application inclusion in GNOME";
     homepage = "https://github.com/FedoraQt/QGnomePlatform";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.xfce.org/apps/parole";
     license = lib.licenses.gpl2Plus;
     mainProgram = "parole";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

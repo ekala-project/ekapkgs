@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "KornShell Command And Programming Language";
     homepage = "https://github.com/att/ast";
     license = lib.licenses.cpl10;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

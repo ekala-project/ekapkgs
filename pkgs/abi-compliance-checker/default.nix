@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "abi-compliance-checker";
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

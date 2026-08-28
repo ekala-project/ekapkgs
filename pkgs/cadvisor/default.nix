@@ -35,7 +35,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "cadvisor";
     homepage = "https://github.com/google/cadvisor";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

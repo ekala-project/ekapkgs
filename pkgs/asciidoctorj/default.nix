@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://asciidoctor.org/docs/asciidoctorj/";
     license = lib.licenses.asl20;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "asciidoctorj";
   };
 })

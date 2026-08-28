@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Winitzki Proof Cyrillic pcf font";
     homepage = "https://gitlab.freedesktop.org/xorg/font/winitzki-cyrillic";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Additional taglib plugins";
     mainProgram = "taglib-extras-config";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     license = lib.licenses.lgpl2;
   };
 })

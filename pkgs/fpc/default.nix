@@ -95,7 +95,6 @@ stdenv.mkDerivation rec {
       gpl2
       lgpl2
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
       gpl3Plus
     ];
     mainProgram = "luit";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

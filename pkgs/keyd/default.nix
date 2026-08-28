@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/rvaiya/keyd/blob/master/docs/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "keyd";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

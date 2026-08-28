@@ -73,6 +73,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Unix utilities for processing and interacting with mail messages which are stored in maildir folders";
     license = lib.licenses.cc0;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

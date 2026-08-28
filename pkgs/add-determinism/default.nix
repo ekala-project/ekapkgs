@@ -45,7 +45,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Build postprocessor to reset metadata fields for build reproducibility";
     homepage = "https://github.com/keszybz/add-determinism";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "add-det";
   };

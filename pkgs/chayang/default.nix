@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
       Gradually dim the screen on Wayland.
       Can be used to implement a grace period before locking the session.
     '';
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "chayang";
   };

@@ -126,6 +126,5 @@ stdenv.mkDerivation {
     license = lib.licenses.bsd2;
     mainProgram = "swipl";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

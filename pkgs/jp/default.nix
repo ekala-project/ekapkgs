@@ -21,7 +21,6 @@ buildGoModule (finalAttrs: {
     description = "Command line interface to the JMESPath expression language for JSON";
     mainProgram = "jp";
     homepage = "https://github.com/jmespath/jp";
-    maintainers = [ ];
     license = lib.licenses.asl20;
   };
 })

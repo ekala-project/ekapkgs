@@ -60,7 +60,6 @@ buildGoModule (finalAttrs: {
       lgpl3Only
       gpl3Only
     ];
-    maintainers = [ ];
     mainProgram = "geth";
   };
 })

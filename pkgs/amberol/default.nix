@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://gitlab.gnome.org/World/amberol";
     description = "Small and simple sound and music player";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
     mainProgram = "amberol";

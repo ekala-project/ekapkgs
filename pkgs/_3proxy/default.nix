@@ -42,6 +42,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/3proxy/3proxy";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

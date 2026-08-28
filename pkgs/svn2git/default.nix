@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/nirvdrum/svn2git";
     description = "Tool for importing Subversion repositories into git";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "svn2git";
   };

@@ -27,7 +27,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/curlpipe/ox";
     changelog = "https://github.com/curlpipe/ox/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "ox";
   };
 })

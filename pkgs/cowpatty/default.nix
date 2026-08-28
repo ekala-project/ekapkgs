@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Offline dictionary attack against WPA/WPA2 networks";
     homepage = "https://github.com/joswr1ght/cowpatty";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
       mit
     ];
     mainProgram = "sessreg";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

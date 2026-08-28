@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "GGZ Gaming zone libraries";
     mainProgram = "ggz-config";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2;
     downloadPage = "http://www.ggzgamingzone.org/releases/";

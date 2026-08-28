@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "cdb";
     homepage = "https://www.corpit.ru/mjt/tinycdb.html";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -41,7 +41,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/jtesta/ssh-audit/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "ssh-audit";
   };
 })

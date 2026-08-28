@@ -37,7 +37,6 @@ stdenv.mkDerivation rec {
 
   meta = {
     description = "Tool to copy data from a damaged block device";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     homepage = "http://www.garloff.de/kurt/linux/ddrescue/";
     license = lib.licenses.gpl2Plus;

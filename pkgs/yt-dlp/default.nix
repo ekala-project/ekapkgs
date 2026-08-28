@@ -158,6 +158,5 @@ python3Packages.buildPythonApplication rec {
       you can modify it, redistribute it or use it however you like.
     '';
     mainProgram = "yt-dlp";
-    maintainers = [ ];
   };
 }

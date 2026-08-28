@@ -66,7 +66,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       lgpl3Only # lib
       gpl3Only # everything else
     ];
-    maintainers = [ ];
     mainProgram = "prs";
   };
 })

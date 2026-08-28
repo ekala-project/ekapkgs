@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/vkmark/vkmark";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "vkmark";
   };
 })

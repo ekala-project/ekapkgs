@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "JSON to TSV converter";
     homepage = "https://codemadness.org/json2tsv.html";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

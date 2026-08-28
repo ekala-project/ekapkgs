@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: rec {
     description = "Improved Nano Syntax Highlighting Files, fork of nanorc";
     homepage = "https://github.com/galenguyer/nano-syntax-highlighting";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

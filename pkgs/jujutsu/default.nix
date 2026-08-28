@@ -56,7 +56,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://jj-vcs.dev/";
     changelog = "https://github.com/jj-vcs/jj/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "jj";
   };
 })

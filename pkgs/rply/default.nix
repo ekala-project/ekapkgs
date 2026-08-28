@@ -42,6 +42,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/diegonehab/rply";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

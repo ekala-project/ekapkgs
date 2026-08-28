@@ -33,6 +33,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.mew.org/~kazu/proj/pgpdump/en/";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -33,7 +33,6 @@ stdenv.mkDerivation {
     description = "2D Vector Graphics Engine Powered by a JIT Compiler";
     homepage = "https://blend2d.com";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

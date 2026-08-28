@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
       X session.
     '';
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 })

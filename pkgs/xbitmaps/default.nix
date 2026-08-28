@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
       icu
       smlnj
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

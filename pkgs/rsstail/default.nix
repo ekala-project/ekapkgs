@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://www.vanheusden.com/rsstail/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

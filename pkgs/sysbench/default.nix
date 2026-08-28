@@ -71,6 +71,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/akopytov/sysbench/blob/${finalAttrs.version}/ChangeLog";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

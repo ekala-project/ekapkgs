@@ -25,7 +25,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/konradsz/igrep";
     changelog = "https://github.com/konradsz/igrep/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "ig";
   };
 })

@@ -94,7 +94,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     downloadPage = "https://github.com/tstack/lnav/releases";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "lnav";
   };

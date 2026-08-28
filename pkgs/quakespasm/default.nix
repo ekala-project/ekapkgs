@@ -88,7 +88,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Engine for iD software's Quake";
     homepage = "https://quakespasm.sourceforge.net/";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "quake";
     license = lib.licenses.gpl2Only;
   };

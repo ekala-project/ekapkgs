@@ -62,7 +62,6 @@ stdenv.mkDerivation rec {
     homepage = "https://www.gnu.org/software/inetutils/";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     priority = (util-linux.meta.priority or lib.meta.defaultPriority) + 1;
   };
 }

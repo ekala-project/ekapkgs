@@ -21,6 +21,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://bvi.sourceforge.net/download.html";
     license = lib.licenses.gpl2;
     platforms = with lib.platforms; linux ++ darwin;
-    maintainers = [ ];
   };
 })

@@ -48,7 +48,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://sr.ht/~xenrox/hut/";
     description = "CLI tool for Sourcehut / sr.ht";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
     mainProgram = "hut";
   };
 })

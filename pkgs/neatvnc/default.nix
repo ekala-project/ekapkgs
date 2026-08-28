@@ -56,6 +56,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/any1/neatvnc";
     license = lib.licenses.isc;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

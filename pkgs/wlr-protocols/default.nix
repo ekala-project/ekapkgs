@@ -39,6 +39,5 @@ stdenv.mkDerivation {
     homepage = "https://gitlab.freedesktop.org/wlroots/wlr-protocols";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

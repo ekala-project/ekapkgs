@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
       bsd2
       gpl2Plus
     ];
-    maintainers = [ ];
     mainProgram = "ucarp";
   };
 })

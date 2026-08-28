@@ -89,7 +89,6 @@ stdenv.mkDerivation rec {
     changelog = "https://github.com/Tom94/tev/releases/tag/v${version}";
     homepage = "https://github.com/Tom94/tev";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

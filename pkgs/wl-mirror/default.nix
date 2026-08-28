@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Ferdi265/wl-mirror";
     description = "Simple Wayland output mirror client";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

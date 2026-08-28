@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Correct bit errors in an AES key schedules";
     mainProgram = "aesfix";
     homepage = "https://citp.princeton.edu/our-work/memory/";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 })

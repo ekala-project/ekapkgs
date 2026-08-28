@@ -45,6 +45,5 @@ stdenv.mkDerivation rec {
     license = lib.licenses.bsd3;
     homepage = "https://pupnp.github.io/pupnp/";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

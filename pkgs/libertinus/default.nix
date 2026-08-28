@@ -38,7 +38,6 @@ stdenvNoCC.mkDerivation rec {
     description = "Libertinus font family";
     homepage = "https://github.com/alerque/libertinus";
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

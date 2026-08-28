@@ -31,6 +31,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "fdroidcl";
     homepage = "https://github.com/Hoverth/fdroidcl";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

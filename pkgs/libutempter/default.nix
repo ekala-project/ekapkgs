@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
       On NixOS systems, this can be achieved by creating a setguid wrapper.
     '';
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

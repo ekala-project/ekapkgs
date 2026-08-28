@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://mmonit.com/monit/";
     description = "Monitoring system";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "monit";
   };

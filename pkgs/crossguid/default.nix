@@ -38,7 +38,6 @@ stdenv.mkDerivation {
     description = "Lightweight cross platform C++ GUID/UUID library";
     license = lib.licenses.mit;
     homepage = "https://github.com/graeme-hill/crossguid";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/thkukuk/libnss_nis/blob/master/NEWS";
     homepage = "https://github.com/thkukuk/libnss_nis";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

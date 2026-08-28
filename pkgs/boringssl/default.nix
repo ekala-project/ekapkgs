@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Free TLS/SSL implementation";
     mainProgram = "bssl";
     homepage = "https://boringssl.googlesource.com";
-    maintainers = [ ];
     license = with lib.licenses; [
       asl20
       isc

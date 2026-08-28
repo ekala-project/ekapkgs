@@ -99,6 +99,5 @@ stdenv.mkDerivation (finalAttrs: {
     broken = stdenv.hostPlatform.isDarwin;
     platforms = lib.platforms.all;
     mainProgram = "gforth";
-    maintainers = [ ];
   };
 })

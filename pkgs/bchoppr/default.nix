@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/sjaehn/BChoppr";
     description = "Audio stream chopping LV2 plugin";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl3Plus;
   };

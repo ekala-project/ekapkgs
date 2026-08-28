@@ -60,6 +60,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Implementation of Microsoft's Media Transfer Protocol";
     platforms = lib.platforms.unix;
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
   };
 })

@@ -65,6 +65,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/systemd/zram-generator";
     license = lib.licenses.mit;
     description = "Systemd unit generator for zram devices";
-    maintainers = [ ];
   };
 })

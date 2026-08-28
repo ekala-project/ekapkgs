@@ -25,6 +25,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Parser generator tool and an incremental parsing library";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

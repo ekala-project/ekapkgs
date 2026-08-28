@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "act";
     homepage = "https://github.com/Autodesk/AutomaticComponentToolkit";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

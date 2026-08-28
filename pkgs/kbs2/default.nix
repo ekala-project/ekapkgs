@@ -51,6 +51,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/woodruffw/kbs2";
     changelog = "https://github.com/woodruffw/kbs2/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -82,6 +82,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.xfce.org/xfce/libxfce4windowing";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

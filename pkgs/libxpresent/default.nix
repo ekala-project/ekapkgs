@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for the X Present Extension";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxpresent";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

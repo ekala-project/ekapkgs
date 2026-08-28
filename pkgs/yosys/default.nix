@@ -104,6 +104,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.isc;
     platforms = lib.platforms.all;
     mainProgram = "yosys";
-    maintainers = [ ];
   };
 })

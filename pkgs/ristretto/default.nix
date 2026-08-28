@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.xfce.org/apps/ristretto";
     license = lib.licenses.gpl2Plus;
     mainProgram = "ristretto";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

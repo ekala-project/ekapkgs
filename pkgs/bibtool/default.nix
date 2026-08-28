@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.gerd-neugebauer.de/software/TeX/BibTool/index.en.html";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "bibtool";
   };
 })

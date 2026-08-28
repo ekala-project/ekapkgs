@@ -32,7 +32,6 @@ stdenv.mkDerivation rec {
     description = "Traceroute implementation using TCP packets";
     homepage = "https://github.com/mct/tcptraceroute";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "tcptraceroute";
   };
 }

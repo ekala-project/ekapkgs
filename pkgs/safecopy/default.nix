@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://safecopy.sourceforge.net";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "safecopy";
   };
 })

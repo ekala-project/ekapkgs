@@ -42,7 +42,6 @@ buildGoModule rec {
     homepage = "https://github.com/git-pkgs/git-pkgs";
     description = "Git subcommand for analyzing package/dependency usage in git repositories over time";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "git-pkgs";
   };

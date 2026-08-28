@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Terminal pager similar to 'more' and 'less'";
     homepage = "https://www.jedsoft.org/most/index.html";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "most";
   };

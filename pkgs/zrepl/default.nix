@@ -47,7 +47,6 @@ buildGoModule (finalAttrs: {
     description = "One-stop, integrated solution for ZFS replication";
     platforms = lib.platforms.linux;
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "zrepl";
   };
 })

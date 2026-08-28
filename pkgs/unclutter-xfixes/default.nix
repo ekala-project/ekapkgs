@@ -50,7 +50,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/Airblader/unclutter-xfixes";
     platforms = lib.platforms.unix;
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "unclutter";
   };
 }

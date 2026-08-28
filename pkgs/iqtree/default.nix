@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Efficient and versatile phylogenomic software by maximum likelihood";
     mainProgram = "iqtree3";
     license = lib.licenses.lgpl2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

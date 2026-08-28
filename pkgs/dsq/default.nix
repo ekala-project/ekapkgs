@@ -29,6 +29,5 @@ buildGo126Module (finalAttrs: {
     description = "Commandline tool for running SQL queries against JSON, CSV, Excel, Parquet, and more";
     homepage = "https://github.com/multiprocessio/dsq";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

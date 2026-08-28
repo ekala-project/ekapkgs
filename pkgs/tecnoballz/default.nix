@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
       game. This game was ported from the Commodore Amiga.
     '';
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     broken = stdenv.hostPlatform.isDarwin;
   };

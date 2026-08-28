@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "CloneCD to ISO converter";
     homepage = "https://sourceforge.net/projects/ccd2iso/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "ccd2iso";
   };

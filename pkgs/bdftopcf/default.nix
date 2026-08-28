@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/util/bdftopcf";
     license = lib.licenses.mitOpenGroup;
     mainProgram = "bdftopcf";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

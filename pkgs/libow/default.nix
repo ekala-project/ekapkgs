@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "1-Wire File System full library";
     homepage = "https://owfs.org/";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Colourful visualization tool for binary files";
     homepage = "https://github.com/FireyFly/pixd";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
     mainProgram = "pixd";

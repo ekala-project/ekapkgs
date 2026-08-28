@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Graphical antenna simulation";
     mainProgram = "xnec2c";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
 
     # Darwin support likely to be fixed upstream in the next release

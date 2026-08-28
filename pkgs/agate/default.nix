@@ -41,6 +41,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
       # or
       mit
     ];
-    maintainers = [ ];
   };
 })

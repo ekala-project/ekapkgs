@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
       partial differential equations using iterative methods.
     '';
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

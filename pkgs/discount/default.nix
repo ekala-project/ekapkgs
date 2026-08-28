@@ -42,6 +42,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3;
     mainProgram = "markdown";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for Near Field Communication (NFC)";
     homepage = "https://github.com/nfc-tools/libnfc";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

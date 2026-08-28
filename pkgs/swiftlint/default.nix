@@ -72,7 +72,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://realm.github.io/SwiftLint/";
     license = lib.licenses.mit;
     mainProgram = "swiftlint";
-    maintainers = [ ];
     platforms = lib.attrNames sources.platforms;
     sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];
   };

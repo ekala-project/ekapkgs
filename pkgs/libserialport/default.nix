@@ -23,6 +23,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://sigrok.org/";
     license = lib.licenses.gpl3Plus;
     platforms = with lib.platforms; linux ++ darwin ++ windows;
-    maintainers = [ ];
   };
 })

@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Command that lists Wayland toplevels";
     homepage = "https://sr.ht/~leon_plickat/lswt";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "lswt";
   };

@@ -50,7 +50,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://goshs.de";
     changelog = "https://github.com/goshs-labs/goshs/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "goshs";
   };
 })

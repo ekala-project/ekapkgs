@@ -29,7 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/b1rger/carl";
     changelog = "https://github.com/b1rger/carl/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "carl";
   };
 })

@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl3
     ];
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     # build tool make_bin is built for host
     broken = !stdenv.buildPlatform.canExecute stdenv.hostPlatform;
   };

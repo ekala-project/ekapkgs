@@ -60,6 +60,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "aws-vault";
     homepage = "https://github.com/ByteNess/aws-vault";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

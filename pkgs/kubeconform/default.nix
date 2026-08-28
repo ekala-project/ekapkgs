@@ -36,6 +36,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "kubeconform";
     homepage = "https://github.com/yannh/kubeconform/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

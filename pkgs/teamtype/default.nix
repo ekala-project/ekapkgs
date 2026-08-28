@@ -57,6 +57,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     license = lib.licenses.agpl3Plus;
     mainProgram = "teamtype";
     teams = [ ];
-    maintainers = [ ];
   };
 })

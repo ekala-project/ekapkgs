@@ -69,6 +69,5 @@ stdenv.mkDerivation rec {
     license = lib.licenses.mpl20;
     platforms = lib.platforms.unix;
     homepage = "https://bitbucket.org/tagoh/liblangtag/overview";
-    maintainers = [ ];
   };
 }

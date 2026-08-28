@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "http://www.jfc.org.uk/software/lwm.html";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "lwm";
   };

@@ -68,6 +68,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     homepage = "http://www.htslib.org/";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

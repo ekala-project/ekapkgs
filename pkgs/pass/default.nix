@@ -101,7 +101,6 @@ stdenv.mkDerivation rec {
     license = lib.licenses.gpl2Plus;
     mainProgram = "pass";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     longDescription = ''
       pass is a very simple password store that keeps passwords inside gpg2
       encrypted files inside a simple directory tree residing at

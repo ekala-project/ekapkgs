@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool to display dialogs from the commandline and shell scripts";
     homepage = "https://gitlab.gnome.org/GNOME/zenity";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "zenity";
   };

@@ -86,7 +86,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
       asl20
       gpl3Plus
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -45,6 +45,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/google/libnop";
     license = lib.licenses.asl20;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

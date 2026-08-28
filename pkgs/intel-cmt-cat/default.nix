@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "User space software for Intel(R) Resource Director Technology";
     homepage = "https://github.com/intel/intel-cmt-cat";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = [ "x86_64-linux" ];
   };
 })

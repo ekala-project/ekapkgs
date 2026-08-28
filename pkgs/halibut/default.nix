@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Documentation production system for software manuals";
     homepage = "https://www.chiark.greenend.org.uk/~sgtatham/halibut/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
     mainProgram = "halibut";
   };

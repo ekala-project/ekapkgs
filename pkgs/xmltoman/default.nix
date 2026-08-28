@@ -47,7 +47,6 @@ stdenvNoCC.mkDerivation rec {
     description = "Two very simple scripts for converting xml to groff or html";
     homepage = "https://github.com/atsb/xmltoman";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "xmltoman";
     platforms = lib.platforms.all;
   };

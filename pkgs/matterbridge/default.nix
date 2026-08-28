@@ -23,7 +23,6 @@ buildGoModule {
     description = "Simple bridge between Mattermost, IRC, XMPP, Gitter, Slack, Discord, Telegram, Rocket.Chat, Hipchat(via xmpp), Matrix and Steam";
     homepage = "https://github.com/42wim/matterbridge";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "matterbridge";
   };
 }

@@ -21,6 +21,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/xvzc/SpoofDPI";
     description = "Simple and fast anti-censorship tool written in Go";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -38,6 +38,5 @@ stdenvNoCC.mkDerivation {
     '';
     license = lib.licenses.asl20;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

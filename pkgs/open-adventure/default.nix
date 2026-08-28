@@ -75,7 +75,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "advent";
     homepage = "http://www.catb.org/~esr/open-adventure/";
     changelog = "https://gitlab.com/esr/open-adventure/-/blob/${finalAttrs.version}/NEWS.adoc";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

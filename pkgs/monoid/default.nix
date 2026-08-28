@@ -57,6 +57,5 @@ stdenv.mkDerivation {
       lib.licenses.mit
     ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

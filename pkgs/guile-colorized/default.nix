@@ -46,6 +46,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.com/NalaGinrut/guile-colorized/";
     license = lib.licenses.gpl3Plus;
     platforms = guile.meta.platforms;
-    maintainers = [ ];
   };
 })

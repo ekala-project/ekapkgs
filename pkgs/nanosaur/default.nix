@@ -51,7 +51,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/jorio/Nanosaur";
     license = lib.licenses.cc-by-sa-40;
     mainProgram = "Nanosaur";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

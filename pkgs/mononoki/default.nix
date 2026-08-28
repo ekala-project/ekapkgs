@@ -32,7 +32,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Font for programming and code review";
     homepage = "https://github.com/madmalik/mononoki";
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

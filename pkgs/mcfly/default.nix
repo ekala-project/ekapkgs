@@ -28,7 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Upgraded ctrl-r where history results make sense for what you're working on right now";
     changelog = "https://github.com/cantino/mcfly/raw/v${finalAttrs.version}/CHANGELOG.txt";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "mcfly";
   };
 })

@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Make recommendations for increased performance and stability of MariaDB/MySQL";
     homepage = "https://github.com/major/MySQLTuner-perl";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "mysqltuner";
   };
 })

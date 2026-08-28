@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://commons.apache.org/proper/commons-daemon";
     description = "Apache Commons Daemon software is a set of utilities and Java support classes for running Java applications as server processes";
-    maintainers = [ ];
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
     license = lib.licenses.asl20;
     platforms = with lib.platforms; unix;

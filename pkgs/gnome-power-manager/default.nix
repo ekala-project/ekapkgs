@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-power-manager";
     description = "View battery and power statistics provided by UPower";
     mainProgram = "gnome-power-statistics";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

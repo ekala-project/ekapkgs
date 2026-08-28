@@ -20,7 +20,6 @@ stdenv.mkDerivation {
     description = "LADSPA format audio plugins header file";
     homepage = "https://www.ladspa.org/";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

@@ -137,6 +137,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Virtual Filesystem support library";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

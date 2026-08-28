@@ -44,6 +44,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.oracle.com/database/sqldeveloper/technologies/sqlcl/";
     license = lib.licenses.unfreeRedistributable;
     platforms = [ "x86_64-linux" ];
-    maintainers = [ ];
   };
 })

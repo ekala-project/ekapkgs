@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C library for Bitcoin's base58 encoding";
     homepage = "https://github.com/bitcoin/libbase58";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "base58";
     platforms = lib.platforms.all;
   };

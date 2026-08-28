@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Shared library that implements scrypt() functionality";
     homepage = "https://lolware.net/2014/04/29/libscrypt.html";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

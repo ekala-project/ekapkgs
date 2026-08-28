@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Fast and Easy to use microframework for the web";
     homepage = "https://crowcpp.org/";
-    maintainers = [ ];
     platforms = lib.platforms.all;
     license = lib.licenses.bsd3;
   };

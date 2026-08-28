@@ -21,7 +21,6 @@ buildGoModule (finalAttrs: {
     description = "Best way to tail AWS CloudWatch Logs from your terminal";
     homepage = "https://github.com/lucagrulla/cw";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "cw";
   };
 })

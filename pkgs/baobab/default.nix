@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "baobab";
     homepage = "https://apps.gnome.org/Baobab/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

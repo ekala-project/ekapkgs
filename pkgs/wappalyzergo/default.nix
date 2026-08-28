@@ -24,7 +24,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/projectdiscovery/wappalyzergo";
     changelog = "https://github.com/projectdiscovery/wappalyzergo/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "wappalyzergo";
   };
 })

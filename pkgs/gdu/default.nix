@@ -43,6 +43,5 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/dundee/gdu/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "gdu";
-    maintainers = [ ];
   };
 })

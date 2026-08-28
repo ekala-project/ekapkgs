@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/fcambus/bdf2sfd";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "bdf2sfd";
   };
 })

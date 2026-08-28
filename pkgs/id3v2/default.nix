@@ -40,6 +40,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
     mainProgram = "id3v2";
-    maintainers = [ ];
   };
 })

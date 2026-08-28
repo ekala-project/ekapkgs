@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://4ti2.github.io/";
     description = "Software package for algebraic, geometric and combinatorial problems on linear spaces";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

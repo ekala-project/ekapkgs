@@ -38,7 +38,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Lightning fast web crawler which extracts URLs, files, intel & endpoints from a target";
     homepage = "https://github.com/s0md3v/Photon";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     mainProgram = "photon";
   };
 })

@@ -63,6 +63,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     mainProgram = "jasper";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

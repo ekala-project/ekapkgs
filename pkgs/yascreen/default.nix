@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/bbonev/yascreen/releases/tag/${finalAttrs.src.tag}";
     description = "Curses replacement for daemons and embedded apps";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

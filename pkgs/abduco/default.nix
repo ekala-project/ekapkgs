@@ -54,7 +54,6 @@ stdenv.mkDerivation {
     homepage = "http://brain-dump.org/projects/abduco";
     license = lib.licenses.isc;
     description = "Allows programs to be run independently from its controlling terminal";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "abduco";
   };

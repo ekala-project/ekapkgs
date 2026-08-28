@@ -26,7 +26,6 @@ buildGo126Module {
     description = "Powerful markdown processor in Go geared towards the IETF";
     homepage = "https://github.com/mmarkdown/mmark";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "mmark";
   };
 }

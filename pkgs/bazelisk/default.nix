@@ -32,6 +32,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/bazelbuild/bazelisk";
     changelog = "https://github.com/bazelbuild/bazelisk/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

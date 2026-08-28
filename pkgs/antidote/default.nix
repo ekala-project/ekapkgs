@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Zsh plugin manager made from the ground up thinking about performance";
     homepage = "https://getantidote.github.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

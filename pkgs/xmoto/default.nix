@@ -81,7 +81,6 @@ stdenv.mkDerivation rec {
       You need to control your bike to its limits, if you want to have a chance to finish the most difficult challenges.
     '';
     homepage = "https://xmoto.tuxfamily.org";
-    maintainers = [ ];
     platforms = lib.platforms.all;
     license = lib.licenses.gpl2Plus;
   };

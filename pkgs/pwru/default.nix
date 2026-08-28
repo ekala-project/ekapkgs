@@ -45,7 +45,6 @@ buildGoModule (finalAttrs: {
     description = "eBPF-based Linux kernel networking debugger";
     homepage = "https://github.com/cilium/pwru";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "pwru";
   };

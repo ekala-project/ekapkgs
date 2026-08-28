@@ -71,6 +71,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "ghex";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

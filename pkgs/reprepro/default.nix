@@ -43,7 +43,6 @@ theStdenv.mkDerivation (finalAttrs: {
     homepage = "https://salsa.debian.org/debian/reprepro/";
     description = "Debian package repository producer";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "reprepro";
   };

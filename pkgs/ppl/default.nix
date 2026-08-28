@@ -81,7 +81,6 @@ stdenv.mkDerivation {
 
     license = lib.licenses.gpl3Plus;
 
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

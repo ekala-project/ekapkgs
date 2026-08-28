@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://box2d.org/";
     license = lib.licenses.zlib;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

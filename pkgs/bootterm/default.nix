@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/wtarreau/bootterm";
     license = lib.licenses.mit;
     mainProgram = "bt";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

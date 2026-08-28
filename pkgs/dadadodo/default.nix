@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Markov chain-based text generator";
     mainProgram = "dadadodo";
     homepage = "http://www.jwz.org/dadadodo";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

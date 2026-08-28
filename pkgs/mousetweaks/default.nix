@@ -63,7 +63,6 @@ stdenv.mkDerivation rec {
     homepage = "https://gitlab.gnome.org/Archive/mousetweaks";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "mousetweaks";
   };
 }

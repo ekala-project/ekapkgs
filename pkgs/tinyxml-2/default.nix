@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Simple, small, efficient, C++ XML parser";
     homepage = "https://github.com/leethomason/tinyxml2";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

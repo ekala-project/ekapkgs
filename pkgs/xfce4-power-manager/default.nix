@@ -70,6 +70,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     mainProgram = "xfce4-power-manager";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

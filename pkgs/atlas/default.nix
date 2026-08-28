@@ -51,7 +51,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://atlasgo.io/";
     changelog = "https://github.com/ariga/atlas/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "atlas";
   };
 })

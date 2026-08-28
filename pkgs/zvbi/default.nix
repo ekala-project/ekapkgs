@@ -40,6 +40,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/zapping-vbi/zvbi";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

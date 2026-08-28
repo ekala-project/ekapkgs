@@ -47,6 +47,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Generic monitor plugin for the Xfce panel";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

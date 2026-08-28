@@ -63,6 +63,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://sourceforge.net/p/klavaro/code/HEAD/tree/trunk/ChangeLog";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

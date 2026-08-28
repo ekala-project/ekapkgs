@@ -43,6 +43,5 @@ buildGo126Module rec {
     description = "Suite of programs to use native stores to keep Docker credentials safe";
     homepage = "https://github.com/docker/docker-credential-helpers";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

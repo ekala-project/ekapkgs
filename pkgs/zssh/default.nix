@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "SSH and Telnet client with ZMODEM file transfer capability";
     homepage = "https://zssh.sourceforge.net/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ]; # required by deepin-terminal
     platforms = lib.platforms.linux;
   };
 })

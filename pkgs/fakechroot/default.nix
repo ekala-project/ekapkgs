@@ -81,6 +81,5 @@ stdenv.mkDerivation rec {
     description = "Give a fake chroot environment through LD_PRELOAD";
     license = licenses.lgpl21;
     platforms = platforms.linux;
-    maintainers = [ ];
   };
 }

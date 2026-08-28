@@ -28,6 +28,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Text face designed to be pleasant to read on screens";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

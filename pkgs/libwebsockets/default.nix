@@ -71,7 +71,6 @@ stdenv.mkDerivation (finalAttrs: {
       bsd3
       asl20
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://codeberg.org/OpenVPN/gdbuspp/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.agpl3Only;
     sourceProvenance = [ lib.sourceTypes.fromSource ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

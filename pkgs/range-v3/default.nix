@@ -39,6 +39,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/ericniebler/range-v3/releases/tag/${finalAttrs.version}";
     license = lib.licenses.boost;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

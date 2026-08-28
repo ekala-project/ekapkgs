@@ -52,7 +52,6 @@ stdenv.mkDerivation {
     description = "IRC client that runs as a daemon accepting notification requests";
     homepage = "https://gitlab.com/esr/irker";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "irkerd";
     platforms = lib.platforms.unix;
   };

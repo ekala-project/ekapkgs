@@ -36,7 +36,6 @@ buildGo126Module (finalAttrs: {
     description = "Simple terminal UI for both docker and docker-compose";
     homepage = "https://github.com/jesseduffield/lazydocker";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "lazydocker";
   };
 })

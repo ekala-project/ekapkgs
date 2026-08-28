@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.libsdl.org/projects/SDL_image/";
     description = "SDL image library";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     inherit (SDL.meta) platforms;
   };
 })

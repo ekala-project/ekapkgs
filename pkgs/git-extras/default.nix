@@ -44,6 +44,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "GIT utilities -- repo summary, repl, changelog population, author commit percentages and more";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

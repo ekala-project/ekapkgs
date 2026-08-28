@@ -33,7 +33,6 @@ buildGoModule (finalAttrs: {
     description = "CLI tool for GoBGP";
     homepage = "https://osrg.github.io/gobgp/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "gobgp";
   };
 })

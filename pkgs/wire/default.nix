@@ -29,6 +29,5 @@ buildGoModule (finalAttrs: {
     description = "Code generation tool that automates connecting components using dependency injection";
     mainProgram = "wire";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

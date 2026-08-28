@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
       # "May be distributed and modified without restrictions."
       free
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

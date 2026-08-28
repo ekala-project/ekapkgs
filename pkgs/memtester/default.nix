@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Userspace utility for testing the memory subsystem for faults";
     homepage = "http://pyropus.ca/software/memtester/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "memtester";
   };

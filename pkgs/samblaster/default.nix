@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Tool for marking duplicates and extracting discordant/split reads from SAM/BAM files";
     mainProgram = "samblaster";
-    maintainers = [ ];
     license = lib.licenses.mit;
     homepage = "https://github.com/GregoryFaust/samblaster";
     platforms = lib.platforms.x86_64;

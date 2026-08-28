@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.linuxsampler.org";
     description = "LinuxSampler Control Protocol (LSCP) wrapper library";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

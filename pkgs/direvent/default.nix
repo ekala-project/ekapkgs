@@ -19,6 +19,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.gnu.org.ua/software/direvent/";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

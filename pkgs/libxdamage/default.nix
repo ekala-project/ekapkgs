@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "X Damage Extension library";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxdamage";
     license = lib.licenses.hpndSellVariant;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

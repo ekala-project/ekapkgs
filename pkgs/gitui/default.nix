@@ -56,6 +56,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/gitui-org/gitui";
     license = lib.licenses.mit;
     mainProgram = "gitui";
-    maintainers = [ ];
   };
 })

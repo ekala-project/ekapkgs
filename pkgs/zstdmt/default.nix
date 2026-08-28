@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3;
     mainProgram = "zstd";
     platforms = lib.platforms.all;
-    maintainers = [ ];
     pkgConfigModules = [ "libzstd" ];
   };
 })

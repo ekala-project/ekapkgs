@@ -32,6 +32,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     platforms = jdk.meta.platforms;
     license = lib.licenses.asl20;
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
-    maintainers = [ ];
   };
 })

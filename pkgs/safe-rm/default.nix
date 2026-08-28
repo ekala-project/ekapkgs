@@ -37,7 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://launchpad.net/safe-rm";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "safe-rm";
   };
 })

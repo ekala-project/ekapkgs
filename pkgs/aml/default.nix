@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/any1/aml";
     license = lib.licenses.isc;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

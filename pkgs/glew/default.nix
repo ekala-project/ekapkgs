@@ -72,7 +72,6 @@ stdenv.mkDerivation (finalAttrs: {
       mit
       gpl2Only
     ];
-    maintainers = [ ];
     platforms = lib.subtractLists lib.platforms.darwin mesa.meta.platforms;
   };
 })

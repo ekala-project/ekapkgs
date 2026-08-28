@@ -33,7 +33,6 @@ buildGo126Module (finalAttrs: {
     description = "iOS/macOS Research Swiss Army Knife";
     homepage = "https://blacktop.github.io/ipsw";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "ipsw";
   };

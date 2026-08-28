@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://swapoff.org/devtodo1.html";
     description = "Hierarchical command-line task manager";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

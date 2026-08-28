@@ -67,7 +67,6 @@ stdenv.mkDerivation {
     homepage = "http://cvs.nongnu.org";
     description = "Concurrent Versions System - a source control system";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

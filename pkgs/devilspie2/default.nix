@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Window matching utility";
     homepage = "https://www.nongnu.org/devilspie2/";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "devilspie2";
   };

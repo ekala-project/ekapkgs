@@ -50,6 +50,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/liquidprompt/liquidprompt";
     license = lib.licenses.agpl3Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

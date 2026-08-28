@@ -56,6 +56,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://tango.freedesktop.org/Tango_Icon_Library";
     platforms = lib.platforms.linux;
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
   };
 })

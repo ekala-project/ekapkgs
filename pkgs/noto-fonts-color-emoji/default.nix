@@ -71,6 +71,5 @@ stdenvNoCC.mkDerivation rec {
       asl20
     ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

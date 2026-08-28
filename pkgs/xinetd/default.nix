@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = lib.platforms.linux;
     homepage = "https://github.com/openSUSE/xinetd";
     license = lib.licenses.xinetd;
-    maintainers = [ ];
   };
 })

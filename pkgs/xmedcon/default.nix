@@ -36,6 +36,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://xmedcon.sourceforge.net/";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

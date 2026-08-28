@@ -42,7 +42,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
       mit
     ]; # either at your option
-    maintainers = [ ];
     mainProgram = "rage";
   };
 })

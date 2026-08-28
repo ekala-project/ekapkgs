@@ -42,7 +42,6 @@ buildGoModule (finalAttrs: {
     description = "Telegram downloader/tools written in Golang";
     homepage = "https://github.com/iyear/tdl";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
     mainProgram = "tdl";
   };
 })

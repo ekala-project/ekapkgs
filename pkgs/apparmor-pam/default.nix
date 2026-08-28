@@ -37,6 +37,5 @@ stdenv.mkDerivation {
 
   meta = libapparmor.meta // {
     description = "Mandatory access control system - PAM service";
-    maintainers = [ ];
   };
 }

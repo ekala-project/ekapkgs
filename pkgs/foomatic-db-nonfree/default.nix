@@ -70,7 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
     downloadPage = "https://www.openprinting.org/download/foomatic/";
     homepage = "https://openprinting.github.io/projects/02-foomatic/";
     license = lib.licenses.unfree;
-    maintainers = [ ];
     # list printer manufacturers here so people
     # searching for ppd files can find this package
     longDescription = ''

@@ -43,6 +43,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/getsentry/sentry-native/blob/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

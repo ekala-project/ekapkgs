@@ -33,7 +33,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       Ralph du Carrois, Anja Meiners and Botio Nikoltchev of Carrois
       Type Design for Mozilla Firefox OS.
     '';
-    maintainers = [ ];
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
   };

@@ -75,6 +75,5 @@ python3Packages.buildPythonPackage rec {
     homepage = "https://gitlab.freedesktop.org/dbus/dbus-python";
     license = lib.licenses.mit;
     platforms = dbus.meta.platforms;
-    maintainers = [ ];
   };
 }

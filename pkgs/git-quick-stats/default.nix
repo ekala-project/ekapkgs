@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/git-quick-stats/git-quick-stats";
     description = "Simple and efficient way to access various statistics in git repository";
     platforms = lib.platforms.all;
-    maintainers = [ ];
     license = lib.licenses.mit;
     mainProgram = "git-quick-stats";
   };

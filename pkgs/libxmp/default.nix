@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://xmp.sourceforge.net/";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

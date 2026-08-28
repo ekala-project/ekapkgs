@@ -44,7 +44,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/orhun/git-cliff";
     changelog = "https://github.com/orhun/git-cliff/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "git-cliff";
   };
 })

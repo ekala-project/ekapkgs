@@ -149,6 +149,5 @@ stdenv.mkDerivation {
     platforms = lib.platforms.all;
     license = lib.licenses.unfreeRedistributable;
     priority = 5;
-    maintainers = [ ];
   };
 }

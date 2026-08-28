@@ -21,7 +21,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/volatilityfoundation/dwarf2json";
     description = "Convert ELF/DWARF symbol and type information into vol3's intermediate JSON";
     license = lib.licenses.vol-sl;
-    maintainers = [ ];
     mainProgram = "dwarf2json";
   };
 })

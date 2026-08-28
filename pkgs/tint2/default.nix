@@ -95,6 +95,5 @@ stdenv.mkDerivation rec {
     description = "Simple panel/taskbar unintrusive and light (memory, cpu, aestetic)";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

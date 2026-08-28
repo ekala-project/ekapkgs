@@ -58,6 +58,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://smarden.org/socklog/";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

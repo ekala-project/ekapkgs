@@ -28,7 +28,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/six-ddc/plow";
     changelog = "https://github.com/six-ddc/plow/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "plow";
   };
 })

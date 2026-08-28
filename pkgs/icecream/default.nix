@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Distributed compiler with a central scheduler to share build load";
     inherit (finalAttrs.src.meta) homepage;
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

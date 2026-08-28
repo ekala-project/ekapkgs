@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://tools.suckless.org/farbfeld/";
     license = lib.licenses.isc;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

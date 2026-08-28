@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Open-source implementation of JPEG2000 Part-15 (or JPH or HTJ2K)";
     homepage = "https://openjph.org/";
-    maintainers = [ ];
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
     pkgConfigModules = [ "openjph" ];

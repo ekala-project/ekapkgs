@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.retrodev.com/blastem/";
     license = lib.licenses.gpl3Plus;
     mainProgram = "blastem";
-    maintainers = [ ];
     platforms = [
       "i686-linux"
       "x86_64-linux"

@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://burp.grke.org";
     changelog = "https://github.com/grke/burp/blob/${finalAttrs.version}/CHANGELOG";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

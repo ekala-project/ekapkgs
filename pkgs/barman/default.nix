@@ -68,7 +68,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/EnterpriseDB/barman/blob/${finalAttrs.src.tag}/RELNOTES.md";
     mainProgram = "barman";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -31,6 +31,5 @@ stdenv.mkDerivation rec {
     description = "Multilingual text processing library (runtime)";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

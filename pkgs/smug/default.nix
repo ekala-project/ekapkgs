@@ -37,7 +37,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/ivaaaan/smug";
     description = "tmux session manager";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "smug";
   };
 })

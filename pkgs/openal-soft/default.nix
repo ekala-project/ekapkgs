@@ -42,7 +42,6 @@ stdenv.mkDerivation rec {
     description = "OpenAL alternative";
     homepage = "https://openal-soft.org/";
     license = lib.licenses.lgpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

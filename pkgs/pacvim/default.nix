@@ -32,7 +32,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/jmoon018/PacVim";
     description = "Game that teaches you vim commands";
     mainProgram = "pacvim";
-    maintainers = [ ];
     license = lib.licenses.lgpl3;
     platforms = lib.platforms.unix;
   };

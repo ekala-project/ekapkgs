@@ -28,6 +28,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.ssdeep.sf.net";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

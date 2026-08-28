@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/stoeckmann/xwallpaper";
     description = "Utility for setting wallpapers in X";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "xwallpaper";
   };

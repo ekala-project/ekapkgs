@@ -76,6 +76,5 @@ stdenv.mkDerivation rec {
     homepage = "https://www.inchi-trust.org/";
     description = "IUPAC International Chemical Identifier library";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
   };
 }

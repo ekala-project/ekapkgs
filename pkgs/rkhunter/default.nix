@@ -56,7 +56,6 @@ stdenv.mkDerivation rec {
     description = "Rootkit Hunter - scans for rootkits, backdoors, and local exploits";
     homepage = "https://rkhunter.sourceforge.net/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

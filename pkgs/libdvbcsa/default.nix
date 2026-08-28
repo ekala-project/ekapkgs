@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.videolan.org/developers/libdvbcsa.html";
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 
 })

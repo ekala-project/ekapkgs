@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
       gpl2
       bsd3
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

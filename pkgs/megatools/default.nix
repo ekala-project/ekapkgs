@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://xff.cz/megatools/";
     changelog = "https://xff.cz/megatools/builds/NEWS";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

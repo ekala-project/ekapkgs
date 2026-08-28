@@ -150,7 +150,6 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl21Plus
       sissl11
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

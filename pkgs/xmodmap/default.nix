@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
       mitOpenGroup
     ];
     mainProgram = "xmodmap";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

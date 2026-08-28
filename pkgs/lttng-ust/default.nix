@@ -70,6 +70,5 @@ stdenv.mkDerivation (finalAttrs: {
       mit
     ];
     platforms = lib.intersectLists lib.platforms.linux liburcu.meta.platforms;
-    maintainers = [ ];
   };
 })

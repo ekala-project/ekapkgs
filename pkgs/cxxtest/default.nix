@@ -46,6 +46,5 @@ python3Packages.buildPythonApplication rec {
     mainProgram = "cxxtestgen";
     license = lib.licenses.lgpl3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

@@ -104,7 +104,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://wayfire.org/";
     description = "3D Wayland compositor";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "wayfire";
   };

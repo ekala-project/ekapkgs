@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://hyperrealm.github.io/libconfig/";
     description = "C/C++ library for processing configuration files";
     license = lib.licenses.lgpl3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

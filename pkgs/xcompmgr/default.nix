@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Sample X11 compositing manager";
     homepage = "https://gitlab.freedesktop.org/xorg/app/xcompmgr";
     license = lib.licenses.hpndSellVariant;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "xcompmgr";
   };

@@ -35,7 +35,6 @@ stdenv.mkDerivation {
     homepage = "http://samy.pl/pwnat/";
     description = "ICMP NAT to NAT client-server communication";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
     mainProgram = "pwnat";
   };

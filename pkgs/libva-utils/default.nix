@@ -50,6 +50,5 @@ stdenv.mkDerivation rec {
     changelog = "https://raw.githubusercontent.com/intel/libva-utils/${version}/NEWS";
     license = licenses.mit;
     platforms = platforms.unix;
-    maintainers = [ ];
   };
 }

@@ -42,7 +42,6 @@ stdenv.mkDerivation {
     description = "E-component of Network Intrusion Detection System which emulates the IP stack of Linux 2.0.x";
     homepage = "https://libnids.sourceforge.net/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     # probably also bsd and solaris
     platforms = lib.platforms.linux;
   };

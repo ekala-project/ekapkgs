@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "XCB utility library for window manager hints";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxcb-wm";
     license = lib.licenses.x11;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

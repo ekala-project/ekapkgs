@@ -88,7 +88,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://taskwarrior.org";
     license = lib.licenses.mit;
     mainProgram = "task";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

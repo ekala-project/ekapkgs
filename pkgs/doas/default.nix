@@ -52,6 +52,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Duncaen/OpenDoas";
     license = lib.licenses.isc;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

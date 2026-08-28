@@ -36,7 +36,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/aeosynth/bk";
     description = "Terminal epub reader written in rust";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "bk";
   };
 })

@@ -32,7 +32,6 @@ stdenv.mkDerivation {
     homepage = "https://www.fourmilab.ch/random/";
     platforms = lib.platforms.all;
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
     mainProgram = "ent";
   };
 }

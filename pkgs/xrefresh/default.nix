@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
       hpnd
     ];
     mainProgram = "xrefresh";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -23,7 +23,6 @@ stdenv.mkDerivation rec {
     description = "State machine compiler";
     homepage = "https://www.colm.net/open-source/ragel/";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     mainProgram = "ragel";
     platforms = lib.platforms.unix;
   };

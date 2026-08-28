@@ -97,6 +97,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Group Communication System with features for implementing high availability within applications";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -59,6 +59,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Set of programs to deal with Microsoft Windows icon and cursor files";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

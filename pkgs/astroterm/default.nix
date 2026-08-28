@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Celestial viewer for the terminal, written in C";
     homepage = "https://github.com/da-luce/astroterm/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "astroterm";
     platforms = lib.platforms.unix;
   };

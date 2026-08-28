@@ -47,6 +47,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "boron";
     license = lib.licenses.lgpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

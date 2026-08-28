@@ -220,7 +220,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://flatpak.org/";
     changelog = "https://github.com/flatpak/flatpak/releases/tag/${finalAttrs.version}";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     mainProgram = "flatpak";
     platforms = lib.platforms.linux;
   };

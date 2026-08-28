@@ -31,7 +31,6 @@ buildGo126Module (finalAttrs: {
     description = "Retrieve files over IPFS and save them locally";
     homepage = "https://ipfs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "ipget";
   };
 })

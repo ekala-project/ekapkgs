@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Foomatic printing filters";
     mainProgram = "foomatic-rip";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Plus;
   };

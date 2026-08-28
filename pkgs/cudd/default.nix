@@ -30,6 +30,5 @@ stdenv.mkDerivation {
     description = "Binary Decision Diagram (BDD) library";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

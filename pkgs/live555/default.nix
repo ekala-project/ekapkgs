@@ -93,6 +93,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "http://www.live555.com/liveMedia/public/changelog.txt";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

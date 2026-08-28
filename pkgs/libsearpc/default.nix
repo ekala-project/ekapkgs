@@ -38,6 +38,5 @@ stdenv.mkDerivation rec {
     mainProgram = "searpc-codegen.py";
     license = lib.licenses.lgpl3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

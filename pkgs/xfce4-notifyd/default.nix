@@ -71,6 +71,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     mainProgram = "xfce4-notifyd-config";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

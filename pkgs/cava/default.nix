@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Console-based Audio Visualizer for Alsa";
     homepage = "https://github.com/karlstav/cava";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "cava";
   };

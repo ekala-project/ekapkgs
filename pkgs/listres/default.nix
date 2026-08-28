@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/app/listres";
     license = lib.licenses.x11;
     mainProgram = "listres";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

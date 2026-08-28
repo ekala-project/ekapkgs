@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/LibtraceTeam/wandio";
     changelog = "https://github.com/LibtraceTeam/wandio/releases/tag/${finalAttrs.version}";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

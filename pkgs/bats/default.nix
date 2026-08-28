@@ -58,6 +58,5 @@ stdenv.mkDerivation rec {
     license = licenses.mit;
     platforms = platforms.unix;
     mainProgram = "bats";
-    maintainers = [ ];
   };
 }

@@ -45,6 +45,5 @@ stdenv.mkDerivation rec {
     homepage = "https://gitlab.gnome.org/Archive/libglade";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

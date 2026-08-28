@@ -38,6 +38,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C library for parsing, writing and creating RSS/ATOM files or streams";
     license = lib.licenses.lgpl2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

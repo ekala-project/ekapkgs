@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Header-only library that allows one to dynamically assemble code in-memory at runtime";
     homepage = "https://github.com/eden-emulator/oaknut";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
   };

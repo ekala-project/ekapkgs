@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "OS independent and secure pty/tty and utmp/wtmp/lastlog";
     homepage = "http://dist.schmorp.de/libptytty";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     broken = isStatic && isMusl;
   };

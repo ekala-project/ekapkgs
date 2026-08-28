@@ -52,6 +52,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://velero.io/";
     changelog = "https://github.com/vmware-tanzu/velero/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

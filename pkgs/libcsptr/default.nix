@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Snaipe/libcsptr";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "tidyp";
     homepage = "http://tidyp.com/";
     platforms = lib.platforms.all;
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 })

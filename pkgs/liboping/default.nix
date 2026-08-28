@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C library to generate ICMP echo requests (a.k.a. ping packets)";
     homepage = "https://noping.cc/";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

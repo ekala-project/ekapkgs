@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.asl20;
     homepage = "https://compile-time.re";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

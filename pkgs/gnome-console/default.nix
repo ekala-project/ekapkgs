@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Simple user-friendly terminal emulator for the GNOME desktop";
     homepage = "https://gitlab.gnome.org/GNOME/console";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "kgx";
   };

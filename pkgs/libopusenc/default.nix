@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for encoding .opus audio files and live streams";
     license = lib.licenses.bsd3;
     homepage = "https://www.opus-codec.org/";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

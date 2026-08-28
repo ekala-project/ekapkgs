@@ -98,7 +98,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://feralinteractive.github.io/gamemode";
     changelog = "https://github.com/FeralInteractive/gamemode/blob/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "gamemoderun";
   };

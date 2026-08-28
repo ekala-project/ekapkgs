@@ -26,7 +26,6 @@ buildGoModule (finalAttrs: {
     description = "Generic template rendering and notifications with Consul";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     mainProgram = "consul-template";
   };
 })

@@ -102,7 +102,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "ecwolf";
     homepage = "https://maniacsvault.net/ecwolf/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

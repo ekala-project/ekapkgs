@@ -35,7 +35,6 @@ stdenvNoCC.mkDerivation {
     description = "New (2024) monospace sibling family to Atkinson Hyperlegible Next";
     homepage = "https://www.brailleinstitute.org/freefont/";
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

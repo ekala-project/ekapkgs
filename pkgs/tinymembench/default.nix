@@ -27,6 +27,5 @@ stdenv.mkDerivation {
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
     mainProgram = "tinymembench";
-    maintainers = [ ];
   };
 }

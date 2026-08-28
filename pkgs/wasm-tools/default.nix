@@ -45,7 +45,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Low level tooling for WebAssembly in Rust";
     homepage = "https://github.com/bytecodealliance/wasm-tools";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "wasm-tools";
   };
 })

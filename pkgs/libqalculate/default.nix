@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Advanced calculator library";
     homepage = "http://qalculate.github.io";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "qalc";
     platforms = lib.platforms.all;
   };

@@ -41,6 +41,5 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
     description = "Small C++ library for utilities used across the Hypr* ecosystem";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

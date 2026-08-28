@@ -48,7 +48,6 @@ let
     homepage = "https://www.ibm.com/plex/";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 in
 assert lib.assertMsg (unknownFamilies == [ ]) "Unknown font(s): ${toString unknownFamilies}";

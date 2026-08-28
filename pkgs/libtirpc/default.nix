@@ -48,7 +48,6 @@ stdenv.mkDerivation rec {
     homepage = "https://sourceforge.net/projects/libtirpc/";
     description = "Transport-independent Sun RPC implementation (TI-RPC)";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

@@ -36,7 +36,6 @@ buildGoModule (finalAttrs: {
       mit
       asl20
     ];
-    maintainers = [ ];
     mainProgram = "tap";
   };
 })

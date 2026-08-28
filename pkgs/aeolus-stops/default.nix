@@ -30,6 +30,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "http://kokkinizita.linuxaudio.org/linuxaudio/aeolus/index.html";
     license = lib.licenses.lgpl3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

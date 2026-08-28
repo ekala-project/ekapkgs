@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Library that reads information about processes and the running system";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

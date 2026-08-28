@@ -42,7 +42,6 @@ buildGoModule rec {
     homepage = "https://github.com/tsenart/vegeta/";
     changelog = "https://github.com/tsenart/vegeta/releases/tag/${src.rev}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "vegeta";
   };
 }

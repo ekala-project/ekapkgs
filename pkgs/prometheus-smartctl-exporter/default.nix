@@ -32,6 +32,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/prometheus-community/smartctl_exporter";
     license = lib.licenses.lgpl3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

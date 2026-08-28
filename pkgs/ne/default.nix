@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     downloadPage = "https://github.com/vigna/ne";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "ne";
   };
 })

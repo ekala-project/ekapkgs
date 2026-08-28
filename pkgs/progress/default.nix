@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool that shows the progress of coreutils programs";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
     mainProgram = "progress";
   };
 })

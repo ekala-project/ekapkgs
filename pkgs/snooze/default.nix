@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool for waiting until a particular time and then running a command";
     homepage = "https://github.com/leahneukirchen/snooze";
     license = lib.licenses.cc0;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "snooze";
   };

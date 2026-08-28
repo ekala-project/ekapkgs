@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Pacman clone with an ncurses and a 'graphic' interface";
     homepage = "http://myman.sourceforge.net/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "myman";
   };

@@ -33,6 +33,5 @@ stdenv.mkDerivation rec {
     homepage = "https://cantarell.gnome.org/";
     platforms = lib.platforms.all;
     license = lib.licenses.ofl;
-    maintainers = [ ];
   };
 }

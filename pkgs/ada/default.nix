@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
       asl20
       mit
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
     pkgConfigModules = [ "ada" ];
   };

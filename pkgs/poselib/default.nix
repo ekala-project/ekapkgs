@@ -31,6 +31,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/PoseLib/PoseLib/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

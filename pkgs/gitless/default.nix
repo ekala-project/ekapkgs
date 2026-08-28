@@ -37,7 +37,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     description = "Version control system built on top of Git";
     homepage = "https://gitless.com/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "gl";
   };

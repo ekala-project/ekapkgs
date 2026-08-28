@@ -44,6 +44,5 @@ stdenv.mkDerivation rec {
     homepage = "https://wiki.documentfoundation.org/DLP/Libraries/libcdr";
     platforms = lib.platforms.all;
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

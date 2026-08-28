@@ -125,6 +125,5 @@ stdenv.mkDerivation rec {
     homepage = "https://www.strongswan.org";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

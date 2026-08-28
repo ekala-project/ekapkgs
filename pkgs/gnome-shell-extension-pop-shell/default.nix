@@ -53,7 +53,6 @@ stdenv.mkDerivation {
     description = "Keyboard-driven layer for GNOME Shell";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     homepage = "https://github.com/pop-os/shell";
   };
 }

@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.com/mdds/mdds";
     description = "Collection of multi-dimensional data structure and indexing algorithms";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

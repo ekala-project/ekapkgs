@@ -51,7 +51,6 @@ buildGoModule (finalAttrs: {
   meta = {
     description = "Tool to detect when your YubiKey is waiting for a touch";
     homepage = "https://github.com/maximbaz/yubikey-touch-detector";
-    maintainers = [ ];
     license = lib.licenses.isc;
     platforms = lib.platforms.linux;
     mainProgram = "yubikey-touch-detector";

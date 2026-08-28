@@ -45,7 +45,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/orhun/gpg-tui";
     changelog = "https://github.com/orhun/gpg-tui/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gpg-tui";
   };
 })

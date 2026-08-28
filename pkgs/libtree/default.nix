@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "libtree";
     homepage = "https://github.com/haampie/libtree";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

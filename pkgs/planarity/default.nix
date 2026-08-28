@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for implementing graph algorithms";
     mainProgram = "planarity";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

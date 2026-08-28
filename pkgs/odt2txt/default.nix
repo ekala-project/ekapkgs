@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "odt2txt";
     homepage = "https://github.com/dstosberg/odt2txt";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

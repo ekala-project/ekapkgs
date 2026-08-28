@@ -81,6 +81,5 @@ buildGo126Module (finalAttrs: {
     description = "Tool that makes it easy to run Kubernetes locally";
     mainProgram = "minikube";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -50,6 +50,5 @@ buildGo126Module rec {
     description = "Quick and easy server validation";
     license = lib.licenses.asl20;
     mainProgram = "goss";
-    maintainers = [ ];
   };
 }

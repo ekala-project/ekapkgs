@@ -28,6 +28,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "iwmenu";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

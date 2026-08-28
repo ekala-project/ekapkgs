@@ -55,6 +55,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/grafana/mimir";
     changelog = "https://github.com/grafana/mimir/releases/tag/mimir-${finalAttrs.version}";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 })

@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for fast updating of qr and cholesky decompositions";
     homepage = "https://github.com/mpimd-csc/qrupdate-ng";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

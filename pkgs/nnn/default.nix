@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/jarun/nnn";
     changelog = "https://github.com/jarun/nnn/blob/v${finalAttrs.version}/CHANGELOG";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "nnn";
   };
 })

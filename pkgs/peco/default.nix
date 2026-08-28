@@ -32,6 +32,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/peco/peco";
     changelog = "https://github.com/peco/peco/blob/v${finalAttrs.version}/Changes";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

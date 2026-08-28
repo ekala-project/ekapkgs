@@ -72,6 +72,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/google/ios-webkit-debug-proxy/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.bsd3;
     mainProgram = "ios_webkit_debug_proxy";
-    maintainers = [ ];
   };
 })

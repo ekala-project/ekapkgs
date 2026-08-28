@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/ammen99/wf-recorder";
     changelog = "https://github.com/ammen99/wf-recorder/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "wf-recorder";
   };

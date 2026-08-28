@@ -59,6 +59,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/fdw/rofimoji/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "tuntox";
     homepage = "https://github.com/gjedeer/tuntox";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/libevdev/evtest";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "evtest";
   };
 })

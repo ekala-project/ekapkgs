@@ -26,6 +26,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://sourceforge.net/projects/stm32flash/";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

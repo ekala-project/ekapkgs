@@ -73,6 +73,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.id.ee/";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

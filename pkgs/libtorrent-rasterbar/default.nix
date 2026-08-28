@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://libtorrent.org/";
     description = "Efficient feature complete C++ bittorrent implementation";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

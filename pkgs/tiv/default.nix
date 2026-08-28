@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Small C++ program to display images in a (modern) terminal using RGB ANSI codes and unicode block graphics characters";
     mainProgram = "tiv";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = [ "x86_64-linux" ];
   };
 })

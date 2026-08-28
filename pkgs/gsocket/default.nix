@@ -26,6 +26,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.gsocket.io";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

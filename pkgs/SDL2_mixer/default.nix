@@ -67,7 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/libsdl-org/SDL_mixer";
     description = "SDL multi-channel audio mixer library";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

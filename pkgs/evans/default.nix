@@ -24,6 +24,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "evans";
     homepage = "https://evans.syfm.me/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

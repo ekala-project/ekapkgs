@@ -60,7 +60,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/ducaale/xh";
     changelog = "https://github.com/ducaale/xh/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "xh";
   };
 })

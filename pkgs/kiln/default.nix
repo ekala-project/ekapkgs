@@ -33,7 +33,6 @@ buildGoModule (finalAttrs: {
     description = "Simple static site generator for Gemini";
     homepage = "https://kiln.adnano.co/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "kiln";
   };
 })

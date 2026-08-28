@@ -55,7 +55,6 @@ buildGo126Module rec {
     homepage = "https://github.com/gitleaks/gitleaks";
     changelog = "https://github.com/gitleaks/gitleaks/releases/tag/${src.tag}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gitleaks";
   };
 }

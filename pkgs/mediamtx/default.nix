@@ -55,6 +55,5 @@ buildGo126Module (finalAttrs: {
     inherit (finalAttrs.src.meta) homepage;
     license = lib.licenses.mit;
     mainProgram = "mediamtx";
-    maintainers = [ ];
   };
 })

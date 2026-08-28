@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Command-line utilities for date and time calculations and conversions";
     homepage = "http://www.fresse.org/dateutils/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

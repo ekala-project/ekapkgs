@@ -207,6 +207,5 @@ stdenv.mkDerivation (finalAttrs: {
       "i686-linux"
       "aarch64-linux"
     ];
-    maintainers = [ ];
   };
 })

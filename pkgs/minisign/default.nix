@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Simple tool for signing files and verifying signatures";
     homepage = "https://jedisct1.github.io/minisign/";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "minisign";
   };

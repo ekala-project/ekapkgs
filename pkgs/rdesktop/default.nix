@@ -64,6 +64,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.rdesktop.org/";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2;
-    maintainers = [ ];
   };
 })

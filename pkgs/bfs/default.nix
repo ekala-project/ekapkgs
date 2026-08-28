@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/tavianator/bfs";
     license = lib.licenses.bsd0;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "bfs";
   };
 })

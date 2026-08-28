@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
       icu
     ];
     mainProgram = "xhost";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -60,6 +60,5 @@ stdenv.mkDerivation (finalAttrs: {
     ];
     platforms = with lib.platforms; linux ++ darwin;
     mainProgram = "lsusb";
-    maintainers = [ ];
   };
 })

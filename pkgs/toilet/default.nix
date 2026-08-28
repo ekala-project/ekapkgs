@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Display large colourful characters in text mode";
     homepage = "http://caca.zoy.org/wiki/toilet";
     license = lib.licenses.wtfpl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "toilet";
   };

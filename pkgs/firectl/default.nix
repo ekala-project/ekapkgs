@@ -24,7 +24,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/firecracker-microvm/firectl";
     license = lib.licenses.asl20;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "firectl";
   };
 })

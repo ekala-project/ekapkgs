@@ -28,6 +28,5 @@ stdenv.mkDerivation rec {
     mainProgram = "fxload";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

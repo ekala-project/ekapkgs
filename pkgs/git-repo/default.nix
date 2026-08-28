@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://android.googlesource.com/tools/repo";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "repo";
   };

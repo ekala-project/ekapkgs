@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     ];
     mainProgram = "samu";
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

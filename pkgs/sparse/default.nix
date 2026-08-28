@@ -61,6 +61,5 @@ stdenv.mkDerivation {
     homepage = "https://git.kernel.org/pub/scm/devel/sparse/sparse.git/";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

@@ -60,7 +60,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/vanhauser-thc/thc-hydra";
     changelog = "https://github.com/vanhauser-thc/thc-hydra/raw/v${version}/CHANGES";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

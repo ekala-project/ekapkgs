@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     pkgConfigModules = [ "clap" ];
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

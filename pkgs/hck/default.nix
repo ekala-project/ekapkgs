@@ -28,7 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit # or
       unlicense
     ];
-    maintainers = [ ];
     mainProgram = "hck";
   };
 })

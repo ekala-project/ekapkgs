@@ -27,7 +27,6 @@ buildGo126Module (finalAttrs: {
     changelog = "https://github.com/tristanisham/zvm/releases/tag/v${finalAttrs.version}";
     description = "Tool to manage and use different Zig versions";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "zvm";
   };

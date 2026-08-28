@@ -105,7 +105,6 @@ stdenv.mkDerivation rec {
     changelog = "https://github.com/widelands/widelands/releases/tag/v${version}";
     mainProgram = "widelands";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

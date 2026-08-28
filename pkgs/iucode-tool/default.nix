@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "iucode_tool";
     homepage = "https://gitlab.com/iucode-tool/iucode-tool";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = [
       "x86_64-linux"
       "i686-linux"

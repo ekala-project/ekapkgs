@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://mp3val.sourceforge.net/index.shtml";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "mp3val";
   };
 })

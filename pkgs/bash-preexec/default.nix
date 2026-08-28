@@ -55,7 +55,6 @@ stdenvNoCC.mkDerivation {
     license = lib.licenses.mit;
     homepage = "https://github.com/rcaloras/bash-preexec";
     changelog = "https://github.com/rcaloras/bash-preexec/releases/tag/${version}";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

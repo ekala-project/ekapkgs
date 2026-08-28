@@ -216,7 +216,6 @@ stdenv.mkDerivation (finalAttrs: {
       lib.licenses.lgpl21Plus
     ];
     mainProgram = "mpv";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Clean, friendly gtk-based serial terminal for the gnome desktop";
     homepage = "https://gitlab.gnome.org/GNOME/moserial";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "moserial";
   };

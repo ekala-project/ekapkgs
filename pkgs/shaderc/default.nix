@@ -76,6 +76,5 @@ stdenv.mkDerivation rec {
     description = "Collection of tools, libraries and tests for shader compilation";
     platforms = lib.platforms.all;
     license = [ lib.licenses.asl20 ];
-    maintainers = [ ];
   };
 }

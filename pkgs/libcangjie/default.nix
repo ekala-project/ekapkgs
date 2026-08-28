@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C library implementing the Cangjie input method";
     homepage = "https://gitlab.freedesktop.org/cangjie/libcangjie";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "libcangjie-cli";
   };

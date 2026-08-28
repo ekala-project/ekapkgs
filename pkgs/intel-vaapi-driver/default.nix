@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/irql-notlessorequal/intel-vaapi-driver";
     license = lib.licenses.mit;
     description = "VA-API user mode driver for Intel GEN Graphics family";
-    maintainers = [ ];
     platforms = [
       "x86_64-linux"
       "i686-linux"

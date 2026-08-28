@@ -121,7 +121,6 @@ stdenv.mkDerivation (finalAttrs: {
       capable of handling many of the web standards in use today.
     '';
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

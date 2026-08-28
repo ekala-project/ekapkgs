@@ -56,7 +56,6 @@ buildGoModule {
     license = lib.licenses.gpl3Only;
     description = "Convenient full-system test (task) distribution";
     homepage = "https://github.com/snapcore/spread";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

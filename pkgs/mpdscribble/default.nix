@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "MPD client which submits info about tracks being played to a scrobbler";
     homepage = "https://www.musicpd.org/clients/mpdscribble/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "mpdscribble";
   };

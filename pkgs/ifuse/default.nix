@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fuse filesystem implementation to access the contents of iOS devices";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "ifuse";
   };
 })

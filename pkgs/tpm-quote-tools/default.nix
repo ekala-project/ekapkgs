@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "http://tpmquotetools.sourceforge.net/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

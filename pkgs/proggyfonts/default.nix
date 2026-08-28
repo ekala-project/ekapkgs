@@ -44,6 +44,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Set of fixed-width screen fonts that are designed for code listings";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

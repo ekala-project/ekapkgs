@@ -38,6 +38,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/hashicorp/terraform-ls";
     changelog = "https://github.com/hashicorp/terraform-ls/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 })

@@ -134,7 +134,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://bcachefs.org/";
     downloadPage = "https://github.com/koverstreet/bcachefs-tools";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "bcachefs";
   };

@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Ultimate Packer for eXecutables";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "upx";
   };
 })

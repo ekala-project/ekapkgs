@@ -27,6 +27,5 @@ stdenvNoCC.mkDerivation rec {
     description = "Fonts for Scientific and Technical Information eXchange";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

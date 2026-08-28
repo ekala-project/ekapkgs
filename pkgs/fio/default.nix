@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Flexible IO Tester - an IO benchmark tool";
     homepage = "https://git.kernel.dk/cgit/fio/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

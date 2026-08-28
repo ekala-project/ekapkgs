@@ -68,6 +68,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/naelstrof/maim/releases/tag/v${finalAttrs.version}";
     platforms = lib.platforms.all;
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

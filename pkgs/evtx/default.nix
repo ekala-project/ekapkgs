@@ -37,7 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20 # or
       mit
     ];
-    maintainers = [ ];
     mainProgram = "evtx_dump";
   };
 })

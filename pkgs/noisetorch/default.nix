@@ -45,7 +45,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/noisetorch/NoiseTorch";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "noisetorch";
   };
 })

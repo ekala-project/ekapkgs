@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Terminal based bitwise calculator in curses";
     homepage = "https://github.com/mellowcandle/bitwise";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "bitwise";
   };

@@ -39,7 +39,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/aandrew-me/tgpt";
     changelog = "https://github.com/aandrew-me/tgpt/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "tgpt";
   };
 })

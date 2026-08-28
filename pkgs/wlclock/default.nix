@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Digital analog clock for Wayland desktops";
     homepage = "https://git.sr.ht/~leon_plickat/wlclock";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
     mainProgram = "wlclock";
   };

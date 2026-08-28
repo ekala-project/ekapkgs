@@ -65,7 +65,6 @@ stdenv.mkDerivation rec {
       # Deark contains VGA and CGA bitmapped fonts, which have no known
       # copyright claims."
     ];
-    maintainers = [ ];
     mainProgram = "deark";
     platforms = lib.platforms.unix;
   };

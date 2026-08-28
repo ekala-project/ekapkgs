@@ -27,6 +27,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/ColinIanKing/fnotifystat";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

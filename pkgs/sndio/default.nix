@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Small audio and MIDI framework part of the OpenBSD project";
     license = lib.licenses.isc;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

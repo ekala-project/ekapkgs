@@ -106,7 +106,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/GSConnect/gnome-shell-extension-gsconnect/wiki";
     changelog = "https://github.com/GSConnect/gnome-shell-extension-gsconnect/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

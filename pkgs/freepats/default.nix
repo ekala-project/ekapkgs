@@ -24,6 +24,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://freepats.zenvoid.org/";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

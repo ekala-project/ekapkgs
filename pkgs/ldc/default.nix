@@ -117,7 +117,6 @@ stdenv.mkDerivation (finalAttrs: {
       gpl2Plus
     ];
     mainProgram = "ldc2";
-    maintainers = [ ];
     platforms = [
       "x86_64-linux"
       "aarch64-linux"

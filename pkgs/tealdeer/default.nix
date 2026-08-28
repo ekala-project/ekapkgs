@@ -34,7 +34,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Very fast implementation of tldr in Rust";
     homepage = "https://github.com/tealdeer-rs/tealdeer";
     changelog = "https://github.com/tealdeer-rs/tealdeer/blob/v${finalAttrs.version}/CHANGELOG.md";
-    maintainers = [ ];
     license = with lib.licenses; [
       asl20
       mit

@@ -26,6 +26,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Dobiasd/FunctionalPlus";
     license = lib.licenses.boost;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

@@ -50,6 +50,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/NVIDIA/egl-gbm/";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

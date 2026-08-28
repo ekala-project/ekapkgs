@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fast & densely stored hashmap and hashset based on robin-hood backward shift deletion";
     homepage = "https://github.com/martinus/unordered_dense";
     changelog = "https://github.com/martinus/unordered_dense/releases/tag/${finalAttrs.src.tag}";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
   };

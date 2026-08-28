@@ -41,6 +41,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Clean and modern font suitable for headings and logos";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

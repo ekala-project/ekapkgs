@@ -78,7 +78,6 @@ stdenv.mkDerivation {
     description = "1Password command-line tool";
     homepage = "https://developer.1password.com/docs/cli/";
     downloadPage = "https://app-updates.agilebits.com/product_history/CLI2";
-    maintainers = [ ];
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
     license = lib.licenses.unfree;
     inherit mainProgram platforms;

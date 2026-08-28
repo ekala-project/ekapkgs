@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/fontforge/libuninameslist/";
     description = "Library of Unicode names and annotation data";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

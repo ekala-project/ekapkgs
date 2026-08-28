@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "AX.25 library for hamradio applications";
     homepage = "https://linux-ax25.in-berlin.de/wiki/Main_Page";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

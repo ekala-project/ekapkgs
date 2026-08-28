@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://6xq.net/pianobar/";
     platforms = lib.platforms.unix;
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "pianobar";
   };
 })

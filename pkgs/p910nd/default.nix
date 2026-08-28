@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/kenyapcomau/p910nd";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "p910nd";
   };

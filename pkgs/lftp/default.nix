@@ -54,6 +54,5 @@ stdenv.mkDerivation rec {
     homepage = "https://lftp.yar.ru/";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

@@ -92,6 +92,5 @@ buildGo126Module (finalAttrs: {
     description = "Build OCI images using APK directly without Dockerfile";
     mainProgram = "apko";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

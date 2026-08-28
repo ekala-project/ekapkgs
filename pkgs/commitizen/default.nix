@@ -109,6 +109,5 @@ python3Packages.buildPythonPackage rec {
     changelog = "https://github.com/commitizen-tools/commitizen/blob/${src.tag}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "cz";
-    maintainers = [ ];
   };
 }

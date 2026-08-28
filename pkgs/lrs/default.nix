@@ -41,7 +41,6 @@ stdenv.mkDerivation {
   meta = {
     description = "Implementation of the reverse search algorithm for vertex enumeration/convex hull problems";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     homepage = "http://cgm.cs.mcgill.ca/~avis/C/lrs.html";
   };

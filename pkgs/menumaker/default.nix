@@ -21,6 +21,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://menumaker.sourceforge.net";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

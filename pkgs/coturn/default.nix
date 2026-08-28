@@ -51,6 +51,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/coturn/coturn/blob/${finalAttrs.version}/ChangeLog";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

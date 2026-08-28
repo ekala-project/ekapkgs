@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     downloadPage = "https://github.com/mptre/yank/releases";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "yank";
   };

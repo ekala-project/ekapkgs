@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Archive manager for the GNOME desktop environment";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "file-roller";
   };
 })

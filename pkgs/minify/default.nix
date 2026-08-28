@@ -38,7 +38,6 @@ buildGo126Module (finalAttrs: {
     downloadPage = "https://github.com/tdewolff/minify";
     changelog = "https://github.com/tdewolff/minify/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "minify";
   };
 })

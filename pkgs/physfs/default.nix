@@ -38,6 +38,5 @@ stdenv.mkDerivation rec {
     description = "Library to provide abstract access to various archives";
     license = lib.licenses.zlib;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

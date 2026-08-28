@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "lxrandr";
     homepage = "https://lxde.org/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -22,7 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Debugger for Sed: demystify and debug your sed scripts, from comfort of your terminal";
     homepage = "https://github.com/SoptikHa2/desed";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "desed";
   };
 })

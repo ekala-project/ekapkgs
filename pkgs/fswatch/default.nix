@@ -38,6 +38,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/emcrisostomo/fswatch";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

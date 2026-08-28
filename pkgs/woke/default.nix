@@ -35,6 +35,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/get-woke/woke";
     license = lib.licenses.mit;
     mainProgram = "woke";
-    maintainers = [ ];
   };
 })

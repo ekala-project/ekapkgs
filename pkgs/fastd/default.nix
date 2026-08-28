@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
       bsd3
     ];
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "fastd";
   };
 })

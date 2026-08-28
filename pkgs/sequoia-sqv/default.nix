@@ -44,7 +44,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Command-line OpenPGP signature verification tool";
     homepage = "https://docs.sequoia-pgp.org/sqv/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "sqv";
   };
 })

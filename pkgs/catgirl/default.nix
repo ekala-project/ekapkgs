@@ -47,6 +47,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
     mainProgram = "catgirl";
-    maintainers = [ ];
   };
 })

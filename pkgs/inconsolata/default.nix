@@ -25,7 +25,6 @@ stdenvNoCC.mkDerivation {
   meta = {
     homepage = "https://www.levien.com/type/myfonts/inconsolata.html";
     description = "Monospace font for both screen and print";
-    maintainers = [ ];
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
   };

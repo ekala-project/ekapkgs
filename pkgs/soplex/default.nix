@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Sequential object-oriented simPlex";
     license = lib.licenses.asl20;
     mainProgram = "soplex";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

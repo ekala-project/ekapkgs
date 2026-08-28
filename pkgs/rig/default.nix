@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
       cross-check the city, state, zip, or area code, it will check out.
     '';
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; all;
     mainProgram = "rig";
   };

@@ -91,6 +91,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.com/libosinfo/libosinfo/-/blob/v${finalAttrs.version}/NEWS";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

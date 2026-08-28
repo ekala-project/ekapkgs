@@ -40,7 +40,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/gopasspw/gopass-hibp";
     changelog = "https://github.com/gopasspw/gopass-hibp/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gopass-hibp";
   };
 })

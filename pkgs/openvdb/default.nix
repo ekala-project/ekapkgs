@@ -48,7 +48,6 @@ stdenv.mkDerivation rec {
     description = "Open framework for voxel";
     mainProgram = "vdb_print";
     homepage = "https://www.openvdb.org";
-    maintainers = [ ];
     platforms = platforms.unix;
     license = licenses.asl20;
   };

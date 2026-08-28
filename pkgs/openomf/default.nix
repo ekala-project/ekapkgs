@@ -116,7 +116,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.openomf.org";
     changelog = "https://github.com/omf2097/openomf/releases/tag/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "openomf";
     platforms = lib.platforms.all;
   };

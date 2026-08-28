@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "nvc";
     homepage = "https://www.nickg.me.uk/nvc/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

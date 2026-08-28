@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Commandline utilities for use inside Flatpak sandboxes";
     homepage = "https://flatpak.org/";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

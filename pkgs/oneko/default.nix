@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/IreneKnapp/oneko";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "oneko";
   };

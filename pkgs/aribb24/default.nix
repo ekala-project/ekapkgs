@@ -33,6 +33,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://code.videolan.org/jeeb/aribb24/";
     license = lib.licenses.lgpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

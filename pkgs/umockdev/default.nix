@@ -82,7 +82,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/martinpitt/umockdev";
     description = "Mock hardware devices for creating unit tests";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

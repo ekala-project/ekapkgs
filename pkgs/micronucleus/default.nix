@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "micronucleus";
     homepage = "https://github.com/micronucleus/micronucleus";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
   };
 })

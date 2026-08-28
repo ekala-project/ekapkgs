@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-taquin";
     description = "Move tiles so that they reach their places";
     mainProgram = "gnome-taquin";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
   };

@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Talinx/jp2a";
     description = "Small utility that converts JPG images to ASCII";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "jp2a";
   };

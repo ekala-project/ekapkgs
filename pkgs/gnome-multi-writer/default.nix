@@ -55,6 +55,5 @@ stdenv.mkDerivation rec {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-multi-writer";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

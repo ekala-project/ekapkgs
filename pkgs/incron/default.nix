@@ -35,7 +35,6 @@ stdenv.mkDerivation rec {
     description = "Cron-like daemon which handles filesystem events";
     homepage = "https://github.com/ar-/incron";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

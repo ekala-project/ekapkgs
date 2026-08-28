@@ -89,7 +89,6 @@ buildGo126Module (finalAttrs: {
     downloadPage = "https://github.com/TecharoHQ/anubis";
     changelog = "https://github.com/TecharoHQ/anubis/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "anubis";
   };
 })

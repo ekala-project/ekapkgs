@@ -33,7 +33,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/mvdan/gofumpt";
     changelog = "https://github.com/mvdan/gofumpt/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "gofumpt";
   };
 })

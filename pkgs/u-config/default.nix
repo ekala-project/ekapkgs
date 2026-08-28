@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Smaller, simpler, portable pkg-config clone";
     homepage = "https://github.com/skeeto/u-config";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

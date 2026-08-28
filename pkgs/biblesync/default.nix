@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Multicast protocol to Bible software shared conavigation";
     license = lib.licenses.publicDomain;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

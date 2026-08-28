@@ -76,7 +76,6 @@ stdenv.mkDerivation (finalAttrs: {
         gpl2
         gpl3
       ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     homepage = "http://home.math.au.dk/jensen/software/gfan/gfan.html";
   };

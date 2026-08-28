@@ -39,7 +39,6 @@ buildGoModule rec {
     description = "Proxy mechanism to bypass GFW";
     homepage = "https://p4gefau1t.github.io/trojan-go/";
     changelog = "https://github.com/p4gefau1t/trojan-go/releases/tag/v${version}";
-    maintainers = [ ];
     license = lib.licenses.gpl3Only;
     mainProgram = "trojan-go";
   };

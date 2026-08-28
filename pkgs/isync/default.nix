@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Free IMAP and MailDir mailbox synchronizer";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "mbsync";
   };
 })

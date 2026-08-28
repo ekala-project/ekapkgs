@@ -37,6 +37,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://www.huertatipografica.com/en/fonts/alegreya-sans-ht";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

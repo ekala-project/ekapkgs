@@ -36,7 +36,6 @@ stdenv.mkDerivation {
     description = "Convert Fortran 77 source code to C";
     homepage = "https://www.netlib.org/f2c/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

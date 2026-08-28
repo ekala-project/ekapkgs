@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/Baron-von-Riedesel/JWasm/releases/tag/${finalAttrs.src.rev}";
     mainProgram = "jwasm";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     broken = stdenv.hostPlatform.isDarwin;
   };

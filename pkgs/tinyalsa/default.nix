@@ -38,7 +38,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/tinyalsa/tinyalsa";
     description = "Tiny library to interface with ALSA in the Linux kernel";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
   };
 }

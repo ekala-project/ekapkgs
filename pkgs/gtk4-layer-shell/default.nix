@@ -69,7 +69,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/wmww/gtk4-layer-shell";
     mainProgram = "gtk4-layer-demo";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

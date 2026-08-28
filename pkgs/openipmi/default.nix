@@ -41,6 +41,5 @@ stdenv.mkDerivation rec {
       lgpl2Only
     ];
     platforms = platforms.linux;
-    maintainers = [ ];
   };
 }

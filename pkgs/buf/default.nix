@@ -84,7 +84,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/bufbuild/buf/releases/tag/v${finalAttrs.version}";
     description = "Create consistent Protobuf APIs that preserve compatibility and comply with design best-practices";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "buf";
   };
 })

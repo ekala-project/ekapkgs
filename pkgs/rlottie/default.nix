@@ -45,6 +45,5 @@ stdenv.mkDerivation {
       ftl
     ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

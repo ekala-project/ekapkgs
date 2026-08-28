@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://jubalh.github.io/nudoku";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

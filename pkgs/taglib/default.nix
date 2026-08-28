@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl21Only
       mpl11
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

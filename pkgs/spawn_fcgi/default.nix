@@ -27,6 +27,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "spawn-fcgi";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

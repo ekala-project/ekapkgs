@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd2;
     homepage = "https://github.com/JulienPalard/logtop";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "logtop";
   };
 })

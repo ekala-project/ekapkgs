@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Luxi TrueType fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/bh-ttf";
     license = lib.licenses.unfreeRedistributable;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

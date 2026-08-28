@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.pleyades.net/david/projects/sakura";
     description = "Terminal emulator based on GTK and VTE";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "sakura";
   };

@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Multi Router Traffic Grapher";
     homepage = "https://oss.oetiker.ch/mrtg/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

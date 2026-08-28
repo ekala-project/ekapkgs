@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "X11 colorname to RGB mapping database";
     mainProgram = "showrgb";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     homepage = "https://xorg.freedesktop.org/";
   };

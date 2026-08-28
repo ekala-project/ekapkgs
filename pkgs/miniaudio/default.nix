@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
       unlicense
       mit0
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

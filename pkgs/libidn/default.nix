@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for internationalized domain names";
     mainProgram = "idn";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

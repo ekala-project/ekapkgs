@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/thoughtbot/rcm";
     description = "Management Suite for Dotfiles";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
   };
 })

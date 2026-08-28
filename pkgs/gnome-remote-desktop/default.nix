@@ -92,7 +92,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.gnome.org/GNOME/gnome-remote-desktop/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
     description = "GNOME Remote Desktop server";
     mainProgram = "grdctl";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

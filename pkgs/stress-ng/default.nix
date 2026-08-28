@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Stress test a computer system";
     homepage = "https://github.com/ColinIanKing/stress-ng";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "stress-ng";
   };

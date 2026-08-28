@@ -77,7 +77,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Bash Line Editor -- a full-featured line editor written in pure Bash";
     mainProgram = "blesh-share";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -25,7 +25,6 @@ buildGo126Module (finalAttrs: {
     description = "CLI tool to check XMPP SRV records";
     homepage = "https://salsa.debian.org/mdosch/xmpp-dns";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "xmpp-dns";
   };
 })

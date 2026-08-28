@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "CLI tool for managing and capturing video from DVRs which use the DVR-IP protocol";
     homepage = "https://tanidvr.sourceforge.net/";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

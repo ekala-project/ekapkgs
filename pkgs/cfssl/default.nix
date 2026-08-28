@@ -40,7 +40,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://cfssl.org/";
     description = "Cloudflare's PKI and TLS toolkit";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "cfssl";
   };
 })

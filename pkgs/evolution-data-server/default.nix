@@ -161,7 +161,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/GNOME/evolution-data-server";
     changelog = "https://gitlab.gnome.org/GNOME/evolution-data-server/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

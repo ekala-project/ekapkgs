@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     description = "REXX interpreter";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.lgpl2;
   };

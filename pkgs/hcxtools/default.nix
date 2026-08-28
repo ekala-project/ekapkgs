@@ -37,6 +37,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/ZerBea/hcxtools/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Queries for a selection from the user and prints the region to stdout";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "slop";
   };
 })

@@ -158,7 +158,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.geeqie.org/";
     changelog = "https://github.com/BestImageViewer/geeqie/blob/${finalAttrs.src.tag}/NEWS";
 
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

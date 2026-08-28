@@ -33,7 +33,6 @@ stdenv.mkDerivation {
     description = "Open Graph Drawing Framework/Open Graph algorithms and Data structure Framework";
     homepage = "http://www.ogdf.net";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     longDescription = ''
       OGDF stands both for Open Graph Drawing Framework (the original name) and

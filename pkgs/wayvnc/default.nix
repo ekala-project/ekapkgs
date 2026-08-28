@@ -66,6 +66,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.isc;
     platforms = lib.platforms.linux;
     mainProgram = "wayvnc";
-    maintainers = [ ];
   };
 })

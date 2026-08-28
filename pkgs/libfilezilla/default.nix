@@ -43,6 +43,5 @@ stdenv.mkDerivation {
     description = "Modern C++ library, offering some basic functionality to build high-performing, platform-independent programs";
     license = licenses.gpl2Plus;
     platforms = platforms.unix;
-    maintainers = [ ];
   };
 }

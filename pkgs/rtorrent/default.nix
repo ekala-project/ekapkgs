@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://rakshasa.github.io/rtorrent/";
     license = lib.licenses.gpl2Plus;
     mainProgram = "rtorrent";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -26,6 +26,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Common GNOME build infrastructure";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

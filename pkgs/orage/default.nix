@@ -57,6 +57,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     mainProgram = "orage";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

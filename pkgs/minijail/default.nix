@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Sandboxing library and application using Linux namespaces and capabilities";
     changelog = "https://chromium.googlesource.com/chromiumos/platform/minijail/+/refs/tags/linux-v${finalAttrs.version}";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "minijail0";
   };

@@ -63,7 +63,6 @@ stdenv.mkDerivation {
     homepage = "https://www.rarlab.com/";
     license = lib.licenses.unfree;
     mainProgram = "rar";
-    maintainers = [ ];
     platforms = lib.attrNames srcs;
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
   };

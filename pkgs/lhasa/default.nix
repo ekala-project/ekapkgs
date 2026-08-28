@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.isc;
     homepage = "http://fragglet.github.io/lhasa";
     mainProgram = "lha";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

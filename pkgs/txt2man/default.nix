@@ -46,6 +46,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://mvertes.free.fr/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

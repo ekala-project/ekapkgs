@@ -83,6 +83,5 @@ buildGo126Module (finalAttrs: {
     description = "Docker and OCI Registry Client in Go and tooling using those libraries";
     homepage = "https://github.com/regclient/regclient";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

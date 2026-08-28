@@ -33,6 +33,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       cronyx
       mit
     ];
-    maintainers = [ ];
   };
 })

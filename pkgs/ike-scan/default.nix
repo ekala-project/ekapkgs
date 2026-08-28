@@ -43,6 +43,5 @@ stdenv.mkDerivation {
     homepage = "https://github.com/royhills/ike-scan";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

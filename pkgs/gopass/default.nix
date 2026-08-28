@@ -78,7 +78,6 @@ buildGo126Module (finalAttrs: {
     description = "Slightly more awesome Standard Unix Password Manager for Teams. Written in Go";
     homepage = "https://www.gopass.pw/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     changelog = "https://github.com/gopasspw/gopass/blob/v${finalAttrs.version}/CHANGELOG.md";
     longDescription = ''
       gopass is a rewrite of the pass password manager in Go with the aim of

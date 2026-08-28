@@ -38,6 +38,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/micahkepe/jsongrep";
     license = lib.licenses.mit;
     mainProgram = "jg";
-    maintainers = [ ];
   };
 })

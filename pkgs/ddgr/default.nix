@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/jarun/ddgr";
     description = "Search DuckDuckGo from the terminal";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = python3.meta.platforms;
     mainProgram = "ddgr";
   };

@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Converter from DocBook V4.x and v5.x XML into mdoc";
     license = lib.licenses.isc;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "docbook2mdoc";
   };
 })

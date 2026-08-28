@@ -38,7 +38,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/clusterlabs/libqb";
     description = "Library providing high performance logging, tracing, ipc, and poll";
     license = licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = platforms.unix;
   };
 }

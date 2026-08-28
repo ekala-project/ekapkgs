@@ -128,7 +128,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/niri-wm/niri";
     changelog = "https://github.com/niri-wm/niri/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "niri";
     platforms = lib.platforms.linux;
   };

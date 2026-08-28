@@ -78,6 +78,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.rowetel.com/codec2.html";
     license = lib.licenses.lgpl21Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

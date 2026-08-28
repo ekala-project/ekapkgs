@@ -69,7 +69,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-screenshot";
     description = "Utility used in the GNOME desktop environment for taking screenshots";
     mainProgram = "gnome-screenshot";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

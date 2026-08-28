@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     changelog = "https://github.com/yadm-dev/yadm/blob/${finalAttrs.version}/CHANGES";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "yadm";
   };

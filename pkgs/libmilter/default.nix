@@ -48,7 +48,6 @@ stdenv.mkDerivation rec {
   meta = {
     description = "Sendmail Milter mail filtering API library";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     license = lib.licenses.sendmail;
   };
 }

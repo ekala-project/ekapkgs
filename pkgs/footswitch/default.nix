@@ -40,6 +40,5 @@ stdenv.mkDerivation {
     homepage = "https://github.com/rgerganov/footswitch";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

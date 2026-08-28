@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://rime.im/";
     description = "Rime Input Method Engine, the core library";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

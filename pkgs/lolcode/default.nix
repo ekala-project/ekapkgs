@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
       whose keywords are LOLspeak.
     '';
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     mainProgram = "lolcode-lci";
     platforms = lib.platforms.unix;
   };

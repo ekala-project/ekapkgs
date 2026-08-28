@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.gpl2Only;
     mainProgram = "vms-empire";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

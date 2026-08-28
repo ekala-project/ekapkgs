@@ -44,7 +44,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/Linus-Mussmaecher/rucola";
     changelog = "https://github.com/Linus-Mussmaecher/rucola/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "rucola";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };

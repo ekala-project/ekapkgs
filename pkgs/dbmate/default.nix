@@ -27,6 +27,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/amacneil/dbmate";
     changelog = "https://github.com/amacneil/dbmate/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

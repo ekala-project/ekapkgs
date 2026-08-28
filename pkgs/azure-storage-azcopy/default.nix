@@ -30,6 +30,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/Azure/azure-storage-azcopy";
     changelog = "https://github.com/Azure/azure-storage-azcopy/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

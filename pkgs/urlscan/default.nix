@@ -33,7 +33,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/firecat53/urlscan";
     changelog = "https://github.com/firecat53/urlscan/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "urlscan";
   };
 })

@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Gottox/bgs";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "bgs";
   };
 })

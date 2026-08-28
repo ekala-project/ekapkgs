@@ -18,6 +18,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.videolan.org/developers/libdvbpsi.html";
     platforms = lib.platforms.unix;
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
   };
 })

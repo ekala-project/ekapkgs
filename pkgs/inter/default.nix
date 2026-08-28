@@ -34,6 +34,5 @@ stdenvNoCC.mkDerivation rec {
     description = "Typeface specially designed for user interfaces";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

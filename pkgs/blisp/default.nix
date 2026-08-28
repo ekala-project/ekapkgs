@@ -43,6 +43,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "blisp";
     homepage = "https://github.com/pine64/blisp";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

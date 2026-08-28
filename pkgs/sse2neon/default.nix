@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/DLTcollab/sse2neon";
     platforms = lib.platforms.unix;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://hte.sourceforge.net";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "ht";
   };
 })

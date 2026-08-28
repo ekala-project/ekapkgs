@@ -41,6 +41,5 @@ stdenv.mkDerivation rec {
     homepage = "https://download.gnome.org/sources/gnome-icon-theme/";
     license = licenses.gpl3Plus;
     platforms = platforms.unix;
-    maintainers = [ ];
   };
 }

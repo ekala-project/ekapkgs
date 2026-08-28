@@ -91,7 +91,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "PMIx Reference Runtime Environment";
     homepage = "https://docs.prrte.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

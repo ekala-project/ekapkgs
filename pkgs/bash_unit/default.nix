@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Bash unit testing enterprise edition framework for professionals";
     homepage = "https://github.com/bash-unit/bash_unit";
-    maintainers = [ ];
     platforms = lib.platforms.all;
     license = lib.licenses.gpl3Plus;
     mainProgram = "bash_unit";

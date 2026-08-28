@@ -33,7 +33,6 @@ stdenv.mkDerivation rec {
     mainProgram = "checkpolicy";
     homepage = "https://github.com/SELinuxProject/selinux";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

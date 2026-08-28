@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "http://liblqr.wikidot.com";
     description = "Seam-carving C/C++ library called Liquid Rescaling";
-    maintainers = [ ];
     platforms = lib.platforms.all;
     license = with lib.licenses; [
       gpl3

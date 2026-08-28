@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "gnome-sound-recorder";
     homepage = "https://gitlab.gnome.org/World/vocalis";
     changelog = "https://gitlab.gnome.org/World/vocalis/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

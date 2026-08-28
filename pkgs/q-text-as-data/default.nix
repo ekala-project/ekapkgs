@@ -43,7 +43,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     '';
     homepage = "http://harelba.github.io/q/";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "q";
   };

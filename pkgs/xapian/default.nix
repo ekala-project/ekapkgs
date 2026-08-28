@@ -44,7 +44,6 @@ stdenv.mkDerivation rec {
     description = "Search engine library";
     homepage = "https://xapian.org/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

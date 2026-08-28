@@ -52,6 +52,5 @@ python3Packages.buildPythonApplication rec {
     description = "Static site generator that requires no database or server-side logic";
     homepage = "https://getpelican.com/";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 }

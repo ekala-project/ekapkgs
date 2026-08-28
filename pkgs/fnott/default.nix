@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
       mit
       zlib
     ];
-    maintainers = [ ];
     mainProgram = "fnott";
     platforms = lib.platforms.linux;
   };

@@ -65,7 +65,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     '';
     homepage = "https://gitlab.com/timvisee/ffsend";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "ffsend";
   };
 })

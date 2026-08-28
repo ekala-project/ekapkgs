@@ -37,7 +37,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://sqlmap.org";
     changelog = "https://github.com/sqlmapproject/sqlmap/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "sqlmap";
   };
 })

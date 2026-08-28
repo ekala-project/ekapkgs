@@ -19,7 +19,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Pure rust implementation of jq";
     homepage = "https://github.com/MiSawa/xq";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "xq";
   };
 })

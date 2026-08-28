@@ -67,7 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
       language but is also suitable for standalone scripts.
     '';
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "rep";
   };

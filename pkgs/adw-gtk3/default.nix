@@ -30,6 +30,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://github.com/lassekongo83/adw-gtk3";
     license = lib.licenses.lgpl21Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

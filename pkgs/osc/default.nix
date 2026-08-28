@@ -26,7 +26,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/theimpostor/osc";
     changelog = "https://github.com/theimpostor/osc/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "osc";
   };
 })

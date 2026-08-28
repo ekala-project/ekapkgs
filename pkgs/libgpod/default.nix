@@ -87,6 +87,5 @@ stdenv.mkDerivation rec {
     mainProgram = "ipod-read-sysinfo-extended";
     license = licenses.lgpl21Plus;
     platforms = platforms.linux;
-    maintainers = [ ];
   };
 }

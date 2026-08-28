@@ -53,6 +53,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/checkmake/checkmake";
     changelog = "https://github.com/checkmake/checkmake/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

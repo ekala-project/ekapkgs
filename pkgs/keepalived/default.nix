@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Routing software written in C";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "keepalived";
   };
 })

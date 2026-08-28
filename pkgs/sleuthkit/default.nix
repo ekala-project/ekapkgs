@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Forensic/data recovery tool";
     homepage = "https://www.sleuthkit.org/";
     changelog = "https://github.com/sleuthkit/sleuthkit/blob/${finalAttrs.src.rev}/NEWS.txt";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.ipl10;
   };

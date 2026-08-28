@@ -23,7 +23,6 @@ buildGoModule (finalAttrs: {
     description = "Automatically generate RESTful API documentation with Swagger 2.0 for Go";
     homepage = "https://github.com/swaggo/swag";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "swag";
   };
 })

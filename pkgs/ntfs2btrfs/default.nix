@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "CLI tool which does in-place conversion of Microsoft's NTFS filesystem to the open-source filesystem Btrfs";
     homepage = "https://github.com/maharmstone/ntfs2btrfs";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "ntfs2btrfs";
     platforms = lib.platforms.linux;
   };

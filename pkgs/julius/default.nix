@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Open source re-implementation of Caesar III";
     mainProgram = "julius";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

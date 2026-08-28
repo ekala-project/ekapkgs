@@ -48,6 +48,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://codeberg.org/mikf/gallery-dl";
     license = lib.licenses.gpl2Only;
     mainProgram = "gallery-dl";
-    maintainers = [ ];
   };
 })

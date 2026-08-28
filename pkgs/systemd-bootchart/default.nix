@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Boot performance graphing tool from systemd";
     homepage = "https://github.com/systemd/systemd-bootchart";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

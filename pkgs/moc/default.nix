@@ -155,7 +155,6 @@ stdenv.mkDerivation {
     description = "Terminal audio player designed to be powerful and easy to use";
     homepage = "http://moc.daper.net/";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "mocp";
   };

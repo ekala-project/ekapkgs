@@ -27,7 +27,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/phith0n/zkar";
     changelog = "https://github.com/phith0n/zkar/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "zkar";
   };
 })

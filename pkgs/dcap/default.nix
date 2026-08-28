@@ -57,6 +57,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl2Only;
     platforms = lib.platforms.all;
     mainProgram = "dccp";
-    maintainers = [ ];
   };
 })

@@ -46,7 +46,6 @@ stdenvNoCC.mkDerivation rec {
     homepage = "https://github.com/bfontaine/rfc";
     changelog = "https://github.com/bfontaine/rfc/blob/${src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "rfc";
   };

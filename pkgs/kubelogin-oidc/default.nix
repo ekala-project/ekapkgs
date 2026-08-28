@@ -39,6 +39,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "kubectl-oidc_login";
     inherit (finalAttrs.src.meta) homepage;
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

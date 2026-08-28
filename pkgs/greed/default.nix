@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Game of Consumption";
     homepage = "http://www.catb.org/~esr/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "greed";
   };

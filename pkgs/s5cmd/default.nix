@@ -28,7 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/peak/s5cmd";
     description = "Parallel S3 and local filesystem execution tool";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "s5cmd";
   };
 })

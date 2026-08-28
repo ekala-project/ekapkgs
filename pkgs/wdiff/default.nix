@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Comparing files on a word by word basis";
     mainProgram = "wdiff";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

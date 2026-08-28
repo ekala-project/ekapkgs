@@ -74,7 +74,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     description = "GTK/GNOME application to use GnuPG for signing other peoples' keys";
     homepage = "https://gitlab.gnome.org/GNOME/gnome-keysign";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

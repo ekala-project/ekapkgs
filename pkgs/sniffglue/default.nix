@@ -34,7 +34,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Secure multithreaded packet sniffer";
     homepage = "https://github.com/kpcyrd/sniffglue";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     mainProgram = "sniffglue";
   };

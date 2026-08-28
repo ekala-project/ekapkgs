@@ -38,7 +38,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://blog.didierstevens.com/programs/pdf-tools/";
     license = lib.licenses.free;
     mainProgram = "pdfid";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

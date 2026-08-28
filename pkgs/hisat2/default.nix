@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Graph based aligner";
     license = lib.licenses.gpl3Plus;
     homepage = "https://daehwankimlab.github.io/hisat2/";
-    maintainers = [ ];
     platforms = [
       "x86_64-linux"
       "i686-linux"

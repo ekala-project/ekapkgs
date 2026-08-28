@@ -66,7 +66,6 @@ stdenv.mkDerivation rec {
     homepage = "https://gitlab.com/nbdkit/libnbd";
     description = "Network Block Device client library in userspace";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     broken = buildOcamlBindings && !lib.versionAtLeast ocamlPackages.ocaml.version "4.05";
   };

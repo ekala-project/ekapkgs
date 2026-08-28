@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Pulseaudio command line mixer";
     homepage = "https://github.com/cdemoulins/pamixer";
-    maintainers = [ ];
     license = lib.licenses.gpl3;
     platforms = lib.platforms.linux;
     mainProgram = "pamixer";

@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "astyle";
     homepage = "https://astyle.sourceforge.net/";
     license = lib.licenses.lgpl3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

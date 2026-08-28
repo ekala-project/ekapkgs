@@ -72,7 +72,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "${finalAttrs.src.meta.homepage}/blob/${finalAttrs.src.rev}/changelog.txt";
     sourceProvenance = [ lib.sourceTypes.fromSource ];
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "imagew";
     platforms = lib.platforms.all;
   };

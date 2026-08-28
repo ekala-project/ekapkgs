@@ -42,7 +42,6 @@ perlPackages.buildPerlPackage {
     mainProgram = "ninka";
     homepage = "http://ninka.turingmachine.org/";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/exfatprogs/exfatprogs";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

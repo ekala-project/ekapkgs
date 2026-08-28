@@ -124,7 +124,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://networkupstools.org/";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     license = with lib.licenses; [
       gpl1Plus
       gpl2Plus

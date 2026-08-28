@@ -46,7 +46,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Executes commands in response to file modifications";
     homepage = "https://watchexec.github.io/";
     license = with lib.licenses; [ asl20 ];
-    maintainers = [ ];
     mainProgram = "watchexec";
   };
 })

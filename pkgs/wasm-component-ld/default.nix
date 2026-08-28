@@ -32,7 +32,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       llvm-exception
       mit
     ];
-    maintainers = [ ];
     mainProgram = "wasm-component-ld";
   };
 })

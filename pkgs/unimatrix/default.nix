@@ -31,7 +31,6 @@ python3Packages.buildPythonApplication {
     description = ''Python script to simulate the display from "The Matrix" in terminal'';
     homepage = "https://github.com/will8211/unimatrix";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "unimatrix";
   };
 }

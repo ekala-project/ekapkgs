@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Simple, lightweight fan control program";
     license = lib.licenses.gpl3Plus;
     homepage = "https://github.com/vmatare/thinkfan";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "thinkfan";
   };

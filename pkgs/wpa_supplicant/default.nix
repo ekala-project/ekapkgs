@@ -159,7 +159,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://w1.fi/wpa_supplicant/";
     description = "Tool for connecting to WPA and WPA2-protected wireless networks";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

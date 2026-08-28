@@ -72,6 +72,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://rpm-software-management.github.io/createrepo_c/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

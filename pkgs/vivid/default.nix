@@ -24,7 +24,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
       mit
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "vivid";
   };

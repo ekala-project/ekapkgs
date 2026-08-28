@@ -44,7 +44,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/remoteoss/dexter";
     changelog = "https://github.com/remoteoss/dexter/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "dexter";
   };
 })

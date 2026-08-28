@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "bwa";
     license = lib.licenses.gpl3Plus;
     homepage = "https://bio-bwa.sourceforge.net/";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

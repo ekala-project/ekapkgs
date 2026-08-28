@@ -30,7 +30,6 @@ let
     '';
     homepage = "https://monaspace.githubnext.com/";
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 

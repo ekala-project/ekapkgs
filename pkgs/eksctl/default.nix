@@ -49,7 +49,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/eksctl-io/eksctl";
     changelog = "https://github.com/eksctl-io/eksctl/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "eksctl";
   };
 })

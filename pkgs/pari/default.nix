@@ -47,7 +47,6 @@ stdenv.mkDerivation rec {
     homepage = "http://pari.math.u-bordeaux.fr";
     license = lib.licenses.gpl2Plus;
     mainProgram = "gp";
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 }

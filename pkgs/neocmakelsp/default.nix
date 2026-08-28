@@ -33,7 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/neocmakelsp/neocmakelsp";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "neocmakelsp";
   };
 })

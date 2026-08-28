@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Storage conversion and expression calculator";
     homepage = "https://github.com/jarun/bcal";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "bcal";
   };

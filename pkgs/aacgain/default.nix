@@ -35,7 +35,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/dgilman/aacgain";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "aacgain";
   };
 }

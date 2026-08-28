@@ -26,7 +26,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/projectdiscovery/urlfinder";
     changelog = "https://github.com/projectdiscovery/urlfinder/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "urlfinder";
   };
 })

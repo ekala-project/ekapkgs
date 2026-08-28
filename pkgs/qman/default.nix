@@ -75,7 +75,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/plp13/qman";
     changelog = "https://github.com/plp13/qman/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "qman";
     platforms = lib.platforms.all;
   };

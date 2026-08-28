@@ -36,7 +36,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/prasmussen/gdrive";
     description = "Command line utility for interacting with Google Drive";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gdrive";
   };
 })

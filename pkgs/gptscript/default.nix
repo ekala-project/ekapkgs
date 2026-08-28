@@ -30,7 +30,6 @@ buildGo126Module (finalAttrs: {
     changelog = "https://github.com/gptscript-ai/gptscript/releases/tag/v${finalAttrs.version}";
     description = "Build AI assistants that interact with your systems";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "gptscript";
   };
 })

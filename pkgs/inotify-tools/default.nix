@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/inotify-tools/inotify-tools/wiki";
     description = "C library and CLI tools providing a simple interface to inotify";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

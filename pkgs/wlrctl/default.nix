@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Command line utility for miscellaneous wlroots Wayland extensions";
     homepage = "https://git.sr.ht/~brocellous/wlrctl";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "wlrctl";
   };

@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/ThomasHabets/arping";
     changelog = "https://github.com/ThomasHabets/arping/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "arping";
   };

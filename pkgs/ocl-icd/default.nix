@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/OCL-dev/ocl-icd";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

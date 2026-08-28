@@ -41,7 +41,6 @@ stdenv.mkDerivation rec {
     description = "Decoder for many camera raw picture formats";
     license = lib.licenses.free;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     knownVulnerabilities = [
       "CVE-2018-19655"
       "CVE-2018-19565"

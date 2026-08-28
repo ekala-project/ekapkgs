@@ -38,6 +38,5 @@ stdenv.mkDerivation (finalAttrs: {
       Additionally, you may need to enable 'hardware.uinput'.
     '';
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

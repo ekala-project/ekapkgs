@@ -49,7 +49,6 @@ stdenv.mkDerivation {
     '';
     homepage = "https://www.acs.com.hk";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
   };
 }

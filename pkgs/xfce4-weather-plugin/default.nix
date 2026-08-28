@@ -66,6 +66,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Weather plugin for the Xfce desktop environment";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

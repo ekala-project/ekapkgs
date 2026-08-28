@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl3Plus;
     description = "Command line program which converts ABC to music sheet in PostScript or SVG format";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "abcm2ps";
   };
 })

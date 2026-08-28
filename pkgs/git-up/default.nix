@@ -54,7 +54,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/msiemens/PyGitUp";
     description = "Git pull replacement that rebases all local branches when pulling";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "git-up";
   };

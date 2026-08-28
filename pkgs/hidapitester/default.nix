@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Simple command-line program to test HIDAPI";
     homepage = "https://github.com/todbot/hidapitester";
     changelog = "https://github.com/todbot/hidapitester/releases/tag/v${finalAttrs.version}";
-    maintainers = [ ];
     license = lib.licenses.gpl3Only;
     mainProgram = "hidapitester";
   };

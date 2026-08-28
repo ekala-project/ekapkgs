@@ -74,7 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://gitlab.gnome.org/World/Solanum";
     description = "Pomodoro timer for the GNOME desktop";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
     mainProgram = "solanum";

@@ -52,7 +52,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Userspace daemon that implements the Smart Amp protection model";
     mainProgram = "speakersafetyd";
     homepage = "https://github.com/AsahiLinux/speakersafetyd";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
   };

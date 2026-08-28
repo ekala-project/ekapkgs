@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     broken = (stdenv.hostPlatform.isLinux && stdenv.hostPlatform.isAarch64);
     description = "Drum sample player LV2 plugin dedicated to Glen MacArthur's AVLdrums";
     homepage = "https://x42-plugins.com/x42/x42-avldrums";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

@@ -117,7 +117,6 @@ stdenv.mkDerivation {
       lib.licenses.gpl2Plus
     ];
     homepage = "https://github.com/openwall/john/";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

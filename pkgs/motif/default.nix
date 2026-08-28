@@ -139,6 +139,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Unix standard widget-toolkit and window-manager";
     platforms = lib.platforms.unix;
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 })

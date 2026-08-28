@@ -61,6 +61,5 @@ stdenv.mkDerivation {
     homepage = "http://opencircuitdesign.com/xcircuit";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

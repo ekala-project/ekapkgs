@@ -58,7 +58,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://soju.im";
     changelog = "https://codeberg.org/emersion/soju/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
     mainProgram = "sojuctl";
   };
 })

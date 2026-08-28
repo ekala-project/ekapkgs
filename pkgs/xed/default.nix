@@ -87,6 +87,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://intelxed.github.io/";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

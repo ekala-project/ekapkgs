@@ -32,7 +32,6 @@ stdenv.mkDerivation {
     description = "User mode driver for Airspy HF+";
     homepage = "https://github.com/airspy/airspyhf";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

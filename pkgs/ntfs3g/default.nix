@@ -82,6 +82,5 @@ stdenv.mkDerivation (finalAttrs: {
       gpl2Plus
       lgpl2Plus
     ];
-    maintainers = [ ];
   };
 })

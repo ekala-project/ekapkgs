@@ -95,7 +95,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://pdfcpu.io/changelog/";
     homepage = "https://pdfcpu.io";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "pdfcpu";
   };
 })

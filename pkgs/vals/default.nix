@@ -34,6 +34,5 @@ buildGo126Module (finalAttrs: {
     license = lib.licenses.asl20;
     homepage = "https://github.com/helmfile/vals";
     changelog = "https://github.com/helmfile/vals/releases/v${finalAttrs.version}";
-    maintainers = [ ];
   };
 })

@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
       asl20
       mit
     ];
-    maintainers = [ ];
     pkgConfigModules = [ "simdutf" ];
     platforms = lib.platforms.all;
   };

@@ -36,7 +36,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/dalance/procs";
     changelog = "https://github.com/dalance/procs/raw/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "procs";
   };
 })

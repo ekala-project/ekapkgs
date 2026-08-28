@@ -55,6 +55,5 @@ rustPlatform.buildRustPackage {
       asl20
       mit
     ];
-    maintainers = [ ];
   };
 }

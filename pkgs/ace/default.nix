@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "ADAPTIVE Communication Environment";
     mainProgram = "ace_gperf";
     license = lib.licenses.doc;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

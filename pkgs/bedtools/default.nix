@@ -40,7 +40,6 @@ stdenv.mkDerivation rec {
     description = "Powerful toolset for genome arithmetic";
     license = lib.licenses.gpl2;
     homepage = "https://bedtools.readthedocs.io/en/latest/";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

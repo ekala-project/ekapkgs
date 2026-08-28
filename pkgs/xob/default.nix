@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     inherit (finalAttrs.src.meta) homepage;
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "xob";
   };
 })

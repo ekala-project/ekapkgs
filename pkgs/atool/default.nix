@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Archive command line helper";
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     mainProgram = "atool";
   };
 })

@@ -47,6 +47,5 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/TomWright/dasel/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "dasel";
-    maintainers = [ ];
   };
 })

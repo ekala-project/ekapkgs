@@ -99,7 +99,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://rspamd.com";
     license = lib.licenses.asl20;
     description = "Advanced spam filtering system";
-    maintainers = [ ];
     mainProgram = "rspamd";
     platforms = with lib.platforms; linux;
   };

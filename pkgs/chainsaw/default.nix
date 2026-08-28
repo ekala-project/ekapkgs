@@ -35,7 +35,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/WithSecureLabs/chainsaw";
     changelog = "https://github.com/WithSecureLabs/chainsaw/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "chainsaw";
   };
 })

@@ -49,6 +49,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/client9/libinjection";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

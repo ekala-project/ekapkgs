@@ -79,7 +79,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "GTK toolkit providing widgets for embedded maps";
     homepage = "https://gitlab.gnome.org/GNOME/libshumate";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

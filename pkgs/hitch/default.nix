@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Libev-based high performance SSL/TLS proxy by Varnish Software";
     homepage = "https://hitch-tls.org/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "hitch";
   };

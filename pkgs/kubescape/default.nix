@@ -47,7 +47,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/kubescape/kubescape";
     changelog = "https://github.com/kubescape/kubescape/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "kubescape";
   };
 })

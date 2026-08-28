@@ -61,6 +61,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "xfwm4";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

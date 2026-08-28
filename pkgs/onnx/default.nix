@@ -51,6 +51,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://onnx.ai";
     license = lib.licenses.asl20;
     changelog = "https://github.com/onnx/onnx/releases/tag/v${finalAttrs.version}";
-    maintainers = [ ];
   };
 })

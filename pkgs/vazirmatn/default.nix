@@ -37,6 +37,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Persian (Farsi) Font";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

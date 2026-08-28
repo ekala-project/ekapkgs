@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Command-line time tracker";
     homepage = "https://timewarrior.net";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "timew";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };

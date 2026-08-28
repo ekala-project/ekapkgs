@@ -64,7 +64,6 @@ stdenv.mkDerivation {
     homepage = "https://davidepucci.it/doc/vpnc/";
     description = "Virtual private network (VPN) client for Cisco's VPN concentrators";
     license = if opensslSupport then lib.licenses.unfree else lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

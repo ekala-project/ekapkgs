@@ -47,7 +47,6 @@ buildGoModule (finalAttrs: {
     description = "Userspace Go implementation of WireGuard";
     homepage = "https://git.zx2c4.com/wireguard-go/about/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "wireguard-go";
   };
 })

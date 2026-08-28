@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fast paced, arcade-style, top-scrolling space shooter";
     mainProgram = "chromium-bsu";
     license = lib.licenses.artistic1;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

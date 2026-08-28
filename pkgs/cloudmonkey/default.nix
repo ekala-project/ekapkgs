@@ -21,7 +21,6 @@ buildGoModule (finalAttrs: {
     description = "CLI for Apache CloudStack";
     homepage = "https://github.com/apache/cloudstack-cloudmonkey";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "cloudstack-cloudmonkey";
   };
 

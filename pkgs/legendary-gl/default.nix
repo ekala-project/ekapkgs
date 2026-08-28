@@ -34,7 +34,6 @@ python3Packages.buildPythonApplication {
     description = "Free and open-source Epic Games Launcher alternative";
     homepage = "https://github.com/legendary-gl/legendary";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "legendary";
   };
 }

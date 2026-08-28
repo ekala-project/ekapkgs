@@ -69,6 +69,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = licenses.gpl2Plus;
     homepage = "http://projects.gnome.org/gnumeric/";
     platforms = platforms.unix;
-    maintainers = [ ];
   };
 })

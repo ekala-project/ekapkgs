@@ -45,6 +45,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.alsa-project.org/~tiwai/alsa.html";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

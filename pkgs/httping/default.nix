@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://vanheusden.com/httping";
     license = lib.licenses.agpl3Only;
     mainProgram = "httping";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

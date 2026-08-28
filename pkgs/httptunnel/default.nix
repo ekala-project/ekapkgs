@@ -28,7 +28,6 @@ stdenv.mkDerivation {
     description = "Creates a bidirectional virtual data connection tunnelled in HTTP requests";
     homepage = "http://www.gnu.org/software/httptunnel/httptunnel.html";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

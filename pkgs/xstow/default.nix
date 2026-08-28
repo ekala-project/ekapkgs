@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Replacement of GNU Stow written in C++";
     homepage = "https://github.com/majorkingleo/xstow";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

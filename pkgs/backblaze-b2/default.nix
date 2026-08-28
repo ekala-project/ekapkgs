@@ -92,6 +92,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/Backblaze/B2_Command_Line_Tool/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "backblaze-b2";
-    maintainers = [ ];
   };
 })

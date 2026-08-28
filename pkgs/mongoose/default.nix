@@ -69,7 +69,6 @@ stdenv.mkDerivation {
     mainProgram = "suitesparse_mongoose";
     homepage = "https://github.com/DrTimothyAldenDavis/SuiteSparse/tree/dev/Mongoose";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
   };
 }

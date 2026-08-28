@@ -87,7 +87,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Open Source multimedia framework for research and academic purposes";
     homepage = "https://gpac.wp.imt.fr";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

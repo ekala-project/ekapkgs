@@ -46,6 +46,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/jacobdeichert/mask";
     changelog = "https://github.com/jacobdeichert/mask/blob/mask/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

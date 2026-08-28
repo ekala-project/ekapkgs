@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/pali/0xFFFF/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "0xFFFF";
   };
 })

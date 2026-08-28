@@ -50,7 +50,6 @@ stdenvNoCC.mkDerivation rec {
     homepage = "https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git";
     license = lib.licenses.unfreeRedistributableFirmware;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     priority = 6;
   };
 }

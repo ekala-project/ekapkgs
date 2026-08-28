@@ -78,6 +78,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-terminal";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

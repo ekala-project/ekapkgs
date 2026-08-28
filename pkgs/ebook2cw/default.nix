@@ -39,7 +39,6 @@ stdenv.mkDerivation rec {
     homepage = "https://fkurz.net/ham/ebook2cw.html";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "ebook2cw";
   };
 }

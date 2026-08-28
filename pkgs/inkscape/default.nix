@@ -156,7 +156,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Vector graphics editor";
     homepage = "https://www.inkscape.org";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "inkscape";
     longDescription = ''

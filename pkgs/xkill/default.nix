@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/app/xkill";
     license = lib.licenses.mitOpenGroup;
     mainProgram = "xkill";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

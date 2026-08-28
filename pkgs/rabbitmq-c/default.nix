@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "RabbitMQ C AMQP client library";
     homepage = "https://github.com/alanxz/rabbitmq-c";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

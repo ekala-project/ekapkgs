@@ -27,7 +27,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/jesseduffield/lazygit";
     changelog = "https://github.com/jesseduffield/lazygit/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "lazygit";
   };
 })

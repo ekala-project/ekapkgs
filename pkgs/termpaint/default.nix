@@ -42,6 +42,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/termpaint/termpaint";
     platforms = lib.platforms.unix;
     license = lib.licenses.boost;
-    maintainers = [ ];
   };
 })

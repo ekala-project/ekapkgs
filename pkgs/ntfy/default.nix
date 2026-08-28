@@ -71,7 +71,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Utility for sending notifications, on demand and when commands finish";
     homepage = "https://ntfy.readthedocs.io/en/latest/";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "ntfy";
   };
 })

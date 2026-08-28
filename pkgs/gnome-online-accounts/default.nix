@@ -102,6 +102,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Single sign-on framework for GNOME";
     platforms = lib.platforms.unix;
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
   };
 })

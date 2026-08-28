@@ -103,6 +103,5 @@ buildGoModule (finalAttrs: {
     downloadPage = "https://github.com/argoproj/argo-cd";
     homepage = "https://argo-cd.readthedocs.io/en/stable/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

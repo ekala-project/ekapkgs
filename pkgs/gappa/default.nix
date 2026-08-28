@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
       cecill21
       gpl3
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

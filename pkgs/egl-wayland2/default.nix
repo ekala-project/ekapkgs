@@ -56,6 +56,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/NVIDIA/egl-wayland2/";
     license = lib.licenses.asl20;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

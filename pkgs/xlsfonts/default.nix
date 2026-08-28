@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/app/xlsfonts";
     license = lib.licenses.mitOpenGroup;
     mainProgram = "xlsfonts";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

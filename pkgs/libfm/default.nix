@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://blog.lxde.org/category/pcmanfm/";
     license = lib.licenses.lgpl21Plus;
     description = "Glib-based library for file management";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

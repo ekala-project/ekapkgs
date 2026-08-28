@@ -27,6 +27,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "matterircd";
     homepage = "https://github.com/42wim/matterircd";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

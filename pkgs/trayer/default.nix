@@ -46,7 +46,6 @@ stdenv.mkDerivation rec {
     license = lib.licenses.mit;
     description = "Lightweight GTK2-based systray for UNIX desktop";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "trayer";
   };
 }

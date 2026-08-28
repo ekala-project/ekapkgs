@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "logid";
     homepage = "https://github.com/PixlOne/logiops";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
   };
 })

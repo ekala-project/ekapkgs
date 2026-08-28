@@ -24,6 +24,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C library and tools for manipulating with Ogg files and streams";
     platforms = lib.platforms.unix;
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

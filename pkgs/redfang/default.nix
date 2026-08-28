@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Small proof-of-concept application to find non discoverable bluetooth devices";
     homepage = "https://gitlab.com/kalilinux/packages/redfang";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "fang";
   };
 })

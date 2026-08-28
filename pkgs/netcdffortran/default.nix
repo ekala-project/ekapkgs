@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "nf-config";
     homepage = "https://www.unidata.ucar.edu/software/netcdf/";
     license = lib.licenses.free;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

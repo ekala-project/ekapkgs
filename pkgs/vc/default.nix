@@ -31,6 +31,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/VcDevel/Vc";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

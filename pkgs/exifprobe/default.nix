@@ -29,7 +29,6 @@ stdenv.mkDerivation {
     description = "Tool for reading EXIF data from image files produced by digital cameras";
     homepage = "https://github.com/hfiguiere/exifprobe";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

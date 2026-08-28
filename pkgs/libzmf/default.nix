@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Library that parses the file format of Zoner Callisto/Draw documents";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     homepage = "https://wiki.documentfoundation.org/DLP/Libraries/libzmf";
     downloadPage = "http://dev-www.libreoffice.org/src/libzmf/";

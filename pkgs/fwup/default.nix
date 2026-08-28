@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Configurable embedded Linux firmware update creator and runner";
     homepage = "https://github.com/fwup-home/fwup";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

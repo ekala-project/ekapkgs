@@ -76,7 +76,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "http://dar.linux.free.fr";
     description = "Disk ARchiver, allows backing up files into indexed archives";
-    maintainers = [ ];
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
   };

@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/HOST-Oman/libraqm";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

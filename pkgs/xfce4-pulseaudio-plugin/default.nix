@@ -64,6 +64,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.xfce.org/panel-plugins/xfce4-pulseaudio-plugin";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

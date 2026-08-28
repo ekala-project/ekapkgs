@@ -92,6 +92,5 @@ stdenv.mkDerivation rec {
     homepage = "https://boinc.berkeley.edu/";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

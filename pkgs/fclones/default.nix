@@ -43,7 +43,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/pkolaczk/fclones";
     changelog = "https://github.com/pkolaczk/fclones/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "fclones";
   };
 })

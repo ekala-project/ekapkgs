@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/ansilove/libansilove";
     changelog = "https://github.com/ansilove/libansilove/blob/${finalAttrs.src.rev}/ChangeLog";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "libansilove";
     platforms = lib.platforms.unix;
   };

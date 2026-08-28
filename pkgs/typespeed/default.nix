@@ -31,6 +31,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://typespeed.sourceforge.net/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

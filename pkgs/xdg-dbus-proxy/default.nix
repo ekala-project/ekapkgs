@@ -43,6 +43,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl21Plus;
     mainProgram = "xdg-dbus-proxy";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

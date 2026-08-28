@@ -97,7 +97,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://munt.sourceforge.net/";
     description = "Library to emulate Roland MT-32, CM-32L, CM-64 and LAPC-I devices";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix; # Not tested on ReactOS yet :)
   };
 })

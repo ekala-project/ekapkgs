@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
       diff-so-fancy builds on the good-lookin' output of git contrib's
       diff-highlight to upgrade your diffs' appearances.
     '';
-    maintainers = [ ];
     mainProgram = "diff-so-fancy";
   };
 })

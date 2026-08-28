@@ -82,7 +82,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/dprint/dprint/releases/tag/${finalAttrs.version}";
     homepage = "https://dprint.dev";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "dprint";
   };
 })

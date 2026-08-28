@@ -31,7 +31,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/ekkinox/yai";
     description = "Your AI powered terminal assistant";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "yai";
   };
 })

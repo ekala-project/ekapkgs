@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
       cc-by-sa-30 # icon
       mit
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "xinput_calibrator";
   };

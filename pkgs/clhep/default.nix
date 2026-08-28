@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
       gpl3Only
       lgpl3Only
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -74,7 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Agile dynamic language for the Java Platform";
     homepage = "http://groovy-lang.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

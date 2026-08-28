@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/ArcticaProject/librda";
     license = lib.licenses.gpl2Plus;
     mainProgram = "rdacheck";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     pkgConfigModules = [
       "rda"

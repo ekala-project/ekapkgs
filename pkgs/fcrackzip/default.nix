@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Zip password cracker, similar to fzc, zipcrack and others";
     homepage = "http://oldhome.schmorp.de/marc/fcrackzip.html";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
   };
 })

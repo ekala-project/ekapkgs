@@ -126,6 +126,5 @@ stdenv.mkDerivation {
     mainProgram = "clisp";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

@@ -71,7 +71,6 @@ stdenv.mkDerivation {
   meta = {
     homepage = "https://github.com/0intro/wmii";
     description = "Small, scriptable window manager, with a 9P filesystem interface and an acme-like layout";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = with lib.platforms; linux;
   };

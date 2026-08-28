@@ -24,6 +24,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "RPC library for C++, providing both a client and server implementation";
     homepage = "https://github.com/rpclib/rpclib/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

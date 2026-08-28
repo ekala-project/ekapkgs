@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Convert text files with DOS or Mac line breaks to Unix line breaks and vice versa";
     homepage = "https://waterlan.home.xs4all.nl/dos2unix.html";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

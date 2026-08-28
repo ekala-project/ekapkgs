@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Single Packet Authorization (and Port Knocking) server/client";
     homepage = "https://www.cipherdyne.org/fwknop/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

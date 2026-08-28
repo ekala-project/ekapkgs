@@ -25,6 +25,5 @@ stdenv.mkDerivation (finalAttrs: {
       cc0
     ];
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

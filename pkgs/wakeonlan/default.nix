@@ -41,7 +41,6 @@ perlPackages.buildPerlPackage rec {
     description = "Perl script for waking up computers via Wake-On-LAN magic packets";
     homepage = "https://github.com/jpoliv/wakeonlan";
     license = lib.licenses.artistic1;
-    maintainers = [ ];
     mainProgram = "wakeonlan";
   };
 }

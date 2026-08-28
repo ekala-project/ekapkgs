@@ -33,7 +33,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     downloadPage = "https://github.com/kellyjonbrazil/jtbl/releases/tag/${finalAttrs.src.rev}";
     changelog = "https://github.com/kellyjonbrazil/jtbl/blob/${finalAttrs.src.rev}/CHANGELOG";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "jtbl";
   };
 })

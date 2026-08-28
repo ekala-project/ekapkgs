@@ -40,7 +40,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/EmmyLuaLs/emmylua-analyzer-rust";
     changelog = "https://github.com/EmmyLuaLs/emmylua-analyzer-rust/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "emmylua_ls";
   };

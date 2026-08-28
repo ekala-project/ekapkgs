@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/taocpp/pegtl";
     description = "Parsing Expression Grammar Template Library";
     license = lib.licenses.boost;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

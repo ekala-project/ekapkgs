@@ -27,7 +27,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/brettcannon/python-launcher";
     changelog = "https://github.com/brettcannon/python-launcher/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "py";
   };
 })

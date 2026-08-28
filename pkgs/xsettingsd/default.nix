@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Provides settings to X11 applications via the XSETTINGS specification";
     homepage = "https://github.com/derat/xsettingsd";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "xsettingsd";
   };

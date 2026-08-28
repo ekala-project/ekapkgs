@@ -45,7 +45,6 @@ python3Packages.buildPythonPackage rec {
       mit
       gpl2Plus
     ];
-    maintainers = [ ];
     mainProgram = "git-filter-repo";
   };
 }

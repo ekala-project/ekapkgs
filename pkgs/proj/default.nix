@@ -61,6 +61,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://proj.org/";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

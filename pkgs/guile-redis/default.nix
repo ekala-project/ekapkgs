@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/aconchillo/guile-redis";
     changelog = "https://github.com/aconchillo/guile-redis/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = guile.meta.platforms;
   };
 })

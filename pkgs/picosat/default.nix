@@ -42,6 +42,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://fmv.jku.at/picosat/";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/gsl-lite/gsl-lite";
     changelog = "https://github.com/gsl-lite/gsl-lite/blob/${finalAttrs.src.rev}/CHANGES.txt";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

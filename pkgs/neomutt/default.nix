@@ -161,7 +161,6 @@ stdenv.mkDerivation (finalAttrs: {
     downloadPage = "https://github.com/neomutt/neomutt";
     homepage = "https://www.neomutt.org";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

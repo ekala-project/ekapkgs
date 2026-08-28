@@ -53,7 +53,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/schollz/croc";
     changelog = "https://github.com/schollz/croc/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "croc";
   };
 })

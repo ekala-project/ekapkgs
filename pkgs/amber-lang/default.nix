@@ -59,6 +59,5 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://amber-lang.com";
     license = lib.licenses.lgpl3Only;
     mainProgram = "amber";
-    maintainers = [ ];
   };
 }

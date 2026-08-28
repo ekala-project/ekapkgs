@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "gpuvis";
     homepage = "https://github.com/mikesart/gpuvis";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

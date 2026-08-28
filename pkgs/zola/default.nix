@@ -45,6 +45,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://www.getzola.org/";
     changelog = "https://github.com/getzola/zola/raw/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

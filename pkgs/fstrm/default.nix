@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Frame Streams implementation in C";
     homepage = "https://github.com/farsightsec/fstrm";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

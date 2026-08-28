@@ -42,6 +42,5 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/bbuchfink/diamond";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

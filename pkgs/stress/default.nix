@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Simple workload generator for POSIX systems. It imposes a configurable amount of CPU, memory, I/O, and disk stress on the system";
     homepage = "https://github.com/resurrecting-open-source-projects/stress";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "stress";
   };

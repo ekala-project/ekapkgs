@@ -40,7 +40,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/dyc3/steamguard-cli";
     license = lib.licenses.gpl3Only;
     mainProgram = "steamguard";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

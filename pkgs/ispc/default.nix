@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://ispc.github.io/";
     changelog = "https://github.com/ispc/ispc/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "ispc";
     platforms = lib.platforms.linux;
   };

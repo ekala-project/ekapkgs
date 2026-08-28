@@ -40,7 +40,6 @@ stdenv.mkDerivation {
     description = "Dialer that automatically recognises the modem";
     homepage = "https://gitea.osmocom.org/retronetworking/wvdial";
     license = lib.licenses.lgpl2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

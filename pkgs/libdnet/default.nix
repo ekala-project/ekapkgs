@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Provides a simplified, portable interface to several low-level networking routines";
     homepage = "https://github.com/dugsong/libdnet";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -62,7 +62,6 @@ stdenv.mkDerivation {
     description = "FUSE driver for APFS (Apple File System)";
     license = lib.licenses.gpl2Plus;
     mainProgram = "apfs-fuse";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

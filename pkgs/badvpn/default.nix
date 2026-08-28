@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Set of network-related (mostly VPN-related) tools";
     homepage = "https://github.com/ambrop72/badvpn";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

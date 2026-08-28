@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/lballabio/QuantLib/releases/tag/v${finalAttrs.version}";
     platforms = lib.platforms.unix;
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

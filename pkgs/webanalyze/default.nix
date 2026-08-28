@@ -22,7 +22,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/rverton/webanalyze";
     changelog = "https://github.com/rverton/webanalyze/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "webanalyze";
   };
 })

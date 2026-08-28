@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "cflow";
     homepage = "https://www.gnu.org/software/cflow/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 })

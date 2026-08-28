@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "TCP/IP swiss army knife. OpenBSD variant";
     homepage = "https://salsa.debian.org/debian/netcat-openbsd";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
     mainProgram = "nc";

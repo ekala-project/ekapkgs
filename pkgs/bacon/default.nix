@@ -60,6 +60,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/Canop/bacon";
     changelog = "https://github.com/Canop/bacon/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 })

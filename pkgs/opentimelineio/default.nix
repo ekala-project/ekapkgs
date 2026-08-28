@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Open Source API and interchange format for editorial timeline information";
     homepage = "https://github.com/AcademySoftwareFoundation/OpenTimelineIO";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

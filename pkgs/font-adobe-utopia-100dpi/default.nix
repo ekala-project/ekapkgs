@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Adobe Utopia 100dpi pcf fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/adobe-utopia-100dpi";
     license = lib.licenses.adobeUtopia;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

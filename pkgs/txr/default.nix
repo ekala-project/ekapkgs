@@ -70,7 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     changelog = "https://www.kylheku.com/cgit/txr/tree/RELNOTES?h=txr-${finalAttrs.version}";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -85,7 +85,6 @@ stdenv.mkDerivation rec {
       Stockfish is one of the strongest chess engines in the world. It is also
       much stronger than the best human chess grandmasters.
     '';
-    maintainers = [ ];
     platforms = [
       "x86_64-linux"
       "i686-linux"

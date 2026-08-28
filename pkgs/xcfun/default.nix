@@ -33,6 +33,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/dftlibs/xcfun";
     license = lib.licenses.mpl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Martchus/cpp-utilities";
     description = "Common C++ classes and routines used by @Martchus' applications featuring argument parser, IO and conversion utilities";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 })

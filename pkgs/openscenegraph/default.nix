@@ -141,7 +141,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "3D graphics toolkit";
     homepage = "http://www.openscenegraph.org/";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = with lib.licenses; [
       lgpl21Only

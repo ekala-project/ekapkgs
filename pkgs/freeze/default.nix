@@ -32,6 +32,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "freeze";
     homepage = "https://github.com/optiv/Freeze";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/szechyjs/mbelib";
     license = lib.licenses.isc;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

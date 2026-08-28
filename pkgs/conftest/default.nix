@@ -68,6 +68,5 @@ buildGoModule (finalAttrs: {
       assertions. You can read more about Rego in 'How do I write policies' in
       the Open Policy Agent documentation.
     '';
-    maintainers = [ ];
   };
 })

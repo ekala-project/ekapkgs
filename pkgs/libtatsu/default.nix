@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/libimobiledevice/libtatsu";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

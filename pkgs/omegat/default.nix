@@ -47,7 +47,6 @@ stdenv.mkDerivation {
     homepage = "http://www.omegat.org/";
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = [
       "i686-linux"
       "x86_64-linux"

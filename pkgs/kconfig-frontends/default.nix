@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://bitbucket.org/nuttx/tools/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

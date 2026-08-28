@@ -55,7 +55,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/royhills/arp-scan/wiki/arp-scan-User-Guide";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
     mainProgram = "arp-scan";
   };
 }

@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "POP3 mail retrieval agent";
     homepage = "https://marlam.de/mpop";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

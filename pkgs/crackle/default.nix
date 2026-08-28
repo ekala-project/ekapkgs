@@ -28,7 +28,6 @@ stdenv.mkDerivation {
   meta = {
     description = "Crack and decrypt BLE encryption";
     homepage = "https://github.com/mikeryan/crackle";
-    maintainers = [ ];
     license = lib.licenses.bsd2;
     mainProgram = "crackle";
   };

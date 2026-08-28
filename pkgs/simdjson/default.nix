@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://simdjson.org/";
     description = "Parsing gigabytes of JSON per second";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -24,6 +24,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "protoc-gen-go";
     homepage = "https://google.golang.org/protobuf";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

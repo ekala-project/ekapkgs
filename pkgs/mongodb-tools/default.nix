@@ -57,6 +57,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/mongodb/mongo-tools";
     description = "Tools for the MongoDB";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

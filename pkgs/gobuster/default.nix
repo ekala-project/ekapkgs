@@ -29,7 +29,6 @@ buildGo125Module rec {
     homepage = "https://github.com/OJ/gobuster";
     changelog = "https://github.com/OJ/gobuster/releases/tag/${src.tag}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "gobuster";
   };
 }

@@ -33,7 +33,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://gpuopen.com/vulkan-memory-allocator/";
     changelog = "https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "vulkan-memory-allocator";
     platforms = lib.platforms.unix ++ lib.platforms.windows;
   };

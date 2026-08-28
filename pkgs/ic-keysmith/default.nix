@@ -21,7 +21,6 @@ buildGoModule (finalAttrs: {
     description = "Hierarchical Deterministic Key Derivation for the Internet Computer";
     homepage = "https://github.com/dfinity/keysmith";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "keysmith";
   };
 })

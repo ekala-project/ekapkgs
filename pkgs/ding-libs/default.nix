@@ -27,7 +27,6 @@ stdenv.mkDerivation rec {
       lib.licenses.gpl3
       lib.licenses.lgpl3
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

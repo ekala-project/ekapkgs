@@ -48,6 +48,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     mainProgram = "nohang";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

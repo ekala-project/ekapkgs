@@ -32,7 +32,6 @@ gccStdenv.mkDerivation (finalAttrs: {
     homepage = "https://octobanana.com/software/peaclock";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "peaclock";
   };
 })

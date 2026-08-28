@@ -82,7 +82,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://gitlab.gnome.org/World/gedit/gedit";
     description = "Former GNOME text editor";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
     mainProgram = "gedit";

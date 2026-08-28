@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fast and lightweight HTML/CSS rendering engine";
     homepage = "http://www.litehtml.com/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

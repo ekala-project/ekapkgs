@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "BIRD Internet Routing Daemon";
     homepage = "https://bird.network.cz";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

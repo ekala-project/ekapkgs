@@ -76,6 +76,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.regressive.org/snobol4/csnobol4/";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

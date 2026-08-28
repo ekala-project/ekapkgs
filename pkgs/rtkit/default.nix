@@ -62,6 +62,5 @@ stdenv.mkDerivation {
       bsd0
     ];
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

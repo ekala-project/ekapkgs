@@ -123,6 +123,5 @@ python.pkgs.buildPythonApplication (finalAttrs: {
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix; # Darwin and FreeBSD mentioned on homepage
     mainProgram = "borg";
-    maintainers = [ ];
   };
 })

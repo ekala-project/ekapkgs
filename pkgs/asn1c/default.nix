@@ -57,6 +57,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Open Source ASN.1 Compiler";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

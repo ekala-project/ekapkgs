@@ -78,7 +78,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     '';
     homepage = "https://xwmx.github.io/nb/";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "nb";
   };

@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/jpmens/jo";
     mainProgram = "jo";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

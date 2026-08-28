@@ -61,6 +61,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "xfdesktop";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -90,7 +90,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://newsboat.org/";
     changelog = "https://github.com/newsboat/newsboat/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     description = "Fork of Newsbeuter, an RSS/Atom feed reader for the text console";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
     mainProgram = "newsboat";

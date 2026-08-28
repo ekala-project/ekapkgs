@@ -59,7 +59,6 @@ buildGo126Module (finalAttrs: {
     '';
     mainProgram = "oci-seccomp-bpf-hook";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

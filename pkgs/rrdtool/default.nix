@@ -47,7 +47,6 @@ perl.pkgs.toPerlModule (
       homepage = "https://oss.oetiker.ch/rrdtool/";
       description = "High performance logging in Round Robin Databases";
       license = lib.licenses.gpl2Only;
-      maintainers = [ ];
       platforms = lib.platforms.linux;
     };
   }

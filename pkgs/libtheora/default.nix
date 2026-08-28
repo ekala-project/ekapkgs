@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for Theora, a free and open video compression format";
     homepage = "https://www.theora.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

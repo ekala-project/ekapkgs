@@ -84,6 +84,5 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     description = "Hunt down social media accounts by username across social networks";
     license = lib.licenses.mit;
     mainProgram = "sherlock";
-    maintainers = [ ];
   };
 })

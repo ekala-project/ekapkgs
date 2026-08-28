@@ -79,7 +79,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Daemon for controlling APC UPSes";
     homepage = "http://www.apcupsd.com/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

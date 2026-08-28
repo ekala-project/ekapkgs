@@ -31,7 +31,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://codeberg.org/eduVPN/eduvpn-common/raw/tag/${finalAttrs.version}/CHANGES.md";
     description = "Code to be shared between eduVPN clients";
     homepage = "https://codeberg.org/eduVPN/eduvpn-common";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
   };

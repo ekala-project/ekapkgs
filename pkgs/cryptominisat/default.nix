@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "cryptominisat5";
     homepage = "https://github.com/msoos/cryptominisat";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

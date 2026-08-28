@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Namespace-based sandboxing tool for Linux";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     homepage = "https://firejail.wordpress.com/";
     mainProgram = "firejail";

@@ -36,7 +36,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/lsd-rs/lsd";
     description = "Next gen ls command";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "lsd";
   };
 })

@@ -114,7 +114,6 @@ stdenv.mkDerivation {
     description = "Io programming language";
     homepage = "https://iolanguage.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = [ "x86_64-linux" ];
   };
 }

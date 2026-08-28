@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Device abstraction for the Megapixels camera application";
     homepage = "https://gitlab.com/megapixels-org/libmegapixels";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

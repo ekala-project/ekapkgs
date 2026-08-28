@@ -67,7 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool for creating and unpacking squashfs filesystems";
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "mksquashfs";
   };
 })

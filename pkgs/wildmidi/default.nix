@@ -38,7 +38,6 @@ stdenv.mkDerivation rec {
     mainProgram = "wildmidi";
     homepage = "https://wildmidi.sourceforge.net/";
     license = lib.licenses.lgpl3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

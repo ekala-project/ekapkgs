@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://sr.ht/~emersion/libscfg";
     description = "Simple configuration file format";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -61,7 +61,6 @@ stdenv.mkDerivation rec {
     homepage = "https://casys.gricad-pages.univ-grenoble-alpes.fr/givaro/";
     mainProgram = "givaro-config";
     license = lib.licenses.cecill-b;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

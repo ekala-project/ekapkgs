@@ -43,6 +43,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl21Plus;
 
     platforms = lib.platforms.gnu ++ lib.platforms.linux; # arbitrary choice
-    maintainers = [ ];
   };
 })

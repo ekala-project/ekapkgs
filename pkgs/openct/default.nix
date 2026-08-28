@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/OpenSC/openct/";
     description = "Drivers for several smart card readers";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     broken = stdenv.hostPlatform.isDarwin;
   };

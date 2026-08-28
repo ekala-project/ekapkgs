@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.gnome.org/GNOME/gnome-sudoku/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
     description = "Test your logic skills in this number grid puzzle";
     mainProgram = "gnome-sudoku";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
   };

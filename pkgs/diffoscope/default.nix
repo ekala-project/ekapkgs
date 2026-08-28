@@ -147,7 +147,6 @@ python3.pkgs.buildPythonApplication rec {
     homepage = "https://diffoscope.org/";
     changelog = "https://diffoscope.org/news/diffoscope-${version}-released/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "diffoscope";
   };

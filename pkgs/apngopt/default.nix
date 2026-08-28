@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://sourceforge.net/projects/apng/";
     description = "Optimizes APNG animations";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

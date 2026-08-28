@@ -42,6 +42,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
     mainProgram = "dmg2img";
-    maintainers = [ ];
   };
 })

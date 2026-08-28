@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Intelligent WHOIS client from Debian";
     homepage = "https://packages.qa.debian.org/w/whois.html";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "whois";
   };

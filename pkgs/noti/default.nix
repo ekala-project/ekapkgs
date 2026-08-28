@@ -40,7 +40,6 @@ buildGo126Module (finalAttrs: {
     description = "Monitor a process and trigger a notification";
     homepage = "https://codeberg.org/roble/noti";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "noti";
   };
 })

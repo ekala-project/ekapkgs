@@ -236,7 +236,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Movie player that supports many video formats";
     homepage = "http://mplayerhq.hu";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = [
       "i686-linux"
       "x86_64-linux"

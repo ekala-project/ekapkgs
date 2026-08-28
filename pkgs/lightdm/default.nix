@@ -117,6 +117,5 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl2Only
       lgpl3Only
     ];
-    maintainers = [ ];
   };
 })

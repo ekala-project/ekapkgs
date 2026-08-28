@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/TobiX/screentest";
     changelog = "https://github.com/TobiX/screentest/blob/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

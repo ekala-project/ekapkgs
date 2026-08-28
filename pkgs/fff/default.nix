@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "fff";
     homepage = "https://github.com/dylanaraps/fff";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -37,6 +37,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/google/osv-scanner";
     changelog = "https://github.com/google/osv-scanner/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

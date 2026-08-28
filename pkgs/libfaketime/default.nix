@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Report faked system time to programs without having to change the system-wide time";
     homepage = "https://github.com/wolfcw/libfaketime/";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "faketime";
   };

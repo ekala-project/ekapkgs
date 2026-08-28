@@ -55,6 +55,5 @@ buildGoModule (finalAttrs: {
     description = "Open Source Kubernetes Marketplace";
     mainProgram = "arkade";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

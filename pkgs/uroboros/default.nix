@@ -22,6 +22,5 @@ buildGo126Module rec {
     description = "Tool for monitoring and profiling single processes";
     homepage = "https://github.com/evilsocket/uroboros";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

@@ -43,6 +43,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Shared library written in C to access SEGGER J-Link and compatible devices";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

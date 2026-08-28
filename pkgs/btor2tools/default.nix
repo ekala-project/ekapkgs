@@ -59,6 +59,5 @@ stdenv.mkDerivation {
     homepage = "https://github.com/hwmcc/btor2tools";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

@@ -97,7 +97,6 @@ stdenv.mkDerivation rec {
     description = "A clone of the well-known terminal emulator rxvt";
     homepage = "http://software.schmorp.de/pkg/rxvt-unicode.html";
     downloadPage = "http://dist.schmorp.de/rxvt-unicode/Attic/";
-    maintainers = [ ];
     platforms = platforms.unix;
     license = licenses.gpl3;
     mainProgram = "urxvt";

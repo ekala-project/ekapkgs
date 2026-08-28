@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://salsa.debian.org/debian/xbattbar";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "xbattbar";
   };
 })

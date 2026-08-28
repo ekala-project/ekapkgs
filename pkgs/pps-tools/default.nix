@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://linuxpps.org/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

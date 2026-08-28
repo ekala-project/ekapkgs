@@ -38,6 +38,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://packages.qa.debian.org/s/shntool.html";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

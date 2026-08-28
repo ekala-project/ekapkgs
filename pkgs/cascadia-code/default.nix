@@ -34,7 +34,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://github.com/microsoft/cascadia-code";
     changelog = "https://github.com/microsoft/cascadia-code/raw/v${finalAttrs.version}/FONTLOG.txt";
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

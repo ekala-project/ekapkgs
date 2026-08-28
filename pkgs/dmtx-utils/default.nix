@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/dmtx/dmtx-utils";
     changelog = "https://github.com/dmtx/dmtx-utils/blob/v${finalAttrs.version}/ChangeLog";
     license = lib.licenses.lgpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

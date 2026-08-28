@@ -70,7 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Source code editing widget for GTK";
     homepage = "https://gitlab.gnome.org/World/gedit/libgedit-gtksourceview";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

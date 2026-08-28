@@ -98,6 +98,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     mainProgram = "xfce4-settings-manager";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

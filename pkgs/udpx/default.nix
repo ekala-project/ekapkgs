@@ -28,6 +28,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/nullt3r/udpx";
     changelog = "https://github.com/nullt3r/udpx/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Identifies duplicate files residing within specified directories";
     homepage = "https://github.com/adrianlopezroche/fdupes";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "fdupes";
   };

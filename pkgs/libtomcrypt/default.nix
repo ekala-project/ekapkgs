@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
       publicDomain
       wtfpl
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

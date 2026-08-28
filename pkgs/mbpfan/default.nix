@@ -24,6 +24,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/linux-on-mac/mbpfan";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

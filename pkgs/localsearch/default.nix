@@ -114,7 +114,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://gitlab.gnome.org/GNOME/localsearch";
     description = "Desktop-neutral user information store, search tool and indexer";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
     mainProgram = "localsearch";

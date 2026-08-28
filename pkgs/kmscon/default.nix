@@ -103,7 +103,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.freedesktop.org/wiki/Software/kmscon/";
     changelog = "https://github.com/kmscon/kmscon/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

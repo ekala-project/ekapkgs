@@ -43,7 +43,6 @@ stdenv.mkDerivation {
         isc
         mit
       ];
-    maintainers = [ ];
     mainProgram = "redo";
     platforms = lib.platforms.unix;
   };

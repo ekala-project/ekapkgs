@@ -74,7 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://schismtracker.org/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "schismtracker";
   };
 })

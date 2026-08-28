@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/intel/vpl-gpu-rt/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
     platforms = [ "x86_64-linux" ];
-    maintainers = [ ];
   };
 })

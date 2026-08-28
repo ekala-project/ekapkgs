@@ -53,6 +53,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/quietvoid/dovi_tool/releases/tag/${finalAttrs.version}";
     mainProgram = "dovi_tool";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

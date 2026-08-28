@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "snow";
     homepage = "http://www.darkside.com.au/snow/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

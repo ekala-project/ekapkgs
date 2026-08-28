@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Free text editor for developers";
     homepage = "https://fte.sourceforge.net/";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/libsdl-org/SDL_mixer";
     changelog = "https://github.com/libsdl-org/SDL_mixer/releases/tag/release-${finalAttrs.version}";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -102,6 +102,5 @@ stdenv.mkDerivation {
     homepage = "https://www.videlibri.de/xidel.html";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

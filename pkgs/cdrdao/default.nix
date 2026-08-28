@@ -58,6 +58,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://cdrdao.sourceforge.net/";
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

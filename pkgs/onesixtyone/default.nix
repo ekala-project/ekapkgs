@@ -27,7 +27,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/trailofbits/onesixtyone";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "onesixtyone";
   };
 }

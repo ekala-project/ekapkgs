@@ -48,7 +48,6 @@ buildGo126Module (finalAttrs: {
     description = "AI on the command line";
     homepage = "https://github.com/charmbracelet/mods";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "mods";
   };
 })

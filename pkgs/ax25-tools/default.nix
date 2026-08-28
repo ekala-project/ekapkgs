@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Non-GUI tools used to configure an AX.25 enabled computer";
     homepage = "https://linux-ax25.in-berlin.de/wiki/Main_Page";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

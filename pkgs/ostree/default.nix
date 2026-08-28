@@ -140,6 +140,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://ostreedev.github.io/ostree/";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

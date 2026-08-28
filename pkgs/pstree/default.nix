@@ -35,7 +35,6 @@ stdenv.mkDerivation rec {
     description = "Show the set of running processes as a tree";
     homepage = "http://www.thp.uni-duisburg.de/pstree/";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     priority = 5; # Lower than psmisc also providing pstree on Linux platforms
     mainProgram = "pstree";

@@ -72,7 +72,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/laixintao/iredis/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     homepage = "https://iredis.xbin.io/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "iredis";
   };
 })

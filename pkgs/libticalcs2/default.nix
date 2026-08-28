@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "This library is part of the TiLP framework";
     homepage = "http://lpg.ticalc.org/prj_tilp/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

@@ -30,7 +30,6 @@ buildGo126Module (finalAttrs: {
     description = "Official language server for the Go language";
     homepage = "https://github.com/golang/tools/tree/master/gopls";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "gopls";
   };
 })

@@ -57,7 +57,6 @@ stdenv.mkDerivation rec {
     description = "GLib/GObject wrapper for the Facebook Graph API";
     homepage = "https://gitlab.gnome.org/GNOME/libgfbgraph";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

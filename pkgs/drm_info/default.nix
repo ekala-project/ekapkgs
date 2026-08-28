@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "drm_info";
     homepage = "https://gitlab.freedesktop.org/emersion/drm_info";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

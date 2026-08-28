@@ -24,6 +24,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "dotslash";
-    maintainers = [ ];
   };
 })

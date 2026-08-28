@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/PDB-REDO/libcifpp";
     changelog = "https://github.com/PDB-REDO/libcifpp/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "nwipe";
     homepage = "https://github.com/martijnvanbrummelen/nwipe";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

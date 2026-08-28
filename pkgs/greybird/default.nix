@@ -45,6 +45,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/shimmerproject/Greybird";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

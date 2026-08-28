@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/dvidelabs/flatcc";
     changelog = "https://github.com/dvidelabs/flatcc/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

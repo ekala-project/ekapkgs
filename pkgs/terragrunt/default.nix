@@ -48,6 +48,5 @@ buildGo126Module (finalAttrs: {
     description = "Thin wrapper for Terraform that supports locking for Terraform state and enforces best practices";
     mainProgram = "terragrunt";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

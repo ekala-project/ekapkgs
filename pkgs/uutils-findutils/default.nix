@@ -35,7 +35,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/uutils/findutils";
     license = lib.licenses.mit;
     mainProgram = "find";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

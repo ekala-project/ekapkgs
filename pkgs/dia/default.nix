@@ -108,7 +108,6 @@ stdenv.mkDerivation {
     description = "Gnome Diagram drawing software";
     mainProgram = "dia";
     homepage = "https://wiki.gnome.org/Apps/Dia";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

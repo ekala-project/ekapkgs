@@ -21,7 +21,6 @@ buildGo126Module (finalAttrs: {
     description = "Local command-line Japanese dictionary tool using yomichan's dictionary files";
     homepage = "https://github.com/yuanji-dev/tango";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "tango";
   };
 })

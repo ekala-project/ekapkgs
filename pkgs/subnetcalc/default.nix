@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
       type, scope, interface ID, etc.).
     '';
     mainProgram = "subnetcalc";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

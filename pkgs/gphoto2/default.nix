@@ -44,7 +44,6 @@ stdenv.mkDerivation rec {
     homepage = "http://www.gphoto.org/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "gphoto2";
   };
 }

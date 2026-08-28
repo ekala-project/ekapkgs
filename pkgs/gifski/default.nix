@@ -42,7 +42,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://gif.ski/";
     changelog = "https://github.com/ImageOptim/gifski/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     mainProgram = "gifski";
   };
 })

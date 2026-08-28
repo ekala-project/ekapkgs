@@ -83,6 +83,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://collectd.org";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

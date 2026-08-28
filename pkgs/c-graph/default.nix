@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool for Learning about Convolution";
     homepage = "https://www.gnu.org/software/c-graph/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "c-graph";
   };

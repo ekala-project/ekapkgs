@@ -79,7 +79,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     description = "Programmable turn-based strategy game";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Plus;
   };

@@ -25,6 +25,5 @@ bundlerApp {
     homepage = "https://taskjuggler.org/";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     description = "Plugin SDK for virtual instruments";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.lgpl21;
     downloadPage = "https://sourceforge.net/projects/dssi/files/dssi/";

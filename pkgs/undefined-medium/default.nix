@@ -26,6 +26,5 @@ stdenvNoCC.mkDerivation {
     description = "Pixel grid-based monospace typeface";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

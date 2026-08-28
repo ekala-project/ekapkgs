@@ -28,6 +28,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "fastmod";
     homepage = "https://github.com/facebookincubator/fastmod";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

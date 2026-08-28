@@ -26,6 +26,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "litestream";
     license = lib.licenses.asl20;
     homepage = "https://litestream.io/";
-    maintainers = [ ];
   };
 })

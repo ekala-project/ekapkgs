@@ -92,7 +92,6 @@ stdenv.mkDerivation (finalAttrs: {
     ];
     mainProgram = "buck2";
     sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];
-    maintainers = [ ];
     platforms = [
       "x86_64-linux"
       "aarch64-linux"

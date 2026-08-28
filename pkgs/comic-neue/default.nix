@@ -37,6 +37,5 @@ stdenv.mkDerivation rec {
     '';
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

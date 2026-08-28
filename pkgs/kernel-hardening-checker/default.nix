@@ -25,7 +25,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/a13xp0p0v/kernel-hardening-checker";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "kernel-hardening-checker";
   };
 })

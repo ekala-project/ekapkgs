@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Thin layer of graphic data types";
     homepage = "https://github.com/ebassi/graphene";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

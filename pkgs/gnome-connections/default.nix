@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.gnome.org/GNOME/gnome-connections/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
     description = "Remote desktop client for the GNOME desktop environment";
     mainProgram = "gnome-connections";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
   };

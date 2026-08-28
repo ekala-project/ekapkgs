@@ -31,7 +31,6 @@ stdenvNoCC.mkDerivation {
     description = "Latin Modern Math (LM Math) font completes the modernization of the Computer Modern family of typefaces designed and programmed by Donald E. Knuth";
     homepage = "https://www.gust.org.pl/projects/e-foundry/lm-math";
     license = lib.licenses.lppl13c;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

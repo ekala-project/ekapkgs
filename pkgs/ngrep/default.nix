@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
       redistributable = true;
     };
     platforms = with lib.platforms; linux ++ darwin;
-    maintainers = [ ];
     mainProgram = "ngrep";
   };
 })

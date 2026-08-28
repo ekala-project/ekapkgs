@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Neural network inference framework";
     homepage = "https://github.com/Tencent/ncnn";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -111,7 +111,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "gnome-software";
     homepage = "https://apps.gnome.org/Software/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

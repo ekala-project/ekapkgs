@@ -27,7 +27,6 @@ buildGoModule {
     description = "Comprehensive Network Measurement Tool for TCP, UDP & ICMP";
     homepage = "https://github.com/microsoft/ethr";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "ethr";
   };
 }

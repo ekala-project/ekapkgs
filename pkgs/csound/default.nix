@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Sound design, audio synthesis, and signal processing system, providing facilities for music composition and performance on all major operating systems and platforms";
     homepage = "https://csound.com/";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

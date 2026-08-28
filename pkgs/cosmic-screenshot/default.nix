@@ -40,7 +40,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/pop-os/cosmic-screenshot";
     description = "Screenshot tool for the COSMIC Desktop Environment";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "cosmic-screenshot";
   };

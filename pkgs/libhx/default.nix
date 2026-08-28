@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
       and autoresizing, option and config file parsing, type checking casts and more.
     '';
     changelog = "https://codeberg.org/jengelh/libhx/src/branch/master/doc/changelog.rst";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = with lib.licenses; [
       gpl3

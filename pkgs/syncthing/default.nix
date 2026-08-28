@@ -89,7 +89,6 @@ buildGoModule (finalAttrs: {
     donationPage = "https://syncthing.net/donations/";
     changelog = "https://github.com/syncthing/syncthing/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     mainProgram = target;
     platforms = lib.platforms.unix;
   };

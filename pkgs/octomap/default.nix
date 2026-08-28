@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Probabilistic, flexible, and compact 3D mapping library for robotic systems";
     homepage = "https://octomap.github.io/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix ++ lib.platforms.windows;
   };
 })

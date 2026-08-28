@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library to load and write XISF format from PixInsight";
     homepage = "https://gitea.nouspiro.space/nou/libXISF";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

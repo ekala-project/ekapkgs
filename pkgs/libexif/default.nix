@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://libexif.github.io/";
     description = "Library to read and manipulate EXIF data in digital photographs";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

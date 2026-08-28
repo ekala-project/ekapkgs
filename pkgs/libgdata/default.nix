@@ -80,7 +80,6 @@ stdenv.mkDerivation rec {
     description = "GData API library";
     homepage = "https://gitlab.gnome.org/GNOME/libgdata";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

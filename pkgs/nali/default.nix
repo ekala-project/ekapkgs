@@ -42,7 +42,6 @@ buildGoModule (finalAttrs: {
     description = "Offline tool for querying IP geographic information and CDN provider";
     homepage = "https://github.com/zu1k/nali";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "nali";
   };
 })

@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Maratyszcza/FP16";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

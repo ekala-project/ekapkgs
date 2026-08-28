@@ -34,7 +34,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/nik-rev/countryfetch";
     changelog = "https://github.com/nik-rev/countryfetch/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "countryfetch";
   };
 })

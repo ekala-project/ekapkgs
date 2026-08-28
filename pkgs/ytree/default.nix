@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Curses-based file manager similar to DOS Xtree(TM)";
     license = lib.licenses.gpl2Plus;
     mainProgram = "ytree";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

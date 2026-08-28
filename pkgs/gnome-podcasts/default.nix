@@ -84,7 +84,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://apps.gnome.org/Podcasts/";
     changelog = "https://gitlab.gnome.org/World/podcasts/-/releases/${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

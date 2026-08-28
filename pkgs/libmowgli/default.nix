@@ -20,6 +20,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/atheme/libmowgli-2";
     license = lib.licenses.isc;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

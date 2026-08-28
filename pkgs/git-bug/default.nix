@@ -65,7 +65,6 @@ buildGoModule (finalAttrs: {
     description = "Distributed bug tracker embedded in Git";
     homepage = "https://github.com/git-bug/git-bug";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "git-bug";
   };
 })

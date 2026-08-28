@@ -51,7 +51,6 @@ let
       homepage = "https://github.com/Electrostatics/FETK";
       changelog = "https://github.com/Electrostatics/FETK/releases/tag/${finalAttrs.version}";
       license = lib.licenses.lgpl21Plus;
-      maintainers = [ ];
       platforms = lib.platforms.unix;
     };
   });
@@ -109,7 +108,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.poissonboltzmann.org/";
     changelog = "https://github.com/Electrostatics/apbs/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

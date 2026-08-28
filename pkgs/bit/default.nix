@@ -27,7 +27,6 @@ buildGoModule (finalAttrs: {
     description = "Command-line tool for git";
     homepage = "https://github.com/chriswalz/bit";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "bit";
   };
 })

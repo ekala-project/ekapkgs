@@ -44,6 +44,5 @@ buildGo126Module (finalAttrs: {
     description = "OpenTofu, Terraform, Terragrunt and Atmos version manager written in Go";
     homepage = "https://tofuutils.github.io/tenv";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

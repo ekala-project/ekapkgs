@@ -43,6 +43,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "JSON Web Token library for C++";
     homepage = "https://github.com/arun11299/cpp-jwt";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

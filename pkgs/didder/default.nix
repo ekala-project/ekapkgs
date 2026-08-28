@@ -33,7 +33,6 @@ buildGo126Module (finalAttrs: {
     description = "Extensive, fast, and accurate command-line image dithering tool";
     license = lib.licenses.gpl3;
     homepage = "https://github.com/makew0rld/didder";
-    maintainers = [ ];
     mainProgram = "didder";
   };
 })

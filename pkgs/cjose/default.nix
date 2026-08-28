@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/OpenIDC/cjose/blob/${finalAttrs.version}/CHANGELOG.md";
     description = "C library for Javascript Object Signing and Encryption. This is a maintained fork of the original project";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

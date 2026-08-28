@@ -39,7 +39,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/apernet/hysteria";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "hysteria";
   };
 })

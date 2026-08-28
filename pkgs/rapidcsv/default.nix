@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C++ CSV parser library";
     homepage = "https://github.com/d99kris/rapidcsv";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

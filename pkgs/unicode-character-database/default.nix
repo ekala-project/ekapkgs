@@ -34,7 +34,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Unicode Character Database";
     homepage = "https://www.unicode.org/";
     license = lib.licenses.unicode-dfs-2016;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -90,7 +90,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Most popular clone of the VI editor";
     homepage = "https://www.vim.org";
     license = lib.licenses.vim;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "vim";
   };

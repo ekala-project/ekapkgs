@@ -80,6 +80,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/World/AbiWord/";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

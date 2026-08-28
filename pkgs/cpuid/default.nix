@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Linux tool to dump x86 CPUID information about the CPU";
     homepage = "http://etallen.com/cpuid.html";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = [
       "i686-linux"
       "x86_64-linux"

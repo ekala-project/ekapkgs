@@ -48,7 +48,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Native, blazing-fast screenshot tool for wlroots based compositors such as sway and river";
     homepage = "https://github.com/waycrate/wayshot";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "wayshot";
   };

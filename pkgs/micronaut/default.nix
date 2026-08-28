@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://micronaut.io/";
     license = lib.licenses.asl20;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "mn";
   };
 })

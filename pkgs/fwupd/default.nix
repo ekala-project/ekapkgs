@@ -238,7 +238,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://fwupd.org/";
     changelog = "https://github.com/fwupd/fwupd/releases/tag/${finalAttrs.version}";
-    maintainers = [ ];
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
   };

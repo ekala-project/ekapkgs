@@ -43,7 +43,6 @@ stdenv.mkDerivation rec {
     homepage = "https://mediaarea.net/";
     license = licenses.bsd2;
     platforms = platforms.unix;
-    maintainers = [ ];
     mainProgram = "mediainfo";
   };
 }

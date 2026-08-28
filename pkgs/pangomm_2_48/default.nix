@@ -52,7 +52,6 @@ stdenv.mkDerivation rec {
     '';
     homepage = "https://www.pango.org/";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

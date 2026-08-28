@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
       - Easy customized color scheme definition.
     '';
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

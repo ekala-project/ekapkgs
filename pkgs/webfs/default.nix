@@ -34,7 +34,6 @@ stdenv.mkDerivation {
     homepage = "http://linux.bytesex.org/misc/webfs.html";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "webfsd";
   };
 }

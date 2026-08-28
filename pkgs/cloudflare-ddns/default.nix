@@ -29,7 +29,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/favonia/cloudflare-ddns";
     mainProgram = "ddns";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix ++ lib.platforms.darwin;
   };
 })

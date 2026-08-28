@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Small Jabber console client";
     mainProgram = "mcabber";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
     downloadPage = "http://mcabber.com/files/";
   };

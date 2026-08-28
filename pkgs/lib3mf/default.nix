@@ -100,7 +100,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Reference implementation of the 3D Manufacturing Format file standard";
     homepage = "https://3mf.io/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

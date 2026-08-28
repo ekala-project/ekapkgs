@@ -77,6 +77,5 @@ buildGo126Module (finalAttrs: {
     description = "Security health metrics for Open Source";
     mainProgram = "scorecard";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

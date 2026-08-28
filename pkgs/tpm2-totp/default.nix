@@ -47,6 +47,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3;
     mainProgram = "tpm2-totp";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

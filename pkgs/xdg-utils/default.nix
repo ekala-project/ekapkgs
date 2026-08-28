@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.freedesktop.org/wiki/Software/xdg-utils/";
     description = "Set of command line tools that assist applications with a variety of desktop integration tasks";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -37,6 +37,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Exports a gssapi interface which calls other random gssapi libraries";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

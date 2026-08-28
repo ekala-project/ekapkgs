@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
       power up your ship and get special powers, helpers and weapons.
     '';
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     broken = stdenv.hostPlatform.isDarwin;
   };

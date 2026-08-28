@@ -26,7 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Native cross platform full feature terminal based sequence editor for git interactive rebase";
     changelog = "https://github.com/MitMaro/git-interactive-rebase-tool/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "interactive-rebase-tool";
   };
 })

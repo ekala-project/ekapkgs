@@ -24,6 +24,5 @@ stdenv.mkDerivation rec {
     homepage = "https://tango.freedesktop.org/Standard_Icon_Naming_Specification";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2;
-    maintainers = [ ];
   };
 }

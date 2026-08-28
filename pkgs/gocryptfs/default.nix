@@ -61,7 +61,6 @@ buildGo126Module (finalAttrs: {
     description = "Encrypted overlay filesystem written in Go";
     license = lib.licenses.mit;
     homepage = "https://nuetzlich.net/gocryptfs/";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -64,6 +64,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://openlab.ring.gr.jp/efont/unicode/";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

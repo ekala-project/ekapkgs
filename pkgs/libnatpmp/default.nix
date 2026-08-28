@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "NAT-PMP client";
     homepage = "http://miniupnp.free.fr/libnatpmp.html";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "natpmpc";
     platforms = lib.platforms.all;
   };

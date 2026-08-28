@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.gpl2Plus;
     mainProgram = "fastjar";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

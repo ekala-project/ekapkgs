@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Only;
     changelog = "https://github.com/proxytunnel/proxytunnel/raw/${finalAttrs.src.tag}/CHANGES";
-    maintainers = [ ];
   };
 })

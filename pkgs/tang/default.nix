@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Server for binding data to network presence";
     homepage = "https://github.com/latchset/tang";
     changelog = "https://github.com/latchset/tang/releases/tag/v${finalAttrs.version}";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     mainProgram = "tangd";
   };

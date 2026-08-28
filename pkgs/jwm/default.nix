@@ -83,7 +83,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Joe's Window Manager is a light-weight X11 window manager";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "jwm";
   };
 })

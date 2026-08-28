@@ -115,7 +115,6 @@ stdenv.mkDerivation rec {
     mainProgram = "gnome-photos";
     homepage = "https://gitlab.gnome.org/GNOME/gnome-photos";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

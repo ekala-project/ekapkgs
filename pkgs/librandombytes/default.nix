@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
       mit
       mit0
     ];
-    maintainers = [ ];
     platforms = [
       "i686-linux"
       "x86_64-linux"

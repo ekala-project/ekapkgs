@@ -40,6 +40,5 @@ stdenv.mkDerivation rec {
     homepage = "http://liboauth.sourceforge.net/";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

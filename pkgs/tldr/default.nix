@@ -47,7 +47,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Simplified and community-driven man pages";
     homepage = "https://tldr.sh";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "tldr";
   };
 })

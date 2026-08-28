@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Postgres Pager";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "pspg";
   };
 })

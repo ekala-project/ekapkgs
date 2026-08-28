@@ -32,6 +32,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://github.com/badaix/aixlog";
     changelog = "https://github.com/badaix/aixlog/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

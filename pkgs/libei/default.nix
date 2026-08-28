@@ -69,7 +69,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "ei-debug-events";
     homepage = "https://gitlab.freedesktop.org/libinput/libei";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

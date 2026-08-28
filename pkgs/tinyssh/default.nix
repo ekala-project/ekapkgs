@@ -25,6 +25,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/janmojzis/tinyssh/releases/tag/${finalAttrs.version}";
     license = lib.licenses.cc0;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

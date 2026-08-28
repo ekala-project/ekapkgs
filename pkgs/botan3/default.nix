@@ -86,7 +86,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Cryptographic algorithms library";
     homepage = "https://botan.randombit.net";
     mainProgram = "botan";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.bsd2;
   };

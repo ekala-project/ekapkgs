@@ -21,7 +21,6 @@ buildGo126Module (finalAttrs: {
   meta = {
     description = "Convert a tar archive to an ext4 image";
     homepage = "https://github.com/microsoft/hcsshim";
-    maintainers = [ ];
     license = lib.licenses.mit;
     mainProgram = "tar2ext4";
   };

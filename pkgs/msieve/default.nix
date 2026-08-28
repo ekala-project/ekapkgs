@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "msieve";
     license = lib.licenses.publicDomain;
     homepage = "http://msieve.sourceforge.net/";
-    maintainers = [ ];
     platforms = [ "x86_64-linux" ] ++ lib.platforms.darwin;
   };
 })

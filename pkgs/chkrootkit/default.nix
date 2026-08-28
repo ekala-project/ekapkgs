@@ -42,7 +42,6 @@ stdenv.mkDerivation rec {
     description = "Locally checks for signs of a rootkit";
     homepage = "https://www.chkrootkit.org/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

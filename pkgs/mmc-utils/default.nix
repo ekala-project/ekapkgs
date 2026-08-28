@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "mmc";
     homepage = "https://git.kernel.org/pub/scm/utils/mmc/mmc-utils.git/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -59,7 +59,6 @@ let
         gpl3Only
         asl20
       ];
-      maintainers = [ ];
     };
   });
 in

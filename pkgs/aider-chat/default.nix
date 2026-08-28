@@ -206,7 +206,6 @@ python3Packages.buildPythonApplication {
     homepage = "https://github.com/Aider-AI/aider";
     changelog = "https://github.com/Aider-AI/aider/blob/v0.86.1/HISTORY.md";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "aider";
   };
 }

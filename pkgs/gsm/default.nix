@@ -61,6 +61,5 @@ stdenv.mkDerivation rec {
     homepage = "https://www.quut.com/gsm/";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

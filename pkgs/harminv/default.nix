@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Harmonic inversion algorithm of Mandelshtam: decompose signal into sum of decaying sinusoids";
     homepage = "https://github.com/NanoComp/harminv";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

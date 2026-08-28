@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/quiet/libcorrect";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

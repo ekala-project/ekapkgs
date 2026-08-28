@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.netsurf-browser.org/";
     description = "UTF8 Processing library for netsurf browser";
     license = lib.licenses.mit;
-    maintainers = [ ];
     inherit (netsurf-buildsystem.meta) platforms;
   };
 })

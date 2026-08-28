@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Display serial port modem status lines";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "statserial";
   };
 })

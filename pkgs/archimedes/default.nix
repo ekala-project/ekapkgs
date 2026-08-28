@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "archimedes";
     homepage = "https://www.gnu.org/software/archimedes";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
   };
 })

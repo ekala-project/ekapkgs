@@ -55,7 +55,6 @@ buildGoModule (finalAttrs: {
     description = "Package manager for kubectl plugins";
     mainProgram = "krew";
     homepage = "https://github.com/kubernetes-sigs/krew";
-    maintainers = [ ];
     license = lib.licenses.asl20;
   };
 })

@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     description = "Block layer IO tracing mechanism";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

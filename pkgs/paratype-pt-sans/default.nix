@@ -34,7 +34,6 @@ stdenvNoCC.mkDerivation {
     description = "Open Paratype font";
     homepage = "https://www.paratype.ru/catalog/font/pt/pt-sans";
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

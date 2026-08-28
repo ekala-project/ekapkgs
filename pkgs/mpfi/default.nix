@@ -46,7 +46,6 @@ stdenv.mkDerivation rec {
     description = "Multiple precision interval arithmetic library based on MPFR";
     homepage = "http://perso.ens-lyon.fr/nathalie.revol/software.html";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

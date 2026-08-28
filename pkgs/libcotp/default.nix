@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/paolostivanin/libcotp";
     changelog = "https://github.com/paolostivanin/libcotp/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

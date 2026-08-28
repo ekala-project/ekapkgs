@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://www.spice-space.org/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

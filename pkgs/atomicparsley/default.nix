@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/wez/atomicparsley";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "AtomicParsley";
   };
 })

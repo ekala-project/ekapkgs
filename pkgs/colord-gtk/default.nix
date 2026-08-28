@@ -68,6 +68,5 @@ stdenv.mkDerivation rec {
     license = licenses.lgpl21Plus;
     platforms = platforms.linux;
     mainProgram = "cd-convert";
-    maintainers = [ ];
   };
 }

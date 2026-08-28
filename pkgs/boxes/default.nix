@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "boxes";
     homepage = "https://boxes.thomasjensen.com";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -70,6 +70,5 @@ stdenv.mkDerivation {
     homepage = "https://launchpad.net/libunity";
     license = lib.licenses.lgpl3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

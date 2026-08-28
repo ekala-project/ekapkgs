@@ -81,7 +81,6 @@ stdenv.mkDerivation (finalAttrs: {
       On linux, the data can be placed in ~/.local/share/fheroes2 folder.
     '';
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

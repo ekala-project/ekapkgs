@@ -45,7 +45,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/josegonzalez/python-github-backup";
     changelog = "https://github.com/josegonzalez/python-github-backup/blob/${finalAttrs.src.tag}/CHANGES.rst";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "github-backup";
   };
 })

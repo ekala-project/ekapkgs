@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://w-calc.sourceforge.net";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "wcalc";
   };
 })

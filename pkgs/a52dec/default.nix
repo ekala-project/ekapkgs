@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "ATSC A/52 stream decoder";
     homepage = "https://liba52.sourceforge.io/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "a52dec";
     platforms = lib.platforms.unix;
   };

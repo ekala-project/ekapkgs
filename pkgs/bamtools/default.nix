@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/pezmaster31/bamtools";
     changelog = "https://github.com/pezmaster31/bamtools/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

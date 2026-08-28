@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Reimplementation of OpenVR, translating calls to OpenXR";
     homepage = "https://gitlab.com/znixian/OpenOVR";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     # This can realistically only work on systems that support OpenXR Loader
     inherit (openxr-loader.meta) platforms;
   };

@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     inherit (finalAttrs.src.meta) homepage;
     changelog = "${finalAttrs.src.meta.homepage}/blob/${finalAttrs.src.rev}/ChangeLog";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

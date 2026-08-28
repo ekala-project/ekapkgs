@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Protected multinode virtual network";
     homepage = "http://software.schmorp.de/pkg/gvpe.html";
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ freebsd;
     license = lib.licenses.gpl2Plus;
   };

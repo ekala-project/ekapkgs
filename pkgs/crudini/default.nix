@@ -54,7 +54,6 @@ python3Packages.buildPythonApplication rec {
     description = "Utility for manipulating ini files";
     homepage = "https://www.pixelbeat.org/programs/crudini/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "crudini";
   };
 }

@@ -72,7 +72,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://apps.gnome.org/Clocks/";
     description = "Simple and elegant clock application for GNOME";
     mainProgram = "gnome-clocks";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
   };

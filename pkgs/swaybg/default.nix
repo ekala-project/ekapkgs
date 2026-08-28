@@ -59,6 +59,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     mainProgram = "swaybg";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

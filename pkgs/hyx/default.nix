@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "hyx";
     homepage = "https://yx7.cc/code/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

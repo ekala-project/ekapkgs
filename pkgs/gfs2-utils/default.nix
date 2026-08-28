@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://pagure.io/gfs2-utils";
     description = "Tools for creating, checking and working with gfs2 filesystems";
-    maintainers = [ ];
     license = [
       lib.licenses.gpl2Plus
       lib.licenses.lgpl2Plus

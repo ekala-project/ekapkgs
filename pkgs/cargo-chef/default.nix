@@ -20,6 +20,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "cargo-chef";
     homepage = "https://github.com/LukeMathWalker/cargo-chef";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

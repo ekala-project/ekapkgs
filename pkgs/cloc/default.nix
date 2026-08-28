@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/AlDanial/cloc";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "cloc";
   };
 })

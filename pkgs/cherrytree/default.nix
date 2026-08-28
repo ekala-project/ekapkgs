@@ -67,7 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.giuspen.com/cherrytree";
     changelog = "https://raw.githubusercontent.com/giuspen/cherrytree/v${finalAttrs.version}/changelog.txt";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

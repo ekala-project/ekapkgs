@@ -84,6 +84,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Map arbitrary files as block devices over the network";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -99,6 +99,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "powerprofilesctl";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for large linear classification";
     homepage = "https://www.csie.ntu.edu.tw/~cjlin/liblinear/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     badPlatforms = [ lib.systems.inspect.platformPatterns.isStatic ];
   };

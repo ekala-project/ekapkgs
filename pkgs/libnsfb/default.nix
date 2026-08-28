@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.netsurf-browser.org/projects/libnsfb/";
     description = "Netsurf framebuffer abstraction library";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

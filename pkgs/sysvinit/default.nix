@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Utilities related to booting and shutdown";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

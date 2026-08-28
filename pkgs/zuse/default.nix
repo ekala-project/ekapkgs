@@ -27,7 +27,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/babycommando/zuse";
     changelog = "https://github.com/babycommando/zuse/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "zuse";
   };
 })

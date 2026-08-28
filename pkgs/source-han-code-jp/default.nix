@@ -23,7 +23,6 @@ stdenvNoCC.mkDerivation rec {
 
   meta = {
     description = "Monospaced Latin font suitable for coding";
-    maintainers = [ ];
     platforms = with lib.platforms; all;
     homepage = "https://blogs.adobe.com/CCJKType/2015/06/source-han-code-jp.html";
     license = lib.licenses.ofl;

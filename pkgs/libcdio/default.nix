@@ -87,7 +87,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for OS-independent CD-ROM and CD image access";
     homepage = "https://www.gnu.org/software/libcdio/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

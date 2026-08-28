@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "GUI for chess engines";
     mainProgram = "xboard";
     homepage = "https://www.gnu.org/software/xboard/";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl3Plus;
   };

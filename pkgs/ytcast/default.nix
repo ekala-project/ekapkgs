@@ -22,7 +22,6 @@ buildGo126Module (finalAttrs: {
     description = "Tool to cast YouTube videos from the command-line";
     homepage = "https://github.com/MarcoLucidi01/ytcast";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "ytcast";
   };
 })

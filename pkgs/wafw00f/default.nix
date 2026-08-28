@@ -33,7 +33,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/EnableSecurity/wafw00f";
     changelog = "https://github.com/EnableSecurity/wafw00f/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "wafw00f";
   };
 })

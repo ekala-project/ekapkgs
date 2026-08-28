@@ -20,7 +20,6 @@ stdenv.mkDerivation rec {
     homepage = "https://rdfind.pauldreik.se/";
     description = "Removes or hardlinks duplicate files very swiftly";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "rdfind";
   };

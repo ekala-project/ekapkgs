@@ -35,6 +35,5 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/mackyle/topgit";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

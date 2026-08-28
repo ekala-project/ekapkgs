@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
       gpl2Plus
     ];
     mainProgram = "xxhsum";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

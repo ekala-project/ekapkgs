@@ -120,7 +120,6 @@ stdenv.mkDerivation rec {
       EAN-13/UPC-A, UPC-E, EAN-8, Code 128, Code 39, Interleaved 2 of 5 and QR
       Code.
     '';
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.lgpl21;
     homepage = "https://github.com/mchehab/zbar";

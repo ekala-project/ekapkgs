@@ -71,6 +71,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/rpm-software-management/dnf5/releases/tag/${finalAttrs.version}";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

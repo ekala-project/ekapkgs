@@ -174,7 +174,6 @@ stdenv.mkDerivation (finalAttrs: {
       gpl3
       cc-by-30
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

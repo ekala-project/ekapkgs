@@ -33,7 +33,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/go-swagger/go-swagger";
     changelog = "https://github.com/go-swagger/go-swagger/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "swagger";
   };
 })

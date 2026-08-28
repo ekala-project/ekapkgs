@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Reference implementation of the Dirfile Standards";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     homepage = "https://getdata.sourceforge.net/";
   };
 })

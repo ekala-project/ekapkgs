@@ -82,7 +82,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.gnome.org/GNOME/sushi/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
     description = "Quick previewer for Nautilus";
     mainProgram = "sushi";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

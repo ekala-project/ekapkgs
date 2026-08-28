@@ -63,7 +63,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/libimobiledevice/libimobiledevice";
     description = "Software library that talks the protocols to support iPhone, iPod Touch and iPad devices on Linux";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

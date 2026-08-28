@@ -40,6 +40,5 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
     description = "Official implementation library for the hypr config language";
     license = lib.licenses.lgpl3Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

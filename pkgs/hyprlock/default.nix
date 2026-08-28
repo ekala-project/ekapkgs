@@ -74,7 +74,6 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/hyprwm/hyprlock";
     changelog = "https://github.com/hyprwm/hyprlock/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "hyprlock";
     platforms = lib.platforms.linux;
   };

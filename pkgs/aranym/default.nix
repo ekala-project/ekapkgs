@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.gpl2Plus;
     mainProgram = "aranym";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     broken = stdenv.hostPlatform.isDarwin || stdenv.hostPlatform.isAarch64;
   };

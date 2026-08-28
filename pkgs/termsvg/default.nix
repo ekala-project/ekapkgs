@@ -29,7 +29,6 @@ buildGo126Module (finalAttrs: {
     description = "Record, share and export your terminal as a animated SVG image";
     homepage = "https://github.com/MrMarble/termsvg";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "termsvg";
   };
 })

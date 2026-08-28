@@ -32,7 +32,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Find unused dependencies in Cargo.toml";
     homepage = "https://github.com/est31/cargo-udeps";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "cargo-udeps";
   };
 })

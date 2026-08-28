@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Set of tools for joysticks and serial peripherals";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
 
     longDescription = ''
       The included tools are:

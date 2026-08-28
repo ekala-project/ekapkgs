@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Generate filesystem images from directory trees";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "genimage";
   };
 })

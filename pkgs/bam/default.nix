@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Yet another build manager";
     homepage = "https://github.com/matricks/bam";
     mainProgram = "bam";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.zlib;
     downloadPage = "http://matricks.github.com/bam/";

@@ -28,7 +28,6 @@ buildGo126Module {
     description = "Yet Another JSON Schema Validator";
     homepage = "https://github.com/neilpa/yajsv";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "yajsv";
   };
 }

@@ -86,7 +86,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Text-based window manager and terminal multiplexer";
     license = lib.licenses.gpl3Plus;
     mainProgram = "byobu";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

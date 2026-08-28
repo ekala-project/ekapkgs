@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "esh";
     homepage = "https://github.com/jirutka/esh";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

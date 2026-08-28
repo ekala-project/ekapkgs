@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Lightweight text editor written in Lua";
     homepage = "https://github.com/lite-xl/lite-xl";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "lite-xl";
   };

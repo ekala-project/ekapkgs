@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "WebM file parser";
     homepage = "https://www.webmproject.org/code/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

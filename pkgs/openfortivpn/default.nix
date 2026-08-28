@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Client for PPP+SSL VPN tunnel services";
     homepage = "https://github.com/adrienverge/openfortivpn";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     mainProgram = "openfortivpn";
   };

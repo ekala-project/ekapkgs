@@ -97,6 +97,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Authoritative only, high performance, simple and open source name server";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

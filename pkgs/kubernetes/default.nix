@@ -94,7 +94,6 @@ buildGo126Module (finalAttrs: {
     description = "Production-Grade Container Scheduling and Management";
     license = lib.licenses.asl20;
     homepage = "https://kubernetes.io";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

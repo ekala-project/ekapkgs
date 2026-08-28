@@ -38,7 +38,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/tarkah/tickrs";
     changelog = "https://github.com/tarkah/tickrs/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "tickrs";
   };
 })

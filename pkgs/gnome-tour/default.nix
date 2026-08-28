@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.gnome.org/GNOME/gnome-tour/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
     description = "GNOME Greeter & Tour";
     mainProgram = "gnome-tour";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
   };

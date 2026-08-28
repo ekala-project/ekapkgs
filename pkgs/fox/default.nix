@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "http://fox-toolkit.org";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

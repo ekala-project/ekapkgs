@@ -42,7 +42,6 @@ stdenv.mkDerivation {
   meta = {
     description = "Tool that injects data into wireless networks";
     homepage = "https://github.com/aircrack-ng/mdk4";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     mainProgram = "mdk4";
   };

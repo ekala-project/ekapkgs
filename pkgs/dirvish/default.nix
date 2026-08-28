@@ -84,6 +84,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://dirvish.org/";
     license = lib.licenses.osl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

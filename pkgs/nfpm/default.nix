@@ -45,7 +45,6 @@ buildGo126Module (finalAttrs: {
     description = "Simple deb and rpm packager written in Go";
     homepage = "https://github.com/goreleaser/nfpm";
     changelog = "https://github.com/goreleaser/nfpm/releases/tag/v${finalAttrs.version}";
-    maintainers = [ ];
     license = lib.licenses.mit;
     mainProgram = "nfpm";
   };

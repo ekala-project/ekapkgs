@@ -27,6 +27,5 @@ stdenv.mkDerivation rec {
     description = "Mail filter that classifies mail as spam or ham by statistical analysis";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

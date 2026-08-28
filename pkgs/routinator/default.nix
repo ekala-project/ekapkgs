@@ -22,7 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/NLnetLabs/routinator";
     changelog = "https://github.com/NLnetLabs/routinator/blob/v${finalAttrs.version}/Changelog.md";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "routinator";
   };
 

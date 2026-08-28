@@ -33,6 +33,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://www.babelstone.co.uk/Fonts/Han.html";
     license = lib.licenses.arphicpl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

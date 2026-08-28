@@ -42,6 +42,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/lilydjwg/pssh/blob/${finalAttrs.src.tag}/ChangeLog";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
   };
 })

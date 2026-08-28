@@ -43,7 +43,6 @@ tcl.mkTclDerivation rec {
     description = "Interactive shell for the TCL programming language based on editline";
     homepage = "https://homepages.laas.fr/mallet/soft/shell/eltclsh";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

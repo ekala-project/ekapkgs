@@ -29,7 +29,6 @@ python3Packages.buildPythonApplication rec {
     description = "Terminal session recorder and the best companion of asciinema.org";
     homepage = "https://asciinema.org/";
     license = with lib.licenses; [ gpl3Plus ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "asciinema";
   };

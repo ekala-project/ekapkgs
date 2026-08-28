@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/EmbeddedSynth/sonivox";
     description = "MIDI synthesizer library";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

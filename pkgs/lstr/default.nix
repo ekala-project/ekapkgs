@@ -34,7 +34,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/bgreenwell/lstr";
     changelog = "https://github.com/bgreenwell/lstr/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "lstr";
   };
 })

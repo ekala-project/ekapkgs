@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.com/esr/ascii/-/blob/${finalAttrs.version}/NEWS.adoc";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

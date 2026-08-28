@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
       x11
       hpndDocSell
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

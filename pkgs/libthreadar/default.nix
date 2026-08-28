@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
       Libthreadar is a C++ library providing a small set of C++ classes to manipulate
       threads in a very simple and efficient way from your C++ code.
     '';
-    maintainers = [ ];
     license = lib.licenses.lgpl3;
     platforms = lib.platforms.unix;
   };

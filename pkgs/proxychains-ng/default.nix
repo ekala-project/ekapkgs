@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Preloader which hooks calls to sockets in dynamically linked programs and redirects it through one or more socks/http proxies";
     homepage = "https://github.com/rofl0r/proxychains-ng";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "proxychains4";
   };

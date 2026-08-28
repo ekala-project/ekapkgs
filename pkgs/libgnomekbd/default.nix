@@ -50,7 +50,6 @@ stdenv.mkDerivation rec {
   meta = {
     description = "Keyboard management library";
     mainProgram = "gkbd-keyboard-display";
-    maintainers = [ ];
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
   };

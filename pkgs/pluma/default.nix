@@ -78,6 +78,5 @@ stdenv.mkDerivation (finalAttrs: {
       fdl11Plus
     ];
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

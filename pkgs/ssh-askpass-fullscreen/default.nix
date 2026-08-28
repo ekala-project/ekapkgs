@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Small, fullscreen SSH askpass GUI using GTK+2";
     license = lib.licenses.gpl2Plus;
     mainProgram = "ssh-askpass-fullscreen";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

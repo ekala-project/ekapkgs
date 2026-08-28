@@ -21,6 +21,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://ta-lib.org/";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -36,6 +36,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://github.com/PapirusDevelopmentTeam/papirus-icon-theme";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

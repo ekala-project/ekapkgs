@@ -194,6 +194,5 @@ stdenv.mkDerivation rec {
     mainProgram = "darktable";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

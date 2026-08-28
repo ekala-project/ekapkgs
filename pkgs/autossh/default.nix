@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Automatically restart SSH sessions and tunnels";
     license = lib.licenses.bsd1;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "autossh";
   };
 })

@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C++ implementation of Lie Groups using Eigen";
     homepage = "https://github.com/strasdat/Sophus";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

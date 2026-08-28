@@ -36,7 +36,6 @@ buildGoModule (finalAttrs: {
     description = "Easily rename multiple files using your text editor";
     license = lib.licenses.mit;
     homepage = "https://github.com/laurent22/massren";
-    maintainers = [ ];
     mainProgram = "massren";
   };
 })

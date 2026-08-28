@@ -39,6 +39,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Virtual filesystem that allows browsing of compressed files";
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 })

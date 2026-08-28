@@ -28,6 +28,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "nomad-driver-podman";
     platforms = lib.platforms.linux;
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 })

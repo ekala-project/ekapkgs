@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/apt-mirror/apt-mirror";
     changelog = "https://github.com/apt-mirror/apt-mirror/blob/${finalAttrs.src.rev}/CHANGELOG";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "apt-mirror";
     platforms = lib.platforms.all;
   };

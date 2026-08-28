@@ -40,6 +40,5 @@ buildGo126Module (finalAttrs: {
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
     teams = [ ];
-    maintainers = [ ];
   };
 })

@@ -26,7 +26,6 @@ buildGo126Module (finalAttrs: {
     description = "Vulnerability scanner for the Terrapin attack";
     homepage = "https://github.com/RUB-NDS/Terrapin-Scanner";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "Terrapin-Scanner";
   };
 })

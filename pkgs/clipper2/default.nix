@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/AngusJohnson/Clipper2";
     license = lib.licenses.boost;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -234,6 +234,5 @@ stdenv.mkDerivation (finalAttrs: {
       zlib
     ];
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

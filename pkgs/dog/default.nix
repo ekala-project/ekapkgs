@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://lwn.net/Articles/421072/";
     description = "'cat' replacement";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "dog";
   };

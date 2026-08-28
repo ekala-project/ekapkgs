@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/linux-msm/qbootctl";
     description = "Qualcomm bootctl HAL for Linux";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "qbootctl";
   };

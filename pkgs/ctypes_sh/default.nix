@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "ctypes.sh";
     homepage = "https://github.com/taviso/ctypes.sh";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

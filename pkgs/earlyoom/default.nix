@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Early OOM Daemon for Linux";
     license = lib.licenses.mit;
     mainProgram = "earlyoom";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

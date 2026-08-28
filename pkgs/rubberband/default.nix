@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "High quality software library for audio time-stretching and pitch-shifting";
     homepage = "https://breakfastquay.com/rubberband/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

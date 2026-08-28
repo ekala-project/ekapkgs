@@ -46,6 +46,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/mitsuhiko/insta";
     changelog = "https://github.com/mitsuhiko/insta/blob/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

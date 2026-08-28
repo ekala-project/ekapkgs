@@ -75,6 +75,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.enlightenment.org";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

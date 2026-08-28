@@ -141,6 +141,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.lirc.org/";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

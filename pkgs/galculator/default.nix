@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "GTK algebraic and RPN calculator";
     license = lib.licenses.gpl2Plus;
     mainProgram = "galculator";
-    maintainers = [ ];
     inherit (gtk3.meta) platforms;
   };
 })

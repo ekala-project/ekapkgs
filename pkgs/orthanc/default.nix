@@ -110,7 +110,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.orthanc-server.com/";
     license = lib.licenses.gpl3Plus;
     mainProgram = "Orthanc";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

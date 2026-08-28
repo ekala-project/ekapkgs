@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://git.universe-factory.net/libuecc";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

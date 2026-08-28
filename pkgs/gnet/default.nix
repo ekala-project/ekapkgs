@@ -38,6 +38,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/Archive/gnet";
     license = lib.licenses.lgpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

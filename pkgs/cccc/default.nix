@@ -44,6 +44,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/sarnold/cccc";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

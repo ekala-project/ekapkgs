@@ -32,7 +32,6 @@ rustPlatform.buildRustPackage rec {
     description = "Browser automation framework and ecosystem";
     homepage = "https://github.com/SeleniumHQ/selenium";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "selenium-manager";
     platforms = lib.platforms.all;
   };

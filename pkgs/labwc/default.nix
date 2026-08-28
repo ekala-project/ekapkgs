@@ -103,7 +103,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/labwc/labwc/blob/master/NEWS.md";
     license = lib.licenses.gpl2Plus;
     mainProgram = "labwc";
-    maintainers = [ ];
     inherit (wayland.meta) platforms;
   };
 })

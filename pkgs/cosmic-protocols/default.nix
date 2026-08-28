@@ -29,7 +29,6 @@ stdenv.mkDerivation {
       mit
       gpl3Only
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

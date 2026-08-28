@@ -70,6 +70,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     mainProgram = "ugit";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

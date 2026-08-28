@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "SCIntilla based Text Editor";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "SciTE";
   };
 })

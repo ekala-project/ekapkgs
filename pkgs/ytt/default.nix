@@ -51,6 +51,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "ytt";
     homepage = "https://get-ytt.io";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

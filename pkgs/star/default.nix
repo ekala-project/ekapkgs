@@ -57,6 +57,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/alexdobin/STAR";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

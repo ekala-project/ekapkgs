@@ -39,6 +39,5 @@ stdenv.mkDerivation {
       bsdOriginalUC
     ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

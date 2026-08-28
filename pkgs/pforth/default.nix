@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "pforth";
     changelog = "https://github.com/philburk/pforth/blob/v${finalAttrs.version}/RELEASES.md";
     license = lib.licenses.bsd0;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

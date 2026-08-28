@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
       "https://wiki.openstreetmap.org/wiki/osmfilter"
       "https://wiki.openstreetmap.org/wiki/osmupdate"
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.agpl3Only;
   };

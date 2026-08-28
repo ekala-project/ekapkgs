@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/tgraf/bmon";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "bmon";
   };
 })

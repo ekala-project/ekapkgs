@@ -49,7 +49,6 @@ stdenv.mkDerivation rec {
     homepage = "https://gitlab.gnome.org/GNOME/gnote";
     description = "Note taking application";
     mainProgram = "gnote";
-    maintainers = [ ];
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.linux;
   };

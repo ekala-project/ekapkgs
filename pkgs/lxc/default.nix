@@ -81,6 +81,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Userspace tools for Linux Containers, a lightweight virtualization system";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

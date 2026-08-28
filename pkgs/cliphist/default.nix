@@ -24,7 +24,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/sentriz/cliphist";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "cliphist";
   };
 })

@@ -74,7 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/GNOME/simple-scan";
     changelog = "https://gitlab.gnome.org/GNOME/simple-scan/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

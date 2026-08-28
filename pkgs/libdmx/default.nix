@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libdmx";
     license = lib.licenses.mit;
-    maintainers = [ ];
     pkgConfigModules = [ "dmx" ];
     platforms = lib.platforms.unix;
   };

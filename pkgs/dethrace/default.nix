@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Reverse engineering the 1997 game Carmageddon";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "dethrace";
   };
 })

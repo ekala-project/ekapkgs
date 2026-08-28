@@ -23,7 +23,6 @@ buildGoModule (finalAttrs: {
     description = "Allows you to wait for a port or a service to enter the requested state";
     homepage = "https://github.com/wait4x/wait4x";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "wait4x";
   };
 })

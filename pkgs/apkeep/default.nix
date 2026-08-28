@@ -34,7 +34,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/EFForg/apkeep";
     changelog = "https://github.com/EFForg/apkeep/blob/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "apkeep";
   };
 })

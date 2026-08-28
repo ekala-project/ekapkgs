@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "File format designed for highly efficient deltas while maintaining good compression";
     license = lib.licenses.bsd2;
     mainProgram = "zck";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://sg.danny.cz/sg/p/sg3_utils.ChangeLog";
     description = "Utilities that send SCSI commands to devices";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     license = with lib.licenses; [
       bsd2
       gpl2Plus

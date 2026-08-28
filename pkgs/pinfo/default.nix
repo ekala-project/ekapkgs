@@ -60,7 +60,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/baszoetekouw/pinfo";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "pinfo";
   };
 }

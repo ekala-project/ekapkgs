@@ -47,6 +47,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     '';
     homepage = "https://github.com/CycloneDX/cyclonedx-rust-cargo";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

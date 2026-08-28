@@ -36,6 +36,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/aquasecurity/tfsec";
     changelog = "https://github.com/aquasecurity/tfsec/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

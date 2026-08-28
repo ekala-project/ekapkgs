@@ -36,6 +36,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://revive.run";
     downloadPage = "https://github.com/mgechev/revive";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

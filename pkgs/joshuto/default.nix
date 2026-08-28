@@ -33,7 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/kamiyaa/joshuto";
     changelog = "https://github.com/kamiyaa/joshuto/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
     mainProgram = "joshuto";
   };
 })

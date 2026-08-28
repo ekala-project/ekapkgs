@@ -51,7 +51,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/dooblem/bsync";
     description = "Bidirectional Synchronization using Rsync";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "bsync";
   };

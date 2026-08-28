@@ -32,7 +32,6 @@ stdenv.mkDerivation rec {
     mainProgram = "openjade";
     license = lib.licenses.mit;
     homepage = "https://openjade.sourceforge.net/";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/n0la/rcon";
     description = "Source RCON client for command line";
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
     license = lib.licenses.bsd2;
     mainProgram = "rcon";

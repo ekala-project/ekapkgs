@@ -26,6 +26,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.tslib.org/";
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

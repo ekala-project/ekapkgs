@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "spectre-meltdown-checker";
     homepage = "https://github.com/speed47/spectre-meltdown-checker";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/laurikari/tre/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd2;
     mainProgram = "agrep";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

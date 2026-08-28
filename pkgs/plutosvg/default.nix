@@ -51,6 +51,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/sammycage/plutosvg/releases/tag/${finalAttrs.src.tag}";
     description = "Tiny SVG rendering library in C";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

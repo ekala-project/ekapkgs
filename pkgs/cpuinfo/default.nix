@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/pytorch/cpuinfo";
     license = lib.licenses.bsd2;
     mainProgram = "cpu-info";
-    maintainers = [ ];
     pkgConfigModules = [ "libcpuinfo" ];
     # https://github.com/pytorch/cpuinfo/blob/ea6b9f1bb6e1001d8b21574d5bc78ddef62e499d/CMakeLists.txt#L98
     platforms = lib.platforms.x86 ++ lib.platforms.aarch ++ lib.platforms.riscv;

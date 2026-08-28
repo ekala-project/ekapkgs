@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Rendering library for Kate streams using Pango and Cairo";
     platforms = lib.platforms.unix;
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 })

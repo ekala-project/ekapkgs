@@ -133,7 +133,6 @@ stdenv.mkDerivation rec {
       gpl2Plus
       mpl20
     ];
-    maintainers = [ ];
     mainProgram = "ipsec";
   };
 }

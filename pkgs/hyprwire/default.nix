@@ -36,7 +36,6 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/hyprwm/hyprwire";
     description = "A fast and consistent wire protocol for IPC";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "hyprwire";
   };

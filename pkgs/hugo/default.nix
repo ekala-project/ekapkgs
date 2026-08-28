@@ -74,6 +74,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://gohugo.io";
     license = lib.licenses.asl20;
     mainProgram = "hugo";
-    maintainers = [ ];
   };
 })

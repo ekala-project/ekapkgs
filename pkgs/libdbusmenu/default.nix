@@ -80,7 +80,6 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl21
       lgpl3
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

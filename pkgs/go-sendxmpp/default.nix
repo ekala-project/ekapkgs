@@ -26,7 +26,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://salsa.debian.org/mdosch/go-sendxmpp";
     changelog = "https://salsa.debian.org/mdosch/go-sendxmpp/-/releases/v${finalAttrs.version}";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "go-sendxmpp";
   };
 })

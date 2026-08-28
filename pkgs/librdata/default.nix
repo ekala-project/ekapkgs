@@ -26,7 +26,6 @@ stdenv.mkDerivation {
     description = "Read and write R data frames from C";
     homepage = "https://github.com/WizardMac/librdata";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

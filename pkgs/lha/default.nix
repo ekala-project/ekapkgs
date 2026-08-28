@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Archiver and compressor using the LZSS and Huffman encoding compression algorithms";
     homepage = "https://github.com/jca02266/lha";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     # Some of the original LHa code has been rewritten and the current author
     # considers adopting a "true" free and open source license for it.
     # However, old code is still covered by the original LHa license, which is

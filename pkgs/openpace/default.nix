@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/frankmorgner/openpace";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     broken = !stdenv.buildPlatform.canExecute stdenv.hostPlatform; # help2man
   };
 })

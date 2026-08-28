@@ -74,7 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Graphics API Capture and Replay Tools";
     homepage = "https://github.com/LunarG/gfxreconstruct/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

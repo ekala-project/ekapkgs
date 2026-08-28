@@ -33,7 +33,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       Medium, and Bold.
     '';
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

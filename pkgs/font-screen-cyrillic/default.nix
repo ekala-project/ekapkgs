@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Screen Cyrillic pcf font";
     homepage = "https://gitlab.freedesktop.org/xorg/font/screen-cyrillic";
     license = lib.licenses.cronyx;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

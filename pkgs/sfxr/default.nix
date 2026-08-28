@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Videogame sound effect generator";
     mainProgram = "sfxr";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

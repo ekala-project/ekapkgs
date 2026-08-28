@@ -27,7 +27,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/hueristiq/xsubfind3r";
     changelog = "https://github.com/hueristiq/xsubfind3r/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "xsubfind3r";
   };
 })

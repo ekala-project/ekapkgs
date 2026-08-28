@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
       R5RS-derived document syntax.
     '';
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = guile.meta.platforms;
   };
 })

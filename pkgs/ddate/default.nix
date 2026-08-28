@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/bo0ts/ddate";
     description = "Discordian version of the date program";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "ddate";
   };

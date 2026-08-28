@@ -58,6 +58,5 @@ buildGo126Module rec {
     changelog = "https://github.com/smallstep/certificates/releases/tag/v${version}";
     license = lib.licenses.asl20;
     mainProgram = "step-ca";
-    maintainers = [ ];
   };
 }

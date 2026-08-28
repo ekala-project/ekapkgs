@@ -79,7 +79,6 @@ stdenv.mkDerivation (finalAttrs: {
       zlib
     ];
     mainProgram = "fuzzel";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

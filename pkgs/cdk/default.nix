@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://invisible-island.net/cdk/";
     changelog = "https://invisible-island.net/cdk/CHANGES.html";
     license = lib.licenses.mit;
-    maintainers = [ ];
     inherit (ncurses.meta) platforms;
   };
 })

@@ -28,6 +28,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "safe";
     homepage = "https://github.com/starkandwayne/safe";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

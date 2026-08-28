@@ -32,6 +32,5 @@ stdenv.mkDerivation rec {
     homepage = "https://www.gnu.org/software/gnugo/";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

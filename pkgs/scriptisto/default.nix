@@ -32,6 +32,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/igor-petruk/scriptisto";
     changelog = "https://github.com/igor-petruk/scriptisto/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

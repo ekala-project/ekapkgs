@@ -69,7 +69,6 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
     description = "Very light linux rendering backend library";
     homepage = "https://github.com/hyprwm/aquamarine";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -32,7 +32,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/CodeOne45/vex-tui";
     license = lib.licenses.mit;
     mainProgram = "vex";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

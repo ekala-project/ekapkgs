@@ -307,6 +307,5 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
   };
 })

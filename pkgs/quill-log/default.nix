@@ -28,6 +28,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Asynchronous Low Latency C++17 Logging Library";
     platforms = lib.platforms.all;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

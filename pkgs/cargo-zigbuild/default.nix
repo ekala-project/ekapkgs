@@ -32,6 +32,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/rust-cross/cargo-zigbuild";
     changelog = "https://github.com/rust-cross/cargo-zigbuild/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

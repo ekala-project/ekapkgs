@@ -59,6 +59,5 @@ clangStdenv.mkDerivation (finalAttrs: {
     description = "Assembler for various ARM and MIPS platforms";
     mainProgram = "armips";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -26,7 +26,6 @@ stdenv.mkDerivation rec {
     description = "Motif-based sequence analysis tools";
     homepage = "https://meme-suite.org/meme/meme-software/";
     license = lib.licenses.unfree;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

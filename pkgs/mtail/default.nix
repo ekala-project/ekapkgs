@@ -46,7 +46,6 @@ buildGoModule (finalAttrs: {
     description = "Tool for extracting metrics from application logs";
     homepage = "https://github.com/jaqx0r/mtail";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "mtail";
   };
 })

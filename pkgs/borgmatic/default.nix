@@ -82,6 +82,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.all;
     mainProgram = "borgmatic";
-    maintainers = [ ];
   };
 })

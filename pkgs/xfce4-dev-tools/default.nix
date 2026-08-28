@@ -63,6 +63,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Autoconf macros and scripts to augment app build systems";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

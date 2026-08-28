@@ -88,7 +88,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     description = "ZjStream printer drivers";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Plus;
   };

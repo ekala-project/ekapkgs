@@ -67,7 +67,6 @@ buildGo126Module rec {
     description = "Open and extensible continuous delivery solution for Kubernetes";
     homepage = "https://fluxcd.io";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "flux";
   };
 }

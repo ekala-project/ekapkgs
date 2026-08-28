@@ -55,7 +55,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://netbird.io";
     description = "Connect your devices into a single secure private WireGuard-based mesh network";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "netbird";
   };
 })

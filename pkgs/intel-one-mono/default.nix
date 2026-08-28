@@ -36,7 +36,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://github.com/intel/intel-one-mono";
     changelog = "https://github.com/intel/intel-one-mono/releases/tag/V${finalAttrs.version}";
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

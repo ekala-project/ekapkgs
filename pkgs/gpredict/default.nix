@@ -51,6 +51,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
     homepage = "https://oz9aec.dk/gpredict/";
-    maintainers = [ ];
   };
 })

@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Program maintenance (make) utility using a C-like grammar";
     homepage = "https://fbb-git.gitlab.io/icmake/";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

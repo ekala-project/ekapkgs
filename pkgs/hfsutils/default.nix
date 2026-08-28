@@ -138,7 +138,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://www.mars.org/home/rob/proj/hfs/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "hfs";
     platforms = lib.platforms.unix;
   };

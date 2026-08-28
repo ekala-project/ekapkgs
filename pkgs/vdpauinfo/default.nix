@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool to query the Video Decode and Presentation API for Unix (VDPAU) abilities of the system";
     license = lib.licenses.mit; # expat version
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "vdpauinfo";
   };
 })

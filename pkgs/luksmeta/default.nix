@@ -28,7 +28,6 @@ stdenv.mkDerivation rec {
     description = "Simple library for storing metadata in the LUKSv1 header";
     mainProgram = "luksmeta";
     homepage = "https://github.com/latchset/luksmeta/";
-    maintainers = [ ];
     license = lib.licenses.lgpl21Plus;
   };
 }

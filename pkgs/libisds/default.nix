@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Client library for accessing SOAP services of Czech government-provided Databox infomation system";
     homepage = "http://xpisar.wz.cz/libisds/";
     license = lib.licenses.lgpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

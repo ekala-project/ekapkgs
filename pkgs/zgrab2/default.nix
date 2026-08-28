@@ -29,7 +29,6 @@ buildGo126Module (finalAttrs: {
       asl20
       isc
     ];
-    maintainers = [ ];
     mainProgram = "zgrab2";
   };
 })

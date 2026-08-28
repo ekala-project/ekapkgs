@@ -83,7 +83,6 @@ perlPackages.buildPerlPackage rec {
     downloadPage = "https://www.openprinting.org/download/foomatic/";
     homepage = "https://openprinting.github.io/projects/02-foomatic/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     longDescription = ''
       Foomatic's database engine generates PPD files
       from the data in Foomatic's XML database.

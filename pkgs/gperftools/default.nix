@@ -48,6 +48,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fast, multi-threaded malloc() and nifty performance analysis tools";
     platforms = lib.platforms.all;
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

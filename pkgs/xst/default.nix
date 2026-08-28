@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Simple terminal fork that can load config from Xresources";
     mainProgram = "xst";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

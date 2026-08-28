@@ -41,7 +41,6 @@ stdenv.mkDerivation rec {
     description = "HTTP and WebDAV client library";
     mainProgram = "neon-config";
     homepage = "https://notroj.github.io/neon/";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.lgpl2;
   };

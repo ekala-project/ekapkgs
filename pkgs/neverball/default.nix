@@ -110,7 +110,6 @@ stdenv.mkDerivation (finalAttrs: {
       mit
       gpl3Only
     ];
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

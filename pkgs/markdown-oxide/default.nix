@@ -20,7 +20,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Markdown LSP server inspired by Obsidian";
     homepage = "https://github.com/Feel-ix-343/markdown-oxide";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "markdown-oxide";
   };
 })

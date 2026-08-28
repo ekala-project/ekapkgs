@@ -52,7 +52,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
       beautifying your logfiles or output of commands.
     '';
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "grc";
   };

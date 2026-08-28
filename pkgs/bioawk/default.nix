@@ -46,7 +46,6 @@ stdenv.mkDerivation {
     mainProgram = "bioawk";
     homepage = "https://github.com/lh3/bioawk";
     license = lib.licenses.hpnd;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

@@ -26,7 +26,6 @@ stdenv.mkDerivation {
     mainProgram = "gpp";
     homepage = "https://logological.org/gpp";
     license = lib.licenses.lgpl3;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 }

@@ -31,7 +31,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/ms-jpq/sad";
     changelog = "https://github.com/ms-jpq/sad/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "sad";
   };
 })

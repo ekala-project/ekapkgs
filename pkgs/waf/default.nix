@@ -75,7 +75,6 @@ let
       homepage = "https://waf.io";
       description = "Meta build system";
       license = lib.licenses.bsd3;
-      maintainers = [ ];
       mainProgram = "waf";
       platforms = lib.platforms.unix;
     };

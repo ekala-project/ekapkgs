@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Quick access to current weather conditions and forecasts";
     mainProgram = "weather";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-mines";
     description = "Clear hidden mines from a minefield";
     mainProgram = "gnome-mines";
-    maintainers = [ ];
     license = lib.licenses.gpl3;
     platforms = lib.platforms.unix;
   };

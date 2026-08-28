@@ -31,6 +31,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "kubergrunt";
     homepage = "https://github.com/gruntwork-io/kubergrunt";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/nowrep/dualsensectl";
     license = lib.licenses.gpl2Only;
     mainProgram = "dualsensectl";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -27,7 +27,6 @@ buildGo126Module rec {
     description = "WireGuard vanity key generator";
     homepage = "https://github.com/axllent/wireguard-vanity-keygen";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "wireguard-vanity-keygen";
   };
 }

@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/tenox7/ttyplot";
     license = lib.licenses.asl20;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "ttyplot";
   };
 })

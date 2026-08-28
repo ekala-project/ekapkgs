@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "MessagePack implementation for C";
     homepage = "https://github.com/msgpack/msgpack-c";
     license = lib.licenses.boost;
-    maintainers = [ ];
   };
 })

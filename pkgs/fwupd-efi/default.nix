@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     homepage = "https://fwupd.org/";
-    maintainers = [ ];
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
   };

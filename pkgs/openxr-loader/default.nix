@@ -75,6 +75,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.khronos.org/openxr";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

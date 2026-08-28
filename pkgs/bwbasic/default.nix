@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Bywater BASIC Interpreter";
     mainProgram = "bwbasic";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     homepage = "https://sourceforge.net/projects/bwbasic/";
   };

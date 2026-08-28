@@ -65,6 +65,5 @@ python3Packages.buildPythonApplication rec {
     changelog = "https://github.com/psf/black/blob/${version}/CHANGES.md";
     license = lib.licenses.mit;
     mainProgram = "black";
-    maintainers = [ ];
   };
 }

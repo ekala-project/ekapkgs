@@ -75,6 +75,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/mate-desktop/marco";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

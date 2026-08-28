@@ -70,6 +70,5 @@ stdenv.mkDerivation {
     homepage = "https://github.com/ifupdown-ng/ifupdown-ng";
     license = lib.licenses.isc;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

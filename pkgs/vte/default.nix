@@ -139,7 +139,6 @@ stdenv.mkDerivation (finalAttrs: {
       the system's terminfo database.
     '';
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

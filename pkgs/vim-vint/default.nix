@@ -55,7 +55,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/Kuniwak/vint";
     license = lib.licenses.mit;
     mainProgram = "vint";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

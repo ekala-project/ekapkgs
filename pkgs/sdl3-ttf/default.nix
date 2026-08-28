@@ -52,6 +52,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.zlib;
     pkgConfigModules = [ "sdl3-ttf" ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

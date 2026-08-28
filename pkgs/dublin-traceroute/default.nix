@@ -54,7 +54,6 @@ stdenv.mkDerivation {
     description = "NAT-aware multipath traceroute tool";
     homepage = "https://dublin-traceroute.net/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "dublin-traceroute";
     broken = stdenv.hostPlatform.isDarwin;

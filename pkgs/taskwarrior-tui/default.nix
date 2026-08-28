@@ -30,7 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Terminal user interface for taskwarrior";
     homepage = "https://github.com/kdheepak/taskwarrior-tui";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "taskwarrior-tui";
   };
 })

@@ -45,6 +45,5 @@ stdenv.mkDerivation rec {
     license = lib.licenses.ofl;
     homepage = "https://github.com/liberationfonts";
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

@@ -24,7 +24,6 @@ rustPlatform.buildRustPackage {
     description = "Grep with human-friendly search results";
     homepage = "https://github.com/rhysd/hgrep";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "hgrep";
   };
 }

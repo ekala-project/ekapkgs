@@ -45,6 +45,5 @@ stdenv.mkDerivation rec {
     changelog = "https://github.com/dbry/WavPack/releases/tag/${version}";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

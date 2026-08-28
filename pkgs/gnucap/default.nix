@@ -87,7 +87,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.all;
     broken = stdenv.hostPlatform.isDarwin; # Relies on LD_LIBRARY_PATH
-    maintainers = [ ];
     mainProgram = "gnucap";
   };
 })

@@ -103,7 +103,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://getpublii.com";
     changelog = "https://github.com/getpublii/publii/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = [ "x86_64-linux" ];
   };
 })

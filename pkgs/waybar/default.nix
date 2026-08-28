@@ -186,7 +186,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/alexays/waybar/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "waybar";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

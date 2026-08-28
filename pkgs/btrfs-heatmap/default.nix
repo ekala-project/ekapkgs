@@ -50,6 +50,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/knorrie/btrfs-heatmap";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

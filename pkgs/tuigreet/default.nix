@@ -33,7 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/apognu/tuigreet";
     changelog = "https://github.com/apognu/tuigreet/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "tuigreet";
   };

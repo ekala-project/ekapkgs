@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Simple header-only C++ argument parser library";
     homepage = "https://github.com/Taywee/args";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

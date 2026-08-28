@@ -86,7 +86,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Language server that offers Lua language support";
     homepage = "https://github.com/luals/lua-language-server";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "lua-language-server";
     platforms = lib.platforms.linux;
   };

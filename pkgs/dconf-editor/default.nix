@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://apps.gnome.org/DconfEditor/";
     changelog = "https://gitlab.gnome.org/GNOME/dconf-editor/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

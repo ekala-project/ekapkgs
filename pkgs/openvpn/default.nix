@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Robust and highly flexible tunneling application";
     homepage = "https://openvpn.net/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "openvpn";
     platforms = lib.platforms.unix;
   };

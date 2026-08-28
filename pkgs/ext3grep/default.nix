@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool to investigate an ext3 file system for deleted content and possibly recover it";
     mainProgram = "ext3grep";
     homepage = "https://code.google.com/archive/p/ext3grep/";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Plus;
   };

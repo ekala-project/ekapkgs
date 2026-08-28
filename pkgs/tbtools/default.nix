@@ -33,7 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/intel/tbtools";
     license = lib.licenses.mit;
     mainProgram = "tblist";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

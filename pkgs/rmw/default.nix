@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/theimpossibleastronaut/rmw";
     changelog = "https://github.com/theimpossibleastronaut/rmw/blob/${finalAttrs.src.rev}/ChangeLog";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "rmw";
   };
 })

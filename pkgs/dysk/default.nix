@@ -32,7 +32,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/Canop/dysk";
     changelog = "https://github.com/Canop/dysk/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "dysk";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };

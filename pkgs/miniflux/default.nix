@@ -44,7 +44,6 @@ buildGo126Module (finalAttrs: {
     changelog = "https://miniflux.app/releases/${finalAttrs.version}.html";
     homepage = "https://miniflux.app/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "miniflux";
   };
 })

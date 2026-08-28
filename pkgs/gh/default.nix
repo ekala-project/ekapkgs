@@ -55,6 +55,5 @@ buildGo126Module (finalAttrs: {
     changelog = "https://github.com/cli/cli/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "gh";
-    maintainers = [ ];
   };
 })

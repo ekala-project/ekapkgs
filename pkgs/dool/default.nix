@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/scottchiefbaker/dool";
     changelog = "https://github.com/scottchiefbaker/dool/blob/${finalAttrs.src.rev}/ChangeLog";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "dool";
   };

@@ -44,7 +44,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Extremely simple lofi player";
     homepage = "https://github.com/talwat/lowfi";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "lowfi";
   };
 })

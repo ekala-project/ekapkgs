@@ -56,6 +56,5 @@ stdenv.mkDerivation rec {
     mainProgram = "xfce4-kiosk-query";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

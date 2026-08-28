@@ -29,7 +29,6 @@ buildGoModule (finalAttrs: {
     description = "VSphere CLI built on top of govmomi";
     homepage = "https://github.com/vmware/govmomi/tree/main/govc";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "govc";
   };
 })

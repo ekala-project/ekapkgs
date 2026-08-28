@@ -42,6 +42,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.colm.net/open-source/colm";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

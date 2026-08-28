@@ -46,7 +46,6 @@ stdenv.mkDerivation {
     homepage = "https://www.kermitproject.org/ck90.html";
     description = "Portable Scriptable Network and Serial Communication Software";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
   };
 }

@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
       for efficiency and scalability.'';
     homepage = "http://taktuk.gforge.inria.fr/kanif";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 

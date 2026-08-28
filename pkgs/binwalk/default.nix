@@ -106,7 +106,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/ReFirmLabs/binwalk/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "binwalk";
   };
 })

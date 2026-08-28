@@ -90,7 +90,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.com/nbdkit/nbdkit";
     description = "NBD server with stable plugin ABI and permissive license";
     license = with lib.licenses; bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "nbdkit";
   };

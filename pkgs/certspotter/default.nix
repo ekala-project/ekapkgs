@@ -44,6 +44,5 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/SSLMate/certspotter/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mpl20;
     mainProgram = "certspotter";
-    maintainers = [ ];
   };
 })

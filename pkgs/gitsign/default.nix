@@ -48,7 +48,6 @@ buildGo126Module (finalAttrs: {
     changelog = "https://github.com/sigstore/gitsign/releases/tag/v${finalAttrs.version}";
     description = "Keyless Git signing using Sigstore";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "gitsign";
   };
 })

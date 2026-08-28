@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs-utils.git/about/";
     description = "Userspace utilities for linux-erofs file system";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

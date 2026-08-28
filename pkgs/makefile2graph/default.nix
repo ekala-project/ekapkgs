@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/lindenb/makefile2graph";
     description = "Creates a graph of dependencies from GNU-Make; Output is a graphiz-dot file or a Gexf-XML file";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
   };

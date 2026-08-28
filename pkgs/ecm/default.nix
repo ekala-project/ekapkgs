@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "ecm";
     license = lib.licenses.gpl3Only;
     homepage = "https://gitlab.inria.fr/zimmerma/ecm";
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

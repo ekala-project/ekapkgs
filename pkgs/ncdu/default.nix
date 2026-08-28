@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://dev.yorhel.nl/ncdu";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "ncdu";
   };
 })

@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/app/xmessage";
     license = lib.licenses.x11;
     mainProgram = "xmessage";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

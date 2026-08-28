@@ -28,7 +28,6 @@ buildGo126Module rec {
     description = "Cross-platform TUI database management tool written in Go";
     homepage = "https://github.com/jorgerojas26/lazysql";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "lazysql";
   };
 }

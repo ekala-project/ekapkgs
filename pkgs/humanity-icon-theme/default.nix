@@ -49,6 +49,5 @@ stdenvNoCC.mkDerivation rec {
     homepage = "https://launchpad.net/humanity/";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

@@ -47,7 +47,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/vishen/go-chromecast";
     description = "CLI for Google Chromecast, Home devices and Cast Groups";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "go-chromecast";
   };
 })

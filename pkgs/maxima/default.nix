@@ -115,7 +115,6 @@ stdenv.mkDerivation (finalAttrs: {
       DOE-MACSYMA and licensed under the GPL. Its abilities include
       symbolic integration, 3D plotting, and an ODE solver.
     '';
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

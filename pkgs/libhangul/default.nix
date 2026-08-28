@@ -23,6 +23,5 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/choehwanjin/libhangul";
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

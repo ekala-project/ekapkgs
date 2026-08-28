@@ -75,7 +75,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.gnome.org/GNOME/gnome-bluetooth/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
     description = "Application that lets you manage Bluetooth in the GNOME desktop";
     mainProgram = "bluetooth-sendto";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

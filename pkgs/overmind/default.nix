@@ -36,6 +36,5 @@ buildGo126Module (finalAttrs: {
     description = "Process manager for Procfile-based applications and tmux";
     mainProgram = "overmind";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

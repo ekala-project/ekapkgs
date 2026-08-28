@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/puppetlabs/leatherman/";
     description = "Collection of C++ and CMake utility libraries";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 

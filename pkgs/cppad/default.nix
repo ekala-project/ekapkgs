@@ -27,6 +27,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C++ Algorithmic Differentiation Package";
     homepage = "https://github.com/coin-or/CppAD";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

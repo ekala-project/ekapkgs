@@ -48,7 +48,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/greenbone/ospd-openvas";
     changelog = "https://github.com/greenbone/ospd-openvas/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

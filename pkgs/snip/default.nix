@@ -30,7 +30,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/edouard-claude/snip";
     changelog = "https://github.com/edouard-claude/snip/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "snip";
   };
 })

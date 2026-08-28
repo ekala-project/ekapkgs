@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Microsoft Publisher import library";
     homepage = "https://wiki.documentfoundation.org/DLP/Libraries/libmspub";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

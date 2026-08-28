@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.xfce.org/apps/mousepad";
     license = lib.licenses.gpl2Plus;
     mainProgram = "mousepad";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

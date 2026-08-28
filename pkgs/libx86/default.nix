@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     description = "Real-mode x86 code emulator";
-    maintainers = [ ];
     platforms = [
       "x86_64-linux"
       "i686-linux"

@@ -62,6 +62,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "bpftune";
     homepage = "https://github.com/oracle-samples/bpftune";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 })

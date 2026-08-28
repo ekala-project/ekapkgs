@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/YJesus/Unhide";
     changelog = "https://github.com/YJesus/Unhide/blob/${finalAttrs.src.rev}/NEWS";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "unhide";
     platforms = lib.platforms.all;
   };

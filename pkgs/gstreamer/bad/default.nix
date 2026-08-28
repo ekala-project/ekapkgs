@@ -446,6 +446,5 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = if enableGplPlugins then lib.licenses.gpl2Plus else lib.licenses.lgpl2Plus;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
   };
 })

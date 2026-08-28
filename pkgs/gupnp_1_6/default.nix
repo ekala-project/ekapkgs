@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Implementation of the UPnP specification";
     mainProgram = "gupnp-binding-tool-1.6";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

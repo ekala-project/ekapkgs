@@ -22,7 +22,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Declutters url lists for crawling/pentesting";
     homepage = "https://github.com/s0md3v/uro";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "uro";
   };
 })

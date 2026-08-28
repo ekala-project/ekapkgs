@@ -69,6 +69,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     mainProgram = "wlogout";
     inherit (wayland.meta) platforms;
-    maintainers = [ ];
   };
 })

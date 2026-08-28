@@ -31,7 +31,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/blacknon/hwatch";
     changelog = "https://github.com/blacknon/hwatch/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "hwatch";
   };
 })

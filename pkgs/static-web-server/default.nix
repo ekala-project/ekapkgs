@@ -47,7 +47,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit # or
       asl20
     ];
-    maintainers = [ ];
     mainProgram = "static-web-server";
   };
 })

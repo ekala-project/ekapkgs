@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "libpanel-example";
     homepage = "https://gitlab.gnome.org/GNOME/libpanel";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

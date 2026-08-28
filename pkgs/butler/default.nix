@@ -27,6 +27,5 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/itchio/butler/releases/tag/v${finalAttrs.version}/CHANGELOG.md";
     homepage = "http://itch.io";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

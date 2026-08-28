@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://mypaint.org/";
     description = "Brushes used by MyPaint and other software using libmypaint";
     license = lib.licenses.cc0;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

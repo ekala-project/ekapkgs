@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/hufrea/byedpi";
     changelog = "https://github.com/hufrea/byedpi/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ windows ++ darwin;
     mainProgram = "ciadpi";
   };

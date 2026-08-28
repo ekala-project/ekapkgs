@@ -33,6 +33,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/sammycage/plutovg/releases/tag/v${finalAttrs.version}";
     description = "Tiny 2D vector graphics library in C";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

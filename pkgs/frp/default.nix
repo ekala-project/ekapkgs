@@ -34,6 +34,5 @@ buildGo126Module (finalAttrs: {
     description = "Fast reverse proxy";
     homepage = "https://github.com/fatedier/frp";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

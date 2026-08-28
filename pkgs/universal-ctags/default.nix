@@ -80,7 +80,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://docs.ctags.io/en/latest/";
     description = "Maintained ctags implementation";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "ctags";
     priority = 1;

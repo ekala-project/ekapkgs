@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "GDSIIConvert";
     homepage = "https://github.com/HomerReid/libGDSII";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

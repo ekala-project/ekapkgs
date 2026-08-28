@@ -65,6 +65,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Glib/GTK set of document centric objects and utilities";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

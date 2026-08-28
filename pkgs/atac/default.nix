@@ -51,7 +51,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Simple API client (postman like) in your terminal";
     homepage = "https://github.com/Julien-cpsn/ATAC";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "atac";
   };
 })

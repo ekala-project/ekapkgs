@@ -142,7 +142,6 @@ stdenv.mkDerivation rec {
     homepage = "https://micropython.org";
     platforms = lib.platforms.unix;
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "micropython";
   };
 }

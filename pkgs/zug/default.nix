@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/arximboldi/zug";
     description = "Library for functional interactive c++ programs";
-    maintainers = [ ];
     license = lib.licenses.boost;
   };
 })

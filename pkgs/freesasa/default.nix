@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/mittinatten/freesasa";
     changelog = "https://github.com/mittinatten/freesasa/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "freesasa";
     platforms = lib.platforms.unix;
   };

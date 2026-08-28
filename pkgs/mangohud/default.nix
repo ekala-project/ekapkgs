@@ -225,7 +225,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/flightlessmango/MangoHud/releases/tag/v${finalAttrs.version}";
     platforms = lib.platforms.linux;
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "mangohud";
   };
 })

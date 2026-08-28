@@ -67,7 +67,6 @@ buildGoModule (finalAttrs: {
     description = "Backup program that is fast, efficient and secure";
     platforms = with lib.platforms; linux ++ darwin;
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "restic";
   };
 })

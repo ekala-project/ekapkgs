@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://sourceforge.net/projects/opencore-amr/";
     description = "Library of OpenCORE Framework implementation of Adaptive Multi Rate Narrowband and Wideband speech codec";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

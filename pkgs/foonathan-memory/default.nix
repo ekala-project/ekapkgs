@@ -71,7 +71,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
 
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = with lib.platforms; unix ++ windows;
   };
 })

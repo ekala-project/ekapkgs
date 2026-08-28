@@ -129,7 +129,6 @@ stdenv.mkDerivation (finalAttrs: {
       on top of a cross-platform back-end.
     '';
     homepage = "https://www.transmissionbt.com/";
-    maintainers = [ ];
     license = with lib.licenses; [
       gpl2Plus
       mit

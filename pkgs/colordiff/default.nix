@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Wrapper for 'diff' that produces the same output but with pretty 'syntax' highlighting";
     homepage = "https://www.colordiff.org/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "colordiff";
   };

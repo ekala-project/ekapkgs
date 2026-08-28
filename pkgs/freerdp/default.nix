@@ -218,7 +218,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/FreeRDP/FreeRDP/releases/tag/${finalAttrs.src.tag}";
     homepage = "https://www.freerdp.com/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -72,7 +72,6 @@ stdenv.mkDerivation rec {
     description = "Vim like editor";
     homepage = "https://github.com/martanne/vis";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "vis";
   };

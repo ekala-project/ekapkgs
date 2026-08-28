@@ -45,6 +45,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://kompose.io";
     changelog = "https://github.com/kubernetes/kompose/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

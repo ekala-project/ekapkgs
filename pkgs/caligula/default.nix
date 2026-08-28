@@ -27,7 +27,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "User-friendly, lightweight TUI for disk imaging";
     homepage = "https://github.com/ifd3f/caligula/";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     mainProgram = "caligula";
   };

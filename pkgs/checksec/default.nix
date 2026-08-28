@@ -29,6 +29,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://slimm609.github.io/checksec/";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "CLI tool to interact with EWMH/NetWM compatible X Window Managers";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "wmctrl";
   };
 })

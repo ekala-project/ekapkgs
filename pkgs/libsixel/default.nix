@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "SIXEL library for console graphics, and converter programs";
     homepage = "https://github.com/libsixel/libsixel";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

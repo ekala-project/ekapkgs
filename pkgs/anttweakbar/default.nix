@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://anttweakbar.sourceforge.net/";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -91,7 +91,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-network-displays";
     description = "Miracast implementation for GNOME";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
     mainProgram = "gnome-network-displays";

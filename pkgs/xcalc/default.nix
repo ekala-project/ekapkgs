@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
       hpndSellVariant
     ];
     mainProgram = "xcalc";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

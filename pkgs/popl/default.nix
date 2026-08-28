@@ -32,6 +32,5 @@ stdenvNoCC.mkDerivation rec {
     homepage = "https://github.com/badaix/popl";
     changelog = "https://github.com/badaix/popl/releases/tag/${src.rev}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

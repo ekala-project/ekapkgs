@@ -93,6 +93,5 @@ stdenv.mkDerivation (finalAttrs: {
       artistic2
     ];
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

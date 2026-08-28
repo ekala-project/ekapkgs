@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/app/xdriinfo";
     license = lib.licenses.mit;
     mainProgram = "xdriinfo";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

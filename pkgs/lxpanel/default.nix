@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Lightweight X11 desktop panel for LXDE";
     homepage = "https://lxde.org/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "lxpanel";
   };

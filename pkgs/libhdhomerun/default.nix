@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "hdhomerun_config";
     homepage = "https://www.silicondust.com/support/linux";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -67,7 +67,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Program to clean your computer";
     longDescription = "BleachBit helps you easily clean your computer to free space and maintain privacy.";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     mainProgram = "bleachbit";
   };
 })

@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://apps.gnome.org/Yelp/";
     description = "Help viewer for GNOME";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

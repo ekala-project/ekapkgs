@@ -106,7 +106,6 @@ buildGo126Module (finalAttrs: {
       Create, retrieve, update, or delete API objects.
     '';
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "stripe";
   };
 })

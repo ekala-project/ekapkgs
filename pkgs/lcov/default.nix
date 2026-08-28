@@ -64,6 +64,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/linux-test-project/lcov";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

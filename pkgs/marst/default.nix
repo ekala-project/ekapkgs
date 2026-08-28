@@ -49,7 +49,6 @@ stdenv.mkDerivation rec {
         from some other representations to MARST representation.
     '';
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

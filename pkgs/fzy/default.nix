@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Better fuzzy finder";
     homepage = "https://github.com/jhawthorn/fzy";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "fzy";
   };

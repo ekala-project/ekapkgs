@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Libmodplug emulation layer based on libopenmpt";
     homepage = "https://lib.openmpt.org/libopenmpt/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

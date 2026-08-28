@@ -54,7 +54,6 @@ buildGo126Module (finalAttrs: {
     description = "Generic, high-level git support for git-flow workflows";
     homepage = "https://www.git-town.com/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "git-town";
   };
 })

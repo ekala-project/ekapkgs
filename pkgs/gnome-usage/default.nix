@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Nice way to view information about use of system resources, like memory and disk space";
     mainProgram = "gnome-usage";
     homepage = "https://gitlab.gnome.org/GNOME/gnome-usage";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
   };

@@ -130,6 +130,5 @@ stdenv.mkDerivation rec {
     changelog = "https://gitlab.com/gpsd/gpsd/-/blob/release-${version}/NEWS";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

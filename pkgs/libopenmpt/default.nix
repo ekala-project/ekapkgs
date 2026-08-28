@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "openmpt123";
     homepage = "https://lib.openmpt.org/libopenmpt/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

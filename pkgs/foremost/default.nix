@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://foremost.sourceforge.net/";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     mainProgram = "foremost";
   };

@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Sweets/tiramisu";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "tiramisu";
   };
 })

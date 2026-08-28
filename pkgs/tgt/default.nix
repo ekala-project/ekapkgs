@@ -86,6 +86,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/fujita/tgt";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -28,6 +28,5 @@ stdenvNoCC.mkDerivation {
     homepage = "https://fontawesome.com/";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

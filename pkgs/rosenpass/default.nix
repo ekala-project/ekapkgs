@@ -46,7 +46,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit # or
       asl20
     ];
-    maintainers = [ ];
     teams = [ ];
     platforms = [
       "aarch64-darwin"

@@ -43,7 +43,6 @@ stdenv.mkDerivation rec {
     description = "Socket daemon to multiplex connections from and to iOS devices";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "usbmuxd";
   };
 }

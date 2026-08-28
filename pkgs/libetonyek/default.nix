@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/LibreOffice/libetonyek";
     changelog = "https://github.com/LibreOffice/libetonyek/blob/${finalAttrs.src.rev}/NEWS";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

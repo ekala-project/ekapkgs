@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Cross-platform build utility based on Lua";
     homepage = "https://xmake.io";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "xmake";
   };
 })

@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Small Mail Transport Agent, designed for home and office use";
     homepage = "https://github.com/corecode/dma";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

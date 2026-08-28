@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Cronyx pcf fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/cronyx-cyrillic";
     license = lib.licenses.cronyx;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

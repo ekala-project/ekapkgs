@@ -69,6 +69,5 @@ buildGo126Module (finalAttrs: {
     '';
     license = lib.licenses.bsd3;
     mainProgram = "headscale";
-    maintainers = [ ];
   };
 })

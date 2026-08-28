@@ -47,7 +47,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "DNS Enumeration script";
     homepage = "https://github.com/darkoperator/dnsrecon";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "dnsrecon";
   };
 })

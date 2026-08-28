@@ -42,7 +42,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/chmouel/clipman";
     description = "Simple clipboard manager for Wayland";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "clipman";
   };

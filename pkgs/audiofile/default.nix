@@ -118,7 +118,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for reading and writing audio files in various formats";
     homepage = "http://www.68k.org/~michael/audiofile/";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

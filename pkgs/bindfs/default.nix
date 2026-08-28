@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "FUSE filesystem for mounting a directory to another location";
     homepage = "https://bindfs.org";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

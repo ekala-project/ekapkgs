@@ -48,6 +48,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://contribs.martymac.org/";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

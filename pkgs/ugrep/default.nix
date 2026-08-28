@@ -82,7 +82,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Ultra fast grep with interactive query UI";
     homepage = "https://github.com/Genivia/ugrep";
     changelog = "https://github.com/Genivia/ugrep/releases/tag/v${finalAttrs.version}";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
     mainProgram = "ug";

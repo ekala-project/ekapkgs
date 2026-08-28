@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Header only C++14 mocking framework";
     homepage = "https://github.com/rollbear/trompeloeil";
     license = lib.licenses.boost;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -98,7 +98,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://dunst-project.org/";
     license = lib.licenses.bsd3;
     mainProgram = "dunst";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

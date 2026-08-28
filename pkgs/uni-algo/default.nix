@@ -26,6 +26,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/uni-algo/uni-algo";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

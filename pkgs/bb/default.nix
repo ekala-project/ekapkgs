@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://aa-project.sourceforge.net/bb";
     description = "AA-lib demo";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "bb";
   };

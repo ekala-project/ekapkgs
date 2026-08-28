@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "aragorn";
     homepage = "https://www.trna.se/ARAGORN/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

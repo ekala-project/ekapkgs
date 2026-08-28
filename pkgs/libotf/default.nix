@@ -62,6 +62,5 @@ stdenv.mkDerivation rec {
     description = "Multilingual text processing library (libotf)";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

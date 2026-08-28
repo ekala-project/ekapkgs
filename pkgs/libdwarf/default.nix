@@ -45,6 +45,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/davea42/libdwarf-code";
     platforms = lib.platforms.unix;
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 })

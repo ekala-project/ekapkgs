@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Interpreter for the AWK Programming Language";
     license = lib.licenses.gpl2Only;
     mainProgram = "mawk";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

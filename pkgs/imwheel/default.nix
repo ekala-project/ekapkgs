@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://imwheel.sourceforge.net/";
     description = "Mouse wheel configuration tool for XFree86/Xorg";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Only;
     mainProgram = "imwheel";

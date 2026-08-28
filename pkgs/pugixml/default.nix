@@ -44,6 +44,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://pugixml.org";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -47,6 +47,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://xplr.dev";
     changelog = "https://github.com/sayanarijit/xplr/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

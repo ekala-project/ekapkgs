@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tools for command line processing of XML, HTML, and CSV";
     homepage = "https://web.archive.org/web/20160515005047/http://dan.egnor.name:80/xml2";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

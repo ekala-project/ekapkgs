@@ -27,6 +27,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/kilobyte/colorized-logs/blob/v${finalAttrs.version}/ChangeLog";
     license = with lib.licenses; [ mit ];
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -39,6 +39,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "kubelogin";
     inherit (finalAttrs.src.meta) homepage;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

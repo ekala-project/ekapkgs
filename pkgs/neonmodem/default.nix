@@ -41,7 +41,6 @@ buildGoModule (finalAttrs: {
     downloadPage = "https://github.com/mrusme/neonmodem/releases";
     changelog = "https://github.com/mrusme/neonmodem/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "neonmodem";
   };
 })

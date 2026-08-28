@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/spk121/guile-curl";
     changelog = "https://github.com/spk121/guile-curl/releases/tag/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = guile.meta.platforms;
   };
 })

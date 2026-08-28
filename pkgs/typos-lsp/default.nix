@@ -29,7 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/tekumara/typos-lsp";
     changelog = "https://github.com/tekumara/typos-lsp/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "typos-lsp";
   };
 })

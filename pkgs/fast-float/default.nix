@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
       boost
       mit
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

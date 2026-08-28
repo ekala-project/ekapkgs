@@ -74,7 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Portable, CLI-driven, SDL+OpenGL-based, multi-system emulator";
     license = lib.licenses.gpl2Plus;
     mainProgram = "mednafen";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

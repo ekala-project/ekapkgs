@@ -25,7 +25,6 @@ buildGo126Module (finalAttrs: {
     description = "Share your terminal as a web application";
     mainProgram = "gotty";
     homepage = "https://github.com/sorenisanerd/gotty";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 })

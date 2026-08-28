@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Modern audio compression for the internet";
     homepage = "https://opus-codec.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

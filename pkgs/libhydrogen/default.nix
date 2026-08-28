@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Lightweight, secure, easy-to-use crypto library suitable for constrained environments";
     homepage = "https://github.com/jedisct1/libhydrogen";
     license = lib.licenses.isc;
-    maintainers = [ ];
     pkgConfigModules = [ "libhydrogen" ];
     platforms = lib.platforms.all;
   };

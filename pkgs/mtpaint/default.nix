@@ -58,6 +58,5 @@ stdenv.mkDerivation {
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
     mainProgram = "mtpaint";
-    maintainers = [ ];
   };
 }

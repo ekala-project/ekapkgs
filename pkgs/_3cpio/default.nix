@@ -27,7 +27,6 @@ rustPlatform.buildRustPackage rec {
     description = "Manage initrd cpio archives";
     homepage = "https://github.com/bdrung/3cpio";
     license = lib.licenses.isc;
-    maintainers = [ ];
     mainProgram = "3cpio";
     # broken due to signature mismatch in libc crate on darwin:
     # https://github.com/rust-lang/libc/issues/4360

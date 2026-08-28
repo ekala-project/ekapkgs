@@ -57,6 +57,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/GNOME/geocode-glib";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

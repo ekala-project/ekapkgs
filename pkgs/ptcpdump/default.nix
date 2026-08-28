@@ -41,7 +41,6 @@ buildGoModule (finalAttrs: {
     description = "Process-aware, eBPF-based tcpdump";
     mainProgram = "ptcpdump";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

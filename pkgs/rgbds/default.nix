@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
 
       This is a fork of the original RGBDS which aims to make the programs more like other UNIX tools.
     '';
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

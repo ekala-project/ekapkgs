@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://heasarc.gsfc.nasa.gov/docs/software/fitsio/";
     description = "Library for reading and writing FITS data files";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

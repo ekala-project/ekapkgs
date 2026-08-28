@@ -49,7 +49,6 @@ stdenv.mkDerivation {
     '';
     homepage = "https://github.com/jaredsburrows/Rarcrack";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
   };
 }

@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://goaccess.io";
     changelog = "https://github.com/allinurl/goaccess/raw/v${finalAttrs.version}/ChangeLog";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     mainProgram = "goaccess";
   };

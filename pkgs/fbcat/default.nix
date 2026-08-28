@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://jwilk.net/software/fbcat";
     description = "Framebuffer screenshot tool";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

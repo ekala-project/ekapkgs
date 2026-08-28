@@ -43,6 +43,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Enclosure LED Utilities";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 })

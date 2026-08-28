@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Proof of work algorithm based on random code execution";
     homepage = "https://github.com/tevador/RandomX";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 

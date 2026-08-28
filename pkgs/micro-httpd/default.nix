@@ -24,7 +24,6 @@ stdenv.mkDerivation {
     description = "Really small HTTP server";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "micro_httpd";
   };
 }

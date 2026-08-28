@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library to read/write the NUT video container format";
     homepage = "https://git.ffmpeg.org/gitweb/nut.git";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

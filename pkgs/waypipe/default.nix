@@ -81,7 +81,6 @@ llvmPackages.stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.freedesktop.org/mstoeckl/waypipe/-/releases#v${finalAttrs.version}";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "waypipe";
   };
 })

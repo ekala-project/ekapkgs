@@ -21,7 +21,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/mrusme/reader";
     changelog = "https://github.com/mrusme/reader/releases";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "reader";
   };
 })

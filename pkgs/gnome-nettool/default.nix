@@ -79,6 +79,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "gnome-nettool";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

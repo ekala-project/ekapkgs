@@ -46,6 +46,5 @@ stdenv.mkDerivation rec {
     mainProgram = "gsound-play";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

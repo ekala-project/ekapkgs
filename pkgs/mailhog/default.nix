@@ -37,7 +37,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "MailHog";
     homepage = "https://github.com/mailhog/MailHog";
     changelog = "https://github.com/mailhog/MailHog/releases/tag/v${finalAttrs.version}";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 })

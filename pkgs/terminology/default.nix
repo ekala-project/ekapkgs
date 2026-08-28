@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.enlightenment.org/about-terminology";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

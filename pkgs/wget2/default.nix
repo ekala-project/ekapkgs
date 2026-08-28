@@ -107,7 +107,6 @@ stdenv.mkDerivation (finalAttrs: {
       gpl3Plus
       lgpl3Plus
     ];
-    maintainers = [ ];
     mainProgram = "wget2";
   };
 })

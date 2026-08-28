@@ -19,6 +19,5 @@ symlinkJoin {
     homepage = "https://carrois.com/fira/";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

@@ -30,7 +30,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/Chocapikk/wpprobe";
     changelog = "https://github.com/Chocapikk/wpprobe/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "wpprobe";
   };
 })

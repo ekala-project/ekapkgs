@@ -83,7 +83,6 @@ buildGo126Module (finalAttrs: {
       vulnerability detection when used with a scanner tool like Grype.
     '';
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "syft";
   };
 })

@@ -129,7 +129,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "RAW converter and digital photo processing software";
     homepage = "http://www.rawtherapee.com/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

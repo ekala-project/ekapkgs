@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
       unmodified "guest" operating systems to run.
     '';
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "gxemul";
   };

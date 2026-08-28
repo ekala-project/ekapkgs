@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "zfsnap";
     homepage = "https://github.com/zfsnap/zfsnap";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

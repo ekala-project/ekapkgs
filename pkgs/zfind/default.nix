@@ -28,6 +28,5 @@ buildGo126Module (finalAttrs: {
     changelog = "https://github.com/laktak/zfind/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "zfind";
-    maintainers = [ ];
   };
 })

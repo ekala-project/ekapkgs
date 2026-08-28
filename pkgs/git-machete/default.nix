@@ -51,7 +51,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     description = "Git repository organizer and rebase/merge workflow automation tool";
     changelog = "https://github.com/VirtusLab/git-machete/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "git-machete";
   };
 })

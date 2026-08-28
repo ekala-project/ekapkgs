@@ -67,7 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Text editor widget for GTK based on GtkTextView";
     homepage = "https://gitlab.gnome.org/GNOME/gtksourceview";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -43,6 +43,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Sanitizing parser for OpenType fonts";
     homepage = "https://github.com/khaledhosny/ots";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

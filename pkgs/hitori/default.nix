@@ -56,6 +56,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "hitori";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

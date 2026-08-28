@@ -187,7 +187,6 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/hyprwm/Hyprland/releases/tag/v${finalAttrs.version}";
     description = "Dynamic tiling Wayland compositor that doesn't sacrifice on its looks";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "Hyprland";
     platforms = lib.platforms.linux;
   };

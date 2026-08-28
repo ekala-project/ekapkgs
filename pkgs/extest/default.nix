@@ -22,6 +22,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/Supreeeme/extest";
     platforms = lib.platforms.linux;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

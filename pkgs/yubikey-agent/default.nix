@@ -50,7 +50,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "yubikey-agent";
     license = lib.licenses.bsd3;
     homepage = "https://filippo.io/yubikey-agent";
-    maintainers = [ ];
     platforms = lib.platforms.darwin ++ lib.platforms.linux;
   };
 })

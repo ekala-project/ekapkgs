@@ -40,6 +40,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "mb2md";
     license = lib.licenses.publicDomain;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Wayland protocols but much more iterative";
     homepage = "https://github.com/misyltoad/frog-protocols";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     pkgConfigModules = [ "frog-protocols" ];
   };

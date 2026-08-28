@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "File system and storage benchmark that can generate both micro and macro workloads";
     homepage = "https://github.com/filebench/filebench";
     license = lib.licenses.cddl;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "filebench";
   };

@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "IP address formatting tool";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "netmask";
   };
 })

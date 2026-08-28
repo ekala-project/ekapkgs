@@ -56,7 +56,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Interactive tree view, a fuzzy search, a balanced BFS descent and customizable commands";
     homepage = "https://dystroy.org/broot/";
     changelog = "https://github.com/Canop/broot/releases/tag/v${finalAttrs.version}";
-    maintainers = [ ];
     license = with lib.licenses; [ mit ];
     mainProgram = "broot";
   };

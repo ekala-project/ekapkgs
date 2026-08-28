@@ -66,7 +66,6 @@ stdenv.mkDerivation {
     homepage = "https://www.cl.cam.ac.uk/~mgk25/ucs-fonts.html";
     description = "Unicode bitmap fonts";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

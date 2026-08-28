@@ -129,7 +129,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://graphics.pixar.com/opensubdiv";
     broken = openclSupport && cudaSupport;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     license = lib.licenses.asl20;
   };
 })

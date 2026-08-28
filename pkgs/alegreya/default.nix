@@ -28,6 +28,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://www.huertatipografica.com/en/fonts/alegreya-ht-pro";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

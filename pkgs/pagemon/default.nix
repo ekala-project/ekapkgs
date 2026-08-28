@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Interactive memory/page monitor for Linux";
     mainProgram = "pagemon";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

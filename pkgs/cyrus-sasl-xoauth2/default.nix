@@ -38,6 +38,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "XOAUTH2 mechanism plugin for cyrus-sasl";
     platforms = lib.platforms.unix;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

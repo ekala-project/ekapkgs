@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://www.nongnu.org/g-wrap/";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

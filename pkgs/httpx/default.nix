@@ -39,7 +39,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/projectdiscovery/httpx";
     changelog = "https://github.com/projectdiscovery/httpx/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "httpx";
   };
 })

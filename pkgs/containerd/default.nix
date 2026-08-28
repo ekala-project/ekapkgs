@@ -72,7 +72,6 @@ buildGoModule rec {
     homepage = "https://containerd.io/";
     changelog = "https://github.com/containerd/containerd/releases/tag/v${version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "containerd";
     platforms = lib.platforms.linux;
   };

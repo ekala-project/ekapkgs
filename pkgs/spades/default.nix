@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://ablab.github.io/spades";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     broken = stdenv.hostPlatform.isMusl;
   };
 })

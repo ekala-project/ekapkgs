@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Lightweight volume control that sits in your systray";
     homepage = "https://nullwise.com/pages/volumeicon/volumeicon.html";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     license = lib.licenses.gpl3;
     mainProgram = "volumeicon";
   };

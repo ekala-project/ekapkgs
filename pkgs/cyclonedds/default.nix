@@ -25,6 +25,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Eclipse Cyclone DDS project";
     homepage = "https://cyclonedds.io/";
     license = lib.licenses.epl20;
-    maintainers = [ ];
   };
 })

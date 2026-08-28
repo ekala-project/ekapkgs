@@ -49,6 +49,5 @@ stdenv.mkDerivation {
     '';
     homepage = "https://osdn.net/projects/efont/";
     license = lib.licenses.wadalab;
-    maintainers = [ ];
   };
 }

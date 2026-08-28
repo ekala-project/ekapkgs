@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/HdrHistogram/HdrHistogram_c";
     changelog = "https://github.com/HdrHistogram/HdrHistogram_c/releases/tag/${finalAttrs.version}";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
     pkgConfigModules = [ "hdr_histogram" ];
   };
 })

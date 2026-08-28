@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Cross-platform C++11 header-only library for memory mapped file IO";
     homepage = "https://github.com/vimpunk/mio";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

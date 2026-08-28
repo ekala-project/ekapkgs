@@ -39,6 +39,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/BuGlessRB/procmail/";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -33,7 +33,6 @@ buildGoModule (finalAttrs: {
   meta = {
     homepage = "https://github.com/boyter/scc";
     description = "Very fast accurate code counter with complexity calculations and COCOMO estimates written in pure Go";
-    maintainers = [ ];
     license = with lib.licenses; [
       mit
     ];

@@ -32,6 +32,5 @@ stdenv.mkDerivation rec {
     description = "Extra CMake modules for KDE frameworks";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

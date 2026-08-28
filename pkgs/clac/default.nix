@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/soveran/clac";
     changelog = "https://github.com/soveran/clac/releases/tag/${finalAttrs.version}";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "clac";
   };

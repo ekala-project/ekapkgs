@@ -65,6 +65,5 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
     description = "Cpp graphics library for Hypr* ecosystem";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -32,7 +32,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/builditluc/wiki-tui";
     changelog = "https://github.com/Builditluc/wiki-tui/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "wiki-tui";
   };
 })

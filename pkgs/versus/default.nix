@@ -21,7 +21,6 @@ buildGo126Module (finalAttrs: {
     description = "Benchmark multiple API endpoints against each other";
     homepage = "https://github.com/INFURA/versus";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "versus";
   };
 })

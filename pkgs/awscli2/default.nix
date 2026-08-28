@@ -139,7 +139,6 @@ py.pkgs.buildPythonApplication rec {
     homepage = "https://aws.amazon.com/cli/";
     changelog = "https://github.com/aws/aws-cli/blob/${version}/CHANGELOG.rst";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "aws";
   };
 }

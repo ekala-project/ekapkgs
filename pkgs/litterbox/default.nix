@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://code.causal.agency/june/litterbox";
     license = lib.licenses.gpl3Plus;
     mainProgram = "litterbox";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -71,7 +71,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Helper library and tools for Active Directory client operations";
     mainProgram = "adcli";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -35,7 +35,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/orhun/kmon/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "kmon";
   };
 })

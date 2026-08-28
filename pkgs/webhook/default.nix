@@ -25,6 +25,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "webhook";
     homepage = "https://github.com/adnanh/webhook";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

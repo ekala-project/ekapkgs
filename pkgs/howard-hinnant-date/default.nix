@@ -71,6 +71,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Date and time library based on the C++11/14/17 <chrono> header";
     homepage = "https://github.com/HowardHinnant/date";
     platforms = with lib.platforms; unix ++ windows;
-    maintainers = [ ];
   };
 })

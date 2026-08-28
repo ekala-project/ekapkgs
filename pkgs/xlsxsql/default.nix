@@ -41,7 +41,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/noborus/xlsxsql";
     changelog = "https://github.com/noborus/xlsxsql/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "xlsxsql";
   };
 })

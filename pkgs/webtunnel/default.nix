@@ -22,7 +22,6 @@ buildGoModule (finalAttrs: {
   meta = {
     description = "Pluggable Transport based on HTTP Upgrade(HTTPT)";
     homepage = "https://community.torproject.org/relay/setup/webtunnel/";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 })

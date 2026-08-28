@@ -33,6 +33,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://pax.grsecurity.net";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

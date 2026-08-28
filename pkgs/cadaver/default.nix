@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Command-line WebDAV client";
     homepage = "https://notroj.github.io/cadaver/";
     changelog = "https://github.com/notroj/cadaver/blob/${finalAttrs.version}/NEWS";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = with lib.platforms; linux ++ freebsd ++ openbsd;
     mainProgram = "cadaver";

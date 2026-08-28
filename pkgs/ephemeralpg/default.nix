@@ -29,6 +29,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.isc;
     homepage = "https://eradman.com/ephemeralpg/";
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

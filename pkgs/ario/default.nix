@@ -58,7 +58,6 @@ stdenv.mkDerivation rec {
     mainProgram = "ario";
     homepage = "https://ario-player.sourceforge.net/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

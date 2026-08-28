@@ -25,6 +25,5 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = with lib.platforms; linux ++ windows ++ darwin;
     mainProgram = "mac";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

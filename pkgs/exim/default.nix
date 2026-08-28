@@ -200,7 +200,6 @@ stdenv.mkDerivation (finalAttrs: {
     ];
     mainProgram = "exim";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     changelog = "https://github.com/Exim/exim/blob/exim-${finalAttrs.version}/doc/doc-txt/ChangeLog";
   };
 })

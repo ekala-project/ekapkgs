@@ -26,7 +26,6 @@ python3.pkgs.buildPythonPackage rec {
       with the final purpose of reducing its ability to interact with the system.
     '';
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     mainProgram = "me_cleaner.py";
   };
 }

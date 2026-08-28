@@ -51,7 +51,6 @@ stdenv.mkDerivation rec {
     '';
     homepage = "http://www.catb.org/~esr/intercal/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

@@ -15,7 +15,6 @@ buildRubyGem rec {
     description = "Upload code to https://gist.github.com (or github enterprise)";
     homepage = "http://defunkt.io/gist/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = ruby.meta.platforms;
   };
 }

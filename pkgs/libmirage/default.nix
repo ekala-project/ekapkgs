@@ -83,7 +83,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   meta = {
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
     description = "CD-ROM image access library";

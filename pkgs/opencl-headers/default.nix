@@ -26,6 +26,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.khronos.org/registry/cl/";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix ++ lib.platforms.windows;
-    maintainers = [ ];
   };
 })

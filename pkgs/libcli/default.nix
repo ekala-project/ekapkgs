@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Emulate a Cisco-style telnet command-line interface";
     homepage = "https://dparrish.com/pages/libcli";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

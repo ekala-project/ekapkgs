@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tensor library for machine learning";
     homepage = "https://github.com/ggml-org/ggml";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

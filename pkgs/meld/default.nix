@@ -68,7 +68,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://meld.app/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "meld";
   };
 })

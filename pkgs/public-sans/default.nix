@@ -37,7 +37,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://public-sans.digital.gov/";
     changelog = "https://github.com/uswds/public-sans/raw/v${finalAttrs.version}/FONTLOG.txt";
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

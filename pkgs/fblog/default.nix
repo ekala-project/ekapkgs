@@ -24,6 +24,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/brocode/fblog";
     changelog = "https://github.com/brocode/fblog/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.wtfpl;
-    maintainers = [ ];
   };
 })

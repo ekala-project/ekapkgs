@@ -76,6 +76,5 @@ buildGoModule rec {
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
     mainProgram = "ipfs";
-    maintainers = [ ];
   };
 }

@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/pothosware/SoapySDR";
     description = "Vendor and platform neutral SDR support library";
     license = lib.licenses.boost;
-    maintainers = [ ];
     mainProgram = "SoapySDRUtil";
     platforms = lib.platforms.unix;
   };

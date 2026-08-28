@@ -25,6 +25,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/cpb-/spi-tools";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

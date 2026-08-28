@@ -46,7 +46,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       variables, functions, derivation, integration, and complex numbers
     '';
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "kalker";
   };
 })

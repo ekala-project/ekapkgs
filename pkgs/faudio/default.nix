@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/FNA-XNA/FAudio/releases/tag/${finalAttrs.version}";
     license = lib.licenses.zlib;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

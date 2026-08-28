@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/petitlapin/Li-Ri";
     description = "Drive a toy wood engine and collect all the coaches to win";
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
     license = with lib.licenses; [
       # Code

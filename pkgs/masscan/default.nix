@@ -67,6 +67,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/robertdavidgraham/masscan/releases/tag/${finalAttrs.version}";
     license = lib.licenses.agpl3Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

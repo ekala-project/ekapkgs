@@ -60,7 +60,6 @@ rustPlatform.buildRustPackage {
     description = "Faster alternative to cd + ls";
     homepage = "https://github.com/mgunyho/tere";
     license = lib.licenses.eupl12;
-    maintainers = [ ];
     mainProgram = "tere";
   };
 }

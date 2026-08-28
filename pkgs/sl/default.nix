@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Steam Locomotive runs across your terminal when you type 'sl'";
     homepage = "http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/index_e.html";
     license = lib.licenses.free;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "sl";
   };

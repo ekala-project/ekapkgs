@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/iustin/mt-st";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

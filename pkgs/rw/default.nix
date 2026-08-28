@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
       dd with standard style command line flags.
     '';
     license = lib.licenses.isc;
-    maintainers = [ ];
     mainProgram = "rw";
   };
 })

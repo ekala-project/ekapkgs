@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/jorio/CroMagRally";
     changelog = "https://github.com/jorio/CroMagRally/releases";
     license = lib.licenses.cc-by-sa-40;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "CroMagRally";
   };

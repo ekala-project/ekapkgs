@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "A Unix shell and Lisp REPL, fused together";
     homepage = "https://github.com/cosmos72/schemesh";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "schemesh";
   };

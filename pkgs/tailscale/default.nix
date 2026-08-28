@@ -98,6 +98,5 @@ buildGo126Module (finalAttrs: {
     changelog = "https://tailscale.com/changelog#client";
     license = lib.licenses.bsd3;
     mainProgram = "tailscale";
-    maintainers = [ ];
   };
 })

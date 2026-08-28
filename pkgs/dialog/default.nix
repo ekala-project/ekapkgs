@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Display dialog boxes from shell";
     license = lib.licenses.lgpl21Plus;
     mainProgram = "dialog";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

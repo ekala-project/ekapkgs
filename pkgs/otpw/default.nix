@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "otpw-gen";
     homepage = "http://www.cl.cam.ac.uk/~mgk25/otpw.html";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

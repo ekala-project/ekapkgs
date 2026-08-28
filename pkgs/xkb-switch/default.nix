@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Switch your X keyboard layouts from the command line";
     homepage = "https://github.com/ierton/xkb-switch";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "xkb-switch";
   };

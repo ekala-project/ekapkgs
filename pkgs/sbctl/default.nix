@@ -53,7 +53,6 @@ buildGo126Module (finalAttrs: {
     mainProgram = "sbctl";
     homepage = "https://github.com/Foxboron/sbctl";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

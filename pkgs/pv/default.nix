@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.ivarch.com/programs/pv.shtml";
     description = "Tool for monitoring the progress of data through a pipeline";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "pv";
   };

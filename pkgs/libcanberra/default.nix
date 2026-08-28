@@ -68,7 +68,6 @@ stdenv.mkDerivation rec {
     mainProgram = "canberra-gtk-play";
     homepage = "http://0pointer.de/lennart/projects/libcanberra/";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

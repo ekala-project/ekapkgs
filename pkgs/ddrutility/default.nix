@@ -29,6 +29,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://sourceforge.net/projects/ddrutility/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

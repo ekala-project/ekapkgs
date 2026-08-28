@@ -33,7 +33,6 @@ buildGo126Module (finalAttrs: {
     description = "High-performance load testing tool, written in Golang";
     homepage = "https://ddosify.com/";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     mainProgram = "ddosify";
   };
 })

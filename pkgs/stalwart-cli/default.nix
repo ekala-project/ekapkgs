@@ -31,6 +31,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
       agpl3Only
     ];
     mainProgram = "stalwart-cli";
-    maintainers = [ ];
   };
 })

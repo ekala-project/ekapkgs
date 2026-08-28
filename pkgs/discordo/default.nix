@@ -48,7 +48,6 @@ buildGo126Module (finalAttrs: {
     description = "Lightweight, secure, and feature-rich Discord terminal client";
     homepage = "https://github.com/ayn2op/discordo";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "discordo";
   };
 })

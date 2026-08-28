@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://sourceforge.net/projects/u3-tool/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "u3-tool";
   };
 })

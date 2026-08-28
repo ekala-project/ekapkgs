@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Monitors the video signal from cameras";
     homepage = "https://motion-project.github.io/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "motion";
   };

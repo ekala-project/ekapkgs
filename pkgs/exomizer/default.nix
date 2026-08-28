@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Compress archives that can still be unpacked by 8-bit systems";
     homepage = "https://bitbucket.org/magli143/exomizer/";
     license = lib.licenses.unfree;
-    maintainers = [ ];
     mainProgram = "exomizer";
     platforms = lib.platforms.all;
   };

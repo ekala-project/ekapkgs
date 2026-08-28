@@ -48,6 +48,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.opus-codec.org/";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

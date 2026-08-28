@@ -69,7 +69,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gsmartcontrol.shaduri.dev";
     mainProgram = "gsmartcontrol";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

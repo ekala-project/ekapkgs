@@ -65,6 +65,5 @@ buildGo126Module (finalAttrs: {
     description = "DNS server that runs middleware";
     mainProgram = "coredns";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

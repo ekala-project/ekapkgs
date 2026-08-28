@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Portable command-line mass tagger";
     homepage = "https://squell.github.io/id3/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "id3";
   };

@@ -72,6 +72,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
     mainProgram = "nagios";
-    maintainers = [ ];
   };
 })

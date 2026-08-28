@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Bayesian haplotype-based polymorphism discovery and genotyping";
     license = lib.licenses.mit;
     homepage = "https://github.com/freebayes/freebayes";
-    maintainers = [ ];
     platforms = [ "x86_64-linux" ];
   };
 })

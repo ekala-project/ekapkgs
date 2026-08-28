@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://docs.tboox.org";
     license = lib.licenses.asl20;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -24,7 +24,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "App source + Nix packages + Docker = Image Resources";
     homepage = "https://github.com/railwayapp/nixpacks";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "nixpacks";
   };
 })

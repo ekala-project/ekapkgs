@@ -133,7 +133,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "gnome-boxes";
     homepage = "https://apps.gnome.org/Boxes/";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

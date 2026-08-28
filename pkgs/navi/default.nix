@@ -43,6 +43,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
     mainProgram = "navi";
-    maintainers = [ ];
   };
 })

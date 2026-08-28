@@ -54,7 +54,6 @@ stdenv.mkDerivation {
       rendering features, and expanding upon the engine's native game code
       language QuakeC, as well as supporting additional map and model formats.
     '';
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

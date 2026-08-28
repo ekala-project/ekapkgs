@@ -113,7 +113,6 @@ stdenv.mkDerivation (
         texts in around 100 languages.
       '';
       license = lib.licenses.gpl2;
-      maintainers = [ ];
       platforms = lib.platforms.all;
     };
   }

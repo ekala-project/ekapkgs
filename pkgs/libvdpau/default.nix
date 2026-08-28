@@ -53,6 +53,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library to use the Video Decode and Presentation API for Unix (VDPAU)";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

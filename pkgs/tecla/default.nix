@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://sites.astro.caltech.edu/~mcs/tecla/release.html";
     license = lib.licenses.mit;
     mainProgram = "enhance";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

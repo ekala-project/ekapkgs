@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Outputs X window titles";
     homepage = "https://github.com/baskerville/xtitle";
-    maintainers = [ ];
     license = lib.licenses.unlicense;
     platforms = lib.platforms.linux;
     mainProgram = "xtitle";

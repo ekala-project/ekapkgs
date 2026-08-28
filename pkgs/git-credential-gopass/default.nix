@@ -42,7 +42,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/gopasspw/git-credential-gopass";
     changelog = "https://github.com/gopasspw/git-credential-gopass/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "git-credential-gopass";
   };
 })

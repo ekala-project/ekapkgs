@@ -88,7 +88,6 @@ stdenv.mkDerivation (finalAttrs: {
     downloadPage = "https://github.com/quick-lint/quick-lint-js";
     changelog = "https://github.com/quick-lint/quick-lint-js/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

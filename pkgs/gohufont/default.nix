@@ -73,6 +73,5 @@ stdenv.mkDerivation {
     '';
     homepage = "https://font.gohu.org/";
     license = lib.licenses.wtfpl;
-    maintainers = [ ];
   };
 }

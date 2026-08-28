@@ -55,7 +55,6 @@ stdenv.mkDerivation rec {
     mainProgram = "monitor-sensor";
     homepage = "https://gitlab.freedesktop.org/hadess/iio-sensor-proxy";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

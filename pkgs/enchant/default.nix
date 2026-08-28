@@ -55,7 +55,6 @@ stdenv.mkDerivation rec {
     description = "Generic spell checking library";
     homepage = "https://rrthomas.github.io/enchant/";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

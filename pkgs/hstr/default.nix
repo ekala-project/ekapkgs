@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/dvorka-oss/hstr";
     description = "Shell history suggest box - easily view, navigate, search and use your command history";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 

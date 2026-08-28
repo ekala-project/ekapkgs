@@ -52,6 +52,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mpl20
       gpl3Plus
     ];
-    maintainers = [ ];
   };
 })

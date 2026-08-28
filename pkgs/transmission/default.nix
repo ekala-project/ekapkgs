@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/transmission/transmission/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
     mainProgram = "transmission-daemon";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

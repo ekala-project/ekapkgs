@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
       to the above pages also shows links to precompiled Matlab mex-libraries.
       Please consult the documentation for more information.
     '';
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

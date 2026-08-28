@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Single C source file zlib-replacement library";
     homepage = "https://github.com/richgel999/miniz";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     pkgConfigModules = [ "miniz" ];
   };

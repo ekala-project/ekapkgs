@@ -22,6 +22,5 @@ stdenv.mkDerivation rec {
     description = "Detects the encoding of text files and reencodes them";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

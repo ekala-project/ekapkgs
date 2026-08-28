@@ -27,7 +27,6 @@ buildGo126Module (finalAttrs: {
     description = "NextDNS DNS/53 to DoH Proxy";
     homepage = "https://nextdns.io";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "nextdns";
   };
 })

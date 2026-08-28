@@ -48,7 +48,6 @@ stdenv.mkDerivation {
     description = "Create an APNG from multiple PNG files";
     homepage = "https://github.com/apngasm/apngasm";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "apngasm";
   };

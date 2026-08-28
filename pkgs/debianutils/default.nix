@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
       smail
     ];
     mainProgram = "ischroot";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

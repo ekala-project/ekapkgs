@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Expose-style compositing-based standalone window switcher";
     homepage = "https://github.com/felixfung/skippy-xd";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

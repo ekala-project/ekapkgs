@@ -114,7 +114,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Automated Encryption Framework";
     changelog = "https://github.com/latchset/clevis/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "clevis";
   };
 })

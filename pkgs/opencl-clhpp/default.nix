@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "OpenCL Host API C++ bindings";
     homepage = "http://github.khronos.org/OpenCL-CLHPP/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

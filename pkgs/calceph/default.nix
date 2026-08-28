@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
       cecill-b
       cecill-c
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "X11 based fractal landscape generator";
     homepage = "https://spbooth.github.io/xmountains";
     license = lib.licenses.hpndSellVariant;
-    maintainers = [ ];
     mainProgram = "xmountains";
   };
 })

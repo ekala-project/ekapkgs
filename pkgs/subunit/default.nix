@@ -49,6 +49,5 @@ stdenv.mkDerivation (finalAttrs: {
       bsd3
     ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

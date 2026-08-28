@@ -27,7 +27,6 @@ buildGoModule rec {
     description = "Network fabric for containers, designed for Kubernetes";
     license = lib.licenses.asl20;
     homepage = "https://github.com/flannel-io/flannel";
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
     mainProgram = "flannel";
   };

@@ -39,6 +39,5 @@ stdenv.mkDerivation rec {
     platforms = lib.platforms.unix;
     license = lib.licenses.zlib;
     homepage = "https://www.icculus.org/SDL_sound/";
-    maintainers = [ ];
   };
 }

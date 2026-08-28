@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Project for mocking web service APIs which use HTTP or HTTPS";
     homepage = "https://gitlab.freedesktop.org/pwithnall/uhttpmock/";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

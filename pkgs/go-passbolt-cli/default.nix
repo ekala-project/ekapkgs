@@ -51,7 +51,6 @@ buildGo126Module (finalAttrs: {
     description = "CLI tool to interact with Passbolt, an open source password manager for teams";
     homepage = "https://github.com/passbolt/go-passbolt-cli";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "passbolt";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };

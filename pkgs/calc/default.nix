@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     # The licensing situation depends on readline (see section 3 of the LGPL)
     # If linked against readline then GPLv2 otherwise LGPLv2.1
     license = if enableReadline then lib.licenses.gpl2Only else lib.licenses.lgpl21Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

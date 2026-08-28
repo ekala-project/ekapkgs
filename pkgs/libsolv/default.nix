@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Free package dependency solver";
     homepage = "https://github.com/openSUSE/libsolv";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

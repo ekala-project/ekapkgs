@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/irino/softflowd";
     changelog = "https://github.com/irino/softflowd/releases/tag/spftflowd-v${finalAttrs.version}";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

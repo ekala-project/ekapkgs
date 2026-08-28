@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Small tool to capture packets from wlan devices";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "hcxdumptool";
   };
 })

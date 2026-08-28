@@ -57,7 +57,6 @@ stdenv.mkDerivation rec {
     description = "GTK patchbay for pipewire";
     homepage = "https://gitlab.freedesktop.org/pipewire/helvum";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "helvum";
   };

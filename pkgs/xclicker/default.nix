@@ -51,6 +51,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Only;
     mainProgram = "xclicker";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

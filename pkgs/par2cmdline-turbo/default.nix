@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/animetosho/par2cmdline-turbo";
     description = "par2cmdline × ParPar: speed focused par2cmdline fork";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "par2";
   };

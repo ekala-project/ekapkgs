@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Classic biplane shoot ‘em-up game";
     license = lib.licenses.gpl2Plus;
     mainProgram = "sopwith";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

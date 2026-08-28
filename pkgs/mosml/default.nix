@@ -45,6 +45,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://mosml.org/";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

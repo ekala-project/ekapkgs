@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Static multicast routing daemon";
     homepage = "https://troglobit.com/smcroute.html";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; (linux ++ freebsd ++ netbsd ++ openbsd);
   };
 })

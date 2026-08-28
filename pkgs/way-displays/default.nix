@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/alex-courtis/way-displays";
     description = "Auto Manage Your Wayland Displays";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "way-displays";
   };

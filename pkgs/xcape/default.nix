@@ -54,7 +54,6 @@ stdenv.mkDerivation {
     '';
     homepage = "https://github.com/alols/xcape";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "xcape";
   };

@@ -63,7 +63,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://sing-box.sagernet.org";
     description = "Universal proxy platform";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "sing-box";
   };
 })

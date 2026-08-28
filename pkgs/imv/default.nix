@@ -136,7 +136,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Command line image viewer for tiling window managers";
     homepage = "https://sr.ht/~exec64/imv/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "imv";
   };

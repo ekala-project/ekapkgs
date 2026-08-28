@@ -80,7 +80,6 @@ buildGo126Module (finalAttrs: {
     description = "Email client for your terminal";
     homepage = "https://aerc-mail.org/";
     changelog = "https://git.sr.ht/~rjarry/aerc/tree/${finalAttrs.version}/item/CHANGELOG.md";
-    maintainers = [ ];
     mainProgram = "aerc";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;

@@ -31,7 +31,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/grouzen/framework-tool-tui/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     platforms = [ "x86_64-linux" ];
-    maintainers = [ ];
     mainProgram = "framework-tool-tui";
   };
 })

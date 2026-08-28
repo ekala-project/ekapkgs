@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C++ library of Leiden algorithm";
     homepage = "https://github.com/vtraag/libleidenalg";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

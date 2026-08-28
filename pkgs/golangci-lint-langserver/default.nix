@@ -25,7 +25,6 @@ buildGo126Module (finalAttrs: {
     description = "Language server for golangci-lint";
     homepage = "https://github.com/nametake/golangci-lint-langserver";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "golangci-lint-langserver";
   };
 })

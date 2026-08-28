@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/google/leveldb";
     description = "Fast and lightweight key/value database library by Google";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

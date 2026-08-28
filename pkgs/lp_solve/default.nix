@@ -47,7 +47,6 @@ stdenv.mkDerivation rec {
     mainProgram = "lp_solve";
     homepage = "https://lpsolve.sourceforge.net";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

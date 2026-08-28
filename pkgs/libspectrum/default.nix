@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "ZX Spectrum input and output support library";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -36,6 +36,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/PapirusDevelopmentTeam/papirus-folders";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "High-tech ttyrec player for Unix";
     homepage = "https://www.chiark.greenend.org.uk/~sgtatham/ipbt/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "ipbt";
   };

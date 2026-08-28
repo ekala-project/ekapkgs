@@ -33,7 +33,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Universal Design Japanese font";
     homepage = "https://github.com/googlefonts/morisawa-biz-ud-gothic";
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

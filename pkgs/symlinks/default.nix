@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Find and remedy problematic symbolic links on a system";
     homepage = "https://github.com/brandt/symlinks";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "symlinks";
   };

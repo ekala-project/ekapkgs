@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/aristocratos/btop/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.asl20;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
     mainProgram = "btop";
   };
 })

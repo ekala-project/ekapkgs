@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/google/nsync";
     description = "C library that exports various synchronization primitives";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

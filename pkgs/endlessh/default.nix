@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/skeeto/endlessh";
     changelog = "https://github.com/skeeto/endlessh/releases/tag/${finalAttrs.version}";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "endlessh";
   };

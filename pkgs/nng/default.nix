@@ -43,6 +43,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     mainProgram = "nngcat";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

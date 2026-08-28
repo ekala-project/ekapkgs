@@ -47,7 +47,6 @@ stdenv.mkDerivation {
     description = "Dynamic virtual terminal manager";
     homepage = "http://www.brain-dump.org/projects/dvtm";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

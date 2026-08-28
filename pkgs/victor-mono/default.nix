@@ -27,6 +27,5 @@ stdenvNoCC.mkDerivation rec {
     homepage = "https://rubjo.github.io/victor-mono";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

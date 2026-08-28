@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
       to the complex data structures and algorithms required.
     '';
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

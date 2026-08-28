@@ -56,7 +56,6 @@ stdenv.mkDerivation {
     description = "Atari ST and Amiga music player";
     homepage = "http://sc68.atari.org/project.html";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

@@ -121,6 +121,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://cdn.openttd.org/openttd-releases/${finalAttrs.version}/changelog.md";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -67,7 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Lightweight high-performance web server";
     homepage = "http://www.lighttpd.net/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "lighttpd";
   };

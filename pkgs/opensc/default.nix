@@ -80,6 +80,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/OpenSC/OpenSC/wiki";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Software for rapid LiDAR processing";
     homepage = "http://lastools.org/";
     license = lib.licenses.unfree;
-    maintainers = [ ];
     teams = [ ];
     platforms = lib.platforms.unix;
   };

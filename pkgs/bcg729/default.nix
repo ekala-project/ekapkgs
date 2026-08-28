@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://linphone.org/technical-corner/bcg729";
     changelog = "https://gitlab.linphone.org/BC/public/bcg729/blob/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
       It is well suited for remote administration and to be used as part of automated server maintenance scripts.
       It does not trigger "IO: Broken pipe" or "IO: Connection reset" spam bugs on the server side.
     '';
-    maintainers = [ ];
     license = with lib.licenses; [
       zlib
       libpng

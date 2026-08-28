@@ -21,7 +21,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Screen rotation daemon for X11 and wlroots";
     homepage = "https://github.com/efernau/rot8";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "rot8";
     platforms = lib.platforms.linux;
   };

@@ -31,6 +31,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mitOpenGroup;
     mainProgram = "xwud";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

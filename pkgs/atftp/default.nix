@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://sourceforge.net/p/atftp/code/ci/v${finalAttrs.version}/tree/Changelog";
     homepage = "https://sourceforge.net/projects/atftp/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

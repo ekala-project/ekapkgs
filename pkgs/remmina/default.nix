@@ -129,7 +129,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.com/Remmina/Remmina";
     description = "Remote desktop client written in GTK";
     mainProgram = "remmina";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

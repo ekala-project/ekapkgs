@@ -67,7 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://launchpad.net/cuneiform-linux";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "cuneiform";
   };
 })

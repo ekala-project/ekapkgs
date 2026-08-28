@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "libtar";
     homepage = "https://repo.or.cz/libtar";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

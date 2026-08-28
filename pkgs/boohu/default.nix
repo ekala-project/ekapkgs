@@ -32,6 +32,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://download.tuxfamily.org/boohu/index.html";
     license = lib.licenses.isc;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

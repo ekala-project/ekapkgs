@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "EPUB generator for librevenge";
     homepage = "https://sourceforge.net/projects/libepubgen/";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -55,7 +55,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://rest.sh/";
     changelog = "https://github.com/danielgtaylor/restish/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "restish";
   };
 })

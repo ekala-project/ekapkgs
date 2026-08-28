@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "JSON Bindings for GNU Guile";
     homepage = "https://savannah.nongnu.org/projects/guile-json";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

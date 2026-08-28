@@ -70,7 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C library for reading and writing files containing sampled sound";
     homepage = "https://libsndfile.github.io/libsndfile/";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

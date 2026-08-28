@@ -50,6 +50,5 @@ buildGo126Module (finalAttrs: {
     changelog = "https://github.com/openbao/openbao/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mpl20;
     mainProgram = "bao";
-    maintainers = [ ];
   };
 })

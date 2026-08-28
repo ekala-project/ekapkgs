@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Proxifier for SOCKS proxies";
     homepage = "https://proxychains.sourceforge.net";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "proxychains4";
   };

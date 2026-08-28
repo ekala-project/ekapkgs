@@ -24,6 +24,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "libwhich";
     homepage = "https://github.com/vtjnash/libwhich";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

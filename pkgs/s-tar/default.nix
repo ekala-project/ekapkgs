@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://cdrtools.sourceforge.net/private/star.html";
     license = lib.licenses.cddl;
-    maintainers = [ ];
     platforms = [ "x86_64-linux" ];
   };
 })

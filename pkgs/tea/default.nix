@@ -54,7 +54,6 @@ buildGo126Module (finalAttrs: {
     description = "Gitea official CLI client";
     homepage = "https://gitea.com/gitea/tea";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "tea";
   };
 })

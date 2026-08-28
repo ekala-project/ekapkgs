@@ -43,7 +43,6 @@ stdenv.mkDerivation rec {
     description = "C++ wrappers for ATK accessibility toolkit";
     homepage = "https://gtkmm.org";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

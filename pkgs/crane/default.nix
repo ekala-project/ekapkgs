@@ -53,6 +53,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/google/go-containerregistry";
     license = lib.licenses.asl20;
     mainProgram = "crane";
-    maintainers = [ ];
   };
 })

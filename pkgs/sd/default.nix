@@ -35,6 +35,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "sd";
     homepage = "https://github.com/chmln/sd";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

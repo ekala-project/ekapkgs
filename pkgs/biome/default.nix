@@ -64,7 +64,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://biomejs.dev/";
     changelog = "https://github.com/biomejs/biome/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "biome";
   };
 })

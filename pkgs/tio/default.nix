@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Serial console TTY";
     homepage = "https://tio.github.io/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "tio";
     platforms = lib.platforms.unix;
   };

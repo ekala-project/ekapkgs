@@ -66,7 +66,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Command-line utility for easily compressing and decompressing files and directories";
     homepage = "https://github.com/ouch-org/ouch";
     license = with lib.licenses; [ mit ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "ouch";
   };

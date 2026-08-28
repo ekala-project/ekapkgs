@@ -28,6 +28,5 @@ stdenvNoCC.mkDerivation rec {
     homepage = "https://cldr.unicode.org";
     license = lib.licenses.unicode-30;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

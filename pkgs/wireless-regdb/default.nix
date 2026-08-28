@@ -25,6 +25,5 @@ stdenvNoCC.mkDerivation rec {
     homepage = "https://wireless.docs.kernel.org/en/latest/en/developers/regulatory/wireless-regdb.html";
     license = lib.licenses.isc;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

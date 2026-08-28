@@ -37,6 +37,5 @@ perlPackages.buildPerlPackage rec {
       artistic2
     ];
     mainProgram = "exiftool";
-    maintainers = [ ];
   };
 }

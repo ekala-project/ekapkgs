@@ -35,7 +35,6 @@ stdenv.mkDerivation rec {
     description = "Memory Efficient Serialization Library";
     homepage = "https://google.github.io/flatbuffers/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "flatc";
     platforms = lib.platforms.unix;
   };

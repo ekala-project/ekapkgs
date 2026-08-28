@@ -35,7 +35,6 @@ stdenv.mkDerivation {
     description = "Programmer's calculator";
     mainProgram = "pcalc";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

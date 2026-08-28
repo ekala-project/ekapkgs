@@ -47,6 +47,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/jarun/Buku";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

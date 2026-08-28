@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.tedunangst.com/flak/post/signify";
     license = lib.licenses.isc;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

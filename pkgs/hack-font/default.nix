@@ -30,7 +30,6 @@ stdenvNoCC.mkDerivation rec {
     '';
     homepage = "https://sourcefoundry.org/hack/";
     license = lib.licenses.free;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

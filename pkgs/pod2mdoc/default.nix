@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://mandoc.bsd.lv/pod2mdoc/ChangeLog";
     license = lib.licenses.isc;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "pod2mdoc";
   };
 })

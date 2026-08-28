@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool for sequential logic synthesis and formal verification";
     homepage = "https://people.eecs.berkeley.edu/~alanmi/abc";
     license = lib.licenses.mit-modern;
-    maintainers = [ ];
     mainProgram = "abc";
     platforms = lib.platforms.unix;
   };

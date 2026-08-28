@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/RichiH/vcsh";
     changelog = "https://github.com/RichiH/vcsh/blob/v${finalAttrs.version}/changelog";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "vcsh";
   };

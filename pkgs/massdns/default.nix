@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/blechschmidt/massdns";
     changelog = "https://github.com/blechschmidt/massdns/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "massdns";
     platforms = lib.platforms.all;
     # error: use of undeclared identifier 'MSG_NOSIGNAL'

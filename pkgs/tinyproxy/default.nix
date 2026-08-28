@@ -31,7 +31,6 @@ stdenv.mkDerivation rec {
     description = "Light-weight HTTP/HTTPS proxy daemon for POSIX operating systems";
     license = licenses.gpl2Only;
     platforms = platforms.all;
-    maintainers = [ ];
     mainProgram = "tinyproxy";
   };
 }

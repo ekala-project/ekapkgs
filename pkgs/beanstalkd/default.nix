@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://kr.github.io/beanstalkd/";
     description = "Simple, fast work queue";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "beanstalkd";
   };

@@ -29,7 +29,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/charmbracelet/skate";
     changelog = "https://github.com/charmbracelet/skate/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "skate";
   };
 })

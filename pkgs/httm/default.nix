@@ -43,7 +43,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/kimono-koans/httm";
     changelog = "https://github.com/kimono-koans/httm/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     mainProgram = "httm";
   };
 })

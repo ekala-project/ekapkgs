@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "http://www.ladspa.org/ladspa_sdk/overview.html";
     license = lib.licenses.lgpl2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

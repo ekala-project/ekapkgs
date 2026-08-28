@@ -36,6 +36,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/intel/intel-ipsec-mb";
     license = lib.licenses.bsd3;
     platforms = [ "x86_64-linux" ];
-    maintainers = [ ];
   };
 })

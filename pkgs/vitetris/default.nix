@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Terminal-based Tetris clone by Victor Nilsson";
     homepage = "http://www.victornils.net/tetris/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "tetris";
     platforms = lib.platforms.unix;
 

@@ -65,7 +65,6 @@ stdenv.mkDerivation rec {
     '';
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
     license = lib.licenses.bsl11;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "boundary";
   };

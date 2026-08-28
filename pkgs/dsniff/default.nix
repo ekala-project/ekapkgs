@@ -137,7 +137,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://www.monkey.org/~dugsong/dsniff/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     # bsd and solaris should work as well
     platforms = lib.platforms.linux;
   };

@@ -33,6 +33,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/savedra1/clipse";
     license = lib.licenses.mit;
     mainProgram = "clipse";
-    maintainers = [ ];
   };
 })

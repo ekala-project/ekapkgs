@@ -75,7 +75,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     mainProgram = "xavs2";
     pkgConfigModules = [ "xavs2" ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -22,7 +22,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/ssleert/zfxtop";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "zfxtop";
   };
 })

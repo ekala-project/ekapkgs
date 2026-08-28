@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Compute the convex hull, Delaunay triangulation, Voronoi diagram and more";
     license = lib.licenses.qhull;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

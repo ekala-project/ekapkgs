@@ -36,6 +36,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://gleam.run/";
     changelog = "https://github.com/gleam-lang/gleam/blob/v${finalAttrs.version}/changelog/v${lib.versions.majorMinor finalAttrs.version}.md";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

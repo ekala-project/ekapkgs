@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "CPU miner for Litecoin and Bitcoin";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "minerd";
   };
 })

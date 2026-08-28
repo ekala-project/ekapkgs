@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "mednafen-server";
     homepage = "https://mednafen.github.io/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

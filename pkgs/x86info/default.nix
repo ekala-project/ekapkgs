@@ -55,6 +55,5 @@ stdenv.mkDerivation {
     ];
     license = lib.licenses.gpl2Only;
     homepage = "https://github.com/kernelslacker/x86info";
-    maintainers = [ ];
   };
 }

@@ -31,7 +31,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       supports Arabic, Devenagari, Georgian, Hebrew and Thai
     '';
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

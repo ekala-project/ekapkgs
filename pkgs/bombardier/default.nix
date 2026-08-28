@@ -32,7 +32,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/codesenberg/bombardier";
     changelog = "https://github.com/codesenberg/bombardier/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "bombardier";
   };
 })

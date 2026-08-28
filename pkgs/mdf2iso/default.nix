@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://salsa.debian.org/debian/mdf2iso";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "mdf2iso";
   };
 })

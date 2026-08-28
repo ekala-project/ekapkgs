@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Lightweight C++ API for Lua";
     homepage = "https://github.com/freebsd/lutok/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

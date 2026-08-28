@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "X-Resource extension client library";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxres";
     license = lib.licenses.x11;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

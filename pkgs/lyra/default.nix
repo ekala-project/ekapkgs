@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Simple to use, composable, command line parser for C++ 11 and beyond";
     platforms = lib.platforms.unix;
     license = lib.licenses.boost;
-    maintainers = [ ];
   };
 })

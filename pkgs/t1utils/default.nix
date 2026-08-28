@@ -30,7 +30,6 @@ stdenv.mkDerivation rec {
       free = true;
       redistributable = true;
     };
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

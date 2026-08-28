@@ -40,7 +40,6 @@ stdenv.mkDerivation rec {
     description = "Lexical analyzer generator for Java, written in Java";
     mainProgram = "jflex";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

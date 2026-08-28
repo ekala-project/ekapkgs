@@ -23,6 +23,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Yeraze's TNEF Stream Reader - for winmail.dat files";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

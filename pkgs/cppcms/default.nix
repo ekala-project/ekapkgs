@@ -45,6 +45,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "High Performance C++ Web Framework";
     platforms = lib.platforms.linux;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

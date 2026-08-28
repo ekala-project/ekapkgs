@@ -31,6 +31,5 @@ buildGoModule rec {
     homepage = "https://vale.sh/";
     mainProgram = "vale";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

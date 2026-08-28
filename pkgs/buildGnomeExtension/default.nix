@@ -57,7 +57,6 @@ stdenv.mkDerivation {
   meta = {
     inherit description homepage license;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
   passthru = {
     extensionPortalSlug = pname;

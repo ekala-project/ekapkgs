@@ -44,6 +44,5 @@ stdenv.mkDerivation rec {
     homepage = "https://www.linas.org/gle/";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

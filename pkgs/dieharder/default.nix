@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "dieharder";
     homepage = "https://webhome.phy.duke.edu/~rgb/General/dieharder.php";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

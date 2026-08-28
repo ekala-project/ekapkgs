@@ -23,6 +23,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C/C++ implementation of the zxcvbn password strength estimation";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

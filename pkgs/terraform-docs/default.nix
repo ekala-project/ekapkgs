@@ -48,6 +48,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "terraform-docs";
     homepage = "https://github.com/terraform-docs/terraform-docs/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -51,7 +51,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Front-end to your dev env";
     changelog = "https://github.com/jdx/mise/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "mise";
   };
 })

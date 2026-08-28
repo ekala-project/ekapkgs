@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for collision detection between two convex shapes";
     homepage = "https://github.com/danfis/libccd";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

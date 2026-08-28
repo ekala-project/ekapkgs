@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/adsr/mle";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "mle";
   };
 })

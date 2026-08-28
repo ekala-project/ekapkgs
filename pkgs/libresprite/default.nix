@@ -111,7 +111,6 @@ stdenv.mkDerivation (finalAttrs: {
         - Pixel-art specific tools like filled Contour, Polygon, Shading mode, etc.
         - Onion skinning.
     '';
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -40,7 +40,6 @@ buildGo126Module (finalAttrs: {
     changelog = "https://github.com/mrjosh/helm-ls/releases/tag/v${finalAttrs.version}";
     homepage = "https://github.com/mrjosh/helm-ls";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "helm_ls";
   };
 })

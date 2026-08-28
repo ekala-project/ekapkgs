@@ -59,7 +59,6 @@ buildGoModule (finalAttrs: {
     '';
     homepage = "https://github.com/aaronjanse/3mux";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

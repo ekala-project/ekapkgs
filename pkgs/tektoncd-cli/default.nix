@@ -90,7 +90,6 @@ buildGo126Module (finalAttrs: {
       Pipelines.
     '';
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "tkn";
   };
 })

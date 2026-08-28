@@ -24,7 +24,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Utility to accurately report the in core memory usage for a program";
     homepage = "https://github.com/pixelb/ps_mem";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "ps_mem";
   };

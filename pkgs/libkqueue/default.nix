@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/mheily/libkqueue";
     changelog = "https://github.com/mheily/libkqueue/raw/v${finalAttrs.version}/ChangeLog";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -46,7 +46,6 @@ stdenv.mkDerivation {
     description = "SSTP client for Linux";
     homepage = "https://sstp-client.sourceforge.net/";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     mainProgram = "sstpc";
   };

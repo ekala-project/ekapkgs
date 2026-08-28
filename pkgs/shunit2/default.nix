@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/kward/shunit2";
     description = "XUnit based unit test framework for Bourne based shell scripts";
-    maintainers = [ ];
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
     mainProgram = "shunit2";

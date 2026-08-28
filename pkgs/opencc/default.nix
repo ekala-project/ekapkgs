@@ -36,7 +36,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/BYVoid/OpenCC";
     license = lib.licenses.asl20;
     description = "Project for conversion between Traditional and Simplified Chinese";
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 }

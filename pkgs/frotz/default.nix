@@ -85,7 +85,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Z-machine interpreter for Infocom games and other interactive fiction (${frontend})";
     mainProgram = progName;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
   };
 })

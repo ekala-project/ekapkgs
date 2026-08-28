@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Collection of command line diagnostic tools for storage devices";
     homepage = "https://github.com/Seagate/openSeaChest";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     platforms = with lib.platforms; freebsd ++ linux;
   };
 })

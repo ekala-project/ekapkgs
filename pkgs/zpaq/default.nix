@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Incremental journaling backup utility and archiver";
     homepage = "http://mattmahoney.net/dc/zpaq.html";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "zpaq";
   };

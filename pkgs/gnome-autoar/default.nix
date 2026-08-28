@@ -49,6 +49,5 @@ stdenv.mkDerivation rec {
     platforms = lib.platforms.linux;
     license = lib.licenses.lgpl21Plus;
     description = "Library to integrate compressed files management with GNOME";
-    maintainers = [ ];
   };
 }

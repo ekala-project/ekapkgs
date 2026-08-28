@@ -56,6 +56,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
     mainProgram = "dwm";
-    maintainers = [ ];
   };
 })

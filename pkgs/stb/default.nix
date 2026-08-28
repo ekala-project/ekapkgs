@@ -50,6 +50,5 @@ stdenv.mkDerivation (finalAttrs: {
       unlicense
     ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

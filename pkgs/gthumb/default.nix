@@ -97,6 +97,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "gthumb";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

@@ -43,6 +43,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "resterm";
     license = lib.licenses.asl20;
     platforms = with lib.platforms; linux ++ darwin ++ windows;
-    maintainers = [ ];
   };
 })

@@ -27,6 +27,5 @@ stdenvNoCC.mkDerivation rec {
     homepage = "https://github.com/marlonrichert/zsh-autocomplete/";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

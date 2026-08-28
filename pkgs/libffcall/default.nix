@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Foreign function call library";
     homepage = "https://www.gnu.org/software/libffcall/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

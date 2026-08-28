@@ -31,6 +31,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/zeux/volk";
     platforms = lib.platforms.all;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

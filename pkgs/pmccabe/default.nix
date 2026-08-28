@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
       trees or files; and vifn, to invoke vi given a function name rather
       than a file name.
     '';
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -33,6 +33,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/traefik/yaegi";
     changelog = "https://github.com/traefik/yaegi/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

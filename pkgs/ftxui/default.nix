@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/ArthurSonzogni/FTXUI/blob/v${finalAttrs.version}/CHANGELOG.md";
     description = "Functional Terminal User Interface library for C++";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "bijiben";
     homepage = "https://gitlab.gnome.org/GNOME/gnome-notes";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

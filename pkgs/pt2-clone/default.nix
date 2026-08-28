@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Highly accurate clone of the classic ProTracker 2.3D software for Amiga";
     homepage = "https://16-bits.org/pt2.php";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     # From HOW-TO-COMPILE.txt:
     # > This code is NOT big-endian compatible
     platforms = lib.platforms.littleEndian;

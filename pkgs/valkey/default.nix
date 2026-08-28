@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://valkey.io/";
     description = "High-performance data structure server that primarily serves key/value workloads";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     changelog = "https://github.com/valkey-io/valkey/releases/tag/${finalAttrs.version}";
     mainProgram = "valkey-cli";

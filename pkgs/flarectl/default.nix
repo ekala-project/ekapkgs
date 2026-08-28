@@ -29,7 +29,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/cloudflare/cloudflare-go";
     changelog = "https://github.com/cloudflare/cloudflare-go/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "flarectl";
   };
 })

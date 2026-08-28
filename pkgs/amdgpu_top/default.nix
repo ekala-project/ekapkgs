@@ -52,7 +52,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/Umio-Yasuno/amdgpu_top";
     changelog = "https://github.com/Umio-Yasuno/amdgpu_top/releases";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "amdgpu_top";
   };

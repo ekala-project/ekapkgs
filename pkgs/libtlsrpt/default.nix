@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/sys4/libtlsrpt";
     changelog = "https://github.com/sys4/libtlsrpt/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

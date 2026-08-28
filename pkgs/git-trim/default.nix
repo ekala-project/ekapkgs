@@ -49,7 +49,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Automatically trims your branches whose tracking remote refs are merged or gone";
     homepage = "https://github.com/foriequal0/git-trim";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "git-trim";
   };
 })

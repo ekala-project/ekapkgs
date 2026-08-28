@@ -37,6 +37,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Universal typing tutor";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

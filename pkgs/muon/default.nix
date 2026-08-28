@@ -140,7 +140,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://muon.build";
     description = "Implementation of the meson build system in C99";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "muon";
   };

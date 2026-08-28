@@ -75,6 +75,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://tracker.debian.org/pkg/at";
     platforms = lib.platforms.linux;
     mainProgram = "at";
-    maintainers = [ ];
   };
 })

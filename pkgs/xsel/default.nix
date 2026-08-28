@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.kfish.org/software/xsel";
     changelog = "https://github.com/kfish/xsel/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "xsel";
   };

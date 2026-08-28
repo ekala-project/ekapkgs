@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/sandialabs/verdict";
     license = lib.licenses.bsd3;
     changelog = "https://github.com/sandialabs/verdict/releases/tag/${finalAttrs.version}";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

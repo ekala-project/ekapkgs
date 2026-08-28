@@ -51,7 +51,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://rustlings.cool/";
     changelog = "https://github.com/rust-lang/rustlings/releases";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "rustlings";
   };
 })

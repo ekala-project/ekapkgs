@@ -34,7 +34,6 @@ buildGoModule (finalAttrs: {
     description = "Build a digital writing community";
     homepage = "https://github.com/writefreely/writefreely";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
     mainProgram = "writefreely";
   };
 })

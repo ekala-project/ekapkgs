@@ -30,6 +30,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "mage";
     homepage = "https://magefile.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -83,7 +83,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://apps.gnome.org/Contacts/";
     description = "GNOME's integrated address book";
     mainProgram = "gnome-contacts";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

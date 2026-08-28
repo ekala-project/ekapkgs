@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://i2pd.website";
     description = "Minimal I2P router written in C++";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "i2pd";
   };

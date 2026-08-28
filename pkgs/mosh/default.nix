@@ -78,6 +78,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Mobile shell (ssh replacement)";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

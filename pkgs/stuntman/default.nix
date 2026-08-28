@@ -45,7 +45,6 @@ stdenv.mkDerivation {
     description = "Open source STUN server and client";
     homepage = "https://www.stunprotocol.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

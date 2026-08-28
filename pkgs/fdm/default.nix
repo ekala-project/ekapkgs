@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     description = "Mail fetching and delivery tool - should do the job of getmail and procmail";
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
     homepage = "https://github.com/nicm/fdm";
     downloadPage = "https://github.com/nicm/fdm/releases";

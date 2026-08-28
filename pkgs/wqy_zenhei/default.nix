@@ -27,7 +27,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Chinese Unicode font with full CJK coverage";
     homepage = "http://wenq.org";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -103,7 +103,6 @@ stdenv.mkDerivation (finalAttrs: {
       use of coreboot.
     '';
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.systems.inspect.patternLogicalAnd lib.systems.inspect.patterns.isUnix lib.systems.inspect.patterns.isx86;
     badPlatforms = [ lib.systems.inspect.patterns.isDarwin ];
   };

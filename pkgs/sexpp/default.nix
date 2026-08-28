@@ -57,6 +57,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "sexpp";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

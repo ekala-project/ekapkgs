@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
 
     homepage = "https://wordnet.princeton.edu/";
     license = lib.licenses.free;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "wn";
   };

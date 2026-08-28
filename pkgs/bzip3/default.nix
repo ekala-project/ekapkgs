@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/iczelia/bzip3";
     changelog = "https://github.com/iczelia/bzip3/blob/${finalAttrs.version}/NEWS";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Parallel Presolve for Integer and Linear Optimization";
     license = lib.licenses.lgpl3Plus;
     mainProgram = "papilo";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

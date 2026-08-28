@@ -22,7 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/EdJoPaTo/mqttui";
     changelog = "https://github.com/EdJoPaTo/mqttui/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "mqttui";
   };
 })

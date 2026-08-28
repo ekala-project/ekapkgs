@@ -122,7 +122,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.lgpl21Only;
     mainProgram = "tcc";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

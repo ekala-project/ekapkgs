@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "VT220/xterm/ECMA-48 terminal emulator library";
     homepage = "http://www.leonerd.org.uk/code/libvterm/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -179,7 +179,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://www.cyrusimap.org/imap/download/release-notes/${lib.versions.majorMinor finalAttrs.version}/x/${finalAttrs.version}.html";
     license = lib.licenses.bsdOriginal;
     mainProgram = "cyradm";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

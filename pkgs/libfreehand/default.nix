@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Adobe Freehand import library";
     homepage = "https://wiki.documentfoundation.org/DLP/Libraries/libfreehand";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

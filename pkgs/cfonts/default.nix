@@ -18,7 +18,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/dominikwilkowski/cfonts";
     description = "Silly little command line tool for sexy ANSI fonts in the console";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "cfonts";
   };
 })

@@ -43,6 +43,5 @@ stdenv.mkDerivation rec {
     homepage = "https://www.freedesktop.org/wiki/Software/media-player-info/";
     license = licenses.bsd3;
     platforms = platforms.linux;
-    maintainers = [ ];
   };
 }

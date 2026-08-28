@@ -36,6 +36,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://members.home.nl/p.a.rombouts/pdnsd";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

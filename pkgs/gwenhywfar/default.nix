@@ -81,7 +81,6 @@ stdenv.mkDerivation rec {
     description = "OS abstraction functions used by aqbanking and related tools";
     homepage = "https://www.aquamaniac.de/rdm/projects/gwenhywfar";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

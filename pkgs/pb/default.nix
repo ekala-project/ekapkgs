@@ -32,7 +32,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/parseablehq/pb/releases/tag/v${finalAttrs.version}";
     description = "CLI client for Parseable server";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     mainProgram = "pb";
   };
 })

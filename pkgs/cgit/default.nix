@@ -109,6 +109,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Web frontend for git repositories";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

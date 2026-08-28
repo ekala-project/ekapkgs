@@ -61,6 +61,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://mcj.sourceforge.net/";
     license = lib.licenses.xfig;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

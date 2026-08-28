@@ -21,7 +21,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Set the system timezone based on IP geolocation";
     homepage = "https://github.com/cdown/tzupdate";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "tzupdate";
   };

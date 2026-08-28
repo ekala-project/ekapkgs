@@ -157,7 +157,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://apps.gnome.org/Builder/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "gnome-builder";
   };

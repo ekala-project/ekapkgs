@@ -27,7 +27,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://crates.io/crates/systemctl-tui";
     changelog = "https://github.com/rgwood/systemctl-tui/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "systemctl-tui";
   };
 })

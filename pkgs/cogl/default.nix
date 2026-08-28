@@ -85,6 +85,5 @@ stdenv.mkDerivation rec {
       publicDomain
       sgi-b-20
     ];
-    maintainers = [ ];
   };
 }

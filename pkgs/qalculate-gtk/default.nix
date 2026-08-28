@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Ultimate desktop calculator";
     homepage = "http://qalculate.github.io";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     mainProgram = "qalculate-gtk";
     platforms = lib.platforms.linux;

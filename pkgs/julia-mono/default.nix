@@ -22,6 +22,5 @@ stdenvNoCC.mkDerivation rec {
     homepage = "https://juliamono.netlify.app/";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

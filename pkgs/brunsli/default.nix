@@ -62,6 +62,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Lossless JPEG repacking library";
     homepage = "https://github.com/google/brunsli";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

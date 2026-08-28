@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Small and lightweight IDE";
     homepage = "https://www.geany.org/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "geany";
   };

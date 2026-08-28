@@ -28,7 +28,6 @@ buildGoModule {
     description = "Manage local application configuration files using templates and data from etcd or consul";
     homepage = "https://github.com/kelseyhightower/confd";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "confd";
   };
 }

@@ -45,7 +45,6 @@ buildGoModule rec {
     homepage = "https://github.com/cilium/hubble/";
     changelog = "https://github.com/cilium/hubble/blob/${src.tag}/CHANGELOG.md";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "hubble";
   };
 }

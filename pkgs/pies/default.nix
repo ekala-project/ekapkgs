@@ -54,6 +54,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.gnu ++ lib.platforms.linux;
     broken = stdenv.hostPlatform.system == "aarch64-linux";
-    maintainers = [ ];
   };
 })

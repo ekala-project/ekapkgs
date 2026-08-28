@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Convolution library by Fons Adriaensen";
     homepage = "https://kokkinizita.linuxaudio.org/linuxaudio/index.html";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

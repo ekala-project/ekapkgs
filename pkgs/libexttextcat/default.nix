@@ -18,7 +18,6 @@ stdenv.mkDerivation rec {
     homepage = "https://wiki.documentfoundation.org/Libexttextcat";
     license = lib.licenses.bsd3;
     mainProgram = "createfp";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

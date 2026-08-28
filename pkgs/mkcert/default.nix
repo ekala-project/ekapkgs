@@ -30,6 +30,5 @@ buildGoModule (finalAttrs: {
     description = "Simple tool for making locally-trusted development certificates";
     mainProgram = "mkcert";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

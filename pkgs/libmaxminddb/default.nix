@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/maxmind/libmaxminddb";
     license = lib.licenses.asl20;
     mainProgram = "mmdblookup";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

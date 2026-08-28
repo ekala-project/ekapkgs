@@ -77,6 +77,5 @@ stdenv.mkDerivation {
     homepage = "https://sigrok.org/";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

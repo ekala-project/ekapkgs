@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/f4exb/dsdcc";
     license = lib.licenses.gpl3;
     mainProgram = "dsdccx";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

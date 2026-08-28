@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://pwmt.org/projects/girara";
     description = "User interface library";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

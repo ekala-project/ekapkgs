@@ -154,7 +154,6 @@ stdenv.mkDerivation (self: {
     homepage = "https://sbcl.org";
     license = lib.licenses.publicDomain;
     mainProgram = "sbcl";
-    maintainers = [ ];
     platforms = [
       "x86_64-darwin"
       "x86_64-linux"

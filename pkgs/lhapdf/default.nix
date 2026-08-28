@@ -55,6 +55,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3;
     homepage = "https://www.lhapdf.org";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

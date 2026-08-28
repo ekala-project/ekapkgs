@@ -48,7 +48,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/PortMidi/portmidi";
     description = "Platform independent library for MIDI I/O";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

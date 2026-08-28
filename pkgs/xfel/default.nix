@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tooling for working with the FEL mode on Allwinner SoCs";
     homepage = "https://github.com/xboot/xfel";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "xfel";
   };

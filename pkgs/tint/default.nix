@@ -31,7 +31,6 @@ buildGoModule (finalAttrs: {
     description = "Command-line tool to recolor images using theme palettes";
     homepage = "https://github.com/ashish0kumar/tint";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "tint";
     platforms = lib.platforms.unix;
   };

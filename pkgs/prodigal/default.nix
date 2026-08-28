@@ -31,6 +31,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/hyattpd/Prodigal";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

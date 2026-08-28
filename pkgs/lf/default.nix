@@ -48,7 +48,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://godoc.org/github.com/gokcehan/lf";
     changelog = "https://github.com/gokcehan/lf/releases/tag/r${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "lf";
   };
 })

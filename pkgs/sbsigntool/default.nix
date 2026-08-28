@@ -69,7 +69,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Tools for maintaining UEFI signature databases";
     homepage = "http://jk.ozlabs.org/docs/sbkeysync-maintaing-uefi-key-databases";
-    maintainers = [ ];
     platforms = [
       "x86_64-linux"
       "aarch64-linux"

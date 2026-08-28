@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "webdis";
     homepage = "https://webd.is/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

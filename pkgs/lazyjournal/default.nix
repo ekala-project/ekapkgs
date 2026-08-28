@@ -33,7 +33,6 @@ buildGoModule {
     homepage = "https://github.com/Lifailon/lazyjournal";
     license = lib.licenses.mit;
     platforms = with lib.platforms; unix ++ windows;
-    maintainers = [ ];
     mainProgram = "lazyjournal";
   };
 }

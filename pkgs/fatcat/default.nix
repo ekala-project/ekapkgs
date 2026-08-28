@@ -43,6 +43,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "fatcat";
     homepage = "https://github.com/Gregwar/fatcat";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

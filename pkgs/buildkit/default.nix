@@ -34,7 +34,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/moby/buildkit";
     changelog = "https://github.com/moby/buildkit/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "buildctl";
   };
 })

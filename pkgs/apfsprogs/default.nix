@@ -72,6 +72,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/linux-apfs/apfsprogs/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

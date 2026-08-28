@@ -101,7 +101,6 @@ buildGo126Module (finalAttrs: {
     changelog = "https://raw.githubusercontent.com/cloudflare/cloudflared/refs/tags/${finalAttrs.version}/RELEASE_NOTES";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix ++ lib.platforms.windows;
-    maintainers = [ ];
     mainProgram = "cloudflared";
   };
 })

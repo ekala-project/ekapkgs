@@ -32,7 +32,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/oklog/ulid";
     changelog = "https://github.com/oklog/ulid/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "ulid";
   };
 })

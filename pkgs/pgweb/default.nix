@@ -44,6 +44,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://sosedoff.github.io/pgweb/";
     license = lib.licenses.mit;
     mainProgram = "pgweb";
-    maintainers = [ ];
   };
 })

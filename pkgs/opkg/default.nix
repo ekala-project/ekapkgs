@@ -50,6 +50,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://git.yoctoproject.org/opkg/tree/CHANGELOG.md";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

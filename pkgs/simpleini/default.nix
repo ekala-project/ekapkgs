@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/brofield/simpleini";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -32,7 +32,6 @@ stdenv.mkDerivation {
 
   meta = {
     description = "TFTP tools - a lot of fixes on top of BSD TFTP";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.bsd3;
     homepage = "https://www.kernel.org/pub/software/network/tftp/";

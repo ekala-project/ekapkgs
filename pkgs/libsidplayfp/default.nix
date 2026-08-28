@@ -95,7 +95,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/libsidplayfp/libsidplayfp";
     changelog = "https://github.com/libsidplayfp/libsidplayfp/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

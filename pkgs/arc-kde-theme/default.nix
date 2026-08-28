@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Port of the arc theme for Plasma";
     homepage = "https://github.com/PapirusDevelopmentTeam/arc-kde";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

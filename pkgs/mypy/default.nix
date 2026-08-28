@@ -64,6 +64,5 @@ python3Packages.buildPythonApplication rec {
     downloadPage = "https://github.com/python/mypy";
     license = lib.licenses.mit;
     mainProgram = "mypy";
-    maintainers = [ ];
   };
 }

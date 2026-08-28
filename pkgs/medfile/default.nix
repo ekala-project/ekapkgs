@@ -42,6 +42,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://salome-platform.org/";
     platforms = lib.platforms.linux;
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 })

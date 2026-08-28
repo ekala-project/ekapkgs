@@ -46,6 +46,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Automatically calculate BPM (tempo) of music files";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

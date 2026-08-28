@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
       panel, and menu.
     '';
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = guile.meta.platforms;
   };
 })

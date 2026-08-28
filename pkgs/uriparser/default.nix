@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3;
     mainProgram = "uriparse";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

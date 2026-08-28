@@ -89,7 +89,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
       mit
     ];
-    maintainers = [ ];
     mainProgram = "sudo";
     platforms = lib.platforms.linux;
   };

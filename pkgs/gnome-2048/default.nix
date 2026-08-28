@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.gnome.org/GNOME/gnome-2048/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
     description = "Obtain the 2048 tile";
     mainProgram = "gnome-2048";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
   };

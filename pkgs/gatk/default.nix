@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Wide variety of tools with a primary focus on variant discovery and genotyping";
     license = lib.licenses.asl20;
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
-    maintainers = [ ];
     longDescription = ''
       The GATK is the industry standard for identifying SNPs and indels in germline
       DNA and RNAseq data. Its scope is now expanding to include somatic short variant

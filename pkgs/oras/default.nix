@@ -45,6 +45,5 @@ buildGoModule (finalAttrs: {
     description = "Distribute artifacts across OCI registries with ease";
     mainProgram = "oras";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

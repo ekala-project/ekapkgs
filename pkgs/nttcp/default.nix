@@ -25,7 +25,6 @@ stdenv.mkDerivation rec {
   meta = {
     description = "New test TCP program";
     license = lib.licenses.unfree;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

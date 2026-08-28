@@ -26,7 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Port of i3bar for river";
     homepage = "https://github.com/MaxVerevkin/i3bar-river";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "i3bar-river";
     platforms = lib.platforms.linux;
   };

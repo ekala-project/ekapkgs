@@ -36,7 +36,6 @@ stdenv.mkDerivation rec {
     homepage = "https://www.gnu.org/software/rcs/";
     description = "Revision control system";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

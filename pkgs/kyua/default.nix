@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/freebsd/kyua/blob/master/NEWS.md";
     license = lib.licenses.bsd3;
     mainProgram = "kyua";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

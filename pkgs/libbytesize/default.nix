@@ -65,6 +65,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl2Plus;
     mainProgram = "bscalc";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

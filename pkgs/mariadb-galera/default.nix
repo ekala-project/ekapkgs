@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "garbd";
     homepage = "https://galeracluster.com/";
     license = lib.licenses.lgpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

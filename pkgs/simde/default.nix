@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://simd-everywhere.github.io";
     description = "Implementations of SIMD instruction sets for systems which don't natively support them";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

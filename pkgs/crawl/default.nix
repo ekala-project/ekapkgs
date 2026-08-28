@@ -84,7 +84,6 @@ stdenv.mkDerivation rec {
       lib.licenses.zlib
       cc0
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

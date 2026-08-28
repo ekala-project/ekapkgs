@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fast single-producer, single-consumer lock-free queue for C";
     homepage = "https://github.com/cameron314/readerwriterqueue";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

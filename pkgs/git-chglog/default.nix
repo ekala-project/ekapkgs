@@ -29,7 +29,6 @@ buildGoModule (finalAttrs: {
     description = "CHANGELOG generator implemented in Go (Golang)";
     homepage = "https://github.com/git-chglog/git-chglog";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "git-chglog";
   };
 })

@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool to generate ext2 filesystem images without requiring root privileges";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "genext2fs";
   };
 })

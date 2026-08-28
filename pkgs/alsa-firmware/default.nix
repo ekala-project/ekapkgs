@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Soundcard firmwares from the alsa project";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     sourceProvenance = with lib.sourceTypes; [
       binaryFirmware
       fromSource

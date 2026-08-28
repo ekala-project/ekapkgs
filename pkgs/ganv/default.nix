@@ -47,7 +47,6 @@ stdenv.mkDerivation {
     mainProgram = "ganv_bench";
     homepage = "http://drobilla.net";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

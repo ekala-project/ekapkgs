@@ -21,7 +21,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Simple output management tool for wlroots based compositors implementing";
     homepage = "https://git.sr.ht/~shinyzenith/wayout";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "wayout";
   };

@@ -35,7 +35,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/languitar/pass-git-helper";
     description = "Git credential helper interfacing with pass, the standard unix password manager";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     mainProgram = "pass-git-helper";
   };
 })

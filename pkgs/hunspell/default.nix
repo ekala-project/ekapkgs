@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
       mpl11
     ];
     mainProgram = "hunspell";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

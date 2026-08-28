@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.ugetdm.com";
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "uget-gtk";
   };
 })

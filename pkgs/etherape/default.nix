@@ -37,6 +37,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://etherape.sourceforge.net/";
     license = lib.licenses.gpl2Plus;
     platforms = with lib.platforms; linux;
-    maintainers = [ ];
   };
 })

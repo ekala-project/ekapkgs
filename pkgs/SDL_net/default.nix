@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/libsdl-org/SDL_net";
     description = "SDL networking library";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     inherit (SDL.meta) platforms;
   };
 })

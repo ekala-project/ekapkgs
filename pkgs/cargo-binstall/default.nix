@@ -62,6 +62,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/cargo-bins/cargo-binstall";
     changelog = "https://github.com/cargo-bins/cargo-binstall/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

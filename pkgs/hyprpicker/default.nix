@@ -59,7 +59,6 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/hyprwm/hyprpicker";
     changelog = "https://github.com/hyprwm/hyprpicker/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "hyprpicker";
   };

@@ -44,6 +44,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/y3owk1n/nvs";
     changelog = "https://github.com/y3owk1n/nvs/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

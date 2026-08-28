@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.gnu.org/software/parallel/";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "parallel";
   };
 })

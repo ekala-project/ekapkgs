@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl21;
     changelog = "https://github.com/openslide/openslide/releases/tag/v${finalAttrs.version}";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "slidetool";
   };
 })

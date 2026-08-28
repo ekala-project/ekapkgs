@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "OpenSSL based Authenticode signing for PE/MSI/Java CAB files";
     mainProgram = "osslsigncode";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

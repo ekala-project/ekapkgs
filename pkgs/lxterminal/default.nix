@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Standard terminal emulator of LXDE";
     homepage = "https://www.lxde.org/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "lxterminal";
   };

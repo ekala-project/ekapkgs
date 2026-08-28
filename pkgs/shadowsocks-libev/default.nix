@@ -84,7 +84,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/shadowsocks/shadowsocks-libev";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

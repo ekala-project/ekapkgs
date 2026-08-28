@@ -30,7 +30,6 @@ buildGo126Module (finalAttrs: {
       almost all basic and advanced OAuth 2.0, OIDC, OIDF FAPI and JWT profiles.
     '';
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.darwin ++ lib.platforms.linux;
   };
 })

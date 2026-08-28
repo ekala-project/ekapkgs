@@ -17,7 +17,6 @@ perlPackages.buildPerlPackage rec {
   meta = {
     description = "Rename files according to a Perl rewrite expression";
     homepage = "https://github.com/pstray/rename";
-    maintainers = [ ];
     license = lib.licenses.gpl1Plus;
     mainProgram = "rename";
   };

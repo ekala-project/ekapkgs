@@ -32,6 +32,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "unfurl";
     homepage = "https://github.com/tomnomnom/unfurl";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

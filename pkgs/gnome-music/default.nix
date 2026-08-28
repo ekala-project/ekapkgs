@@ -98,7 +98,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://apps.gnome.org/Music/";
     description = "Music player and management application for the GNOME desktop environment";
     mainProgram = "gnome-music";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
   };

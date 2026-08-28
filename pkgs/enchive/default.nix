@@ -27,6 +27,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/skeeto/enchive";
     license = lib.licenses.unlicense;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

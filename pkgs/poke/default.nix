@@ -75,7 +75,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.jemarch.net/poke";
     changelog = "https://git.savannah.gnu.org/cgit/poke.git/plain/NEWS?h=releases/poke-${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

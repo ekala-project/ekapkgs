@@ -78,6 +78,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/canonical/cloud-utils";
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl3;
-    maintainers = [ ];
   };
 })

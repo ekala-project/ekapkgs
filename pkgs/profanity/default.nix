@@ -122,7 +122,6 @@ stdenv.mkDerivation (finalAttrs: {
       libstrophe, inspired by Irssi.
     '';
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

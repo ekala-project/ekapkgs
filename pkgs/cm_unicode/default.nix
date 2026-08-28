@@ -31,7 +31,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://cm-unicode.sourceforge.io/";
     description = "Computer Modern Unicode fonts";
-    maintainers = [ ];
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
   };

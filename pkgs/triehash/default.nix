@@ -43,7 +43,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/julian-klode/triehash";
     description = "Order-preserving minimal perfect hash function generator";
     license = with lib.licenses; mit;
-    maintainers = [ ];
     platforms = perlPackages.perl.meta.platforms;
     mainProgram = "triehash";
   };

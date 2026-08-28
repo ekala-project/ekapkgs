@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Hummer12007/brightnessctl";
     description = "This program allows you read and control device brightness";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "brightnessctl";
   };

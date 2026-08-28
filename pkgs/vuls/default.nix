@@ -34,7 +34,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/future-architect/vuls";
     changelog = "https://github.com/future-architect/vuls/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "vuls";
   };
 })

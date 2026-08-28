@@ -42,6 +42,5 @@ stdenv.mkDerivation rec {
     description = "C++ wrapper for the libxml2 XML parser library";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

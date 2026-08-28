@@ -102,7 +102,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://www.gnu.org/software/xnee/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

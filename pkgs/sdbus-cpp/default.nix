@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/Kistler-Group/sdbus-cpp/blob/v${version}/ChangeLog";
     description = "High-level C++ D-Bus library designed to provide easy-to-use yet powerful API";
     license = lib.licenses.lgpl2Only;
-    maintainers = [ ];
     mainProgram = "sdbus-c++-xml2cpp";
     platforms = lib.platforms.linux;
   };

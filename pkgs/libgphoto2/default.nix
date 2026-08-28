@@ -66,6 +66,5 @@ stdenv.mkDerivation rec {
     description = "Library for accessing digital cameras";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

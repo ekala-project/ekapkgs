@@ -82,7 +82,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Cross-platform multimedia library - build SDL 1.2 applications against 2.0";
     license = lib.licenses.zlib;
     mainProgram = "sdl-config";
-    maintainers = [ ];
     platforms = lib.platforms.all;
     pkgConfigModules = [
       "sdl"

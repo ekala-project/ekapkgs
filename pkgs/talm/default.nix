@@ -49,7 +49,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/cozystack/talm";
     changelog = "https://github.com/cozystack/talm/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "talm";
   };
 })

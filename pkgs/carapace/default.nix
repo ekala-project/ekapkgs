@@ -38,7 +38,6 @@ buildGo126Module (finalAttrs: {
   meta = {
     description = "Multi-shell multi-command argument completer";
     homepage = "https://carapace.sh/";
-    maintainers = [ ];
     license = lib.licenses.mit;
     mainProgram = "carapace";
   };

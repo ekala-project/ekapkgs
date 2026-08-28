@@ -46,7 +46,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/joshmedeski/sesh";
     changelog = "https://github.com/joshmedeski/sesh/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "sesh";
   };
 })

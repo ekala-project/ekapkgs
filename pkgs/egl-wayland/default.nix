@@ -65,6 +65,5 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/NVIDIA/egl-wayland/";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

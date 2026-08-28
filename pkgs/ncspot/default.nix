@@ -66,7 +66,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/hrkfdn/ncspot";
     changelog = "https://github.com/hrkfdn/ncspot/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "ncspot";
   };
 })

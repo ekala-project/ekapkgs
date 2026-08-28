@@ -47,6 +47,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "ijq";
     homepage = "https://codeberg.org/gpanders/ijq";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

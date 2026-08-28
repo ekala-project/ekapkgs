@@ -22,6 +22,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "wasmserve";
     homepage = "https://github.com/hajimehoshi/wasmserve";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

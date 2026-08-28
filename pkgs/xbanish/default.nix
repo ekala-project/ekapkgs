@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/jcs/xbanish";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "xbanish";
   };

@@ -41,6 +41,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "mob";
     homepage = "https://github.com/remotemobprogramming/mob";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

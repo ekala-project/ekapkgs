@@ -82,6 +82,5 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/KhronosGroup/Vulkan-Tools";
     platforms = lib.platforms.unix;
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

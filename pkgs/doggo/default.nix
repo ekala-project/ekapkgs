@@ -41,6 +41,5 @@ buildGo126Module (finalAttrs: {
       It outputs information in a neat concise manner and supports protocols like DoH, DoT, DoQ, and DNSCrypt as well
     '';
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

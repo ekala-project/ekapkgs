@@ -24,6 +24,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://git.codemadness.org/stagit/file/README.html";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

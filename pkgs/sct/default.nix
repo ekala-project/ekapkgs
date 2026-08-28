@@ -31,7 +31,6 @@ stdenv.mkDerivation {
   meta = {
     homepage = "https://www.umaxx.net/";
     description = "Minimal utility to set display colour temperature";
-    maintainers = [ ];
     license = lib.licenses.isc;
     platforms = with lib.platforms; linux ++ freebsd ++ openbsd;
   };

@@ -50,6 +50,5 @@ stdenv.mkDerivation rec {
     homepage = "https://gitlab.gnome.org/GNOME/gom";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

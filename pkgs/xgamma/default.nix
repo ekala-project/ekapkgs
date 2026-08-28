@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
       hpndSellVariant
     ];
     mainProgram = "xgamma";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

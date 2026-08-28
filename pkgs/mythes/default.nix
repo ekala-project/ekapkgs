@@ -30,7 +30,6 @@ stdenv.mkDerivation rec {
     homepage = "https://hunspell.sourceforge.net/";
     license = lib.licenses.bsd3;
     mainProgram = "th_gen_idx.pl";
-    maintainers = [ ];
     inherit (hunspell.meta) platforms;
   };
 }

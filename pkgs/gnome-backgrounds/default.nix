@@ -27,6 +27,5 @@ stdenv.mkDerivation rec {
     changelog = "https://gitlab.gnome.org/GNOME/gnome-backgrounds/-/blob/${version}/NEWS?ref_type=tags";
     license = lib.licenses.cc-by-sa-30;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

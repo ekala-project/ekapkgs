@@ -21,6 +21,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     homepage = "https://github.com/termbox/termbox#readme";
     downloadPage = "https://github.com/termbox/termbox/releases";
-    maintainers = [ ];
   };
 })

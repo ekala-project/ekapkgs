@@ -66,7 +66,6 @@ stdenv.mkDerivation rec {
     description = "Library for creating fast, dynamic graphical user interfaces";
     license = lib.licenses.lgpl2Plus;
     homepage = "http://www.clutter-project.org/";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

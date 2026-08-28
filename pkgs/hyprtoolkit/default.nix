@@ -64,7 +64,6 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/hyprwm/hyprtoolkit";
     description = "A modern C++ Wayland-native GUI toolkit";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

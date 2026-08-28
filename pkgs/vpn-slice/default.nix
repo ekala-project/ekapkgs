@@ -48,6 +48,5 @@ python3Packages.buildPythonApplication rec {
     description = "vpnc-script replacement for easy and secure split-tunnel VPN setup";
     mainProgram = "vpn-slice";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
   };
 }

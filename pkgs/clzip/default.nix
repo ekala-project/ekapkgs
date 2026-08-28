@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C language version of lzip";
     homepage = "https://www.nongnu.org/lzip/clzip.html";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "clzip";
   };

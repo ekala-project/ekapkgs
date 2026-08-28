@@ -82,7 +82,6 @@ stdenv.mkDerivation {
     '';
     homepage = "https://uhexen2.sourceforge.net/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

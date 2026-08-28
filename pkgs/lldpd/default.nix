@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "802.1ab implementation (LLDP) to help you locate neighbors of all your equipments";
     homepage = "https://lldpd.github.io/";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
       notification facilities
     '';
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

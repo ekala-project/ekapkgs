@@ -65,7 +65,6 @@ rustPlatform.buildRustPackage {
     description = "Modern shell written in Rust";
     homepage = "https://www.nushell.sh/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "nu";
   };
 }

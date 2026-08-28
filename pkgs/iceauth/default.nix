@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/app/iceauth";
     license = lib.licenses.mitOpenGroup;
     mainProgram = "iceauth";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -66,6 +66,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/ledger/ledger/raw/v${finalAttrs.version}/NEWS.md";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

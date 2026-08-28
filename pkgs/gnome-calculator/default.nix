@@ -80,7 +80,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://apps.gnome.org/Calculator/";
     description = "Application that solves mathematical equations and is suitable as a default application in a Desktop environment";
     mainProgram = "gnome-calculator";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
   };

@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl3Only
       asl20
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

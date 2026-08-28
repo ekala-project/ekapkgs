@@ -85,7 +85,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/abenz1267/elephant";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "elephant";
   };
 })

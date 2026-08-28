@@ -29,7 +29,6 @@ buildGo126Module (finalAttrs: {
     description = "Compute various size metrics for a Git repository";
     homepage = "https://github.com/github/git-sizer";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "git-sizer";
   };
 })

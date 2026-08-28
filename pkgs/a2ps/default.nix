@@ -47,6 +47,5 @@ stdenv.mkDerivation rec {
     homepage = "https://www.gnu.org/software/a2ps/";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

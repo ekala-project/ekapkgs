@@ -43,7 +43,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://kubelinter.io";
     changelog = "https://github.com/stackrox/kube-linter/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

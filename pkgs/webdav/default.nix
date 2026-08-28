@@ -22,7 +22,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/hacdias/webdav";
     changelog = "https://github.com/hacdias/webdav/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "webdav";
   };
 })

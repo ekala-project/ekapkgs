@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Open Source Lighthouse Tracking System";
     homepage = "https://github.com/collabora/libsurvive";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

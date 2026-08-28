@@ -65,6 +65,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://git.kernel.org/pub/scm/libs/libtrace/libtracefs.git/";
     license = lib.licenses.lgpl21Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

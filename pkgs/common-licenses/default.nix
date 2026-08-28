@@ -24,6 +24,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://tracker.debian.org/pkg/base-files";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

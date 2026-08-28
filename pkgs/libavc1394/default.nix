@@ -23,6 +23,5 @@ stdenv.mkDerivation rec {
     homepage = "https://sourceforge.net/projects/libavc1394/";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

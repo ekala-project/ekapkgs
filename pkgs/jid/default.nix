@@ -27,6 +27,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "jid";
     homepage = "https://github.com/simeji/jid";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

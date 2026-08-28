@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/electrickite/batsignal";
     description = "Lightweight battery daemon written in C";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "batsignal";
   };

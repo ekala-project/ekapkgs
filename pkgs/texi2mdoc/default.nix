@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Converter from Texinfo into mdoc";
     license = lib.licenses.isc;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "texi2mdoc";
   };
 })

@@ -83,7 +83,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://gtkmm.org/";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

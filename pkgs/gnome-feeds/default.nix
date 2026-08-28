@@ -92,7 +92,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     mainProgram = "gfeeds";
     homepage = "https://gitlab.gnome.org/World/gfeeds";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

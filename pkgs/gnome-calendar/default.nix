@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://apps.gnome.org/Calendar/";
     description = "Simple and beautiful calendar application for GNOME";
     mainProgram = "gnome-calendar";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
   };

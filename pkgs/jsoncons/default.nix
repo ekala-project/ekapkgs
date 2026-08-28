@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://danielaparker.github.io/jsoncons/";
     changelog = "https://github.com/danielaparker/jsoncons/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.boost;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

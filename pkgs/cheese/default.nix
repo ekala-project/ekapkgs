@@ -101,7 +101,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.gnome.org/GNOME/cheese/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
     description = "Take photos and videos with your webcam, with fun graphical effects";
     mainProgram = "cheese";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

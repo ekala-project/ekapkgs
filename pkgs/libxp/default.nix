@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxp";
     license = lib.licenses.x11;
-    maintainers = [ ];
     pkgConfigModules = [ "xp" ];
     platforms = lib.platforms.unix;
   };

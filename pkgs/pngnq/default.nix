@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://pngnq.sourceforge.net/";
     description = "PNG quantizer";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

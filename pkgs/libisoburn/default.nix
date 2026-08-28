@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Enables creation and expansion of ISO-9660 filesystems on CD/DVD/BD";
     license = lib.licenses.gpl2Plus;
     mainProgram = "osirrox";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

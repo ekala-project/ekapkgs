@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Teredo IPv6 Tunneling Daemon";
     homepage = "https://www.remlab.net/miredo/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "gtk-gnutella";
     homepage = "https://gtk-gnutella.sourceforge.net/"; # Code: https://github.com/gtk-gnutella/gtk-gnutella
     changelog = "https://raw.githubusercontent.com/gtk-gnutella/gtk-gnutella/v${finalAttrs.version}/ChangeLog";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
     # The last successful Darwin Hydra build was in 2023

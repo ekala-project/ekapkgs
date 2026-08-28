@@ -25,7 +25,6 @@ stdenvNoCC.mkDerivation rec {
     description = "CJK Unicode font Kai style";
     homepage = "https://www.freedesktop.org/wiki/Software/CJKUnifonts/";
     license = lib.licenses.arphicpl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

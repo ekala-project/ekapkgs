@@ -26,7 +26,6 @@ stdenvNoCC.mkDerivation rec {
     description = "Nanum Korean font set";
     homepage = "https://hangeul.naver.com/font";
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

@@ -24,7 +24,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/terror/just-lsp";
     changelog = "https://github.com/terror/just-lsp/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.cc0;
-    maintainers = [ ];
     mainProgram = "just-lsp";
   };
 })

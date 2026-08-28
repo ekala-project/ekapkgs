@@ -28,7 +28,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/projectdiscovery/uncover";
     changelog = "https://github.com/projectdiscovery/uncover/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "uncover";
   };
 })

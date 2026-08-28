@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
 
     license = lib.licenses.bsd2;
     homepage = "https://github.com/VMML/vmmlib/";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

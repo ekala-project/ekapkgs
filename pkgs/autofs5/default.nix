@@ -101,6 +101,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.kernel.org/pub/linux/daemons/autofs/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

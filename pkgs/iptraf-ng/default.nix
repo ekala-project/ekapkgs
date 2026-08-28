@@ -31,7 +31,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/iptraf-ng/iptraf-ng";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "iptraf-ng";
   };
 }

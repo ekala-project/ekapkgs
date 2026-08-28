@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://ext4magic.sourceforge.net/ext4magic_en.html";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "ext4magic";
   };
 })

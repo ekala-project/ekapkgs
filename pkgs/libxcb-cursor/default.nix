@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "XCB port of libxcursor";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxcb-cursor";
     license = lib.licenses.x11;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "gengetopt";
     homepage = "https://www.gnu.org/software/gengetopt/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

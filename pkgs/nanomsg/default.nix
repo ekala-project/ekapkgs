@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://nanomsg.org/";
     license = lib.licenses.mit;
     mainProgram = "nanocat";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -35,7 +35,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://plantuml.com/";
     license = lib.licenses.gpl3Plus;
     mainProgram = "plantuml";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
   };

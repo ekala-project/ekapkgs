@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Open-Source, Automated Benchmarking";
     homepage = "https://www.phoronix-test-suite.com/";
-    maintainers = [ ];
     license = lib.licenses.gpl3;
     platforms = with lib.platforms; unix;
     mainProgram = "phoronix-test-suite";

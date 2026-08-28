@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
 
     homepage = "http://aj-snapshot.sourceforge.net/";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "aj-snapshot";
   };

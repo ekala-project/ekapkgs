@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
       mit
       bsd2
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     broken = stdenv.hostPlatform.isDarwin;
   };

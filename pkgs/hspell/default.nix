@@ -42,6 +42,5 @@ stdenv.mkDerivation rec {
     homepage = "http://hspell.ivrix.org.il/";
     platforms = platforms.all;
     license = licenses.gpl2;
-    maintainers = [ ];
   };
 }

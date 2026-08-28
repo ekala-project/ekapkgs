@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "High speed arctic racing game based on Tux Racer";
     license = lib.licenses.gpl2Plus;
     homepage = "https://sourceforge.net/projects/extremetuxracer/";
-    maintainers = [ ];
     mainProgram = "etr";
     platforms = lib.platforms.linux;
   };

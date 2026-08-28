@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tuned OpenCL BLAS library";
     homepage = "https://github.com/CNugteren/CLBlast";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/nbfc-linux/nbfc-linux";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "nbfc";
     platforms = lib.platforms.linux;
   };

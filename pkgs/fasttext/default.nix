@@ -37,6 +37,5 @@ stdenv.mkDerivation {
     homepage = "https://fasttext.cc/";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

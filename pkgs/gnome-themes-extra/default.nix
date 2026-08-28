@@ -51,6 +51,5 @@ stdenv.mkDerivation rec {
 
   meta = {
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

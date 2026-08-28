@@ -38,7 +38,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/MestreLion/wavegain";
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "wavegain";
   };
 }

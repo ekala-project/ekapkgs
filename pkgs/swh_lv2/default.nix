@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
       generators, surround encoders and more.
     '';
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

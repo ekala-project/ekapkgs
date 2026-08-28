@@ -36,6 +36,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/SergiusTheBest/plog";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
   };
 })

@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = lib.platforms.unix;
     homepage = "https://www.eggheads.org";
     description = "Internet Relay Chat (IRC) bot";
-    maintainers = [ ];
   };
 })

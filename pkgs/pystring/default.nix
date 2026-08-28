@@ -31,7 +31,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/imageworks/pystring/";
     description = "Collection of C++ functions which match the interface and behavior of python's string class methods using std::string";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

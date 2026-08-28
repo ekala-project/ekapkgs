@@ -39,6 +39,5 @@ buildGo126Module (finalAttrs: {
     changelog = "https://github.com/jfrog/jfrog-cli/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     mainProgram = "jf";
-    maintainers = [ ];
   };
 })

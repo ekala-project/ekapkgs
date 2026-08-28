@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://us.metamath.org";
     downloadPage = "https://us.metamath.org/#downloads";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

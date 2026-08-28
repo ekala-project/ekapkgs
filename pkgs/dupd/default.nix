@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "CLI utility to find duplicate files";
     homepage = "http://www.virkki.com/dupd";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     mainProgram = "dupd";
   };
 })

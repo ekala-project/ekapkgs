@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Filesystem snapshot utility for making backups of local and remote systems";
     homepage = "https://rsnapshot.org/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "rsnapshot";
   };

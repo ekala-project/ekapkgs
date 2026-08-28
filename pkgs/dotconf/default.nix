@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Configuration parser library";
     homepage = "https://github.com/williamh/dotconf";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

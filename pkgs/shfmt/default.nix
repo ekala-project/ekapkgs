@@ -53,7 +53,6 @@ buildGoModule (finalAttrs: {
       You can feed it standard input, any number of files or any number of directories to recurse into.
     '';
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "shfmt";
   };
 })

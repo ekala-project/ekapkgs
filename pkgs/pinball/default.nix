@@ -52,7 +52,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/adoptware/pinball";
     description = "Emilia Pinball simulator";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

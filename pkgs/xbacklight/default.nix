@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/app/xbacklight";
     license = lib.licenses.hpndSellVariant;
     mainProgram = "xbacklight";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

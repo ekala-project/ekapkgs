@@ -44,7 +44,6 @@ stdenv.mkDerivation rec {
     description = "LaTeX-to-HTML translator";
     homepage = "https://www.ctan.org/pkg/latex2html";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 }

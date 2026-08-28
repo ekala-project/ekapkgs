@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/app/xcursorgen";
     license = lib.licenses.hpndSellVariant;
     mainProgram = "xcursorgen";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -25,7 +25,6 @@ buildGoModule (finalAttrs: {
     description = "Automatic GeoIP database updater";
     homepage = "https://github.com/maxmind/geoipupdate";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "geoipupdate";
   };
 })

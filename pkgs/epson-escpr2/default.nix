@@ -50,7 +50,6 @@ stdenv.mkDerivation {
       Refer to the description of epson-escpr for usage.
     '';
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

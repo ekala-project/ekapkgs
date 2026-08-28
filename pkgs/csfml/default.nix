@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
       It is written in C++, and has bindings for various languages such as C, .Net, Ruby, Python.
     '';
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

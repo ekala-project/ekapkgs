@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for intelligent sentence-based Chinese pinyin input method";
     homepage = "https://github.com/libpinyin/libpinyin";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

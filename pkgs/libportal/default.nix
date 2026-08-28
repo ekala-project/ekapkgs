@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Flatpak portal library";
     homepage = "https://github.com/flatpak/libportal";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

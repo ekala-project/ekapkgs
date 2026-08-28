@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = lib.platforms.linux;
     homepage = "https://dianne.skoll.ca/projects/rp-pppoe/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

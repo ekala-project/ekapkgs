@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Advanced color picker written in C++ using GTK+ toolkit";
     homepage = "https://www.gpick.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "gpick";
   };

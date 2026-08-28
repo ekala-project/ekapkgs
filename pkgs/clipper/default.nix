@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://sourceforge.net/projects/polyclipping";
     license = lib.licenses.boost;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
   };
 })

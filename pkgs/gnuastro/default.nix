@@ -47,6 +47,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://git.savannah.gnu.org/cgit/gnuastro.git/plain/NEWS?id=gnuastro_v${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

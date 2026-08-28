@@ -49,7 +49,6 @@ buildGoModule (finalAttrs: {
     description = "Framework for dark-mode and light-mode transitions on Linux desktop";
     homepage = "https://gitlab.com/WhyNotHugo/darkman";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "darkman";
   };

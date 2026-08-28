@@ -61,6 +61,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/irontec/sngrep";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

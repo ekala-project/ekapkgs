@@ -34,7 +34,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/orhun/rustypaste";
     changelog = "https://github.com/orhun/rustypaste/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "rustypaste";
   };
 })

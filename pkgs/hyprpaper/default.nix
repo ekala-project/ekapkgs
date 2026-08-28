@@ -89,7 +89,6 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/hyprwm/hyprpaper";
     description = "Blazing fast wayland wallpaper utility";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "hyprpaper";
   };

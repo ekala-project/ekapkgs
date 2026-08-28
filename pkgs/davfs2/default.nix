@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://savannah.nongnu.org/projects/davfs2";
     description = "Mount WebDAV shares like a typical filesystem";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

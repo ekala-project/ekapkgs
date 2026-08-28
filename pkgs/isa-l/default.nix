@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3;
     homepage = "https://github.com/intel/isa-l";
     changelog = "https://github.com/intel/isa-l/releases/tag/v${finalAttrs.version}";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

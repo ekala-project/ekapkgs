@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Highly accurate clone of the classic Fasttracker II software for MS-DOS";
     homepage = "https://16-bits.org/ft2.php";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     # From HOW-TO-COMPILE.txt:
     # > This code is NOT big-endian compatible
     platforms = lib.platforms.littleEndian;

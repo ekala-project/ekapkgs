@@ -125,6 +125,5 @@ stdenv.mkDerivation (finalAttrs: {
     pkgConfigModules = [ "gtksourceview-4" ];
     platforms = lib.platforms.unix;
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 })

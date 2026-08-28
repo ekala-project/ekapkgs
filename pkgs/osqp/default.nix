@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Quadratic programming solver using operator splitting";
     homepage = "https://osqp.org";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -35,7 +35,6 @@ buildGoModule (finalAttrs: {
     downloadPage = "https://github.com/control-theory/gonzo";
     changelog = "https://github.com/control-theory/gonzo/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gonzo";
   };
 })

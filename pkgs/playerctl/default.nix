@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/altdesktop/playerctl";
     license = lib.licenses.lgpl3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "playerctl";
   };
 })

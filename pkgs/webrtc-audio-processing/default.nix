@@ -53,6 +53,5 @@ stdenv.mkDerivation rec {
     description = "More Linux packaging friendly copy of the AudioProcessing module from the WebRTC project";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

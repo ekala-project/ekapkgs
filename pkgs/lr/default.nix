@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "List files recursively";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "lr";
   };
 })

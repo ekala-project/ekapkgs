@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Comps XML file manipulation library";
     homepage = "https://github.com/rpm-software-management/libcomps";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

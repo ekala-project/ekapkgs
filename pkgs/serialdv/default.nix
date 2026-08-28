@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "dvtest";
     homepage = "https://github.com/f4exb/serialdv";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     license = lib.licenses.gpl3;
   };
 })

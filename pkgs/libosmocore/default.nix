@@ -55,6 +55,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/osmocom/libosmocore";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

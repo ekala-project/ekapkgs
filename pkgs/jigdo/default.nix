@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.einval.com/~steve/software/jigdo/";
     changelog = "https://git.einval.com/cgi-bin/gitweb.cgi?p=jigdo.git;a=blob;f=changelog;hb=refs/tags/${finalAttrs.version}";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

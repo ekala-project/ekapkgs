@@ -78,7 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
     downloadPage = "https://github.com/LLNL/sundials";
     changelog = "https://github.com/LLNL/sundials/releases/tag/v${finalAttrs.version}";
     platforms = lib.platforms.all;
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 })

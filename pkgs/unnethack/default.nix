@@ -83,6 +83,5 @@ stdenv.mkDerivation {
       publicDomain
     ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

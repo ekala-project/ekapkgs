@@ -52,6 +52,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://github.com/iridakos/goto";
     changelog = "https://github.com/iridakos/goto/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

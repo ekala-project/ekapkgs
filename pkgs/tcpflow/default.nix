@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     inherit (finalAttrs.src.meta) homepage;
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "tcpflow";
   };

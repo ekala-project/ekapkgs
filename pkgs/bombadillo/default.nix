@@ -33,6 +33,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "bombadillo";
     homepage = "https://bombadillo.colorfield.space/";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
   };
 })

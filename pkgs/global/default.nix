@@ -82,7 +82,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://www.gnu.org/software/global/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     changelog = "https://www.gnu.org/software/global/whatsnew.html";
   };

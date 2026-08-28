@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/katexochen/dumpasn1";
     license = lib.licenses.bsd2;
     mainProgram = "dumpasn1";
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 })

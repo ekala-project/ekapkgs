@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Full-featured remote-mail retrieval and forwarding utility";
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "fetchmail";
   };
 })

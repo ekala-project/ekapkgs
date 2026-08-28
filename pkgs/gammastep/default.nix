@@ -106,7 +106,6 @@ stdenv.mkDerivation rec {
     '';
     homepage = "https://gitlab.com/chinstrap/gammastep";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "gammastep";
   };

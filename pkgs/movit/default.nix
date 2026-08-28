@@ -59,7 +59,6 @@ stdenv.mkDerivation rec {
     description = "High-performance, high-quality video filters for the GPU";
     homepage = "https://movit.sesse.net";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

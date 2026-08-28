@@ -40,6 +40,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     license = lib.licenses.gpl2Only;
     description = "Helper utility to work with patches made available via a public-inbox archive";
     mainProgram = "b4";
-    maintainers = [ ];
   };
 })

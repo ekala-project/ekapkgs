@@ -38,7 +38,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/aliyun/aliyun-cli";
     changelog = "https://github.com/aliyun/aliyun-cli/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "aliyun";
   };
 })

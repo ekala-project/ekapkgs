@@ -27,6 +27,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Simple C++ geometry processing library";
     homepage = "https://github.com/libigl/libigl";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 })

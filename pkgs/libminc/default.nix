@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/BIC-MNI/libminc";
     description = "Medical imaging library based on HDF5";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.free;
   };

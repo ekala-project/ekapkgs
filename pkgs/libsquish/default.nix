@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for compressing images with the DXT/S3TC standard";
     homepage = "https://libsquish.sourceforge.io";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

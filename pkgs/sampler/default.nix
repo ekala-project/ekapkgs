@@ -38,7 +38,6 @@ buildGoModule (finalAttrs: {
     description = "Tool for shell commands execution, visualization and alerting";
     homepage = "https://sampler.dev";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     mainProgram = "sampler";
   };
 })

@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Turns an xterm into a gamelike console";
     homepage = "https://github.com/jceb/yeahconsole";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     broken = stdenv.hostPlatform.isDarwin;
   };

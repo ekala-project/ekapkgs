@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "CLI email sending tool";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     homepage = "https://github.com/muquit/mailsend";
     downloadPage = "https://github.com/muquit/mailsend/releases";

@@ -44,6 +44,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://pptpclient.sourceforge.net/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

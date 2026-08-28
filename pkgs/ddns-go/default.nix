@@ -28,7 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/jeessy2/ddns-go";
     description = "Simple and easy to use DDNS";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "ddns-go";
   };
 })

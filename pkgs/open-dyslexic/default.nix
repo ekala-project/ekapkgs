@@ -31,6 +31,5 @@ stdenvNoCC.mkDerivation {
     description = "Font created to increase readability for readers with dyslexia";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

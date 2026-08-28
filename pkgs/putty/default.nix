@@ -44,7 +44,6 @@ stdenv.mkDerivation rec {
     '';
     homepage = "https://www.chiark.greenend.org.uk/~sgtatham/putty/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

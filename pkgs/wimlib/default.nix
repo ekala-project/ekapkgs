@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://wimlib.net";
     description = "Library and program to extract, create, and modify WIM files";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     license = with lib.licenses; [
       gpl3
       lgpl3

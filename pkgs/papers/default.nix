@@ -130,7 +130,6 @@ stdenv.mkDerivation (finalAttrs: {
       on the GNOME Desktop with a more modern interface.
     '';
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "papers";
   };

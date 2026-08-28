@@ -22,7 +22,6 @@ stdenv.mkDerivation rec {
     homepage = "http://dvdnav.mplayerhq.hu/";
     description = "Library that implements DVD navigation features such as DVD menus";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

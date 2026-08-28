@@ -44,7 +44,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
       - epylint: Emacs and Flymake compatible Pylint
     '';
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "pylint";
   };
 })

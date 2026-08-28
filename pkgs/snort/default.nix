@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Network intrusion prevention and detection system (IDS/IPS)";
     homepage = "https://www.snort.org";
-    maintainers = [ ];
     changelog = "https://github.com/snort3/snort3/blob/${finalAttrs.src.rev}/ChangeLog.md";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;

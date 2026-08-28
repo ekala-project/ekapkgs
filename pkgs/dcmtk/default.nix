@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://dicom.offis.de/dcmtk";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

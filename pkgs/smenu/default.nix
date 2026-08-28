@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Terminal selection utility";
     homepage = "https://github.com/p-gen/smenu";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "smenu";
   };

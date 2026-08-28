@@ -33,7 +33,6 @@ buildGoModule (finalAttrs: {
     description = "Like awk, sed, cut, join, and sort for data formats such as CSV, TSV, JSON, JSON Lines, and positionally-indexed";
     homepage = "https://github.com/johnkerl/miller";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "mlr";
     platforms = lib.platforms.all;
   };

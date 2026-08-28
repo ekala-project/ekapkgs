@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "P2P FOSS instant messaging application aimed to replace Skype";
     homepage = "https://tox.chat";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

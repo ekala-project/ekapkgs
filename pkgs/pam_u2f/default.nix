@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/Yubico/pam-u2f/raw/pam_u2f-${finalAttrs.version}/NEWS";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "pamu2fcfg";
   };
 })

@@ -18,6 +18,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.moria.de/~michael/comp/";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Regex-centric, fast lexical analyzer generator for C++ with full Unicode support";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "reflex";
   };
 })

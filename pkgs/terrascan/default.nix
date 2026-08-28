@@ -36,6 +36,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/accurics/terrascan";
     changelog = "https://github.com/tenable/terrascan/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

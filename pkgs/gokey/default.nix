@@ -20,7 +20,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/cloudflare/gokey";
     description = "Vault-less password store";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "gokey";
   };
 })

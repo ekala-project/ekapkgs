@@ -83,7 +83,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.wesnoth.org/";
     changelog = "https://github.com/wesnoth/wesnoth/blob/${finalAttrs.version}/changelog.md";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "wesnoth";
   };

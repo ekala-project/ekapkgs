@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://savannah.nongnu.org/projects/quilt";
     description = "Easily manage large numbers of patches";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -38,6 +38,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/raboof/nethogs#readme";
     platforms = lib.platforms.linux;
     mainProgram = "nethogs";
-    maintainers = [ ];
   };
 })

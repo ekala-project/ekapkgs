@@ -25,6 +25,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://people.redhat.com/dhowells/fscache/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

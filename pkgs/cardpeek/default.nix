@@ -66,7 +66,6 @@ stdenv.mkDerivation {
     description = "Tool to read the contents of ISO7816 smart cards";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "cardpeek";
   };
 }

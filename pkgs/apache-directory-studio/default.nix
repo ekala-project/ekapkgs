@@ -84,7 +84,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.asl20;
     # Upstream supports macOS and Windows too.
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "ApacheDirectoryStudio";
   };
 })

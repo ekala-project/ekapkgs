@@ -49,6 +49,5 @@ stdenv.mkDerivation {
     license = lib.licenses.bsd3;
     homepage = "https://codeberg.org/IPMITool/ipmitool";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

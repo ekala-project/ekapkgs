@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   meta = {
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     description = "Tool to set battery charging thresholds on Lenovo Thinkpad";
     homepage = "https://github.com/teleshoes/tpacpi-bat";

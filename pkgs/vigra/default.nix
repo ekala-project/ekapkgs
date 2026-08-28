@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "vigra-config";
     homepage = "https://hci.iwr.uni-heidelberg.de/vigra";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

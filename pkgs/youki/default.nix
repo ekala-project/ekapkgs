@@ -60,7 +60,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://youki-dev.github.io/youki/";
     changelog = "https://github.com/youki-dev/youki/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "youki";
   };

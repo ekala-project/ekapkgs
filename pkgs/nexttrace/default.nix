@@ -35,7 +35,6 @@ buildGo126Module (finalAttrs: {
     description = "Open source visual route tracking CLI tool";
     homepage = "https://www.nxtrace.org/";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "nexttrace";
   };
 })

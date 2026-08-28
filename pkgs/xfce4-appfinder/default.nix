@@ -52,6 +52,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     mainProgram = "xfce4-appfinder";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

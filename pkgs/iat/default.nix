@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool for detecting the structure of many types of CD/DVD images";
     homepage = "https://www.berlios.de/software/iso9660-analyzer-tool/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "iat";
   };

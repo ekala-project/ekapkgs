@@ -33,6 +33,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://git.sr.ht/~julienxx/asuka";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

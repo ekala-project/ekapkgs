@@ -32,6 +32,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Command line tool for managing Amazon S3 and CloudFront services";
     mainProgram = "s3cmd";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

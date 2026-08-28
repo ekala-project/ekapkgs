@@ -39,7 +39,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/OrangeShark/guile-commonmark";
     description = "Implementation of CommonMark for Guile";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = guile.meta.platforms;
   };
 }

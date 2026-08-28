@@ -54,6 +54,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/serge1/ELFIO";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

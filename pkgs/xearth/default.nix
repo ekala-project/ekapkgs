@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
       correctly shaded for the current position of the Sun.
       By default, xearth updates the displayed image every  five  minutes.
     '';
-    maintainers = [ ];
     license = {
       fullName = "xearth license";
       url = "https://xearth.org/copyright.html";

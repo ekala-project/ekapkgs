@@ -46,6 +46,5 @@ stdenv.mkDerivation {
     homepage = "https://github.com/google/packetdrill";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

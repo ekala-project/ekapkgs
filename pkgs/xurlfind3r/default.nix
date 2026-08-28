@@ -27,7 +27,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/hueristiq/xurlfind3r";
     changelog = "https://github.com/hueristiq/xurlfind3r/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "xurlfind3r";
   };
 })

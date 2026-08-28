@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://monkey.org/~marius/nylon";
     description = "Proxy server, supporting SOCKS 4 and 5, as well as a mirror mode";
     license = lib.licenses.bsdOriginal;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "nylon";
   };

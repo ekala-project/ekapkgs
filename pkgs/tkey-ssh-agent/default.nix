@@ -35,7 +35,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://tillitis.se/app/tkey-ssh-agent/";
     changelog = "https://github.com/tillitis/tkey-ssh-agent/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     mainProgram = "tkey-ssh-agent";
     platforms = lib.platforms.all;
   };

@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-chess";
     description = "Play the classic two-player boardgame of chess";
     mainProgram = "gnome-chess";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
   };

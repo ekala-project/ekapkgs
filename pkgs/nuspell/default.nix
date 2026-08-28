@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "nuspell";
     homepage = "https://nuspell.github.io/";
     platforms = lib.platforms.all;
-    maintainers = [ ];
     license = lib.licenses.lgpl3Plus;
     changelog = "https://github.com/nuspell/nuspell/blob/v${finalAttrs.version}/CHANGELOG.md";
   };

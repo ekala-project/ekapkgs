@@ -27,6 +27,5 @@ stdenvNoCC.mkDerivation rec {
     description = "Fallback font of last resort";
     homepage = "https://github.com/unicode-org/last-resort-font";
     license = lib.licenses.ofl;
-    maintainers = [ ];
   };
 }

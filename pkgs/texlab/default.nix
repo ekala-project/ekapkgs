@@ -46,7 +46,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/latex-lsp/texlab";
     changelog = "https://github.com/latex-lsp/texlab/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "texlab";
   };

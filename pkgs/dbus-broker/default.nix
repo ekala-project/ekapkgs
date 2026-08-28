@@ -15,7 +15,6 @@
 
 let
   meta = {
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 

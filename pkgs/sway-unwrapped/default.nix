@@ -117,7 +117,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/swaywm/sway/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "sway";
   };
 })

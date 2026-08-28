@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.gpl2Plus;
     mainProgram = "bashdb";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

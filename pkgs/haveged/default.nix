@@ -41,7 +41,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/jirka-h/haveged";
     changelog = "https://raw.githubusercontent.com/jirka-h/haveged/v${version}/ChangeLog";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     badPlatforms = lib.platforms.darwin;
   };

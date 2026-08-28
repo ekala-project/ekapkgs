@@ -29,7 +29,6 @@ python3Packages.buildPythonPackage (finalAttrs: {
     homepage = "https://amanusk.github.io/s-tui/";
     description = "Stress-Terminal UI monitoring tool";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "s-tui";
   };
 })

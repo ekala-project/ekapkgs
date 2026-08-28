@@ -82,7 +82,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://pwmt.org/projects/zathura";
     description = "Core component for zathura PDF viewer";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "zathura";
   };

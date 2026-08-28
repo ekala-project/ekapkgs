@@ -79,6 +79,5 @@ buildGo126Module (finalAttrs: {
       lgpl3
     ];
     mainProgram = "resticprofile";
-    maintainers = [ ];
   };
 })

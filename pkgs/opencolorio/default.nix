@@ -83,7 +83,6 @@ stdenv.mkDerivation rec {
     homepage = "https://opencolorio.org";
     description = "Color management framework for visual effects and animation";
     license = licenses.bsd3;
-    maintainers = [ ];
     platforms = platforms.unix;
   };
 }

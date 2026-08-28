@@ -33,6 +33,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/hellman/xortool";
     changelog = "https://github.com/hellman/xortool/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

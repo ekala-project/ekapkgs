@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/app/xstdcmap";
     license = lib.licenses.mitOpenGroup;
     mainProgram = "xstdcmap";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

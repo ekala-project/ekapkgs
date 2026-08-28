@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/app/appres";
     license = lib.licenses.mitOpenGroup;
     mainProgram = "appres";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

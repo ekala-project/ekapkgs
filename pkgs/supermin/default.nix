@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool for creating and building supermin appliances";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "supermin";
   };
 })

@@ -39,7 +39,6 @@ stdenv.mkDerivation {
       bsdOriginal
       bsdOriginalShortened
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "ssldump";
   };

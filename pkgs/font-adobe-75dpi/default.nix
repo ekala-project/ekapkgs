@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Adobe 75dpi pcf fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/adobe-75dpi";
     license = lib.licenses.hpndSellVariant; # plus a trademark that doesn't change the license
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

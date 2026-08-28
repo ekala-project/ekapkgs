@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Minimal init system for Linux containers";
     homepage = "https://github.com/Yelp/dumb-init";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "dumb-init";
   };

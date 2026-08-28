@@ -50,7 +50,6 @@ stdenv.mkDerivation {
     description = "Bash-tool to store your private data inside a git repository";
     homepage = "https://sobolevn.me/git-secret/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "git-secret";
   };

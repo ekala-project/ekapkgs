@@ -51,7 +51,6 @@ let
       description = "C++ target for ANTLR 4";
       homepage = "https://www.antlr.org/";
       license = lib.licenses.bsd3;
-      maintainers = [ ];
       platforms = lib.platforms.unix;
     };
   };
@@ -97,7 +96,6 @@ stdenv.mkDerivation {
     description = "Powerful parser generator";
     homepage = "https://www.antlr.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

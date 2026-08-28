@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://grisbi.org";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd2; # OR LGPL-2.1-or-later
     sourceProvenance = [ lib.sourceTypes.fromSource ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "resample-sndfile";
   };
 })

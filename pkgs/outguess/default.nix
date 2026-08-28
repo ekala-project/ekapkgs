@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Universal steganographic tool that allows the insertion of hidden information into the redundant bits of data sources";
     homepage = "https://github.com/resurrecting-open-source-projects/outguess";
     license = lib.licenses.bsdOriginal;
-    maintainers = [ ];
     mainProgram = "outguess";
     platforms = lib.platforms.unix;
   };

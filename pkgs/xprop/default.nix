@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
       mit
     ];
     mainProgram = "xprop";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

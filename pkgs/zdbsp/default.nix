@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "ZDoom's internal node builder for DOOM maps";
     mainProgram = "zdbsp";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

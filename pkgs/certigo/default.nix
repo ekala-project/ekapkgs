@@ -21,7 +21,6 @@ buildGoModule (finalAttrs: {
     description = "Utility to examine and validate certificates in a variety of formats";
     homepage = "https://github.com/square/certigo";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "certigo";
   };
 })

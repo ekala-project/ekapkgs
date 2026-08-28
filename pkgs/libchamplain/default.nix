@@ -74,7 +74,6 @@ stdenv.mkDerivation rec {
        supports numerous free map sources such as OpenStreetMap,
        OpenCycleMap, OpenAerialMap, and Maps for free.
     '';
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

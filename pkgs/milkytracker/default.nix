@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Music tracker application, similar to Fasttracker II";
     homepage = "https://milkytracker.org/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "milkytracker";
   };

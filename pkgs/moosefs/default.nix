@@ -60,6 +60,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Open Source, Petabyte, Fault-Tolerant, Highly Performing, Scalable Network Distributed File System";
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 })

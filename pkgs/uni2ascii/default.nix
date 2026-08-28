@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Converts between UTF-8 and many 7-bit ASCII equivalents and back";
     homepage = "http://billposer.org/Software/uni2ascii.html";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

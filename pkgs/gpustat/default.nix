@@ -67,7 +67,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Simple utility for viewing GPU utilization";
     homepage = "https://github.com/arduano/gpustat";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "gpustat";
     platforms = lib.platforms.linux;
   };

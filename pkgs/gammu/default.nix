@@ -78,6 +78,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Command line utility and library to control mobile phones";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

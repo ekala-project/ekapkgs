@@ -31,6 +31,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://robobunny.com/projects/asciiquarium/html/";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

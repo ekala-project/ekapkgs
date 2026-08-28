@@ -36,7 +36,6 @@ stdenv.mkDerivation {
   meta = {
     homepage = "https://jnovy.fedorapeople.org/pxz/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     description = "Compression utility that runs LZMA compression of different parts on multiple cores simultaneously";
     mainProgram = "pxz";
     platforms = lib.platforms.linux;

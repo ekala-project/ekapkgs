@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.com/dps8m/dps8m";
     changelog = "https://gitlab.com/dps8m/dps8m/-/wikis/DPS8M-${finalAttrs.src.rev}-Release-Notes";
     license = lib.licenses.icu;
-    maintainers = [ ];
     mainProgram = "dps8m";
     platforms = lib.platforms.all;
   };

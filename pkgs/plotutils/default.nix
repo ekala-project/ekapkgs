@@ -36,7 +36,6 @@ stdenv.mkDerivation rec {
     description = "Powerful C/C++ library for exporting 2D vector graphics";
     homepage = "https://www.gnu.org/software/plotutils/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

@@ -27,7 +27,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/pythops/impala";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "impala";
   };
 })

@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
       lib.replaceStrings [ "." ] [ "_" ] finalAttrs.version
     }";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

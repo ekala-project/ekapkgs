@@ -47,6 +47,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://sr.ht/~delthas/senpai/";
     changelog = "https://git.sr.ht/~delthas/senpai/refs/v${finalAttrs.version}";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 })

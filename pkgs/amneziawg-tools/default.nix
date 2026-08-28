@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://amnezia.org";
     changelog = "https://github.com/amnezia-vpn/amneziawg-tools/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "awg";
   };

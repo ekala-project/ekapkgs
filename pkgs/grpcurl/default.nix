@@ -29,7 +29,6 @@ buildGoModule (finalAttrs: {
     description = "Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers";
     homepage = "https://github.com/fullstorydev/grpcurl";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "grpcurl";
   };
 })

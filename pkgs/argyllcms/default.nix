@@ -124,7 +124,6 @@ stdenv.mkDerivation rec {
     homepage = "https://www.argyllcms.com/";
     description = "Color management system (compatible with ICC)";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

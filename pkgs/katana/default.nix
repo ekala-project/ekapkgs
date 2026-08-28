@@ -28,7 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/projectdiscovery/katana";
     changelog = "https://github.com/projectdiscovery/katana/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "katana";
   };
 })

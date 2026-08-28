@@ -57,7 +57,6 @@ python3Packages.buildPythonPackage rec {
     description = "Command line tool for configuring any YubiKey over all USB transports";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "ykman";
   };
 }

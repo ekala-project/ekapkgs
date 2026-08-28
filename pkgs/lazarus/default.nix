@@ -122,7 +122,6 @@ stdenv.mkDerivation rec {
     description = "Graphical IDE for the FreePascal language";
     homepage = "https://www.lazarus.freepascal.org";
     license = licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = platforms.linux;
   };
 }

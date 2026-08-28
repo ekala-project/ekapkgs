@@ -30,6 +30,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "fq";
     homepage = "https://github.com/wader/fq";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

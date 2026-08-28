@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
       items.
     '';
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

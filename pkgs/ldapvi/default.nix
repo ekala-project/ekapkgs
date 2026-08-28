@@ -61,7 +61,6 @@ stdenv.mkDerivation {
     '';
     homepage = "http://www.lichteblau.com/ldapvi/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "ldapvi";
   };

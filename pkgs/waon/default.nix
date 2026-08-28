@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Wave-to-Notes transcriber";
     homepage = "https://kichiki.github.io/WaoN/";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

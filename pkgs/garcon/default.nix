@@ -55,6 +55,5 @@ stdenv.mkDerivation (finalAttrs: {
       fdl11Only
     ];
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

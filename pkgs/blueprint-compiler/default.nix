@@ -71,7 +71,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "blueprint-compiler";
     homepage = "https://gitlab.gnome.org/GNOME/blueprint-compiler";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

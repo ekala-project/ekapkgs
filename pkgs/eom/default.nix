@@ -69,6 +69,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://mate-desktop.org";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

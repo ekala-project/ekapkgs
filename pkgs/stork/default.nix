@@ -36,7 +36,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Impossibly fast web search, made for static sites";
     homepage = "https://github.com/jameslittle230/stork";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "stork";
   };
 })

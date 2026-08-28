@@ -78,7 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
       records, each record containing an arbitrary number of named fields.
     '';
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

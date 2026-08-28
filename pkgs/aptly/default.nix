@@ -61,7 +61,6 @@ buildGo126Module (finalAttrs: {
     description = "Debian repository management tool";
     license = lib.licenses.mit;
     changelog = "https://github.com/aptly-dev/aptly/releases/tag/v${finalAttrs.version}";
-    maintainers = [ ];
     mainProgram = "aptly";
   };
 })

@@ -74,6 +74,5 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/rkd77/elinks";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

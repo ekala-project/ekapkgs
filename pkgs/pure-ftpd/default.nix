@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Free, secure, production-quality and standard-conformant FTP server";
     homepage = "https://www.pureftpd.org";
     license = lib.licenses.isc; # with some parts covered by BSD3(?)
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

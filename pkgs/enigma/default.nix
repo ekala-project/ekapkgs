@@ -70,7 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
       free
     ];
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     homepage = "https://www.nongnu.org/enigma/";
   };
 })

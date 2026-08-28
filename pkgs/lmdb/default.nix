@@ -65,7 +65,6 @@ stdenv.mkDerivation rec {
     description = "Lightning memory-mapped database";
     homepage = "https://symas.com/lmdb/";
     license = lib.licenses.openldap;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

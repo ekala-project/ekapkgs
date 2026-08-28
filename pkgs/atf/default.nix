@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/freebsd/atf/";
     license = lib.licenses.bsd3;
     mainProgram = "atf-sh";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

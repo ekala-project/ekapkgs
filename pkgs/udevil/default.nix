@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://ignorantguru.github.io/udevil/";
     description = "Mount without password";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

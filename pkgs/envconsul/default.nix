@@ -29,7 +29,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/hashicorp/envconsul/";
     description = "Read and set environmental variables for processes from Consul";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     mainProgram = "envconsul";
   };
 })

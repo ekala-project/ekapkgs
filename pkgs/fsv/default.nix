@@ -60,7 +60,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/jabl/fsv";
     license = lib.licenses.lgpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "fsv";
   };
 }

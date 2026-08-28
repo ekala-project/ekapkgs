@@ -81,7 +81,6 @@ let
       homepage = "https://opencog.github.io/link-grammar-website/";
       changelog = "https://github.com/opencog/link-grammar/blob/link-grammar-${finalAttrs.version}/ChangeLog";
       license = lib.licenses.lgpl21Only;
-      maintainers = [ ];
       platforms = lib.platforms.unix;
     };
   });

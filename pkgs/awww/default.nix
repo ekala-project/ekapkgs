@@ -66,7 +66,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Efficient animated wallpaper daemon for wayland, controlled at runtime";
     homepage = "https://codeberg.org/LGFae/awww";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "awww";
   };

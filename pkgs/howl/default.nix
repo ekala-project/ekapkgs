@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://howl.io/";
     description = "General purpose, fast and lightweight editor with a keyboard-centric minimalistic user interface";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "howl";
 
     # Howl builds fail for aarch64-linux

@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool to resize BDF fonts";
     homepage = "http://openlab.ring.gr.jp/efont/dist/tools/bdfresize/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "bdfresize";
   };
 })

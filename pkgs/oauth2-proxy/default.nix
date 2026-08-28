@@ -24,6 +24,5 @@ buildGo126Module rec {
     homepage = "https://github.com/oauth2-proxy/oauth2-proxy/";
     license = lib.licenses.mit;
     mainProgram = "oauth2-proxy";
-    maintainers = [ ];
   };
 }

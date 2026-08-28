@@ -48,6 +48,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "castor";
     homepage = "https://sr.ht/~julienxx/Castor";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

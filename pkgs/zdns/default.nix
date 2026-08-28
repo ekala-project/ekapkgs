@@ -30,6 +30,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "zdns";
     homepage = "https://github.com/zmap/zdns";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

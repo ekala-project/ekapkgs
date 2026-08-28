@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/rbenv/rbenv";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "rbenv";
     platforms = lib.platforms.all;
   };

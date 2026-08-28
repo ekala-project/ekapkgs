@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/marzer/tomlplusplus";
     description = "Header-only TOML config file parser and serializer for C++17";
     license = lib.licenses.mit;
-    maintainers = [ ];
     pkgConfigModules = [ "tomlplusplus" ];
     platforms = lib.platforms.unix;
   };

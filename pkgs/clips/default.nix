@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
       easier to implement and maintain than an algorithmic solution.
     '';
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

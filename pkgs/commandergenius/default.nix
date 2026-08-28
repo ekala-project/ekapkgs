@@ -83,7 +83,6 @@ stdenv.mkDerivation (finalAttrs: {
       are required to do so
     '';
     homepage = "https://github.com/gerstrong/Commander-Genius";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

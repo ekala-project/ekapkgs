@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/google/cpu_features";
     license = lib.licenses.asl20;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

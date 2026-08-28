@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.gropp.org/?id=projects&sub=bwm-ng";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     longDescription = ''
       bwm-ng supports:
        - /proc/net/dev, netstat, getifaddr, sysctl, kstat, /proc/diskstats /proc/partitions, IOKit,

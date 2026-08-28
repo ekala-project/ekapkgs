@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Official C++ client library for MongoDB";
     homepage = "http://mongocxx.org";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     pkgConfigModules = [
       "libmongocxx"
       "libbsoncxx"

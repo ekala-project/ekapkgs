@@ -26,7 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/mfontanini/presenterm/releases/tag/v${finalAttrs.version}";
     homepage = "https://github.com/mfontanini/presenterm";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "presenterm";
   };
 })

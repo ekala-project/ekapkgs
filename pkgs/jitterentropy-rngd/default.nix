@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
       lib.licenses.bsd3
     ];
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "jitterentropy-rngd";
   };
 })

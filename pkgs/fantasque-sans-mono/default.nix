@@ -28,6 +28,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Font family with a great monospaced variant for programmers";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

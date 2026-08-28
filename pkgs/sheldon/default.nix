@@ -68,7 +68,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Fast and configurable shell plugin manager";
     homepage = "https://github.com/rossmacarthur/sheldon";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "sheldon";
   };

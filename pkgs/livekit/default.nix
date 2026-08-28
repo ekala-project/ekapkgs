@@ -26,7 +26,6 @@ buildGo126Module (finalAttrs: {
     description = "End-to-end stack for WebRTC. SFU media server and SDKs";
     homepage = "https://livekit.io/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "livekit-server";
   };
 })

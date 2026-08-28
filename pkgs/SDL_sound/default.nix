@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.icculus.org/SDL_sound/";
     description = "SDL sound library";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     mainProgram = "playsound";
     inherit (SDL.meta) platforms;
   };

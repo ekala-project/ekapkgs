@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://gitlab.gnome.org/World/gedit/libgedit-amtk";
     description = "Actions, Menus and Toolbars Kit for GTK applications";
-    maintainers = [ ];
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
   };

@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Like tree but interactive";
     homepage = "https://github.com/NikitaIvanovV/ictree";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "ictree";
   };
 })

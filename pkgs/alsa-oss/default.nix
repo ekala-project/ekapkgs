@@ -40,6 +40,5 @@ stdenv.mkDerivation (finalAttrs: {
 
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

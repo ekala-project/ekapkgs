@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://systemc.org/";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

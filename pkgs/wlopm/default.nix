@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://git.sr.ht/~leon_plickat/wlopm";
     mainProgram = "wlopm";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

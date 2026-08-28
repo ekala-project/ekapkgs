@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tools for documenting and improving portability";
     homepage = "https://wgropp.cs.illinois.edu/projects/software/sowing/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

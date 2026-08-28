@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "USB viewer for Linux";
     license = lib.licenses.gpl2Only;
     homepage = "http://www.kroah.com/linux-usb/";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "usbview";
   };

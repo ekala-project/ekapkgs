@@ -28,7 +28,6 @@ buildGo126Module rec {
     homepage = "https://github.com/xjasonlyu/tun2socks";
     description = "Routes network traffic from any application through a proxy";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "tun2socks";
   };
 }

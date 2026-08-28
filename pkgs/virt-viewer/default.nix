@@ -94,7 +94,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://virt-manager.org/";
     description = "Viewer for remote virtual machines";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2;
     mainProgram = "virt-viewer";

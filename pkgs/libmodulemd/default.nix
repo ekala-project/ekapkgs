@@ -67,6 +67,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/fedora-modularity/libmodulemd";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
   };
 })

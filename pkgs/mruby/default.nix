@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Embeddable implementation of the Ruby language";
     homepage = "https://mruby.org";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
     mainProgram = "mruby";

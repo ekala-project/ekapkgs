@@ -98,7 +98,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Collection of open-source audio plugins";
     homepage = "https://lsp-plug.in";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

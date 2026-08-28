@@ -40,7 +40,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       epl10
       bsd3
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

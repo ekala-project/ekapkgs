@@ -60,7 +60,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Interactive CLI for creating conventional commits";
     homepage = "https://github.com/its-danny/koji";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "koji";
     platforms = lib.platforms.unix;
   };

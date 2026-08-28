@@ -104,7 +104,6 @@ stdenv.mkDerivation (finalAttrs: {
     broken = stdenv.hostPlatform.isStatic;
     description = "High-performance multiple regex matching library";
     homepage = "https://www.hyperscan.io/";
-    maintainers = [ ];
     platforms = [
       "x86_64-linux"
     ];

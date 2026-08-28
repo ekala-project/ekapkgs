@@ -31,6 +31,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     changelog = "https://git.launchpad.net/ubuntu/+source/fonts-ubuntu-classic/tree/FONTLOG.txt?h=${finalAttrs.src.rev}";
     license = lib.licenses.ufl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

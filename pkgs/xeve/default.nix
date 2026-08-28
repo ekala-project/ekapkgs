@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "eXtra-fast Essential Video Encoder, MPEG-5 EVC";
     license = lib.licenses.bsd3;
     mainProgram = "xeve_app";
-    maintainers = [ ];
     platforms = lib.platforms.all;
     broken = stdenv.hostPlatform.isLinux && stdenv.hostPlatform.isAarch64;
   };

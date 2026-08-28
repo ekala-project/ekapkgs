@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/ladislav-zezula/StormLib";
     description = "Open-source project that can work with Blizzard MPQ archives";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     broken = stdenv.hostPlatform.isDarwin; # installation directory mismatch
   };

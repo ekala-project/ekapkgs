@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://www.gnu.org/software/libmatheval/";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2;
     mainProgram = "gensiot";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

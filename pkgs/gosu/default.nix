@@ -28,7 +28,6 @@ buildGo126Module (finalAttrs: {
     mainProgram = "gosu";
     homepage = "https://github.com/tianon/gosu";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

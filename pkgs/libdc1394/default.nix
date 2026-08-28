@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Capture and control API for IIDC compliant cameras";
     homepage = "https://sourceforge.net/projects/libdc1394/";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     mainProgram = "dc1394_reset_bus";
     platforms = lib.platforms.unix;
   };

@@ -59,7 +59,6 @@ stdenv.mkDerivation rec {
     mainProgram = "gtranslator";
     homepage = "https://gitlab.gnome.org/GNOME/gtranslator";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

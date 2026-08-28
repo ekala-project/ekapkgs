@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Ncurses-based monitoring application for wireless network devices";
     homepage = "https://github.com/uoaerg/wavemon";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "wavemon";
   };

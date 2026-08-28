@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Analyze power consumption on Intel-based laptops";
     mainProgram = "powertop";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

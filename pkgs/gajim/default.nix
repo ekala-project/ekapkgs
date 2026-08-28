@@ -127,7 +127,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     description = "XMPP chat client";
     changelog = "https://dev.gajim.org/gajim/gajim/-/blob/${finalAttrs.version}/ChangeLog";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "gajim";
   };

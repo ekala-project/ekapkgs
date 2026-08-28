@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
       psfl
       bsd0
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

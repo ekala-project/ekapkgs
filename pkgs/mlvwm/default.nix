@@ -70,7 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
       pre-Mac OS X Macintosh look and feel in its layout and window design.
     '';
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "mlvwm";
   };
 })

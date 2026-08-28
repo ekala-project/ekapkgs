@@ -72,6 +72,5 @@ stdenv.mkDerivation {
     homepage = "https://www.glfw.org/";
     license = lib.licenses.zlib;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

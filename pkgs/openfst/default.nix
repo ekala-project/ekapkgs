@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://www.openfst.org/twiki/bin/view/FST/WebHome";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

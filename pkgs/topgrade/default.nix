@@ -45,7 +45,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/topgrade-rs/topgrade";
     changelog = "https://github.com/topgrade-rs/topgrade/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "topgrade";
   };
 })

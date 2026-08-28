@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Makefile for Arduino sketches";
     homepage = "https://github.com/sudar/Arduino-Makefile";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -67,7 +67,6 @@ stdenv.mkDerivation rec {
     description = "Open Source Host-based Intrusion Detection System";
     homepage = "https://www.ossec.net/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

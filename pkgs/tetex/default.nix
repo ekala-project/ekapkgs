@@ -88,7 +88,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Full-featured (La)TeX distribution";
     homepage = "http://www.tug.org/tetex/";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     hydraPlatforms = [ ];
   };

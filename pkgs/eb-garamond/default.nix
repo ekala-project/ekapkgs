@@ -53,6 +53,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Digitization of the Garamond shown on the Egenolff-Berner specimen";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

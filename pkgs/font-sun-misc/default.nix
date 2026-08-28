@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Open Look Glyph and Cursor pcf fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/sun-misc/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

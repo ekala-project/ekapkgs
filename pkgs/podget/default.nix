@@ -52,7 +52,6 @@ stdenvNoCC.mkDerivation rec {
     changelog = "https://github.com/dvehrs/podget/blob/dev/Changelog";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "podget";
   };
 }

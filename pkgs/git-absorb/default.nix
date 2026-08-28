@@ -39,7 +39,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/tummychow/git-absorb";
     description = "git commit --fixup, but automatic";
     license = [ lib.licenses.bsd3 ];
-    maintainers = [ ];
     mainProgram = "git-absorb";
   };
 })

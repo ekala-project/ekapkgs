@@ -59,6 +59,5 @@ stdenv.mkDerivation (finalAttrs: {
       boost
     ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

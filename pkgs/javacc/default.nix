@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Parser generator for building parsers from grammars";
     homepage = "https://javacc.github.io/javacc";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "javacc";
   };
 })

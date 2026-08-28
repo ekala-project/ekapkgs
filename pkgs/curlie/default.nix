@@ -26,7 +26,6 @@ buildGo126Module (finalAttrs: {
   meta = {
     description = "Frontend to curl that adds the ease of use of httpie, without compromising on features and performance";
     homepage = "https://rs.github.io/curlie/";
-    maintainers = [ ];
     license = lib.licenses.mit;
     mainProgram = "curlie";
   };

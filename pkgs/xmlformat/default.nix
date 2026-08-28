@@ -27,7 +27,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/someth2say/xmlformat";
     license = lib.licenses.gpl3Only;
     mainProgram = "xmlformat";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

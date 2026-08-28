@@ -76,7 +76,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/greenbone/gvm-libs";
     changelog = "https://github.com/greenbone/gvm-libs/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

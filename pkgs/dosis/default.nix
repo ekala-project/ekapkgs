@@ -39,7 +39,6 @@ stdenvNoCC.mkDerivation rec {
     '';
     homepage = "http://www.impallari.com/dosis";
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

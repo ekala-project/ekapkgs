@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "UDF reader";
     homepage = "https://code.videolan.org/videolan/libudfread";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Basic tools (containers, algorithms) used by other quantstack packages";
     homepage = "https://github.com/xtensor-stack/xtl";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

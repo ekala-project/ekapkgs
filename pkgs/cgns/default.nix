@@ -74,6 +74,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/cgns/cgns/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.zlib;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

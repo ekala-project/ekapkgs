@@ -90,7 +90,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/greshake/i3status-rust";
     license = lib.licenses.gpl3Only;
     mainProgram = "i3status-rs";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

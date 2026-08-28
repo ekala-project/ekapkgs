@@ -77,7 +77,6 @@ stdenv'.mkDerivation (finalAttrs: {
       This package contains a library of BLAS functions on top of OpenCL.
     '';
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 

@@ -50,6 +50,5 @@ stdenv.mkDerivation rec {
     platforms = lib.platforms.unix;
     license = lib.licenses.asl20;
     mainProgram = "zopfli";
-    maintainers = [ ];
   };
 }

@@ -83,6 +83,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.xfce.org/xfce/tumbler";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

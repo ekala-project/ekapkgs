@@ -45,6 +45,5 @@ stdenv.mkDerivation rec {
     mainProgram = "libusb-config";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

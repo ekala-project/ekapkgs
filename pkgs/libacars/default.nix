@@ -29,6 +29,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Aircraft Communications Addressing and Reporting System (ACARS) message decoder";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

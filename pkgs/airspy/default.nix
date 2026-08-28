@@ -63,6 +63,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Host tools and driver library for the AirSpy SDR";
     license = lib.licenses.bsd3;
     platforms = with lib.platforms; linux ++ darwin;
-    maintainers = [ ];
   };
 })

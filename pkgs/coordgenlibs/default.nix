@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Schrodinger-developed 2D Coordinate Generation";
     homepage = "https://github.com/schrodinger/coordgenlibs";
     changelog = "https://github.com/schrodinger/coordgenlibs/releases/tag/v${finalAttrs.version}";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 })

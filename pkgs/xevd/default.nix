@@ -98,7 +98,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3;
     mainProgram = "xevd_app";
     pkgConfigModules = [ "xevd" ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
     broken = stdenv.hostPlatform.isLinux && stdenv.hostPlatform.isAarch64;
   };

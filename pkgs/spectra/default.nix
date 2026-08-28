@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://spectralib.org/";
     description = "C++ library for large scale eigenvalue problems, built on top of Eigen";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

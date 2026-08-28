@@ -69,7 +69,6 @@ stdenv.mkDerivation {
     platforms = lib.platforms.linux;
     description = "Efficient dynamic menu for wayland (wlroots)";
     homepage = "https://github.com/nyyManni/dmenu-wayland";
-    maintainers = [ ];
     mainProgram = "dmenu-wl";
   };
 }

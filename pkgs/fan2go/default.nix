@@ -59,7 +59,6 @@ buildGo126Module (finalAttrs: {
     mainProgram = "fan2go";
     homepage = "https://github.com/markusressel/fan2go";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

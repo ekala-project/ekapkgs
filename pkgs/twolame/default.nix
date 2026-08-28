@@ -34,6 +34,5 @@ stdenv.mkDerivation {
     homepage = "https://www.twolame.org/";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

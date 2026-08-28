@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.hping.org/wbox/";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "wbox";
   };
 })

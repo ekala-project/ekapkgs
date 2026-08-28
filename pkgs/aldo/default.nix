@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Morse code training program";
     homepage = "http://aldo.nongnu.org/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "aldo";
   };

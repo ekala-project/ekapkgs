@@ -50,7 +50,6 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/hyprwm/hypridle";
     changelog = "https://github.com/hyprwm/hypridle/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "hypridle";
     platforms = lib.platforms.linux;
   };

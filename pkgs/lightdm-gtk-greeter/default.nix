@@ -76,6 +76,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "lightdm-gtk-greeter";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

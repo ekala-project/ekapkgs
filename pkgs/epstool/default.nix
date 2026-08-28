@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Utility to create or extract preview images in EPS files, fix bounding boxes and convert to bitmaps";
     homepage = "http://pages.cs.wisc.edu/~ghost/gsview/epstool.htm";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "epstool";
   };

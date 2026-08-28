@@ -44,6 +44,5 @@ stdenv.mkDerivation {
     homepage = "https://github.com/ttdoda/lv";
     license = lib.licenses.gpl2Plus;
     platforms = with lib.platforms; linux ++ darwin;
-    maintainers = [ ];
   };
 }

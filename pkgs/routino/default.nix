@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "http://routino.org/software/NEWS.txt";
     description = "OpenStreetMap Routing Software";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

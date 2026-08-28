@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Free Software for extracting Microsoft cabinet files";
     platforms = lib.platforms.all;
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     mainProgram = "cabextract";
   };
 })

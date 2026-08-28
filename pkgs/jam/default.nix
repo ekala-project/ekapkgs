@@ -116,7 +116,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.free;
     mainProgram = "jam";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

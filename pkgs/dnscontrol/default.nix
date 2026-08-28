@@ -49,7 +49,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://dnscontrol.org/";
     changelog = "https://github.com/DNSControl/dnscontrol/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "dnscontrol";
   };
 })

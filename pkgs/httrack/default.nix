@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Easy-to-use offline browser / website mirroring utility";
     homepage = "https://www.httrack.com";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
   };
 })

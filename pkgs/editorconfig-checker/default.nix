@@ -35,6 +35,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "editorconfig-checker";
     homepage = "https://editorconfig-checker.github.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

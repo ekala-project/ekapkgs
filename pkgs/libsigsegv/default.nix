@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.gnu.org/software/libsigsegv/";
     description = "Library to handle page faults in user mode";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

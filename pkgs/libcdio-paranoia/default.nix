@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "CD paranoia on top of libcdio";
     homepage = "https://github.com/rocky/libcdio-paranoia";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     mainProgram = "cd-paranoia";
     platforms = lib.platforms.unix;
   };

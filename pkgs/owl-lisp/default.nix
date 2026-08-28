@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Functional Scheme for world domination";
     homepage = "https://gitlab.com/owl-lisp/owl";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

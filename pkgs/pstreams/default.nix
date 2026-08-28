@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://pstreams.sourceforge.net/";
     downloadPage = "https://pstreams.sourceforge.net/download/";
-    maintainers = [ ];
     license = lib.licenses.boost;
     platforms = lib.platforms.all;
   };

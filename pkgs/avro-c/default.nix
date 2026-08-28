@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C library which implements parts of the Avro Specification";
     homepage = "https://avro.apache.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

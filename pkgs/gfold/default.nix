@@ -21,7 +21,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "CLI tool to help keep track of your Git repositories, written in Rust";
     homepage = "https://github.com/nickgerace/gfold";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "gfold";
   };

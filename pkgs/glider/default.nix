@@ -32,7 +32,6 @@ buildGoModule (finalAttrs: {
     description = "Forward proxy with multiple protocols support";
     license = lib.licenses.gpl3Only;
     mainProgram = "glider";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

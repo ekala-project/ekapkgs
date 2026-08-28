@@ -153,7 +153,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://nethack.org/";
     license = lib.licenses.ngpl;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "nethack";
   };
 })

@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
       mit
     ];
     mainProgram = "xlsclients";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

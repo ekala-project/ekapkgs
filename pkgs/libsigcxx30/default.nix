@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/libsigcplusplus/libsigcplusplus/blob/${finalAttrs.src.tag}/NEWS";
     description = "Typesafe callback system for standard C++";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

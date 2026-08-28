@@ -32,6 +32,5 @@ buildGo126Module (finalAttrs: {
     description = "Convert yaml to json";
     mainProgram = "yaml2json";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

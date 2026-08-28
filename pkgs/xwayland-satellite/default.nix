@@ -71,7 +71,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/Supreeeme/xwayland-satellite";
     changelog = "https://github.com/Supreeeme/xwayland-satellite/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     mainProgram = "xwayland-satellite";
     platforms = lib.platforms.linux;
   };

@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fish shell history-substring-search for Zsh";
     homepage = "https://github.com/zsh-users/zsh-history-substring-search";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

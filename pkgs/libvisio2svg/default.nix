@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Library and tools to convert Microsoft Visio documents (VSS and VSD) to SVG";
     homepage = "https://github.com/kakwa/libvisio2svg";
-    maintainers = [ ];
     license = lib.licenses.gpl2Only;
     platforms = [ "x86_64-linux" ];
   };

@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/stella-emu/stella/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.gpl2Plus;
     mainProgram = "stella";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

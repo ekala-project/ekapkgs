@@ -143,7 +143,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Desktop integration portals for sandboxed apps";
     homepage = "https://flatpak.github.io/xdg-desktop-portal";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

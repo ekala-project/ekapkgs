@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "ssl-cert-check";
     homepage = "https://github.com/Matty9191/ssl-cert-check";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

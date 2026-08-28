@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "X-Video Motion Compensation API";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxvmc";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Layer 2 Tunnelling Protocol Daemon (RFC 2661)";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

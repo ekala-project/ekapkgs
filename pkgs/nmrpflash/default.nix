@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Netgear Unbrick Utility";
     homepage = "https://github.com/jclehner/nmrpflash";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     mainProgram = "nmrpflash";
     platforms = lib.platforms.unix;
   };

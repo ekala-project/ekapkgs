@@ -38,7 +38,6 @@ buildGo126Module (finalAttrs: {
     description = "Modular, pluggable DNS forwarder";
     homepage = "https://github.com/IrineSistiana/mosdns";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "mosdns";
   };
 })

@@ -24,7 +24,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     '';
     homepage = "https://github.com/darakian/ddh";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "ddh";
   };

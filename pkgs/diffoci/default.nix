@@ -47,7 +47,6 @@ buildGoModule (finalAttrs: {
     description = "Diff for Docker and OCI container images";
     homepage = "https://github.com/reproducible-containers/diffoci/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "diffoci";
   };
 })

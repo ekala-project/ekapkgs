@@ -25,7 +25,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       lib.replaceStrings [ "." ] [ "" ] finalAttrs.version
     }";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "grass";
   };
 })

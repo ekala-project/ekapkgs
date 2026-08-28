@@ -43,7 +43,6 @@ stdenvNoCC.mkDerivation {
     homepage = "https://github.com/b3nj5m1n/xdg-ninja";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "xdg-ninja";
   };
 }

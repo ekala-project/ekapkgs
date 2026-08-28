@@ -62,7 +62,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Framework for managing and maintaining multi-language pre-commit hooks";
     homepage = "https://pre-commit.com/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "pre-commit";
   };
 })

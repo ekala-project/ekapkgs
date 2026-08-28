@@ -86,7 +86,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-tweaks";
     description = "Tool to customize advanced GNOME 3 options";
     mainProgram = "gnome-tweaks";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
   };

@@ -86,7 +86,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Z shell";
     license = lib.licenses.mit;
     homepage = "https://www.zsh.org/";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "zsh";
   };

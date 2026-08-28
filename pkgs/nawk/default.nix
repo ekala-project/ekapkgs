@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/onetrueawk/awk/blob/${finalAttrs.src.rev}/ChangeLog";
     license = lib.licenses.mit;
     mainProgram = "nawk";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

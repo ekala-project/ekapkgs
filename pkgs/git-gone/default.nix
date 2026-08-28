@@ -21,7 +21,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Cleanup stale Git branches of merge requests";
     homepage = "https://codeberg.org/swsnr/git-gone";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "git-gone";
   };
 })

@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://apps.gnome.org/Weather/";
     description = "Access current weather conditions and forecasts";
     mainProgram = "gnome-weather";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
   };

@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.publicDomain;
     description = "Encode and decode Quoted-Printable files";
     mainProgram = "qprint";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 

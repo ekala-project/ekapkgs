@@ -33,6 +33,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "ferretdb";
     homepage = "https://www.ferretdb.com/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

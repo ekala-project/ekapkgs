@@ -33,6 +33,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd2;
     mainProgram = "matdump";
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

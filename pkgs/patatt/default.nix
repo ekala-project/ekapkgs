@@ -35,6 +35,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
       DKIM email signature standard to include cryptographic
       signatures via the X-Developer-Signature email header.
     '';
-    maintainers = [ ];
   };
 })

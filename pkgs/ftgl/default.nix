@@ -46,7 +46,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/frankheckenbach/ftgl";
     description = "Font rendering library for OpenGL applications";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

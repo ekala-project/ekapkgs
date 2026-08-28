@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://blake2.net/";
     platforms = lib.platforms.all;
     license = lib.licenses.cc0;
-    maintainers = [ ];
   };
 })

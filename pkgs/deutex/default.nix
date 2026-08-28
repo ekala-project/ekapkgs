@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
       hpnd
       lgpl21Plus
     ];
-    maintainers = [ ];
     mainProgram = "deutex";
     platforms = lib.platforms.unix;
   };

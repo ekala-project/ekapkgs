@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Bibliography format interconversion";
     homepage = "https://sourceforge.net/p/bibutils/home/Bibutils/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -74,7 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
     downloadPage = "https://github.com/thewml/website-meta-language/releases";
     changelog = "https://github.com/thewml/website-meta-language/blob/${finalAttrs.src.rev}/src/ChangeLog";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     mainProgram = "wml";
     platforms = lib.platforms.linux;
   };

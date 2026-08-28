@@ -55,7 +55,6 @@ buildGo126Module rec {
     description = "Config-free text editor and IDE limited to VT100";
     homepage = "https://roboticoverlords.org/orbiton/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "o";
   };
 }

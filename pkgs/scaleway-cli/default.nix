@@ -64,7 +64,6 @@ buildGo126Module (finalAttrs: {
     description = "Command Line Interface for Scaleway";
     homepage = "https://github.com/scaleway/scaleway-cli";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "scw";
   };
 })

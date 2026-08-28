@@ -53,6 +53,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl21Plus;
     mainProgram = "vkd3d-compiler";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

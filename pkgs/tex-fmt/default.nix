@@ -34,6 +34,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/WGUNDERWOOD/tex-fmt/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "tex-fmt";
-    maintainers = [ ];
   };
 })

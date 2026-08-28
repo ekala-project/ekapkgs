@@ -36,6 +36,5 @@ buildGoModule (finalAttrs: {
     description = "Declarative configuration for Gmail filters";
     homepage = "https://github.com/mbrt/gmailctl";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

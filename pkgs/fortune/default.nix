@@ -79,6 +79,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Program that displays a pseudorandom message from a database of quotations";
     license = lib.licenses.bsdOriginal;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

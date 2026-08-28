@@ -78,7 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://codeberg.org/dnkl/fcft";
     changelog = "https://codeberg.org/dnkl/fcft/releases/tag/${finalAttrs.version}";
     description = "Simple library for font loading and glyph rasterization";
-    maintainers = [ ];
     license = with lib.licenses; [
       mit
       zlib

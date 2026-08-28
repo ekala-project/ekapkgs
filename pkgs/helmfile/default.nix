@@ -52,6 +52,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "helmfile";
     homepage = "https://helmfile.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

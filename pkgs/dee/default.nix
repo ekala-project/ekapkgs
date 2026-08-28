@@ -71,6 +71,5 @@ stdenv.mkDerivation {
     homepage = "https://launchpad.net/dee";
     license = lib.licenses.lgpl3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

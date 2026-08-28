@@ -49,7 +49,6 @@ buildGoModule (finalAttrs: {
     description = "Command-line tool to find out why processes are running";
     homepage = "https://github.com/pranshuparmar/witr";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "witr";
   };
 })

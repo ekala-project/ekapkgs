@@ -33,6 +33,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "wgo";
     homepage = "https://github.com/bokwoon95/wgo";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

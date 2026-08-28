@@ -74,7 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "GTK-based Usenet newsreader good at both text and binaries";
     mainProgram = "pan";
     homepage = "http://pan.rebelbase.com";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = with lib.licenses; [
       gpl2Only

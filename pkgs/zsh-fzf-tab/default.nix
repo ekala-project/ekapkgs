@@ -94,7 +94,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Replace zsh's default completion selection menu with fzf";
     changelog = "https://github.com/Aloxaf/fzf-tab/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -28,7 +28,6 @@ buildGo126Module (finalAttrs: {
     description = "In-Depth DNS Enumeration and Network Mapping";
     homepage = "https://owasp.org/www-project-amass/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "amass";
   };
 })

@@ -34,6 +34,5 @@ gccStdenv.mkDerivation rec {
     mainProgram = "muscle";
     license = lib.licenses.gpl3Plus;
     homepage = "https://www.drive5.com/muscle/";
-    maintainers = [ ];
   };
 }

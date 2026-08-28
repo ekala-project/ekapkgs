@@ -51,6 +51,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "System load plugin for Xfce panel";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

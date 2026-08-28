@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/fangfufu/httpdirfs";
     license = lib.licenses.gpl3Only;
     mainProgram = "httpdirfs";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

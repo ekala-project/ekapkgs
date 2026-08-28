@@ -29,7 +29,6 @@ stdenv.mkDerivation {
     description = "HID report descriptor I/O library and conversion tool";
     homepage = "https://github.com/DIGImend/hidrd";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     broken = stdenv.hostPlatform.isDarwin; # never built on Hydra https://hydra.nixos.org/job/nixpkgs/trunk/hidrd.x86_64-darwin
     mainProgram = "hidrd-convert";

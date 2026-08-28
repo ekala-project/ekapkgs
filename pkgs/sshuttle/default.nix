@@ -72,6 +72,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/sshuttle/sshuttle";
     changelog = "https://github.com/sshuttle/sshuttle/blob/${finalAttrs.src.tag}/CHANGES.rst";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 })

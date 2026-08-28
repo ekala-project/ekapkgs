@@ -43,7 +43,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://sq.io/";
     changelog = "https://github.com/neilotoole/sq/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "sq";
   };
 })

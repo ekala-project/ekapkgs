@@ -55,7 +55,6 @@ stdenv.mkDerivation rec {
     homepage = "http://mongoc.org";
     license = lib.licenses.asl20;
     mainProgram = "mongoc-stat";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

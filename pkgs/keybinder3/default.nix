@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for registering global key bindings";
     homepage = "https://github.com/kupferlauncher/keybinder/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

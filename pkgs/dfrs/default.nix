@@ -21,7 +21,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Display file system space usage using graphs and colors";
     homepage = "https://github.com/anthraxx/dfrs";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "dfrs";
   };
 })

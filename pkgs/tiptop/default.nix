@@ -53,6 +53,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://tiptop.gforge.inria.fr";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

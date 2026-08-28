@@ -126,7 +126,6 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl3Only
     ];
     mainProgram = "cobc";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

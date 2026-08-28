@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "smemstat";
     homepage = "https://github.com/ColinIanKing/smemstat";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

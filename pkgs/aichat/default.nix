@@ -32,7 +32,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Use GPT-4(V), Gemini, LocalAI, Ollama and other LLMs in the terminal";
     homepage = "https://github.com/sigoden/aichat";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "aichat";
   };
 })

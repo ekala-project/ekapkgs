@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Command-line tool for programming Atmel AVR microcontrollers";
     homepage = "https://www.nongnu.org/avrdude/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "avrdude";
   };

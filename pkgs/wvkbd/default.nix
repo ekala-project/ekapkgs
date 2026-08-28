@@ -47,6 +47,5 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl3Plus;
     mainProgram = "wvkbd-mobintl";
-    maintainers = [ ];
   };
 })

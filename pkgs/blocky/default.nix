@@ -34,7 +34,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://0xerr0r.github.io/blocky";
     changelog = "https://github.com/0xERR0R/blocky/releases";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "blocky";
   };
 })

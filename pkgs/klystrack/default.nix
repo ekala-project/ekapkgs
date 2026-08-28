@@ -84,7 +84,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Chiptune tracker";
     homepage = "https://kometbomb.github.io/klystrack";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "klystrack";
   };

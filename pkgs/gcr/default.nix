@@ -84,7 +84,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "GNOME crypto services (daemon and tools)";
     homepage = "https://gitlab.gnome.org/GNOME/gcr";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
       lppl13c
       free
     ];
-    maintainers = [ ];
   };
 })

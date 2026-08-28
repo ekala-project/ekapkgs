@@ -57,7 +57,6 @@ stdenv.mkDerivation rec {
       lib.licenses.asl20
       lib.licenses.gpl2Plus
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Prusa Block & Binary G-code reader / writer / converter";
     mainProgram = "bgcode";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

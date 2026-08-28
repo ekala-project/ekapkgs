@@ -30,7 +30,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "C++ implementation of a fast and memory efficient HAT-trie";
     homepage = "https://github.com/Tessil/hat-trie";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

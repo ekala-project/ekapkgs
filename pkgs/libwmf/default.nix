@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "WMF library from wvWare";
     homepage = "https://wvware.sourceforge.net/libwmf.html";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

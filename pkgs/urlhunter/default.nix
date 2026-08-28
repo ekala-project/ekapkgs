@@ -22,6 +22,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "urlhunter";
     homepage = "https://github.com/utkusen/urlhunter";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

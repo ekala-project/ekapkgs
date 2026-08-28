@@ -33,7 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://git.sr.ht/~tsdh/swayr";
     license = lib.licenses.gpl3Plus;
     mainProgram = "swayr";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

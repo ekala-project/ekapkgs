@@ -70,7 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Test library providing test harnesses and mock classes complementing the classes provided by GLib";
     homepage = "https://gitlab.gnome.org/pwithnall/libglib-testing";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

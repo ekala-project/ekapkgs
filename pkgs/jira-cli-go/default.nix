@@ -50,7 +50,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/ankitpokhrel/jira-cli";
     changelog = "https://github.com/ankitpokhrel/jira-cli/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "jira";
   };
 })

@@ -26,6 +26,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://github.com/yuru7/HackGen";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

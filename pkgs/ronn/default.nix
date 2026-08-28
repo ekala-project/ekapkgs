@@ -13,7 +13,6 @@ bundlerApp {
     mainProgram = "ronn";
     homepage = "https://github.com/apjanke/ronn-ng";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

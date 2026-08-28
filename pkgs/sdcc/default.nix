@@ -101,7 +101,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Small Device C Compiler";
     license = if withGputils then lib.licenses.unfreeRedistributable else lib.licenses.gpl2Plus;
     mainProgram = "sdcc";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

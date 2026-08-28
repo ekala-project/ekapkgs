@@ -26,7 +26,6 @@ buildGoModule (finalAttrs: {
     description = "Utility to manage your SSH, telnet, kubernetes, winrm, web or any custom shell";
     homepage = "https://github.com/evilsocket/shellz";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "shellz";
   };
 })

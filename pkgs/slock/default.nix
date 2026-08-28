@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Simple X display locker";
     homepage = "https://tools.suckless.org/slock";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "slock";
   };

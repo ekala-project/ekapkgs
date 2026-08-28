@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
       mpl11
     ];
     mainProgram = "cmph";
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 })

@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/LibtraceTeam/libtrace";
     changelog = "https://github.com/LibtraceTeam/libtrace/releases/tag/${finalAttrs.version}";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

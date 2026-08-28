@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool for installing firmware on devices";
     mainProgram = "gnome-firmware";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

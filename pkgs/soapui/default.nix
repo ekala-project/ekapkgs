@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.soapui.org/";
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
     license = lib.licenses.eupl11;
-    maintainers = [ ];
     platforms = lib.platforms.linux; # we don't fetch the dmg yet
     mainProgram = "soapui";
   };

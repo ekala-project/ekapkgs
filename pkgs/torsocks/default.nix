@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.torproject.org/tpo/core/torsocks";
     license = lib.licenses.gpl2Plus;
     mainProgram = "torsocks";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

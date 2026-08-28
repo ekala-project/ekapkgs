@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fetches system/theme information in terminal for Linux desktop screenshots";
     license = lib.licenses.gpl3;
     homepage = "https://github.com/KittyKatt/screenFetch";
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "screenfetch";
   };

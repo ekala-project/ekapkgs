@@ -40,6 +40,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://crazymax.dev/undock/";
     license = lib.licenses.mit;
     mainProgram = "undock";
-    maintainers = [ ];
   };
 })

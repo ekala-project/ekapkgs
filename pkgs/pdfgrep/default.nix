@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Commandline utility to search text in PDF files";
     homepage = "https://pdfgrep.org/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
     mainProgram = "pdfgrep";
   };

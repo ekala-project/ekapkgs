@@ -29,6 +29,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/giaf/blasfeo";
     changelog = "https://github.com/giaf/blasfeo/blob/${finalAttrs.version}/Changelog.txt";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

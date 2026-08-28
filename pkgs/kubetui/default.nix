@@ -25,7 +25,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/sarub0b0/kubetui";
     changelog = "https://github.com/sarub0b0/kubetui/releases/tag/v${finalAttrs.version}";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     license = lib.licenses.mit;
     description = "Intuitive TUI tool for real-time monitoring and exploration of Kubernetes resources";
     mainProgram = "kubetui";

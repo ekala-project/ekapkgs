@@ -41,7 +41,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Unofficial Bitwarden compatible server written in Rust";
     homepage = "https://github.com/dani-garcia/vaultwarden";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
     mainProgram = "vaultwarden";
   };
 })

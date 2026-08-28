@@ -121,7 +121,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/fastfetch-cli/fastfetch";
     changelog = "https://github.com/fastfetch-cli/fastfetch/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "fastfetch";
   };

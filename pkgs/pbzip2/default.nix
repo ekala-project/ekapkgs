@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://compression.ca/pbzip2/";
     description = "Parallel implementation of bzip2 for multi-core machines";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

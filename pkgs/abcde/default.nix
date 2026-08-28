@@ -79,7 +79,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "http://abcde.einval.com/wiki/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     description = "Command-line audio CD ripper";
     platforms = lib.platforms.linux;
   };

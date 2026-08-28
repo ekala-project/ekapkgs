@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "YANG data modelling language parser and toolkit";
     homepage = "https://github.com/CESNET/libyang";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

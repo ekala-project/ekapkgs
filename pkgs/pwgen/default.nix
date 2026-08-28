@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Password generator which creates passwords which can be easily memorized by a human";
     homepage = "https://github.com/tytso/pwgen";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "pwgen";
     platforms = lib.platforms.all;
   };

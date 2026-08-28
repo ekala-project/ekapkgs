@@ -67,6 +67,5 @@ buildGo126Module (finalAttrs: {
     changelog = "https://github.com/caddyserver/caddy/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     mainProgram = "caddy";
-    maintainers = [ ];
   };
 })

@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Apache Kafka C/C++ client library";
     homepage = "https://github.com/confluentinc/librdkafka";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 })

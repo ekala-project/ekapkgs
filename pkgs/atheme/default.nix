@@ -61,6 +61,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://atheme.github.io/";
     license = lib.licenses.isc;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

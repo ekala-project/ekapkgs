@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.gnome.org/GNOME/gnome-klotski/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
     description = "Slide blocks to solve the puzzle";
     mainProgram = "gnome-klotski";
-    maintainers = [ ];
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
   };

@@ -49,7 +49,6 @@ buildGoModule rec {
     description = "Some standard networking plugins, maintained by the CNI team";
     homepage = "https://www.cni.dev/plugins/";
     license = licenses.asl20;
-    maintainers = [ ];
     platforms = platforms.linux;
   };
 }

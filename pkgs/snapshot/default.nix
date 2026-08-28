@@ -86,7 +86,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/GNOME/snapshot";
     description = "Take pictures and videos on your computer, tablet, or phone";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "snapshot";
   };

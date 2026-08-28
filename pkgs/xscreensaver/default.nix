@@ -126,7 +126,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Set of screensavers";
     downloadPage = "https://www.jwz.org/xscreensaver/download.html";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

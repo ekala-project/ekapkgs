@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "su-exec";
     homepage = "https://github.com/ncopa/su-exec";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

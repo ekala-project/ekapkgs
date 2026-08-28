@@ -41,7 +41,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://www.cilium.io/";
     changelog = "https://github.com/cilium/cilium-cli/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "cilium";
   };
 })

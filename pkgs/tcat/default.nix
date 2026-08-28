@@ -21,7 +21,6 @@ buildGo126Module (finalAttrs: {
   meta = {
     description = "Table cat";
     homepage = "https://github.com/rsc/tcat";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
     mainProgram = "tcat";
   };

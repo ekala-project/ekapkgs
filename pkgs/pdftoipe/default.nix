@@ -32,7 +32,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/otfried/ipe-tools";
     changelog = "https://github.com/otfried/ipe-tools/releases";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "pdftoipe";
   };
 }

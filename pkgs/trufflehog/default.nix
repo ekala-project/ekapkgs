@@ -44,7 +44,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/trufflesecurity/trufflehog";
     changelog = "https://github.com/trufflesecurity/trufflehog/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
     mainProgram = "trufflehog";
   };
 })

@@ -20,7 +20,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Desktop/gui font for integrated use with the KDE desktop";
     homepage = "https://github.com/vernnobile/oxygenFont";
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

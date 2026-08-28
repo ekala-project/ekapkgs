@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://codeberg.org/jbruchon/dev86";
     description = "C compiler, assembler and linker environment for the production of 8086 executables";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

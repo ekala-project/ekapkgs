@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "irssi";
     homepage = "https://irssi.org";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

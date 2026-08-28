@@ -24,6 +24,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://libmms.sourceforge.net";
     platforms = lib.platforms.all;
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
   };
 })

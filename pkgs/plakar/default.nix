@@ -53,6 +53,5 @@ buildGo125Module (finalAttrs: {
     description = "Encrypted, queryable backups for engineers based on an immutable data store and portable archives";
     homepage = "https://www.plakar.io";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 })

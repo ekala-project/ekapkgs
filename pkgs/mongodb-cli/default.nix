@@ -33,7 +33,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/mongodb/mongodb-cli";
     changelog = "https://www.mongodb.com/docs/mongocli/current/release-notes/#mongodb-cli-${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "mongocli";
   };
 })

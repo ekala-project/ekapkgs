@@ -60,6 +60,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://pachterlab.github.io/kallisto";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

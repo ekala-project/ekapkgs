@@ -41,6 +41,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/jarun/imgp";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

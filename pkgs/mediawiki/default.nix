@@ -38,6 +38,5 @@ stdenvNoCC.mkDerivation rec {
     license = lib.licenses.gpl2Plus;
     homepage = "https://www.mediawiki.org/";
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

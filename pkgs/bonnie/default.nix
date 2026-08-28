@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Only;
     mainProgram = "bonnie++";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
   };
 })

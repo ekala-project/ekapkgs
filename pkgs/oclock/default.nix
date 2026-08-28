@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
       x11
     ];
     mainProgram = "oclock";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })
