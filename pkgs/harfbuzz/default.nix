@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "OpenType text shaping engine";
     homepage = "https://harfbuzz.github.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

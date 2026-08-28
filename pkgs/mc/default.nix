@@ -65,6 +65,5 @@ stdenv.mkDerivation rec {
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     mainProgram = "mc";
-    maintainers = [ ];
   };
 }

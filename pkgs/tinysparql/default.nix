@@ -174,7 +174,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://tracker.gnome.org/";
     description = "Desktop-neutral user information store, search tool and indexer";
     mainProgram = "tinysparql";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
     pkgConfigModules = [

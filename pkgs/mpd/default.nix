@@ -234,7 +234,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Flexible, powerful daemon for playing music";
     homepage = "https://www.musicpd.org/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "mpd";
   };

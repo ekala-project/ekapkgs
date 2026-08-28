@@ -67,7 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Light-weight image viewer";
     homepage = "https://feh.finalrewind.org/";
     license = lib.licenses.mit-feh;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "feh";
   };

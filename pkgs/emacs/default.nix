@@ -148,7 +148,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.gnu.org/software/emacs/";
     description = "Extensible, customizable GNU text editor (terminal-only)";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "emacs";
   };

@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Image manipulation library";
     homepage = "https://docs.enlightenment.org/api/imlib2/html";
     license = lib.licenses.imlib2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

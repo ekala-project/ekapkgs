@@ -53,6 +53,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3;
     mainProgram = "yara";
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

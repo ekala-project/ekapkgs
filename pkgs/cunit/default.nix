@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Unit Testing Framework for C";
     homepage = "https://cunit.sourceforge.net/";
     license = lib.licenses.lgpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

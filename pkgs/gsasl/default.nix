@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "gsasl";
     homepage = "https://www.gnu.org/software/gsasl/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

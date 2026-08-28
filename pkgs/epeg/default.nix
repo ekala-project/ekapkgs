@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Insanely fast JPEG/ JPG thumbnail scaling";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     license = lib.licenses.mit-enna;
-    maintainers = [ ];
     mainProgram = "epeg";
   };
 })

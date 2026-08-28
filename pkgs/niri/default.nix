@@ -19,9 +19,9 @@
   wayland,
   withDbus ? true,
   withDinit ? false,
-  # TODO: pipewire currently fails to build (modemmanager dep broken); disable screencast until fixed
+  # TODO: pipewire fails to build (libxtst -> at-spi2-core dep chain broken); disable until fixed
   withScreencastSupport ? false,
-  # TODO: systemd fails to build (clang-wrapper-21 dep broken); disable until fixed
+  # TODO: systemd pulls in pipewire transitively; disable until libxtst is fixed
   withSystemd ? false,
 }:
 

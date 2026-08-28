@@ -87,6 +87,5 @@ stdenv.mkDerivation rec {
     license = lib.licenses.epl10;
     platforms = lib.platforms.unix;
     mainProgram = "mosquitto";
-    maintainers = [ ];
   };
 }

@@ -49,6 +49,5 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/OSGeo/libgeotiff";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

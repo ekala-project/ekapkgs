@@ -93,7 +93,7 @@ stdenv.mkDerivation (finalAttrs: {
     "--sysconfdir /etc"
     "-Duse_system_wlroots=enabled"
     "-Duse_system_wfconfig=enabled"
-    # TODO: xwayland currently fails to build (libtirpc broken); disable until fixed
+    # TODO: xwayland fails to build (libtirpc broken); disable until fixed
     (lib.mesonEnable "xwayland" false)
     (lib.mesonEnable "wf-touch:tests" false)
   ];

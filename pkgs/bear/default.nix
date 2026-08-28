@@ -45,6 +45,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/rizsotto/Bear";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

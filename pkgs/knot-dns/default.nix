@@ -110,7 +110,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://knot-dns.cz";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "knotd";
   };
 })

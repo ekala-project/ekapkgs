@@ -77,7 +77,6 @@ stdenv.mkDerivation rec {
       bsd3
       gpl3Only
     ];
-    maintainers = [ ];
     platforms = platforms.unix;
   };
 }

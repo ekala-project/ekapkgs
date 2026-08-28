@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Create and manage windows containing OpenGL contexts";
     homepage = "https://freeglut.sourceforge.net/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

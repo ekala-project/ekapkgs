@@ -25,7 +25,7 @@
   libxcb-wm,
   xwayland,
 
-  # TODO: xwayland currently fails to build (libtirpc broken); disable until fixed
+  # TODO: xwayland fails to build (libtirpc broken in corepkgs); disable until fixed
   enableXWayland ? false,
   enableSystemd ? true,
 }:

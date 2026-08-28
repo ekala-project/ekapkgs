@@ -118,6 +118,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.fltk.org";
     platforms = lib.platforms.unix;
     license = lib.licenses.lgpl2Only;
-    maintainers = [ ];
   };
 })

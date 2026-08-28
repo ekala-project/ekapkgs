@@ -91,6 +91,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.squid-cache.org";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

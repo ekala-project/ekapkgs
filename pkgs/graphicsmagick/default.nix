@@ -70,6 +70,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     mainProgram = "gm";
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })
