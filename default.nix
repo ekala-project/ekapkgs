@@ -19,6 +19,8 @@ in
 coreRepo (
   {
     modules = modules ++ [ pkgsModule ];
+    # corepkgs meta checker rejects valid keys (maintainers, teams); disable until fixed
+    config.checkMeta = false;
   }
   // filteredAttrs
 )
