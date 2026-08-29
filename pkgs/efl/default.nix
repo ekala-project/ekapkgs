@@ -36,7 +36,7 @@
   libtiff,
   libwebp,
   libxkbcommon,
-  lua,
+  lua5_1,
   lz4,
   mesa-gl-headers,
   mint-x-icons,
@@ -140,7 +140,7 @@ stdenv.mkDerivation (finalAttrs: {
     # libspectre  # requires ghostscript
     libwebp
     libxkbcommon
-    lua
+    lua5_1
     mint-x-icons
     openjpeg
     poppler
