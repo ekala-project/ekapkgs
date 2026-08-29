@@ -25,8 +25,7 @@
   libdrm,
   # Used by the NixOS module:
   isNixOS ? false,
-  # TODO: xwayland fails to build (libtirpc broken in corepkgs); disable until fixed
-  enableXWayland ? false,
+  enableXWayland ? true,
   libxcb-wm,
   systemdSupport ? lib.meta.availableOn stdenv.hostPlatform systemd,
   systemd,

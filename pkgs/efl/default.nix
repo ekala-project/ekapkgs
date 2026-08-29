@@ -16,14 +16,12 @@
   fontconfig,
   freetype,
   fribidi,
-  ghostscript,
   giflib,
   glib,
   gstreamer,
   gtk3,
   harfbuzz,
   hicolor-icon-theme,
-  jbig2dec,
   libGL,
   libdrm,
   libgbm,
@@ -128,17 +126,18 @@ stdenv.mkDerivation (finalAttrs: {
     doxygen
     expat
     fribidi
-    ghostscript
+    # TODO: ghostscript fails to build (GCC 14 compat); disable PostScript support until fixed
+    # ghostscript
     harfbuzz
     hicolor-icon-theme
-    jbig2dec
+    # jbig2dec  # only needed with ghostscript
     libdrm
     libgbm
     libinput
     libjpeg
     libraw
     librsvg
-    libspectre
+    # libspectre  # requires ghostscript
     libwebp
     libxkbcommon
     lua

@@ -19,10 +19,9 @@
   wayland,
   withDbus ? true,
   withDinit ? false,
-  # TODO: pipewire fails to build (libxtst -> at-spi2-core dep chain broken); disable until fixed
+  # TODO: pipewire fails to build (ghostscript dep chain); disable screencast until fixed
   withScreencastSupport ? false,
-  # TODO: systemd pulls in pipewire transitively; disable until libxtst is fixed
-  withSystemd ? false,
+  withSystemd ? true,
 }:
 
 rustPlatform.buildRustPackage (finalAttrs: {
