@@ -55,6 +55,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     wayland-scanner
@@ -86,6 +87,8 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional (libxcb-errors != null) libxcb-errors
   ++ lib.optional stdenv.hostPlatform.isLinux libcap
   ++ lib.optional finalAttrs.enableXWayland xwayland;
+
+  mesonBuildType = "release";
 
   mesonFlags = [
     (lib.mesonEnable "xwayland" finalAttrs.enableXWayland)
