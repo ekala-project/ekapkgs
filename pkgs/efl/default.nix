@@ -32,7 +32,6 @@
   libraw,
   librsvg,
   libsndfile,
-  libspectre,
   libtiff,
   libwebp,
   libxkbcommon,
@@ -171,6 +170,7 @@ stdenv.mkDerivation (finalAttrs: {
   mesonFlags = [
     (mesonBool "build-tests" false)
     (mesonOption "ecore-imf-loaders-disabler" "ibus,scim")
+    (mesonOption "evas-loaders-disabler" "ps,avif,heif,jxl,json")
     (mesonBool "embedded-lz4" false)
     (mesonBool "fb" true)
     (mesonOption "network-backend" "connman")
