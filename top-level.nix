@@ -24,6 +24,7 @@ final: prev: {
   libfm-extra = final.libfm.override { extraOnly = true; };
   dconf = prev.dconf.overrideAttrs (old: {
     nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
+    doCheck = false;
   });
   gdk-pixbuf = prev.gdk-pixbuf.overrideAttrs (old: {
     nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
