@@ -669,6 +669,7 @@
   ./services/gnome-settings-daemon.nix
   ./services/hypridle.nix
   ./services/hyprland.nix
+  ./services/jack.nix
   ./services/kubo.nix
   ./services/lightdm.nix
   ./services/ollama.nix
