@@ -18,7 +18,7 @@ with lib;
 
     services.dbus.packages = [ pkgs.colord ];
 
-    # TODO: services.udev.packages = [ pkgs.colord ];
+    services.udev.packages = [ pkgs.colord ];
 
     systemd.packages = [ pkgs.colord ];
 
