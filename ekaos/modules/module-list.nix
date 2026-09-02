@@ -659,6 +659,7 @@
   ./config/xdg/portals/wlr.nix
 
   # Services
+  ./services/alsa.nix
   ./services/at-spi2-core.nix
   ./services/gdm.nix
   ./services/gnome-browser-connector.nix
