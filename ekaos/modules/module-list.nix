@@ -668,6 +668,7 @@
   ./services/gcr-ssh-agent.nix
   ./services/gdm.nix
   ./services/glib-networking.nix
+  ./services/gnome.nix
   ./services/gnome-browser-connector.nix
   ./services/gnome-initial-setup.nix
   ./services/gnome-keyring.nix
