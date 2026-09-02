@@ -26,7 +26,7 @@ in
       pkgs.gnome-settings-daemon
     ];
 
-    # TODO: services.udev.packages = [ pkgs.gnome-settings-daemon ];
+    services.udev.packages = [ pkgs.gnome-settings-daemon ];
 
     systemd.packages = [
       pkgs.gnome-settings-daemon
