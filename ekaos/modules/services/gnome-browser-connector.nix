@@ -40,7 +40,7 @@ in
 
     environment.systemPackages = [ pkgs.gnome-browser-connector ];
 
-    # TODO: services.dbus.packages = [ pkgs.gnome-browser-connector ];
+    services.dbus.packages = [ pkgs.gnome-browser-connector ];
     # TODO: programs.firefox.nativeMessagingHosts.packages = [ pkgs.gnome-browser-connector ];
   };
 }
