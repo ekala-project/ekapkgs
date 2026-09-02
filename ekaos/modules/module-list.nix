@@ -659,22 +659,38 @@
   ./config/xdg/portals/wlr.nix
 
   # Services
+  ./services/accounts-daemon.nix
   ./services/alsa.nix
   ./services/at-spi2-core.nix
+  ./services/colord.nix
+  ./services/docker.nix
+  ./services/evolution-data-server.nix
+  ./services/gcr-ssh-agent.nix
   ./services/gdm.nix
+  ./services/glib-networking.nix
   ./services/gnome-browser-connector.nix
+  ./services/gnome-initial-setup.nix
   ./services/gnome-keyring.nix
   ./services/gnome-online-accounts.nix
   ./services/gnome-remote-desktop.nix
   ./services/gnome-settings-daemon.nix
+  ./services/gnome-software.nix
+  ./services/gnome-user-share.nix
+  ./services/gvfs.nix
   ./services/hypridle.nix
   ./services/hyprland.nix
   ./services/jack.nix
   ./services/kubo.nix
   ./services/lightdm.nix
+  ./services/localsearch.nix
   ./services/ollama.nix
   ./services/pipewire.nix
   ./services/plex.nix
+  ./services/sddm.nix
+  ./services/sushi.nix
+  ./services/syncthing.nix
+  ./services/tailscale.nix
+  ./services/tinysparql.nix
   ./services/transmission.nix
   ./services/xserver.nix
 ]
