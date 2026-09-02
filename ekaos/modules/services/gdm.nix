@@ -136,7 +136,7 @@ in
       pkgs.adwaita-icon-theme
     ];
 
-    # TODO: services.dbus.packages = [ gdm ];
+    services.dbus.packages = [ gdm ];
     # TODO: services.accounts-daemon.enable = true;
     # TODO: programs.dconf.profiles.gdm for autoSuspend and banner settings
 
