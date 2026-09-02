@@ -27,6 +27,6 @@ in
   config = mkIf cfg.enable {
     environment.systemPackages = [ pkgs.gnome-online-accounts ];
 
-    # TODO: services.dbus.packages = [ pkgs.gnome-online-accounts ];
+    services.dbus.packages = [ pkgs.gnome-online-accounts ];
   };
 }
