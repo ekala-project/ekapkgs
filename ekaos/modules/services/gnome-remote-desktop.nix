@@ -22,9 +22,9 @@ in
   };
 
   config = mkIf cfg.enable {
-    # TODO: services.pipewire.enable = true;
+    services.pipewire.enable = true;
     services.dbus.packages = [ pkgs.gnome-remote-desktop ];
-    # TODO: security.polkit.enable = true;
+    security.polkit.enable = true;
 
     environment.systemPackages = [ pkgs.gnome-remote-desktop ];
 
