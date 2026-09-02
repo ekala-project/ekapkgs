@@ -671,6 +671,7 @@
   ./services/kubo.nix
   ./services/lightdm.nix
   ./services/ollama.nix
+  ./services/pipewire.nix
   ./services/plex.nix
   ./services/transmission.nix
   ./services/xserver.nix
