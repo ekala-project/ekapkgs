@@ -30,9 +30,7 @@ in
 
     systemd.packages = [ cfg.package ];
 
-    # TODO: services.udev.packages = [ pkgs.libmtp.out ];
-    # TODO: services.udisks2.enable = true;
-    # TODO: programs.fuse.enable = true;
+    services.udev.packages = [ pkgs.libmtp.out ];
 
     environment.sessionVariables.GIO_EXTRA_MODULES = [ "${cfg.package}/lib/gio/modules" ];
   };
