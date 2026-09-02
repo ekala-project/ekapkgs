@@ -166,7 +166,7 @@ in
       };
 
       # Mutter udev rules for KMS modifier forcing
-      # TODO: services.udev.packages = [ pkgs.mutter ];
+      services.udev.packages = [ pkgs.mutter ];
 
       # Default fonts
       fonts.packages = [
