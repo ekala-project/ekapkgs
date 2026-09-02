@@ -137,8 +137,7 @@ in
     ];
 
     services.dbus.packages = [ gdm ];
-    # TODO: services.accounts-daemon.enable = true;
-    # TODO: programs.dconf.profiles.gdm for autoSuspend and banner settings
+    services.accounts-daemon.enable = true;
 
     systemd.packages = [
       gdm
