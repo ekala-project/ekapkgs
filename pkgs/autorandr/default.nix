@@ -82,7 +82,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/phillipberndt/autorandr/";
     description = "Automatically select a display configuration based on connected devices";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "autorandr";
   };

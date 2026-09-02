@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Easy to use, powerful and expressive command line argument handling for C++11/14/17";
     homepage = "https://github.com/muellan/clipp";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = with lib.platforms; all;
   };
 })

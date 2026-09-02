@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/glv2/bruteforce-salted-openssl";
     changelog = "https://github.com/glv2/bruteforce-salted-openssl/blob/${finalAttrs.src.rev}/NEWS";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "bruteforce-salted-openssl";
     platforms = lib.platforms.linux;
   };

@@ -11,18 +11,22 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "sopwith";
-  version = "2.8.0";
+  version = "2.9.0";
 
   src = fetchFromGitHub {
     owner = "fragglet";
     repo = "sdl-sopwith";
     tag = "sdl-sopwith-${finalAttrs.version}";
-    hash = "sha256-s7npLid3GYZArQmctSwOu8zeC+mSfTiiiOaOEa9dcrg=";
+    hash = "sha256-pSxNW1WVe3Zq8m+cRJr1zeDx+8SUuav+lvM4PTYpRxo=";
   };
 
   nativeBuildInputs = [
     autoreconfHook
     pkg-config
+  ];
+
+  configureFlags = [
+    "--with-hiscores-path=${placeholder "out"}/var/games/sopwith"
   ];
 
   buildInputs = [
@@ -36,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Classic biplane shoot ‘em-up game";
     license = lib.licenses.gpl2Plus;
     mainProgram = "sopwith";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

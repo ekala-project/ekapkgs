@@ -47,6 +47,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     '';
     homepage = "https://github.com/tkellogg/dura";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

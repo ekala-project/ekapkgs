@@ -164,6 +164,5 @@ stdenv.mkDerivation (finalAttrs: {
       epl20
     ];
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

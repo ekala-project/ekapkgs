@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/twekkel/htpdate";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "htpdate";
   };
 })

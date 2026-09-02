@@ -10,11 +10,11 @@
 
 stdenv.mkDerivation rec {
   pname = "cgal";
-  version = "5.6.2";
+  version = "6.1.2";
 
   src = fetchurl {
     url = "https://github.com/CGAL/cgal/releases/download/v${version}/CGAL-${version}.tar.xz";
-    hash = "sha256-RY9g346PHy/a2TyPJOGqj0sJXMYaFPrIG5BoDXMGpC4=";
+    hash = "sha256-QEEbl8XGTdwa8dFT1Xo55CTSHpR+7ysZT6BcWosALuo=";
   };
 
   nativeBuildInputs = [
@@ -40,6 +40,5 @@ stdenv.mkDerivation rec {
       lgpl3Plus
     ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

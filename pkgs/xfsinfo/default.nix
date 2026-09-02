@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
       hpndSellVariant
     ];
     mainProgram = "xfsinfo";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

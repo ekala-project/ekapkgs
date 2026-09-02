@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation {
   pname = "bash-git-prompt";
-  version = "2.7.1-unstable-2025-04-23";
+  version = "2.7.1";
 
   src = fetchFromGitHub {
     owner = "magicmonty";
@@ -44,6 +44,5 @@ stdenv.mkDerivation {
     homepage = "https://github.com/magicmonty/bash-git-prompt";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

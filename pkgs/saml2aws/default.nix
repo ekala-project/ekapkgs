@@ -41,6 +41,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "saml2aws";
     homepage = "https://github.com/Versent/saml2aws";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

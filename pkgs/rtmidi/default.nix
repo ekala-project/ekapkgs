@@ -38,6 +38,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.music.mcgill.ca/~gary/rtmidi/";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

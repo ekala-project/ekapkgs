@@ -48,7 +48,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/charmbracelet/pop";
     changelog = "https://github.com/charmbracelet/pop/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "pop";
   };
 })

@@ -51,6 +51,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl21Only;
     homepage = "https://github.com/open-iscsi/open-isns";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

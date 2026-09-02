@@ -31,7 +31,6 @@ buildGoModule (finalAttrs: {
     description = "Interactive web UI for gRPC, along the lines of postman";
     homepage = "https://github.com/fullstorydev/grpcui";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     mainProgram = "grpcui";
   };

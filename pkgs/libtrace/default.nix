@@ -15,13 +15,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libtrace";
-  version = "4.0.32-2";
+  version = "4.0.34-1";
 
   src = fetchFromGitHub {
     owner = "LibtraceTeam";
     repo = "libtrace";
     tag = finalAttrs.version;
-    hash = "sha256-cqRhTNSXvNlZW63baxqcqVJJEVe8SeunTPdJ623kIvo=";
+    hash = "sha256-vVhLUc2IddslHmXtzduYs4MLwWA+vYE/q5qpZIORdbY=";
   };
 
   strictDeps = true;
@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/LibtraceTeam/libtrace";
     changelog = "https://github.com/LibtraceTeam/libtrace/releases/tag/${finalAttrs.version}";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

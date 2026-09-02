@@ -59,7 +59,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     '';
     homepage = "https://github.com/Kentzo/git-archive-all";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "git-archive-all";
   };
 })

@@ -32,6 +32,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/a-h/templ";
     license = lib.licenses.mit;
     mainProgram = "templ";
-    maintainers = [ ];
   };
 })

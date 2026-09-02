@@ -53,6 +53,5 @@ stdenv.mkDerivation rec {
       url = "https://sourceforge.net/p/gnuplot/gnuplot-main/ci/master/tree/Copyright";
     };
     mainProgram = "gnuplot";
-    maintainers = [ ];
   };
 }

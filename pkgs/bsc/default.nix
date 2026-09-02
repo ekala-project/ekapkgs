@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "High performance block-sorting data compression library";
     homepage = "http://libbsc.com/";
-    maintainers = [ ];
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
     mainProgram = "bsc";

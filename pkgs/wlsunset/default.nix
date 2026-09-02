@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://git.sr.ht/~kennylevinsen/wlsunset/refs/${finalAttrs.version}";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "wlsunset";
   };
 })

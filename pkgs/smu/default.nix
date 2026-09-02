@@ -27,6 +27,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "smu";
     homepage = "https://github.com/Gottox/smu";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

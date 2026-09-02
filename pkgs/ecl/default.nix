@@ -87,7 +87,6 @@ stdenv.mkDerivation rec {
     homepage = "https://common-lisp.net/project/ecl/";
     license = lib.licenses.mit;
     mainProgram = "ecl";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

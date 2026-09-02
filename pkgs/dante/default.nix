@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Circuit-level SOCKS client/server that can be used to provide convenient and secure network connectivity";
     homepage = "https://www.inet.no/dante/";
-    maintainers = [ ];
     license = lib.licenses.bsdOriginal;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };

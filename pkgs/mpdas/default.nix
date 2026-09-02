@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Music Player Daemon AudioScrobbler";
     homepage = "https://50hz.ws/mpdas/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "mpdas";
   };

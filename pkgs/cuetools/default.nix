@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Set of utilities for working with cue files and toc files";
     homepage = "https://github.com/svend/cuetools";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

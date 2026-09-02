@@ -48,6 +48,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl21Plus;
     homepage = "https://github.com/regularhunter/libfreeaptx";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -99,6 +99,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Wireless daemon for Linux";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -22,6 +22,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://pagure.io/mlocate";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

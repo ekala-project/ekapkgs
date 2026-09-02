@@ -36,7 +36,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://shopify.github.io/shadowenv/";
     description = "Reversible directory-local environment variable manipulations";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "shadowenv";
   };
 })

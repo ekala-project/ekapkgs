@@ -135,6 +135,5 @@ stdenv.mkDerivation rec {
     ];
     mainProgram = "dovecot";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

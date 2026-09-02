@@ -39,6 +39,5 @@ buildGo125Module (finalAttrs: {
     changelog = "https://github.com/traefik/traefik/raw/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "traefik";
-    maintainers = [ ];
   };
 })

@@ -10,16 +10,16 @@
 }:
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "rosenpass";
-  version = "0.2.2";
+  version = "0.2.3";
 
   src = fetchFromGitHub {
     owner = "rosenpass";
     repo = "rosenpass";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-fQIeKGyTkFWUV9M1o256G4U1Os5OlVsRZu+5olEkbD4=";
+    hash = "sha256-i05iIZJX3pvw/9J/rM7UBY9a2YRv25sdJU4duxw0qw8=";
   };
 
-  cargoHash = "sha256-vx6kSdDOXiIp2626yKVieDuS9DD5/wKyXutMiKMKn24=";
+  cargoHash = "sha256-YzPile/lvNMSEgBsKuKhxgv+JnKT3CtuTpfNM8gJctI=";
 
   nativeBuildInputs = [
     cmake # for oqs build in the oqs-sys crate
@@ -46,8 +46,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit # or
       asl20
     ];
-    maintainers = [ ];
-    teams = with lib.teams; [ ngi ];
+    teams = [ ];
     platforms = [
       "aarch64-darwin"
       "aarch64-linux"

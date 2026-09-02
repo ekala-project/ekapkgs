@@ -26,7 +26,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/showwin/speedtest-go";
     changelog = "https://github.com/showwin/speedtest-go/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "speedtest-go";
   };
 })

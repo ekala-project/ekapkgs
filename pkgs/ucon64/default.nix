@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool to backup video game cartridges and perform various ROM operations";
     homepage = "https://ucon64.sourceforge.io/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "ucon64";
   };
 })

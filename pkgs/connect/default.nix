@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://bitbucket.org/gotoh/connect/wiki/Home";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.gnu ++ lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
     mainProgram = "connect";
   };
 })

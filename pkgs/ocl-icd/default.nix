@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "ocl-icd";
-  version = "2.3.4";
+  version = "2.3.5";
 
   src = fetchFromGitHub {
     owner = "OCL-dev";
     repo = "ocl-icd";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-7q5+33oWMA/PQOz6awC+LOBVTKeXNluHxDNAq8bJPYU=";
+    sha256 = "sha256-J7j68KlcwdlwtBo171xZd5iLWeo1suYm43G1JiFs2AE=";
   };
 
   nativeBuildInputs = [
@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/OCL-dev/ocl-icd";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

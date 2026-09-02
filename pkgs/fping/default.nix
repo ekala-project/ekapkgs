@@ -25,6 +25,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd0;
     mainProgram = "fping";
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Legacy D-Bus client library for Audacious";
     homepage = "https://audacious-media-player.org/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
   };
 })

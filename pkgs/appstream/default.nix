@@ -124,7 +124,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.freedesktop.org/wiki/Distributions/AppStream/";
     license = lib.licenses.lgpl21Plus;
     mainProgram = "appstreamcli";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

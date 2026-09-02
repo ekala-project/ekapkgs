@@ -60,7 +60,6 @@ stdenv.mkDerivation rec {
     homepage = "https://sourceforge.net/projects/ddrescueview/";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "ddrescueview";
   };
 }

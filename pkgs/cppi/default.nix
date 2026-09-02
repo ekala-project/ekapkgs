@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C preprocessor directive indenter";
     homepage = "https://savannah.gnu.org/projects/cppi/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "cppi";
   };

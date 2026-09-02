@@ -54,6 +54,5 @@ stdenv.mkDerivation rec {
     homepage = "https://launchpad.net/libindicator";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

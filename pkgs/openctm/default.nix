@@ -68,6 +68,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "File format, software library and a tool set for compression of 3D triangle meshes";
     homepage = "https://sourceforge.net/projects/openctm/";
     license = lib.licenses.zlib;
-    maintainers = [ ];
   };
 })

@@ -60,7 +60,6 @@ stdenv.mkDerivation {
     homepage = "https://www.speedtest.net/apps/cli";
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
     license = lib.licenses.unfree;
-    maintainers = [ ];
     platforms = lib.attrNames srcs;
     mainProgram = "speedtest";
   };

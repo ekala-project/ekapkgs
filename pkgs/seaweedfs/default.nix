@@ -81,7 +81,6 @@ buildGoModule (finalAttrs: {
     '';
     homepage = "https://github.com/seaweedfs/seaweedfs";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "weed";
   };
 })

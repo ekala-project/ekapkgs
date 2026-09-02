@@ -26,7 +26,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/DarthSim/";
     description = "Process manager for Procfile-based applications";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "hivemind";
   };
 })

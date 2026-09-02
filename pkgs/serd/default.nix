@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.isc;
     mainProgram = "serdi";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

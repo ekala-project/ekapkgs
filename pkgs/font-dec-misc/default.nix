@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "DEC cursors in pcf font format";
     homepage = "https://gitlab.freedesktop.org/xorg/font/dec-misc";
     license = lib.licenses.hpnd;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

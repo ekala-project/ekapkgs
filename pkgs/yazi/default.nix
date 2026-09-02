@@ -56,7 +56,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Blazing fast terminal file manager written in Rust, based on async I/O";
     homepage = "https://github.com/sxyazi/yazi";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "yazi";
   };
 })

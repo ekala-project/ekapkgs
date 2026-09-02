@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     homepage = "https://github.com/cdown/psi-notify";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "psi-notify";
   };
 })

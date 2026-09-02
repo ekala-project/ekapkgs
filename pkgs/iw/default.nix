@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.isc;
     mainProgram = "iw";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

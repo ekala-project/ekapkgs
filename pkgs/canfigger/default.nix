@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/andy5995/canfigger";
     changelog = "https://github.com/andy5995/canfigger/blob/${finalAttrs.src.rev}/ChangeLog.txt";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "canfigger";
     platforms = lib.platforms.all;
   };

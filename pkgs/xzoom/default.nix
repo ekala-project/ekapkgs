@@ -53,7 +53,6 @@ stdenv.mkDerivation rec {
   meta = {
     description = "X11 screen zoom tool";
     license = lib.licenses.free;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "xzoom";
   };

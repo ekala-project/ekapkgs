@@ -35,7 +35,6 @@ stdenv.mkDerivation rec {
     homepage = "http://subsonic.org";
     description = "Personal media streamer";
     license = lib.licenses.unfree;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

@@ -40,6 +40,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://libspatialindex.org";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

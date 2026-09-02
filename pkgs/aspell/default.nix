@@ -54,7 +54,6 @@ stdenv.mkDerivation rec {
     description = "Spell checker for many languages";
     homepage = "http://aspell.net/";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

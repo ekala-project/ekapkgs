@@ -42,6 +42,5 @@ stdenv.mkDerivation {
     mainProgram = "xwiishow";
     platforms = lib.platforms.linux;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

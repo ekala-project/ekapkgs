@@ -40,7 +40,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://codeberg.org/iff/pay-respects";
     changelog = "https://codeberg.org/iff/pay-respects/src/tag/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     mainProgram = "pay-respects";
   };
 })

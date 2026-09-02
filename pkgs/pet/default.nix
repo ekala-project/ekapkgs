@@ -47,7 +47,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "pet";
     homepage = "https://github.com/knqyf263/pet";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 })

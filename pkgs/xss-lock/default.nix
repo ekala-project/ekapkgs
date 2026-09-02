@@ -47,7 +47,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/xdbob/xss-lock";
     license = lib.licenses.mit;
     mainProgram = "xss-lock";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

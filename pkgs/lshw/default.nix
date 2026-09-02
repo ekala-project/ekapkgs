@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://ezix.org/project/wiki/HardwareLiSter";
     license = lib.licenses.gpl2;
     mainProgram = "lshw";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

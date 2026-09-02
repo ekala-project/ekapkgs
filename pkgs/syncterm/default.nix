@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://syncterm.bbsdev.net/";
     description = "BBS terminal emulator";
     mainProgram = "syncterm";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Plus;
   };

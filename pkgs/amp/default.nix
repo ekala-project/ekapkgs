@@ -50,7 +50,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Modern text editor inspired by Vim";
     homepage = "https://amp.rs";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "amp";
   };
 })

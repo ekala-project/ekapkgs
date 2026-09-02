@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://roy.marples.name/projects/parpd";
     changelog = "https://github.com/NetworkConfiguration/parpd/releases/tag/v${finalAttrs.version}";
     description = "Proxy ARP Daemon that complies with RFC 1027";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.bsd2;
     mainProgram = "parpd";

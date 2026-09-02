@@ -38,6 +38,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Small Footprint Scheme for use as a C Extension Language";
     platforms = lib.platforms.all;
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

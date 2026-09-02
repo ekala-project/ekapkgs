@@ -80,6 +80,5 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/rclone/rclone/blob/v${finalAttrs.version}/docs/content/changelog.md";
     license = lib.licenses.mit;
     mainProgram = "rclone";
-    maintainers = [ ];
   };
 })

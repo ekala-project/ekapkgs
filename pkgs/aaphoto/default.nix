@@ -49,7 +49,6 @@ stdenv.mkDerivation {
       one-by-one.
     '';
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "aaphoto";
   };

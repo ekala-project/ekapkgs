@@ -63,7 +63,6 @@ stdenv.mkDerivation rec {
     description = "ebusd";
     homepage = "https://github.com/john30/ebusd";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

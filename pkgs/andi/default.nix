@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Efficient Estimation of Evolutionary Distances";
     homepage = "https://github.com/evolbioinf/andi";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "andi";
     platforms = lib.platforms.all;
   };

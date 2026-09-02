@@ -1,0 +1,48 @@
+{
+  lib,
+  stdenv,
+  fetchzip,
+  buildFHSEnv,
+}:
+
+let
+  version = "23.1.14";
+  pname = "cockroachdb";
+
+  srcs = {
+    aarch64-linux = fetchzip {
+      url = "https://binaries.cockroachdb.com/cockroach-v${version}.linux-arm64.tgz";
+      hash = "sha256-cwczzmSKKQs/DN6WZ/FF6nJC82Pu47akeDqWdBMgdz0=";
+    };
+    x86_64-linux = fetchzip {
+      url = "https://binaries.cockroachdb.com/cockroach-v${version}.linux-amd64.tgz";
+      hash = "sha256-goCBE+zv9KArdoMsI48rlISurUM0bL/l1OEYWQKqzv0=";
+    };
+  };
+  src =
+    srcs.${stdenv.hostPlatform.system} or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
+
+in
+buildFHSEnv {
+  inherit pname version;
+
+  runScript = "${src}/cockroach";
+
+  extraInstallCommands = ''
+    cp -P $out/bin/cockroachdb $out/bin/cockroach
+  '';
+
+  meta = {
+    homepage = "https://www.cockroachlabs.com";
+    description = "Scalable, survivable, strongly-consistent SQL database";
+    license = with lib.licenses; [
+      bsl11
+      mit
+    ];
+    sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
+    platforms = [
+      "aarch64-linux"
+      "x86_64-linux"
+    ];
+  };
+}

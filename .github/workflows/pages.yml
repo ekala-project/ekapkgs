@@ -1,0 +1,51 @@
+name: Deploy Options Documentation
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'ekaos/modules/**'
+      - 'doc/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: cachix/install-nix-action@v30
+
+      - uses: cachix/cachix-action@v15
+        with:
+          name: ekala-corepkgs
+
+      - name: Build options.json
+        run: nix-build doc/options.nix -o doc-result
+
+      - name: Generate HTML
+        run: python3 doc/generate.py doc-result/options.json _site/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

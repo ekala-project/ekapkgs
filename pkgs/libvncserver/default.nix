@@ -69,7 +69,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "VNC server library";
     homepage = "https://libvnc.github.io/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

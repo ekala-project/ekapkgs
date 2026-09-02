@@ -27,6 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "ucontext implementation featuring glibc-compatible ABI";
     license = lib.licenses.isc;
     platforms = lib.platforms.linux;
-    teams = [ lib.teams.lix ];
+    teams = [ ];
   };
 })

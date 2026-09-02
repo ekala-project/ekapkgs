@@ -28,7 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/sensepost/gowitness";
     changelog = "https://github.com/sensepost/gowitness/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "gowitness";
   };
 })

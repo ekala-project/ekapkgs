@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Provides core data structures and a simple XML parser for populating the class data structures from an URDF file";
     homepage = "https://github.com/ros/urdfdom";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

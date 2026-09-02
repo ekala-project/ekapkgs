@@ -27,6 +27,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "cpat";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

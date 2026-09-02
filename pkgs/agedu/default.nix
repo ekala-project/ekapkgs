@@ -41,7 +41,6 @@ stdenv.mkDerivation {
     '';
     homepage = "https://www.chiark.greenend.org.uk/~sgtatham/agedu/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "agedu";
   };

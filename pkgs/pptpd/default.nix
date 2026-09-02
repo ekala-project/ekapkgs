@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://poptop.sourceforge.net/dox/";
     description = "PPTP Server for Linux";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     license = lib.licenses.gpl2Only;
   };
 })

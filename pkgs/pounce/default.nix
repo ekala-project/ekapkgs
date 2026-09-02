@@ -36,6 +36,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Simple multi-client TLS-only IRC bouncer";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

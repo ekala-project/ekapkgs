@@ -50,7 +50,6 @@ stdenv.mkDerivation {
     mainProgram = "flasm";
     homepage = "https://flasm.sourceforge.net/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

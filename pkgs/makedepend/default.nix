@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
       hpnd
     ];
     mainProgram = "makedepend";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

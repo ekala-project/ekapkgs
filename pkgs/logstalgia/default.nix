@@ -86,7 +86,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
 
     platforms = lib.platforms.gnu ++ lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
     mainProgram = "logstalgia";
   };
 })

@@ -58,6 +58,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "chocolate-doom";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

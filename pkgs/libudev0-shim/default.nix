@@ -29,6 +29,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/archlinux/libudev0-shim";
     platforms = lib.platforms.linux;
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
   };
 })

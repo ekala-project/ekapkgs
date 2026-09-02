@@ -2,21 +2,20 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  fetchpatch,
   python3,
   installShellFiles,
 }:
 
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "fail2ban";
-  version = "1.1.0";
+  version = "1.1.1";
   format = "setuptools";
 
   src = fetchFromGitHub {
     owner = "fail2ban";
     repo = "fail2ban";
     rev = finalAttrs.version;
-    hash = "sha256-0xPNhbu6/p/cbHOr5Y+PXbMbt5q/S13S5100ZZSdylE=";
+    hash = "sha256-6L8lSoFdf/KL1AQfN0lfGthEfeLlxodVsMI3LXCq+XY=";
   };
 
   outputs = [
@@ -25,17 +24,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   ];
 
   nativeBuildInputs = [ installShellFiles ];
-
-  patches = [
-    (fetchpatch {
-      url = "https://github.com/fail2ban/fail2ban/commit/2fed408c05ac5206b490368d94599869bd6a056d.patch";
-      hash = "sha256-uyrCdcBm0QyA97IpHzuGfiQbSSvhGH6YaQluG5jVIiI=";
-    })
-    (fetchpatch {
-      url = "https://github.com/fail2ban/fail2ban/commit/50ff131a0fd8f54fdeb14b48353f842ee8ae8c1a.patch";
-      hash = "sha256-YGsUPfQRRDVqhBl7LogEfY0JqpLNkwPjihWIjfGdtnQ=";
-    })
-  ];
 
   preConfigure = ''
     for i in config/action.d/sendmail*.conf; do
@@ -78,6 +66,5 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://www.fail2ban.org/";
     description = "Program that scans log files for repeated failing login attempts and bans IP addresses";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

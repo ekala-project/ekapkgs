@@ -31,7 +31,6 @@ buildGoModule (finalAttrs: {
     license = lib.licenses.mit;
     homepage = "https://github.com/gotify/cli";
     description = "Command line interface for pushing messages to gotify/server";
-    maintainers = [ ];
     mainProgram = "gotify";
   };
 })

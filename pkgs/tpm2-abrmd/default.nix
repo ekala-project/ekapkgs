@@ -65,6 +65,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/tpm2-software/tpm2-tools";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

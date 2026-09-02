@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "GNU Guile library providing bindings to lzlib";
     homepage = "https://notabug.org/guile-lzlib/guile-lzlib";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = guile.meta.platforms;
   };
 })

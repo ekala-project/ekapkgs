@@ -96,7 +96,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Tiling window manager";
     homepage = "https://i3wm.org";
-    maintainers = [ ];
     mainProgram = "i3";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;

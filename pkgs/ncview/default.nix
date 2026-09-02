@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://meteora.ucsd.edu/~pierce/ncview_home_page.html";
     license = lib.licenses.gpl3Plus;
     mainProgram = "ncview";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

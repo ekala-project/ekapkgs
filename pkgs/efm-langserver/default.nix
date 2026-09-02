@@ -21,7 +21,6 @@ buildGoModule (finalAttrs: {
   meta = {
     description = "General purpose Language Server";
     mainProgram = "efm-langserver";
-    maintainers = [ ];
     homepage = "https://github.com/mattn/efm-langserver";
     license = lib.licenses.mit;
   };

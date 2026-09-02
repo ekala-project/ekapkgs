@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Query and change Linux monitor settings using DDC/CI and USB";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     changelog = "https://github.com/rockowitz/ddcutil/blob/v${finalAttrs.version}/CHANGELOG.md";
     mainProgram = "ddcutil";
   };

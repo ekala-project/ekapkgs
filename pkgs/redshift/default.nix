@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Screen color temperature manager";
     license = lib.licenses.gpl3Plus;
     homepage = "http://jonls.dk/redshift";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "redshift";
   };

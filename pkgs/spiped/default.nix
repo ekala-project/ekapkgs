@@ -39,6 +39,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.tarsnap.com/spiped.html";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

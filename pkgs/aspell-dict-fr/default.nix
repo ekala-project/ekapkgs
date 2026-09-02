@@ -36,6 +36,5 @@ stdenv.mkDerivation {
     homepage = "http://ftp.gnu.org/gnu/aspell/dict/0index.html";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

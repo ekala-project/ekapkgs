@@ -36,7 +36,6 @@ buildGoModule (finalAttrs: {
     description = "Github Cli extension to display a dashboard with pull requests and issues";
     homepage = "https://www.gh-dash.dev";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gh-dash";
   };
 })

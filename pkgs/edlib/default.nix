@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://martinsos.github.io/edlib";
     description = "Lightweight, fast C/C++ library for sequence alignment using edit distance";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
   };

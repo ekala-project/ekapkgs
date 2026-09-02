@@ -52,6 +52,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "u2f-server";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

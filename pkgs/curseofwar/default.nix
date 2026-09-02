@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fast-paced action strategy game";
     homepage = "https://a-nikolaev.github.io/curseofwar/";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "curseofwar";
   };

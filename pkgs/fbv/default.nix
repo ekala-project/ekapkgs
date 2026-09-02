@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "View pictures on a linux framebuffer device";
     homepage = "https://github.com/jstkdng/fbv";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "fbv";
   };
 })

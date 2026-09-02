@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3;
     platforms = lib.platforms.unix;
     broken = stdenv.hostPlatform.isDarwin; # packages 'libdrm' and 'gbm' not found
-    maintainers = [ ];
     mainProgram = "blur_image";
   };
 })

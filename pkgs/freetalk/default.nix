@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Console XMPP client";
     mainProgram = "freetalk";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     downloadPage = "https://www.gnu.org/software/freetalk/";
   };

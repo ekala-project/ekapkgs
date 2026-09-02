@@ -68,7 +68,6 @@ stdenv.mkDerivation rec {
     description = "Tools for generating DVD files to be played on standalone DVD players";
     homepage = "https://dvdauthor.sourceforge.net/";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 }

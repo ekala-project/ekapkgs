@@ -12,7 +12,7 @@ let
 in
 stdenv.mkDerivation {
   pname = "mongoose";
-  version = "3.3.6";
+  version = "7.14.0";
 
   outputs = [
     "bin"
@@ -69,7 +69,6 @@ stdenv.mkDerivation {
     mainProgram = "suitesparse_mongoose";
     homepage = "https://github.com/DrTimothyAldenDavis/SuiteSparse/tree/dev/Mongoose";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
   };
 }

@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Only;
     mainProgram = "wideriver";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

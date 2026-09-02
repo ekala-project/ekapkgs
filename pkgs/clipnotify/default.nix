@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Notify on new X clipboard events";
     inherit (finalAttrs.src.meta) homepage;
-    maintainers = [ ];
     license = lib.licenses.publicDomain;
     mainProgram = "clipnotify";
   };

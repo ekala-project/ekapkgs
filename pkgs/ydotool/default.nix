@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/ReimuNotMoe/ydotool";
     license = lib.licenses.agpl3Plus;
     mainProgram = "ydotool";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

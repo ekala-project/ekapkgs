@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Generates CUE sheets from a CD TOC";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "mkcue";
   };
 })

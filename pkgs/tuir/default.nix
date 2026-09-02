@@ -54,6 +54,5 @@ buildPythonApplication (finalAttrs: {
     mainProgram = "tuir";
     homepage = "https://gitlab.com/Chocimier/tuir";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

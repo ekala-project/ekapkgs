@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "GObject-based API for handling resource discovery and announcement over SSDP";
     homepage = "http://www.gupnp.org/";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

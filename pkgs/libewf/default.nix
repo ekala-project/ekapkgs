@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for support of the Expert Witness Compression Format";
     homepage = "https://sourceforge.net/projects/libewf/";
     license = lib.licenses.lgpl3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

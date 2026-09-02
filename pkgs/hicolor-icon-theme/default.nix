@@ -38,6 +38,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://www.freedesktop.org/wiki/Software/icon-theme/";
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 })

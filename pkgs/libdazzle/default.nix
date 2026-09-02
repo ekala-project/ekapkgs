@@ -58,6 +58,5 @@ stdenv.mkDerivation rec {
     homepage = "https://gitlab.gnome.org/GNOME/libdazzle";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

@@ -66,6 +66,5 @@ stdenv.mkDerivation rec {
     description = "Library designed to make it easy to add support for consumer fingerprint readers";
     license = lib.licenses.lgpl21Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

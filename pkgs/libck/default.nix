@@ -38,6 +38,5 @@ stdenv.mkDerivation (finalAttrs: {
     ];
     homepage = "https://concurrencykit.org/";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

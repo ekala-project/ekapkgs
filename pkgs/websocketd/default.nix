@@ -22,7 +22,6 @@ buildGoModule (finalAttrs: {
   meta = {
     description = "Turn any program that uses STDIN/STDOUT into a WebSocket server";
     homepage = "http://websocketd.com/";
-    maintainers = [ ];
     license = lib.licenses.bsd2;
     mainProgram = "websocketd";
   };

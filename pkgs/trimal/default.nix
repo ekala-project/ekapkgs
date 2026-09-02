@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3;
     platforms = lib.platforms.linux;
     homepage = "http://trimal.cgenomics.org";
-    maintainers = [ ];
   };
 })

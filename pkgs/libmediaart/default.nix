@@ -53,6 +53,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library tasked with managing, extracting and handling media art caches";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Micro String API for C language";
     mainProgram = "ustr-import";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

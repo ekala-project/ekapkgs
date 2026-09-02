@@ -79,6 +79,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     mainProgram = "pcsc_scan";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

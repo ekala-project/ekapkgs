@@ -54,6 +54,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Z3Prover/z3";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

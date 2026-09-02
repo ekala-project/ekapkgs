@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "gperftools";
-  version = "2.17.2";
+  version = "2.18.1";
 
   src = fetchFromGitHub {
     owner = "gperftools";
     repo = "gperftools";
     tag = "gperftools-${finalAttrs.version}";
-    hash = "sha256-WCEuiSjNIX/KhEBWndyVhrKlWs7H60mcHoPlWd7YWC4=";
+    hash = "sha256-LvLsq0UuMu51vcgxDrBkdnoUJ3qFH+tbXbTjreBxBqs=";
   };
 
   patches = [
@@ -48,6 +48,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fast, multi-threaded malloc() and nifty performance analysis tools";
     platforms = lib.platforms.all;
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

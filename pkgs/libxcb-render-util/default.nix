@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
       hpndSellVariant
       x11
     ];
-    maintainers = [ ];
     pkgConfigModules = [ "xcb-renderutil" ];
     platforms = lib.platforms.unix;
   };

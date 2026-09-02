@@ -29,7 +29,6 @@ buildGoModule (finalAttrs: {
     description = "Cat alternative written in Go";
     license = lib.licenses.mit;
     homepage = "https://github.com/koki-develop/gat";
-    maintainers = [ ];
     mainProgram = "gat";
   };
 })

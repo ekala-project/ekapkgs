@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "qoiconv";
     homepage = "https://qoiformat.org/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     pkgConfigModules = [ "qoi" ];
   };

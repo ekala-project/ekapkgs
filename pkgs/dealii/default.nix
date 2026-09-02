@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "dealii";
-  version = "9.7.1";
+  version = "9.8.0";
 
   src = fetchFromGitHub {
     owner = "dealii";
     repo = "dealii";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-hy7Z9DUcSv/k5UU5TOfYzCIEiKXBZZEUrRnJ7jN1gus=";
+    hash = "sha256-TivjhIy2IVcyQqS42d7Tnp2pFnrD0UWa9RLgRHUnIFc=";
   };
 
   nativeBuildInputs = [
@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
       to the complex data structures and algorithms required.
     '';
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

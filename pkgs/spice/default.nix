@@ -101,7 +101,6 @@ stdenv.mkDerivation rec {
     '';
     homepage = "https://www.spice-space.org/";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 }

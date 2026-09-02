@@ -30,7 +30,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "lightdm";
-  version = "1.32.0";
+  version = "1.33.1";
 
   outputs = [
     "out"
@@ -41,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "ubuntu";
     repo = "lightdm";
     tag = finalAttrs.version;
-    sha256 = "sha256-ttNlhWD0Ran4d3QvZ+PxbFbSUGMkfrRm+hJdQxIDJvM=";
+    sha256 = "sha256-/p5/V2KNRkm1cP9/Ld3crfAxAdHYc2mFyNl1rV6QXr0=";
   };
 
   nativeBuildInputs = [
@@ -117,6 +117,5 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl2Only
       lgpl3Only
     ];
-    maintainers = [ ];
   };
 })

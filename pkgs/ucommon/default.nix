@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C++ library to facilitate using C++ design patterns";
     homepage = "https://www.gnu.org/software/commoncpp/";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Automatic device model synthesizer";
     homepage = "https://github.com/Qucs/adms";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
   };
 })

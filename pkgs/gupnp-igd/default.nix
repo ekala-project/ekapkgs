@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library to handle UPnP IGD port mapping";
     homepage = "http://www.gupnp.org/";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

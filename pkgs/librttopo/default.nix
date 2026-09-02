@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "RT Topology Library";
     homepage = "https://git.osgeo.org/rttopo/librttopo";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

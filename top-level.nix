@@ -24,6 +24,7 @@ final: prev: {
   libfm-extra = final.libfm.override { extraOnly = true; };
   dconf = prev.dconf.overrideAttrs (old: {
     nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
+    doCheck = false;
   });
   gdk-pixbuf = prev.gdk-pixbuf.overrideAttrs (old: {
     nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
@@ -49,8 +50,27 @@ final: prev: {
   # GSSDP/GUPnP version aliases
   gssdp_1_6 = final.gssdp;
   gupnp_1_6 = final.gupnp;
-  # Stub for tinysparql until tracker is ported
-  tinysparql = null;
+  # bluez5 alias (bluez is already v5)
+  bluez5 = final.bluez;
+  # rest/librest version aliases
+  rest_1_0 = final.rest; # rest 0.10.x (librest 1.0 API)
+
+  # stub for packages that reference nixosTests
+  nixosTests = { };
+
+  # libxcrypt-legacy (all hash algorithms enabled)
+  libxcrypt-legacy = final.libxcrypt.override { enableHashes = "all"; };
+
+  # wlroots version aliases (wlroots is now 0.20, older versions removed)
+  wlroots_0_18 = null;
+  wlroots_0_19 = null;
+  wlroots_0_20 = final.wlroots;
+
+  # evolution-data-server GTK4 variant
+  evolution-data-server-gtk4 = final.evolution-data-server.override {
+    withGtk3 = false;
+    withGtk4 = true;
+  };
   gtk4 =
     (prev.gtk4.override {
       trackerSupport = false;
@@ -59,6 +79,8 @@ final: prev: {
       (old: {
         nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
       });
+  # sdbus-cpp v2 variant
+  sdbus-cpp_2 = final.sdbus-cpp.override { version = "2.2.1"; };
   gtk3 =
     (prev.gtk3.override {
       trackerSupport = false;
@@ -67,4 +89,21 @@ final: prev: {
       (old: {
         nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
       });
+  # GNOME Shell extensions convenience set
+  gnomeExtensions = {
+    appindicator = final.gnome-shell-extension-appindicator;
+    dash-to-panel = final.gnome-shell-extension-dash-to-panel;
+    caffeine = final.gnome-shell-extension-caffeine;
+    gsconnect = final.gnome-shell-extension-gsconnect;
+    blur-my-shell = final.gnome-shell-extension-blur-my-shell;
+    dash-to-dock = final.gnome-shell-extension-dash-to-dock;
+    no-overview = final.gnome-shell-extension-no-overview;
+    just-perfection = final.gnome-shell-extension-just-perfection;
+    pop-shell = final.gnome-shell-extension-pop-shell;
+    vertical-workspaces = final.gnome-shell-extension-vertical-workspaces;
+    paperwm = final.gnome-shell-extension-paperwm;
+    clipboard-indicator = final.gnome-shell-extension-clipboard-indicator;
+    kimpanel = final.gnome-shell-extension-kimpanel;
+    freon = final.gnome-shell-extension-freon;
+  };
 }

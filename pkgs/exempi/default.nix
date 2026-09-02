@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://libopenraw.freedesktop.org/exempi/";
     platforms = lib.platforms.linux;
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

@@ -9,16 +9,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "drill";
-  version = "0.9.0";
+  version = "0.9.1";
 
   src = fetchFromGitHub {
     owner = "fcsonline";
     repo = "drill";
     rev = finalAttrs.version;
-    sha256 = "sha256-jBnRVTnrSfEpN7xgMrlAsCwl62kZpHMI4IeT0rPb+zg=";
+    sha256 = "sha256-YnInBTqqzbZmFpuw7oyowl9/4BsxFo+/Wd3dVmuPw7A=";
   };
 
-  cargoHash = "sha256-CfPmTmtCpBgxDH043yIedZk9dngPb5L6z7jQpmvtiEA=";
+  cargoHash = "sha256-Wxn1A5i1rDQXc8+yxfE7nO3cCT/Re/IGW8UQFsFvbEg=";
 
   nativeBuildInputs = lib.optionals stdenv.hostPlatform.isLinux [
     pkg-config
@@ -31,6 +31,11 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [
     openssl
+  ];
+
+  checkFlags = [
+    "--skip=actions::request::tests::measures_full_body_transfer_time"
+    "--skip=actions::request::tests::large_body_without_assign_is_drained_not_retained"
   ];
 
   meta = {

@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Graphical application for configuring displays in Wayland compositors";
     homepage = "https://github.com/artizirk/wdisplays";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
     mainProgram = "wdisplays";

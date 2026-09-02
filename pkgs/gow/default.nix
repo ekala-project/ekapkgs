@@ -33,6 +33,5 @@ buildGoModule (finalAttrs: {
     description = "Missing watch mode for Go commands";
     mainProgram = "gox";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
   };
 })

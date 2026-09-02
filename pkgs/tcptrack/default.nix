@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "tcptrack";
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -59,6 +59,5 @@ stdenv.mkDerivation (finalAttrs: {
     ];
     description = "Library for the solution of large, sparse, nonsymmetric systems of linear equations";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

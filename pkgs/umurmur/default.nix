@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = lib.platforms.all;
     # never built on aarch64-darwin since first introduction in nixpkgs
     broken = stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isAarch64;
-    maintainers = [ ];
     mainProgram = "umurmurd";
   };
 })

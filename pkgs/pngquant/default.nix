@@ -53,6 +53,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
       bsd2
     ];
     mainProgram = "pngquant";
-    maintainers = [ ];
   };
 })

@@ -16,13 +16,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "nvc";
-  version = "1.22.0";
+  version = "1.22.1";
 
   src = fetchFromGitHub {
     owner = "nickg";
     repo = "nvc";
     tag = "r${finalAttrs.version}";
-    hash = "sha256-Z8N4TskOak7tU3Kp5BfUahoXsP/LnCLx5mhAuXwG7qI=";
+    hash = "sha256-FA9GzfwsQRI3OOJQ54H8+JbgVtIz2F4xncVDUHRzgRA=";
   };
 
   nativeBuildInputs = [
@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "nvc";
     homepage = "https://www.nickg.me.uk/nvc/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C micro-package manager";
     homepage = "https://github.com/clibs/clib";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://libvolk.org/";
     description = "Vector Optimized Library of Kernels";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/resurrecting-open-source-projects/dnsmap";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     changelog = "https://github.com/resurrecting-open-source-projects/dnsmap/releases/tag/${finalAttrs.tag}";
     mainProgram = "dnsmap";
   };

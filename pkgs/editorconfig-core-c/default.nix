@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
       bsd2
       bsd3
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "editorconfig";
   };

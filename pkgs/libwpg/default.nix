@@ -35,6 +35,5 @@ stdenv.mkDerivation rec {
       mpl20
     ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

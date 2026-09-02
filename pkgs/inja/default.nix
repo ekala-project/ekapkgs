@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Template engine for modern C++, loosely inspired by jinja for python";
     homepage = "https://github.com/pantor/inja";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

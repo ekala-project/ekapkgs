@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/manipuladordedados/tocaia/releases/tag/${finalAttrs.version}";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "tocaia";
   };
 })

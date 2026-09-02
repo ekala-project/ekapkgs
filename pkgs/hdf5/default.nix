@@ -76,13 +76,17 @@ stdenv.mkDerivation rec {
     popd
   '';
 
+  passthru = {
+    mpiSupport = false;
+    mpi = null;
+  };
+
   enableParallelBuilding = true;
 
   meta = {
     description = "Data model, library, and file format for storing and managing data";
     homepage = "https://www.hdfgroup.org/HDF5/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

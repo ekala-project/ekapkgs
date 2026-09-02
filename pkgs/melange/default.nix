@@ -70,6 +70,5 @@ buildGoModule (finalAttrs: {
     description = "Build APKs from source code";
     mainProgram = "melange";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

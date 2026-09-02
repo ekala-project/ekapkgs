@@ -32,6 +32,5 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/sahlberg/libiscsi";
     license = lib.licenses.lgpl2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

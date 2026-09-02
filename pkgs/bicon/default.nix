@@ -12,7 +12,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "bicon";
-  version = "0.5-unstable-2024-01-31";
+  version = "0.5";
 
   src = fetchFromGitHub {
     owner = "behdad";
@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
       psfl
       bsd0
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

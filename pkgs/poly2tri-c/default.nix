@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "p2tc";
     homepage = "https://code.google.com/archive/p/poly2tri-c/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

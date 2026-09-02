@@ -29,7 +29,6 @@ buildGoModule (finalAttrs: {
     description = "RSS reader for the terminal";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "nom";
   };
 })

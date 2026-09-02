@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Easy-to-use IPMI server management utility";
     homepage = "https://ipmiutil.sourceforge.net/";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.bsd3;
     downloadPage = "https://sourceforge.net/projects/ipmiutil/files/ipmiutil/";

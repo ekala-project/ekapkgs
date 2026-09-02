@@ -36,6 +36,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     platforms = with lib.platforms; unix;
     mainProgram = "sipsak";
-    maintainers = [ ];
   };
 })

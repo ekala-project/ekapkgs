@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "jtc";
     homepage = "https://github.com/ldn-softdev/jtc";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

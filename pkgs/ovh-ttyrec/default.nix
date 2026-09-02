@@ -29,6 +29,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Terminal interaction recorder and player";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

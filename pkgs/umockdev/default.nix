@@ -17,7 +17,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "umockdev";
-  version = "0.19.3";
+  version = "0.19.8";
 
   outputs = [
     "bin"
@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchurl {
     url = "https://github.com/martinpitt/umockdev/releases/download/${finalAttrs.version}/umockdev-${finalAttrs.version}.tar.xz";
-    hash = "sha256-RuReq29la/wJJDjX4OXfTF9R0Y46gzYMK+aAsgehoLc=";
+    hash = "sha256-nVfJF6MtxpaHerUl61EJcagQmJnVuS2YbnusMlcxJbA=";
   };
 
   patches = [
@@ -82,7 +82,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/martinpitt/umockdev";
     description = "Mock hardware devices for creating unit tests";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

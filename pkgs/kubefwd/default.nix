@@ -29,7 +29,6 @@ buildGo126Module (finalAttrs: {
     description = "Bulk port forwarding Kubernetes services for local development";
     homepage = "https://kubefwd.com";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "kubefwd";
   };
 })

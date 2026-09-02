@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     with devices over a serial connection";
     inherit (finalAttrs.src.meta) homepage;
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
     mainProgram = "microcom";
   };

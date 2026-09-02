@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://codeberg.org/dnkl/tllist";
     description = "C header file only implementation of a typed linked list";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

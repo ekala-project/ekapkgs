@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "bpfmon";
     homepage = "https://github.com/bbonev/bpfmon";
     changelog = "https://github.com/bbonev/bpfmon/releases/tag/v${finalAttrs.version}";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

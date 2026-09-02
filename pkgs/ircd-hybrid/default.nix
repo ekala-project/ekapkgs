@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     description = "IPv6-capable IRC server";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     homepage = "https://www.ircd-hybrid.org/";
   };

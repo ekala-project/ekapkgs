@@ -36,7 +36,6 @@ buildGoModule (finalAttrs: {
     description = "Open Source realtime backend in 1 file";
     homepage = "https://github.com/pocketbase/pocketbase";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "pocketbase";
   };
 })

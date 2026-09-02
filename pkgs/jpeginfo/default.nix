@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Prints information and tests integrity of JPEG/JFIF files";
     homepage = "https://www.kokkonen.net/tjko/projects.html";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "jpeginfo";
   };

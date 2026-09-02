@@ -71,7 +71,6 @@ stdenv.mkDerivation rec {
     homepage = "https://wiki.lxde.org/en/LXSession";
     description = "Classic LXDE session manager";
     license = licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = platforms.linux;
   };
 }

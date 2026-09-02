@@ -46,6 +46,5 @@ stdenv.mkDerivation rec {
     homepage = "https://xmlrpc-c.sourceforge.net/";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

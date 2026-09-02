@@ -12,14 +12,14 @@
 
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "conan";
-  version = "2.28.1";
+  version = "2.31.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "conan-io";
     repo = "conan";
     tag = finalAttrs.version;
-    hash = "sha256-S/IEk3fSoCzoVfyo9oaId9VGR8YTjzoCIWoZ3xYVVBc=";
+    hash = "sha256-lPH9spNQSqddFeqewGQi8pyJqLQfbI1+u2OQDNGjmhE=";
   };
 
   pythonRelaxDeps = [
@@ -133,7 +133,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://conan.io";
     changelog = "https://github.com/conan-io/conan/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "conan";
   };
 })

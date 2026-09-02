@@ -33,6 +33,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl3;
     platforms = lib.platforms.linux;
     homepage = "https://vcftools.github.io/index.html";
-    maintainers = [ ];
   };
 })

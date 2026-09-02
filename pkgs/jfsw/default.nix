@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.jonof.id.au/jfsw/";
     license = lib.licenses.gpl2Plus;
     mainProgram = "sw";
-    maintainers = [ ];
     broken = stdenv.hostPlatform.isDarwin;
     inherit (SDL2.meta) platforms;
   };

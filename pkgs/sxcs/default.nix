@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Minimal X11 Color Picker and Magnifier";
     homepage = "https://codeberg.org/NRK/sxcs";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

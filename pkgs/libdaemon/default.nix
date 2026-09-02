@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Lightweight C library that eases the writing of UNIX daemons";
     homepage = "http://0pointer.de/lennart/projects/libdaemon/";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

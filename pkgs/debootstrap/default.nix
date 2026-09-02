@@ -90,7 +90,6 @@ stdenv.mkDerivation rec {
     homepage = "https://wiki.debian.org/Debootstrap";
     license = lib.licenses.mit;
     mainProgram = "debootstrap";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

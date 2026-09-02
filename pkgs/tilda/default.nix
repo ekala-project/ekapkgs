@@ -62,6 +62,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "tilda";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -24,6 +24,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "prettyping";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

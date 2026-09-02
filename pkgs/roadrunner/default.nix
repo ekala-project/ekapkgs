@@ -48,6 +48,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://roadrunner.dev";
     license = lib.licenses.mit;
     mainProgram = "rr";
-    maintainers = [ ];
   };
 })

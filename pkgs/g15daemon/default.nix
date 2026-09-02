@@ -6,7 +6,6 @@
 }:
 let
   license = lib.licenses.gpl2Plus;
-  maintainers = [ ];
 
   g15src =
     {

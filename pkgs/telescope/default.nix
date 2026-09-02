@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "w3m-like browser for Gemini";
     homepage = "https://telescope-browser.org/";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

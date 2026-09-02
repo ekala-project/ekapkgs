@@ -64,6 +64,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/robinbowes/flac2mp3";
     changelog = "https://github.com/robinbowes/flac2mp3/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

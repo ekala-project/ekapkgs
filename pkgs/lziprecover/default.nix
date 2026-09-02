@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.nongnu.org/lzip/lziprecover.html";
     description = "Data recovery tool for lzip compressed files";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "lziprecover";
   };

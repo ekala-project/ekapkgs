@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Two-step verification, with pam module";
     mainProgram = "google-authenticator";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

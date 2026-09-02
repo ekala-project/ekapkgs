@@ -42,6 +42,5 @@ stdenv.mkDerivation {
     homepage = "https://tclap.sourceforge.net/";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

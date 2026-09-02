@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Utility to manipulate machines owner keys";
     mainProgram = "mokutil";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

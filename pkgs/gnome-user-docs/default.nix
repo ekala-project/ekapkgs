@@ -31,6 +31,5 @@ stdenv.mkDerivation rec {
     homepage = "https://help.gnome.org/users/gnome-help/";
     license = licenses.cc-by-30;
     platforms = platforms.all;
-    maintainers = [ ];
   };
 }

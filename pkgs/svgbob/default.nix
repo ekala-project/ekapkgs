@@ -25,7 +25,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/ivanceras/svgbob";
     changelog = "https://github.com/ivanceras/svgbob/raw/${finalAttrs.version}/Changelog.md";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "svgbob";
   };
 })

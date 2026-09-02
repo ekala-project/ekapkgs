@@ -65,6 +65,5 @@ stdenv.mkDerivation {
     homepage = "https://github.com/antirez/hping";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

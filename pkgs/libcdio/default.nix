@@ -15,13 +15,13 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "libcdio";
-  version = "2.3.0";
+  version = "2.4.0";
 
   src = fetchFromGitHub {
     owner = "libcdio";
     repo = "libcdio";
     tag = finalAttrs.version;
-    hash = "sha256-NZj6sMIhBORh2ZBs/WGI4BYri1REog4ovUug1t5p8Y8=";
+    hash = "sha256-BzV86qnIOvhTJiNZ54zW1u3oXhDyNMsIKDdfNGBWLes=";
   };
 
   env = lib.optionalAttrs stdenv.hostPlatform.is32bit {
@@ -87,7 +87,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for OS-independent CD-ROM and CD image access";
     homepage = "https://www.gnu.org/software/libcdio/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

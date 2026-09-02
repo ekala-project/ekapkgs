@@ -6,7 +6,7 @@
 
 python3Packages.buildPythonApplication {
   pname = "legendary-gl"; # Name in pypi
-  version = "0.20.34";
+  version = "0.21.0";
   pyproject = true;
 
   src = fetchFromGitHub {
@@ -34,7 +34,6 @@ python3Packages.buildPythonApplication {
     description = "Free and open-source Epic Games Launcher alternative";
     homepage = "https://github.com/legendary-gl/legendary";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "legendary";
   };
 }

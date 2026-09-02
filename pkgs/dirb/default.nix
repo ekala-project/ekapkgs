@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Web content scanner";
     homepage = "https://dirb.sourceforge.net/";
-    maintainers = [ ];
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
   };

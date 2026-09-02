@@ -67,6 +67,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "lsyncd";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

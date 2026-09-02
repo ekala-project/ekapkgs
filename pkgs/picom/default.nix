@@ -90,7 +90,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     homepage = "https://github.com/yshui/picom";
     mainProgram = "picom";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

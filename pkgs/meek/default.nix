@@ -42,7 +42,6 @@ buildGoModule (finalAttrs: {
       fingerprintable byte patterns in Tor traffic.
     '';
     homepage = "https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/meek";
-    maintainers = [ ];
     license = lib.licenses.cc0;
   };
 })

@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "imapfilter";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

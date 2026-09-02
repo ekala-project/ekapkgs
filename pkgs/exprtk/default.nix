@@ -27,6 +27,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C++ Mathematical Expression Toolkit Library";
     homepage = "https://www.partow.net/programming/exprtk/index.html";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

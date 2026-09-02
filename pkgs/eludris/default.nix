@@ -35,6 +35,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "eludris";
     homepage = "https://github.com/eludris/eludris/tree/main/cli";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

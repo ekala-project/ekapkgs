@@ -35,7 +35,6 @@ stdenvNoCC.mkDerivation {
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
     license = lib.licenses.asl20;
     mainProgram = "activemq";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

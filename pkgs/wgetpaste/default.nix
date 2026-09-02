@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "wgetpaste";
     homepage = "https://github.com/zlin/wgetpaste";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

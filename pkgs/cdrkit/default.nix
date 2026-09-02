@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Portable command-line CD/DVD recorder software, mostly compatible with cdrtools";
     homepage = "http://cdrkit.org/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

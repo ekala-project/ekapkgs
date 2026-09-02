@@ -38,7 +38,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/bytecodealliance/cargo-component";
     changelog = "https://github.com/bytecodealliance/cargo-component/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "cargo-component";
   };
 })

@@ -60,6 +60,5 @@ stdenv.mkDerivation rec {
       asl20
     ];
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

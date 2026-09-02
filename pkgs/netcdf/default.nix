@@ -75,6 +75,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.unidata.ucar.edu/software/netcdf/";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

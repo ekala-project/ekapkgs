@@ -8,7 +8,7 @@
 
 stdenv.mkDerivation {
   pname = "loguru";
-  version = "2.1.0-unstable-2023-04-06";
+  version = "2.1.0";
 
   src = fetchFromGitHub {
     owner = "emilk";
@@ -44,7 +44,6 @@ stdenv.mkDerivation {
     description = "Lightweight C++ logging library";
     homepage = "https://github.com/emilk/loguru";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

@@ -117,7 +117,6 @@ stdenv.mkDerivation rec {
     homepage = "https://www.wxwidgets.org/";
     description = "Cross-Platform C++ GUI Library";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

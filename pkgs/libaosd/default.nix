@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     broken = stdenv.hostPlatform.isDarwin;
     homepage = "https://github.com/atheme-legacy/libaosd";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
   };
 })

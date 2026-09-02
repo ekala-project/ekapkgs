@@ -14,7 +14,7 @@
 
 stdenv.mkDerivation {
   pname = "pinball";
-  version = "0.3.20230219-unstable-2024-11-14";
+  version = "0.3.20230219";
 
   src = fetchFromGitHub {
     owner = "adoptware";
@@ -52,7 +52,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/adoptware/pinball";
     description = "Emilia Pinball simulator";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

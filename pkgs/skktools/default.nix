@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/skk-dev/skktools";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

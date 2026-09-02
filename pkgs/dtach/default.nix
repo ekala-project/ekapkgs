@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Program that emulates the detach feature of screen";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "dtach";
   };
 })

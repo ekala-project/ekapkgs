@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.math.utah.edu/~mayer/linux/bmark.html";
     description = "Synthetic computing benchmark program";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "nbench";
   };
 })

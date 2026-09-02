@@ -27,7 +27,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     mainProgram = "resolve-march-native";
     homepage = "https://github.com/hartwork/resolve-march-native";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

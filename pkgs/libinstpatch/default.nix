@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.swamiproject.org/";
     description = "MIDI instrument patch files support library";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

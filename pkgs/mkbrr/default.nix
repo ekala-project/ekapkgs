@@ -37,7 +37,6 @@ buildGoModule (finalAttrs: {
     description = "Tool to create, modify and inspect torrent files";
     homepage = "https://github.com/autobrr/mkbrr";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "mkbrr";
   };
 })

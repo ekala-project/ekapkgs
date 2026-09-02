@@ -39,7 +39,6 @@ buildGoModule rec {
     '';
     homepage = "https://cayley.io/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "cayley";
   };
 }

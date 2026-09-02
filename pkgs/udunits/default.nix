@@ -48,7 +48,6 @@ stdenv.mkDerivation {
       converting values.
     '';
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "udunits2";
   };

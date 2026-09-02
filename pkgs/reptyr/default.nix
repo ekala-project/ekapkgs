@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
       "aarch64-linux"
       "riscv64-linux"
     ];
-    maintainers = [ ];
     license = lib.licenses.mit;
     description = "Reparent a running program to a new terminal";
     mainProgram = "reptyr";

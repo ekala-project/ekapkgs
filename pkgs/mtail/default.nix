@@ -8,17 +8,17 @@
 
 buildGoModule (finalAttrs: {
   pname = "mtail";
-  version = "3.4.5";
+  version = "3.4.9";
 
   src = fetchFromGitHub {
     owner = "jaqx0r";
     repo = "mtail";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-lCIl5Kc9VatCt6APXUT7vk4AZJ/WeqEjKvvAZKLVuRE=";
+    hash = "sha256-0bUC79nP2MpjbeDMyBe19Li6BqCFegNNPqtuv1DssII=";
   };
 
   proxyVendor = true;
-  vendorHash = "sha256-/11U9jTTiIZ8ixqWWMt9/ieXhPLT00SJIKViO3m9vsk=";
+  vendorHash = "sha256-564euO/Ns7Mju3pFv4wtzxJhblPD3/ThSK62JsZH7VA=";
 
   nativeBuildInputs = [
     gotools # goyacc
@@ -46,7 +46,6 @@ buildGoModule (finalAttrs: {
     description = "Tool for extracting metrics from application logs";
     homepage = "https://github.com/jaqx0r/mtail";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "mtail";
   };
 })

@@ -16,7 +16,7 @@
 
 stdenv.mkDerivation rec {
   pname = "egl-wayland";
-  version = "1.1.19";
+  version = "1.1.21";
 
   outputs = [
     "out"
@@ -27,7 +27,7 @@ stdenv.mkDerivation rec {
     owner = "Nvidia";
     repo = "egl-wayland";
     rev = version;
-    hash = "sha256-xQZTmZQqFY7oXHx+g+PKbwCYCPdpUrFnyMZyL2Q/faE=";
+    hash = "sha256-a98DzmzCG6DlLJ1HCl/LeD21Q7yyNbTce1poOoAnTjA=";
   };
 
   postPatch = ''
@@ -65,6 +65,5 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/NVIDIA/egl-wayland/";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

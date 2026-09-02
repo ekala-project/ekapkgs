@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Microsoft EMF to SVG conversion library";
     mainProgram = "emf2svg-conv";
     homepage = "https://github.com/kakwa/libemf2svg";
-    maintainers = [ ];
     license = lib.licenses.gpl2Only;
     platforms = [ "x86_64-linux" ];
   };

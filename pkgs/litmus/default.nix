@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.webdav.org/neon/litmus/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "litmus";
   };
 })

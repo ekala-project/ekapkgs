@@ -26,7 +26,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "POSIX *nix (Linux, macOS, Android, *BSD, etc) fetch script using Nerdfonts";
     homepage = "https://github.com/ThatOneCalculator/NerdFetch";
     changelog = "https://github.com/ThatOneCalculator/NerdFetch/releases/tag/${finalAttrs.src.tag}";
-    maintainers = [ ];
     license = lib.licenses.mit;
     mainProgram = "nerdfetch";
     platforms = lib.platforms.unix;

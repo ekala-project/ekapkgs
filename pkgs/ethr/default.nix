@@ -6,7 +6,7 @@
 
 buildGoModule {
   pname = "ethr";
-  version = "1.0.0-unstable-2025-12-10";
+  version = "1.0.0";
 
   src = fetchFromGitHub {
     owner = "microsoft";
@@ -27,7 +27,6 @@ buildGoModule {
     description = "Comprehensive Network Measurement Tool for TCP, UDP & ICMP";
     homepage = "https://github.com/microsoft/ethr";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "ethr";
   };
 }

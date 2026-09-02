@@ -18,7 +18,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "gfxreconstruct";
-  version = "1.0.4-unstable-2026-04-29";
+  version = "1.0.4";
 
   src = fetchFromGitHub {
     owner = "LunarG";
@@ -74,7 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Graphics API Capture and Replay Tools";
     homepage = "https://github.com/LunarG/gfxreconstruct/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

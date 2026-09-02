@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/leahneukirchen/xe";
     license = lib.licenses.cc0;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "xe";
   };
 })

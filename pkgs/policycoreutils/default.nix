@@ -52,6 +52,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Only;
     homepage = "https://selinuxproject.org/";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

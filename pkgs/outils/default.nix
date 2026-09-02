@@ -39,6 +39,5 @@ stdenv.mkDerivation (finalAttrs: {
       publicDomain
     ];
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

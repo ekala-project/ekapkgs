@@ -27,6 +27,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/xiaoyjy/cconv";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

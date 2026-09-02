@@ -7,13 +7,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libmcfp";
-  version = "1.4.2";
+  version = "2.0.4";
 
   src = fetchFromGitHub {
     owner = "mhekkel";
     repo = "libmcfp";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-qKmSkVuxY5kXQ1eSs/T500lFpCLzU3sXAoUmpXhTUp4=";
+    hash = "sha256-T9zqcx207L/AhMjpvv/3wdB20odLYV4I8Th49tpOetA=";
   };
 
   nativeBuildInputs = [
@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/mhekkel/libmcfp";
     changelog = "https://github.com/mhekkel/libmcfp/blob/${finalAttrs.src.rev}/changelog";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -78,7 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://polybar.github.io/";
     description = "Fast and easy-to-use tool for creating status bars";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "polybar";
     platforms = lib.platforms.linux;
   };

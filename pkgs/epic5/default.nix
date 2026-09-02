@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://epicsol.org";
     description = "IRC client that offers a great ircII interface";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "epic5";
   };

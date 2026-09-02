@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "NILFS utilities";
     homepage = "https://github.com/nilfs-dev/nilfs-utils";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = with lib.licenses; [
       gpl2Plus

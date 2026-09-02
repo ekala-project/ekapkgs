@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/radcli/radcli";
     changelog = "https://github.com/radcli/radcli/blob/${finalAttrs.version}/NEWS";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "radcli";
     platforms = lib.platforms.all;
   };

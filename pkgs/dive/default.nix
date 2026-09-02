@@ -52,6 +52,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/wagoodman/dive";
     changelog = "https://github.com/wagoodman/dive/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

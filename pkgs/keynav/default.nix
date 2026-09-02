@@ -59,7 +59,6 @@ stdenv.mkDerivation {
     description = "Generate X11 mouse clicks from keyboard";
     homepage = "https://www.semicomplete.com/projects/keynav/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "keynav";
   };

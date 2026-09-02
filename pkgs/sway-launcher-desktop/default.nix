@@ -51,6 +51,5 @@ stdenv.mkDerivation rec {
     changelog = "https://github.com/Biont/sway-launcher-desktop/releases/tag/v${version}";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

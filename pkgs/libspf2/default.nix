@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl21Plus
       bsd2
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

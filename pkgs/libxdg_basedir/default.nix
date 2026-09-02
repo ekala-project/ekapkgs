@@ -24,7 +24,6 @@ stdenv.mkDerivation rec {
     description = "Implementation of the XDG Base Directory specification";
     homepage = "https://github.com/devnev/libxdg-basedir";
     license = licenses.mit;
-    maintainers = [ ];
     platforms = platforms.unix;
   };
 }

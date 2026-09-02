@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Arabic newspaper pcf font";
     homepage = "https://gitlab.freedesktop.org/xorg/font/arabic-misc";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

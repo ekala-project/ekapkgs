@@ -52,6 +52,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       mit
     ];
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

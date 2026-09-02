@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Very secure FTP daemon";
     mainProgram = "vsftpd";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

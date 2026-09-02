@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
 
           unclutter -idle 1 &
     '';
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.publicDomain;
     mainProgram = "unclutter";

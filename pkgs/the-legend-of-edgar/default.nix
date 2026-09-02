@@ -92,7 +92,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.gpl1Plus;
     mainProgram = "edgar";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     broken = stdenv.hostPlatform.isDarwin;
   };

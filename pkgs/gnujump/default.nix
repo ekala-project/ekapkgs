@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
       once you've tried you'll realize how addictive this is.
     '';
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

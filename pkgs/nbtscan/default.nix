@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation {
   pname = "nbtscan";
-  version = "1.7.2-unstable-2022-10-29";
+  version = "1.7.2";
 
   src = fetchFromGitHub {
     owner = "resurrecting-open-source-projects";
@@ -22,7 +22,6 @@ stdenv.mkDerivation {
     description = "Scan networks searching for NetBIOS information";
     mainProgram = "nbtscan";
     homepage = "https://github.com/resurrecting-open-source-projects/nbtscan";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Plus;
   };

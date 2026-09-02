@@ -39,6 +39,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "shiori";
     homepage = "https://github.com/go-shiori/shiori";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

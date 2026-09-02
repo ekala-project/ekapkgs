@@ -35,7 +35,6 @@ buildGoModule (finalAttrs: {
     description = "Extract urls from text";
     homepage = "https://github.com/mvdan/xurls";
     mainProgram = "xurls";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 })

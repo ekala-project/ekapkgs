@@ -42,7 +42,6 @@ stdenv.mkDerivation {
     description = "Multitalented APRS i-gate / digipeater";
     homepage = "http://thelifeofkenneth.com/aprx";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "aprx";
     platforms = lib.platforms.unix;
   };

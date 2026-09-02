@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
 
     homepage = "https://savannah.nongnu.org/projects/flvstreamer";
 
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

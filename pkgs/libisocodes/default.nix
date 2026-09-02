@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/toddy15/libisocodes";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

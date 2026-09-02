@@ -50,7 +50,6 @@ stdenv.mkDerivation rec {
   meta = {
     description = "Finite state compiler, processor and helper tools used by apertium";
     homepage = "https://github.com/apertium/lttoolbox";
-    maintainers = [ ];
     changelog = "https://github.com/apertium/lttoolbox/releases/tag/v${version}";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;

@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libitl";
-  version = "0.1.8-unstable-2024-05-26";
+  version = "0.8.0";
 
   nativeBuildInputs = [
     cmake.configurePhaseHook
@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.arabeyes.org/ITL";
     license = lib.licenses.lgpl21Only;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

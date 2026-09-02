@@ -36,7 +36,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://docs.meilisearch.com/";
     changelog = "https://github.com/meilisearch/meilisearch/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = [
       "aarch64-linux"
       "aarch64-darwin"

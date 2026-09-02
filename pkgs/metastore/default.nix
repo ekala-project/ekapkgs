@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "metastore";
     homepage = "https://software.przemoc.net/#metastore";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

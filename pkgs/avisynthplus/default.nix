@@ -45,6 +45,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Only;
     pkgConfigModules = [ "avisynth" ];
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

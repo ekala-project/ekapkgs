@@ -15,7 +15,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl21Plus;
     homepage = "https://www.gnu.org/software/osip/";
     description = "GNU oSIP library, an implementation of the Session Initiation Protocol (SIP)";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

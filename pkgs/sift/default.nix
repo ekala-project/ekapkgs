@@ -42,7 +42,6 @@ buildGoModule (finalAttrs: {
     description = "Fast and powerful alternative to grep";
     mainProgram = "sift";
     homepage = "https://sift-tool.org";
-    maintainers = [ ];
     license = lib.licenses.gpl3;
   };
 })

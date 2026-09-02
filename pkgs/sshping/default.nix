@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Measure character-echo latency and bandwidth for an interactive ssh session";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "sshping";
   };
 })

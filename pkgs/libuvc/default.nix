@@ -37,6 +37,5 @@ stdenv.mkDerivation {
     description = "Cross-platform library for USB video devices";
     platforms = lib.platforms.linux;
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 }

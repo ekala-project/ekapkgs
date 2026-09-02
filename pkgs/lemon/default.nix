@@ -38,7 +38,6 @@ stdenv.mkDerivation {
     mainProgram = "lemon";
     homepage = "http://www.hwaci.com/sw/lemon/";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

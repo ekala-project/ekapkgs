@@ -28,6 +28,5 @@ stdenvNoCC.mkDerivation rec {
     description = "Font heavily inspired by Highway Gothic";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

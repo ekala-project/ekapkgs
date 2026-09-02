@@ -6,7 +6,7 @@
 
 buildGoModule {
   pname = "matterbridge";
-  version = "1.26.0-unstable-2024-08-27";
+  version = "1.26.0";
 
   src = fetchFromGitHub {
     owner = "42wim";
@@ -23,7 +23,6 @@ buildGoModule {
     description = "Simple bridge between Mattermost, IRC, XMPP, Gitter, Slack, Discord, Telegram, Rocket.Chat, Hipchat(via xmpp), Matrix and Steam";
     homepage = "https://github.com/42wim/matterbridge";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "matterbridge";
   };
 }

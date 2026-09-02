@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Utility for reading, writing, erasing and verifying flash ROM chips";
     license = lib.licenses.gpl2Plus;
     mainProgram = "flashrom";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

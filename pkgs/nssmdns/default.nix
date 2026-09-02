@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "MDNS Name Service Switch (NSS) plug-in";
     homepage = "https://github.com/avahi/nss-mdns/";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

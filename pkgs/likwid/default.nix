@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Only;
     # Might work on ARM by appropriately setting COMPILER in config.mk
     platforms = lib.intersectLists lib.platforms.linux lib.platforms.x86;
-    maintainers = [ ];
     mainProgram = "likwid-perfctr";
   };
 })

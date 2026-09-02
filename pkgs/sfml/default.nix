@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Simple and fast multimedia library";
     homepage = "https://www.sfml-dev.org/";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/openSUSE/libeconf";
     changelog = "https://github.com/openSUSE/libeconf/blob/${finalAttrs.src.tag}/NEWS";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "econftool";
     platforms = lib.platforms.all;
   };

@@ -52,6 +52,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "A collection of Fortran77 subroutines to solve large scale eigenvalue problems";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

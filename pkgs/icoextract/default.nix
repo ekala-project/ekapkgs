@@ -40,7 +40,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/jlu5/icoextract";
     changelog = "https://github.com/jlu5/icoextract/blob/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "icoextract";
   };
 })

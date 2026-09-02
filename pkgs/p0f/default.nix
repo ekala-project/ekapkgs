@@ -44,6 +44,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://lcamtuf.coredump.cx/p0f3/";
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

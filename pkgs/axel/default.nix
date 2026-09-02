@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Console downloading program with some features for parallel connections for faster downloading";
     homepage = "https://github.com/axel-download-accelerator/axel";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Plus;
     mainProgram = "axel";

@@ -59,6 +59,5 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = with lib.platforms; linux ++ freebsd ++ darwin;
     license = lib.licenses.bsd3;
     mainProgram = "upnpc";
-    maintainers = [ ];
   };
 })

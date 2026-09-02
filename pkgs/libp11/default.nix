@@ -37,7 +37,6 @@ stdenv.mkDerivation rec {
     description = "Small layer on top of PKCS#11 API to make PKCS#11 implementations easier";
     homepage = "https://github.com/OpenSC/libp11";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

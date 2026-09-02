@@ -56,6 +56,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://git.sailfishos.org/mer-core/libglibutil";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

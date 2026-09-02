@@ -33,7 +33,6 @@ stdenv.mkDerivation {
     '';
 
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "fasd";
   };
 }

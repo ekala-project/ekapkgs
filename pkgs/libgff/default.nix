@@ -33,6 +33,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/COMBINE-lab/libgff/releases/tag/" + "v${finalAttrs.version}";
     license = lib.licenses.boost;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

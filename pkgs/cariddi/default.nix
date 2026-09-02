@@ -27,7 +27,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/edoardottt/cariddi";
     changelog = "https://github.com/edoardottt/cariddi/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "cariddi";
   };
 })

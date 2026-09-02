@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tiny dynamic menu for Wayland";
     homepage = "https://github.com/philj56/tofi";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "tofi";
   };

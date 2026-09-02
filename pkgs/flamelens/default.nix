@@ -22,6 +22,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/YS-L/flamelens";
     changelog = "https://github.com/YS-L/flamelens/releases/tag/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

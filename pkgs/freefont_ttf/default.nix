@@ -32,6 +32,5 @@ stdenvNoCC.mkDerivation rec {
     homepage = "https://www.gnu.org/software/freefont/";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

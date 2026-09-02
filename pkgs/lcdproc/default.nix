@@ -85,7 +85,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Client/server suite for controlling a wide variety of LCD devices";
     homepage = "https://lcdproc.org/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     # never built on aarch64-darwin since first introduction in nixpkgs
     broken = stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isAarch64;

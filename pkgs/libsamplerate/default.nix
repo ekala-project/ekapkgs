@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Sample Rate Converter for audio";
     homepage = "https://libsndfile.github.io/libsamplerate/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

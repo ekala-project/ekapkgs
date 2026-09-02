@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Programs for computing automorphism groups of graphs and digraphs";
     license = lib.licenses.asl20;
-    teams = [ lib.teams.sage ];
+    teams = [ ];
     platforms = lib.platforms.unix;
     # The filename may change for future changelogs. Better than nothing in any case.
     changelog = "https://pallini.di.uniroma1.it/changes24-2${lib.versions.minor finalAttrs.version}.txt";

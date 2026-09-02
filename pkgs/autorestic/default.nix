@@ -34,7 +34,6 @@ buildGoModule (finalAttrs: {
     description = "High level CLI utility for restic";
     homepage = "https://github.com/cupcakearmy/autorestic";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "autorestic";
   };
 })

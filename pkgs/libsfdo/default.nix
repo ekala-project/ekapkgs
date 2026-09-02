@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Collection of libraries which implement some of the freedesktop.org specifications";
     homepage = "https://gitlab.freedesktop.org/vyivel/libsfdo";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     pkgConfigModules = [
       "libsfdo-basedir"
       "libsfdo-desktop-file"

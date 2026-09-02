@@ -35,7 +35,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/hickford/git-credential-oauth";
     changelog = "https://github.com/hickford/git-credential-oauth/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "git-credential-oauth";
   };
 })

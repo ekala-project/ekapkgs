@@ -71,6 +71,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3;
     homepage = "https://github.com/hfp/libxsmm";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

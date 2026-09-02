@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://www.digitemp.com";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

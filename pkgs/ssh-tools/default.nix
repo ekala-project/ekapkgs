@@ -41,6 +41,5 @@ buildGoModule (finalAttrs: {
     description = "Making SSH more convenient";
     homepage = "https://codeberg.org/vaporup/ssh-tools";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

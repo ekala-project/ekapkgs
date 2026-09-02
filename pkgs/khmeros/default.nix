@@ -26,7 +26,6 @@ stdenvNoCC.mkDerivation rec {
     description = "Unicode fonts for the Khmer language";
     homepage = "http://www.khmeros.info/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

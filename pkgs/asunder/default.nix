@@ -61,6 +61,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/rizalmart/asunder-gtk3";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

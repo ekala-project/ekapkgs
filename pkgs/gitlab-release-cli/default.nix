@@ -27,7 +27,6 @@ buildGoModule (finalAttrs: {
     description = "Toolset to create, retrieve and update releases on GitLab";
     homepage = "https://gitlab.com/gitlab-org/release-cli";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "release-cli";
   };
 })

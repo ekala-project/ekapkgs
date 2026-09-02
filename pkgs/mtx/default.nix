@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://sourceforge.net/projects/mtx/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

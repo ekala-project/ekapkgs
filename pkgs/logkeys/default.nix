@@ -42,7 +42,6 @@ stdenv.mkDerivation {
     description = "GNU/Linux keylogger that works";
     license = lib.licenses.gpl3;
     homepage = "https://github.com/kernc/logkeys";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

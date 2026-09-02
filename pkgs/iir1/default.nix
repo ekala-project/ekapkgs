@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     downloadPage = "https://github.com/berndporr/iir1";
     changelog = "https://github.com/berndporr/iir1/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

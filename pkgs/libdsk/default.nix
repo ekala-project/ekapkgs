@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for accessing discs and disc image files";
     homepage = "http://www.seasip.info/Unix/LibDsk/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

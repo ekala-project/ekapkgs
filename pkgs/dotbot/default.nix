@@ -39,6 +39,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/anishathalye/dotbot";
     changelog = "https://github.com/anishathalye/dotbot/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

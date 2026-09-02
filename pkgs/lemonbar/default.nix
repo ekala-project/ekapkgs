@@ -31,7 +31,6 @@ stdenv.mkDerivation rec {
     description = "Lightweight xcb based bar";
     homepage = "https://github.com/LemonBoy/bar";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "lemonbar";
   };

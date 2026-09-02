@@ -39,6 +39,5 @@ stdenv.mkDerivation {
     description = "C++ implementation of the SciTokens library with a C library interface";
     platforms = lib.platforms.unix;
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

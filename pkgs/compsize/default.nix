@@ -40,7 +40,6 @@ stdenv.mkDerivation {
     mainProgram = "compsize";
     homepage = "https://github.com/kilobyte/compsize";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

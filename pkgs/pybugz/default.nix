@@ -28,6 +28,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Command line interface for Bugzilla";
     mainProgram = "bugz";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

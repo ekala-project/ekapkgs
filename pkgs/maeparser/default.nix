@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/schrodinger/maeparser";
     description = "Maestro file parser";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
   };

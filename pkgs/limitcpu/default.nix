@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool to throttle the CPU usage of programs";
     platforms = with lib.platforms; linux ++ freebsd;
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "cpulimit";
   };
 })

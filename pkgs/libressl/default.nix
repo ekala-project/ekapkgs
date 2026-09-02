@@ -75,6 +75,5 @@ stdenv.mkDerivation (finalAttrs: {
       openssl
     ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

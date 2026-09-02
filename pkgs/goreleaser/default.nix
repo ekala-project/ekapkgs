@@ -51,6 +51,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://goreleaser.com";
     license = lib.licenses.mit;
     mainProgram = "goreleaser";
-    maintainers = [ ];
   };
 })

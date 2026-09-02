@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Scalable PostgreSQL connection pooler";
     homepage = "https://github.com/yandex/odyssey";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = [ "x86_64-linux" ];
     mainProgram = "odyssey";
   };

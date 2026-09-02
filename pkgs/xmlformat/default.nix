@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation {
   pname = "xmlformat";
-  version = "1.9-unstable-2026-02-12";
+  version = "1.9";
 
   src = fetchFromGitHub {
     owner = "someth2say";
@@ -27,7 +27,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/someth2say/xmlformat";
     license = lib.licenses.gpl3Only;
     mainProgram = "xmlformat";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

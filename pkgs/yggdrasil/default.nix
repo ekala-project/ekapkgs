@@ -36,6 +36,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://yggdrasil-network.github.io/";
     license = lib.licenses.lgpl3;
     mainProgram = "yggdrasil";
-    maintainers = [ ];
   };
 })

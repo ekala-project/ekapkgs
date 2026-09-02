@@ -41,7 +41,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/altsem/gitu";
     changelog = "https://github.com/altsem/gitu/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gitu";
   };
 })

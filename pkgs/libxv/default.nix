@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
       hpnd
       hpndSellVariant
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

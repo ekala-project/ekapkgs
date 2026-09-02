@@ -33,6 +33,5 @@ stdenv.mkDerivation rec {
     homepage = "https://wiki.linuxfoundation.org/networking/bridge";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

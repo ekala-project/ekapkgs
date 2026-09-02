@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Base library for writing document import filters";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

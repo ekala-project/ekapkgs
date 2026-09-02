@@ -38,6 +38,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       cc-by-sa-40
     ];
     platforms = lib.platforms.unix;
-    teams = [ lib.teams.mate ];
+    teams = [ ];
   };
 })

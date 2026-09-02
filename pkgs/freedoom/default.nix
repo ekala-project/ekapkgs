@@ -54,7 +54,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     '';
     homepage = "https://freedoom.github.io";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

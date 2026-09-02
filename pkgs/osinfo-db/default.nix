@@ -32,6 +32,5 @@ stdenv.mkDerivation rec {
     changelog = "https://gitlab.com/libosinfo/osinfo-db/-/commits/v${version}";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

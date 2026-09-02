@@ -41,6 +41,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "textql";
     homepage = "https://github.com/dinedal/textql";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

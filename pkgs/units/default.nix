@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Unit conversion tool";
     license = lib.licenses.gpl3Plus;
     mainProgram = "units";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

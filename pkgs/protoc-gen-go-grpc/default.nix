@@ -32,7 +32,6 @@ buildGoModule (finalAttrs: {
     description = "Go language implementation of gRPC. HTTP/2 based RPC";
     homepage = "https://grpc.io/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "protoc-gen-go-grpc";
   };
 })

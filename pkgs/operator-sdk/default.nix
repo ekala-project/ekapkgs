@@ -50,7 +50,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://github.com/operator-framework/operator-sdk";
     changelog = "https://github.com/operator-framework/operator-sdk/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 })

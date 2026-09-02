@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "UDF tools";
     homepage = "https://github.com/pali/udftools";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Plus;
   };

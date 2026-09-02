@@ -63,6 +63,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     homepage = "https://www.open-iscsi.com";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

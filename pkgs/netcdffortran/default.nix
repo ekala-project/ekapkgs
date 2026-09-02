@@ -6,19 +6,23 @@
   hdf5,
   curl,
   gfortran,
+  m4,
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "netcdf-fortran";
-  version = "4.4.5";
+  version = "4.6.4";
 
   src = fetchFromGitHub {
     owner = "Unidata";
     repo = "netcdf-fortran";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-nC93NcA4VJbrqaLwyhjP10j/t6rQSYcAzKBxclpZVe0=";
+    sha256 = "sha256-k3cPO293Qc+YGlRI1Lz73zuGPP1A+m+VfOk5hBgeDoM=";
   };
 
-  nativeBuildInputs = [ gfortran ];
+  nativeBuildInputs = [
+    gfortran
+    m4
+  ];
   buildInputs = [
     netcdf
     hdf5
@@ -37,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "nf-config";
     homepage = "https://www.unidata.ucar.edu/software/netcdf/";
     license = lib.licenses.free;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

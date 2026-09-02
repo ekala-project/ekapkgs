@@ -23,6 +23,6 @@ stdenv.mkDerivation {
     homepage = "http://pari.math.u-bordeaux.fr/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    teams = [ lib.teams.sage ];
+    teams = [ ];
   };
 }

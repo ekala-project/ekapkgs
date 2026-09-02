@@ -149,7 +149,6 @@ stdenv.mkDerivation rec {
     description = "mDNS/DNS-SD implementation";
     homepage = "http://avahi.org";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

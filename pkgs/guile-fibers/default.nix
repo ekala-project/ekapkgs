@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/wingo/fibers";
     description = "Concurrent ML-like concurrency for Guile";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = guile.meta.platforms;
   };
 })

@@ -39,7 +39,6 @@ stdenv.mkDerivation {
     description = "Multi-user tmux made easy";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "wemux";
   };
 }

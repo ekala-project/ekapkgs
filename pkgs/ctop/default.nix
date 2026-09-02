@@ -28,7 +28,6 @@ buildGoModule (finalAttrs: {
     description = "Top-like interface for container metrics";
     homepage = "https://ctop.sh/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "ctop";
   };
 })

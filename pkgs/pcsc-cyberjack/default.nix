@@ -54,7 +54,6 @@ stdenv.mkDerivation rec {
     mainProgram = "cjflash";
     homepage = "https://www.reiner-sct.com/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

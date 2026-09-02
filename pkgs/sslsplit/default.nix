@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Transparent SSL/TLS interception";
     homepage = "https://www.roe.ch/SSLsplit";
     platforms = lib.platforms.all;
-    maintainers = [ ];
     license = with lib.licenses; [
       bsd2
       mit

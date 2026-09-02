@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://rfc1149.net/devel/recoverjpeg.html";
     description = "Recover lost JPEGs and MOV files on a bogus memory card or disk";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
   };
 })

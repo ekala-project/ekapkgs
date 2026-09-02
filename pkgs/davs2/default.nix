@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     mainProgram = "davs2";
     pkgConfigModules = [ "davs2" ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

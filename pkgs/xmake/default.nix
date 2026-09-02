@@ -6,13 +6,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "xmake";
-  version = "3.0.9";
+  version = "3.1.0";
 
   src = fetchFromGitHub {
     owner = "xmake-io";
     repo = "xmake";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-JoIXsEvcB65NQ7G06HgNIDqMSVzxlX7jOVxe1bWaEAQ=";
+    hash = "sha256-gcPOOAS1JSze+sgeWzGvXijxDmuJKbuNFP0MX2D4Rtg=";
     fetchSubmodules = true;
   };
 
@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Cross-platform build utility based on Lua";
     homepage = "https://xmake.io";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "xmake";
   };
 })

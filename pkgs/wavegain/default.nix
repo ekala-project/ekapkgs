@@ -7,13 +7,13 @@
 
 stdenv.mkDerivation {
   pname = "wavegain";
-  version = "1.3.1";
+  version = "1.3.2";
 
   src = fetchFromGitHub {
     owner = "MestreLion";
     repo = "wavegain";
     rev = "c928eaf97aeec5732625491b64c882e08e314fee";
-    sha256 = "0wghqnsbypmr4xcrhb568bfjdnxzzp8qgnws3jslzmzf34dpk5ls";
+    sha256 = "sha256-mpZ5Gxnu10+1HJrbh9H9v9sm3UKmLJhZJ7lev7TF8HE=";
   };
 
   patches = [
@@ -38,7 +38,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/MestreLion/wavegain";
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "wavegain";
   };
 }

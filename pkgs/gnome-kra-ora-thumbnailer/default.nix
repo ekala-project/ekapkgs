@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-kra-ora-thumbnailer/-/blob/${finalAttrs.src.tag}?ref_type=tags";
     changelog = "https://gitlab.gnome.org/GNOME/gnome-kra-ora-thumbnailer/-/blob/${finalAttrs.src.tag}/NEWS?ref_type=tags";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

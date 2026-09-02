@@ -19,13 +19,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "lxc";
-  version = "6.0.4";
+  version = "7.0.0";
 
   src = fetchFromGitHub {
     owner = "lxc";
     repo = "lxc";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-zmL568PprrpIWTVCkScXHEzTZ+NduSH4r8ETnz4NY64=";
+    hash = "sha256-eB68l7SmVxJViGmVlVtEXVD+cRtr4WqOrA8b9ImQ89g=";
   };
 
   nativeBuildInputs = [
@@ -45,14 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     libselinux
     openssl
     systemd
-  ];
-
-  patches = [
-    (fetchpatch {
-      name = "4536.patch";
-      url = "https://patch-diff.githubusercontent.com/raw/lxc/lxc/pull/4536.patch";
-      hash = "sha256-yEqK9deO2MhfPROPfBw44Z752Mc5bR8DBKl1KrGC+5c=";
-    })
   ];
 
   mesonFlags = [
@@ -89,6 +81,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Userspace tools for Linux Containers, a lightweight virtualization system";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

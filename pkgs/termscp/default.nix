@@ -59,7 +59,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/veeso/termscp";
     license = lib.licenses.mit;
     mainProgram = "termscp";
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

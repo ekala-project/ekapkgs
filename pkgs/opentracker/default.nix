@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = lib.platforms.linux;
     description = "Bittorrent tracker project which aims for minimal resource usage and is intended to run at your wlan router";
     mainProgram = "opentracker";
-    maintainers = [ ];
   };
 })

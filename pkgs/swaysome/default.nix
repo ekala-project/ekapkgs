@@ -26,7 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Helper to make sway behave more like awesomewm";
     homepage = "https://gitlab.com/hyask/swaysome";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "swaysome";
   };

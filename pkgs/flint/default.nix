@@ -84,7 +84,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Fast Library for Number Theory";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     homepage = "https://www.flintlib.org/";
     downloadPage = "https://www.flintlib.org/downloads.html";

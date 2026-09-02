@@ -30,6 +30,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/adelolmo/hd-idle";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

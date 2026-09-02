@@ -46,6 +46,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Web server which allows users to develop web applications using C++";
     platforms = lib.platforms.linux;
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
   };
 })

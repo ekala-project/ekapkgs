@@ -14,13 +14,13 @@ fetch_linux() {
   VER="$1"
   ARCH="$2"
   URL="https://cache.agilebits.com/dist/1P/op2/pkg/v${VER}/op_${ARCH}_v${VER}.zip"
-  nurl --hash --expr "(import <nixpkgs> { }).fetchzip { url = \"$URL\"; stripRoot = false; }"
+  nurl --hash --expr "(import ../.. { }).fetchzip { url = \"$URL\"; stripRoot = false; }"
 }
 
 fetch_darwin() {
   VER="$1"
   URL="https://cache.agilebits.com/dist/1P/op2/pkg/v${VER}/op_apple_universal_v${VER}.pkg"
-  nurl --hash --expr "(import <nixpkgs> { }).fetchurl { url = \"$URL\"; }"
+  nurl --hash --expr "(import ../.. { }).fetchurl { url = \"$URL\"; }"
 }
 
 replace_sha() {

@@ -71,7 +71,6 @@ stdenv.mkDerivation (finalAttrs: {
       x11
     ];
     mainProgram = "imake";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

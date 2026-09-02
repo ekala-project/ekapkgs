@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Luxi 75dpi pcf fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/bh-75dpi";
     license = lib.licenses.unfreeRedistributable;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

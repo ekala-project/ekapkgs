@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Export an RCS or CVS history as a fast-import stream";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     homepage = "http://www.catb.org/esr/cvs-fast-export/";
     platforms = lib.platforms.unix;
   };

@@ -12,13 +12,13 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "mimalloc";
-  version = "3.3.2";
+  version = "3.5.0";
 
   src = fetchFromGitHub {
     owner = "microsoft";
     repo = "mimalloc";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-GZ37qQVDe9jgMb4Coe5oKvgaLTspZDlSkS5rdy1MfUU=";
+    hash = "sha256-1cHcEjcnzyJaEohtMoC3h7EdXSLE1lHCnq8kURXIx/E=";
   };
 
   doCheck = !stdenv.hostPlatform.isStatic;
@@ -82,6 +82,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/microsoft/mimalloc";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

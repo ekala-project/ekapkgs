@@ -22,7 +22,6 @@ bundlerApp {
     homepage = "https://wpscan.org/";
     changelog = "https://github.com/wpscanteam/wpscan/releases";
     license = lib.licenses.unfreeRedistributable;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

@@ -49,6 +49,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Free open-source library for nonlinear optimization";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Adobe Utopia PostScript Type 1 fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/adobe-utopia-type1";
     license = lib.licenses.adobeUtopia;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

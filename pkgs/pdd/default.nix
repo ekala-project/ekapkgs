@@ -41,7 +41,6 @@ python3Packages.buildPythonApplication rec {
       program arguments are specified it shows the current date, time and
       timezone.
     '';
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     mainProgram = "pdd";
   };

@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Spell-checking library for GTK applications";
     homepage = "https://gitlab.gnome.org/GNOME/gspell";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

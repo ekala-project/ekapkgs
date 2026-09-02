@@ -28,6 +28,5 @@ stdenv.mkDerivation rec {
     homepage = "https://netfilter.org/projects/libnetfilter_cttimeout/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

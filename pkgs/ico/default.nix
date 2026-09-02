@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
       hpndSellVariant
     ];
     mainProgram = "ico";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

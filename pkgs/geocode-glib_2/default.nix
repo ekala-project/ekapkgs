@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Convenience library for the geocoding and reverse geocoding using Nominatim service";
     homepage = "https://gitlab.gnome.org/GNOME/geocode-glib";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

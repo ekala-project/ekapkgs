@@ -37,6 +37,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Cargo subcommand to build and install C-ABI compatible dynamic and static libraries";
     homepage = "https://github.com/lu-zero/cargo-c";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

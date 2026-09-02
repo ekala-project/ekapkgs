@@ -10,7 +10,7 @@
 
 stdenv.mkDerivation {
   pname = "nanosaur2";
-  version = "2.1.0-unstable-2023-05-21";
+  version = "2.1.0";
 
   src = fetchFromGitHub {
     owner = "jorio";
@@ -51,7 +51,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/jorio/Nanosaur2";
     license = lib.licenses.cc-by-sa-40;
     mainProgram = "Nanosaur2";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

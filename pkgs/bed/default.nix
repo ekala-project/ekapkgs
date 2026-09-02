@@ -23,7 +23,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/itchyny/bed";
     changelog = "https://github.com/itchyny/bed/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "bed";
   };
 })

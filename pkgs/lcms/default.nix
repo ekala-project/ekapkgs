@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Color management engine";
     homepage = "http://www.littlecms.com/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Signing tools for PE-COFF binaries. Compliant with the PE and Authenticode specifications";
     homepage = "https://github.com/rhboot/pesign";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     # efivar is currently Linux-only.
     platforms = lib.platforms.linux;
   };

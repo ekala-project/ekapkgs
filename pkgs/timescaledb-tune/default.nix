@@ -27,6 +27,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "timescaledb-tune";
     homepage = "https://github.com/timescale/timescaledb-tune";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

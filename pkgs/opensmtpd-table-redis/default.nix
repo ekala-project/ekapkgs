@@ -47,6 +47,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/OpenSMTPD/table-redis/releases/tag/${finalAttrs.version}";
     license = lib.licenses.isc;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "http://bulletphysics.org";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

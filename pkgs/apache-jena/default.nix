@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "RDF database";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     homepage = "https://jena.apache.org";
     downloadPage = "https://archive.apache.org/dist/jena/binaries/";

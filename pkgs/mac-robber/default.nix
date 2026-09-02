@@ -38,6 +38,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.sleuthkit.org/mac-robber/";
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 })

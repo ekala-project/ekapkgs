@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.libdivecomputer.org";
     description = "Cross-platform and open source library for communication with dive computers from various manufacturers";
     mainProgram = "dctool";
-    maintainers = [ ];
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.all;
   };

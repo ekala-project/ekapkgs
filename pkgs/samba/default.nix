@@ -275,6 +275,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Standard Windows interoperability suite of programs for Linux and Unix";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gif2apng.sourceforge.net/";
     description = "Simple program that converts animations from GIF to APNG format";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

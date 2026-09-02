@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "OpenGL Mathematics library for C++";
     homepage = "https://github.com/g-truc/glm";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     broken = !stdenv.hostPlatform.isLittleEndian && !stdenv.hostPlatform.isLinux;
   };

@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/sass/sassc/";
     license = lib.licenses.mit;
     mainProgram = "sassc";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

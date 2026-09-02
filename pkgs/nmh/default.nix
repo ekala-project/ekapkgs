@@ -90,7 +90,6 @@ stdenv.mkDerivation (finalAttrs: {
       claws-mail's mail folders.  Most other mail clients have migrated to
       maildir.
     '';
-    maintainers = [ ];
   };
 
 })

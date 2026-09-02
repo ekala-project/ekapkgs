@@ -35,7 +35,6 @@ stdenv.mkDerivation rec {
     description = "Software Token for Linux/UNIX";
     homepage = "https://github.com/cernekee/stoken";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

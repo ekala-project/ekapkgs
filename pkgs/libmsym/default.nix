@@ -28,6 +28,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/mcodev31/libmsym";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

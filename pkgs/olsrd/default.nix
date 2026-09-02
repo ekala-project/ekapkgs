@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Adhoc wireless mesh routing daemon";
     license = lib.licenses.bsd3;
     homepage = "http://olsr.org/";
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
   };
 })

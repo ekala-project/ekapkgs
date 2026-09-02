@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Game based on the movie Tron";
     mainProgram = "gltron";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
   };
 })

@@ -22,6 +22,5 @@ gccStdenv.mkDerivation rec {
     homepage = "https://www.ginac.de/CLN/";
     license = licenses.gpl2;
     platforms = platforms.unix;
-    maintainers = [ ];
   };
 }

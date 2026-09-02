@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation rec {
   pname = "opencc";
-  version = "1.1.9";
+  version = "1.4.2";
 
   src = fetchFromGitHub {
     owner = "BYVoid";
     repo = "OpenCC";
     rev = "ver.${version}";
-    sha256 = "sha256-JBTegQs9ALp4LdKKYMNp9GYEgqR9O8IkX6LqatvaTic=";
+    sha256 = "sha256-FgpAnN9bo2H6cuLEuxxSg5I4R0zViDrJ8KueNEoTVF8=";
   };
 
   nativeBuildInputs = [
@@ -36,7 +36,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/BYVoid/OpenCC";
     license = lib.licenses.asl20;
     description = "Project for conversion between Traditional and Simplified Chinese";
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 }

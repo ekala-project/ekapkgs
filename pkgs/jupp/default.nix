@@ -49,7 +49,6 @@ stdenv.mkDerivation rec {
       because these behave better overall.
     '';
     license = lib.licenses.gpl1Only;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
   };
 }

@@ -25,7 +25,7 @@ let
 in
 stdenv.mkDerivation {
   pname = "bloaty";
-  version = "1.1-unstable-2026-05-31";
+  version = "1.1";
 
   src = fetchFromGitHub {
     owner = "google";
@@ -88,6 +88,5 @@ stdenv.mkDerivation {
     homepage = "https://github.com/google/bloaty";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

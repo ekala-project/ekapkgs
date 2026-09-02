@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Encrypt files with Advanced Encryption Standard (AES)";
     homepage = "https://www.aescrypt.com/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     hydraPlatforms = with lib.platforms; unix;
   };

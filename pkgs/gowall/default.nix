@@ -38,6 +38,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/Achno/gowall";
     license = lib.licenses.mit;
     mainProgram = "gowall";
-    maintainers = [ ];
   };
 })

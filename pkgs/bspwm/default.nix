@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Tiling window manager based on binary space partitioning";
     homepage = "https://github.com/baskerville/bspwm";
-    maintainers = [ ];
     license = lib.licenses.bsd2;
     platforms = lib.platforms.linux;
   };

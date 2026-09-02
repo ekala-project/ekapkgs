@@ -73,7 +73,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/tarka/xcp";
     changelog = "https://github.com/tarka/xcp/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "xcp";
   };
 })

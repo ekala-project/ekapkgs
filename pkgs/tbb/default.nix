@@ -96,6 +96,5 @@ stdenv.mkDerivation rec {
       details and threading mechanisms for scalability and performance.
     '';
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

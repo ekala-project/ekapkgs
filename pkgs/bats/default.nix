@@ -16,13 +16,13 @@
 
 stdenv.mkDerivation rec {
   pname = "bats";
-  version = "1.11.1";
+  version = "1.14.0";
 
   src = fetchFromGitHub {
     owner = "bats-core";
     repo = "bats-core";
     rev = "v${version}";
-    hash = "sha256-+qmCeLixfLak09XxgSe6ONcH1IoHGl5Au0s9JyNm95g=";
+    hash = "sha256-pUuSjXxMCFLlsTvErgerHLnaQmcA9eXuKZKRkuOGJ8k=";
   };
 
   nativeBuildInputs = [ makeWrapper ];
@@ -58,6 +58,5 @@ stdenv.mkDerivation rec {
     license = licenses.mit;
     platforms = platforms.unix;
     mainProgram = "bats";
-    maintainers = [ ];
   };
 }

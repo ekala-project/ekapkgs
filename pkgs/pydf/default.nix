@@ -27,6 +27,5 @@ python3Packages.buildPythonPackage rec {
     homepage = "http://kassiopeia.juls.savba.sk/~garabik/software/pydf/";
     mainProgram = "pydf";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
   };
 }

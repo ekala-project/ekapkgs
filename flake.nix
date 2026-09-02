@@ -12,6 +12,8 @@
     python.flake = false;
     r-pkgs.url = "github:ekala-project/r-pkgs";
     r-pkgs.flake = false;
+    vim-plugins.url = "github:ekala-project/vim-plugins";
+    vim-plugins.flake = false;
     systems.follows = "corepkgs/systems";
   };
 
@@ -35,36 +37,6 @@
           modules = [ pkgsModule ];
         }
       );
-
-      ekaosSystem =
-        {
-          modules ? [ ],
-          system ? "x86_64-linux",
-          ...
-        }@args:
-        let
-          pkgs = import ./. {
-            inherit system;
-            modules = [ pkgsModule ];
-          };
-          ekapkgsModules = import ./ekaos/modules/module-list.nix;
-          extraArgs = builtins.removeAttrs args [
-            "modules"
-            "system"
-          ];
-          eval =
-            (import (corepkgs + "/ekaos/eval-config.nix") {
-              lib = pkgs.lib;
-              inherit pkgs;
-            })
-              (
-                {
-                  modules = ekapkgsModules ++ modules;
-                }
-                // extraArgs
-              );
-        in
-        eval;
 
       formatter = corepkgs.formatter;
       nixConfig = {

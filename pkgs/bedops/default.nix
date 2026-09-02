@@ -69,7 +69,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Suite of tools for addressing questions arising in genomics studies";
     homepage = "https://github.com/bedops/bedops";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.x86_64;
   };
 })

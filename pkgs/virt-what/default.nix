@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Detect if running in a virtual machine and prints its type";
     homepage = "https://people.redhat.com/~rjones/virt-what/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "virt-what";
   };

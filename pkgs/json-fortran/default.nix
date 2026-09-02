@@ -39,6 +39,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/jacobwilliams/json-fortran";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

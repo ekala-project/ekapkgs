@@ -76,7 +76,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Small QR code decoding library";
     homepage = "https://github.com/dlbeer/quirc";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

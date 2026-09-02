@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Developer's tool for browsing source code";
     homepage = "https://cscope.sourceforge.net/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

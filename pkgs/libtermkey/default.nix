@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Terminal keypress reading library";
     homepage = "http://www.leonerd.org.uk/code/libtermkey";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

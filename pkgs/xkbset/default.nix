@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/stephenmontgomerysmith/xkbset";
     description = "Program to help manage many of XKB features of X window";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.bsd3;
     mainProgram = "xkbset";

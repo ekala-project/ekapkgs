@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "untex";
     homepage = "https://www.ctan.org/pkg/untex";
     license = lib.licenses.gpl1Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

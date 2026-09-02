@@ -21,6 +21,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library that provides cross platforms access to statistics about the running system";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

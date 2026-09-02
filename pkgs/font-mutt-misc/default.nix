@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "ClearU pcf fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/mutt-misc";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

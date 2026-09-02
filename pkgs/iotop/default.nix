@@ -33,7 +33,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "http://guichaz.free.fr/iotop";
     license = lib.licenses.gpl2Plus;
     mainProgram = "iotop";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

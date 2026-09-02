@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://commons.apache.org/proper/commons-compress";
     description = "Allows manipulation of ar, cpio, Unix dump, tar, zip, gzip, XZ, Pack200, bzip2, 7z, arj, lzma, snappy, DEFLATE and Z files";
-    maintainers = [ ];
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
     license = lib.licenses.asl20;
     platforms = with lib.platforms; unix;

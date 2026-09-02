@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Decrypt password stored in cmos used to access BIOS SETUP";
     homepage = "https://www.cgsecurity.org/wiki/CmosPwd";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = [ "x86_64-linux" ];
     mainProgram = "cmospwd";
   };

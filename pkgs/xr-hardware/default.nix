@@ -28,7 +28,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Hardware description for XR devices";
     homepage = "https://gitlab.freedesktop.org/monado/utilities/xr-hardware";
     license = lib.licenses.boost;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

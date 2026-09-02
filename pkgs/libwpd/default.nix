@@ -38,6 +38,5 @@ stdenv.mkDerivation rec {
     homepage = "https://libwpd.sourceforge.net/";
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

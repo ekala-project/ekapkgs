@@ -65,6 +65,5 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/lastpass/lastpass-cli";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "par";
     platforms = lib.platforms.unix;
     license = lib.licenses.free;
-    maintainers = [ ];
   };
 })

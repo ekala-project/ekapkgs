@@ -22,7 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Scriptable, curses-based, digital habit tracker";
     homepage = "https://github.com/oppiliappan/dijo";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "dijo";
   };
 })

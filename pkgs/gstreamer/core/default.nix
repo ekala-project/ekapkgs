@@ -144,6 +144,5 @@ stdenv.mkDerivation (finalAttrs: {
       "gstreamer-controller-1.0"
     ];
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

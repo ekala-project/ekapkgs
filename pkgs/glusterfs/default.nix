@@ -179,7 +179,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Distributed storage system";
     homepage = "https://www.gluster.org";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ freebsd;
   };
 })

@@ -32,7 +32,6 @@ buildGoModule (finalAttrs: {
     description = "jq language server";
     homepage = "https://github.com/wader/jq-lsp";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "jq-lsp";
   };
 })

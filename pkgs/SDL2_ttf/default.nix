@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/libsdl-org/SDL_ttf";
     description = "Support for TrueType (.ttf) font files with Simple Directmedia Layer";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     inherit (SDL2.meta) platforms;
   };
 })

@@ -62,6 +62,5 @@ stdenv.mkDerivation rec {
       asl20
       lgpl2
     ];
-    maintainers = [ ];
   };
 }

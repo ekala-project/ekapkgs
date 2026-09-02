@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/davidesantangelo/krep";
     changelog = "https://github.com/davidesantangelo/krep/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

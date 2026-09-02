@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
       gpl2Plus
       lgpl21Only
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "haproxy";
   };

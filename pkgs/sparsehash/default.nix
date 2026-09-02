@@ -20,6 +20,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Extremely memory-efficient hash_map implementation";
     platforms = lib.platforms.all;
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

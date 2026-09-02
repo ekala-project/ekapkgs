@@ -71,6 +71,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "aria2c";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

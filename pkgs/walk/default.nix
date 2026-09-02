@@ -21,7 +21,6 @@ buildGoModule (finalAttrs: {
     description = "Terminal file manager";
     homepage = "https://github.com/antonmedv/walk";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "walk";
   };
 })

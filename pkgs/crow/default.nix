@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "crow";
-  version = "1.3.2";
+  version = "1.3.3";
 
   src = fetchFromGitHub {
     owner = "CrowCpp";
     repo = "Crow";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-MN2x1hgJ9TziZFPSZn6RuAEfl4mZv3ijU9LqQJkw6UM=";
+    hash = "sha256-0KbX/OzUZmycsKCoS+pov+q3Ms8+kzSy1TJi57GoMME=";
   };
 
   patches = [
@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Fast and Easy to use microframework for the web";
     homepage = "https://crowcpp.org/";
-    maintainers = [ ];
     platforms = lib.platforms.all;
     license = lib.licenses.bsd3;
   };

@@ -59,6 +59,5 @@ stdenv.mkDerivation rec {
     description = "Client-side decorations library for Wayland clients";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

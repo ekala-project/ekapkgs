@@ -53,7 +53,6 @@ stdenv.mkDerivation rec {
     homepage = "https://gnupg.org/software/pinentry/index.html";
     description = "GnuPG's interface to passphrase input";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "pinentry";
   };

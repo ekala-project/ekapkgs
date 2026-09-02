@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Network traffic statistics utility for Solaris and Linux";
     homepage = "https://github.com/scotte/nicstat";
     license = lib.licenses.artistic2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "nicstat";
   };

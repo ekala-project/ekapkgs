@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "X Window System logo display demo";
     homepage = "https://gitlab.freedesktop.org/xorg/app/xlogo";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.mit;
     mainProgram = "xlogo";

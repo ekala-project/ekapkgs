@@ -10,7 +10,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "SDL_net";
-  version = "1.2.8-unstable-2025-04-21";
+  version = "3.2.0";
 
   src = fetchFromGitHub {
     owner = "libsdl-org";
@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/libsdl-org/SDL_net";
     description = "SDL networking library";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     inherit (SDL.meta) platforms;
   };
 })

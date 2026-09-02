@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "DWARF optimization and duplicate removal tool";
     mainProgram = "dwz";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gmid.omarpolo.com/";
     changelog = "https://gmid.omarpolo.com/changelog.html";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

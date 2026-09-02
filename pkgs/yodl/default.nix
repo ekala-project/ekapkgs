@@ -88,7 +88,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://fbb-git.gitlab.io/yodl/";
     mainProgram = "yodl";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Full-featured MP4 format and MPEG DASH library and tools";
     homepage = "http://bento4.com";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

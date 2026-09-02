@@ -33,13 +33,13 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "xed";
-  version = "2025.12.14";
+  version = "2026.07.15";
 
   src = fetchFromGitHub {
     owner = "intelxed";
     repo = "xed";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-af0PYWMFLCrDyX7lkyhH1t5obYm9VTIyMtV2BwHhIBo=";
+    hash = "sha256-YpBDSkRKgL7KNpN9fLTiho4T6ntTV/4iK9EvXYckqvA=";
   };
 
   postPatch = ''
@@ -87,6 +87,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://intelxed.github.io/";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

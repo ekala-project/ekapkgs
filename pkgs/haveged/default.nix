@@ -6,13 +6,13 @@
 
 stdenv.mkDerivation rec {
   pname = "haveged";
-  version = "1.9.19";
+  version = "1.9.26";
 
   src = fetchFromGitHub {
     owner = "jirka-h";
     repo = "haveged";
     rev = "v${version}";
-    hash = "sha256-tq4OXLlyC6exJEZ80H1gQQRBgYGbu+3kGz99RxsyauI=";
+    hash = "sha256-mt3lQYCTiZSDf8toogAxx9VGewSMwyhdalLe0W2C+DQ=";
   };
 
   strictDeps = true;
@@ -41,7 +41,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/jirka-h/haveged";
     changelog = "https://raw.githubusercontent.com/jirka-h/haveged/v${version}/ChangeLog";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     badPlatforms = lib.platforms.darwin;
   };

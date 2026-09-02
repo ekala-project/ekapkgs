@@ -72,6 +72,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Plus;
     mainProgram = "bemenu";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

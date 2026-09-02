@@ -7,13 +7,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "jsoncons";
-  version = "1.8.1";
+  version = "1.9.0";
 
   src = fetchFromGitHub {
     owner = "danielaparker";
     repo = "jsoncons";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-+5vglrmmJ6jb33Mlp+VnIMG2yHqzKFHPQUqTBezDNCw=";
+    hash = "sha256-Jf+RoSRCswjF1Hq4bGdDhmAYrUEkhfQ+3ikTcXvqcl0=";
   };
 
   nativeBuildInputs = [
@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://danielaparker.github.io/jsoncons/";
     changelog = "https://github.com/danielaparker/jsoncons/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.boost;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

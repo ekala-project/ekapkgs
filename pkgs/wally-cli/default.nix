@@ -31,6 +31,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://ergodox-ez.com/pages/wally-planck";
     platforms = with lib.platforms; linux ++ darwin;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -37,6 +37,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/nu774/fdkaac";
     license = lib.licenses.zlib;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

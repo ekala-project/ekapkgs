@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Wraps a set of bdf or pcf bitmap fonts in a sfnt (TrueType or OpenType) wrapper";
     homepage = "https://gitlab.freedesktop.org/xorg/app/fonttosfnt";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "fonttosfnt";
   };

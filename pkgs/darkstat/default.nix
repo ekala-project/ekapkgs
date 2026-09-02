@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/emikulic/darkstat/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "darkstat";
   };
 })

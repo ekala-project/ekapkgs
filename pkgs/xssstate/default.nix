@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://git.suckless.org/xssstate/file/README.html";
     description = "Simple tool to retrieve the X screensaver state";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "xssstate";
   };

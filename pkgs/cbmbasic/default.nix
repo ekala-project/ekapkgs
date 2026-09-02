@@ -67,7 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/mist64/cbmbasic";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "cbmbasic";
     platforms = lib.platforms.all;
   };

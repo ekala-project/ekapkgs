@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = lib.platforms.unix;
     license = lib.licenses.mit;
     mainProgram = "iperf2";
-    maintainers = [ ];
 
     # prioritize iperf3
     priority = 10;

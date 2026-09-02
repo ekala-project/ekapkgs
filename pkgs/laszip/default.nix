@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://laszip.org";
     changelog = "https://github.com/LASzip/LASzip/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.lgpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

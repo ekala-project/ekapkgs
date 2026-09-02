@@ -20,6 +20,5 @@ stdenv.mkDerivation rec {
     description = "Musepack SV7 decoder library";
     platforms = lib.platforms.unix;
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

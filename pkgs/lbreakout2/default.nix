@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Breakout clone from the LGames series";
     license = lib.licenses.gpl2Plus;
     mainProgram = "lbreakout2";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     hydraPlatforms = lib.platforms.linux; # build hangs on both Darwin platforms, needs investigation
   };

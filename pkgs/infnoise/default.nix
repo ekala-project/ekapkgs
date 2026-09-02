@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
       It can either provide rng for userland applications, or provide rng for the OS entropy.
     '';
     license = lib.licenses.cc0;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

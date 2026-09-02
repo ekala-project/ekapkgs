@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation {
   pname = "mg";
-  version = "7.3-unstable-2024-06-04";
+  version = "7.3";
 
   src = fetchFromGitHub {
     owner = "ibara";

@@ -18,6 +18,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.cabextract.org.uk/libmspack";
     license = lib.licenses.lgpl2Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

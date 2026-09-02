@@ -7,16 +7,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "numbat";
-  version = "1.23.0";
+  version = "1.24.0";
 
   src = fetchFromGitHub {
     owner = "sharkdp";
     repo = "numbat";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-xezYRtIzP3MHme/7DwaM0hMgGTcio6iABuNREOOh6HU=";
+    hash = "sha256-b+2DMNfg3ZZcGNJh/C6YKfKdZJBQwuNcaOhF5YOE7E0=";
   };
 
-  cargoHash = "sha256-oNGq00Znh5WLc+y2NEWZL7Bl17gIaSY7PXYLel9Ucjg=";
+  cargoHash = "sha256-Lz5S4GT3cUaeKj7js0E6XSwkg3LnGiVplKzTlN54td8=";
 
   env.NUMBAT_SYSTEM_MODULE_PATH = "${placeholder "out"}/share/numbat/modules";
 
@@ -59,7 +59,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
       mit
     ];
-    maintainers = [ ];
     mainProgram = "numbat";
   };
 })

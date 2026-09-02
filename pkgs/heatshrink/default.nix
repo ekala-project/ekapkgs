@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Data compression/decompression library for embedded/real-time systems";
     homepage = "https://github.com/atomicobject/heatshrink";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "heatshrink";
   };

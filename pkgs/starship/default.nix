@@ -59,7 +59,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     downloadPage = "https://github.com/starship/starship";
     changelog = "https://github.com/starship/starship/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.isc;
-    maintainers = [ ];
     mainProgram = "starship";
   };
 })

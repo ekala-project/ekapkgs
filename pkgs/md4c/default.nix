@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Markdown parser made in C";
     license = lib.licenses.mit;
     mainProgram = "md2html";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

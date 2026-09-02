@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/app/smproxy";
     license = lib.licenses.mitOpenGroup;
     mainProgram = "smproxy";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

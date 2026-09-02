@@ -60,6 +60,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Manipulate Android Boot Images";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

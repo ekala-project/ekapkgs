@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library to Access SMI MIB Information";
     homepage = "https://www.ibr.cs.tu-bs.de/projects/libsmi/index.html";
     license = lib.licenses.free;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 })

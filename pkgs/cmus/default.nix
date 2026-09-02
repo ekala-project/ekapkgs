@@ -150,7 +150,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Small, fast and powerful console music player for Linux and *BSD";
     homepage = "https://cmus.github.io/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

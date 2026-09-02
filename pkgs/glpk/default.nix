@@ -43,7 +43,6 @@ stdenv.mkDerivation rec {
     description = "GNU Linear Programming Kit";
     homepage = "https://www.gnu.org/software/glpk/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "glpsol";
     platforms = lib.platforms.all;
   };

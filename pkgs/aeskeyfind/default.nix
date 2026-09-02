@@ -25,6 +25,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "aeskeyfind";
     homepage = "https://citp.princeton.edu/our-work/memory/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

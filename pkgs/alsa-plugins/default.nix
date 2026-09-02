@@ -36,6 +36,5 @@ stdenv.mkDerivation rec {
     homepage = "http://alsa-project.org/";
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

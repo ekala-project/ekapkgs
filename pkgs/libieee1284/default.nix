@@ -53,6 +53,5 @@ stdenv.mkDerivation rec {
     homepage = "http://cyberelk.net/tim/software/libieee1284/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

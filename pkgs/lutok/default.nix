@@ -10,7 +10,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "lutok";
-  version = "0.4";
+  version = "0.6.2";
 
   outputs = [
     "out"
@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "freebsd";
     repo = "lutok";
     rev = "lutok-${finalAttrs.version}";
-    hash = "sha256-awAFxx9q8dZ6JO1/mShjhJnOPTLn1wCT4VrB4rlgWyg=";
+    hash = "sha256-g20I/vbSo71ECuwXW05mKIHEXnbMKdVxAqrPHS7UaMI=";
   };
 
   strictDeps = true;
@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Lightweight C++ API for Lua";
     homepage = "https://github.com/freebsd/lutok/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

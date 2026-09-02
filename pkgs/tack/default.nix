@@ -29,6 +29,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "flake-like toml nix pins, lazily fetched and transformed";
     mainProgram = "tack";
     license = lib.licenses.eupl12;
-    maintainers = [ ];
   };
 })

@@ -81,6 +81,5 @@ stdenv.mkDerivation rec {
     description = "C++ API for D-BUS";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

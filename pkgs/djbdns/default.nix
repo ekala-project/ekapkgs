@@ -65,6 +65,5 @@ stdenv.mkDerivation {
     longDescription = "Includes software for all the fundamental DNS operations: DNS cache: finding addresses of Internet hosts; DNS server: publishing addresses of Internet hosts; and DNS client: talking to a DNS cache.";
     homepage = "https://cr.yp.to/djbdns.html";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
   };
 }

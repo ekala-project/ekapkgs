@@ -25,7 +25,6 @@ stdenvNoCC.mkDerivation rec {
     description = "Japanese TrueType font obtained by mixing M+ FONTS and Open Sans";
     homepage = "https://github.com/Koruri/Koruri";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

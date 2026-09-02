@@ -83,7 +83,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://packages.debian.org/source/sid/os-prober";
     license = lib.licenses.gpl2Plus;
     mainProgram = "os-prober";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -41,7 +41,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   meta = {
     description = "Chess TUI implementation in rust";
     homepage = "https://github.com/thomas-mauran/chess-tui";
-    maintainers = [ ];
     license = lib.licenses.mit;
     mainProgram = "chess-tui";
   };

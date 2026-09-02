@@ -54,7 +54,6 @@ stdenv.mkDerivation {
     homepage = "https://irrlicht.sourceforge.io/";
     license = lib.licenses.zlib;
     description = "Open source high performance realtime 3D engine written in C++";
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 }

@@ -2,7 +2,6 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  fetchpatch,
   autoreconfHook,
   perl,
   afflib,
@@ -13,25 +12,14 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "sleuthkit";
-  version = "4.14.0";
+  version = "4.15.0";
 
   src = fetchFromGitHub {
     owner = "sleuthkit";
     repo = "sleuthkit";
     rev = "sleuthkit-${finalAttrs.version}";
-    hash = "sha256-WvGVEDuhpmcyPOaihDruBbQbcj7s+Zkt2/D5CIsu0u8=";
+    hash = "sha256-11KK7O7V8bMp0YMt9ZPwAJ00n0VeXMooYTbu+By6b2Q=";
   };
-
-  patches = [
-    (fetchpatch {
-      url = "https://github.com/sleuthkit/sleuthkit/commit/8d710c36a947a2666bbef689155831d76fff56b9.patch";
-      hash = "sha256-/mCal0EVTM2dM5ok3OmAXQ1HiaCUi0lmhavIuwxVEMA=";
-    })
-    (fetchpatch {
-      url = "https://github.com/sleuthkit/sleuthkit/commit/f78bd37db6be72f8f4d444d124be4e26488dce4b.patch";
-      hash = "sha256-ZEeN0jp5cRi6dOpWlcGYm0nLLu5b56ivdR+WrhnhCz0=";
-    })
-  ];
 
   postPatch = ''
     substituteInPlace tsk/img/ewf.cpp --replace libewf_handle_read_random libewf_handle_read_buffer_at_offset
@@ -64,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Forensic/data recovery tool";
     homepage = "https://www.sleuthkit.org/";
     changelog = "https://github.com/sleuthkit/sleuthkit/blob/${finalAttrs.src.rev}/NEWS.txt";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.ipl10;
   };

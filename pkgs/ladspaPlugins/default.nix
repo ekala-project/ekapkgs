@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://plugin.org.uk/";
     description = "LADSPA format audio plugins";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

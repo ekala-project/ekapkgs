@@ -67,7 +67,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/danyspin97/wpaperd";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "wpaperd";
   };
 })

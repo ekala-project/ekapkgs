@@ -21,7 +21,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/txthinking/brook";
     description = "Cross-platform Proxy/VPN software";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "brook";
   };
 })

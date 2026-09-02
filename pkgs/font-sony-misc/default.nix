@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Sony pcf fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/sony-misc";
     license = lib.licenses.hpnd;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

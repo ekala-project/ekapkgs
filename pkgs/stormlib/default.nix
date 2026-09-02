@@ -11,13 +11,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "stormlib";
-  version = "9.30";
+  version = "9.40";
 
   src = fetchFromGitHub {
     owner = "ladislav-zezula";
     repo = "StormLib";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-gW3jR9XnBo5uEORu12TpGsUMFAS4w5snWPA/bIUt9UY=";
+    hash = "sha256-yjuoWGhCcMnk4FyrFO4TiyRGk322LsHNQZHzynGWhQ8=";
   };
 
   nativeBuildInputs = [
@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/ladislav-zezula/StormLib";
     description = "Open-source project that can work with Blizzard MPQ archives";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     broken = stdenv.hostPlatform.isDarwin; # installation directory mismatch
   };

@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
       - has small and simple source code
       - can easily be ported to almost all UNIX-like systems
     '';
-    maintainers = [ ];
     mainProgram = "empty";
   };
 })

@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libe57format";
-  version = "3.3.0";
+  version = "3.4.0";
 
   src = fetchFromGitHub {
     owner = "asmaloney";
     repo = "libE57Format";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-rEX251cgb6GMToGzcZcwDzjLZBGcwN8+ij1nCIpK2ZE=";
+    hash = "sha256-iCQ+aLBvpGPm1heUcfWzo0UKFi2X+3aGfR9zCgcbP5E=";
   };
 
   postPatch = lib.optionalString finalAttrs.finalPackage.doCheck ''
@@ -81,7 +81,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for reading & writing the E57 file format";
     homepage = "https://github.com/asmaloney/libE57Format";
     license = lib.licenses.boost;
-    maintainers = [ ];
     platforms = lib.platforms.linux; # because of the .so buiding in `postInstall` above
   };
 })

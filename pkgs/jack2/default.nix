@@ -123,6 +123,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     pkgConfigModules = [ "jack" ];
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

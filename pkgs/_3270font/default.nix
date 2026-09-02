@@ -37,7 +37,6 @@ stdenvNoCC.mkDerivation rec {
       lib.licenses.bsd3
       lib.licenses.ofl
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

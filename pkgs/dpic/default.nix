@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Implementation of the pic little language for creating drawings";
     homepage = "https://ece.uwaterloo.ca/~aplevich/dpic/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "dpic";
   };

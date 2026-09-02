@@ -24,6 +24,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     homepage = "https://www.seehuhn.de/pages/moon-buggy";
-    maintainers = [ ];
   };
 })

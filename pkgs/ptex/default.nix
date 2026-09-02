@@ -36,6 +36,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://ptex.us/";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

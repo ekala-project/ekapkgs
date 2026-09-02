@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/cernekee/ocproxy";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

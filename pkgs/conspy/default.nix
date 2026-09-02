@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Linux text console viewer";
     mainProgram = "conspy";
     license = lib.licenses.epl10;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

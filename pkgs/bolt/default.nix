@@ -77,6 +77,5 @@ stdenv.mkDerivation rec {
     homepage = "https://gitlab.freedesktop.org/bolt/bolt";
     license = licenses.lgpl21Plus;
     platforms = platforms.linux;
-    maintainers = [ ];
   };
 }

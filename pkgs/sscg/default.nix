@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/sgallagher/sscg";
     changelog = "https://github.com/sgallagher/sscg/blob/sscg-${finalAttrs.version}";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     mainProgram = "sscg";
   };
 })

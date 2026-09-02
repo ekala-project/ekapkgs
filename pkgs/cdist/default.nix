@@ -64,7 +64,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
 
     # Mostly. There are still couple types that are gpl3-only.
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -24,6 +24,5 @@ buildGo126Module (finalAttrs: {
     description = "Plugin for kubectl to manage a CloudNativePG cluster in Kubernetes";
     mainProgram = "kubectl-cnpg";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

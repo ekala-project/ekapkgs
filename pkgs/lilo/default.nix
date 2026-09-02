@@ -36,6 +36,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Linux bootloader";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

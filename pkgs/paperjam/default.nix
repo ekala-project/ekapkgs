@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.gpl2Plus;
     mainProgram = "paperjam";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

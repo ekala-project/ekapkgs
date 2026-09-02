@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Administration tool for IP sets";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "ipset";
   };
 })

@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Portable cross-platform Audio API";
     homepage = "https://www.portaudio.com/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

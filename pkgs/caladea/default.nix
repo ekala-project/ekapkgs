@@ -36,7 +36,6 @@ stdenvNoCC.mkDerivation rec {
     '';
     license = lib.licenses.asl20;
     platforms = lib.platforms.all;
-    maintainers = [ ];
 
     # Reduce the priority of this package. The intent is that if you
     # also install the `vista-fonts` package, then you probably will

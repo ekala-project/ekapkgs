@@ -23,7 +23,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "ergo";
     homepage = "https://github.com/ergochat/ergo";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

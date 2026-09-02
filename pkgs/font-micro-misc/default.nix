@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Micro pcf font";
     homepage = "https://gitlab.freedesktop.org/xorg/font/micro-misc";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

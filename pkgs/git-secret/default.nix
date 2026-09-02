@@ -11,7 +11,7 @@
 
 stdenv.mkDerivation {
   pname = "git-secret";
-  version = "0.5.0-unstable-2024-12-09";
+  version = "0.5.0";
 
   src = fetchFromGitHub {
     repo = "git-secret";
@@ -50,7 +50,6 @@ stdenv.mkDerivation {
     description = "Bash-tool to store your private data inside a git repository";
     homepage = "https://sobolevn.me/git-secret/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "git-secret";
   };

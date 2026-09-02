@@ -58,7 +58,6 @@ stdenv.mkDerivation rec {
     changelog = "https://github.com/bbc/audiowaveform/blob/${version}/ChangeLog";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "audiowaveform";
   };
 }

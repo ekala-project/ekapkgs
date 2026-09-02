@@ -25,7 +25,6 @@ stdenv.mkDerivation {
     description = "Tools for random password generation";
     homepage = "https://github.com/wilx/apg";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Molecular metadynamics library";
     homepage = "https://github.com/plumed/plumed2";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 })

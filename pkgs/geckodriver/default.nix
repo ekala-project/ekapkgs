@@ -27,7 +27,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Proxy for using W3C WebDriver-compatible clients to interact with Gecko-based browsers";
     homepage = "https://github.com/mozilla/geckodriver";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     mainProgram = "geckodriver";
   };
 })

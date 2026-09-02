@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://vtm.netxs.online/";
     license = lib.licenses.mit;
     mainProgram = "vtm";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

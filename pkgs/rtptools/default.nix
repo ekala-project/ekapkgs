@@ -13,7 +13,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Number of small applications that can be used for processing RTP data";
     homepage = "https://www.cs.columbia.edu/irt/software/rtptools/";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.bsd3;
   };

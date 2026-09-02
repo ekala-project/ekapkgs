@@ -30,7 +30,6 @@ buildGoModule (finalAttrs: {
   tags = [ "fts5" ];
 
   meta = {
-    maintainers = [ ];
     license = lib.licenses.gpl3;
     description = "Zettelkasten plain text note-taking assistant";
     homepage = "https://github.com/zk-org/zk";

@@ -26,7 +26,6 @@ stdenv.mkDerivation rec {
       to any DLNA-certified renderer device (e.g. a TV set, Bluray player, games console) on your home network.
     '';
     license = lib.licenses.unfree;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

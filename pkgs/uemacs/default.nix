@@ -40,7 +40,6 @@ gccStdenv.mkDerivation {
     description = "Linus Torvalds's random version of microemacs with his personal modifications";
     homepage = "https://git.kernel.org/pub/scm/editors/uemacs/uemacs.git/about/";
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "em";
     # MicroEMACS 3.9 can be copied and distributed freely for any
     # non-commercial purposes. MicroEMACS 3.9 can only be incorporated

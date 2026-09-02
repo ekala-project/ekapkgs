@@ -16,16 +16,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "stgit";
-  version = "2.5.5";
+  version = "2.6.1";
 
   src = fetchFromGitHub {
     owner = "stacked-git";
     repo = "stgit";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-zl3xy4t15QwdHeo0cjtorOcmD6oerprUswoMubpVLGU=";
+    hash = "sha256-mR2XsZrTQhpKU5qfOm9Cbj/2zQ9zE8judJkSGtgZHCI=";
   };
 
-  cargoHash = "sha256-HPwKKh2QAG690u5pVIIp6Mu6ejaXmIuSuzMLt2tvwhw=";
+  cargoHash = "sha256-cOd3t/l+b2gnM0G+atyUXK7oU4JBGXlJY64UmfGuhdU=";
 
   nativeBuildInputs = [
     pkg-config
@@ -88,6 +88,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
     mainProgram = "stg";
-    maintainers = [ ];
   };
 })

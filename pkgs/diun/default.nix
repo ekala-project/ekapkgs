@@ -55,7 +55,6 @@ buildGo126Module (finalAttrs: {
     changelog = "https://crazymax.dev/diun/changelog";
     license = lib.licenses.mit;
     mainProgram = "diun";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

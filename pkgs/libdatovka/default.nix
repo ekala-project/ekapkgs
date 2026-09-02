@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Client library for accessing SOAP services of Czech government-provided Databox infomation system";
     homepage = "https://gitlab.nic.cz/datovka/libdatovka";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

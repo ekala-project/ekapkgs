@@ -29,6 +29,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://loki-lib.sourceforge.net";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

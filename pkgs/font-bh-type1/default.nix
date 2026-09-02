@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Luxi PostScript Type 1 fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/bh-type1";
     license = lib.licenses.unfreeRedistributable;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

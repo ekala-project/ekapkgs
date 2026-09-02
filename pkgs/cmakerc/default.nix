@@ -32,7 +32,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Resource Compiler in a Single CMake Script";
     homepage = "https://github.com/vector-of-bool/cmrc";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

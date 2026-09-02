@@ -49,6 +49,5 @@ stdenv.mkDerivation (finalAttrs: {
       gpl2Plus # evmctl
     ];
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

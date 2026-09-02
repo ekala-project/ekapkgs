@@ -2,7 +2,6 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  fetchurl,
   cmake,
   pkg-config,
   docutils,
@@ -14,13 +13,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "rdma-core";
-  version = "63.0";
+  version = "64.0";
 
   src = fetchFromGitHub {
     owner = "linux-rdma";
     repo = "rdma-core";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-YW6BJS6acj9S8wFXUhC1vrJSm9YowGGuwWEBzQRVyPM=";
+    hash = "sha256-Y0pCGkvCjZ1F9Ojouesozn2Lxj+x7/0ck6/9tJmdkWw=";
   };
 
   strictDeps = true;
@@ -42,14 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     libnl
     perl
     udev
-  ];
-
-  patches = [
-    (fetchurl {
-      name = "cmake-allow-overriding-sysusers.d-install-directory";
-      url = "https://github.com/linux-rdma/rdma-core/commit/8b186b5d932701e94bbced83d2f3899ee53f041a.patch?full_index=1";
-      hash = "sha256-Rjknu7mmJL2Sx+Ypq9SRXU4LUiHERs9j5/qMIZaiRTI=";
-    })
   ];
 
   cmakeFlags = [
@@ -82,6 +73,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/linux-rdma/rdma-core";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

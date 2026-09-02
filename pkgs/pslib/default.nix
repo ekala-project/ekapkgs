@@ -65,7 +65,6 @@ stdenv.mkDerivation rec {
     homepage = "https://pslib.sourceforge.net/";
     changelog = "https://sourceforge.net/p/pslib/git/ci/master/tree/pslib/ChangeLog";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

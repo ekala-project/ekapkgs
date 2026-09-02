@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/dmtx/libdmtx/blob/v${finalAttrs.version}/ChangeLog";
     platforms = lib.platforms.all;
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

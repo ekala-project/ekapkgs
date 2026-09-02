@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "REPL for taskwarrior";
     homepage = "http://tasktools.org";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "tasksh";
   };

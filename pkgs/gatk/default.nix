@@ -9,10 +9,10 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "gatk";
-  version = "4.6.2.0";
+  version = "4.7.0.0";
   src = fetchzip {
     url = "https://github.com/broadinstitute/gatk/releases/download/${finalAttrs.version}/gatk-${finalAttrs.version}.zip";
-    sha256 = "sha256-I2p7BLh4q0i8qn1fTbzsaKVnCkMrPIxEpBUjOxNxgxI=";
+    sha256 = "sha256-tOiI2O2Ey5fz/I+FbiqqbnXcZXnJ5k0efI7MQ1tRie0=";
   };
 
   nativeBuildInputs = [ makeWrapper ];
@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Wide variety of tools with a primary focus on variant discovery and genotyping";
     license = lib.licenses.asl20;
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
-    maintainers = [ ];
     longDescription = ''
       The GATK is the industry standard for identifying SNPs and indels in germline
       DNA and RNAseq data. Its scope is now expanding to include somatic short variant

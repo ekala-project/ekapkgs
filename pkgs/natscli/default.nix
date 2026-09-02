@@ -35,7 +35,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/nats-io/natscli";
     changelog = "https://github.com/nats-io/natscli/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "nats";
   };
 })

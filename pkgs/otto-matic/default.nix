@@ -10,7 +10,7 @@
 
 stdenv.mkDerivation {
   pname = "OttoMatic";
-  version = "4.0.1-unstable-2025-09-28";
+  version = "4.0.1";
 
   src = fetchFromGitHub {
     owner = "jorio";
@@ -48,7 +48,6 @@ stdenv.mkDerivation {
     description = "Port of Otto Matic, a 2001 Macintosh game by Pangea Software, for modern operating systems";
     homepage = "https://github.com/jorio/OttoMatic";
     license = lib.licenses.cc-by-sa-40;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "OttoMatic";
   };

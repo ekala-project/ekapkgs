@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/benmcollins/libjwt";
     description = "JWT C Library";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

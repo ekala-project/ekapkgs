@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "taglib";
-  version = "2.2.1";
+  version = "2.3.1";
 
   src = fetchFromGitHub {
     owner = "taglib";
     repo = "taglib";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-xup/c1giZadq8jYQgsZW+NJkjw9ofpdivnBVKTVkRjU=";
+    hash = "sha256-QV7XeDsPh772opOg9NdrtAHSdBNMRPZMikzhEXR9wi0=";
   };
 
   strictDeps = true;
@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl21Only
       mpl11
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

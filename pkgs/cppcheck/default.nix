@@ -53,6 +53,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Plus;
     mainProgram = "cppcheck";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

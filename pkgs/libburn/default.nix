@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://dev.lovelyhq.com/libburnia/web/wiki";
     description = "Library by which preformatted data get onto optical media: CD, DVD, BD (Blu-Ray)";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "cdrskin";
     platforms = lib.platforms.unix;
   };

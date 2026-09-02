@@ -50,6 +50,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

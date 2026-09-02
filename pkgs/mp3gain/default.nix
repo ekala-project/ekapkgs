@@ -41,6 +41,5 @@ stdenv.mkDerivation rec {
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.unix;
     mainProgram = "mp3gain";
-    maintainers = [ ];
   };
 }

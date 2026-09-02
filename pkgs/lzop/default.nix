@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.lzop.org";
     description = "Fast file compressor";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "lzop";
   };

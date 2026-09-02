@@ -86,7 +86,6 @@ let
       license = lib.licenses.gpl2;
       changelog = "https://github.com/SimonKagstrom/kcov/blob/master/ChangeLog";
 
-      maintainers = [ ];
       platforms = lib.platforms.linux;
     };
   };

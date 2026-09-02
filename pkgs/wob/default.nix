@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     changelog = "https://github.com/francma/wob/releases/tag/${finalAttrs.version}";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "wob";
   };

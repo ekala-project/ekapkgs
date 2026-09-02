@@ -57,6 +57,5 @@ stdenvNoCC.mkDerivation {
     ];
     # darwin cannot deal with file names differing only in case
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

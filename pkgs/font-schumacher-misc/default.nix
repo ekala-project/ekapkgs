@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Schumacher pcf fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/schumacher-misc";
     license = lib.licenses.hpnd;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

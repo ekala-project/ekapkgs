@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Command line tool to clean and optimize Matroska (.mkv / .mka / .mks / .mk3d) and WebM (.webm / .weba) files that have already been muxed";
     homepage = "https://www.matroska.org";
     license = lib.licenses.bsdOriginal;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

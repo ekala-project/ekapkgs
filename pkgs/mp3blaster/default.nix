@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Audio player for the text console";
     homepage = "http://www.mp3blaster.org/";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

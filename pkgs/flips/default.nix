@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Patcher for IPS and BPS files";
     homepage = "https://git.disroot.org/Sir_Walrus/Flips";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "flips";
   };

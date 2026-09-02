@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "MQTTVersion";
     homepage = "https://www.eclipse.org/paho/";
     license = lib.licenses.epl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

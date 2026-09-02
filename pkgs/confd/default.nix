@@ -6,7 +6,7 @@
 
 buildGoModule {
   pname = "confd";
-  version = "0.16-unstable-2023-12-09";
+  version = "0.16.0";
 
   src = fetchFromGitHub {
     owner = "kelseyhightower";
@@ -28,7 +28,6 @@ buildGoModule {
     description = "Manage local application configuration files using templates and data from etcd or consul";
     homepage = "https://github.com/kelseyhightower/confd";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "confd";
   };
 }

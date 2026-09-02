@@ -43,6 +43,5 @@ stdenv.mkDerivation {
     description = "Visualization for profiled code";
     mainProgram = "flamegraph.pl";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

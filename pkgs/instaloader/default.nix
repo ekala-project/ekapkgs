@@ -6,14 +6,14 @@
 
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "instaloader";
-  version = "4.14.2";
+  version = "4.15.3";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "instaloader";
     repo = "instaloader";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-q5/lZ+BHnrod0vG/ZJw/5iJRKKaP3Gbns5yaZH0P2rE=";
+    hash = "sha256-DsVDeyevMnwfL8yGsxbma5KPl7KeEjex3aB4npDY3DM=";
   };
 
   build-system = [
@@ -30,7 +30,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   meta = {
     homepage = "https://instaloader.github.io/";
     description = "Download pictures (or videos) along with their captions and other metadata from Instagram";
-    maintainers = [ ];
     license = lib.licenses.mit;
     mainProgram = "instaloader";
   };

@@ -57,7 +57,6 @@ perlPackages.buildPerlPackage rec {
     homepage = "https://ddclient.net/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "ddclient";
   };
 }

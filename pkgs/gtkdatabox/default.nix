@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gtkdatabox.sourceforge.io/";
     license = lib.licenses.lgpl2Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

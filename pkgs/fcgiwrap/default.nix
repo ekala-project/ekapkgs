@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/gnosek/fcgiwrap";
     description = "Simple server for running CGI applications over FastCGI";
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
     license = lib.licenses.mit;
     mainProgram = "fcgiwrap";

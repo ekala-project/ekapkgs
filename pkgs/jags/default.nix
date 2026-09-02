@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "jags";
     license = lib.licenses.gpl2;
     homepage = "http://mcmc-jags.sourceforge.net";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

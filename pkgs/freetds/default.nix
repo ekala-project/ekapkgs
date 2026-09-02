@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/FreeTDS/freetds/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.lgpl2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

@@ -102,7 +102,7 @@ stdenv.mkDerivation (finalAttrs: {
       gpl2 # Michael Reid's and Eric Dietz software
       mit # Dik T. Winter's software
     ];
-    teams = [ lib.teams.sage ];
+    teams = [ ];
     platforms = lib.platforms.unix;
   };
 })

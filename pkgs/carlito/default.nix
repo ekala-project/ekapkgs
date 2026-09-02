@@ -25,7 +25,6 @@ stdenvNoCC.mkDerivation rec {
     description = "Sans-serif font metric-compatible with Microsoft Calibri";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     priority = 10;
   };
 }

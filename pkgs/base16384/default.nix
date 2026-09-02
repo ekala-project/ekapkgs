@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "base16384";
     homepage = "https://github.com/fumiama/base16384";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

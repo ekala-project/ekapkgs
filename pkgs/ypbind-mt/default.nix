@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/thkukuk/ypbind-mt/blob/master/NEWS";
     license = lib.licenses.gpl2Plus;
     mainProgram = "ypbind";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -45,7 +45,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://jorisroovers.com/gitlint/";
     changelog = "https://github.com/jorisroovers/gitlint/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gitlint";
   };
 })

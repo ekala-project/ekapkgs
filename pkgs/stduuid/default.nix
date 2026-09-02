@@ -36,7 +36,6 @@ stdenv.mkDerivation {
   meta = {
     description = "C++17 cross-platform implementation for UUIDs";
     license = lib.licenses.mit;
-    maintainers = [ ];
     homepage = "https://github.com/mariusbancila/stduuid";
     platforms = lib.platforms.all;
   };

@@ -46,7 +46,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://opendev.org/opendev/git-review";
     changelog = "https://docs.opendev.org/opendev/git-review/latest/releasenotes.html#relnotes-${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "git-review";
   };
 })

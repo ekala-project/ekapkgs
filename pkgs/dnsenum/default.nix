@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/SparrowOchon/dnsenum2";
     description = "Tool to enumerate DNS information";
     mainProgram = "dnsenum";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
   };

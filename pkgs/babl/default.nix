@@ -70,7 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "babl";
     homepage = "https://gegl.org/babl/";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

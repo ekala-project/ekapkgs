@@ -61,7 +61,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   meta = {
     description = "Fast and minimalistic image viewer";
     homepage = "https://arturkovacs.github.io/emulsion-website/";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.mit;
     mainProgram = "emulsion";

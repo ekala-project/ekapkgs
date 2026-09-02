@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     description = "Attachment extractor for MIME messages";
-    maintainers = [ ];
     homepage = "https://pldaniels.com/ripmime/";
     platforms = lib.platforms.all;
     mainProgram = "ripmime";

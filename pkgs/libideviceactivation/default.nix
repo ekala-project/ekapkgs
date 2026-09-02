@@ -50,6 +50,5 @@ stdenv.mkDerivation (finalAttrs: {
     ];
     mainProgram = "ideviceactivation";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

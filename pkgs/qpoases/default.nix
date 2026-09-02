@@ -43,6 +43,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/coin-or/qpOASES";
     changelog = "https://github.com/coin-or/qpOASES/blob/${finalAttrs.src.tag}/VERSIONS.txt";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
   };
 })

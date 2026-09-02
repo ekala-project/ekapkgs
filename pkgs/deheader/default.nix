@@ -70,7 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://catb.org/~esr/deheader";
     changelog = "https://gitlab.com/esr/deheader/-/blob/master/NEWS.adoc";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
 
     platforms = lib.platforms.linux;
   };

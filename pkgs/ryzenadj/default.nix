@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "ryzenadj";
     homepage = "https://github.com/FlyGoat/RyzenAdj";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
     platforms = [ "x86_64-linux" ];
   };
 })

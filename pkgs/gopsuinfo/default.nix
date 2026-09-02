@@ -36,7 +36,6 @@ buildGoModule (finalAttrs: {
     description = "Gopsutil-based command to display system usage info";
     homepage = "https://github.com/nwg-piotr/gopsuinfo";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "gopsuinfo";
   };

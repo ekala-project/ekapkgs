@@ -64,6 +64,5 @@ buildGo126Module (finalAttrs: {
     downloadPage = "https://github.com/cert-manager/cmctl";
     license = lib.licenses.asl20;
     homepage = "https://cert-manager.io/";
-    maintainers = [ ];
   };
 })

@@ -96,6 +96,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://instead.syscall.ru/";
     license = lib.licenses.mit;
     platforms = with lib.platforms; linux;
-    maintainers = [ ];
   };
 })

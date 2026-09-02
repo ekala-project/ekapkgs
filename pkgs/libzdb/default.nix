@@ -38,6 +38,5 @@ stdenv.mkDerivation (finalAttrs: {
     downloadPage = "https://bitbucket.org/tildeslash/libzdb/";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

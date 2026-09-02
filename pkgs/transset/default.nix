@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
       mitOpenGroup
       hpndSellVariant
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "transset";
   };

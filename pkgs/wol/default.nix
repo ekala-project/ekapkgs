@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Implements Wake On LAN functionality in a small program";
     homepage = "https://sourceforge.net/projects/wake-on-lan/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "wol";
     platforms = lib.platforms.unix;
   };

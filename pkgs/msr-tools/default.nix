@@ -23,6 +23,5 @@ stdenv.mkDerivation {
     homepage = "https://github.com/intel/msr-tools";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Fork of libcurl used by GNUnet";
     homepage = "https://gnunet.org/en/gnurl.html";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.curl;
   };

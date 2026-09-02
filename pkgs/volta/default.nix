@@ -57,7 +57,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://volta.sh/";
     changelog = "https://github.com/volta-cli/volta/blob/main/RELEASES.md";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "volta";
   };
 })

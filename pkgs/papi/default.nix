@@ -25,6 +25,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library providing access to various hardware performance counters";
     license = lib.licenses.bsdOriginal;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

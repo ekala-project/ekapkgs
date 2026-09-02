@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/RIPE-NCC/bgpdump";
     description = "Analyze dump files produced by Zebra/Quagga or MRT";
     license = lib.licenses.hpnd;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "bgpdump";
   };

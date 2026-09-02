@@ -104,7 +104,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.mit;
     mainProgram = "fc-solve";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

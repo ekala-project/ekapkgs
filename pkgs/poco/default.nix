@@ -67,7 +67,6 @@ stdenv.mkDerivation rec {
     homepage = "https://pocoproject.org/";
     description = "Cross-platform C++ libraries with a network/internet focus";
     license = lib.licenses.boost;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

@@ -53,7 +53,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Assorted git tools, including git-restore-mtime";
     homepage = "https://github.com/MestreLion/git-tools";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

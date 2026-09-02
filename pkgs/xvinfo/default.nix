@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/app/xvinfo";
     license = lib.licenses.x11;
     mainProgram = "xvinfo";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

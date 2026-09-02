@@ -28,7 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://tty-share.com";
     description = "Share terminal via browser for remote work or shared sessions";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "tty-share";
   };
 })

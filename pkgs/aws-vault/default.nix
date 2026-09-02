@@ -10,17 +10,17 @@
 }:
 buildGo126Module (finalAttrs: {
   pname = "aws-vault";
-  version = "7.13.1";
+  version = "7.13.5";
 
   src = fetchFromGitHub {
     owner = "ByteNess";
     repo = "aws-vault";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-J9soEr5QhHZZLthWyNCr3ofCJD01gVLqT+8XVXgd/oA=";
+    hash = "sha256-LQu1SKPAROv+1wfREgQiSYCo/mv0WuiJ2wkKGYOJJCE=";
   };
 
   proxyVendor = true;
-  vendorHash = "sha256-5GYKo2bs0JBe7aiqv/HVerfJKYf1Ocen7xkQvHQfm44=";
+  vendorHash = "sha256-jytF037CRWTPlWDk1luyLrkFkW9LXNqpbDXVX8xbxsM=";
 
   nativeBuildInputs = [
     installShellFiles
@@ -60,6 +60,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "aws-vault";
     homepage = "https://github.com/ByteNess/aws-vault";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

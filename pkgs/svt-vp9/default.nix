@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/OpenVisualCloud/SVT-VP9/releases/tag/v${finalAttrs.version}";
     homepage = "https://github.com/OpenVisualCloud/SVT-VP9";
     license = lib.licenses.bsd2Patent;
-    maintainers = [ ];
     mainProgram = "SvtVp9EncApp";
     platforms = [ "x86_64-linux" ];
   };

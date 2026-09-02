@@ -25,6 +25,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/egoist/dum";
     changelog = "https://github.com/egoist/dum/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

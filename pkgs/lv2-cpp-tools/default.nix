@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://ll-plugins.nongnu.org/hacking.html";
     description = "Tools and libraries that may come in handy when writing LV2 plugins in C++";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

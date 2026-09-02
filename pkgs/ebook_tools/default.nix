@@ -35,6 +35,5 @@ stdenv.mkDerivation rec {
     description = "Tools and library for dealing with various ebook file formats";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

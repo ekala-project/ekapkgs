@@ -41,7 +41,6 @@ gccStdenv.mkDerivation {
 
   meta = {
     description = "Automated theorem prover for first-order logic";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.bsd2;
     downloadPage = "http://www.spass-prover.org/download/index.html";

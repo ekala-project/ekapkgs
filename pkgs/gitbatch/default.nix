@@ -40,7 +40,6 @@ buildGoModule (finalAttrs: {
     description = "Running git UI commands";
     homepage = "https://github.com/isacikgoz/gitbatch";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
     mainProgram = "gitbatch";
   };

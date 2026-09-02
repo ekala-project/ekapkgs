@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
       lib.licenses.zlib
       cc-by-sa-30
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     hydraPlatforms = [ ];
   };

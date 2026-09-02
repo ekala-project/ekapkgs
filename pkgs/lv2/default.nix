@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Plugin standard for audio systems";
     mainProgram = "lv2_validate";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

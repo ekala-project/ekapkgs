@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "XCB utility library for X11 keysyms";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxcb-keysyms";
     license = lib.licenses.x11;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

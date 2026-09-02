@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
       apple-psl10 # new files
     ];
     mainProgram = "pdisk";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

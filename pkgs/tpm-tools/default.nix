@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://sourceforge.net/projects/trousers/files/tpm-tools/";
     license = lib.licenses.cpl10;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -52,6 +52,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/eradman/rset/raw/${finalAttrs.version}/NEWS";
     license = lib.licenses.isc;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

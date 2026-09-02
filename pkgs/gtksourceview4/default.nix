@@ -92,6 +92,11 @@ stdenv.mkDerivation (finalAttrs: {
     dbus
   ];
 
+  mesonFlags = [
+    "-Dgir=false"
+    "-Dvapi=false"
+  ];
+
   postPatch = ''
     # https://gitlab.gnome.org/GNOME/gtksourceview/-/merge_requests/295
     # build: drop unnecessary vapigen check
@@ -120,6 +125,5 @@ stdenv.mkDerivation (finalAttrs: {
     pkgConfigModules = [ "gtksourceview-4" ];
     platforms = lib.platforms.unix;
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 })

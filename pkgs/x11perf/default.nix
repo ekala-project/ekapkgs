@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/test/x11perf";
     license = lib.licenses.hpnd;
     mainProgram = "x11perf";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

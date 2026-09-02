@@ -27,7 +27,6 @@ stdenv.mkDerivation rec {
     description = "Hiragana text to Kana Kanji mixed text Japanese input method";
     homepage = "https://anthy.osdn.jp/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

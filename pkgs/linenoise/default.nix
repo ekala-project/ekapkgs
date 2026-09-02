@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/antirez/linenoise";
     description = "Minimal, zero-config, BSD licensed, readline replacement";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.bsd2;
   };

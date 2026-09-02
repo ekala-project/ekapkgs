@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     mainProgram = "xa";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

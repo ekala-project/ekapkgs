@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation rec {
   pname = "wildmidi";
-  version = "0.4.6";
+  version = "0.5.0";
 
   src = fetchFromGitHub {
     owner = "Mindwerks";
     repo = "wildmidi";
     rev = "${pname}-${version}";
-    sha256 = "sha256-syjs8y75M2ul7whiZxnWMSskRJd0ixFqnep7qsTbiDE=";
+    sha256 = "sha256-KFJW2m7TJ0RExK/C0XHyOefKGFLUszl7Jh6l10NjeHM=";
   };
 
   nativeBuildInputs = [
@@ -38,7 +38,6 @@ stdenv.mkDerivation rec {
     mainProgram = "wildmidi";
     homepage = "https://wildmidi.sourceforge.net/";
     license = lib.licenses.lgpl3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

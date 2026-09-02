@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Training program about morse-code for aspiring radio hams";
     homepage = "https://gitlab.com/esr/morse-classic";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "morse";
   };

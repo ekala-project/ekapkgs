@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
       mit-modern
     ];
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

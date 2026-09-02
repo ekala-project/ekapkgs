@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Implementation of the Double Description Method for generating all vertices of a convex polyhedron";
     homepage = "https://www.inf.ethz.ch/personal/fukudak/cdd_home/index.html";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

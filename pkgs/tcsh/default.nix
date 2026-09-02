@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Enhanced version of the Berkeley UNIX C shell (csh)";
     mainProgram = "tcsh";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

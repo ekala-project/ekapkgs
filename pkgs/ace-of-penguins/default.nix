@@ -81,7 +81,6 @@ stdenv.mkDerivation (finalAttrs: {
       Martin Thornquist).
     '';
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

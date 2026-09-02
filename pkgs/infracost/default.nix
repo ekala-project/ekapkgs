@@ -72,7 +72,6 @@ buildGoModule (finalAttrs: {
       compare different deployment options upfront.
     '';
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "infracost";
   };
 })

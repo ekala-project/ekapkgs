@@ -14,13 +14,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "burp";
-  version = "3.2.0";
+  version = "3.3.0";
 
   src = fetchFromGitHub {
     owner = "grke";
     repo = "burp";
     tag = finalAttrs.version;
-    hash = "sha256-jZSrHq3dL9Za71E2k4UDTHe10ESAgkBy5bogY2AqtnM=";
+    hash = "sha256-tA+yAYGbafVOelqRl689w89RNZmrb2Tjcq/OEh1tChk=";
   };
 
   nativeBuildInputs = [
@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://burp.grke.org";
     changelog = "https://github.com/grke/burp/blob/${finalAttrs.version}/CHANGELOG";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

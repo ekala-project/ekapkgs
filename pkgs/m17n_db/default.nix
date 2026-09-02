@@ -33,6 +33,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "m17n-db";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

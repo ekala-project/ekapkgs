@@ -11,13 +11,13 @@
 
 tcl.mkTclDerivation rec {
   pname = "scid";
-  version = "5.0.2";
+  version = "5.1.202601";
 
   src = fetchFromGitHub {
     owner = "benini";
     repo = "scid";
     rev = "v${version}";
-    hash = "sha256-5WGZm7EwhZAMKJKxj/OOIFOJIgPBcc6/Bh4xVAlia4Y=";
+    hash = "sha256-S5G28RB0i97dT/hXWpsA6mp6AuiBylzoeXGIbQKZiNM=";
   };
 
   postPatch = ''
@@ -50,7 +50,6 @@ tcl.mkTclDerivation rec {
 
   meta = {
     description = "Chess database with play and training functionality";
-    maintainers = [ ];
     homepage = "https://scid.sourceforge.net/";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.all;

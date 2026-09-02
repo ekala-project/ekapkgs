@@ -24,14 +24,14 @@
 
 stdenv.mkDerivation rec {
   pname = "tev";
-  version = "2.13.1";
+  version = "2.14.0";
 
   src = fetchFromGitHub {
     owner = "Tom94";
     repo = "tev";
     tag = "v${version}";
     fetchSubmodules = true;
-    hash = "sha256-+11GpyUCtVvIeSTEJx6WTvN6aUcvuF/lDlA/+6IduKQ=";
+    hash = "sha256-WfpanCZ3U/2jGNrOM+1euzfGCqcoODBLYuRtcPcCc4Y=";
   };
 
   postPatch = lib.optionalString stdenv.hostPlatform.isLinux (
@@ -89,7 +89,6 @@ stdenv.mkDerivation rec {
     changelog = "https://github.com/Tom94/tev/releases/tag/v${version}";
     homepage = "https://github.com/Tom94/tev";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

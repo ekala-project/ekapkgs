@@ -14,11 +14,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "12aql6svkplxq5fjycar18863hcq84c5kx8g6f4rj0lcvigw24di";
   };
 
-  patches = [
-    # Remove once https://sourceforge.net/p/soxr/code/merge-requests/5/ is merged.
-    ./arm64-check.patch
-  ];
-
   outputs = [
     "out"
     "dev"
@@ -31,11 +26,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeFlags = [
-    # Workaround for upstream not using GNUInstallDirs.
     "-DINCLUDE_INSTALL_DIR=${placeholder "dev"}/include"
   ];
 
-  # Fix the build with CMake 4.
   postPatch = ''
     substituteInPlace CMakeLists.txt \
       --replace-fail \
@@ -48,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://soxr.sourceforge.net";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.unix ++ lib.platforms.windows;
-    maintainers = [ ];
   };
 })

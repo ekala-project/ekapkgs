@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "tuptime";
-  version = "5.2.4";
+  version = "5.2.6";
 
   src = fetchFromGitHub {
     owner = "rfmoz";
     repo = "tuptime";
     rev = finalAttrs.version;
-    sha256 = "sha256-pYGtgv9hPBG/URD2nOWg6qJYYLtlqLW+t5mCLpzKlEc=";
+    sha256 = "sha256-ESdhp65OclwhbqXjC5bA+qTx22H5haINZPg7G1PXnaI=";
   };
 
   nativeBuildInputs = [
@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/rfrail3/tuptime/blob/master/CHANGELOG";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "tuptime";
   };
 })

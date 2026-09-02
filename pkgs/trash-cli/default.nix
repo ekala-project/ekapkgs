@@ -74,7 +74,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   meta = {
     homepage = "https://github.com/andreafrancia/trash-cli";
     description = "Command line interface to the freedesktop.org trashcan";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Plus;
     mainProgram = "trash";

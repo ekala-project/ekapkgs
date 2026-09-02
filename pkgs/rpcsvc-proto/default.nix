@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/thkukuk/rpcsvc-proto";
     description = "This package contains rpcsvc proto.x files from glibc, which are missing in libtirpc";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "rpcgen";
   };
 })

@@ -43,7 +43,6 @@ stdenv.mkDerivation {
     description = "Standalone library for reading MAME's CHDv1-v5 formats";
     homepage = "https://github.com/rtissera/libchdr";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

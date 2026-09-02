@@ -49,6 +49,5 @@ stdenv.mkDerivation rec {
     homepage = "https://gtkspell.sourceforge.net";
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2;
-    maintainers = [ ];
   };
 }

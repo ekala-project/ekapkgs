@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://sourceforge.net/projects/tboot/";
     changelog = "https://sourceforge.net/p/tboot/code/ci/v${finalAttrs.version}/tree/CHANGELOG";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = [
       "x86_64-linux"
       "i686-linux"

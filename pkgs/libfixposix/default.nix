@@ -27,6 +27,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Thin wrapper over POSIX syscalls and some replacement functionality";
     license = lib.licenses.boost;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
   };
 })

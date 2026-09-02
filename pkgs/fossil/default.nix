@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://www.fossil-scm.org/";
     license = licenses.bsd2;
-    maintainers = [ ];
     platforms = platforms.all;
     mainProgram = "fossil";
   };

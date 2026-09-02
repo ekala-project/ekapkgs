@@ -72,7 +72,6 @@ buildGoModule (finalAttrs: {
     description = "Composable all-in-one mail server";
     homepage = "https://maddy.email";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "maddy";
   };
 })

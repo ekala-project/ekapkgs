@@ -47,7 +47,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "TOML toolkit written in Rust";
     homepage = "https://taplo.tamasfe.dev";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "taplo";
   };
 })

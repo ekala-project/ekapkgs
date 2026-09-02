@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Reliable, high-performance, thread safe, flexible, clear-model, pure C logging library";
     homepage = "https://hardysimpson.github.io/zlog/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "zlog-chk-conf";
     platforms = lib.platforms.unix;
   };

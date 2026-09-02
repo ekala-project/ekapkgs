@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "openjph";
-  version = "0.24.1";
+  version = "0.31.0";
 
   src = fetchFromGitHub {
     owner = "aous72";
     repo = "openjph";
     rev = finalAttrs.version;
-    hash = "sha256-4TodVzVK86UCrD1Q6EzIjsJhyOFQUryQHZmQ2DrXVTg=";
+    hash = "sha256-rMiWIu/D3zc80zX63jgorcY/JMJLfCBBXEAuDzzWc4I=";
   };
 
   nativeBuildInputs = [
@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Open-source implementation of JPEG2000 Part-15 (or JPH or HTJ2K)";
     homepage = "https://openjph.org/";
-    maintainers = [ ];
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
     pkgConfigModules = [ "openjph" ];

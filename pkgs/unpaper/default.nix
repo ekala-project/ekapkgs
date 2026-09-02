@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/unpaper/unpaper/blob/unpaper-${finalAttrs.version}/NEWS";
     description = "Post-processing tool for scanned sheets of paper";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "unpaper";
   };

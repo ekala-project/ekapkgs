@@ -21,7 +21,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Preprocessor for mdbook to add Material Design admonishments";
     mainProgram = "mdbook-admonish";
     license = lib.licenses.mit;
-    maintainers = [ ];
     homepage = "https://github.com/tommilligan/mdbook-admonish";
   };
 })

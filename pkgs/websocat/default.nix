@@ -65,7 +65,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/vi/websocat";
     changelog = "https://github.com/vi/websocat/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "websocat";
   };
 })

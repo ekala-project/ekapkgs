@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Daemon and companion application to Shairport Sync that monitors timing data from any PTP clocks";
     license = lib.licenses.gpl2Only;
     mainProgram = "nqptp";
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.freebsd;
   };
 })

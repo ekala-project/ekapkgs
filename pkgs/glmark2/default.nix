@@ -69,6 +69,5 @@ stdenv.mkDerivation (finalAttrs: {
       the OpenGL 2.0 API that is compatible with OpenGL ES 2.0.
     '';
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

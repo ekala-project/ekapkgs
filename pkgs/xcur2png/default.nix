@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Convert X cursors to PNG images";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "xcur2png";
   };
 })

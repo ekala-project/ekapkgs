@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
       gpl2Only
       mit
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

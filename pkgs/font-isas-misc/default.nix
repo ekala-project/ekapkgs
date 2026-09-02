@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Isas Fangsong ti & Song ti pcf fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/isas-misc";
     license = lib.licenses.hpnd;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

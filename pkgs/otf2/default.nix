@@ -56,6 +56,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://perftools.pages.jsc.fz-juelich.de/cicd/otf2/tags/otf2-${finalAttrs.version}/ChangeLog.txt";
     description = "Open Trace Format 2 library";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

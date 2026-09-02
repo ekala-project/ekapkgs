@@ -50,7 +50,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       album art through kitty image protocol without any ugly hacks. It also features ranger/lf
       inspired browsing of songs and other goodies.
     '';
-    maintainers = [ ];
     mainProgram = "rmpc";
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };

@@ -204,7 +204,6 @@ stdenv.mkDerivation {
     changelog = "https://codeberg.org/dnkl/foot/releases/tag/${version}";
     description = "Fast, lightweight and minimalistic Wayland terminal emulator";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "foot";
   };

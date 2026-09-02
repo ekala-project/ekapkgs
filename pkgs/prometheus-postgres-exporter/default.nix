@@ -37,6 +37,5 @@ buildGoModule rec {
     description = "Prometheus exporter for PostgreSQL";
     mainProgram = "postgres_exporter";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

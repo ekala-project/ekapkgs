@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C++ interface to the GLib library";
     homepage = "https://gtkmm.org/";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

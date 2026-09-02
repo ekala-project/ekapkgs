@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "aptdec";
     homepage = "https://github.com/Xerbo/aptdec";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

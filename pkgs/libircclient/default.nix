@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Small but extremely powerful library which implements the client IRC protocol";
     homepage = "http://www.ulduzsoft.com/libircclient/";
     license = lib.licenses.lgpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

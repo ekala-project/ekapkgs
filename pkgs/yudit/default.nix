@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.yudit.org/";
     mainProgram = "yudit";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     # Might work on Darwin but currently fails, and upstream doesn't officially
     # supports it.
     platforms = lib.platforms.linux;

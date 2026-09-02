@@ -37,6 +37,5 @@ stdenv.mkDerivation rec {
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.unix;
     mainProgram = "libIDL-config-2";
-    maintainers = [ ];
   };
 }

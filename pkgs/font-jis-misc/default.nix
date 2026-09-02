@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     # - COPYING just says "permission to use"
     # - The industial standard (JIS X 9051: 1984) this is from, is paid.
     license = lib.licenses.unfree;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

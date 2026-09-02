@@ -70,7 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/paul-j-lucas/cdecl";
     changelog = "https://github.com/paul-j-lucas/cdecl/blob/cdecl-${finalAttrs.version}/ChangeLog";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "cdecl";
   };

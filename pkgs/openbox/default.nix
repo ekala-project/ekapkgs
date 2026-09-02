@@ -88,6 +88,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://openbox.org/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

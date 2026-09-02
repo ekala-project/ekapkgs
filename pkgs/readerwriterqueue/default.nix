@@ -9,7 +9,7 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "readerwriterqueue";
   # Not using a stable version since this one produces
   # readerwriterqueueConfig.cmake needed by dependent packages.
-  version = "1.0.6-2024-07-09";
+  version = "1.0.7";
 
   src = fetchFromGitHub {
     owner = "cameron314";
@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fast single-producer, single-consumer lock-free queue for C";
     homepage = "https://github.com/cameron314/readerwriterqueue";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

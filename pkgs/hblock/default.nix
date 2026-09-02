@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "hblock";
     homepage = "https://github.com/hectorm/hblock";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -6,13 +6,13 @@
 
 buildGoModule (finalAttrs: {
   pname = "resterm";
-  version = "0.46.4";
+  version = "1.2.4";
 
   src = fetchFromGitHub {
     owner = "unkn0wn-root";
     repo = "resterm";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-Fpt/ZYdLC4OVA9Aj8NXJ76TY1ofxifXfjqD6irVV6cM=";
+    hash = "sha256-vp1/yWDqx8fQp4NifjENr/x8e0TVSRlLYv7TshfwC2Y=";
   };
 
   vendorHash = "sha256-K6edyYLkVQwEZBAfRwgckUJI8dmo/ZxFRjEkExtyLxY=";
@@ -43,6 +43,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "resterm";
     license = lib.licenses.asl20;
     platforms = with lib.platforms; linux ++ darwin ++ windows;
-    maintainers = [ ];
   };
 })

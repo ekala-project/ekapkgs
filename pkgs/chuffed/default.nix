@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "The Chuffed CP solver";
     longDescription = "Chuffed is a state of the art lazy clause solver designed from the ground up with lazy clause generation in mind.";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

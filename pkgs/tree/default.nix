@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Command to produce a depth indented directory listing";
     homepage = "https://oldmanprogrammer.net/source.php?dir=projects/tree";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "tree";
     platforms = lib.platforms.all;
   };

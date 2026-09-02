@@ -52,6 +52,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://openquantumsafe.org";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

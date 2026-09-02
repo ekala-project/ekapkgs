@@ -26,6 +26,5 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/transmission/libutp";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

@@ -31,7 +31,7 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "wml";
-  version = "2.32.0-unstable-2026-05-08";
+  version = "2.32.0";
 
   src = fetchFromGitHub {
     owner = "thewml";
@@ -74,7 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
     downloadPage = "https://github.com/thewml/website-meta-language/releases";
     changelog = "https://github.com/thewml/website-meta-language/blob/${finalAttrs.src.rev}/src/ChangeLog";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     mainProgram = "wml";
     platforms = lib.platforms.linux;
   };

@@ -26,6 +26,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.oml;
     mainProgram = "cgi-fcgi";
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

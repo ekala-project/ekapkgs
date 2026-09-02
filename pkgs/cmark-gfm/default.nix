@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "cmark-gfm";
     homepage = "https://github.com/github/cmark-gfm";
     changelog = "https://github.com/github/cmark-gfm/raw/${finalAttrs.version}/changelog.txt";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.bsd2;
   };

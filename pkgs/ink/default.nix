@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://ink.sourceforge.net/";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux ++ lib.platforms.freebsd;
-    maintainers = [ ];
     mainProgram = "ink";
   };
 })

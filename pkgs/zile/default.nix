@@ -78,7 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
       every Emacs user should feel at home.
     '';
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "zile";
   };

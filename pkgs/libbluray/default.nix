@@ -41,6 +41,5 @@ stdenv.mkDerivation rec {
     description = "Library to access Blu-Ray disks for video playback";
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

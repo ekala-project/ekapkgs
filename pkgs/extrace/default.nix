@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
       bsd2
     ];
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

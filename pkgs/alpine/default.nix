@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Console mail reader";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     homepage = "https://alpineapp.email/";
   };

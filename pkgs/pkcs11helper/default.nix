@@ -35,6 +35,5 @@ stdenv.mkDerivation rec {
       gpl2Only
     ];
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

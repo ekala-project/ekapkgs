@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Light-weight scripting library";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     downloadPage = "https://www.angelcode.com/angelscript/downloads.html";
     homepage = "https://www.angelcode.com/angelscript/";

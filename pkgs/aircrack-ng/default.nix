@@ -68,6 +68,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.aircrack-ng.org/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

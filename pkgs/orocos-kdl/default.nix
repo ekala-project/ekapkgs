@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Kinematics and Dynamics Library";
     homepage = "https://www.orocos.org/kdl.html";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

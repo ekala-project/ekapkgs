@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
       JUCE library.
     '';
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

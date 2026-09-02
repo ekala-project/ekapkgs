@@ -43,6 +43,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "IPv6 Router Advertisement Daemon";
     platforms = lib.platforms.linux;
     license = lib.licenses.bsdOriginal;
-    maintainers = [ ];
   };
 })

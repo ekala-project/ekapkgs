@@ -29,7 +29,6 @@ stdenv.mkDerivation {
     homepage = "https://extundelete.sourceforge.net/";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "extundelete";
   };
 }

@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/libhangul/nabi";
     changelog = "https://github.com/libhangul/nabi/blob/nabi-${finalAttrs.version}/NEWS";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

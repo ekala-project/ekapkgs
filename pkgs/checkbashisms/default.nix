@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Check shell scripts for non-portable syntax";
     mainProgram = "checkbashisms";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

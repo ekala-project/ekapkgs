@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Small X utility to perform elementary actions on windows";
     homepage = "https://github.com/baskerville/xdo";
-    maintainers = [ ];
     license = lib.licenses.bsd2;
     platforms = lib.platforms.linux;
     mainProgram = "xdo";

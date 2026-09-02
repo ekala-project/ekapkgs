@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://www.graphics.rwth-aachen.de/software/openmesh/";
     description = "Generic and efficient polygon mesh data structure";
-    maintainers = [ ];
     platforms = lib.platforms.all;
     license = lib.licenses.bsd3;
   };

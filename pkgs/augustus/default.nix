@@ -53,6 +53,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Keriew/augustus";
     license = lib.licenses.agpl3Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

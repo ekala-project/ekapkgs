@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/app/xeyes";
     license = lib.licenses.x11;
     mainProgram = "xeyes";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

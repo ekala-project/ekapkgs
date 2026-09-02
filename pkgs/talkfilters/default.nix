@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Converts English text into text that mimics a stereotyped or humorous dialect";
     homepage = "https://www.hyperrealm.com/talkfilters/talkfilters.html";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
   };
 })

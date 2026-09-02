@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.maier-komor.de/xjobs.html";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     longDescription = ''
       xjobs reads job descriptions line by line and executes them in parallel.
 

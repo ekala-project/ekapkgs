@@ -52,6 +52,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Google's i18n library for parsing and using phone numbers";
     homepage = "https://github.com/google/libphonenumber";
     license = licenses.asl20;
-    maintainers = [ ];
   };
 })

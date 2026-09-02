@@ -59,6 +59,8 @@ stdenv.mkDerivation (finalAttrs: {
     "--localstatedir=/var"
     (if gtkVersion == null then "--disable-gtk" else "--with-gtk=${gtkVersion}")
     "--disable-scrollkeeper"
+    "--disable-introspection"
+    "--disable-vala"
   ]
   ++ lib.optional (gtkVersion != "2") "--disable-dumper";
 
@@ -78,7 +80,6 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl21
       lgpl3
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

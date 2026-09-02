@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Complete emulation of CPC464, CPC664 and CPC6128";
     homepage = "https://github.com/ColinPitrat/caprice32";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "cap32";
   };

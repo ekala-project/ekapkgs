@@ -55,7 +55,6 @@ stdenv.mkDerivation rec {
     description = "DBus API that allows cloud storage sync clients to expose their services";
     homepage = "https://gitlab.gnome.org/World/libcloudproviders";
     license = licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = platforms.unix;
   };
 }

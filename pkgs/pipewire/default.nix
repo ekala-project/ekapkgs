@@ -284,7 +284,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://pipewire.org/";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux ++ lib.platforms.freebsd;
-    maintainers = [ ];
     pkgConfigModules = [
       "libpipewire-0.3"
       "libspa-0.2"

@@ -35,7 +35,6 @@ buildGoModule (finalAttrs: {
     description = "Userspace Go implementation of AmneziaWG";
     homepage = "https://github.com/amnezia-vpn/amneziawg-go";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "amneziawg-go";
   };
 })

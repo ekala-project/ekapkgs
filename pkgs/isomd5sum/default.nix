@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Utilities for working with md5sum implanted in ISO images";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

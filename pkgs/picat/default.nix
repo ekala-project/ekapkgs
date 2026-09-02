@@ -70,6 +70,5 @@ stdenv.mkDerivation {
       "x86_64-cygwin"
       "aarch64-darwin"
     ];
-    maintainers = [ ];
   };
 }

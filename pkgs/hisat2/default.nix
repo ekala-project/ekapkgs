@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "hisat2";
-  version = "2.2.2";
+  version = "2.2.3";
 
   src = fetchFromGitHub {
     owner = "DaehwanKimLab";
     repo = "hisat2";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-Ub7Oe363bU+R1xGiWVDkbXGV0PWJ5x2D9de+jTJSwOA=";
+    sha256 = "sha256-NbCjQNOfR90vYbnUfZLnHlQirUxEOP3XYJ+DDl7L5w8=";
   };
 
   nativeBuildInputs = [
@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Graph based aligner";
     license = lib.licenses.gpl3Plus;
     homepage = "https://daehwankimlab.github.io/hisat2/";
-    maintainers = [ ];
     platforms = [
       "x86_64-linux"
       "i686-linux"

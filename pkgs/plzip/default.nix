@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Massively parallel lossless data compressor based on the lzlib compression library";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "plzip";
   };
 })

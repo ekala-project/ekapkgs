@@ -63,7 +63,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://zellij.dev/";
     changelog = "https://github.com/zellij-org/zellij/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "zellij";
   };
 })

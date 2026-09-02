@@ -12,13 +12,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "mongocxx";
-  version = "4.0.0";
+  version = "4.5.0";
 
   src = fetchFromGitHub {
     owner = "mongodb";
     repo = "mongo-cxx-driver";
     tag = "r${finalAttrs.version}";
-    hash = "sha256-fAOOQyXJ6H4Rt8gRGJnvb5I7E505MOAjNDcFqXUdY+U=";
+    hash = "sha256-QRVzYX6x29Fpc1hLFYbFkdOVGpWiyRS5jAAABHHAU78=";
   };
 
   postPatch = ''
@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Official C++ client library for MongoDB";
     homepage = "http://mongocxx.org";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     pkgConfigModules = [
       "libmongocxx"
       "libbsoncxx"

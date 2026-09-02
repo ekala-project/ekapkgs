@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   meta = {
     mainProgram = "igsc";
-    maintainers = [ ];
     description = "Intel graphics system controller firmware update library";
     homepage = "https://github.com/intel/igsc";
     license = lib.licenses.asl20;

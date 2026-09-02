@@ -44,7 +44,6 @@ buildGo126Module (finalAttrs: {
   meta = {
     description = "Official command line client for Cloud Foundry";
     homepage = "https://github.com/cloudfoundry/cli";
-    maintainers = [ ];
     mainProgram = "cf";
     license = lib.licenses.asl20;
   };

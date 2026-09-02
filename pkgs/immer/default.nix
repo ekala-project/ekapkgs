@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://sinusoid.es/immer";
     changelog = "https://github.com/arximboldi/immer/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.boost;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

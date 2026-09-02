@@ -39,7 +39,6 @@ buildGoModule (finalAttrs: {
     description = "End-to-end encrypted file transfers";
     changelog = "https://github.com/psanford/wormhole-william/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "wormhole-william";
   };
 })

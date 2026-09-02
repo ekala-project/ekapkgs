@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl21;
     homepage = "http://hepmc.web.cern.ch/hepmc/";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

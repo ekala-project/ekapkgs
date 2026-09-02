@@ -33,7 +33,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Minimalistic MP3 decoder single header library";
     homepage = "https://github.com/lieff/minimp3";
     license = lib.licenses.cc0;
-    maintainers = [ ];
     platforms = lib.intersectLists lib.platforms.linux (
       lib.platforms.x86 ++ lib.platforms.x86_64 ++ lib.platforms.aarch64
     );

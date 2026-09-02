@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "World Coordinate System library for astronomy";
     license = lib.licenses.lgpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

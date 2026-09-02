@@ -107,7 +107,6 @@ stdenv.mkDerivation (finalAttrs: {
       over colors, styles, options and details.
     '';
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     homepage = "https://ploticus.sourceforge.net/";
     platforms = with lib.platforms; linux ++ darwin;
   };

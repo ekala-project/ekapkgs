@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.openh264.org";
     changelog = "https://github.com/cisco/openh264/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.intersectLists (
       lib.platforms.x86
       ++ lib.platforms.arm

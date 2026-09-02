@@ -56,6 +56,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Utility for wildcard renaming, copying, etc";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

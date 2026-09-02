@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/sjaehn/BSEQuencer";
     description = "Multi channel MIDI step sequencer LV2 plugin";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl3;
   };

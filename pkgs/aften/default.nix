@@ -39,6 +39,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://aften.sourceforge.net/";
     license = lib.licenses.lgpl21Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

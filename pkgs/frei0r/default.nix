@@ -33,6 +33,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Minimalist, cross-platform, shared video plugins";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

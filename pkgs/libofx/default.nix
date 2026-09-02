@@ -45,6 +45,5 @@ stdenv.mkDerivation rec {
     homepage = "https://libofx.sourceforge.net/";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

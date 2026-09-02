@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Utility to set up and maintain TUN/TAP network interfaces";
     mainProgram = "tunctl";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

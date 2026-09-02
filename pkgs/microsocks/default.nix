@@ -28,6 +28,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/rofl0r/microsocks";
     license = lib.licenses.mit;
     mainProgram = "microsocks";
-    maintainers = [ ];
   };
 })

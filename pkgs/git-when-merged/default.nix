@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/mhagger/git-when-merged";
     license = lib.licenses.gpl2Only;
     platforms = python3.meta.platforms;
-    maintainers = [ ];
     mainProgram = "git-when-merged";
   };
 })

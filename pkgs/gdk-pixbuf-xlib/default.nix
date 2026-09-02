@@ -54,6 +54,5 @@ stdenv.mkDerivation rec {
     homepage = "https://gitlab.gnome.org/Archive/gdk-pixbuf-xlib";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

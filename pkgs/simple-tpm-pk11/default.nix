@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/ThomasHabets/simple-tpm-pk11";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

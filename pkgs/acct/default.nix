@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Plus;
     homepage = "https://www.gnu.org/software/acct/";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

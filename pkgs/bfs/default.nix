@@ -11,13 +11,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "bfs";
-  version = "4.1";
+  version = "4.1.4";
 
   src = fetchFromGitHub {
     repo = "bfs";
     owner = "tavianator";
     tag = finalAttrs.version;
-    hash = "sha256-+hGxdsk9MU5MVvvx3C2cqomboNxD0UZ5y7t84fAwfqs=";
+    hash = "sha256-gENWuxZh4dOaKUyrb53dn/ai7F2L3gyYj8kuha0JaLo=";
   };
 
   buildInputs = [
@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/tavianator/bfs";
     license = lib.licenses.bsd0;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "bfs";
   };
 })

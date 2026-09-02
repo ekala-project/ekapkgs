@@ -36,7 +36,6 @@ stdenv.mkDerivation rec {
     description = "General-purpose library for WPE WebKit";
     license = lib.licenses.bsd2;
     homepage = "https://wpewebkit.org";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

@@ -6,14 +6,14 @@
 
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "ospd-openvas";
-  version = "22.10.1";
+  version = "22.10.5";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "greenbone";
     repo = "ospd-openvas";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-YrCYudM45xDSQRNhUfYAxFNKToMsWdGwtDYJiZ0E6+c=";
+    hash = "sha256-RW+ZIU0CTF6FsojsM+aU9vg2LfrxqrRHTIKHOVCBQiE=";
   };
 
   pythonRelaxDeps = [
@@ -22,6 +22,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     "packaging"
     "psutil"
     "python-gnupg"
+    "redis"
   ];
 
   build-system = with python3.pkgs; [ poetry-core ];
@@ -47,7 +48,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/greenbone/ospd-openvas";
     changelog = "https://github.com/greenbone/ospd-openvas/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

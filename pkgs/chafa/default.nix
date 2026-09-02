@@ -79,7 +79,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://hpjansson.org/chafa/";
     license = lib.licenses.lgpl3Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "chafa";
   };
 })

@@ -53,6 +53,5 @@ stdenv.mkDerivation {
     description = "Iconic bitmap font based on Stlarch with additional glyphs";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

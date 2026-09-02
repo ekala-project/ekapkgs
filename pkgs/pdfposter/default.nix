@@ -5,7 +5,7 @@
 }:
 python3Packages.buildPythonApplication rec {
   pname = "pdfposter";
-  version = "0.9.1";
+  version = "0.9.post2";
   pyproject = true;
 
   build-system = with python3Packages; [ setuptools ];
@@ -15,7 +15,7 @@ python3Packages.buildPythonApplication rec {
   src = fetchPypi {
     pname = "pdfposter";
     inherit version;
-    hash = "sha256-Y5gUrHI470vsORETxkpf3WH5YXgdIeTZvSb3v/UgD24=";
+    hash = "sha256-Je48IxXjGxwc7FDihwvFVWR/M1IDOgBPyV0h5dd3IwY=";
   };
 
   pythonImportsCheck = [
@@ -28,6 +28,5 @@ python3Packages.buildPythonApplication rec {
     mainProgram = "pdfposter";
     homepage = "https://pdfposter.readthedocs.io";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

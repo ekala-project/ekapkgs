@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/team-charls/charls";
     description = "JPEG-LS library implementation in C++";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
   };

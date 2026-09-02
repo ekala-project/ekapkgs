@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Convert terminal recordings to animated gifs";
     platforms = lib.platforms.unix;
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "ttygif";
   };
 })

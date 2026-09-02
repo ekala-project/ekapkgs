@@ -47,6 +47,5 @@ stdenv.mkDerivation rec {
     homepage = "https://humdi.net/vnstat/";
     license = licenses.gpl2Plus;
     platforms = platforms.linux;
-    maintainers = [ ];
   };
 }

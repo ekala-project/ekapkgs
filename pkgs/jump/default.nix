@@ -48,7 +48,6 @@ buildGoModule (finalAttrs: {
     '';
     homepage = "https://github.com/gsamokovarov/jump";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "jump";
   };
 })

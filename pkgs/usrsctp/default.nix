@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/sctplab/usrsctp";
     description = "Portable SCTP userland stack";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
   };

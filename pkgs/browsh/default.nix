@@ -45,7 +45,6 @@ buildGoModule rec {
     description = "Fully-modern text-based browser, rendering to TTY and browsers";
     mainProgram = "browsh";
     homepage = "https://www.brow.sh/";
-    maintainers = [ ];
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };

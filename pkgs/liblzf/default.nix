@@ -128,7 +128,6 @@ stdenv.mkDerivation (finalAttrs: {
       gpl2Plus
     ];
     mainProgram = "lzf";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     pkgConfigModules = [ "liblzf" ];
   };

@@ -9,24 +9,19 @@
 
 stdenv.mkDerivation rec {
   pname = "portmidi";
-  version = "2.0.4";
+  version = "2.0.8";
 
   src = fetchFromGitHub {
     owner = "portmidi";
     repo = "portmidi";
     rev = "v${version}";
-    sha256 = "sha256-uqBeh9vBP6+V+FN4lfeGxePQcpZMDYUuAo/d9a5rQxU=";
+    sha256 = "sha256-j5m/ablSzsENVzE1ghvnu+uE4nB0V91SA/mrCx5gCNk=";
   };
 
   cmakeFlags = [
     "-DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=Release"
     "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=Release"
     "-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=Release"
-  ];
-
-  patches = [
-    # Add missing header include
-    ./missing-header.diff
   ];
 
   postInstall =
@@ -53,7 +48,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/PortMidi/portmidi";
     description = "Platform independent library for MIDI I/O";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

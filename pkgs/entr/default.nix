@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Run arbitrary commands when files change";
     changelog = "https://github.com/eradman/entr/raw/${finalAttrs.version}/NEWS";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "entr";
   };

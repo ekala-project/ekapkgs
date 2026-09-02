@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation {
   pname = "shine";
-  version = "3.1.1-unstable-2023-01-01";
+  version = "3.1.1";
 
   src = fetchFromGitHub {
     owner = "toots";
@@ -23,6 +23,5 @@ stdenv.mkDerivation {
     mainProgram = "shineenc";
     homepage = "https://github.com/toots/shine";
     license = lib.licenses.lgpl2Only;
-    maintainers = [ ];
   };
 }

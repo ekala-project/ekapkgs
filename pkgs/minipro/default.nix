@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.com/DavidGriffith/minipro";
     description = "Open source program for controlling the MiniPRO TL866xx series of chip programmers";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "minipro";
     platforms = lib.platforms.unix;
   };

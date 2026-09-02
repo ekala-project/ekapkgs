@@ -87,6 +87,5 @@ stdenv.mkDerivation {
       gpl2Only
     ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

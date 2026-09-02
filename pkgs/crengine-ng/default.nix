@@ -54,6 +54,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.com/coolreader-ng/crengine-ng";
     description = "Cross-platform library designed to implement text viewers and e-book readers";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

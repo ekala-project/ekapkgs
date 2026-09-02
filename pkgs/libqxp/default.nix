@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "QuarkXPress import library";
     homepage = "https://wiki.documentfoundation.org/DLP/Libraries/libqxp";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

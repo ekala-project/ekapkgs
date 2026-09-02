@@ -53,6 +53,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     mainProgram = "fortls";
     homepage = "https://github.com/fortran-lang/fortls";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

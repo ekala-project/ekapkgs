@@ -72,7 +72,6 @@ perlPackages.buildPerlPackage rec {
       gpl1Plus
     ];
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "feedgnuplot";
   };
 }

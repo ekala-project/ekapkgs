@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.unfree;
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
     platforms = [ "x86_64-linux" ];
-    maintainers = [ ];
     mainProgram = "tixati";
   };
 })

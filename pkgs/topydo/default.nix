@@ -55,6 +55,5 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/topydo/topydo";
     changelog = "https://github.com/topydo/topydo/blob/${finalAttrs.src.tag}/CHANGES.md";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

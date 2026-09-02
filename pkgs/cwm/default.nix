@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Lightweight and efficient window manager for X11";
     homepage = "https://github.com/leahneukirchen/cwm";
-    maintainers = [ ];
     license = lib.licenses.isc;
     platforms = lib.platforms.linux;
     mainProgram = "cwm";

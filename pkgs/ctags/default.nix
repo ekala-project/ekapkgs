@@ -29,7 +29,6 @@ stdenv.mkDerivation rec {
     homepage = "https://ctags.sourceforge.net/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     priority = 1;
   };
 }

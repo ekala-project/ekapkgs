@@ -32,6 +32,5 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/ianw/libiptcdata";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

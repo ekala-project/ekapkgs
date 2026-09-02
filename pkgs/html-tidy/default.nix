@@ -42,6 +42,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.libpng;
     platforms = lib.platforms.all;
     mainProgram = "tidy";
-    maintainers = [ ];
   };
 })

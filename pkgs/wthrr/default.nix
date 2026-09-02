@@ -38,7 +38,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/ttytm/wthrr-the-weathercrab";
     changelog = "https://github.com/ttytm/wthrr-the-weathercrab/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "wthrr";
   };
 })

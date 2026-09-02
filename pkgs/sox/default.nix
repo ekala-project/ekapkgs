@@ -66,6 +66,5 @@ stdenv.mkDerivation {
     homepage = "https://sox.sourceforge.net/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

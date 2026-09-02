@@ -54,7 +54,6 @@ stdenv.mkDerivation rec {
     description = "XFS filesystem incremental dump utility";
     homepage = "https://git.kernel.org/pub/scm/fs/xfs/xfsdump-dev.git/tree/doc/CHANGES";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

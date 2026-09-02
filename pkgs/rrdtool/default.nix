@@ -15,13 +15,13 @@
 perl.pkgs.toPerlModule (
   stdenv.mkDerivation rec {
     pname = "rrdtool";
-    version = "1.9.0";
+    version = "1.11.0";
 
     src = fetchFromGitHub {
       owner = "oetiker";
       repo = "rrdtool-1.x";
       rev = "v${version}";
-      hash = "sha256-CPbSu1mosNlfj2nqiNVH14a5C5njkfvJM8ix3X3aP8E=";
+      hash = "sha256-EMnIh8Ug0LkbdER+Tpk0QUKns/dvX8413iQUS79QrVA=";
     };
 
     nativeBuildInputs = [
@@ -47,7 +47,6 @@ perl.pkgs.toPerlModule (
       homepage = "https://oss.oetiker.ch/rrdtool/";
       description = "High performance logging in Round Robin Databases";
       license = lib.licenses.gpl2Only;
-      maintainers = [ ];
       platforms = lib.platforms.linux;
     };
   }

@@ -43,6 +43,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/ffuf/ffuf";
     changelog = "https://github.com/ffuf/ffuf/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

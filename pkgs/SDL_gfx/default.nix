@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
       written in plain C and can be used in C++ code.
     '';
     license = lib.licenses.zlib;
-    maintainers = [ ];
     inherit (SDL.meta) platforms;
   };
 })

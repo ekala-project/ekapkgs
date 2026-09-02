@@ -39,7 +39,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/xxxserxxx/gotop";
     changelog = "https://github.com/xxxserxxx/gotop/raw/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gotop";
   };
 })

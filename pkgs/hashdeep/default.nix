@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Set of cross-platform tools to compute hashes";
     homepage = "https://github.com/jessek/hashdeep";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

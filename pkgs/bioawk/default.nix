@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation {
   pname = "bioawk";
-  version = "1.0-unstable-2017-09-11";
+  version = "1.0";
 
   src = fetchFromGitHub {
     owner = "lh3";
@@ -46,7 +46,6 @@ stdenv.mkDerivation {
     mainProgram = "bioawk";
     homepage = "https://github.com/lh3/bioawk";
     license = lib.licenses.hpnd;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

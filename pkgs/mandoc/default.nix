@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://mandoc.bsd.lv/";
     description = "Suite of tools compiling mdoc and man";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "man";
   };

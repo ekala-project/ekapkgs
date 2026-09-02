@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     homepage = "https://github.com/amadvance/advancecomp";
     changelog = "https://github.com/amadvance/advancecomp/blob/v${finalAttrs.version}/HISTORY";
-    maintainers = [ ];
   };
 })

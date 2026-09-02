@@ -48,7 +48,6 @@ buildGoModule (finalAttrs: {
       complete.
     '';
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "qrcp";
   };
 })

@@ -44,6 +44,5 @@ stdenv.mkDerivation (finalAttrs: {
     */
     license = lib.licenses.free;
     mainProgram = "afio";
-    maintainers = [ ];
   };
 })

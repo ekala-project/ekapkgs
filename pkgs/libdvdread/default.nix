@@ -21,7 +21,6 @@ stdenv.mkDerivation rec {
     homepage = "http://dvdnav.mplayerhq.hu/";
     description = "Library for reading DVDs";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

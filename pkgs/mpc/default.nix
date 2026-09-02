@@ -53,6 +53,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = licenses.gpl2Plus;
     mainProgram = "mpc";
     platforms = platforms.unix;
-    maintainers = [ ];
   };
 })

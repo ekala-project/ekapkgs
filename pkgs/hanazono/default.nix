@@ -43,7 +43,6 @@ stdenvNoCC.mkDerivation rec {
       lib.licenses.ofl
       lib.licenses.free
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

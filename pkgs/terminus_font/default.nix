@@ -44,6 +44,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Clean fixed width font";
     homepage = "https://terminus-font.sourceforge.net/";
     license = lib.licenses.ofl;
-    maintainers = [ ];
   };
 })

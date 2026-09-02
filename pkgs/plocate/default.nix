@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Much faster locate";
     homepage = "https://plocate.sesse.net/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

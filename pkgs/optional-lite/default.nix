@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/martinmoene/optional-lite";
     changelog = "https://github.com/martinmoene/optional-lite/blob/v${finalAttrs.version}/CHANGES.txt";
     license = lib.licenses.boost;
-    maintainers = [ ];
   };
 })

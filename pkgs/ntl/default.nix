@@ -76,7 +76,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "http://www.shoup.net/ntl/";
     changelog = "https://www.shoup.net/ntl/doc/tour-changes.html";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
     broken = !(stdenv.buildPlatform.canExecute stdenv.hostPlatform);

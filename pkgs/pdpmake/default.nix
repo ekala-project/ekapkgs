@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/rmyorston/pdpmake";
     description = "Public domain POSIX make";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
     mainProgram = "pdpmake";
     platforms = lib.platforms.all;
     badPlatforms = lib.platforms.darwin; # Requires `uimensat`

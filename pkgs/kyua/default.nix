@@ -16,13 +16,13 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "kyua";
-  version = "0.13-unstable-2024-01-22";
+  version = "0.14.1";
 
   src = fetchFromGitHub {
     owner = "freebsd";
     repo = "kyua";
     rev = "c85354e09ad93a902c9e8a701c042c045ec2a5b7";
-    hash = "sha256-fZ0WFgOTj8Gw8IT5O8DnuaNyZscKpg6B94m+l5UoZGc";
+    hash = "sha256-fZ0WFgOTj8Gw8IT5O8DnuaNyZscKpg6B94m+l5UoZGc=";
   };
 
   setupHooks = ./kyua-check-hook.sh;
@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/freebsd/kyua/blob/master/NEWS.md";
     license = lib.licenses.bsd3;
     mainProgram = "kyua";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

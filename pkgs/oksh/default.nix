@@ -32,7 +32,6 @@ stdenv.mkDerivation rec {
     mainProgram = "oksh";
     homepage = "https://github.com/ibara/oksh";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 

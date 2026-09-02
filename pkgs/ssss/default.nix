@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://point-at-infinity.org/ssss/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

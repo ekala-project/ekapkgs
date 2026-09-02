@@ -53,6 +53,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/r-c-f/waynergy";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -33,6 +33,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/google/liblc3";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -39,6 +39,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/rcsb/mmtf-cpp";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

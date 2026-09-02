@@ -34,7 +34,6 @@ stdenv.mkDerivation rec {
     # Code cannot be used in commercial programs
     # Looks like the definition hinges on the price, not license
     license = lib.licenses.unfree;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     homepage = "https://www.fractint.net/";
     mainProgram = "xfractint";

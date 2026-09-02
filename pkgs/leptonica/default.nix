@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Image processing and analysis library";
     homepage = "http://www.leptonica.org/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

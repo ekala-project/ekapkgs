@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "CPU, RAM, and load monitor for use with tmux";
     homepage = "https://github.com/thewtex/tmux-mem-cpu-load";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "tmux-mem-cpu-load";
   };

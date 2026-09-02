@@ -80,7 +80,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "GTK VNC widget";
     homepage = "https://gitlab.gnome.org/GNOME/gtk-vnc";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "gvnccapture";
   };

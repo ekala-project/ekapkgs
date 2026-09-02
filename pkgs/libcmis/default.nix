@@ -57,7 +57,6 @@ stdenv.mkDerivation rec {
     description = "C++ client library for the CMIS interface";
     homepage = "https://github.com/tdf/libcmis";
     license = licenses.gpl2;
-    maintainers = [ ];
     mainProgram = "cmis-client";
     platforms = platforms.unix;
   };

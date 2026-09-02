@@ -79,7 +79,6 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl3Plus
     ];
     mainProgram = "roxterm";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

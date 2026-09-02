@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C++ library for modeling and solving large, complicated optimization problems";
     license = lib.licenses.bsd3;
     homepage = "http://ceres-solver.org";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

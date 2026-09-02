@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C library for audio noise reduction";
     homepage = "https://github.com/lucianodato/libspecbleach";
     license = lib.licenses.lgpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

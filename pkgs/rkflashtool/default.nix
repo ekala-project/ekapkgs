@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://sourceforge.net/projects/rkflashtool/";
     description = "Tools for flashing Rockchip devices";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     license = lib.licenses.bsd2;
   };
 })

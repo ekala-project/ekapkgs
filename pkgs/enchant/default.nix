@@ -11,7 +11,7 @@
 
 stdenv.mkDerivation rec {
   pname = "enchant";
-  version = "2.6.9";
+  version = "2.8.19";
 
   outputs = [
     "out"
@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "https://github.com/rrthomas/${pname}/releases/download/v${version}/${pname}-${version}.tar.gz";
-    hash = "sha256-2aWhDcmzikOzoPoix27W67fgnrU1r/YpVK/NvUDv/2s=";
+    hash = "sha256-yNcJkdVE7jknS5a9AdKFigCf5zL/Q/Kq9gX9YezQb2A=";
   };
 
   strictDeps = true;
@@ -55,7 +55,6 @@ stdenv.mkDerivation rec {
     description = "Generic spell checking library";
     homepage = "https://rrthomas.github.io/enchant/";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

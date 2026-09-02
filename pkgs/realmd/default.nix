@@ -71,7 +71,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/realmd/realmd";
     license = lib.licenses.lgpl21Only;
     mainProgram = "realm";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

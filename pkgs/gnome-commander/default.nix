@@ -67,7 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gcmd.github.io";
     license = lib.licenses.gpl2Plus;
     mainProgram = "gnome-commander";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -13,19 +13,20 @@
   pkg-config,
   python3,
   stdenv,
+  systemd,
   zlib,
   zstd,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "pgbackrest";
-  version = "2.58.0";
+  version = "2.59.1";
 
   src = fetchFromGitHub {
     owner = "pgbackrest";
     repo = "pgbackrest";
     tag = "release/${finalAttrs.version}";
-    hash = "sha256-RxvVqThfGnTCWTaM54Job+2HgJ7baf6ciFYTz496aKQ=";
+    hash = "sha256-bCHjIQ0WIlvjGg1b4jNwWKzxLg+YIDswKx/Jt6EwAdQ=";
   };
 
   strictDeps = true;
@@ -46,6 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
     libyaml
     lz4
+    systemd
     zlib
     zstd
   ];
@@ -55,6 +57,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/pgbackrest/pgbackrest/releases/tag/release%2F${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "pgbackrest";
-    maintainers = [ ];
   };
 })

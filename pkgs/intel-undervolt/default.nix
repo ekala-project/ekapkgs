@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "intel-undervolt";
     license = lib.licenses.gpl3;
     platforms = [ "x86_64-linux" ]; # It probably compiles for aaarch64-linux too, but what's the point?
-    maintainers = [ ];
   };
 })

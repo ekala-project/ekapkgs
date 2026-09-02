@@ -50,7 +50,6 @@ stdenv.mkDerivation {
     description = "Open source forensic software used as a Windows Registry data extraction command line";
     mainProgram = "regripper";
     homepage = "https://github.com/keydet89/RegRipper3.0";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.mit;
   };

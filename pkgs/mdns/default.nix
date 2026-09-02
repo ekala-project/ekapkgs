@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/mjansson/mdns";
     changelog = "https://github.com/mjansson/mdns/blob/${finalAttrs.src.rev}/CHANGELOG";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

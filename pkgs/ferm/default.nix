@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
       language, which can contain levels and lists.
     '';
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

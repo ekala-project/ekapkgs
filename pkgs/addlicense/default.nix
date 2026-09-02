@@ -23,7 +23,6 @@ buildGoModule (finalAttrs: {
     description = "Ensures source code files have copyright license headers by scanning directory patterns recursively";
     homepage = "https://github.com/google/addlicense";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "addlicense";
   };
 })

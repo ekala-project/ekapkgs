@@ -48,6 +48,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Host app for the WebExtension PassFF";
     homepage = "https://codeberg.org/PassFF/passff-host";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 })

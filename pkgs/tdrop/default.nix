@@ -51,6 +51,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/noctuid/tdrop";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

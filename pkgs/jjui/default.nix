@@ -32,7 +32,6 @@ buildGo125Module (finalAttrs: {
     homepage = "https://github.com/idursun/jjui";
     changelog = "https://github.com/idursun/jjui/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "jjui";
   };
 })

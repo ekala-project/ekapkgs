@@ -26,6 +26,5 @@ stdenv.mkDerivation rec {
     homepage = "https://rapidxml.sourceforge.net/";
     license = lib.licenses.boost;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

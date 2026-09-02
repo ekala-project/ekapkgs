@@ -31,7 +31,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/Chleba/netscanner";
     changelog = "https://github.com/Chleba/netscanner/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "netscanner";
   };
 })

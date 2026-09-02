@@ -37,7 +37,6 @@ pypkgs.buildPythonApplication (finalAttrs: {
     description = "Backup system trying to combine best a mirror and an incremental backup system";
     homepage = "https://rdiff-backup.net";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "rdiff-backup";
     platforms = lib.platforms.all;
   };

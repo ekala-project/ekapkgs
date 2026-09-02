@@ -72,7 +72,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "cgminer";
     homepage = "https://github.com/ckolivas/cgminer";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

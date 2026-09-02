@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation {
   pname = "vid.stab";
-  version = "1.1.1-unstable-2025-08-21";
+  version = "1.1.2";
 
   src = fetchFromGitHub {
     owner = "georgmartius";
@@ -32,7 +32,6 @@ stdenv.mkDerivation {
     description = "Video stabilization library";
     homepage = "http://public.hronopik.de/vid.stab/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

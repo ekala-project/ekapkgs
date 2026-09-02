@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "BGP filtering automation tool";
     homepage = "https://github.com/bgp/bgpq4";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
     mainProgram = "bgpq4";
   };

@@ -35,7 +35,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/chadmed/bankstown";
     description = "Lightweight psychoacoustic bass enhancement plugin";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

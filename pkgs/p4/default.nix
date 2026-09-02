@@ -135,6 +135,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd2;
     mainProgram = "p4";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

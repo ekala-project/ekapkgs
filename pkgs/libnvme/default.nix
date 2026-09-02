@@ -17,7 +17,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libnvme";
-  version = "1.16.1";
+  version = "1.16.2";
 
   outputs = [
     "out"
@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "linux-nvme";
     repo = "libnvme";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-/9snTFixG8bBAWPDJNiOmMEMmNnN451CdJqfp2y1lR4=";
+    hash = "sha256-M+SkxzNrRSBu5EmdK82Qh8MPDqGO7fKbdrU9irScARY=";
   };
 
   postPatch = ''
@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "C Library for NVM Express on Linux";
     homepage = "https://github.com/linux-nvme/libnvme";
-    maintainers = [ ];
     license = with lib.licenses; [ lgpl21Plus ];
     platforms = lib.platforms.linux;
   };

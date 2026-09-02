@@ -38,6 +38,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "bzmenu";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

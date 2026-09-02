@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Functions useful in mobile related, glib based projects";
     homepage = "https://gitlab.gnome.org/World/Phosh/gmobile";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

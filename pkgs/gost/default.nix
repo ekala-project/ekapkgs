@@ -35,7 +35,6 @@ buildGoModule (finalAttrs: {
     description = "Simple tunnel written in golang";
     homepage = "https://github.com/go-gost/gost";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gost";
   };
 })

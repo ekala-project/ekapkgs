@@ -37,6 +37,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "lxtask";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

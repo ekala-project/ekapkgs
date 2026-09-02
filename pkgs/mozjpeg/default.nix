@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     # supported:
     # https://github.com/mozilla/mozjpeg/issues/309#issuecomment-440674126
     mainProgram = "cjpeg";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

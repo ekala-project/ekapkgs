@@ -60,7 +60,6 @@ stdenv.mkDerivation rec {
     homepage = "https://lynx.invisible-island.net/";
     mainProgram = "lynx";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

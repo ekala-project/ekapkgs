@@ -6,7 +6,7 @@
 
 stdenvNoCC.mkDerivation {
   pname = "retroarch-assets";
-  version = "1.22.0-unstable-2026-06-27";
+  version = "1.22.0";
 
   src = fetchFromGitHub {
     owner = "libretro";
@@ -27,7 +27,7 @@ stdenvNoCC.mkDerivation {
     description = "Assets needed for RetroArch";
     homepage = "https://libretro.com";
     license = lib.licenses.mit;
-    teams = [ lib.teams.libretro ];
+    teams = [ ];
     platforms = lib.platforms.all;
   };
 }

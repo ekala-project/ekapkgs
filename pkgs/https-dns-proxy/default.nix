@@ -56,7 +56,6 @@ stdenv.mkDerivation rec {
     description = "DNS to DNS over HTTPS (DoH) proxy";
     homepage = "https://github.com/aarond10/https_dns_proxy";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "https_dns_proxy";
   };

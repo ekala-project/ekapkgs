@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "http://t-sato.in.coocan.jp/xvkbd";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "xvkbd";
   };

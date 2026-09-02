@@ -31,7 +31,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/Gu1llaum-3/sshm/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "sshm";
   };
 })

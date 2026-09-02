@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "bgp filtering automation tool";
     homepage = "https://github.com/snar/bgpq3";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = with lib.platforms; unix;
     mainProgram = "bgpq3";
   };

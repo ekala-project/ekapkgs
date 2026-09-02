@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://dmedvinsky.github.io/gsimplecal/";
     description = "Lightweight calendar application written in C++ using GTK";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "gsimplecal";
   };

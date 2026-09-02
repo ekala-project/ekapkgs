@@ -59,6 +59,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
     mainProgram = "vi";
-    maintainers = [ ];
   };
 })

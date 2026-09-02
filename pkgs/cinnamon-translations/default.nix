@@ -29,6 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Translations files for the Cinnamon desktop";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    teams = [ lib.teams.cinnamon ];
+    teams = [ ];
   };
 })

@@ -56,6 +56,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/wting/autojump";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

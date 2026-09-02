@@ -20,7 +20,7 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "form";
-  version = "5.0.0";
+  version = "5.0.1";
 
   __structuredAttrs = true;
 
@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "form-dev";
     repo = "form";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-cYO8B5uDJQ9eUc4w5Le47su3JS/jGYwUFtHFunuQaJc=";
+    hash = "sha256-luV6yHhm7BHbNRd1VQp7UGIA289KikYQGNXAFMEXnvs=";
   };
 
   nativeBuildInputs = [
@@ -44,16 +44,15 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   postUnpack = ''
-    mkdir -p source/extern/zstd
-    cp -r ${zstd_src}/zlibWrapper source/extern/zstd/
-    chmod -R +w source
+    mkdir -p $sourceRoot/extern/zstd
+    cp -r ${zstd_src}/zlibWrapper $sourceRoot/extern/zstd/
+    chmod -R +w $sourceRoot
   '';
 
   meta = {
     description = "Symbolic manipulation of very big expressions";
     homepage = "https://www.nikhef.nl/~form/";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

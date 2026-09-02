@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Wayland clipboard utility";
     homepage = "https://sr.ht/~noocsharp/wayclip/";
     license = lib.licenses.isc;
-    maintainers = [ ];
     mainProgram = "waycopy";
     inherit (wayland.meta) platforms;
   };

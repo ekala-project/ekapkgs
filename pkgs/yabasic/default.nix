@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     changelog = "https://2484.de/yabasic/whatsnew.html";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

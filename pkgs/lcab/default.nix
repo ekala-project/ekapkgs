@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Create cabinet (.cab) archives";
     homepage = "http://ohnopub.net/~ohnobinki/lcab";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "lcab";
   };

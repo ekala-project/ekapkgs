@@ -40,7 +40,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://www.ivpn.net/apps";
     changelog = "https://github.com/ivpn/desktop-app/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "ivpn";
   };
 })

@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "http://www.kyberdigi.cz/projects/mencal/english.html";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "mencal";
   };

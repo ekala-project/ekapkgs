@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Free exFAT file system implementation";
     homepage = "https://github.com/relan/exfat";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

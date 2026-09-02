@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.com/bgermann/unrar-free";
     license = lib.licenses.gpl2Plus;
     mainProgram = "unrar-free";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/MirServer/wlcs";
     changelog = "https://github.com/MirServer/wlcs/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     pkgConfigModules = [
       "wlcs"

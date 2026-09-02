@@ -53,6 +53,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.isc;
     platforms = lib.platforms.unix;
     mainProgram = "dnsperf";
-    maintainers = [ ];
   };
 })

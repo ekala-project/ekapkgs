@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "GUI dialog tool for shell scripts";
     license = lib.licenses.gpl3;
     mainProgram = "yad";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation rec {
   pname = "wavpack";
-  version = "5.8.1";
+  version = "5.9.0";
 
   src = fetchFromGitHub {
     owner = "dbry";
     repo = "WavPack";
     rev = version;
-    hash = "sha256-V9jRIuDpZYIBohJRouGr2TI32BZMXSNVfavqPl56YO0=";
+    hash = "sha256-bG2RGYoJyNX2NObccA3TF1O0Lj/R531hlm/CiNCOCmM=";
   };
 
   outputs = [
@@ -45,6 +45,5 @@ stdenv.mkDerivation rec {
     changelog = "https://github.com/dbry/WavPack/releases/tag/${version}";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

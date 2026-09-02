@@ -28,6 +28,5 @@ stdenv.mkDerivation rec {
     homepage = "https://www.netfilter.org/projects/libnetfilter_cthelper/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

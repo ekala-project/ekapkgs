@@ -33,6 +33,5 @@ stdenv.mkDerivation {
     '';
     homepage = "https://asmjit.com/";
     license = lib.licenses.zlib;
-    maintainers = [ ];
   };
 }

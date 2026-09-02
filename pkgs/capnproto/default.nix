@@ -45,6 +45,5 @@ clangStdenv.mkDerivation rec {
     description = "Cap'n Proto cerealization protocol";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

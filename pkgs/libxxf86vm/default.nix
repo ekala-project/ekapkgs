@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "X11 XFree86 video mode extension library";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxxf86vm";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

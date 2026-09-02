@@ -109,7 +109,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.libvips.org/";
     description = "Image processing system for large images";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "vips";
   };

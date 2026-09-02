@@ -78,7 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Vi clone for Unix and other operating systems";
     license = lib.licenses.free;
     mainProgram = "elvis";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

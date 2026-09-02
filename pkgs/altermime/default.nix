@@ -30,7 +30,6 @@ gccStdenv.mkDerivation (finalAttrs: {
 
   meta = {
     description = "MIME alteration tool";
-    maintainers = [ ];
     platforms = lib.platforms.all;
     license = lib.licenses.sendmail;
     downloadPage = "https://pldaniels.com/altermime/";

@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/font/daewoo-misc";
     # no license, just a copyright notice
     license = lib.licenses.unfree;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

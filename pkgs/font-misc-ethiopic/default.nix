@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Ge'ez Frontiers Foundation's Zemen OpenType and TrueType fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/misc-ethiopic";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

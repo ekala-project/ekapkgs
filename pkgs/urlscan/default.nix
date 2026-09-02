@@ -6,14 +6,14 @@
 
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "urlscan";
-  version = "1.0.9";
+  version = "1.1.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "firecat53";
     repo = "urlscan";
     tag = finalAttrs.version;
-    hash = "sha256-WWnWQRDo2Q023qLvR5gExE0uptYRGErnFmd7dZNJQ+k=";
+    hash = "sha256-Jykv08XKloVioHLpe3uLje7lGiQHL/EcjEUkhBOeV2k=";
   };
 
   build-system = with python3.pkgs; [
@@ -33,7 +33,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/firecat53/urlscan";
     changelog = "https://github.com/firecat53/urlscan/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "urlscan";
   };
 })

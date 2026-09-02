@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Sokoban-like game";
     mainProgram = "npush";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

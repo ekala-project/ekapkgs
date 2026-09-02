@@ -67,7 +67,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://sequoia-pgp.org/";
     changelog = "https://gitlab.com/sequoia-pgp/sequoia-sq/-/blob/v${finalAttrs.version}/NEWS";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     mainProgram = "sq";
   };
 })

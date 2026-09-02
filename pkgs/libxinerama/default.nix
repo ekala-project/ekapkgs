@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
       mit
       mitOpenGroup
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

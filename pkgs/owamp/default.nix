@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://software.internet2.edu/owamp/";
     description = "Tool for performing one-way active measurements";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     license = lib.licenses.asl20;
   };
 })

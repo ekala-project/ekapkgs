@@ -31,7 +31,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/AlexxIT/go2rtc";
     changelog = "https://github.com/AlexxIT/go2rtc/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "go2rtc";
   };
 })

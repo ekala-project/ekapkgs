@@ -23,6 +23,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "pdfcrack";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Tokyo Cabinet: a modern implementation of DBM";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -58,7 +58,6 @@ stdenv.mkDerivation {
   meta = {
     description = "Linux DVB API applications and utilities";
     homepage = "https://linuxtv.org/";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Plus;
   };

@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Data AcQuisition library (libDAQ), for snort packet I/O";
     homepage = "https://www.snort.org";
-    maintainers = [ ];
     changelog = "https://github.com/snort3/libdaq/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl2;
     outputsToInstall = [

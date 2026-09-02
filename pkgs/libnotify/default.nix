@@ -55,7 +55,6 @@ stdenv.mkDerivation rec {
     homepage = "https://gitlab.gnome.org/GNOME/libnotify";
     license = lib.licenses.lgpl21;
     mainProgram = "notify-send";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

@@ -41,7 +41,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/pxb1988/dex2jar";
     description = "Tools to work with android .dex and java .class files";
-    maintainers = [ ];
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;

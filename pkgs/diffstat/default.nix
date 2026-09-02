@@ -25,6 +25,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://invisible-island.net/diffstat/";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

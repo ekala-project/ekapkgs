@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "File archive format supporting random-access reads";
     homepage = "https://github.com/Exzap/ZArchive";
     license = lib.licenses.mit0;
-    maintainers = [ ];
     mainProgram = "zarchive";
   };
 })

@@ -46,7 +46,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/suleman1971/boinctui";
     changelog = "https://github.com/suleman1971/boinctui/blob/master/changelog";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "boinctui";
   };

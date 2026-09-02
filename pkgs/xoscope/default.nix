@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "xoscope";
     homepage = "https://xoscope.sourceforge.net";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
   };
 })

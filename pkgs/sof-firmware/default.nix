@@ -32,7 +32,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       bsd3
       isc
     ];
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
     sourceProvenance = with lib.sourceTypes; [ binaryFirmware ];
   };

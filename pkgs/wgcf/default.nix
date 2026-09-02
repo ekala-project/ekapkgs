@@ -23,7 +23,6 @@ buildGoModule (finalAttrs: {
     description = "Cross-platform, unofficial CLI for Cloudflare Warp";
     homepage = "https://github.com/ViRb3/wgcf";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "wgcf";
   };
 })

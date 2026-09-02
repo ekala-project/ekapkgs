@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/mmatyas/supermariowar";
     changelog = "https://github.com/mmatyas/supermariowar/blob/${finalAttrs.src.rev}/CHANGELOG";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "smw";
     platforms = lib.platforms.linux;
   };

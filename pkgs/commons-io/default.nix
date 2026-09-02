@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://commons.apache.org/proper/commons-io";
     description = "Library of utilities to assist with developing IO functionality";
-    maintainers = [ ];
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
     license = lib.licenses.asl20;
     platforms = with lib.platforms; unix;

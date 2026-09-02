@@ -30,7 +30,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/homeport/termshot";
     changelog = "https://github.com/homeport/termshot/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "termshot";
   };
 })

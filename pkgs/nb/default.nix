@@ -9,13 +9,13 @@
 
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "nb";
-  version = "7.25.4";
+  version = "7.25.5";
 
   src = fetchFromGitHub {
     owner = "xwmx";
     repo = "nb";
     tag = finalAttrs.version;
-    hash = "sha256-zcNL1WI3UoYV5nXzU0yYh0GwTsUzkeclMcEjQlneSzw=";
+    hash = "sha256-T0+jQZCELnVJbHpN8Y59iThiYboNl/PJMXYgoaDlZIg=";
   };
 
   nativeBuildInputs = [ installShellFiles ];
@@ -78,7 +78,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     '';
     homepage = "https://xwmx.github.io/nb/";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "nb";
   };

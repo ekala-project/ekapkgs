@@ -70,7 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "VNC server connected to a real X11 screen";
     homepage = "https://github.com/LibVNC/x11vnc/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "x11vnc";
   };

@@ -56,7 +56,6 @@ buildRubyGem rec {
     description = "Manage complex tmux sessions easily";
     homepage = "https://github.com/tmuxinator/tmuxinator";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "tmuxinator";
   };

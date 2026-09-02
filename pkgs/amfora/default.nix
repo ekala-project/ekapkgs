@@ -28,7 +28,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "amfora";
     homepage = "https://github.com/makew0rld/amfora";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     changelog = "https://github.com/makew0rld/amfora/blob/v${finalAttrs.version}/CHANGELOG.md";
   };
 })

@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
       icu
       x11
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

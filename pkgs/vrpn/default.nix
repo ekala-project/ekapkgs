@@ -42,6 +42,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/vrpn/vrpn";
     license = lib.licenses.boost; # see https://github.com/vrpn/vrpn/wiki/License
     platforms = lib.platforms.darwin ++ lib.platforms.linux;
-    maintainers = [ ];
   };
 })

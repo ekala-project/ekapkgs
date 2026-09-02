@@ -43,7 +43,6 @@ stdenv.mkDerivation rec {
     '';
     homepage = "https://www.gtkmm.org";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

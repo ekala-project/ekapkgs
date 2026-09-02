@@ -74,6 +74,5 @@ stdenv.mkDerivation rec {
     homepage = "https://www.gnome.org/projects/libgsf";
     license = lib.licenses.lgpl21Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

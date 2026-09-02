@@ -54,7 +54,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Various data formats for the SPDX License List";
     homepage = "https://github.com/spdx/license-list-data";
     license = lib.licenses.cc0;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

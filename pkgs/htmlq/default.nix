@@ -23,7 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Like jq, but for HTML";
     homepage = "https://github.com/mgdm/htmlq";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "htmlq";
   };
 })

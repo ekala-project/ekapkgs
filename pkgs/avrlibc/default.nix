@@ -37,6 +37,5 @@ stdenvNoLibc.mkDerivation (finalAttrs: {
     changelog = "https://github.com/avrdudes/avr-libc/blob/avr-libc-${finalAttrs.tag_version}-release/NEWS";
     license = lib.licenses.bsd3;
     platforms = [ "avr-none" ];
-    maintainers = [ ];
   };
 })

@@ -22,6 +22,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "ls_lint";
     homepage = "https://ls-lint.org/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

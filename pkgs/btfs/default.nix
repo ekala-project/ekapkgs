@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Bittorrent filesystem based on FUSE";
     homepage = "https://github.com/johang/btfs";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

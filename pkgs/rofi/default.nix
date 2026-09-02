@@ -22,18 +22,21 @@
   librsvg,
   check,
   glib,
+  wayland,
+  wayland-protocols,
+  wayland-scanner,
 }:
 
 stdenv.mkDerivation rec {
   pname = "rofi";
-  version = "1.7.9.1";
+  version = "2.0.0";
 
   src = fetchFromGitHub {
     owner = "davatorium";
     repo = "rofi";
     rev = version;
     fetchSubmodules = true;
-    hash = "sha256-HZMVGlK6ig7kWf/exivoiTe9J/SLgjm7VwRm+KgKN44=";
+    hash = "sha256-akKwIYH9OoCh4ZE/bxKPCppxXsUhplvfRjSGsdthFk4=";
   };
 
   preConfigure = ''
@@ -48,6 +51,7 @@ stdenv.mkDerivation rec {
     pkg-config
     flex
     bison
+    wayland-scanner
   ];
 
   buildInputs = [
@@ -65,6 +69,8 @@ stdenv.mkDerivation rec {
     libxcb-wm
     xcbutilxrm
     which
+    wayland
+    wayland-protocols
   ];
 
   mesonFlags = [
@@ -79,7 +85,6 @@ stdenv.mkDerivation rec {
     description = "Window switcher, run dialog and dmenu replacement";
     homepage = "https://github.com/davatorium/rofi";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "rofi";
   };

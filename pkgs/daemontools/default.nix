@@ -80,7 +80,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://cr.yp.to/daemontools.html";
     description = "Collection of tools for managing UNIX services";
 
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

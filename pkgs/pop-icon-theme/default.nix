@@ -42,6 +42,5 @@ stdenvNoCC.mkDerivation rec {
       gpl3
     ];
     platforms = lib.platforms.linux; # hash mismatch on darwin due to file names differing only in case
-    maintainers = [ ];
   };
 }

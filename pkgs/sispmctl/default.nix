@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "USB controlled powerstrips management software";
     license = lib.licenses.gpl2Plus;
     mainProgram = "sispmctl";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

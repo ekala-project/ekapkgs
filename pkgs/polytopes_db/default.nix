@@ -22,6 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Reflexive polytopes database";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.all;
-    teams = [ lib.teams.sage ];
+    teams = [ ];
   };
 })

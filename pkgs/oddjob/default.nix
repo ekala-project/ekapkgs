@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Odd Job Daemon";
     homepage = "https://pagure.io/oddjob";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://nifti-imaging.github.io";
     description = "Medical imaging format C API";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.publicDomain;
   };

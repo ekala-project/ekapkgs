@@ -37,6 +37,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Atari ST/STE/TT/Falcon emulator";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

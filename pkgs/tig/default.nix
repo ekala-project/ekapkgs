@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://jonas.github.io/tig/";
     description = "Text-mode interface for git";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
     mainProgram = "tig";

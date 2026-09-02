@@ -39,6 +39,5 @@ buildGoModule (finalAttrs: {
     mainProgram = "kubespy";
     homepage = "https://github.com/pulumi/kubespy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

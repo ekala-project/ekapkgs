@@ -29,6 +29,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Service manager that looks after the herd of system services";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

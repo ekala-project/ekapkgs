@@ -52,6 +52,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/alobbs/macchanger";
     platforms = lib.platforms.linux;
     mainProgram = "macchanger";
-    maintainers = [ ];
   };
 })

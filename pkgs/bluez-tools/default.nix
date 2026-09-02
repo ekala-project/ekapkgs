@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Set of tools to manage bluetooth devices for linux";
     license = lib.licenses.gpl2Plus;
     mainProgram = "bt-agent";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

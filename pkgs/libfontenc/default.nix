@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "X font encoding library";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libfontenc";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

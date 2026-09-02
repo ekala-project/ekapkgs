@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/libimobiledevice/libirecovery";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
     mainProgram = "irecovery";
     platforms = lib.platforms.unix;
   };

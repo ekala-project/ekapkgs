@@ -34,6 +34,5 @@ stdenv.mkDerivation rec {
     homepage = "https://xorg.freedesktop.org/";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

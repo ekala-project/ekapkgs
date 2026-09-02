@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Template engine library written in C";
     mainProgram = "ctpl";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
   };
 })

@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "OpenType to BDF font converter";
     license = lib.licenses.mit0;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "otf2bdf";
   };
 })

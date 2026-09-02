@@ -56,7 +56,6 @@ stdenv.mkDerivation {
       numbers, etc.
     '';
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

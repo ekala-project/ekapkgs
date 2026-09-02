@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tool that reads information about your system's hardware from the BIOS according to the SMBIOS/DMI standard";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "dmidecode";
   };
 })

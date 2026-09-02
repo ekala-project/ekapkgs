@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3Clear;
     mainProgram = "vvencapp";
     pkgConfigModules = [ "libvvenc" ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

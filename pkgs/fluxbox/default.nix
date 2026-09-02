@@ -61,7 +61,6 @@ stdenv.mkDerivation rec {
     description = "Full-featured, light-resource X window manager";
     homepage = "https://fluxbox.org/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

@@ -54,7 +54,6 @@ stdenv.mkDerivation {
     description = "Window manager from scratch";
     homepage = "https://github.com/xorg62/wmfs";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "wmfs";
   };

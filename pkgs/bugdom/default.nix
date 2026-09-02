@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Port of Bugdom, a 1999 Macintosh game by Pangea Software, for modern operating systems";
     homepage = "https://github.com/jorio/Bugdom";
     license = lib.licenses.cc-by-sa-40;
-    maintainers = [ ];
     mainProgram = "Bugdom";
     platforms = lib.platforms.unix;
   };

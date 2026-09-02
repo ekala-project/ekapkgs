@@ -30,6 +30,5 @@ buildGoModule (finalAttrs: {
     description = "Small Clojure interpreter and linter written in Go";
     mainProgram = "joker";
     license = lib.licenses.epl10;
-    maintainers = [ ];
   };
 })

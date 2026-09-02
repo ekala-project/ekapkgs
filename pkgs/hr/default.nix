@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/LuRsT/hr";
     description = "Horizontal bar for your terminal";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "hr";
   };

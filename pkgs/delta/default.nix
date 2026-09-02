@@ -59,7 +59,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Syntax-highlighting pager for git";
     changelog = "https://github.com/dandavison/delta/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "delta";
   };
 })

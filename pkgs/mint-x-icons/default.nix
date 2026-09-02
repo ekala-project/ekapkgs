@@ -49,6 +49,6 @@ stdenvNoCC.mkDerivation rec {
     description = "Mint/metal theme based on mintified versions of Clearlooks Revamp, Elementary and Faenza";
     license = lib.licenses.gpl3Plus; # from debian/copyright
     platforms = lib.platforms.linux;
-    teams = [ lib.teams.cinnamon ];
+    teams = [ ];
   };
 }

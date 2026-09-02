@@ -34,7 +34,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/hannob/snallygaster";
     changelog = "https://github.com/hannob/snallygaster/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.bsd0;
-    maintainers = [ ];
     mainProgram = "snallygaster";
   };
 })

@@ -38,7 +38,6 @@ stdenv.mkDerivation rec {
     description = "Library to read freedesktop.org menu files";
     homepage = "https://blog.lxde.org/tag/menu-cache/";
     license = licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = platforms.linux;
   };
 }

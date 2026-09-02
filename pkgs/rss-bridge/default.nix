@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "RSS feed for websites missing it";
     homepage = "https://github.com/RSS-Bridge/rss-bridge";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

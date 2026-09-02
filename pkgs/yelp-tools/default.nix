@@ -52,6 +52,5 @@ python3.pkgs.buildPythonApplication rec {
     description = "Small programs that help you create, edit, manage, and publish your Mallard or DocBook documentation";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

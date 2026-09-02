@@ -42,6 +42,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "ykpamcfg";
     homepage = "https://developers.yubico.com/yubico-pam";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

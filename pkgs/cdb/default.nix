@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://cdb.cr.yp.to/";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

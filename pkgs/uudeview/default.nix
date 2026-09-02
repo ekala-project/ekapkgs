@@ -38,7 +38,6 @@ stdenv.mkDerivation {
     description = "Nice and Friendly Decoder";
     homepage = "http://www.fpx.de/fp/Software/UUDeview/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

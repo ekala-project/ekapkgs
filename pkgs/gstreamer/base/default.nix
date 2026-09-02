@@ -201,6 +201,5 @@ stdenv.mkDerivation (finalAttrs: {
       "gstreamer-video-1.0"
     ];
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

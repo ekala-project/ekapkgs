@@ -87,7 +87,6 @@ stdenv.mkDerivation (finalAttrs: {
       made to your patches.
     '';
     homepage = "https://github.com/jeffpc/guilt";
-    maintainers = [ ];
     license = lib.licenses.gpl2;
     platforms = lib.platforms.all;
     mainProgram = "guilt";

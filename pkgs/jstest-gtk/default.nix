@@ -40,7 +40,6 @@ stdenv.mkDerivation {
     '';
     homepage = "https://github.com/Grumbel/jstest-gtk";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "jstest-gtk";
   };

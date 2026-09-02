@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "ois";
-  version = "1.5.1";
+  version = "1.6.0";
 
   src = fetchFromGitHub {
     owner = "wgois";
     repo = "OIS";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-ir6p+Tzf8L5VOW/rsG4yelsth7INbhABO2T7pfMHcFo=";
+    sha256 = "sha256-SQ5wUNwU0Wel//72gcmIkEiN0CslzyI7HHmGhwm75FY=";
   };
 
   nativeBuildInputs = [
@@ -28,16 +28,9 @@ stdenv.mkDerivation (finalAttrs: {
     "-DCMAKE_INSTALL_LIBDIR=lib"
   ];
 
-  patches = [
-    # CMake 4 dropped support of versions lower than 3.5,
-    # versions lower than 3.10 are deprecated.
-    ./cmake4.patch
-  ];
-
   meta = {
     description = "Object-oriented C++ input system";
     homepage = "https://github.com/wgois/OIS";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.zlib;
   };

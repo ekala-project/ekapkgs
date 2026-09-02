@@ -35,7 +35,6 @@ stdenv.mkDerivation rec {
     homepage = "https://www.speex.org/";
     description = "DSP library for Speex audio compression";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

@@ -53,7 +53,6 @@ buildGo126Module (finalAttrs: {
     description = "Extendable version manager with support for Ruby, Node.js, Erlang & more";
     homepage = "https://asdf-vm.com/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "asdf";
     platforms = lib.platforms.unix;
   };

@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
       for every keystroke. After entering your password, the screen is unlocked again.
     '';
     homepage = "https://i3wm.org/i3lock/";
-    maintainers = [ ];
     mainProgram = "i3lock";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;

@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://libcello.org/";
     description = "Higher level programming in C";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

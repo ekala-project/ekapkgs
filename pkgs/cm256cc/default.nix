@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fast GF(256) Cauchy MDS Block Erasure Codec in C++";
     homepage = "https://github.com/f4exb/cm256cc";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     license = lib.licenses.gpl3;
   };
 })

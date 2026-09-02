@@ -35,6 +35,5 @@ stdenv.mkDerivation {
     homepage = "https://github.com/drscream/lemonbar-xft";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

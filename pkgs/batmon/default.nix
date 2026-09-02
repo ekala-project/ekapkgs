@@ -29,6 +29,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "batmon";
     platforms = with lib.platforms; unix ++ windows;
     broken = stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isAarch64;
-    maintainers = [ ];
   };
 })

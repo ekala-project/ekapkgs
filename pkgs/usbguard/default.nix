@@ -82,6 +82,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://usbguard.github.io/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

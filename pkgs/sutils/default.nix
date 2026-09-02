@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Small command-line utilities";
     homepage = "https://github.com/baskerville/sutils";
-    maintainers = [ ];
     license = lib.licenses.unlicense;
     platforms = lib.platforms.linux;
   };

@@ -11,13 +11,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libhttpserver";
-  version = "0.19.0";
+  version = "2.0.0";
 
   src = fetchFromGitHub {
     owner = "etr";
     repo = "libhttpserver";
     rev = finalAttrs.version;
-    hash = "sha256-Pc3Fvd8D4Ymp7dG9YgU58mDceOqNfhWE1JtnpVaNx/Y=";
+    hash = "sha256-x/JSjTjDHfknr1VB1uApGgSGTdDkhGCZQCYj8PQ2UUE=";
   };
 
   nativeBuildInputs = [
@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C++ library for creating an embedded Rest HTTP server (and more)";
     homepage = "https://github.com/etr/libhttpserver";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     broken = stdenv.hostPlatform.isDarwin; # configure: error: cannot find required auxiliary files: ltmain.sh
   };

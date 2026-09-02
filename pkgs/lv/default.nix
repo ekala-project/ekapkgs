@@ -8,7 +8,7 @@
 
 stdenv.mkDerivation {
   pname = "lv";
-  version = "4.51-unstable-2020-08-03";
+  version = "4.51";
 
   src = fetchFromGitHub {
     owner = "ttdoda";
@@ -44,6 +44,5 @@ stdenv.mkDerivation {
     homepage = "https://github.com/ttdoda/lv";
     license = lib.licenses.gpl2Plus;
     platforms = with lib.platforms; linux ++ darwin;
-    maintainers = [ ];
   };
 }

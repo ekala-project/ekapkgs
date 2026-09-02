@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Version of the classic game Mastermind";
     mainProgram = "braincurses";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

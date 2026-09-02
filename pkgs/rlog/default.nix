@@ -18,6 +18,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C++ logging library used in encfs";
     platforms = lib.platforms.linux;
     license = lib.licenses.lgpl3;
-    maintainers = [ ];
   };
 })

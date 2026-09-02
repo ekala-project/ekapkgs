@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/KhronosGroup/SPIRV-Cross/releases/tag/vulkan-sdk-${finalAttrs.version}";
     platforms = lib.platforms.all;
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "spirv-cross";
   };
 })

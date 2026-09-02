@@ -63,6 +63,5 @@ stdenv.mkDerivation rec {
     homepage = "ftp://ftp.porcupine.org/pub/security/index.html";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

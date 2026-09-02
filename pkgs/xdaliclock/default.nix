@@ -46,6 +46,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.free;
     downloadPage = "http://www.jwz.org/xdaliclock/";
     mainProgram = "xdaliclock";
-    maintainers = [ ];
   };
 })

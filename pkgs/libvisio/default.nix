@@ -59,6 +59,5 @@ stdenv.mkDerivation rec {
     homepage = "https://wiki.documentfoundation.org/DLP/Libraries/libvisio";
     license = lib.licenses.mpl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

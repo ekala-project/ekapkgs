@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://gnupg-pkcs11.sourceforge.net/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

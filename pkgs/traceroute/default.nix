@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tracks the route taken by packets over an IP network";
     homepage = "https://traceroute.sourceforge.net/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "traceroute";
   };

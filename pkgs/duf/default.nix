@@ -34,7 +34,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/muesli/duf/";
     description = "Disk Usage/Free Utility";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "duf";
   };
 })

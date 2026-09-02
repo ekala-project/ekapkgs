@@ -79,7 +79,6 @@ stdenv.mkDerivation rec {
       unfree
       mit
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "SpaceCadetPinball";
   };

@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
       bsd3
     ];
     platforms = [ "x86_64-linux" ];
-    maintainers = [ ];
     # uses __off64_t, srand48_r, lrand48_r, drand48_r
     broken = stdenv.hostPlatform.isMusl;
   };

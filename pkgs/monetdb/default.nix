@@ -52,6 +52,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.monetdb.org/";
     license = lib.licenses.mpl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

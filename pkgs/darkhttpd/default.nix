@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "darkhttpd";
     homepage = "https://unix4lyfe.org/darkhttpd/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

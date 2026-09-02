@@ -58,6 +58,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.unfreeRedistributable;
     mainProgram = "unrar";
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

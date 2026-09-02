@@ -6,22 +6,26 @@
 rustPlatform.buildRustPackage (finalAttrs: {
 
   pname = "bkt";
-  version = "0.8.0";
+  version = "0.8.2";
 
   src = fetchFromGitHub {
     owner = "dimo414";
     repo = "bkt";
     tag = finalAttrs.version;
-    sha256 = "sha256-XQK7oZfutqCvFoGzMH5G5zoGvqB8YaXSdrwjS/SVTNU=";
+    sha256 = "sha256-qb7uRvCAXCayDIg8yQfF/Yxe0pNvR3giCQYmMIur2rM=";
   };
 
-  cargoHash = "sha256-4CY2A6mPTfGhqUh+nNg6eaTIVwA9ZtgH5jHQDGHnK4c=";
+  cargoHash = "sha256-locf3k0jIT9RNQS9yCUtOpj4oKo5pOBU3CEYAJDbaPU=";
+
+  checkFlags = [
+    # tries to run external commands not available in the sandbox
+    "--skip=cli::cache_dirs_multi_user"
+  ];
 
   meta = {
     description = "Subprocess caching utility";
     homepage = "https://github.com/dimo414/bkt";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "bkt";
   };
 })

@@ -11,13 +11,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "yara";
-  version = "4.5.5";
+  version = "4.5.8";
 
   src = fetchFromGitHub {
     owner = "VirusTotal";
     repo = "yara";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-a+oLxVJgdDrnOra85PPo8ZlFhinawWHuRtVE39S8yJk=";
+    hash = "sha256-SA68/fb24ml40TvwEzsT1sgQvEuq5/nV7UljErlpOWQ=";
   };
 
   nativeBuildInputs = [
@@ -53,6 +53,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3;
     mainProgram = "yara";
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "HTTP load tester";
     homepage = "https://www.joedog.org/siege-home/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

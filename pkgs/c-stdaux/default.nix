@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
       asl20
       lgpl2Plus
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -31,7 +31,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://codeberg.org/git-pages/git-pages";
     changelog = "https://codeberg.org/git-pages/git-pages/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.bsd0;
-    maintainers = [ ];
     mainProgram = "git-pages";
   };
 })

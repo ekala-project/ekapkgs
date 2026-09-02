@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "GNU Scientific Library, a large numerical library";
     homepage = "https://www.gnu.org/software/gsl/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

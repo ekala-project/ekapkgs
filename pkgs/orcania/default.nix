@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "base64url";
     homepage = "https://github.com/babelouest/orcania";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
   };
 })

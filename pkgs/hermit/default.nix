@@ -26,7 +26,6 @@ stdenvNoCC.mkDerivation rec {
     description = "Monospace font designed to be clear, pragmatic and very readable";
     homepage = "https://pcaro.es/p/hermit";
     license = lib.licenses.ofl;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

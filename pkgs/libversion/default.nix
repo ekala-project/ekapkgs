@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Advanced version string comparison library";
     homepage = "https://github.com/repology/libversion";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

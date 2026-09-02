@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Plus;
     homepage = "https://github.com/pali/libopenaptx";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

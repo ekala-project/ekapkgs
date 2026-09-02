@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://pmt.sourceforge.net/pngcrush";
     description = "PNG optimizer";
     license = lib.licenses.free;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
     mainProgram = "pngcrush";
   };

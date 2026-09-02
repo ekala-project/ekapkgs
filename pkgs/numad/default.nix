@@ -36,6 +36,5 @@ stdenv.mkDerivation {
     homepage = "https://fedoraproject.org/wiki/Features/numad";
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

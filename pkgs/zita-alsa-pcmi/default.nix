@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     version = finalAttrs.version;
     homepage = "http://kokkinizita.linuxaudio.org/linuxaudio/downloads/index.html";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

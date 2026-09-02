@@ -2,7 +2,6 @@
   stdenv,
   lib,
   fetchFromGitHub,
-  fetchpatch2,
   meson,
   ninja,
   pkg-config,
@@ -14,7 +13,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libportal";
-  version = "0.9.1";
+  version = "0.10.0";
 
   outputs = [
     "out"
@@ -26,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "flatpak";
     repo = "libportal";
     rev = finalAttrs.version;
-    sha256 = "sha256-CXI4rBr9wxLUX537d6SNNf8YFR/J6YdeROlFt3edeOU=";
+    sha256 = "sha256-vU3jnHxCvxZMSJOh5hzkCB8uuE0NnbnZM7+eQ6a5+oI=";
   };
 
   depsBuildBuild = [
@@ -47,14 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
-  patches = [
-    (fetchpatch2 {
-      name = "libportal-fix-qt6.9-private-api-usage.patch";
-      url = "https://github.com/flatpak/libportal/commit/796053d2eebe4532aad6bd3fd80cdf3b197806ec.patch?full_index=1";
-      hash = "sha256-TPIKKnZCcp/bmmsaNlDxAsKLTBe6BKPCTOutLjXPCHQ=";
-    })
-  ];
-
   mesonFlags = [
     (lib.mesonEnable "backend-gtk3" false)
     (lib.mesonEnable "backend-gtk4" false)
@@ -73,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Flatpak portal library";
     homepage = "https://github.com/flatpak/libportal";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

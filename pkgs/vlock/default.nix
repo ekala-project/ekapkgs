@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Virtual console locking program";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "vlock";
   };

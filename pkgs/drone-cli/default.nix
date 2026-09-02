@@ -28,7 +28,6 @@ buildGoModule rec {
 
   meta = {
     mainProgram = "drone";
-    maintainers = [ ];
     license = lib.licenses.asl20;
     description = "Command line client for the Drone continuous integration server";
     homepage = "https://github.com/harness/drone-cli";

@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/swaywm/swayidle";
     license = lib.licenses.mit;
     mainProgram = "swayidle";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

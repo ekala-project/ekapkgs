@@ -1,0 +1,66 @@
+{
+  lib,
+  fetchFromGitHub,
+  python3Packages,
+  libsepol,
+  libselinux,
+  checkpolicy,
+}:
+
+python3Packages.buildPythonApplication (finalAttrs: {
+  pname = "setools";
+  version = "4.7.1";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "SELinuxProject";
+    repo = "setools";
+    tag = finalAttrs.version;
+    hash = "sha256-ZdqoLOwKdTuQVgmajsXEEi9hHILxx/8qJc6az9mGIHw=";
+  };
+
+  build-system = with python3Packages; [
+    cython
+    setuptools
+  ];
+
+  buildInputs = [ libsepol ];
+
+  dependencies = with python3Packages; [
+    libselinux
+    setuptools
+  ];
+
+  optional-dependencies = {
+    analysis = with python3Packages; [
+      networkx
+      pygraphviz
+    ];
+  };
+
+  nativeCheckInputs = [
+    python3Packages.tox
+    checkpolicy
+  ];
+
+  setupPyBuildFlags = [ "-i" ];
+
+  preBuild = ''
+    export SEPOL="${lib.getLib libsepol}/lib/libsepol.a"
+  '';
+
+  preCheck = ''
+    export CHECKPOLICY=${lib.getExe checkpolicy}
+  '';
+
+  meta = {
+    description = "SELinux Policy Analysis Tools";
+    homepage = "https://github.com/SELinuxProject/setools";
+    changelog = "https://github.com/SELinuxProject/setools/blob/${finalAttrs.version}/ChangeLog";
+    license = with lib.licenses; [
+      gpl2Only
+      lgpl21Plus
+    ];
+    platforms = lib.platforms.linux;
+  };
+})

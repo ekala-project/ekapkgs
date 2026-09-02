@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/orhun/zps";
     changelog = "https://github.com/orhun/zps/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "zps";
   };

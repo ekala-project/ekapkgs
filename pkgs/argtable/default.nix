@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
       are essential but tedious to implement for a robust CLI program.
     '';
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

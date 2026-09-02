@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "volk";
-  version = "1.4.313.0";
+  version = "1.4.350";
 
   src = fetchFromGitHub {
     owner = "zeux";
     repo = "volk";
     rev = "vulkan-sdk-${finalAttrs.version}";
-    hash = "sha256-MXJjHfrSZiDHnCJMaKYgy2480DxNv86pbHx2ebWU2ug=";
+    hash = "sha256-7JsOWhMTnxeJfsTVgnnHQt5gYJ8tqELT+s3VDHTPof8=";
   };
 
   nativeBuildInputs = [
@@ -31,6 +31,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/zeux/volk";
     platforms = lib.platforms.all;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

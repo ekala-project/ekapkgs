@@ -30,6 +30,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Secure suspend/hibernate-friendly alternative to vlock -an";
     homepage = "https://github.com/xyb3rt/physlock";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "physlock";
   };

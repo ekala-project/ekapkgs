@@ -110,7 +110,6 @@ stdenv.mkDerivation rec {
     '';
     platforms = lib.platforms.unix;
     badPlatforms = [ "aarch64-darwin" ];
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
   };
 }

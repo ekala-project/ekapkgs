@@ -37,6 +37,5 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/cruegge/pam-gnupg";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
   };
 })

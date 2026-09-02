@@ -29,6 +29,5 @@ buildGoModule (finalAttrs: {
     description = "EPUB to KEPUB converter";
     homepage = "https://pgaskin.net/kepubify";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -10,7 +10,7 @@
 
 stdenv.mkDerivation {
   pname = "rlottie";
-  version = "0.2-unstable-2026-07-03";
+  version = "0.2";
 
   src = fetchFromGitHub {
     owner = "Samsung";
@@ -45,6 +45,5 @@ stdenv.mkDerivation {
       ftl
     ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

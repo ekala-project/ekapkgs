@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "3D appearance variant of the X Athena Widget Set";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxaw3d";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

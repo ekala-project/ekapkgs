@@ -1,0 +1,33 @@
+{
+  lib,
+  stdenv,
+  fetchurl,
+  meson,
+  ninja,
+  gtk3,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "adwaita-icon-theme-legacy";
+  version = "46.2";
+
+  src = fetchurl {
+    url = "mirror://gnome/sources/adwaita-icon-theme-legacy/${lib.versions.major finalAttrs.version}/adwaita-icon-theme-legacy-${finalAttrs.version}.tar.xz";
+    hash = "sha256-VISA9YWJpUty0Ygzt1WxX/vVZ+MYcknXTi4fj5nyL7Q=";
+  };
+
+  nativeBuildInputs = [
+    meson
+    meson.configurePhaseHook
+    ninja
+    gtk3
+  ];
+
+  meta = {
+    description = "Fullcolor icon theme providing fallback for legacy apps";
+    homepage = "https://gitlab.gnome.org/GNOME/adwaita-icon-theme-legacy";
+    changelog = "https://gitlab.gnome.org/GNOME/adwaita-icon-theme-legacy/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
+    license = lib.licenses.cc-by-sa-30;
+    platforms = lib.platforms.all;
+  };
+})

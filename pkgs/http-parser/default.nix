@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "HTTP message parser written in C";
     homepage = "https://github.com/nodejs/http-parser";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
   };

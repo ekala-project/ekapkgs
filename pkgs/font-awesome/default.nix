@@ -6,13 +6,13 @@
 
 stdenvNoCC.mkDerivation {
   pname = "font-awesome";
-  version = "6.7.2";
+  version = "7.3.1";
 
   src = fetchFromGitHub {
     owner = "FortAwesome";
     repo = "Font-Awesome";
-    rev = "6.7.2";
-    hash = "sha256-MaJG96kYj8ukJVyqOTDpkHH/eWr/ZlbVKk9AvJM7ub4=";
+    rev = "7.3.1";
+    hash = "sha256-FQ2XvDi2JQ/XR8xgy3f8uJnsQW/lF0/IehCJvSHS1Y4=";
   };
 
   installPhase = ''
@@ -28,6 +28,5 @@ stdenvNoCC.mkDerivation {
     homepage = "https://fontawesome.com/";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

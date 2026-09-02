@@ -46,6 +46,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/OpenSMTPD/table-mysql/releases/tag/${finalAttrs.version}";
     license = lib.licenses.isc;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

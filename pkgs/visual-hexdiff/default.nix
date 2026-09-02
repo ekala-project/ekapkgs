@@ -49,7 +49,6 @@ stdenv.mkDerivation {
     description = "Visual hexadecimal difference editor";
     homepage = "http://tboudet.free.fr/hexdiff/";
     license = lib.licenses.wtfpl;
-    maintainers = [ ];
     mainProgram = "hexdiff";
     platforms = lib.platforms.unix;
   };

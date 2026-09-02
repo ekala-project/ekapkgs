@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "nmon";
     homepage = "https://nmon.sourceforge.net";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

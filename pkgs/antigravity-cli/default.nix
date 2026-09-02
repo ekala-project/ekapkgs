@@ -55,7 +55,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://antigravity.google";
     changelog = "https://antigravity.google/changelog";
     license = lib.licenses.unfree;
-    maintainers = [ ];
     platforms = lib.attrNames sourceData;
     mainProgram = "agy";
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];

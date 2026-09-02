@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Utility for encrypting and decrypting files and streams with AES-256";
     homepage = "https://ccrypt.sourceforge.net/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

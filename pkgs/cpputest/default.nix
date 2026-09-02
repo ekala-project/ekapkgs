@@ -18,6 +18,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Unit testing and mocking framework for C/C++";
     platforms = lib.platforms.all;
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

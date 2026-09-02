@@ -26,7 +26,6 @@ stdenv.mkDerivation rec {
     description = "Components for building one-time password authentication systems";
     homepage = "https://www.nongnu.org/oath-toolkit/";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
     mainProgram = "oathtool";
   };

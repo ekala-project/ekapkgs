@@ -16,7 +16,7 @@
 
 stdenv.mkDerivation {
   pname = "apt-dater";
-  version = "1.0.4-unstable-2026-02-15";
+  version = "1.0.4";
 
   src = fetchFromGitHub {
     owner = "DE-IBH";
@@ -76,6 +76,5 @@ stdenv.mkDerivation {
     '';
     license = lib.licenses.gpl2Plus;
     mainProgram = "apt-dater";
-    maintainers = [ ];
   };
 }

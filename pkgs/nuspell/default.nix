@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "nuspell";
-  version = "5.1.7";
+  version = "5.1.8";
 
   src = fetchFromGitHub {
     owner = "nuspell";
     repo = "nuspell";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-CAyM3bzIP0aYNEu94I7I1qlglPx9HJSnEkgEfjNGfvc=";
+    hash = "sha256-foMq1Gx30/EmYIHMPXTeraV3XcwBBVGnjMRjGE9+Xbw=";
   };
 
   nativeBuildInputs = [
@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "nuspell";
     homepage = "https://nuspell.github.io/";
     platforms = lib.platforms.all;
-    maintainers = [ ];
     license = lib.licenses.lgpl3Plus;
     changelog = "https://github.com/nuspell/nuspell/blob/v${finalAttrs.version}/CHANGELOG.md";
   };

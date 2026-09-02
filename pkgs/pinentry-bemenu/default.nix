@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Pinentry implementation based on bemenu";
     homepage = "https://github.com/t-8ch/pinentry-bemenu";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
     mainProgram = "pinentry-bemenu";
   };

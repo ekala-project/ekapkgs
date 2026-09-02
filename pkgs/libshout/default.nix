@@ -56,6 +56,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2;
     mainProgram = "shout";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

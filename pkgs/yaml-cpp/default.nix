@@ -48,6 +48,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/jbeder/yaml-cpp";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

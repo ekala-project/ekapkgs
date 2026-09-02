@@ -29,6 +29,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/leahneukirchen/nq/blob/v${finalAttrs.version}/NEWS.md";
     license = lib.licenses.publicDomain;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

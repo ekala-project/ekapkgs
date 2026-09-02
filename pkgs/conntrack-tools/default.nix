@@ -52,6 +52,5 @@ stdenv.mkDerivation rec {
     description = "Connection tracking userspace tools";
     platforms = platforms.linux;
     license = licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Dr-Noob/cpufetch";
     changelog = "https://github.com/Dr-Noob/cpufetch/releases/tag/v${finalAttrs.version}";
     mainProgram = "cpufetch";
-    maintainers = [ ];
   };
 })

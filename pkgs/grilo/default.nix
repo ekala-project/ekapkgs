@@ -69,7 +69,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://gitlab.gnome.org/GNOME/grilo";
     description = "Framework that provides access to various sources of multimedia content, using a pluggable system";
-    maintainers = [ ];
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.unix;
   };

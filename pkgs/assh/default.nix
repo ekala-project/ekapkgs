@@ -46,7 +46,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/moul/assh";
     changelog = "https://github.com/moul/assh/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

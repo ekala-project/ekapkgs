@@ -37,7 +37,6 @@ buildGoModule (finalAttrs: {
 
     license = lib.licenses.isc;
     homepage = "https://dnscrypt.info/";
-    maintainers = [ ];
     mainProgram = "dnscrypt-proxy";
     platforms = with lib.platforms; unix;
   };

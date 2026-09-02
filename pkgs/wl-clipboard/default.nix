@@ -53,6 +53,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Command-line copy/paste utilities for Wayland";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

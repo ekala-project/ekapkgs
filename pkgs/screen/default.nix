@@ -74,6 +74,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Window manager that multiplexes a physical terminal";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Classic system monitoring tool";
     license = lib.licenses.gpl2Plus;
     mainProgram = "xosview";
-    maintainers = [ ];
     platforms = with lib.platforms; linux;
   };
 })

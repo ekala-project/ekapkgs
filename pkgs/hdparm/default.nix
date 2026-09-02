@@ -24,6 +24,5 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = lib.platforms.linux;
     license = lib.licenses.bsd2;
     mainProgram = "hdparm";
-    maintainers = [ ];
   };
 })

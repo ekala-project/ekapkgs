@@ -28,6 +28,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.unix;
     homepage = "https://www.maxmind.com";
-    maintainers = [ ];
   };
 })

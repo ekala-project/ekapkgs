@@ -25,6 +25,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/sakov/nn-c/";
     platforms = lib.platforms.unix;
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

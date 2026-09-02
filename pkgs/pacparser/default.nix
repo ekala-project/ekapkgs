@@ -6,13 +6,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "pacparser";
-  version = "1.5.1";
+  version = "1.5.2";
 
   src = fetchFromGitHub {
     owner = "manugarg";
     repo = "pacparser";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-CkaRgm5xZHKiewPDSp0bzVkgAOeTbuGrY3FM4HaN97I=";
+    hash = "sha256-JW4FuKqhiIpX+0p8+OBFbsy6/34q161L2C15kipiUQc=";
   };
 
   makeFlags = [
@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://pacparser.manugarg.com/";
     license = lib.licenses.lgpl3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "pactester";
   };
 })

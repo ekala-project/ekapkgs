@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://c9x.me/compile/";
     description = "Small compiler backend written in C";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
     mainProgram = "qbe";

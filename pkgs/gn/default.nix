@@ -67,6 +67,5 @@ stdenv.mkDerivation {
     homepage = "https://gn.googlesource.com/gn";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

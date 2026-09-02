@@ -48,7 +48,6 @@ stdenv.mkDerivation rec {
       (4.8J) supports up to 15 piece types, and board sizes up to 12x8.
     '';
     license = lib.licenses.free;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

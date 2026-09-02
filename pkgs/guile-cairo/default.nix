@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
       management, exceptions, macros, and a dynamic programming environment.
     '';
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     platforms = guile.meta.platforms;
   };
 })

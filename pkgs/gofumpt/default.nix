@@ -6,16 +6,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "gofumpt";
-  version = "0.10.0";
+  version = "0.11.0";
 
   src = fetchFromGitHub {
     owner = "mvdan";
     repo = "gofumpt";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-FaaXfvx63q+CkVGm3DyPrAykRVmpwyw+/2bBIAz8ab8=";
+    hash = "sha256-ybGY9zgzg2cK72hoebj9QF3SlrTzfI1eEk7IsKbp3pQ=";
   };
 
-  vendorHash = "sha256-tM9IKMdCAdKcQPzENWdeK9GtVD20IzZYGaoLGJPettw=";
+  vendorHash = "sha256-xN7s8zSK9V7E0cCRaRKVkhzp0rOcEIlgaZjPAgrpdio=";
 
   env.CGO_ENABLED = "0";
 
@@ -33,7 +33,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/mvdan/gofumpt";
     changelog = "https://github.com/mvdan/gofumpt/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "gofumpt";
   };
 })

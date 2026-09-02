@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/graysky2/modprobed-db";
     description = "Useful utility for users wishing to build a minimal kernel via a make localmodconfig";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "modprobed-db";
     platforms = lib.platforms.linux;
   };

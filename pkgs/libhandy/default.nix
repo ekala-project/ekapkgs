@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Building blocks for modern adaptive GNOME apps";
     homepage = "https://gitlab.gnome.org/GNOME/libhandy";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -29,7 +29,6 @@ stdenv.mkDerivation {
   meta = {
     homepage = "http://leenissen.dk/fann/wp/";
     description = "Fast Artificial Neural Network Library";
-    maintainers = [ ];
     license = lib.licenses.lgpl21;
     platforms = lib.platforms.all;
   };

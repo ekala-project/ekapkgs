@@ -45,6 +45,5 @@ rustPlatform.buildRustPackage rec {
     description = "Image quantization library";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

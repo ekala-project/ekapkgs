@@ -28,7 +28,6 @@ stdenv.mkDerivation {
     description = "Allows to start X with NumLock turned on";
     homepage = "https://github.com/rg3/numlockx";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "numlockx";
   };

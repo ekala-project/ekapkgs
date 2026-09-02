@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Processor counter monitor";
     homepage = "https://www.intel.com/software/pcm";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = [ "x86_64-linux" ];
   };
 })

@@ -77,6 +77,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "High performance C++ OpenPGP library, fully compliant to RFC 4880";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

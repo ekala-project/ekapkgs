@@ -20,6 +20,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "cargo-license";
     homepage = "https://github.com/onur/cargo-license";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -49,7 +49,6 @@ stdenv.mkDerivation {
     description = "File system archiver for linux";
     homepage = "https://www.fsarchiver.org/";
     license = lib.licenses.lgpl2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "fsarchiver";
   };

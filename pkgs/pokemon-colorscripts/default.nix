@@ -38,7 +38,6 @@ stdenv.mkDerivation {
     description = "Scripts for Pokémon color manipulation";
     homepage = "https://gitlab.com/phoneybadger/pokemon-colorscripts";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "pokemon-colorscripts";
   };
 }

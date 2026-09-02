@@ -76,7 +76,6 @@ buildGo126Module (finalAttrs: {
     description = "Develop your applications directly in your Kubernetes Cluster";
     homepage = "https://okteto.com/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "okteto";
   };
 })

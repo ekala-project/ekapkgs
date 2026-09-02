@@ -48,7 +48,6 @@ stdenv.mkDerivation rec {
     homepage = "https://marlam.de/msmtp/";
     license = lib.licenses.gpl3Plus;
     mainProgram = "msmtp";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

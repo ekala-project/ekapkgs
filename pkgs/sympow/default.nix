@@ -78,7 +78,7 @@ stdenv.mkDerivation (finalAttrs: {
       fullName = "Custom, BSD-like. See COPYING file.";
       free = true;
     };
-    teams = [ lib.teams.sage ];
+    teams = [ ];
     platforms = lib.platforms.unix;
   };
 })

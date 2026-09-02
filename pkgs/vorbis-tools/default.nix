@@ -39,7 +39,6 @@ stdenv.mkDerivation rec {
     description = "Extra tools for Ogg-Vorbis audio codec";
     homepage = "https://xiph.org/vorbis/";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

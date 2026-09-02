@@ -44,7 +44,6 @@ stdenv.mkDerivation {
     description = "Bible, King James Version";
     homepage = "https://github.com/layeh/kjv";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
     mainProgram = "kjv";
   };
 }

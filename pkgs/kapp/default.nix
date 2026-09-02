@@ -1,0 +1,44 @@
+{
+  lib,
+  buildGo126Module,
+  fetchFromGitHub,
+  installShellFiles,
+}:
+
+buildGo126Module (finalAttrs: {
+  pname = "kapp";
+  version = "0.66.0";
+
+  src = fetchFromGitHub {
+    owner = "carvel-dev";
+    repo = "kapp";
+    rev = "v${finalAttrs.version}";
+    hash = "sha256-Fs15mvxg3MxQpis1f9eOGOE516THazTIKs0ZiqV15Xk=";
+  };
+
+  vendorHash = null;
+
+  subPackages = [ "cmd/kapp" ];
+
+  env.CGO_ENABLED = 0;
+
+  ldflags = [
+    "-X carvel.dev/kapp/pkg/kapp/version.Version=${finalAttrs.version}"
+  ];
+
+  nativeBuildInputs = [ installShellFiles ];
+
+  postInstall = ''
+    for shell in bash fish zsh; do
+      $out/bin/kapp completion $shell > kapp.$shell
+      installShellCompletion kapp.$shell
+    done
+  '';
+
+  meta = {
+    description = "CLI tool that encourages Kubernetes users to manage bulk resources with an application abstraction for grouping";
+    homepage = "https://carvel.dev/kapp/";
+    license = lib.licenses.asl20;
+    mainProgram = "kapp";
+  };
+})

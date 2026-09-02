@@ -51,6 +51,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "git-subrepo";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

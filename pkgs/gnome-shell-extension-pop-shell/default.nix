@@ -1,0 +1,58 @@
+# Pop Shell - manually packaged extension (built from source)
+# TODO: gnome-shell dependency (being ported)
+{
+  stdenv,
+  lib,
+  fetchFromGitHub,
+  glib,
+  gjs,
+  typescript ? null, # TODO: not yet available in ekapkgs
+}:
+
+stdenv.mkDerivation {
+  pname = "gnome-shell-extension-pop-shell";
+  version = "1.2.0-unstable-2026-03-31";
+
+  src = fetchFromGitHub {
+    owner = "pop-os";
+    repo = "shell";
+    rev = "7898b65c20735057faf0797f8ed056704ca55f0d";
+    hash = "sha256-MmHoOxymo0QSRbRcSbFiv82+QWAwIwXwg/wyGQGVYiI=";
+  };
+
+  nativeBuildInputs = [
+    glib
+    gjs
+  ]
+  ++ lib.optional (typescript != null) typescript;
+
+  buildInputs = [ gjs ];
+
+  patches = [
+    ./fix-gjs.patch
+  ];
+
+  makeFlags = [ "XDG_DATA_HOME=$(out)/share" ];
+
+  passthru = {
+    extensionUuid = "pop-shell@system76.com";
+    extensionPortalSlug = "pop-shell";
+  };
+
+  postPatch = ''
+    for file in */main.js; do
+      substituteInPlace $file --replace "gjs" "${gjs}/bin/gjs"
+    done
+  '';
+
+  preFixup = ''
+    chmod +x $out/share/gnome-shell/extensions/pop-shell@system76.com/*/main.js
+  '';
+
+  meta = {
+    description = "Keyboard-driven layer for GNOME Shell";
+    license = lib.licenses.gpl3Only;
+    platforms = lib.platforms.linux;
+    homepage = "https://github.com/pop-os/shell";
+  };
+}

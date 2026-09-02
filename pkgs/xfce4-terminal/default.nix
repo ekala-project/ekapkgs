@@ -63,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.xfce.org/apps/xfce4-terminal";
     license = lib.licenses.gpl2Plus;
     mainProgram = "xfce4-terminal";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     version = finalAttrs.version;
     homepage = "http://non.tuxfamily.org/";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

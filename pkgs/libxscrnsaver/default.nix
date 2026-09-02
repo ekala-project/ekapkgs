@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "X11 Screen Saver extension client library";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxscrnsaver";
     license = lib.licenses.x11;
-    maintainers = [ ];
     pkgConfigModules = [ "xscrnsaver" ];
     platforms = lib.platforms.unix;
   };

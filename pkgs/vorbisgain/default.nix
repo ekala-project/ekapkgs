@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Utility that corrects the volume of an Ogg Vorbis file to a predefined standardized loudness";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "vorbisgain";
   };
 })

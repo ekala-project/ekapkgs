@@ -6,16 +6,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "govc";
-  version = "0.55.1";
+  version = "0.56.0";
 
   src = fetchFromGitHub {
     owner = "vmware";
     repo = "govmomi";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-jhehpkwLa8wWdwMSazbZCT3zV4IUopUciSgPE71nTgQ=";
+    hash = "sha256-z52rXiwCirACr22gucSax1QCGqrbKSETLePr1lekkVc=";
   };
 
-  vendorHash = "sha256-6DKE4rs7w070ZreAffs3i7bcJ075eCn9MrvVlOTANPo=";
+  vendorHash = "sha256-+9iPWQo/2I4Fsuz0ozPF7tBBRv6tAcZUHCYLxIr8AkM=";
 
   sourceRoot = "${finalAttrs.src.name}/govc";
 
@@ -29,7 +29,6 @@ buildGoModule (finalAttrs: {
     description = "VSphere CLI built on top of govmomi";
     homepage = "https://github.com/vmware/govmomi/tree/main/govc";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "govc";
   };
 })

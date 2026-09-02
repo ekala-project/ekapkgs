@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Time command execution over multiple executions";
     license = lib.licenses.mit;
     homepage = "https://tratt.net/laurie/src/multitime/";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "multitime";
   };

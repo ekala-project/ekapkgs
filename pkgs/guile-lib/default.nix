@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
       for Guile".
     '';
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = guile.meta.platforms;
   };
 })

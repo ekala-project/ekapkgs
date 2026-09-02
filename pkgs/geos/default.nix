@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C/C++ library for computational geometry with a focus on algorithms used in geographic information systems (GIS) software";
     homepage = "https://libgeos.org";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
     mainProgram = "geosop";
     platforms = lib.platforms.all;
   };

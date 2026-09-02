@@ -26,9 +26,8 @@
           homepage = "https://framagit.org/ppom/reaction";
           license = lib.licenses.agpl3Plus;
           mainProgram = name;
-          maintainers = [ ];
           platforms = lib.platforms.unix;
-          teams = [ lib.teams.ngi ];
+          teams = [ ];
         };
       }
       // extra

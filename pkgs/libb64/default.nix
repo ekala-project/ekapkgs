@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/libb64/libb64";
     license = lib.licenses.publicDomain;
     mainProgram = "base64";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

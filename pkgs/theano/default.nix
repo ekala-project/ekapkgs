@@ -28,7 +28,6 @@ stdenvNoCC.mkDerivation rec {
   meta = {
     homepage = "https://github.com/akryukov/theano";
     description = "Old-style font designed from historic samples";
-    maintainers = [ ];
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
   };

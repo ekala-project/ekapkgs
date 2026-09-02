@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
       hpndSellVariant
     ];
     mainProgram = "xwininfo";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

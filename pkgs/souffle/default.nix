@@ -102,7 +102,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Translator of declarative Datalog programs into the C++ language";
     homepage = "https://souffle-lang.github.io/";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     license = lib.licenses.upl;
   };
 })

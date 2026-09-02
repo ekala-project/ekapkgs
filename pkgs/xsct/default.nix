@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/faf0/sct";
     changelog = "https://github.com/faf0/sct/blob/${finalAttrs.version}/CHANGELOG";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ freebsd ++ openbsd;
   };
 })

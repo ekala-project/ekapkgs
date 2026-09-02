@@ -77,7 +77,6 @@ buildGoModule (finalAttrs: {
     '';
     homepage = "https://direnv.net";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "direnv";
   };
 })

@@ -10,12 +10,12 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "rgbds";
-  version = "1.0.1";
+  version = "1.0.3";
   src = fetchFromGitHub {
     owner = "gbdev";
     repo = "rgbds";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-amTlFuk+j4lupBmXt+2A2XNn3CIqKhar+JfpFFhg834=";
+    hash = "sha256-m9iqBXM9qcvBKiTpVhKmRyOD4nd5fBwbGcWIOZJvjSI=";
   };
   nativeBuildInputs = [
     bison
@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
 
       This is a fork of the original RGBDS which aims to make the programs more like other UNIX tools.
     '';
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

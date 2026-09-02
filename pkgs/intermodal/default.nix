@@ -38,7 +38,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/casey/intermodal";
     changelog = "https://github.com/casey/intermodal/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.cc0;
-    maintainers = [ ];
     mainProgram = "imdl";
   };
 })

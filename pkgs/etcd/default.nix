@@ -27,7 +27,6 @@ let
     description = "Distributed reliable key-value store for the most critical data of a distributed system";
     license = licenses.asl20;
     homepage = "https://etcd.io/";
-    maintainers = [ ];
     platforms = platforms.darwin ++ platforms.linux;
   };
 

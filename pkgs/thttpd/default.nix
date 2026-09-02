@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tiny/turbo/throttling HTTP server";
     homepage = "http://www.acme.com/software/thttpd/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

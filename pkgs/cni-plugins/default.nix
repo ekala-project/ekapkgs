@@ -6,13 +6,13 @@
 
 buildGoModule rec {
   pname = "cni-plugins";
-  version = "1.7.1";
+  version = "1.9.1";
 
   src = fetchFromGitHub {
     owner = "containernetworking";
     repo = "plugins";
     rev = "v${version}";
-    hash = "sha256-S1BpOLPmWxaemPHTqZsYwGMH5KM1bPALcl78waZ0TBE=";
+    hash = "sha256-3OhUvIJPU5Ayc4/po9Rj4Tfa5536aN8bj+51M6Xg5os=";
   };
 
   vendorHash = null;
@@ -49,7 +49,6 @@ buildGoModule rec {
     description = "Some standard networking plugins, maintained by the CNI team";
     homepage = "https://www.cni.dev/plugins/";
     license = licenses.asl20;
-    maintainers = [ ];
     platforms = platforms.linux;
   };
 }

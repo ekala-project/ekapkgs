@@ -26,6 +26,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Set of programs to make renaming of files faster";
     platforms = lib.platforms.unix;
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

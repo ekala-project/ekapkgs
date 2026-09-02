@@ -85,6 +85,5 @@ stdenv.mkDerivation rec {
       gpl2Only
       publicDomain
     ];
-    maintainers = [ ];
   };
 }

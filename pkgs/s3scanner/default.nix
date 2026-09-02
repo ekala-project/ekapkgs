@@ -28,7 +28,6 @@ buildGoModule (finalAttrs: {
     downloadPage = "https://github.com/sa7mon/S3Scanner/releases/tag/v${finalAttrs.version}";
     homepage = "https://github.com/sa7mon/s3scanner";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "s3scanner";
   };
 })

@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Library for semi-portable access to hardware-provided atomic memory update operations";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

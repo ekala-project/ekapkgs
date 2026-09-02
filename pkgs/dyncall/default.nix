@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Highly dynamic multi-platform foreign function call interface library";
     homepage = "https://www.dyncall.org";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 })

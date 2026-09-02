@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/bitcoin-core/secp256k1";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = with lib.platforms; all;
   };
 })

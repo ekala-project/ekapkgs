@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://fstrcmp.sourceforge.net/";
     downloadPage = "https://sourceforge.net/projects/fstrcmp/";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

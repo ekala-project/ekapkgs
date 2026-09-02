@@ -29,7 +29,6 @@ buildGoModule (finalAttrs: {
     description = "Byzantine-Fault Tolerant State Machines. Or Blockchain, for short";
     homepage = "https://tendermint.com/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     mainProgram = "tendermint";
   };

@@ -22,7 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Rust tool to create TCP tunnels";
     homepage = "https://github.com/ekzhang/bore";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "bore";
   };
 })

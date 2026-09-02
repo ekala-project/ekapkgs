@@ -54,6 +54,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/NVIDIA/egl-x11/";
     license = lib.licenses.asl20;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

@@ -51,6 +51,5 @@ buildGoModule {
       This is not an official Google product.
     '';
     mainProgram = "pprof";
-    maintainers = [ ];
   };
 }

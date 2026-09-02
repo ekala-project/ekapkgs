@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://tracker.debian.org/pkg/prctl";
     changelog = "https://github.com/hikerockies/prctl/blob/v${finalAttrs.version}/ChangeLog";
     mainProgram = "prctl";
-    maintainers = [ ];
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
   };

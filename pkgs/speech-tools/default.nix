@@ -79,7 +79,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     description = "Text-to-speech engine";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.free;
   };

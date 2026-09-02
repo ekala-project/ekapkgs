@@ -46,7 +46,6 @@ buildGoModule (finalAttrs: {
 
   meta = {
     description = "Create and view interactive cheatsheets on the command-line";
-    maintainers = [ ];
     license = with lib.licenses; [
       gpl3
       mit

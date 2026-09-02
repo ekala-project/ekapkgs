@@ -63,6 +63,5 @@ stdenv.mkDerivation {
     license = lib.licenses.lgpl3;
     description = "Opensource database of photographic lenses and their characteristics";
     homepage = "https://lensfun.github.io";
-    maintainers = [ ];
   };
 }

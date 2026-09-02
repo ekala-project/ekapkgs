@@ -44,7 +44,6 @@ stdenv.mkDerivation {
     description = "AX.25 ham radio applications";
     homepage = "https://linux-ax25.in-berlin.de/wiki/Main_Page";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

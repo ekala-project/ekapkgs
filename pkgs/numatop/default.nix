@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "numatop";
     homepage = "https://www.intel.com/content/www/us/en/developer/topic-technology/open/numatop/overview.html";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = [
       "i686-linux"
       "x86_64-linux"

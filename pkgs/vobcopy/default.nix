@@ -10,7 +10,7 @@
 
 stdenv.mkDerivation {
   pname = "vobcopy";
-  version = "1.2.1-unstable-2023-08-29";
+  version = "1.2.1";
 
   src = fetchFromGitHub {
     owner = "barak";

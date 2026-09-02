@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
       mit
       mit0
     ];
-    maintainers = [ ];
     inherit (librandombytes.meta) platforms;
   };
 })

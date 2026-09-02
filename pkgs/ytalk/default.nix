@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Terminal based talk client";
     mainProgram = "ytalk";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
   };
 })

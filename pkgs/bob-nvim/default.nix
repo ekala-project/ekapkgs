@@ -34,7 +34,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Version manager for neovim";
     homepage = "https://github.com/MordechaiHadad/bob";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "bob";
   };
 })

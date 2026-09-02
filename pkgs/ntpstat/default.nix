@@ -26,7 +26,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://github.com/mlichvar/ntpstat";
     license = lib.licenses.mit;
     mainProgram = "nptstat";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -33,7 +33,6 @@ buildGo126Module (finalAttrs: {
     description = "Simple DNS proxy with DoH, DoT, and DNSCrypt support";
     homepage = "https://github.com/AdguardTeam/dnsproxy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "dnsproxy";
   };
 })

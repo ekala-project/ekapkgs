@@ -29,6 +29,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://scanline.ca/exrtools";
     platforms = lib.platforms.linux;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

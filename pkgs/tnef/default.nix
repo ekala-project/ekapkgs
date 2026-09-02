@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Unpacks MIME attachments of type application/ms-tnef";
     homepage = "https://github.com/verdammelt/tnef";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "tnef";
   };

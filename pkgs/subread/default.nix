@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     broken = stdenv.hostPlatform.isDarwin;
     description = "High-performance read alignment, quantification and mutation discovery";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = [
       "x86_64-linux"
     ];

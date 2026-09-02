@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Beautiful and accessible math in all browsers";
     homepage = "https://www.mathjax.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

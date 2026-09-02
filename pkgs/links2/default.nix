@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Small browser with some graphics support";
     mainProgram = "links";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

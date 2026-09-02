@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "firewalk";
     homepage = "http://packetfactory.openwall.net/projects/firewalk/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

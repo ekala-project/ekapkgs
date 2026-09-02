@@ -21,7 +21,6 @@ buildGo126Module (finalAttrs: {
     description = "Command line tool for time tracking in a human-readable, plain-text file format";
     homepage = "https://klog.jotaen.net";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "klog";
   };
 })

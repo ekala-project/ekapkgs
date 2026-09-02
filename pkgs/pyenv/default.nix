@@ -7,13 +7,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "pyenv";
-  version = "2.6.31";
+  version = "2.8.4";
 
   src = fetchFromGitHub {
     owner = "pyenv";
     repo = "pyenv";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-WFQDjfSyu1DfFiLwqxH6wu6bYsxD5H66qWLCo+Xfmvo=";
+    hash = "sha256-jp61b5KLUWawmtwUutsbQQ/2TWpmWy7ZDhMKtXnIJ3M=";
   };
 
   nativeBuildInputs = [
@@ -41,6 +41,10 @@ stdenv.mkDerivation (finalAttrs: {
   postInstall = ''
     installManPage man/man1/pyenv.1
     installShellCompletion completions/pyenv.{bash,fish,zsh}
+
+    # Remove test directories that contain broken symlinks (test_helper.bash
+    # points to ../../test/ which is not installed)
+    find "$out/plugins" -type d -name test -exec rm -rf {} +
   '';
 
   meta = {

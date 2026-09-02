@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
       Includes plugins for a variety of log formats (Apache, Postfix, Procmail, etc.).
     '';
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

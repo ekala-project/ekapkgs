@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     mainProgram = "wayland-logout";
     homepage = "https://github.com/soreau/wayland-logout";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
   };

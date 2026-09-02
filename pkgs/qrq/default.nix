@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/dj1yfk/qrq";
     changelog = "https://github.com/dj1yfk/qrq/blob/${finalAttrs.src.rev}/ChangeLog";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     mainProgram = "qrq";
     platforms = lib.platforms.all;
   };

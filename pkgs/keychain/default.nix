@@ -68,7 +68,6 @@ stdenv.mkDerivation rec {
     homepage = "https://www.funtoo.org/Keychain";
     license = licenses.gpl2Only;
     platforms = platforms.unix;
-    maintainers = [ ];
     mainProgram = "keychain";
   };
 }

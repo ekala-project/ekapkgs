@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.freedesktop.org/emersion/kanshi/-/tags/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
     mainProgram = "kanshi";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

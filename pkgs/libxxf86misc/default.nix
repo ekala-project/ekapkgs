@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Extension library for the XFree86-Misc X extension";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxxf86misc";
     license = lib.licenses.x11;
-    maintainers = [ ];
     pkgConfigModules = [ "xxf86misc" ];
     platforms = lib.platforms.unix;
   };

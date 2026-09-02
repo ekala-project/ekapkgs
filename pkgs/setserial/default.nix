@@ -38,6 +38,5 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Only;
     mainProgram = "setserial";
-    maintainers = [ ];
   };
 })

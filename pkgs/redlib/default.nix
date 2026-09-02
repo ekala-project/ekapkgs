@@ -7,7 +7,7 @@
 
 rustPlatform.buildRustPackage {
   pname = "redlib";
-  version = "0.36.0-unstable-2025-12-16";
+  version = "0.36.0";
 
   src = fetchFromGitHub {
     owner = "redlib-org";
@@ -67,6 +67,5 @@ rustPlatform.buildRustPackage {
     homepage = "https://github.com/redlib-org/redlib";
     license = lib.licenses.agpl3Only;
     mainProgram = "redlib";
-    maintainers = [ ];
   };
 }

@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/jtheoof/swappy";
     license = lib.licenses.mit;
     mainProgram = "swappy";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

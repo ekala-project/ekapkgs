@@ -6,7 +6,7 @@
 
 buildGoModule {
   pname = "pup";
-  version = "0.4.0-unstable-2022-03-06";
+  version = "0.4.0";
 
   src = fetchFromGitHub {
     owner = "ericchiang";
@@ -22,6 +22,5 @@ buildGoModule {
     mainProgram = "pup";
     homepage = "https://github.com/ericchiang/pup";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

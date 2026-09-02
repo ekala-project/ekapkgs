@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.gcd.org/sengoku/stone/";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "stone";
   };
 })

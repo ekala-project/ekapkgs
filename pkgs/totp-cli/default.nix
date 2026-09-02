@@ -30,7 +30,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/yitsushi/totp-cli/releases/";
     homepage = "https://yitsushi.github.io/totp-cli/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "totp-cli";
   };
 })

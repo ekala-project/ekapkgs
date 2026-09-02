@@ -9,10 +9,10 @@
 
 stdenv.mkDerivation rec {
   pname = "tinyproxy";
-  version = "1.11.2";
+  version = "1.11.3";
 
   src = fetchFromGitHub {
-    hash = "sha256-bpr/O723FmW2gb+85aJrwW5/U7R2HwbePTx15i3rpsE=";
+    hash = "sha256-In/ZG50i2jKl0x7yfSs3KHlBdm8NdXtspMJPiv4BW6g=";
     rev = version;
     repo = "tinyproxy";
     owner = "tinyproxy";
@@ -31,7 +31,6 @@ stdenv.mkDerivation rec {
     description = "Light-weight HTTP/HTTPS proxy daemon for POSIX operating systems";
     license = licenses.gpl2Only;
     platforms = platforms.all;
-    maintainers = [ ];
     mainProgram = "tinyproxy";
   };
 }

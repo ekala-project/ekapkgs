@@ -74,6 +74,5 @@ stdenv.mkDerivation rec {
     homepage = "http://openbabel.org";
     platforms = lib.platforms.all;
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

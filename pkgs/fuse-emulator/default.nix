@@ -53,6 +53,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "fuse";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

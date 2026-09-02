@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://mujs.com/";
     description = "Lightweight, embeddable Javascript interpreter";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     license = lib.licenses.isc;
   };
 })

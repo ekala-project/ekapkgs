@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Powerful editor targeted towards programmers and webdevelopers";
     homepage = "https://bluefish.openoffice.nl/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "bluefish";
   };

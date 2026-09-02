@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/libhugetlbfs/libhugetlbfs";
     changelog = "https://github.com/libhugetlbfs/libhugetlbfs/blob/${finalAttrs.version}/NEWS";
     description = "Library and utilities for Linux hugepages";
-    maintainers = [ ];
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
     badPlatforms = lib.flatten [

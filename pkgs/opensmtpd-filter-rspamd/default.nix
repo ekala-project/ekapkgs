@@ -24,7 +24,6 @@ buildGoModule (finalAttrs: {
     description = "OpenSMTPD filter integration for the Rspamd daemon";
     homepage = "https://github.com/poolpOrg/filter-rspamd";
     license = lib.licenses.isc;
-    maintainers = [ ];
     mainProgram = "filter-rspamd";
   };
 })

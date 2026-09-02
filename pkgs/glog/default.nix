@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3;
     description = "Library for application-level logging";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

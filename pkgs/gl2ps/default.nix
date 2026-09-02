@@ -39,6 +39,5 @@ stdenv.mkDerivation rec {
     description = "OpenGL to PostScript printing library";
     platforms = lib.platforms.all;
     license = lib.licenses.lgpl2;
-    maintainers = [ ];
   };
 }

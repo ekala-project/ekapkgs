@@ -8,7 +8,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libelfin";
-  version = "0.3-unstable-2024-03-11";
+  version = "0.3";
 
   src = fetchFromGitHub {
     owner = "aclements";
@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/aclements/libelfin/";
     license = lib.licenses.mit;
     description = "C++11 ELF/DWARF parser";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

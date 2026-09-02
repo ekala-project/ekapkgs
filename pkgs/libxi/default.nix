@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
       hpnd
       mit
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

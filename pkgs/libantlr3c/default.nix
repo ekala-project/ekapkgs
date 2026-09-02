@@ -22,6 +22,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.antlr3.org/";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

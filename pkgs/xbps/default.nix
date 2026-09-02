@@ -50,6 +50,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "X Binary Package System";
     platforms = lib.platforms.linux; # known to not work on Darwin, at least
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

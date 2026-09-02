@@ -28,7 +28,6 @@ stdenv.mkDerivation rec {
     description = "Command wrapper that retries until the command succeeds";
     homepage = "https://github.com/minfrin/retry";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "retry";
   };

@@ -59,7 +59,6 @@ stdenv.mkDerivation rec {
     homepage = "https://www.privoxy.org/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "privoxy";
   };
 }

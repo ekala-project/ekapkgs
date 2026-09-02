@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://xiph.org/ao/";
     description = "Xiph.org's cross-platform audio output library";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

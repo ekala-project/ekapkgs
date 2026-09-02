@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     broken = (stdenv.hostPlatform.isLinux && stdenv.hostPlatform.isAarch64);
     description = "Chris Colins' General User soundfont player LV2 plugin";
     homepage = "https://x42-plugins.com/x42/x42-gmsynth";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };

@@ -30,6 +30,5 @@ stdenv.mkDerivation rec {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-video-effects";
     platforms = platforms.unix;
     license = licenses.gpl2;
-    maintainers = [ ];
   };
 }

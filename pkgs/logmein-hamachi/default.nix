@@ -50,7 +50,6 @@ stdenv.mkDerivation rec {
     changelog = "https://support.logmeininc.com/central/help/whats-new-in-hamachi";
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
     license = lib.licenses.unfreeRedistributable;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

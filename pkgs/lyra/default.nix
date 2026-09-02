@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "lyra";
-  version = "1.7.0";
+  version = "1.8.0";
 
   src = fetchFromGitHub {
     owner = "bfgroup";
     repo = "lyra";
     rev = finalAttrs.version;
-    sha256 = "sha256-X8wJwSfOo7v2SKYrKJ4RhpEmOdEkS8lPHIqCxP46VF4=";
+    sha256 = "sha256-h2IO5cUYY5Xn3nmy2pXmRYqRRWHyOwPCrZgKnJf9gU8=";
   };
 
   nativeBuildInputs = [
@@ -35,6 +35,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Simple to use, composable, command line parser for C++ 11 and beyond";
     platforms = lib.platforms.unix;
     license = lib.licenses.boost;
-    maintainers = [ ];
   };
 })

@@ -11,7 +11,7 @@
 
 stdenv.mkDerivation {
   pname = "libmusicbrainz";
-  version = "5.1.0-unstable-2025-07-12";
+  version = "5.1.0";
 
   src = fetchFromGitHub {
     owner = "metabrainz";
@@ -42,6 +42,5 @@ stdenv.mkDerivation {
     '';
     platforms = lib.platforms.all;
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 }

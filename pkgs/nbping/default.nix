@@ -24,7 +24,6 @@ rustPlatform.buildRustPackage {
     homepage = "https://github.com/hanshuaikang/NBping";
     changelog = "https://github.com/hanshuaikang/NBping/releases/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "nbping";
   };
 }

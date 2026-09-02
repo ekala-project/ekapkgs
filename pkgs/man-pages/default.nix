@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Linux development manual pages";
     homepage = "https://www.kernel.org/doc/man-pages/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     outputsToInstall = [ "man" ];
     priority = 30;

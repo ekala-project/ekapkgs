@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Application Layer DoS attack simulator";
     homepage = "https://github.com/shekyan/slowhttptest";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "slowhttptest";
   };
 })

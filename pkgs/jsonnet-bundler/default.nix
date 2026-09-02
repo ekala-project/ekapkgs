@@ -27,7 +27,6 @@ buildGoModule (finalAttrs: {
     description = "Jsonnet package manager";
     homepage = "https://github.com/jsonnet-bundler/jsonnet-bundler";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "jb";
   };
 })

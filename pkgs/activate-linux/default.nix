@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/MrGlockenspiel/activate-linux";
     changelog = "https://github.com/MrGlockenspiel/activate-linux/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "activate-linux";
   };

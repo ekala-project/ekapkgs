@@ -68,7 +68,6 @@ stdenv.mkDerivation {
     description = "Source Port of the Descent 1 and 2 engines";
     homepage = "https://www.dxx-rebirth.com/";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

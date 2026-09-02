@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Ultrafast memory-efficient short read aligner";
     license = lib.licenses.artistic2;
     homepage = "https://bowtie-bio.sourceforge.net";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation rec {
   pname = "libusb-compat";
-  version = "0.1.8";
+  version = "0.1.9";
 
   outputs = [
     "out"
@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
     owner = "libusb";
     repo = "libusb-compat-0.1";
     rev = "v${version}";
-    sha256 = "sha256-pAPERYSxoc47gwpPUoMkrbK8TOXyx03939vlFN0hHRg=";
+    sha256 = "sha256-F501lakQfJsqms0/531/jQmYoexMfROjvjEroy+ktZ0=";
   };
 
   patches = lib.optional stdenv.hostPlatform.isMusl ./fix-headers.patch;
@@ -45,6 +45,5 @@ stdenv.mkDerivation rec {
     mainProgram = "libusb-config";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

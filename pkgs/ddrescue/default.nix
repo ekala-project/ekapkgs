@@ -52,6 +52,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.gnu.org/software/ddrescue/ddrescue.html";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

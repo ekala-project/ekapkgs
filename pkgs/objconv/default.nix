@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "objconv";
     homepage = "https://www.agner.org/optimize/";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

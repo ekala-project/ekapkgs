@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "gensio";
-  version = "3.0.2";
+  version = "3.0.4";
 
   src = fetchFromGitHub {
     owner = "cminyard";
     repo = "gensio";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-5gxBz6m0tyVESeYe5L6z6PZFhrzqVmQuUFYxtd8n9Jc=";
+    sha256 = "sha256-BCtKGJVmyEZ6zN1yPFtQx5B8zoamjdECAJRGElsm4OA=";
   };
 
   configureFlags = [
@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2;
     mainProgram = "gensiot";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

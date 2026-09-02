@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Plus;
     homepage = "https://www.gnu.org/software/time/";
     mainProgram = "time";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

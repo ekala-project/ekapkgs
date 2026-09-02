@@ -86,6 +86,5 @@ stdenv.mkDerivation {
     '';
     homepage = "https://www.dcmembers.com/jibsen/download/61/";
     license = lib.licenses.free;
-    maintainers = [ ];
   };
 }

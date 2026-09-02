@@ -60,7 +60,6 @@ buildGoModule rec {
       agpl3Only
       unfreeRedistributable
     ]; # Software is AGPLv3, web UI is unfree
-    maintainers = [ ];
     mainProgram = "sftpgo";
   };
 }

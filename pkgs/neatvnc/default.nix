@@ -6,7 +6,6 @@
   ninja,
   pkg-config,
   aml,
-  ffmpeg,
   gnutls,
   libdrm,
   libjpeg_turbo,
@@ -18,13 +17,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "neatvnc";
-  version = "1.0.0";
+  version = "1.0.1";
 
   src = fetchFromGitHub {
     owner = "any1";
     repo = "neatvnc";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-yEWNiazRxc8G7ToqOcTtCXEuBCgXO64v31Xx1YeOPCM=";
+    hash = "sha256-ZQdx3NvoFh+lubF1tglYBeEBb4XpD5I1mN3ufibD+uA=";
   };
 
   strictDeps = true;
@@ -38,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     aml
-    ffmpeg
     gnutls
     libdrm
     libjpeg_turbo
@@ -50,6 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonFlags = [
     (lib.mesonBool "tests" false)
+    (lib.mesonEnable "h264" false)
   ];
 
   meta = {
@@ -57,6 +56,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/any1/neatvnc";
     license = lib.licenses.isc;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

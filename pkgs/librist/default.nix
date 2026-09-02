@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
       mit
       isc
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

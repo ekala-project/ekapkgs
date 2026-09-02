@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Music related metadata searchengine";
     homepage = "https://github.com/sahib/glyr";
     license = lib.licenses.lgpl3;
-    maintainers = [ ];
     mainProgram = "glyrc";
     platforms = lib.platforms.unix;
   };

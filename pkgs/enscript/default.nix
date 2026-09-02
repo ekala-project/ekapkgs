@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Converter from ASCII to PostScript, HTML, or RTF";
     homepage = "https://www.gnu.org/software/enscript/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "enscript";
   };

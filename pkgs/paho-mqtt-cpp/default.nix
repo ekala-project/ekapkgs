@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Eclipse Paho MQTT C++ Client Library";
     homepage = "https://www.eclipse.org/paho/";
     license = lib.licenses.epl10;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

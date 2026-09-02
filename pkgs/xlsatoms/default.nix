@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/xorg/app/xlsatoms";
     license = lib.licenses.mitOpenGroup;
     mainProgram = "xlsatoms";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

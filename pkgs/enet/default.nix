@@ -18,6 +18,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Simple and robust network communication layer on top of UDP";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

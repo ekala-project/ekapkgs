@@ -7,16 +7,16 @@
 
 buildGo126Module (finalAttrs: {
   pname = "chezmoi";
-  version = "2.70.5";
+  version = "2.72.0";
 
   src = fetchFromGitHub {
     owner = "twpayne";
     repo = "chezmoi";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-KvPUIucPW+vTJ9HY1rtD9nwyei+JHhYGSBRDtEh8PGg=";
+    hash = "sha256-vnVNPf4xSw7oVNy048i7lSQQukNjE7eTYG/8wfvs5VM=";
   };
 
-  vendorHash = "sha256-jCKO/ih/HRLZ5hv4Ib8qB9kIJagJQq79wtSqBi+BgCY=";
+  vendorHash = "sha256-89JSaV9hupRGhhiGsyLU7MUcDSiPE7dSX55El1SybLw=";
 
   nativeBuildInputs = [
     installShellFiles
@@ -43,7 +43,6 @@ buildGo126Module (finalAttrs: {
     homepage = "https://www.chezmoi.io/";
     changelog = "https://github.com/twpayne/chezmoi/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "chezmoi";
   };
 })

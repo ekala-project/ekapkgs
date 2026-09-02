@@ -43,7 +43,6 @@ stdenv.mkDerivation rec {
       interface for the Ghostscript interpreter.
     '';
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

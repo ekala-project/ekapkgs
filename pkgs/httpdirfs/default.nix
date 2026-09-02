@@ -16,13 +16,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "httpdirfs";
-  version = "1.2.10";
+  version = "1.3.3";
 
   src = fetchFromGitHub {
     owner = "fangfufu";
     repo = "httpdirfs";
     tag = finalAttrs.version;
-    hash = "sha256-dfMavLEBXry1cW4o2yQjuvBbYIvct1GXzACj+9Hh4wE=";
+    hash = "sha256-HMcb23Rk7MD4qsdXXFaOqOenb87BDB1N1ov4wWPOq58=";
   };
 
   nativeBuildInputs = [
@@ -32,6 +32,10 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
   ];
+
+  postPatch = ''
+    sed -i "/subdir('tests')/d" meson.build
+  '';
 
   buildInputs = [
     curl
@@ -59,7 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/fangfufu/httpdirfs";
     license = lib.licenses.gpl3Only;
     mainProgram = "httpdirfs";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

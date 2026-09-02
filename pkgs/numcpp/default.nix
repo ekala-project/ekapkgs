@@ -9,13 +9,13 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "numcpp";
-  version = "2.16.0";
+  version = "2.16.1";
 
   src = fetchFromGitHub {
     owner = "dpilger26";
     repo = "NumCpp";
     tag = "Version_${finalAttrs.version}";
-    hash = "sha256-r1NHutP2b5hq8v/TXyk3WQ7hVmWHVaJPZ200NbC2HLk=";
+    hash = "sha256-sCN2zXsBFm7jdcHweYJ3u0BE90FFwV5msHrSYc1dJfA=";
   };
 
   patches = [ ./pytest-CMakeLists.patch ];
@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Templatized Header Only C++ Implementation of the Python NumPy Library";
     homepage = "https://github.com/dpilger26/NumCpp";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

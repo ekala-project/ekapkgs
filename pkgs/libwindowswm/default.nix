@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "library for Cygwin/X rootless window management extension";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libwindowswm";
     license = lib.licenses.mit;
-    maintainers = [ ];
     pkgConfigModules = [ "windowswm" ];
     platforms = lib.platforms.unix;
   };

@@ -30,6 +30,5 @@ buildGoModule (finalAttrs: {
     '';
     homepage = "https://github.com/pseudomuto/protoc-gen-doc";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

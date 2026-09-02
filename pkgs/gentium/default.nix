@@ -42,7 +42,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       family, along with documentation.
     '';
     downloadPage = "https://software.sil.org/gentium/download/";
-    maintainers = [ ];
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
   };

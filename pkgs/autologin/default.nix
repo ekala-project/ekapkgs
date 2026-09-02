@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://git.sr.ht/~kennylevinsen/autologin/refs/${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "autologin";
   };
 })

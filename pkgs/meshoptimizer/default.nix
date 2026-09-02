@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Mesh optimization library that makes meshes smaller and faster to render";
     homepage = "https://github.com/zeux/meshoptimizer";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "gltfpack";
   };

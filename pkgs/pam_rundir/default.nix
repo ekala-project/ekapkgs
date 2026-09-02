@@ -36,6 +36,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Provide user runtime directory on Linux systems";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

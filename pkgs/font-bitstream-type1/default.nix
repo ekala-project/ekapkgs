@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Bitstream Charter PostScript Type 1 and OpenType fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/bitstream-type1";
     license = lib.licenses.bitstreamCharter;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

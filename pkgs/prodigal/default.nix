@@ -6,19 +6,24 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "prodigal";
-  version = "2.6.3";
+  version = "2.60";
 
   src = fetchFromGitHub {
     repo = "Prodigal";
     owner = "hyattpd";
     rev = "v${finalAttrs.version}";
-    sha256 = "1fs1hqk83qjbjhrvhw6ni75zakx5ki1ayy3v6wwkn3xvahc9hi5s";
+    sha256 = "sha256-9fiM357S52QNM8tt7aAyWRyja9zzdek1KpFtlw9g4Ic=";
   };
 
   makeFlags = [
     "CC=${stdenv.cc.targetPrefix}cc"
-    "INSTALLDIR=$(out)/bin"
   ];
+
+  installPhase = ''
+    runHook preInstall
+    install -Dm755 prodigal -t $out/bin
+    runHook postInstall
+  '';
 
   meta = {
     description = "Fast, reliable protein-coding gene prediction for prokaryotic genomes";
@@ -26,6 +31,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/hyattpd/Prodigal";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

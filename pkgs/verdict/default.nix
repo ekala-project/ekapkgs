@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "verdict";
-  version = "1.4.4";
+  version = "1.4.5";
 
   src = fetchFromGitHub {
     owner = "sandialabs";
     repo = "verdict";
     tag = finalAttrs.version;
-    hash = "sha256-8RUFag3XsWsrvVXsz/+ARTHfmGAJ6giQApn+XDwslMQ=";
+    hash = "sha256-4buaRxZGznC70GxGjyVdLMJVxwMReNh5IroO1qkBLuQ=";
   };
 
   nativeBuildInputs = [
@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/sandialabs/verdict";
     license = lib.licenses.bsd3;
     changelog = "https://github.com/sandialabs/verdict/releases/tag/${finalAttrs.version}";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

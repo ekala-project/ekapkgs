@@ -69,6 +69,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "bat";
-    maintainers = [ ];
   };
 })

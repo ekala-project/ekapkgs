@@ -27,6 +27,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "xdotool clone for KDE Wayland";
     homepage = "https://github.com/jinliu/kdotool";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

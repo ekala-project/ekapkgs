@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://libharu.org/";
     license = lib.licenses.zlib;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

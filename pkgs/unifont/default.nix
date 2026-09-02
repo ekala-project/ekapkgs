@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
       gpl2Plus
       fontException
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

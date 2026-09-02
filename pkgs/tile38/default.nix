@@ -36,6 +36,6 @@ buildGoModule (finalAttrs: {
     '';
     homepage = "https://tile38.com/";
     license = lib.licenses.mit;
-    teams = [ lib.teams.geospatial ];
+    teams = [ ];
   };
 })

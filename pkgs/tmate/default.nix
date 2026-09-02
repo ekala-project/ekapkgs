@@ -55,7 +55,6 @@ stdenv.mkDerivation {
     description = "Instant Terminal Sharing";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "tmate";
   };
 }

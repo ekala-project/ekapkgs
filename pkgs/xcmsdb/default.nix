@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
       mitOpenGroup
     ];
     mainProgram = "xcmsdb";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

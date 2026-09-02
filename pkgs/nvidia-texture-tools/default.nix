@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation {
   pname = "nvidia-texture-tools";
-  version = "2.1.2-unstable-2020-12-21";
+  version = "2.1.2";
 
   src = fetchFromGitHub {
     owner = "castano";
@@ -57,7 +57,6 @@ stdenv.mkDerivation {
     description = "Set of cuda-enabled texture tools and compressors";
     homepage = "https://github.com/castano/nvidia-texture-tools";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

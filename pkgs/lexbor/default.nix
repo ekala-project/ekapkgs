@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "lexbor";
-  version = "3.0.0-unstable-2026-07-15";
+  version = "3.0.0";
 
   src = fetchFromGitHub {
     owner = "lexbor";
@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/lexbor/lexbor";
     changelog = "https://github.com/lexbor/lexbor/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "lexbor";
     platforms = lib.platforms.all;
   };

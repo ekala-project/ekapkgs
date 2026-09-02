@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Powerful tool to generate web server statistics";
     platforms = lib.platforms.all;
     mainProgram = "analog";
-    maintainers = [ ];
   };
 
 })

@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Command line tool to extract main content from a webpage";
     homepage = "https://github.com/eafer/rdrview";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "rdrview";
   };
 

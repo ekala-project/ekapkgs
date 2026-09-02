@@ -28,6 +28,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.jabberwocky.com/software/paperkey/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

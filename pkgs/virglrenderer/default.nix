@@ -65,6 +65,5 @@ stdenv.mkDerivation rec {
     homepage = "https://virgil3d.github.io/";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

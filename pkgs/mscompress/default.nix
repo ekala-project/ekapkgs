@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = ''Microsoft "compress.exe/expand.exe" compatible (de)compressor'';
     homepage = "https://github.com/stapelberg/mscompress";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

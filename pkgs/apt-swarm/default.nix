@@ -23,7 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/kpcyrd/apt-swarm/releases/tag/v${finalAttrs.version}";
     mainProgram = "apt-swarm";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

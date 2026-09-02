@@ -51,6 +51,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     mainProgram = "thunar-volman";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

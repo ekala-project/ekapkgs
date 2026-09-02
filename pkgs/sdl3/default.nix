@@ -154,7 +154,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://libsdl.org";
     changelog = "https://github.com/libsdl-org/SDL/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     pkgConfigModules = [ "sdl3" ];
   };

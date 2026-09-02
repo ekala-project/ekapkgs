@@ -70,7 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
       dependencies like wxWidgets and Qt.
     '';
     license = lib.licenses.zlib;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 })

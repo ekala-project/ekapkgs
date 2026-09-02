@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/glv2/bruteforce-wallet";
     changelog = "https://github.com/glv2/bruteforce-wallet/blob/${finalAttrs.src.rev}/NEWS";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "bruteforce-wallet";
     platforms = lib.platforms.linux;
   };

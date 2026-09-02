@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tandem Repeats Finder: a program to analyze DNA sequences";
     homepage = "https://tandem.bu.edu/trf/trf.html";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

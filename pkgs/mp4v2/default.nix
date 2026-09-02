@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
       This container format is derived from Apple's QuickTime format.
     '';
     homepage = "https://github.com/TechSmith/mp4v2";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.mpl11;
   };

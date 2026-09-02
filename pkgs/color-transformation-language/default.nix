@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/aces-aswf/CTL";
     changelog = "https://github.com/aces-aswf/CTL/blob/${finalAttrs.src.rev}/CHANGELOG";
     license = lib.licenses.ampas;
-    maintainers = [ ];
     mainProgram = "ctl";
     platforms = lib.platforms.all;
   };

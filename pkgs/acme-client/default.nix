@@ -34,7 +34,6 @@ gccStdenv.mkDerivation (finalAttrs: {
     homepage = "https://git.wolfsden.cz/acme-client-portable";
     platforms = lib.platforms.unix;
     license = lib.licenses.isc;
-    maintainers = [ ];
     mainProgram = "acme-client";
   };
 })

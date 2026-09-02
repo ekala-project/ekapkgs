@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Stun server and test client";
     homepage = "https://sourceforge.net/projects/stun/";
     license = lib.licenses.vsl10;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "stun";
   };

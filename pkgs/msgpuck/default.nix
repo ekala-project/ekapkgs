@@ -40,6 +40,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/rtsisyk/msgpuck";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

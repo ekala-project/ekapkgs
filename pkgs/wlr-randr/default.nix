@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Xrandr clone for wlroots compositors";
     homepage = "https://gitlab.freedesktop.org/emersion/wlr-randr";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "wlr-randr";
   };

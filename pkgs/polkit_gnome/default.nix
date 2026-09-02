@@ -39,6 +39,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Dbus session bus service that is used to bring up authentication dialogs";
     license = licenses.lgpl2Plus;
     platforms = platforms.linux;
-    maintainers = [ ];
   };
 })

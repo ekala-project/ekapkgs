@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Prepare and store patch revisions as git tags";
     license = lib.licenses.mit;
-    maintainers = [ ];
     homepage = "https://github.com/stefanha/git-publish";
     mainProgram = "git-publish";
   };

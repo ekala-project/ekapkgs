@@ -36,6 +36,5 @@ buildGoModule rec {
     platforms = lib.platforms.linux;
     license = lib.licenses.bsl11;
     mainProgram = "consul";
-    maintainers = [ ];
   };
 }

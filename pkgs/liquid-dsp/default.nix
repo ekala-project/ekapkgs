@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation rec {
   pname = "liquid-dsp";
-  version = "1.8.0";
+  version = "1.8.2";
 
   src = fetchFromGitHub {
     owner = "jgaeddert";
     repo = "liquid-dsp";
     rev = "v${version}";
-    sha256 = "sha256-IvWtoXuuIvpJfY4cyRUsPHgax2/aytYShSdxEStiPYI=";
+    sha256 = "sha256-WI0GLU/m3PVm1VjOTyPuKcopauiqdSullDyux9WUyKc=";
   };
 
   patches = [
@@ -49,6 +49,5 @@ stdenv.mkDerivation rec {
     description = "Digital signal processing library for software-defined radios";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

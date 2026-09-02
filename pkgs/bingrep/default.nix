@@ -22,6 +22,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "bingrep";
     homepage = "https://github.com/m4b/bingrep";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

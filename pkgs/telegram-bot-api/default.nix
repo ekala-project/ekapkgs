@@ -38,7 +38,6 @@ stdenv.mkDerivation {
     description = "Telegram Bot API server";
     homepage = "https://github.com/tdlib/telegram-bot-api";
     license = lib.licenses.boost;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "telegram-bot-api";
   };

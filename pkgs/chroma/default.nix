@@ -30,7 +30,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/alecthomas/chroma";
     description = "General purpose syntax highlighter in pure Go";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "chroma";
   };
 })

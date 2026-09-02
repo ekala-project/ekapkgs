@@ -40,7 +40,6 @@ buildGoModule (finalAttrs: {
     description = "Git in your tmux status bar";
     homepage = "https://github.com/arl/gitmux";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gitmux";
   };
 })

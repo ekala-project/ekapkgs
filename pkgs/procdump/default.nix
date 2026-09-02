@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "procdump";
     homepage = "https://github.com/Microsoft/ProcDump-for-Linux";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

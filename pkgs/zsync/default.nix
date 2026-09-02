@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/cph6/zsync";
     changelog = "https://github.com/cph6/zsync/raw/refs/tags/${finalAttrs.src.tag}/c/NEWS";
     license = lib.licenses.artistic2;
-    maintainers = [ ];
     platforms = with lib.platforms; all;
   };
 })

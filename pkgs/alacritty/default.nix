@@ -112,7 +112,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/alacritty/alacritty";
     license = lib.licenses.asl20;
     mainProgram = "alacritty";
-    maintainers = [ ];
     changelog = "https://github.com/alacritty/alacritty/blob/v${finalAttrs.version}/CHANGELOG.md";
   };
 })

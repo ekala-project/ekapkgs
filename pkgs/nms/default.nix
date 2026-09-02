@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
       effect seen in the 1992 movie Sneakers.
     '';
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

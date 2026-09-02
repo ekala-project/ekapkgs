@@ -60,7 +60,6 @@ python3Packages.buildPythonApplication {
     homepage = "https://ranger.github.io/";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "ranger";
   };
 }

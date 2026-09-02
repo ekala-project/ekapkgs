@@ -32,7 +32,6 @@ buildGoModule (finalAttrs: {
       The interface is inspired by htop and shortcut keys are inspired by vim.
     '';
     homepage = "https://cointop.sh";
-    maintainers = [ ];
     license = lib.licenses.asl20;
     mainProgram = "cointop";
   };

@@ -33,7 +33,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/0intro/libixp";
     description = "Portable, simple C-language 9P client and server library";
     mainProgram = "ixpc";
-    maintainers = [ ];
     license = lib.licenses.mit;
     platforms = with lib.platforms; unix;
   };

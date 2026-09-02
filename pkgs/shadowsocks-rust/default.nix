@@ -57,6 +57,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/shadowsocks/shadowsocks-rust";
     changelog = "https://github.com/shadowsocks/shadowsocks-rust/raw/v${finalAttrs.version}/debian/changelog";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

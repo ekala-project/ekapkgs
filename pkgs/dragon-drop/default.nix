@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Plus;
     mainProgram = "dragon-drop";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

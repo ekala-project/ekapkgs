@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Easy-to-use X protocol tracing program";
     homepage = "https://www.chiark.greenend.org.uk/~sgtatham/xtruss";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "xtruss";
   };
 })

@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation {
   pname = "mdk4";
-  version = "4.2-unstable-2024-08-16";
+  version = "4.2";
 
   src = fetchFromGitHub {
     owner = "aircrack-ng";
@@ -42,7 +42,6 @@ stdenv.mkDerivation {
   meta = {
     description = "Tool that injects data into wireless networks";
     homepage = "https://github.com/aircrack-ng/mdk4";
-    maintainers = [ ];
     license = lib.licenses.gpl3Plus;
     mainProgram = "mdk4";
   };

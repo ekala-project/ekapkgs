@@ -24,7 +24,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "murex";
     homepage = "https://murex.rocks";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 
   passthru = {

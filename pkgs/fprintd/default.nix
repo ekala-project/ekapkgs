@@ -102,6 +102,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "D-Bus daemon that offers libfprint functionality over the D-Bus interprocess communication bus";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

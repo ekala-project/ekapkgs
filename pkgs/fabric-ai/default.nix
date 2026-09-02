@@ -7,13 +7,13 @@
 
 buildGo126Module (finalAttrs: {
   pname = "fabric-ai";
-  version = "1.4.468";
+  version = "1.4.470";
 
   src = fetchFromGitHub {
     owner = "danielmiessler";
     repo = "fabric";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-ZHxzorUDKRxS44ogbivUff+gPtN+RD6z2V6jo2TfAtw=";
+    hash = "sha256-X/M8LgHyFEV+FobRta5sY268OWBmYsQ2LAi2eEgCys4=";
   };
 
   vendorHash = "sha256-FOnCNQB/GDUAtEC/jRb80Pn/psSPantWhUk7zrFbcRE=";
@@ -38,7 +38,6 @@ buildGo126Module (finalAttrs: {
     description = "Fabric is an open-source framework for augmenting humans using AI. It provides a modular framework for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere";
     homepage = "https://github.com/danielmiessler/fabric";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "fabric";
   };
 })

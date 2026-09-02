@@ -15,7 +15,7 @@
 
 stdenv.mkDerivation rec {
   pname = "libimobiledevice";
-  version = "1.3.0-unstable-2024-05-20";
+  version = "1.4.0";
 
   src = fetchFromGitHub {
     owner = "libimobiledevice";
@@ -63,7 +63,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/libimobiledevice/libimobiledevice";
     description = "Software library that talks the protocols to support iPhone, iPod Touch and iPad devices on Linux";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

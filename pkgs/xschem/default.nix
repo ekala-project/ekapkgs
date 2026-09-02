@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://xschem.sourceforge.io/stefan/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

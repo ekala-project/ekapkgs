@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "sshguard";
     homepage = "https://sshguard.net";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

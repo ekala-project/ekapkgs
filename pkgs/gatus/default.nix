@@ -26,7 +26,6 @@ buildGo126Module (finalAttrs: {
     description = "Automated developer-oriented status page";
     homepage = "https://gatus.io";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "gatus";
   };
 })

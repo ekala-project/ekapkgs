@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Hides the mouse pointer in X11";
     homepage = "https://github.com/aktau/hhpc";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.bsd3;
     mainProgram = "hhpc";

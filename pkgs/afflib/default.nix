@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Advanced forensic format library";
     platforms = lib.platforms.unix;
     license = lib.licenses.bsdOriginal;
-    maintainers = [ ];
     downloadPage = "https://github.com/sshock/AFFLIBv3/tags";
   };
 })

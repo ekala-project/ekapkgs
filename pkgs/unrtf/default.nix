@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "unrtf";
     homepage = "https://www.gnu.org/software/unrtf/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

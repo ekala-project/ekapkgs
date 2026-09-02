@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "File and directory integrity checker";
     mainProgram = "aide";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

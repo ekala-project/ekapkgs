@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "OpenSSL Provider for TPM2 integration";
     homepage = "https://github.com/tpm2-software/tpm2-openssl";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

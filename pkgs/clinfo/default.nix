@@ -30,6 +30,5 @@ stdenv.mkDerivation rec {
     license = licenses.cc0;
     platforms = platforms.unix;
     mainProgram = "clinfo";
-    maintainers = [ ];
   };
 }

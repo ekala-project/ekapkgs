@@ -59,6 +59,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "dehydrated";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

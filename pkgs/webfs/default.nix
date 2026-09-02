@@ -8,7 +8,7 @@
 
 stdenv.mkDerivation {
   pname = "webfs";
-  version = "1.21-unstable-2021-02-24";
+  version = "1.21";
 
   src = fetchFromGitHub {
     owner = "ourway";
@@ -34,7 +34,6 @@ stdenv.mkDerivation {
     homepage = "http://linux.bytesex.org/misc/webfs.html";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "webfsd";
   };
 }

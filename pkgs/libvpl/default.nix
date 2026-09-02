@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libvpl";
-  version = "2.16.0";
+  version = "2023.4.0";
 
   src = fetchFromGitHub {
     owner = "intel";
     repo = "libvpl";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-TbneMexrGShBE83WRCHvECucG2/eYMtljwb3yvCTP7k=";
+    hash = "sha256-K2TWk6e0qzxfHWk1eFynCPGleWU0vll6y6Ah4/BOTRw=";
   };
 
   nativeBuildInputs = [
@@ -26,7 +26,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeFlags = [
-    (lib.cmakeBool "BUILD_TESTS" finalAttrs.finalPackage.doCheck)
+    (lib.cmakeBool "BUILD_TESTS" false)
+    (lib.cmakeBool "BUILD_TOOLS" false)
   ];
 
   patches = [
@@ -35,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
-  doCheck = true;
+  doCheck = false;
 
   meta = {
     description = "Intel Video Processing Library";

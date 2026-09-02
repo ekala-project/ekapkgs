@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "XFree86 Cusrsor Postscript Type 1 Font";
     homepage = "https://gitlab.freedesktop.org/xorg/font/xfree86-type1";
     license = lib.licenses.x11;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

@@ -52,7 +52,6 @@ buildGoModule (finalAttrs: {
     description = "Command-line tool for everything at Exoscale: compute, storage, dns";
     homepage = "https://github.com/exoscale/cli";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "exo";
   };
 })

@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://libmpeg2.sourceforge.net/";
     description = "Free library for decoding mpeg-2 and mpeg-1 video streams";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

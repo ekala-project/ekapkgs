@@ -14,13 +14,13 @@
 
 stdenv.mkDerivation rec {
   pname = "sshfs-fuse";
-  version = "3.7.3";
+  version = "3.7.6";
 
   src = fetchFromGitHub {
     owner = "libfuse";
     repo = "sshfs";
     rev = "sshfs-${version}";
-    sha256 = "0s2hilqixjmv4y8n67zaq374sgnbscp95lgz5ignp69g3p1vmhwz";
+    sha256 = "sha256-BT9qttXyryliR2kV1xVYvcwJhB6gkGf7IEwrTB38SvI=";
   };
 
   nativeBuildInputs = [
@@ -53,6 +53,5 @@ stdenv.mkDerivation rec {
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
     mainProgram = "sshfs";
-    maintainers = [ ];
   };
 }

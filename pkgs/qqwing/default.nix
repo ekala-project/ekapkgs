@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Sudoku generating and solving software";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "qqwing";
   };
 })

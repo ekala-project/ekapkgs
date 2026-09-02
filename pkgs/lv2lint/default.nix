@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Check whether a given LV2 plugin is up to the specification";
     homepage = "https://git.open-music-kontrollers.ch/~hp/lv2lint";
     license = lib.licenses.artistic2;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "lv2lint";
   };

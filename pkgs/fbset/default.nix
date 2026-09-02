@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://users.telenet.be/geertu/Linux/fbdev/";
     license = lib.licenses.gpl2Only;
     mainProgram = "fbset";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

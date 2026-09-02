@@ -85,7 +85,6 @@ stdenv.mkDerivation rec {
   meta = {
     homepage = "http://pogostick.net/~pnh/ntpasswd/";
     description = "Utility to reset the password of any user that has a valid local account on a Windows system";
-    maintainers = [ ];
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
   };

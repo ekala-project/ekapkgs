@@ -56,7 +56,6 @@ stdenv.mkDerivation {
     description = "Fast and simple image viewer";
     license = lib.licenses.gpl3;
     homepage = "https://siyanpanayotov.com/project/viewnior/";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "viewnior";
   };

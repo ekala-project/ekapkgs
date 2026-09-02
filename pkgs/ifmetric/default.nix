@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "http://0pointer.de/lennart/projects/ifmetric";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "ifmetric";
   };

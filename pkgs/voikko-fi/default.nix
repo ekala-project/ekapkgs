@@ -33,7 +33,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     homepage = "https://voikko.puimula.org";
     description = "Description of Finnish morphology written for libvoikko";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

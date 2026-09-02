@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "X11 Cursor management library";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxcursor";
     license = lib.licenses.hpndSellVariant;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

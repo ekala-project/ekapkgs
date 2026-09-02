@@ -28,6 +28,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Ncurses gopher client";
     platforms = lib.platforms.linux; # clang doesn't like local regex.h
     license = lib.licenses.gpl2;
-    maintainers = [ ];
   };
 })

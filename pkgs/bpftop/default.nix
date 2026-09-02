@@ -37,7 +37,6 @@ rustPlatform.buildRustPackage.override { stdenv = clangStdenv; } (finalAttrs: {
     description = "Dynamic real-time view of running eBPF programs";
     homepage = "https://github.com/jfernandez/bpftop";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "bpftop";
   };
 })

@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/libxls/libxls/releases/tag/v${finalAttrs.version}";
     homepage = "https://github.com/libxls/libxls";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "xls2csv";
     platforms = lib.platforms.unix;
   };

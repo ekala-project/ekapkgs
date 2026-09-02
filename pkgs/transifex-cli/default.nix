@@ -34,7 +34,6 @@ buildGoModule (finalAttrs: {
     description = "Transifex command-line client";
     homepage = "https://github.com/transifex/cli";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "tx";
   };
 })

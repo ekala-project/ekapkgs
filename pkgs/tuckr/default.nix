@@ -24,7 +24,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/RaphGL/Tuckr";
     changelog = "https://github.com/RaphGL/Tuckr/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "tuckr";
   };
 })

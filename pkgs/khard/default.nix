@@ -73,7 +73,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/lucc/khard";
     description = "Console carddav client";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     mainProgram = "khard";
   };
 })

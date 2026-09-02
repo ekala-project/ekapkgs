@@ -43,7 +43,6 @@ buildGoModule (finalAttrs: {
     '';
     homepage = "https://guumaster.github.io/hostctl/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "hostctl";
   };
 })

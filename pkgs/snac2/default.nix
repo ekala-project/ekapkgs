@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://codeberg.org/grunfink/snac2";
     license = lib.licenses.mit;
     mainProgram = "snac";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

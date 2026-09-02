@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "gphotofs";
     homepage = "http://www.gphoto.org/";
     changelog = "https://github.com/gphoto/gphotofs/releases/tag/${finalAttrs.src.tag}";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Only;
   };

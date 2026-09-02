@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Nyancat in your terminal, rendered through ANSI escape sequences";
     homepage = "https://nyancat.dakko.us";
     license = lib.licenses.ncsa;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "nyancat";
   };

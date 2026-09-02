@@ -63,7 +63,6 @@ stdenv.mkDerivation rec {
     homepage = "http://www.tarsnap.com/";
     license = lib.licenses.unfree;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "tarsnap";
   };
 }

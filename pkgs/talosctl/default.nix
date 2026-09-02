@@ -47,6 +47,5 @@ buildGo126Module (finalAttrs: {
     mainProgram = "talosctl";
     homepage = "https://www.talos.dev/";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 })

@@ -48,7 +48,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/noborus/trdsql";
     changelog = "https://github.com/noborus/trdsql/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "trdsql";
   };
 })

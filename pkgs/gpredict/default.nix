@@ -13,13 +13,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "gpredict";
-  version = "2.5.1";
+  version = "2.5.2";
 
   src = fetchFromGitHub {
     owner = "csete";
     repo = "gpredict";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-lP+QakQ+uTgBY8NNEC7DwQifh3Zi0ZKbarxNGB4onq0=";
+    hash = "sha256-DX+9SHD3VJnpSc58DRoSlqeEoj3CKEHbnhmFqJRYDBQ=";
   };
 
   strictDeps = true;
@@ -51,6 +51,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
     homepage = "https://oz9aec.dk/gpredict/";
-    maintainers = [ ];
   };
 })

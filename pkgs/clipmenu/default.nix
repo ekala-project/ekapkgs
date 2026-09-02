@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Clipboard management using dmenu";
     inherit (finalAttrs.src.meta) homepage;
-    maintainers = [ ];
     license = lib.licenses.publicDomain;
   };
 })

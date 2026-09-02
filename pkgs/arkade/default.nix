@@ -8,13 +8,13 @@
 
 buildGoModule (finalAttrs: {
   pname = "arkade";
-  version = "0.11.114";
+  version = "0.11.124";
 
   src = fetchFromGitHub {
     owner = "alexellis";
     repo = "arkade";
     tag = finalAttrs.version;
-    hash = "sha256-OVND+MdbWIrT3SzbqqEiwFC2y7dKQ5AXnnaOjxaC9LU=";
+    hash = "sha256-IwOyvcpxgnalHF2QTQRVoMFOuatXWjIMknr/j+dfEYg=";
   };
 
   env.CGO_ENABLED = 0;
@@ -55,6 +55,5 @@ buildGoModule (finalAttrs: {
     description = "Open Source Kubernetes Marketplace";
     mainProgram = "arkade";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

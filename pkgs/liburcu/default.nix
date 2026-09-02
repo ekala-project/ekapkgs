@@ -42,6 +42,5 @@ stdenv.mkDerivation (finalAttrs: {
       ++ lib.platforms.riscv
       ++ lib.platforms.loongarch64
     );
-    maintainers = [ ];
   };
 })

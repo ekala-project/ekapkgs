@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
       # gets resolved
       xfig
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

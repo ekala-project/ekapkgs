@@ -46,7 +46,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/sagiegurari/cargo-make";
     changelog = "https://github.com/sagiegurari/cargo-make/blob/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "cargo-make";
   };
 })

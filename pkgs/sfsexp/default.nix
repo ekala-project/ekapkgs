@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Small Fast S-Expression Library";
     homepage = "https://github.com/mjsottile/sfsexp";
-    maintainers = [ ];
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.all;
   };

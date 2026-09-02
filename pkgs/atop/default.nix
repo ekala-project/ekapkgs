@@ -87,7 +87,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     description = "Console system performance monitor";
     license = lib.licenses.gpl2Plus;
     downloadPage = "http://atoptool.nl/downloadatop.php";

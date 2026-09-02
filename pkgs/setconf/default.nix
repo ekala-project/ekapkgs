@@ -25,7 +25,6 @@ let
       description = "Small utility for changing settings in configuration textfiles";
       changelog = "https://github.com/xyproto/setconf/releases/tag/${self.src.rev}";
       mainProgram = "setconf";
-      maintainers = [ ];
       license = lib.licenses.gpl2Only;
     };
   };

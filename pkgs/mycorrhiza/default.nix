@@ -32,7 +32,6 @@ buildGoModule (finalAttrs: {
     description = "Filesystem and git-based wiki engine written in Go using mycomarkup as its primary markup language";
     homepage = "https://github.com/bouncepaw/mycorrhiza";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "mycorrhiza";
   };

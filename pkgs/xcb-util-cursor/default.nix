@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "XCB cursor library";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxcb-cursor";
     license = lib.licenses.x11;
-    maintainers = [ ];
     pkgConfigModules = [ "xcb-cursor" ];
     platforms = lib.platforms.unix;
   };

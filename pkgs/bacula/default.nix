@@ -81,7 +81,6 @@ stdenv.mkDerivation (finalAttrs: {
       agpl3Only
       bsd2
     ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

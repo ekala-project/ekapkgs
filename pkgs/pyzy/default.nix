@@ -12,7 +12,7 @@
 
 stdenv.mkDerivation {
   pname = "pyzy";
-  version = "1.1-unstable-2026-02-28";
+  version = "1.1";
 
   src = fetchFromGitHub {
     owner = "openSUSE";
@@ -40,7 +40,6 @@ stdenv.mkDerivation {
     description = "Chinese PinYin and Bopomofo conversion library";
     homepage = "https://github.com/openSUSE/pyzy";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

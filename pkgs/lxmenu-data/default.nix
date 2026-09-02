@@ -31,6 +31,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2;
     description = "Freedesktop.org desktop menus for LXDE";
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

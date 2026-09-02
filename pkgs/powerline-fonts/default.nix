@@ -39,6 +39,5 @@ stdenvNoCC.mkDerivation {
       ofl
     ];
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

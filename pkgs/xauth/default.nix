@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "X authority file utility";
     homepage = "https://gitlab.freedesktop.org/xorg/app/xauth";
     license = lib.licenses.mitOpenGroup;
-    maintainers = [ ];
     mainProgram = "xauth";
     platforms = lib.platforms.unix;
   };

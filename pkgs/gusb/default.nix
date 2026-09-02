@@ -77,7 +77,6 @@ stdenv.mkDerivation rec {
     mainProgram = "gusbcmd";
     homepage = "https://github.com/hughsie/libgusb";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

@@ -32,6 +32,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://modplug-xmms.sourceforge.net/";
     license = lib.licenses.publicDomain;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

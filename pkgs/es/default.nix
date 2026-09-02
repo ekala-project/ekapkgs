@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "http://wryun.github.io/es-shell/";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 

@@ -56,7 +56,6 @@ buildGo126Module (finalAttrs: {
       bsd3
       gpl3
     ];
-    maintainers = [ ];
     mainProgram = "lyrebird";
   };
 })

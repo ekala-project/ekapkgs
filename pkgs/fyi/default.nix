@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://codeberg.org/dnkl/fyi";
     license = lib.licenses.mit;
     mainProgram = "fyi";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

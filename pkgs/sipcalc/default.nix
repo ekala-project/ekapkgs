@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.routemeister.net/projects/sipcalc/";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "sipcalc";
   };
 })

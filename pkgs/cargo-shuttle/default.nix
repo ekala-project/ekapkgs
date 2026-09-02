@@ -46,6 +46,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://shuttle.rs";
     changelog = "https://github.com/shuttle-hq/shuttle/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

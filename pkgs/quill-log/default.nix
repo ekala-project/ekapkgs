@@ -7,13 +7,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "quill-log";
-  version = "12.1.0";
+  version = "12.2.1";
 
   src = fetchFromGitHub {
     owner = "odygrd";
     repo = "quill";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-1CL5twjO0uInbdjTF6VRMugoeBABiDjPGagf5HdW57E=";
+    hash = "sha256-8Xo6n0YiE4rhNc8VcAYKK2vNMLh2xRcziHsUMjBVgRc=";
   };
 
   nativeBuildInputs = [
@@ -28,6 +28,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Asynchronous Low Latency C++17 Logging Library";
     platforms = lib.platforms.all;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

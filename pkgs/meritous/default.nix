@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.com/meritous/meritous/-/blob/master/NEWS";
     license = lib.licenses.gpl3Only;
     mainProgram = "meritous";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

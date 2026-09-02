@@ -56,7 +56,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/containers/toolbox/releases/tag/${finalAttrs.version}";
     description = "Tool for containerized command line environments on Linux";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "toolbox";
   };
 })

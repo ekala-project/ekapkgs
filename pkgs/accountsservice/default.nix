@@ -89,6 +89,5 @@ stdenv.mkDerivation rec {
     homepage = "https://www.freedesktop.org/wiki/Software/AccountsService";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

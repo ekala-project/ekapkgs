@@ -40,7 +40,6 @@ buildGoModule (finalAttrs: {
     description = "Data constraint language which aims to simplify tasks involving defining and using data";
     homepage = "https://cuelang.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "cue";
   };
 })

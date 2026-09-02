@@ -33,6 +33,5 @@ buildGoModule (finalAttrs: {
     changelog = "https://codeberg.org/git-pages/git-pages-cli/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd0;
     mainProgram = "git-pages-cli";
-    maintainers = [ ];
   };
 })

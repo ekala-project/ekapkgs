@@ -126,7 +126,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.gtk.org/";
     description = "Multi-platform toolkit for creating graphical user interfaces";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

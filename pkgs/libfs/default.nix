@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
       mitOpenGroup
       hpndSellVariant
     ];
-    maintainers = [ ];
     pkgConfigModules = [ "libfs" ];
     platforms = lib.platforms.unix;
   };

@@ -85,6 +85,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.free;
     platforms = lib.platforms.linux;
     mainProgram = "povray";
-    maintainers = [ ];
   };
 })

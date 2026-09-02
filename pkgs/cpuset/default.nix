@@ -35,7 +35,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/SUSE/cpuset";
     license = lib.licenses.gpl2;
     mainProgram = "cset";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -7,13 +7,13 @@
 
 stdenv.mkDerivation {
   pname = "gpp";
-  version = "2.25";
+  version = "2.28";
 
   src = fetchFromGitHub {
     owner = "logological";
     repo = "gpp";
     rev = "96c5dd8905384ea188f380f51d24cbd7fd58f642";
-    sha256 = "0bvhnx3yfhbfiqqhhz6k2a596ls5rval7ykbp3jl5b6062xj861b";
+    sha256 = "sha256-KxgkuzDArELluGv6Q9XORVOTihLTfAgxjm5B50e3cC8=";
   };
 
   nativeBuildInputs = [ autoreconfHook ];
@@ -26,7 +26,6 @@ stdenv.mkDerivation {
     mainProgram = "gpp";
     homepage = "https://logological.org/gpp";
     license = lib.licenses.lgpl3;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 }

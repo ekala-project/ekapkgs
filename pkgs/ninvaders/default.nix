@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "ninvaders";
     homepage = "https://ninvaders.sourceforge.net/";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

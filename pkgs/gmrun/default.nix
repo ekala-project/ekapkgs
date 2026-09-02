@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/wdlkmpx/gmrun";
     license = lib.licenses.isc;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "gmrun";
   };

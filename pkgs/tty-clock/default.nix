@@ -39,7 +39,6 @@ stdenv.mkDerivation {
     license = lib.licenses.bsd3;
     description = "Digital clock in ncurses";
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "tty-clock";
   };
 }

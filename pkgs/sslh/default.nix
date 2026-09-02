@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Applicative Protocol Multiplexer (e.g. share SSH and HTTPS on the same port)";
     license = lib.licenses.gpl2Plus;
     homepage = "https://www.rutschle.net/tech/sslh/README.html";
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

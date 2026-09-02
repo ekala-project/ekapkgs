@@ -28,6 +28,5 @@ stdenvNoCC.mkDerivation rec {
     description = "Typeface for setting text in many sizes, weights, and languages. Designed to complement Source Sans";
     license = lib.licenses.ofl;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

@@ -69,7 +69,6 @@ stdenv.mkDerivation {
 
   meta = {
     description = "Unicode VGA font";
-    maintainers = [ ];
     homepage = "http://www.inp.nsk.su/~bolkhov/files/fonts/univga/";
     license = lib.licenses.mit;
   };

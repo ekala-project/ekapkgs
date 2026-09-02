@@ -124,7 +124,6 @@ let
       homepage = "https://duplicity.gitlab.io/duplicity-web/";
       license = lib.licenses.gpl2Plus;
       mainProgram = "duplicity";
-      maintainers = [ ];
     };
   };
 

@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Per-window keyboard layout for Sway";
     homepage = "https://github.com/artemsen/swaykbdd";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "swaykbdd";
   };

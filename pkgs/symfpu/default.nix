@@ -62,6 +62,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/martin-cs/symfpu";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

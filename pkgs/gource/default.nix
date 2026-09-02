@@ -78,7 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
       by several third party tools for CVS repositories.
     '';
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "gource";
   };
 })

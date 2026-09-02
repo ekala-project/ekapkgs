@@ -27,7 +27,6 @@ stdenv.mkDerivation {
       (IFF).
     '';
     homepage = "https://github.com/svanderburg/libiff";
-    maintainers = [ ];
     platforms = lib.platforms.all;
     license = lib.licenses.mit;
   };

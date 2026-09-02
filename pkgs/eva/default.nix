@@ -19,7 +19,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Calculator REPL, similar to bc";
     homepage = "https://github.com/oppiliappan/eva";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "eva";
   };
 })

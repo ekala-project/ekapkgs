@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Puzzle game about arranging balls in triplets, like Luxor, Zuma, or Puzzle Bobble";
     homepage = "https://zaz.sourceforge.net/";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "zaz";
   };

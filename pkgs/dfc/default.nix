@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/rolinh/dfc/releases/tag/${finalAttrs.src.tag}";
     description = "Displays file system space usage using graphs and colors";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "dfc";
   };

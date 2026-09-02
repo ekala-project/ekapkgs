@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://www.kernel.org/doc/html/latest/admin-guide/bcache.html";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "bcache-tools";
     platforms = lib.platforms.linux;
   };

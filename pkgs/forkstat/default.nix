@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Process fork/exec/exit monitoring tool";
     homepage = "https://github.com/ColinIanKing/forkstat";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "forkstat";
   };

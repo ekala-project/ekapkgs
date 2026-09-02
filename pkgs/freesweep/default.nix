@@ -60,7 +60,6 @@ stdenv.mkDerivation {
     mainProgram = "freesweep";
     homepage = "https://github.com/rwestlund/freesweep";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

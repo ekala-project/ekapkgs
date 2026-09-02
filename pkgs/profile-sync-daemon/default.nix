@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/graysky2/profile-sync-daemon";
     downloadPage = "https://github.com/graysky2/profile-sync-daemon/releases";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

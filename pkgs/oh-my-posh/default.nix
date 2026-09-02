@@ -5,16 +5,16 @@
 }:
 buildGo126Module (finalAttrs: {
   pname = "oh-my-posh";
-  version = "30.4.0";
+  version = "30.6.5";
 
   src = fetchFromGitHub {
     owner = "jandedobbeleer";
     repo = "oh-my-posh";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-pEprhxE8qqCT001DXC/OQmfSHX2mSw4oHpe5/C2cxhg=";
+    hash = "sha256-e73Oi4HdWt/UhoNoSlhY6NPZGiMgk97zXvXnfUbYm+k=";
   };
 
-  vendorHash = "sha256-7LLRPE0aYI+hG0AOL7PARzwDpHto56c68ddQDapGKSM=";
+  vendorHash = "sha256-aq+HxSJojSUtWbIn5TY669bbMrFgEvq2nCxLNnKRHLo=";
 
   sourceRoot = "${finalAttrs.src.name}/src";
 
@@ -46,6 +46,5 @@ buildGo126Module (finalAttrs: {
     homepage = "https://ohmyposh.dev";
     changelog = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

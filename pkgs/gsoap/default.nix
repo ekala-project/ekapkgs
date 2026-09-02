@@ -50,6 +50,5 @@ stdenv.mkDerivation rec {
     homepage = "https://www.genivia.com/products.html";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

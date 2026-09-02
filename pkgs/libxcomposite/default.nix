@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
       hpndSellVariant
       mit
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

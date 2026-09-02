@@ -40,6 +40,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://libinklevel.sourceforge.net/";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux ++ lib.platforms.freebsd;
-    maintainers = [ ];
   };
 })

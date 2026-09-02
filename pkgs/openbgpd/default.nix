@@ -24,7 +24,6 @@ clangStdenv.mkDerivation (finalAttrs: {
     description = "Free implementation of the Border Gateway Protocol, Version 4. It allows ordinary machines to be used as routers exchanging routes with other systems speaking the BGP protocol";
     license = lib.licenses.isc;
     homepage = "http://www.openbgpd.org/";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

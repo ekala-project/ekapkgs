@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://partclone.org";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

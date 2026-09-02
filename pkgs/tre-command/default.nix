@@ -36,7 +36,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Tree command, improved";
     homepage = "https://github.com/dduan/tre";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "tre";
   };
 })

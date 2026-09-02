@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/ansilove/ansilove";
     changelog = "https://github.com/ansilove/ansilove/blob/${finalAttrs.src.rev}/ChangeLog";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "ansilove";
     platforms = lib.platforms.unix;
   };

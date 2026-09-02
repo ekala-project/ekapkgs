@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "chardet-config";
     homepage = "ftp://ftp.oops.org/pub/oops/libchardet/index.html";
     license = lib.licenses.mpl11;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

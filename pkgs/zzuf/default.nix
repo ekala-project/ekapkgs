@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Transparent application input fuzzer";
     homepage = "http://caca.zoy.org/wiki/zzuf";
     license = lib.licenses.wtfpl;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

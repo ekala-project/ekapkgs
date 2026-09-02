@@ -62,6 +62,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitolite.com/gitolite/index.html";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

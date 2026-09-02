@@ -28,7 +28,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     mainProgram = "flawfinder";
     homepage = "https://dwheeler.com/flawfinder/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

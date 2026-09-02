@@ -25,6 +25,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Collection of programs that access and manipulate ELF files";
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

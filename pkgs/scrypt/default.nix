@@ -46,6 +46,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.tarsnap.com/scrypt.html";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

@@ -119,7 +119,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://cisco.github.io/ChezScheme/";
     changelog = "https://cisco.github.io/ChezScheme/release_notes/v${finalAttrs.version}/release_notes.html";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "scheme";
   };

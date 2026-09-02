@@ -53,7 +53,6 @@ stdenv.mkDerivation {
     mainProgram = "pulseaudio-ctl";
     homepage = "https://bbs.archlinux.org/viewtopic.php?id=124513";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

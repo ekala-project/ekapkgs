@@ -12,7 +12,7 @@
 
 stdenv.mkDerivation {
   pname = "dublin-traceroute";
-  version = "0.4.2-unstable-2024-04-11";
+  version = "0.4.2";
 
   src = fetchFromGitHub {
     owner = "insomniacslk";
@@ -54,7 +54,6 @@ stdenv.mkDerivation {
     description = "NAT-aware multipath traceroute tool";
     homepage = "https://dublin-traceroute.net/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "dublin-traceroute";
     broken = stdenv.hostPlatform.isDarwin;

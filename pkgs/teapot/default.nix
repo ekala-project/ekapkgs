@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
       systems.
     '';
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     mainProgram = "teapot";
     homepage = "https://www.syntax-k.de/projekte/teapot/";

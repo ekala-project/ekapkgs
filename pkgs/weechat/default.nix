@@ -162,7 +162,6 @@ stdenv.mkDerivation rec {
     changelog = "https://github.com/weechat/weechat/releases/tag/v${version}";
     description = "Fast, light and extensible chat client";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     mainProgram = "weechat";
     platforms = lib.platforms.unix;
   };

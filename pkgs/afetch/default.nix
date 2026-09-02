@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fetch program written in C";
     homepage = "https://github.com/13-CF/afetch";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     mainProgram = "afetch";
   };

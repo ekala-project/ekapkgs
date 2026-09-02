@@ -53,7 +53,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
       unlicense
     ];
-    maintainers = [ ];
     mainProgram = "rgr";
   };
 })

@@ -42,7 +42,6 @@ stdenv.mkDerivation rec {
     description = "C++ interface to the GTK graphical user interface library";
     homepage = "https://gtkmm.org/";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

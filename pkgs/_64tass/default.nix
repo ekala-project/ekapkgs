@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
       lib.licenses.lgpl21Only
       lib.licenses.mit
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

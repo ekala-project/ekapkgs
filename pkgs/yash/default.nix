@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Yet another POSIX-compliant shell";
     mainProgram = "yash";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 

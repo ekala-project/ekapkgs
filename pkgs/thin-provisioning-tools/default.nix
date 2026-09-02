@@ -66,6 +66,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Suite of tools for manipulating the metadata of the dm-thin device-mapper target";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

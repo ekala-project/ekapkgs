@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Command line FTP (File Transfer Protocol) client";
     homepage = "https://www.ncftp.com/ncftp/";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.clArtistic;
     mainProgram = "ncftp";

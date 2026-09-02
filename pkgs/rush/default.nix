@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.all;
 
-    maintainers = [ ];
   };
 
   passthru = {

@@ -52,6 +52,5 @@ stdenv.mkDerivation rec {
     mainProgram = "xfconf-query";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

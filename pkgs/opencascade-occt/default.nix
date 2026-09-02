@@ -58,6 +58,5 @@ stdenv.mkDerivation rec {
     homepage = "https://www.opencascade.org/";
     license = licenses.lgpl21;
     platforms = platforms.all;
-    maintainers = [ ];
   };
 }

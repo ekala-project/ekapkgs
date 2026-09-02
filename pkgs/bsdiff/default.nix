@@ -59,6 +59,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.daemonology.net/bsdiff/";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

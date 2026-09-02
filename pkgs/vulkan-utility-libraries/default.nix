@@ -31,6 +31,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/KhronosGroup/Vulkan-Utility-Libraries";
     platforms = lib.platforms.all;
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

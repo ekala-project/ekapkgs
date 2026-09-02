@@ -44,6 +44,5 @@ stdenv.mkDerivation {
     homepage = "http://linux-sunxi.org/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

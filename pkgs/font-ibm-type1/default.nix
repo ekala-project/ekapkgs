@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "IBM Courier Type1 fonts";
     homepage = "https://gitlab.freedesktop.org/xorg/font/ibm-type1";
     license = lib.licenses.unfreeRedistributable;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

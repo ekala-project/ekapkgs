@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Matching the pairs - a typical Memory Game";
     license = lib.licenses.gpl2Plus;
     mainProgram = "lpairs2";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     broken = stdenv.hostPlatform.isDarwin;
   };

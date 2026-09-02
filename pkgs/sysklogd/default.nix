@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "BSD syslog daemon with syslog()/syslogp() API replacement for Linux, RFC3164 + RFC5424";
     homepage = "https://github.com/troglobit/sysklogd";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.subtractLists lib.platforms.darwin lib.platforms.unix;
   };
 })

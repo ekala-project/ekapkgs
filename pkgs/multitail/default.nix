@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://github.com/folkertvanheusden/multitail";
     description = "tail on steroids";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
     license = lib.licenses.asl20;
     mainProgram = "multitail";

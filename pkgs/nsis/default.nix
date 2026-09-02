@@ -104,7 +104,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://nsis.sourceforge.io/";
     license = lib.licenses.zlib;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     mainProgram = "makensis";
   };
 })

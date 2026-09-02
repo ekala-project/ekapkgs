@@ -39,6 +39,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     '';
     homepage = "https://www.theleagueofmoveabletype.com/league-spartan";
     license = lib.licenses.ofl;
-    maintainers = [ ];
   };
 })

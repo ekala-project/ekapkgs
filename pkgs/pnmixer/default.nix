@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "ALSA volume mixer for the system tray";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
     mainProgram = "pnmixer";
   };
 })

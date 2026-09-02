@@ -6,13 +6,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "tree-sitter";
-  version = "0.26.8";
+  version = "0.26.13";
 
   src = fetchFromGitHub {
     owner = "tree-sitter";
     repo = "tree-sitter";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-fcFEfoALrbpBD6rWogxJ7FNVlvDQgswoX9ylRgko+8Q=";
+    hash = "sha256-W+43VmpHihq651eeKoECtxCSQyTGEv9ySMdmPwDFVhM=";
     fetchSubmodules = true;
   };
 
@@ -25,6 +25,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Parser generator tool and an incremental parsing library";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -6,21 +6,27 @@ let
     let
       node = lock.nodes.${attr}.locked;
     in
-    builtins.fetchTree {
-      inherit (node)
-        type
-        owner
-        repo
-        narHash
-        rev
-        ;
-    };
+    if node.type == "path" then
+      builtins.fetchTree {
+        inherit (node) type path narHash;
+      }
+    else
+      builtins.fetchTree {
+        inherit (node)
+          type
+          owner
+          repo
+          narHash
+          rev
+          ;
+      };
 in
 {
-  lib = getInfo "lib";
+  lib = getInfo "nix-lib";
   corepkgs = getInfo "corepkgs";
   python = getInfo "python";
   haskell = getInfo "haskell";
   cuda = getInfo "cuda";
   r-pkgs = getInfo "r-pkgs";
+  vim-plugins = getInfo "vim-plugins";
 }

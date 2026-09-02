@@ -21,7 +21,6 @@ buildGoModule (finalAttrs: {
     description = "Command line downloader for the Gemini protocol";
     homepage = "https://github.com/makew0rld/gemget";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gemget";
   };
 })

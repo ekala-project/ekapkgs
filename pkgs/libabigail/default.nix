@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
       asl20
       llvm-exception
     ];
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

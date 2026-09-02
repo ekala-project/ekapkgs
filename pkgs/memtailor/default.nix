@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C++ library of special purpose memory allocators";
     homepage = "https://github.com/Macaulay2/memtailor";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

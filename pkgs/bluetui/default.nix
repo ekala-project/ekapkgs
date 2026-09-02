@@ -31,7 +31,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "TUI for managing bluetooth on Linux";
     homepage = "https://github.com/pythops/bluetui";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "bluetui";
     platforms = lib.platforms.linux;
   };
