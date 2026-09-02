@@ -29,7 +29,7 @@ in
     environment.systemPackages = [ pkgs.gnome-keyring ];
 
     services.dbus.packages = [ pkgs.gnome-keyring pkgs.gcr ];
-    # TODO: xdg.portal.extraPortals = [ pkgs.gnome-keyring ];
+    xdg.portal.extraPortals = [ pkgs.gnome-keyring ];
 
     security.pam.services.login.enableGnomeKeyring = true;
 
