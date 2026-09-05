@@ -28,7 +28,10 @@ in
   config = mkIf cfg.enable {
     environment.systemPackages = [ pkgs.gnome-keyring ];
 
-    services.dbus.packages = [ pkgs.gnome-keyring pkgs.gcr ];
+    services.dbus.packages = [
+      pkgs.gnome-keyring
+      pkgs.gcr
+    ];
     xdg.portal.extraPortals = [ pkgs.gnome-keyring ];
 
     security.pam.services.login.enableGnomeKeyring = true;

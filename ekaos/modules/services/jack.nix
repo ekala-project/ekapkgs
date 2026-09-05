@@ -19,9 +19,7 @@ let
   loopback = cfg.jackd.enable && cfg.loopback.enable;
 
   enable32BitAlsaPlugins =
-    cfg.alsa.support32Bit
-    && pkgs.stdenv.hostPlatform.isx86_64
-    && pkgs.pkgsi686Linux.alsa-lib != null;
+    cfg.alsa.support32Bit && pkgs.stdenv.hostPlatform.isx86_64 && pkgs.pkgsi686Linux.alsa-lib != null;
 
   umaskNeeded = lib.versionOlder cfg.jackd.package.version "1.9.12";
   bridgeNeeded = lib.versionAtLeast cfg.jackd.package.version "1.9.12";

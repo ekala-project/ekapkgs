@@ -20,7 +20,12 @@ in
 
   nodes = {
     machine =
-      { config, pkgs, lib, ... }:
+      {
+        config,
+        pkgs,
+        lib,
+        ...
+      }:
       {
         imports = ekapkgsModules;
 
