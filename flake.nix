@@ -38,6 +38,10 @@
         }
       );
 
+      lib = {
+        mkFlake = import ./lib/mk-flake.nix;
+      };
+
       formatter = corepkgs.formatter;
       nixConfig = {
         extra-substituters = [ "https://ekala-corepkgs.cachix.org" ];
