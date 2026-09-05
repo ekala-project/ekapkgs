@@ -7,11 +7,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1788608763,
-        "narHash": "sha256-NdIWae8yd6vnSqO8sZUrD6eH2YGBO8OG/wuJvbFO+9U=",
+        "lastModified": 1788632744,
+        "narHash": "sha256-YZJN8cgCxlgplUSeZMlaKBQ79hymq3wFS88rC78n+7k=",
         "owner": "ekala-project",
         "repo": "corepkgs",
-        "rev": "43f4d743d9439fdf01fd2f321607a55a0b6d9274",
+        "rev": "bb98f9ce0fbef041137b42ebc784fb6238bbc718",
         "type": "github"
       },
       "original": {
@@ -86,17 +86,16 @@
     "python": {
       "flake": false,
       "locked": {
-        "lastModified": 1788623463,
+        "lastModified": 1788627492,
         "narHash": "sha256-egLzQt8HeXx4+Zq7a3MFXD3l4ThjpptdIhCdNpU4jaI=",
-        "owner": "srid",
-        "repo": "python-packages",
-        "rev": "adc65ed23701966e1e4df406a72b38a212cd7465",
+        "owner": "ekala-project",
+        "repo": "python-pkgs",
+        "rev": "3228c35ad5a223620535833dc0599c9b1181d5f0",
         "type": "github"
       },
       "original": {
-        "owner": "srid",
-        "repo": "python-packages",
-        "rev": "adc65ed23701966e1e4df406a72b38a212cd7465",
+        "owner": "ekala-project",
+        "repo": "python-pkgs",
         "type": "github"
       }
     },
