@@ -2,7 +2,9 @@
   description = "Ekapkgs flake";
 
   inputs = {
-    corepkgs.url = "github:ekala-project/corepkgs";
+    # corepkgs#155 (toDevShell) until it merges. Drop this branch pin
+    # when that PR lands on master.
+    corepkgs.url = "github:ekala-project/corepkgs/dev-shell";
     cuda.url = "github:ekala-project/cuda-pkgs";
     cuda.flake = false;
     haskell.url = "github:ekala-project/haskell-pkgs";
