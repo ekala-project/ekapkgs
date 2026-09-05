@@ -8,7 +8,9 @@
     haskell.url = "github:ekala-project/haskell-pkgs";
     haskell.flake = false;
     nix-lib.follows = "corepkgs/nix-lib";
-    python.url = "github:ekala-project/python-pkgs";
+    # python-packages#17 (withMypyc) until it merges; charset-normalizer
+    # override from fetch-cargo-vendor fails on master (corepkgs#172).
+    python.url = "github:srid/python-packages/adc65ed23701966e1e4df406a72b38a212cd7465";
     python.flake = false;
     r-pkgs.url = "github:ekala-project/r-pkgs";
     r-pkgs.flake = false;

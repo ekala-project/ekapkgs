@@ -86,16 +86,17 @@
     "python": {
       "flake": false,
       "locked": {
-        "lastModified": 1788114580,
-        "narHash": "sha256-HwXSvKrjQG/wqLSshNiuwuF4fznvqqsAi6bgP0Q1ydY=",
-        "owner": "ekala-project",
-        "repo": "python-pkgs",
-        "rev": "5326c6dac2ff4adace66955ee87feb9ce4dd3502",
+        "lastModified": 1788623463,
+        "narHash": "sha256-egLzQt8HeXx4+Zq7a3MFXD3l4ThjpptdIhCdNpU4jaI=",
+        "owner": "srid",
+        "repo": "python-packages",
+        "rev": "adc65ed23701966e1e4df406a72b38a212cd7465",
         "type": "github"
       },
       "original": {
-        "owner": "ekala-project",
-        "repo": "python-pkgs",
+        "owner": "srid",
+        "repo": "python-packages",
+        "rev": "adc65ed23701966e1e4df406a72b38a212cd7465",
         "type": "github"
       }
     },
