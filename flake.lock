@@ -86,11 +86,11 @@
     "python": {
       "flake": false,
       "locked": {
-        "lastModified": 1788114580,
-        "narHash": "sha256-HwXSvKrjQG/wqLSshNiuwuF4fznvqqsAi6bgP0Q1ydY=",
+        "lastModified": 1788627492,
+        "narHash": "sha256-egLzQt8HeXx4+Zq7a3MFXD3l4ThjpptdIhCdNpU4jaI=",
         "owner": "ekala-project",
         "repo": "python-pkgs",
-        "rev": "5326c6dac2ff4adace66955ee87feb9ce4dd3502",
+        "rev": "3228c35ad5a223620535833dc0599c9b1181d5f0",
         "type": "github"
       },
       "original": {

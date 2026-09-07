@@ -50,14 +50,16 @@ let
 
   legacyPackages = forAllSystems (
     system:
-    import ../. {
-      inherit
-        system
-        config
-        overlays
-        modules
-        ;
-    }
+    import ../. (
+      {
+        inherit
+          system
+          overlays
+          modules
+          ;
+      }
+      // (if config != { } then { inherit config; } else { })
+    )
   );
 
   perSystem = f: forAllSystems (system: f legacyPackages.${system});

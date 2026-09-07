@@ -1,11 +1,9 @@
 {
   lib,
-  boost,
   fetchFromGitHub,
   meson,
   ninja,
   curl,
-  nlohmann_json,
   pkg-config,
   stdenv,
   nixVersions,
@@ -27,9 +25,7 @@ stdenv.mkDerivation rec {
   };
 
   buildInputs = [
-    boost
     curl
-    nlohmann_json
     nixComponents.nix-store
     nixComponents.nix-fetchers
     nixComponents.nix-expr
@@ -39,6 +35,7 @@ stdenv.mkDerivation rec {
   ];
 
   nativeBuildInputs = [
+    meson.configurePhaseHook
     meson
     ninja
     pkg-config
