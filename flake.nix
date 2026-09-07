@@ -8,6 +8,7 @@
     haskell.url = "github:ekala-project/haskell-pkgs";
     haskell.flake = false;
     nix-lib.follows = "corepkgs/nix-lib";
+    treefmt-nix.follows = "corepkgs/treefmt-nix";
     python.url = "github:ekala-project/python-pkgs";
     python.flake = false;
     r-pkgs.url = "github:ekala-project/r-pkgs";
@@ -23,6 +24,7 @@
       nix-lib,
       self,
       systems,
+      treefmt-nix,
       ...
     }:
     let
@@ -39,7 +41,7 @@
       );
 
       lib = {
-        mkFlake = import ./lib/mk-flake.nix;
+        mkFlake = import ./lib/mk-flake.nix treefmt-nix;
       };
 
       formatter = corepkgs.formatter;
