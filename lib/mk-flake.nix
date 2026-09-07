@@ -8,18 +8,22 @@
 #
 #   outputs = { ekapkgs, ... }:
 #     ekapkgs.lib.mkFlake {
+#       overlays.default = import ./nix/overlay.nix;
+#
 #       packages = pkgs: {
-#         foo = pkgs.callPackage ./foo.nix { };
+#         default = pkgs.my-package;
+#         inherit (pkgs) my-package;
 #       };
+#
 #       devShells = pkgs: {
 #         default = pkgs.callPackage ./shell.nix { };
 #       };
+#
 #       treefmt = {
 #         programs.rustfmt.enable = true;
 #         programs.nixfmt.enable = true;
 #       };
-#     } // {
-#       # Non-per-system outputs go outside mkFlake:
+#
 #       nixosModules.default = import ./module.nix;
 #     };
 #
@@ -27,7 +31,10 @@ treefmt-nix:
 
 {
   config ? { },
-  overlays ? [ ],
+  # Overlays: an attrset of named overlays (e.g. { default = final: prev: { ... }; }).
+  # All values are composed and applied to the package set.
+  # The attrset is re-exposed as `overlays` in the flake output.
+  overlays ? { },
   modules ? [ ], # pkgsModules
   packages ? null,
   devShells ? null,
@@ -36,12 +43,17 @@ treefmt-nix:
   treefmt ? null,
   apps ? null,
   hydraJobs ? null,
+  # Non-per-system passthrough outputs.
+  nixosModules ? { },
+  nixosConfigurations ? { },
   systems ? [
     "x86_64-linux"
     "aarch64-linux"
     "x86_64-darwin"
     "aarch64-darwin"
   ],
+  # Escape hatch: arbitrary extra outputs merged last.
+  extra ? { },
 }:
 
 let
@@ -56,15 +68,14 @@ let
 
   forAllSystems = genAttrs systems;
 
+  overlayList = builtins.attrValues overlays;
+
   legacyPackages = forAllSystems (
     system:
     import ../. (
       {
-        inherit
-          system
-          overlays
-          modules
-          ;
+        inherit system modules;
+        overlays = overlayList;
       }
       // (if config != { } then { inherit config; } else { })
     )
@@ -79,10 +90,6 @@ let
     }
   );
 
-  composeManyExtensions =
-    exts: final: prev:
-    builtins.foldl' (acc: ext: acc // ext final prev) { } exts;
-
   # When treefmt config is provided, build the formatter via treefmt-nix.
   # This takes precedence over a raw `formatter` function.
   effectiveFormatter =
@@ -94,6 +101,7 @@ let
       fmt.config.build.wrapper
     else
       formatter;
+
 in
 
 assert packages == null || builtins.isFunction packages;
@@ -106,15 +114,20 @@ assert apps == null || builtins.isFunction apps;
 assert hydraJobs == null || builtins.isFunction hydraJobs;
 
 {
+  # -- Per-system outputs --------------------------------------------------
   inherit legacyPackages;
   ${if modules != [ ] then "pkgsModules" else null}.default = {
     imports = modules;
   };
-  ${if overlays != [ ] then "overlays" else null}.default = composeManyExtensions overlays;
   ${if packages != null then "packages" else null} = perSystem packages;
   ${if devShells != null then "devShells" else null} = perSystem devShells;
   ${if checks != null then "checks" else null} = perSystem checks;
   ${if effectiveFormatter != null then "formatter" else null} = perSystem effectiveFormatter;
   ${if apps != null then "apps" else null} = perSystem (pkgs: mkApps (apps pkgs));
   ${if hydraJobs != null then "hydraJobs" else null} = perSystem hydraJobs;
-}
+
+  # -- Non-per-system outputs ----------------------------------------------
+  ${if overlays != { } then "overlays" else null} = overlays;
+  ${if nixosModules != { } then "nixosModules" else null} = nixosModules;
+  ${if nixosConfigurations != { } then "nixosConfigurations" else null} = nixosConfigurations;
+} // extra
