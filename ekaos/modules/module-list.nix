@@ -686,6 +686,7 @@
   ./services/localsearch.nix
   ./services/ollama.nix
   ./services/pipewire.nix
+  ./services/plasma6.nix
   ./services/plex.nix
   ./services/sddm.nix
   ./services/sushi.nix
