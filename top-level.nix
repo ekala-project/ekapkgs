@@ -63,6 +63,11 @@ final: prev: {
   # libsoup_2_4 has been removed upstream; stub it out
   libsoup_2_4 = null;
 
+  # Discord variant aliases
+  discord-ptb = final.discord.ptb;
+  discord-canary = final.discord.canary;
+  discord-development = final.discord.development;
+
   # stub for packages that reference nixosTests
   nixosTests = { };
 
