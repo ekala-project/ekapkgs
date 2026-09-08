@@ -42,10 +42,11 @@ let
 
   # --- ekapkgs keys ---
   ekapkgsPkgs = dirKeys ./pkgs;
+  ekapkgsPkgsMany = dirKeys ./pkgs-many;
   ekapkgsToplevel = overlayKeys (import ./top-level.nix);
 
   # --- intersection by source ---
-  shadowedPkgsDir = intersectAttrs corepkgsAll ekapkgsPkgs;
+  shadowedPkgsDir = intersectAttrs corepkgsAll (ekapkgsPkgs // ekapkgsPkgsMany);
   shadowedTopLevel = intersectAttrs corepkgsAll ekapkgsToplevel;
   allShadowed = shadowedPkgsDir // shadowedTopLevel;
 in
