@@ -15,8 +15,11 @@
 #         inherit (pkgs) my-package;
 #       };
 #
-#       devShells = pkgs: {
-#         default = pkgs.callPackage ./shell.nix { };
+#       # Declarative dev shell module (cannot be combined with devShells).
+#       ekaShell = {
+#         languages.rust.enable = true;
+#         commands = pkgs: { inherit (pkgs) nix-eval-jobs; };
+#         libraries = pkgs: { inherit (pkgs) openssl sqlite; };
 #       };
 #
 #       treefmt = {
@@ -38,6 +41,9 @@ treefmt-nix:
   modules ? [ ], # pkgsModules
   packages ? null,
   devShells ? null,
+  # Declarative dev shell module passed to pkgs.mkDevShell { modules = [ ekaShell ]; }.
+  # Produces devShells.<system>.default.  Cannot be combined with devShells.
+  ekaShell ? null,
   checks ? null,
   formatter ? null,
   treefmt ? null,
@@ -90,6 +96,13 @@ let
     }
   );
 
+  # When ekaShell is provided, pass it as a module to pkgs.mkDevShell.
+  effectiveDevShells =
+    if ekaShell != null then
+      pkgs: { default = pkgs.mkDevShell { modules = [ ekaShell ]; }; }
+    else
+      devShells;
+
   # When treefmt config is provided, build the formatter via treefmt-nix.
   # This takes precedence over a raw `formatter` function.
   effectiveFormatter =
@@ -106,6 +119,8 @@ in
 
 assert packages == null || builtins.isFunction packages;
 assert devShells == null || builtins.isFunction devShells;
+assert ekaShell == null || builtins.isAttrs ekaShell || builtins.isFunction ekaShell;
+assert devShells == null || ekaShell == null;
 assert checks == null || builtins.isFunction checks;
 assert formatter == null || builtins.isFunction formatter;
 assert treefmt == null || builtins.isAttrs treefmt;
@@ -120,7 +135,7 @@ assert hydraJobs == null || builtins.isFunction hydraJobs;
     imports = modules;
   };
   ${if packages != null then "packages" else null} = perSystem packages;
-  ${if devShells != null then "devShells" else null} = perSystem devShells;
+  ${if effectiveDevShells != null then "devShells" else null} = perSystem effectiveDevShells;
   ${if checks != null then "checks" else null} = perSystem checks;
   ${if effectiveFormatter != null then "formatter" else null} = perSystem effectiveFormatter;
   ${if apps != null then "apps" else null} = perSystem (pkgs: mkApps (apps pkgs));
