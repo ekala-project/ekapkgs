@@ -7,11 +7,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1788608763,
-        "narHash": "sha256-NdIWae8yd6vnSqO8sZUrD6eH2YGBO8OG/wuJvbFO+9U=",
+        "lastModified": 1789065397,
+        "narHash": "sha256-pjb1jj2Gw1g4chMtjDvJqMZGagfQR8HejTt+waNe6qg=",
         "owner": "ekala-project",
         "repo": "corepkgs",
-        "rev": "43f4d743d9439fdf01fd2f321607a55a0b6d9274",
+        "rev": "86d978617263d71166d4825f2f0c06c776d63e85",
         "type": "github"
       },
       "original": {
@@ -129,6 +129,10 @@
         "systems": [
           "corepkgs",
           "systems"
+        ],
+        "treefmt-nix": [
+          "corepkgs",
+          "treefmt-nix"
         ],
         "vim-plugins": "vim-plugins"
       }
