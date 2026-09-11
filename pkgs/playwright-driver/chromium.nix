@@ -1,43 +1,42 @@
-{
-  runCommand,
-  makeWrapper,
-  fontconfig_file,
-  fetchzip,
-  revision,
-  browserVersion,
-  system,
-  throwSystem,
-  lib,
-  alsa-lib,
-  at-spi2-atk,
-  atk,
-  autoPatchelfHook,
-  cairo,
-  cups,
-  dbus,
-  expat,
-  glib,
-  gobject-introspection,
-  libGL,
-  libgbm,
-  libgcc,
-  libxkbcommon,
-  nspr,
-  nss,
-  pango,
-  patchelf,
-  pciutils,
-  stdenv,
-  systemd,
-  vulkan-loader,
-  libxrandr,
-  libxfixes,
-  libxext,
-  libxdamage,
-  libxcomposite,
-  libx11,
-  libxcb,
-  ...
+{ runCommand
+, makeWrapper
+, fontconfig_file
+, fetchzip
+, revision
+, browserVersion
+, system
+, throwSystem
+, lib
+, alsa-lib
+, at-spi2-atk
+, atk
+, autoPatchelfHook
+, cairo
+, cups
+, dbus
+, expat
+, glib
+, gobject-introspection
+, libGL
+, libgbm
+, libgcc
+, libxkbcommon
+, nspr
+, nss
+, pango
+, patchelf
+, pciutils
+, stdenv
+, systemd
+, vulkan-loader
+, libxrandr
+, libxfixes
+, libxext
+, libxdamage
+, libxcomposite
+, libx11
+, libxcb
+, ...
 }:
 let
   download =
@@ -53,19 +52,12 @@ let
     {
       x86_64-linux = "chrome-linux64";
       aarch64-linux = "chrome-linux";
-    }
-    .${system} or throwSystem;
+    }.${system} or throwSystem;
 
   chromium-linux = stdenv.mkDerivation {
     name = "playwright-chromium";
     src = fetchzip {
-      inherit (download) url stripRoot;
-      hash =
-        {
-          x86_64-linux = "sha256-/0OwT0Asm4A/rUkFruw1JYWbDInFJPuDX0CEdNjeMLo=";
-          aarch64-linux = "sha256-5vNF1/utXGctixYJj/0qvi6X0qklIG9XCcet94feQoA=";
-        }
-        .${system} or throwSystem;
+      inherit (download) url stripRoot hash;
     };
 
     nativeBuildInputs = [
@@ -126,13 +118,11 @@ let
     '';
   };
   chromium-darwin = fetchzip {
-    inherit (download) url stripRoot;
-    hash = "sha256-aJbvZQ1hY0FfDC+ZktfW2yNW3nwc0kh/P30+n/cmLf0=";
+    inherit (download) url stripRoot hash;
   };
 in
-{
-  x86_64-linux = chromium-linux;
-  aarch64-linux = chromium-linux;
-  aarch64-darwin = chromium-darwin;
-}
-.${system} or throwSystem
+  {
+    x86_64-linux = chromium-linux;
+    aarch64-linux = chromium-linux;
+    aarch64-darwin = chromium-darwin;
+  }.${system} or throwSystem

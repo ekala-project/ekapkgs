@@ -1,5 +1,5 @@
 {
-  "comment": "Playwright 1.61.1 browsers.json (chromium farm only; firefox/webkit URLs unused)",
+  "comment": "Playwright 1.61.1 chromium farm (revision pin only; FODs live in browser-downloads.nix)",
   "browsers": {
     "chromium": {
       "revision": "1228",
@@ -10,24 +10,6 @@
       "revision": "1228",
       "browserVersion": "149.0.7827.55",
       "title": "Chrome Headless Shell"
-    },
-    "firefox": {
-      "revision": "1532",
-      "browserVersion": "151.0",
-      "title": "Firefox"
-    },
-    "webkit": {
-      "revision": "2311",
-      "revisionOverrides": {
-        "mac14": "2251",
-        "mac14-arm64": "2251",
-        "debian11-x64": "2105",
-        "debian11-arm64": "2105",
-        "ubuntu20.04-x64": "2092",
-        "ubuntu20.04-arm64": "2092"
-      },
-      "browserVersion": "26.5",
-      "title": "WebKit"
     },
     "ffmpeg": {
       "revision": "1011",

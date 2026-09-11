@@ -6,13 +6,13 @@
 # Chromium-only: firefox-bin is missing from this set and webkit's closure
 # is huge. Consumers that only launch chromium (typical Node e2e) use
 # passthru.browsers.
-{
-  lib,
-  callPackage,
-  linkFarm,
-  runCommand,
-  makeFontsConf,
-  stdenv,
+{ lib
+, callPackage
+, linkFarm
+, runCommand
+, makeFontsConf
+, stdenv
+,
 }:
 let
   version = "1.61.1";

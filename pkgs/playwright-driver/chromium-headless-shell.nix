@@ -1,27 +1,25 @@
-{
-  fetchzip,
-  revision,
-  browserVersion,
-  system,
-  throwSystem,
-  stdenv,
-  autoPatchelfHook,
-  patchelf,
-
-  alsa-lib,
-  at-spi2-atk,
-  expat,
-  glib,
-  libxcomposite,
-  libxdamage,
-  libxfixes,
-  libxrandr,
-  libgbm,
-  libgcc,
-  libxkbcommon,
-  nspr,
-  nss,
-  ...
+{ fetchzip
+, revision
+, browserVersion
+, system
+, throwSystem
+, stdenv
+, autoPatchelfHook
+, patchelf
+, alsa-lib
+, at-spi2-atk
+, expat
+, glib
+, libxcomposite
+, libxdamage
+, libxfixes
+, libxrandr
+, libgbm
+, libgcc
+, libxkbcommon
+, nspr
+, nss
+, ...
 }:
 let
   download =
@@ -33,13 +31,7 @@ let
   linux = stdenv.mkDerivation {
     name = "playwright-chromium-headless-shell";
     src = fetchzip {
-      inherit (download) url stripRoot;
-      hash =
-        {
-          x86_64-linux = "sha256-wnN0SL8QqiFGZdevm06WOhR9o6q34+kHL5ay1mRYnxs=";
-          aarch64-linux = "sha256-d9Qr3q4GjtUp2ZVFSq+M2Ap++WKaEscRzEkk4JwXL/E=";
-        }
-        .${system} or throwSystem;
+      inherit (download) url stripRoot hash;
     };
 
     nativeBuildInputs = [
@@ -69,13 +61,11 @@ let
   };
 
   darwin = fetchzip {
-    inherit (download) url stripRoot;
-    hash = "sha256-qWrMOreqTOFhmFBROlXIPXrM3wqNT7iJJwpelVFke6I=";
+    inherit (download) url stripRoot hash;
   };
 in
-{
-  x86_64-linux = linux;
-  aarch64-linux = linux;
-  aarch64-darwin = darwin;
-}
-.${system} or throwSystem
+  {
+    x86_64-linux = linux;
+    aarch64-linux = linux;
+    aarch64-darwin = darwin;
+  }.${system} or throwSystem
