@@ -28,7 +28,8 @@ rustPlatform.buildRustPackage (finalAttrs: {
     # Skip interactive tests
     "--skip=interactive::app::tests::journeys_readonly::quit_instantly_when_nothing_marked"
     "--skip=interactive::app::tests::journeys_readonly::quit_requires_two_presses_when_items_marked"
-    "--skip=interactive::app::tests::journeys_readonly::once_allows_replayed_quit_to_exit stdout"
+    "--skip=interactive::app::tests::journeys_readonly::once_allows_replayed_quit_to_exit"
+    "--skip=interactive::app::tests::journeys_readonly::once_finishes_traversal_without_user_events"
     "--skip=interactive::app::tests::journeys_readonly::simple_user_journey_read_only"
     "--skip=interactive::app::tests::journeys_with_writes::basic_user_journey_with_deletion"
     "--skip=interactive::app::tests::unit::it_can_handle_ending_traversal_reaching_top_but_skipping_levels"
