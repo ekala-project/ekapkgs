@@ -40,7 +40,7 @@ stdenv.mkDerivation rec {
     libdrm
     libGL
     gstreamer.gstreamer
-    gstreamer.gst-plugins-bad
+    # TODO(ekapkgs): re-enable gst-plugins-bad when pulseaudio/webrtc-audio-processing builds
     nv-codec-headers
     libva
   ];
