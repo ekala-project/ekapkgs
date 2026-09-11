@@ -55,6 +55,11 @@ final: prev: {
   # rest/librest version aliases
   rest_1_0 = final.rest; # rest 0.10.x (librest 1.0 API)
 
+  # Discord variant aliases
+  discord-ptb = final.discord.ptb;
+  discord-canary = final.discord.canary;
+  discord-development = final.discord.development;
+
   # stub for packages that reference nixosTests
   nixosTests = { };
 
