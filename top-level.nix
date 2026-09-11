@@ -5,14 +5,9 @@ final: prev: {
       inherit (final) lib writeTextFile buildPackages;
     }
   );
-  copyDesktopItems = final.makeSetupHook {
-    name = "copy-desktop-items-hook";
-  } ./build-support/copy-desktop-items.sh;
   libmpg123 = final.mpg123;
   docbook_xsl = final.docbook-xsl;
   wafHook = final.waf.hook;
-  at-spi2-atk = final.atk;
-  at-spi2-core = final.atk;
   wrapGAppsHook3 = final.wrapGAppsNoGuiHook.override {
     isGraphical = true;
   };
@@ -22,31 +17,11 @@ final: prev: {
   };
   libxcb-renderutil = final.xcbutilrenderutil;
   libfm-extra = final.libfm.override { extraOnly = true; };
-  dconf = prev.dconf.overrideAttrs (old: {
-    nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
-    doCheck = false;
-  });
-  gdk-pixbuf = prev.gdk-pixbuf.overrideAttrs (old: {
-    nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
-  });
-  # FFTW precision variants
-  fftwSinglePrec = final.fftw.override { precision = "single"; };
   fftwFloat = final.fftwSinglePrec;
-  fftwLongDouble = final.fftw.override { precision = "long-double"; };
   # PulseAudio: libpulseaudio is library-only variant
   libpulseaudio = final.pulseaudio.override { libOnly = true; };
   # JACK2: libjack2 is library-only variant
   libjack2 = final.jack2.override { prefix = "lib"; };
-  # Legacy alias
-  gst_all_1 = final.gstreamer;
-  # libpsl.minimal alias (corepkgs curl expects it)
-  libpsl = prev.libpsl.overrideAttrs (old: {
-    passthru = (old.passthru or { }) // {
-      minimal = prev.libpsl;
-    };
-  });
-  # libsoup v3 alias (libsoup is already v3)
-  libsoup_3 = final.libsoup;
   # GSSDP/GUPnP version aliases
   gssdp_1_6 = final.gssdp;
   gupnp_1_6 = final.gupnp;
@@ -81,14 +56,6 @@ final: prev: {
       });
   # sdbus-cpp v2 variant
   sdbus-cpp_2 = final.sdbus-cpp.override { version = "2.2.1"; };
-  gtk3 =
-    (prev.gtk3.override {
-      trackerSupport = false;
-      withIntrospection = false;
-    }).overrideAttrs
-      (old: {
-        nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
-      });
   # GNOME Shell extensions convenience set
   gnomeExtensions = {
     appindicator = final.gnome-shell-extension-appindicator;
