@@ -1,5 +1,42 @@
 # These will be added to the pkgs scope
+let
+  pins = import ./pins.nix;
+in
 final: prev: {
+  aggregateModules =
+    modules:
+    final.callPackage (
+      {
+        stdenvNoCC,
+        kmod,
+        buildEnv,
+      }:
+      buildEnv {
+        name = "kernel-modules";
+        paths = modules;
+        postBuild = ''
+          source ${stdenvNoCC}/setup
+          if ! test -d "$out/lib/modules"; then
+            exit 0
+          fi
+          kernelVersion=$(cd $out/lib/modules && ls -d *)
+          if test "$(echo $kernelVersion | wc -w)" != 1; then
+            echo "inconsistent kernel versions: $kernelVersion"
+            exit 1
+          fi
+          shopt -s extglob
+          if test -w $out/lib/modules/$kernelVersion; then
+            rm -f $out/lib/modules/$kernelVersion/modules.!(builtin*|order*)
+            ${kmod}/bin/depmod -b $out -C $out/etc/depmod.d -a $kernelVersion
+          fi
+        '';
+      }
+    ) { inherit (final.buildPackages) kmod; };
+
+  # Re-expose networkmanager from corepkgs — the haskell-pkgs aliases.nix
+  # sets it to null because it wasn't available when those aliases were written.
+  networkmanager = final.callPackage (pins.corepkgs + "/pkgs/networkmanager") { };
+
   makeDesktopItem = final.lib.makeOverridable (
     import ./build-support/make-desktopitem.nix {
       inherit (final) lib writeTextFile buildPackages;

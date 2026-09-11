@@ -40,42 +40,29 @@
         }
       );
 
-      # ISO images
-      packages.x86_64-linux =
+      # ISO images — uses corepkgs eval-config directly with only
+      # the ekapkgs service modules needed for the desktop environment.
+      packages = forAllSystems (
+        system:
         let
-          pkgs = self.legacyPackages.x86_64-linux;
+          pkgs = self.legacyPackages.${system};
           evalIso =
             configuration:
-            import ./ekaos {
-              system = "x86_64-linux";
-              inherit pkgs;
+            (corepkgs.lib.ekaosSystem {
+              inherit system pkgs;
               lib = pkgs.lib;
-              configuration = configuration;
-            };
+              modules =
+                (import ./ekaos/iso-modules.nix)
+                ++ [ configuration ];
+            });
         in
         {
-          iso-gnome = (evalIso (
-            import ./ekaos/modules/installer/installation-cd-graphical-gnome.nix
-          )).config.system.build.isoImage;
-        };
-
-      packages.aarch64-linux =
-        let
-          pkgs = self.legacyPackages.aarch64-linux;
-          evalIso =
-            configuration:
-            import ./ekaos {
-              system = "aarch64-linux";
-              inherit pkgs;
-              lib = pkgs.lib;
-              configuration = configuration;
-            };
-        in
-        {
-          iso-gnome = (evalIso (
-            import ./ekaos/modules/installer/installation-cd-graphical-gnome.nix
-          )).config.system.build.isoImage;
-        };
+          iso-gnome =
+            (evalIso (
+              import ./ekaos/modules/installer/installation-cd-graphical-gnome.nix
+            )).config.system.build.isoImage;
+        }
+      );
 
       lib = {
         mkFlake = import ./lib/mk-flake.nix treefmt-nix;

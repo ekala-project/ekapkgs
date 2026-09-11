@@ -32,7 +32,7 @@
   readline, # meson can't find <7 as those versions don't have a .pc file
   lilv,
   makeFontsConf,
-  valgrind,
+  valgrind ? null,
   libcamera ? null,
   libdrm,
   gst_all_1,
