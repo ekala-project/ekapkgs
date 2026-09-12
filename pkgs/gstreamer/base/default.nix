@@ -188,8 +188,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   };
 
-  passthru.
-
   meta = {
     description = "Base GStreamer plug-ins and helper libraries";
     homepage = "https://gstreamer.freedesktop.org";

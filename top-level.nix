@@ -56,13 +56,14 @@ final: prev: {
       gst-plugins-good
       gst-plugins-bad
       gst-plugins-ugly
+      gst-libav
+      gst-rtsp-server
+      gst-devtools
       ;
-    gst-libav = null; # TODO: port
-    gst-rtsp-server = null; # TODO: port
-    gst-editing-services = null; # TODO: port
-    gst-devtools = null; # TODO: port
-    gst-plugins-rs = null; # TODO: port
-    gstreamermm = null; # TODO: port
+    # TODO: port these remaining GStreamer components
+    gst-editing-services = null;
+    gst-plugins-rs = null;
+    gstreamermm = null;
   };
 
   # stub for packages that reference nixosTests
