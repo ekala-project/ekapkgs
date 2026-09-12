@@ -14,4 +14,78 @@ final: prev: {
     ];
   });
 
+  pycairo = prev.pycairo.overridePythonAttrs (old: {
+    nativeBuildInputs = old.nativeBuildInputs ++ [ final.pkgs.meson.configurePhaseHook ];
+  });
+
+  pygobject3 = final.buildPythonPackage rec {
+    pname = "pygobject";
+    version = "3.56.3";
+
+    outputs = [
+      "out"
+      "dev"
+    ];
+
+    pyproject = false;
+
+    src = final.pkgs.fetchurl {
+      url = "mirror://gnome/sources/pygobject/${final.pkgs.lib.versions.majorMinor version}/pygobject-${version}.tar.gz";
+      hash = "sha256-EnYOSg49BLbrleBveifjYsgm1WfqYTNzqSwAO2xw0tY=";
+    };
+
+    depsBuildBuild = [ final.pkgs.pkg-config ];
+
+    nativeBuildInputs = [
+      final.pkgs.pkg-config
+      final.pkgs.meson
+      final.pkgs.meson.configurePhaseHook
+      final.pkgs.ninja
+      final.pkgs.gobject-introspection
+    ];
+
+    buildInputs = [
+      final.pkgs.cairo
+      final.pkgs.glib
+    ];
+
+    propagatedBuildInputs = [
+      final.pycairo
+      final.pkgs.gobject-introspection
+    ];
+
+    mesonFlags = [
+      "-Dpython=${final.python.pythonOnBuildForHost.interpreter}"
+    ];
+
+    meta = {
+      homepage = "https://pygobject.readthedocs.io/";
+      description = "Python bindings for Glib";
+      license = final.pkgs.lib.licenses.lgpl21Plus;
+      platforms = final.pkgs.lib.platforms.unix;
+    };
+  };
+
+  pydbus = final.buildPythonPackage rec {
+    pname = "pydbus";
+    version = "0.6.0";
+    pyproject = true;
+
+    src = final.pkgs.fetchFromGitHub {
+      owner = "LEW21";
+      repo = "pydbus";
+      rev = "v${version}";
+      hash = "sha256-MHwt9XaGcjMjq3FuVWMVqyIEgFoZnhmDhbMaEJUbfkA=";
+    };
+
+    build-system = [ final.setuptools ];
+    dependencies = [ final.pygobject3 ];
+
+    meta = {
+      description = "Pythonic D-Bus library";
+      homepage = "https://github.com/LEW21/pydbus";
+      license = final.pkgs.lib.licenses.lgpl2Plus;
+    };
+  };
+
 }
