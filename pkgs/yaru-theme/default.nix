@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     glib
     python3
+    gtk3
   ];
 
   buildInputs = [

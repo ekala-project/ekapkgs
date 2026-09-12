@@ -33,6 +33,8 @@
   libxcb-wm,
   xcb-imdkit,
   libxkbfile,
+  fmt,
+  json_c,
   gettext,
 }:
 let
@@ -44,13 +46,13 @@ let
 in
 stdenv.mkDerivation rec {
   pname = "fcitx5";
-  version = "5.1.21";
+  version = "5.1.15";
 
   src = fetchFromGitHub {
     owner = "fcitx";
     repo = pname;
     rev = version;
-    hash = "sha256-IR5mKOsVJ/GPL2czdztLVXGJTNk1JXnWpzmqC/UIwuw=";
+    hash = "sha256-g9qDdDx+y/Vmky3pjlG77wsVERWB7ZpnDw+edhYw9Ss=";
     fetchSubmodules = true;
   };
 
@@ -94,6 +96,8 @@ stdenv.mkDerivation rec {
     xcb-imdkit
     xkeyboard-config
     libxkbfile
+    fmt
+    json_c
   ];
 
   strictDeps = true;
