@@ -47,6 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     gettext
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     python3
