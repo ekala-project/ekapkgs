@@ -1,0 +1,140 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  fetchpatch,
+  udev,
+  pkg-config,
+  glib,
+  xmlto,
+  wrapGAppsHook3,
+  docbook_xml_dtd_412,
+  docbook_xsl,
+  libxml2,
+  desktop-file-utils,
+  libusb1,
+  cups,
+  gdk-pixbuf,
+  pango,
+  atk,
+  libnotify,
+  gobject-introspection,
+  libsecret ? null, # TODO(ekapkgs): re-enable when gjs/spidermonkey is available
+  libcupsfilters,
+  gettext,
+  libtool,
+  autoconf-archive,
+  python3Packages,
+  autoreconfHook,
+  bash,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "system-config-printer";
+  version = "1.5.18";
+
+  src = fetchFromGitHub {
+    owner = "openPrinting";
+    repo = "system-config-printer";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-l3HEnYycP56vZWREWkAyHmcFgtu09dy4Ds65u7eqNZk=";
+  };
+
+  strictDeps = true;
+  __structuredAttrs = true;
+
+  prePatch = ''
+    touch README ChangeLog
+    substituteInPlace Makefile.am --replace /bin/bash ${bash}/bin/bash
+  '';
+
+  patches = [
+    ./detect_serverbindir.patch
+    (fetchpatch {
+      url = "https://github.com/OpenPrinting/system-config-printer/commit/399b3334d6519639cfe7f1c0457e2475b8ee5230.patch";
+      hash = "sha256-JCdGmZk2vRn3X1BDxOJaY3Aw8dr0ODVzi0oY20ZWfRs=";
+      excludes = [ "NEWS" ];
+    })
+    ./pep517.patch
+    ./gettext-0.25.patch
+  ];
+
+  buildInputs = [
+    glib
+    udev
+    libusb1
+    cups
+    python3Packages.python
+    libnotify
+    gdk-pixbuf
+    pango
+    atk
+    # TODO(ekapkgs): Port packagekit for software management integration
+    # TODO(ekapkgs): Port libsecret when gjs/spidermonkey is available
+  ];
+
+  nativeBuildInputs = [
+    pkg-config
+    gettext
+    libtool
+    autoconf-archive
+    xmlto
+    libxml2
+    docbook_xml_dtd_412
+    docbook_xsl
+    desktop-file-utils
+    python3Packages.wrapPython
+    python3Packages.build
+    python3Packages.installer
+    python3Packages.setuptools
+    python3Packages.wheel
+    wrapGAppsHook3
+    autoreconfHook
+    gobject-introspection
+  ];
+
+  pythonPath =
+    with python3Packages;
+    requiredPythonModules [
+      pycups
+      pycurl
+      dbus-python
+      pygobject3
+      pycairo
+      # TODO(ekapkgs): re-enable pysmbc when samba builds (needs perl.pkgs.ParseYapp/JSON)
+    ];
+
+  configureFlags = [
+    "--with-udev-rules"
+    "--with-udevdir=${placeholder "out"}/etc/udev"
+    "--with-systemdsystemunitdir=${placeholder "out"}/etc/systemd/system"
+  ];
+
+  stripDebugList = [
+    "bin"
+    "lib"
+    "etc/udev"
+  ];
+
+  postInstall = ''
+    buildPythonPath "$out ''${pythonPath[*]}"
+    gappsWrapperArgs+=(
+      --prefix PATH : "$program_PATH"
+      --set CUPS_DATADIR "${libcupsfilters}/share/cups"
+    )
+
+    find $out/share/system-config-printer -name \*.py -type f -perm -0100 -print0 | while read -d "" f; do
+      patchPythonScript "$f"
+    done
+    patchPythonScript $out/etc/udev/udev-add-printer
+
+    substituteInPlace $out/etc/udev/rules.d/70-printers.rules \
+      --replace "udev-configure-printer" "$out/etc/udev/udev-configure-printer"
+  '';
+
+  meta = {
+    homepage = "https://github.com/openprinting/system-config-printer";
+    platforms = lib.platforms.linux;
+    license = lib.licenses.gpl2Plus;
+  };
+})
