@@ -66,6 +66,31 @@ final: prev: {
     };
   };
 
+  nftables = final.buildPythonPackage {
+    pname = "nftables";
+    inherit (final.pkgs.nftables) version src;
+    pyproject = true;
+
+    postPatch = ''
+      substituteInPlace "src/nftables.py" \
+        --replace-fail 'NFTABLES_VERSION = "0.1"' 'NFTABLES_VERSION = "${final.pkgs.nftables.version}"' \
+        --replace-fail "libnftables.so.1" "${final.pkgs.nftables}/lib/libnftables.so.1"
+    '';
+
+    setSourceRoot = "sourceRoot=$(echo */py)";
+
+    build-system = [ final.setuptools ];
+
+    pythonImportsCheck = [ "nftables" ];
+
+    meta = {
+      description = "Python bindings for nftables";
+      homepage = "https://netfilter.org/projects/nftables/";
+      license = final.pkgs.lib.licenses.gpl2Only;
+      platforms = final.pkgs.lib.platforms.linux;
+    };
+  };
+
   pydbus = final.buildPythonPackage rec {
     pname = "pydbus";
     version = "0.6.0";
