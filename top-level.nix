@@ -26,6 +26,8 @@ final: prev: {
   # GSSDP/GUPnP version aliases
   gssdp_1_6 = final.gssdp;
   gupnp_1_6 = final.gupnp;
+  # openal is an alias for openal-soft
+  openal = final.openal-soft;
   # bluez5 alias (bluez is already v5)
   bluez5 = final.bluez;
   # rest/librest version aliases
