@@ -28,6 +28,13 @@ final: prev: {
   gupnp_1_6 = final.gupnp;
   # openal is an alias for openal-soft
   openal = final.openal-soft;
+
+  # Rust infrastructure aliases
+  rustPlatform = final.rust.packages.stable.rustPlatform;
+  cargo = final.rust.packages.stable.cargo;
+  clippy = final.rust.packages.stable.clippy;
+  rustfmt = final.rust.packages.stable.rustfmt;
+  rustc = final.rust.packages.stable.rustc;
   # bluez5 alias (bluez is already v5)
   bluez5 = final.bluez;
   # rest/librest version aliases
@@ -40,6 +47,23 @@ final: prev: {
     postBuild = "";
     postInstall = "";
   });
+
+  # GStreamer: map gst_all_1 to the gstreamer scope (corepkgs stubs them as null)
+  gst_all_1 = {
+    inherit (final.gstreamer)
+      gstreamer
+      gst-plugins-base
+      gst-plugins-good
+      gst-plugins-bad
+      gst-plugins-ugly
+      ;
+    gst-libav = null; # TODO: port
+    gst-rtsp-server = null; # TODO: port
+    gst-editing-services = null; # TODO: port
+    gst-devtools = null; # TODO: port
+    gst-plugins-rs = null; # TODO: port
+    gstreamermm = null; # TODO: port
+  };
 
   # stub for packages that reference nixosTests
   nixosTests = { };
