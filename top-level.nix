@@ -30,6 +30,14 @@ final: prev: {
   # rest/librest version aliases
   rest_1_0 = final.rest; # rest 0.10.x (librest 1.0 API)
 
+  # Fix zeromq: disable doc generation (asciidoc binary not available)
+  # TODO: remove once corepkgs zeromq fix is upstream
+  zeromq = prev.zeromq.overrideAttrs (old: {
+    cmakeFlags = (old.cmakeFlags or [ ]) ++ [ "-DWITH_DOC=OFF" ];
+    postBuild = "";
+    postInstall = "";
+  });
+
   # stub for packages that reference nixosTests
   nixosTests = { };
 
