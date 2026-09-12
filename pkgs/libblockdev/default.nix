@@ -16,7 +16,6 @@
   lvm2,
   util-linux,
   libbytesize,
-  libndctl,
   nss,
   volume_key,
   libxslt,
@@ -24,7 +23,7 @@
   gptfdisk,
   libyaml,
   autoconf-archive,
-  thin-provisioning-tools ? null,
+  thin-provisioning-tools,
   makeBinaryWrapper,
   e2fsprogs,
   libnvme,
@@ -46,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
   outputs = [
     "out"
     "dev"
-    "devdoc"
     "python"
   ];
 
@@ -58,6 +56,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [
     "--with-python_prefix=${placeholder "python"}"
+    # TODO(ekapkgs): Port libndctl for NVDIMM support
+    "--without-nvdimm"
   ];
 
   strictDeps = true;
@@ -85,7 +85,6 @@ stdenv.mkDerivation (finalAttrs: {
     kmod
     libatasmart
     libbytesize
-    libndctl
     libnvme
     libyaml
     lvm2
@@ -96,19 +95,18 @@ stdenv.mkDerivation (finalAttrs: {
     volume_key
   ];
 
-  postInstall = lib.optionalString (thin-provisioning-tools != null) ''
+  postInstall = ''
     wrapProgram $out/bin/lvm-cache-stats --prefix PATH : \
       ${lib.makeBinPath [ thin-provisioning-tools ]}
   '';
 
   meta = {
-    changelog = "https://github.com/storaged-project/libblockdev/raw/${finalAttrs.src.tag}/NEWS.rst";
     description = "Library for manipulating block devices";
     homepage = "http://storaged.org/libblockdev/";
     license = with lib.licenses; [
       lgpl2Plus
       gpl2Plus
-    ]; # lgpl2Plus for the library, gpl2Plus for the utils
+    ];
     platforms = lib.platforms.linux;
   };
 })
