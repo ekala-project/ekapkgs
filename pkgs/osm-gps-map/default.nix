@@ -61,6 +61,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gobject-introspection
     gnome-common
+    gtk3 # for Gtk-3.0.gir (gobject-introspection)
   ];
 
   buildInputs = [
