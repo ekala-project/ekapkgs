@@ -6,6 +6,7 @@
   boost,
   cairo,
   cmake,
+  expat,
   fftwSinglePrec,
   fltk,
   libGLU,
@@ -41,6 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
+    fltk
     pkg-config
   ];
 
@@ -48,6 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     alsa-lib
     boost
     cairo
+    expat
     fftwSinglePrec
     fltk
     libGLU
