@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     gobject-introspection
     gtk-doc
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
   ]
