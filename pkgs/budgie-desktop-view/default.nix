@@ -44,6 +44,12 @@ stdenv.mkDerivation (finalAttrs: {
     libxfce4windowing
   ];
 
+  postPatch = ''
+    substituteInPlace meson.build --replace-fail \
+      "dependency('vapigen'" \
+      "dependency('vapigen', native: true"
+  '';
+
   mesonFlags = [ (lib.mesonBool "werror" false) ];
 
   meta = {

@@ -5,8 +5,6 @@
   meson,
   ninja,
   pkg-config,
-  gobject-introspection,
-  vala,
   gtk3,
   wayland-scanner,
   wayland,
@@ -33,14 +31,18 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    gobject-introspection
-    vala
     wayland-scanner
   ];
 
   buildInputs = [
     gtk3
     wayland
+  ];
+
+  # TODO(ekapkgs): re-enable introspection/vapi when gtk3 provides Gtk-3.0.gir
+  mesonFlags = [
+    (lib.mesonBool "introspection" false)
+    (lib.mesonBool "vapi" false)
   ];
 
   strictDeps = true;
