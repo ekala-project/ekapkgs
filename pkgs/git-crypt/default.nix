@@ -1,13 +1,13 @@
-{
-  fetchFromGitHub,
-  git,
-  gnupg,
-  makeWrapper,
-  openssl,
-  lib,
-  stdenv,
-  libxslt,
-  docbook_xsl,
+{ fetchFromGitHub
+, gitMinimal
+, gnupg
+, makeWrapper
+, openssl
+, lib
+, stdenv
+, libxslt
+, docbook_xsl
+,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -50,7 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     wrapProgram $out/bin/git-crypt \
       --suffix PATH : ${
         lib.makeBinPath [
-          git
+          gitMinimal
           gnupg
         ]
       }

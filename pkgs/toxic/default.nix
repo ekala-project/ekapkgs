@@ -31,7 +31,12 @@ stdenv.mkDerivation (finalAttrs: {
   makeFlags = [ "PREFIX=$(out)" ];
   installFlags = [ "PREFIX=$(out)" ];
 
+  nativeBuildInputs = [
+    pkg-config
+  ];
+
   buildInputs = [
+    libconfig
     libtoxcore
     libsodium
     ncurses
@@ -45,11 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     libvpx
     freealut
     qrencode
-  ];
-
-  nativeBuildInputs = [
-    pkg-config
-    libconfig
   ];
 
   meta = {
