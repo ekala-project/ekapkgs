@@ -11,9 +11,6 @@
   gtk3,
   libpulseaudio,
   libsamplerate,
-  gobject-introspection,
-  vala,
-  gtk-doc,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -34,13 +31,16 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [
-    gobject-introspection
-    gtk-doc
     meson
     meson.configurePhaseHook
     ninja
     pkg-config
-    vala
+  ];
+
+  # Disable introspection/vapi: Gtk-3.0.gir not available in ekapkgs (corepkgs issue)
+  mesonFlags = [
+    "-Dintrospection=false"
+    "-Dvapi=false"
   ];
 
   buildInputs = [
