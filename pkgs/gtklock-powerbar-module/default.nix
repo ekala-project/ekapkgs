@@ -1,0 +1,51 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  meson,
+  ninja,
+  pkg-config,
+  gtk3,
+  systemd,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "gtklock-powerbar-module";
+  version = "4.0.0";
+
+  src = fetchFromGitHub {
+    owner = "jovanlanik";
+    repo = "gtklock-powerbar-module";
+    rev = "v${finalAttrs.version}";
+    hash = "sha256-Zakdta1i0o7S2AbHydlonnh5OMGVgGjB2H/AiHgQT9A=";
+  };
+
+  nativeBuildInputs = [
+    meson
+    meson.configurePhaseHook
+    ninja
+    pkg-config
+  ];
+
+  buildInputs = [ gtk3 ];
+
+  postPatch =
+    let
+      systemctl = lib.getExe' systemd "systemctl";
+    in
+    ''
+      substituteInPlace source.c \
+        --replace-fail '"systemctl reboot"' '"${systemctl} reboot"' \
+        --replace-fail '"systemctl -i poweroff"' '"${systemctl} -i poweroff"' \
+        --replace-fail '"systemctl suspend"' '"${systemctl} suspend"'
+    '';
+
+  strictDeps = true;
+
+  meta = {
+    description = "Gtklock module adding power controls to the lockscreen";
+    homepage = "https://github.com/jovanlanik/gtklock-powerbar-module";
+    license = lib.licenses.gpl3Only;
+    platforms = lib.platforms.linux;
+  };
+})
