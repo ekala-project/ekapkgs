@@ -40,19 +40,18 @@ rustPlatform.buildRustPackage (finalAttrs: {
     cmake
   ];
 
-  buildInputs =
-    [
-      dbus
-      glib
-      gst_all_1.gstreamer
-      mpv-unwrapped
-      openssl
-      sqlite
-      libopus
-    ]
-    ++ lib.optionals stdenv.hostPlatform.isLinux [
-      alsa-lib
-    ];
+  buildInputs = [
+    dbus
+    glib
+    gst_all_1.gstreamer
+    mpv-unwrapped
+    openssl
+    sqlite
+    libopus
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
+    alsa-lib
+  ];
 
   meta = {
     description = "Terminal Music Player TUI written in Rust";

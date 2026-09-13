@@ -37,7 +37,7 @@ buildGoModule (finalAttrs: {
   ];
 
   postInstall = ''
-    cp -r "$NIX_BUILD_TOP/source"/{support,VERSION} $out/
+    cp -r "$NIX_BUILD_TOP/$sourceRoot"/{support,VERSION} $out/
   '';
   doCheck = false;
 

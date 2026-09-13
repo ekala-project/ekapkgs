@@ -14,7 +14,7 @@ buildNpmPackage rec {
     owner = "nodejs";
     repo = "node-gyp";
     tag = "v${version}";
-    hash = "sha256-AoHPkoyWxpnDjCVKVVab+ml+2DF47PKV5njEHRImYg0=";
+    hash = "sha256-AoHPkoyWxpnDjCVKVVab+ml+2DF47NfmTK3mk24rMCQ=";
   };
 
   npmDepsHash = "sha256-udF/exHe0Gy6JLrXP/47PKV5njEHRImYg0kDlHQoJbs=";
