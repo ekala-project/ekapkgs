@@ -21,6 +21,7 @@
   libgedit-gtksourceview,
   libgedit-tepl,
   libgee,
+  gtk3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -56,6 +57,7 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     gsettings-desktop-schemas
     gspell
+    gtk3
     libgedit-amtk
     libgedit-gtksourceview
     libgedit-tepl
