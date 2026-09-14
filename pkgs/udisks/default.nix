@@ -34,28 +34,26 @@
   exfat,
   nilfs-utils,
   ntfs3g,
-  udevCheckHook,
   libiscsi,
   libconfig,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "udisks";
-  version = "2.11.1";
+  version = "2.11.2";
 
   src = fetchFromGitHub {
     owner = "storaged-project";
     repo = "udisks";
     tag = "udisks-${finalAttrs.version}";
-    hash = "sha256-FZr5AhAxvMbaonYIClHgxsoHaGR2nIClK65IEaYxMeA=";
+    hash = "sha256-bzTposLFl8jrRr+MphV8uM60TBFPuvwEKBUgVlq1YNo=";
   };
 
   outputs = [
     "out"
     "man"
     "dev"
-  ]
-  ++ lib.optional (stdenv.hostPlatform == stdenv.buildPlatform) "devdoc";
+  ];
 
   patches = [
     (replaceVars ./fix-paths.patch {
@@ -84,7 +82,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
-  # pkg-config had to be in both to find gtk-doc and gobject-introspection
   depsBuildBuild = [ pkg-config ];
   nativeBuildInputs = [
     autoreconfHook
@@ -96,14 +93,7 @@ stdenv.mkDerivation (finalAttrs: {
     docbook_xml_dtd_412
     docbook_xml_dtd_43
     docbook_xsl
-    udevCheckHook
   ];
-
-  postPatch = lib.optionalString stdenv.hostPlatform.isMusl ''
-    substituteInPlace udisks/udisksclient.c \
-      --replace 'defined( __GNUC_PREREQ)' 1 \
-      --replace '__GNUC_PREREQ(4,6)' 1
-  '';
 
   buildInputs = [
     expat
@@ -122,7 +112,7 @@ stdenv.mkDerivation (finalAttrs: {
   preConfigure = "NOCONFIGURE=1 ./autogen.sh";
 
   configureFlags = [
-    (lib.enableFeature (stdenv.buildPlatform == stdenv.hostPlatform) "gtk-doc")
+    "--disable-gtk-doc"
     "--sysconfdir=/etc"
     "--localstatedir=/var"
     "--with-systemdsystemunitdir=$(out)/etc/systemd/system"
@@ -145,20 +135,13 @@ stdenv.mkDerivation (finalAttrs: {
 
   enableParallelBuilding = true;
 
-  doCheck = true;
-  doInstallCheck = true;
-
-  passthru = {
-    inherit libblockdev;
-  };
-
   meta = {
-    description = "Daemon, tools and libraries to access and manipulate disks, storage devices and technologies";
+    description = "Daemon, tools and libraries to access and manipulate disks and storage devices";
     homepage = "https://www.freedesktop.org/wiki/Software/udisks/";
     license = with lib.licenses; [
       lgpl2Plus
       gpl2Plus
-    ]; # lgpl2Plus for the library, gpl2Plus for the tools & daemon
+    ];
     platforms = lib.platforms.linux;
   };
 })

@@ -5,14 +5,10 @@ final: prev: {
       inherit (final) lib writeTextFile buildPackages;
     }
   );
-  copyDesktopItems = final.makeSetupHook {
-    name = "copy-desktop-items-hook";
-  } ./build-support/copy-desktop-items.sh;
   libmpg123 = final.mpg123;
+  libdbusmenu-gtk3 = final.libdbusmenu.override { withGtk3 = true; };
   docbook_xsl = final.docbook-xsl;
   wafHook = final.waf.hook;
-  at-spi2-atk = final.atk;
-  at-spi2-core = final.atk;
   wrapGAppsHook3 = final.wrapGAppsNoGuiHook.override {
     isGraphical = true;
   };
@@ -22,38 +18,53 @@ final: prev: {
   };
   libxcb-renderutil = final.xcbutilrenderutil;
   libfm-extra = final.libfm.override { extraOnly = true; };
-  dconf = prev.dconf.overrideAttrs (old: {
-    nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
-    doCheck = false;
-  });
-  gdk-pixbuf = prev.gdk-pixbuf.overrideAttrs (old: {
-    nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
-  });
-  # FFTW precision variants
-  fftwSinglePrec = final.fftw.override { precision = "single"; };
   fftwFloat = final.fftwSinglePrec;
-  fftwLongDouble = final.fftw.override { precision = "long-double"; };
   # PulseAudio: libpulseaudio is library-only variant
   libpulseaudio = final.pulseaudio.override { libOnly = true; };
   # JACK2: libjack2 is library-only variant
   libjack2 = final.jack2.override { prefix = "lib"; };
-  # Legacy alias
-  gst_all_1 = final.gstreamer;
-  # libpsl.minimal alias (corepkgs curl expects it)
-  libpsl = prev.libpsl.overrideAttrs (old: {
-    passthru = (old.passthru or { }) // {
-      minimal = prev.libpsl;
-    };
-  });
-  # libsoup v3 alias (libsoup is already v3)
-  libsoup_3 = final.libsoup;
   # GSSDP/GUPnP version aliases
   gssdp_1_6 = final.gssdp;
   gupnp_1_6 = final.gupnp;
+  # openal is an alias for openal-soft
+  openal = final.openal-soft;
+
+  # Rust infrastructure aliases
+  rustPlatform = final.rust.packages.stable.rustPlatform;
+  cargo = final.rust.packages.stable.cargo;
+  clippy = final.rust.packages.stable.clippy;
+  rustfmt = final.rust.packages.stable.rustfmt;
+  rustc = final.rust.packages.stable.rustc;
   # bluez5 alias (bluez is already v5)
   bluez5 = final.bluez;
   # rest/librest version aliases
   rest_1_0 = final.rest; # rest 0.10.x (librest 1.0 API)
+
+  # Fix zeromq: disable doc generation (asciidoc binary not available)
+  # TODO: remove once corepkgs zeromq fix is upstream
+  zeromq = prev.zeromq.overrideAttrs (old: {
+    cmakeFlags = (old.cmakeFlags or [ ]) ++ [ "-DWITH_DOC=OFF" ];
+    postBuild = "";
+    postInstall = "";
+  });
+
+  # GStreamer: map gst_all_1 to the gstreamer scope (corepkgs stubs them as null)
+  gst_all_1 = {
+    inherit (final.gstreamer)
+      gstreamer
+      gst-plugins-base
+      gst-plugins-good
+      gst-plugins-bad
+      gst-plugins-ugly
+      gst-libav
+      gst-rtsp-server
+      gst-devtools
+      ;
+    # TODO: port these remaining GStreamer components
+    gst-editing-services = null;
+    gst-plugins-rs = null;
+    gstreamermm = null;
+  };
 
   # stub for packages that reference nixosTests
   nixosTests = { };
@@ -81,14 +92,6 @@ final: prev: {
       });
   # sdbus-cpp v2 variant
   sdbus-cpp_2 = final.sdbus-cpp.override { version = "2.2.1"; };
-  gtk3 =
-    (prev.gtk3.override {
-      trackerSupport = false;
-      withIntrospection = false;
-    }).overrideAttrs
-      (old: {
-        nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
-      });
   # GNOME Shell extensions convenience set
   gnomeExtensions = {
     appindicator = final.gnome-shell-extension-appindicator;

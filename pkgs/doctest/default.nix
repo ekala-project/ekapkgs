@@ -1,0 +1,34 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  cmake,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "doctest";
+  version = "2.5.3";
+
+  src = fetchFromGitHub {
+    owner = "doctest";
+    repo = "doctest";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-+/IEISqN9HdaCJ0udLVUitOUziLvF/D3POecZMoXuho=";
+  };
+
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
+
+  cmakeFlags = lib.optionals stdenv.hostPlatform.isStatic [
+    "-DDOCTEST_WITH_TESTS=OFF"
+  ];
+
+  meta = {
+    homepage = "https://github.com/doctest/doctest";
+    description = "Fastest feature-rich C++11/14/17/20 single-header testing framework";
+    platforms = lib.platforms.all;
+    license = lib.licenses.mit;
+  };
+})
