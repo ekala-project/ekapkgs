@@ -41,6 +41,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     makeBinaryWrapper
     jdk
     gradle
+    gradle.setupHook
     copyDesktopItems
   ];
 
@@ -62,6 +63,22 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   preBuild = "mkdir -p freeplane/build";
 
   gradleBuildTask = "build";
+
+  # Gradle setup hook's dynamic phase assignments don't work with
+  # structuredAttrs; prevent auto-registration and call explicitly.
+  dontUseGradleConfigure = true;
+
+  configurePhase = ''
+    runHook preConfigure
+    gradleConfigureHook
+    runHook postConfigure
+  '';
+
+  buildPhase = ''
+    runHook preBuild
+    gradleBuildPhase
+    runHook postBuild
+  '';
 
   desktopItems = [
     (makeDesktopItem {
