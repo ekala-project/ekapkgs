@@ -1,26 +1,26 @@
-{
-  lib,
-  stdenv,
-  fetchFromGitHub,
-  cmake,
-  doxygen,
-  graphviz,
-  makeWrapper,
-  boost,
-  SDL2,
-  python3,
-  freetype,
-  openal,
-  libogg,
-  libvorbis,
-  zlib,
-  libpng,
-  libtiff,
-  libjpeg,
-  libGLU,
-  libGL,
-  glew,
-  libxslt,
+{ lib
+, stdenv
+, fetchFromGitHub
+, cmake
+, doxygen
+, graphviz
+, makeWrapper
+, boost
+, SDL2
+, python3
+, freetype
+, openal
+, libogg
+, libvorbis
+, zlib
+, libpng
+, libtiff
+, libjpeg
+, libGLU
+, libGL
+, glew
+, libxslt
+,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -60,6 +60,7 @@ stdenv.mkDerivation (finalAttrs: {
     doxygen
     graphviz
     makeWrapper
+    python3
   ];
 
   # as of 0.5.0.1 FreeOrion doesn't work with "-DOpenGL_GL_PREFERENCE=GLVND"
