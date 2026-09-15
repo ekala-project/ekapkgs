@@ -1,13 +1,13 @@
-{ fetchFromGitHub
-, gitMinimal
-, gnupg
-, makeWrapper
-, openssl
-, lib
-, stdenv
-, libxslt
-, docbook_xsl
-,
+{
+  fetchFromGitHub,
+  gitMinimal,
+  gnupg,
+  makeWrapper,
+  openssl,
+  lib,
+  stdenv,
+  libxslt,
+  docbook_xsl,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
