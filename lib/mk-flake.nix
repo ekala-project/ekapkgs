@@ -145,4 +145,5 @@ assert hydraJobs == null || builtins.isFunction hydraJobs;
   ${if overlays != { } then "overlays" else null} = overlays;
   ${if nixosModules != { } then "nixosModules" else null} = nixosModules;
   ${if nixosConfigurations != { } then "nixosConfigurations" else null} = nixosConfigurations;
-} // extra
+}
+// extra

@@ -28,7 +28,15 @@ stdenvNoCC.mkDerivation rec {
 
     install -Dm755 ufw-docker $out/bin/ufw-docker
     wrapProgram $out/bin/ufw-docker \
-      --prefix PATH : ${lib.makeBinPath [ coreutils gawk gnugrep gnused util-linux ]}
+      --prefix PATH : ${
+        lib.makeBinPath [
+          coreutils
+          gawk
+          gnugrep
+          gnused
+          util-linux
+        ]
+      }
 
     runHook postInstall
   '';

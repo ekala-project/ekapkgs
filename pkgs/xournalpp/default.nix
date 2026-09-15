@@ -45,23 +45,22 @@ stdenv.mkDerivation (finalAttrs: {
     help2man
   ];
 
-  buildInputs =
-    [
-      glib
-      gsettings-desktop-schemas
-      gtk3
-      gtksourceview4
-      librsvg
-      libsndfile
-      libxml2
-      libzip
-      poppler
-      portaudio
-      qpdf
-      zlib
-    ]
-    ++ lib.optional stdenv.hostPlatform.isLinux alsa-lib
-    ++ lib.optional withLua lua5_3;
+  buildInputs = [
+    glib
+    gsettings-desktop-schemas
+    gtk3
+    gtksourceview4
+    librsvg
+    libsndfile
+    libxml2
+    libzip
+    poppler
+    portaudio
+    qpdf
+    zlib
+  ]
+  ++ lib.optional stdenv.hostPlatform.isLinux alsa-lib
+  ++ lib.optional withLua lua5_3;
 
   buildFlags = [ "translations" ];
 
