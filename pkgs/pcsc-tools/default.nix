@@ -46,19 +46,17 @@ stdenv.mkDerivation (finalAttrs: {
   postInstall = ''
     wrapProgram $out/bin/scriptor \
       --set PERL5LIB "${
-        with perlPackages;
-        makePerlPath [
-          ChipcardPCSC
-          libintl-perl
+        perlPackages.makeFullPerlPath [
+          perlPackages.libintl-perl
+          perlPackages.ChipcardPCSC
         ]
       }"
 
     wrapProgram $out/bin/ATR_analysis \
       --set PERL5LIB "${
-        with perlPackages;
-        makePerlPath [
-          ChipcardPCSC
-          libintl-perl
+        perlPackages.makeFullPerlPath [
+          perlPackages.libintl-perl
+          perlPackages.ChipcardPCSC
         ]
       }"
 
