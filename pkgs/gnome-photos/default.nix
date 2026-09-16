@@ -19,7 +19,7 @@
   gtk3,
   itstool,
   libdazzle,
-  libportal-gtk3 ? null, # TODO: not in ekapkgs, needs porting
+  libportal,
   libhandy,
   libxml2,
   meson,
@@ -85,9 +85,7 @@ stdenv.mkDerivation rec {
     gsettings-desktop-schemas
     gtk3
     libdazzle
-  ]
-  ++ lib.optional (libportal-gtk3 != null) libportal-gtk3
-  ++ [
+    libportal.gtk3
     libhandy
     tinysparql
     localsearch # For 'org.freedesktop.Tracker.Miner.Files' GSettings schema
