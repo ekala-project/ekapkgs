@@ -23,7 +23,8 @@ perlPackages.buildPerlPackage rec {
   ];
 
   nativeCheckInputs = [
-    perlPackages.TestPerlCritic
+    # TODO(ekapkgs): re-enable once perlPackages.PerlCritic dep tree is available
+    # perlPackages.TestPerlCritic
     perlPackages.TestPod
     perlPackages.TestPodCoverage
   ];
