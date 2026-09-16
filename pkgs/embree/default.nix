@@ -7,7 +7,7 @@
   ispc ? null,
   onetbb,
   glfw,
-  openimageio,
+  openimageio ? null,
   libjpeg,
   libpng,
   libpthread-stubs,
