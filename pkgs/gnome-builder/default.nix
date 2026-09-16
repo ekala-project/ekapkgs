@@ -29,7 +29,7 @@
   # TODO: gtksourceview5 - not available
   # TODO: libdex - not available
   # TODO: libpanel - not available
-  # TODO: libportal-gtk4 - not available (need gtk4 variant of libportal)
+
   # TODO: libspelling - not available
   # TODO: libsysprof-capture - not available
   # TODO: libyaml - not available
@@ -79,7 +79,7 @@ stdenv.mkDerivation (finalAttrs: {
     flatpak
     # TODO: libgit2-glib
     libpeas2
-    # TODO: libportal-gtk4
+    libportal.gtk4
     # TODO: vte-gtk4
     # TODO: gom
     gtk4
