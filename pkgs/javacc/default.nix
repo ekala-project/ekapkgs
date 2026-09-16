@@ -43,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     install -Dm755 scripts/{javacc,jjdoc,jjtree,jjrun} -t $out/bin
 
     for file in $out/bin/*; do
-      wrapProgram "$file" --suffix PATH : ${jre}/bin
+      wrapProgram "$file" --suffix PATH : ${lib.optionalString (jre != null) "${jre}/bin"}
     done
 
     runHook postInstall
