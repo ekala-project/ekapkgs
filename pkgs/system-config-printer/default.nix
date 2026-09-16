@@ -101,7 +101,7 @@ stdenv.mkDerivation (finalAttrs: {
       dbus-python
       pygobject3
       pycairo
-      # TODO(ekapkgs): re-enable pysmbc when samba builds (needs perl.pkgs.ParseYapp/JSON)
+      pysmbc
     ];
 
   configureFlags = [
