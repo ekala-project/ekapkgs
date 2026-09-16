@@ -1,4 +1,12 @@
 {
+  version,
+  src-hash,
+  variant ? null,
+  mkVariantPassthru,
+  ...
+}@variantArgs:
+
+{
   stdenv,
   lib,
   fetchFromGitHub,
@@ -9,11 +17,13 @@
   vala,
   gi-docgen,
   glib,
+  gtk3,
+  gtk4 ? null,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-  pname = "libportal";
-  version = "0.10.0";
+  pname = "libportal" + lib.optionalString (variant != null) "-${variant}";
+  inherit version;
 
   outputs = [
     "out"
@@ -25,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "flatpak";
     repo = "libportal";
     rev = finalAttrs.version;
-    sha256 = "sha256-vU3jnHxCvxZMSJOh5hzkCB8uuE0NnbnZM7+eQ6a5+oI=";
+    hash = src-hash;
   };
 
   depsBuildBuild = [
@@ -44,11 +54,17 @@ stdenv.mkDerivation (finalAttrs: {
 
   propagatedBuildInputs = [
     glib
+  ]
+  ++ lib.optionals (variant == "gtk3") [
+    gtk3
+  ]
+  ++ lib.optionals (variant == "gtk4") [
+    gtk4
   ];
 
   mesonFlags = [
-    (lib.mesonEnable "backend-gtk3" false)
-    (lib.mesonEnable "backend-gtk4" false)
+    (lib.mesonEnable "backend-gtk3" (variant == "gtk3"))
+    (lib.mesonEnable "backend-gtk4" (variant == "gtk4"))
     (lib.mesonEnable "backend-qt5" false)
     (lib.mesonEnable "backend-qt6" false)
     (lib.mesonBool "vapi" true)
@@ -59,6 +75,8 @@ stdenv.mkDerivation (finalAttrs: {
   postFixup = ''
     moveToOutput "share/doc" "$devdoc"
   '';
+
+  passthru = mkVariantPassthru variantArgs;
 
   meta = {
     description = "Flatpak portal library";
