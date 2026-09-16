@@ -6,6 +6,7 @@
   libaio,
   systemd,
   perl,
+  perlPackages,
   docbook_xsl,
   coreutils,
   lsof,
@@ -63,13 +64,16 @@ stdenv.mkDerivation (finalAttrs: {
 
   postInstall = ''
     substituteInPlace $out/sbin/tgt-admin \
-      --replace "#!/usr/bin/perl" "#! ${perl.withPackages (p: [ p.ConfigGeneral ])}/bin/perl"
+      --replace "#!/usr/bin/perl" "#! ${perl}/bin/perl"
     wrapProgram $out/sbin/tgt-admin --prefix PATH : \
-      ${lib.makeBinPath [
-        lsof
-        sg3_utils
-        (placeholder "out")
-      ]}
+      ${
+        lib.makeBinPath [
+          lsof
+          sg3_utils
+          (placeholder "out")
+        ]
+      } \
+      --prefix PERL5LIB : "${perlPackages.makeFullPerlPath [ perlPackages.ConfigGeneral ]}"
 
     install -D scripts/tgtd.service $out/etc/systemd/system/tgtd.service
     substituteInPlace $out/etc/systemd/system/tgtd.service \
