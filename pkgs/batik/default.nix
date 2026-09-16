@@ -2,8 +2,8 @@
   lib,
   stdenvNoCC,
   fetchurl,
-  jre,
-  rhino ? null,
+  jdk,
+  rhino,
   stripJavaArchivesHook ? null,
   makeWrapper,
 }:
@@ -23,7 +23,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    jre
+    jdk
     rhino
   ];
 
@@ -37,7 +37,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     chmod +x $out/share/java/*.jar
     classpath="$(find $out/share/java -name '*.jar' -printf '${rhino}/share/java/js.jar:%h/%f')"
     for appName in rasterizer slideshow squiggle svgpp ttf2svg; do
-      makeWrapper ${lib.getExe jre} $out/bin/batik-$appName \
+      makeWrapper ${lib.getExe jdk} $out/bin/batik-$appName \
         --add-flags "-jar $out/share/java/batik-all-${finalAttrs.version}.jar" \
         --add-flags "-classpath $classpath" \
         --add-flags "org.apache.batik.apps.$appName.Main"
