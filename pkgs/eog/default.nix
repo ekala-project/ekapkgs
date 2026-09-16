@@ -10,7 +10,7 @@
   libxml2,
   libjpeg,
   libpeas,
-  libportal-gtk3 ? null,
+  libportal,
   gtk3,
   libhandy,
   glib,
@@ -61,7 +61,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     libjpeg
-    libportal-gtk3
+    libportal.gtk3
     gtk3
     libhandy
     gdk-pixbuf
