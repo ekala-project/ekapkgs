@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   pkg-config,
-  libestr,
+  libestr ? null,
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "libee";
