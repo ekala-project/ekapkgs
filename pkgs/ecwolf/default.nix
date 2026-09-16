@@ -14,7 +14,7 @@
   gtk3,
   writers,
   python3Packages,
-  nix-update,
+  nix-update ? null,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
