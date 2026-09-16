@@ -2,7 +2,7 @@
   description = "Ekapkgs flake";
 
   inputs = {
-    corepkgs.url = "github:ekala-project/corepkgs";
+    corepkgs.url = "path:/home/jon/projects/corepkgs-other";
     cuda.url = "github:ekala-project/cuda-pkgs";
     cuda.flake = false;
     haskell.url = "github:ekala-project/haskell-pkgs";
