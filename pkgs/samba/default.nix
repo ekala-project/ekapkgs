@@ -105,9 +105,10 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     bison
     flex
-    perl
-    # TODO(ekapkgs): Port perl.pkgs.ParseYapp to corepkgs for yapp parser generation
-    # TODO(ekapkgs): Port perl.pkgs.JSON to corepkgs for JSON support
+    (perl.withPackages (p: [
+      p.ParseYapp
+      p.JSON
+    ]))
     libxslt
     docbook_xsl
     docbook_xml_dtd_45
