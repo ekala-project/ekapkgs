@@ -6,7 +6,7 @@
   coreutils,
   curl,
   libarchive,
-  libpkgconf ? pkgconf.dev,
+  libpkgconf ? (pkgconf.dev or pkgconf),
   pkgconf,
   pkg-config,
   samurai,
