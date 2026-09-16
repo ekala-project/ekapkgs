@@ -97,7 +97,7 @@ stdenv.mkDerivation {
     cd builddir
   '';
 
-  hardeningDisable = [ "pie" ];
+  hardeningDisable = [ "pic" ];
 
   doCheck = true;
 
