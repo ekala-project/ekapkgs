@@ -5,7 +5,7 @@
   go-md2man,
   installShellFiles,
   pkg-config,
-  bcc,
+  bcc ? null,
   libseccomp,
 }:
 
