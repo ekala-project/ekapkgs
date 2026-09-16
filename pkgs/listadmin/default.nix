@@ -4,6 +4,7 @@
   fetchurl,
   makeWrapper,
   perl,
+  perlPackages,
   installShellFiles,
 }:
 
@@ -32,12 +33,14 @@ stdenvNoCC.mkDerivation rec {
 
     wrapProgram $out/bin/listadmin \
       --prefix PERL5LIB : "${
-        with perl.pkgs;
-        makeFullPerlPath [
-          TextReform
-          NetINET6Glue
-          LWPProtocolHttps
-        ]
+        perlPackages.makeFullPerlPath (
+          with perlPackages;
+          [
+            TextReform
+            NetINET6Glue
+            LWPProtocolHttps
+          ]
+        )
       }"
   '';
 
