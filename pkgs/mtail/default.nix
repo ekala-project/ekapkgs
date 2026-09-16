@@ -3,7 +3,7 @@
   stdenv,
   buildGoModule,
   fetchFromGitHub,
-  gotools,
+  gotools ? null,
 }:
 
 buildGoModule (finalAttrs: {
