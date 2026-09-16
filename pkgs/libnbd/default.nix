@@ -7,7 +7,7 @@
   perl,
   buildPythonBindings ? false,
   buildOcamlBindings ? false,
-  ocamlPackages,
+  ocamlPackages ? null,
   python3,
   libxml2,
   fuse3,
