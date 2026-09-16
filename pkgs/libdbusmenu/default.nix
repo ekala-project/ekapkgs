@@ -12,6 +12,7 @@
   vala,
   withGtk3 ? false,
   gtk3,
+  gtkVersion ? null,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
