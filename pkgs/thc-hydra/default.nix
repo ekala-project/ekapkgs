@@ -39,7 +39,7 @@ stdenv.mkDerivation rec {
         --replace-fail "-lcurses" "-lncurses"
     '';
 
-  buildInputs = [
+  buildInputs = lib.filter (x: x != null) [
     zlib
     openssl
     ncurses
