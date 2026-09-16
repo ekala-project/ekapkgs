@@ -12,7 +12,7 @@
   desktop-file-utils,
   gtk4,
   glib,
-  libportal-gtk4 ? null, # TODO: not in ekapkgs, needs porting
+  libportal,
   gnome-online-accounts, # TODO: being ported to ekapkgs
   qrencode,
   wrapGAppsHook4,
@@ -60,9 +60,7 @@ stdenv.mkDerivation (finalAttrs: {
     pipewire # pipewiresrc
     gtk4
     glib
-  ]
-  ++ lib.optional (libportal-gtk4 != null) libportal-gtk4
-  ++ [
+    libportal.gtk4
     evolution-data-server-gtk4
     gsettings-desktop-schemas
     folks
