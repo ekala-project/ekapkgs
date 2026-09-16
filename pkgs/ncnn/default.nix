@@ -6,7 +6,7 @@
   vulkan-headers,
   vulkan-loader,
   glslang,
-  opencv,
+  opencv ? null,
   protobuf,
 }:
 
