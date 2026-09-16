@@ -29,7 +29,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   '';
 
   build-system = with python3Packages; [
-    distutils
     setuptools
   ];
 
@@ -39,7 +38,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     azure-mgmt-compute
     azure-storage-blob
     boto3
-    distutils
     google-cloud-compute
     google-cloud-storage
     grpcio
