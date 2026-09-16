@@ -14,7 +14,7 @@
   wrapGAppsHook4,
   gtk4,
   libadwaita,
-  # TODO: libportal-gtk4 (not available)
+  libportal,
   gnome-autoar,
   # TODO: glib-networking (not yet ported)
   icu,
@@ -85,7 +85,7 @@ stdenv.mkDerivation (finalAttrs: {
     gst_all_1.gst-plugins-base
     gtk4
     libadwaita
-    # TODO: libportal-gtk4 (not available)
+    libportal.gtk4
     # TODO: libexif
     libnotify
     # TODO: libseccomp
