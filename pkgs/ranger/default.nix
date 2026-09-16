@@ -4,7 +4,7 @@
   python3Packages,
   file,
   less,
-  highlight,
+  highlight ? null,
   w3m,
   imagemagick,
 }:
@@ -36,8 +36,10 @@ python3Packages.buildPythonApplication {
   ];
 
   preConfigure = ''
-    sed -i -e 's|^\s*highlight\b|${highlight}/bin/highlight|' \
-      ranger/data/scope.sh
+    ${lib.optionalString (highlight != null) ''
+      sed -i -e 's|^\s*highlight\b|${highlight}/bin/highlight|' \
+        ranger/data/scope.sh
+    ''}
 
     substituteInPlace ranger/__init__.py \
       --replace "DEFAULT_PAGER = 'less'" "DEFAULT_PAGER = '${lib.getBin less}/bin/less'"
