@@ -5,6 +5,7 @@ final: prev: {
       inherit (final) lib writeTextFile buildPackages;
     }
   );
+  jre = final.jdk;
   libmpg123 = final.mpg123;
   libdbusmenu-gtk3 = final.libdbusmenu.override { withGtk3 = true; };
   libportal-gtk3 = final.libportal.gtk3;
