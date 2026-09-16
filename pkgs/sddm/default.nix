@@ -6,22 +6,22 @@
   runCommand,
   cmake,
   pkg-config,
-  qttools,
+  qttools ? null,
   libxcb,
   libxau,
   linux-pam,
-  qtbase,
-  qtdeclarative,
+  qtbase ? null,
+  qtdeclarative ? null,
   qtquickcontrols2 ? null,
   systemd,
   xkeyboard-config,
   docutils,
-  wrapQtAppsHook,
+  wrapQtAppsHook ? null,
   extraPackages ? [ ],
 }:
 
 let
-  isQt6 = lib.versions.major qtbase.version == "6";
+  isQt6 = qtbase != null && lib.versions.major qtbase.version == "6";
 
   unwrapped = stdenv.mkDerivation (finalAttrs: {
     pname = "sddm-unwrapped";
@@ -83,7 +83,9 @@ let
       "-DUID_MIN=1000"
       "-DUID_MAX=29999"
       "-DSDDM_INITIAL_VT=1"
-      "-DQT_IMPORTS_DIR=${placeholder "out"}/${qtbase.qtQmlPrefix}"
+      "-DQT_IMPORTS_DIR=${placeholder "out"}/${
+        if qtbase != null then qtbase.qtQmlPrefix else "lib/qt/qml"
+      }"
       "-DCMAKE_INSTALL_SYSCONFDIR=${placeholder "out"}/etc"
       "-DSYSTEMD_SYSTEM_UNIT_DIR=${placeholder "out"}/lib/systemd/system"
       "-DSYSTEMD_SYSUSERS_DIR=${placeholder "out"}/lib/sysusers.d"
