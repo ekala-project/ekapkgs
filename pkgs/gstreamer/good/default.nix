@@ -38,10 +38,8 @@
   twolame,
   gtkSupport ? false,
   gtk3,
-  qt5Support ? false,
-  qt5,
   qt6Support ? false,
-  qt6,
+  qt6 ? null,
   raspiCameraSupport ? false,
   libraspberrypi ? null,
   enableJack ? true,
@@ -118,13 +116,6 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optionals enableDocumentation [
   ]
-  ++ lib.optionals qt5Support (
-    with qt5;
-    [
-      qtbase
-      qttools
-    ]
-  )
   ++ lib.optionals qt6Support (
     with qt6;
     [
@@ -177,15 +168,6 @@ stdenv.mkDerivation (finalAttrs: {
     # for gtksink
     gtk3
   ]
-  ++ lib.optionals qt5Support (
-    with qt5;
-    [
-      qtbase
-      qtdeclarative
-      qtwayland
-      qtx11extras
-    ]
-  )
   ++ lib.optionals qt6Support (
     with qt6;
     [
@@ -218,9 +200,7 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.mesonEnable "doc" enableDocumentation)
     (lib.mesonEnable "asm" true)
   ]
-  ++ lib.optionals (!qt5Support) [
-    "-Dqt5=disabled"
-  ]
+  ++ [ "-Dqt5=disabled" ]
   ++ lib.optionals (!qt6Support) [
     "-Dqt6=disabled"
   ]
@@ -281,9 +261,6 @@ stdenv.mkDerivation (finalAttrs: {
     tests = {
       gtk = gst-plugins-good.override {
         gtkSupport = true;
-      };
-      qt5 = gst-plugins-good.override {
-        qt5Support = true;
       };
       qt6 = gst-plugins-good.override {
         qt6Support = true;
