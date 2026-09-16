@@ -23,7 +23,7 @@
   grilo-plugins,
   libepoxy,
   libpeas,
-  libportal-gtk3,
+  libportal,
   libhandy,
   adwaita-icon-theme,
   gnome-desktop,
@@ -74,7 +74,7 @@ stdenv.mkDerivation (finalAttrs: {
     gst_all_1.gst-libav
     libepoxy
     libpeas
-    libportal-gtk3
+    libportal.gtk3
     libhandy
     shared-mime-info
     gdk-pixbuf
