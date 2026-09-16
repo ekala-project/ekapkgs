@@ -14,7 +14,7 @@
   writeShellScript,
   curl,
   jq,
-  nix-update,
+  nix-update ? null,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
