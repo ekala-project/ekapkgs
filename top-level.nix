@@ -7,6 +7,7 @@ final: prev: {
   );
   libmpg123 = final.mpg123;
   libdbusmenu-gtk3 = final.libdbusmenu.override { withGtk3 = true; };
+  libportal-gtk3 = final.libportal.gtk3;
   docbook_xsl = final.docbook-xsl;
   wafHook = final.waf.hook;
   wrapGAppsHook3 = final.wrapGAppsNoGuiHook.override {
