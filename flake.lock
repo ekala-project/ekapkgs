@@ -7,17 +7,14 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1789160702,
-        "narHash": "sha256-9PZOo5l1SfZP+8IjyL6lt2TAaYu1Lezpk5QR/q+fmO4=",
-        "owner": "ekala-project",
-        "repo": "corepkgs",
-        "rev": "5f493e5c48da3561e5d606fe6e91e48686f89174",
-        "type": "github"
+        "lastModified": 1789569679,
+        "narHash": "sha256-7hms3bqWgnNFMsQffjYvg+pgcUm+qlZqCPMVPz19Yv8=",
+        "path": "/home/jon/projects/corepkgs-other",
+        "type": "path"
       },
       "original": {
-        "owner": "ekala-project",
-        "repo": "corepkgs",
-        "type": "github"
+        "path": "/home/jon/projects/corepkgs-other",
+        "type": "path"
       }
     },
     "cuda": {
@@ -39,11 +36,11 @@
     "haskell": {
       "flake": false,
       "locked": {
-        "lastModified": 1788554633,
-        "narHash": "sha256-3RuM+RoiTjNfGZPUQNGUIBFvekFsPu3/X4nOvoAO4iI=",
+        "lastModified": 1789567023,
+        "narHash": "sha256-MFjM9/lZxr+m1pl8ctqMtDfjiA+A/JKlrUR4GDXqv4g=",
         "owner": "ekala-project",
         "repo": "haskell-pkgs",
-        "rev": "427f504a7812d9ab787f1c819cc4c42483358b10",
+        "rev": "c10f55c466f6ae8cf762e51a68503ae095790e00",
         "type": "github"
       },
       "original": {
