@@ -23,8 +23,7 @@
   json-glib,
   glib-networking,
   libadwaita,
-  # TODO: libportal-gtk4 not yet available in ekapkgs
-  libportal-gtk4 ? null,
+  libportal,
   # TODO: libpulseaudio not yet ported to ekapkgs
   libpulseaudio,
   libsoup_3,
@@ -74,9 +73,7 @@ stdenv.mkDerivation (finalAttrs: {
     # required for TLS. See https://github.com/NixOS/nixpkgs/issues/502092
     glib-networking
     libadwaita
-  ]
-  ++ lib.optional (libportal-gtk4 != null) libportal-gtk4
-  ++ [
+    libportal.gtk4
     libpulseaudio
     libsoup_3
     protobufc
