@@ -24,7 +24,7 @@ stdenv.mkDerivation rec {
 
   enableParallelBuilding = true;
 
-  hardeningEnable = [ "pie" ];
+  hardeningEnable = [ "pic" ];
 
   configureFlags = [
     "--enable-default-colors"
