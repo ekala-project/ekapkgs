@@ -46,7 +46,7 @@
   # TODO: webkitgtk_4_1 (webkitgtk) - not available
   # TODO: vte - not available
   # TODO: qemu-utils - not available
-  # TODO: libportal-gtk3 - not available (need gtk3 variant of libportal)
+
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -113,7 +113,7 @@ stdenv.mkDerivation (finalAttrs: {
     # TODO: vte
     # TODO: webkitgtk_4_1
     # TODO: yajl
-    # TODO: libportal-gtk3
+    libportal.gtk3
   ];
 
   # TODO: preFixup with mtools, cdrkit, libcdio, qemu-utils PATH
