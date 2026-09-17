@@ -6,7 +6,7 @@
 #   overlays — all top-level overlays (upstream + ekapkgs)
 #   module   — NixOS module for config.overlays.* (currently empty for ekapkgs itself)
 #   modules  — all upstream NixOS modules (for downstream to include)
-{ lib, ... }:
+{ lib, config, ... }:
 let
   pins = import ./pins.nix;
 
@@ -30,6 +30,7 @@ let
   pkgsOverlay = lib.packageSets.mkAutoCalledPackageDir ./pkgs;
   pkgsManyOverlay = lib.packageSets.mkAutoCalledManyVariantsDir ./pkgs-many;
   pkgsOverrides = import ./top-level.nix;
+  nixpkgsAliases = self: super: import ./aliases/nixpkgs.nix lib self super;
   pythonOverrides = import ./python-packages.nix;
   perlOverrides = lib.packageSets.mkAutoCalledPackageDir ./perl/pkgs;
 in
@@ -40,7 +41,8 @@ in
     pkgsOverlay
     pkgsManyOverlay
     pkgsOverrides
-  ];
+  ]
+  ++ lib.optional config.aliases.nixpkgs nixpkgsAliases;
 
   overlays.python = [
     pythonOverrides
