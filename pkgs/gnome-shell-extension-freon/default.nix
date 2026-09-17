@@ -2,7 +2,7 @@
   callPackage,
   replaceVars,
   hddtemp,
-  liquidctl ? "/run/current-system/sw", # TODO: not yet available in ekapkgs
+  liquidctl ? "/run/current-system/sw", # TODO: port liquidctl python package
   lm_sensors,
   netcat-gnu,
   nvme-cli,
@@ -37,5 +37,4 @@ in
         nvmecli = nvme-cli;
       })
     ];
-    # TODO: gnome-shell dependency (being ported)
   })
