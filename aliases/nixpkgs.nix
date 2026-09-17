@@ -19,9 +19,4 @@ let
 in
 with pkgs;
 mapAliases {
-  # Nixpkgs compatibility aliases for ekapkgs
-  # These map old nixpkgs attribute names to ekapkgs equivalents.
-
-  # webrtc-audio-processing v1 (nixpkgs has both v0 and v1; ekapkgs only has v1)
-  webrtc-audio-processing_1 = webrtc-audio-processing;
 }
