@@ -30,7 +30,7 @@
   readline,
   template-glib,
   vte-gtk4,
-  webkitgtk_6_0,
+  webkitgtk,
   wrapGAppsNoGuiHook,
   withGtk ? true,
 }:
@@ -88,7 +88,7 @@ stdenv.mkDerivation (finalAttrs: {
     gtksourceview5
     libspelling
     vte-gtk4
-    webkitgtk_6_0
+    webkitgtk
   ];
 
   propagatedBuildInputs = [

@@ -15,8 +15,7 @@
   meson,
   ninja,
   pkg-config,
-  # TODO: webkitgtk_6_0 not available in ekapkgs
-  webkitgtk_6_0,
+  webkitgtk,
   wrapGAppsHook4,
 }:
 
@@ -48,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional (libfoundry != null) libfoundry
   ++ [
     libpanel
-    webkitgtk_6_0
+    webkitgtk
   ];
 
   strictDeps = true;

@@ -24,9 +24,6 @@ final: prev: {
   libpulseaudio = final.pulseaudio.override { libOnly = true; };
   # JACK2: libjack2 is library-only variant
   libjack2 = final.jack2.override { prefix = "lib"; };
-  # GSSDP/GUPnP version aliases
-  gssdp_1_6 = final.gssdp;
-  gupnp_1_6 = final.gupnp;
   # openal is an alias for openal-soft
   openal = final.openal-soft;
 
@@ -36,11 +33,6 @@ final: prev: {
   clippy = final.rust.packages.stable.clippy;
   rustfmt = final.rust.packages.stable.rustfmt;
   rustc = final.rust.packages.stable.rustc;
-  # bluez5 alias (bluez is already v5)
-  bluez5 = final.bluez;
-  # rest/librest version aliases
-  rest_1_0 = final.rest; # rest 0.10.x (librest 1.0 API)
-
   # Fix zeromq: disable doc generation (asciidoc binary not available)
   # TODO: remove once corepkgs zeromq fix is upstream
   zeromq = prev.zeromq.overrideAttrs (old: {
@@ -88,12 +80,8 @@ final: prev: {
   # libcanberra-gtk3 alias for the gtk3 variant from pkgs-many
   libcanberra-gtk3 = final.libcanberra.gtk3;
 
-  # WebKit GTK variants
+  # WebKit GTK: base variant is GTK4 (ABI 6.0)
   webkitgtk_6_0 = final.webkitgtk;
-  webkitgtk_4_1 = final.webkitgtk.override {
-    withGtk3 = true;
-    gtk3 = final.gtk3;
-  };
 
   # libnma-gtk4 variant
   libnma-gtk4 = final.libnma.override {
@@ -109,11 +97,6 @@ final: prev: {
 
   # libxcrypt-legacy (all hash algorithms enabled)
   libxcrypt-legacy = final.libxcrypt.override { enableHashes = "all"; };
-
-  # wlroots version aliases (wlroots is now 0.20, older versions removed)
-  wlroots_0_18 = null;
-  wlroots_0_19 = null;
-  wlroots_0_20 = final.wlroots;
 
   # evolution-data-server GTK4 variant
   evolution-data-server-gtk4 = final.evolution-data-server.override {

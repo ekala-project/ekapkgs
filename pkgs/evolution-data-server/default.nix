@@ -28,10 +28,10 @@
   libkrb5 ? null, # TODO: libkrb5 (krb5) may need to be ported to ekapkgs
   openldap ? null, # TODO: openldap may need to be ported to ekapkgs
   enableOAuth2 ? stdenv.hostPlatform.isLinux,
-  # TODO: webkitgtk_4_1 is not available in ekapkgs; OAuth2 with GTK3 will be disabled
-  # webkitgtk_4_1,
-  # TODO: webkitgtk_6_0 is not available in ekapkgs; OAuth2 with GTK4 will be disabled
-  # webkitgtk_6_0,
+  # TODO: webkitgtk.gtk3 is not wired up; OAuth2 with GTK3 will be disabled
+  # webkitgtk,
+  # TODO: webkitgtk is not wired up; OAuth2 with GTK4 will be disabled
+  # webkitgtk,
   json-glib,
   glib,
   gtk3,
@@ -106,16 +106,16 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals withGtk3 [
     gtk3
   ]
-  # TODO: webkitgtk is not available in ekapkgs; OAuth2 support is disabled
+  # TODO: webkitgtk.gtk3 is not wired up; OAuth2 support is disabled
   # ++ lib.optionals (withGtk3 && enableOAuth2) [
-  #   webkitgtk_4_1
+  #   webkitgtk.gtk3
   # ]
   ++ lib.optionals withGtk4 [
     gtk4
   ];
-  # TODO: webkitgtk is not available in ekapkgs; OAuth2 support is disabled
+  # TODO: webkitgtk is not wired up; OAuth2 support is disabled
   # ++ lib.optionals (withGtk4 && enableOAuth2) [
-  #   webkitgtk_6_0
+  #   webkitgtk
   # ];
 
   propagatedBuildInputs = [

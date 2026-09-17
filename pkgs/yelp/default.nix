@@ -16,7 +16,7 @@
   libxml2,
   libxslt,
   sqlite,
-  webkitgtk_6_0 ? null, # TODO: webkitgtk_6_0 is likely missing from ekapkgs; needs porting
+  webkitgtk,
   xz,
   yelp-xsl,
 }:
@@ -50,9 +50,8 @@ stdenv.mkDerivation (finalAttrs: {
     sqlite
     xz
     yelp-xsl
-  ]
-  # TODO: webkitgtk_6_0 needs to be ported to ekapkgs for full functionality
-  ++ lib.optional (webkitgtk_6_0 != null) webkitgtk_6_0;
+    webkitgtk
+  ];
 
   postPatch = ''
     chmod +x src/link-gnome-help.sh data/domains/gen_yelp_xml.sh

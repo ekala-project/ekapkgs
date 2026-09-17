@@ -1,4 +1,12 @@
 {
+  version,
+  src-hash,
+  withGtk3 ? false,
+  mkVariantPassthru,
+  ...
+}@variantArgs:
+
+{
   lib,
   clangStdenv,
   fetchurl,
@@ -69,7 +77,6 @@
   enableGeoLocation ? true,
   enableExperimental ? false,
   withLibsecret ? true,
-  withGtk3 ? false,
 }:
 
 let
@@ -79,7 +86,7 @@ in
 
 clangStdenv.mkDerivation (finalAttrs: {
   pname = "webkitgtk";
-  version = "2.52.6";
+  inherit version;
   name = "webkitgtk-${finalAttrs.version}+abi=${abiVersion}";
 
   outputs = [
@@ -92,7 +99,7 @@ clangStdenv.mkDerivation (finalAttrs: {
 
   src = fetchurl {
     url = "https://webkitgtk.org/releases/webkitgtk-${finalAttrs.version}.tar.xz";
-    hash = "sha256-F5ouo/j27dS+fzH9xVr8V70HKfH7pkjGHUGBU5rBFvw=";
+    hash = src-hash;
   };
 
   patches = lib.optionals clangStdenv.hostPlatform.isLinux [
@@ -197,6 +204,8 @@ clangStdenv.mkDerivation (finalAttrs: {
   '';
 
   requiredSystemFeatures = [ "big-parallel" ];
+
+  passthru = mkVariantPassthru variantArgs;
 
   meta = {
     description = "Web content rendering engine, GTK port";

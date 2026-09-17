@@ -15,8 +15,7 @@
 
   glib-networking,
   libadwaita,
-  # TODO: webkitgtk_6_0 not yet available in ekapkgs
-  webkitgtk_6_0,
+  webkitgtk,
 }:
 
 python3.pkgs.buildPythonApplication (finalAttrs: {
@@ -59,7 +58,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   buildInputs = [
     glib-networking
     libadwaita
-    webkitgtk_6_0
+    webkitgtk
   ];
 
   dependencies =
