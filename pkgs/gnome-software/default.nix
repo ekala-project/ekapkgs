@@ -24,21 +24,21 @@
   desktop-file-utils,
   gst_all_1,
   # TODO: packagekit - not available
-  # TODO: ostree - not available
-  # TODO: polkit - not available
-  # TODO: isocodes - not available
-  # TODO: gspell - not available
-  # TODO: libxslt - not available
-  # TODO: libgudev - not available
-  # TODO: libxmlb - not available
+  ostree,
+  polkit,
+  isocodes,
+  gspell,
+  libxslt,
+  libgudev,
+  libxmlb,
   # TODO: malcontent - not available
-  # TODO: libsysprof-capture - not available
+  libsysprof-capture,
   # TODO: valgrind-light - not available
-  # TODO: docbook-xsl-nons - not available
-  # TODO: docbook_xml_dtd_42 - not available
-  # TODO: docbook_xml_dtd_43 - not available
-  # TODO: gtk-doc - not available
-  # TODO: fwupd - not available
+  docbook-xsl-nons,
+  docbook_xml_dtd_42,
+  docbook_xml_dtd_43,
+  gtk-doc,
+  fwupd,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -50,12 +50,11 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-sTGOaPArs5AvzY+QTVbwP1NOpQmPZeTGu5wskk2n+CM=";
   };
 
-  # TODO: fix-paths.patch requires isocodes (replaceVars)
-  # patches = [
-  #   (replaceVars ./fix-paths.patch {
-  #     inherit isocodes;
-  #   })
-  # ];
+  patches = [
+    (replaceVars ./fix-paths.patch {
+      inherit isocodes;
+    })
+  ];
 
   nativeBuildInputs = [
     meson
@@ -64,12 +63,12 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     wrapGAppsHook4
-    # TODO: libxslt
-    # TODO: docbook_xml_dtd_42
-    # TODO: docbook_xml_dtd_43
-    # TODO: valgrind-light
-    # TODO: docbook-xsl-nons
-    # TODO: gtk-doc
+    libxslt
+    docbook_xml_dtd_42
+    docbook_xml_dtd_43
+    # TODO: valgrind-light - not available
+    docbook-xsl-nons
+    gtk-doc
     desktop-file-utils
     gobject-introspection
     itstool
@@ -79,31 +78,30 @@ stdenv.mkDerivation (finalAttrs: {
     gtk4
     glib
     glib-networking
-    # TODO: packagekit
+    # TODO: packagekit - not available
     appstream
     libsoup_3
     libadwaita
     gsettings-desktop-schemas
     gnome-desktop
-    # TODO: gspell
+    gspell
     json-glib
     libsecret
-    # TODO: ostree
-    # TODO: polkit
+    ostree
+    polkit
     flatpak
-    # TODO: libgudev
-    # TODO: libxmlb
-    # TODO: malcontent
-    # TODO: libsysprof-capture
+    libgudev
+    libxmlb
+    # TODO: malcontent - not available
+    libsysprof-capture
     # For video screenshots
     gst_all_1.gst-plugins-base
-    # TODO: gst_all_1.gst-plugins-good - not available
+    gst_all_1.gst-plugins-good
   ];
 
   mesonFlags = [
     # Requires /etc/machine-id, D-Bus system bus, etc.
     "-Dtests=false"
-    "-Dfwupd=false"
   ];
 
   meta = {

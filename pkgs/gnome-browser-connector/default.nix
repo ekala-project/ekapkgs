@@ -4,7 +4,7 @@
   meson,
   ninja,
   python3,
-  gnome-shell ? null, # TODO: not in ekapkgs, needs porting or corepkgs
+  gnome-shell,
   wrapGAppsNoGuiHook,
   gobject-introspection,
 }:
@@ -30,7 +30,7 @@ buildPythonApplication (finalAttrs: {
     gobject-introspection # for setup-hook
   ];
 
-  buildInputs = lib.optional (gnome-shell != null) gnome-shell;
+  buildInputs = [ gnome-shell ];
 
   pythonPath = lib.optional (python3.pkgs ? pygobject3) python3.pkgs.pygobject3;
 

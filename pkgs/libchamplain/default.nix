@@ -14,11 +14,10 @@
   gobject-introspection,
   clutter,
 
-  # TODO: not yet available in ekapkgs
-  # clutter-gtk,
-  # gtk-doc,
-  # docbook_xsl,
-  # docbook_xml_dtd_412,
+  clutter-gtk ? null, # TODO: not yet available
+  gtk-doc,
+  docbook_xsl,
+  docbook_xml_dtd_412,
 }:
 
 stdenv.mkDerivation rec {
@@ -52,9 +51,10 @@ stdenv.mkDerivation rec {
     glib
     gtk3
     cairo
-    # TODO: clutter-gtk not available — using clutter directly for now
-    # clutter-gtk
     clutter
+  ]
+  ++ lib.optional (clutter-gtk != null) clutter-gtk
+  ++ [
   ];
 
   mesonFlags = [

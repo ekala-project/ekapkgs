@@ -1,12 +1,11 @@
 # Pop Shell - manually packaged extension (built from source)
-# TODO: gnome-shell dependency (being ported)
 {
   stdenv,
   lib,
   fetchFromGitHub,
   glib,
   gjs,
-  typescript ? null, # TODO: not yet available in ekapkgs
+  typescript ? null,
 }:
 
 stdenv.mkDerivation {

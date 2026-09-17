@@ -5,16 +5,16 @@
   gettext,
   fetchurl,
   gdk-pixbuf,
-  tinysparql, # TODO: being ported to ekapkgs
+  tinysparql,
   libxml2,
   python3,
   libnotify,
   wrapGAppsHook4,
   libmediaart,
   gobject-introspection,
-  gnome-online-accounts, # TODO: being ported to ekapkgs
+  gnome-online-accounts,
   grilo,
-  grilo-plugins, # TODO: not in ekapkgs, needs porting
+  grilo-plugins,
   pkg-config,
   gtk4,
   pango,

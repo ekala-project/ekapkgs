@@ -3,7 +3,7 @@
   lib,
   fetchurl,
   replaceVars,
-  # TODO: dconf (not yet ported)
+  dconf,
   gettext,
   meson,
   ninja,
@@ -11,24 +11,25 @@
   wrapGAppsHook4,
   accountsservice,
   fontconfig,
-  # TODO: gdm (not yet ported)
-  # TODO: geoclue2 (not yet ported)
-  # TODO: geocode-glib_2 (not yet ported)
+  gdm,
+  geoclue2,
+  geocode-glib_2,
   glib,
   gnome-desktop,
+  gnome-bluetooth,
   gtk4,
-  # TODO: libgweather (being ported)
+  libgweather,
   json-glib,
-  # TODO: krb5 (not yet ported)
-  # TODO: libpwquality (not yet ported)
+  krb5,
+  libpwquality,
   libsecret,
-  # TODO: networkmanager (not yet ported)
+  networkmanager,
   pango,
   polkit,
-  # TODO: webkitgtk_6_0 (not available)
-  # TODO: systemd - needed as nativeBuildInput
+  # TODO: webkitgtk_6_0 (not available in ekapkgs)
+  systemd,
   libadwaita,
-  # TODO: libnma-gtk4 (not yet ported)
+  # TODO: libnma-gtk4 (not available in ekapkgs)
   tzdata,
   gnome-tecla,
   gsettings-desktop-schemas,
@@ -51,37 +52,38 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [
-    # TODO: dconf
+    dconf
     gettext
     meson
     meson.configurePhaseHook
     ninja
     pkg-config
-    # TODO: systemd (needed as native build input for unit dir detection)
+    systemd
     wrapGAppsHook4
   ];
 
   buildInputs = [
     accountsservice
     fontconfig
-    # TODO: gdm
-    # TODO: geoclue2
-    # TODO: geocode-glib_2
+    gdm
+    geoclue2
+    geocode-glib_2
     glib
+    gnome-bluetooth
     gnome-desktop
     gsettings-desktop-schemas
     gtk4
     json-glib
-    # TODO: krb5
-    # TODO: libgweather (being ported)
+    krb5
+    libgweather
     libadwaita
-    # TODO: libnma-gtk4
-    # TODO: libpwquality
+    # TODO: libnma-gtk4 (not available in ekapkgs)
+    libpwquality
     libsecret
-    # TODO: networkmanager
+    networkmanager
     pango
     polkit
-    # TODO: webkitgtk_6_0 (not available)
+    # TODO: webkitgtk_6_0 (not available in ekapkgs)
   ];
 
   mesonFlags = [

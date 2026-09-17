@@ -74,8 +74,7 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     wrapGAppsNoGuiHook
     python3
-    # TODO: pygobject3 not available in ekapkgs python packages
-    # (python3.pythonOnBuildForHost.withPackages (p: [ p.pygobject3 ]))
+    (python3.pythonOnBuildForHost.withPackages (p: [ p.pygobject3 ]))
   ]
   ++ lib.optionals withIntrospection [
     gobject-introspection

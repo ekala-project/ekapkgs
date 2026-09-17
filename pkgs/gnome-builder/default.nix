@@ -20,22 +20,21 @@
   template-glib,
   vala,
   wrapGAppsHook4,
+  cmark,
   dbus,
-  # TODO: cmark - not available
-  # TODO: editorconfig-core-c - not available
-  # TODO: libgit2-glib - not available
-  # TODO: gi-docgen - not available
-  # TODO: gom - not available
-  # TODO: gtksourceview5 - not available
-  # TODO: libdex - not available
-  # TODO: libpanel - not available
-
-  # TODO: libspelling - not available
-  # TODO: libsysprof-capture - not available
-  # TODO: libyaml - not available
-  # TODO: ostree - not available
-  # TODO: pcre2 - not available
-  # TODO: sysprof - not available
+  editorconfig-core-c,
+  gi-docgen,
+  gom,
+  gtksourceview5,
+  libdex,
+  libpanel,
+  libspelling,
+  libsysprof-capture,
+  libyaml,
+  ostree,
+  pcre2,
+  sysprof,
+  libgit2-glib,
   # TODO: vte-gtk4 - not available
   # TODO: webkitgtk_6_0 (webkitgtk) - not available
   # TODO: xvfb-run - not available
@@ -62,7 +61,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     desktop-file-utils
-    # TODO: gi-docgen
+    gi-docgen
     gobject-introspection
     meson
     meson.configurePhaseHook
@@ -73,39 +72,38 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
+    cmark
     ctags
-    # TODO: cmark
-    # TODO: editorconfig-core-c
+    editorconfig-core-c
     flatpak
-    # TODO: libgit2-glib
-    libpeas2
-    libportal.gtk4
-    # TODO: vte-gtk4
-    # TODO: gom
+    gom
     gtk4
-    # TODO: gtksourceview5
+    gtksourceview5
     json-glib
     jsonrpc-glib
     libadwaita
-    # TODO: libdex
-    # TODO: libpanel
-    # TODO: libspelling
-    # TODO: libsysprof-capture
+    libdex
+    libgit2-glib
+    libpanel
+    libpeas2
+    libportal.gtk4
+    libspelling
+    libsysprof-capture
     libxml2
-    # TODO: libyaml
-    # TODO: ostree
-    # TODO: pcre2
+    libyaml
+    ostree
+    pcre2
     python3
     template-glib
     vala
-    # TODO: webkitgtk_6_0
+    # TODO: vte-gtk4 - not available
+    # TODO: webkitgtk_6_0 - not available
   ];
 
-  # TODO: nativeCheckInputs = [ dbus xvfb-run ];
+  # TODO: nativeCheckInputs = [ dbus xvfb-run ]; # xvfb-run not available
 
   mesonFlags = [
-    # TODO: re-enable docs when gi-docgen is available
-    "-Ddocs=false"
+    "-Ddocs=true"
 
     # Making the build system correctly detect clang header and library paths
     # is difficult. Somebody should look into fixing this.
@@ -115,7 +113,7 @@ stdenv.mkDerivation (finalAttrs: {
     "-Dnetwork_tests=false"
   ];
 
-  doCheck = false; # TODO: enable when xvfb-run and dbus are set up for tests
+  doCheck = false; # TODO: enable when xvfb-run is available for tests
 
   postPatch = ''
     patchShebangs build-aux/meson/post_install.py
@@ -123,15 +121,12 @@ stdenv.mkDerivation (finalAttrs: {
       --replace "gtk-update-icon-cache" "gtk4-update-icon-cache"
   '';
 
-  # TODO: restore when sysprof and libpanel are available
-  # preFixup = ''
-  #   gappsWrapperArgs+=(
-  #     --prefix PATH : "${sysprof}/bin"
-  #     --prefix XDG_DATA_DIRS : "${libpanel}/share"
-  #   )
-  # '';
-
   preFixup = ''
+    gappsWrapperArgs+=(
+      --prefix PATH : "${sysprof}/bin"
+      --prefix XDG_DATA_DIRS : "${libpanel}/share"
+    )
+
     # Ensure that all plugins get their interpreter paths fixed up.
     find $out/lib -name \*.py -type f -print0 | while read -d "" f; do
       chmod a+x "$f"

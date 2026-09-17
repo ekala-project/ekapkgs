@@ -5,19 +5,17 @@
   fetchurl,
   flatpak,
   glib,
-  # TODO: gom available in ekapkgs
   gom,
   gtk4,
   libadwaita,
-  # TODO: libdex not yet available in ekapkgs
   libdex,
-  # TODO: libfoundry not yet available in ekapkgs
+  # TODO: libfoundry not available in ekapkgs
   libfoundry ? null,
   libpanel,
   meson,
   ninja,
   pkg-config,
-  # TODO: webkitgtk_6_0 not yet available in ekapkgs
+  # TODO: webkitgtk_6_0 not available in ekapkgs
   webkitgtk_6_0,
   wrapGAppsHook4,
 }:

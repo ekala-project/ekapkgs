@@ -16,20 +16,20 @@
   polkit,
   systemd,
   dbus,
-  # TODO: itstool - not yet available in ekapkgs
-  # TODO: libx11 - not yet available in ekapkgs
-  # TODO: libxdmcp - not yet available in ekapkgs
-  # TODO: libxcb - not yet available in ekapkgs
-  # TODO: libgudev - not yet available in ekapkgs
-  # TODO: libselinux - not yet available in ekapkgs
-  # TODO: keyutils - not yet available in ekapkgs
-  # TODO: audit - not yet available in ekapkgs
-  # TODO: plymouth - not yet available in ekapkgs
-  # TODO: dconf - not yet available in ekapkgs
-  # TODO: coreutils - not yet available in ekapkgs
-  # TODO: xorg-server - not yet available in ekapkgs
+  itstool,
+  libx11,
+  libxdmcp,
+  libxcb,
+  libgudev,
+  libselinux,
+  keyutils,
+  audit,
+  plymouth,
+  dconf,
+  coreutils,
+  xorg-server,
   # TODO: nixos-icons - not yet available in ekapkgs
-  # TODO: udevCheckHook - not yet available in ekapkgs
+  udevCheckHook,
 }:
 
 # TODO: once nixos-icons is available, uncomment the override logic:
@@ -64,30 +64,30 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [
-    # TODO: dconf
+    dconf
     glib # for glib-compile-schemas
-    # TODO: itstool
+    itstool
     meson
     ninja
     pkg-config
     gobject-introspection
-    # TODO: udevCheckHook
+    udevCheckHook
   ];
 
   buildInputs = [
     accountsservice
-    # TODO: audit
+    audit
     glib
     json-glib
     gtk3
-    # TODO: keyutils
-    # TODO: libx11
-    # TODO: libxdmcp
-    # TODO: libxcb
-    # TODO: libgudev
-    # TODO: libselinux
+    keyutils
+    libx11
+    libxdmcp
+    libxcb
+    libgudev
+    libselinux
     pam
-    # TODO: plymouth
+    plymouth
     polkit
     systemd
   ];
@@ -103,15 +103,14 @@ stdenv.mkDerivation (finalAttrs: {
     })
 
     # Change hardcoded paths to nix store paths.
-    # TODO: uncomment once coreutils, plymouth, dbus, xorg-server are available
-    # (replaceVars ./fix-paths.patch {
-    #   inherit
-    #     coreutils
-    #     plymouth
-    #     dbus
-    #     ;
-    #   xorgserver = xorg-server;
-    # })
+    (replaceVars ./fix-paths.patch {
+      inherit
+        coreutils
+        plymouth
+        dbus
+        ;
+      xorgserver = xorg-server;
+    })
 
     ./gdm-x-session_extra_args.patch
 

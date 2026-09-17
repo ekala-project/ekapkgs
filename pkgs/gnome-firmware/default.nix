@@ -4,7 +4,6 @@
   fetchFromGitLab,
   appstream-glib,
   desktop-file-utils,
-  # TODO: fwupd not yet available in ekapkgs
   fwupd,
   gettext,
   glib,
@@ -14,8 +13,7 @@
   meson,
   ninja,
   pkg-config,
-  # TODO: systemd not yet ported to ekapkgs
-  # systemd,
+  systemd,
   help2man,
   wrapGAppsHook4,
 }:
@@ -49,8 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
     gtk4
     libadwaita
     libxmlb
-    # TODO: systemd not yet ported to ekapkgs
-    # systemd
+    systemd
   ];
 
   mesonFlags = [

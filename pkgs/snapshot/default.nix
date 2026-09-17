@@ -12,15 +12,15 @@
   gtk4,
   libadwaita,
   pipewire,
+  cargo,
+  lcms2,
+  libseccomp,
+  rustc,
+  rustPlatform,
   # TODO: libglycin - not available
   # TODO: libglycin-gtk4 - not available
   # TODO: glycin-loaders - not available
-  # TODO: cargo - not available (rustPlatform)
-  # TODO: rustc - not available (rustPlatform)
-  # TODO: rustPlatform.cargoSetupHook - not available
   # TODO: libcamera - not available
-  # TODO: lcms2 - not available
-  # TODO: libseccomp - not available
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -32,55 +32,52 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-7J2vmIPrkDMJEbtR5rae7YydvdVDjoZK3JDuVaX+nu0=";
   };
 
-  # TODO: cargoVendorDir = "vendor";
+  cargoVendorDir = "vendor";
 
   nativeBuildInputs = [
-    # TODO: cargo
+    cargo
     desktop-file-utils
     meson
     meson.configurePhaseHook
     ninja
     pkg-config
-    # TODO: rustc
-    # TODO: rustPlatform.cargoSetupHook
+    rustc
+    rustPlatform.cargoSetupHook
     wrapGAppsHook4
   ];
 
   buildInputs = [
     glib
-    # TODO: libglycin
-    # TODO: libglycin.setupHook
-    # TODO: libglycin-gtk4
-    # TODO: glycin-loaders
-    # TODO: gst_all_1.gst-plugins-bad - not available
+    # TODO: libglycin - not available
+    # TODO: libglycin.setupHook - not available
+    # TODO: libglycin-gtk4 - not available
+    # TODO: glycin-loaders - not available
+    gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-base
-    # TODO: gst_all_1.gst-plugins-good - not available
+    gst_all_1.gst-plugins-good
     # TODO: gst_all_1.gst-plugins-rs - not available
     gst_all_1.gstreamer
     gtk4
+    lcms2
     libadwaita
-    # TODO: libcamera
-    # TODO: lcms2
-    # TODO: libseccomp
+    # TODO: libcamera - not available
+    libseccomp
     pipewire # for device provider
   ];
 
-  # TODO: requires Rust build support
-  # postPatch = ''
-  #   substituteInPlace src/meson.build --replace-fail \
-  #     "'cp', cargo_target / rust_target / meson.project_name()" \
-  #     "'cp', cargo_target / '${stdenv.hostPlatform.rust.cargoShortTarget}' / rust_target / meson.project_name()"
-  # '';
+  postPatch = ''
+    substituteInPlace src/meson.build --replace-fail \
+      "'cp', cargo_target / rust_target / meson.project_name()" \
+      "'cp', cargo_target / '${stdenv.hostPlatform.rust.cargoShortTarget}' / rust_target / meson.project_name()"
+  '';
 
-  # TODO: requires gst-plugins-good
-  # preFixup = ''
-  #   gappsWrapperArgs+=(
-  #     --prefix GST_PRESET_PATH : "${gst_all_1.gst-plugins-good}/share/gstreamer-1.0/presets"
-  #   )
-  # '';
+  preFixup = ''
+    gappsWrapperArgs+=(
+      --prefix GST_PRESET_PATH : "${gst_all_1.gst-plugins-good}/share/gstreamer-1.0/presets"
+    )
+  '';
 
-  # TODO: requires Rust build support
-  # env.CARGO_BUILD_TARGET = stdenv.hostPlatform.rust.rustcTargetSpec;
+  env.CARGO_BUILD_TARGET = stdenv.hostPlatform.rust.rustcTargetSpec;
 
   meta = {
     homepage = "https://gitlab.gnome.org/GNOME/snapshot";

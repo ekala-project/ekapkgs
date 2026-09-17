@@ -2,18 +2,15 @@
   lib,
   stdenv,
   fetchFromGitLab,
-  # TODO: rustPlatform not yet available in ekapkgs
   rustPlatform,
-  # TODO: cargo not yet available in ekapkgs
-  # cargo,
+  cargo,
   desktop-file-utils,
   appstream-glib,
   blueprint-compiler,
   meson,
   ninja,
   pkg-config,
-  # TODO: rustc not yet available in ekapkgs
-  # rustc,
+  rustc,
   wrapGAppsHook4,
   python3,
   glib,
@@ -34,11 +31,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-Wh9/88Vc4mtjL0U1Vrw+GEEBPjEv+5NrWd/Kw1glp+w=";
   };
 
-  # TODO: cargoDeps requires rustPlatform.fetchCargoVendor
-  # cargoDeps = rustPlatform.fetchCargoVendor {
-  #   inherit (finalAttrs) pname version src;
-  #   hash = "sha256-krjbeutochFk5md+THlYBW4iEwfFDbK89DYHZyd3IKo=";
-  # };
+  cargoDeps = rustPlatform.fetchCargoVendor {
+    inherit (finalAttrs) pname version src;
+    hash = "sha256-krjbeutochFk5md+THlYBW4iEwfFDbK89DYHZyd3IKo=";
+  };
 
   postPatch = ''
     patchShebangs build-aux
@@ -50,16 +46,12 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     wrapGAppsHook4
     python3
-    # TODO: git needed at build time but typically available
     desktop-file-utils
     appstream-glib
     blueprint-compiler
-    # TODO: rustPlatform.cargoSetupHook not yet available in ekapkgs
-    # rustPlatform.cargoSetupHook
-    # TODO: cargo not yet available in ekapkgs
-    # cargo
-    # TODO: rustc not yet available in ekapkgs
-    # rustc
+    rustPlatform.cargoSetupHook
+    cargo
+    rustc
   ];
 
   buildInputs = [

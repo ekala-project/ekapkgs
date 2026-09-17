@@ -6,7 +6,7 @@
   ninja,
   pkg-config,
   python3,
-  libxml2, # TODO: not in ekapkgs, needs porting or corepkgs
+  libxml2,
   nautilus,
   glib,
   gtk4,
@@ -15,15 +15,15 @@
   gsettings-desktop-schemas,
   vte,
   gettext,
-  which, # TODO: not in ekapkgs, needs porting or corepkgs
-  libuuid, # TODO: not in ekapkgs, needs porting or corepkgs
+  which,
+  libuuid,
   vala,
   desktop-file-utils,
   itstool,
   wrapGAppsHook3,
-  pcre2, # TODO: not in ekapkgs, needs porting or corepkgs
-  libxslt, # TODO: not in ekapkgs, needs porting or corepkgs
-  docbook-xsl-nons, # TODO: not in ekapkgs, needs porting or corepkgs
+  pcre2,
+  libxslt,
+  docbook-xsl-nons,
 }:
 
 stdenv.mkDerivation (finalAttrs: {

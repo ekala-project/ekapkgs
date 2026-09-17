@@ -6,24 +6,19 @@
   itstool,
   libxml2,
   pkg-config,
-  # TODO: gnome-panel being ported in ekapkgs (this batch)
   gnome-panel,
   gtk3,
   glib,
   libwnck,
-  # TODO: libgtop not yet available in ekapkgs
   libgtop,
   libnotify,
   upower,
   wirelesstools,
-  # TODO: linuxPackages (cpupower) not yet available in ekapkgs
-  # linuxPackages,
+  linuxPackages,
   adwaita-icon-theme,
-  # TODO: libgweather being ported to ekapkgs
   libgweather,
   # TODO: gucharmap not yet available in ekapkgs
   gucharmap ? null,
-  # TODO: tinysparql being ported to ekapkgs
   tinysparql,
   polkit,
 }:
@@ -62,8 +57,7 @@ stdenv.mkDerivation (finalAttrs: {
     tinysparql
     polkit
     wirelesstools
-    # TODO: linuxPackages.cpupower not yet available in ekapkgs
-    # linuxPackages.cpupower
+    linuxPackages.cpupower
   ];
 
   enableParallelBuilding = true;

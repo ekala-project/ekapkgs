@@ -6,17 +6,17 @@
   blueprint-compiler,
   evolution-data-server-gtk4, # TODO: not in ekapkgs (gtk4 variant of evolution-data-server)
   pkg-config,
-  libxslt, # TODO: not in ekapkgs, needs porting or corepkgs
-  docbook-xsl-nons, # TODO: not in ekapkgs, needs porting or corepkgs
-  docbook_xml_dtd_42, # TODO: not in ekapkgs, needs porting or corepkgs
+  libxslt,
+  docbook-xsl-nons,
+  docbook_xml_dtd_42,
   desktop-file-utils,
   gtk4,
   glib,
   libportal,
-  gnome-online-accounts, # TODO: being ported to ekapkgs
+  gnome-online-accounts,
   qrencode,
   wrapGAppsHook4,
-  folks, # TODO: being ported to ekapkgs
+  folks,
   libxml2,
   vala,
   meson,

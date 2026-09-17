@@ -12,7 +12,7 @@
   librsvg,
   gettext,
   itstool,
-  # TODO: libxml2 not yet available
+  libxml2,
   libgee,
   desktop-file-utils,
 }:
@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     itstool
-    # TODO: libxml2 not yet available
+    libxml2
     wrapGAppsHook4
     desktop-file-utils
   ];

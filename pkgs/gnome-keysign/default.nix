@@ -3,6 +3,7 @@
   fetchFromGitLab,
   fetchpatch,
   python3,
+  avahi,
   wrapGAppsHook3,
   gobject-introspection,
   gtk3,
@@ -42,8 +43,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   ]);
 
   buildInputs = [
-    # TODO: avahi not yet available in ekapkgs
-    # avahi
+    avahi
     gtk3
     glib
     gst_all_1.gstreamer

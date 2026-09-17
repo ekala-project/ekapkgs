@@ -3,16 +3,13 @@
   lib,
   fetchFromGitLab,
   buildPackages,
-  # TODO: cargo not yet available in ekapkgs
-  # cargo,
+  cargo,
   gettext,
   meson,
   ninja,
   pkg-config,
-  # TODO: rustPlatform not yet available in ekapkgs
   rustPlatform,
-  # TODO: rustc not yet available in ekapkgs
-  # rustc,
+  rustc,
   wrapGAppsHook4,
   appstream-glib,
   desktop-file-utils,
@@ -34,11 +31,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-/Plvvn1tle8t/bsPcsamn5d81CqnyGCyGYPF6j6U5NI=";
   };
 
-  # TODO: cargoDeps requires rustPlatform.fetchCargoVendor
-  # cargoDeps = rustPlatform.fetchCargoVendor {
-  #   inherit (finalAttrs) pname version src;
-  #   hash = "sha256-Llgn+dYNKZ9Mles9f9Xor+GZoCCQ0cERkXz4MicZglY=";
-  # };
+  cargoDeps = rustPlatform.fetchCargoVendor {
+    inherit (finalAttrs) pname version src;
+    hash = "sha256-Llgn+dYNKZ9Mles9f9Xor+GZoCCQ0cERkXz4MicZglY=";
+  };
 
   env = lib.optionalAttrs stdenv.hostPlatform.isDarwin {
     GETTEXT_BIN_DIR = "${lib.getBin buildPackages.gettext}/bin";
@@ -51,12 +47,9 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     ninja
     pkg-config
-    # TODO: rustPlatform.cargoSetupHook not yet available in ekapkgs
-    # rustPlatform.cargoSetupHook
-    # TODO: cargo not yet available in ekapkgs
-    # cargo
-    # TODO: rustc not yet available in ekapkgs
-    # rustc
+    rustPlatform.cargoSetupHook
+    cargo
+    rustc
     wrapGAppsHook4
     appstream-glib
     desktop-file-utils

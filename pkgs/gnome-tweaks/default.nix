@@ -8,9 +8,7 @@
   gettext,
   glib,
   gnome-desktop,
-  # TODO: gnome-settings-daemon not yet ported to ekapkgs
   gnome-settings-daemon,
-  # TODO: gnome-shell not yet ported to ekapkgs
   gnome-shell,
   gnome-shell-extensions,
   gobject-introspection,
@@ -21,7 +19,6 @@
   libgudev,
   libnotify,
   libxml2,
-  # TODO: mutter not yet ported to ekapkgs
   mutter,
   pkg-config,
   python3Packages,

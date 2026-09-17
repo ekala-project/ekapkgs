@@ -12,14 +12,13 @@
   dbus,
   gettext,
   systemd,
-  # TODO: gnome-session-ctl - need to port or find equivalent
-  # TODO: gnome-settings-daemon - being ported
-  # TODO: gnome-shell - being ported
-  # TODO: xmlto - not yet available in ekapkgs
-  # TODO: docbook_xsl - not yet available in ekapkgs
-  # TODO: docbook_xml_dtd_45 - not yet available in ekapkgs
-  # TODO: libxslt - not yet available in ekapkgs
-  # TODO: wrapGAppsNoGuiHook - not yet available in ekapkgs
+  gnome-settings-daemon,
+  gnome-shell,
+  xmlto,
+  docbook_xsl,
+  docbook_xml_dtd_45,
+  libxslt,
+  wrapGAppsNoGuiHook,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -47,23 +46,23 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     gettext
-    # TODO: xmlto
-    # TODO: libxslt
-    # TODO: docbook_xsl
-    # TODO: docbook_xml_dtd_45
+    xmlto
+    libxslt
+    docbook_xsl
+    docbook_xml_dtd_45
     dbus # for DTD
-    # TODO: wrapGAppsNoGuiHook
+    wrapGAppsNoGuiHook
   ];
 
   buildInputs = [
     glib
     gnome-desktop
-    # TODO: gnome-settings-daemon - being ported
+    gnome-settings-daemon
     gsettings-desktop-schemas
     systemd
   ];
 
-  # TODO: postPatch requires gnome-session-ctl to be available
+  # TODO: gnome-session-ctl is not a separate package; wire up postPatch once available
   # postPatch = ''
   #   # Use our provided `gnome-session-ctl`
   #   original="@libexecdir@/gnome-session-ctl"
@@ -85,13 +84,12 @@ stdenv.mkDerivation (finalAttrs: {
     rm -rf $out/libexec/gnome-session-ctl
   '';
 
-  # TODO: preFixup requires gnome-shell and gnome-settings-daemon (being ported)
-  # preFixup = ''
-  #   gappsWrapperArgs+=(
-  #     --suffix XDG_DATA_DIRS : "${gnome-shell}/share"
-  #     --suffix XDG_CONFIG_DIRS : "${gnome-settings-daemon}/etc/xdg"
-  #   )
-  # '';
+  preFixup = ''
+    gappsWrapperArgs+=(
+      --suffix XDG_DATA_DIRS : "${gnome-shell}/share"
+      --suffix XDG_CONFIG_DIRS : "${gnome-settings-daemon}/etc/xdg"
+    )
+  '';
 
   separateDebugInfo = true;
 

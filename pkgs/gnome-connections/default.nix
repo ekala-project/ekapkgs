@@ -14,11 +14,11 @@
   gtk3,
   libsecret,
   libxml2,
-  # TODO: libhandy - not available
-  # TODO: gtk-vnc - not available
-  # TODO: gtk-frdp - not available
-  # TODO: spice-gtk - not available
-  # TODO: spice-protocol - not available
+  libhandy,
+  gtk-vnc,
+  # TODO: gtk-frdp - not available in ekapkgs
+  spice-gtk,
+  spice-protocol,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -45,14 +45,14 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     glib
-    # TODO: gtk-vnc
+    gtk-vnc
     gtk3
-    # TODO: libhandy
+    libhandy
     libsecret
     libxml2
-    # TODO: gtk-frdp
-    # TODO: spice-gtk
-    # TODO: spice-protocol
+    # TODO: gtk-frdp (not available in ekapkgs)
+    spice-gtk
+    spice-protocol
   ];
 
   meta = {

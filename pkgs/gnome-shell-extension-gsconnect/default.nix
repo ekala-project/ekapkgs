@@ -1,5 +1,4 @@
 # GSConnect - manually packaged extension (built from source, not from extensions.gnome.org)
-# TODO: gnome-shell dependency (being ported)
 {
   stdenv,
   lib,

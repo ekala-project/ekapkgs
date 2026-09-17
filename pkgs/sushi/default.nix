@@ -8,19 +8,19 @@
   gobject-introspection,
   glib,
   gtk3,
-  # TODO: evince (not yet ported)
-  # TODO: gtksourceview4 (not yet ported)
-  # TODO: gjs (being ported)
-  # TODO: libsoup_3 (not yet ported)
-  # TODO: webkitgtk_4_1 (not available)
+  evince,
+  gtksourceview4,
+  gjs,
+  libsoup_3,
+  # TODO: webkitgtk_4_1 (not available in ekapkgs)
   icu,
   wrapGAppsHook3,
   gst_all_1,
   gdk-pixbuf,
-  # TODO: librsvg (not yet ported)
+  librsvg,
   harfbuzz,
   ninja,
-  # TODO: libepoxy (not yet ported)
+  libepoxy,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -45,26 +45,25 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     glib
     gtk3
-    # TODO: evince
+    evince
     icu
     harfbuzz
-    # TODO: gjs (being ported)
-    # TODO: gtksourceview4
+    gjs
+    gtksourceview4
     gdk-pixbuf
-    # TODO: librsvg
-    # TODO: libsoup_3
-    # TODO: webkitgtk_4_1 (not available)
-    # TODO: libepoxy
+    librsvg
+    libsoup_3
+    # TODO: webkitgtk_4_1 (not available in ekapkgs)
+    libepoxy
     gst_all_1.gstreamer
     gst_all_1.gst-plugins-base
     # TODO: gst-plugins-good (with gtkSupport), gst-plugins-bad, gst-plugins-ugly
   ];
 
-  # TODO: postPatch to fix gjs path once gjs is available
-  # postPatch = ''
-  #   substituteInPlace meson.build \
-  #     --replace-fail "gjs = find_program('gjs', 'gjs-console')" "gjs = find_program('${lib.getExe gjs}')"
-  # '';
+  postPatch = ''
+    substituteInPlace meson.build \
+      --replace-fail "gjs = find_program('gjs', 'gjs-console')" "gjs = find_program('${lib.getExe gjs}')"
+  '';
 
   # See https://github.com/NixOS/nixpkgs/issues/31168
   postInstall = ''

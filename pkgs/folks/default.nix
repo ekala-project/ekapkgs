@@ -18,9 +18,9 @@
   docbook-xsl-nons,
   docbook_xml_dtd_43,
 
-  # TODO: not yet available in ekapkgs
-  # evolution-data-server-gtk4,
-  # dbus-glib,
+  evolution-data-server-gtk4,
+  dbus-glib,
+  # TODO: telepathy-glib not yet available in ekapkgs
   # telepathy-glib,
 }:
 
@@ -59,10 +59,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    # TODO: dbus-glib not yet available
-    # dbus-glib
-    # TODO: evolution-data-server-gtk4 being ported
-    # evolution-data-server-gtk4
+    dbus-glib
+    evolution-data-server-gtk4
     readline
   ];
 
@@ -87,8 +85,7 @@ stdenv.mkDerivation (finalAttrs: {
     "-Ddocs=false"
     "-Dtelepathy_backend=false"
     "-Dtests=false"
-    # TODO: re-enable EDS backend once evolution-data-server is ported
-    "-Deds_backend=false"
+    "-Deds_backend=true"
   ];
 
   doCheck = false;

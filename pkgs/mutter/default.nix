@@ -41,36 +41,26 @@
   libstartup_notification,
   libsm,
   libice,
-  # TODO: libdisplay-info is not yet available in ekapkgs
-  libdisplay-info ? null,
-  # TODO: libepoxy is not yet available in ekapkgs
-  libepoxy ? null,
-  # TODO: libgbm is not yet available in ekapkgs (may be part of mesa)
-  libgbm ? null,
-  # TODO: libGL is not yet available in ekapkgs (may be part of libglvnd)
-  libGL ? null,
-  # TODO: gnome-settings-daemon is not yet available in ekapkgs
-  gnome-settings-daemon ? null,
-  # TODO: sysprof is not yet available in ekapkgs
+  libdisplay-info,
+  libepoxy,
+  libgbm,
+  libGL,
+  gnome-settings-daemon,
+  # TODO: sysprof is available but marked broken in ekapkgs
   sysprof ? null,
-  # TODO: libsysprof-capture is not yet available in ekapkgs
-  libsysprof-capture ? null,
+  libsysprof-capture,
   # TODO: libglycin is not yet available in ekapkgs
   libglycin ? null,
-  # TODO: mesa-gl-headers is not yet available in ekapkgs
-  mesa-gl-headers ? null,
+  mesa-gl-headers,
   gi-docgen,
   desktop-file-utils,
-  # TODO: docutils is not yet available in ekapkgs
-  docutils ? null,
+  docutils,
   # TODO: xvfb-run is not yet available in ekapkgs
   xvfb-run ? null,
-  # TODO: xorg-server is not yet available in ekapkgs
-  xorg-server ? null,
+  xorg-server,
   wayland-scanner,
   wrapGAppsHook4,
-  # TODO: udevCheckHook is not yet available in ekapkgs
-  udevCheckHook ? null,
+  udevCheckHook,
   libxcb,
   # X11 libs from xorg set (available)
   xorg,
@@ -121,8 +111,8 @@ stdenv.mkDerivation (finalAttrs: {
   propagatedBuildInputs = [
     # required for pkg-config to detect mutter-mtk
     graphene
-  ]
-  ++ lib.optional (mesa-gl-headers != null) mesa-gl-headers;
+    mesa-gl-headers
+  ];
 
   nativeBuildInputs = [
     gettext
@@ -137,11 +127,11 @@ stdenv.mkDerivation (finalAttrs: {
     wayland-scanner
     wrapGAppsHook4
     gi-docgen
+    docutils # for rst2man
+    xorg-server
+    udevCheckHook
   ]
-  ++ lib.optional (docutils != null) docutils # for rst2man
-  ++ lib.optional (xvfb-run != null) xvfb-run
-  ++ lib.optional (xorg-server != null) xorg-server
-  ++ lib.optional (udevCheckHook != null) udevCheckHook;
+  ++ lib.optional (xvfb-run != null) xvfb-run;
 
   buildInputs = [
     cairo
@@ -186,15 +176,15 @@ stdenv.mkDerivation (finalAttrs: {
 
     # TODO: pygobject3, dbus-python not available in ekapkgs python packages
     python3
+    gnome-settings-daemon
+    libgbm
+    libepoxy
+    libdisplay-info
+    libGL
+    libsysprof-capture
   ]
   ++ lib.optional (libglycin != null) libglycin
-  ++ lib.optional (gnome-settings-daemon != null) gnome-settings-daemon
-  ++ lib.optional (libgbm != null) libgbm
-  ++ lib.optional (libepoxy != null) libepoxy
-  ++ lib.optional (libdisplay-info != null) libdisplay-info
-  ++ lib.optional (libGL != null) libGL
-  ++ lib.optional (sysprof != null) sysprof # for D-Bus interfaces
-  ++ lib.optional (libsysprof-capture != null) libsysprof-capture;
+  ++ lib.optional (sysprof != null) sysprof; # for D-Bus interfaces
 
   postPatch = ''
     patchShebangs src/backends/native/gen-default-modes.py

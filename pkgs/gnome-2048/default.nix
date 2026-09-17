@@ -1,6 +1,6 @@
 {
   lib,
-  # TODO: rustPlatform not yet available
+  rustPlatform,
   fetchurl,
   wrapGAppsHook4,
   meson,
@@ -11,10 +11,10 @@
   gtk4,
   libadwaita,
   stdenv,
-  # TODO: rustc not yet available
-  # TODO: cargo not yet available
+  rustc,
+  cargo,
   desktop-file-utils,
-  # TODO: writableTmpDirAsHomeHook not yet available
+  writableTmpDirAsHomeHook,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -26,11 +26,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-bRXfaKYSjPDJnlmJCK+MZntzPcQAPvTSHUtMSkK9Lak=";
   };
 
-  # TODO: cargoDeps requires rustPlatform.fetchCargoVendor
-  # cargoDeps = rustPlatform.fetchCargoVendor {
-  #   inherit (finalAttrs) pname version src;
-  #   hash = "sha256-OcuhISJhm8uvcJjki86FSNiT5AoqUrILZaHcn1oZVtk=";
-  # };
+  cargoDeps = rustPlatform.fetchCargoVendor {
+    inherit (finalAttrs) pname version src;
+    hash = "sha256-OcuhISJhm8uvcJjki86FSNiT5AoqUrILZaHcn1oZVtk=";
+  };
 
   strictDeps = true;
 
@@ -41,9 +40,9 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     vala
     wrapGAppsHook4
-    # TODO: rustPlatform.cargoSetupHook not yet available
-    # TODO: rustc not yet available
-    # TODO: cargo not yet available
+    rustPlatform.cargoSetupHook
+    rustc
+    cargo
     desktop-file-utils
   ];
 
@@ -52,7 +51,10 @@ stdenv.mkDerivation (finalAttrs: {
     libadwaita
   ];
 
-  # TODO: nativeCheckInputs requires writableTmpDirAsHomeHook and rustPlatform.cargoCheckHook
+  nativeCheckInputs = [
+    writableTmpDirAsHomeHook
+    rustPlatform.cargoCheckHook
+  ];
 
   meta = {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-2048";

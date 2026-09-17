@@ -16,12 +16,14 @@
   fontconfig,
   freetype,
   fribidi,
+  ghostscript,
   giflib,
   glib,
   gstreamer,
   gtk3,
   harfbuzz,
   hicolor-icon-theme,
+  jbig2dec,
   libGL,
   libdrm,
   libgbm,
@@ -32,6 +34,7 @@
   libraw,
   librsvg,
   libsndfile,
+  libspectre,
   libtiff,
   libwebp,
   libxkbcommon,
@@ -98,7 +101,7 @@ stdenv.mkDerivation (finalAttrs: {
     gstreamer.gst-plugins-base
     gstreamer.gst-plugins-good
     gstreamer.gstreamer
-    # TODO: gst-libav not available; video codec support limited
+    gstreamer.gst-libav
     libGL
     libpng
     libpulseaudio
@@ -125,18 +128,17 @@ stdenv.mkDerivation (finalAttrs: {
     doxygen
     expat
     fribidi
-    # TODO: ghostscript fails to build (GCC 14 compat); disable PostScript support until fixed
-    # ghostscript
+    ghostscript
     harfbuzz
     hicolor-icon-theme
-    # jbig2dec  # only needed with ghostscript
+    jbig2dec
     libdrm
     libgbm
     libinput
     libjpeg
     libraw
     librsvg
-    # libspectre  # requires ghostscript
+    libspectre
     libwebp
     libxkbcommon
     lua5_1
@@ -170,7 +172,7 @@ stdenv.mkDerivation (finalAttrs: {
   mesonFlags = [
     (mesonBool "build-tests" false)
     (mesonOption "ecore-imf-loaders-disabler" "ibus,scim")
-    (mesonOption "evas-loaders-disabler" "ps,avif,heif,jxl,json")
+    (mesonOption "evas-loaders-disabler" "avif,heif,jxl,json")
     (mesonBool "embedded-lz4" false)
     (mesonBool "fb" true)
     (mesonOption "network-backend" "connman")

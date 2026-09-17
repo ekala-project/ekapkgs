@@ -6,7 +6,6 @@
   gettext,
   gobject-introspection,
   wrapGAppsHook4,
-  # TODO: gjs not yet ported to ekapkgs
   gjs,
   glib,
   gtk4,

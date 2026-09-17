@@ -11,7 +11,7 @@
   desktop-file-utils,
   glib,
   librsvg,
-  # TODO: libxml2 not yet available
+  libxml2,
   gettext,
   itstool,
   libgee,
@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     wrapGAppsHook3
     gettext
     itstool
-    # TODO: libxml2 not yet available
+    libxml2
     appstream-glib
     desktop-file-utils
     adwaita-icon-theme

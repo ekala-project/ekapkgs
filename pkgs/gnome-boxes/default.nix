@@ -20,33 +20,32 @@
   desktop-file-utils,
   libportal,
   libsecret,
+  acl,
+  adwaita-icon-theme,
+  cdrkit,
+  cyrus_sasl,
+  gdbm,
+  gmp,
+  libapparmor,
+  libcap,
+  libcap_ng,
+  libcdio,
+  libgudev,
+  libhandy,
+  libosinfo,
+  librsvg,
+  libusb1,
+  libvirt,
   # TODO: libvirt-glib - not available
-  # TODO: libvirt - not available
-  # TODO: spice-gtk - not available
-  # TODO: spice-protocol - not available
-  # TODO: libhandy - not available
-  # TODO: libosinfo - not available
-  # TODO: systemd - not available
-  # TODO: libcap - not available
-  # TODO: yajl - not available
-  # TODO: gmp - not available
-  # TODO: gdbm - not available
-  # TODO: cyrus_sasl - not available
-  # TODO: adwaita-icon-theme - not available
-  # TODO: librsvg - not available
-  # TODO: mtools - not available
-  # TODO: cdrkit - not available
-  # TODO: libcdio - not available
-  # TODO: libusb1 - not available
-  # TODO: acl - not available
-  # TODO: libgudev - not available
-  # TODO: libcap_ng - not available
-  # TODO: numactl - not available
-  # TODO: libapparmor - not available
+  mtools,
+  numactl,
+  qemu-utils,
+  spice-gtk,
+  spice-protocol,
+  systemd,
+  vte,
   # TODO: webkitgtk_4_1 (webkitgtk) - not available
-  # TODO: vte - not available
-  # TODO: qemu-utils - not available
-
+  yajl,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -81,52 +80,51 @@ stdenv.mkDerivation (finalAttrs: {
     desktop-file-utils
   ];
 
-  # TODO: propagatedUserEnvPkgs = [ spice-gtk ];
+  propagatedUserEnvPkgs = [ spice-gtk ];
 
   buildInputs = [
-    # TODO: acl
-    # TODO: cyrus_sasl
-    # TODO: gdbm
+    acl
+    adwaita-icon-theme
+    cyrus_sasl
+    gdbm
     glib
     glib-networking
-    # TODO: gmp
-    # TODO: adwaita-icon-theme
+    gmp
     gtk3
     json-glib
-    # TODO: libapparmor
+    libapparmor
     libarchive
-    # TODO: libcap
-    # TODO: libcap_ng
-    # TODO: libgudev
-    # TODO: libhandy
-    # TODO: libosinfo
-    # TODO: librsvg
-    libsoup_3
-    # TODO: libusb1
-    # TODO: libvirt
-    # TODO: libvirt-glib
-    libxml2
-    # TODO: numactl
-    # TODO: spice-gtk
-    # TODO: spice-protocol
-    # TODO: systemd
-    # TODO: vte
-    # TODO: webkitgtk_4_1
-    # TODO: yajl
+    libcap
+    libcap_ng
+    libgudev
+    libhandy
+    libosinfo
     libportal.gtk3
+    librsvg
+    libsoup_3
+    libusb1
+    libvirt
+    # TODO: libvirt-glib - not available
+    libxml2
+    numactl
+    spice-gtk
+    spice-protocol
+    systemd
+    vte
+    # TODO: webkitgtk_4_1 - not available
+    yajl
   ];
 
-  # TODO: preFixup with mtools, cdrkit, libcdio, qemu-utils PATH
-  # preFixup = ''
-  #   gappsWrapperArgs+=(--prefix PATH : "${
-  #     lib.makeBinPath [
-  #       mtools
-  #       cdrkit
-  #       libcdio
-  #       qemu-utils
-  #     ]
-  #   }")
-  # '';
+  preFixup = ''
+    gappsWrapperArgs+=(--prefix PATH : "${
+      lib.makeBinPath [
+        mtools
+        cdrkit
+        libcdio
+        qemu-utils
+      ]
+    }")
+  '';
 
   meta = {
     description = "Simple GNOME application to access virtual systems";

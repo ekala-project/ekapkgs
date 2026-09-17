@@ -6,11 +6,9 @@
   glib,
   json-glib,
   gobject-introspection,
-
-  # TODO: not yet available in ekapkgs
-  # librest (being ported),
-  # gnome-online-accounts (being ported),
-  # libsoup_2_4 — this package needs libsoup 2.x, not libsoup 3
+  librest,
+  gnome-online-accounts,
+  libsoup_2_4,
 }:
 
 stdenv.mkDerivation rec {
@@ -34,16 +32,13 @@ stdenv.mkDerivation rec {
 
   buildInputs = [
     glib
-    # TODO: gnome-online-accounts (being ported)
-    # gnome-online-accounts
+    gnome-online-accounts
   ];
 
   propagatedBuildInputs = [
-    # TODO: libsoup_2_4 — this package uses libsoup 2.x API
-    # libsoup_2_4
+    libsoup_2_4
     json-glib
-    # TODO: librest (being ported)
-    # librest
+    librest
   ];
 
   configureFlags = [

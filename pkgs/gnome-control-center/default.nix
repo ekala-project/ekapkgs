@@ -27,46 +27,46 @@
   polkit,
   upower,
   wrapGAppsHook4,
-  # TODO: gnome-settings-daemon - being ported
-  # TODO: gnome-online-accounts - being ported
-  # TODO: mutter - being ported
-  # TODO: tinysparql - being ported
-  # TODO: networkmanager - not available
+  gnome-settings-daemon,
+  gnome-online-accounts,
+  mutter,
+  tinysparql,
+  networkmanager,
+  gnome-bluetooth,
+  blueprint-compiler,
+  docbook-xsl-nons,
+  fontconfig,
+  gdk-pixbuf,
+  libxslt,
+  shared-mime-info,
+  wayland-scanner,
+  adwaita-icon-theme,
+  gnome-user-share,
+  gst_all_1,
+  libepoxy,
+  libgtop,
+  libgudev,
+  libkrb5,
+  libpulseaudio,
+  librsvg,
+  libsoup_3,
+  localsearch,
+  libjxl,
+  webp-pixbuf-loader,
   # TODO: libnma (libnma-gtk4) - not available
   # TODO: libwacom - not available
   # TODO: samba - not available
-  # TODO: gnome-bluetooth - not available (gnome-bluetooth_1_0)
-  # TODO: blueprint-compiler - not yet available in ekapkgs
-  # TODO: docbook-xsl-nons - not yet available in ekapkgs
-  # TODO: fontconfig - not yet available in ekapkgs
-  # TODO: gdk-pixbuf - not yet available in ekapkgs
-  # TODO: libxslt - not yet available in ekapkgs
-  # TODO: shared-mime-info - not yet available in ekapkgs
-  # TODO: wayland-scanner - not yet available in ekapkgs
-  # TODO: adwaita-icon-theme - not yet available in ekapkgs
   # TODO: colord-gtk4 - not yet available in ekapkgs
   # TODO: gmobile - not yet available in ekapkgs
   # TODO: gnome-color-manager - not yet available in ekapkgs
   # TODO: gnome-remote-desktop - not yet available in ekapkgs
   # TODO: gnome-tecla - not yet available in ekapkgs
-  # TODO: gnome-user-share - not yet available in ekapkgs
   # TODO: gsound - not yet available in ekapkgs
-  # TODO: gstreamer - not yet available in ekapkgs
-  # TODO: libepoxy - not yet available in ekapkgs
-  # TODO: libgtop - not yet available in ekapkgs
-  # TODO: libgudev - not yet available in ekapkgs
-  # TODO: libkrb5 - not yet available in ekapkgs
-  # TODO: libpulseaudio - not yet available in ekapkgs
   # TODO: libpwquality - not yet available in ekapkgs
-  # TODO: librsvg - not yet available in ekapkgs
-  # TODO: libsoup_3 - not yet available in ekapkgs
-  # TODO: localsearch - not yet available in ekapkgs
   # TODO: modemmanager - not yet available in ekapkgs
   # TODO: networkmanagerapplet - not yet available in ekapkgs
   # TODO: sound-theme-freedesktop - not yet available in ekapkgs
   # TODO: udisks - not yet available in ekapkgs
-  # TODO: libjxl - not yet available in ekapkgs
-  # TODO: webp-pixbuf-loader - not yet available in ekapkgs
   # TODO: shadow - not yet available in ekapkgs
   # TODO: glibc (for i18n locales path) - not yet available in ekapkgs
   # TODO: tzdata - not yet available in ekapkgs
@@ -82,6 +82,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   # TODO: uncomment once all replaceVars deps are available
+  # Still missing: gnome-color-manager, glibc, tzdata, shadow, networkmanagerapplet
   # patches = [
   #   (replaceVars ./paths.patch {
   #     gcm = gnome-color-manager;
@@ -91,68 +92,68 @@ stdenv.mkDerivation (finalAttrs: {
   # ];
 
   nativeBuildInputs = [
-    # TODO: blueprint-compiler
-    # TODO: docbook-xsl-nons
+    blueprint-compiler
+    docbook-xsl-nons
     gettext
-    # TODO: libxslt
+    libxslt
     meson
     ninja
     pkg-config
     python3
-    # TODO: shared-mime-info
-    # TODO: wayland-scanner
+    shared-mime-info
+    wayland-scanner
     wrapGAppsHook4
   ];
 
   buildInputs = [
     accountsservice
-    # TODO: adwaita-icon-theme
+    adwaita-icon-theme
     colord
-    # TODO: colord-gtk4
+    # TODO: colord-gtk4 - not yet available in ekapkgs
     cups
-    # TODO: fontconfig
-    # TODO: gdk-pixbuf
+    fontconfig
+    gdk-pixbuf
     glib
     glib-networking
     gcr_4
-    # TODO: gmobile
-    # TODO: gnome-bluetooth - not available
+    # TODO: gmobile - not yet available in ekapkgs
+    gnome-bluetooth
     gnome-desktop
-    # TODO: gnome-online-accounts - being ported
-    # TODO: gnome-remote-desktop
-    # TODO: gnome-settings-daemon - being ported
-    # TODO: gnome-tecla
-    # TODO: gnome-user-share
+    gnome-online-accounts
+    # TODO: gnome-remote-desktop - not yet available in ekapkgs
+    gnome-settings-daemon
+    # TODO: gnome-tecla - not yet available in ekapkgs
+    gnome-user-share
     gsettings-desktop-schemas
-    # TODO: gsound
+    # TODO: gsound - not yet available in ekapkgs
     gtk3 # org.gtk.Settings.FileChooser schema (datetime panel sets clock-format)
     gtk4
     ibus
     json-glib
-    # TODO: libepoxy
-    # TODO: libgtop
-    # TODO: libgudev
+    libepoxy
+    libgtop
+    libgudev
     libadwaita
-    # TODO: libkrb5
+    libkrb5
     # TODO: libnma-gtk4 - not available
-    # TODO: libpulseaudio
-    # TODO: libpwquality
-    # TODO: librsvg
+    libpulseaudio
+    # TODO: libpwquality - not yet available in ekapkgs
+    librsvg
     libsecret
-    # TODO: libsoup_3
+    libsoup_3
     # TODO: libwacom - not available
     libxml2
-    # TODO: modemmanager
-    # TODO: mutter - being ported (schemas for keybindings)
-    # TODO: networkmanager - not available
+    # TODO: modemmanager - not yet available in ekapkgs
+    mutter # schemas for keybindings
+    networkmanager
     polkit
     # TODO: samba - not available
-    # TODO: tinysparql - being ported
-    # TODO: localsearch (for search locations dialog)
-    # TODO: udisks
+    tinysparql
+    localsearch # for search locations dialog
+    # TODO: udisks - not yet available in ekapkgs
     upower
-    # TODO: gst_all_1.gst-plugins-base
-    # TODO: gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
   ];
 
   preConfigure = ''
@@ -166,12 +167,14 @@ stdenv.mkDerivation (finalAttrs: {
     export XDG_DATA_DIRS=${glib.getSchemaDataDirPath gsettings-desktop-schemas}
   '';
 
-  # TODO: uncomment once pixbuf loader deps are available
+  # TODO: uncomment and fill in GDK_PIXBUF_MODULE_FILE path once pixbuf loader integration is finalized
+  # gdk-pixbuf, libjxl, and webp-pixbuf-loader are now available
   # postInstall = ''
   #   export GDK_PIXBUF_MODULE_FILE="..."
   # '';
 
-  # TODO: uncomment once sound-theme-freedesktop, gdk-pixbuf, librsvg, mutter are available
+  # TODO: uncomment once sound-theme-freedesktop is available
+  # (gdk-pixbuf, librsvg, mutter are now available)
   # preFixup = ''
   #   gappsWrapperArgs+=(
   #     --prefix XDG_DATA_DIRS : "${sound-theme-freedesktop}/share"

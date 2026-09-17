@@ -12,16 +12,16 @@
   python3,
   glib,
   gtk3,
-  evolution-data-server, # TODO: being ported to ekapkgs
-  gnome-online-accounts, # TODO: being ported to ekapkgs
+  evolution-data-server,
+  gnome-online-accounts,
   json-glib,
-  libuuid, # TODO: not in ekapkgs, needs porting or corepkgs
-  curl, # TODO: not in ekapkgs, needs porting or corepkgs
+  libuuid,
+  curl,
   libhandy,
   webkitgtk_4_1 ? null, # TODO: not in ekapkgs, needs porting
   libxml2,
   gsettings-desktop-schemas,
-  tinysparql, # TODO: being ported to ekapkgs
+  tinysparql,
   adwaita-icon-theme,
 }:
 

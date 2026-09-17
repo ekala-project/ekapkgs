@@ -15,20 +15,16 @@
   gst_all_1,
   gsettings-desktop-schemas,
   gtk4,
-  # TODO: avahi not yet available in ekapkgs
   avahi,
   glib,
-  # TODO: networkmanager not yet available in ekapkgs
   networkmanager,
   json-glib,
   glib-networking,
   libadwaita,
   libportal,
-  # TODO: libpulseaudio not yet ported to ekapkgs
   libpulseaudio,
   libsoup_3,
   pipewire,
-  # TODO: protobufc not yet available in ekapkgs
   protobufc,
 }:
 
