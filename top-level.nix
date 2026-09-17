@@ -6,6 +6,8 @@ final: prev: {
     }
   );
   jre = final.java;
+  qt5Packages = final.qt5;
+  libsForQt5 = final.qt5;
   libdbusmenu-gtk3 = final.libdbusmenu.gtk3;
   docbook_xsl = final.docbook-xsl;
   libxcb-renderutil = final.xcbutilrenderutil;
