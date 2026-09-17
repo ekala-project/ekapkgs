@@ -13,6 +13,7 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [
     meson
+    meson.configurePhaseHook
     ninja
   ];
 
