@@ -30,6 +30,12 @@ final: prev: {
   # openal is an alias for openal-soft
   openal = final.openal-soft;
 
+  # corepkgs' stdenv looks up `shellcheck-minimal` (the nixpkgs name) when
+  # `writeShellApplication` checks the scripts it writes. haskell-pkgs'
+  # `shellcheck` is already that build: ShellCheck as static executables,
+  # without the pandoc-built documentation.
+  shellcheck-minimal = final.shellcheck;
+
   # Rust infrastructure aliases
   rustPlatform = final.rust.packages.stable.rustPlatform;
   cargo = final.rust.packages.stable.cargo;
