@@ -9,8 +9,8 @@
   glib,
   gtk4,
   libadwaita,
-  libxkbcommon, # TODO: not in ekapkgs, needs porting or corepkgs
-  wayland, # TODO: not in ekapkgs, needs porting or corepkgs
+  libxkbcommon,
+  wayland,
 }:
 
 stdenv.mkDerivation (finalAttrs: {

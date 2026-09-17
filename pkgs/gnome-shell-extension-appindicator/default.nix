@@ -24,5 +24,4 @@ in
         gjs = lib.getExe gjs;
       })
     ];
-    # TODO: gnome-shell dependency (being ported)
   })

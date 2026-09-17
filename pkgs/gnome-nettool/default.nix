@@ -12,9 +12,9 @@
   wrapGAppsHook3,
   glib,
   gtk3,
-  libgtop ? null, # TODO: not in ekapkgs, needs porting or corepkgs
+  libgtop,
   dnsutils ? null, # TODO: not in ekapkgs, needs porting or corepkgs
-  iputils ? null, # TODO: not in ekapkgs, needs porting or corepkgs
+  iputils,
   nmap,
   inetutils,
 }:
@@ -50,8 +50,8 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     glib
     gtk3
-  ]
-  ++ lib.optional (libgtop != null) libgtop;
+    libgtop
+  ];
 
   postPatch = ''
     chmod +x postinstall.py
@@ -63,7 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
       --prefix PATH : "${
         lib.makeBinPath (
           lib.optional (dnsutils != null) dnsutils # for dig
-          ++ lib.optional (iputils != null) iputils # for ping
+          ++ [ iputils ] # for ping
           ++ [
             nmap # for nmap
             inetutils # for ping6, traceroute, whois

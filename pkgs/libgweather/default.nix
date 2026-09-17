@@ -10,7 +10,7 @@
   json-glib,
   glib,
   gettext,
-  gweather-locations ? null, # TODO: not yet available in ekapkgs
+  gweather-locations ? null,
   libsoup_3,
   gi-docgen,
   gobject-introspection,

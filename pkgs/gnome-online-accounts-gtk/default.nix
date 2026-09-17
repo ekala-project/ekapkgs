@@ -8,7 +8,6 @@
   wrapGAppsHook4,
   glib,
   glib-networking,
-  # TODO: gnome-online-accounts being ported to ekapkgs
   gnome-online-accounts,
   gtk4,
   libadwaita,

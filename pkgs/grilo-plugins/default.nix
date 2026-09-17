@@ -17,22 +17,20 @@
   totem-pl-parser,
   itstool,
   gperf,
-
-  # TODO: not yet available in ekapkgs
-  # localsearch (tracker-miners),
-  # librest (being ported),
-  # gnome-online-accounts (being ported),
-  # tinysparql (being ported),
-  # gjs (being ported),
-  # lua5_4,
-  # liboauth,
-  # libarchive,
-  # libdmapsharing,
-  # gmime,
-  # gom,
-  # avahi,
-  # dleyna,
-  # gst_all_1,
+  localsearch,
+  rest,
+  gnome-online-accounts,
+  tinysparql,
+  gjs,
+  lua5_4,
+  liboauth,
+  libarchive,
+  libdmapsharing,
+  gmime,
+  gom,
+  avahi,
+  dleyna,
+  gst_all_1,
 }:
 
 stdenv.mkDerivation rec {
@@ -44,22 +42,21 @@ stdenv.mkDerivation rec {
     sha256 = "jjznTucXw8Mi0MsPjfJrsJFAKKXQFuKAVf+0nMmkbF4=";
   };
 
-  # TODO: chromaprint patch requires gst_all_1 — disabled until gstreamer deps available
-  # patches = [
-  #   (replaceVars ./chromaprint-gst-plugins.patch {
-  #     load_plugins =
-  #       lib.concatMapStrings
-  #         (plugin: ''gst_registry_scan_path(gst_registry_get(), "${lib.getLib plugin}/lib/gstreamer-1.0");'')
-  #         (
-  #           with gst_all_1;
-  #           [
-  #             gstreamer
-  #             gst-plugins-base
-  #             gst-plugins-bad
-  #           ]
-  #         );
-  #   })
-  # ];
+  patches = [
+    (replaceVars ./chromaprint-gst-plugins.patch {
+      load_plugins =
+        lib.concatMapStrings
+          (plugin: ''gst_registry_scan_path(gst_registry_get(), "${lib.getLib plugin}/lib/gstreamer-1.0");'')
+          (
+            with gst_all_1;
+            [
+              gstreamer
+              gst-plugins-base
+              gst-plugins-bad
+            ]
+          );
+    })
+  ];
 
   strictDeps = true;
 
@@ -75,8 +72,7 @@ stdenv.mkDerivation rec {
     itstool
     gperf # for lua-factory
     glib # glib-compile-resources
-    # TODO: localsearch (tracker-miners) not available
-    # localsearch
+    localsearch
   ];
 
   buildInputs = [
@@ -87,28 +83,21 @@ stdenv.mkDerivation rec {
     libsoup_3
     json-glib
     libmediaart
-    # TODO: these deps not yet available in ekapkgs:
-    # lua5_4
-    # liboauth
-    # gnome-online-accounts (being ported)
-    # librest (being ported)
-    # tinysparql (being ported)
-    # libarchive
-    # libdmapsharing
-    # gmime
-    # gom
-    # avahi
-    # dleyna
-    # gst_all_1.gstreamer
+    lua5_4
+    liboauth
+    gnome-online-accounts
+    rest
+    tinysparql
+    libarchive
+    libdmapsharing
+    gmime
+    gom
+    avahi
+    dleyna
+    gst_all_1.gstreamer
   ];
 
   mesonFlags = [
-    # Disable plugins that need unavailable deps
-    "-Denable-chromaprint=false"
-    "-Denable-dleyna=false"
-    "-Denable-dmap=false"
-    "-Denable-lua-factory=false"
-    "-Denable-tracker3=false"
   ];
 
   meta = {

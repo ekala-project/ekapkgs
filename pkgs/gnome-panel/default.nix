@@ -3,11 +3,8 @@
   lib,
   fetchurl,
   autoreconfHook,
-  # TODO: dconf not yet ported to ekapkgs
   dconf,
-  # TODO: evolution-data-server being ported to ekapkgs
   evolution-data-server,
-  # TODO: gdm may need review
   gdm,
   geocode-glib_2,
   gettext,
@@ -16,14 +13,12 @@
   gnome-menus,
   gtk3,
   itstool,
-  # TODO: libgweather being ported to ekapkgs
   libgweather,
   libwnck,
   libxml2,
   pkg-config,
   polkit,
-  # TODO: systemd not yet ported to ekapkgs
-  # systemd,
+  systemd,
   wrapGAppsHook3,
 }:
 
@@ -77,8 +72,7 @@ stdenv.mkDerivation (finalAttrs: {
     libgweather
     libwnck
     polkit
-    # TODO: systemd not yet ported to ekapkgs
-    # systemd
+    systemd
   ];
 
   configureFlags = [

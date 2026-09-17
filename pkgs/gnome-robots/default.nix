@@ -1,21 +1,21 @@
 {
   lib,
   stdenv,
-  # TODO: cargo not yet available
+  cargo,
   desktop-file-utils,
   fetchurl,
   glib,
+  gst_all_1,
   gtk4,
   itstool,
   libadwaita,
-  # TODO: libglycin not yet available
-  # TODO: libglycin-gtk4 not yet available
-  # TODO: gst_all_1 (gstreamer, gst-plugins-base, gst-plugins-good) not yet available
+  # TODO: libglycin - not available
+  # TODO: libglycin-gtk4 - not available
   meson,
   ninja,
   pkg-config,
-  # TODO: rustc not yet available
-  # TODO: rustPlatform not yet available
+  rustc,
+  rustPlatform,
   wrapGAppsHook4,
 }:
 
@@ -28,19 +28,18 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-YX5XTBX5Bhi4JJPJk51xdZatLOH/HeCq1cnDl2Yz03k=";
   };
 
-  # TODO: cargoDeps requires rustPlatform.fetchCargoVendor
-  # cargoDeps = rustPlatform.fetchCargoVendor {
-  #   inherit (finalAttrs) pname version src;
-  #   hash = "sha256-T3o4zlRLQzrLexSDI9A98bubehYFwJY1zBVUUNmrc9o=";
-  # };
+  cargoDeps = rustPlatform.fetchCargoVendor {
+    inherit (finalAttrs) pname version src;
+    hash = "sha256-T3o4zlRLQzrLexSDI9A98bubehYFwJY1zBVUUNmrc9o=";
+  };
 
   nativeBuildInputs = [
     pkg-config
     meson
     ninja
-    # TODO: cargo not yet available
-    # TODO: rustc not yet available
-    # TODO: rustPlatform.cargoSetupHook not yet available
+    cargo
+    rustc
+    rustPlatform.cargoSetupHook
     gtk4 # for gtk4-update-icon-cache
     wrapGAppsHook4
     itstool
@@ -51,19 +50,18 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     gtk4
     libadwaita
-    # TODO: libglycin not yet available
-    # TODO: libglycin-gtk4 not yet available
-    # TODO: gst_all_1.gstreamer not yet available (sound playback)
-    # TODO: gst_all_1.gst-plugins-base not yet available
-    # TODO: gst_all_1.gst-plugins-good not yet available
+    # TODO: libglycin - not available
+    # TODO: libglycin-gtk4 - not available
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
   ];
 
-  # TODO: uncomment when gstreamer deps are available
-  # preFixup = ''
-  #   # Seal GStreamer plug-ins so that we can notice when they are missing.
-  #   gappsWrapperArgs+=(--set "GST_PLUGIN_SYSTEM_PATH_1_0" "$GST_PLUGIN_SYSTEM_PATH_1_0")
-  #   unset GST_PLUGIN_SYSTEM_PATH_1_0
-  # '';
+  preFixup = ''
+    # Seal GStreamer plug-ins so that we can notice when they are missing.
+    gappsWrapperArgs+=(--set "GST_PLUGIN_SYSTEM_PATH_1_0" "$GST_PLUGIN_SYSTEM_PATH_1_0")
+    unset GST_PLUGIN_SYSTEM_PATH_1_0
+  '';
 
   meta = {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-robots";

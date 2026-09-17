@@ -12,16 +12,16 @@
   gobject-introspection,
   gdk-pixbuf,
   librest,
-  libgweather, # TODO: being ported to ekapkgs
+  libgweather,
   geoclue2,
   wrapGAppsHook4,
   desktop-file-utils,
   libportal,
-  libshumate, # TODO: not in ekapkgs, needs porting
-  libsecret, # TODO: not in ekapkgs, needs porting
+  libshumate,
+  libsecret,
   libsoup_3,
   gsettings-desktop-schemas,
-  gjs, # TODO: being ported to ekapkgs
+  gjs,
   libadwaita,
   geocode-glib_2,
   tzdata,

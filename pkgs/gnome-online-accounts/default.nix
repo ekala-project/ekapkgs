@@ -81,7 +81,7 @@ stdenv.mkDerivation (finalAttrs: {
     gvfs # OwnCloud, Google Drive
     json-glib
     libkrb5 # TODO: libkrb5 (krb5) may need to be ported to ekapkgs
-    librest # TODO: librest is being ported separately; verify it is available
+    librest
     libxml2
     libsecret
     libsoup_3

@@ -7,29 +7,29 @@
   pkg-config,
   python3,
   wrapGAppsHook3,
+  asciidoc,
+  cairo,
+  fdk_aac,
+  freerdp,
+  fuse3,
+  gdk-pixbuf,
   glib,
-  pipewire,
-  libsecret,
+  libdrm,
+  libei,
+  libepoxy,
+  libkrb5,
   libnotify,
-  # TODO: cairo - not available
-  # TODO: freerdp - not available
-  # TODO: fdk_aac - not available
-  # TODO: tpm2-tss - not available
-  # TODO: fuse3 - not available
-  # TODO: libei - not available
-  # TODO: libepoxy - not available
-  # TODO: libdrm - not available
-  # TODO: libkrb5 - not available
-  # TODO: libva - not available
-  # TODO: vulkan-loader - not available
+  libopus,
+  libsecret,
+  libva,
+  libxkbcommon,
   # TODO: nv-codec-headers-11 - not available
-  # TODO: libopus - not available
-  # TODO: libxkbcommon - not available
-  # TODO: gdk-pixbuf - not available
-  # TODO: systemd - not available
-  # TODO: polkit - not available
-  # TODO: asciidoc - not available
-  # TODO: shaderc - not available
+  pipewire,
+  polkit,
+  shaderc,
+  systemd,
+  tpm2-tss,
+  vulkan-loader,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -42,38 +42,38 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
+    asciidoc
     meson
     meson.configurePhaseHook
     ninja
     pkg-config
     python3
-    # TODO: asciidoc
-    # TODO: shaderc (for glslc)
+    shaderc # for glslc
     wrapGAppsHook3
   ];
 
   buildInputs = [
-    # TODO: cairo
-    # TODO: freerdp
-    # TODO: fdk_aac
-    # TODO: tpm2-tss
-    # TODO: fuse3
-    # TODO: gdk-pixbuf (for libnotify)
+    cairo
+    fdk_aac
+    freerdp
+    fuse3
+    gdk-pixbuf
     glib
-    # TODO: libei
-    # TODO: libepoxy
-    # TODO: libdrm
-    # TODO: libkrb5
-    # TODO: libva
-    # TODO: vulkan-loader
-    # TODO: nv-codec-headers-11
+    libdrm
+    libei
+    libepoxy
+    libkrb5
     libnotify
-    # TODO: libopus
+    libopus
     libsecret
-    # TODO: libxkbcommon
+    libva
+    libxkbcommon
+    # TODO: nv-codec-headers-11 - not available
     pipewire
-    # TODO: systemd
-    # TODO: polkit
+    polkit
+    systemd
+    tpm2-tss
+    vulkan-loader
   ];
 
   mesonFlags = [
@@ -83,8 +83,7 @@ stdenv.mkDerivation (finalAttrs: {
     "-Dsystemd_sysusers_dir=${placeholder "out"}/lib/sysusers.d"
     "-Dsystemd_tmpfiles_dir=${placeholder "out"}/lib/tmpfiles.d"
     "-Dtests=false"
-    # TODO: restore when freerdp is available
-    # "-Dc_args=-I${freerdp}/include/winpr3"
+    "-Dc_args=-I${freerdp}/include/winpr3"
   ];
 
   meta = {

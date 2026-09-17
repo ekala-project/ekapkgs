@@ -14,18 +14,12 @@
   makeWrapper,
   # TODO: spidermonkey_140 (mozjs) is not yet available in ekapkgs
   spidermonkey_140 ? null,
-  # TODO: readline is not yet available in ekapkgs
-  readline ? null,
-  # TODO: libsysprof-capture is not yet available in ekapkgs
-  libsysprof-capture ? null,
-  # TODO: libxml2 is not yet available in ekapkgs
-  libxml2 ? null,
-  # TODO: gdk-pixbuf is not yet available in ekapkgs
-  gdk-pixbuf ? null,
-  # TODO: harfbuzz is not yet available in ekapkgs
-  harfbuzz ? null,
-  # TODO: which is not yet available in ekapkgs
-  which ? null,
+  readline,
+  libsysprof-capture,
+  libxml2,
+  gdk-pixbuf,
+  harfbuzz,
+  which,
   # TODO: xvfb-run is not yet available in ekapkgs
   xvfb-run ? null,
   atk,
@@ -38,9 +32,9 @@ let
     atk
     pango.out
     glib.out
-  ]
-  ++ lib.optional (gdk-pixbuf != null) gdk-pixbuf
-  ++ lib.optional (harfbuzz != null) harfbuzz;
+    gdk-pixbuf
+    harfbuzz
+  ];
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "gjs";
@@ -79,15 +73,15 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
     dbus # for dbus-run-session
     gobject-introspection
-  ]
-  ++ lib.optional (which != null) which # for locale detection
-  ++ lib.optional (libxml2 != null) libxml2; # for xml-stripblanks
+    which # for locale detection
+    libxml2 # for xml-stripblanks
+  ];
 
   buildInputs = [
     cairo
+    readline
+    libsysprof-capture
   ]
-  ++ lib.optional (readline != null) readline
-  ++ lib.optional (libsysprof-capture != null) libsysprof-capture
   ++ lib.optional (spidermonkey_140 != null) spidermonkey_140;
 
   nativeCheckInputs = lib.optional (xvfb-run != null) xvfb-run;

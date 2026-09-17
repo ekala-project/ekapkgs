@@ -12,13 +12,12 @@
   json-glib,
   gobject-introspection,
 
-  # TODO: not yet available in ekapkgs
-  # gnome-online-accounts (being ported),
-  # gcr,
-  # p11-kit,
-  # openssl,
-  # uhttpmock,
-  # libsoup_2_4 — this package needs libsoup 2.x, not libsoup 3
+  gnome-online-accounts,
+  gcr,
+  p11-kit,
+  openssl,
+  # TODO: uhttpmock - not yet available in ekapkgs
+  # TODO: libsoup_2_4 — this package needs libsoup 2.x, not libsoup 3
 }:
 
 stdenv.mkDerivation rec {
@@ -49,13 +48,10 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [
-    # TODO: gcr not available
-    # gcr
-    # TODO: openssl — may need to add
-    # openssl
-    # TODO: p11-kit not available
-    # p11-kit
-    # TODO: uhttpmock not available
+    gcr
+    openssl
+    p11-kit
+    # TODO: uhttpmock - not yet available in ekapkgs
     # uhttpmock
   ];
 
@@ -64,16 +60,13 @@ stdenv.mkDerivation rec {
     # TODO: libsoup_2_4 — this package uses libsoup 2.x API
     # libsoup_2_4
     libxml2
-    # TODO: gnome-online-accounts (being ported)
-    # gnome-online-accounts
+    gnome-online-accounts
     json-glib
   ];
 
   mesonFlags = [
     "-Dgtk_doc=false"
     "-Dinstalled_tests=false"
-    # TODO: re-enable GOA once gnome-online-accounts is ported
-    "-Dgoa=disabled"
   ];
 
   meta = {

@@ -94,7 +94,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   propagatedBuildInputs =
     with python3.pkgs;
     [
-      nbxmpp
+      # nbxmpp # TODO: not yet available in python package set
       dbus-python
       pillow
       css-parser
@@ -103,7 +103,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
       setuptools
       packaging
       gssapi
-      omemo-dr
+      # omemo-dr # TODO: not yet available in python package set
       qrcode
       sqlalchemy
       emoji

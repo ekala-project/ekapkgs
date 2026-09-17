@@ -5,10 +5,10 @@
   meson,
   ninja,
   pkg-config,
-  # TODO: gi-docgen (not yet ported)
-  # TODO: docbook-xsl-nons (not yet ported)
+  gi-docgen,
+  docbook-xsl-nons,
   gettext,
-  # TODO: blueprint-compiler (not yet ported)
+  blueprint-compiler,
   desktop-file-utils,
   wayland-scanner,
   wrapGAppsHook4,
@@ -16,28 +16,28 @@
   libadwaita,
   libportal,
   gnome-autoar,
-  # TODO: glib-networking (not yet ported)
+  glib-networking,
   icu,
-  # TODO: shared-mime-info (not yet ported)
+  shared-mime-info,
   libnotify,
-  # TODO: libexif (not yet ported)
-  # TODO: libglycin, libglycin-gtk4 (not yet ported)
-  # TODO: libseccomp (not yet ported)
-  # TODO: librsvg (not yet ported)
-  # TODO: tinysparql (being ported)
-  # TODO: localsearch (not available)
+  libexif,
+  # TODO: libglycin, libglycin-gtk4 (not yet available)
+  libseccomp,
+  librsvg,
+  tinysparql,
+  localsearch,
   gexiv2,
-  # TODO: libselinux (not yet ported)
-  # TODO: libcloudproviders (not available)
+  libselinux,
+  libcloudproviders,
   gdk-pixbuf,
   gnome-desktop,
   gst_all_1,
   gsettings-desktop-schemas,
-  # TODO: gnome-user-share (circular dep - this file; wire up after both are built)
+  gnome-user-share,
   gobject-introspection,
   glib,
-  # TODO: libjxl (not yet ported) - used in preFixup for thumbnailers
-  # TODO: webp-pixbuf-loader (not yet ported) - used in preFixup for thumbnailers
+  libjxl,
+  webp-pixbuf-loader,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -60,7 +60,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [
-    # TODO: blueprint-compiler
+    blueprint-compiler
     desktop-file-utils
     gettext
     gobject-introspection
@@ -68,35 +68,34 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    # TODO: gi-docgen
-    # TODO: docbook-xsl-nons
+    gi-docgen
+    docbook-xsl-nons
     wayland-scanner
     wrapGAppsHook4
   ];
 
   buildInputs = [
     gexiv2
-    # TODO: glib-networking
+    glib-networking
     icu
     gnome-desktop
-    # TODO: adwaita-icon-theme (not yet ported as build dep)
     gsettings-desktop-schemas
-    # TODO: gnome-user-share
+    gnome-user-share
     gst_all_1.gst-plugins-base
     gtk4
     libadwaita
     libportal.gtk4
-    # TODO: libexif
+    libexif
     libnotify
-    # TODO: libseccomp
-    # TODO: libselinux
+    libseccomp
+    libselinux
     gdk-pixbuf
-    # TODO: libcloudproviders (not available)
-    # TODO: shared-mime-info
-    # TODO: tinysparql (being ported)
-    # TODO: localsearch (not available)
+    libcloudproviders
+    shared-mime-info
+    tinysparql
+    localsearch
     gnome-autoar
-    # TODO: libglycin, libglycin-gtk4
+    # TODO: libglycin, libglycin-gtk4 (not yet available)
     glib
   ];
 
@@ -109,8 +108,16 @@ stdenv.mkDerivation (finalAttrs: {
     "-Dtests=none"
   ];
 
-  # TODO: add preFixup for thumbnailer XDG_DATA_DIRS once librsvg,
-  # libjxl, webp-pixbuf-loader, shared-mime-info are available
+  preFixup = ''
+    gappsWrapperArgs+=(
+      # Thumbnailers
+      --prefix XDG_DATA_DIRS : "${gdk-pixbuf}/share"
+      --prefix XDG_DATA_DIRS : "${libjxl}/share"
+      --prefix XDG_DATA_DIRS : "${librsvg}/share"
+      --prefix XDG_DATA_DIRS : "${webp-pixbuf-loader}/share"
+      --prefix XDG_DATA_DIRS : "${shared-mime-info}/share"
+    )
+  '';
 
   meta = {
     description = "File manager for GNOME";

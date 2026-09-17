@@ -10,8 +10,7 @@
   packagekit ? null,
   polkit,
   gtk3,
-  # TODO: systemd not yet ported to ekapkgs
-  # systemd,
+  systemd,
   wrapGAppsHook3,
   desktop-file-utils,
 }:
@@ -39,8 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional (packagekit != null) packagekit
   ++ [
-    # TODO: systemd not yet ported to ekapkgs
-    # systemd
+    systemd
     polkit
   ];
 

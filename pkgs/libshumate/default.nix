@@ -15,11 +15,10 @@
   gtk4,
   json-glib,
 
-  # TODO: not yet available in ekapkgs
-  # gi-docgen,
-  # libsysprof-capture,
-  # protobufc,
-  # xvfb-run,
+  gi-docgen,
+  libsysprof-capture,
+  protobufc,
+  # TODO: xvfb-run - not available
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -41,8 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [
-    # TODO: gi-docgen not available — disable docs
-    # gi-docgen
+    gi-docgen
     meson
     ninja
     pkg-config
@@ -57,18 +55,15 @@ stdenv.mkDerivation (finalAttrs: {
     sqlite
     libsoup_3
     gtk4
-    # TODO: libsysprof-capture not available
-    # libsysprof-capture
+    libsysprof-capture
     json-glib
-    # TODO: protobufc (protobuf-c) not available
-    # protobufc
+    protobufc
   ];
 
   mesonFlags = [
     "-Ddemos=false"
-    "-Dgtk_doc=false"
-    # TODO: re-enable sysprof once libsysprof-capture available
-    "-Dsysprof=disabled"
+    "-Dgtk_doc=true"
+    "-Dsysprof=enabled"
   ];
 
   doCheck = false;

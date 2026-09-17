@@ -12,12 +12,10 @@
   wrapGAppsHook4,
   glib,
   gtk4,
-  # TODO: json-glib not yet ported to ekapkgs
   json-glib,
   libadwaita,
   libgee,
   libgtop,
-  # TODO: networkmanager not yet ported to ekapkgs
   networkmanager,
   tinysparql,
 }:

@@ -53,7 +53,6 @@ stdenv.mkDerivation {
     cp -r -T . $out/share/gnome-shell/extensions/${uuid}
     runHook postInstall
   '';
-  # TODO: gnome-shell dependency (being ported)
   meta = {
     inherit description homepage license;
     platforms = lib.platforms.linux;

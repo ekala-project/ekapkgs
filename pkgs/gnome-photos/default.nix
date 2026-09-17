@@ -6,14 +6,14 @@
   babl,
   dbus,
   desktop-file-utils,
-  dleyna ? null, # TODO: not in ekapkgs, needs porting
+  dleyna,
   gdk-pixbuf,
   gegl,
   geocode-glib_2,
   gettext,
   gexiv2,
   glib,
-  gnome-online-accounts, # TODO: being ported to ekapkgs
+  gnome-online-accounts,
   gobject-introspection,
   gsettings-desktop-schemas,
   gtk3,
@@ -26,7 +26,7 @@
   ninja,
   pkg-config,
   python3,
-  tinysparql, # TODO: being ported to ekapkgs
+  tinysparql,
   localsearch,
   wrapGAppsHook3,
 }:
@@ -73,9 +73,7 @@ stdenv.mkDerivation rec {
   buildInputs = [
     babl
     dbus
-  ]
-  ++ lib.optional (dleyna != null) dleyna
-  ++ [
+    dleyna
     gdk-pixbuf
     gegl
     geocode-glib_2

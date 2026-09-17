@@ -7,13 +7,13 @@
   ninja,
   pkg-config,
   wrapGAppsHook4,
-  libgweather, # TODO: being ported to ekapkgs
+  libgweather,
   geoclue2,
   gettext,
   libxml2,
   fribidi,
   gtk4,
-  evolution-data-server-gtk4, # TODO: not in ekapkgs (gtk4 variant of evolution-data-server)
+  evolution-data-server-gtk4,
   libical,
   libsoup_3,
   glib,

@@ -22,20 +22,20 @@
   systemd,
   tzdata,
   upower,
+  alsa-lib,
+  bashNonInteractive,
+  fontconfig,
+  libgudev,
+  libgweather,
+  libpulseaudio,
+  libx11,
+  libxfixes,
+  networkmanager,
+  perl,
+  udevCheckHook,
+  wrapGAppsNoGuiHook,
   # TODO: gnome-session-ctl - need to port or find equivalent
-  # TODO: libgweather - being ported
-  # TODO: networkmanager - not available
-  # TODO: alsa-lib - not yet available in ekapkgs
-  # TODO: bashNonInteractive - not yet available in ekapkgs
-  # TODO: fontconfig - not yet available in ekapkgs
-  # TODO: libgudev - not yet available in ekapkgs
-  # TODO: libpulseaudio - not yet available in ekapkgs
-  # TODO: libx11 - not yet available in ekapkgs
-  # TODO: libxfixes - not yet available in ekapkgs
   # TODO: modemmanager - not yet available in ekapkgs
-  # TODO: perl - not yet available in ekapkgs
-  # TODO: udevCheckHook - not yet available in ekapkgs
-  # TODO: wrapGAppsNoGuiHook - not yet available in ekapkgs
   withSystemd ? lib.meta.availableOn stdenv.hostPlatform systemd,
 }:
 
@@ -70,18 +70,18 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     meson
     ninja
-    # TODO: perl
+    perl
     pkg-config
-    # TODO: udevCheckHook
-    # TODO: wrapGAppsNoGuiHook
+    udevCheckHook
+    wrapGAppsNoGuiHook
   ];
 
   buildInputs = [
-    # TODO: alsa-lib
-    # TODO: bashNonInteractive
+    alsa-lib
+    bashNonInteractive
     colord
     cups
-    # TODO: fontconfig
+    fontconfig
     gcr_4
     geoclue2
     geocode-glib_2
@@ -89,14 +89,14 @@ stdenv.mkDerivation (finalAttrs: {
     gnome-desktop
     gsettings-desktop-schemas
     libcanberra
-    # TODO: libgudev
-    # TODO: libgweather - being ported
+    libgudev
+    libgweather
     libnotify
-    # TODO: libpulseaudio
-    # TODO: libx11
-    # TODO: libxfixes
+    libpulseaudio
+    libx11
+    libxfixes
     # TODO: modemmanager
-    # TODO: networkmanager - not available
+    networkmanager
     polkit
     upower
   ]

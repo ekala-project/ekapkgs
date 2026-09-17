@@ -26,44 +26,44 @@
   libadwaita,
   systemd,
   libxml2,
-  # TODO: gjs - being ported
-  # TODO: mutter - being ported
-  # TODO: gnome-settings-daemon - being ported
-  # TODO: evolution-data-server (evolution-data-server-gtk4) - being ported
-  # TODO: libgweather - being ported
-  # TODO: tinysparql - being ported (for gnome-autoar)
-  # TODO: networkmanager - not available
-  # TODO: libnma (libnma-gtk4) - not available
-  # TODO: webkitgtk (webkitgtk_6_0) - not available
-  # TODO: gnome-bluetooth - not available (gnome-bluetooth_1_0)
-  # TODO: docutils - not yet available in ekapkgs
-  # TODO: gi-docgen - not yet available in ekapkgs
-  # TODO: sassc - not yet available in ekapkgs
-  # TODO: desktop-file-utils - not yet available in ekapkgs
-  # TODO: libxslt - not yet available in ekapkgs
-  # TODO: at-spi2-core - not yet available in ekapkgs
-  # TODO: gdk-pixbuf - not yet available in ekapkgs
-  # TODO: gdm - being ported (circular dep, needs careful handling)
-  # TODO: geoclue2 - available in ekapkgs but not used here yet
-  # TODO: adwaita-icon-theme - not yet available in ekapkgs
-  # TODO: gnome-clocks - not yet available in ekapkgs
-  # TODO: libpulseaudio - not yet available in ekapkgs
-  # TODO: libical - not yet available in ekapkgs
-  # TODO: librsvg - not yet available in ekapkgs
-  # TODO: lcms2 - not yet available in ekapkgs
-  # TODO: pipewire - not yet available in ekapkgs
-  # TODO: gstreamer - not yet available in ekapkgs
-  # TODO: gnome-autoar - not yet available in ekapkgs
-  # TODO: bash-completion - not yet available in ekapkgs
-  # TODO: shared-mime-info - not yet available in ekapkgs
-  # TODO: glycin-loaders - not yet available in ekapkgs
-  # TODO: unzip - not yet available in ekapkgs
-  # TODO: libsoup_3 - not yet available in ekapkgs
-  # TODO: libgbm - not yet available in ekapkgs
-  # TODO: libGL - not yet available in ekapkgs
-  # TODO: libxi - not yet available in ekapkgs
-  # TODO: libx11 - not yet available in ekapkgs
-  # TODO: libxkbcommon - not yet available in ekapkgs
+  gjs,
+  mutter,
+  gnome-settings-daemon,
+  evolution-data-server-gtk4,
+  libgweather,
+  tinysparql,
+  networkmanager,
+  # TODO: libnma-gtk4 - not available
+  # TODO: webkitgtk_6_0 - not available
+  gnome-bluetooth,
+  docutils,
+  gi-docgen,
+  sassc,
+  desktop-file-utils,
+  libxslt,
+  at-spi2-core,
+  gdk-pixbuf,
+  gdm,
+  geoclue2,
+  adwaita-icon-theme,
+  gnome-clocks,
+  libpulseaudio,
+  libical,
+  librsvg,
+  lcms2,
+  pipewire,
+  gst_all_1,
+  gnome-autoar,
+  bash-completion,
+  shared-mime-info,
+  # TODO: glycin-loaders - not available
+  unzip,
+  libsoup_3,
+  libgbm,
+  libGL,
+  libxi,
+  libx11,
+  libxkbcommon,
 }:
 
 let
@@ -90,12 +90,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   patches = [
     # Hardcode paths to various dependencies so that they can be found at runtime.
-    # TODO: requires replaceVars with glib and unzip paths once deps are available
-    # (replaceVars ./fix-paths.patch {
-    #   glib_compile_schemas = "${glib.dev}/bin/glib-compile-schemas";
-    #   gsettings = "${glib.bin}/bin/gsettings";
-    #   unzip = "${lib.getBin unzip}/bin/unzip";
-    # })
+    (replaceVars ./fix-paths.patch {
+      glib_compile_schemas = "${glib.dev}/bin/glib-compile-schemas";
+      gsettings = "${glib.bin}/bin/gsettings";
+      unzip = "${lib.getBin unzip}/bin/unzip";
+    })
 
     # Use absolute path for libshew installation to make our patched gobject-introspection
     # aware of the location to hardcode in the generated GIR file.
@@ -117,16 +116,16 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [
-    # TODO: docutils (for rst2man)
+    docutils
     meson
     ninja
     pkg-config
     gettext
-    # TODO: gi-docgen
+    gi-docgen
     wrapGAppsHook4
-    # TODO: sassc
-    # TODO: desktop-file-utils
-    # TODO: libxslt
+    sassc
+    desktop-file-utils
+    libxslt
     gobject-introspection
   ];
 
@@ -139,47 +138,49 @@ stdenv.mkDerivation (finalAttrs: {
     accountsservice
     libsecret
     polkit
-    # TODO: gdk-pixbuf
-    # TODO: librsvg
-    # TODO: networkmanager - not available
-    # TODO: gjs - being ported
-    # TODO: mutter - being ported
-    # TODO: libpulseaudio
-    # TODO: evolution-data-server-gtk4 - being ported
-    # TODO: libical
+    gdk-pixbuf
+    librsvg
+    networkmanager
+    gjs
+    mutter
+    libpulseaudio
+    evolution-data-server-gtk4
+    libical
     gtk4
     libadwaita
-    # TODO: gdm - being ported (circular dep)
-    # TODO: geoclue2
-    # TODO: adwaita-icon-theme
-    # TODO: gnome-bluetooth - not available
-    # TODO: gnome-clocks
-    # TODO: at-spi2-core
+    gdm
+    geoclue2
+    adwaita-icon-theme
+    gnome-bluetooth
+    gnome-clocks
+    at-spi2-core
     upower
     ibus
     gnome-desktop
-    # TODO: gnome-settings-daemon - being ported
-    # TODO: lcms2
-    # TODO: libgbm
-    # TODO: libGL
-    # TODO: libxi
-    # TODO: libx11
-    # TODO: libxkbcommon
-    # TODO: libsoup_3
+    gnome-settings-daemon
+    lcms2
+    libgbm
+    libGL
+    libxi
+    libx11
+    libxkbcommon
+    libsoup_3
     libxml2
 
     # recording
-    # TODO: pipewire
-    # TODO: gstreamer / gst-plugins-base / gst-plugins-good
+    pipewire
+    gst_all_1.gstreamer
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
 
     # not declared at build time, but typelib is needed at runtime
-    # TODO: libgweather - being ported
+    libgweather
     # TODO: libnma-gtk4 - not available
     # TODO: webkitgtk_6_0 - not available (for gnome-shell-portal-helper)
 
     # for gnome-extension tool
-    # TODO: bash-completion
-    # TODO: gnome-autoar
+    bash-completion
+    gnome-autoar
     json-glib
 
     # for tools
@@ -200,25 +201,20 @@ stdenv.mkDerivation (finalAttrs: {
     rm -f man/gnome-shell.1
     rm data/theme/gnome-shell-{light,dark}.css
 
-    # TODO: uncomment once gjs is available
-    # substituteInPlace meson.build subprojects/extensions-app/meson.build \
-    #   --replace-fail "gjs = find_program('gjs')" "gjs = find_program('gjs-path-here')"
+    substituteInPlace meson.build subprojects/extensions-app/meson.build \
+      --replace-fail "gjs = find_program('gjs')" "gjs = find_program('${gjs}/bin/gjs')"
   '';
 
-  # TODO: uncomment once mutter is available
-  # preInstall = ''
-  #   # gnome-shell contains GSettings schema overrides for Mutter.
-  #   schemadir="$out/share/glib-2.0/schemas"
-  #   mkdir -p "$schemadir"
-  #   cp "${glib.getSchemaPath mutter}/org.gnome.mutter.gschema.xml" "$schemadir"
-  # '';
+  preInstall = ''
+    # gnome-shell contains GSettings schema overrides for Mutter.
+    schemadir="$out/share/glib-2.0/schemas"
+    mkdir -p "$schemadir"
+    cp "${glib.getSchemaPath mutter}/org.gnome.mutter.gschema.xml" "$schemadir"
+  '';
 
-  # TODO: uncomment once pixbuf loader deps are available
-  # postInstall = ''
-  #   export GDK_PIXBUF_MODULE_FILE="..."
-  # '';
+  # TODO: postInstall needs GDK_PIXBUF_MODULE_FILE setup (pixbuf loaders)
 
-  # TODO: uncomment once shared-mime-info and glycin-loaders are available
+  # TODO: preFixup needs glycin-loaders (not yet available)
   # preFixup = ''
   #   gappsWrapperArgs+=(
   #     --prefix XDG_DATA_DIRS : ...

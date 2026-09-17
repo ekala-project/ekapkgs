@@ -17,7 +17,7 @@
   db ? null, # TODO: db (Berkeley DB) may need to be ported to ekapkgs
   nspr,
   nss ? null, # TODO: nss may need to be ported to ekapkgs
-  libical, # TODO: libical is being ported; verify it is available
+  libical,
   gperf,
   wrapGAppsHook3,
   glib-networking,
@@ -40,7 +40,7 @@
   withGtk4 ? false,
   libphonenumber,
   libuuid ? null, # TODO: libuuid may need to be ported to ekapkgs
-  gnome-online-accounts, # TODO: gnome-online-accounts is being ported; verify it is available
+  gnome-online-accounts,
   libgweather,
   boost ? null, # TODO: boost may need to be ported to ekapkgs
   protobuf ? null, # TODO: protobuf may need to be ported to ekapkgs

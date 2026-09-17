@@ -9,18 +9,14 @@
   rustPlatform,
   cargo,
   fetchurl,
-  # TODO: apacheHttpdPackages (apacheHttpd and mod_dnssd not yet ported)
+  apacheHttpd,
+  mod_dnssd ? null,
   pkg-config,
   glib,
   libxml2,
   wrapGAppsNoGuiHook,
   itstool,
 }:
-
-# TODO: needs apacheHttpdPackages (apacheHttpd, mod_dnssd) to be ported
-# let
-#   inherit (apacheHttpdPackages) apacheHttpd mod_dnssd;
-# in
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "gnome-user-share";
@@ -37,30 +33,28 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-tQoP0yBOCesj2kwgBUoqmcVtFttwML2N+wfSULtfC4w=";
   };
 
-  # TODO: uncomment and fix once apacheHttpd and mod_dnssd are available
-  # preConfigure = ''
-  #   substituteInPlace data/dav_user_2.4.conf \
-  #     --replace-fail \
-  #       'LoadModule dnssd_module ''${HTTP_MODULES_PATH}/mod_dnssd.so' \
-  #       'LoadModule dnssd_module ${mod_dnssd}/modules/mod_dnssd.so' \
-  #     --replace-fail \
-  #       '${"$"}{HTTP_MODULES_PATH}' \
-  #       '${apacheHttpd}/modules'
-  # ''
-  # + lib.optionalString (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
-  #   substituteInPlace meson.build --replace-fail \
-  #     "run_command([httpd, '-v']" \
-  #     "run_command(['${stdenv.hostPlatform.emulator buildPackages}', httpd, '-v']"
-  # '';
-
-  # TODO: uncomment once apacheHttpd is available
-  # mesonFlags = [
-  #   "-Dhttpd=${apacheHttpd.out}/bin/httpd"
-  #   "-Dmodules_path=${apacheHttpd}/modules"
-  #   "-Dsystemduserunitdir=${placeholder "out"}/etc/systemd/user"
-  # ];
+  preConfigure =
+    lib.optionalString (mod_dnssd != null) ''
+      substituteInPlace data/dav_user_2.4.conf \
+        --replace-fail \
+          'LoadModule dnssd_module ''${HTTP_MODULES_PATH}/mod_dnssd.so' \
+          'LoadModule dnssd_module ${mod_dnssd}/modules/mod_dnssd.so'
+    ''
+    + ''
+      substituteInPlace data/dav_user_2.4.conf \
+        --replace-fail \
+          '${"$"}{HTTP_MODULES_PATH}' \
+          '${apacheHttpd}/modules'
+    ''
+    + lib.optionalString (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
+      substituteInPlace meson.build --replace-fail \
+        "run_command([httpd, '-v']" \
+        "run_command(['${stdenv.hostPlatform.emulator buildPackages}', httpd, '-v']"
+    '';
 
   mesonFlags = [
+    "-Dhttpd=${apacheHttpd.out}/bin/httpd"
+    "-Dmodules_path=${apacheHttpd}/modules"
     "-Dsystemduserunitdir=${placeholder "out"}/etc/systemd/user"
   ];
 

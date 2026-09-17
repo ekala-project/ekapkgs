@@ -11,7 +11,7 @@
   gsound,
   gettext,
   itstool,
-  # TODO: libxml2 not yet available
+  libxml2,
   meson,
   ninja,
   vala,
@@ -48,7 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3
     gettext
     itstool
-    # TODO: libxml2 not yet available
+    libxml2
     vala
     desktop-file-utils
   ];

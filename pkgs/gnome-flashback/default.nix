@@ -7,30 +7,23 @@
   glib,
   gnome-bluetooth,
   gnome-desktop,
-  # TODO: gnome-panel being ported in ekapkgs (this batch)
   gnome-panel,
-  # TODO: gnome-session being ported to ekapkgs
   gnome-session,
   gsettings-desktop-schemas,
   gtk3,
-  # TODO: ibus not yet ported to ekapkgs
   ibus,
   libcanberra-gtk3 ? null,
-  # TODO: libpulseaudio not yet ported to ekapkgs
   libpulseaudio,
   libxkbfile,
   libxml2,
-  # TODO: metacity available in ekapkgs
   metacity,
   pkg-config,
   polkit,
   gdm,
   replaceVars,
-  # TODO: systemd not yet ported to ekapkgs
-  # systemd,
+  systemd,
   gnome-tecla,
   upower,
-  # TODO: pam not yet ported to ekapkgs
   pam,
   wrapGAppsHook3,
   writeTextFile,
@@ -94,8 +87,7 @@ stdenv.mkDerivation (finalAttrs: {
     polkit
     gdm
     gnome-panel
-    # TODO: systemd not yet ported to ekapkgs
-    # systemd
+    systemd
     upower
     pam
     xkeyboard-config
