@@ -85,8 +85,8 @@ final: prev: {
   # valgrind-light is valgrind without Xen support
   valgrind-light = final.valgrind;
 
-  # libcanberra-gtk3 is libcanberra with GTK3 support
-  libcanberra-gtk3 = final.libcanberra;
+  # libcanberra-gtk3 alias for the gtk3 variant from pkgs-many
+  libcanberra-gtk3 = final.libcanberra.gtk3;
 
   # WebKit GTK variants
   webkitgtk_6_0 = final.webkitgtk;

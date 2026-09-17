@@ -1,25 +1,35 @@
 {
+  version,
+  src-hash,
+  gtkSupport ? null,
+  mkVariantPassthru,
+  ...
+}@variantArgs:
+
+{
   lib,
   stdenv,
   fetchurl,
   fetchpatch,
   pkg-config,
   libtool,
-  gtk2,
+  gtk3 ? null,
   pulseaudio,
   libvorbis,
   libcap,
   withAlsa ? stdenv.hostPlatform.isLinux,
   alsa-lib,
+  systemd,
+  withSystemd ? lib.meta.availableOn stdenv.hostPlatform systemd,
 }:
 
-stdenv.mkDerivation rec {
-  pname = "libcanberra";
-  version = "0.30";
+stdenv.mkDerivation (finalAttrs: {
+  pname = "libcanberra" + lib.optionalString (gtkSupport != null) "-${gtkSupport}";
+  inherit version;
 
   src = fetchurl {
-    url = "http://0pointer.de/lennart/projects/libcanberra/${pname}-${version}.tar.xz";
-    sha256 = "0wps39h8rx2b00vyvkia5j40fkak3dpipp1kzilqla0cgvk73dn2";
+    url = "http://0pointer.de/lennart/projects/libcanberra/libcanberra-${version}.tar.xz";
+    hash = src-hash;
   };
 
   outputs = [
@@ -35,18 +45,18 @@ stdenv.mkDerivation rec {
     pulseaudio
     libvorbis
     libtool
-    gtk2
   ]
-  ++ lib.optionals stdenv.hostPlatform.isLinux [
-    libcap
-  ]
+  ++ lib.optional (gtkSupport == "gtk3") gtk3
+  ++ lib.optional stdenv.hostPlatform.isLinux libcap
+  ++ lib.optional withSystemd systemd
   ++ lib.optional withAlsa alsa-lib;
 
   configureFlags = [
     "--disable-oss"
-    "--disable-gstreamer"
-    "--with-builtin=dso"
+    "--disable-gtk" # gtk2
   ]
+  ++ lib.optional (gtkSupport == "gtk3") "--enable-gtk3"
+  ++ lib.optional (gtkSupport != "gtk3") "--disable-gtk3"
   ++ lib.optional stdenv.hostPlatform.isLinux "--with-systemdsystemunitdir=${placeholder "out"}/lib/systemd/system";
 
   patches = [
@@ -63,6 +73,14 @@ stdenv.mkDerivation rec {
     done
   '';
 
+  enableParallelBuilding = true;
+
+  passthru =
+    mkVariantPassthru variantArgs
+    // lib.optionalAttrs (gtkSupport != null) {
+      gtkModule = if gtkSupport == "gtk3" then "/lib/gtk-3.0/" else null;
+    };
+
   meta = {
     description = "Implementation of the XDG Sound Theme and Name Specifications";
     mainProgram = "canberra-gtk-play";
@@ -70,4 +88,4 @@ stdenv.mkDerivation rec {
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.unix;
   };
-}
+})
