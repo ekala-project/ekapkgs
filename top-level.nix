@@ -67,6 +67,43 @@ final: prev: {
     gstreamermm = null;
   };
 
+  # dnsutils is just the utils output of bind
+  dnsutils = final.bind.utils;
+
+  # vte-gtk4 is the GTK4 variant of vte
+  vte-gtk4 = final.vte.override {
+    gtkVersion = "4";
+    gtk4 = final.gtk4;
+  };
+
+  # colord-gtk4 is colord-gtk built with GTK4
+  colord-gtk4 = final.colord-gtk.override { withGtk4 = true; };
+
+  # nixos-icons is a simple data package
+  nixos-icons = final.callPackage ./pkgs/nixos-icons { };
+
+  # valgrind-light is valgrind without Xen support
+  valgrind-light = final.valgrind;
+
+  # libcanberra-gtk3 is libcanberra with GTK3 support
+  libcanberra-gtk3 = final.libcanberra;
+
+  # WebKit GTK variants
+  webkitgtk_6_0 = final.webkitgtk;
+  webkitgtk_4_1 = final.webkitgtk.override {
+    withGtk3 = true;
+    gtk3 = final.gtk3;
+  };
+
+  # libnma-gtk4 variant
+  libnma-gtk4 = final.libnma.override {
+    withGtk4 = true;
+    gtk4 = final.gtk4;
+  };
+
+  # libsoup_2_4 has been removed upstream; stub it out
+  libsoup_2_4 = null;
+
   # stub for packages that reference nixosTests
   nixosTests = { };
 
@@ -90,6 +127,9 @@ final: prev: {
     }).overrideAttrs
       (old: {
         nativeBuildInputs = old.nativeBuildInputs ++ [ final.meson.configurePhaseHook ];
+        meta = old.meta // {
+          broken = false;
+        };
       });
   # sdbus-cpp v2 variant
   sdbus-cpp_2 = final.sdbus-cpp.override { version = "2.2.1"; };
