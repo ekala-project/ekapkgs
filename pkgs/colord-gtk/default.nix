@@ -6,13 +6,16 @@
   gettext,
   meson,
   ninja,
+  gobject-introspection,
   gtk-doc,
   docbook-xsl-ns,
   docbook-xsl-nons,
   docbook_xml_dtd_412,
   libxslt,
   glib,
+  withGtk4 ? false,
   gtk3,
+  gtk4 ? null,
   pkg-config,
   lcms2,
 }:
@@ -38,6 +41,7 @@ stdenv.mkDerivation rec {
     meson
     meson.configurePhaseHook
     ninja
+    gobject-introspection
     gtk-doc
     docbook-xsl-ns
     docbook-xsl-nons
@@ -52,21 +56,19 @@ stdenv.mkDerivation rec {
 
   propagatedBuildInputs = [
     colord
-    gtk3
-  ];
+  ]
+  ++ (if withGtk4 then [ gtk4 ] else [ gtk3 ]);
 
   mesonFlags = [
-    "-Dgtk4=false"
-    "-Dgtk3=true"
-    "-Dintrospection=false"
-    "-Dvapi=false"
+    "-Dgtk4=${lib.boolToString withGtk4}"
+    "-Dgtk3=${lib.boolToString (!withGtk4)}"
   ];
 
-  meta = with lib; {
+  meta = {
     homepage = "https://www.freedesktop.org/software/colord/intro.html";
     description = "GTK integration for colord color management";
-    license = licenses.lgpl21Plus;
-    platforms = platforms.linux;
+    license = lib.licenses.lgpl21Plus;
+    platforms = lib.platforms.linux;
     mainProgram = "cd-convert";
   };
 }
