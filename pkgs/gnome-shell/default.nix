@@ -34,7 +34,7 @@
   tinysparql,
   networkmanager,
   # TODO: libnma-gtk4 - not available
-  # TODO: webkitgtk_6_0 - not available
+  # TODO: webkitgtk - not wired up
   gnome-bluetooth,
   docutils,
   gi-docgen,
@@ -176,7 +176,7 @@ stdenv.mkDerivation (finalAttrs: {
     # not declared at build time, but typelib is needed at runtime
     libgweather
     # TODO: libnma-gtk4 - not available
-    # TODO: webkitgtk_6_0 - not available (for gnome-shell-portal-helper)
+    # TODO: webkitgtk - not wired up (for gnome-shell-portal-helper)
 
     # for gnome-extension tool
     bash-completion

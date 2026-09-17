@@ -26,7 +26,7 @@
   networkmanager,
   pango,
   polkit,
-  # TODO: webkitgtk_6_0 (not available in ekapkgs)
+  # TODO: webkitgtk (not wired up)
   systemd,
   libadwaita,
   # TODO: libnma-gtk4 (not available in ekapkgs)
@@ -83,7 +83,7 @@ stdenv.mkDerivation (finalAttrs: {
     networkmanager
     pango
     polkit
-    # TODO: webkitgtk_6_0 (not available in ekapkgs)
+    # TODO: webkitgtk (not wired up)
   ];
 
   mesonFlags = [

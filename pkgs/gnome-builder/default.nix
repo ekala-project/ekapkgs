@@ -36,7 +36,7 @@
   sysprof,
   libgit2-glib,
   # TODO: vte-gtk4 - not available
-  # TODO: webkitgtk_6_0 (webkitgtk) - not available
+  # TODO: webkitgtk - not wired up
   # TODO: xvfb-run - not available
 }:
 
@@ -97,7 +97,7 @@ stdenv.mkDerivation (finalAttrs: {
     template-glib
     vala
     # TODO: vte-gtk4 - not available
-    # TODO: webkitgtk_6_0 - not available
+    # TODO: webkitgtk - not wired up
   ];
 
   # TODO: nativeCheckInputs = [ dbus xvfb-run ]; # xvfb-run not available
