@@ -2,12 +2,9 @@
   lib,
   stdenv,
   fetchzip,
-  fftw,
+  fftwFloat,
 }:
 
-let
-  fftwFloat = fftw.override { precision = "single"; };
-in
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "zita-convolver";

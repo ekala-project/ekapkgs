@@ -61,7 +61,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   ++ lib.optionals enableJingle [
     farstream
     gst-libav
-    (gst-plugins-good.override { gtkSupport = true; })
+    gst-plugins-good
     libnice
   ]
   ++ lib.optional enableSecrets libsecret

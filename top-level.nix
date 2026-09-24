@@ -41,20 +41,18 @@ final: prev: {
     postInstall = "";
   });
 
-  # GStreamer: map gst_all_1 to the gstreamer scope (corepkgs stubs them as null)
+  # GStreamer: map gst_all_1 to corepkgs gstreamer passthru attrs
   gst_all_1 = {
-    inherit (final.gstreamer)
-      gstreamer
-      gst-plugins-base
-      gst-plugins-good
-      gst-plugins-bad
-      gst-plugins-ugly
-      gst-libav
-      gst-rtsp-server
-      gst-devtools
-      ;
+    gstreamer = final.gstreamer;
+    gst-plugins-base = final.gstreamer.plugins-base;
+    gst-plugins-good = final.gstreamer.plugins-good;
+    gst-plugins-bad = final.gstreamer.plugins-bad;
+    gst-plugins-ugly = final.gstreamer.plugins-ugly;
+    gst-libav = final.gstreamer.libav;
+    gst-rtsp-server = final.gstreamer.rtsp-server;
+    gst-devtools = final.gstreamer.devtools;
+    gst-editing-services = final.gstreamer.editing-services;
     # TODO: port these remaining GStreamer components
-    gst-editing-services = null;
     gst-plugins-rs = null;
     gstreamermm = null;
   };

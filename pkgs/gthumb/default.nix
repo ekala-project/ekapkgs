@@ -61,7 +61,7 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     gsettings-desktop-schemas
     gst_all_1.gst-plugins-base
-    (gst_all_1.gst-plugins-good.override { gtkSupport = true; })
+    gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-ugly
     gtk3
