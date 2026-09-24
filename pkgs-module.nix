@@ -31,6 +31,7 @@ let
   pkgsManyOverlay = lib.packageSets.mkAutoCalledManyVariantsDir ./pkgs-many;
   pkgsOverrides = import ./top-level.nix;
   nixpkgsAliases = self: super: import ./aliases/nixpkgs.nix lib self super;
+  pythonAutoCallOverlay = lib.packageSets.mkAutoCalledPackageDir ./python/pkgs;
   pythonOverrides = import ./python-packages.nix;
   perlOverrides = lib.packageSets.mkAutoCalledPackageDir ./perl/pkgs;
 in
@@ -45,6 +46,7 @@ in
   ++ lib.optional config.aliases.nixpkgs nixpkgsAliases;
 
   overlays.python = [
+    pythonAutoCallOverlay
     pythonOverrides
   ];
 
