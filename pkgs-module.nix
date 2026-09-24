@@ -34,6 +34,8 @@ let
   pythonAutoCallOverlay = lib.packageSets.mkAutoCalledPackageDir ./python/pkgs;
   pythonOverrides = import ./python-packages.nix;
   perlOverrides = lib.packageSets.mkAutoCalledPackageDir ./perl/pkgs;
+
+  writersOverlay = lib.packageSets.mkAutoCalledPackageDir ./writers/pkgs;
 in
 {
   imports = allPkgsModules;
@@ -52,5 +54,9 @@ in
 
   overlays.perl = [
     perlOverrides
+  ];
+
+  overlays.writers = [
+    writersOverlay
   ];
 }
