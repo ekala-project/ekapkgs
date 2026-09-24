@@ -13,7 +13,7 @@
   gtkmm3,
   iniparser,
   jsoncpp,
-  libdbusmenu,
+  libdbusmenu-gtk3,
   libevdev,
   libinput,
   libjack2,
@@ -65,8 +65,6 @@
 }:
 
 let
-  libdbusmenu-gtk3 = libdbusmenu.override { gtkVersion = "3"; };
-
   libcava =
     let
       version = "0.10.7-beta";
