@@ -8,7 +8,7 @@
   coreutils,
   wall,
   hostname,
-  man,
+  man-db,
   enableCgiScripts ? true,
   gd,
 }:
@@ -26,7 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-    man
+    man-db
     unixtools.col
   ];
 

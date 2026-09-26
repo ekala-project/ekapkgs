@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  man,
+  man-db,
   ncurses,
   readline,
   enableReadline ? true,
@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    man
+    man-db
   ];
 
   buildInputs = lib.optionals enableReadline [

@@ -13,7 +13,7 @@
   x11Support ? graphicsSupport,
   libX11,
   perl,
-  man,
+  man-db,
   pkg-config,
   buildPackages,
   w3m,
@@ -47,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   env = {
     PERL = "${perl}/bin/perl";
-    MAN = "${man}/bin/man";
+    MAN = "${man-db}/bin/man";
     LIBS = lib.optionalString x11Support "-lX11";
   };
 

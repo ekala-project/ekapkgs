@@ -21,7 +21,7 @@
   openssl,
   bash,
   gdb,
-  man,
+  man-db,
   git,
   makeWrapper,
   buildEnv,
