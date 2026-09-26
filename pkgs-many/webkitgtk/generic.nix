@@ -63,7 +63,7 @@
   freetype,
   openssl,
   sqlite,
-  gst_all_1,
+  gstreamer,
   bubblewrap,
   libseccomp,
   libbacktrace,
@@ -140,8 +140,8 @@ clangStdenv.mkDerivation (finalAttrs: {
     libepoxy
     libjxl
     gnutls
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-base
+    gstreamer.plugins-bad
+    gstreamer.plugins-base
     harfbuzz
     hyphen
     icu
