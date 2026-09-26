@@ -6,7 +6,6 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook4,
   libgweather,
   geoclue2,
   gettext,
@@ -38,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     libxml2
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

@@ -11,7 +11,6 @@
   blueprint-compiler,
   desktop-file-utils,
   wayland-scanner,
-  wrapGAppsHook4,
   gtk4,
   libadwaita,
   libportal,
@@ -31,7 +30,7 @@
   libcloudproviders,
   gdk-pixbuf,
   gnome-desktop,
-  gst_all_1,
+  gstreamer,
   gsettings-desktop-schemas,
   gnome-user-share,
   gobject-introspection,
@@ -71,7 +70,7 @@ stdenv.mkDerivation (finalAttrs: {
     gi-docgen
     docbook-xsl-nons
     wayland-scanner
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [
@@ -81,7 +80,7 @@ stdenv.mkDerivation (finalAttrs: {
     gnome-desktop
     gsettings-desktop-schemas
     gnome-user-share
-    gst_all_1.gst-plugins-base
+    gstreamer.plugins-base
     gtk4
     libadwaita
     libportal.gtk4

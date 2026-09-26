@@ -7,7 +7,6 @@
   adwaita-icon-theme ? null,
   gtk4,
   libadwaita ? null,
-  wrapGAppsHook4 ? null,
   gjs ? null,
   gobject-introspection,
   libgweather ? null,
@@ -33,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     meson
     ninja
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     python3
     gobject-introspection
     gjs

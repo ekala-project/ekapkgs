@@ -9,7 +9,6 @@
   glib,
   gtk4,
   pango,
-  wrapGAppsHook4 ? null,
   desktop-file-utils ? null,
   gobject-introspection,
   gjs ? null,
@@ -35,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     desktop-file-utils
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

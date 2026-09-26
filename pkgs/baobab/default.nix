@@ -12,7 +12,6 @@
   libadwaita,
   glib,
   libxml2,
-  wrapGAppsHook4,
   itstool,
 }:
 
@@ -36,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

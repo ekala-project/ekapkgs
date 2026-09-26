@@ -18,8 +18,7 @@
   openssl,
   glib-networking,
   sqlite,
-  gst_all_1,
-  wrapGAppsHook4,
+  gstreamer,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -46,7 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
     cargo
     rustPlatform.cargoSetupHook
     rustc
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     appstream-glib
     desktop-file-utils
   ];
@@ -60,10 +59,10 @@ stdenv.mkDerivation (finalAttrs: {
     openssl
     glib-networking
     sqlite
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-good
+    gstreamer
+    gstreamer.plugins-base
+    gstreamer.plugins-bad
+    gstreamer.plugins-good
   ];
 
   # tests require network

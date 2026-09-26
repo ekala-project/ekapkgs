@@ -5,7 +5,6 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook4,
   glib,
   glib-networking,
   gnome-online-accounts,
@@ -29,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     ninja
     pkg-config
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

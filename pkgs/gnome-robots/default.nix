@@ -5,7 +5,7 @@
   desktop-file-utils,
   fetchurl,
   glib,
-  gst_all_1,
+  gstreamer,
   gtk4,
   itstool,
   libadwaita,
@@ -16,7 +16,6 @@
   pkg-config,
   rustc,
   rustPlatform,
-  wrapGAppsHook4,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -41,7 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
     rustc
     rustPlatform.cargoSetupHook
     gtk4 # for gtk4-update-icon-cache
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     itstool
     desktop-file-utils
   ];
@@ -52,9 +51,9 @@ stdenv.mkDerivation (finalAttrs: {
     libadwaita
     # TODO: libglycin - not available
     # TODO: libglycin-gtk4 - not available
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
+    gstreamer
+    gstreamer.plugins-base
+    gstreamer.plugins-good
   ];
 
   preFixup = ''

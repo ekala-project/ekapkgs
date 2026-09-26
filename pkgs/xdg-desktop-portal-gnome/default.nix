@@ -13,7 +13,6 @@
   pkg-config,
   wayland,
   wayland-scanner,
-  wrapGAppsHook4,
   xdg-desktop-portal,
 }:
 
@@ -32,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     wayland-scanner
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

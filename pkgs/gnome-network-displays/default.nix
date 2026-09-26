@@ -9,10 +9,9 @@
   gettext,
   desktop-file-utils,
   appstream-glib,
-  wrapGAppsHook4,
   python3,
   # Not native
-  gst_all_1,
+  gstreamer,
   gsettings-desktop-schemas,
   gtk4,
   avahi,
@@ -44,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     desktop-file-utils
     appstream-glib
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     python3
   ];
 
@@ -53,13 +52,13 @@ stdenv.mkDerivation (finalAttrs: {
     gtk4
     glib
     gsettings-desktop-schemas
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-ugly
+    gstreamer
+    gstreamer.plugins-base
+    gstreamer.plugins-good
+    gstreamer.plugins-bad
+    gstreamer.plugins-ugly
   ]
-  ++ lib.optional (gst_all_1 ? gst-rtsp-server) gst_all_1.gst-rtsp-server
+  ++ lib.optional (gstreamer ? rtsp-server) gstreamer.rtsp-server
   ++ [
     pipewire
     networkmanager
@@ -75,7 +74,7 @@ stdenv.mkDerivation (finalAttrs: {
     protobufc
   ];
 
-  env.CFLAGS = "-I${gst_all_1.gst-plugins-base.dev}/include/gstreamer-1.0";
+  env.CFLAGS = "-I${gstreamer.plugins-base.dev}/include/gstreamer-1.0";
 
   preConfigure = ''
     patchShebangs ./build-aux/meson/postinstall.py

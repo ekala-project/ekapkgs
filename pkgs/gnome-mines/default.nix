@@ -8,7 +8,6 @@
   pkg-config,
   gtk4,
   libadwaita,
-  wrapGAppsHook4,
   librsvg,
   gettext,
   itstool,
@@ -34,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     itstool
     libxml2
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     desktop-file-utils
   ];
 

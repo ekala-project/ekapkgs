@@ -22,7 +22,6 @@
   mutter,
   pkg-config,
   python3Packages,
-  wrapGAppsHook4,
 }:
 
 python3Packages.buildPythonApplication (finalAttrs: {
@@ -44,7 +43,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
     meson
     ninja
     pkg-config
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

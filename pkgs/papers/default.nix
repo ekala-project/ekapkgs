@@ -14,7 +14,6 @@
   djvulibre,
   libarchive,
   libsecret,
-  wrapGAppsHook4,
   gobject-introspection,
   gsettings-desktop-schemas,
   dbus,
@@ -70,7 +69,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     rustPlatform.cargoSetupHook
     rustc
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     yelp-tools
   ];
 

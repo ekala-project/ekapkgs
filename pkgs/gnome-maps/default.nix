@@ -14,7 +14,6 @@
   librest,
   libgweather,
   geoclue2,
-  wrapGAppsHook4,
   desktop-file-utils,
   libportal,
   libshumate,
@@ -45,7 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     ninja
     pkg-config
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     gobject-introspection
     # For post install script
     desktop-file-utils

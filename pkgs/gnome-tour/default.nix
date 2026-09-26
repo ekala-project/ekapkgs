@@ -11,7 +11,6 @@
   glib,
   desktop-file-utils,
   appstream-glib,
-  wrapGAppsHook4,
   python3,
   libadwaita,
   librsvg,
@@ -46,7 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3
     rustPlatform.cargoSetupHook
     rustc
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

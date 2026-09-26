@@ -11,7 +11,6 @@
   libxml2,
   libadwaita,
   fribidi,
-  wrapGAppsHook4,
   harfbuzz,
   desktop-file-utils,
 }:
@@ -33,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     gettext
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     libxml2
     glib
     desktop-file-utils

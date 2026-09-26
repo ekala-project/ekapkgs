@@ -9,7 +9,6 @@
   glib,
   gtksourceview5,
   gsettings-desktop-schemas,
-  wrapGAppsHook4,
   ninja,
   icu,
   itstool,
@@ -38,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     python3
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [
