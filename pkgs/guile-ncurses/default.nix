@@ -5,7 +5,7 @@
   pkg-config,
   guile,
   libffi,
-  ncurses5,
+  ncurses,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -23,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     guile
     libffi
-    ncurses5
+    ncurses.v5
   ];
 
   configureFlags = [

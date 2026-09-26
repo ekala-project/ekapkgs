@@ -7,7 +7,7 @@
   libxext,
   libxft,
   libxt,
-  ncurses5,
+  ncurses,
   slang,
 }:
 
@@ -26,7 +26,7 @@ stdenv.mkDerivation rec {
     libxext
     libxft
     libxt
-    ncurses5
+    ncurses.v5
     slang
   ];
 

@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  ncurses5,
+  ncurses,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "18g81274d0f7sr04p7h7irz0d53j6kd9j1y3zbka1gcqq0gscdvx";
   };
 
-  buildInputs = [ ncurses5 ];
+  buildInputs = [ ncurses.v5 ];
 
   env.NIX_CFLAGS_COMPILE = "-std=gnu17";
 

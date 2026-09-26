@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   autoreconfHook,
-  ncurses5,
+  ncurses,
   enableSdl2 ? false,
   SDL2 ? null,
   SDL2_image ? null,
@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ autoreconfHook ];
   buildInputs = [
-    ncurses5
+    ncurses.v5
   ]
   ++ lib.optionals enableSdl2 [
     SDL2
