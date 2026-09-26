@@ -14,7 +14,7 @@
   libsigcxx,
   libvorbis,
   libx11,
-  lua5_2,
+  lua,
   libgbm,
   SDL2,
   SDL2_image,
@@ -54,7 +54,7 @@ stdenv.mkDerivation (finalAttrs: {
     libsigcxx
     libvorbis
     libx11
-    lua5_2
+    lua.v5_2
     libgbm
     SDL2
     SDL2_image

@@ -38,7 +38,7 @@
   libtiff,
   libwebp,
   libxkbcommon,
-  lua5_1,
+  lua,
   lz4,
   mesa-gl-headers,
   mint-x-icons,
@@ -141,7 +141,7 @@ stdenv.mkDerivation (finalAttrs: {
     libspectre
     libwebp
     libxkbcommon
-    lua5_1
+    lua.v5_1
     mint-x-icons
     openjpeg
     poppler

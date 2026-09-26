@@ -12,7 +12,7 @@
   SDL_mixer,
   libogg,
   libvorbis,
-  lua5_3,
+  lua,
   libjpeg,
   libpng,
   zlib,
@@ -50,7 +50,7 @@ stdenv.mkDerivation {
     SDL_mixer
     libogg
     libvorbis
-    lua5_3
+    lua.v5_3
     libjpeg
     libpng
     zlib

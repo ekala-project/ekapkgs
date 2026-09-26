@@ -9,13 +9,10 @@
   gnome-common,
   gtk-doc,
   gtk2,
-  lua5_1,
+  lua,
   gobject-introspection,
 }:
 
-let
-  lua = lua5_1;
-in
 stdenv.mkDerivation (finalAttrs: {
   pname = "keybinder";
   version = "0.3.1";
@@ -39,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     gnome-common
     gtk-doc
     gtk2
-    lua
+    lua.v5_1
   ];
 
   configureFlags = [ "--disable-python" ];

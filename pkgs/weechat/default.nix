@@ -18,7 +18,7 @@
   guileSupport ? true,
   guile,
   luaSupport ? true,
-  lua5_3,
+  lua,
   perlSupport ? true,
   perl,
   pythonSupport ? true,
@@ -71,7 +71,7 @@ let
       name = "lua";
       enabled = luaSupport;
       cmakeFlag = "ENABLE_LUA";
-      buildInputs = [ lua5_3 ];
+      buildInputs = [ lua.v5_3 ];
     }
     {
       name = "python";

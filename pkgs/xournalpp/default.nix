@@ -22,7 +22,7 @@
   qpdf,
   zlib,
   withLua ? true,
-  lua5_3,
+  lua,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -60,7 +60,7 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ]
   ++ lib.optional stdenv.hostPlatform.isLinux alsa-lib
-  ++ lib.optional withLua lua5_3;
+  ++ lib.optional withLua lua.v5_3;
 
   buildFlags = [ "translations" ];
 
