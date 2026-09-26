@@ -20,7 +20,7 @@
   replaceVars,
   systemd,
   udev,
-  gnused,
+  sed,
   fetchFromGitHub,
 }:
 
@@ -99,7 +99,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   postInstall = ''
     substituteInPlace $out/lib/systemd/system-shutdown/nutshutdown \
-      --replace /bin/sed "${gnused}/bin/sed" \
+      --replace /bin/sed "${sed}/bin/sed" \
       --replace /bin/sleep "${coreutils}/bin/sleep" \
       --replace /bin/systemctl "${systemd}/bin/systemctl"
 

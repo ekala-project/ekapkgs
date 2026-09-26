@@ -5,7 +5,7 @@
   cups,
   cups-filters ? null,
   ghostscript,
-  gnused,
+  sed,
   perl,
   autoconf,
   automake,
@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     cups
     cups-filters
     ghostscript
-    gnused
+    sed
     perl
   ];
 

@@ -3,14 +3,14 @@
   stdenv,
   fetchFromGitHub,
   autoreconfHook,
-  gnused,
+  sed,
   hostname,
   systemdLibs,
 }:
 
 let
   scriptPath = lib.makeBinPath [
-    gnused
+    sed
     hostname
   ];
 

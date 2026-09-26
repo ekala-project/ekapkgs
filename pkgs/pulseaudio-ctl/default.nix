@@ -6,7 +6,7 @@
   bc,
   dbus,
   gawk,
-  gnused,
+  sed,
   libnotify,
   pulseaudio,
 }:
@@ -16,7 +16,7 @@ let
     bc
     dbus
     gawk
-    gnused
+    sed
     libnotify
     pulseaudio
   ];

@@ -5,7 +5,7 @@
   fetchFromGitLab,
   perl,
   flex,
-  gnused,
+  sed,
   coreutils,
   which,
   opensp,
@@ -69,7 +69,7 @@ stdenv.mkDerivation (finalAttrs: {
     groff
     texinfo
     perl
-    gnused
+    sed
     coreutils
   ];
 

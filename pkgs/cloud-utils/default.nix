@@ -4,7 +4,7 @@
   fetchFromGitHub,
   makeWrapper,
   gawk,
-  gnused,
+  sed,
   util-linux,
   file,
   wget,
@@ -20,7 +20,7 @@ let
     e2fsprogs
     gptfdisk
     gawk
-    gnused
+    sed
     util-linux
   ];
   binDeps = guestDeps ++ [
