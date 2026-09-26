@@ -4,7 +4,7 @@
   fetchFromGitHub,
   gawk,
   cmake,
-  gnugrep,
+  grep,
   libxext,
   libxft,
   libxinerama,
@@ -14,7 +14,7 @@
   libpng,
   pkg-config,
   runtimeShell,
-  gnused,
+  sed,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -53,8 +53,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeFlags = [
     "-DAWK=${lib.getBin gawk}/bin/awk"
-    "-DGREP=${lib.getBin gnugrep}/bin/grep"
-    "-DSED=${lib.getBin gnused}/bin/sed"
+    "-DGREP=${lib.getBin grep}/bin/grep"
+    "-DSED=${lib.getBin sed}/bin/sed"
     "-DSH=${runtimeShell}"
   ];
 

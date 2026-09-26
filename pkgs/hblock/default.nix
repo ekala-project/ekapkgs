@@ -6,7 +6,7 @@
   coreutils,
   gawk,
   curl,
-  gnugrep,
+  grep,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -23,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     coreutils
     curl
-    gnugrep
+    grep
     gawk
   ];
   nativeBuildInputs = [ makeWrapper ];
@@ -37,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
         lib.makeBinPath [
           coreutils
           curl
-          gnugrep
+          grep
           gawk
         ]
       }

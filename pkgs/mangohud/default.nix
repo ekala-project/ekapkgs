@@ -6,8 +6,8 @@
   replaceVars,
   coreutils,
   curl,
-  gnugrep,
-  gnused,
+  grep,
+  sed,
   xdg-utils,
   dbus,
   libGL,
@@ -24,7 +24,7 @@
   wayland,
   spdlog,
   libxkbcommon,
-  glfw,
+  glfw3,
   libxrandr,
   x11Support ? true,
   waylandSupport ? true,
@@ -131,8 +131,8 @@ stdenv.mkDerivation (finalAttrs: {
       path = lib.makeBinPath [
         coreutils
         curl
-        gnugrep
-        gnused
+        grep
+        sed
         xdg-utils
       ];
 
@@ -193,7 +193,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional x11Support libx11
   ++ lib.optional (x11Support || waylandSupport) libxkbcommon
   ++ lib.optionals mangoappSupport [
-    glfw
+    glfw3
     libxrandr
   ];
 

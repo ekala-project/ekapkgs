@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  gnugrep,
+  grep,
   ncurses,
   pkg-config,
   installShellFiles,
@@ -26,7 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     installShellFiles
   ];
   buildInputs = [
-    gnugrep
+    grep
     libpq
     ncurses
     readline

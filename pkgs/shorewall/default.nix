@@ -1,8 +1,8 @@
 {
   coreutils,
   fetchurl,
-  gnugrep,
-  gnused,
+  grep,
+  sed,
   iproute2,
   iptables,
   perl,
@@ -17,8 +17,8 @@ let
     "${iproute2}/bin"
     "${iptables}/bin"
     "${util-linux}/bin"
-    "${gnugrep}/bin"
-    "${gnused}/bin"
+    "${grep}/bin"
+    "${sed}/bin"
   ];
 in
 stdenv.mkDerivation (finalAttrs: {
@@ -46,8 +46,8 @@ stdenv.mkDerivation (finalAttrs: {
     iproute2
     iptables
     util-linux
-    gnugrep
-    gnused
+    grep
+    sed
     perl
   ]
   ++ (with perlPackages; [

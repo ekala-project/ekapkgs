@@ -9,8 +9,8 @@
   rsync,
   coreutils,
   gawk,
-  gnused,
-  gnugrep,
+  sed,
+  grep,
 }:
 
 stdenv.mkDerivation rec {
@@ -45,8 +45,8 @@ stdenv.mkDerivation rec {
           rsync
           coreutils
           gawk
-          gnused
-          gnugrep
+          sed
+          grep
         ]
       }"
   '';

@@ -4,7 +4,7 @@
   fetchFromGitHub,
   makeWrapper,
   wget,
-  gnugrep,
+  grep,
   testers,
 }:
 
@@ -44,7 +44,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
 
     mv "$out/bin/${finalAttrs.meta.mainProgram}" "$out/bin/.${finalAttrs.meta.mainProgram}-wrapped"
     makeWrapper "${stdenvNoCC.shell}" "$out/bin/${finalAttrs.meta.mainProgram}" \
-      --prefix PATH ":" "${lib.makeBinPath [ gnugrep ]}" \
+      --prefix PATH ":" "${lib.makeBinPath [ grep ]}" \
       --add-flags "-c 'source \"$out/bin/.${finalAttrs.meta.mainProgram}-wrapped\"' \"\$0\""
 
     mkdir -p $out/share/distrobox

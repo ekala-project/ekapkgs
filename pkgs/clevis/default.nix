@@ -6,8 +6,8 @@
   curl,
   fetchFromGitHub,
   gawk,
-  gnugrep,
-  gnused,
+  grep,
+  sed,
   jansson,
   jose,
   libpwquality,
@@ -81,8 +81,8 @@ stdenv.mkDerivation (finalAttrs: {
       includeIntoPath = [
         coreutils
         cryptsetup
-        gnugrep
-        gnused
+        grep
+        sed
         jose
         libpwquality
         luksmeta
@@ -95,8 +95,8 @@ stdenv.mkDerivation (finalAttrs: {
         cryptsetup
         curl
         gawk
-        gnugrep
-        gnused
+        grep
+        sed
         jose
         luksmeta
       ];

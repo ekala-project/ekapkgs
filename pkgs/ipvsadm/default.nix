@@ -5,7 +5,7 @@
   pkg-config,
   libnl,
   popt,
-  gnugrep,
+  grep,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -40,7 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   postInstall = ''
-    sed -i -e "s|^PATH=.*|PATH=$out/bin:${gnugrep}/bin|" $out/sbin/ipvsadm-{restore,save}
+    sed -i -e "s|^PATH=.*|PATH=$out/bin:${grep}/bin|" $out/sbin/ipvsadm-{restore,save}
   '';
 
   meta = {

@@ -4,7 +4,7 @@
   fetchurl,
   fetchpatch,
   makeWrapper,
-  gnused,
+  sed,
   db,
   openssl,
   cyrus_sasl,
@@ -12,7 +12,7 @@
   lmdb,
   coreutils,
   findutils,
-  gnugrep,
+  grep,
   gawk,
   icu,
   pcre2,
@@ -138,7 +138,7 @@ stdenv.mkDerivation (finalAttrs: {
         lib.makeBinPath [
           coreutils
           findutils
-          gnugrep
+          grep
         ]
       }
     wrapProgram $out/libexec/postfix/postfix-script \
@@ -146,9 +146,9 @@ stdenv.mkDerivation (finalAttrs: {
         lib.makeBinPath [
           coreutils
           findutils
-          gnugrep
+          grep
           gawk
-          gnused
+          sed
         ]
       }
 

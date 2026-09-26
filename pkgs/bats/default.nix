@@ -4,7 +4,7 @@
   fetchFromGitHub,
   bash,
   coreutils,
-  gnugrep,
+  grep,
   ncurses,
   findutils,
   hostname,
@@ -41,7 +41,7 @@ stdenv.mkDerivation rec {
         lib.makeBinPath [
           bash
           coreutils
-          gnugrep
+          grep
           ncurses
           findutils
           hostname

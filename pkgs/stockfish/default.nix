@@ -6,7 +6,7 @@
   _experimental-update-script-combinators,
   writeShellApplication,
   nix,
-  gnugrep,
+  grep,
 }:
 
 let

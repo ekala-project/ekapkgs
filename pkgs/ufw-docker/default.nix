@@ -5,8 +5,8 @@
   makeWrapper,
   coreutils,
   gawk,
-  gnugrep,
-  gnused,
+  grep,
+  sed,
   util-linux,
 }:
 
@@ -32,8 +32,8 @@ stdenvNoCC.mkDerivation rec {
         lib.makeBinPath [
           coreutils
           gawk
-          gnugrep
-          gnused
+          grep
+          sed
           util-linux
         ]
       }

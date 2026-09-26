@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   coreutils,
-  gnugrep,
+  grep,
   util-linux,
   kmod,
   procps,
@@ -15,7 +15,7 @@ let
 
   binPath = lib.makeBinPath [
     coreutils
-    gnugrep
+    grep
     util-linux
     kmod
     procps

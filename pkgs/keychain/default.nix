@@ -9,10 +9,10 @@
   gnupg,
   perl,
   procps,
-  gnugrep,
+  grep,
   gawk,
   findutils,
-  gnused,
+  sed,
 }:
 
 stdenv.mkDerivation rec {
@@ -43,8 +43,8 @@ stdenv.mkDerivation rec {
           findutils
           gawk
           gnupg
-          gnugrep
-          gnused
+          grep
+          sed
           openssh
           procps
         ]

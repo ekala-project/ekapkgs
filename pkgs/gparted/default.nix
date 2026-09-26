@@ -4,9 +4,9 @@
   fetchurl,
   gettext,
   coreutils,
-  gnused,
+  sed,
   adwaita-icon-theme,
-  gnugrep,
+  grep,
   parted,
   glib,
   libuuid,
@@ -76,8 +76,8 @@ stdenv.mkDerivation rec {
            util-linux
            procps
            coreutils
-           gnused
-           gnugrep
+           sed
+           grep
            mtools
            dosfstools
          ]

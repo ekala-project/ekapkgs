@@ -5,7 +5,7 @@
   perl,
   replaceVars,
   coreutils,
-  gnugrep,
+  grep,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     ./nosetuid.patch
     (replaceVars ./cat-grep-sort-wc.patch {
       coreutils = "${coreutils}/bin/";
-      gnugrep = "${gnugrep}/bin/";
+      grep = "${grep}/bin/";
     })
   ];
 

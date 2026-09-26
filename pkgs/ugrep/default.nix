@@ -18,7 +18,7 @@
   exiftool ? null,
   wrapWithFilterUtils ? false,
   createGrepReplacementLinks ? false,
-  gnugrep,
+  grep,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -87,6 +87,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "ug";
   }
   // lib.optionalAttrs createGrepReplacementLinks {
-    priority = (gnugrep.meta.priority or lib.meta.defaultPriority) - 1;
+    priority = (grep.meta.priority or lib.meta.defaultPriority) - 1;
   };
 })

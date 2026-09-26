@@ -5,8 +5,8 @@
   makeWrapper,
   bash,
   coreutils,
-  gnused,
-  gnugrep,
+  sed,
+  grep,
   findutils,
   ncurses,
 }:
@@ -36,8 +36,8 @@ stdenv.mkDerivation (finalAttrs: {
       --prefix PATH : ${
         lib.makeBinPath [
           coreutils
-          gnused
-          gnugrep
+          sed
+          grep
           findutils
           ncurses
         ]
