@@ -7,7 +7,7 @@
   liburcu,
   lmdb,
   libcap_ng ? null,
-  libidn2,
+  libidn,
   libunistring,
   systemd ? null,
   nettle,
@@ -67,7 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     gnutls
     liburcu
-    libidn2
+    libidn.v2
     libunistring
     nettle
     libedit

@@ -5,7 +5,7 @@
   pkg-config,
   courier-unicode,
   pcre2,
-  libidn2,
+  libidn,
   perl,
 }:
 
@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [
     courier-unicode
-    libidn2
+    libidn.v2
     pcre2
     perl
   ];

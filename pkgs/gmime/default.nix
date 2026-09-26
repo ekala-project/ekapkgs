@@ -6,7 +6,7 @@
   glib,
   zlib,
   gpgme,
-  libidn2,
+  libidn,
   libunistring,
 }:
 
@@ -29,7 +29,7 @@ stdenv.mkDerivation rec {
   buildInputs = [
     zlib
     gpgme
-    libidn2
+    libidn.v2
     libunistring
   ];
 

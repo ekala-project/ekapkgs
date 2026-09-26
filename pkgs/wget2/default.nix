@@ -13,7 +13,7 @@
   bzip2,
   gpgme,
   libhsts ? null,
-  libidn2,
+  libidn,
   libpsl,
   lzip,
   nghttp2,
@@ -62,7 +62,7 @@ stdenv.mkDerivation (finalAttrs: {
     brotli
     bzip2
     gpgme
-    libidn2
+    libidn.v2
     libpsl
     nghttp2
     pcre2

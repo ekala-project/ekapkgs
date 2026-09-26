@@ -7,7 +7,7 @@
   gettext,
   pkg-config,
   perlPackages,
-  libidn2,
+  libidn,
   zlib,
   pcre2,
   libuuid,
@@ -68,7 +68,7 @@ stdenv.mkDerivation (finalAttrs: {
     nukeReferences
   ];
   buildInputs = [
-    libidn2
+    libidn.v2
     zlib
     pcre2
     libuuid
