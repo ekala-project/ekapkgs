@@ -15,7 +15,7 @@
   ocl-icd,
   vulkan-headers,
   vulkan-loader,
-  glfw,
+  glfw3,
   libxdmcp,
   util-linux,
   libselinux,
@@ -68,7 +68,7 @@ stdenv.mkDerivation (finalAttrs: {
     procps
     vulkan-headers
     vulkan-loader
-    glfw
+    glfw3
     opencl-headers
     ocl-icd
     libxdmcp
