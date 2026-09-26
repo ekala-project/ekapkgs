@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  gnum4,
+  m4,
   autoreconfHook,
 }:
 
@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   patches = lib.optionals stdenv.hostPlatform.isDarwin [ ./darwin.patch ];
 
   nativeBuildInputs = [
-    gnum4
+    m4
     autoreconfHook
   ];
 

@@ -12,7 +12,7 @@
   dbus ? null,
   sqlite,
   gpgme ? null,
-  gnum4 ? null,
+  m4 ? null,
   withNotmuch ? true,
   notmuch ? null,
 }:
@@ -56,7 +56,7 @@ rustPlatform.buildRustPackage rec {
           lib.optional (gpgme != null) gpgme ++ lib.optional (withNotmuch && notmuch != null) notmuch
         )
       } \
-      --prefix PATH : ${lib.makeBinPath (lib.optional (gnum4 != null) gnum4)}
+      --prefix PATH : ${lib.makeBinPath (lib.optional (m4 != null) m4)}
   '';
 
   checkFlags = [

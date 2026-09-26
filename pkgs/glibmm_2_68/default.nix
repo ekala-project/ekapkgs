@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   pkg-config,
-  gnum4,
+  m4,
   glib,
   libsigcxx30,
   meson,
@@ -29,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     pkg-config
     ninja
-    gnum4
+    m4
     glib # for glib-compile-schemas
   ];
 

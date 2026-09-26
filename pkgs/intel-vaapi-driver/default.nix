@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   autoreconfHook,
-  gnum4,
+  m4,
   pkg-config,
   python3,
   wayland-scanner,
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     autoreconfHook
-    gnum4
+    m4
     pkg-config
     python3
     wayland-scanner
