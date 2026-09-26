@@ -6,7 +6,7 @@ final: prev: {
     }
   );
   jre = final.jdk;
-  libdbusmenu-gtk3 = final.libdbusmenu.override { withGtk3 = true; };
+  libdbusmenu-gtk3 = final.libdbusmenu.gtk3;
   docbook_xsl = final.docbook-xsl;
   libxcb-renderutil = final.xcbutilrenderutil;
   libfm-extra = final.libfm.override { extraOnly = true; };
