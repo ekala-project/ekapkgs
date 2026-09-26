@@ -4,7 +4,7 @@
   fetchgit,
   pkg-config,
   freetype,
-  wafHook,
+  waf,
   python3,
   libxmu,
   glew,
@@ -34,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-    wafHook
+    waf.hook
     python3
   ];
 
