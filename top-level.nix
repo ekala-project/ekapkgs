@@ -5,7 +5,7 @@ final: prev: {
       inherit (final) lib writeTextFile buildPackages;
     }
   );
-  jre = final.jdk;
+  jre = final.java;
   libdbusmenu-gtk3 = final.libdbusmenu.gtk3;
   docbook_xsl = final.docbook-xsl;
   libxcb-renderutil = final.xcbutilrenderutil;
