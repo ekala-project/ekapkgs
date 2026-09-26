@@ -4,7 +4,7 @@
   fetchFromGitHub,
   autoreconfHook,
   automake,
-  fftwSinglePrec,
+  fftw,
   ladspa-header,
   libxml2,
   pkg-config,
@@ -41,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    fftwSinglePrec
+    fftw.float
     ladspa-header
     libxml2
   ];

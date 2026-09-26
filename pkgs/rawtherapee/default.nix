@@ -21,7 +21,7 @@
   libxdmcp,
   lcms2,
   libiptcdata,
-  fftwSinglePrec,
+  fftw,
   expat,
   pcre2,
   libsigcxx,
@@ -88,7 +88,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxdmcp
     lcms2
     libiptcdata
-    fftwSinglePrec
+    fftw.float
     expat
     pcre2
     libsigcxx

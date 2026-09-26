@@ -12,7 +12,7 @@
   pkg-config,
   rubberband,
   libsndfile,
-  fftwFloat,
+  fftw,
   libsamplerate,
 }:
 
@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     lv2
     rubberband
     libsndfile
-    fftwFloat
+    fftw.float
     libsamplerate
   ];
 

@@ -7,7 +7,7 @@
   cairo,
   cmake,
   expat,
-  fftwSinglePrec,
+  fftw,
   fltk,
   fontconfig,
   libGLU,
@@ -55,7 +55,7 @@ stdenv.mkDerivation (finalAttrs: {
     boost
     cairo
     expat
-    fftwSinglePrec
+    fftw.float
     fltk
     fontconfig
     libGLU

@@ -13,7 +13,7 @@
   lv2,
   cairo,
   pango,
-  fftwFloat,
+  fftw,
   zita-convolver,
 }:
 
@@ -38,7 +38,7 @@ stdenv.mkDerivation rec {
     lv2
     cairo
     pango
-    fftwFloat
+    fftw.float
     zita-convolver
   ];
 

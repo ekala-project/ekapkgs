@@ -5,7 +5,7 @@
   cmake,
   pkg-config,
   libusb1,
-  fftwSinglePrec,
+  fftw,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     libusb1
-    fftwSinglePrec
+    fftw.float
   ];
 
   cmakeFlags = [

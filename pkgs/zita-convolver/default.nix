@@ -2,9 +2,8 @@
   lib,
   stdenv,
   fetchzip,
-  fftwFloat,
+  fftw,
 }:
-
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "zita-convolver";
@@ -17,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   sourceRoot = "${finalAttrs.src.name}/source";
 
-  buildInputs = [ fftwFloat ];
+  buildInputs = [ fftw.float ];
 
   patchPhase = ''
     sed -e "s@ldconfig@@" -i Makefile
