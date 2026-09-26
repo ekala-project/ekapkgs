@@ -24,6 +24,7 @@ let
   pkgs = import ../. {
     config = {
       inherit checkMeta;
+      aliases.nixpkgs = false;
 
       handleEvalIssue =
         reason: msg:
