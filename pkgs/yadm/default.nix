@@ -9,7 +9,7 @@
   gnupg ? null,
   openssl ? null,
   gawk ? null,
-  gnutar ? null,
+  tar ? null,
   coreutils,
 }:
 
@@ -57,7 +57,7 @@ stdenv.mkDerivation (finalAttrs: {
           ++ lib.optional (gnupg != null) gnupg
           ++ lib.optional (openssl != null) openssl
           ++ lib.optional (gawk != null) gawk
-          ++ lib.optional (gnutar != null) gnutar
+          ++ lib.optional (tar != null) tar
         )
       }
   '';

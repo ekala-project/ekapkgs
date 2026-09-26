@@ -11,7 +11,7 @@
   zip,
   unzip,
   p7zip,
-  gnutar,
+  tar,
   bzip2,
   gzip,
   lhasa,
@@ -50,7 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
         zip
         unzip
         p7zip
-        gnutar
+        tar
         bzip2
         gzip
         lhasa

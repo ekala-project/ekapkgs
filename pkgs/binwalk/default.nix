@@ -6,7 +6,7 @@
   dumpifs ? null,
   fetchFromGitHub,
   fontconfig,
-  gnutar,
+  tar,
   jefferson ? null,
   lib,
   lzfse ? null,
@@ -89,7 +89,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
           lzop
           sasquatch
           srec2bin
-          gnutar
+          tar
           sleuthkit
           ubi_reader
           uefi-firmware-parser

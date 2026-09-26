@@ -7,7 +7,7 @@
   glib,
   ncftp,
   gnupg,
-  gnutar,
+  tar,
   par2cmdline,
   util-linux,
   rsync,
@@ -72,7 +72,7 @@ let
 
     nativeCheckInputs = [
       gnupg
-      gnutar
+      tar
       librsync
       par2cmdline
     ]

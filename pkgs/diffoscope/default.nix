@@ -16,7 +16,7 @@
   file,
   findutils,
   gettext,
-  gnutar,
+  tar,
   gzip,
   help2man,
   html2text,
@@ -85,7 +85,7 @@ python3.pkgs.buildPythonApplication rec {
       file
       findutils
       gettext
-      gnutar
+      tar
       gzip
       html2text
       libarchive
