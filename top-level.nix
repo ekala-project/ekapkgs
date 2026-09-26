@@ -6,20 +6,10 @@ final: prev: {
     }
   );
   jre = final.jdk;
-  libmpg123 = final.mpg123;
   libdbusmenu-gtk3 = final.libdbusmenu.override { withGtk3 = true; };
   docbook_xsl = final.docbook-xsl;
-  wafHook = final.waf.hook;
-  wrapGAppsHook3 = final.wrapGAppsNoGuiHook.override {
-    isGraphical = true;
-  };
-  wrapGAppsHook4 = final.wrapGAppsNoGuiHook.override {
-    isGraphical = true;
-    gtk3 = final.gtk4;
-  };
   libxcb-renderutil = final.xcbutilrenderutil;
   libfm-extra = final.libfm.override { extraOnly = true; };
-  fftwFloat = final.fftwSinglePrec;
   # PulseAudio: libpulseaudio is library-only variant
   libpulseaudio = final.pulseaudio.override { libOnly = true; };
   # JACK2: libjack2 is library-only variant
@@ -41,22 +31,6 @@ final: prev: {
     postInstall = "";
   });
 
-  # GStreamer: map gst_all_1 to corepkgs gstreamer passthru attrs
-  gst_all_1 = {
-    gstreamer = final.gstreamer;
-    gst-plugins-base = final.gstreamer.plugins-base;
-    gst-plugins-good = final.gstreamer.plugins-good;
-    gst-plugins-bad = final.gstreamer.plugins-bad;
-    gst-plugins-ugly = final.gstreamer.plugins-ugly;
-    gst-libav = final.gstreamer.libav;
-    gst-rtsp-server = final.gstreamer.rtsp-server;
-    gst-devtools = final.gstreamer.devtools;
-    gst-editing-services = final.gstreamer.editing-services;
-    # TODO: port these remaining GStreamer components
-    gst-plugins-rs = null;
-    gstreamermm = null;
-  };
-
   # dnsutils is just the utils output of bind
   dnsutils = final.bind.utils;
 
@@ -71,9 +45,6 @@ final: prev: {
 
   # nixos-icons is a simple data package
   nixos-icons = final.callPackage ./pkgs/nixos-icons { };
-
-  # valgrind-light is valgrind without Xen support
-  valgrind-light = final.valgrind;
 
   # libcanberra-gtk3 alias for the gtk3 variant from pkgs-many
   libcanberra-gtk3 = final.libcanberra.gtk3;
