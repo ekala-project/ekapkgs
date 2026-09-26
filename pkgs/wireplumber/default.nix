@@ -15,7 +15,7 @@
   # runtime deps
   glib,
   systemd,
-  lua5_4,
+  lua,
   pipewire,
   # options
   enableDocs ? true,
@@ -73,7 +73,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     glib
     systemd
-    lua5_4
+    lua
     pipewire
   ];
 

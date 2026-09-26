@@ -2,7 +2,7 @@
   fetchFromGitHub,
   freetype,
   lib,
-  lua5_4,
+  lua,
   meson,
   ninja,
   cmake,
@@ -34,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     freetype
-    lua5_4
+    lua
     pcre2
     sdl3
   ];

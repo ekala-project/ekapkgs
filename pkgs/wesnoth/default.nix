@@ -18,13 +18,13 @@
   libpng,
   openssl,
   icu,
-  lua5_4,
+  lua,
   curl,
 }:
 
 let
   # wesnoth requires lua built with c++, see https://github.com/wesnoth/wesnoth/pull/8234
-  lua = lua5_4.override {
+  lua' = lua.override {
     postConfigure = ''
       makeFlagsArray+=("CC=$CXX")
     '';
@@ -63,7 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
     libpng
     openssl
     icu
-    lua
+    lua'
     curl
   ];
 

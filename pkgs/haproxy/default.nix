@@ -5,7 +5,7 @@
   zlib,
   libxcrypt,
   openssl,
-  lua5_4,
+  lua,
   pcre2,
 }:
 
@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     openssl
     zlib
     libxcrypt
-    lua5_4
+    lua
     pcre2
   ];
 
@@ -41,8 +41,8 @@ stdenv.mkDerivation (finalAttrs: {
     "USE_PCRE2_JIT=yes"
     "USE_LUA=yes"
     "LUA_LIB_NAME=lua"
-    "LUA_LIB=${lua5_4}/lib"
-    "LUA_INC=${lua5_4}/include"
+    "LUA_LIB=${lua}/lib"
+    "LUA_INC=${lua}/include"
     "USE_GETADDRINFO=1"
     "USE_PROMEX=yes"
     "CC=${stdenv.cc.targetPrefix}cc"

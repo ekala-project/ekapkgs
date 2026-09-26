@@ -6,7 +6,7 @@
   ncurses,
   flex,
   bison,
-  lua5_4,
+  lua,
 }:
 
 stdenv.mkDerivation {
@@ -29,7 +29,7 @@ stdenv.mkDerivation {
 
   buildInputs = [
     ncurses
-    lua5_4
+    lua
   ];
 
   nativeBuildInputs = [

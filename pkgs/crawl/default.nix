@@ -4,7 +4,7 @@
   fetchFromGitHub,
   which,
   sqlite,
-  lua5_4,
+  lua,
   perl,
   python3,
   zlib,
@@ -35,7 +35,7 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [
-    lua5_4
+    lua
     zlib
     sqlite
     ncurses

@@ -52,7 +52,7 @@
   libtiff,
   libwebp,
   libxml2,
-  lua5_4,
+  lua,
   util-linux,
   openexr,
   openjpeg,
@@ -130,7 +130,7 @@ stdenv.mkDerivation rec {
     libtiff
     libwebp
     libxml2
-    lua5_4
+    lua
     openexr
     openjpeg
     pcre2

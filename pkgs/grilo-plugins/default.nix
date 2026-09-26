@@ -22,7 +22,7 @@
   gnome-online-accounts,
   tinysparql,
   gjs,
-  lua5_4,
+  lua,
   liboauth,
   libarchive,
   libdmapsharing,
@@ -83,7 +83,7 @@ stdenv.mkDerivation rec {
     libsoup_3
     json-glib
     libmediaart
-    lua5_4
+    lua
     liboauth
     gnome-online-accounts
     rest
