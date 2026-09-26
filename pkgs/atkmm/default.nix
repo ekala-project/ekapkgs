@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  atk,
+  at-spi2-core,
   glibmm,
   pkg-config,
   meson,
@@ -25,7 +25,7 @@ stdenv.mkDerivation rec {
   ];
 
   propagatedBuildInputs = [
-    atk
+    at-spi2-core
     glibmm
   ];
 

@@ -9,7 +9,7 @@
   xorg,
   cogl,
   pango,
-  atk,
+  at-spi2-core,
   json-glib,
   gtk3,
   libinput,
@@ -38,7 +38,7 @@ stdenv.mkDerivation rec {
   propagatedBuildInputs = [
     cogl
     pango
-    atk
+    at-spi2-core
     json-glib
     xorg.libX11
     libGL

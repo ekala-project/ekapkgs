@@ -8,7 +8,7 @@
   gtk3,
   gdk-pixbuf,
   pango,
-  atk,
+  at-spi2-core,
   cairo,
 }:
 
@@ -35,7 +35,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     gtk3
     gdk-pixbuf
     pango
-    atk
+    at-spi2-core
     cairo
   ];
 

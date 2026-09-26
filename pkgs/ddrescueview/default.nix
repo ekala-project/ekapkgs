@@ -4,7 +4,7 @@
   fetchurl,
   fpc,
   lazarus,
-  atk,
+  at-spi2-core,
   cairo,
   gdk-pixbuf,
   glib,
@@ -29,7 +29,7 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [
-    atk
+    at-spi2-core
     cairo
     gdk-pixbuf
     glib

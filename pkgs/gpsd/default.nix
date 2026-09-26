@@ -27,7 +27,7 @@
   gobject-introspection,
   pango,
   gdk-pixbuf,
-  atk,
+  at-spi2-core,
   wrapGAppsHook3,
 
   gpsdUser ? "gpsd",
@@ -63,7 +63,7 @@ stdenv.mkDerivation rec {
     pps-tools
   ]
   ++ lib.optionals guiSupport [
-    atk
+    at-spi2-core
     dbus-glib
     gdk-pixbuf
     libX11

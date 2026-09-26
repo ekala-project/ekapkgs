@@ -8,14 +8,14 @@
   gtk2,
   glib,
   pango,
-  atk,
+  at-spi2-core,
   gdk-pixbuf,
   libxi,
   xorgproto,
   libx11,
   libxext,
   gdb,
-  gnumake,
+  make,
   binutils,
 }:
 
@@ -54,7 +54,7 @@ stdenv.mkDerivation rec {
     libx11
     libxext
     pango
-    atk
+    at-spi2-core
     stdenv.cc
     gdk-pixbuf
   ];
@@ -112,7 +112,7 @@ stdenv.mkDerivation rec {
           lib.makeBinPath [
             fpc
             gdb
-            gnumake
+            make
             binutils
           ]
         }"

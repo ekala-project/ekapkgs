@@ -6,9 +6,7 @@
   makeShellWrapper,
   wrapGAppsHook3,
   alsa-lib,
-  at-spi2-atk,
   at-spi2-core,
-  atk,
   cairo,
   cups,
   dbus,
@@ -48,9 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     alsa-lib
-    at-spi2-atk
     at-spi2-core
-    atk
     cairo
     cups
     dbus

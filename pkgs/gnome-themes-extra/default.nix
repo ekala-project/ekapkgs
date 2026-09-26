@@ -8,7 +8,7 @@
   librsvg,
   pkg-config,
   pango,
-  atk,
+  at-spi2-core,
   gtk2,
   gdk-pixbuf,
   hicolor-icon-theme,
@@ -33,7 +33,7 @@ stdenv.mkDerivation rec {
     gtk3
     librsvg
     pango
-    atk
+    at-spi2-core
     gtk2
     gdk-pixbuf
   ];

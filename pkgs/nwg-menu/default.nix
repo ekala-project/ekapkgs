@@ -9,7 +9,7 @@
   gtk3,
   pango,
   gdk-pixbuf,
-  atk,
+  at-spi2-core,
 }:
 
 buildGoModule (finalAttrs: {
@@ -28,7 +28,7 @@ buildGoModule (finalAttrs: {
   doCheck = false;
 
   buildInputs = [
-    atk
+    at-spi2-core
     gtk3
     gdk-pixbuf
     gtk-layer-shell

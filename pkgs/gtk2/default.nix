@@ -4,7 +4,7 @@
   fetchurl,
   fetchpatch,
   replaceVars,
-  atk,
+  at-spi2-core,
   cairo,
   cups,
   gdk-pixbuf,
@@ -71,7 +71,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   propagatedBuildInputs = [
-    atk
+    at-spi2-core
     cairo
     gdk-pixbuf
     glib
