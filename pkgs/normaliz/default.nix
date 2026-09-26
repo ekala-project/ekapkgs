@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   autoreconfHook,
-  gmpxx,
+  gmp,
   flint,
   nauty,
 }:
@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [
-    gmpxx
+    gmp.withCxx
     flint
     nauty
   ];

@@ -7,7 +7,7 @@
   autoconf,
   libtool,
   autoreconfHook,
-  gmpxx,
+  gmp,
 }:
 stdenv.mkDerivation rec {
   pname = "givaro";
@@ -33,7 +33,7 @@ stdenv.mkDerivation rec {
     automake
   ];
   buildInputs = [ libtool ];
-  propagatedBuildInputs = [ gmpxx ];
+  propagatedBuildInputs = [ gmp.withCxx ];
 
   configureFlags = [
     "--without-archnative"
