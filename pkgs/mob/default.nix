@@ -1,13 +1,13 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   makeWrapper,
   espeak-ng ? null,
   withSpeech ? (espeak-ng != null),
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "mob";
   version = "5.4.2";
 

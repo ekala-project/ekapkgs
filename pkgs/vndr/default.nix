@@ -1,10 +1,10 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
 }:
 
-buildGo126Module {
+buildGoModule {
   pname = "vndr";
   version = "0.1.2-unstable-2022-12-29";
 

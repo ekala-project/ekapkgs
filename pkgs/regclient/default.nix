@@ -1,7 +1,7 @@
 {
   stdenv,
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   lndir,
@@ -15,7 +15,7 @@ let
   ];
 in
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "regclient";
   version = "0.11.5";
 

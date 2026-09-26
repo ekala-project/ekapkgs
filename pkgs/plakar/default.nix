@@ -1,12 +1,12 @@
 {
   stdenv,
   lib,
-  buildGo125Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   fuse,
 }:
-buildGo125Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "plakar";
   version = "1.1.4";
 

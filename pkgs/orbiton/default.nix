@@ -1,6 +1,6 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   makeWrapper,
@@ -9,7 +9,7 @@
   vte ? null,
 }:
 
-buildGo126Module rec {
+buildGoModule rec {
   pname = "orbiton";
   version = "2.74.4";
 

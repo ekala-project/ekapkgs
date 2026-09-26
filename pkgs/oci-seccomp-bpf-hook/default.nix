@@ -1,6 +1,6 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   go-md2man,
   installShellFiles,
@@ -9,7 +9,7 @@
   libseccomp,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "oci-seccomp-bpf-hook";
   version = "1.3.0";
   src = fetchFromGitHub {

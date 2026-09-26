@@ -1,14 +1,14 @@
 {
   lib,
   stdenv,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   libx11,
   makeWrapper,
   wl-clipboard,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "discordo";
   version = "0-unstable-2026-05-12";
 

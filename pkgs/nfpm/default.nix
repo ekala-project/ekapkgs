@@ -1,13 +1,13 @@
 {
   stdenv,
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   buildPackages,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "nfpm";
   version = "2.47.0";
 

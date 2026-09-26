@@ -1,10 +1,10 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
 }:
 
-buildGo126Module rec {
+buildGoModule rec {
   pname = "oauth2-proxy";
   version = "7.15.4";
 

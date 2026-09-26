@@ -1,12 +1,12 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   makeWrapper,
   olm,
 }:
 
-buildGo126Module rec {
+buildGoModule rec {
   pname = "gomuks";
   version = "0.3.1";
 

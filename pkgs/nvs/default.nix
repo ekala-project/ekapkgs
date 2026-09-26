@@ -1,12 +1,12 @@
 {
   stdenv,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   writableTmpDirAsHomeHook,
   lib,
 }:
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "nvs";
   version = "1.14.1";
 

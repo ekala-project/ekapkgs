@@ -1,5 +1,5 @@
 {
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   fetchzip,
   installShellFiles,
@@ -20,7 +20,7 @@ let
   };
 in
 
-buildGo126Module rec {
+buildGoModule rec {
   pname = "fluxcd";
   inherit vendorHash version;
 

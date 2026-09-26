@@ -1,7 +1,7 @@
 {
   lib,
   stdenv,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   k3sVersion ? null,
@@ -15,7 +15,7 @@ let
     else
       false;
 in
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "k3d";
   version = "5.9.0";
 

@@ -1,10 +1,10 @@
 {
   lib,
-  buildGo125Module,
+  buildGoModule,
   fetchFromGitHub,
   stdenv,
 }:
-buildGo125Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "jjui";
   version = "0.10.9";
   __structuredAttrs = true;

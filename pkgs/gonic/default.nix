@@ -1,6 +1,6 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   pkg-config,
   taglib,
@@ -16,7 +16,7 @@
   mpv,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "gonic";
   version = "0.22.0";
   src = fetchFromGitHub {

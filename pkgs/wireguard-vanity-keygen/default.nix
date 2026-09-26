@@ -1,10 +1,10 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
 }:
 
-buildGo126Module rec {
+buildGoModule rec {
   pname = "wireguard-vanity-keygen";
   version = "1.0.1";
 

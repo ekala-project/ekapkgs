@@ -1,14 +1,14 @@
 {
   lib,
   stdenv,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   writableTmpDirAsHomeHook,
   installShellFiles,
   buildPackages,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "apko";
   version = "1.2.39";
 

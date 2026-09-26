@@ -2,11 +2,11 @@
   stdenv,
   lib,
   fetchFromGitHub,
-  buildGo126Module,
+  buildGoModule,
   installShellFiles,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "kubelogin";
   version = "0.2.19";
 

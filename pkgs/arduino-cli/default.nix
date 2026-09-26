@@ -1,7 +1,7 @@
 {
   lib,
   stdenv,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   buildFHSEnv,
   installShellFiles,
@@ -11,7 +11,7 @@
 }:
 
 let
-  pkg = buildGo126Module (finalAttrs: {
+  pkg = buildGoModule (finalAttrs: {
     pname = "arduino-cli";
     version = "1.5.1";
 

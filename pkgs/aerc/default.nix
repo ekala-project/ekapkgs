@@ -1,6 +1,6 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromSourcehut,
   ncurses,
   withNotmuch ? (notmuch != null),
@@ -13,7 +13,7 @@
   bashNonInteractive,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "aerc";
   version = "0.22.0";
 

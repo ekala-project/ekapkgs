@@ -1,13 +1,13 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitea,
   installShellFiles,
   stdenv,
   writableTmpDirAsHomeHook,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "tea";
   version = "0.14.0";
 

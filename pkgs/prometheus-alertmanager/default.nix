@@ -1,12 +1,12 @@
 {
   lib,
   go,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "alertmanager";
   version = "0.34.0";
 

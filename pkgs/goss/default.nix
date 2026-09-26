@@ -1,6 +1,6 @@
 {
   bash,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   getent,
   lib,
@@ -8,7 +8,7 @@
   systemd ? null,
 }:
 
-buildGo126Module rec {
+buildGoModule rec {
   pname = "goss";
   version = "0.4.10";
 

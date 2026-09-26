@@ -2,10 +2,10 @@
   fetchFromGitHub,
   icu,
   lib,
-  buildGo126Module,
+  buildGoModule,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "dolt";
   version = "2.3.1";
 

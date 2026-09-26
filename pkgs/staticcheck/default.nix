@@ -1,10 +1,10 @@
 {
-  buildGo126Module,
+  buildGoModule,
   lib,
   fetchFromGitHub,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "go-tools";
   version = "2026.1";
 

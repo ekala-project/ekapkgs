@@ -1,5 +1,5 @@
 {
-  buildGo126Module,
+  buildGoModule,
   fetchFromCodeberg,
   installShellFiles,
   lib,
@@ -9,7 +9,7 @@
   withPam ? false,
   withSqlite ? true,
 }:
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "soju";
   version = "0.10.1";
 

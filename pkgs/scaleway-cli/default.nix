@@ -2,12 +2,12 @@
   stdenv,
   lib,
   fetchFromGitHub,
-  buildGo126Module,
+  buildGoModule,
   installShellFiles,
   writableTmpDirAsHomeHook,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "scaleway-cli";
   version = "2.61.0";
 

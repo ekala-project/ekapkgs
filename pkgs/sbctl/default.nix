@@ -1,6 +1,6 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   stdenv,
   fetchFromGitHub,
   installShellFiles,
@@ -9,7 +9,7 @@
   pcsclite ? null,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "sbctl";
   version = "0.18";
 

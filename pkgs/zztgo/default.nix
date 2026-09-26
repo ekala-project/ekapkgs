@@ -1,11 +1,11 @@
 {
   lib,
   fetchFromGitHub,
-  buildGo126Module,
+  buildGoModule,
   makeWrapper,
 }:
 
-buildGo126Module {
+buildGoModule {
   pname = "zztgo";
   version = "0-unstable-2020-05-29";
 

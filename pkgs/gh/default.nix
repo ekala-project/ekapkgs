@@ -1,13 +1,13 @@
 {
   lib,
   fetchFromGitHub,
-  buildGo126Module,
+  buildGoModule,
   installShellFiles,
   stdenv,
   makeWrapper,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "gh";
   version = "2.98.0";
 

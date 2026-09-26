@@ -1,5 +1,5 @@
 {
-  buildGo126Module,
+  buildGoModule,
   buildPackages,
   fetchFromGitHub,
   installShellFiles,
@@ -7,7 +7,7 @@
   stdenv,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "golangci-lint";
   version = "2.13.1";
 

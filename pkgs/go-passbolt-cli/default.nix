@@ -1,12 +1,12 @@
 {
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   lib,
   stdenv,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "go-passbolt-cli";
   version = "0.5.1";
 

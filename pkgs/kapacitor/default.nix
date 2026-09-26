@@ -3,7 +3,7 @@
   rustPlatform,
   fetchFromGitHub,
   fetchpatch,
-  buildGo126Module,
+  buildGoModule,
   pkg-config,
 }:
 
@@ -56,7 +56,7 @@ let
     __structuredAttrs = true;
   };
 in
-buildGo126Module rec {
+buildGoModule rec {
   pname = "kapacitor";
   version = "1.7.5";
 

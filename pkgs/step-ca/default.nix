@@ -2,14 +2,14 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  buildGo126Module,
+  buildGoModule,
   coreutils,
   pcsclite,
   pkg-config,
   hsmSupport ? true,
 }:
 
-buildGo126Module rec {
+buildGoModule rec {
   pname = "step-ca";
   version = "0.30.2";
 

@@ -1,5 +1,5 @@
 {
-  buildGo126Module,
+  buildGoModule,
   fetchurl,
   lib,
   zstd,
@@ -7,7 +7,7 @@
   perl ? null,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "goredo";
   version = "2.6.0";
 

@@ -1,5 +1,5 @@
 {
-  buildGo126Module,
+  buildGoModule,
   fetchFromCodeberg,
   lib,
   jq,
@@ -8,7 +8,7 @@
   scdoc,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "ijq";
   version = "1.3.0";
 
