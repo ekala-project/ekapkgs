@@ -14,7 +14,7 @@
   libnotify,
   upower,
   wirelesstools,
-  linuxPackages,
+  linux,
   adwaita-icon-theme,
   libgweather,
   # TODO: gucharmap not yet available in ekapkgs
@@ -57,7 +57,7 @@ stdenv.mkDerivation (finalAttrs: {
     tinysparql
     polkit
     wirelesstools
-    linuxPackages.cpupower
+    linux.pkgs.cpupower
   ];
 
   enableParallelBuilding = true;

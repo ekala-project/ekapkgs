@@ -10,7 +10,7 @@
   giflib,
   libdrm,
   libexif,
-  libiconvReal,
+  libiconv,
   libinput,
   libtsm,
   libwebp,
@@ -55,7 +55,7 @@ stdenv.mkDerivation (finalAttrs: {
     giflib
     libdrm
     libexif
-    libiconvReal
+    libiconv.real
     libinput
     libtsm
     libwebp

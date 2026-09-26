@@ -7,7 +7,7 @@
   libgsf,
   glib,
   libxml2,
-  libiconvReal,
+  libiconv,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -42,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     libxml2
   ]
-  ++ lib.optional stdenv.hostPlatform.isDarwin libiconvReal;
+  ++ lib.optional stdenv.hostPlatform.isDarwin libiconv.real;
 
   env.NIX_CFLAGS_COMPILE = "-I${libxml2.dev}/include/libxml2";
 

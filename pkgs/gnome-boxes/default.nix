@@ -39,7 +39,7 @@
   # TODO: libvirt-glib - not available
   mtools,
   numactl,
-  qemu-utils,
+  qemu,
   spice-gtk,
   spice-protocol,
   systemd,
@@ -121,7 +121,7 @@ stdenv.mkDerivation (finalAttrs: {
         mtools
         cdrkit
         libcdio
-        qemu-utils
+        qemu
       ]
     }")
   '';

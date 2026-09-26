@@ -6,7 +6,7 @@
   makeWrapper,
   file,
   lsof,
-  binutils-unwrapped,
+  binutils,
 }:
 
 stdenv.mkDerivation rec {
@@ -43,7 +43,7 @@ stdenv.mkDerivation rec {
           perl
           file
           lsof
-          binutils-unwrapped
+          binutils.unwrapped
         ]
       }
 

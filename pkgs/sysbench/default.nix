@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  autoconf269,
+  autoconf,
   autoreconfHook,
   pkg-config,
   libmysqlclient,
@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   version = "1.0.20";
 
   nativeBuildInputs = [
-    autoconf269
+    autoconf.v2_69
     autoreconfHook
     pkg-config
   ];
