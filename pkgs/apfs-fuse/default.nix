@@ -3,7 +3,6 @@
   stdenv,
   fetchFromGitHub,
   fuse,
-  fuse3,
   bzip2,
   zlib,
   attr,
@@ -43,7 +42,7 @@ stdenv.mkDerivation {
   ];
 
   buildInputs = [
-    (if stdenv.hostPlatform.isDarwin then fuse else fuse3)
+    fuse
     bzip2
     zlib
   ]

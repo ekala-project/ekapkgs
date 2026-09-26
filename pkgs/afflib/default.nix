@@ -5,7 +5,7 @@
   zlib,
   curl,
   expat,
-  fuse3,
+  fuse,
   openssl,
   autoreconfHook,
   python3,
@@ -29,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     expat
     openssl
     python3
-    fuse3
+    fuse
   ];
 
   env.CFLAGS = lib.optionalString stdenv.hostPlatform.isDarwin "-DFUSE_DARWIN_ENABLE_EXTENSIONS=0";

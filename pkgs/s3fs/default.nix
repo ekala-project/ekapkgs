@@ -7,7 +7,7 @@
   curl,
   openssl,
   libxml2,
-  fuse3,
+  fuse,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     curl
     openssl
     libxml2
-    fuse3
+    fuse
   ];
   nativeBuildInputs = [
     autoreconfHook

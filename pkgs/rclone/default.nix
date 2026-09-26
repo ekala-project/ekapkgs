@@ -7,7 +7,7 @@
   installShellFiles,
   makeWrapper,
   enableCmount ? false,
-  fuse3 ? null,
+  fuse ? null,
 }:
 
 buildGoModule (finalAttrs: {
@@ -35,9 +35,9 @@ buildGoModule (finalAttrs: {
     makeWrapper
   ];
 
-  buildInputs = lib.optional (enableCmount && fuse3 != null) fuse3;
+  buildInputs = lib.optional (enableCmount && fuse != null) fuse;
 
-  tags = lib.optionals (fuse3 != null) [ "fuse3" ] ++ lib.optionals enableCmount [ "cmount" ];
+  tags = lib.optionals (fuse != null) [ "fuse3" ] ++ lib.optionals enableCmount [ "cmount" ];
 
   ldflags = [
     "-s"
@@ -45,7 +45,7 @@ buildGoModule (finalAttrs: {
     "-X github.com/rclone/rclone/fs.Version=${finalAttrs.src.tag}"
   ];
 
-  postConfigure = lib.optionalString (fuse3 != null) ''
+  postConfigure = lib.optionalString (fuse != null) ''
     substituteInPlace vendor/github.com/winfsp/cgofuse/fuse/host_cgo.go \
         --replace-fail "fuse.h" "fuse3/fuse.h"
   '';
@@ -69,9 +69,9 @@ buildGoModule (finalAttrs: {
       ln -s $out/bin/rclone $out/bin/rclonefs
       ln -s $out/bin/rclone $out/bin/mount.rclone
     ''
-    + lib.optionalString (enableCmount && fuse3 != null) ''
+    + lib.optionalString (enableCmount && fuse != null) ''
       wrapProgram $out/bin/rclone \
-        --suffix PATH : "${lib.makeBinPath [ fuse3 ]}"
+        --suffix PATH : "${lib.makeBinPath [ fuse ]}"
     '';
 
   meta = {

@@ -11,7 +11,7 @@
   cairo,
   fdk_aac,
   freerdp,
-  fuse3,
+  fuse,
   gdk-pixbuf,
   glib,
   libdrm,
@@ -56,7 +56,7 @@ stdenv.mkDerivation (finalAttrs: {
     cairo
     fdk_aac
     freerdp
-    fuse3
+    fuse
     gdk-pixbuf
     glib
     libdrm

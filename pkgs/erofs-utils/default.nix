@@ -4,7 +4,7 @@
   fetchurl,
   autoreconfHook,
   pkg-config,
-  fuse3,
+  fuse,
   util-linux,
   xxhash,
   lz4,
@@ -42,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     xz
     zstd
     libdeflate
-    fuse3
+    fuse
   ];
 
   configureFlags = [

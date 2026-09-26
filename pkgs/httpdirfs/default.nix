@@ -2,7 +2,7 @@
   curl,
   expat,
   fetchFromGitHub,
-  fuse3,
+  fuse,
   gumbo,
   help2man,
   lib,
@@ -40,7 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     curl
     expat
-    fuse3
+    fuse
     gumbo
     libuuid
   ];

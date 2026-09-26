@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   python3,
-  fuse3,
+  fuse,
   pkg-config,
   libpcap,
   zlib,
@@ -26,7 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    fuse3
+    fuse
     libpcap
     zlib
     python3

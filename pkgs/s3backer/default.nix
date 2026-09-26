@@ -4,7 +4,7 @@
   fetchFromGitHub,
   autoreconfHook,
   pkg-config,
-  fuse3,
+  fuse,
   curl,
   expat,
 }:
@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
   buildInputs = [
-    fuse3
+    fuse
     curl
     expat
   ];

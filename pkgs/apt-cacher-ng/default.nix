@@ -5,7 +5,7 @@
   cmake,
   doxygen,
   fetchurl,
-  fuse3,
+  fuse,
   libevent,
   xz,
   openssl,
@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   buildInputs = [
     bzip2
-    fuse3
+    fuse
     libevent
     xz
     openssl

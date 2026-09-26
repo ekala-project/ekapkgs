@@ -7,7 +7,7 @@
   ninja,
   docutils,
   makeWrapper,
-  fuse3,
+  fuse,
   glib,
   openssh,
 }:
@@ -33,7 +33,7 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [
-    fuse3
+    fuse
     glib
   ];
 

@@ -7,7 +7,7 @@
   gettext,
   libtool,
   libgphoto2,
-  fuse3,
+  fuse,
   glib,
 }:
 
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     libgphoto2
-    fuse3
+    fuse
     glib
   ];
 

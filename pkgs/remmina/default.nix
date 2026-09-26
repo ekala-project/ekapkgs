@@ -7,7 +7,7 @@
   pkg-config,
   wrapGAppsHook3,
   curl,
-  fuse3,
+  fuse,
   glib,
   gtk3,
   gettext,
@@ -92,7 +92,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optionals (freerdp != null) [ freerdp ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [
-    fuse3
+    fuse
     libappindicator-gtk3
     libdbusmenu-gtk3
     wayland

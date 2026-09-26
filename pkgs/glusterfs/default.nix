@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  fuse3,
+  fuse,
   bison,
   flex,
   openssl,
@@ -23,8 +23,8 @@
   attr,
   makeWrapper,
   coreutils,
-  gnused,
-  gnugrep,
+  sed,
+  grep,
   which,
   openssh,
   gawk,
@@ -43,7 +43,7 @@
 }:
 let
   buildInputs = [
-    fuse3
+    fuse
     openssl
     ncurses
     readline
@@ -76,8 +76,8 @@ let
     findutils
     gawk
     getent
-    gnugrep
-    gnused
+    grep
+    sed
     lvm2
     openssh
     rsync

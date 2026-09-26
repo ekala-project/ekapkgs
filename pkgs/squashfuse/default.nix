@@ -4,7 +4,7 @@
   fetchFromGitHub,
   autoreconfHook,
   libtool,
-  fuse3,
+  fuse,
   pkg-config,
   lz4,
   xz,
@@ -36,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
     lzo
     zstd
-    fuse3
+    fuse
   ];
 
   meta = {
