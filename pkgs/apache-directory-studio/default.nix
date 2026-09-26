@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  jdk,
+  java,
   makeWrapper,
   autoPatchelfHook,
   makeDesktopItem,
@@ -64,7 +64,7 @@ stdenv.mkDerivation (finalAttrs: {
     # https://github.com/adoptium/adoptium-support/issues/785#issuecomment-2387481967.
     makeWrapper "$dest/ApacheDirectoryStudio" \
         "$out/bin/ApacheDirectoryStudio" \
-        --prefix PATH : "${jdk}/bin" \
+        --prefix PATH : "${java}/bin" \
         --prefix LD_LIBRARY_PATH : ${
           lib.makeLibraryPath ([ glib ] ++ lib.optionals (webkitgtk_4_1 != null) [ webkitgtk_4_1 ])
         } \

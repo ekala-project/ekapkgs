@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   makeWrapper,
-  jdk,
+  java,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -23,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   installPhase = ''
     mkdir -pv $out/bin
     cp $src $out/jython.jar
-    makeWrapper ${jdk}/bin/java $out/bin/jython --add-flags "-jar $out/jython.jar"
+    makeWrapper ${java}/bin/java $out/bin/jython --add-flags "-jar $out/jython.jar"
   '';
 
   meta = {
@@ -32,6 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://jython.org/";
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
     license = lib.licenses.psfl;
-    platforms = jdk.meta.platforms;
+    platforms = java.meta.platforms;
   };
 })

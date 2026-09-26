@@ -2,7 +2,7 @@
   lib,
   stdenvNoCC,
   fetchurl,
-  jdk,
+  java,
 }:
 
 stdenvNoCC.mkDerivation (finalAttrs: {
@@ -29,7 +29,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://tomcat.apache.org/";
     description = "Implementation of the Java Servlet and JavaServer Pages technologies";
-    platforms = jdk.meta.platforms;
+    platforms = java.meta.platforms;
     license = lib.licenses.asl20;
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
   };

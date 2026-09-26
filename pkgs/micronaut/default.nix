@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchzip,
-  jdk,
+  java,
   makeWrapper,
   installShellFiles,
 }:
@@ -26,7 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     rm bin/mn.bat
     cp -r . $out
     wrapProgram $out/bin/mn \
-      --prefix JAVA_HOME : ${jdk}
+      --prefix JAVA_HOME : ${java}
     installShellCompletion --bash --name mn.bash bin/mn_completion
     runHook postInstall
   '';

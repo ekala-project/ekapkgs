@@ -4,7 +4,7 @@
   curl ? null,
   hiredis ? null,
   iptables ? null,
-  jdk ? null,
+  java ? null,
   libatasmart ? null,
   libdbi ? null,
   libesmtp ? null,
@@ -63,7 +63,7 @@ let
     ipmi.buildInputs = opt openipmi;
     iptables.buildInputs =
       (opt libpcap) ++ lib.optionals stdenv.hostPlatform.isLinux ((opt iptables) ++ (opt libmnl));
-    java.buildInputs = (opt jdk) ++ (opt libgcrypt) ++ (opt libxml2);
+    java.buildInputs = (opt java) ++ (opt libgcrypt) ++ (opt libxml2);
     log_logstash.buildInputs = opt yajl;
     lua.buildInputs = opt lua;
     memcachec.buildInputs = (opt libmemcached) ++ (opt cyrus_sasl);

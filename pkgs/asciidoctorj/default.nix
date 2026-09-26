@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchzip,
-  jdk,
+  java,
   makeWrapper,
 }:
 
@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     rm bin/asciidoctorj.bat
     cp -r . $out
     wrapProgram $out/bin/asciidoctorj \
-      --prefix JAVA_HOME : ${jdk}
+      --prefix JAVA_HOME : ${java}
   '';
 
   meta = {

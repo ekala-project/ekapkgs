@@ -4,7 +4,7 @@
   lib,
   makeWrapper,
   makeDesktopItem,
-  jdk,
+  java,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -34,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     substituteInPlace etc/visualvm.conf \
       --replace-fail "#visualvm_jdkhome=" "visualvm_jdkhome=" \
-      --replace-fail "/path/to/jdk" "${jdk.home}" \
+      --replace-fail "/path/to/jdk" "${java.home}" \
 
     cp -r . $out
   '';

@@ -4,16 +4,15 @@
   fetchFromGitHub,
   makeBinaryWrapper,
   makeDesktopItem,
-  jdk17,
-  gradle_9,
+  java,
+  gradle,
   which,
   copyDesktopItems,
   fetchpatch,
 }:
 
 let
-  jdk = jdk17;
-  gradle = gradle_9;
+  jdk = java.v17;
 
   src = fetchFromGitHub {
     owner = "freeplane";
@@ -40,12 +39,12 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     makeBinaryWrapper
     jdk
-    gradle
-    gradle.setupHook
+    gradle.v9
+    gradle.v9.setupHook
     copyDesktopItems
   ];
 
-  mitmCache = gradle.fetchDeps {
+  mitmCache = gradle.v9.fetchDeps {
     inherit (finalAttrs) pname;
     data = ./deps.json;
   };
