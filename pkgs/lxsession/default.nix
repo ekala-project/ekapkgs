@@ -5,7 +5,7 @@
   fetchFromGitHub,
   autoconf,
   automake,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   docbook_xsl,
   intltool,
   libxml2,
@@ -42,7 +42,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     autoconf
     automake
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
     docbook_xsl
     intltool
     libxml2
@@ -62,7 +62,7 @@ stdenv.mkDerivation rec {
     "--enable-man"
     "--disable-buildin-clipboard"
     "--disable-buildin-polkit"
-    "--with-xml-catalog=${docbook_xml_dtd_412}/xml/dtd/docbook/catalog.xml"
+    "--with-xml-catalog=${docbook-xml-dtd.v4_1_2}/xml/dtd/docbook/catalog.xml"
   ];
 
   preConfigure = "./autogen.sh";

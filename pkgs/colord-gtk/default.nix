@@ -10,7 +10,7 @@
   gtk-doc,
   docbook-xsl-ns,
   docbook-xsl-nons,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   libxslt,
   glib,
   withGtk4 ? false,
@@ -45,7 +45,7 @@ stdenv.mkDerivation rec {
     gtk-doc
     docbook-xsl-ns
     docbook-xsl-nons
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
     libxslt
   ];
 

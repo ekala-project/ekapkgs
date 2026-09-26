@@ -9,11 +9,11 @@
   vala,
   avahi,
   gdk-pixbuf,
-  gst_all_1,
+  gstreamer,
   glib,
   gtk-doc,
   docbook-xsl-nons,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   gobject-introspection,
   libsoup_3,
   withGtkDoc ? stdenv.buildPlatform.canExecute stdenv.hostPlatform,
@@ -54,14 +54,14 @@ stdenv.mkDerivation rec {
   ]
   ++ lib.optionals withGtkDoc [
     docbook-xsl-nons
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
   ];
 
   buildInputs = [
     avahi
     gdk-pixbuf
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
+    gstreamer
+    gstreamer.plugins-base
   ]
   ++ lib.optionals withGtkDoc [
     gtk-doc

@@ -22,7 +22,7 @@
   sane-backends,
   docbook_xsl,
   docbook-xsl-ns,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   gtk-doc,
   libxslt,
   enableDaemon ? true,
@@ -70,7 +70,7 @@ stdenv.mkDerivation rec {
   ];
 
   nativeBuildInputs = [
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
     docbook_xsl
     docbook-xsl-ns
     gettext

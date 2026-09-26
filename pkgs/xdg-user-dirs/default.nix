@@ -6,7 +6,7 @@
   fetchurl,
   libxslt,
   docbook-xsl-nons,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   gettext,
   makeBinaryWrapper,
   libiconv,
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     makeBinaryWrapper
     libxslt
     docbook-xsl-nons
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     gettext
   ];
 

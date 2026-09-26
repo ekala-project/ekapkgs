@@ -9,7 +9,7 @@
   lzo,
   pkg-config,
   zstd,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -34,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     libcap_ng
     lzo
     zstd
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
   ];
 
   meta = {

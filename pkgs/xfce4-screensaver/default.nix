@@ -2,7 +2,7 @@
   stdenv,
   lib,
   fetchFromGitLab,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   docbook-xsl-ns,
   gettext,
   meson,
@@ -47,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   nativeBuildInputs = [
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
     docbook-xsl-ns
     gettext
     glib # glib-compile-resources

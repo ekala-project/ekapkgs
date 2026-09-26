@@ -1,7 +1,7 @@
 {
   lib,
   autoreconfHook,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   docbook_xsl,
   fetchFromGitHub,
   gettext,
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     autoreconfHook
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     docbook_xsl
     gettext
     gtk-doc

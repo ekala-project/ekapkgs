@@ -18,7 +18,7 @@
   gobject-introspection,
   gtk-doc,
   docbook-xsl-nons,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   python3,
   gsettings-desktop-schemas,
 }:
@@ -52,7 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
     gobject-introspection
     gtk-doc
     docbook-xsl-nons
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     python3
   ];
 

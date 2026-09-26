@@ -11,9 +11,9 @@
   dconf,
   desktop-file-utils,
   docbook-xsl-nons,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   fetchurl,
-  fuse3,
+  fuse,
   gdk-pixbuf,
   gettext,
   glib,
@@ -156,14 +156,14 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional withSELinuxModule bzip2
   ++ lib.optionals withDocbookDocs [
     docbook-xsl-nons
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     xmlto
   ];
 
   buildInputs = [
     appstream
     curl
-    fuse3
+    fuse
     gdk-pixbuf
     gpgme
     gsettings-desktop-schemas

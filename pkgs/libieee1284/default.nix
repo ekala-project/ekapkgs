@@ -7,7 +7,7 @@
   automake,
   libtool,
   xmlto,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   docbook_xsl,
 }:
 
@@ -35,7 +35,7 @@ stdenv.mkDerivation rec {
     automake
     libtool
     xmlto
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
     docbook_xsl
   ];
 

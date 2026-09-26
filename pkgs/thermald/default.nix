@@ -4,7 +4,7 @@
   automake,
   dbus,
   dbus-glib,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   docbook-xsl-nons,
   fetchFromGitHub,
   gtk-doc,
@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoconf-archive
     automake
     docbook-xsl-nons
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
     gtk-doc
     libtool
     pkg-config

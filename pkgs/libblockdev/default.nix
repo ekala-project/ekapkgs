@@ -5,7 +5,7 @@
   autoreconfHook,
   pkg-config,
   gtk-doc,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   python3,
   gobject-introspection,
   glib,
@@ -66,7 +66,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoconf-archive
     autoreconfHook
     docbook_xsl
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     gobject-introspection
     gtk-doc
     libxslt

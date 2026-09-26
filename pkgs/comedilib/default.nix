@@ -7,7 +7,7 @@
   bison,
   xmlto,
   docbook_xsl,
-  docbook_xml_dtd_44,
+  docbook-xml-dtd,
   swig,
   perl,
   python3,
@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     bison
     swig
     xmlto
-    docbook_xml_dtd_44
+    docbook-xml-dtd.v4_4
     docbook_xsl
     python3
     perl

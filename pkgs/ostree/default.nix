@@ -15,7 +15,7 @@
   autoconf,
   automake,
   libtool,
-  fuse3,
+  fuse,
   util-linuxMinimal,
   libselinux,
   libsodium,
@@ -25,7 +25,7 @@
   bison,
   libxslt,
   docbook-xsl-nons ? null,
-  docbook_xml_dtd_42,
+  docbook-xml-dtd,
   python3,
   buildPackages,
   gobject-introspection,
@@ -77,7 +77,7 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
     bison
     libxslt
-    docbook_xml_dtd_42
+    docbook-xml-dtd.v4_2
     gobject-introspection
   ]
   ++ lib.optionals (docbook-xsl-nons != null) [ docbook-xsl-nons ];
@@ -88,7 +88,7 @@ stdenv.mkDerivation (finalAttrs: {
     e2fsprogs
     libsoup_3
     gpgme
-    fuse3
+    fuse
     libselinux
     libsodium
     libcap

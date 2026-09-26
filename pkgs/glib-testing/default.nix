@@ -8,7 +8,7 @@
   coreutils,
   gtk-doc,
   docbook-xsl-nons,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   glib,
 }:
 
@@ -43,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gtk-doc
     docbook-xsl-nons
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
   ];
 
   propagatedBuildInputs = [

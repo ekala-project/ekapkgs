@@ -9,14 +9,13 @@
   glib,
   gtk4,
   desktop-file-utils,
-  wrapGAppsHook4,
   gettext,
   itstool,
   libadwaita,
   libxml2,
   libxslt,
   docbook-xsl-nons,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   systemd,
   gsettings-desktop-schemas,
 }:
@@ -36,13 +35,13 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     gettext
     itstool
     libxml2
     libxslt
     docbook-xsl-nons
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     glib
     gtk4
     desktop-file-utils

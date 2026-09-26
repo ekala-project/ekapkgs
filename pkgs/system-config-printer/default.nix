@@ -8,7 +8,7 @@
   glib,
   xmlto,
   wrapGAppsHook3,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   docbook_xsl,
   libxml2,
   desktop-file-utils,
@@ -16,7 +16,7 @@
   cups,
   gdk-pixbuf,
   pango,
-  atk,
+  at-spi2-core,
   libnotify,
   gobject-introspection,
   libsecret ? null, # TODO(ekapkgs): re-enable when gjs/spidermonkey is available
@@ -68,7 +68,7 @@ stdenv.mkDerivation (finalAttrs: {
     libnotify
     gdk-pixbuf
     pango
-    atk
+    at-spi2-core
     # TODO(ekapkgs): Port packagekit for software management integration
     # TODO(ekapkgs): Port libsecret when gjs/spidermonkey is available
   ];
@@ -80,7 +80,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoconf-archive
     xmlto
     libxml2
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
     docbook_xsl
     desktop-file-utils
     python3Packages.wrapPython

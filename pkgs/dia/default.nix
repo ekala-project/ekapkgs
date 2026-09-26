@@ -5,7 +5,7 @@
   dblatex ? null,
   desktop-file-utils,
   docbook-xsl-nons,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   fetchFromGitLab,
   gdk-pixbuf,
   graphene,
@@ -78,7 +78,7 @@ stdenv.mkDerivation {
     appstream
     desktop-file-utils
     docbook-xsl-nons
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     libxml2
     libxslt
     meson

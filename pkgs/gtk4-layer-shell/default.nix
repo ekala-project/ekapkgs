@@ -7,7 +7,7 @@
   pkg-config,
   gtk-doc,
   docbook-xsl-nons,
-  docbook_xml_dtd_43 ? null,
+  docbook-xml-dtd ? null,
   wayland-protocols,
   wayland-scanner,
   wayland,
@@ -48,7 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
     gobject-introspection
     gtk-doc
     docbook-xsl-nons
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     vala
     wayland-scanner
   ];

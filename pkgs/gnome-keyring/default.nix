@@ -18,7 +18,7 @@
   p11-kit,
   wrapGAppsNoGuiHook,
   docbook-xsl-nons,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   useWrappedDaemon ? true,
 }:
 
@@ -45,7 +45,7 @@ stdenv.mkDerivation rec {
     glib
     libxslt
     docbook-xsl-nons
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     wrapGAppsNoGuiHook
   ];
 

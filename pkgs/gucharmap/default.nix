@@ -17,7 +17,7 @@
   libxml2,
   yelp-tools,
   docbook_xsl,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   gsettings-desktop-schemas,
   unzip,
   unicode-character-database,
@@ -74,7 +74,7 @@ stdenv.mkDerivation (finalAttrs: {
     itstool
     gtk-doc
     docbook_xsl
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     yelp-tools
     libxml2
     desktop-file-utils

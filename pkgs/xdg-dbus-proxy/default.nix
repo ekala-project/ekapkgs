@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   docbook-xsl-nons,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   glib,
   libxslt,
   meson,
@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     docbook-xsl-nons
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     libxslt
     meson
     meson.configurePhaseHook

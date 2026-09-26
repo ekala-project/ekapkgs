@@ -15,7 +15,7 @@
   pango,
   pkg-config,
   docbook_xsl,
-  docbook_xml_dtd_42,
+  docbook-xml-dtd,
   python3,
   ncurses,
   libxslt,
@@ -71,7 +71,7 @@ stdenv.mkDerivation (finalAttrs: {
     docbook_xsl
     pkg-config
     libxslt # xsltproc
-    docbook_xml_dtd_42
+    docbook-xml-dtd.v4_2
     python3
     ncurses
   ];

@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  docbook_xml_dtd_42,
+  docbook-xml-dtd,
   docbook-xsl,
   gdk-pixbuf,
   gettext,
@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    docbook_xml_dtd_42
+    docbook-xml-dtd.v4_2
     docbook-xsl
     gettext
     gperf

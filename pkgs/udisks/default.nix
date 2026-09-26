@@ -4,7 +4,7 @@
   fetchFromGitHub,
   replaceVars,
   pkg-config,
-  gnused,
+  sed,
   autoreconfHook,
   gtk-doc,
   acl,
@@ -24,8 +24,7 @@
   libblockdev,
   parted,
   gobject-introspection,
-  docbook_xml_dtd_412,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   xfsprogs,
   f2fs-tools,
   dosfstools,
@@ -59,7 +58,7 @@ stdenv.mkDerivation (finalAttrs: {
     (replaceVars ./fix-paths.patch {
       false = "${coreutils}/bin/false";
       mdadm = "${mdadm}/bin/mdadm";
-      sed = "${gnused}/bin/sed";
+      sed = "${sed}/bin/sed";
       sh = "${bash}/bin/sh";
       sleep = "${coreutils}/bin/sleep";
       true = "${coreutils}/bin/true";
@@ -90,8 +89,8 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gtk-doc
     libxslt
-    docbook_xml_dtd_412
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_1_2
+    docbook-xml-dtd.v4_3
     docbook_xsl
   ];
 

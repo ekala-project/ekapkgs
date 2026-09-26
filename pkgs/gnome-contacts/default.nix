@@ -8,14 +8,13 @@
   pkg-config,
   libxslt,
   docbook-xsl-nons,
-  docbook_xml_dtd_42,
+  docbook-xml-dtd,
   desktop-file-utils,
   gtk4,
   glib,
   libportal,
   gnome-online-accounts,
   qrencode,
-  wrapGAppsHook4,
   folks,
   libxml2,
   vala,
@@ -26,7 +25,7 @@
   libglycin-gtk4 ? null, # TODO: not in ekapkgs, needs porting
   glycin-loaders ? null, # TODO: not in ekapkgs, needs porting
   gsettings-desktop-schemas,
-  gst_all_1,
+  gstreamer,
   pipewire,
 }:
 
@@ -48,15 +47,15 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     libxslt
     docbook-xsl-nons
-    docbook_xml_dtd_42
+    docbook-xml-dtd.v4_2
     desktop-file-utils
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
-    # TODO: gst_all_1.gst-plugins-rs not in ekapkgs (GTK4 sink & paintable)
+    gstreamer
+    gstreamer.plugins-base
+    # TODO: gstreamer.plugins-rs not in ekapkgs (GTK4 sink & paintable)
     pipewire # pipewiresrc
     gtk4
     glib

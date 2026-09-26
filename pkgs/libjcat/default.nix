@@ -2,7 +2,7 @@
   stdenv,
   lib,
   fetchFromGitHub,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   docbook-xsl-nons,
   glib,
   json-glib,
@@ -46,7 +46,7 @@ stdenv.mkDerivation rec {
     meson.configurePhaseHook
     ninja
     pkg-config
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     docbook-xsl-nons
     gobject-introspection
     vala

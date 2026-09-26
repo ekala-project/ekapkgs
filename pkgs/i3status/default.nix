@@ -12,7 +12,7 @@
   pkg-config,
   asciidoc,
   xmlto,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
 }:
 
@@ -33,7 +33,7 @@ stdenv.mkDerivation rec {
     pkg-config
     asciidoc
     xmlto
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook_xsl
   ];
 

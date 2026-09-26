@@ -17,7 +17,7 @@
   libice,
   xmlto,
   docbook_xsl,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   python3,
   libxslt,
   gettext,
@@ -62,7 +62,7 @@ stdenv.mkDerivation (finalAttrs: {
     xmlto
     libxslt
     docbook_xsl
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
     python3
     dbus # for DTD
   ];

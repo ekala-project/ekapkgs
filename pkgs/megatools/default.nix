@@ -3,7 +3,7 @@
   stdenv,
   fetchgit,
   asciidoc,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook2x,
   libxml2,
   meson,
@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     asciidoc
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook2x
     libxml2
     meson

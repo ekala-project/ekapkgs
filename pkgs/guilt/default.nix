@@ -1,11 +1,11 @@
 {
   asciidoc,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
   fetchFromGitHub,
   gawk,
   git,
-  gnused,
+  sed,
   lib,
   makeWrapper,
   openssl,
@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   nativeBuildInputs = [
     asciidoc
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook_xsl
     makeWrapper
     perl
@@ -42,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     gawk
     git
-    gnused
+    sed
   ]
   ++ lib.optionals stdenv.hostPlatform.isDarwin [ openssl ];
   makeFlags = [

@@ -7,7 +7,7 @@
   xmlto,
   docbook2x,
   docbook_xsl,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
 }:
 
 stdenv.mkDerivation {
@@ -26,7 +26,7 @@ stdenv.mkDerivation {
     xmlto
     docbook2x
     docbook_xsl
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
   ];
 
   buildInputs = [

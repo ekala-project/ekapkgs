@@ -4,7 +4,7 @@
   fetchFromGitHub,
   autoconf,
   automake,
-  docbook_xml_dtd_42,
+  docbook-xml-dtd,
   docbook-xsl-nons,
   glib,
   gobject-introspection,
@@ -75,7 +75,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     autoconf
     automake
-    docbook_xml_dtd_42
+    docbook-xml-dtd.v4_2
     docbook-xsl-nons
     glib
     gobject-introspection

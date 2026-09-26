@@ -14,7 +14,7 @@
   libxt,
   docbook_xsl,
   libxslt,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -48,7 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
     libassuan
     libxt
     libiconv
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
   ]
   ++ lib.optional (!stdenv.hostPlatform.isDarwin) pcsclite;
 

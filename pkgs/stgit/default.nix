@@ -7,7 +7,7 @@
   makeWrapper,
   asciidoc,
   docbook_xsl,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   xmlto,
   curl,
   git,
@@ -34,7 +34,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     asciidoc
     xmlto
     docbook_xsl
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     perl
   ];
 
@@ -51,7 +51,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
     substituteInPlace Documentation/texi.xsl \
       --replace http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd \
-                ${docbook_xml_dtd_45}/xml/dtd/docbook/docbookx.dtd
+                ${docbook-xml-dtd.v4_5}/xml/dtd/docbook/docbookx.dtd
   '';
 
   makeFlags = [

@@ -4,14 +4,14 @@
   buildPackages,
   fetchurl,
   fetchpatch,
-  wafHook,
+  waf,
   pkg-config,
   bison,
   flex,
   perl,
   libxslt,
   docbook_xsl,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   readline,
   popt,
   dbus,
@@ -101,7 +101,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     python3Packages.python
-    wafHook
+    waf.hook
     pkg-config
     bison
     flex
@@ -111,7 +111,7 @@ stdenv.mkDerivation (finalAttrs: {
     ]))
     libxslt
     docbook_xsl
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     cmocka
     rpcsvc-proto
   ]

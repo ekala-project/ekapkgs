@@ -31,7 +31,7 @@
   net-tools,
   doxygen,
   xmlto,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
   findXMLCatalogs,
   libxkbcommon,
@@ -89,7 +89,7 @@ stdenv.mkDerivation rec {
     makeWrapper
     pkg-config
     xmlto
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook_xsl
     findXMLCatalogs
     asciidoctor

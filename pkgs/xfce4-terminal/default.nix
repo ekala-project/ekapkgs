@@ -2,7 +2,7 @@
   stdenv,
   lib,
   fetchFromGitLab,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
   glib,
   libxslt,
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   nativeBuildInputs = [
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook_xsl
     glib
     libxslt

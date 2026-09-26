@@ -11,9 +11,9 @@
   popt,
   libxslt,
   docbook-xsl-nons,
-  docbook_xml_dtd_42,
+  docbook-xml-dtd,
   cmocka,
-  wafHook,
+  waf,
   libxcrypt,
 }:
 
@@ -34,10 +34,10 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
     python3
-    wafHook
+    waf.hook
     libxslt
     docbook-xsl-nons
-    docbook_xml_dtd_42
+    docbook-xml-dtd.v4_2
     tdb
     tevent
   ];

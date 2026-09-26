@@ -19,9 +19,9 @@
   ninja,
   libxslt,
   docbook-xsl-nons,
-  docbook_xml_dtd_42,
+  docbook-xml-dtd,
   libxml2,
-  gst_all_1,
+  gstreamer,
   gtk3,
   enableSystemd ? true,
   systemd,
@@ -48,8 +48,8 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     polkit
     python3
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
+    gstreamer
+    gstreamer.plugins-base
     gtk3
     jansson
     sqlite
@@ -68,7 +68,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     libxslt
     docbook-xsl-nons
-    docbook_xml_dtd_42
+    docbook-xml-dtd.v4_2
     libxml2
     ninja
   ];

@@ -8,7 +8,7 @@
   pkg-config,
   gtk-doc,
   docbook-xsl-nons,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   glib,
   json-glib,
   libsoup,
@@ -54,7 +54,7 @@ stdenv.mkDerivation (finalAttrs: {
     gobject-introspection
     gtk-doc
     docbook-xsl-nons
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
   ];
 
   buildInputs = [

@@ -7,10 +7,10 @@
   pkg-config,
 
   rsync,
-  lua5_2_compat,
+  lua,
   asciidoc,
   libxml2,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
   libxslt,
   darwin,
@@ -53,10 +53,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     rsync
-    lua5_2_compat
+    lua.v5_2
     asciidoc
     libxml2
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook_xsl
     libxslt
   ];

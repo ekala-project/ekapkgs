@@ -6,7 +6,7 @@
   pkg-config,
   docbook_xsl,
   libxslt,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   acl,
   attr,
   boost,
@@ -42,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     docbook_xsl
     libxslt
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
   ];
   buildInputs = [
     acl

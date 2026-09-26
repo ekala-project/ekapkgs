@@ -8,7 +8,7 @@
   libxml2,
   gtk-doc,
   docbook_xsl,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   glib,
   gtk3,
 }:
@@ -35,7 +35,7 @@ stdenv.mkDerivation rec {
     libxml2
     gtk-doc
     docbook_xsl
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     glib
   ];
 

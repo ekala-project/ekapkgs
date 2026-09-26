@@ -2,7 +2,7 @@
   lib,
   SDL2,
   curl,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
   fetchurl,
   gtk3,
@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook_xsl
     libtool
     pkg-config

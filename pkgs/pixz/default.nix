@@ -9,7 +9,7 @@
   asciidoc,
   libxslt,
   libxml2,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
   libarchive,
   xz,
@@ -29,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     asciidoc
     libxslt
     libxml2
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook_xsl
     libarchive
     xz

@@ -17,7 +17,7 @@
   clutter-gtk ? null, # TODO: not yet available
   gtk-doc,
   docbook_xsl,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
 }:
 
 stdenv.mkDerivation rec {

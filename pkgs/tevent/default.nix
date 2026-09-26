@@ -9,9 +9,9 @@
   talloc,
   libxslt,
   docbook-xsl-nons,
-  docbook_xml_dtd_42,
+  docbook-xml-dtd,
   which,
-  wafHook,
+  waf,
   libxcrypt,
 }:
 
@@ -30,8 +30,8 @@ stdenv.mkDerivation (finalAttrs: {
     python3
     libxslt
     docbook-xsl-nons
-    docbook_xml_dtd_42
-    wafHook
+    docbook-xml-dtd.v4_2
+    waf.hook
   ];
 
   buildInputs = [

@@ -7,7 +7,7 @@
   systemd,
   libxslt,
   docbook_xsl,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     libxslt
     docbook_xsl
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
   ];
 
   buildInputs = [

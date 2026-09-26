@@ -9,9 +9,9 @@
   vala,
   gtk-doc,
   docbook-xsl-nons,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   libxml2,
-  gst_all_1,
+  gstreamer,
 }:
 
 stdenv.mkDerivation rec {
@@ -38,12 +38,12 @@ stdenv.mkDerivation rec {
     vala
     gtk-doc
     docbook-xsl-nons
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
   ];
 
   buildInputs = [
     libxml2
-    gst_all_1.gst-plugins-base
+    gstreamer.plugins-base
   ];
 
   mesonFlags = [
