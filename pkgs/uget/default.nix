@@ -8,7 +8,7 @@
   curl,
   libnotify,
   libappindicator-gtk3 ? null,
-  gst_all_1,
+  gstreamer,
   gtk3,
   dconf,
   wrapGAppsHook3,
@@ -49,10 +49,10 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (libappindicator-gtk3 != null) [
     libappindicator-gtk3
   ]
-  ++ (with gst_all_1; [
+  ++ (with gstreamer; [
     gstreamer
-    gst-plugins-base
-    gst-plugins-good
+    plugins-base
+    plugins-good
   ])
   ++ (lib.optional aria2Support aria2);
 

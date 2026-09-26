@@ -35,7 +35,7 @@
   rdpSupport ? false,
   freerdp ? null,
   remotingSupport ? false,
-  gst_all_1,
+  gstreamer,
   vncSupport ? true,
   aml,
   neatvnc,
@@ -93,8 +93,8 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional pipewireSupport pipewire
   ++ lib.optional (rdpSupport && freerdp != null) freerdp
   ++ lib.optionals remotingSupport [
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
+    gstreamer
+    gstreamer.plugins-base
   ]
   ++ lib.optionals vncSupport [
     aml

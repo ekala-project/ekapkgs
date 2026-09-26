@@ -10,7 +10,7 @@
   libdrm,
   libevent,
   libyaml,
-  gst_all_1,
+  gstreamer,
   gtest,
   graphviz,
   doxygen,
@@ -67,8 +67,8 @@ stdenv.mkDerivation rec {
 
   buildInputs = [
     openssl
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
+    gstreamer
+    gstreamer.plugins-base
     libevent
     libdrm
     udev

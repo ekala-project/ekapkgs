@@ -17,7 +17,7 @@
   libopenraw,
   librsvg,
   poppler,
-  gst_all_1,
+  gstreamer,
   webp-pixbuf-loader,
   libxfce4util,
 }:
@@ -46,7 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
     freetype
     gdk-pixbuf
     glib
-    gst_all_1.gst-plugins-base
+    gstreamer.plugins-base
     libgsf
     libopenraw
     poppler

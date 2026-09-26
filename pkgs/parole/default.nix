@@ -8,7 +8,7 @@
   wrapGAppsHook3,
   dbus,
   dbus-glib,
-  gst_all_1,
+  gstreamer,
   glib,
   gtk3,
   libnotify,
@@ -46,10 +46,10 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     dbus
     dbus-glib
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
-    gst_all_1.gst-plugins-ugly
+    gstreamer.plugins-bad
+    gstreamer.plugins-base
+    gstreamer.plugins-good
+    gstreamer.plugins-ugly
     glib
     gtk3
     libnotify

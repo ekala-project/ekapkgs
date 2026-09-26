@@ -8,7 +8,7 @@
   libepoxy,
   gettext,
   gobject-introspection,
-  gst_all_1,
+  gstreamer,
   gtk-doc,
   gtk3,
   hwdata,
@@ -85,8 +85,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
+    gstreamer.plugins-base
+    gstreamer.plugins-good
     cyrus_sasl
     libepoxy
     gtk3

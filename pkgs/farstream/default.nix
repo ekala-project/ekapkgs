@@ -6,7 +6,7 @@
   buildPackages,
   libnice,
   pkg-config,
-  gst_all_1,
+  gstreamer,
   gupnp-igd,
   gobject-introspection,
   python3,
@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   patches = [
-    # Fix build with newer gnumake.
+    # Fix build with newer make.
     (fetchpatch {
       url = "https://gitlab.freedesktop.org/farstream/farstream/-/commit/54987d44.diff";
       sha256 = "02pka68p2j1wg7768rq7afa5wl9xv82wp86q7izrmwwnxdmz4zyg";
@@ -42,16 +42,16 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-    buildPackages.autoreconfHook269
+    buildPackages.autoconf.v2_69.autoreconfHook
     gobject-introspection
     python3
   ];
 
-  propagatedBuildInputs = with gst_all_1; [
+  propagatedBuildInputs = with gstreamer; [
     gstreamer
-    gst-plugins-base
-    gst-plugins-good
-    gst-plugins-bad
+    plugins-base
+    plugins-good
+    plugins-bad
   ];
 
   meta = {

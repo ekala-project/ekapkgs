@@ -6,7 +6,7 @@
   fetchpatch,
   gdbm,
   glib,
-  gst_all_1,
+  gstreamer,
   gsettings-desktop-schemas,
   gtk-vnc,
   gtk3,
@@ -57,8 +57,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
+    gstreamer.plugins-base
+    gstreamer.plugins-good
     bash-completion
     glib
     gsettings-desktop-schemas

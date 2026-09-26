@@ -3,7 +3,7 @@
   stdenv,
   cairo,
   fetchurl,
-  gst_all_1,
+  gstreamer,
   libjack2,
   ladspa-header ? null,
   libGL,
@@ -63,8 +63,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     cairo
-    gst_all_1.gst-plugins-base
-    gst_all_1.gstreamer
+    gstreamer.plugins-base
+    gstreamer
     libjack2
     libGL
     libGLU

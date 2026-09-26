@@ -9,7 +9,7 @@
   libheif,
   libjpeg,
   libtiff,
-  gst_all_1,
+  gstreamer,
   libraw,
   glib,
   gtk3,
@@ -60,10 +60,10 @@ stdenv.mkDerivation (finalAttrs: {
     exiv2
     glib
     gsettings-desktop-schemas
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-ugly
+    gstreamer.plugins-base
+    gstreamer.plugins-good
+    gstreamer.plugins-bad
+    gstreamer.plugins-ugly
     gtk3
     lcms2
     libheif

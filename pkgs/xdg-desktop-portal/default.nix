@@ -3,7 +3,7 @@
   fetchFromGitHub,
   fetchFromGitLab,
   flatpak ? null,
-  fuse3,
+  fuse,
   bubblewrap,
   docutils,
   systemdMinimal,
@@ -21,7 +21,7 @@
   stdenv,
   wrapGAppsNoGuiHook,
   bash,
-  gst_all_1,
+  gstreamer,
   libgudev,
   replaceVars,
   enableGeoLocation ? true,
@@ -84,13 +84,13 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    fuse3
+    fuse
     bubblewrap
     glib
     gsettings-desktop-schemas
     json-glib
     pipewire
-    gst_all_1.gst-plugins-base
+    gstreamer.plugins-base
     libgudev
 
     # For icon validator

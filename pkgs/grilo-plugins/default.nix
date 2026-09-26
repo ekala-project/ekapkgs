@@ -30,7 +30,7 @@
   gom,
   avahi,
   dleyna,
-  gst_all_1,
+  gstreamer,
 }:
 
 stdenv.mkDerivation rec {
@@ -48,11 +48,11 @@ stdenv.mkDerivation rec {
         lib.concatMapStrings
           (plugin: ''gst_registry_scan_path(gst_registry_get(), "${lib.getLib plugin}/lib/gstreamer-1.0");'')
           (
-            with gst_all_1;
+            with gstreamer;
             [
               gstreamer
-              gst-plugins-base
-              gst-plugins-bad
+              plugins-base
+              plugins-bad
             ]
           );
     })
@@ -94,7 +94,7 @@ stdenv.mkDerivation rec {
     gom
     avahi
     dleyna
-    gst_all_1.gstreamer
+    gstreamer
   ];
 
   mesonFlags = [
