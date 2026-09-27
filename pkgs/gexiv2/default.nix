@@ -5,6 +5,8 @@
   meson,
   ninja,
   pkg-config,
+  gobject-introspection,
+  vala,
   exiv2,
   glib,
 }:
@@ -28,6 +30,8 @@ stdenv.mkDerivation rec {
     meson.configurePhaseHook
     ninja
     pkg-config
+    gobject-introspection
+    vala
   ];
 
   buildInputs = [
@@ -40,8 +44,8 @@ stdenv.mkDerivation rec {
 
   mesonFlags = [
     "-Dgtk_doc=false"
-    "-Dintrospection=false"
-    "-Dvapi=false"
+    "-Dintrospection=true"
+    "-Dvapi=true"
     "-Dtests=false"
     "-Dpython3=false"
   ];

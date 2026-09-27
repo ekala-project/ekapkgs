@@ -29,7 +29,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "gegl";
-  version = "0.4.62";
+  version = "0.4.66";
 
   outputs = [
     "out"
@@ -40,7 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchurl {
     url = "https://download.gimp.org/pub/gegl/${lib.versions.majorMinor finalAttrs.version}/gegl-${finalAttrs.version}.tar.xz";
-    hash = "sha256-WIdXY3Hr8dnpB5fRDkuafxZYIo1IJ1g+eeHbPZRQXGw=";
+    hash = "sha256-krBYVeIZCGiUnXDOpumlCxY6akQSQudApiY5dTefmTs=";
   };
 
   nativeBuildInputs = [
@@ -87,6 +87,8 @@ stdenv.mkDerivation (finalAttrs: {
     "-Dlua=disabled"
     "-Dmaxflow=disabled"
     "-Dumfpack=disabled"
+    # vapigen pkg-config detection fails under strictDeps
+    "-Dvapigen=disabled"
   ];
 
   postPatch = ''

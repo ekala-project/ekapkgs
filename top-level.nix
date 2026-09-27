@@ -72,6 +72,11 @@ final: prev: {
     withGtk3 = false;
     withGtk4 = true;
   };
+  # Enable GObject introspection in gtk3 (needed by GIMP, etc.)
+  gtk3 = prev.gtk3.overrideAttrs (old: {
+    nativeBuildInputs = old.nativeBuildInputs ++ [ final.gobject-introspection ];
+    mesonFlags = (old.mesonFlags or [ ]) ++ [ "-Dintrospection=true" ];
+  });
   gtk4 =
     (prev.gtk4.override {
       trackerSupport = false;
@@ -85,6 +90,27 @@ final: prev: {
       });
   # sdbus-cpp v2 variant
   sdbus-cpp_2 = final.sdbus-cpp.override { version = "2.2.1"; };
+  # Fix stale fetchpatch hashes in corepkgs sane-backends;
+  # patch 90815a9f is already in 1.4.0 source, only c9bf9574 (C2X fix) still needed
+  sane-backends = prev.sane-backends.overrideAttrs (old: {
+    patches = [
+      (final.fetchpatch {
+        url = "https://gitlab.com/sane-project/backends/-/commit/8acc267d5f4049d8438456821137ae56e91baea9.patch";
+        hash = "sha256-IyupDeH1MPvEBnGaUzBbCu106Gp7zXxlPGFAaiiINQI=";
+      })
+      (final.fetchpatch {
+        url = "https://gitlab.com/sane-project/backends/-/commit/fbf80b0fc1d262ed40d4b49dd53c14707083ef60.patch";
+        hash = "sha256-9KKTr7p1vCgvGr6hFY83K5gbL7Ilm4Uzc86JIxv+ahI=";
+        revert = true;
+      })
+      # C2X fix: GCC 14 with -std=gnu23 defines __STDC_VERSION__ < 202311L
+      (final.fetchurl {
+        url = "https://gitlab.com/sane-project/backends/-/commit/c9bf95744ae3c32c31202dea3327064c0d121444.patch";
+        hash = "sha256-1Lvqdd8Y4VcPABJgR6UJu8W4RHCmr5VqL3wNtVBLrMk=";
+      })
+    ];
+  });
+
   # GNOME Shell extensions convenience set
   gnomeExtensions = {
     appindicator = final.gnome-shell-extension-appindicator;
