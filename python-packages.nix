@@ -15,6 +15,7 @@ final: prev: {
   });
 
   pycairo = prev.pycairo.overridePythonAttrs (old: {
+    pyproject = false;
     nativeBuildInputs = old.nativeBuildInputs ++ [ final.pkgs.meson.configurePhaseHook ];
   });
 
@@ -88,6 +89,76 @@ final: prev: {
       homepage = "https://netfilter.org/projects/nftables/";
       license = final.pkgs.lib.licenses.gpl2Only;
       platforms = final.pkgs.lib.platforms.linux;
+    };
+  };
+
+  # python-xlib's setup.py imports pkg_resources which was removed in setuptools 84
+  python-xlib = prev.python-xlib.overridePythonAttrs (old: {
+    postPatch =
+      (old.postPatch or "")
+      + ''
+        substituteInPlace setup.py \
+          --replace-fail "from pkg_resources import parse_requirements" "" \
+          --replace-fail "setuptools_require = next(parse_requirements('setuptools>=30.3.0'))" "" \
+          --replace-fail "assert setuptools_version in setuptools_require, '{} is required'.format(setuptools_require)" ""
+      '';
+  });
+
+  # The python pkgconfig package has a broken setup-hook in corepkgs
+  # (unsubstituted @wrapperName@/@suffixSalt@ placeholders).
+  # uharfbuzz bundles harfbuzz as a submodule and doesn't need system pkg-config,
+  # so we remove pkgconfig from build-system and skip the runtime deps check
+  # (which would fail looking for the pkgconfig dist-info).
+  uharfbuzz = prev.uharfbuzz.overridePythonAttrs (old: {
+    build-system = builtins.filter (
+      dep: (dep.pname or "") != "pkgconfig"
+    ) (old.build-system or [ ]);
+    # The corepkgs python-pkgconfig has a broken setup-hook
+    # (unsubstituted @wrapperName@/@suffixSalt@ placeholders).
+    # uharfbuzz uses pkgconfig at build time to find system harfbuzz, but
+    # since it bundles harfbuzz as a submodule, we can remove the dependency
+    # and patch both pyproject.toml and setup.py to skip pkgconfig usage.
+    postPatch =
+      (old.postPatch or "")
+      + ''
+        substituteInPlace pyproject.toml \
+          --replace-fail '"pkgconfig"' ""
+        substituteInPlace setup.py \
+          --replace-fail "import pkgconfig" "" \
+          --replace-fail 'harfbuzz_component_configuration = pkgconfig.parse(harfbuzz_component)' 'harfbuzz_component_configuration = {"include_dirs": [], "define_macros": [], "libraries": [], "library_dirs": []}' \
+      '';
+  });
+
+  img2pdf = final.buildPythonPackage rec {
+    pname = "img2pdf";
+    version = "0.6.3";
+    pyproject = true;
+
+    src = final.pkgs.fetchFromGitHub {
+      owner = "josch";
+      repo = "img2pdf";
+      tag = version;
+      hash = "sha256-uHcGCx5DdUxFnATG3T565R+NatLukPPpnRj0TZHToC0=";
+    };
+
+    # Skip the ICC profile patch - the upstream fallback paths are fine.
+
+    build-system = [ final.flit-core ];
+
+    dependencies = [
+      final.pikepdf
+      final.pillow
+    ];
+
+    doCheck = false;
+
+    pythonImportsCheck = [ "img2pdf" ];
+
+    meta = {
+      description = "Convert images to PDF via direct JPEG inclusion";
+      homepage = "https://gitlab.mister-muffin.de/josch/img2pdf";
+      license = final.pkgs.lib.licenses.lgpl3Plus;
+      mainProgram = "img2pdf";
     };
   };
 
