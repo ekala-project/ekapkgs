@@ -66,6 +66,23 @@ final: prev: {
   # stub for packages that reference nixosTests
   nixosTests = { };
 
+  # Break qt6 <-> doxygen cycle: doxygen optionally depends on qt6,
+  # but qt6.qtbase transitively depends on doxygen through libxml2.
+  doxygen = prev.doxygen.override { qt6 = null; };
+
+  # Fix lttng-ust: GitHub changed archive hash for v2.15.1,
+  # and disable man pages (requires asciidoc/xmlto not available)
+  lttng-ust = prev.lttng-ust.overrideAttrs (old: {
+    src = old.src.overrideAttrs {
+      outputHash = "sha256-3hjg4zIIO20zS6ojDjZttPFeJmSDywI493ZCWqNcWcA=";
+    };
+    configureFlags = (old.configureFlags or [ ]) ++ [ "--disable-man-pages" ];
+    outputs = final.lib.filter (o: o != "devdoc") (old.outputs or [ "out" ]);
+  });
+
+  # Qt convenience aliases
+  qt6Packages = final.qt6;
+
   # libxcrypt-legacy (all hash algorithms enabled)
   libxcrypt-legacy = final.libxcrypt.override { enableHashes = "all"; };
 
