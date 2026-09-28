@@ -9,10 +9,11 @@
   xz,
   zstd,
   openssl,
+  enableCompat ? false,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-  pname = "minizip-ng";
+  pname = "minizip-ng" + lib.optionalString enableCompat "-compat";
   version = "4.2.2";
 
   src = fetchFromGitHub {
@@ -43,7 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     "-DMZ_LIBCOMP=OFF"
     "-DMZ_BUILD_TESTS=OFF"
     "-DMZ_BUILD_UNIT_TESTS=OFF"
-    "-DMZ_COMPAT=OFF"
+    (lib.cmakeBool "MZ_COMPAT" enableCompat)
   ];
 
   strictDeps = true;
