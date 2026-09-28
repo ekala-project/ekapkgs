@@ -162,6 +162,8 @@ final: prev: {
     };
   };
 
+  pyqt5-multimedia = final.pyqt5.override { withMultimedia = true; };
+
   pydbus = final.buildPythonPackage rec {
     pname = "pydbus";
     version = "0.6.0";
