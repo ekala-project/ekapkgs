@@ -162,6 +162,17 @@ final: prev: {
     };
   };
 
+  # autobahn's wheel metadata lists serialization deps as required,
+  # but upstream nix expression only has them as optional-dependencies.
+  autobahn = prev.autobahn.overridePythonAttrs (old: {
+    dependencies = old.dependencies ++ [
+      final.cbor2
+      final.msgpack
+      final.ujson
+      final.py-ubjson
+    ];
+  });
+
   pyqt5-multimedia = final.pyqt5.override { withMultimedia = true; };
 
   pydbus = final.buildPythonPackage rec {
