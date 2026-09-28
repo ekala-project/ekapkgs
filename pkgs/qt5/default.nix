@@ -203,6 +203,8 @@ lib.makeScope newScope (
       inherit (srcs.qtbase) src version;
       patches = patches.qtbase;
       withGtk3 = true;
+      # Break qt5 cycle: qtbase -> qttranslations -> qttools -> qmake -> qtbase
+      qttranslations = null;
     };
 
     qt3d = callPackage ./modules/qt3d.nix { };
@@ -237,7 +239,12 @@ lib.makeScope newScope (
     qtsystems = callPackage ./modules/qtsystems.nix { };
     qtscxml = callPackage ./modules/qtscxml.nix { };
     qttools = callPackage ./modules/qttools.nix { };
-    qttranslations = callPackage ./modules/qttranslations.nix { };
+    qttranslations = callPackage ./modules/qttranslations.nix {
+      qttools = self.qttools.override {
+        qtbase = self.qtbase.override { qttranslations = null; };
+        qtdeclarative = null;
+      };
+    };
     qtvirtualkeyboard = callPackage ./modules/qtvirtualkeyboard.nix { };
     qtwayland = callPackage ./modules/qtwayland.nix { };
     qtwebchannel = callPackage ./modules/qtwebchannel.nix { };

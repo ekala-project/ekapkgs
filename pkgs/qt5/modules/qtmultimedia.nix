@@ -17,8 +17,8 @@ qtModule {
   ];
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [
-    gstreamer.gstreamer
-    gstreamer.gst-plugins-base
+    gstreamer
+    gstreamer.plugins-base
     libpulseaudio
     alsa-lib
     wayland
