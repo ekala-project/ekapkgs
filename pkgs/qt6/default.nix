@@ -62,13 +62,11 @@ lib.makeScope newScope (
     qtlocation = callQtModule ./modules/qtlocation.nix { };
     qtlottie = callQtModule ./modules/qtlottie.nix { };
     qtmultimedia = callQtModule ./modules/qtmultimedia {
-      inherit (gstreamer)
-        gstreamer
-        gst-plugins-bad
-        gst-plugins-base
-        gst-plugins-good
-        gst-libav
-        ;
+      gstreamer = gstreamer;
+      gst-plugins-bad = gstreamer.plugins-bad;
+      gst-plugins-base = gstreamer.plugins-base;
+      gst-plugins-good = gstreamer.plugins-good;
+      gst-libav = gstreamer.libav;
     };
     qtmqtt = callQtModule ./modules/qtmqtt.nix { };
     qtnetworkauth = callQtModule ./modules/qtnetworkauth.nix { };
