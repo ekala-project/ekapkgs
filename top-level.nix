@@ -66,6 +66,14 @@ final: prev: {
   # stub for packages that reference nixosTests
   nixosTests = { };
 
+  # Fix duktape: ensure libm is linked into the shared library.
+  # LDFLAGS=-lm is placed before the source file by Makefile.sharedlibrary,
+  # so the linker drops it. Append -lm via NIX_LDFLAGS to fix IFUNC resolution
+  # failures with glibc 2.42 (e.g. qmlcachegen crash during qtdeclarative build).
+  duktape = prev.duktape.overrideAttrs (old: {
+    NIX_LDFLAGS = (old.NIX_LDFLAGS or "") + " -lm";
+  });
+
   # Break qt6 <-> doxygen cycle: doxygen optionally depends on qt6,
   # but qt6.qtbase transitively depends on doxygen through libxml2.
   doxygen = prev.doxygen.override { qt6 = null; };
