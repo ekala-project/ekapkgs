@@ -12,7 +12,7 @@
   autogen,
   libtool,
   libpq,
-  libmysqlclient,
+  mariadb-connector-c,
   sqlite,
   pkg-config,
   libpcap,
@@ -60,7 +60,7 @@ stdenv.mkDerivation (finalAttrs: {
     libnfnetlink
     libpcap
     libpq
-    libmysqlclient
+    mariadb-connector-c
     sqlite
   ];
 

@@ -19,7 +19,7 @@
   withMemcached ? false,
   libmemcached ? null,
   withMysql ? false,
-  libmysqlclient ? null,
+  mariadb-connector-c ? null,
   withPostgresql ? false,
   libpq ? null,
   withPcap ? true,
@@ -60,7 +60,7 @@ stdenv.mkDerivation rec {
   ++ lib.optional (withJson && json_c != null) json_c
   ++ lib.optional withLdap openldap
   ++ lib.optional (withMemcached && libmemcached != null) libmemcached
-  ++ lib.optional (withMysql && libmysqlclient != null) libmysqlclient
+  ++ lib.optional (withMysql && mariadb-connector-c != null) mariadb-connector-c
   ++ lib.optional (withPostgresql && libpq != null) libpq
   ++ lib.optional withPcap libpcap
   ++ lib.optional (withRedis && hiredis != null) hiredis

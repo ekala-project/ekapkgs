@@ -7,7 +7,7 @@
   openssl,
   libiconv ? null,
   dbBackend ? "sqlite_system",
-  libmysqlclient ? null,
+  mariadb-connector-c ? null,
   libpq ? null,
   sqlite,
 }:
@@ -31,7 +31,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildInputs = [
     openssl
   ]
-  ++ lib.optional (dbBackend == "mysql" && libmysqlclient != null) libmysqlclient
+  ++ lib.optional (dbBackend == "mysql" && mariadb-connector-c != null) mariadb-connector-c
   ++ lib.optional (dbBackend == "postgresql" && libpq != null) libpq
   ++ lib.optional (dbBackend == "sqlite_system") sqlite;
 

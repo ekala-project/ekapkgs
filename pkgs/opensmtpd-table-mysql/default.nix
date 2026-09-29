@@ -4,7 +4,7 @@
   fetchFromGitHub,
   autoconf,
   automake,
-  libmysqlclient,
+  mariadb-connector-c,
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "opensmtpd-table-mysql";
@@ -20,13 +20,13 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   buildInputs = [
-    libmysqlclient
+    mariadb-connector-c
   ];
 
   nativeBuildInputs = [
     autoconf
     automake
-    libmysqlclient
+    mariadb-connector-c
   ];
 
   configureFlags = [

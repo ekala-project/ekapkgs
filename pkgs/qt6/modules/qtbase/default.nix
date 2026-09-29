@@ -71,7 +71,7 @@
   pkgsBuildBuild,
   # optional dependencies
   cups,
-  libmysqlclient,
+  mariadb-connector-c,
   libpq,
   withGtk3 ? false,
   gtk3,
@@ -173,7 +173,7 @@ stdenv.mkDerivation {
     ]
     ++ lib.optional withGtk3 gtk3
     ++ lib.optional withLibinput libinput
-    ++ lib.optional (libmysqlclient != null) libmysqlclient
+    ++ lib.optional (mariadb-connector-c != null) mariadb-connector-c
     ++ lib.optional (libpq != null && lib.meta.availableOn stdenv.hostPlatform libpq) libpq;
 
   nativeBuildInputs = [
@@ -294,7 +294,7 @@ stdenv.mkDerivation {
       --replace-fail "@qtbaseOut@" $out
 
     # FIXME: not sure why this isn't added automatically?
-    patchelf --add-rpath "${libmysqlclient}/lib/mariadb" $out/${qtPluginPrefix}/sqldrivers/libqsqlmysql.so
+    patchelf --add-rpath "${mariadb-connector-c}/lib/mariadb" $out/${qtPluginPrefix}/sqldrivers/libqsqlmysql.so
     patchelf --add-rpath "${vulkan-loader}/lib" --add-needed "libvulkan.so" $out/lib/libQt6Gui.so
   '';
 

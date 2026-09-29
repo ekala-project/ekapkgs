@@ -64,7 +64,7 @@
   libGLSupported ? true,
   libGL,
   mysqlSupport ? true,
-  libmysqlclient,
+  mariadb-connector-c,
   buildExamples ? false,
   buildTests ? false,
   debug ? false,
@@ -155,7 +155,7 @@ stdenv.mkDerivation (finalAttrs: {
     cups
   ]
   ++ lib.optionals mysqlSupport [
-    libmysqlclient
+    mariadb-connector-c
   ]
   ++ lib.optionals (libpq != null) [
     libpq
@@ -171,7 +171,7 @@ stdenv.mkDerivation (finalAttrs: {
     which
   ]
   ++ lib.optionals mysqlSupport [
-    libmysqlclient
+    mariadb-connector-c
   ];
 
   propagatedNativeBuildInputs = [ lndir ];

@@ -14,7 +14,7 @@
   libmodbus ? null,
   libmicrohttpd ? null,
   libmnl ? null,
-  libmysqlclient ? null,
+  mariadb-connector-c ? null,
   libnotify ? null,
   gdk-pixbuf ? null,
   liboping ? null,
@@ -69,7 +69,7 @@ let
     memcachec.buildInputs = (opt libmemcached) ++ (opt cyrus_sasl);
     modbus.buildInputs = lib.optionals stdenv.hostPlatform.isLinux (opt libmodbus);
     mqtt.buildInputs = opt mosquitto;
-    mysql.buildInputs = opt libmysqlclient;
+    mysql.buildInputs = opt mariadb-connector-c;
     netlink.buildInputs = (opt libpcap) ++ lib.optionals stdenv.hostPlatform.isLinux (opt libmnl);
     network.buildInputs = opt libgcrypt;
     nginx.buildInputs = opt curl;
