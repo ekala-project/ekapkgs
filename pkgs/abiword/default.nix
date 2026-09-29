@@ -19,7 +19,6 @@
   boost,
   libxslt,
   goffice,
-  wrapGAppsHook3,
   gitUpdater,
 }:
 
@@ -39,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     autoconf-archive
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     perl
   ];
 

@@ -19,7 +19,6 @@
   nss ? null, # TODO: nss may need to be ported to ekapkgs
   libical,
   gperf,
-  wrapGAppsHook3,
   glib-networking,
   gsettings-desktop-schemas,
   vala,
@@ -80,7 +79,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     python3
     gperf
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
     vala
   ];

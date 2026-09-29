@@ -3,7 +3,6 @@
   stdenv,
   gettext,
   fetchurl,
-  wrapGAppsHook3,
   gnome-video-effects ? null,
   libcanberra-gtk3 ? null,
   pkg-config,
@@ -59,7 +58,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     glib
   ];
 

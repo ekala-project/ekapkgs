@@ -24,7 +24,7 @@
   pkg-config,
   libGL,
   mbedtls,
-  wrapGAppsHook3,
+  gtk3,
   scriptingSupport ? true,
   luajit,
   swig,
@@ -79,7 +79,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     qt6.wrapQtAppsHook
     extra-cmake-modules
   ]

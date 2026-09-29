@@ -9,7 +9,6 @@
   libepoxy,
   wayland,
   wayland-scanner,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -21,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     wayland-scanner
   ];
 

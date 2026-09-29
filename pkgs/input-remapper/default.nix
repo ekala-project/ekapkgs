@@ -2,7 +2,6 @@
   lib,
   python3Packages,
   fetchFromGitHub,
-  wrapGAppsHook3,
   gettext,
   gtk3,
   glib,
@@ -38,7 +37,7 @@ in
   '';
 
   nativeBuildInputs = [
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gettext
     gtk3
     glib

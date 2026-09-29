@@ -20,7 +20,6 @@
   gtk3,
   mate-desktop,
   hicolor-icon-theme,
-  wrapGAppsHook3,
   yelp-tools,
 }:
 
@@ -43,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     itstool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     yelp-tools
   ];
 

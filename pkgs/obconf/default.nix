@@ -4,7 +4,6 @@
   fetchgit,
   autoreconfHook,
   pkg-config,
-  wrapGAppsHook3,
   gtk3,
   imlib2,
   libsm,
@@ -28,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     autoreconfHook
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

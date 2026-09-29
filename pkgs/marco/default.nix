@@ -20,7 +20,6 @@
   gtk3,
   mate-desktop,
   mate-settings-daemon ? null,
-  wrapGAppsHook3,
   yelp-tools,
 }:
 
@@ -43,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     itstool
     libxml2
     mate-common
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     yelp-tools
   ];
 

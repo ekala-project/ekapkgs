@@ -15,7 +15,6 @@
   libxml2,
   gettext,
   docbook-xsl-nons,
-  wrapGAppsHook3,
   gobject-introspection,
 }:
 
@@ -41,7 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
     vala
     libxslt
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gettext
     docbook-xsl-nons
     libxml2

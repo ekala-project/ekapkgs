@@ -7,7 +7,7 @@
   pkg-config,
   glib,
   xmlto,
-  wrapGAppsHook3,
+  gtk3,
   docbook-xml-dtd,
   docbook_xsl,
   libxml2,
@@ -88,7 +88,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3Packages.installer
     python3Packages.setuptools
     python3Packages.wheel
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     autoreconfHook
     gobject-introspection
   ];

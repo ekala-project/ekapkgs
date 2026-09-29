@@ -7,7 +7,7 @@
   pkg-config,
   flex,
   itstool,
-  wrapGAppsHook3,
+  gtk3,
   desktop-file-utils,
   exiv2,
   libgsf,
@@ -44,7 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     flex
     itstool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     desktop-file-utils
   ];
 

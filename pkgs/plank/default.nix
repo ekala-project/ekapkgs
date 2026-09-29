@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   vala,
-  atk,
+  at-spi2-core,
   cairo,
   dconf,
   glib,
@@ -23,7 +23,6 @@
   file,
   gnome-menus,
   libgee,
-  wrapGAppsHook3,
   autoreconfHook,
 }:
 
@@ -52,11 +51,11 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2 # xmllint
     pkg-config
     vala
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
-    atk
+    at-spi2-core
     bamf
     cairo
     gdk-pixbuf

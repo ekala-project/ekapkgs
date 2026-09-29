@@ -9,7 +9,6 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook3,
   gtk3,
   gtk-layer-shell,
   libutempter,
@@ -43,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

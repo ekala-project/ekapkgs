@@ -6,7 +6,7 @@
   ninja,
   pkg-config,
   python3,
-  wrapGAppsHook3,
+  gtk3,
   asciidoc,
   cairo,
   fdk_aac,
@@ -49,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     python3
     shaderc # for glslc
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

@@ -10,7 +10,6 @@
   gnome-settings-daemon ? null,
   gnome-desktop,
   glib,
-  wrapGAppsHook3,
   gsettings-desktop-schemas,
   runCommand,
 }:
@@ -31,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

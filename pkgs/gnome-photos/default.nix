@@ -28,7 +28,6 @@
   python3,
   tinysparql,
   localsearch,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation rec {
@@ -67,7 +66,7 @@ stdenv.mkDerivation rec {
         (pkgs.pyatspi or null)
       ]
     ))
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

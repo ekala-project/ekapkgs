@@ -17,7 +17,6 @@
   pkg-config,
   poppler,
   python3,
-  wrapGAppsHook3,
 }:
 
 let
@@ -85,7 +84,7 @@ stdenv.mkDerivation {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

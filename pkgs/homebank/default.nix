@@ -6,7 +6,6 @@
   pkg-config,
   libofx,
   intltool,
-  wrapGAppsHook3,
   libsoup_3,
   adwaita-icon-theme,
 }:
@@ -21,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     intltool
   ];
   buildInputs = [

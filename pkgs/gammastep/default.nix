@@ -8,7 +8,6 @@
   intltool,
   libtool,
   pkg-config,
-  wrapGAppsHook3,
   gobject-introspection,
   wayland-scanner,
   gtk3,
@@ -48,7 +47,7 @@ stdenv.mkDerivation rec {
     intltool
     libtool
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
     wayland-scanner
   ];

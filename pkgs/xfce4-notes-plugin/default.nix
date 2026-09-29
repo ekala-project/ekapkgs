@@ -7,7 +7,6 @@
   ninja,
   pkg-config,
   vala,
-  wrapGAppsHook3,
   glib,
   gtk3,
   gtksourceview4,
@@ -38,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

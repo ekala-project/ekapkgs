@@ -10,7 +10,6 @@
   libnotify,
   librsvg,
   runtimeShell,
-  wrapGAppsHook3,
   fehSupport ? false,
   feh,
   # imagemagick currently fails to build due to libheif/libaom issue
@@ -36,7 +35,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
 
   nativeBuildInputs = [
     intltool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
   ];
 

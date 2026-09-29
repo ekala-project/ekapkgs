@@ -13,7 +13,6 @@
   openssl,
   libGL,
   libxkbcommon,
-  wrapGAppsHook3,
   wayland,
   gobject-introspection,
   libxxf86vm,
@@ -66,7 +65,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     pkg-config
     perl
     python3
-    wrapGAppsHook3 # FIX: No GSettings schemas are installed on the system
+    gtk3.wrapGAppsHook # FIX: No GSettings schemas are installed on the system
     gobject-introspection
   ];
 

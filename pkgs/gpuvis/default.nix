@@ -6,9 +6,8 @@
   meson,
   ninja,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   stdenv,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -33,11 +32,11 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     meson.configurePhaseHook
     ninja
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     gtk3
     freetype
   ];

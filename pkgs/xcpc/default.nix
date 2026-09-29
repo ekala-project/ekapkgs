@@ -5,7 +5,7 @@
   autoreconfHook,
   autoconf-archive,
   pkg-config,
-  wrapGAppsHook3,
+  gtk3,
   libepoxy,
 }:
 
@@ -23,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     autoreconfHook
     autoconf-archive
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     pkg-config
   ];
 

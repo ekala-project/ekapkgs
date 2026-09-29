@@ -32,7 +32,6 @@
   exiftool,
   zenity,
   libnotify,
-  wrapGAppsHook3,
   doxygen,
   openexr ? null,
   cfitsio ? null,
@@ -57,7 +56,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     intltool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     doxygen
     meson
     meson.configurePhaseHook

@@ -12,7 +12,6 @@
   librsvg,
   python3Packages,
   udisks,
-  wrapGAppsHook3,
 }:
 
 python3Packages.buildPythonApplication (finalAttrs: {
@@ -43,7 +42,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
     asciidoc
     gobject-introspection
     installShellFiles
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   build-system = with python3Packages; [

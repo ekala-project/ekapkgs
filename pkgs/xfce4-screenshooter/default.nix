@@ -8,7 +8,6 @@
   ninja,
   pkg-config,
   wayland-scanner,
-  wrapGAppsHook3,
   xfce4-exo,
   gtk3,
   gtk-layer-shell,
@@ -50,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     wayland-scanner
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

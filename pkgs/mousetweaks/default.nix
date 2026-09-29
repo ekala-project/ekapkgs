@@ -7,7 +7,6 @@
   gtk3,
   gnome,
   gsettings-desktop-schemas,
-  wrapGAppsHook3,
   libxtst,
   libxfixes,
   libxcursor,
@@ -25,7 +24,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

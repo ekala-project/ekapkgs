@@ -17,7 +17,6 @@
   lhasa,
   xz,
   zstd,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -36,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
     makeWrapper
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

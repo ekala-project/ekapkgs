@@ -17,7 +17,7 @@
   xorg-server,
   dbus,
   python3,
-  wrapGAppsHook3,
+  gtk3,
   withDocs ? false,
 }:
 
@@ -54,7 +54,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     vala
     which
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     xorg-server
   ];
 

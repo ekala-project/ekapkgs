@@ -8,7 +8,7 @@
   makeBinaryWrapper,
   kdsingleapplication,
   qt-color-widgets,
-  wrapGAppsHook3,
+  gtk3,
   enableWlrSupport ? true,
   enableMonochromeIcon ? false,
 }:
@@ -47,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
     qt6.qttools
     qt6.wrapQtAppsHook
     makeBinaryWrapper
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

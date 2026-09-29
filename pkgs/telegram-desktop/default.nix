@@ -25,7 +25,7 @@
   boost,
   ada,
   cmark-gfm,
-  wrapGAppsHook3,
+  gtk3,
   glib-networking,
 }:
 let

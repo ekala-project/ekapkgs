@@ -5,7 +5,6 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook3,
   dbus,
   dbus-glib,
   gstreamer,
@@ -40,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

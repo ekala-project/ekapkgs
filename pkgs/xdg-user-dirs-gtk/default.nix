@@ -6,7 +6,6 @@
   ninja,
   pkg-config,
   xdg-user-dirs,
-  wrapGAppsHook3,
   gtk3,
 }:
 
@@ -25,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     xdg-user-dirs
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [ gtk3 ];

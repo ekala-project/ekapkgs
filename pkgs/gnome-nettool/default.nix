@@ -9,7 +9,6 @@
   ninja,
   pkg-config,
   python3,
-  wrapGAppsHook3,
   glib,
   gtk3,
   libgtop,
@@ -44,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     python3
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

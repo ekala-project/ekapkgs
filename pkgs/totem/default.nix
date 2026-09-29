@@ -14,7 +14,6 @@
   glib,
   gobject-introspection,
   totem-pl-parser,
-  wrapGAppsHook3,
   itstool,
   libxml2,
   vala,
@@ -56,7 +55,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3Packages.python
     itstool
     gobject-introspection
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gstreamer
   ];
 

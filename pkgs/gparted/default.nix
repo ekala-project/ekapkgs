@@ -17,7 +17,7 @@
   procps,
   util-linux,
   polkit,
-  wrapGAppsHook3,
+  gtk3,
   replaceVars,
   mtools,
   dosfstools,
@@ -60,7 +60,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     gettext
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   preConfigure = ''

@@ -4,7 +4,6 @@
   fetchFromGitHub,
   cmake,
   gettext,
-  wrapGAppsHook3,
   pkg-config,
   help2man,
   adwaita-icon-theme,
@@ -41,7 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     gettext
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     help2man
   ];
 

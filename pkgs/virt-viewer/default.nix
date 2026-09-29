@@ -26,7 +26,6 @@
   spice-protocol,
   spiceSupport ? (spice-gtk != null),
   vte,
-  wrapGAppsHook3,
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "virt-viewer";
@@ -53,7 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     python3
     shared-mime-info
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

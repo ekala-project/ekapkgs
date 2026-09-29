@@ -12,7 +12,6 @@
   upower,
   itstool,
   libxml2,
-  wrapGAppsHook3,
   libnotify,
   gsound,
   gobject-introspection,
@@ -48,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
     itstool
     pkg-config
     libxml2
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
     gtk-doc
     docbook-xsl-nons

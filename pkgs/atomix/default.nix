@@ -5,7 +5,6 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook3,
   python3,
   gettext,
   gnome,
@@ -30,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     python3
   ];
 

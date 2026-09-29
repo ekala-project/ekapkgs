@@ -5,7 +5,6 @@
   pkg-config,
   intltool,
   python3Packages,
-  wrapGAppsHook3,
   glib,
   libxml2,
   libxslt,
@@ -32,7 +31,7 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     python3Packages.wrapPython
     intltool
     pkg-config

@@ -6,7 +6,6 @@
   pkg-config,
   python3,
   xfce4-dev-tools,
-  wrapGAppsHook3,
   cairo,
   xfce4-exo,
   garcon,
@@ -44,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     python3
     xfce4-dev-tools
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

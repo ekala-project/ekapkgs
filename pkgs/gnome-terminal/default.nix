@@ -20,7 +20,6 @@
   vala,
   desktop-file-utils,
   itstool,
-  wrapGAppsHook3,
   pcre2,
   libxslt,
   docbook-xsl-nons,
@@ -48,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
     docbook-xsl-nons
     vala
     desktop-file-utils
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     python3
   ];
 

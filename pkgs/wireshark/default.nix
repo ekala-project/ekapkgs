@@ -41,7 +41,7 @@
   snappy,
   spandsp,
   speexdsp,
-  wrapGAppsHook3,
+  gtk3,
   zlib-ng,
   zstd,
   brotli,
@@ -90,7 +90,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optionals withQt [
     qt6.wrapQtAppsHook
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

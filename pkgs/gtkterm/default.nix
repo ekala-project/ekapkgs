@@ -8,7 +8,6 @@
   gtk3,
   vte,
   libgudev,
-  wrapGAppsHook3,
   pcre2,
 }:
 
@@ -28,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

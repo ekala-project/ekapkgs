@@ -23,7 +23,6 @@
   hicolor-icon-theme,
   wayland,
   gobject-introspection,
-  wrapGAppsHook3,
   yelp-tools,
   marco,
 }:
@@ -54,7 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2 # xmllint
     mate-common # mate-common.m4 macros
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     yelp-tools
   ];
 
@@ -74,7 +73,7 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     gtk3
     # Optionally for the ca.desrt.dconf-editor.Settings schema
-    # This is propagated for mate_panel_applet_settings_new and applet's wrapGAppsHook3
+    # This is propagated for mate_panel_applet_settings_new and applet's gtk3.wrapGAppsHook
     dconf-editor
   ];
 

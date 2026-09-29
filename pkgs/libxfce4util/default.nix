@@ -4,7 +4,7 @@
   fetchFromGitLab,
   pkg-config,
   xfce4-dev-tools,
-  wrapGAppsHook3,
+  gtk3,
   hicolor-icon-theme,
   python3,
   glib,
@@ -30,7 +30,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     pkg-config
     xfce4-dev-tools
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     python3
   ];
 

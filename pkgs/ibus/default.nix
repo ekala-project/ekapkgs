@@ -8,7 +8,6 @@
   makeWrapper,
   pkg-config,
   vala,
-  wrapGAppsHook3,
   dbus,
   systemd,
   dconf,
@@ -142,7 +141,7 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     vala
     gobject-introspection
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     wayland-scanner
   ];
 

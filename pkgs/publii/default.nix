@@ -4,7 +4,6 @@
   fetchurl,
   autoPatchelfHook,
   makeShellWrapper,
-  wrapGAppsHook3,
   alsa-lib,
   at-spi2-core,
   cairo,
@@ -41,7 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     autoPatchelfHook
     makeShellWrapper
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

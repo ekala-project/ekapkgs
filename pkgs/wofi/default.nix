@@ -7,7 +7,6 @@
   ninja,
   wayland,
   gtk3,
-  wrapGAppsHook3,
   installShellFiles,
 }:
 stdenv.mkDerivation (finalAttrs: {
@@ -32,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     meson.configurePhaseHook
     ninja
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     installShellFiles
   ];
   buildInputs = [

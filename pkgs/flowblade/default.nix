@@ -10,7 +10,6 @@
   ladspaPlugins,
   gobject-introspection,
   makeWrapper,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -45,7 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     gobject-introspection
     makeWrapper
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   installPhase = ''

@@ -11,7 +11,6 @@
   libdispatch,
   gtk3,
   gsettings-desktop-schemas,
-  wrapGAppsHook3,
   # input plugins
   vorbisSupport ? true,
   libvorbis,
@@ -148,7 +147,7 @@ clangStdenv.mkDerivation (finalAttrs: {
     intltool
     libtool
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   enableParallelBuilding = true;

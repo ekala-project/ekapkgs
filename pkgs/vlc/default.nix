@@ -78,7 +78,7 @@
   wayland,
   wayland-protocols,
   wayland-scanner,
-  wrapGAppsHook3,
+  gtk3,
   libxcb-keysyms,
   zlib,
   chromecastSupport ? true,
@@ -114,7 +114,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     removeReferencesTo
     unzip
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ]
   ++ optionals chromecastSupport [ protobuf ]
   ++ optionals waylandSupport [

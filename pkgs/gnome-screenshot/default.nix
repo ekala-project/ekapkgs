@@ -13,7 +13,6 @@
   meson,
   ninja,
   python3,
-  wrapGAppsHook3,
   appstream-glib,
   desktop-file-utils,
   adwaita-icon-theme,
@@ -46,7 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
     desktop-file-utils
     python3
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

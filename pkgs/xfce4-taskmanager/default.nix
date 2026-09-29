@@ -6,7 +6,6 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook3,
   glib,
   gtk3,
   libxfce4ui,
@@ -38,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

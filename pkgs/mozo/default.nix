@@ -7,7 +7,6 @@
   mate-menus,
   gtk3,
   glib,
-  wrapGAppsHook3,
   gobject-introspection,
 }:
 
@@ -27,7 +26,7 @@ python3.pkgs.buildPythonApplication rec {
     pkg-config
     gettext
     gobject-introspection
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   propagatedBuildInputs = [

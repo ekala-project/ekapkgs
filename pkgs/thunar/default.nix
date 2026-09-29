@@ -19,7 +19,6 @@
   xfce4-dev-tools,
   xfce4-panel,
   xfconf,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -45,7 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
     pkg-config
     xfce4-dev-tools
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

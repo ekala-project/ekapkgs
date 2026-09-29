@@ -6,7 +6,6 @@
   python3,
   meson,
   ninja,
-  wrapGAppsHook3,
   libxml2,
   pkg-config,
   desktop-file-utils,
@@ -38,7 +37,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     pkg-config
     desktop-file-utils
     gobject-introspection
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gtk3 # for gtk-update-icon-cache
   ];
 

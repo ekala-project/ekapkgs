@@ -10,7 +10,6 @@
   stdenv,
   tcl,
   tk,
-  wrapGAppsHook3,
   xz,
 }:
 
@@ -25,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

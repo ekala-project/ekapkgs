@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  SDL ? null,
+  sdl12-compat ? null,
   check,
   curl,
   expat,
@@ -20,7 +20,6 @@
   openssl,
   perlPackages,
   pkg-config,
-  wrapGAppsHook3,
   xxd,
 
   # Netsurf-specific dependencies
@@ -63,7 +62,7 @@ stdenv.mkDerivation (finalAttrs: {
     perlPackages.perl
     pkg-config
     xxd
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

@@ -4,7 +4,6 @@
   gobject-introspection,
   gtk3,
   python3Packages,
-  wrapGAppsHook3,
   gdk-pixbuf,
   hidapi,
   # libappindicator fails to build due to libdbusmenu-gtk3 missing Gtk-3.0.gir
@@ -37,7 +36,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   nativeBuildInputs = [
     gdk-pixbuf
     gobject-introspection
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

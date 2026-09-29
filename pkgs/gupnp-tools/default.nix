@@ -12,7 +12,6 @@
   gettext,
   gupnp-av,
   gtksourceview4,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -30,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

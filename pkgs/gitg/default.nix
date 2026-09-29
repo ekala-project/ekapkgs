@@ -9,7 +9,6 @@
   glib,
   gpgme,
   json-glib,
-  wrapGAppsHook3,
   libpeas,
   bash,
   gobject-introspection,
@@ -55,7 +54,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     python3
     vala
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

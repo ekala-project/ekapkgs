@@ -6,7 +6,6 @@
   ninja,
   pkg-config,
   gtk3,
-  wrapGAppsHook3,
   librsvg,
   libgnome-games-support,
   gettext,
@@ -34,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     itstool
     libxml2
     python3
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     vala
   ];
 

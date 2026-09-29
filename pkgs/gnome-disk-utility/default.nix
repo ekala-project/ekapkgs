@@ -24,7 +24,6 @@
   pkg-config,
   systemd,
   udisks,
-  wrapGAppsHook3,
   xz,
 }:
 
@@ -48,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

@@ -2,7 +2,7 @@
   lib,
   fetchFromGitLab,
   gettext,
-  wrapGAppsHook3,
+  gtk3,
   python3,
   gtk4,
   gobject-introspection,
@@ -71,7 +71,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
 
   nativeBuildInputs = [
     gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
     libadwaita
   ];

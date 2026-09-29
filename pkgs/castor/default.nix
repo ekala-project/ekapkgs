@@ -3,7 +3,6 @@
   fetchFromSourcehut,
   rustPlatform,
   pkg-config,
-  wrapGAppsHook3,
   openssl,
   gtk3,
   gdk-pixbuf,
@@ -27,7 +26,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

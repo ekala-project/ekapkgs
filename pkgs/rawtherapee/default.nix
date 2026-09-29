@@ -13,7 +13,7 @@
   libxkbcommon,
   libepoxy,
   libxtst,
-  wrapGAppsHook3,
+  gtk3,
   pixman,
   libpthread-stubs,
   gtkmm3,
@@ -68,7 +68,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

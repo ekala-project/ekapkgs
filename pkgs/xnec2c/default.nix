@@ -3,7 +3,6 @@
   stdenv,
   fetchFromGitHub,
   autoreconfHook,
-  wrapGAppsHook3,
   pkg-config,
   which,
   gtk3,
@@ -26,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     autoreconfHook
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     pkg-config
     which
   ];

@@ -7,7 +7,7 @@
   libxslt,
   meson,
   pkg-config,
-  wrapGAppsHook3,
+  gtk3,
   python3,
   autoconf,
   automake,
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
     meson
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

@@ -11,7 +11,6 @@
   gstreamer,
   gtk3,
   dconf,
-  wrapGAppsHook3,
   aria2,
   aria2Support ? true,
 }:
@@ -36,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
     intltool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

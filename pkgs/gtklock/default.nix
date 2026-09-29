@@ -6,7 +6,6 @@
   ninja,
   scdoc,
   pkg-config,
-  wrapGAppsHook3,
   gtk3,
   pam,
   gtk-session-lock,
@@ -29,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     scdoc
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

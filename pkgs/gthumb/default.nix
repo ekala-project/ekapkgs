@@ -24,7 +24,6 @@
   flex,
   clutter-gtk ? null,
   colord,
-  wrapGAppsHook3,
   shared-mime-info,
   python3,
   desktop-file-utils,
@@ -52,7 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     python3
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

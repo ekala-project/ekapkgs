@@ -8,7 +8,6 @@
   intltool,
   libtool,
   pkg-config,
-  wrapGAppsHook3,
   gtk3,
   libxcb,
   libdrm,
@@ -37,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     intltool
     libtool
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

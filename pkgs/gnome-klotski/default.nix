@@ -6,7 +6,6 @@
   vala,
   adwaita-icon-theme,
   gtk3,
-  wrapGAppsHook3,
   appstream-glib,
   desktop-file-utils,
   glib,
@@ -36,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     ninja
     python3
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gettext
     itstool
     libxml2

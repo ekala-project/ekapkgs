@@ -9,7 +9,6 @@
   libcpuid,
   pciutils,
   procps,
-  wrapGAppsHook3,
   nasm,
   opencl-headers,
   ocl-icd,
@@ -55,7 +54,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     nasm
   ];
 

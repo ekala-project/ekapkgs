@@ -4,7 +4,6 @@
   fetchpatch,
   python3,
   avahi,
-  wrapGAppsHook3,
   gobject-introspection,
   gtk3,
   glib,
@@ -33,7 +32,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   ];
 
   nativeBuildInputs = [
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
   ]
   ++ (with python3.pkgs; [

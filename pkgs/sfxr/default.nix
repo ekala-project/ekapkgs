@@ -5,10 +5,9 @@
   fetchpatch,
   pkg-config,
   desktop-file-utils,
-  SDL,
+  sdl12-compat,
   gtk3,
   gsettings-desktop-schemas,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -48,10 +47,10 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL
+    sdl12-compat
     gtk3
     gsettings-desktop-schemas
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   makeFlags = [ "DESTDIR=$(out)" ];

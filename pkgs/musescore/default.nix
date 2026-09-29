@@ -8,7 +8,7 @@
   cmake,
   ninja,
   pkg-config,
-  wrapGAppsHook3,
+  gtk3,
 
   # buildInputs
   alsa-lib,
@@ -102,7 +102,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

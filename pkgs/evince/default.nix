@@ -24,7 +24,6 @@
   libgxps,
   libhandy,
   libsecret,
-  wrapGAppsHook3,
   librsvg,
   gobject-introspection,
   yelp-tools,
@@ -68,7 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     yelp-tools
   ];
 

@@ -14,7 +14,6 @@
   libsoup_3,
   # TODO: webkitgtk_4_1 (not available in ekapkgs)
   icu,
-  wrapGAppsHook3,
   gstreamer,
   gdk-pixbuf,
   librsvg,
@@ -39,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     gettext
     gobject-introspection
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

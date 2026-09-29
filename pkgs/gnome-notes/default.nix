@@ -6,7 +6,6 @@
   gettext,
   fetchurl,
   pkg-config,
-  wrapGAppsHook3,
   itstool,
   desktop-file-utils,
   python3,
@@ -50,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
     desktop-file-utils
     python3
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

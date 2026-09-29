@@ -6,7 +6,6 @@
   ninja,
   cmake,
   pkg-config,
-  wrapGAppsHook3,
   gtk3,
   glib,
   openssl,
@@ -33,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

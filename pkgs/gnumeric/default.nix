@@ -10,7 +10,6 @@
   perlPackages,
   goffice,
   adwaita-icon-theme,
-  wrapGAppsHook3,
   glib,
   gtk3,
   bison,
@@ -42,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     glib # glib-compile-resources
     libxml2 # xmllint
     python3
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

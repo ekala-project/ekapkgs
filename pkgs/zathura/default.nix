@@ -4,7 +4,6 @@
   fetchFromGitHub,
   meson,
   ninja,
-  wrapGAppsHook3,
   pkg-config,
   appstream-glib,
   json-glib,
@@ -58,7 +57,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     desktop-file-utils
     gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     libxml2
     appstream-glib
   ];

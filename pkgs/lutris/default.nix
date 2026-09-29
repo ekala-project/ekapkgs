@@ -15,7 +15,6 @@
   gtk3,
   libnotify,
   pango,
-  wrapGAppsHook3,
   meson,
   ninja,
 
@@ -79,7 +78,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
     meson
     meson.configurePhaseHook
     ninja
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     pkg-config
   ];
 

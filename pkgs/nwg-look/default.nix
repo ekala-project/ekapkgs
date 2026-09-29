@@ -1,7 +1,6 @@
 {
   lib,
   fetchFromGitHub,
-  wrapGAppsHook3,
   buildGoModule,
   glib,
   pkg-config,
@@ -32,7 +31,7 @@ buildGoModule (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

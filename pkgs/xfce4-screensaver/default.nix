@@ -8,7 +8,6 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook3,
   xmlto,
   dbus-glib,
   garcon,
@@ -55,7 +54,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     xmlto
   ];
 

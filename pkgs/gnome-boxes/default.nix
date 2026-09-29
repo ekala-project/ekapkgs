@@ -4,7 +4,6 @@
   fetchurl,
   meson,
   ninja,
-  wrapGAppsHook3,
   pkg-config,
   gettext,
   itstool,
@@ -73,7 +72,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     # For post install script
     glib
     gtk3

@@ -15,7 +15,7 @@
   pkg-config,
   qrencode,
   readline,
-  wrapGAppsHook3,
+  gtk3,
   zlib,
 
   withKeePassBrowser ? true,
@@ -85,7 +85,7 @@ stdenv.mkDerivation (finalAttrs: {
     qt6.wrapQtAppsHook
     (qt6.qttools.override { qtdeclarative = null; })
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   dontWrapGApps = true;

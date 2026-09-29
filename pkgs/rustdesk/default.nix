@@ -3,7 +3,6 @@
   rustPlatform,
   fetchFromGitHub,
   pkg-config,
-  wrapGAppsHook3,
   at-spi2-core,
   bzip2,
   cairo,
@@ -73,7 +72,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     perl
     pkg-config
     rustPlatform.bindgenHook
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildFeatures = lib.optionals stdenv.hostPlatform.isLinux [ "linux-pkg-config" ];

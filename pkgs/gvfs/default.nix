@@ -28,7 +28,7 @@
   samba,
   libmtp,
   gnomeSupport ? false,
-  wrapGAppsHook3,
+  gtk3,
   libimobiledevice,
   libbluray,
   libcdio-paranoia,
@@ -65,7 +65,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3
     pkg-config
     gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     libxslt
     docbook_xsl
     docbook-xml-dtd.v4_2

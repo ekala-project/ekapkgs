@@ -20,7 +20,6 @@
   gdk-pixbuf,
   exempi,
   shared-mime-info,
-  wrapGAppsHook3,
   libjxl,
   librsvg,
   libexif,
@@ -53,7 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     itstool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     libxml2
     gobject-introspection
     gi-docgen

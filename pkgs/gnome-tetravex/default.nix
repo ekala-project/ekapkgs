@@ -6,7 +6,6 @@
   gnome,
   adwaita-icon-theme,
   gtk3,
-  wrapGAppsHook3,
   libxml2,
   gettext,
   itstool,
@@ -27,7 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     itstool
     libxml2
     adwaita-icon-theme

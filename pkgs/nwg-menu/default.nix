@@ -3,7 +3,6 @@
   fetchFromGitHub,
   buildGoModule,
   pkg-config,
-  wrapGAppsHook3,
   gobject-introspection,
   gtk-layer-shell,
   gtk3,
@@ -36,7 +35,7 @@ buildGoModule (finalAttrs: {
   ];
   nativeBuildInputs = [
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
   ];
 

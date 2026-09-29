@@ -13,7 +13,6 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook3,
   polkit,
   udisks, # called udisks2 in nixpkgs, udisks in ekapkgs
 }:
@@ -34,7 +33,7 @@ stdenv.mkDerivation rec {
     meson
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

@@ -7,7 +7,6 @@
   ninja,
   pkg-config,
   vala,
-  wrapGAppsHook3,
   libxfce4util,
   libxfce4ui,
   gtk3,
@@ -36,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     libxfce4ui
     libxfce4util
   ];

@@ -10,7 +10,6 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook3,
   gettext,
   icu,
 }:
@@ -33,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gettext
   ];
 

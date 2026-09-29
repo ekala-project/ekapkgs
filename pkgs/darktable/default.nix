@@ -12,10 +12,9 @@
   ninja,
   perl,
   pkg-config,
-  wrapGAppsHook3,
 
   # buildInputs
-  SDL2,
+  sdl2-compat,
   adwaita-icon-theme,
   alsa-lib,
   cairo,
@@ -95,11 +94,11 @@ stdenv.mkDerivation rec {
     ninja
     perl
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     adwaita-icon-theme
     cairo
     curl

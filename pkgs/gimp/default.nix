@@ -39,7 +39,6 @@
   libexif,
   gettext,
   glibcLocales,
-  wrapGAppsHook3,
   libxslt,
   gobject-introspection,
   vala,
@@ -119,7 +118,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     glibcLocales
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     libxslt # for xsltproc
     gobject-introspection
     perl

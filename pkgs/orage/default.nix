@@ -5,7 +5,6 @@
   gettext,
   pkg-config,
   xfce4-dev-tools,
-  wrapGAppsHook3,
   glib,
   gtk3,
   libical,
@@ -31,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     pkg-config
     xfce4-dev-tools
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

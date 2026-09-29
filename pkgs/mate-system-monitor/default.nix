@@ -11,7 +11,7 @@
   librsvg,
   polkit,
   systemd,
-  wrapGAppsHook3,
+  gtk3,
   mate-desktop,
 }:
 
@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     itstool
     libxml2 # xmllint
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

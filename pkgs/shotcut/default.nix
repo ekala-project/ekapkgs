@@ -3,7 +3,7 @@
   fetchFromGitHub,
   stdenv,
   replaceVars,
-  SDL2,
+  sdl2-compat,
   frei0r,
   ladspaPlugins,
   gettext,
@@ -14,7 +14,7 @@
   cmake,
   ffmpeg,
   mlt,
-  wrapGAppsHook3,
+  gtk3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -33,11 +33,11 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
     qt6.wrapQtAppsHook
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     frei0r
     ladspaPlugins
     gettext
@@ -75,7 +75,7 @@ stdenv.mkDerivation (finalAttrs: {
     "LD_LIBRARY_PATH"
     ":"
     "${lib.makeLibraryPath [
-      SDL2
+      sdl2-compat
       jack1
     ]}"
   ];
