@@ -5,7 +5,6 @@
   cmake,
   ninja,
   pkg-config,
-  wrapGAppsHook3,
   curl,
   fuse,
   glib,
@@ -20,7 +19,7 @@
   gnutls,
   pcre2,
   libdbusmenu-gtk3,
-  libappindicator-gtk3,
+  libappindicator,
   libvncserver,
   libpthread-stubs,
   libxdmcp,
@@ -61,7 +60,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
@@ -93,7 +92,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (freerdp != null) [ freerdp ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [
     fuse
-    libappindicator-gtk3
+    libappindicator
     libdbusmenu-gtk3
     wayland
   ]
