@@ -7,7 +7,7 @@
   pkg-config,
   sphinx,
   buildPackages,
-  ffmpeg-headless,
+  ffmpeg,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -34,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    ffmpeg-headless
+    ffmpeg.headless
   ];
 
   doCheck = false;

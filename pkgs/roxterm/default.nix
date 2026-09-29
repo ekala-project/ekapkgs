@@ -24,7 +24,6 @@
   stdenv,
   util-linuxMinimal,
   vte,
-  wrapGAppsHook3,
   xmlto,
 }:
 
@@ -44,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     libxslt
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

@@ -3,14 +3,13 @@
   rustPlatform,
   fetchFromGitHub,
   pkg-config,
-  wrapGAppsHook3,
-  atk,
+  at-spi2-core,
   bzip2,
   cairo,
   dbus,
   gdk-pixbuf,
   glib,
-  gst_all_1,
+  gstreamer,
   gtk3,
   libayatana-appindicator,
   libgit2,
@@ -73,7 +72,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     perl
     pkg-config
     rustPlatform.bindgenHook
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildFeatures = lib.optionals stdenv.hostPlatform.isLinux [ "linux-pkg-config" ];
@@ -82,14 +81,14 @@ rustPlatform.buildRustPackage (finalAttrs: {
   doCheck = false;
 
   buildInputs = [
-    atk
+    at-spi2-core
     bzip2
     cairo
     dbus
     gdk-pixbuf
     glib
-    gst_all_1.gst-plugins-base
-    gst_all_1.gstreamer
+    gstreamer.plugins-base
+    gstreamer
     gtk3
     libgit2
     libpulseaudio

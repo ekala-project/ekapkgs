@@ -1,5 +1,5 @@
 {
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   lib,
@@ -8,7 +8,7 @@
   writableTmpDirAsHomeHook,
   xdg-utils,
 }:
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "aws-vault";
   version = "7.13.5";
 

@@ -6,7 +6,7 @@
   libtraceevent,
   asciidoc,
   xmlto,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
   sourceHighlight,
   meson,
@@ -43,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     asciidoc
     xmlto
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook_xsl
     sourceHighlight
     flex

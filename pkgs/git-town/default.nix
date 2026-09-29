@@ -1,14 +1,14 @@
 {
   lib,
   stdenv,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   gitMinimal,
   makeWrapper,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "git-town";
   version = "24.0.0";
 

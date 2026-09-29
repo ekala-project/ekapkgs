@@ -6,7 +6,7 @@
   fetchpatch,
   gdbm,
   glib,
-  gst_all_1,
+  gstreamer,
   gsettings-desktop-schemas,
   gtk-vnc,
   gtk3,
@@ -26,7 +26,6 @@
   spice-protocol,
   spiceSupport ? (spice-gtk != null),
   vte,
-  wrapGAppsHook3,
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "virt-viewer";
@@ -53,12 +52,12 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     python3
     shared-mime-info
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
+    gstreamer.plugins-base
+    gstreamer.plugins-good
     bash-completion
     glib
     gsettings-desktop-schemas

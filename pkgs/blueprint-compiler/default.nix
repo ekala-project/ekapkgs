@@ -8,7 +8,7 @@
   ninja,
   python3,
   stdenv,
-  wrapGAppsNoGuiHook,
+  gtk3,
   xvfb-run ? null,
 }:
 stdenv.mkDerivation (finalAttrs: {
@@ -33,12 +33,16 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     python3
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [
     libadwaita
-    python3
+    (python3.withPackages (
+      ps: with ps; [
+        pygobject3
+      ]
+    ))
   ];
 
   propagatedBuildInputs = [

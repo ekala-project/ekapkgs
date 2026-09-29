@@ -1,6 +1,6 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   fetchNpmDeps ? null,
   stdenv,
@@ -15,7 +15,7 @@ let
   hasNpm = fetchNpmDeps != null && npmHooks != null;
 in
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "anubis";
   version = "1.26.2";
 

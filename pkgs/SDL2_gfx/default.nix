@@ -1,6 +1,6 @@
 {
   lib,
-  SDL2,
+  sdl2-compat,
   fetchurl,
   pkg-config,
   stdenv,
@@ -18,12 +18,12 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    SDL2
+    sdl2-compat
     pkg-config
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
   ];
 
   outputs = [
@@ -65,6 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
       written in plain C and can be used in C++ code.
     '';
     license = lib.licenses.zlib;
-    inherit (SDL2.meta) platforms;
+    inherit (sdl2-compat.meta) platforms;
   };
 })

@@ -4,7 +4,6 @@
   fetchFromGitHub,
   cmake,
   gettext,
-  wrapGAppsHook3,
   pkg-config,
   help2man,
   adwaita-icon-theme,
@@ -22,7 +21,7 @@
   qpdf,
   zlib,
   withLua ? true,
-  lua5_3,
+  lua,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -41,7 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     gettext
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     help2man
   ];
 
@@ -60,7 +59,7 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ]
   ++ lib.optional stdenv.hostPlatform.isLinux alsa-lib
-  ++ lib.optional withLua lua5_3;
+  ++ lib.optional withLua lua.v5_3;
 
   buildFlags = [ "translations" ];
 

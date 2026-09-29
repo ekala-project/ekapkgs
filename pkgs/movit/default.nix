@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   fftw,
   gtest,
   eigen,
@@ -31,7 +31,7 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     fftw
     gtest
     libGL

@@ -17,7 +17,7 @@
   db ? null,
 
   withJava ? false,
-  jdk ? null,
+  java ? null,
 
   withOdbc ? false,
   unixodbc ? null,
@@ -54,7 +54,7 @@ let
   optionalDependencies =
     [ ]
     ++ lib.optionals (withDb && db != null) [ db ]
-    ++ lib.optionals (withJava && jdk != null) [ jdk ]
+    ++ lib.optionals (withJava && java != null) [ java ]
     ++ lib.optionals (withOdbc && unixodbc != null) [ unixodbc ]
     ++ lib.optionals (withPcre && pcre2 != null) [ pcre2 ]
     ++ lib.optionals (withPython && python3 != null) [ python3 ]

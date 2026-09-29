@@ -12,7 +12,6 @@
   ninja,
   pkg-config,
   vala,
-  wrapGAppsHook3,
   dconf,
   glib,
   gsettings-desktop-schemas,
@@ -49,7 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

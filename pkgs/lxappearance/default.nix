@@ -9,7 +9,6 @@
   gtk3,
   libxslt,
   docbook_xsl,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -28,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
     intltool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     autoreconfHook
     libxslt
     docbook_xsl

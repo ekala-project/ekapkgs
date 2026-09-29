@@ -8,7 +8,6 @@
   pkg-config,
   libxslt,
   gobject-introspection,
-  wrapGAppsHook3,
   gnome-menus,
   glib,
   gtk3,
@@ -36,7 +35,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     python3
     libxslt
     gobject-introspection
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

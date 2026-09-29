@@ -8,7 +8,6 @@
   adwaita-icon-theme,
   gdk-pixbuf,
   librsvg,
-  wrapGAppsHook3,
   itstool,
   gsound,
   libxml2,
@@ -50,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     vala
     desktop-file-utils
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     itstool
     libxml2
   ];

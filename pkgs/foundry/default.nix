@@ -1,7 +1,8 @@
 {
   lib,
   stdenv,
-  darwin,
+  # TODO(ekapkgs): support darwin
+  # darwin,
   fetchFromGitHub,
   libusb1,
   perl,
@@ -32,7 +33,9 @@ rustPlatform.buildRustPackage (finalAttrs: {
     perl
     pkg-config
   ]
-  ++ lib.optionals stdenv.hostPlatform.isDarwin [ darwin.DarwinTools ];
+  # TODO(ekapkgs): support darwin
+  # ++ lib.optionals stdenv.hostPlatform.isDarwin [ darwin.DarwinTools ];
+  ;
 
   buildInputs = lib.optionals stdenv.hostPlatform.isDarwin [ libusb1 ];
 

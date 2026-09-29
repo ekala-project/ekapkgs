@@ -5,7 +5,7 @@
   pkg-config,
   gnutls,
   gsasl,
-  libidn2,
+  libidn,
   libsecret,
   texinfo,
 }:
@@ -32,7 +32,7 @@ stdenv.mkDerivation rec {
   buildInputs = [
     gnutls
     gsasl
-    libidn2
+    libidn.v2
     libsecret
   ];
 

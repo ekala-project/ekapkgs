@@ -1,13 +1,13 @@
 {
   lib,
   stdenv,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   writableTmpDirAsHomeHook,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "okteto";
   version = "3.22.0";
 

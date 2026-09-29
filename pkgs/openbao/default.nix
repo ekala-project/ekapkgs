@@ -1,13 +1,13 @@
 {
   lib,
   fetchFromGitHub,
-  buildGo126Module,
+  buildGoModule,
   installShellFiles,
   stdenvNoCC,
   withHsm ? stdenvNoCC.hostPlatform.isLinux,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "openbao";
   version = "2.6.2";
 

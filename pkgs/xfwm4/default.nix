@@ -6,7 +6,6 @@
   librsvg,
   pkg-config,
   xfce4-dev-tools,
-  wrapGAppsHook3,
   dbus-glib,
   libepoxy,
   gtk3,
@@ -36,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     librsvg # rsvg-convert
     pkg-config
     xfce4-dev-tools
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

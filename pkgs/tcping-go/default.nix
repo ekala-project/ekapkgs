@@ -1,10 +1,10 @@
 {
   lib,
   fetchFromGitHub,
-  buildGo126Module,
+  buildGoModule,
 }:
 
-buildGo126Module {
+buildGoModule {
   pname = "tcping-go";
   version = "unstable-2022-05-28";
 

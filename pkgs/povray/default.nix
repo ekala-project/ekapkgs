@@ -13,7 +13,7 @@
   libjpeg,
   libtiff,
   pkg-config,
-  SDL2,
+  sdl2-compat,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -41,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     libpng
     libjpeg
     libtiff
-    SDL2
+    sdl2-compat
     zlib
   ];
 

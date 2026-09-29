@@ -19,7 +19,6 @@
   python3,
   template-glib,
   vala,
-  wrapGAppsHook4,
   cmark,
   dbus,
   editorconfig-core-c,
@@ -68,7 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     python3
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

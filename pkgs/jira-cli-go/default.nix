@@ -1,13 +1,13 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   less,
   more,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "jira-cli-go";
   version = "1.7.0";
 

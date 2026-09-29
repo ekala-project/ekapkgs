@@ -1,13 +1,13 @@
 {
   lib,
   stdenv,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   gitMinimal,
   installShellFiles,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "ko";
   version = "0.19.1";
 

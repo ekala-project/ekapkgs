@@ -12,7 +12,6 @@
   scdoc,
   libnotify,
   glib,
-  wrapGAppsHook3,
   hicolor-icon-theme,
 }:
 
@@ -34,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     scdoc
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

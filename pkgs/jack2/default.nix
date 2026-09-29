@@ -7,7 +7,7 @@
   python3Packages,
   makeWrapper,
   libsamplerate,
-  wafHook,
+  waf,
   # Darwin Dependencies
   aften,
 
@@ -56,7 +56,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
     python
-    wafHook
+    waf.hook
   ]
   ++ lib.optionals (optDbus != null) [ makeWrapper ];
   buildInputs = [

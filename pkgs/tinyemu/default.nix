@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  SDL,
+  sdl12-compat,
   curl,
   openssl,
 }:
@@ -21,10 +21,10 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail '#include <curl/multi.h>' '#include <curl/curl.h>'
   '';
 
-  nativeBuildInputs = [ SDL ];
+  nativeBuildInputs = [ sdl12-compat ];
 
   buildInputs = [
-    SDL
+    sdl12-compat
     curl
     openssl
   ];
@@ -58,7 +58,7 @@ stdenv.mkDerivation (finalAttrs: {
         - Dynamic XLEN change
       - x86 system emulator based on KVM
       - VirtIO console, network, block device, input and 9P filesystem
-      - Graphical display with SDL
+      - Graphical display with sdl12-compat
       - JSON configuration file
       - Remote HTTP block device and filesystem
       - Small code, easy to modify, few external dependancies

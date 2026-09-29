@@ -6,18 +6,21 @@
   meson,
   ninja,
   lv2,
-  gtk2,
+  withGtk3 ? true,
   gtk3,
+  withQt5 ? true,
+  qt5,
+  withX11 ? !stdenv.hostPlatform.isDarwin,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "suil";
   version = "0.10.20";
 
   src = fetchFromGitLab {
     owner = "lv2";
     repo = "suil";
-    rev = "v${version}";
+    rev = "v${finalAttrs.version}";
     hash = "sha256-rP8tq+zmHrAZeuNttakPPfraFXNvnwqbhtt+LtTNV/k=";
   };
 
@@ -28,19 +31,28 @@ stdenv.mkDerivation rec {
     pkg-config
   ];
 
-  buildInputs = [
-    lv2
-    gtk2
-    gtk3
+  mesonFlags = [
+    (lib.mesonEnable "docs" false)
+    (lib.mesonEnable "gtk2" false)
+    (lib.mesonEnable "gtk3" withGtk3)
+    (lib.mesonEnable "qt5" withQt5)
+    (lib.mesonEnable "x11" withX11)
   ];
 
-  mesonFlags = [
-    (lib.mesonEnable "gtk2" true)
-    (lib.mesonEnable "gtk3" true)
-    (lib.mesonEnable "qt5" false)
-    (lib.mesonEnable "x11" true)
-    (lib.mesonEnable "docs" false)
-  ];
+  buildInputs = [
+    lv2
+  ]
+  ++ lib.optionals withGtk3 [ gtk3 ]
+  ++ lib.optionals withQt5 (
+    with qt5;
+    [
+      qtbase
+      qttools
+    ]
+    ++ lib.optionals withX11 [ qtx11extras ]
+  );
+
+  dontWrapQtApps = true;
 
   strictDeps = true;
 
@@ -50,4 +62,4 @@ stdenv.mkDerivation rec {
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
   };
-}
+})

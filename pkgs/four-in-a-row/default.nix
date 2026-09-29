@@ -5,7 +5,6 @@
   pkg-config,
   adwaita-icon-theme,
   gtk3,
-  wrapGAppsHook3,
   gettext,
   meson,
   gsound,
@@ -28,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gettext
     meson
     meson.configurePhaseHook

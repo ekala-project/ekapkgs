@@ -7,7 +7,7 @@
   glib,
   gtk3,
   pcsclite,
-  lua5_2,
+  lua,
   curl,
   readline,
 }:
@@ -46,7 +46,7 @@ stdenv.mkDerivation {
   buildInputs = [
     glib
     gtk3
-    lua5_2
+    lua.v5_2
     curl
     readline
   ]

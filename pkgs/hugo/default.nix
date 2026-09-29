@@ -1,13 +1,13 @@
 {
   stdenv,
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   buildPackages,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "hugo";
   version = "0.165.0";
 

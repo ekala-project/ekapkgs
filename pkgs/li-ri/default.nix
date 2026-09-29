@@ -5,7 +5,7 @@
   cmake,
   pkg-config,
   ninja,
-  SDL2,
+  sdl2-compat,
   SDL2_mixer,
   simpleini,
 }:
@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_mixer
     simpleini
   ];

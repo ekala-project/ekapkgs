@@ -15,7 +15,7 @@
   pkg-config,
   sqlite,
   docbook_xsl,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   gobject-introspection,
 }:
 
@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     check
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     docbook_xsl
     glibcLocales
     gobject-introspection

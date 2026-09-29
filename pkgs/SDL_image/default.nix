@@ -1,6 +1,6 @@
 {
   lib,
-  SDL,
+  sdl12-compat,
   fetchFromGitHub,
   giflib,
   xorg,
@@ -34,12 +34,12 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [
-    SDL
+    sdl12-compat
     pkg-config
   ];
 
   buildInputs = [
-    SDL
+    sdl12-compat
     giflib
     xorg.libXpm
     libjpeg
@@ -61,8 +61,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     homepage = "http://www.libsdl.org/projects/SDL_image/";
-    description = "SDL image library";
+    description = "sdl12-compat image library";
     license = lib.licenses.zlib;
-    inherit (SDL.meta) platforms;
+    inherit (sdl12-compat.meta) platforms;
   };
 })

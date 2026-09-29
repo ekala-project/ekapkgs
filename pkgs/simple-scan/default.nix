@@ -7,7 +7,6 @@
   pkg-config,
   gettext,
   itstool,
-  wrapGAppsHook4,
   cairo,
   gdk-pixbuf,
   colord,
@@ -39,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     itstool
     pkg-config
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     libxml2
     gobject-introspection # For setup hook
     vala

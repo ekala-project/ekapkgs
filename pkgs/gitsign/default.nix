@@ -1,12 +1,12 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   makeWrapper,
   gitMinimal,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "gitsign";
   version = "0.17.1";
 

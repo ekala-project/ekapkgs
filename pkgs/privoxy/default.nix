@@ -7,7 +7,7 @@
   zlib,
   pcre,
   w3m,
-  man,
+  man-db,
   openssl,
   brotli,
 }:
@@ -31,7 +31,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     autoreconfHook
     w3m
-    man
+    man-db
   ];
 
   buildInputs = [

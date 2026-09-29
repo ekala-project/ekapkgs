@@ -1,11 +1,11 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   withPkcs11 ? true,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "nebula";
   version = "1.11.1";
 

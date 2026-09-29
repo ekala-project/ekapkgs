@@ -1,12 +1,12 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   pkg-config,
   libpostal ? null,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "amass";
   version = "5.1.1";
 

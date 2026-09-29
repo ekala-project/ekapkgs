@@ -13,7 +13,7 @@
   cairo,
   gdk-pixbuf,
   pam,
-  wrapGAppsNoGuiHook,
+  gtk3,
   librsvg,
 }:
 
@@ -37,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     scdoc
     wayland-scanner
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
     gdk-pixbuf
   ];
   buildInputs = [

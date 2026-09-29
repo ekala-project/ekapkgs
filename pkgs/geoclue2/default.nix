@@ -8,14 +8,14 @@
   pkg-config,
   gtk-doc,
   docbook-xsl-nons,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   glib,
   json-glib,
   libsoup,
   avahi,
   glib-networking,
   python3,
-  wrapGAppsNoGuiHook,
+  gtk3,
   gobject-introspection,
   vala,
 }:
@@ -48,13 +48,13 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     meson.configurePhaseHook
     ninja
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
     python3
     vala
     gobject-introspection
     gtk-doc
     docbook-xsl-nons
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
   ];
 
   buildInputs = [

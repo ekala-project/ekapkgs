@@ -11,13 +11,12 @@
   zip,
   unzip,
   p7zip,
-  gnutar,
+  tar,
   bzip2,
   gzip,
   lhasa,
   xz,
   zstd,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -36,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
     makeWrapper
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
@@ -50,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
         zip
         unzip
         p7zip
-        gnutar
+        tar
         bzip2
         gzip
         lhasa

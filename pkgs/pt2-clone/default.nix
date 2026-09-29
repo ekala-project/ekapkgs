@@ -4,7 +4,7 @@
   fetchFromGitHub,
   cmake,
   alsa-lib,
-  SDL2,
+  sdl2-compat,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
-  buildInputs = [ SDL2 ] ++ lib.optional stdenv.hostPlatform.isLinux alsa-lib;
+  buildInputs = [ sdl2-compat ] ++ lib.optional stdenv.hostPlatform.isLinux alsa-lib;
 
   postInstall = ''
     install -Dm444 "$src/release/other/Freedesktop.org Resources/ProTracker 2 clone.desktop" \

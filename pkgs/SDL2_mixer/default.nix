@@ -1,6 +1,6 @@
 {
   lib,
-  SDL2,
+  sdl2-compat,
   fetchFromGitHub,
   flac,
   fluidsynth,
@@ -30,12 +30,12 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    SDL2
+    sdl2-compat
     pkg-config
   ];
 
   propagatedBuildInputs = [
-    SDL2
+    sdl2-compat
     flac
     fluidsynth
     libmodplug

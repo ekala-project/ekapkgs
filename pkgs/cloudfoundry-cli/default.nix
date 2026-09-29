@@ -1,12 +1,12 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   fetchurl,
   installShellFiles,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "cloudfoundry-cli";
   version = "8.18.4";
 

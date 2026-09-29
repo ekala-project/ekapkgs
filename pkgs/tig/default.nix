@@ -6,7 +6,7 @@
   asciidoc,
   xmlto,
   docbook_xsl,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   readline,
   makeWrapper,
   git,
@@ -32,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     asciidoc
     xmlto
     docbook_xsl
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     findXMLCatalogs
     pkg-config
   ];

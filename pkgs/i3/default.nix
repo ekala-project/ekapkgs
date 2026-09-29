@@ -23,7 +23,7 @@
   libxkbcommon,
   asciidoc,
   xmlto,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
   findXMLCatalogs,
 }:
@@ -49,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     perl
     asciidoc
     xmlto
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook_xsl
     findXMLCatalogs
   ];

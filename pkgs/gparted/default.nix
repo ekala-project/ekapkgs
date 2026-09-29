@@ -4,9 +4,9 @@
   fetchurl,
   gettext,
   coreutils,
-  gnused,
+  sed,
   adwaita-icon-theme,
-  gnugrep,
+  grep,
   parted,
   glib,
   libuuid,
@@ -17,7 +17,7 @@
   procps,
   util-linux,
   polkit,
-  wrapGAppsHook3,
+  gtk3,
   replaceVars,
   mtools,
   dosfstools,
@@ -60,7 +60,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     gettext
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   preConfigure = ''
@@ -76,8 +76,8 @@ stdenv.mkDerivation rec {
            util-linux
            procps
            coreutils
-           gnused
-           gnugrep
+           sed
+           grep
            mtools
            dosfstools
          ]

@@ -10,7 +10,7 @@
   ocamlPackages ? null,
   python3,
   libxml2,
-  fuse3,
+  fuse,
   gnutls,
   autoreconfHook,
 }:
@@ -40,7 +40,7 @@ stdenv.mkDerivation rec {
   );
 
   buildInputs = [
-    fuse3
+    fuse
     gnutls
     libxml2
   ];

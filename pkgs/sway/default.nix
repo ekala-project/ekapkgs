@@ -8,7 +8,6 @@
   extraSessionCommands ? "",
   dbus,
   withGtkWrapper ? false,
-  wrapGAppsHook3,
   gdk-pixbuf,
   glib,
   gtk3,
@@ -55,7 +54,7 @@ symlinkJoin {
   paths = (optional withBaseWrapper baseWrapper) ++ [ sway ];
 
   strictDeps = false;
-  nativeBuildInputs = [ makeWrapper ] ++ (optional withGtkWrapper wrapGAppsHook3);
+  nativeBuildInputs = [ makeWrapper ] ++ (optional withGtkWrapper gtk3.wrapGAppsHook);
 
   buildInputs = optionals withGtkWrapper [
     gdk-pixbuf

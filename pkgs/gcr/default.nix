@@ -17,7 +17,6 @@
   openssh,
   python3,
   shared-mime-info,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -43,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3
     ninja
     gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     shared-mime-info
     openssh
   ];

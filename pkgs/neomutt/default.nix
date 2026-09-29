@@ -12,7 +12,7 @@
   gss ? null,
   gpgme,
   libkrb5,
-  libidn2,
+  libidn,
   libxml2,
   notmuch ? null,
   openssl,
@@ -20,7 +20,7 @@
   lmdb,
   libxslt,
   docbook_xsl,
-  docbook_xml_dtd_42,
+  docbook-xml-dtd,
   w3m,
   mailcap,
   sqlite,
@@ -50,7 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     cyrus_sasl
     gpgme
     libkrb5
-    libidn2
+    libidn.v2
     ncurses
     openssl
     perl
@@ -65,7 +65,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     docbook_xsl
-    docbook_xml_dtd_42
+    docbook-xml-dtd.v4_2
     gettext
     libxml2
     libxslt.bin
@@ -87,7 +87,7 @@ stdenv.mkDerivation (finalAttrs: {
     for f in doc/*.{xml,xsl}*  ; do
       substituteInPlace $f \
         --replace http://docbook.sourceforge.net/release/xsl/current     ${docbook_xsl}/share/xml/docbook-xsl \
-        --replace http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd ${docbook_xml_dtd_42}/xml/dtd/docbook/docbookx.dtd
+        --replace http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd ${docbook-xml-dtd.v4_2}/xml/dtd/docbook/docbookx.dtd
     done
 
     # allow neomutt to map attachments to their proper mime.types if specified wrongly

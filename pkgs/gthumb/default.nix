@@ -9,7 +9,7 @@
   libheif,
   libjpeg,
   libtiff,
-  gst_all_1,
+  gstreamer,
   libraw,
   glib,
   gtk3,
@@ -24,7 +24,6 @@
   flex,
   clutter-gtk ? null,
   colord,
-  wrapGAppsHook3,
   shared-mime-info,
   python3,
   desktop-file-utils,
@@ -52,7 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     python3
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
@@ -60,10 +59,10 @@ stdenv.mkDerivation (finalAttrs: {
     exiv2
     glib
     gsettings-desktop-schemas
-    gst_all_1.gst-plugins-base
-    (gst_all_1.gst-plugins-good.override { gtkSupport = true; })
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-ugly
+    gstreamer.plugins-base
+    gstreamer.plugins-good
+    gstreamer.plugins-bad
+    gstreamer.plugins-ugly
     gtk3
     lcms2
     libheif

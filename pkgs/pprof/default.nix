@@ -2,7 +2,7 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
-  libllvm,
+  llvmPackages,
 }:
 
 buildGoModule {
@@ -17,7 +17,7 @@ buildGoModule {
   };
 
   nativeCheckInputs = [
-    libllvm
+    llvmPackages.libllvm
   ];
 
   postPatch = ''

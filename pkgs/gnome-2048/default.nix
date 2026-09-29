@@ -2,7 +2,6 @@
   lib,
   rustPlatform,
   fetchurl,
-  wrapGAppsHook4,
   meson,
   vala,
   pkg-config,
@@ -39,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     rustPlatform.cargoSetupHook
     rustc
     cargo

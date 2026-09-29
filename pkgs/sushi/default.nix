@@ -14,8 +14,7 @@
   libsoup_3,
   # TODO: webkitgtk_4_1 (not available in ekapkgs)
   icu,
-  wrapGAppsHook3,
-  gst_all_1,
+  gstreamer,
   gdk-pixbuf,
   librsvg,
   harfbuzz,
@@ -39,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     gettext
     gobject-introspection
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
@@ -55,8 +54,8 @@ stdenv.mkDerivation (finalAttrs: {
     libsoup_3
     # TODO: webkitgtk_4_1 (not available in ekapkgs)
     libepoxy
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
+    gstreamer
+    gstreamer.plugins-base
     # TODO: gst-plugins-good (with gtkSupport), gst-plugins-bad, gst-plugins-ugly
   ];
 

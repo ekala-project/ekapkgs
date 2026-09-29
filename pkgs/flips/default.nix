@@ -8,7 +8,6 @@
   withGTK3 ? !stdenv.hostPlatform.isDarwin,
   gtk3,
   llvmPackages,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -26,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
   ]
-  ++ lib.optional withGTK3 wrapGAppsHook3;
+  ++ lib.optional withGTK3 gtk3.wrapGAppsHook;
 
   buildInputs = [
     libdivsufsort

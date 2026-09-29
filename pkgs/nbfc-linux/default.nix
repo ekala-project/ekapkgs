@@ -4,7 +4,7 @@
   fetchFromGitHub,
   autoreconfHook,
   pkg-config,
-  lua5_4,
+  lua,
   curl,
   libxml2,
   openssl,
@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    lua5_4
+    lua
     curl
     libxml2
     openssl

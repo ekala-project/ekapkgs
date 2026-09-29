@@ -23,10 +23,10 @@
   libnatpmp,
   # Build options
   enableGTK ? true,
+  gtk4,
   gtkmm4,
   libpthread-stubs,
   libayatana-appindicator,
-  wrapGAppsHook4,
   enableSystemd ? lib.meta.availableOn stdenv.hostPlatform systemd,
   enableDaemon ? true,
   enableCli ? true,
@@ -91,7 +91,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     python3
   ]
-  ++ optionals enableGTK [ wrapGAppsHook4 ];
+  ++ optionals enableGTK [ gtk4.wrapGAppsHook ];
 
   buildInputs = [
     curl

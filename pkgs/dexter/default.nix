@@ -1,12 +1,12 @@
 {
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   lib,
   stdenv,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "dexter";
   version = "0.7.1";
 

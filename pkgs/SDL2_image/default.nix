@@ -1,6 +1,6 @@
 {
   lib,
-  SDL2,
+  sdl2-compat,
   autoreconfHook,
   fetchurl,
   libjpeg,
@@ -26,13 +26,13 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    SDL2
+    sdl2-compat
     autoreconfHook
     pkg-config
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     libtiff
     libwebp
     zlib

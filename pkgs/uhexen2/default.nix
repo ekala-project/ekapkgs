@@ -1,7 +1,7 @@
 {
   lib,
   fetchgit,
-  SDL,
+  sdl12-compat,
   stdenv,
   alsa-lib,
   libGL,
@@ -22,7 +22,7 @@ stdenv.mkDerivation {
   };
 
   buildInputs = [
-    SDL
+    sdl12-compat
     alsa-lib
     libGL
     libogg

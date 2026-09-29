@@ -12,13 +12,12 @@
   upower,
   itstool,
   libxml2,
-  wrapGAppsHook3,
   libnotify,
   gsound,
   gobject-introspection,
   gtk-doc,
   docbook-xsl-nons,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   python3,
   gsettings-desktop-schemas,
 }:
@@ -48,11 +47,11 @@ stdenv.mkDerivation (finalAttrs: {
     itstool
     pkg-config
     libxml2
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
     gtk-doc
     docbook-xsl-nons
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     python3
   ];
 

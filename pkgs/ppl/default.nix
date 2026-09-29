@@ -3,9 +3,9 @@
   fetchpatch,
   lib,
   stdenv,
-  gmpxx,
+  gmp,
   perl,
-  gnum4,
+  m4,
 }:
 
 let
@@ -38,9 +38,9 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [
     perl
-    gnum4
+    m4
   ];
-  propagatedBuildInputs = [ gmpxx ];
+  propagatedBuildInputs = [ gmp.withCxx ];
 
   configureFlags = [
     "--disable-watchdog"

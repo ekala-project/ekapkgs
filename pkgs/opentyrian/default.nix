@@ -2,7 +2,7 @@
   stdenv,
   fetchFromGitHub,
   fetchzip,
-  SDL2,
+  sdl2-compat,
   SDL2_net,
   pkg-config,
 }:
@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_net
   ];
 

@@ -1,7 +1,7 @@
 {
   lib,
   stdenv,
-  SDL,
+  sdl12-compat,
   alsa-lib,
   fetchurl,
   gcc-unwrapped,
@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [
-    SDL
+    sdl12-compat
     alsa-lib
     gcc-unwrapped
     libice

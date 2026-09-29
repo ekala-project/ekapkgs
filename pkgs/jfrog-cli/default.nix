@@ -1,12 +1,12 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   nodejs,
   writableTmpDirAsHomeHook,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "jfrog-cli";
   version = "2.118.0";
 

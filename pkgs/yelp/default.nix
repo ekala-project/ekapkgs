@@ -8,7 +8,6 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook4,
   bzip2,
   glib,
   gtk4,
@@ -37,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     ninja
     pkg-config
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

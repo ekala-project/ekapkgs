@@ -12,10 +12,9 @@
   pkg-config,
   reuse ? null,
   m4,
-  wrapGAppsHook4,
   glib,
   gtk4,
-  gst_all_1,
+  gstreamer,
   libadwaita,
   dbus,
   rustc,
@@ -54,7 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     rustc
     rustPlatform.cargoSetupHook
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ]
   ++ lib.optionals (reuse != null) [
     reuse
@@ -66,12 +65,12 @@ stdenv.mkDerivation (finalAttrs: {
     gtk4
     libadwaita
   ]
-  ++ (with gst_all_1; [
+  ++ (with gstreamer; [
     gstreamer
-    gst-plugins-base
-    gst-plugins-good
-    gst-plugins-bad
-    gst-plugins-ugly
+    plugins-base
+    plugins-good
+    plugins-bad
+    plugins-ugly
   ]);
 
   meta = {

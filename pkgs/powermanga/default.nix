@@ -4,7 +4,7 @@
   fetchurl,
   autoconf,
   automake,
-  SDL,
+  sdl12-compat,
   SDL_mixer,
   libpng,
 }:
@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL
+    sdl12-compat
     SDL_mixer
     libpng
   ];

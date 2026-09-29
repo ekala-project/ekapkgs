@@ -6,7 +6,7 @@
   pkg-config,
   readline,
   zlib,
-  libidn2,
+  libidn,
   gmp,
   libiconv,
   libunistring,
@@ -31,7 +31,7 @@ stdenv.mkDerivation rec {
     openssl
     readline
     zlib
-    libidn2
+    libidn.v2
     gmp
     libiconv
     libunistring

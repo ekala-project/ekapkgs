@@ -3,9 +3,9 @@
   stdenv,
   fetchFromGitHub,
   autoreconfHook,
-  ncurses5,
+  ncurses,
   enableSdl2 ? false,
-  SDL2 ? null,
+  sdl2-compat ? null,
   SDL2_image ? null,
   SDL2_mixer ? null,
   SDL2_ttf ? null,
@@ -24,10 +24,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ autoreconfHook ];
   buildInputs = [
-    ncurses5
+    ncurses.v5
   ]
   ++ lib.optionals enableSdl2 [
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
     SDL2_ttf

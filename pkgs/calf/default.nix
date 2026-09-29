@@ -2,7 +2,7 @@
   lib,
   stdenv,
   expat,
-  fftwSinglePrec,
+  fftw,
   fluidsynth,
   libjack2,
   ladspa-header,
@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     expat
-    fftwSinglePrec
+    fftw.float
     fluidsynth
     libjack2
     ladspa-header

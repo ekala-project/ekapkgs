@@ -3,8 +3,8 @@
   fetchFromGitHub,
   file,
   gawk,
-  gnugrep,
-  gnused,
+  grep,
+  sed,
   installShellFiles,
   lib,
   libiconv,
@@ -61,8 +61,8 @@ stdenv.mkDerivation (finalAttrs: {
             coreutils
             file
             gawk
-            gnugrep
-            gnused
+            grep
+            sed
           ]
         }
     done

@@ -1,10 +1,10 @@
 {
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   lib,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "blocky";
   version = "0.34.0";
 

@@ -8,9 +8,9 @@
   makeWrapper,
   coreutils,
   bc,
-  gnugrep,
+  grep,
   gawk,
-  gnused,
+  sed,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -48,12 +48,12 @@ stdenv.mkDerivation (finalAttrs: {
           lib.makeBinPath [
             coreutils
             bc
-            gnugrep
+            grep
             gawk
           ]
         }
     wrapProgram $out/bin/pic2tpic \
-        --set PATH ${lib.makeBinPath [ gnused ]}
+        --set PATH ${lib.makeBinPath [ sed ]}
   '';
 
   meta = {

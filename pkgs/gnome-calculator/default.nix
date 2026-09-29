@@ -15,7 +15,6 @@
   gtk4,
   glib,
   gtksourceview5,
-  wrapGAppsHook4,
   mpfr,
   gmp,
   libsoup_3,
@@ -52,7 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
     vala
     gettext
     itstool
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

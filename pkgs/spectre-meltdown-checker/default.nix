@@ -1,5 +1,5 @@
 {
-  binutils-unwrapped,
+  binutils,
   coreutils,
   fetchFromGitHub,
   lib,
@@ -29,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     install -Dm755 spectre-meltdown-checker.sh $out/bin/spectre-meltdown-checker
     wrapProgram $out/bin/spectre-meltdown-checker \
-      --prefix PATH : ${lib.makeBinPath [ binutils-unwrapped ]}
+      --prefix PATH : ${lib.makeBinPath [ binutils.unwrapped ]}
 
     runHook postInstall
   '';

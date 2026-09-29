@@ -3,7 +3,7 @@
   coreutils,
   cpio,
   fetchurl,
-  gnutar,
+  tar,
   gzip,
   lib,
   stdenv,
@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
         bzip2
         coreutils
         cpio
-        gnutar
+        tar
         gzip
         xz
         zstd

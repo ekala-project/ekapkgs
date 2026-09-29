@@ -10,7 +10,6 @@
   pkg-config,
   rustPlatform,
   rustc,
-  wrapGAppsHook4,
   appstream-glib,
   desktop-file-utils,
   glib,
@@ -50,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     rustPlatform.cargoSetupHook
     cargo
     rustc
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     appstream-glib
     desktop-file-utils
   ];

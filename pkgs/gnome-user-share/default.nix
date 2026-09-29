@@ -14,7 +14,7 @@
   pkg-config,
   glib,
   libxml2,
-  wrapGAppsNoGuiHook,
+  gtk3,
   itstool,
 }:
 
@@ -70,7 +70,7 @@ stdenv.mkDerivation (finalAttrs: {
     glib # for glib-compile-schemas
     itstool
     libxml2
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [

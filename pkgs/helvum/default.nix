@@ -13,7 +13,6 @@
   rustPlatform,
   rustc,
   stdenv,
-  wrapGAppsHook4,
 }:
 
 stdenv.mkDerivation rec {
@@ -42,7 +41,7 @@ stdenv.mkDerivation rec {
     cargo
     rustc
     rustPlatform.bindgenHook
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

@@ -5,7 +5,7 @@
   dblatex ? null,
   desktop-file-utils,
   docbook-xsl-nons,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   fetchFromGitLab,
   gdk-pixbuf,
   graphene,
@@ -17,7 +17,6 @@
   pkg-config,
   poppler,
   python3,
-  wrapGAppsHook3,
 }:
 
 let
@@ -78,14 +77,14 @@ stdenv.mkDerivation {
     appstream
     desktop-file-utils
     docbook-xsl-nons
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     libxml2
     libxslt
     meson
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

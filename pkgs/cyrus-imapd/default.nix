@@ -20,7 +20,7 @@
   libcap ? null,
   libchardet,
   libical ? null,
-  libmysqlclient ? null,
+  mariadb-connector-c ? null,
   libpq ? null,
   libsrs2,
   libuuid ? null,
@@ -100,7 +100,7 @@ stdenv.mkDerivation (finalAttrs: {
   )
   ++ lib.optionals enableJMAP ([ libchardet ] ++ [ wslay ])
   ++ lib.optionals enableXapian (lib.optionals (rsync != null) [ rsync ] ++ [ xapian ])
-  ++ lib.optionals (withMySQL && libmysqlclient != null) [ libmysqlclient ]
+  ++ lib.optionals (withMySQL && mariadb-connector-c != null) [ mariadb-connector-c ]
   ++ lib.optionals (withPgSQL && libpq != null) [ libpq ]
   ++ lib.optionals (withSQLite && sqlite != null) [ sqlite ];
 

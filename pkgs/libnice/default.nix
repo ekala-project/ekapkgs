@@ -9,7 +9,7 @@
   gobject-introspection,
   gtk-doc,
   docbook-xsl,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   glib,
   gnutls,
   graphviz,
@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     gobject-introspection
     gtk-doc
     docbook-xsl
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
     graphviz
   ];
 

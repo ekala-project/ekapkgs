@@ -44,6 +44,7 @@
   libsecret,
   libxslt,
   harfbuzz,
+  pcre2,
   hyphen,
   icu,
   libsysprof-capture,
@@ -63,7 +64,7 @@
   freetype,
   openssl,
   sqlite,
-  gst_all_1,
+  gstreamer,
   bubblewrap,
   libseccomp,
   libbacktrace,
@@ -112,6 +113,7 @@ clangStdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     bison
     cmake
+    cmake.configurePhaseHook
     gettext
     gobject-introspection
     gperf
@@ -140,11 +142,12 @@ clangStdenv.mkDerivation (finalAttrs: {
     libepoxy
     libjxl
     gnutls
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-base
-    harfbuzz
+    gstreamer.plugins-bad
+    gstreamer.plugins-base
+    (harfbuzz.override { withIcu = true; })
     hyphen
     icu
+    pcre2
     libGL
     libgbm
     libgcrypt
@@ -181,7 +184,7 @@ clangStdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeFlags = [
-    "-DENABLE_INTROSPECTION=ON"
+    "-DENABLE_INTROSPECTION=${if withGtk3 then "OFF" else "ON"}"
     "-DPORT=GTK"
     "-DUSE_LIBSECRET=${if withLibsecret then "ON" else "OFF"}"
     "-DENABLE_EXPERIMENTAL_FEATURES=${if enableExperimental then "ON" else "OFF"}"
@@ -200,6 +203,7 @@ clangStdenv.mkDerivation (finalAttrs: {
   '';
 
   postFixup = ''
+    mkdir -p "$devdoc"
     moveToOutput "share/doc" "$devdoc"
   '';
 

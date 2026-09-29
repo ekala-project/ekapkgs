@@ -47,6 +47,7 @@ stdenv.mkDerivation rec {
     vulkan-headers
     vulkan-loader
     vulkan-volk
+    wayland-scanner
   ]
   ++ lib.optionals (!stdenv.hostPlatform.isDarwin) [
     libffi

@@ -27,8 +27,8 @@
   gobject-introspection,
   pango,
   gdk-pixbuf,
-  atk,
-  wrapGAppsHook3,
+  at-spi2-core,
+  gtk3,
 
   gpsdUser ? "gpsd",
   gpsdGroup ? "dialout",
@@ -50,7 +50,7 @@ stdenv.mkDerivation rec {
   ]
   ++ lib.optionals guiSupport [
     gobject-introspection
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
@@ -63,7 +63,7 @@ stdenv.mkDerivation rec {
     pps-tools
   ]
   ++ lib.optionals guiSupport [
-    atk
+    at-spi2-core
     dbus-glib
     gdk-pixbuf
     libX11

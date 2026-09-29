@@ -1,5 +1,5 @@
 {
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   git,
   jujutsu ? null,
@@ -7,7 +7,7 @@
   makeWrapper,
   universal-ctags,
 }:
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "ctags-lsp";
   version = "0.11.0";
   vendorHash = null;

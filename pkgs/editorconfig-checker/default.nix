@@ -1,11 +1,11 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "editorconfig-checker";
   version = "3.11.1";
 

@@ -4,7 +4,7 @@
   fetchFromGitHub,
   autoreconfHook,
   pkg-config,
-  fuse3 ? null,
+  fuse ? null,
   usbmuxd ? null,
   libimobiledevice ? null,
 }:
@@ -30,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    fuse3
+    fuse
     usbmuxd
     libimobiledevice
   ];

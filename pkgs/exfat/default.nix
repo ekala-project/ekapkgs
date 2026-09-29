@@ -4,7 +4,7 @@
   fetchFromGitHub,
   autoreconfHook,
   pkg-config,
-  fuse3,
+  fuse,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     pkg-config
   ];
-  buildInputs = [ fuse3 ];
+  buildInputs = [ fuse ];
 
   outputs = [
     "out"

@@ -5,7 +5,6 @@
   gettext,
   pkg-config,
   xfce4-dev-tools,
-  wrapGAppsHook3,
   polkit,
   bashNonInteractive,
   xfce4-exo,
@@ -36,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     pkg-config
     xfce4-dev-tools
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     iceauth
   ];
 

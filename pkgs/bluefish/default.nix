@@ -2,7 +2,6 @@
   lib,
   stdenv,
   fetchurl,
-  wrapGAppsHook3,
   pkg-config,
   gtk3,
   libxml2,
@@ -22,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
   buildInputs = [
     adwaita-icon-theme

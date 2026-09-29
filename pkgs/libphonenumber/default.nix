@@ -4,7 +4,7 @@
   fetchFromGitHub,
   cmake,
   gtest,
-  jdk,
+  java,
   pkg-config,
   boost,
   icu,
@@ -30,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
     gtest
-    jdk
+    java
     pkg-config
   ];
 

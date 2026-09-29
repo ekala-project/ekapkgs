@@ -5,12 +5,11 @@
   pkg-config,
   gettext,
   gobject-introspection,
-  wrapGAppsHook4,
   gjs,
   glib,
   gtk4,
   gdk-pixbuf,
-  gst_all_1,
+  gstreamer,
   meson,
   ninja,
   python3,
@@ -33,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     ninja
     gobject-introspection
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     python3
     desktop-file-utils
   ];
@@ -45,11 +44,11 @@ stdenv.mkDerivation (finalAttrs: {
     gdk-pixbuf
     libadwaita
   ]
-  ++ (with gst_all_1; [
+  ++ (with gstreamer; [
     gstreamer
-    gst-plugins-base
-    gst-plugins-good
-    gst-plugins-bad # for gstreamer-player-1.0
+    plugins-base
+    plugins-good
+    plugins-bad # for gstreamer-player-1.0
   ]);
 
   postPatch = ''

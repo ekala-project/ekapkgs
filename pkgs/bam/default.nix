@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  lua5_3,
+  lua,
   python3,
 }:
 
@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    lua5_3
+    lua.v5_3
     python3
   ];
 

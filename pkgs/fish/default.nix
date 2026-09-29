@@ -3,8 +3,8 @@
   lib,
   fetchFromGitHub,
   coreutils,
-  gnused,
-  gnugrep,
+  sed,
+  grep,
   groff,
   gettext,
   man-db,
@@ -83,8 +83,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   propagatedBuildInputs = [
     coreutils
-    gnugrep
-    gnused
+    grep
+    sed
     groff
     gettext
     man-db
@@ -94,7 +94,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   postInstall = ''
     substituteInPlace "$out/share/fish/functions/grep.fish" \
-      --replace-fail "command grep" "command ${lib.getExe gnugrep}"
+      --replace-fail "command grep" "command ${lib.getExe grep}"
 
     substituteInPlace "$out/share/fish/functions/__fish_print_help.fish" \
       --replace-fail "nroff" "${lib.getExe' groff "nroff"}"

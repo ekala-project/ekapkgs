@@ -7,7 +7,7 @@
   pkg-config,
   lib,
   stdenv,
-  wrapGAppsHook3,
+  gtk3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -29,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     meson.configurePhaseHook
     ninja
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     pkg-config
     gobject-introspection
   ];

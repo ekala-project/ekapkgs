@@ -4,7 +4,7 @@
   fetchFromGitHub,
   makeWrapper,
   bash,
-  gnumake,
+  make,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
       --replace '/bin/sh' ${bash}/bin/bash \
       --replace 'make2graph' "$out/bin/make2graph"
     wrapProgram $out/bin/makefile2graph \
-      --set PATH ${lib.makeBinPath [ gnumake ]}
+      --set PATH ${lib.makeBinPath [ make ]}
   '';
 
   meta = {

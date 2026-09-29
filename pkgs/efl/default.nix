@@ -5,7 +5,7 @@
   meson,
   ninja,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   alsa-lib,
   bullet,
   check,
@@ -38,7 +38,7 @@
   libtiff,
   libwebp,
   libxkbcommon,
-  lua5_1,
+  lua,
   lz4,
   mesa-gl-headers,
   mint-x-icons,
@@ -98,10 +98,10 @@ stdenv.mkDerivation (finalAttrs: {
     freetype
     giflib
     glib
-    gstreamer.gst-plugins-base
-    gstreamer.gst-plugins-good
-    gstreamer.gstreamer
-    gstreamer.gst-libav
+    gstreamer.plugins-base
+    gstreamer.plugins-good
+    gstreamer
+    gstreamer.libav
     libGL
     libpng
     libpulseaudio
@@ -120,7 +120,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   propagatedBuildInputs = [
-    SDL2
+    sdl2-compat
     alsa-lib
     bullet
     curl
@@ -141,7 +141,7 @@ stdenv.mkDerivation (finalAttrs: {
     libspectre
     libwebp
     libxkbcommon
-    lua5_1
+    lua.v5_1
     mint-x-icons
     openjpeg
     poppler

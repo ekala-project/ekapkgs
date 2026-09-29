@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  jdk,
+  java,
   makeWrapper,
 }:
 stdenv.mkDerivation (finalAttrs: {
@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ makeWrapper ];
 
-  buildInputs = [ jdk ];
+  buildInputs = [ java ];
 
   installPhase =
     let
@@ -32,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     '';
 
   fixupPhase = ''
-    wrapProgram $out/bin/async-profiler --prefix PATH : ${lib.makeBinPath [ jdk ]}
+    wrapProgram $out/bin/async-profiler --prefix PATH : ${lib.makeBinPath [ java ]}
   '';
 
   meta = {

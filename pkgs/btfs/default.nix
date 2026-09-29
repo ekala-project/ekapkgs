@@ -6,7 +6,7 @@
   pkg-config,
   python3,
   boost,
-  fuse3,
+  fuse,
   libtorrent-rasterbar,
   curl,
 }:
@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   buildInputs = [
     boost
-    fuse3
+    fuse
     libtorrent-rasterbar
     curl
     python3

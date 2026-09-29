@@ -6,7 +6,6 @@
   ninja,
   gettext,
   pkg-config,
-  wrapGAppsHook4,
   itstool,
   desktop-file-utils,
   vala,
@@ -18,7 +17,7 @@
   geocode-glib_2,
   gdk-pixbuf,
   geoclue2,
-  gst_all_1,
+  gstreamer,
   icu,
   libgweather,
   libadwaita,
@@ -42,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     itstool
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     desktop-file-utils
     libxml2
   ];
@@ -59,11 +58,11 @@ stdenv.mkDerivation (finalAttrs: {
     libgweather
     libadwaita
   ]
-  ++ (with gst_all_1; [
+  ++ (with gstreamer; [
     # GStreamer plugins needed for Alarms
     gstreamer
-    gst-plugins-base
-    gst-plugins-good
+    plugins-base
+    plugins-good
   ]);
 
   doCheck = true;

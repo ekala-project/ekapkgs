@@ -10,7 +10,6 @@
   libx11,
   gettext,
   itstool,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -32,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     itstool
     libxml2
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

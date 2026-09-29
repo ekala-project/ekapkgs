@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   pkg-config,
-  fuse3,
+  fuse,
   xz,
   zlib,
 }:
@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [ pkg-config ];
 
   buildInputs = [
-    fuse3
+    fuse
     xz
     zlib
   ];

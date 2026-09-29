@@ -4,7 +4,7 @@
   fetchFromGitHub,
   pcre2,
   uthash,
-  lua5_4,
+  lua,
   makeWrapper,
   installShellFiles,
 }:
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     pcre2
     uthash
-    lua5_4
+    lua
   ];
 
   doCheck = true;

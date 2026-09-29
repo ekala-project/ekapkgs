@@ -1,10 +1,10 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
 }:
 
-buildGo126Module {
+buildGoModule {
   pname = "unconvert";
   version = "0-unstable-2026-08-16";
 

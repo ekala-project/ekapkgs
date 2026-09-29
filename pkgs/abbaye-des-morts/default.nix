@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
 }:
@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
   ];

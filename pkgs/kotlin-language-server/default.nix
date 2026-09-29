@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchzip,
-  openjdk,
+  java,
   gradle,
   makeWrapper,
   maven,
@@ -30,14 +30,14 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
   ];
   buildInputs = [
-    openjdk
+    java
     gradle
   ];
 
   postFixup = ''
-    wrapProgram "$out/bin/kotlin-language-server" --set JAVA_HOME ${openjdk} --prefix PATH : ${
+    wrapProgram "$out/bin/kotlin-language-server" --set JAVA_HOME ${java} --prefix PATH : ${
       lib.strings.makeBinPath [
-        openjdk
+        java
         maven
       ]
     }

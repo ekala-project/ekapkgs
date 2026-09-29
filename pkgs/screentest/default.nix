@@ -5,7 +5,7 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook3,
+  gtk3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -26,7 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   meta = {

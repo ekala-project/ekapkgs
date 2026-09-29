@@ -7,7 +7,7 @@
   cabextract ? null,
   cdrkit ? null,
   mtools ? null,
-  fuse3 ? null,
+  fuse ? null,
   ntfs3g ? null,
   syslinux ? null,
 }:
@@ -23,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     ntfs3g
-    fuse3
+    fuse
   ];
 
   src = fetchurl {
@@ -46,7 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
         ntfs3g
         cdrkit
         syslinux
-        fuse3
+        fuse
       ];
     in
     ''

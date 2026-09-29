@@ -5,7 +5,7 @@
   meson,
   ninja,
   pkg-config,
-  fftwFloat,
+  fftw,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -26,7 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
   buildInputs = [
-    fftwFloat
+    fftw.float
   ];
 
   meta = {

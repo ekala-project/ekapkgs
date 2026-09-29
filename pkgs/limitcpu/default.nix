@@ -13,11 +13,11 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-Wf/rGjUXr+RZmHFL6EGSYKQ2MvfOwI8LAmwezN/1fPw=";
   };
 
-  buildFlags = with stdenv; [
+  buildFlags = [
     (
-      if isDarwin then
+      if stdenv.hostPlatform.isDarwin then
         "osx"
-      else if isFreeBSD then
+      else if stdenv.hostPlatform.isFreeBSD then
         "freebsd"
       else
         "cpulimit"

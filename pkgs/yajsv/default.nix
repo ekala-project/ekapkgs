@@ -1,10 +1,10 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
 }:
 
-buildGo126Module {
+buildGoModule {
   pname = "yajsv";
   version = "1.4.1";
 

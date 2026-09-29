@@ -2,7 +2,6 @@
   stdenv,
   lib,
   fetchFromSourcehut,
-  wrapGAppsHook3,
   pkg-config,
   cmake,
   meson,
@@ -34,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
     scdoc
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

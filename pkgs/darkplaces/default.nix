@@ -4,7 +4,7 @@
   fetchFromGitHub,
   zlib,
   libjpeg,
-  SDL2,
+  sdl2-compat,
   libvorbis,
   libx11,
 }:
@@ -22,7 +22,7 @@ stdenv.mkDerivation {
   buildInputs = [
     zlib
     libjpeg
-    SDL2
+    sdl2-compat
     libx11
   ];
 

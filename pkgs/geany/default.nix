@@ -10,7 +10,6 @@
   libintl,
   hicolor-icon-theme,
   python3,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -41,7 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
     file
     hicolor-icon-theme
     python3
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

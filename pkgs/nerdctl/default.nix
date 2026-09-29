@@ -1,6 +1,6 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   makeWrapper,
   installShellFiles,
@@ -9,7 +9,7 @@
   extraPackages ? [ ],
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "nerdctl";
   version = "2.3.5";
 

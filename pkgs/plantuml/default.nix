@@ -3,7 +3,7 @@
   stdenvNoCC,
   fetchurl,
   graphviz,
-  jdk,
+  java,
   makeBinaryWrapper,
 }:
 
@@ -24,7 +24,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     install -Dm644 $src $out/lib/plantuml.jar
 
     mkdir -p $out/bin
-    makeWrapper ${jdk}/bin/java $out/bin/plantuml \
+    makeWrapper ${java}/bin/java $out/bin/plantuml \
       --argv0 plantuml \
       --set GRAPHVIZ_DOT ${graphviz}/bin/dot \
       --add-flags "-jar $out/lib/plantuml.jar"

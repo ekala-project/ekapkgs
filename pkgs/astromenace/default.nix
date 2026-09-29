@@ -11,7 +11,7 @@
   libice,
   libGLU,
   libGL,
-  SDL2,
+  sdl2-compat,
   openal,
   fontconfig,
   freealut,
@@ -56,7 +56,7 @@ stdenv.mkDerivation rec {
     libxinerama
     libGLU
     libGL
-    SDL2
+    sdl2-compat
     openal
     fontconfig
     freealut

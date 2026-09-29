@@ -7,7 +7,7 @@
   pkg-config,
   installShellFiles,
   libdrm,
-  ffmpeg_6,
+  ffmpeg,
   wayland,
 }:
 
@@ -33,7 +33,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildInputs = [
     wayland
     libdrm
-    ffmpeg_6
+    ffmpeg
   ];
 
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''

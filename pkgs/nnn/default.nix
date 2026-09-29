@@ -9,7 +9,7 @@
   ncurses,
   readline,
   which,
-  gnused,
+  sed,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -41,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
   binPath = lib.makeBinPath [
     file
     which
-    gnused
+    sed
   ];
 
   installTargets = [

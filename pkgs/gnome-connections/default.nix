@@ -9,7 +9,6 @@
   gettext,
   itstool,
   desktop-file-utils,
-  wrapGAppsHook3,
   glib,
   gtk3,
   libsecret,
@@ -40,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     itstool
     desktop-file-utils
     glib # glib-compile-resources
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

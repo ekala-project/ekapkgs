@@ -5,7 +5,7 @@
   autoconf,
   automake,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   gtk3,
   mpfr,
 }:
@@ -29,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
   buildInputs = [
-    SDL2
+    sdl2-compat
     gtk3
     mpfr
   ];

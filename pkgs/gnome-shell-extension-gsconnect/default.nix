@@ -10,7 +10,6 @@
   ninja,
   pkg-config,
   gobject-introspection,
-  wrapGAppsHook3,
   glib,
   glib-networking,
   gtk3,
@@ -50,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     gobject-introspection # for locating typelibs
-    wrapGAppsHook3 # for wrapping daemons
+    gtk3.wrapGAppsHook # for wrapping daemons
     desktop-file-utils # update-desktop-database
   ];
 

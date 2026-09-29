@@ -1,7 +1,7 @@
 {
   asciidoctor,
   dbus,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
   fetchFromGitHub,
   lib,
@@ -46,7 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     asciidoctor
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook_xsl
     makeWrapper
     meson

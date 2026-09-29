@@ -13,7 +13,7 @@
   libxkbcommon,
   libepoxy,
   libxtst,
-  wrapGAppsHook3,
+  gtk3,
   pixman,
   libpthread-stubs,
   gtkmm3,
@@ -21,7 +21,7 @@
   libxdmcp,
   lcms2,
   libiptcdata,
-  fftwSinglePrec,
+  fftw,
   expat,
   pcre2,
   libsigcxx,
@@ -68,7 +68,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
@@ -88,7 +88,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxdmcp
     lcms2
     libiptcdata
-    fftwSinglePrec
+    fftw.float
     expat
     pcre2
     libsigcxx

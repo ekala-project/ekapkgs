@@ -5,21 +5,13 @@ final: prev: {
       inherit (final) lib writeTextFile buildPackages;
     }
   );
-  jre = final.jdk;
-  libmpg123 = final.mpg123;
-  libdbusmenu-gtk3 = final.libdbusmenu.override { withGtk3 = true; };
+  jre = final.java;
+  qt5Packages = final.qt5;
+  libsForQt5 = final.qt5;
+  libdbusmenu-gtk3 = final.libdbusmenu.gtk3;
   docbook_xsl = final.docbook-xsl;
-  wafHook = final.waf.hook;
-  wrapGAppsHook3 = final.wrapGAppsNoGuiHook.override {
-    isGraphical = true;
-  };
-  wrapGAppsHook4 = final.wrapGAppsNoGuiHook.override {
-    isGraphical = true;
-    gtk3 = final.gtk4;
-  };
   libxcb-renderutil = final.xcbutilrenderutil;
   libfm-extra = final.libfm.override { extraOnly = true; };
-  fftwFloat = final.fftwSinglePrec;
   # PulseAudio: libpulseaudio is library-only variant
   libpulseaudio = final.pulseaudio.override { libOnly = true; };
   # JACK2: libjack2 is library-only variant
@@ -41,24 +33,6 @@ final: prev: {
     postInstall = "";
   });
 
-  # GStreamer: map gst_all_1 to the gstreamer scope (corepkgs stubs them as null)
-  gst_all_1 = {
-    inherit (final.gstreamer)
-      gstreamer
-      gst-plugins-base
-      gst-plugins-good
-      gst-plugins-bad
-      gst-plugins-ugly
-      gst-libav
-      gst-rtsp-server
-      gst-devtools
-      ;
-    # TODO: port these remaining GStreamer components
-    gst-editing-services = null;
-    gst-plugins-rs = null;
-    gstreamermm = null;
-  };
-
   # dnsutils is just the utils output of bind
   dnsutils = final.bind.utils;
 
@@ -73,9 +47,6 @@ final: prev: {
 
   # nixos-icons is a simple data package
   nixos-icons = final.callPackage ./pkgs/nixos-icons { };
-
-  # valgrind-light is valgrind without Xen support
-  valgrind-light = final.valgrind;
 
   # libcanberra-gtk3 alias for the gtk3 variant from pkgs-many
   libcanberra-gtk3 = final.libcanberra.gtk3;
@@ -95,6 +66,31 @@ final: prev: {
   # stub for packages that reference nixosTests
   nixosTests = { };
 
+  # Fix duktape: ensure libm is linked into the shared library.
+  # LDFLAGS=-lm is placed before the source file by Makefile.sharedlibrary,
+  # so the linker drops it. Append -lm via NIX_LDFLAGS to fix IFUNC resolution
+  # failures with glibc 2.42 (e.g. qmlcachegen crash during qtdeclarative build).
+  duktape = prev.duktape.overrideAttrs (old: {
+    NIX_LDFLAGS = (old.NIX_LDFLAGS or "") + " -lm";
+  });
+
+  # Break qt6 <-> doxygen cycle: doxygen optionally depends on qt6,
+  # but qt6.qtbase transitively depends on doxygen through libxml2.
+  doxygen = prev.doxygen.override { qt6 = null; };
+
+  # Fix lttng-ust: GitHub changed archive hash for v2.15.1,
+  # and disable man pages (requires asciidoc/xmlto not available)
+  lttng-ust = prev.lttng-ust.overrideAttrs (old: {
+    src = old.src.overrideAttrs {
+      outputHash = "sha256-3hjg4zIIO20zS6ojDjZttPFeJmSDywI493ZCWqNcWcA=";
+    };
+    configureFlags = (old.configureFlags or [ ]) ++ [ "--disable-man-pages" ];
+    outputs = final.lib.filter (o: o != "devdoc") (old.outputs or [ "out" ]);
+  });
+
+  # Qt convenience aliases
+  qt6Packages = final.qt6;
+
   # libxcrypt-legacy (all hash algorithms enabled)
   libxcrypt-legacy = final.libxcrypt.override { enableHashes = "all"; };
 
@@ -103,6 +99,11 @@ final: prev: {
     withGtk3 = false;
     withGtk4 = true;
   };
+  # Enable GObject introspection in gtk3 (needed by GIMP, etc.)
+  gtk3 = prev.gtk3.overrideAttrs (old: {
+    nativeBuildInputs = old.nativeBuildInputs ++ [ final.gobject-introspection ];
+    mesonFlags = (old.mesonFlags or [ ]) ++ [ "-Dintrospection=true" ];
+  });
   gtk4 =
     (prev.gtk4.override {
       trackerSupport = false;
@@ -116,6 +117,42 @@ final: prev: {
       });
   # sdbus-cpp v2 variant
   sdbus-cpp_2 = final.sdbus-cpp.override { version = "2.2.1"; };
+  # Fix stale fetchpatch hashes in corepkgs sane-backends;
+  # patch 90815a9f is already in 1.4.0 source, only c9bf9574 (C2X fix) still needed
+  sane-backends = prev.sane-backends.overrideAttrs (old: {
+    patches = [
+      (final.fetchpatch {
+        url = "https://gitlab.com/sane-project/backends/-/commit/8acc267d5f4049d8438456821137ae56e91baea9.patch";
+        hash = "sha256-IyupDeH1MPvEBnGaUzBbCu106Gp7zXxlPGFAaiiINQI=";
+      })
+      (final.fetchpatch {
+        url = "https://gitlab.com/sane-project/backends/-/commit/fbf80b0fc1d262ed40d4b49dd53c14707083ef60.patch";
+        hash = "sha256-9KKTr7p1vCgvGr6hFY83K5gbL7Ilm4Uzc86JIxv+ahI=";
+        revert = true;
+      })
+      # C2X fix: GCC 14 with -std=gnu23 defines __STDC_VERSION__ < 202311L
+      (final.fetchurl {
+        url = "https://gitlab.com/sane-project/backends/-/commit/c9bf95744ae3c32c31202dea3327064c0d121444.patch";
+        hash = "sha256-1Lvqdd8Y4VcPABJgR6UJu8W4RHCmr5VqL3wNtVBLrMk=";
+      })
+    ];
+  });
+
+  # Fix opencascade-occt: add missing libX11 headers
+  # The corepkgs build has Xlib detection (HAVE_XLIB) but cmake doesn't find X11
+  # include directories. Add libx11 and pass 3RDPARTY_INCLUDE_DIRS so cmake can
+  # locate X11/Xlib.h.
+  opencascade-occt = prev.opencascade-occt.overrideAttrs (old: {
+    buildInputs = (old.buildInputs or [ ]) ++ [
+      final.libx11
+      final.fontconfig
+    ];
+    cmakeFlags = (old.cmakeFlags or [ ]) ++ [
+      "-DCMAKE_CXX_FLAGS=-isystem ${final.libx11.dev}/include -isystem ${final.xorgproto.include}/include -isystem ${final.fontconfig.dev}/include -isystem ${final.libGL.dev}/include"
+      "-DCMAKE_C_FLAGS=-isystem ${final.libx11.dev}/include -isystem ${final.xorgproto.include}/include -isystem ${final.fontconfig.dev}/include -isystem ${final.libGL.dev}/include"
+    ];
+  });
+
   # GNOME Shell extensions convenience set
   gnomeExtensions = {
     appindicator = final.gnome-shell-extension-appindicator;

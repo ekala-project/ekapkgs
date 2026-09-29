@@ -6,7 +6,7 @@
   perl,
   gettext,
   pkg-config,
-  libidn2,
+  libidn,
   libiconv,
 }:
 
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
   buildInputs = [
-    libidn2
+    libidn.v2
     libiconv
   ];
 

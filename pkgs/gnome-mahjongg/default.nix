@@ -4,7 +4,6 @@
   fetchurl,
   pkg-config,
   gtk4,
-  wrapGAppsHook4,
   libadwaita,
   librsvg,
   gettext,
@@ -35,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
     itstool
     gettext
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     glib
   ];
 

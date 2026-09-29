@@ -8,7 +8,6 @@
   itstool,
   gettext,
   desktop-file-utils,
-  wrapGAppsHook4,
   libxml2,
   libadwaita,
   libsoup_3,
@@ -37,7 +36,7 @@ stdenv.mkDerivation rec {
     itstool
     gettext
     desktop-file-utils
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

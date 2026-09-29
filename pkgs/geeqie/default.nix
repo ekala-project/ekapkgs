@@ -21,7 +21,7 @@
   openjpeg,
   libjxl,
   libraw,
-  lua5_3 ? null,
+  lua ? null,
   poppler,
   gspell,
   libtiff,
@@ -32,7 +32,6 @@
   exiftool,
   zenity,
   libnotify,
-  wrapGAppsHook3,
   doxygen,
   openexr ? null,
   cfitsio ? null,
@@ -57,7 +56,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     intltool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     doxygen
     meson
     meson.configurePhaseHook
@@ -83,7 +82,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional (libchamplain_libsoup3 != null) libchamplain_libsoup3
   ++ lib.optional (clutter-gtk != null) clutter-gtk
-  ++ lib.optional (lua5_3 != null) lua5_3
+  ++ lib.optional (lua != null) lua.v5_3
   ++ lib.optional (openexr != null) openexr
   ++ lib.optional (cfitsio != null) cfitsio;
 

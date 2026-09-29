@@ -8,7 +8,7 @@
   pkg-config,
   gnutls,
   libgcrypt,
-  libidn2,
+  libidn,
   lksctp-tools,
 }:
 stdenv.mkDerivation (finalAttrs: {
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     gnutls
     libgcrypt
-    libidn2
+    libidn.v2
     lksctp-tools
   ];
   meta = {

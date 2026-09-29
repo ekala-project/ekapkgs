@@ -6,7 +6,7 @@
   autoPatchelfHook,
   autoreconfHook,
   cairo,
-  ffmpeg-headless,
+  ffmpeg,
   freerdp,
   libjpeg_turbo,
   libpng,
@@ -53,7 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     cairo
-    ffmpeg-headless
+    ffmpeg.headless
     freerdp
     libjpeg_turbo
     libossp_uuid

@@ -12,7 +12,7 @@
   openssl,
   systemd,
   pam,
-  fuse3,
+  fuse,
   libdrm,
   libjpeg,
   libopus,
@@ -101,7 +101,7 @@ let
     ];
 
     buildInputs = [
-      fuse3
+      fuse
       lame
       libjpeg
       libjpeg_turbo

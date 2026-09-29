@@ -8,7 +8,7 @@
   libepoxy,
   gettext,
   gobject-introspection,
-  gst_all_1,
+  gstreamer,
   gtk-doc,
   gtk3,
   hwdata,
@@ -37,7 +37,6 @@
   wayland-protocols,
   wayland-scanner,
   zlib,
-  wrapGAppsHook3,
   withPolkit ? stdenv.hostPlatform.isLinux,
 }:
 
@@ -75,7 +74,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3.pkgs.pyparsing
     python3.pkgs.six
     vala
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ]
   ++ lib.optionals (stdenv.buildPlatform != stdenv.hostPlatform) [
     mesonEmulatorHook
@@ -85,8 +84,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
+    gstreamer.plugins-base
+    gstreamer.plugins-good
     cyrus_sasl
     libepoxy
     gtk3

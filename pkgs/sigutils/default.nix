@@ -4,7 +4,7 @@
   fetchFromGitHub,
   cmake,
   pkg-config,
-  fftwSinglePrec,
+  fftw,
   libsndfile,
   volk,
 }:
@@ -27,7 +27,7 @@ stdenv.mkDerivation {
   ];
 
   buildInputs = [
-    fftwSinglePrec
+    fftw.float
     libsndfile
     volk
   ];

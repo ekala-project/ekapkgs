@@ -11,7 +11,6 @@
   gettext,
   itstool,
   libxml2,
-  wrapGAppsHook3,
   meson,
   ninja,
   python3,
@@ -38,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
     itstool
     gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

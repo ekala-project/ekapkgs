@@ -9,7 +9,6 @@
   libx11,
   pango,
   pkg-config,
-  wrapGAppsHook3,
   adwaita-icon-theme,
   gtk3,
   gettext,
@@ -31,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     intltool
     autoreconfHook
   ];

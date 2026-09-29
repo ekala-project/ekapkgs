@@ -13,7 +13,7 @@
   librsvg,
   libxslt,
   libxml2,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   docbook_xsl,
   glib,
 }:
@@ -44,7 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     which
     libxslt
     libxml2
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
     docbook_xsl
     installShellFiles
   ];
@@ -65,7 +65,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [
     "--enable-man"
-    "--with-xml-catalog=${docbook_xml_dtd_412}/xml/dtd/docbook/catalog.xml"
+    "--with-xml-catalog=${docbook-xml-dtd.v4_1_2}/xml/dtd/docbook/catalog.xml"
   ];
 
   postInstall = ''

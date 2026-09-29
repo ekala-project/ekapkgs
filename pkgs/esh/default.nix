@@ -4,7 +4,7 @@
   fetchFromGitHub,
   asciidoctor,
   gawk,
-  gnused,
+  sed,
   coreutils,
   runtimeShell,
   binlore,
@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     gawk
-    gnused
+    sed
   ];
 
   makeFlags = [
@@ -41,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace esh \
         --replace-fail '"/bin/sh"' '"${runtimeShell}"' \
         --replace-fail '"awk"' '"${gawk}/bin/awk"' \
-        --replace-fail 'sed' '${gnused}/bin/sed' \
+        --replace-fail 'sed' '${sed}/bin/sed' \
         --replace-fail 'cat' '${coreutils}/bin/cat'
     substituteInPlace tests/test-dump.exp \
         --replace-fail '#!/bin/sh' '#!${runtimeShell}'

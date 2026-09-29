@@ -2,7 +2,7 @@
   lib,
   fetchurl,
   perlPackages,
-  jdk,
+  java,
 }:
 
 perlPackages.buildPerlPackage rec {
@@ -42,7 +42,7 @@ perlPackages.buildPerlPackage rec {
     (
       cd wwwroot/classes/src
       rm ../*.jar
-      PATH="${jdk}/bin" "$(type -P perl)" Makefile.pl
+      PATH="${java}/bin" "$(type -P perl)" Makefile.pl
       test -f ../*.jar
     )
   '';

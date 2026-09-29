@@ -16,7 +16,6 @@
   glib,
   gdk-pixbuf,
   perl,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation {
@@ -38,7 +37,7 @@ stdenv.mkDerivation {
     desktop-file-utils
     intltool
     gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

@@ -9,13 +9,12 @@
   libcpuid,
   pciutils,
   procps,
-  wrapGAppsHook3,
   nasm,
   opencl-headers,
   ocl-icd,
   vulkan-headers,
   vulkan-loader,
-  glfw,
+  glfw3,
   libxdmcp,
   util-linux,
   libselinux,
@@ -55,7 +54,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     nasm
   ];
 
@@ -68,7 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
     procps
     vulkan-headers
     vulkan-loader
-    glfw
+    glfw3
     opencl-headers
     ocl-icd
     libxdmcp

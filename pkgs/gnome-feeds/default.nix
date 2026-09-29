@@ -11,7 +11,7 @@
   ninja,
   pkg-config,
   blueprint-compiler,
-  wrapGAppsHook4,
+  gtk4,
 
   glib-networking,
   libadwaita,
@@ -52,7 +52,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     ninja
     pkg-config
     blueprint-compiler
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

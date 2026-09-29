@@ -1,10 +1,10 @@
 {
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   lib,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "kubectl-cnpg";
   version = "1.30.0";
 

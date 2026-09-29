@@ -1,11 +1,11 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   libx11 ? null,
 }:
 
-buildGo126Module rec {
+buildGoModule rec {
   pname = "lazysql";
   version = "0.5.6";
 

@@ -2,7 +2,7 @@
   lib,
   stdenv,
   acl,
-  binutils-unwrapped-all-targets,
+  binutils,
   bzip2,
   cdrkit,
   colordiff,
@@ -16,7 +16,7 @@
   file,
   findutils,
   gettext,
-  gnutar,
+  tar,
   gzip,
   help2man,
   html2text,
@@ -73,7 +73,7 @@ python3.pkgs.buildPythonApplication rec {
   pythonPath = lib.filter (lib.meta.availableOn stdenv.hostPlatform) (
     [
       acl
-      binutils-unwrapped-all-targets
+      binutils.unwrapped-all-targets
       bzip2
       cdrkit
       colordiff
@@ -85,7 +85,7 @@ python3.pkgs.buildPythonApplication rec {
       file
       findutils
       gettext
-      gnutar
+      tar
       gzip
       html2text
       libarchive

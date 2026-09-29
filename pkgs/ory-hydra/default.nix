@@ -1,11 +1,11 @@
 {
   lib,
   stdenv,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
 }:
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "hydra";
   version = "26.2.0";
 

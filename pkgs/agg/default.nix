@@ -7,7 +7,7 @@
   libtool,
   pkg-config,
   freetype,
-  SDL,
+  sdl12-compat,
   libx11,
 }:
 let
@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   buildInputs = [
     freetype
-    SDL
+    sdl12-compat
   ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [
     libx11

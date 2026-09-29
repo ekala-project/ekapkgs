@@ -1,7 +1,7 @@
 {
   lib,
   makeWrapper,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   jq,
@@ -21,7 +21,7 @@ let
     slimjet = "$out/etc/opt/slimjet/native-messaging-hosts/com.justwatch.gopass.json";
   };
 in
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "gopass-jsonapi";
   version = "1.16.1";
 

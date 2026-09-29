@@ -3,7 +3,7 @@
   buildPackages,
   stdenv,
   fetchFromGitHub,
-  ffmpeg-full,
+  ffmpeg,
   libaom,
   meson,
   nasm,
@@ -49,7 +49,8 @@ stdenv.mkDerivation (finalAttrs: {
   doCheck = false;
 
   passthru.tests = {
-    inherit libaom ffmpeg-full;
+    inherit libaom;
+    ffmpeg-full = ffmpeg.full;
     version = testers.testVersion {
       package = finalAttrs.finalPackage;
     };

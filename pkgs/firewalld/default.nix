@@ -4,7 +4,7 @@
   fetchFromGitHub,
   autoconf,
   automake,
-  docbook_xml_dtd_42,
+  docbook-xml-dtd,
   docbook-xsl-nons,
   glib,
   gobject-introspection,
@@ -22,7 +22,6 @@
   python3,
   qt6 ? null,
   sysctl,
-  wrapGAppsNoGuiHook,
   withGui ? false,
 }:
 
@@ -75,7 +74,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     autoconf
     automake
-    docbook_xml_dtd_42
+    docbook-xml-dtd.v4_2
     docbook-xsl-nons
     glib
     gobject-introspection
@@ -85,7 +84,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     python3
     python3.pkgs.wrapPython
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ]
   ++ lib.optionals withGui [
     qt6.wrapQtAppsHook

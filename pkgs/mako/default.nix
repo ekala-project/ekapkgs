@@ -15,7 +15,7 @@
   wayland,
   wayland-scanner,
   wayland-protocols,
-  wrapGAppsHook3,
+  gtk3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     scdoc
     wayland-protocols
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     wayland-scanner
   ];
   buildInputs = [

@@ -1,6 +1,6 @@
 {
   lib,
-  buildGo124Module,
+  buildGoModule,
   fetchFromGitHub,
   symlinkJoin,
 }:
@@ -30,7 +30,7 @@ let
     platforms = platforms.darwin ++ platforms.linux;
   };
 
-  etcdserver = buildGo124Module {
+  etcdserver = buildGoModule {
     pname = "etcdserver";
 
     inherit
@@ -53,7 +53,7 @@ let
     doCheck = false;
   };
 
-  etcdutl = buildGo124Module rec {
+  etcdutl = buildGoModule rec {
     pname = "etcdutl";
 
     inherit
@@ -68,7 +68,7 @@ let
     modRoot = "./etcdutl";
   };
 
-  etcdctl = buildGo124Module rec {
+  etcdctl = buildGoModule rec {
     pname = "etcdctl";
 
     inherit

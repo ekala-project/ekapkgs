@@ -2,11 +2,11 @@
   lib,
   fetchFromGitHub,
   makeWrapper,
-  buildGo126Module,
+  buildGoModule,
   wireshark-cli ? null,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "termshark";
   version = "2.4.0";
 

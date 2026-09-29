@@ -8,7 +8,7 @@
   libidn,
   pcre2,
   libssh,
-  libmysqlclient ? null,
+  mariadb-connector-c ? null,
   libpq ? null,
   samba ? null,
 }:
@@ -46,7 +46,7 @@ stdenv.mkDerivation rec {
     libidn
     pcre2
     libssh
-    libmysqlclient
+    mariadb-connector-c
     libpq
     samba
   ];

@@ -11,7 +11,7 @@
   docbook_xsl,
   pkg-config,
   coreutils,
-  gnused,
+  sed,
   groff,
   docutils,
   gzip,
@@ -94,7 +94,7 @@ stdenv.mkDerivation (finalAttrs: {
       wrapProgram $script --prefix PATH : '${
         lib.makeBinPath [
           coreutils
-          gnused
+          sed
         ]
       }'
     done

@@ -5,7 +5,7 @@
   ninja,
   python3,
   gnome-shell,
-  wrapGAppsNoGuiHook,
+  gtk3,
   gobject-introspection,
 }:
 
@@ -26,7 +26,7 @@ buildPythonApplication (finalAttrs: {
   nativeBuildInputs = [
     meson
     ninja
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
     gobject-introspection # for setup-hook
   ];
 

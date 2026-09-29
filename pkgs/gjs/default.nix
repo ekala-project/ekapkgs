@@ -22,14 +22,14 @@
   which,
   # TODO: xvfb-run is not yet available in ekapkgs
   xvfb-run ? null,
-  atk,
+  at-spi2-core,
   installTests ? true,
 }:
 
 let
   testDeps = [
     gtk3
-    atk
+    at-spi2-core
     pango.out
     glib.out
     gdk-pixbuf

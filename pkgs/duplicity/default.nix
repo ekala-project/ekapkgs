@@ -7,12 +7,12 @@
   glib,
   ncftp,
   gnupg,
-  gnutar,
+  tar,
   par2cmdline,
   util-linux,
   rsync,
   makeWrapper,
-  wrapGAppsNoGuiHook,
+  gtk3,
   gettext,
 }:
 
@@ -50,7 +50,7 @@ let
       makeWrapper
       gettext
       python3.pkgs.wrapPython
-      wrapGAppsNoGuiHook
+      gtk3.wrapGAppsNoGuiHook
       python3.pkgs.setuptools-scm
       python3.pkgs.pycodestyle
       python3.pkgs.pylint
@@ -72,7 +72,7 @@ let
 
     nativeCheckInputs = [
       gnupg
-      gnutar
+      tar
       librsync
       par2cmdline
     ]

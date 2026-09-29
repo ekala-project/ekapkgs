@@ -5,7 +5,6 @@
   fetchpatch2,
   autoreconfHook,
   pkg-config,
-  wrapGAppsHook3,
   glib,
   intltool,
   gtk3,
@@ -31,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     autoreconfHook
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     intltool
   ];
 

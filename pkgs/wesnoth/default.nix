@@ -4,7 +4,7 @@
   fetchFromGitHub,
   cmake,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
   SDL2_net,
@@ -18,13 +18,13 @@
   libpng,
   openssl,
   icu,
-  lua5_4,
+  lua,
   curl,
 }:
 
 let
   # wesnoth requires lua built with c++, see https://github.com/wesnoth/wesnoth/pull/8234
-  lua = lua5_4.override {
+  lua' = lua.override {
     postConfigure = ''
       makeFlagsArray+=("CC=$CXX")
     '';
@@ -49,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
     SDL2_net
@@ -63,7 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
     libpng
     openssl
     icu
-    lua
+    lua'
     curl
   ];
 

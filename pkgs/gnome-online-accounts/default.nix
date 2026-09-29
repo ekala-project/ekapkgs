@@ -26,7 +26,6 @@
   libkrb5, # TODO: libkrb5 (krb5) may need to be ported to ekapkgs
   gvfs,
   dbus,
-  wrapGAppsHook4,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -68,7 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

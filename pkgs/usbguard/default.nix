@@ -8,7 +8,7 @@
   pkg-config,
   libxslt,
   libxml2,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
   dbus-glib,
   libcap_ng,
@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     libxslt # xsltproc
     libxml2 # xmllint
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook_xsl
     dbus-glib # gdbus-codegen
     protobuf # protoc

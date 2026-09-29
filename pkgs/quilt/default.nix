@@ -9,8 +9,8 @@
   diffutils,
   findutils,
   gawk,
-  gnugrep,
-  gnused,
+  grep,
+  sed,
   patch,
   perl,
   unixtools,
@@ -34,8 +34,8 @@ stdenv.mkDerivation (finalAttrs: {
     diffutils
     findutils
     gawk
-    gnugrep
-    gnused
+    grep
+    sed
     patch
     perl
     unixtools.column

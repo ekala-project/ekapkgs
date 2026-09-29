@@ -6,7 +6,7 @@
   which,
   makeWrapper,
   installShellFiles,
-  jdk,
+  java,
   copyDesktopItems ? null,
   makeDesktopItem ? null,
 }:
@@ -63,8 +63,8 @@ stdenv.mkDerivation (finalAttrs: {
 
     for p in grape java2groovy groovy{,doc,c,sh,Console}; do
       wrapProgram $out/bin/$p \
-        --set JAVA_HOME "${jdk}" \
-        --prefix PATH ":" "${jdk}/bin"
+        --set JAVA_HOME "${java}" \
+        --prefix PATH ":" "${java}/bin"
     done
 
     runHook postInstall

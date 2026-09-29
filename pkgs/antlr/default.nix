@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   fetchFromGitHub,
-  jdk,
+  java,
   cmake,
   ninja,
   pkg-config,
@@ -72,20 +72,20 @@ stdenv.mkDerivation {
     ln -s "$src" "$out/share/java/antlr-${version}-complete.jar"
 
     echo "#! ${stdenv.shell}" >> "$out/bin/antlr"
-    echo "'${jdk}/bin/java' -cp '$out/share/java/antlr-${version}-complete.jar:$CLASSPATH' -Xmx500M org.antlr.v4.Tool \"\$@\"" >> "$out/bin/antlr"
+    echo "'${java}/bin/java' -cp '$out/share/java/antlr-${version}-complete.jar:$CLASSPATH' -Xmx500M org.antlr.v4.Tool \"\$@\"" >> "$out/bin/antlr"
 
     echo "#! ${stdenv.shell}" >> "$out/bin/antlr-parse"
-    echo "'${jdk}/bin/java' -cp '$out/share/java/antlr-${version}-complete.jar:$CLASSPATH' -Xmx500M org.antlr.v4.gui.Interpreter \"\$@\"" >> "$out/bin/antlr-parse"
+    echo "'${java}/bin/java' -cp '$out/share/java/antlr-${version}-complete.jar:$CLASSPATH' -Xmx500M org.antlr.v4.gui.Interpreter \"\$@\"" >> "$out/bin/antlr-parse"
 
     echo "#! ${stdenv.shell}" >> "$out/bin/grun"
-    echo "'${jdk}/bin/java' -cp '$out/share/java/antlr-${version}-complete.jar:$CLASSPATH' org.antlr.v4.gui.TestRig \"\$@\"" >> "$out/bin/grun"
+    echo "'${java}/bin/java' -cp '$out/share/java/antlr-${version}-complete.jar:$CLASSPATH' org.antlr.v4.gui.TestRig \"\$@\"" >> "$out/bin/grun"
 
     chmod a+x "$out/bin/antlr" "$out/bin/antlr-parse" "$out/bin/grun"
     ln -s "$out/bin/antlr"{,4}
     ln -s "$out/bin/antlr"{,4}-parse
   '';
 
-  inherit jdk;
+  inherit java;
 
   passthru = {
     inherit runtime;

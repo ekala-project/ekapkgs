@@ -1,10 +1,10 @@
 {
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   lib,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "revive";
   version = "1.16.0";
 

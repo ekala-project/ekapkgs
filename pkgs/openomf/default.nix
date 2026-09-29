@@ -13,7 +13,7 @@
   libxmp,
   miniupnpc,
   opusfile,
-  SDL2,
+  sdl2-compat,
   SDL2_mixer,
   unzip,
   zlib,
@@ -78,7 +78,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxmp
     miniupnpc
     opusfile
-    SDL2
+    sdl2-compat
     SDL2_mixer
     zlib
   ];

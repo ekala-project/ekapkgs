@@ -5,7 +5,7 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsNoGuiHook,
+  gtk3,
   gobject-introspection,
   glib,
   systemd,
@@ -36,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gitMinimal
     swig
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
     gobject-introspection
   ];
 

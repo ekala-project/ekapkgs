@@ -17,7 +17,7 @@
   gtksourceview4,
   libpeas,
   mate-desktop,
-  wrapGAppsHook3,
+  gtk3,
   yelp-tools,
 }:
 
@@ -44,7 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     perl
     pkg-config
     python3.pkgs.wrapPython
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     yelp-tools
   ];
 

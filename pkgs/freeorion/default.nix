@@ -7,7 +7,7 @@
   graphviz,
   makeWrapper,
   boost,
-  SDL2,
+  sdl2-compat,
   python3,
   freetype,
   openal,
@@ -40,7 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
       python = python3;
     })
     (python3.withPackages (p: with p; [ pycodestyle ]))
-    SDL2
+    sdl2-compat
     freetype
     glew
     libGL

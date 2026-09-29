@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  fftwSinglePrec,
+  fftw,
   libxslt,
   lv2,
   pkg-config,
@@ -26,7 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [
-    fftwSinglePrec
+    fftw.float
     lv2
   ];
 

@@ -7,13 +7,9 @@
   gtk-doc,
   gtk3,
   libayatana-indicator,
-  libdbusmenu,
+  libdbusmenu-gtk3,
   vala,
 }:
-
-let
-  libdbusmenu-gtk3 = libdbusmenu.override { gtkVersion = "3"; };
-in
 stdenv.mkDerivation (finalAttrs: {
   pname = "libayatana-appindicator";
   version = "0.5.92";

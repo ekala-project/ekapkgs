@@ -4,7 +4,7 @@
   fetchFromGitHub,
   coreutils,
   openssh,
-  gnutar,
+  tar,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -30,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace execute.c \
       --replace-fail @ssh@     ${openssh}/bin/ssh \
       --replace-fail @ssh-add@ ${openssh}/bin/ssh-add \
-      --replace-fail @tar@     ${gnutar}/bin/tar
+      --replace-fail @tar@     ${tar}/bin/tar
 
     substituteInPlace rutils.c \
       --replace-fail @install@ ${coreutils}/bin/install

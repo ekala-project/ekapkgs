@@ -4,7 +4,6 @@
   fetchFromGitLab,
   pkg-config,
   xfce4-dev-tools,
-  wrapGAppsHook3,
   hicolor-icon-theme,
   perl,
   libice,
@@ -38,7 +37,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     pkg-config
     xfce4-dev-tools
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     perl
   ];
 

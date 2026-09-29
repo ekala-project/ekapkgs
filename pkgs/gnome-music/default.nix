@@ -9,7 +9,6 @@
   libxml2,
   python3,
   libnotify,
-  wrapGAppsHook4,
   libmediaart,
   gobject-introspection,
   gnome-online-accounts,
@@ -22,7 +21,7 @@
   desktop-file-utils,
   appstream-glib,
   itstool,
-  gst_all_1,
+  gstreamer,
   libsoup_3,
   libadwaita,
   gsettings-desktop-schemas,
@@ -46,7 +45,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     itstool
     pkg-config
     libxml2
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     desktop-file-utils
     appstream-glib
     gobject-introspection
@@ -68,10 +67,10 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     gsettings-desktop-schemas
     tinysparql
   ]
-  ++ (with gst_all_1; [
+  ++ (with gstreamer; [
     gstreamer
-    gst-plugins-base
-    # TODO: gst-plugins-good, gst-plugins-bad, gst-plugins-ugly, gst-libav not in ekapkgs
+    plugins-base
+    # TODO: plugins-good, plugins-bad, plugins-ugly, libav not in ekapkgs
   ]);
 
   pythonPath =

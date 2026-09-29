@@ -32,7 +32,7 @@
   egl-wayland,
   fribidi,
   harfbuzz,
-  atk,
+  at-spi2-core,
   libadwaita,
   libxcvt,
   colord,
@@ -59,7 +59,6 @@
   xvfb-run ? null,
   xorg-server,
   wayland-scanner,
-  wrapGAppsHook4,
   udevCheckHook,
   libxcb,
   # X11 libs from xorg set (available)
@@ -125,7 +124,7 @@ stdenv.mkDerivation (finalAttrs: {
     gobject-introspection
     desktop-file-utils
     wayland-scanner
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     gi-docgen
     docutils # for rst2man
     xorg-server
@@ -139,7 +138,7 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     gnome-desktop
     gsettings-desktop-schemas
-    atk
+    at-spi2-core
     fribidi
     harfbuzz
     libcanberra

@@ -12,7 +12,6 @@
   libpeas,
   libxml2,
   gsettings-desktop-schemas ? null,
-  wrapGAppsHook3,
   gtk-doc,
   gobject-introspection,
   docbook-xsl-nons,
@@ -59,7 +58,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gtk-doc
     gobject-introspection
     docbook-xsl-nons

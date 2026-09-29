@@ -9,7 +9,6 @@
   gettext,
   libxml2,
   desktop-file-utils,
-  wrapGAppsHook4,
   glib,
   gtk4,
   json-glib,
@@ -37,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

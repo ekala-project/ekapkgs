@@ -9,7 +9,7 @@
   libsndfile,
   pkg-config,
   python311,
-  wafHook,
+  waf,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
     python311
-    wafHook
+    waf.hook
   ];
   buildInputs = [
     fftw

@@ -5,7 +5,7 @@
   autoreconfHook,
   libiconv,
   ncurses,
-  SDL2,
+  sdl2-compat,
   SDL2_mixer,
 }:
 
@@ -24,7 +24,7 @@ stdenv.mkDerivation {
   buildInputs = [
     libiconv
     ncurses
-    SDL2
+    sdl2-compat
     SDL2_mixer
   ];
 

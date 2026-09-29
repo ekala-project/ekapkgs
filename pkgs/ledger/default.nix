@@ -9,7 +9,7 @@
   libedit,
   installShellFiles,
   texinfo,
-  gnused,
+  sed,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -32,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     gmp
     mpfr
     libedit
-    gnused
+    sed
     boost
   ];
 

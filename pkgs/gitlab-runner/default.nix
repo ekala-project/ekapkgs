@@ -2,13 +2,13 @@
   lib,
   stdenv,
   bash,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitLab,
   gitMinimal,
   writableTmpDirAsHomeHook,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "gitlab-runner";
   version = "19.1.1";
 

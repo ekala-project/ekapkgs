@@ -6,7 +6,7 @@
   pkg-config,
   libglvnd,
   libtool,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
   libsm,
@@ -34,7 +34,7 @@ stdenv.mkDerivation {
   buildInputs = [
     libglvnd
     libtool
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
     libsm
@@ -42,8 +42,8 @@ stdenv.mkDerivation {
   strictDeps = true;
 
   env.NIX_CFLAGS_COMPILE = toString [
-    "-I${lib.getDev SDL2_image}/include/SDL2"
-    "-I${lib.getDev SDL2_mixer}/include/SDL2"
+    "-I${lib.getDev SDL2_image}/include/sdl2-compat"
+    "-I${lib.getDev SDL2_mixer}/include/sdl2-compat"
   ];
 
   enableParallelBuilding = true;

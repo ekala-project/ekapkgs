@@ -4,7 +4,7 @@
   fetchurl,
   makeWrapper,
   asciidoc,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
   coreutils,
   cvs,
@@ -37,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   preBuild = ''
     makeFlagsArray=(
-      XML_CATALOG_FILES="${docbook_xml_dtd_45}/xml/dtd/docbook/catalog.xml ${docbook_xsl}/xml/xsl/docbook/catalog.xml"
+      XML_CATALOG_FILES="${docbook-xml-dtd.v4_5}/xml/dtd/docbook/catalog.xml ${docbook_xsl}/xml/xsl/docbook/catalog.xml"
       LIBS=""
       prefix="$out"
     )

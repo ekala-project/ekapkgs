@@ -13,7 +13,6 @@
   libmpdclient,
   libxml2,
   taglib,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation rec {
@@ -30,7 +29,7 @@ stdenv.mkDerivation rec {
     pkg-config
     gettext
     intltool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

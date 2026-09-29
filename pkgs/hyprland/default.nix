@@ -23,7 +23,7 @@
   libinput,
   libuuid,
   libxkbcommon,
-  lua5_5,
+  lua,
   muparser,
   pango,
   pciutils,
@@ -132,7 +132,7 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
       libuuid
       libxcursor
       libxkbcommon
-      lua5_5
+      lua.v5_5
       muparser
       pango
       pciutils

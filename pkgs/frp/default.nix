@@ -1,10 +1,10 @@
 {
-  buildGo126Module,
+  buildGoModule,
   lib,
   fetchFromGitHub,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "frp";
   version = "0.71.0";
 

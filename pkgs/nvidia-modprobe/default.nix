@@ -2,7 +2,7 @@
   stdenv,
   lib,
   fetchFromGitHub,
-  gnum4,
+  m4,
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "nvidia-modprobe";
@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-XVWvnUZkEqEh3UjPIU6DaZuYU9DvjfIMsWbLJ78jJWs=";
   };
 
-  nativeBuildInputs = [ gnum4 ];
+  nativeBuildInputs = [ m4 ];
 
   postPatch = ''
     substituteInPlace utils.mk --replace-fail "/usr/local" "$out"

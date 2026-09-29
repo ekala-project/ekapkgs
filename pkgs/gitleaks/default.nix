@@ -1,13 +1,13 @@
 {
   lib,
   stdenv,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   gitMinimal,
 }:
 
-buildGo126Module rec {
+buildGoModule rec {
   pname = "gitleaks";
   version = "8.30.1";
 

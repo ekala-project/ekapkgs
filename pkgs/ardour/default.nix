@@ -13,7 +13,6 @@
   doxygen,
   ffmpeg,
   fftw,
-  fftwSinglePrec,
   flac,
   fluidsynth,
   glibc,
@@ -59,7 +58,7 @@
   suil,
   taglib,
   vamp-plugin-sdk,
-  wafHook,
+  waf,
   which,
   xjadeo ? null,
   libxrandr,
@@ -115,7 +114,7 @@ stdenv.mkDerivation (finalAttrs: {
     perl
     pkg-config
     python3
-    wafHook
+    waf.hook
   ];
 
   buildInputs = [
@@ -128,7 +127,7 @@ stdenv.mkDerivation (finalAttrs: {
     dbus
     ffmpeg
     fftw
-    fftwSinglePrec
+    fftw.float
     flac
     fluidsynth
     glibmm

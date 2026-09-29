@@ -3,7 +3,7 @@
   lib,
   fetchgit,
   buildPackages,
-  docbook_xml_dtd_44,
+  docbook-xml-dtd,
   docbook_xsl,
   withFuzzing ? stdenv.hostPlatform.isLinux,
   withLibcap ? stdenv.hostPlatform.isLinux,
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   depsBuildBuild = [ buildPackages.stdenv.cc ];
   nativeBuildInputs = [
-    docbook_xml_dtd_44
+    docbook-xml-dtd.v4_4
     docbook_xsl
     meson
     ninja

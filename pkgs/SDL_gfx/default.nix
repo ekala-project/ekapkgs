@@ -1,6 +1,6 @@
 {
   lib,
-  SDL,
+  sdl12-compat,
   fetchurl,
   stdenv,
   # Boolean flags
@@ -16,12 +16,12 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-37FaxfjOeklS3BLSrtl0dRjF5rM1wOMWNtI/k8Yw9Bk=";
   };
 
-  buildInputs = [ SDL ];
+  buildInputs = [ sdl12-compat ];
 
-  # SDL_gfx.pc refers to sdl.pc and some SDL_gfx headers import SDL.h
-  propagatedBuildInputs = [ SDL ];
+  # SDL_gfx.pc refers to sdl.pc and some SDL_gfx headers import sdl12-compat.h
+  propagatedBuildInputs = [ sdl12-compat ];
 
-  env.SDL_CONFIG = lib.getExe' (lib.getDev SDL) "sdl-config";
+  env.SDL_CONFIG = lib.getExe' (lib.getDev sdl12-compat) "sdl-config";
 
   configureFlags = [
     (lib.enableFeature false "mmx")
@@ -32,11 +32,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     homepage = "https://sourceforge.net/projects/sdlgfx/";
-    description = "SDL graphics drawing primitives and support functions";
+    description = "sdl12-compat graphics drawing primitives and support functions";
     longDescription = ''
       The SDL_gfx library evolved out of the SDL_gfxPrimitives code which
       provided basic drawing routines such as lines, circles or polygons and
-      SDL_rotozoom which implemented a interpolating rotozoomer for SDL
+      SDL_rotozoom which implemented a interpolating rotozoomer for sdl12-compat
       surfaces.
 
       The current components of the SDL_gfx library are:
@@ -51,6 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
       written in plain C and can be used in C++ code.
     '';
     license = lib.licenses.zlib;
-    inherit (SDL.meta) platforms;
+    inherit (sdl12-compat.meta) platforms;
   };
 })

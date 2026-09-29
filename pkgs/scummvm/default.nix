@@ -17,7 +17,7 @@
   libGLU,
   libGL,
   libx11,
-  SDL2,
+  sdl2-compat,
   zlib,
 }:
 
@@ -48,7 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
     libogg
     libtheora
     libvorbis
-    SDL2
+    sdl2-compat
     libx11
     zlib
   ];

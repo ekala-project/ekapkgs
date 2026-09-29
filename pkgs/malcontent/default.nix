@@ -6,7 +6,7 @@
   ninja,
   pkg-config,
   gobject-introspection,
-  wrapGAppsNoGuiHook,
+  gtk3,
   itstool,
   gettext,
   glib,
@@ -45,7 +45,7 @@ stdenv.mkDerivation rec {
     ninja
     pkg-config
     gobject-introspection
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
     itstool
     gettext
   ];

@@ -6,12 +6,12 @@
   ninja,
   pkg-config,
   python3,
-  wrapGAppsHook3,
+  gtk3,
   asciidoc,
   cairo,
   fdk_aac,
   freerdp,
-  fuse3,
+  fuse,
   gdk-pixbuf,
   glib,
   libdrm,
@@ -49,14 +49,14 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     python3
     shaderc # for glslc
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
     cairo
     fdk_aac
     freerdp
-    fuse3
+    fuse
     gdk-pixbuf
     glib
     libdrm

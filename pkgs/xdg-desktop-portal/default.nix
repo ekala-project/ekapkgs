@@ -3,7 +3,7 @@
   fetchFromGitHub,
   fetchFromGitLab,
   flatpak ? null,
-  fuse3,
+  fuse,
   bubblewrap,
   docutils,
   systemdMinimal,
@@ -19,9 +19,9 @@
   python3,
   pkg-config,
   stdenv,
-  wrapGAppsNoGuiHook,
+  gtk3,
   bash,
-  gst_all_1,
+  gstreamer,
   libgudev,
   replaceVars,
   enableGeoLocation ? true,
@@ -80,17 +80,17 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [
-    fuse3
+    fuse
     bubblewrap
     glib
     gsettings-desktop-schemas
     json-glib
     pipewire
-    gst_all_1.gst-plugins-base
+    gstreamer.plugins-base
     libgudev
 
     # For icon validator

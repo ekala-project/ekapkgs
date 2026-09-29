@@ -9,7 +9,7 @@
   zlib,
   libGL,
   libx11,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
 }:
@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     libx11
     freetype
     zlib
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
   ];

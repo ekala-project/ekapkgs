@@ -5,7 +5,6 @@
   pkg-config,
   itstool,
   gtk3,
-  wrapGAppsHook3,
   meson,
   librsvg,
   libxml2,
@@ -26,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     meson
     ninja
     pkg-config

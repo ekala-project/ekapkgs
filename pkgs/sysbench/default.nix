@@ -2,10 +2,10 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  autoconf269,
+  autoconf,
   autoreconfHook,
   pkg-config,
-  libmysqlclient,
+  mariadb-connector-c,
   libaio,
   luajit,
 }:
@@ -15,12 +15,12 @@ stdenv.mkDerivation (finalAttrs: {
   version = "1.0.20";
 
   nativeBuildInputs = [
-    autoconf269
+    autoconf.v2_69
     autoreconfHook
     pkg-config
   ];
   buildInputs = [
-    libmysqlclient
+    mariadb-connector-c
     luajit
     libaio
   ];
@@ -37,8 +37,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [
     "--with-system-luajit"
-    "--with-mysql-includes=${lib.getDev libmysqlclient}/include/mysql"
-    "--with-mysql-libs=${libmysqlclient}/lib/mysql"
+    "--with-mysql-includes=${lib.getDev mariadb-connector-c}/include/mysql"
+    "--with-mysql-libs=${mariadb-connector-c}/lib/mysql"
   ];
 
   postPatch = ''

@@ -10,7 +10,6 @@
   gtk4,
   libadwaita,
   glib,
-  wrapGAppsHook4,
   meson,
   ninja,
   gsettings-desktop-schemas,
@@ -40,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     itstool
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     meson
     meson.configurePhaseHook
     ninja

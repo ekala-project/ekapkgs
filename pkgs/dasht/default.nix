@@ -5,8 +5,8 @@
   makeWrapper,
   installShellFiles,
   coreutils,
-  gnused,
-  gnugrep,
+  sed,
+  grep,
   sqlite,
   wget,
   w3m,
@@ -27,8 +27,8 @@ stdenv.mkDerivation rec {
 
   deps = lib.makeBinPath [
     coreutils
-    gnused
-    gnugrep
+    sed
+    grep
     sqlite
     wget
     w3m

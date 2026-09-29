@@ -2,7 +2,7 @@
   enabledProviders ? null,
 
   bluez ? null,
-  buildGo126Module,
+  buildGoModule,
   fd,
   fetchFromGitHub,
   imagemagick,
@@ -26,7 +26,7 @@ let
     ];
 
 in
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "elephant";
   version = "2.22.0";
 

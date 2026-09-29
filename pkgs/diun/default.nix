@@ -1,9 +1,9 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
 }:
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "diun";
   version = "4.33.0";
 

@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  SDL2,
+  sdl2-compat,
   SDL2_ttf,
   libpcap,
   vde2,
@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
   };
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_ttf
     libpcap
     vde2

@@ -12,7 +12,7 @@
   glib,
   gtk3,
   pango,
-  atk,
+  at-spi2-core,
   gdk-pixbuf,
   shared-mime-info,
   itstool,
@@ -24,7 +24,6 @@
   libgxps,
   libhandy,
   libsecret,
-  wrapGAppsHook3,
   librsvg,
   gobject-introspection,
   yelp-tools,
@@ -32,7 +31,7 @@
   gsettings-desktop-schemas,
   gnome-desktop,
   dbus,
-  gst_all_1,
+  gstreamer,
   gi-docgen,
   supportMultimedia ? true, # PDF multimedia
   withLibsecret ? true,
@@ -68,12 +67,12 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     yelp-tools
   ];
 
   buildInputs = [
-    atk
+    at-spi2-core
     dbus # only needed to find the service directory
     djvulibre
     gdk-pixbuf
@@ -96,13 +95,13 @@ stdenv.mkDerivation (finalAttrs: {
     libsecret
   ]
   ++ lib.optionals supportMultimedia (
-    with gst_all_1;
+    with gstreamer;
     [
       gstreamer
-      gst-plugins-base
-      gst-plugins-good
-      gst-plugins-bad
-      gst-plugins-ugly
+      plugins-base
+      plugins-good
+      plugins-bad
+      plugins-ugly
     ]
   );
 

@@ -5,7 +5,7 @@
   fetchpatch,
   autoreconfHook,
   pkg-config,
-  fuse3 ? null,
+  fuse ? null,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -30,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  buildInputs = lib.optionals (fuse3 != null) [ fuse3 ];
+  buildInputs = lib.optionals (fuse != null) [ fuse ];
 
   postFixup = ''
     ln -s $out/bin/bindfs $out/bin/mount.fuse.bindfs

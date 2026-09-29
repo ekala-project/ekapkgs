@@ -2,7 +2,7 @@
   stdenvNoCC,
   fetchFromGitHub,
   gradle,
-  jdk,
+  java,
   lib,
 }:
 
@@ -34,7 +34,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://hamcrest.org/JavaHamcrest/";
     description = "Java library containing matchers that can be combined to create flexible expressions of intent";
-    platforms = jdk.meta.platforms;
+    platforms = java.meta.platforms;
     license = lib.licenses.bsd3;
   };
 })

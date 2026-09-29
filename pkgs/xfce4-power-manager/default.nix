@@ -6,7 +6,6 @@
   pkg-config,
   wayland-scanner,
   xfce4-dev-tools,
-  wrapGAppsHook3,
   gtk3,
   libnotify,
   libxfce4ui,
@@ -36,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     wayland-scanner
     xfce4-dev-tools
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

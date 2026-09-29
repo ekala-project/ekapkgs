@@ -6,7 +6,6 @@
   pkg-config,
   xfce4-dev-tools,
   wayland-scanner,
-  wrapGAppsHook3,
   xfce4-exo,
   garcon,
   gtk3,
@@ -56,7 +55,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     xfce4-dev-tools
     wayland-scanner
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     libxml2
   ];
 

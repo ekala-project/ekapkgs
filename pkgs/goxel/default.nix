@@ -4,7 +4,6 @@
   fetchFromGitHub,
   scons,
   pkg-config,
-  wrapGAppsHook3,
   glfw3,
   gtk3,
   libpng,
@@ -24,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     scons
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
   buildInputs = [
     glfw3

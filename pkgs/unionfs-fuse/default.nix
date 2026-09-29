@@ -4,7 +4,7 @@
   fetchFromGitHub,
   cmake,
   pkg-config,
-  fuse3,
+  fuse,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   postPatch = lib.optionalString stdenv.hostPlatform.isDarwin ''
     substituteInPlace CMakeLists.txt \
-      --replace '/usr/local/include/osxfuse/fuse' '${lib.getDev fuse3}/include/fuse'
+      --replace '/usr/local/include/osxfuse/fuse' '${lib.getDev fuse}/include/fuse'
   '';
 
   nativeBuildInputs = [
@@ -36,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     pkg-config
   ];
-  buildInputs = [ fuse3 ];
+  buildInputs = [ fuse ];
 
   # Put the unionfs mount helper in place as mount.unionfs-fuse. This makes it
   # possible to do:
@@ -47,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
   preConfigure = lib.optionalString (!stdenv.hostPlatform.isDarwin) ''
     mkdir -p $out/sbin
     cp -a mount.unionfs $out/sbin/mount.unionfs-fuse
-    substituteInPlace $out/sbin/mount.unionfs-fuse --replace mount.fuse ${fuse3}/sbin/mount.fuse3
+    substituteInPlace $out/sbin/mount.unionfs-fuse --replace mount.fuse ${fuse}/sbin/mount.fuse3
     substituteInPlace $out/sbin/mount.unionfs-fuse --replace unionfs $out/bin/unionfs
   '';
   meta = {

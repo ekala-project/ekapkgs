@@ -8,7 +8,6 @@
   glib,
   gtk3,
   cairo,
-  wrapGAppsHook3,
   libxml2,
   python3,
   gettext,
@@ -35,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     desktop-file-utils
     libxml2
     python3
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

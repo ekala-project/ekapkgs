@@ -8,7 +8,6 @@
   gtk3,
   curl,
   gpsd,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -28,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
     intltool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     autoreconfHook
   ];
 

@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   cmake,
-  gnum4,
+  m4,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
-    gnum4
+    m4
   ];
 
   preConfigure = ''

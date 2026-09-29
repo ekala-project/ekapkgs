@@ -5,8 +5,8 @@
   bash,
   coreutils,
   findutils,
-  gnugrep,
-  gnused,
+  grep,
+  sed,
   getopt,
   git,
   tree,
@@ -53,9 +53,9 @@ stdenv.mkDerivation rec {
       findutils
       getopt
       git
-      gnugrep
+      grep
       gnupg
-      gnused
+      sed
       tree
       which
       openssh

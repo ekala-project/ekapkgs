@@ -7,7 +7,6 @@
   pkg-config,
   intltool ? null,
   linkFarm,
-  wrapGAppsHook3,
   gtk3,
   xfce4-dev-tools ? null,
   at-spi2-core,
@@ -28,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     intltool
     xfce4-dev-tools
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

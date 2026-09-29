@@ -13,7 +13,7 @@
   gtk3,
   gtk-doc,
   docbook-xsl-nons,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   libxml2,
   gobject-introspection,
   libsoup_3,
@@ -54,7 +54,7 @@ stdenv.mkDerivation (finalAttrs: {
     vala
     gtk-doc
     docbook-xsl-nons
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
   ];
 
   buildInputs = [

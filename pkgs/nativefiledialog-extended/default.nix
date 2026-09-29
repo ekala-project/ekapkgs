@@ -4,7 +4,7 @@
   fetchFromGitHub,
   cmake,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   SDL2_ttf,
   gtk3,
   testers,
@@ -34,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_ttf
   ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [

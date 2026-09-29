@@ -7,7 +7,7 @@
   lib,
   libtool,
   libtorrent-rakshasa,
-  lua5_4_compat,
+  lua,
   ncurses,
   openssl,
   pkg-config,
@@ -53,7 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
     openssl
     zlib
   ]
-  ++ lib.optionals withLua [ lua5_4_compat ];
+  ++ lib.optionals withLua [ lua.v5_4_compat ];
 
   configureFlags = [
     "--with-xmlrpc-tinyxml2"

@@ -42,6 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     gi-docgen
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     vala

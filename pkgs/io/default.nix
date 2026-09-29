@@ -26,7 +26,7 @@
   yajl,
   python3,
   openssl,
-  glfw,
+  glfw3,
   pkg-config,
   libpthread-stubs,
   libxdmcp,
@@ -84,7 +84,7 @@ stdenv.mkDerivation {
     libevent
     libedit
     yajl
-    glfw
+    glfw3
     openssl
     libpthread-stubs
     libxdmcp

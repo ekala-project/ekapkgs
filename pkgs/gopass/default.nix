@@ -2,7 +2,7 @@
   lib,
   stdenv,
   makeBinaryWrapper,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   installShellFiles,
   gitMinimal,
@@ -24,7 +24,7 @@ let
     ]
   );
 in
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "gopass";
   version = "1.16.1";
 

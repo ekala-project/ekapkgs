@@ -17,12 +17,12 @@
   meson,
   ninja,
   libgudev,
-  wrapGAppsNoGuiHook,
+  gtk3,
   shared-mime-info,
   sane-backends,
   docbook_xsl,
   docbook-xsl-ns,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   gtk-doc,
   libxslt,
   enableDaemon ? true,
@@ -70,7 +70,7 @@ stdenv.mkDerivation rec {
   ];
 
   nativeBuildInputs = [
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
     docbook_xsl
     docbook-xsl-ns
     gettext
@@ -81,7 +81,7 @@ stdenv.mkDerivation rec {
     ninja
     pkg-config
     shared-mime-info
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [

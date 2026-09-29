@@ -11,7 +11,7 @@
   gettext,
   xmlto,
   docbook-xsl-nons,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   libxslt,
   libstemmer,
   glib,
@@ -80,7 +80,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
     xmlto
     docbook-xsl-nons
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     glib
     itstool
     gperf

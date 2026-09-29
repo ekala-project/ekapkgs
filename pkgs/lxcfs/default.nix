@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  fuse3,
+  fuse,
   help2man,
   makeWrapper,
   meson,
@@ -41,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     (python3.pythonOnBuildForHost.withPackages (p: [ p.jinja2 ]))
     pkg-config
   ];
-  buildInputs = [ fuse3 ];
+  buildInputs = [ fuse ];
 
   preConfigure = ''
     patchShebangs tools/

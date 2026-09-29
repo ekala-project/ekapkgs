@@ -5,10 +5,6 @@
   fftw,
 }:
 
-let
-  fftwFloat = fftw.override { precision = "single"; };
-in
-
 stdenv.mkDerivation (finalAttrs: {
   pname = "zita-convolver";
   version = "4.0.3";
@@ -20,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   sourceRoot = "${finalAttrs.src.name}/source";
 
-  buildInputs = [ fftwFloat ];
+  buildInputs = [ fftw.float ];
 
   patchPhase = ''
     sed -e "s@ldconfig@@" -i Makefile

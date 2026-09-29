@@ -11,7 +11,7 @@
   gtk-doc,
   libxslt,
   docbook-xsl-nons,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   glib,
   gusb,
   dbus,
@@ -51,7 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
     dbus
     docbook-xsl-nons
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
   ];
 
   buildInputs = [

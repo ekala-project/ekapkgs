@@ -6,9 +6,8 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook4,
   glib,
-  gst_all_1,
+  gstreamer,
   gtk4,
   libadwaita,
   pipewire,
@@ -43,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     rustc
     rustPlatform.cargoSetupHook
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [
@@ -52,11 +51,11 @@ stdenv.mkDerivation (finalAttrs: {
     # TODO: libglycin.setupHook - not available
     # TODO: libglycin-gtk4 - not available
     # TODO: glycin-loaders - not available
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
-    # TODO: gst_all_1.gst-plugins-rs - not available
-    gst_all_1.gstreamer
+    gstreamer.plugins-bad
+    gstreamer.plugins-base
+    gstreamer.plugins-good
+    # TODO: gstreamer.plugins-rs - not available
+    gstreamer
     gtk4
     lcms2
     libadwaita
@@ -73,7 +72,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   preFixup = ''
     gappsWrapperArgs+=(
-      --prefix GST_PRESET_PATH : "${gst_all_1.gst-plugins-good}/share/gstreamer-1.0/presets"
+      --prefix GST_PRESET_PATH : "${gstreamer.plugins-good}/share/gstreamer-1.0/presets"
     )
   '';
 

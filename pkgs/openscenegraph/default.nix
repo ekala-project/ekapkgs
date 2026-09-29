@@ -51,7 +51,7 @@
   luaSupport ? false,
   lua,
   sdlSupport ? false,
-  SDL2,
+  sdl2-compat,
   restSupport ? false,
   asio ? null,
   withApps ? false,
@@ -105,7 +105,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional vncSupport libvncserver
   ++ lib.optional lasSupport liblas
   ++ lib.optional luaSupport lua
-  ++ lib.optional sdlSupport SDL2
+  ++ lib.optional sdlSupport sdl2-compat
   ++ lib.optional restSupport asio
   ++ lib.optionals withExamples [ fltk ]
   ++ lib.optional (restSupport || colladaSupport) boost;

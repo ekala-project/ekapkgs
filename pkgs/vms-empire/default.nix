@@ -4,7 +4,7 @@
   fetchurl,
   ncurses,
   xmlto,
-  docbook_xml_dtd_44,
+  docbook-xml-dtd,
   docbook_xsl,
   installShellFiles,
 }:
@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     installShellFiles
     xmlto
-    docbook_xml_dtd_44
+    docbook-xml-dtd.v4_4
     docbook_xsl
   ];
 

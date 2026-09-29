@@ -8,7 +8,7 @@
   btor2tools ? null,
   symfpu ? null,
   gtest ? null,
-  gmpxx,
+  gmp,
   cadical,
   cadical' ? cadical,
   cryptominisat ? null,
@@ -42,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     cadical'
-    gmpxx
+    gmp.withCxx
     zlib
     mpfr
   ]

@@ -2,7 +2,7 @@
   stdenv,
   lib,
   fetchzip,
-  jdk,
+  java,
   makeWrapper,
   bashNonInteractive,
   coreutils,
@@ -32,12 +32,12 @@ stdenv.mkDerivation rec {
     rm bin/jbang.{cmd,ps1}
     cp -r . $out
     wrapProgram $out/bin/jbang \
-      --set JAVA_HOME ${jdk} \
+      --set JAVA_HOME ${java} \
       --prefix PATH ${
         lib.makeBinPath [
           (placeholder "out")
           coreutils
-          jdk
+          java
           curl
         ]
       }

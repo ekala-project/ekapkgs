@@ -14,7 +14,7 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook4,
+  gtk4,
 }:
 
 stdenv.mkDerivation rec {
@@ -42,7 +42,7 @@ stdenv.mkDerivation rec {
     meson
     ninja
     pkg-config
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   meta = {

@@ -11,11 +11,10 @@
   ninja,
   pkg-config,
   rustc,
-  wrapGAppsHook4,
   python3,
   glib,
   gtk4,
-  gst_all_1,
+  gstreamer,
   libadwaita,
 }:
 
@@ -44,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     ninja
     pkg-config
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     python3
     desktop-file-utils
     appstream-glib
@@ -58,9 +57,9 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     gtk4
     libadwaita
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-bad
+    gstreamer
+    gstreamer.plugins-base
+    gstreamer.plugins-bad
   ];
 
   meta = {

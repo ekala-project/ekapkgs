@@ -12,10 +12,9 @@
   gtk4,
   libadwaita,
   glib,
-  atk,
+  at-spi2-core,
   gobject-introspection,
   vala,
-  wrapGAppsHook4,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -44,13 +43,13 @@ stdenv.mkDerivation (finalAttrs: {
     gi-docgen
     gobject-introspection
     vala
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [
     gtk4
     libadwaita
-    atk
+    at-spi2-core
     glib
   ];
 

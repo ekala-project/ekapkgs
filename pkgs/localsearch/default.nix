@@ -4,7 +4,7 @@
   fetchurl,
   asciidoc,
   docbook-xsl-nons ? null,
-  docbook_xml_dtd_45 ? null,
+  docbook-xml-dtd ? null,
   gettext,
   itstool,
   libxslt,
@@ -14,7 +14,7 @@
   ninja,
   pkg-config,
   vala,
-  wrapGAppsNoGuiHook ? null,
+  gtk3 ? null,
   bzip2,
   dbus,
   exempi,
@@ -59,7 +59,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     asciidoc
     docbook-xsl-nons
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     gettext
     glib
     gobject-introspection
@@ -69,7 +69,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [

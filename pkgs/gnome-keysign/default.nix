@@ -4,11 +4,10 @@
   fetchpatch,
   python3,
   avahi,
-  wrapGAppsHook3,
   gobject-introspection,
   gtk3,
   glib,
-  gst_all_1,
+  gstreamer,
 }:
 
 python3.pkgs.buildPythonApplication (finalAttrs: {
@@ -33,7 +32,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   ];
 
   nativeBuildInputs = [
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
   ]
   ++ (with python3.pkgs; [
@@ -46,12 +45,10 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     avahi
     gtk3
     glib
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
-    # TODO: gst-plugins-good.override { gtkSupport = true; } needs override in top-level
-    (gst_all_1.gst-plugins-good.override { gtkSupport = true; })
-    # TODO: gst-plugins-bad.override { enableZbar = true; } needs override in top-level
-    (gst_all_1.gst-plugins-bad.override { enableZbar = true; }) # for zbar plug-in
+    gstreamer
+    gstreamer.plugins-base
+    gstreamer.plugins-good
+    gstreamer.plugins-bad
   ];
 
   propagatedBuildInputs =

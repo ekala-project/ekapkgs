@@ -4,7 +4,6 @@
   fetchurl,
   meson,
   ninja,
-  wrapGAppsHook3,
   pkg-config,
   gettext,
   itstool,
@@ -39,7 +38,7 @@
   # TODO: libvirt-glib - not available
   mtools,
   numactl,
-  qemu-utils,
+  qemu,
   spice-gtk,
   spice-protocol,
   systemd,
@@ -73,7 +72,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     # For post install script
     glib
     gtk3
@@ -121,7 +120,7 @@ stdenv.mkDerivation (finalAttrs: {
         mtools
         cdrkit
         libcdio
-        qemu-utils
+        qemu
       ]
     }")
   '';

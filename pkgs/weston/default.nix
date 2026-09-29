@@ -27,7 +27,7 @@
   lcmsSupport ? true,
   lcms2,
   luaSupport ? true,
-  lua5_4_compat ? null,
+  lua ? null,
   pangoSupport ? true,
   pango,
   pipewireSupport ? false,
@@ -35,7 +35,7 @@
   rdpSupport ? false,
   freerdp ? null,
   remotingSupport ? false,
-  gst_all_1,
+  gstreamer,
   vncSupport ? true,
   aml,
   neatvnc,
@@ -88,13 +88,13 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional (libdisplay-info_0_3 != null) libdisplay-info_0_3
   ++ lib.optional jpegSupport libjpeg
   ++ lib.optional lcmsSupport lcms2
-  ++ lib.optional (luaSupport && lua5_4_compat != null) lua5_4_compat
+  ++ lib.optional (luaSupport && lua.v5_4_compat != null) lua.v5_4_compat
   ++ lib.optional pangoSupport pango
   ++ lib.optional pipewireSupport pipewire
   ++ lib.optional (rdpSupport && freerdp != null) freerdp
   ++ lib.optionals remotingSupport [
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
+    gstreamer
+    gstreamer.plugins-base
   ]
   ++ lib.optionals vncSupport [
     aml
@@ -124,7 +124,7 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.mesonBool "deprecated-remoting" remotingSupport)
     (lib.mesonBool "renderer-vulkan" vulkanSupport)
     (lib.mesonOption "simple-clients" "")
-    (lib.mesonBool "shell-lua" (luaSupport && lua5_4_compat != null))
+    (lib.mesonBool "shell-lua" (luaSupport && lua.v5_4_compat != null))
     (lib.mesonBool "test-junit-xml" false)
     (lib.mesonBool "xwayland" xwaylandSupport)
   ]

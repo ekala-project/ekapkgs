@@ -5,7 +5,7 @@
   cmake,
   pkg-config,
   python3,
-  wrapGAppsHook3,
+  gtk3,
   gtkmm3,
   gtksourceview4,
   gtksourceviewmm ? null,
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     pkg-config
     python3
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

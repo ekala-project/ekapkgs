@@ -14,7 +14,6 @@
   ninja,
   pkg-config,
   python3,
-  wrapGAppsHook4,
   yt-dlp ? null,
   youtubeSupport ? true,
 }:
@@ -38,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     python3
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

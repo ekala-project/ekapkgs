@@ -7,9 +7,8 @@
   pkg-config,
   gtk3,
   vte,
-  wrapGAppsHook3,
   libxslt,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   docbook_xsl,
   libxml2,
   findXMLCatalogs,
@@ -36,9 +35,9 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     intltool
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     libxslt
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
     docbook_xsl
     libxml2
     findXMLCatalogs

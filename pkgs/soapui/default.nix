@@ -3,7 +3,7 @@
   lib,
   stdenv,
   writeText,
-  jdk,
+  java,
   makeWrapper,
 }:
 stdenv.mkDerivation (finalAttrs: {
@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ makeWrapper ];
-  buildInputs = [ jdk ];
+  buildInputs = [ java ];
 
   installPhase = ''
     runHook preInstall
@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
        JAVA_OPTS="$JAVA_OPTS --illegal-access=permit"
 
       -JFXRTPATH=`java -cp $SOAPUI_CLASSPATH com.eviware.soapui.tools.JfxrtLocator`
-      +JFXRTPATH=`${jdk}/bin/java -cp $SOAPUI_CLASSPATH com.eviware.soapui.tools.JfxrtLocator`
+      +JFXRTPATH=`${java}/bin/java -cp $SOAPUI_CLASSPATH com.eviware.soapui.tools.JfxrtLocator`
        SOAPUI_CLASSPATH=$JFXRTPATH:$SOAPUI_CLASSPATH
 
        if $darwin
@@ -48,7 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
        echo ================================
 
       -java $JAVA_OPTS -cp $SOAPUI_CLASSPATH com.eviware.soapui.SoapUI "$@"
-      +${jdk}/bin/java $JAVA_OPTS -cp $SOAPUI_CLASSPATH com.eviware.soapui.SoapUI "$@"
+      +${java}/bin/java $JAVA_OPTS -cp $SOAPUI_CLASSPATH com.eviware.soapui.SoapUI "$@"
     '')
   ];
   meta = {

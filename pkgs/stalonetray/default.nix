@@ -1,6 +1,6 @@
 {
   autoreconfHook,
-  docbook_xml_dtd_44,
+  docbook-xml-dtd,
   docbook-xsl-ns,
   fetchFromGitHub,
   lib,
@@ -34,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     autoreconfHook
     docbook-xsl-ns
-    docbook_xml_dtd_44
+    docbook-xml-dtd.v4_4
     libx11
     libxpm
     libxslt

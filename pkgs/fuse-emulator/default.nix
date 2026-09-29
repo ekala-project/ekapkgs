@@ -4,8 +4,7 @@
   fetchurl,
   perl,
   pkg-config,
-  wrapGAppsHook3,
-  SDL,
+  sdl12-compat,
   bzip2,
   glib,
   gtk3,
@@ -28,11 +27,11 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     perl
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
-    SDL
+    sdl12-compat
     bzip2
     glib
     gtk3

@@ -10,7 +10,6 @@
   gettext,
   gtk4,
   blueprint-compiler,
-  wrapGAppsHook4,
   libadwaita,
   libgee,
   json-glib,
@@ -40,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
     desktop-file-utils
     blueprint-compiler
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

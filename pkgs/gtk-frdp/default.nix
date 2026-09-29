@@ -10,7 +10,7 @@
   glib,
   gtk3,
   freerdp,
-  fuse3,
+  fuse,
 }:
 
 stdenv.mkDerivation {
@@ -38,7 +38,7 @@ stdenv.mkDerivation {
     glib
     gtk3
     freerdp
-    fuse3
+    fuse
   ];
 
   strictDeps = true;

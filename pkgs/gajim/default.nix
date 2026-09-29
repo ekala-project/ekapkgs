@@ -2,7 +2,7 @@
   lib,
   fetchFromGitLab,
   gettext,
-  wrapGAppsHook3,
+  gtk3,
   python3,
   gtk4,
   gobject-introspection,
@@ -12,7 +12,7 @@
   libadwaita,
   enableJingle ? true,
   farstream ? null,
-  gst_all_1,
+  gstreamer,
   libnice ? null,
   enableSecrets ? true,
   libsecret ? null,
@@ -29,11 +29,10 @@
   extraPythonPackages ? ps: [ ],
 }:
 let
-  inherit (gst_all_1)
-    gstreamer
-    gst-plugins-base
-    gst-libav
-    gst-plugins-good
+  inherit (gstreamer)
+    plugins-base
+    libav
+    plugins-good
     ;
 in
 python3.pkgs.buildPythonApplication (finalAttrs: {
@@ -56,12 +55,12 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     gtksourceview5
     glib-networking
     gstreamer
-    gst-plugins-base
+    plugins-base
   ]
   ++ lib.optionals enableJingle [
     farstream
-    gst-libav
-    (gst-plugins-good.override { gtkSupport = true; })
+    libav
+    plugins-good
     libnice
   ]
   ++ lib.optional enableSecrets libsecret
@@ -72,7 +71,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
 
   nativeBuildInputs = [
     gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
     libadwaita
   ];

@@ -1,10 +1,10 @@
 {
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   lib,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "oauth2c";
   version = "1.20.0";
 

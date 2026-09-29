@@ -2,14 +2,14 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  buildGo126Module,
+  buildGoModule,
   installShellFiles,
 }:
 
 let
   mainProgram = "pinact";
 in
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "pinact";
   version = "4.1.1";
 

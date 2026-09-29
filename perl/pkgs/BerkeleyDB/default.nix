@@ -1,7 +1,7 @@
 {
   buildPerlPackage,
   fetchurl,
-  db4,
+  db,
 }:
 buildPerlPackage {
   pname = "BerkeleyDB";
@@ -11,8 +11,8 @@ buildPerlPackage {
     hash = "sha256-QQqonnIylB1JEGyeBI1jN0dVQ+wdIz6nzbcly1uWNQQ=";
   };
   preConfigure = ''
-    echo "LIB = ${db4.out}/lib" > config.in
-    echo "INCLUDE = ${db4.dev}/include" >> config.in
+    echo "LIB = ${db.v4_8.out}/lib" > config.in
+    echo "INCLUDE = ${db.v4_8.dev}/include" >> config.in
   '';
   meta = {
     description = "Perl extension for Berkeley DB version 2, 3, 4, 5 or 6";

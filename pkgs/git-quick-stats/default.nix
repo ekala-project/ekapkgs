@@ -6,7 +6,7 @@
   coreutils,
   gawk,
   git,
-  gnugrep,
+  grep,
   ncurses,
   util-linux,
 }:
@@ -34,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
         coreutils
         gawk
         git
-        gnugrep
+        grep
         ncurses
         util-linux
       ];

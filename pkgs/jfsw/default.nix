@@ -3,10 +3,9 @@
   stdenv,
   fetchFromGitHub,
   which,
-  SDL2,
+  sdl2-compat,
   perl,
   pkg-config,
-  wrapGAppsHook3,
   gtk3,
 }:
 
@@ -24,14 +23,14 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     which
-    SDL2
+    sdl2-compat
     perl
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     gtk3
   ];
 
@@ -52,6 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     mainProgram = "sw";
     broken = stdenv.hostPlatform.isDarwin;
-    inherit (SDL2.meta) platforms;
+    inherit (sdl2-compat.meta) platforms;
   };
 })

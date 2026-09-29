@@ -3,7 +3,7 @@
   stdenv,
   bash,
   fetchFromGitHub,
-  SDL2,
+  sdl2-compat,
   alsa-lib,
   catch2_3,
   fftw,
@@ -13,7 +13,7 @@
   gtkmm3,
   iniparser,
   jsoncpp,
-  libdbusmenu,
+  libdbusmenu-gtk3,
   libevdev,
   libinput,
   libjack2,
@@ -38,7 +38,7 @@
   wayland,
   wayland-scanner,
   wireplumber,
-  wrapGAppsHook3,
+  gtk3,
 
   cavaSupport ? false,
   enableManpages ? stdenv.buildPlatform.canExecute stdenv.hostPlatform,
@@ -65,8 +65,6 @@
 }:
 
 let
-  libdbusmenu-gtk3 = libdbusmenu.override { gtkVersion = "3"; };
-
   libcava =
     let
       version = "0.10.7-beta";
@@ -105,7 +103,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     wayland-scanner
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ]
   ++ lib.optional enableManpages scdoc;
 
@@ -119,7 +117,7 @@ stdenv.mkDerivation (finalAttrs: {
     wayland
   ]
   ++ lib.optionals cavaSupport [
-    SDL2
+    sdl2-compat
     alsa-lib
     fftw
     iniparser

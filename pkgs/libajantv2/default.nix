@@ -7,7 +7,7 @@
   pkg-config,
   mbedtls,
   udev,
-  linuxPackages,
+  linux,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -63,7 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   passthru.tests = {
-    inherit (linuxPackages) ajantv2;
+    inherit (linux.pkgs) ajantv2;
   };
 
   meta = {

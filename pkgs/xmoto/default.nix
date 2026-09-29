@@ -16,7 +16,7 @@
   libGLU,
   libpng,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   SDL2_mixer,
   SDL2_net,
   SDL2_ttf,
@@ -54,7 +54,7 @@ stdenv.mkDerivation rec {
     libGL
     libGLU
     libpng
-    SDL2
+    sdl2-compat
     SDL2_mixer
     SDL2_net
     SDL2_ttf
@@ -66,7 +66,7 @@ stdenv.mkDerivation rec {
   # Should normally come from SDL2_ttf pkg-config, but xmoto does not
   # use it and uses include directories directly. Let's re-inject the
   # path here.
-  env.NIX_CFLAGS_COMPILE = "-I${lib.getDev SDL2}/include/SDL2";
+  env.NIX_CFLAGS_COMPILE = "-I${lib.getDev sdl2-compat}/include/sdl2-compat";
 
   preFixup = ''
     wrapProgram "$out/bin/xmoto" \

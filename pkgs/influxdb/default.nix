@@ -1,6 +1,6 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   pkg-config,
   rustPlatform,
@@ -48,7 +48,7 @@ let
     __structuredAttrs = true;
   });
 in
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "influxdb";
   version = "1.12.2";
 

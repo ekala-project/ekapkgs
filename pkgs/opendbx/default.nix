@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   readline,
-  libmysqlclient,
+  mariadb-connector-c,
   libpq,
   sqlite,
 }:
@@ -22,8 +22,8 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   preConfigure = ''
-    export CPPFLAGS="-I${getDev libmysqlclient}/include/mysql"
-    export LDFLAGS="-L${libmysqlclient}/lib/mysql"
+    export CPPFLAGS="-I${getDev mariadb-connector-c}/include/mysql"
+    export LDFLAGS="-L${mariadb-connector-c}/lib/mysql"
     configureFlagsArray=(--with-backends="mysql pgsql sqlite3")
   '';
 
@@ -36,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     readline
-    libmysqlclient
+    mariadb-connector-c
     libpq
     sqlite
   ];

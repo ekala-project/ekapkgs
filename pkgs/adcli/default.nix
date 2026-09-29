@@ -3,7 +3,7 @@
   stdenv,
   autoreconfHook,
   cyrus_sasl,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   docbook_xsl,
   fetchFromGitLab,
   libkrb5,
@@ -59,7 +59,7 @@ stdenv.mkDerivation (finalAttrs: {
     function patch_docbook() {
       substituteInPlace $1 \
         --replace-fail "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd" \
-                       "${docbook_xml_dtd_43}/xml/dtd/docbook/docbookx.dtd"
+                       "${docbook-xml-dtd.v4_3}/xml/dtd/docbook/docbookx.dtd"
     }
     patch_docbook doc/adcli.xml
     patch_docbook doc/adcli-devel.xml

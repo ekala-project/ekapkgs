@@ -5,8 +5,8 @@
   fetchFromGitHub,
   findutils,
   gawk,
-  gnugrep,
-  gnused,
+  grep,
+  sed,
   makeWrapper,
   mktemp,
   openssl,
@@ -32,8 +32,8 @@ stdenv.mkDerivation (finalAttrs: {
     coreutils
     findutils
     gawk
-    gnugrep
-    gnused
+    grep
+    sed
     mktemp
     openssl
     which

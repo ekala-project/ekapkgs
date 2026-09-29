@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   docbook-xsl-nons,
   glib,
   gobject-introspection,
@@ -34,7 +34,7 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     docbook-xsl-nons
     meson
     meson.configurePhaseHook

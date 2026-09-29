@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  SDL,
+  sdl12-compat,
   SDL_image,
   SDL_mixer,
   SDL_net,
@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   buildInputs = [
-    SDL
+    sdl12-compat
     SDL_image
     SDL_mixer
     SDL_net

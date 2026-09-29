@@ -5,7 +5,7 @@
   autoreconfHook,
   pkg-config,
   curl,
-  SDL2,
+  sdl2-compat,
   libGLU,
   libGL,
   glew,
@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     curl
-    SDL2
+    sdl2-compat
     libGLU
     libGL
     glew

@@ -5,7 +5,6 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook3,
   gtk3,
   glib,
   gitUpdater,
@@ -31,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

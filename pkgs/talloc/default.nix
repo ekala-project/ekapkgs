@@ -8,7 +8,7 @@
   libxslt,
   libxcrypt,
   docbook-xsl-nons,
-  docbook_xml_dtd_42,
+  docbook-xml-dtd,
 }:
 
 stdenv.mkDerivation rec {
@@ -24,7 +24,7 @@ stdenv.mkDerivation rec {
     pkg-config
     python3
     docbook-xsl-nons
-    docbook_xml_dtd_42
+    docbook-xml-dtd.v4_2
   ];
 
   buildInputs = [

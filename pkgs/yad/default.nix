@@ -5,7 +5,6 @@
   pkg-config,
   intltool,
   autoreconfHook,
-  wrapGAppsHook3,
   gtk3,
   hicolor-icon-theme,
   netpbm,
@@ -39,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     pkg-config
     intltool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   postPatch = ''

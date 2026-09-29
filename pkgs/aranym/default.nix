@@ -1,6 +1,6 @@
 {
   lib,
-  SDL2,
+  sdl2-compat,
   autoreconfHook,
   fetchFromGitHub,
   libGLU,
@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     libGLU
     libx11
-    SDL2
+    sdl2-compat
   ];
 
   strictDeps = true;

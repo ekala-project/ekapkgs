@@ -14,7 +14,6 @@
   libxml2,
   libnotify,
   gnutls,
-  wrapGAppsHook3,
   gnupg,
   spellChecking ? true,
   gnomeSupport ? true,
@@ -42,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     intltool
     itstool
     libxml2
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

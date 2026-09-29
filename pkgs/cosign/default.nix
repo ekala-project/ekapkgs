@@ -1,7 +1,7 @@
 {
   stdenv,
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   pcsclite ? null,
   pkg-config,
@@ -10,7 +10,7 @@
   pkcs11Support ? true,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "cosign";
   version = "3.1.3";
 

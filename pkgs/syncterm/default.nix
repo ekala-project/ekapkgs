@@ -7,7 +7,7 @@
   unzip,
   autoPatchelfHook,
   ncurses,
-  SDL2,
+  sdl2-compat,
   libx11,
   alsa-lib,
 }:
@@ -46,19 +46,19 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     autoPatchelfHook
     pkg-config
-    SDL2
+    sdl2-compat
     libx11
     perl
     unzip
-  ]; # SDL2 for `sdl2-config`.
+  ]; # sdl2-compat for `sdl2-config`.
   buildInputs = [
     ncurses
-    SDL2
+    sdl2-compat
   ]
   ++ (lib.optional stdenv.hostPlatform.isLinux alsa-lib);
   runtimeDependencies = [
     ncurses
-    SDL2
+    sdl2-compat
   ]; # Both of these are dlopen()'ed at runtime.
 
   meta = {

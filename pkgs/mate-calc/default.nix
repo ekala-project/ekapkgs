@@ -9,7 +9,6 @@
   libmpc,
   libxml2,
   mpfr,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -28,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     itstool
     libxml2 # xmllint
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

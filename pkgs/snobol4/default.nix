@@ -4,7 +4,7 @@
   stdenv,
   bzip2,
   gdbm,
-  gnum4,
+  m4,
   gzip,
   libffi,
   openssl,
@@ -36,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   # gzip used by Makefile to compress man pages
   nativeBuildInputs = [
-    gnum4
+    m4
     gzip
   ];
   # enable all features (undocumented, based on manual review of configure script)

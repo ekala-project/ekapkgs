@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   pkg-config,
-  atk,
+  at-spi2-core,
   cairo,
   glib,
   gtk3,
@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    atk
+    at-spi2-core
     cairo
     glib
     pango

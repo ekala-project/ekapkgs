@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   pkg-config,
-  SDL,
+  sdl12-compat,
   SDL_image,
   libgbm,
   libGL,
@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
   buildInputs = [
-    (lib.getDev SDL)
+    (lib.getDev sdl12-compat)
     SDL_image
     libgbm
     libGL
@@ -38,8 +38,8 @@ stdenv.mkDerivation (finalAttrs: {
     freetype
   ];
 
-  # Fix SDL include problems
-  env.NIX_CFLAGS_COMPILE = "-I${lib.getDev SDL}/include/SDL -I${SDL_image}/include/SDL";
+  # Fix sdl12-compat include problems
+  env.NIX_CFLAGS_COMPILE = "-I${lib.getDev sdl12-compat}/include/sdl12-compat -I${SDL_image}/include/sdl12-compat";
   # Fix linking errors
   makeFlags = [
     "ZAZ_LIBS+=-lSDL"

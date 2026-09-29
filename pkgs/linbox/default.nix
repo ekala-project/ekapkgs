@@ -8,7 +8,7 @@
   blas,
   lapack,
   fflas-ffpack,
-  gmpxx,
+  gmp,
 }:
 
 assert (!blas.isILP64) && (!lapack.isILP64);
@@ -32,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     givaro
     blas
-    gmpxx
+    gmp.withCxx
     fflas-ffpack
   ];
 

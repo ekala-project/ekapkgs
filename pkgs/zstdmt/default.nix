@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   cmake,
-  gnugrep,
+  grep,
   legacySupport ? false,
   static ? stdenv.hostPlatform.isStatic,
   enableStatic ? static,
@@ -53,7 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
   preInstall = ''
     mkdir -p $bin/bin
     substituteInPlace ../programs/zstdgrep \
-      --replace ":-grep" ":-${gnugrep}/bin/grep" \
+      --replace ":-grep" ":-${grep}/bin/grep" \
       --replace ":-zstdcat" ":-$bin/bin/zstdcat"
 
     substituteInPlace ../programs/zstdless \

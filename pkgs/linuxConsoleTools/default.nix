@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   udevCheckHook,
 }:
 
@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     udevCheckHook
   ];
   buildInputs = [
-    SDL2
+    sdl2-compat
   ];
 
   makeFlags = [ "DESTDIR=$(out)" ];

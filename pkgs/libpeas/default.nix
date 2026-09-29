@@ -10,7 +10,6 @@
   glib,
   gtk3,
   ncurses,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation rec {
@@ -38,7 +37,7 @@ stdenv.mkDerivation rec {
     ninja
     gettext
     gobject-introspection
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

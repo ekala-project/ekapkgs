@@ -5,7 +5,7 @@
   gtk3,
   gtkdatabox,
   fftw,
-  gnum4,
+  m4,
   comedilib,
   alsa-lib,
   pkg-config,
@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-    gnum4
+    m4
   ];
   buildInputs = [
     gtk3

@@ -13,7 +13,7 @@
   dconf,
   vte,
   pcre2,
-  wrapGAppsHook3,
+  gtk3,
   yelp-tools,
 }:
 
@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     mate-common # mate-common.m4 macros
     pkg-config
     libxml2 # xmllint
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     yelp-tools
   ];
 

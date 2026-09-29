@@ -4,7 +4,7 @@
   fetchurl,
   makeWrapper,
   coreutils,
-  jdk,
+  java,
   rlwrap,
   gnupg,
 }:
@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   dontUnpack = true;
 
   nativeBuildInputs = [ makeWrapper ];
-  propagatedBuildInputs = [ jdk ];
+  propagatedBuildInputs = [ java ];
 
   # the jar is not in share/java, because it's a standalone jar and should
   # never be picked up by set-java-classpath.sh
@@ -57,7 +57,7 @@ stdenv.mkDerivation (finalAttrs: {
         ]
       }" \
       --set LEIN_GPG ${gnupg}/bin/gpg \
-      --set JAVA_CMD ${jdk}/bin/java
+      --set JAVA_CMD ${java}/bin/java
 
     runHook postFixup
   '';
@@ -67,7 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Project automation for Clojure";
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
     license = lib.licenses.epl10;
-    platforms = jdk.meta.platforms;
+    platforms = java.meta.platforms;
     mainProgram = "lein";
   };
 })

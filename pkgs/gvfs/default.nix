@@ -18,17 +18,17 @@
   libgphoto2,
   avahi,
   libarchive,
-  fuse3,
+  fuse,
   libcdio,
   libxml2,
   libsoup_3,
   libxslt,
   docbook_xsl,
-  docbook_xml_dtd_42,
+  docbook-xml-dtd,
   samba,
   libmtp,
   gnomeSupport ? false,
-  wrapGAppsHook3,
+  gtk3,
   libimobiledevice,
   libbluray,
   libcdio-paranoia,
@@ -65,10 +65,10 @@ stdenv.mkDerivation (finalAttrs: {
     python3
     pkg-config
     gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     libxslt
     docbook_xsl
-    docbook_xml_dtd_42
+    docbook-xml-dtd.v4_2
   ];
 
   buildInputs = [
@@ -87,7 +87,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optionals udevSupport ([
     libgudev
-    fuse3
+    fuse
     libcdio
     samba
     libmtp

@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   glib,
-  SDL2,
+  sdl2-compat,
   libGL,
   pkg-config,
   autoreconfHook,
@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     glib
-    SDL2
+    sdl2-compat
     libGL
   ];
 

@@ -3,7 +3,6 @@
   stdenv,
   gettext,
   fetchurl,
-  wrapGAppsHook3,
   gnome-video-effects ? null,
   libcanberra-gtk3 ? null,
   pkg-config,
@@ -11,10 +10,10 @@
   glib,
   clutter-gtk ? null,
   clutter-gst ? null,
-  gst_all_1,
+  gstreamer,
   itstool,
   vala,
-  docbook_xml_dtd_43 ? null,
+  docbook-xml-dtd ? null,
   docbook-xsl-nons ? null,
   appstream-glib ? null,
   libxslt,
@@ -48,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     appstream-glib
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     docbook-xsl-nons
     gettext
     gtk-doc
@@ -59,7 +58,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     glib
   ];
 
@@ -69,9 +68,9 @@ stdenv.mkDerivation (finalAttrs: {
     dbus
     gnome-desktop
     gnome-video-effects
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
+    gstreamer.plugins-bad
+    gstreamer.plugins-base
+    gstreamer.plugins-good
     gtk3
     libcanberra-gtk3
     librsvg
@@ -82,13 +81,13 @@ stdenv.mkDerivation (finalAttrs: {
     clutter-gtk
     gdk-pixbuf
     glib
-    gst_all_1.gstreamer
+    gstreamer
   ];
 
   preFixup = ''
     gappsWrapperArgs+=(
       --prefix XDG_DATA_DIRS : "${gnome-video-effects}/share"
-      --prefix GST_PRESET_PATH : "${gst_all_1.gst-plugins-good}/share/gstreamer-1.0/presets"
+      --prefix GST_PRESET_PATH : "${gstreamer.plugins-good}/share/gstreamer-1.0/presets"
       --prefix XDG_DATA_DIRS : "${gdk-pixbuf}/share"
       --prefix XDG_DATA_DIRS : "${totem}/share"
     )

@@ -5,8 +5,8 @@
   curl,
   diffutils,
   gawk,
-  gnugrep,
-  gnused,
+  grep,
+  sed,
   hexdump,
   openssl,
   makeWrapper,
@@ -43,8 +43,8 @@ stdenv.mkDerivation (finalAttrs: {
       lib.makeBinPath [
         openssl
         coreutils
-        gnused
-        gnugrep
+        sed
+        grep
         diffutils
         curl
         gawk

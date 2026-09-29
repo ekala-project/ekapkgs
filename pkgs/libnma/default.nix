@@ -11,7 +11,7 @@
   isocodes,
   libxml2,
   docbook_xsl,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   mobile-broadband-provider-info,
   gobject-introspection,
   gtk3,
@@ -49,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     gobject-introspection
     gtk-doc
     docbook_xsl
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     libxml2
     vala
   ];

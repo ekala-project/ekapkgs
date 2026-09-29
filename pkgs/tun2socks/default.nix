@@ -1,10 +1,10 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
 }:
 
-buildGo126Module rec {
+buildGoModule rec {
   pname = "tun2socks";
   version = "2.7.0";
 

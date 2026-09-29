@@ -8,7 +8,7 @@
   python3,
   gnuplot,
   coreutils,
-  gnugrep,
+  grep,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -45,7 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
   postPatch = ''
     sed -e "s|gnuplot_cmd = .*|gnuplot_cmd = '${gnuplot}/bin/gnuplot'|" \
         -e "s|\<wc\>|${coreutils}/bin/wc|g" \
-        -e "s|\<grep\>|${gnugrep}/bin/grep|g" \
+        -e "s|\<grep\>|${grep}/bin/grep|g" \
         -i gitstats
   '';
 

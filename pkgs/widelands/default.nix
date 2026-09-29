@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
   SDL2_net,
@@ -63,7 +63,7 @@ stdenv.mkDerivation rec {
   enableParallelBuilding = true;
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
     SDL2_net

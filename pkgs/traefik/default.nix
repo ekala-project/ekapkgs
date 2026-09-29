@@ -1,10 +1,10 @@
 {
   lib,
   fetchzip,
-  buildGo125Module,
+  buildGoModule,
 }:
 
-buildGo125Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "traefik";
   version = "3.7.5";
 

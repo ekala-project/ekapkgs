@@ -4,7 +4,7 @@
   curl ? null,
   hiredis ? null,
   iptables ? null,
-  jdk ? null,
+  java ? null,
   libatasmart ? null,
   libdbi ? null,
   libesmtp ? null,
@@ -14,7 +14,7 @@
   libmodbus ? null,
   libmicrohttpd ? null,
   libmnl ? null,
-  libmysqlclient ? null,
+  mariadb-connector-c ? null,
   libnotify ? null,
   gdk-pixbuf ? null,
   liboping ? null,
@@ -63,13 +63,13 @@ let
     ipmi.buildInputs = opt openipmi;
     iptables.buildInputs =
       (opt libpcap) ++ lib.optionals stdenv.hostPlatform.isLinux ((opt iptables) ++ (opt libmnl));
-    java.buildInputs = (opt jdk) ++ (opt libgcrypt) ++ (opt libxml2);
+    java.buildInputs = (opt java) ++ (opt libgcrypt) ++ (opt libxml2);
     log_logstash.buildInputs = opt yajl;
     lua.buildInputs = opt lua;
     memcachec.buildInputs = (opt libmemcached) ++ (opt cyrus_sasl);
     modbus.buildInputs = lib.optionals stdenv.hostPlatform.isLinux (opt libmodbus);
     mqtt.buildInputs = opt mosquitto;
-    mysql.buildInputs = opt libmysqlclient;
+    mysql.buildInputs = opt mariadb-connector-c;
     netlink.buildInputs = (opt libpcap) ++ lib.optionals stdenv.hostPlatform.isLinux (opt libmnl);
     network.buildInputs = opt libgcrypt;
     nginx.buildInputs = opt curl;

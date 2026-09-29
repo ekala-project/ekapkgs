@@ -8,7 +8,7 @@
   python3,
   zlib,
   gnutls,
-  libidn2,
+  libidn,
   libunistring,
 }:
 
@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     gnutls
     zlib
-    libidn2
+    libidn.v2
     libunistring
   ];
 

@@ -2,7 +2,8 @@
   lib,
   stdenv,
   cmake,
-  darwin,
+  # TODO(ekapkgs): support darwin
+  # darwin,
   dbus,
   fetchFromGitHub,
   lcms2,

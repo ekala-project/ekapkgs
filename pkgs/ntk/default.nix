@@ -7,7 +7,7 @@
   libxft,
   pkg-config,
   python3,
-  wafHook,
+  waf,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-    wafHook
+    waf.hook
   ];
   buildInputs = [
     cairo
@@ -32,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   # NOTE: ntk provides its own waf script that is incompatible with new
-  # python versions. If the script is not present, wafHook will install
+  # python versions. If the script is not present, waf.hook will install
   # a compatible version from nixpkgs.
   prePatch = ''
     rm waf

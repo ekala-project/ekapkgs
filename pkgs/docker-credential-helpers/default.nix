@@ -1,12 +1,12 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   pkg-config,
   libsecret,
 }:
 
-buildGo126Module rec {
+buildGoModule rec {
   pname = "docker-credential-helpers";
   version = "0.9.8";
 

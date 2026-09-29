@@ -6,7 +6,6 @@
   libpulseaudio,
   pkg-config,
   stdenv,
-  wrapGAppsHook3,
   libjack2,
 }:
 
@@ -25,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

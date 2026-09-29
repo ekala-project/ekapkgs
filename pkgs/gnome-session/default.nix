@@ -16,9 +16,9 @@
   gnome-shell,
   xmlto,
   docbook_xsl,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   libxslt,
-  wrapGAppsNoGuiHook,
+  gtk3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -49,9 +49,9 @@ stdenv.mkDerivation (finalAttrs: {
     xmlto
     libxslt
     docbook_xsl
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     dbus # for DTD
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [

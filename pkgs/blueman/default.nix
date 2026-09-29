@@ -14,7 +14,6 @@
   iproute2,
   adwaita-icon-theme,
   librsvg,
-  wrapGAppsHook3,
   gobject-introspection,
   withPulseAudio ? stdenv.hostPlatform.isLinux,
   libpulseaudio,
@@ -40,7 +39,7 @@ stdenv.mkDerivation rec {
     pkg-config
     pythonPackages.cython
     pythonPackages.wrapPython
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

@@ -6,7 +6,7 @@
   pkg-config,
   ispc ? null,
   onetbb,
-  glfw,
+  glfw3,
   openimageio ? null,
   libjpeg,
   libpng,
@@ -56,7 +56,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     onetbb
-    glfw
+    glfw3
     openimageio
     libjpeg
     libpng

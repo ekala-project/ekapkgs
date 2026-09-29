@@ -26,7 +26,6 @@
   python3,
   polkit,
   upower,
-  wrapGAppsHook4,
   gnome-settings-daemon,
   gnome-online-accounts,
   mutter,
@@ -42,7 +41,7 @@
   wayland-scanner,
   adwaita-icon-theme,
   gnome-user-share,
-  gst_all_1,
+  gstreamer,
   libepoxy,
   libgtop,
   libgudev,
@@ -102,7 +101,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3
     shared-mime-info
     wayland-scanner
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [
@@ -152,8 +151,8 @@ stdenv.mkDerivation (finalAttrs: {
     localsearch # for search locations dialog
     # TODO: udisks - not yet available in ekapkgs
     upower
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
+    gstreamer.plugins-base
+    gstreamer.plugins-good
   ];
 
   preConfigure = ''

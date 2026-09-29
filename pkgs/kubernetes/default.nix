@@ -1,6 +1,6 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   which,
   makeWrapper,
@@ -19,7 +19,7 @@
   ],
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "kubernetes";
   version = "1.36.4";
 

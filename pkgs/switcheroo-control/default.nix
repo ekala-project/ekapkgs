@@ -7,7 +7,7 @@
   libdrm,
   libgudev,
   pkg-config,
-  wrapGAppsNoGuiHook,
+  gtk3,
   glib,
   python3Packages,
 }:
@@ -38,7 +38,7 @@ python3Packages.buildPythonApplication {
     meson
     meson.configurePhaseHook
     pkg-config
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [

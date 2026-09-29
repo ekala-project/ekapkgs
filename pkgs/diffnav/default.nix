@@ -2,13 +2,13 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  buildGo126Module,
+  buildGoModule,
   makeBinaryWrapper,
   installShellFiles,
   delta,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "diffnav";
   version = "0.12.0";
 

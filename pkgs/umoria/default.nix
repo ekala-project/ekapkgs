@@ -5,7 +5,7 @@
   fetchpatch,
   autoreconfHook,
   cmake,
-  ncurses6,
+  ncurses,
   runtimeShell,
 }:
 
@@ -59,7 +59,7 @@ stdenv.mkDerivation rec {
     cmake
     cmake.configurePhaseHook
   ];
-  buildInputs = [ ncurses6 ];
+  buildInputs = [ ncurses ];
   enableParallelBuilding = true;
 
   installPhase = ''

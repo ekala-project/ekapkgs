@@ -4,7 +4,7 @@
   fetchFromGitHub,
   bash,
   coreutils,
-  gnutar,
+  tar,
   gzip,
   makeWrapper,
 }:
@@ -46,7 +46,7 @@ buildGoModule {
       lib.makeBinPath [
         bash
         coreutils
-        gnutar
+        tar
         gzip
       ]
     }

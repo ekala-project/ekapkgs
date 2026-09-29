@@ -16,7 +16,7 @@
   readline,
   gtk-doc,
   docbook-xsl-nons,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
 
   evolution-data-server-gtk4,
   dbus-glib,
@@ -51,7 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
     # TODO: re-enable docs when gtk-doc issues sorted
     # gtk-doc
     # docbook-xsl-nons
-    # docbook_xml_dtd_43
+    # docbook-xml-dtd.v4_3
     meson
     ninja
     pkg-config

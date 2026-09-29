@@ -1,13 +1,13 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   tmux,
   which,
   makeWrapper,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "overmind";
   version = "2.5.1";
 

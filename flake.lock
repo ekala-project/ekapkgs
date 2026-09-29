@@ -7,11 +7,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1789573032,
-        "narHash": "sha256-41b4Y8bijrO48VvT94b1x4+zogKAiDs9GQbAifIuj1w=",
+        "lastModified": 1790518605,
+        "narHash": "sha256-KuXbuJUW1VyuPFX48C/o1+fInmMsAAYr45pkkVzrpEI=",
         "owner": "ekala-project",
         "repo": "corepkgs",
-        "rev": "c75773e8bfb98a3d6ef5f92b3d6ca8925dfea281",
+        "rev": "782d557e8758ce7ea383d991ba238cb3abcee21f",
         "type": "github"
       },
       "original": {
@@ -39,11 +39,11 @@
     "haskell": {
       "flake": false,
       "locked": {
-        "lastModified": 1789567023,
-        "narHash": "sha256-MFjM9/lZxr+m1pl8ctqMtDfjiA+A/JKlrUR4GDXqv4g=",
+        "lastModified": 1790439774,
+        "narHash": "sha256-upEaNx9c9/7NPy56IyVTHTCYPjJRzTpHe4Y8H6I7g90=",
         "owner": "ekala-project",
         "repo": "haskell-pkgs",
-        "rev": "c10f55c466f6ae8cf762e51a68503ae095790e00",
+        "rev": "b466fca502c60fb53d19fb7dbd958c44cb4c03f2",
         "type": "github"
       },
       "original": {
@@ -86,11 +86,11 @@
     "python": {
       "flake": false,
       "locked": {
-        "lastModified": 1788627492,
-        "narHash": "sha256-egLzQt8HeXx4+Zq7a3MFXD3l4ThjpptdIhCdNpU4jaI=",
+        "lastModified": 1790358704,
+        "narHash": "sha256-lNIFh3V/wAGqcnwXXAcimM39H+0s2Jly40btOTSoQkY=",
         "owner": "ekala-project",
         "repo": "python-pkgs",
-        "rev": "3228c35ad5a223620535833dc0599c9b1181d5f0",
+        "rev": "43d74d961ad5cb03cb1a450059a6c76d26d10c5a",
         "type": "github"
       },
       "original": {

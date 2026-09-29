@@ -6,12 +6,12 @@
   coreutils,
   gawk,
   procps,
-  gnused,
+  sed,
   bc,
   findutils,
   xdpyinfo ? null,
   xprop ? null,
-  gnugrep,
+  grep,
   ncurses,
   pciutils,
 }:
@@ -20,9 +20,9 @@ let
   path = lib.makeBinPath [
     coreutils
     gawk
-    gnused
+    sed
     findutils
-    gnugrep
+    grep
     ncurses
     bc
     pciutils

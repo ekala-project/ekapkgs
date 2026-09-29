@@ -13,7 +13,6 @@
   python3,
   polkit,
   gobject-introspection,
-  wrapGAppsHook4,
   gcr_4,
   accountsservice,
   upower,
@@ -52,7 +51,7 @@
   librsvg,
   lcms2,
   pipewire,
-  gst_all_1,
+  gstreamer,
   gnome-autoar,
   bash-completion,
   shared-mime-info,
@@ -122,7 +121,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     gi-docgen
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     sassc
     desktop-file-utils
     libxslt
@@ -169,9 +168,9 @@ stdenv.mkDerivation (finalAttrs: {
 
     # recording
     pipewire
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
+    gstreamer
+    gstreamer.plugins-base
+    gstreamer.plugins-good
 
     # not declared at build time, but typelib is needed at runtime
     libgweather

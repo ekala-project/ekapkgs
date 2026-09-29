@@ -21,6 +21,11 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
+  # Workaround: simdjson's CMakeLists.txt has a multiline project() call
+  # which the cmake hook's parseShareDocName regex can't parse, causing
+  # a grep failure that kills the build with set -e + inherit_errexit.
+  shareDocName = "simdjson";
+
   cmakeFlags = [
     (lib.cmakeBool "SIMDJSON_DEVELOPER_MODE" false)
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))

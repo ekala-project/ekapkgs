@@ -1,6 +1,6 @@
 {
   lib,
-  buildGo126Module,
+  buildGoModule,
   go,
   fetchFromGitHub,
   makeWrapper,
@@ -8,7 +8,7 @@
   gpgme,
 }:
 
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "operator-sdk";
   version = "1.42.3";
 

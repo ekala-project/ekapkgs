@@ -6,7 +6,7 @@
   ninja,
   pkg-config,
   docbook-xsl-nons,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   gtk-doc,
   gdk-pixbuf,
   libx11,
@@ -36,7 +36,7 @@ stdenv.mkDerivation rec {
     ninja
     pkg-config
     docbook-xsl-nons
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_3
     gtk-doc
   ];
 

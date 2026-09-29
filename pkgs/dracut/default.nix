@@ -14,9 +14,9 @@
   coreutils,
   cpio,
   findutils,
-  gnugrep,
-  gnused,
-  gnutar,
+  grep,
+  sed,
+  tar,
   gzip,
   lz4,
   lzop,
@@ -73,9 +73,9 @@ stdenv.mkDerivation rec {
         binutils
         coreutils
         findutils
-        gnugrep
-        gnused
-        gnutar
+        grep
+        sed
+        tar
         stdenv.cc.libc # for ldd command
         util-linux
       ]
@@ -94,7 +94,7 @@ stdenv.mkDerivation rec {
         bzip2
         coreutils
         cpio
-        gnused
+        sed
         gzip
         lz4
         lzop

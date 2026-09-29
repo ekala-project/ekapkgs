@@ -2,7 +2,6 @@
   stdenv,
   lib,
   fetchFromGitHub,
-  wrapGAppsHook3,
   python3,
   gobject-introspection,
   gsettings-desktop-schemas,
@@ -25,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gsettings-desktop-schemas
     gettext
     gobject-introspection

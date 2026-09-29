@@ -5,8 +5,8 @@
   libuv,
   coreutils-full,
   pkg-config,
-  gnugrep,
-  gnused,
+  grep,
+  sed,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -23,8 +23,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   env = {
     ENV = "${coreutils-full}/bin/env";
-    GREP = "${gnugrep}/bin/grep";
-    SED = "${gnused}/bin/sed";
+    GREP = "${grep}/bin/grep";
+    SED = "${sed}/bin/sed";
     PREFIX = placeholder "out";
   };
 

@@ -6,13 +6,13 @@
   gettext,
   glew,
   python3,
-  SDL,
+  sdl12-compat,
   SDL_image,
   SDL_gfx,
   SDL_mixer,
   libogg,
   libvorbis,
-  lua5_3,
+  lua,
   libjpeg,
   libpng,
   zlib,
@@ -44,20 +44,20 @@ stdenv.mkDerivation {
 
   buildInputs = [
     glew
-    SDL
+    sdl12-compat
     SDL_image
     SDL_gfx
     SDL_mixer
     libogg
     libvorbis
-    lua5_3
+    lua.v5_3
     libjpeg
     libpng
     zlib
   ]
   ++ lib.optional stdenv.hostPlatform.isDarwin libiconv;
 
-  env.SDL_CONFIG = lib.getExe' (lib.getDev SDL) "sdl-config";
+  env.SDL_CONFIG = lib.getExe' (lib.getDev sdl12-compat) "sdl-config";
 
   enableParallelBuilding = true;
 

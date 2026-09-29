@@ -5,7 +5,6 @@
   pkg-config,
   gsound ? null,
   gtk4,
-  wrapGAppsHook4,
   librsvg,
   gettext,
   itstool,
@@ -32,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     vala
     pkg-config
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     gettext
     itstool
     libxml2

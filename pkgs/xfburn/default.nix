@@ -8,9 +8,8 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook3,
   xfce4-exo,
-  gst_all_1,
+  gstreamer,
   gtk3,
   libburn,
   libgudev,
@@ -41,14 +40,14 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
     xfce4-exo
     glib
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
+    gstreamer
+    gstreamer.plugins-base
     gtk3
     libburn
     libgudev

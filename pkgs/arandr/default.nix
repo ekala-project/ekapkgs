@@ -6,7 +6,6 @@
   gobject-introspection,
   gsettings-desktop-schemas,
   gtk3,
-  wrapGAppsHook3,
   xrandr,
 }:
 
@@ -44,7 +43,7 @@ buildPythonApplication (finalAttrs: {
 
   nativeBuildInputs = [
     gobject-introspection
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

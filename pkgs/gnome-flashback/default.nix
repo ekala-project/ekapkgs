@@ -25,7 +25,6 @@
   gnome-tecla,
   upower,
   pam,
-  wrapGAppsHook3,
   writeTextFile,
   xkeyboard-config,
   libxxf86vm,
@@ -68,7 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     libxml2
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

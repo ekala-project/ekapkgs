@@ -11,7 +11,6 @@
   gtk3,
   glib,
   glib-networking,
-  wrapGAppsHook3,
   itstool,
   gnupg,
   desktop-file-utils,
@@ -54,7 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     vala
     itstool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     python3
     openssh
     gnupg

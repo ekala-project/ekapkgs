@@ -60,7 +60,7 @@
   libvorbis,
   libxml2,
   live555,
-  lua5_4,
+  lua,
   ncurses,
   perl,
   pkg-config,
@@ -78,7 +78,7 @@
   wayland,
   wayland-protocols,
   wayland-scanner,
-  wrapGAppsHook3,
+  gtk3,
   libxcb-keysyms,
   zlib,
   chromecastSupport ? true,
@@ -109,12 +109,12 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     bison
     flex
-    lua5_4
+    lua
     perl
     pkg-config
     removeReferencesTo
     unzip
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ]
   ++ optionals chromecastSupport [ protobuf ]
   ++ optionals waylandSupport [
@@ -173,7 +173,7 @@ stdenv.mkDerivation (finalAttrs: {
     libva
     libvorbis
     libxml2
-    lua5_4
+    lua
     ncurses
     samba
     schroedinger

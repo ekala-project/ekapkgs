@@ -6,7 +6,6 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook3,
   gtk3,
   libnotify,
   libpulseaudio,
@@ -34,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

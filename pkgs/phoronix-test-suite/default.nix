@@ -5,7 +5,7 @@
   php,
   which,
   makeWrapper,
-  gnumake,
+  make,
   gcc,
   callPackage,
 }:
@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     --set PHP_BIN ${php}/bin/php \
     --prefix PATH : ${
       lib.makeBinPath [
-        gnumake
+        make
         gcc
       ]
     }

@@ -4,7 +4,7 @@
   fetchFromGitLab,
   cmake,
   zlib,
-  SDL2,
+  sdl2-compat,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -29,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     zlib
-    SDL2
+    sdl2-compat
   ];
 
   meta = {

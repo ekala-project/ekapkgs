@@ -21,7 +21,6 @@
   libpthread-stubs,
   libxdmcp,
   libstartup_notification,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation rec {
@@ -55,7 +54,7 @@ stdenv.mkDerivation rec {
     cmake
     cmake.configurePhaseHook
     gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

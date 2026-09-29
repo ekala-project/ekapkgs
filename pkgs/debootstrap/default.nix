@@ -10,10 +10,10 @@
   bzip2,
   coreutils,
   util-linux,
-  gnugrep,
+  grep,
   gnupg,
-  gnutar,
-  gnused,
+  tar,
+  sed,
   gzip,
   xz,
   zstd,
@@ -27,10 +27,10 @@ let
     coreutils
     dpkg
     gawk
-    gnugrep
+    grep
     gnupg
-    gnused
-    gnutar
+    sed
+    tar
     gzip
     perl
     util-linux

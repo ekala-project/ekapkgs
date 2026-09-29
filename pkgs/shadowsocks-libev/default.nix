@@ -11,7 +11,7 @@
   pcre2,
   asciidoc,
   xmlto,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
   libxslt,
 }:
@@ -44,7 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     asciidoc
     xmlto
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook_xsl
     libxslt
   ];

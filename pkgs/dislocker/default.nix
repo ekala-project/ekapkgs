@@ -4,7 +4,7 @@
   fetchFromGitHub,
   cmake,
   pkg-config,
-  fuse3,
+  fuse,
   mbedtls,
 }:
 
@@ -26,7 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    fuse3
+    fuse
     mbedtls
   ];
 

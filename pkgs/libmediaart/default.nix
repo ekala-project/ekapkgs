@@ -8,7 +8,7 @@
   vala,
   gtk-doc,
   docbook-xsl-nons,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   glib,
   gdk-pixbuf,
   gobject-introspection,
@@ -36,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     vala
     gtk-doc
     docbook-xsl-nons
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
     gobject-introspection
   ];
 

@@ -4,7 +4,7 @@
   makeWrapper,
   fetchurl,
   unzip,
-  jdk,
+  java,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     mv * $out/libexec/
 
     makeWrapper $out/libexec/bin/sql $out/bin/sqlcl \
-      --set JAVA_HOME ${jdk.home} \
+      --set JAVA_HOME ${java.home} \
       --chdir "$out/libexec/bin"
   '';
 

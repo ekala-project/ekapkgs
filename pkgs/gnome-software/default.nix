@@ -7,7 +7,6 @@
   meson,
   ninja,
   gettext,
-  wrapGAppsHook4,
   glib,
   appstream,
   libsoup_3,
@@ -22,7 +21,7 @@
   gobject-introspection,
   itstool,
   desktop-file-utils,
-  gst_all_1,
+  gstreamer,
   # TODO: packagekit - not available
   ostree,
   polkit,
@@ -35,8 +34,7 @@
   libsysprof-capture,
   # TODO: valgrind-light - not available
   docbook-xsl-nons,
-  docbook_xml_dtd_42,
-  docbook_xml_dtd_43,
+  docbook-xml-dtd,
   gtk-doc,
   fwupd,
 }:
@@ -62,10 +60,10 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     gettext
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     libxslt
-    docbook_xml_dtd_42
-    docbook_xml_dtd_43
+    docbook-xml-dtd.v4_2
+    docbook-xml-dtd.v4_3
     # TODO: valgrind-light - not available
     docbook-xsl-nons
     gtk-doc
@@ -95,8 +93,8 @@ stdenv.mkDerivation (finalAttrs: {
     # TODO: malcontent - not available
     libsysprof-capture
     # For video screenshots
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
+    gstreamer.plugins-base
+    gstreamer.plugins-good
   ];
 
   mesonFlags = [

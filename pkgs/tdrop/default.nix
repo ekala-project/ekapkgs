@@ -8,7 +8,7 @@
   xprop,
   gawk,
   coreutils,
-  gnugrep,
+  grep,
   procps,
 }:
 
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
         xprop
         gawk
         coreutils
-        gnugrep
+        grep
         procps
       ];
     in

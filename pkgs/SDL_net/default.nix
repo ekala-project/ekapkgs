@@ -1,6 +1,6 @@
 {
   lib,
-  SDL,
+  sdl12-compat,
   fetchFromGitHub,
   pkg-config,
   stdenv,
@@ -20,12 +20,12 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    SDL
+    sdl12-compat
     pkg-config
   ];
 
   propagatedBuildInputs = [
-    SDL
+    sdl12-compat
   ];
 
   configureFlags = [
@@ -36,8 +36,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     homepage = "https://github.com/libsdl-org/SDL_net";
-    description = "SDL networking library";
+    description = "sdl12-compat networking library";
     license = lib.licenses.zlib;
-    inherit (SDL.meta) platforms;
+    inherit (sdl12-compat.meta) platforms;
   };
 })

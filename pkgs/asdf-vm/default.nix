@@ -1,12 +1,12 @@
 {
   lib,
   stdenv,
-  buildGo126Module,
+  buildGoModule,
   fetchFromGitHub,
   makeWrapper,
   installShellFiles,
 }:
-buildGo126Module (finalAttrs: {
+buildGoModule (finalAttrs: {
   pname = "asdf-vm";
   version = "0.20.0";
 

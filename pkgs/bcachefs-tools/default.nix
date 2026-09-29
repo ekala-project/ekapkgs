@@ -16,7 +16,7 @@
   lz4,
   attr,
   udev,
-  fuse3 ? null,
+  fuse ? null,
   cargo,
   rustc,
   rustPlatform,
@@ -82,7 +82,7 @@ stdenv.mkDerivation (finalAttrs: {
     attr
     udev
   ]
-  ++ lib.optional fuseSupport fuse3;
+  ++ lib.optional fuseSupport fuse;
 
   makeFlags = [
     "PREFIX=${placeholder "out"}"

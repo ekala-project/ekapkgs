@@ -5,7 +5,7 @@
   makeWrapper,
   autoreconfHook,
   bash,
-  fuse3,
+  fuse,
   libmspack,
   openssl,
   pam,
@@ -79,7 +79,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    fuse3
+    fuse
     glib
     icu
     libdnet
@@ -130,9 +130,9 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace lib/system/systemLinux.c \
       --replace-fail "/sbin/shutdown" "shutdown"
 
-    # Fix paths to fuse3 (we do not use fuse2 so that is not modified)
+    # Fix paths to fuse (we do not use fuse2 so that is not modified)
     substituteInPlace vmhgfs-fuse/config.c \
-      --replace-fail "/bin/fusermount3" "${fuse3}/bin/fusermount3"
+      --replace-fail "/bin/fusermount3" "${fuse}/bin/fusermount3"
 
     # do not break the PATHs set by makeWrapper, sudo resets PATH anyway.
     substituteInPlace scripts/common/vm-support \

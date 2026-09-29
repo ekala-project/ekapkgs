@@ -14,7 +14,7 @@
   enableLDAP ? false,
   openldap ? null,
   enableMySQL ? false,
-  libmysqlclient ? null,
+  mariadb-connector-c ? null,
   zlib,
   enablePgSQL ? false,
   libpq ? null,
@@ -59,7 +59,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional enableLDAP openldap
   ++ lib.optionals enableMySQL [
-    libmysqlclient
+    mariadb-connector-c
     zlib
   ]
   ++ lib.optional enablePgSQL libpq
@@ -109,10 +109,10 @@ stdenv.mkDerivation (finalAttrs: {
       ''}
       ${lib.optionalString enableMySQL ''
         s:^# \(LOOKUP_MYSQL=yes\)$:\1:
-        s:^# \(LOOKUP_MYSQL_PC=libmysqlclient\)$:\1:
-        s:^\(LOOKUP_LIBS\)=\(.*\):\1=\2 -lmysqlclient -L${libmysqlclient}/lib/mysql -lssl -lm -lpthread -lz:
-        s:^# \(LOOKUP_LIBS\)=.*:\1=-lmysqlclient -L${libmysqlclient}/lib/mysql -lssl -lm -lpthread -lz:
-        s:^# \(LOOKUP_INCLUDE\)=.*:\1=-I${libmysqlclient.dev}/include/mysql/:
+        s:^# \(LOOKUP_MYSQL_PC=mariadb-connector-c\)$:\1:
+        s:^\(LOOKUP_LIBS\)=\(.*\):\1=\2 -lmysqlclient -L${mariadb-connector-c}/lib/mysql -lssl -lm -lpthread -lz:
+        s:^# \(LOOKUP_LIBS\)=.*:\1=-lmysqlclient -L${mariadb-connector-c}/lib/mysql -lssl -lm -lpthread -lz:
+        s:^# \(LOOKUP_INCLUDE\)=.*:\1=-I${mariadb-connector-c.dev}/include/mysql/:
       ''}
       ${lib.optionalString enablePgSQL ''
         s:^# \(LOOKUP_PGSQL=yes\)$:\1:

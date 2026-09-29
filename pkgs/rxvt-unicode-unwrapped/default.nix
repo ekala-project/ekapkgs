@@ -29,7 +29,10 @@ stdenv.mkDerivation rec {
     sha256 = "qqE/y8FJ/g8/OR+TMnlYD3Spb9MS1u0GuP8DwtRmcug=";
   };
 
-  nativeBuildInputs = [ pkg-config ];
+  nativeBuildInputs = [
+    pkg-config
+  ]
+  ++ lib.optional perlSupport perl;
   buildInputs = [
     libx11
     libxt
@@ -69,12 +72,16 @@ stdenv.mkDerivation rec {
     (lib.enableFeature unicode3Support "unicode3")
   ];
 
-  LDFLAGS = [
-    "-lfontconfig"
-    "-lXrender"
-    "-lpthread"
-  ];
-  CFLAGS = [ "-I${freetype.dev}/include/freetype2" ];
+  env = {
+    LDFLAGS = toString [
+      "-lfontconfig"
+      "-lXrender"
+      "-lpthread"
+    ];
+    CFLAGS = toString [
+      "-I${freetype.dev}/include/freetype2"
+    ];
+  };
 
   preConfigure = ''
     # without this the terminfo won't be compiled by tic, see man tic

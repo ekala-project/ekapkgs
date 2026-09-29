@@ -8,10 +8,9 @@
   curl,
   libnotify,
   libappindicator-gtk3 ? null,
-  gst_all_1,
+  gstreamer,
   gtk3,
   dconf,
-  wrapGAppsHook3,
   aria2,
   aria2Support ? true,
 }:
@@ -36,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
     intltool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
@@ -49,10 +48,10 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (libappindicator-gtk3 != null) [
     libappindicator-gtk3
   ]
-  ++ (with gst_all_1; [
+  ++ (with gstreamer; [
     gstreamer
-    gst-plugins-base
-    gst-plugins-good
+    plugins-base
+    plugins-good
   ])
   ++ (lib.optional aria2Support aria2);
 

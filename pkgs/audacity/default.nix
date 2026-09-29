@@ -4,7 +4,6 @@
   fetchFromGitHub,
   cmake,
   makeWrapper,
-  wrapGAppsHook3,
   pkg-config,
   python3,
   gettext,
@@ -85,7 +84,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     python3
     makeWrapper
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     linuxHeaders
   ];
 

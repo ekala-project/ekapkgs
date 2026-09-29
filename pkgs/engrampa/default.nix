@@ -14,7 +14,6 @@
   json-glib,
   mate-common,
   mate-desktop,
-  wrapGAppsHook3,
   yelp-tools,
   withMagic ? stdenv.buildPlatform.canExecute stdenv.hostPlatform,
   file,
@@ -40,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     itstool
     libxml2
     mate-common
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     yelp-tools
   ];
 

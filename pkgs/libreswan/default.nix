@@ -20,7 +20,7 @@
   iptables,
   procps,
   coreutils,
-  gnused,
+  sed,
   gawk,
   nss,
   which,
@@ -28,7 +28,7 @@
   libselinux,
   ldns,
   xmlto,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
   findXMLCatalogs,
   dns-root-data,
@@ -41,7 +41,7 @@ let
     iptables
     procps
     coreutils
-    gnused
+    sed
     gawk
     nss.tools
     which
@@ -64,7 +64,7 @@ stdenv.mkDerivation rec {
     flex
     pkg-config
     xmlto
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook_xsl
     findXMLCatalogs
   ];
@@ -72,7 +72,7 @@ stdenv.mkDerivation rec {
   buildInputs = [
     systemd
     coreutils
-    gnused
+    sed
     gawk
     gmp
     unbound
