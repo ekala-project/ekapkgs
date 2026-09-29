@@ -9,7 +9,7 @@
   targetPackages,
   cmake,
   ninja,
-  llvm_18,
+  llvm,
   curl,
   tzdata,
   lit,
@@ -62,7 +62,7 @@ stdenv.mkDerivation (finalAttrs: {
     ldcBootstrap
     lit
     lit.python
-    llvm_18.dev
+    llvm.v18.pkgs.llvm.dev
     makeWrapper
     ninja
     unzip
