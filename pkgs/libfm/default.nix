@@ -10,13 +10,12 @@
   pkg-config,
   vala,
   extraOnly ? false,
-  withGtk3 ? false,
-  gtk2,
+  withGtk3 ? true,
   gtk3,
 }:
 
 let
-  gtk = if withGtk3 then gtk3 else gtk2;
+  gtk = gtk3;
   inherit (lib) optional optionalString;
 in
 stdenv.mkDerivation (finalAttrs: {
