@@ -10,7 +10,6 @@
   gtk4,
   webkitgtk_6_0,
   gsettings-desktop-schemas,
-  wrapGAppsHook4,
   desktop-file-utils,
   gobject-introspection,
   glib-networking,
@@ -37,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [
