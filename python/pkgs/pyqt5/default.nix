@@ -51,17 +51,16 @@ buildPythonPackage rec {
     ./pyqt5-confirm-license.patch
   ];
 
-  postPatch =
-    ''
-      cat >> pyproject.toml <<EOF
-    ''
-    + lib.optionalString enableVerbose ''
-      [tool.sip.project]
-      verbose = true
-    ''
-    + ''
-      EOF
-    '';
+  postPatch = ''
+    cat >> pyproject.toml <<EOF
+  ''
+  + lib.optionalString enableVerbose ''
+    [tool.sip.project]
+    verbose = true
+  ''
+  + ''
+    EOF
+  '';
 
   enableParallelBuilding = true;
   postUnpack = ''

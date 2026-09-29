@@ -94,14 +94,12 @@ final: prev: {
 
   # python-xlib's setup.py imports pkg_resources which was removed in setuptools 84
   python-xlib = prev.python-xlib.overridePythonAttrs (old: {
-    postPatch =
-      (old.postPatch or "")
-      + ''
-        substituteInPlace setup.py \
-          --replace-fail "from pkg_resources import parse_requirements" "" \
-          --replace-fail "setuptools_require = next(parse_requirements('setuptools>=30.3.0'))" "" \
-          --replace-fail "assert setuptools_version in setuptools_require, '{} is required'.format(setuptools_require)" ""
-      '';
+    postPatch = (old.postPatch or "") + ''
+      substituteInPlace setup.py \
+        --replace-fail "from pkg_resources import parse_requirements" "" \
+        --replace-fail "setuptools_require = next(parse_requirements('setuptools>=30.3.0'))" "" \
+        --replace-fail "assert setuptools_version in setuptools_require, '{} is required'.format(setuptools_require)" ""
+    '';
   });
 
   # The python pkgconfig package has a broken setup-hook in corepkgs
@@ -110,23 +108,19 @@ final: prev: {
   # so we remove pkgconfig from build-system and skip the runtime deps check
   # (which would fail looking for the pkgconfig dist-info).
   uharfbuzz = prev.uharfbuzz.overridePythonAttrs (old: {
-    build-system = builtins.filter (
-      dep: (dep.pname or "") != "pkgconfig"
-    ) (old.build-system or [ ]);
+    build-system = builtins.filter (dep: (dep.pname or "") != "pkgconfig") (old.build-system or [ ]);
     # The corepkgs python-pkgconfig has a broken setup-hook
     # (unsubstituted @wrapperName@/@suffixSalt@ placeholders).
     # uharfbuzz uses pkgconfig at build time to find system harfbuzz, but
     # since it bundles harfbuzz as a submodule, we can remove the dependency
     # and patch both pyproject.toml and setup.py to skip pkgconfig usage.
-    postPatch =
-      (old.postPatch or "")
-      + ''
-        substituteInPlace pyproject.toml \
-          --replace-fail '"pkgconfig"' ""
-        substituteInPlace setup.py \
-          --replace-fail "import pkgconfig" "" \
-          --replace-fail 'harfbuzz_component_configuration = pkgconfig.parse(harfbuzz_component)' 'harfbuzz_component_configuration = {"include_dirs": [], "define_macros": [], "libraries": [], "library_dirs": []}' \
-      '';
+    postPatch = (old.postPatch or "") + ''
+      substituteInPlace pyproject.toml \
+        --replace-fail '"pkgconfig"' ""
+      substituteInPlace setup.py \
+        --replace-fail "import pkgconfig" "" \
+        --replace-fail 'harfbuzz_component_configuration = pkgconfig.parse(harfbuzz_component)' 'harfbuzz_component_configuration = {"include_dirs": [], "define_macros": [], "libraries": [], "library_dirs": []}' \
+    '';
   });
 
   img2pdf = final.buildPythonPackage rec {
