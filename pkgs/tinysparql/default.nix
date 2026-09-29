@@ -17,7 +17,7 @@
   python3,
   libxml2,
   glib,
-  wrapGAppsNoGuiHook, # TODO: not in confirmed available deps list; verify availability
+  gtk3, # TODO: not in confirmed available deps list; verify availability
   sqlite,
   libstemmer, # TODO: not in confirmed available deps list; verify availability
   icu,
@@ -72,7 +72,7 @@ stdenv.mkDerivation (finalAttrs: {
     asciidoc
     gettext
     glib
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
     python3
     (python3.pythonOnBuildForHost.withPackages (p: [ p.pygobject3 ]))
   ]

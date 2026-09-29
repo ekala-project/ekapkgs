@@ -16,7 +16,7 @@
   libcap_ng,
   libselinux,
   p11-kit,
-  wrapGAppsNoGuiHook,
+  gtk3,
   docbook-xsl-nons,
   docbook-xml-dtd,
   useWrappedDaemon ? true,
@@ -46,7 +46,7 @@ stdenv.mkDerivation rec {
     libxslt
     docbook-xsl-nons
     docbook-xml-dtd.v4_3
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [

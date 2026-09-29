@@ -47,7 +47,6 @@
   wayland,
   wayland-protocols,
   wayland-scanner,
-  wrapGAppsNoGuiHook,
   xdg-dbus-proxy,
   xmlto,
   libxau,
@@ -148,7 +147,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     validatePkgConfig
     wayland-scanner
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ]
   ++ lib.optional (withGtkDoc && gtk-doc != null) gtk-doc
   ++ lib.optional withIntrospection gobject-introspection

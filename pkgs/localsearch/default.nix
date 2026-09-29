@@ -14,7 +14,7 @@
   ninja,
   pkg-config,
   vala,
-  wrapGAppsNoGuiHook ? null,
+  gtk3 ? null,
   bzip2,
   dbus,
   exempi,
@@ -69,7 +69,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [

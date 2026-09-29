@@ -33,7 +33,7 @@
   networkmanager,
   perl,
   udevCheckHook,
-  wrapGAppsNoGuiHook,
+  gtk3,
   # TODO: gnome-session-ctl - need to port or find equivalent
   # TODO: modemmanager - not yet available in ekapkgs
   withSystemd ? lib.meta.availableOn stdenv.hostPlatform systemd,
@@ -73,7 +73,7 @@ stdenv.mkDerivation (finalAttrs: {
     perl
     pkg-config
     udevCheckHook
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [

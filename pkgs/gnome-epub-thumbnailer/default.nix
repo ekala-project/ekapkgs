@@ -2,7 +2,7 @@
   stdenv,
   lib,
   fetchurl,
-  wrapGAppsNoGuiHook,
+  gtk3,
   meson,
   ninja,
   pkg-config,
@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
     meson
     meson.configurePhaseHook
     ninja

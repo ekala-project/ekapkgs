@@ -19,7 +19,7 @@
   python3,
   pkg-config,
   stdenv,
-  wrapGAppsNoGuiHook,
+  gtk3,
   bash,
   gstreamer,
   libgudev,
@@ -80,7 +80,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [

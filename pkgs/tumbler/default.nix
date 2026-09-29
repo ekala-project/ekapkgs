@@ -5,7 +5,7 @@
   gettext,
   pkg-config,
   xfce4-dev-tools,
-  wrapGAppsNoGuiHook,
+  gtk3,
   ffmpegthumbnailer ? null,
   gdk-pixbuf,
   glib,
@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     pkg-config
     xfce4-dev-tools
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [

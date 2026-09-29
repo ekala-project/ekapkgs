@@ -15,7 +15,7 @@
   ninja,
   shared-mime-info,
   vala,
-  wrapGAppsNoGuiHook,
+  gtk3,
   writableTmpDirAsHomeHook,
   mesonEmulatorHook,
 
@@ -122,7 +122,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     shared-mime-info
     vala
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
     writableTmpDirAsHomeHook
   ]
   ++ lib.optionals (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) [

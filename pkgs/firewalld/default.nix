@@ -22,7 +22,6 @@
   python3,
   qt6 ? null,
   sysctl,
-  wrapGAppsNoGuiHook,
   withGui ? false,
 }:
 
@@ -85,7 +84,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     python3
     python3.pkgs.wrapPython
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ]
   ++ lib.optionals withGui [
     qt6.wrapQtAppsHook

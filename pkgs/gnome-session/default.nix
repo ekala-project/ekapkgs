@@ -18,7 +18,7 @@
   docbook_xsl,
   docbook-xml-dtd,
   libxslt,
-  wrapGAppsNoGuiHook,
+  gtk3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -51,7 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
     docbook_xsl
     docbook-xml-dtd.v4_5
     dbus # for DTD
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [

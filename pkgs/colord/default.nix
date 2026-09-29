@@ -17,7 +17,7 @@
   meson,
   ninja,
   libgudev,
-  wrapGAppsNoGuiHook,
+  gtk3,
   shared-mime-info,
   sane-backends,
   docbook_xsl,
@@ -81,7 +81,7 @@ stdenv.mkDerivation rec {
     ninja
     pkg-config
     shared-mime-info
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [

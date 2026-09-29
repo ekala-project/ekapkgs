@@ -12,7 +12,7 @@
   util-linux,
   rsync,
   makeWrapper,
-  wrapGAppsNoGuiHook,
+  gtk3,
   gettext,
 }:
 
@@ -50,7 +50,7 @@ let
       makeWrapper
       gettext
       python3.pkgs.wrapPython
-      wrapGAppsNoGuiHook
+      gtk3.wrapGAppsNoGuiHook
       python3.pkgs.setuptools-scm
       python3.pkgs.pycodestyle
       python3.pkgs.pylint

@@ -31,7 +31,7 @@
   template-glib,
   vte-gtk4,
   webkitgtk,
-  wrapGAppsNoGuiHook,
+  gtk3,
   withGtk ? true,
 }:
 
@@ -63,7 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
   ];
 
   buildInputs = [

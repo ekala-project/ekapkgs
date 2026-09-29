@@ -15,7 +15,7 @@
   avahi,
   glib-networking,
   python3,
-  wrapGAppsNoGuiHook,
+  gtk3,
   gobject-introspection,
   vala,
 }:
@@ -48,7 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     meson.configurePhaseHook
     ninja
-    wrapGAppsNoGuiHook
+    gtk3.wrapGAppsNoGuiHook
     python3
     vala
     gobject-introspection
