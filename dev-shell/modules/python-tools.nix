@@ -41,7 +41,6 @@ in
 
   config = lib.mkIf (cfg.enable or false) {
     environment.packages =
-      lib.optional cfg.poetry.enable pkgs.poetry
-      ++ lib.optional cfg.uv.enable pkgs.uv;
+      lib.optional cfg.poetry.enable pkgs.poetry ++ lib.optional cfg.uv.enable pkgs.uv;
   };
 }
