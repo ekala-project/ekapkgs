@@ -36,6 +36,17 @@ let
   perlOverrides = lib.packageSets.mkAutoCalledPackageDir ./perl/pkgs;
 
   writersOverlay = lib.packageSets.mkAutoCalledPackageDir ./writers/pkgs;
+
+  # Fix haskell lua ecosystem: the Haskell 'lua' package depends on system
+  # lua5_4 via librarySystemDepends, but dependent packages (lpeg, hslua-core,
+  # hslua-list, etc.) don't get the headers/libs propagated.  Fix the root
+  # cause by overriding the 'lua' Haskell package to add lua5_4 to
+  # propagatedBuildInputs so all transitive dependents get the C headers.
+  haskellFixes = final: prev: {
+    lua = prev.lua.overrideAttrs (old: {
+      propagatedBuildInputs = (old.propagatedBuildInputs or [ ]) ++ [ prev.pkgs.lua.v5_4 ];
+    });
+  };
 in
 {
   imports = allPkgsModules;
@@ -54,6 +65,10 @@ in
 
   overlays.perl = [
     perlOverrides
+  ];
+
+  overlays.haskell = [
+    haskellFixes
   ];
 
   overlays.writers = [
