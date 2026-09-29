@@ -2,7 +2,7 @@
   lib,
   stdenv,
   acl,
-  binutils-unwrapped-all-targets,
+  binutils,
   bzip2,
   cdrkit,
   colordiff,
@@ -73,7 +73,7 @@ python3.pkgs.buildPythonApplication rec {
   pythonPath = lib.filter (lib.meta.availableOn stdenv.hostPlatform) (
     [
       acl
-      binutils-unwrapped-all-targets
+      binutils.unwrapped-all-targets
       bzip2
       cdrkit
       colordiff
