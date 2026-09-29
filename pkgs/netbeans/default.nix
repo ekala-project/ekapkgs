@@ -8,7 +8,7 @@
   unzip,
   libicns,
   imagemagick,
-  jdk21,
+  java,
   perl,
 }:
 
@@ -46,12 +46,12 @@ stdenv.mkDerivation {
     makeWrapper $out/netbeans/bin/netbeans $out/bin/netbeans \
       --prefix PATH : ${
         lib.makeBinPath [
-          jdk21
+          java
           which
         ]
       } \
-      --prefix JAVA_HOME : ${jdk21.home} \
-      --add-flags "--jdkhome ${jdk21.home} \
+      --prefix JAVA_HOME : ${java.home} \
+      --add-flags "--jdkhome ${java.home} \
       -J-Dawt.useSystemAAFontSettings=gasp -J-Dswing.aatext=true"
 
     # Extract pngs from the Apple icon image and create
