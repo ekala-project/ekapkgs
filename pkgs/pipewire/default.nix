@@ -37,10 +37,10 @@
   libdrm,
   gstreamer,
   # ffmpeg depends on SDL2 which depends on pipewire by default.
-  # Break the cycle by depending on ffmpeg-headless.
+  # Break the cycle by depending on ffmpeg.headless, which excludes SDL2.
   # Pipewire only uses libavcodec (via an SPA plugin), which isn't
-  # affected by the *-headless changes.
-  ffmpeg-headless,
+  # affected by the headless changes.
+  ffmpeg,
   fftw,
   bluezSupport ? stdenv.hostPlatform.isLinux,
   bluez,
@@ -55,23 +55,24 @@
   libpulseaudio,
   onnxruntimeSupport ? false,
   onnxruntime ? null,
-  zeroconfSupport ? true,
+  zeroconfSupport ? false, # TODO(ekapkgs): re-enable when avahi provides libavahi-client
   avahi,
   raopSupport ? true,
   openssl,
-  rocSupport ? true,
   roc-toolkit ? null,
+  rocSupport ? roc-toolkit != null,
   x11Support ? true,
   libcanberra,
   libxfixes,
   libx11,
   libxcb,
   libmysofa,
+  ffado ? null,
   ffadoSupport ?
     x11Support
     && lib.systems.equals stdenv.buildPlatform stdenv.hostPlatform
+    && ffado != null
     && lib.meta.availableOn stdenv.hostPlatform ffado,
-  ffado ? null,
   libselinux,
   libebur128,
   bashNonInteractive,
@@ -137,7 +138,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     dbus
-    ffmpeg-headless
+    ffmpeg.headless
     fftw.float
     glib
     gstreamer.plugins-base

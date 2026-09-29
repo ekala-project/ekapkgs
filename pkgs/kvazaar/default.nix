@@ -4,7 +4,7 @@
   fetchFromGitHub,
   cmake,
   libtool,
-  ffmpeg-headless ? null, # may fail to build; used only for tests
+  ffmpeg, # ffmpeg.headless may fail to build; used only for tests
   hm ? null,
 }:
 
@@ -31,8 +31,8 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  nativeCheckInputs = lib.optionals (ffmpeg-headless != null) [
-    ffmpeg-headless
+  nativeCheckInputs = [
+    ffmpeg.headless
   ];
 
   outputs = [
