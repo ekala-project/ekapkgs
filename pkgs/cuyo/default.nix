@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  SDL,
+  sdl12-compat,
   SDL_mixer,
   zlib,
 }:
@@ -17,7 +17,7 @@ stdenv.mkDerivation {
   };
 
   buildInputs = [
-    SDL
+    sdl12-compat
     SDL_mixer
     zlib
   ];

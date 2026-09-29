@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  SDL,
+  sdl12-compat,
   pkg-config,
   netsurf-buildsystem,
   uilib ? "gtk3",
@@ -26,7 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [ pkg-config ];
 
   buildInputs = [
-    SDL
+    sdl12-compat
     netsurf-buildsystem
   ];
 

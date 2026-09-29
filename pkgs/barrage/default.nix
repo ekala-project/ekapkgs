@@ -1,6 +1,6 @@
 {
   lib,
-  SDL,
+  sdl12-compat,
   SDL_mixer,
   fetchurl,
   stdenv,
@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   buildInputs = [
-    SDL
+    sdl12-compat
     SDL_mixer
   ];
 
@@ -32,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Destructive action game";
     license = lib.licenses.gpl2Plus;
     mainProgram = "barrage";
-    inherit (SDL.meta) platforms;
+    inherit (sdl12-compat.meta) platforms;
     broken = stdenv.hostPlatform.isDarwin;
   };
 })

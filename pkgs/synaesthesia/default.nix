@@ -2,7 +2,7 @@
   stdenv,
   lib,
   fetchzip,
-  SDL,
+  sdl12-compat,
   pkg-config,
   libsm,
 }:
@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL
+    sdl12-compat
     libsm
   ];
 

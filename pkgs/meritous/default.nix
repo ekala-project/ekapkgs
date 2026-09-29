@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitLab,
   fetchpatch,
-  SDL,
+  sdl12-compat,
   SDL_image,
   SDL_mixer,
   zlib,
@@ -36,11 +36,11 @@ stdenv.mkDerivation (finalAttrs: {
   prePatch = ''
     substituteInPlace Makefile \
       --replace "prefix=/usr/local" "prefix=$out" \
-      --replace sdl-config ${lib.getDev SDL}/bin/sdl-config
+      --replace sdl-config ${lib.getDev sdl12-compat}/bin/sdl-config
   '';
 
   buildInputs = [
-    SDL
+    sdl12-compat
     SDL_image
     SDL_mixer
     zlib

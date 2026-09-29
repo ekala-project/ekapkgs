@@ -9,7 +9,7 @@
   libx11,
   libxml2,
   libzip,
-  SDL,
+  sdl12-compat,
   SDL_image,
   SDL_mixer,
   zlib,
@@ -48,7 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
     pkg-config
-    SDL
+    sdl12-compat
   ];
 
   buildInputs = [
@@ -57,7 +57,7 @@ stdenv.mkDerivation (finalAttrs: {
     libx11
     libxml2
     libzip
-    SDL
+    sdl12-compat
     SDL_image
     SDL_mixer
     zlib

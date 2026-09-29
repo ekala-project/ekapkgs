@@ -5,7 +5,7 @@
   fetchpatch,
   ncurses,
   libvorbis,
-  SDL,
+  sdl12-compat,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     ncurses
     libvorbis
   ]
-  ++ lib.optional stdenv.hostPlatform.isDarwin SDL;
+  ++ lib.optional stdenv.hostPlatform.isDarwin sdl12-compat;
 
   env.NIX_CFLAGS_COMPILE = toString (
     [

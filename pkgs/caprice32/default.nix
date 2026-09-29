@@ -6,7 +6,7 @@
   libGLU,
   libpng,
   pkg-config,
-  SDL,
+  sdl12-compat,
   freetype,
   zlib,
 }:
@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     libGLU
     libpng
-    SDL
+    sdl12-compat
     freetype
     zlib
   ];

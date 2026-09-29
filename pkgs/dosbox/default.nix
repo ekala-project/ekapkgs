@@ -4,7 +4,7 @@
   fetchurl,
   fetchpatch,
   autoreconfHook,
-  SDL,
+  sdl12-compat,
   SDL_net,
   SDL_sound,
   graphicsmagick,
@@ -35,11 +35,11 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     autoreconfHook
     graphicsmagick
-    SDL
+    sdl12-compat
   ];
 
   buildInputs = [
-    SDL
+    sdl12-compat
     SDL_net
     SDL_sound
     libpng
@@ -49,7 +49,7 @@ stdenv.mkDerivation rec {
     libGLU
   ];
 
-  env.NIX_CFLAGS_COMPILE = "-I${lib.getDev SDL_net}/include/SDL";
+  env.NIX_CFLAGS_COMPILE = "-I${lib.getDev SDL_net}/include/sdl12-compat";
 
   hardeningDisable = [ "format" ];
 

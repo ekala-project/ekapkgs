@@ -6,7 +6,7 @@
   fetchurl,
   libGL,
   libGLU,
-  SDL,
+  sdl12-compat,
   SDL_image,
   SDL_mixer,
 }:
@@ -23,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     libGL
     libGLU
-    SDL
+    sdl12-compat
     SDL_image
     SDL_mixer
   ];

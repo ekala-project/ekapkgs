@@ -1,6 +1,6 @@
 {
   lib,
-  SDL,
+  sdl12-compat,
   fetchpatch,
   fetchurl,
   fluidsynth,
@@ -72,7 +72,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL
+    sdl12-compat
     fluidsynth
     libmodplug
     libogg
@@ -80,7 +80,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   # pass in correct *-config for cross builds
-  env.SDL_CONFIG = lib.getExe' (lib.getDev SDL) "sdl-config";
+  env.SDL_CONFIG = lib.getExe' (lib.getDev sdl12-compat) "sdl-config";
 
   configureFlags = [
     (lib.enableFeature false "music-ogg-shared")
@@ -99,9 +99,9 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   meta = {
-    description = "SDL multi-channel audio mixer library";
+    description = "sdl12-compat multi-channel audio mixer library";
     homepage = "http://www.libsdl.org/projects/SDL_mixer/";
     license = lib.licenses.zlib;
-    inherit (SDL.meta) platforms;
+    inherit (sdl12-compat.meta) platforms;
   };
 })

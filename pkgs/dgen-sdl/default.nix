@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   libarchive,
-  SDL,
+  sdl12-compat,
 }:
 
 stdenv.mkDerivation rec {
@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   };
 
   buildInputs = [
-    SDL
+    sdl12-compat
     libarchive
   ];
 
@@ -42,8 +42,8 @@ stdenv.mkDerivation rec {
     homepage = "https://dgen.sourceforge.net/";
     description = "Sega Genesis/Mega Drive emulator";
     longDescription = ''
-      DGen/SDL is a free, open source emulator for Sega Genesis/Mega Drive
-      systems. DGen was originally written by Dave, then ported to SDL by Joe
+      DGen/sdl12-compat is a free, open source emulator for Sega Genesis/Mega Drive
+      systems. DGen was originally written by Dave, then ported to sdl12-compat by Joe
       Groff and Phil K. Hornung in 1998.
 
       It features:

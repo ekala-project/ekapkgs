@@ -1,6 +1,6 @@
 {
   lib,
-  SDL,
+  sdl12-compat,
   SDL_mixer,
   fetchpatch,
   fetchurl,
@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL
+    sdl12-compat
     SDL_mixer
     libintl
     libpng

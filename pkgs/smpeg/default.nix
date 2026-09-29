@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   fetchpatch,
-  SDL,
+  sdl12-compat,
   autoconf,
   automake,
   libtool,
@@ -61,7 +61,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL
+    sdl12-compat
   ];
 
   outputs = [
@@ -75,18 +75,18 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   postInstall = ''
-    sed -i -e 's,"SDL.h",<SDL/SDL.h>,' \
-    -e 's,"SDL_mutex.h",<SDL/SDL_mutex.h>,' \
-    -e 's,"SDL_audio.h",<SDL/SDL_audio.h>,' \
-    -e 's,"SDL_thread.h",<SDL/SDL_thread.h>,' \
-    -e 's,"SDL_types.h",<SDL/SDL_types.h>,' \
+    sed -i -e 's,"sdl12-compat.h",<sdl12-compat/sdl12-compat.h>,' \
+    -e 's,"SDL_mutex.h",<sdl12-compat/SDL_mutex.h>,' \
+    -e 's,"SDL_audio.h",<sdl12-compat/SDL_audio.h>,' \
+    -e 's,"SDL_thread.h",<sdl12-compat/SDL_thread.h>,' \
+    -e 's,"SDL_types.h",<sdl12-compat/SDL_types.h>,' \
       $dev/include/smpeg/*.h
 
     moveToOutput bin/smpeg-config "$dev"
 
     wrapProgram $dev/bin/smpeg-config \
       --prefix PATH ":" "${pkg-config}/bin" \
-      --prefix PKG_CONFIG_PATH ":" "${lib.getDev SDL}/lib/pkgconfig"
+      --prefix PKG_CONFIG_PATH ":" "${lib.getDev sdl12-compat}/lib/pkgconfig"
   '';
 
   meta = {

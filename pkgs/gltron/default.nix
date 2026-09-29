@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  SDL,
+  sdl12-compat,
   libGLU,
   libGL,
   zlib,
@@ -41,10 +41,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "AR=${stdenv.cc.targetPrefix}ar" ];
 
-  env.SDL_CONFIG = lib.getExe' (lib.getDev SDL) "sdl-config";
+  env.SDL_CONFIG = lib.getExe' (lib.getDev sdl12-compat) "sdl-config";
 
   buildInputs = [
-    SDL
+    sdl12-compat
     libGLU
     libGL
     zlib

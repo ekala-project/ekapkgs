@@ -6,7 +6,7 @@
   libGLU,
   libGL,
   libglut,
-  SDL,
+  sdl12-compat,
   libxi,
   libsm,
   libxmu,
@@ -49,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     libGLU
     libGL
     libglut
-    SDL
+    sdl12-compat
 
     # The following libs ought to be propagated build inputs of Mesa.
     libxi
@@ -69,7 +69,7 @@ stdenv.mkDerivation (finalAttrs: {
       handy utility functions.  All are 100% portable across nearly
       all modern computing platforms.  What's more, it's all available
       on line - and completely free.  Each library component is fairly
-      independent of the others - so if you want to use SDL, GTK,
+      independent of the others - so if you want to use sdl12-compat, GTK,
       GLUT, or FLTK instead of PLIB's 'PW' windowing library, you can.
     '';
 

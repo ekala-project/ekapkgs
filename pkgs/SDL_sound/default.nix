@@ -1,6 +1,6 @@
 {
   lib,
-  SDL,
+  sdl12-compat,
   fetchurl,
   flac,
   libmikmod,
@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [
-    SDL
+    sdl12-compat
     flac
     libmikmod
     libvorbis
@@ -30,15 +30,15 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.enableFeature enableSdltest "sdltest")
   ];
 
-  env.SDL_CONFIG = lib.getExe' (lib.getDev SDL) "sdl-config";
+  env.SDL_CONFIG = lib.getExe' (lib.getDev sdl12-compat) "sdl-config";
 
   strictDeps = true;
 
   meta = {
     homepage = "https://www.icculus.org/SDL_sound/";
-    description = "SDL sound library";
+    description = "sdl12-compat sound library";
     license = lib.licenses.lgpl21Plus;
     mainProgram = "playsound";
-    inherit (SDL.meta) platforms;
+    inherit (sdl12-compat.meta) platforms;
   };
 })
