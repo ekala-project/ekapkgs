@@ -7,11 +7,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1790368452,
-        "narHash": "sha256-Xt4BckOGloc87G7Ma77xefvTVb6cXyvd183kyjIhOXs=",
+        "lastModified": 1790518605,
+        "narHash": "sha256-KuXbuJUW1VyuPFX48C/o1+fInmMsAAYr45pkkVzrpEI=",
         "owner": "ekala-project",
         "repo": "corepkgs",
-        "rev": "e705b7fbb7b0e47311ab6792bda76e39fd6e9823",
+        "rev": "782d557e8758ce7ea383d991ba238cb3abcee21f",
         "type": "github"
       },
       "original": {
@@ -39,11 +39,11 @@
     "haskell": {
       "flake": false,
       "locked": {
-        "lastModified": 1790229846,
-        "narHash": "sha256-3o1QHlVtm++SZY8ZLpSxlneO7ceYHjAgWJBz7eu/NGA=",
+        "lastModified": 1790439774,
+        "narHash": "sha256-upEaNx9c9/7NPy56IyVTHTCYPjJRzTpHe4Y8H6I7g90=",
         "owner": "ekala-project",
         "repo": "haskell-pkgs",
-        "rev": "d42034fdd694a313f6c4647f16b20acce7a9707f",
+        "rev": "b466fca502c60fb53d19fb7dbd958c44cb4c03f2",
         "type": "github"
       },
       "original": {
