@@ -33,7 +33,7 @@
   discidSupport ? false,
   libdiscid ? null,
   ffmpegSupport ? false,
-  ffmpeg_7 ? null,
+  ffmpeg ? null,
   flacSupport ? true,
   flac ? null,
   madSupport ? true,
@@ -66,7 +66,7 @@ assert vorbisSupport -> !tremorSupport;
 assert tremorSupport -> !vorbisSupport;
 
 let
-  ffmpeg = ffmpeg_7;
+  ffmpeg = ffmpeg;
 
   mkFlag =
     b: f: dep:

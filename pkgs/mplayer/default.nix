@@ -5,7 +5,7 @@
   pkg-config,
   freetype,
   yasm,
-  ffmpeg_7,
+  ffmpeg,
   aalibSupport ? true,
   aalib ? null,
   fontconfigSupport ? true,
@@ -98,7 +98,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   buildInputs = [
     freetype
-    ffmpeg_7
+    ffmpeg
   ]
   ++ lib.optional (aalibSupport && aalib != null) aalib
   ++ lib.optional fontconfigSupport fontconfig

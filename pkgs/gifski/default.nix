@@ -3,7 +3,7 @@
   rustPlatform,
   fetchFromGitHub,
   pkg-config,
-  ffmpeg_6 ? null,
+  ffmpeg ? null,
 }:
 
 rustPlatform.buildRustPackage (finalAttrs: {
@@ -24,11 +24,11 @@ rustPlatform.buildRustPackage (finalAttrs: {
     rustPlatform.bindgenHook
   ];
 
-  buildInputs = lib.optionals (ffmpeg_6 != null) [
-    ffmpeg_6
+  buildInputs = lib.optionals (ffmpeg != null) [
+    ffmpeg
   ];
 
-  buildFeatures = lib.optionals (ffmpeg_6 != null) [ "video" ];
+  buildFeatures = lib.optionals (ffmpeg != null) [ "video" ];
 
   # When the default checkType of release is used, we get the following error:
   #

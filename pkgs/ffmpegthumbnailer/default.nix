@@ -4,7 +4,7 @@
   fetchFromGitHub,
   cmake,
   pkg-config,
-  ffmpeg-headless,
+  ffmpeg,
   libpng,
   libjpeg,
 }:
@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    ffmpeg-headless
+    ffmpeg.headless
     libpng
     libjpeg
   ];

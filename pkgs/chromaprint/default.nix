@@ -4,7 +4,7 @@
   fetchFromGitHub,
   fetchpatch,
   cmake,
-  ffmpeg-headless,
+  ffmpeg,
   zlib,
 }:
 
@@ -32,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    ffmpeg-headless
+    ffmpeg.headless
   ]
   ++ lib.optionals stdenv.hostPlatform.isDarwin [
     zlib
