@@ -16,7 +16,7 @@
   libx11,
   lua,
   libgbm,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
 }:
 
@@ -56,7 +56,7 @@ stdenv.mkDerivation (finalAttrs: {
     libx11
     lua.v5_2
     libgbm
-    SDL2
+    sdl2-compat
     SDL2_image
   ];
 

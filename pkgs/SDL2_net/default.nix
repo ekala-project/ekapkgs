@@ -1,6 +1,6 @@
 {
   lib,
-  SDL2,
+  sdl2-compat,
   fetchFromGitHub,
   pkg-config,
   stdenv,
@@ -25,11 +25,11 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [
-    SDL2
+    sdl2-compat
     pkg-config
   ];
 
-  propagatedBuildInputs = [ SDL2 ];
+  propagatedBuildInputs = [ sdl2-compat ];
 
   configureFlags = [
     (lib.enableFeature false "examples") # can't find libSDL2_test.a
@@ -42,6 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/libsdl-org/SDL_net";
     description = "SDL multiplatform networking library";
     license = lib.licenses.zlib;
-    inherit (SDL2.meta) platforms;
+    inherit (sdl2-compat.meta) platforms;
   };
 })

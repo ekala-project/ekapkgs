@@ -1,6 +1,6 @@
 {
   lib,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
   SDL2_ttf,
@@ -29,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    SDL2
+    sdl2-compat
     cmake
     cmake.configurePhaseHook
     ninja
@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
     SDL2_ttf
@@ -69,6 +69,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/blockattack/blockattack-game/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.gpl2Plus;
     mainProgram = "blockattack";
-    inherit (SDL2.meta) platforms;
+    inherit (sdl2-compat.meta) platforms;
   };
 })

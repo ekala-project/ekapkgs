@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   cmake,
-  SDL2,
+  sdl2-compat,
   SDL2_mixer,
   libpng,
   # TODO(ekapkgs): support darwin
@@ -37,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_mixer
     libpng
   ];

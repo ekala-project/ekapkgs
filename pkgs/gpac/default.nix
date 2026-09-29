@@ -4,7 +4,7 @@
   fetchFromGitHub,
   pkg-config,
   zlib,
-  ffmpeg-headless ? null,
+  ffmpeg ? null,
   freetype ? null,
   libjpeg_turbo ? null,
   libpng ? null,
@@ -23,7 +23,7 @@
   jack2 ? null,
   alsa-lib ? null,
   pulseaudio ? null,
-  SDL2 ? null,
+  sdl2-compat ? null,
   curl ? null,
   libxv ? null,
   libx11 ? null,
@@ -46,8 +46,8 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
   ]
-  ++ lib.optionals (withFfmpeg && ffmpeg-headless != null) [
-    ffmpeg-headless
+  ++ lib.optionals (withFfmpeg && ffmpeg != null) [
+    ffmpeg.headless
   ];
 
   buildInputs = [
@@ -76,7 +76,7 @@ stdenv.mkDerivation (finalAttrs: {
       jack2
       alsa-lib
       pulseaudio
-      SDL2
+      sdl2-compat
       curl
     ]
   );

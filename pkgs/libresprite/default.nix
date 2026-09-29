@@ -19,7 +19,7 @@
   tinyxml-2,
   libxi,
   zlib,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   lua,
 
@@ -63,7 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
     pixman
     tinyxml-2
     zlib
-    SDL2
+    sdl2-compat
     SDL2_image
     lua
     # no v8 due to missing libplatform and libbase

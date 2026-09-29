@@ -7,7 +7,7 @@
   flex,
   gettext,
   makeWrapper,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
   expat,
@@ -37,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
     expat

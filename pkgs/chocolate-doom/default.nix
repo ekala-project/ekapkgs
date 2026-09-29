@@ -7,7 +7,7 @@
   libsamplerate,
   pkg-config,
   python3,
-  SDL2,
+  sdl2-compat,
   SDL2_mixer,
   SDL2_net,
 }:
@@ -37,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     libpng
     libsamplerate
-    SDL2
+    sdl2-compat
     SDL2_mixer
     SDL2_net
   ];

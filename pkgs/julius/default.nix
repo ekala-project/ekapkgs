@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  SDL2,
+  sdl2-compat,
   SDL2_mixer,
   cmake,
   libpng,
@@ -42,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_mixer
     libpng
   ];

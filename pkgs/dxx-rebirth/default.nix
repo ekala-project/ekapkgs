@@ -5,7 +5,7 @@
   fetchurl,
   scons,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
   libGLU,
@@ -43,7 +43,7 @@ stdenv.mkDerivation {
     libGL
     libpng
     physfs
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
   ];

@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   cmake,
-  SDL2,
+  sdl2-compat,
   SDL2_ttf,
   gettext,
   zlib,
@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   buildInputs = [
     zlib
-    SDL2
+    sdl2-compat
     SDL2_ttf
     SDL2_mixer
     SDL2_image

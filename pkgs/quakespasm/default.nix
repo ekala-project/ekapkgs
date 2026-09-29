@@ -1,8 +1,8 @@
 {
   lib,
   stdenv,
-  SDL,
-  SDL2,
+  sdl12-compat,
+  sdl2-compat,
   fetchurl,
   gzip,
   libGL,
@@ -47,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
     opusfile
     libogg
     libxmp
-    (if useSDL2 then SDL2 else SDL)
+    (if useSDL2 then sdl2-compat else sdl12-compat)
   ];
 
   buildFlags = [

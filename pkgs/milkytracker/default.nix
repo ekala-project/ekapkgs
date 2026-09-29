@@ -10,7 +10,7 @@
   makeWrapper,
   pkg-config,
   rtmidi,
-  SDL2,
+  sdl2-compat,
   zlib,
   zziplib,
 }:
@@ -48,7 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
     lhasa
     libjack2
     rtmidi
-    SDL2
+    sdl2-compat
     zlib
     zziplib
   ];

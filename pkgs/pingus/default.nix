@@ -7,7 +7,7 @@
   makeWrapper,
   libGL,
   libGLU,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   fmt,
   gtest ? null,
@@ -46,7 +46,7 @@ stdenv.mkDerivation {
   buildInputs = [
     libGL
     libGLU
-    SDL2
+    sdl2-compat
     SDL2_image
     fmt
     gtest

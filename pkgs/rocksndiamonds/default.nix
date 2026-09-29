@@ -4,7 +4,7 @@
   fetchurl,
   makeDesktopItem,
   copyDesktopItems,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
   SDL2_net,
@@ -38,11 +38,11 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   nativeBuildInputs = [
-    SDL2 # sdl2-config
+    sdl2-compat # sdl2-config
     copyDesktopItems
   ];
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
     SDL2_net

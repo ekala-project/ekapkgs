@@ -4,7 +4,7 @@
   fetchFromGitHub,
   cmake,
   alsa-lib,
-  SDL2,
+  sdl2-compat,
   libiconv,
 }:
 
@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
   buildInputs = [
-    SDL2
+    sdl2-compat
   ]
   ++ lib.optional stdenv.hostPlatform.isLinux alsa-lib
   ++ lib.optionals stdenv.hostPlatform.isDarwin [

@@ -4,7 +4,7 @@
   fetchFromGitHub,
   fetchzip,
   cmake,
-  SDL2,
+  sdl2-compat,
   SDL2_mixer,
   unrar,
 }:
@@ -36,7 +36,7 @@ stdenv.mkDerivation rec {
     cmake.configurePhaseHook
   ];
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_mixer
   ];
 

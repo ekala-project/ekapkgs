@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   fetchpatch,
-  SDL2,
+  sdl2-compat,
   aubio,
   boost,
   cmake,
@@ -90,7 +90,7 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     aubio
     boost
     ffmpeg

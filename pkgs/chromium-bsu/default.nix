@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
   fontconfig,
@@ -32,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
     fontconfig

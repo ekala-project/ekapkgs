@@ -6,7 +6,7 @@
   alsa-lib,
   perl,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   libx11,
   libxext,
   utf8proc,
@@ -53,7 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     libx11
     utf8proc
   ]
@@ -64,7 +64,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   enableParallelBuilding = true;
 
-  # Our Darwin SDL2 doesn't have a SDL2main to link against
+  # Our Darwin sdl2-compat doesn't have a SDL2main to link against
   preConfigure = lib.optionalString stdenv.hostPlatform.isDarwin ''
     substituteInPlace configure.ac \
       --replace '-lSDL2main' '-lSDL2'

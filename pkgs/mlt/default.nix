@@ -33,7 +33,7 @@
   ladspa-sdk,
   ladspaPlugins,
   enableSDL2 ? true,
-  SDL2,
+  sdl2-compat,
   libarchive,
 }:
 
@@ -90,7 +90,7 @@ stdenv.mkDerivation (finalAttrs: {
     ladspaPlugins
   ]
   ++ lib.optionals enableSDL2 [
-    SDL2
+    sdl2-compat
     libx11
   ];
 

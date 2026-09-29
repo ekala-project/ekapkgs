@@ -6,7 +6,7 @@
   gettext,
   glibcLocalesUtf8,
   libpng,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
   SDL2_ttf,
@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     glibcLocalesUtf8
     libpng
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
     SDL2_ttf

@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   fetchpatch,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   pkg-config,
 }:
@@ -41,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_image
   ];
 

@@ -4,7 +4,7 @@
   fetchurl,
   pkg-config,
   gettext,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
   SDL2_net,
@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
   ];
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
     SDL2_net

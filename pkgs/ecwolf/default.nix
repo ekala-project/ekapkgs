@@ -8,7 +8,7 @@
   zlib,
   bzip2,
   libjpeg,
-  SDL2,
+  sdl2-compat,
   SDL2_net,
   SDL2_mixer,
   gtk3,
@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
     bzip2
     libjpeg
-    SDL2
+    sdl2-compat
     SDL2_net
     SDL2_mixer
     gtk3

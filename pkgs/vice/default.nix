@@ -13,7 +13,7 @@
   libGLU,
   libGL,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   dos2unix,
   xa,
@@ -55,7 +55,7 @@ stdenv.mkDerivation (finalAttrs: {
     libpng
     libpulseaudio
     readline
-    SDL2
+    sdl2-compat
     SDL2_image
   ];
 

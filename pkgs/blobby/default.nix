@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   libGLU,
   libGL,
@@ -33,7 +33,7 @@ stdenv.mkDerivation {
     zip
   ];
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_image
     libGLU
     libGL

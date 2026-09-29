@@ -1,6 +1,6 @@
 {
   lib,
-  SDL2,
+  sdl2-compat,
   curl,
   docbook-xml-dtd,
   docbook_xsl,
@@ -45,7 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
     wget
   ]
   ++ lib.optionals enableSDL2 [
-    SDL2
+    sdl2-compat
   ]
   ++ lib.optionals enableTerm [
     ncurses

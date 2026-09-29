@@ -54,7 +54,7 @@
   udevSupport ? true,
   udev,
   sdlSupport ? true,
-  SDL2,
+  sdl2-compat,
   vulkanSupport ? true,
   vulkan-loader,
   usbSupport ? true,
@@ -147,7 +147,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional (xineramaSupport && x11Support) libxinerama
   ++ lib.optional udevSupport udev
   ++ lib.optional vulkanSupport vulkan-loader
-  ++ lib.optional sdlSupport SDL2
+  ++ lib.optional sdlSupport sdl2-compat
   ++ lib.optional usbSupport libusb1
   ++ lib.optionals tlsSupport [
     openssl

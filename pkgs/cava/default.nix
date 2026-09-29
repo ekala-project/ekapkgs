@@ -14,7 +14,7 @@
   pipewire ? null,
   pkg-config,
   portaudio ? null,
-  SDL2 ? null,
+  sdl2-compat ? null,
   withSDL2 ? false,
   withPipewire ? false,
 }:
@@ -42,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optionals withSDL2 [
     libGL
-    SDL2
+    sdl2-compat
   ]
   ++ lib.optionals withPipewire [
     pipewire

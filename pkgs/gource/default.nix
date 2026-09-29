@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  SDL2,
+  sdl2-compat,
   ftgl,
   autoreconfHook,
   pkg-config,
@@ -41,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     glew
-    SDL2
+    sdl2-compat
     ftgl
     libpng
     libjpeg

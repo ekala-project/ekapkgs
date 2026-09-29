@@ -9,7 +9,7 @@
   imagemagick,
   curl,
   libpng,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
   SDL2_ttf,
@@ -43,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     imagemagick
   ];
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer'
     SDL2_ttf

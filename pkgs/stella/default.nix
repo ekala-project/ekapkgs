@@ -1,6 +1,6 @@
 {
   lib,
-  SDL2,
+  sdl2-compat,
   fetchFromGitHub,
   sqlite,
   pkg-config,
@@ -19,12 +19,12 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    SDL2
+    sdl2-compat
     pkg-config
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     sqlite
   ];
 

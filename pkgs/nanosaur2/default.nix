@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  SDL2,
+  sdl2-compat,
   libGL,
   cmake,
   makeWrapper,
@@ -26,7 +26,7 @@ stdenv.mkDerivation {
     makeWrapper
   ];
   buildInputs = [
-    SDL2
+    sdl2-compat
     libGL
   ];
 

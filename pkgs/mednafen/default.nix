@@ -1,6 +1,6 @@
 {
   lib,
-  SDL2,
+  sdl2-compat,
   SDL2_net,
   alsa-lib,
   fetchurl,
@@ -33,12 +33,12 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [
-    SDL2
+    sdl2-compat
     pkg-config
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_net
     flac
     libglut

@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  SDL2,
+  sdl2-compat,
   libGL,
   cmake,
   makeWrapper,
@@ -21,17 +21,17 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   postPatch = lib.optionalString stdenv.hostPlatform.isDarwin ''
-    # Expects SDL2.framework in specific location, which we don't have
+    # Expects sdl2-compat.framework in specific location, which we don't have
     # Passing this in cmakeFlags doesn't work because the path is hard-coded for Darwin
     substituteInPlace cmake/FindSDL2.cmake \
-      --replace 'set(SDL2_LIBRARIES' 'set(SDL2_LIBRARIES "${SDL2}/lib/libSDL2.dylib") #'
+      --replace 'set(SDL2_LIBRARIES' 'set(SDL2_LIBRARIES "${sdl2-compat}/lib/libSDL2.dylib") #'
     # Expects plutil, which we don't have
     sed -i '/plutil/d' CMakeLists.txt
   '';
 
   buildInputs = [
 
-    SDL2
+    sdl2-compat
     libGL
   ];
 
@@ -43,8 +43,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeFlags = lib.optionals stdenv.hostPlatform.isDarwin [
     "-DCMAKE_OSX_ARCHITECTURES=${stdenv.hostPlatform.darwinArch}"
-    # Expects SDL2.framework in specific location, which we don't have
-    "-DSDL2_INCLUDE_DIRS=${lib.getInclude SDL2}/include/SDL2"
+    # Expects sdl2-compat.framework in specific location, which we don't have
+    "-DSDL2_INCLUDE_DIRS=${lib.getInclude sdl2-compat}/include/sdl2-compat"
   ];
 
   installPhase = ''

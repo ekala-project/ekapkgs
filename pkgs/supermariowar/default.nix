@@ -6,7 +6,7 @@
   pkg-config,
   enet,
   yaml-cpp,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
   zlib,
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     enet
     yaml-cpp
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
     zlib

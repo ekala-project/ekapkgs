@@ -10,7 +10,7 @@
   ncurses,
   which,
   pkg-config,
-  SDL2 ? null,
+  sdl2-compat ? null,
   SDL2_mixer ? null,
   zlib,
   libjpeg ? null,
@@ -62,7 +62,7 @@ stdenv.mkDerivation (finalAttrs: {
         freetype
         libjpeg
         libpng
-        SDL2
+        sdl2-compat
         SDL2_mixer
         zlib
       ]

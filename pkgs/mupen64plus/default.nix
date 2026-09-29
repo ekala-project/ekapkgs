@@ -8,7 +8,7 @@
   libpng,
   libGLU,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   which,
   zlib,
   nasm,
@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   patches = [
-    # Remove unused SDL2 header that erroneously adds libx11 dependency
+    # Remove unused sdl2-compat header that erroneously adds libx11 dependency
     ./remove-unused-header.patch
   ];
 
@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     freetype
     libpng
     libGLU
-    SDL2
+    sdl2-compat
     which
     zlib
     vulkan-loader

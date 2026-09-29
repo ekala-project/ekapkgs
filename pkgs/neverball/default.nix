@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   fetchpatch,
-  SDL2,
+  sdl2-compat,
   libGL,
   libpng,
   libjpeg,
@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   buildInputs = [
     libpng
-    SDL2
+    sdl2-compat
     libGL
     libjpeg
     SDL2_ttf

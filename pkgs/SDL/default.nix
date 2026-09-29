@@ -1,6 +1,6 @@
 {
   lib,
-  SDL2,
+  sdl2-compat,
   cmake,
   fetchFromGitHub,
   libGLU,
@@ -36,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     xorg.libX11
-    SDL2
+    sdl2-compat
   ]
   ++ lib.optionals stdenv.hostPlatform.isDarwin [
     libiconv
@@ -52,7 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeFlags =
     let
-      rpath = lib.makeLibraryPath [ SDL2 ];
+      rpath = lib.makeLibraryPath [ sdl2-compat ];
     in
     [
       (lib.cmakeFeature "CMAKE_INSTALL_RPATH" rpath)

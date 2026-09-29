@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   cmake,
-  SDL2,
+  sdl2-compat,
   perl,
 }:
 
@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     fetchSubmodules = true;
   };
 
-  buildInputs = [ SDL2 ];
+  buildInputs = [ sdl2-compat ];
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

@@ -33,7 +33,7 @@
   glm,
   libcap,
   libavif,
-  SDL2,
+  sdl2-compat,
   pipewire,
   pixman,
   python3,
@@ -172,7 +172,7 @@ stdenv.mkDerivation (finalAttrs: {
       libavif
       libdrm
       libei
-      SDL2
+      sdl2-compat
       libdecor
       libinput
       libxkbcommon

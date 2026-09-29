@@ -4,7 +4,7 @@
   fetchzip,
   cmake,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   libpng,
   zlib,
   xz,
@@ -28,7 +28,7 @@
   libogg ? null,
   libvorbis ? null,
   libopus ? null,
-  libmpg123 ? null,
+  mpg123 ? null,
   pulseaudio ? null,
   alsa-lib,
   libjack2 ? null,
@@ -68,7 +68,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     libpng
     xz
     zlib
@@ -89,7 +89,7 @@ stdenv.mkDerivation (finalAttrs: {
     libogg
     libvorbis
     libopus
-    libmpg123
+    mpg123
     pulseaudio
     alsa-lib
     libjack2

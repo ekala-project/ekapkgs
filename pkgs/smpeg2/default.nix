@@ -6,7 +6,7 @@
   fetchFromGitHub,
   makeWrapper,
   pkg-config,
-  SDL2,
+  sdl2-compat,
 }:
 
 stdenv.mkDerivation {
@@ -27,7 +27,7 @@ stdenv.mkDerivation {
     pkg-config
   ];
 
-  buildInputs = [ SDL2 ];
+  buildInputs = [ sdl2-compat ];
 
   outputs = [
     "out"
@@ -43,14 +43,14 @@ stdenv.mkDerivation {
     moveToOutput bin/smpeg2-config "$dev"
     wrapProgram $dev/bin/smpeg2-config \
       --prefix PATH ":" "${pkg-config}/bin" \
-      --prefix PKG_CONFIG_PATH ":" "${lib.getDev SDL2}/lib/pkgconfig"
+      --prefix PKG_CONFIG_PATH ":" "${lib.getDev sdl2-compat}/lib/pkgconfig"
   '';
 
   enableParallelBuilding = true;
 
   meta = {
     homepage = "https://icculus.org/smpeg/";
-    description = "SDL2 MPEG Player Library";
+    description = "sdl2-compat MPEG Player Library";
     license = lib.licenses.lgpl2;
     platforms = lib.platforms.unix;
   };

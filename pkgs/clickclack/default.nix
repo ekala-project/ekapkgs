@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromSourcehut,
-  SDL2,
+  sdl2-compat,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [
-    SDL2
+    sdl2-compat
   ];
 
   makeFlags = [

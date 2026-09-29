@@ -4,7 +4,7 @@
   fetchhg,
   pkg-config,
   makeBinaryWrapper,
-  SDL2,
+  sdl2-compat,
   glew,
   gtk3,
 }:
@@ -32,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     gtk3
-    SDL2
+    sdl2-compat
     glew
   ];
 
@@ -42,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "HOST_ZLIB=1" ];
 
-  env.NIX_CFLAGS_COMPILE = "-I${lib.getDev SDL2}/include/SDL2";
+  env.NIX_CFLAGS_COMPILE = "-I${lib.getDev sdl2-compat}/include/sdl2-compat";
 
   installPhase = ''
     runHook preInstall

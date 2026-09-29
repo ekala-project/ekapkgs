@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchFromSourcehut,
-  SDL2,
+  sdl2-compat,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -22,11 +22,11 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [
-    SDL2
+    sdl2-compat
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
   ];
 
   strictDeps = true;
@@ -65,6 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Assembler and emulator for the Uxn stack machine";
     license = lib.licenses.mit;
     mainProgram = "uxnemu";
-    inherit (SDL2.meta) platforms;
+    inherit (sdl2-compat.meta) platforms;
   };
 })
