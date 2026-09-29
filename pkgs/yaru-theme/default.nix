@@ -10,7 +10,6 @@
   ninja,
   python3,
   gtk3,
-  gnome-themes-extra,
   humanity-icon-theme,
   hicolor-icon-theme,
 }:
@@ -39,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     gtk3
-    gnome-themes-extra
   ];
 
   propagatedBuildInputs = [
