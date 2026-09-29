@@ -13,11 +13,13 @@
   docbook-xml-dtd,
   docbook_xsl,
   libxslt,
-  darwin,
+  # TODO(ekapkgs): support darwin
+  # darwin,
 }:
 
 let
-  xnu = darwin.sourceRelease "xnu";
+  # TODO(ekapkgs): support darwin
+  # xnu = darwin.sourceRelease "xnu";
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "lsyncd";
@@ -35,13 +37,14 @@ stdenv.mkDerivation (finalAttrs: {
       --replace "/usr/bin/rsync" "${rsync}/bin/rsync"
   '';
 
+  # TODO(ekapkgs): support darwin
   # Special flags needed on Darwin:
   # https://github.com/lsyncd/lsyncd/blob/42413cabbedca429d55a5378f6e830f191f3cc86/INSTALL#L51
-  cmakeFlags = lib.optionals stdenv.hostPlatform.isDarwin [
-    "-DWITH_INOTIFY=OFF"
-    "-DWITH_FSEVENTS=ON"
-    "-DXNU_DIR=${xnu}"
-  ];
+  # cmakeFlags = lib.optionals stdenv.hostPlatform.isDarwin [
+  #   "-DWITH_INOTIFY=OFF"
+  #   "-DWITH_FSEVENTS=ON"
+  #   "-DXNU_DIR=${xnu}"
+  # ];
 
   dontUseCmakeBuildDir = true;
 

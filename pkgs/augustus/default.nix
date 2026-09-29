@@ -6,7 +6,8 @@
   SDL2,
   SDL2_mixer,
   libpng,
-  darwin,
+  # TODO(ekapkgs): support darwin
+  # darwin,
   libicns,
   imagemagick,
 }:
@@ -29,7 +30,8 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ]
   ++ lib.optionals stdenv.hostPlatform.isDarwin [
-    darwin.sigtool
+    # TODO(ekapkgs): support darwin
+    # darwin.sigtool
     libicns
     imagemagick
   ];

@@ -3,7 +3,8 @@
   stdenv,
   cmake,
   fetchFromGitHub,
-  darwin,
+  # TODO(ekapkgs): support darwin
+  # darwin,
   fixDarwinDylibNames,
 }:
 
@@ -32,7 +33,8 @@ stdenv.mkDerivation rec {
     cmake
   ]
   ++ lib.optionals stdenv.hostPlatform.isDarwin [
-    darwin.autoSignDarwinBinariesHook
+    # TODO(ekapkgs): support darwin
+    # darwin.autoSignDarwinBinariesHook
     fixDarwinDylibNames
   ];
 

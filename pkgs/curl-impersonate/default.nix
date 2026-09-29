@@ -1,7 +1,8 @@
 {
   lib,
   stdenv,
-  darwin,
+  # TODO(ekapkgs): support darwin
+  # darwin,
   fetchFromGitHub,
   callPackage,
   buildGoModule,
@@ -76,7 +77,8 @@ stdenv.mkDerivation rec {
     sqlite
   ]
   ++ lib.optionals stdenv.hostPlatform.isDarwin [
-    darwin.ICU
+    # TODO(ekapkgs): support darwin
+    # darwin.ICU
   ];
 
   configureFlags = [

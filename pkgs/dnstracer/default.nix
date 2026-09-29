@@ -2,7 +2,8 @@
   lib,
   stdenv,
   fetchurl,
-  darwin,
+  # TODO(ekapkgs): support darwin
+  # darwin,
   perl,
 }:
 
@@ -31,7 +32,9 @@ stdenv.mkDerivation (finalAttrs: {
     install -Dm755 -t $man/share/man/man8 dnstracer.8
   '';
 
-  buildInputs = [ ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ darwin.libresolv ];
+  # TODO(ekapkgs): support darwin
+  # buildInputs = [ ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ darwin.libresolv ];
+  buildInputs = [ ];
 
   env = lib.optionalAttrs stdenv.hostPlatform.isDarwin {
     NIX_LDFLAGS = "-lresolv";
