@@ -138,6 +138,21 @@ final: prev: {
     ];
   });
 
+  # Fix opencascade-occt: add missing libX11 headers
+  # The corepkgs build has Xlib detection (HAVE_XLIB) but cmake doesn't find X11
+  # include directories. Add libx11 and pass 3RDPARTY_INCLUDE_DIRS so cmake can
+  # locate X11/Xlib.h.
+  opencascade-occt = prev.opencascade-occt.overrideAttrs (old: {
+    buildInputs = (old.buildInputs or [ ]) ++ [
+      final.libx11
+      final.fontconfig
+    ];
+    cmakeFlags = (old.cmakeFlags or [ ]) ++ [
+      "-DCMAKE_CXX_FLAGS=-isystem ${final.libx11.dev}/include -isystem ${final.xorgproto.include}/include -isystem ${final.fontconfig.dev}/include -isystem ${final.libGL.dev}/include"
+      "-DCMAKE_C_FLAGS=-isystem ${final.libx11.dev}/include -isystem ${final.xorgproto.include}/include -isystem ${final.fontconfig.dev}/include -isystem ${final.libGL.dev}/include"
+    ];
+  });
+
   # GNOME Shell extensions convenience set
   gnomeExtensions = {
     appindicator = final.gnome-shell-extension-appindicator;
