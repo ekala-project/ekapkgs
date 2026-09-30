@@ -37,7 +37,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [
     "CC=${stdenv.cc.targetPrefix}cc"
-    "-C src/"
+    "-C"
+    "src/"
   ];
 
   installPhase = ''

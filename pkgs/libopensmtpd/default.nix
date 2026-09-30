@@ -21,7 +21,8 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [ mandoc ];
 
   makeFlags = [
-    "-f Makefile.gnu"
+    "-f"
+    "Makefile.gnu"
     "DESTDIR=$(out)"
     "LOCALBASE="
   ];
