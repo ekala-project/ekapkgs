@@ -25,6 +25,7 @@ buildPythonApplication (finalAttrs: {
 
   nativeBuildInputs = [
     meson
+    meson.configurePhaseHook
     ninja
     gtk3.wrapGAppsNoGuiHook
     gobject-introspection # for setup-hook

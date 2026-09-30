@@ -118,6 +118,7 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     libxcvt
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     python3

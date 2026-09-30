@@ -41,6 +41,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
     itstool
     libxml2
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     gtk4.wrapGAppsHook

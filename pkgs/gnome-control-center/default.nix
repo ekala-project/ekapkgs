@@ -96,6 +96,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     libxslt
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     python3

@@ -44,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     gettext
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     rustPlatform.cargoSetupHook

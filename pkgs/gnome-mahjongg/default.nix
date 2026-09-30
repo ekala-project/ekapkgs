@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     meson
+    meson.configurePhaseHook
     ninja
     vala
     desktop-file-utils

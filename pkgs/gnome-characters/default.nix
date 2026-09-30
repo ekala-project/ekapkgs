@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     gobject-introspection
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     desktop-file-utils

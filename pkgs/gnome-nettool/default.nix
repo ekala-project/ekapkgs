@@ -40,6 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
     desktop-file-utils
     itstool
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     python3

@@ -55,6 +55,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
     libxslt
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     vala

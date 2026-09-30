@@ -66,6 +66,7 @@ stdenv.mkDerivation (finalAttrs: {
     itstool
     libxslt
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     vala

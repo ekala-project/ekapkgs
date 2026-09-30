@@ -40,6 +40,7 @@ stdenv.mkDerivation rec {
     gettext
     itstool
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     gtk4.wrapGAppsHook

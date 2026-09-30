@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     libxml2
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     vala

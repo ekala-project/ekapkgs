@@ -118,6 +118,7 @@ stdenv.mkDerivation (finalAttrs: {
     libjcat.bin
     libxml2
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     shared-mime-info

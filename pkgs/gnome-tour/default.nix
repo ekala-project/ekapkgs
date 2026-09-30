@@ -40,6 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     glib # glib-compile-resources
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     python3

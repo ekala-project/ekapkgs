@@ -40,6 +40,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
 
   nativeBuildInputs = [
     meson
+    meson.configurePhaseHook
     ninja
     gettext
     itstool

@@ -117,6 +117,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     docutils
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     gettext

@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     meson
+    meson.configurePhaseHook
     ninja
     gobject-introspection
     gtk4.wrapGAppsHook

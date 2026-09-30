@@ -31,6 +31,7 @@ stdenv.mkDerivation rec {
     desktop-file-utils
     gettext
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     gtk3.wrapGAppsHook

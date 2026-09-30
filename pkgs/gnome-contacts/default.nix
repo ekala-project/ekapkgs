@@ -41,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     blueprint-compiler
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     vala

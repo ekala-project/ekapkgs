@@ -49,6 +49,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     appstream
     gobject-introspection
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     blueprint-compiler

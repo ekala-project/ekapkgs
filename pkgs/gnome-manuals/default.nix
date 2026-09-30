@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     desktop-file-utils
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     gtk4.wrapGAppsHook

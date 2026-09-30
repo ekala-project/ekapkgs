@@ -27,6 +27,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     gtk3.wrapGAppsHook

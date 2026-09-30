@@ -37,6 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
     vala
     vorbis-tools
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     gettext

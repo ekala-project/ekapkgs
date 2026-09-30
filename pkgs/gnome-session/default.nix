@@ -43,6 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     gobject-introspection
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     gettext

@@ -49,6 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     desktop-file-utils
     m4
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     rustc

@@ -56,6 +56,7 @@ stdenv.mkDerivation rec {
     itstool
     libxml2
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     (python3.withPackages (

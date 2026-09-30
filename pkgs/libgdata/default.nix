@@ -42,6 +42,7 @@ stdenv.mkDerivation rec {
     gettext
     gobject-introspection
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     vala

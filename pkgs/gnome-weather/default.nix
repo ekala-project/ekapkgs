@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     desktop-file-utils
     pkg-config
     meson
+    meson.configurePhaseHook
     ninja
     gtk4.wrapGAppsHook
     python3

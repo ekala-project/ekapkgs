@@ -43,6 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     itstool
     libxml2
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     shared-mime-info

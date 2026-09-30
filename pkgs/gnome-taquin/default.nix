@@ -43,6 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gtk3.wrapGAppsHook
     meson
+    meson.configurePhaseHook
     ninja
     python3
     gettext

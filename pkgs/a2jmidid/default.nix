@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     makeWrapper
     meson
+    meson.configurePhaseHook
     ninja
   ];
   buildInputs = [

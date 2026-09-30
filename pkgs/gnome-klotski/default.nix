@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     vala
     meson
+    meson.configurePhaseHook
     ninja
     python3
     gtk3.wrapGAppsHook

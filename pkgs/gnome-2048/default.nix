@@ -35,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     itstool
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     vala

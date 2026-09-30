@@ -240,6 +240,7 @@ stdenv.mkDerivation rec {
     desktop-file-utils
     intltool
     meson
+    meson.configurePhaseHook
     ninja
     gtk4.wrapGAppsHook
   ];

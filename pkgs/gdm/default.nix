@@ -68,6 +68,7 @@ stdenv.mkDerivation (finalAttrs: {
     glib # for glib-compile-schemas
     itstool
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     gobject-introspection
