@@ -38,6 +38,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     protobuf
     rustPlatform.bindgenHook
     cmake
+    cmake.configurePhaseHook
   ];
 
   buildInputs = [

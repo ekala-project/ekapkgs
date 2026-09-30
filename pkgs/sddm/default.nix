@@ -58,6 +58,7 @@ let
 
     nativeBuildInputs = [
       cmake
+    cmake.configurePhaseHook
       pkg-config
       qttools
       docutils

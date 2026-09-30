@@ -34,6 +34,7 @@ stdenv.mkDerivation {
   nativeBuildInputs = [
     autoreconfHook
     cmake
+    cmake.configurePhaseHook
     pkg-config
   ];
 

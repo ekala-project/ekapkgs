@@ -37,6 +37,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     # required by libz-sys, no option for dynamic linking
     # https://github.com/rust-lang/libz-sys/issues/158
     cmake
+    cmake.configurePhaseHook
     pkg-config
     installShellFiles
   ];

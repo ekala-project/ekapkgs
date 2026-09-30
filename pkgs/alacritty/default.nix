@@ -55,6 +55,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     installShellFiles
     makeWrapper
     ncurses

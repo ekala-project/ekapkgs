@@ -24,6 +24,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     installShellFiles
     pkg-config
     cmake
+    cmake.configurePhaseHook
   ];
 
   env.VERGEN_GIT_DESCRIBE = finalAttrs.version;

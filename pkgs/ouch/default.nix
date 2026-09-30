@@ -28,6 +28,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     installShellFiles
     pkg-config
     rustPlatform.bindgenHook

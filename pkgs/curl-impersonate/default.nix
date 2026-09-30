@@ -59,6 +59,7 @@ stdenv.mkDerivation rec {
     ++ [
       installShellFiles
       cmake
+    cmake.configurePhaseHook
       python3
       python3.pythonOnBuildForHost.pkgs.gyp
       ninja
