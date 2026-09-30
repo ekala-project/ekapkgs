@@ -29,8 +29,9 @@ stdenv.mkDerivation (finalAttrs: {
     # See https://trac.sagemath.org/ticket/19233
     lib.optional stdenv.hostPlatform.isDarwin "--disable-asm-redc";
 
+  nativeBuildInputs = [ m4 ];
+
   buildInputs = [
-    m4
     gmp
   ];
 

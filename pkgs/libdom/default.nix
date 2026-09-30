@@ -4,6 +4,8 @@
   fetchurl,
   fetchpatch,
   expat,
+  gperf,
+  perl,
   pkg-config,
   netsurf-buildsystem,
   libparserutils,
@@ -26,7 +28,11 @@ stdenv.mkDerivation (finalAttrs: {
     ./fix-calloc-transposed-args.patch
   ];
 
-  nativeBuildInputs = [ pkg-config ];
+  nativeBuildInputs = [
+    gperf
+    perl
+    pkg-config
+  ];
 
   buildInputs = [
     expat

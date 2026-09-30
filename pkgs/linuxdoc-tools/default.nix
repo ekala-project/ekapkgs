@@ -62,9 +62,14 @@ stdenv.mkDerivation (finalAttrs: {
     flex
     which
     makeWrapper
+    perl
+    groff
+    opensp
+    texinfo
   ];
 
   buildInputs = [
+    flex
     opensp
     groff
     texinfo

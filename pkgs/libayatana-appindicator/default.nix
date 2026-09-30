@@ -5,6 +5,7 @@
   pkg-config,
   cmake,
   gtk-doc,
+  glib,
   gtk3,
   libayatana-indicator,
   libdbusmenu-gtk3,
@@ -30,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     cmake
     cmake.configurePhaseHook
+    glib
     gtk-doc
     vala
   ];

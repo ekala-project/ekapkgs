@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     autoreconfHook
+    libgcrypt
   ];
 
   propagatedBuildInputs = [ libgcrypt ];

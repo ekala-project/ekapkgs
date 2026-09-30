@@ -35,6 +35,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     makeWrapper
     pkg-config
+    ghostscript
   ];
   buildInputs = [
     zlib

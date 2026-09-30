@@ -66,6 +66,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     pkg-config
     gettext
+    libgcrypt
     which
   ];
 

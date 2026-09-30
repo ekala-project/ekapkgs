@@ -2,6 +2,7 @@
   lib,
   stdenv,
   fetchurl,
+  pkg-config,
   validatePkgConfig,
   expat,
   minizip,
@@ -18,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-F2cF8d5Yq3we679cbeRqt2/Ni4VlCNvSj1ZI98bhp/A=";
   };
 
-  nativeBuildInputs = [ validatePkgConfig ];
+  nativeBuildInputs = [ pkg-config validatePkgConfig ];
 
   buildInputs = [
     expat
@@ -26,6 +27,29 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ]
   ++ lib.optional stdenv.hostPlatform.isDarwin libiconv;
+
+  # Create a shim for ints.h which minizip's ioapi.h references but
+  # the ekapkgs minizip package doesn't install.
+  preConfigure = ''
+    mkdir -p $TMPDIR/minizip-ints-shim
+    cat > $TMPDIR/minizip-ints-shim/ints.h << 'INTS_H'
+    /* shim: redirect to standard integer types */
+    #ifndef MINIZIP_INTS_H_SHIM
+    #define MINIZIP_INTS_H_SHIM
+    #include <stdint.h>
+    typedef int8_t i8_t;
+    typedef uint8_t ui8_t;
+    typedef int16_t i16_t;
+    typedef uint16_t ui16_t;
+    typedef int32_t i32_t;
+    typedef uint32_t ui32_t;
+    typedef int64_t i64_t;
+    typedef uint64_t ui64_t;
+    #endif
+    INTS_H
+    export CPPFLAGS="-I${minizip}/include -I${zlib.dev}/include -I$TMPDIR/minizip-ints-shim"
+    export LDFLAGS="-L${minizip}/lib"
+  '';
 
   enableParallelBuilding = true;
 

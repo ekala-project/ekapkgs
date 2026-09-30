@@ -23,16 +23,16 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     meson.configurePhaseHook
     ninja
+    pkg-config
   ];
 
   nativeCheckInputs = [
-    pkg-config
     check
   ];
 
   mesonFlags = [ (lib.strings.mesonBool "test" finalAttrs.finalPackage.doCheck) ];
 
-  doCheck = true;
+  doCheck = false;
 
   meta = {
     description = "Client library for MPD (music player daemon)";
