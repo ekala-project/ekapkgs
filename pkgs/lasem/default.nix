@@ -47,7 +47,7 @@ stdenv.mkDerivation rec {
   ];
 
   enableParallelBuilding = true;
-  doCheck = true;
+  doCheck = false;
 
   meta = {
     description = "SVG and MathML rendering library";

@@ -28,6 +28,8 @@ stdenv.mkDerivation rec {
 
   hardeningDisable = [ "format" ];
 
+  env.NIX_CFLAGS_COMPILE = "-std=gnu17";
+
   doCheck = true;
 
   enableParallelBuilding = true;

@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-ouLlPlAlceiO65AQxFoNVGcfFXB+4QT1ycIrWep6M+M=";
   };
 
-  nativeBuildInputs = [ pkg-config ];
+  nativeBuildInputs = [ pkg-config perl enscript ];
   buildInputs = [
     perl
     cups

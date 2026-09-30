@@ -17,8 +17,15 @@ stdenv.mkDerivation {
   };
   nativeBuildInputs = [
     autoreconfHook
-    help2man
   ];
+
+  # help2man can't run the built binaries in the sandbox to generate man pages;
+  # remove man page rules from Makefiles
+  postPatch = ''
+    for f in src/iffjoin/Makefile.am src/iffpp/Makefile.am; do
+      sed -i '/HELP2MAN/d; /man1_MANS/d; /\.1:/d; s/EXTRA_DIST = .*/EXTRA_DIST =/' "$f"
+    done
+  '';
   meta = {
     description = "Parser for the Interchange File Format (IFF)";
     longDescription = ''

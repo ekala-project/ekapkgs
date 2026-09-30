@@ -25,8 +25,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   installPhase = ''
     mkdir -p "$out/share/java"
-    cp -v rhino-all/build/libs/rhino-all-*.jar "$out/share/java/js-$pkgver.jar"
-    ln -s "js-$pkgver.jar" "$out/share/java/js.jar"
+    cp -v rhino-all/build/libs/rhino-all-*.jar "$out/share/java/js-${finalAttrs.version}.jar"
+    ln -s "js-${finalAttrs.version}.jar" "$out/share/java/js.jar"
   '';
 
   meta = {

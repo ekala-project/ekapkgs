@@ -107,6 +107,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonFlags = [
     "-Dnautilus=false"
+    "-Ddvi=disabled"
   ]
   ++ lib.optionals (ghostscript != null) [
     "-Dps=enabled"

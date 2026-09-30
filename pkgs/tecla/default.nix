@@ -23,6 +23,8 @@ stdenv.mkDerivation (finalAttrs: {
       --replace "stripprog=" "stripprog=\$STRIP # "
   '';
 
+  enableParallelBuilding = false;
+
   env = lib.optionalAttrs stdenv.cc.isClang {
     NIX_CFLAGS_COMPILE = "-Wno-error=implicit-function-declaration";
   };

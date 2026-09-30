@@ -17,12 +17,18 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ dpkg ];
 
+  unpackPhase = ''
+    runHook preUnpack
+    dpkg-deb -x "$src" .
+    runHook postUnpack
+  '';
+
   dontConfigure = true;
   dontBuild = true;
 
   installPhase = ''
     runHook preInstall
-    substituteInPlace usr/bin/bdf2psf --replace /usr/bin/perl "${perl}/bin/perl"
+    substituteInPlace usr/bin/bdf2psf --replace-fail /usr/bin/perl "${perl}/bin/perl"
     rm usr/share/doc/bdf2psf/changelog.gz
     mv usr "$out"
     runHook postInstall

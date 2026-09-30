@@ -63,18 +63,21 @@ stdenv.mkDerivation rec {
   ];
 
   # Fix build with modern gcc
-  NIX_CFLAGS_COMPILE =
-    lib.optionals stdenv.cc.isGNU [
-      "-Wno-error=array-bounds"
-      "-Wno-error=stringop-overflow"
-    ]
-    ++ lib.optionals stdenv.cc.isClang [ "-Wno-error=unused-but-set-variable" ]
-    ++ lib.optionals (stdenv.cc.isGNU && stdenv.hostPlatform.isx86_32) [ "-O2" ];
+  env = {
+    NIX_CFLAGS_COMPILE = toString (
+      lib.optionals stdenv.cc.isGNU [
+        "-Wno-error=array-bounds"
+        "-Wno-error=stringop-overflow"
+      ]
+      ++ lib.optionals stdenv.cc.isClang [ "-Wno-error=unused-but-set-variable" ]
+      ++ lib.optionals (stdenv.cc.isGNU && stdenv.hostPlatform.isx86_32) [ "-O2" ]
+    );
 
-  # Fix undefined reference errors with version script under LLVM.
-  NIX_LDFLAGS = lib.optionalString (
-    stdenv.cc.bintools.isLLVM && lib.versionAtLeast stdenv.cc.bintools.version "17"
-  ) "--undefined-version";
+    # Fix undefined reference errors with version script under LLVM.
+    NIX_LDFLAGS = lib.optionalString (
+      stdenv.cc.bintools.isLLVM && lib.versionAtLeast stdenv.cc.bintools.version "17"
+    ) "--undefined-version";
+  };
 
   postPatch = lib.optionalString stdenv.hostPlatform.isMusl ''
     substituteInPlace test/CMakeLists.txt \

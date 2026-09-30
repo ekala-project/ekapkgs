@@ -56,7 +56,7 @@ stdenv.mkDerivation rec {
   '';
 
   mesonFlags = [
-    "--localstatedir=/var"
+    "--localstatedir=${placeholder "out"}/var"
     "-Dinstalled_tests=true"
     "-Dlibcolordcompat=true"
     "-Dsane=true"
@@ -103,14 +103,16 @@ stdenv.mkDerivation rec {
   ];
 
   postInstall = ''
-    glib-compile-schemas $out/share/glib-2.0/schemas
+    ${glib.dev}/bin/glib-compile-schemas $out/share/glib-2.0/schemas
   '';
 
-  PKG_CONFIG_SYSTEMD_SYSTEMDSYSTEMUNITDIR = "${placeholder "out"}/lib/systemd/system";
-  PKG_CONFIG_SYSTEMD_SYSTEMDUSERUNITDIR = "${placeholder "out"}/lib/systemd/user";
-  PKG_CONFIG_SYSTEMD_TMPFILESDIR = "${placeholder "out"}/lib/tmpfiles.d";
-  PKG_CONFIG_BASH_COMPLETION_COMPLETIONSDIR = "${placeholder "out"}/share/bash-completion/completions";
-  PKG_CONFIG_UDEV_UDEVDIR = "${placeholder "out"}/lib/udev";
+  env = {
+    PKG_CONFIG_SYSTEMD_SYSTEMDSYSTEMUNITDIR = "${placeholder "out"}/lib/systemd/system";
+    PKG_CONFIG_SYSTEMD_SYSTEMDUSERUNITDIR = "${placeholder "out"}/lib/systemd/user";
+    PKG_CONFIG_SYSTEMD_TMPFILESDIR = "${placeholder "out"}/lib/tmpfiles.d";
+    PKG_CONFIG_BASH_COMPLETION_COMPLETIONSDIR = "${placeholder "out"}/share/bash-completion/completions";
+    PKG_CONFIG_UDEV_UDEVDIR = "${placeholder "out"}/lib/udev";
+  };
 
   meta = with lib; {
     description = "System service to manage, install and generate color profiles to accurately color manage input and output devices";

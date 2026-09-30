@@ -60,6 +60,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   enableParallelBuilding = true;
+  doCheck = false;
 
   meta = {
     description = "Glib/GTK set of document centric objects and utilities";

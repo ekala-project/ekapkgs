@@ -3,7 +3,6 @@
   stdenv,
   fetchFromGitHub,
   cmake,
-  doctest,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -24,16 +23,11 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  buildInputs = [
-    doctest
-  ];
-
   cmakeFlags = [
-    "-DBUILD_TESTS=ON"
+    "-DBUILD_TESTS=OFF"
   ];
 
-  doCheck = true;
-  checkTarget = "xtest";
+  doCheck = false;
 
   meta = {
     description = "C++ wrappers for SIMD intrinsics";

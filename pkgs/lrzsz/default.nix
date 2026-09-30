@@ -31,6 +31,18 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [ "--program-transform-name=s/^l//" ];
 
+  # The Makefile's install-exec-local target creates broken symlinks
+  # due to double-slash in path concatenation. Create them manually instead.
+  preInstall = ''
+    sed -i 's/install-exec-local//' src/Makefile
+  '';
+  postInstall = ''
+    ln -sf sz "$out/bin/sb"
+    ln -sf sz "$out/bin/sx"
+    ln -sf rz "$out/bin/rb"
+    ln -sf rz "$out/bin/rx"
+  '';
+
   env.NIX_CFLAGS_COMPILE = "-Wno-error=implicit-function-declaration -Wno-error=implicit-int -Wno-error=incompatible-pointer-types -std=gnu17";
 
   meta = {

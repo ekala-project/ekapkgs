@@ -39,12 +39,12 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
-    gtest
   ];
   buildInputs = [
     openssl
     libpcap
     boost
+    gtest
   ];
 
   cmakeFlags = [
