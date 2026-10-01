@@ -6,6 +6,7 @@
   docbook-xml-dtd,
   docbook-xsl,
   xmlto,
+  w3m,
   bash,
   withXdgOpenUsePortalPatch ? true,
 }:
@@ -33,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     docbook-xml-dtd.v4_3
     docbook-xsl
     xmlto
+    w3m
   ];
 
   buildInputs = [ bash ];
