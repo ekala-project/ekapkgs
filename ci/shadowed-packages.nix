@@ -1,12 +1,12 @@
 # shadowed-packages.nix — Discover ekapkgs packages that shadow corepkgs.
 #
 # After bumping the corepkgs pin, run:
-#   nix-instantiate --eval --strict shadowed-packages.nix -A all --json | jq .
+#   nix-instantiate --eval --strict ci/shadowed-packages.nix -A all --json | jq .
 #
 # Packages in `pkgsDir` are safe candidates for removal.
 # Packages in `topLevel` are intentional overrides — review before removing.
 let
-  pins = import ./pins.nix;
+  pins = import ../pins.nix;
 
   inherit (builtins)
     readDir
@@ -41,8 +41,8 @@ let
     // overlayKeys (import (pins.corepkgs + "/top-level.nix"));
 
   # --- ekapkgs keys ---
-  ekapkgsPkgs = dirKeys ./pkgs;
-  ekapkgsToplevel = overlayKeys (import ./top-level.nix);
+  ekapkgsPkgs = dirKeys ../pkgs;
+  ekapkgsToplevel = overlayKeys (import ../top-level.nix);
 
   # --- intersection by source ---
   shadowedPkgsDir = intersectAttrs corepkgsAll ekapkgsPkgs;

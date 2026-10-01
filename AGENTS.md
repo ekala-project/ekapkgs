@@ -15,7 +15,7 @@ ekaos/modules/         # EkaOS service and program modules
   programs/            # Program modules (auto-generated wrappers)
 build-support/         # Build helpers (desktop items, hooks)
 pins.nix               # Pinned dependencies from flake.lock
-repos-packages.nix     # Unified derivation list for automated updates
+ci/repos-packages.nix  # Unified derivation list for automated updates
 ```
 
 ## Key Differences from corepkgs
