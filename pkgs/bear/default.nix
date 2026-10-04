@@ -8,35 +8,44 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "bear";
-  version = "4.0.4";
+  version = "4.2.2";
 
   src = fetchFromGitHub {
     owner = "rizsotto";
     repo = "bear";
     rev = finalAttrs.version;
-    hash = "sha256-/sR0kIAqXaQkksoUvgSt2q1ZMQObeiLCr3TGalYiHs0=";
+    hash = "sha256-gbDRK4M13jRBCIYWn8so4bKHqCjL2YOF15CqIB2HqIQ=";
   };
 
-  cargoHash = "sha256-rjtf+8ZnkpTX6by20QN2VydWuuLRMvkDB8OTPlDCagI=";
+  cargoHash = "sha256-BZaydfkYyYtQWvM16VwBbeIz/vyfYSa/jSIulnWBNg8=";
 
   nativeBuildInputs = [
     installShellFiles
     lld
   ];
 
-  postPatch = ''
-    substituteInPlace bear/build.rs \
-      --replace-fail 'const DEFAULT_WRAPPER_PATH: &str = "/usr/local/libexec/bear";' \
-        "const DEFAULT_WRAPPER_PATH: &str = \"$out/libexec/bear\";" \
-      --replace-fail 'const DEFAULT_PRELOAD_PATH: &str = "/usr/local/libexec/bear/$LIB";' \
-        "const DEFAULT_PRELOAD_PATH: &str = \"$out/lib\";"
-  '';
-
   postInstall = ''
-    install -d $out/libexec/bear
-    mv $out/bin/wrapper $out/libexec/bear/wrapper
+        # Arrange binaries into the expected layout:
+        # bear-driver finds bear-wrapper as a sibling in the same dir,
+        # and libexec.so at ../lib/libexec.so relative to its location.
+        install -d $out/libexec/bear/bin
+        install -d $out/libexec/bear/lib
+        mv $out/bin/bear-driver $out/libexec/bear/bin/bear-driver
+        mv $out/bin/bear-wrapper $out/libexec/bear/bin/bear-wrapper
+        mv $out/lib/libexec.so $out/libexec/bear/lib/libexec.so
 
-    installManPage man/bear.1
+        # Create the bear wrapper script
+        rm -f $out/bin/bear
+        cat > $out/bin/bear <<EOF
+    #!/bin/sh
+    exec $out/libexec/bear/bin/bear-driver "\$@"
+    EOF
+        chmod 755 $out/bin/bear
+
+        # Remove the completions generator binary
+        rm -f $out/bin/generate-completions
+
+        installManPage man/bear.1
   '';
 
   meta = {
