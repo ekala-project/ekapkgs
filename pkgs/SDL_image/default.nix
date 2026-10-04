@@ -14,7 +14,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "SDL_image";
-  version = "3.4.4";
+  version = "3.4.6";
 
   src = fetchFromGitHub {
     owner = "libsdl-org";
