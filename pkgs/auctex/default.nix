@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation rec {
   pname = "auctex";
-  version = "13.2";
+  version = "13.3";
 
   outputs = [
     "out"
@@ -18,18 +18,22 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "mirror://gnu/auctex/auctex-${version}.tar.gz";
-    hash = "sha256-Hn5AKrz4RmlOuncZklvwlcI+8zpeZgIgHHS2ymCUQDU=";
+    hash = "sha256-T35X4SQaSZ80hh1Z88RlL7R+OJbHonaO27vsHlTJElI=";
   };
 
-  buildInputs = [
+  nativeBuildInputs = [
     emacs
-    ghostscript
   ]
   ++ lib.optionals (texliveBasic != null) [
     (texliveBasic.withPackages (ps: [
       ps.etoolbox
       ps.hypdoc
     ]))
+  ];
+
+  buildInputs = [
+    emacs
+    ghostscript
   ];
 
   preConfigure = ''
