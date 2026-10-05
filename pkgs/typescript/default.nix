@@ -6,20 +6,20 @@
 
 buildNpmPackage rec {
   pname = "typescript";
-  version = "5.9.3";
+  version = "7.0.2";
 
   src = fetchFromGitHub {
     owner = "microsoft";
     repo = "TypeScript";
     tag = "v${version}";
-    hash = "sha256-OVsvlHtYZhoCtTxdZO6mhVPpIICWEt1Q92Jqrf95jyM=";
+    hash = "sha256-j1AY4sf/Jb6uwOah35lrYooc7BnSeaZ2NO6Fx1zMj60=";
   };
 
   patches = [
     ./disable-dprint-dstBundler.patch
   ];
 
-  npmDepsHash = "sha256-4ft5168ru+aGPvZAxASQ4wkjtfNG2e0sNhJTedbiKQA=";
+  npmDepsHash = "sha256-vxILlyVO8S9K+TQPxojaKyV6LptELEyjusMMdr+IVnQ=";
 
   meta = {
     description = "Superset of JavaScript that compiles to clean JavaScript output";
