@@ -43,13 +43,13 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "mlt";
-  version = "7.40.0";
+  version = "7.42.0";
 
   src = fetchFromGitHub {
     owner = "mltframework";
     repo = "mlt";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-rw1jnQJzbtpGsIe/AFMiy7k/3X0vkfkY3rG4E419aVM=";
+    hash = "sha256-uVjCehivKx/45AC3+uFF8HtzmydO13JuFvlvHwG4SSw=";
     fetchSubmodules = true;
   };
 
