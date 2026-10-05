@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "nng";
-  version = "1.12.2";
+  version = "1.12.3";
 
   src = fetchFromGitHub {
     owner = "nanomsg";
     repo = "nng";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-NjTygEuhdZucrvL77EKke/XTVfbSAyGNi2uQRoRBbcg=";
+    hash = "sha256-WumCZ7Qx/ArKX5GOu7kpc0TCbqQMn1o+BKksBvfSRw8=";
   };
 
   nativeBuildInputs = [
