@@ -12,13 +12,13 @@
 
 buildGoModule (finalAttrs: {
   pname = "glab";
-  version = "1.114.0";
+  version = "1.120.0";
 
   src = fetchFromGitLab {
     owner = "gitlab-org";
     repo = "cli";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-V396Fo7YSd5TL/EO82WoF3b+mWlBtrT2kTVCysm5sGs=";
+    hash = "sha256-5zwZ80nAoUZUT8+I+myYz1jsJnGFvvXt+arn7QiNjgE=";
     leaveDotGit = true;
     postFetch = ''
       cd "$out"
@@ -27,7 +27,7 @@ buildGoModule (finalAttrs: {
     '';
   };
 
-  vendorHash = "sha256-UvdML7WKMFJwRqscXhladUDxVXwAWaisWc8c6B1wJNg=";
+  vendorHash = "sha256-8csdDvCsmulEP7SB/GLzf8CGHaufBts8A4W2rKFYekw=";
 
   ldflags = [
     "-s"
