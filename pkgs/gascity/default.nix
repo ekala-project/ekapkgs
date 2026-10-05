@@ -14,6 +14,7 @@
   versionCheckHook,
 }:
 
+# dolt >= 2.1.0 is required for the embedded SQL server gascity drives.
 assert lib.versionAtLeast dolt.version "2.1.0";
 
 buildGoModule (finalAttrs: {
@@ -76,6 +77,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/gastownhall/gascity/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "gc";
-    platforms = dolt.meta.platforms;
+    platforms = lib.platforms.unix;
   };
 })
