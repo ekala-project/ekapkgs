@@ -4,24 +4,26 @@
   rustPlatform,
   fetchFromGitHub,
   installShellFiles,
+  cmake,
   pkg-config,
   openssl,
 }:
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "mise";
-  version = "2026.7.0";
+  version = "2026.10.2";
 
   src = fetchFromGitHub {
     owner = "jdx";
     repo = "mise";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-F/hxgkqLk36906uhr56W+4Evwc8WLbYWw8pibGsq3EY=";
+    hash = "sha256-ZMrPP9GcEW8r7Txn5+FLByH98qBOkU3C/csC5vLQIN8=";
   };
 
-  cargoHash = "sha256-W88dlxvDEwN6C1j1WMtL/KodWQZ9UnI1VJc3xp1Lnqw=";
+  cargoHash = "sha256-MV1vSGthpVHznFVUBjkRgxfj1r6HAZZF8XVDyjIlGt0=";
 
   nativeBuildInputs = [
+    cmake
     installShellFiles
     pkg-config
   ];
