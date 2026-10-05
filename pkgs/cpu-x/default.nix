@@ -31,7 +31,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "cpu-x";
-  version = "5.4.0";
+  version = "5.4.1";
 
   strictDeps = true;
   __structuredAttrs = true;
@@ -40,15 +40,8 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "TheTumultuousUnicornOfDarkness";
     repo = "CPU-X";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-db7NxoVZgnYb1MZKfiFINx00JqDnf/TvwumBp6qDooQ=";
+    hash = "sha256-FB3AaFdmDOh58/ym7iKPZo/T/sx7uU4SwUIM3EOrwBs=";
   };
-
-  postPatch = ''
-    # https://github.com/TheTumultuousUnicornOfDarkness/CPU-X/pull/402
-    # FIXME: remove in the next version
-    substituteInPlace src/core/bandwidth/{OOC/utility,routines}-x86-64bit.asm \
-      --replace-fail "cpu	ia64" "cpu	default"
-  '';
 
   nativeBuildInputs = [
     cmake
