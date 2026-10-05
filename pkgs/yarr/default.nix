@@ -6,13 +6,13 @@
 
 buildGoModule (finalAttrs: {
   pname = "yarr";
-  version = "2.6";
+  version = "2.9";
 
   src = fetchFromGitHub {
     owner = "nkanaev";
     repo = "yarr";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-D/049qH6CFNL7MY5e54guA9i84pbAwGf2UPHnVQWCkU=";
+    hash = "sha256-NvYcl+i3JW18zjYUT1C+ksMJgUJQGP+90UhTQkZRhD4=";
   };
 
   vendorHash = null;
