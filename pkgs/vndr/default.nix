@@ -6,7 +6,7 @@
 
 buildGoModule {
   pname = "vndr";
-  version = "0.1.2-unstable-2022-12-29";
+  version = "0.1.2";
 
   src = fetchFromGitHub {
     owner = "LK4D4";
