@@ -6,7 +6,7 @@
 
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "pylint";
-  version = "4.0.7";
+  version = "4.1.2";
   pyproject = true;
 
   src = fetchFromGitHub {
