@@ -6,13 +6,13 @@
 
 stdenv.mkDerivation rec {
   pname = "mxml";
-  version = "4.0.5";
+  version = "4.0.6";
 
   src = fetchFromGitHub {
     owner = "michaelrsweet";
     repo = "mxml";
     rev = "v${version}";
-    sha256 = "sha256-I9fpqbprxunK4B+Qheo68DRKWkcX9H838PJ3Bx4qh5Q=";
+    sha256 = "sha256-POenTa+7/JLATEN2cjAVFQ72MdZnS2XVNdHDJPjBBrg=";
   };
 
   configureFlags = lib.optionals stdenv.hostPlatform.isDarwin [
