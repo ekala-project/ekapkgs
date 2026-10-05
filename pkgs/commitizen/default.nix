@@ -9,19 +9,19 @@
 
 python3Packages.buildPythonPackage rec {
   pname = "commitizen";
-  version = "4.16.5";
+  version = "4.19.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "commitizen-tools";
     repo = "commitizen";
     tag = "v${version}";
-    hash = "sha256-OIaQcdkvLKUgHvlqsVTk9DaIAQUUZiP8BP9z5Xprdfc=";
+    hash = "sha256-iRrWyK9mg6kDGCh0w4PXvE2g+M9tFuZT8UiNCdkewv8=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail "uv_build >= 0.9.17, <0.12" "uv-build"
+      --replace-fail "uv_build >= 0.9.17, < 0.13" "uv-build"
   '';
 
   pythonRelaxDeps = [
