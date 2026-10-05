@@ -8,16 +8,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "git-bug";
-  version = "0.10.1";
+  version = "0.11.0";
 
   src = fetchFromGitHub {
     owner = "git-bug";
     repo = "git-bug";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-iLYhVv6QMZStuNtxvvIylFSVb1zLfC58NU2QJChFfug=";
+    sha256 = "sha256-lyQy6P929SQcmXZ1GI+5MtXoYD0b0xr69X9/y+1xCUs=";
   };
 
-  vendorHash = "sha256-qztAkP+CHhryhfv1uKHEpDutofMwHGun7Vr30BHWAOE=";
+  vendorHash = "sha256-TwAgpdlitF3O68wA+jyagifrLSRG7WCCZvJ1XJjP/pI=";
 
   nativeBuildInputs = [ installShellFiles ];
 
