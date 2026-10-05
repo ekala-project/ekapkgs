@@ -9,16 +9,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "goreleaser";
-  version = "2.16.0";
+  version = "2.18.2";
 
   src = fetchFromGitHub {
     owner = "goreleaser";
     repo = "goreleaser";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-TV03T9OZXiEa4+v1teI9YA2ilDEU4RoDY9kGdENfZqU=";
+    hash = "sha256-dUVogzJA+TKQ4fJUlh6tedryzOEhX7/XjRpKyev8egM=";
   };
 
-  vendorHash = "sha256-9an5C6xLxyiC4pejOZlz40ZNdc6c0A1mvekXefrCTeQ=";
+  vendorHash = "sha256-CrWFsN/PRZQcyfzgf8RJWdvtsaxIM6OWWpkS8ItV6co=";
 
   ldflags = [
     "-s"
