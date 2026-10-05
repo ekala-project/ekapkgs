@@ -28,11 +28,11 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "maxima";
-  version = "5.47.0";
+  version = "5.50.0";
 
   src = fetchurl {
     url = "mirror://sourceforge/maxima/maxima-${finalAttrs.version}.tar.gz";
-    sha256 = "sha256-kQQCGyT9U+jAOpg1CctC6TepJejAyFwzXXcJoU/UD3o=";
+    sha256 = "sha256-C8S14R/hU+8gsko6gWtmjs5TeMxzj6JMpCa2L9bY/Dc=";
   };
 
   nativeBuildInputs = [
@@ -73,20 +73,7 @@ stdenv.mkDerivation (finalAttrs: {
       sha256 = "09v64n60f7i6frzryrj0zd056lvdpms3ajky4f9p6kankhbiv21x";
     })
 
-    # fix https://sourceforge.net/p/maxima/bugs/2596/
-    (fetchpatch {
-      url = "https://raw.githubusercontent.com/sagemath/sage/07d6c37d18811e2b377a9689790a7c5e24da16ba/build/pkgs/maxima/patches/matrixexp.patch";
-      sha256 = "06961hn66rhjijfvyym21h39wk98sfxhp051da6gz0n9byhwc6zg";
-    })
-
-    # undo https://sourceforge.net/p/maxima/code/ci/f5e9b0f7eb122c4e48ea9df144dd57221e5ea0ca
-    # see https://trac.sagemath.org/ticket/13364#comment:93
-    (fetchpatch {
-      url = "https://raw.githubusercontent.com/sagemath/sage/07d6c37d18811e2b377a9689790a7c5e24da16ba/build/pkgs/maxima/patches/undoing_true_false_printing_patch.patch";
-      sha256 = "0fvi3rcjv6743sqsbgdzazy9jb6r1p1yq63zyj9fx42wd1hgf7yx";
-    })
-
-    ./5.47.0-CVE-2024-34490.patch
+    # CVE-2024-34490 fix is included upstream since 5.48.0
   ];
 
   # The test suite is disabled since 5.42.2 because of the following issues:
