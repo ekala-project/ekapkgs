@@ -160,13 +160,13 @@ in
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "neovim-unwrapped";
-  version = "0.12.4";
+  version = "0.12.5";
 
   src = fetchFromGitHub {
     owner = "neovim";
     repo = "neovim";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-KSLFsrnoEOV712cnUtA8s4EoISp+ON36jslKxSvDthQ=";
+    hash = "sha256-dpu2kncpm+2k+XR7qOEi4KeEy9a1E6X7kjf3s4AbcSo=";
   };
 
   strictDeps = true;
