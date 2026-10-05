@@ -6,16 +6,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "oxipng";
-  version = "10.2.0";
+  version = "10.2.1";
 
   src = fetchFromGitHub {
     owner = "shssoichiro";
     repo = "oxipng";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-GwpXPkEkGqF55YOszXze0iZPi+sjaxtpcKpznc9CQbI=";
+    hash = "sha256-NWDd56sZ/7W8cq9P3o8ifjLhyR+ZHEYrh1fUbyGYhBQ=";
   };
 
-  cargoHash = "sha256-rxb2qKS9sNM/+65YVhZ0jUvvZf8lfDJgU3ltY2Vht00=";
+  cargoHash = "sha256-9DD1EHNtxLN3vwJQFIdibw1SnEgKHlCZAqq7GkDSQh4=";
 
   postPatch = ''
     rm .cargo/config.toml
