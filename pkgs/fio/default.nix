@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "fio";
-  version = "3.42";
+  version = "3.43";
 
   src = fetchFromGitHub {
     owner = "axboe";
     repo = "fio";
     tag = "fio-${finalAttrs.version}";
-    hash = "sha256-v2A2mY0Lvoje632761urfR7h1KHVcGnVDaKOMjexqis=";
+    hash = "sha256-5/3Q4ObLIxL2EukxGzujrN6n7kagjI8WYZYDkmYH4cE=";
   };
 
   buildInputs = [
