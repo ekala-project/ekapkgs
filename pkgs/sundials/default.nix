@@ -14,7 +14,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "sundials";
-  version = "7.8.0";
+  version = "7.9.0";
 
   outputs = [
     "out"
@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "LLNL";
     repo = "sundials";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-TW5LoDEU4y1xSawJsEn5/CoaeiikB6kQQ4xKnON6M0I=";
+    hash = "sha256-gjzNSu6JZxhXziYmYdi3iEjHrEzJfLUGLJw/z5XOmHc=";
   };
 
   nativeBuildInputs = [
