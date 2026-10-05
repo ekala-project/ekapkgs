@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "simdutf";
-  version = "9.1.0";
+  version = "9.2.1";
 
   src = fetchFromGitHub {
     owner = "simdutf";
     repo = "simdutf";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-PKL495sfkRKjHfN4RroW1dwudJV2JWN7ogB8hyDxj5Y=";
+    hash = "sha256-MZUEZWibRgoVwjz3SqkNTepAHgreWYkZTWh74jXtRfY=";
   };
 
   cmakeFlags = [
