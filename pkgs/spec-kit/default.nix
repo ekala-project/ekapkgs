@@ -4,7 +4,7 @@
   fetchFromGitHub,
 }:
 
-python3.pkgs.buildPythonApplication rec {
+python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "spec-kit";
   version = "1.0.13";
   pyproject = true;
@@ -12,7 +12,7 @@ python3.pkgs.buildPythonApplication rec {
   src = fetchFromGitHub {
     owner = "github";
     repo = "spec-kit";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-IkyJBiSa6CyTQpRbsFrsixiz3fwzcLFHw1q5sj6elgM=";
   };
 
@@ -37,7 +37,7 @@ python3.pkgs.buildPythonApplication rec {
   meta = {
     description = "Specify CLI, part of GitHub Spec Kit, for Spec-Driven Development";
     homepage = "https://github.com/github/spec-kit";
-    changelog = "https://github.com/github/spec-kit/releases/tag/v${version}";
+    changelog = "https://github.com/github/spec-kit/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "specify";
     platforms = [
@@ -46,4 +46,4 @@ python3.pkgs.buildPythonApplication rec {
       "aarch64-darwin"
     ];
   };
-}
+})
