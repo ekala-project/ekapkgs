@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libcec";
-  version = "8.1.6";
+  version = "8.1.7";
 
   src = fetchFromGitHub {
     owner = "Pulse-Eight";
     repo = "libcec";
     rev = "libcec-${finalAttrs.version}";
-    sha256 = "sha256-56hzVLPj50y0GdGzmaUEWF6KLX7nWKNWTG7jnt85UpQ=";
+    sha256 = "sha256-teh4w6pDn0HJ9W0FnqhnMYFBd6JxgK9QYfVqYHXviiI=";
   };
 
   # Fix dlopen path
