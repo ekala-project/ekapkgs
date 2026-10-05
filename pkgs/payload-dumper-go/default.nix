@@ -7,16 +7,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "payload-dumper-go";
-  version = "1.3.0";
+  version = "2.1.0";
 
   src = fetchFromGitHub {
     owner = "ssut";
     repo = "payload-dumper-go";
     tag = finalAttrs.version;
-    hash = "sha256-TFnBWylOoyleuBx3yYfHl1kWO6jVBiqsi8AMYLMuuk0=";
+    hash = "sha256-aCrYngtUhjNvjlPplCGwbZVRKxsuFy+xuGVnb/ShGnQ=";
   };
 
-  vendorHash = "sha256-XeD47PsFjDT9777SNE8f2LbKZ1cnL5HNPr3Eg7UIpJ0=";
+  vendorHash = "sha256-RVY686QB9EdPMiu3+QiJeSSVFqpvEL2tREuwKKAjoQQ=";
 
   buildInputs = [ xz ];
 
