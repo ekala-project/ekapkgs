@@ -1,76 +1,55 @@
 {
   lib,
+  fetchFromGitHub,
+  rustPlatform,
+  pkgsBuildBuild,
+  oniguruma,
   stdenv,
-  fetchurl,
-  autoPatchelfHook,
-  makeWrapper,
-  versionCheckHook,
+  zlib,
+  pkg-config,
   writableTmpDirAsHomeHook,
 }:
 
-let
-  version = "0.0.1790798464-g1c0876";
-
-  platformMap = {
-    x86_64-linux = "linux-x64";
-    aarch64-linux = "linux-arm64";
-    aarch64-darwin = "darwin-arm64";
-  };
-
-  system = stdenv.hostPlatform.system;
-  platform = platformMap.${system} or (throw "amp: unsupported system ${system}");
-
-  hashes = {
-    x86_64-linux = "sha256-11xR1x4pZ1x24/kc1MuKvYwPRcRhK7GGOtEmuFBT894=";
-    aarch64-linux = "sha256-aX5Y5lzQMhCfNHrRLffPQx+40XIvGixyX7x+tSfdhaM=";
-    aarch64-darwin = "sha256-bMP4plkxwG8IlJ/i448hfJiUx6b4S6uSXoqVfuucO+U=";
-  };
-in
-stdenv.mkDerivation {
+rustPlatform.buildRustPackage (finalAttrs: {
   pname = "amp";
-  inherit version;
+  version = "0.7.1";
 
-  src = fetchurl {
-    url = "https://static.ampcode.com/cli/${version}/amp-${platform}";
-    hash = hashes.${system};
+  src = fetchFromGitHub {
+    owner = "jmacdonald";
+    repo = "amp";
+    tag = finalAttrs.version;
+    hash = "sha256-YK+HSWTtSVLK8n7NDiif3bBqp/dQW2UTYo3yYcZ5cIA=";
   };
 
-  dontUnpack = true;
-  # bun-compiled binary: stripping corrupts the embedded bytecode.
-  dontStrip = true;
+  cargoHash = "sha256-6enFOmIAYOgOdoeA+pk37+BobI5AGPBxjp73Gd4C+gI=";
 
-  nativeBuildInputs = [ makeWrapper ] ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
+  nativeBuildInputs = [
+    # git rev-parse --short HEAD
+    (pkgsBuildBuild.writeShellScriptBin "git" "echo 0000000")
+  ];
 
-  installPhase = ''
-    runHook preInstall
-    install -Dm755 $src $out/bin/amp
-    runHook postInstall
-  '';
+  buildInputs = [
+    oniguruma
+  ]
+  ++ (lib.optionals stdenv.hostPlatform.isDarwin [
+    zlib
+  ]);
 
-  # TODO(corepkgs): add ripgrep to the runtime PATH
-  postFixup = ''
-    wrapProgram $out/bin/amp \
-      --argv0 amp \
-      --set AMP_SKIP_UPDATE_CHECK 1
-  '';
+  # Needing libgit2 <=1.8.0
+  #env.LIBGIT2_NO_VENDOR = 1;
 
-  doInstallCheck = true;
-  nativeInstallCheckInputs = [
-    versionCheckHook
+  # bundled oniguruma failed on gcc15
+  env.RUSTONIG_SYSTEM_LIBONIG = 1;
+
+  nativeCheckInputs = [
+    pkg-config
     writableTmpDirAsHomeHook
   ];
 
   meta = {
-    description = "CLI for Amp, an agentic coding tool from Sourcegraph";
-    homepage = "https://ampcode.com/";
-    changelog = "https://ampcode.com/chronicle";
-    license = lib.licenses.unfree;
-    sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];
-    platforms = [
-      "x86_64-linux"
-      "aarch64-linux"
-      "aarch64-darwin"
-    ];
+    description = "Modern text editor inspired by Vim";
+    homepage = "https://amp.rs";
+    license = lib.licenses.gpl3Only;
     mainProgram = "amp";
   };
-}
+})
