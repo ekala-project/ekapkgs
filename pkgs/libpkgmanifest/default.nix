@@ -4,12 +4,13 @@
   fetchFromGitHub,
   cmake,
   pkg-config,
+  rpm,
   yaml-cpp,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libpkgmanifest";
-  version = "0.5.9";
+  version = "0.6.1";
 
   strictDeps = true;
   __structuredAttrs = true;
@@ -18,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "rpm-software-management";
     repo = "libpkgmanifest";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-NWuUu1By7MORITgqac09cOMYrVB91xqiUgxN+7sDPMw=";
+    hash = "sha256-sVaFJHM/3ZUnzi09qP5xhIkj/GM0kkWMfOPV5EzILLc=";
   };
 
   nativeBuildInputs = [
@@ -28,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
+    rpm
     yaml-cpp
   ];
 
