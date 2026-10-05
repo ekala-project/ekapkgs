@@ -6,16 +6,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "pfetch-rs";
-  version = "2.11.1";
+  version = "3.0.2";
 
   src = fetchFromGitHub {
     owner = "Gobidev";
     repo = "pfetch-rs";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-Kgoo8piv4pNqzw9zQSEj7POSK6l+0KMvaNbvMp+bpF8=";
+    hash = "sha256-RrsmCSoiTfdWOL0FLbKR8ZQyLMnEnY5fZ0S4pLbwvWY=";
   };
 
-  cargoHash = "sha256-36MjBzSzEOVaSnd6dTqYnV+Pi+5EDoUskkYsvYMGrgg=";
+  cargoHash = "sha256-65v8mNYa+zNbAkCQNWGpb9h0bSi66R4p6cKRZ6/wuaM=";
 
   meta = {
     description = "Rewrite of the pfetch system information tool in Rust";
