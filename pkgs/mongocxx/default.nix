@@ -12,13 +12,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "mongocxx";
-  version = "4.5.0";
+  version = "4.6.0";
 
   src = fetchFromGitHub {
     owner = "mongodb";
     repo = "mongo-cxx-driver";
     tag = "r${finalAttrs.version}";
-    hash = "sha256-QRVzYX6x29Fpc1hLFYbFkdOVGpWiyRS5jAAABHHAU78=";
+    hash = "sha256-zdmZQeAaxxAl9TDFOA2x0DJIfs8Xfjugr0EWSa43nrg=";
   };
 
   postPatch = ''
