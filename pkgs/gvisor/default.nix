@@ -11,7 +11,7 @@
 
 buildGoModule {
   pname = "gvisor";
-  version = "20260406.0";
+  version = "20260928.0";
 
   # gvisor provides a synthetic go branch (https://github.com/google/gvisor/tree/go)
   # that can be used to build gvisor without bazel.
