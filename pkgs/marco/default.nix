@@ -25,13 +25,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "marco";
-  version = "1.28.2";
+  version = "1.29.1";
 
   src = fetchFromGitHub {
     owner = "mate-desktop";
     repo = "marco";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-k45k49mPxy4vmDtCFHaqk0kwZ5wXVAaTj3kanK79n7I=";
+    hash = "sha256-3ylRNRI5iD+S8ClascPs4U0NRlU++47MmqmdkFN56Lk=";
   };
 
   nativeBuildInputs = [
