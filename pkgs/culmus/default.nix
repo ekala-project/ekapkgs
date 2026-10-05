@@ -6,20 +6,17 @@
 
 stdenvNoCC.mkDerivation rec {
   pname = "culmus";
-  version = "0.133";
+  version = "0.140";
 
   src = fetchurl {
     url = "mirror://sourceforge/culmus/culmus/${version}/culmus-${version}.tar.gz";
-    hash = "sha256-wMaHN0LQdUT2us8q1S65yzkpdNVkJ5ONwd+8g5nGTQU=";
+    hash = "sha256-ba7RBEgQB3UqdpBQAOccAJPFkcjvMBfRsYIiwnf8UuM=";
   };
 
   installPhase = ''
     runHook preInstall
 
-    mkdir -p $out/share/fonts/{truetype,type1}
-    cp -v *.pfa $out/share/fonts/type1/
-    cp -v *.afm $out/share/fonts/type1/
-    cp -v fonts.scale-type1 $out/share/fonts/type1/fonts.scale
+    mkdir -p $out/share/fonts/truetype
     cp -v *.ttf $out/share/fonts/truetype/
     cp -v *.otf $out/share/fonts/truetype/
     cp -v fonts.scale-ttf $out/share/fonts/truetype/fonts.scale
