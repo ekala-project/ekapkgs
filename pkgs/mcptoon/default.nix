@@ -5,7 +5,7 @@
   gitMinimal,
 }:
 
-python3.pkgs.buildPythonApplication rec {
+python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "mcptoon";
   version = "0.8.4";
   pyproject = true;
@@ -13,13 +13,13 @@ python3.pkgs.buildPythonApplication rec {
   src = fetchFromGitHub {
     owner = "activeing123";
     repo = "mcptoon";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-O9F29hY8QSy9FbIC8RQ/U7tFTRScnwkSLpbixg62RCU=";
   };
 
   # Upstream tags releases without bumping __version__; align it with the tag.
   postPatch = ''
-    sed -i -E 's/^__version__ = ".*"/__version__ = "${version}"/' src/mcptoon/__init__.py
+    sed -i -E 's/^__version__ = ".*"/__version__ = "${finalAttrs.version}"/' src/mcptoon/__init__.py
   '';
 
   build-system = with python3.pkgs; [ setuptools ];
@@ -40,8 +40,8 @@ python3.pkgs.buildPythonApplication rec {
   meta = {
     description = "MCP server that turns OpenAPI specs into agent-friendly tools";
     homepage = "https://github.com/activeing123/mcptoon";
-    changelog = "https://github.com/activeing123/mcptoon/releases/tag/v${version}";
+    changelog = "https://github.com/activeing123/mcptoon/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "mcptoon";
   };
-}
+})
