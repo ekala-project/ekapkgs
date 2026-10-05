@@ -11,7 +11,6 @@
   gnutar,
   openssh,
   procps,
-  xdg-utils,
   testers,
   versionCheckHook,
   writableTmpDirAsHomeHook,
