@@ -3,23 +3,25 @@
   stdenv,
   fetchFromGitHub,
   cmake,
+  python3,
   llvmPackages,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "luau";
-  version = "0.735";
+  version = "0.741";
 
   src = fetchFromGitHub {
     owner = "luau-lang";
     repo = "luau";
     tag = finalAttrs.version;
-    hash = "sha256-XSMqcpvhGx81r/SCLyZuni83SFGoEBa0d/ZhKnCdGMc=";
+    hash = "sha256-/k9lU9PK+Wsexe1YtZRHrh089EaXx6W3ZbI1wMaVdsM=";
   };
 
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
+    python3
   ];
 
   buildInputs = lib.optionals stdenv.cc.isClang [ llvmPackages.libunwind ];
