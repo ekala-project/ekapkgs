@@ -10,11 +10,11 @@
 
 stdenv.mkDerivation rec {
   pname = "cgal";
-  version = "6.1.2";
+  version = "6.2.1";
 
   src = fetchurl {
     url = "https://github.com/CGAL/cgal/releases/download/v${version}/CGAL-${version}.tar.xz";
-    hash = "sha256-QEEbl8XGTdwa8dFT1Xo55CTSHpR+7ysZT6BcWosALuo=";
+    hash = "sha256-tr53xgdlqEVjNd6ZHur2/+xVJWmE5Knsxql8N7v+hb8=";
   };
 
   nativeBuildInputs = [
