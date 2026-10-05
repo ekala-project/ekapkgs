@@ -14,13 +14,13 @@
 
 stdenv.mkDerivation rec {
   pname = "ossec";
-  version = "4.2.0";
+  version = "4.3.0";
 
   src = fetchFromGitHub {
     owner = "ossec";
     repo = "ossec-hids";
     tag = version;
-    hash = "sha256-uCf5R0jFyBfcD3FmeLqpR7GStuQN++NCyoNfG1c4am0=";
+    hash = "sha256-bOSW7lBozKcf5tArj51pfKOPPHH1Vk9mQduhCkwB92Y=";
   };
 
   buildInputs = [
