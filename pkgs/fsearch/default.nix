@@ -16,13 +16,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "fsearch";
-  version = "0.3.1";
+  version = "0.3.2";
 
   src = fetchFromGitHub {
     owner = "cboxdoerfer";
     repo = "fsearch";
     rev = finalAttrs.version;
-    hash = "sha256-ahIsSR6z7zKCBPqz/W1ATdsJc9krbeXOECa0T8djR6U=";
+    hash = "sha256-IdcNjlloyJEGZ1BbGxaeLGUiDhrku9fIXM45LwQ8iRc=";
   };
 
   nativeBuildInputs = [
