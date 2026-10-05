@@ -2,12 +2,11 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  installShellFiles,
   makeWrapper,
+  python3,
   coreutils,
   openssh,
   gnupg,
-  perl,
   procps,
   grep,
   gawk,
@@ -17,25 +16,24 @@
 
 stdenv.mkDerivation rec {
   pname = "keychain";
-  version = "2.9.5";
+  version = "3.0.7";
 
   src = fetchFromGitHub {
     owner = "funtoo";
     repo = "keychain";
     rev = version;
-    sha256 = "sha256-mKYDSCaDYXUIiDi9EGkAu8gW4sEcUtR8mJ2LW4FFycQ=";
+    sha256 = "sha256-Sr1joGVJ7VtzubHROcc6DCLUCZmDJ1lrYFMkzaLB6so=";
   };
 
   nativeBuildInputs = [
-    installShellFiles
+    python3
     makeWrapper
   ];
-  buildInputs = [ perl ];
 
   installPhase = ''
     mkdir -p $out/bin
-    cp keychain $out/bin/keychain
-    installManPage keychain.1
+    cp keychain.pyz $out/bin/keychain
+    chmod +x $out/bin/keychain
     wrapProgram $out/bin/keychain \
       --prefix PATH ":" "${
         lib.makeBinPath [
@@ -47,6 +45,7 @@ stdenv.mkDerivation rec {
           sed
           openssh
           procps
+          python3
         ]
       }" \
   '';
