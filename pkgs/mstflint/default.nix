@@ -18,20 +18,20 @@
   automake,
   autoconf,
   libtool,
-  git,
+  gitMinimal,
   onlyFirmwareUpdater ? false,
   enableDPA ? true,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "mstflint";
-  version = "4.36.0-1";
+  version = "4.37.0-1";
 
   src = fetchFromGitHub {
     owner = "Mellanox";
     repo = finalAttrs.pname;
     tag = "v${finalAttrs.version}";
-    hash = "sha256-H4NMSjSOSmkM9lDcbsEBOB6AM5GBRKUoCDWm5QbaS3g=";
+    hash = "sha256-E6Z/MkDdWH9jQFB/fFPsEz4kxU6DCGnO/4DU6RPu7dM=";
   };
 
   nativeBuildInputs = [
@@ -40,7 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
     libtool
     pkg-config
     libxml2
-    git
+    gitMinimal
   ];
 
   buildInputs = [
