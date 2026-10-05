@@ -5,16 +5,16 @@
 }:
 buildGoModule (finalAttrs: {
   pname = "cloudflare-ddns";
-  version = "1.17.0";
+  version = "1.17.1";
 
   src = fetchFromGitHub {
     owner = "favonia";
     repo = "cloudflare-ddns";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-03aXACmEXX75CGvnf1vuXhsMEcLb1W8/LL6GrdPORWE=";
+    hash = "sha256-lXWGVhthBEPRAYhrpjGfskRxmPeKwwjqbqW/wRMLDF8=";
   };
 
-  vendorHash = "sha256-/vo5msKJ9J6Ga7BqGwavLlUGUSvkaCtmYFDI/2zBCv4=";
+  vendorHash = "sha256-vq8iavsJFk3Eu1mwyeJLtWSXV8pbeqMnbO/UL/8Af4A=";
 
   subPackages = [
     "cmd/ddns"
