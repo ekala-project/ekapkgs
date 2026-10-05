@@ -6,17 +6,17 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "mprocs";
-  version = "0.9.6";
+  version = "0.10.0";
   __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "pvolok";
     repo = "dekit";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-fh294Re4gEveWgX29m0SXdI8hwuiXuniTq7pVZ464ws=";
+    hash = "sha256-Kj+iWiRyRavCHgpZLPUPWqeItlD079OTO0lkaS3qpsc=";
   };
 
-  cargoHash = "sha256-Qp0o7ruXUZBCi7Abrj8V5MAY/qzo5Uf7pwIcFGwCfnw=";
+  cargoHash = "sha256-g7RJa3wOv4tr7IW3SWHie78t3qTqHV3HMHobgQW2jS8=";
 
   meta = {
     description = "TUI tool to run multiple commands in parallel and show the output of each command separately";
