@@ -8,16 +8,22 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "mstpd";
-  version = "0.2.0";
+  version = "0.05";
 
   src = fetchFromGitHub {
     owner = "mstpd";
     repo = "mstpd";
     rev = finalAttrs.version;
-    hash = "sha256-G/QScCFUVw0+a3GiiIv7NuAlwNRc6k6USd5dckfeaGQ=";
+    hash = "sha256-mZg5DcAR7ZoBTg1Mv/z2YqT6/29z5Gr1tY7I8F7Wdpw=";
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
+  env.NIX_CFLAGS_COMPILE = toString [
+    "-Wno-error=old-style-definition"
+    "-Wno-error=format-truncation"
+    "-Wno-error=stringop-truncation"
+  ];
 
   configureFlags = [
     "--prefix=$(out)"
