@@ -2,7 +2,8 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  autoreconfHook,
+  cmake,
+  pkg-config,
   openssl,
   protobufc,
   libconfig,
@@ -10,25 +11,24 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "umurmur";
-  version = "0.3.1";
+  version = "0.5.1";
 
   src = fetchFromGitHub {
     owner = "umurmur";
     repo = "umurmur";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-pJRGyfG5y5wdB+zoWiJ1+2O1L3TThC6IairVDlE76tA=";
+    hash = "sha256-hxsWTqkbb/ZaLdi+z7EGQn3LXmmerHqNoRpn8Jrryjw=";
   };
 
-  nativeBuildInputs = [ autoreconfHook ];
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+    pkg-config
+  ];
   buildInputs = [
     openssl
     protobufc
     libconfig
-  ];
-
-  configureFlags = [
-    "--with-ssl=openssl"
-    "--enable-shmapi"
   ];
 
   passthru = {
