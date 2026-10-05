@@ -6,12 +6,12 @@
 
 python3Packages.buildPythonApplication rec {
   pname = "pgcli";
-  version = "4.5.0";
+  version = "4.7.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-nc4H9bYoBoFWJWy4GOUZGnc6/m7rcFTyEPqJKBNiXj4=";
+    hash = "sha256-GV0ArplMidQ+2OVw3foKn7YQXmt4Pfwets6psybcM0Y=";
   };
 
   pythonRelaxDeps = [
