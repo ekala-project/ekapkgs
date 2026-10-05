@@ -8,6 +8,7 @@
   parted,
   pkg-config,
   libconfig,
+  libnvme,
   hdparm,
   smartmontools,
   dmidecode,
@@ -15,13 +16,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "nwipe";
-  version = "0.42";
+  version = "0.43";
 
   src = fetchFromGitHub {
     owner = "martijnvanbrummelen";
     repo = "nwipe";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-gSSOS7hY9/xESJrmU7FBSXwa3O2YloPI7pQ+8KKW2dM=";
+    sha256 = "sha256-Z9Grptk+wlTIh46mXY38JdTK4wr+J3W+CD6ZH0YrZXs=";
   };
 
   nativeBuildInputs = [
@@ -34,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     ncurses
     parted
     libconfig
+    libnvme
   ];
 
   postInstall = ''
