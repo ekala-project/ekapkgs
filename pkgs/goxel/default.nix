@@ -11,7 +11,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "goxel";
-  version = "0.15.1-unstable-2024-12-27";
+  version = "0.15.1";
 
   src = fetchFromGitHub {
     owner = "guillaumechereau";
