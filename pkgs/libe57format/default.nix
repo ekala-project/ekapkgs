@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libe57format";
-  version = "3.4.0";
+  version = "3.4.1";
 
   src = fetchFromGitHub {
     owner = "asmaloney";
     repo = "libE57Format";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-iCQ+aLBvpGPm1heUcfWzo0UKFi2X+3aGfR9zCgcbP5E=";
+    hash = "sha256-HzlQ9Jy/Nx9X7OMx7Hcu4rgxBRCDtDcnySK9aHWSv7Y=";
   };
 
   postPatch = lib.optionalString finalAttrs.finalPackage.doCheck ''
