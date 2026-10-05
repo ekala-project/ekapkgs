@@ -5,7 +5,7 @@
   git,
 }:
 
-python3.pkgs.buildPythonApplication rec {
+python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "hermes-hud";
   version = "0.5.0";
   pyproject = true;
@@ -13,7 +13,7 @@ python3.pkgs.buildPythonApplication rec {
   src = fetchFromGitHub {
     owner = "joeynyc";
     repo = "hermes-hud";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Osn/+7qnRQORBJLWgngLT2BU0EVu2xyRN7De619IDNI=";
   };
 
@@ -37,8 +37,8 @@ python3.pkgs.buildPythonApplication rec {
   meta = {
     description = "TUI consciousness monitor for Hermes Agent";
     homepage = "https://github.com/joeynyc/hermes-hud";
-    changelog = "https://github.com/joeynyc/hermes-hud/releases/tag/v${version}";
+    changelog = "https://github.com/joeynyc/hermes-hud/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "hermes-hud";
   };
-}
+})
