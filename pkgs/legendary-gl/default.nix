@@ -6,7 +6,7 @@
 
 python3Packages.buildPythonApplication {
   pname = "legendary-gl"; # Name in pypi
-  version = "0.21.0";
+  version = "0.21.1";
   pyproject = true;
 
   src = fetchFromGitHub {
