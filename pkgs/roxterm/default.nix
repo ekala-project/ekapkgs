@@ -29,28 +29,29 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "roxterm";
-  version = "3.17.2";
+  version = "3.18.2";
 
   src = fetchFromGitHub {
     owner = "realh";
     repo = "roxterm";
     rev = finalAttrs.version;
-    hash = "sha256-QMWxNgMbodkyUDG2o7nrnVZiWFpIYTdphU9yDEhzKNM=";
+    hash = "sha256-6izxSEGPu3svO3uRb2oPUm1Mcky9EogIrnadt6czyEk=";
   };
 
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
+    docbook_xsl
     libxslt
     pkg-config
     gtk3.wrapGAppsHook
+    xmlto
   ];
 
   buildInputs = [
     at-spi2-core
     dbus
     dbus-glib
-    docbook_xsl
     glib
     gtk3
     harfbuzz
@@ -66,7 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     pcre2
     util-linuxMinimal
     vte
-    xmlto
   ];
 
   meta = {
