@@ -12,14 +12,14 @@
 
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "conan";
-  version = "2.31.2";
+  version = "2.33.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "conan-io";
     repo = "conan";
     tag = finalAttrs.version;
-    hash = "sha256-lPH9spNQSqddFeqewGQi8pyJqLQfbI1+u2OQDNGjmhE=";
+    hash = "sha256-FDJjesqvPiAUAEjeqQt088Vnet/KXHbUyEPytP9MyG4=";
   };
 
   pythonRelaxDeps = [
@@ -47,6 +47,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
       pyyaml
       requests
       tqdm
+      truststore
       urllib3
     ]
     ++ lib.optionals stdenv.hostPlatform.isDarwin [
