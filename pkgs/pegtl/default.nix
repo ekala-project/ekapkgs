@@ -7,13 +7,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "pegtl";
-  version = "4.0.1";
+  version = "4.0.2";
 
   src = fetchFromGitHub {
     owner = "taocpp";
     repo = "PEGTL";
     rev = finalAttrs.version;
-    hash = "sha256-28uXdkXGN4FFkWMfiF3ArJhcJhTklWn6CeCEl/wFqA8=";
+    hash = "sha256-eOwUwnyvQwMNHzISOwhxfh83ij36iGvoUK4g7ZmaRDI=";
   };
 
   nativeBuildInputs = [
