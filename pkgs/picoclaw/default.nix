@@ -51,7 +51,7 @@ buildGoModule (finalAttrs: {
   doCheck = false;
 
   doInstallCheck = true;
-  versionCheckProgramArg = "version";
+  versionCheckProgramArg = [ "version" ];
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

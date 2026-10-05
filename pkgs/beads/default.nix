@@ -31,8 +31,8 @@ buildGoModule (finalAttrs: {
   buildInputs = [ icu ];
 
   # go-icu-regex's cgo directives use raw -licui18n etc. with no
-  # `#cgo pkg-config:` line, so pkg-config never runs; pass the icu include
-  # and library paths explicitly.
+  # `#cgo pkg-config:` line, so pass the icu include and library paths
+  # explicitly. pkg-config stays for the other cgo dependencies.
   env = {
     CGO_ENABLED = "1";
     CGO_CFLAGS = "-I${lib.getDev icu}/include";
