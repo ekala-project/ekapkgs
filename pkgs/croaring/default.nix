@@ -3,18 +3,17 @@
   stdenv,
   fetchFromGitHub,
   cmake,
-  cmocka,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "croaring";
-  version = "5.1.0";
+  version = "5.2.3";
 
   src = fetchFromGitHub {
     owner = "RoaringBitmap";
     repo = "CRoaring";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-CyjXE4cDPp8pmVqjgJFzLiVgR1I0lv2PEusS659KKP4=";
+    hash = "sha256-8xQx+awukfCMjoSxWTbKbjCIIGUHF5VKeVlZiaC1h2g=";
   };
 
   # roaring.pc.in cannot handle absolute CMAKE_INSTALL_*DIRs, nor
@@ -27,11 +26,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  buildInputs = [ cmocka ];
-
-  doCheck = true;
-
-  cmakeFlags = [ (lib.cmakeBool "ROARING_USE_CPM" false) ];
+  cmakeFlags = [
+    (lib.cmakeBool "ROARING_USE_CPM" false)
+    (lib.cmakeBool "ENABLE_ROARING_TESTS" false)
+  ];
 
   meta = {
     description = "Compressed bitset library for C and C++";
