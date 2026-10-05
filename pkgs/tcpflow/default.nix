@@ -12,7 +12,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "tcpflow";
-  version = "1.6.1-unstable-2026-01-29";
+  version = "1.6.1";
 
   src = fetchFromGitHub {
     owner = "simsong";
