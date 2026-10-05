@@ -9,16 +9,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "gping";
-  version = "1.20.4";
+  version = "1.21.0";
 
   src = fetchFromGitHub {
     owner = "orf";
     repo = "gping";
     tag = "gping-v${finalAttrs.version}";
-    hash = "sha256-m26GtfRhgib13g+3/cXLwIdMKr3CofaMKFFCFKa8OI4=";
+    hash = "sha256-+oJzm7lEYS3K+GlYMfSxO2qkUb3AXy04e1YVflar9yI=";
   };
 
-  cargoHash = "sha256-CFJ7X0hJG6Whd9vMHo5Au93LueXiAHHEo9dPOKSmD+k=";
+  cargoHash = "sha256-6tAHfcXTMorob0wjdWNxKJ7wAZrwGZqH2hgX9AzN3Yc=";
 
   nativeBuildInputs = [ installShellFiles ];
 
