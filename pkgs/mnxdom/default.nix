@@ -16,13 +16,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "mnxdom";
-  version = "3.0";
+  version = "3.0.1";
 
   src = fetchFromGitHub {
     owner = "rpatters1";
     repo = "mnxdom";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-zM8NRdVKY4RI9fNrVU/BpWOkhmmT9HLrOi21YKPGd0k=";
+    hash = "sha256-YjOFLDmQcq+E4P+tELafeH12L0bgHcAHbeigKn/vjdA=";
   };
 
   nativeBuildInputs = [
