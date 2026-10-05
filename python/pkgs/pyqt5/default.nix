@@ -37,13 +37,13 @@ let
 in
 buildPythonPackage rec {
   pname = "pyqt5";
-  version = "5.15.10";
+  version = "5.15.11";
   pyproject = true;
 
   src = fetchPypi {
     pname = "PyQt5";
     inherit version;
-    hash = "sha256-1Gt4BLGxCk/5F1P4ET5bVYDStEYvMiYoji2ESXM0iYo=";
+    hash = "sha256-/aRXQ+u0ontLGlHG2O9FXEwbXWEMkNKTTHgCtcFVfFI=";
   };
 
   patches = [
