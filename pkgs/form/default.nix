@@ -20,7 +20,7 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "form";
-  version = "5.0.1";
+  version = "5.0.2";
 
   __structuredAttrs = true;
 
@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "form-dev";
     repo = "form";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-luV6yHhm7BHbNRd1VQp7UGIA289KikYQGNXAFMEXnvs=";
+    hash = "sha256-JvdQbBvfeGsFaP70b+531jDhggrYj2vjB3juRI86uGY=";
   };
 
   nativeBuildInputs = [
