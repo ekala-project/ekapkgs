@@ -14,13 +14,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "sscg";
-  version = "4.0.3";
+  version = "4.0.4";
 
   src = fetchFromGitHub {
     owner = "sgallagher";
     repo = "sscg";
     tag = "sscg-${finalAttrs.version}";
-    hash = "sha256-0t3ntUxfh1jFukWGwmdbt0axFfUiH1QEq6wFrGoI7Jk=";
+    hash = "sha256-lfb7sMREF3KEfUu6a2NW50F8ke7pG6ZokfBDlH1+K7o=";
   };
 
   nativeBuildInputs = [
@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     pkg-config
     ninja
+    help2man
   ];
 
   buildInputs = [
@@ -35,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     ding-libs
     talloc
     popt
-    help2man
   ];
 
   meta = {
