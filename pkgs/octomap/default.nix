@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "octomap";
-  version = "1.10.0";
+  version = "1.10.1";
 
   src = fetchFromGitHub {
     owner = "OctoMap";
     repo = "octomap";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-QxQHxxFciR6cvB/b8i0mr1hqGxOXhXmB4zgdsD977Mw=";
+    hash = "sha256-GlYfAZGSMO8nMQxFyvFs+ZM8vBRMlnpfiIXe6kCUJa0=";
   };
 
   patches = [
@@ -33,12 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
       hash = "sha256-8ZwX1CJFykMduEEXIqTRH9VHn7ItvO/ZfdNNDIDmtss=";
     })
   ];
-
-  # ref. https://github.com/OctoMap/octomap/pull/448 not merged yet
-  postPatch = ''
-    substituteInPlace include/octomap/OcTreeKey.h --replace-fail \
-      "#include <ciso646>" ""
-  '';
 
   sourceRoot = "${finalAttrs.src.name}/octomap";
 
