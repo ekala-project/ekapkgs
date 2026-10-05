@@ -10,7 +10,7 @@
 
 stdenv.mkDerivation {
   pname = "gnome-shell-extension-pop-shell";
-  version = "1.2.0-unstable-2026-03-31";
+  version = "1.2.0";
 
   src = fetchFromGitHub {
     owner = "pop-os";
