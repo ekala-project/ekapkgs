@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation rec {
   pname = "inconsolata-lgc";
-  version = "3.300";
+  version = "3.410";
 
   src = fetchFromGitHub {
     owner = "MihailJP";
