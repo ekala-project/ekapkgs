@@ -33,16 +33,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "prometheus";
-  version = "3.14.0";
+  version = "3.15.0";
 
   src = fetchFromGitHub {
     owner = "prometheus";
     repo = "prometheus";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-7PSfh+KWUpmL3BZ7INa1DOZ/ysaXXdWG9n/F+H0cGYo=";
+    hash = "sha256-H0VkirdEVWoFxg86g8utf6EuCSH3pHD8iuHg6y0xOZE=";
   };
 
-  vendorHash = "sha256-sCgxO2/w3Bi6Ncs/Q+JVZVtQC448FEx3llYxe/UxWEE=";
+  vendorHash = "sha256-ax/uL+fR0dGOiEMQfEzYPh+437i6sUGFmBEBfENbEqI=";
 
   proxyVendor = true;
 
