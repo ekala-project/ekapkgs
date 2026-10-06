@@ -11,8 +11,8 @@
   ripgrep,
   fd,
   coreutils,
-  gnugrep,
-  gnused,
+  grep,
+  sed,
   gawk,
   findutils,
   which,
@@ -37,7 +37,7 @@ let
 
   resolvedSourceDir = if sourceDir != null then sourceDir else "${claudeboxSource}/src";
 
-  inherit (stdenv) isLinux;
+  inherit (stdenv.hostPlatform) isLinux;
 
   claudeTools = stdenv.mkDerivation {
     name = "claude-tools";
@@ -49,8 +49,8 @@ let
         ripgrep
         fd
         coreutils
-        gnugrep
-        gnused
+        grep
+        sed
         gawk
         findutils
         which
@@ -102,7 +102,7 @@ runCommand "claudebox"
           ++ sandboxTools
         )
       } \
-      ${lib.optionalString stdenv.isDarwin "--set CLAUDEBOX_SEATBELT_PROFILE $out/share/claudebox/seatbelt.sbpl"}
+      ${lib.optionalString stdenv.hostPlatform.isDarwin "--set CLAUDEBOX_SEATBELT_PROFILE $out/share/claudebox/seatbelt.sbpl"}
 
     makeWrapper ${claude-code}/bin/.claude-wrapped $out/libexec/claudebox/claude \
       --set DISABLE_AUTOUPDATER 1 \
