@@ -1,40 +1,71 @@
 {
   lib,
-  fetchurl,
+  stdenv,
+  fetchFromGitHub,
+  fetchPnpmDeps,
+  pnpm,
+  pnpmConfigHook,
   nodejs,
-  runCommand,
+  makeWrapper,
+  versionCheckHook,
+  writableTmpDirAsHomeHook,
 }:
 
-let
-  version = "1.14.0";
-
-  # The npm tarball ships no lockfile; vendor one so importNpmLock can resolve
-  # the dependency tree offline.
-  src = runCommand "openspec-src" { } ''
-    mkdir -p $out
-    tar -xzf ${
-      fetchurl {
-        url = "https://registry.npmjs.org/@fission-ai/openspec/-/openspec-${version}.tgz";
-        hash = "sha256-nPFq45qcHiM1D6vFrsoeaX0IAWpQG3E4IpOgSRlnTkQ=";
-      }
-    } -C $out --strip-components=1
-    cp ${./package-lock.json} $out/package-lock.json
-  '';
-in
-nodejs.buildNpmApplication {
+stdenv.mkDerivation (finalAttrs: {
   pname = "openspec";
-  inherit version src;
+  version = "1.14.1";
 
-  # The published tarball is already built.
-  dontNpmBuild = true;
+  src = fetchFromGitHub {
+    owner = "Fission-AI";
+    repo = "OpenSpec";
+    rev = "9111a7654d7800391459431fff4eaf66e33a3d2e";
+    hash = "sha256-FUGxAvuptFlZ8rsBVv9jlSxhXb3MCtcPB1KpXtMu1bQ=";
+  };
+
+  pnpmDeps = fetchPnpmDeps {
+    inherit (finalAttrs) pname version src;
+    pnpm = pnpm.v10;
+    fetcherVersion = 3;
+    hash = "sha256-NIMHf7t+FnBgsswDtB1k4E/zX1ks1r3708ggE2ps9E8=";
+  };
+
+  nativeBuildInputs = [
+    nodejs
+    pnpm.v10
+    pnpmConfigHook
+    makeWrapper
+  ];
+
+  buildPhase = ''
+    runHook preBuild
+    chmod -R u+w node_modules 2>/dev/null || true
+    patchShebangs node_modules 2>/dev/null || true
+    for d in $PWD/node_modules/.bin; do export PATH="$d:$PATH"; done
+    pnpm build
+    runHook postBuild
+  '';
+
+  installPhase = ''
+    runHook preInstall
+    mkdir -p $out/lib/openspec
+    cp -r dist bin schemas package.json $out/lib/openspec/
+    pnpm prune --prod || true
+    cp -r node_modules $out/lib/openspec/
+    makeWrapper ${nodejs}/bin/node $out/bin/openspec \
+      --add-flags "$out/lib/openspec/bin/openspec.js"
+    runHook postInstall
+  '';
+
+  doInstallCheck = true;
+  nativeInstallCheckInputs = [ versionCheckHook writableTmpDirAsHomeHook ];
 
   meta = {
     description = "Spec-driven development for AI coding assistants";
     homepage = "https://github.com/Fission-AI/OpenSpec";
-    changelog = "https://github.com/Fission-AI/OpenSpec/releases/tag/v${version}";
-    downloadPage = "https://www.npmjs.com/package/@fission-ai/openspec";
+    changelog = "https://github.com/Fission-AI/OpenSpec/releases";
     license = lib.licenses.mit;
-    sourceProvenance = [ lib.sourceTypes.binaryBytecode ];
+    sourceProvenance = [ lib.sourceTypes.fromSource ];
     mainProgram = "openspec";
+    platforms = lib.platforms.all;
   };
-}
+})
