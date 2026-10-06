@@ -16,15 +16,12 @@
 }:
 
 let
-  versionData = {
-    version = "2.25.8";
-    hashes = {
-      aarch64-darwin = "sha256-myo/nBB46M8r0KLNhgM2s62AOYlOz0I5lFiL5FRdc+o=";
-      x86_64-linux = "sha256-0NAEy4NOjnlzN4u3eUEf6Xu07Z1+UzwSHWTH+9LsPeo=";
-      aarch64-linux = "sha256-pzcnNhyYRA0gw3a/9p7fkv0Y0BwD+B5U49RxNd8snyA=";
-    };
+  version = "2.25.8";
+  wheelHashes = {
+    aarch64-darwin = "sha256-myo/nBB46M8r0KLNhgM2s62AOYlOz0I5lFiL5FRdc+o=";
+    x86_64-linux = "sha256-0NAEy4NOjnlzN4u3eUEf6Xu07Z1+UzwSHWTH+9LsPeo=";
+    aarch64-linux = "sha256-pzcnNhyYRA0gw3a/9p7fkv0Y0BwD+B5U49RxNd8snyA=";
   };
-  inherit (versionData) version hashes;
 
   wheelPlatforms = {
     x86_64-linux = "manylinux_2_28_x86_64";
@@ -163,7 +160,7 @@ let
     };
   };
 in
-python.pkgs.buildPythonApplication {
+python.pkgs.buildPythonApplication (finalAttrs: {
   pname = "mistral-vibe";
   inherit version;
   format = "wheel";
@@ -177,7 +174,7 @@ python.pkgs.buildPythonApplication {
           wheelPlatforms.${stdenv.hostPlatform.system}
         ]
         wheelUrl;
-    hash = hashes.${stdenv.hostPlatform.system};
+    hash = wheelHashes.${stdenv.hostPlatform.system};
   };
 
   # `import vibe` creates ~/.vibe during pythonImportsCheck; HOME must be writable.
@@ -263,4 +260,4 @@ python.pkgs.buildPythonApplication {
     ];
     mainProgram = "vibe";
   };
-}
+})
