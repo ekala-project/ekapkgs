@@ -65,7 +65,7 @@ let
     outputHashMode = "recursive";
   };
 in
-stdenv.mkDerivation {
+stdenv.mkDerivation (finalAttrs: {
   pname = "oh-my-opencode";
   inherit version src;
 
@@ -158,4 +158,4 @@ stdenv.mkDerivation {
     mainProgram = "oh-my-opencode";
     platforms = lib.platforms.unix;
   };
-}
+})
