@@ -23,10 +23,10 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     meson.configurePhaseHook
     ninja
+    pkg-config
   ];
 
-  nativeCheckInputs = [
-    pkg-config
+  buildInputs = [
     check
   ];
 
