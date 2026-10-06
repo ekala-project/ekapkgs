@@ -19,12 +19,7 @@
 }:
 
 let
-  versionData = {
-    version = "18.4.6";
-    hash = "sha256-3XCC12fRSk/iU/hKYk0v53HOMHG0Sk4R1GXzcFXnfYo=";
-    cargoHash = "sha256-kB3UoRsL9Dv70iLrEO6nK+G3QQlWOgUdgIAx2ysK/4s=";
-  };
-  inherit (versionData) version hash cargoHash;
+  version = "18.4.6";
 
   platformsBySystem = {
     aarch64-darwin = {
@@ -40,16 +35,15 @@ let
       nodeTag = "linux-x64";
     };
   };
-  platform =
-    platformsBySystem.${stdenv.hostPlatform.system}
-      or (throw "Unsupported platform for omp: ${stdenv.hostPlatform.system}");
+  platform = platformsBySystem.${stdenv.hostPlatform.system}
+    or (throw "Unsupported platform for omp: ${stdenv.hostPlatform.system}");
   rustTarget = stdenv.hostPlatform.rust.rustcTarget;
 
   src = fetchFromGitHub {
     owner = "can1357";
     repo = "oh-my-pi";
     tag = "v${version}";
-    inherit hash;
+    hash = "sha256-3XCC12fRSk/iU/hKYk0v53HOMHG0Sk4R1GXzcFXnfYo=";
   };
 
   # Common source manipulations: drop the robomp-web workspace (its devDeps
@@ -97,10 +91,7 @@ let
     pname = "omp-node_modules";
     inherit version src;
 
-    nativeBuildInputs = [
-      bun
-      python3
-    ];
+    nativeBuildInputs = [ bun python3 ];
 
     dontConfigure = true;
 
@@ -126,14 +117,14 @@ let
     outputHashMode = "recursive";
   };
 in
-stdenv.mkDerivation {
+stdenv.mkDerivation (finalAttrs: {
   pname = "omp";
   inherit version src;
 
   cargoDeps = rustPlatform.fetchCargoVendor {
     name = "omp-${version}-cargo-vendor";
     inherit src;
-    hash = cargoHash;
+    hash = "sha256-kB3UoRsL9Dv70iLrEO6nK+G3QQlWOgUdgIAx2ysK/4s=";
   };
 
   nativeBuildInputs = [
@@ -267,4 +258,4 @@ stdenv.mkDerivation {
     mainProgram = "omp";
     platforms = builtins.attrNames platformsBySystem;
   };
-}
+})
