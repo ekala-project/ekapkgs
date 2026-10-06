@@ -58,7 +58,7 @@ let
     outputHashMode = "recursive";
   };
 in
-stdenv.mkDerivation {
+stdenv.mkDerivation (finalAttrs: {
   pname = "collie";
   inherit version src;
 
@@ -138,4 +138,4 @@ stdenv.mkDerivation {
     mainProgram = "collie";
     platforms = lib.platforms.unix;
   };
-}
+})
