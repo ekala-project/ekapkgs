@@ -13,6 +13,9 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "9d1191b705d7587a5886736899001d04168392bbb6ed6345a057ade50943a492";
   };
 
+  # Race condition: libtool renames srs2.o to srs2.lo while ar tries to archive srs2.o
+  enableParallelBuilding = false;
+
   meta = {
     description = "Next generation SRS library from the original designer of SRS";
     mainProgram = "srs";
