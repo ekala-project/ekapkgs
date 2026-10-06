@@ -39,13 +39,13 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "yosys";
-  version = "0.68";
+  version = "0.69";
 
   src = fetchFromGitHub {
     owner = "YosysHQ";
     repo = "yosys";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-cf3L3Il717ReAcPTPNHZLwldDeCwuPqHYoxeQusBOOg=";
+    hash = "sha256-Vjyk6aMKwnJEE25tQ0SKWQcXfJxjpCVou+4Hf8c+IL4=";
     fetchSubmodules = true;
   };
 
