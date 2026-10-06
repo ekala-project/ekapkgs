@@ -1,9 +1,0 @@
-{
-  "version": "0.7.3",
-  "hash": "sha256-GrVrecYtZmpy3SSdVvGIbk4Tt4xwXcwqarTf4988jKo=",
-  "cargoHash": "sha256-89SzbNAKLrH63+57TTCcRDded+BlRWpmJE3fBOx+6s4=",
-  "frankensqlite": {
-    "rev": "25e8534b4c2a3df807c836454e38f802ac25ac7e",
-    "hash": "sha256-Z8SoJjnCOPlaBS11f0pPYBCSpVzaGMfbl6TNMhysNBc="
-  }
-}
