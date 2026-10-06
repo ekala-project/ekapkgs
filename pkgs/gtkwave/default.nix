@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
+    gperf
     pkg-config
     gtk3.wrapGAppsHook
   ];
@@ -30,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     bzip2
     glib
-    gperf
     gtk3
     judy
     tcl
