@@ -24,18 +24,14 @@ let
     aarch64-linux = "bun-linux-arm64";
     aarch64-darwin = "bun-darwin-arm64";
   };
-  bunTarget =
-    platformMap.${stdenv.hostPlatform.system}
-      or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
+  bunTarget = platformMap.${stdenv.hostPlatform.system}
+    or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
 
   node_modules = stdenv.mkDerivation {
     pname = "plannotator-node_modules";
     inherit version src;
 
-    nativeBuildInputs = [
-      bun
-      python3
-    ];
+    nativeBuildInputs = [ bun python3 ];
 
     dontConfigure = true;
 
@@ -70,7 +66,7 @@ let
     outputHashMode = "recursive";
   };
 in
-stdenv.mkDerivation {
+stdenv.mkDerivation (finalAttrs: {
   pname = "plannotator";
   inherit version src;
 
@@ -144,4 +140,4 @@ stdenv.mkDerivation {
     ];
     mainProgram = "plannotator";
   };
-}
+})
