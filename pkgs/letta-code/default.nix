@@ -47,7 +47,7 @@ let
     outputHashMode = "recursive";
   };
 in
-stdenv.mkDerivation {
+stdenv.mkDerivation (finalAttrs: {
   pname = "letta-code";
   inherit version src;
 
@@ -112,4 +112,4 @@ stdenv.mkDerivation {
     mainProgram = "letta";
     platforms = lib.platforms.all;
   };
-}
+})
