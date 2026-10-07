@@ -27,13 +27,13 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "apache-orc";
-  version = "2.3.0";
+  version = "2.3.1";
 
   src = fetchFromGitHub {
     owner = "apache";
     repo = "orc";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-QQdRzwmUF1Qwxg53kJv1Q6yFuHqSrLYwUxKt+6wK9Hs=";
+    hash = "sha256-5pY81SM7BALjPL0e7Iov2QbMcUDd3lNC/99U9yiDKfQ=";
   };
 
   patches = [

@@ -8,13 +8,13 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-  version = "4.10.0";
+  version = "4.12.0";
   pname = "libre";
   src = fetchFromGitHub {
     owner = "baresip";
     repo = "re";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-1EI7Tjp5pwinP65vG+59jyHRXbNOBCP3vnRyC7zHUh4=";
+    sha256 = "sha256-lZ/C2+ymPMYq0K0PiuOr/aEpHAWMOZZFBE6wNO/hGcM=";
   };
 
   buildInputs = [
@@ -26,13 +26,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     cmake
   ];
-  makeFlags = [
-    "USE_ZLIB=1"
-    "USE_OPENSSL=1"
-    "PREFIX=$(out)"
-  ]
-  ++ lib.optional (stdenv.cc.cc != null) "SYSROOT_ALT=${stdenv.cc.cc}"
-  ++ lib.optional (stdenv.cc.libc != null) "SYSROOT=${lib.getDev stdenv.cc.libc}";
+  cmakeFlags = [
+    "-DCMAKE_INSTALL_LIBDIR=lib"
+    "-DCMAKE_INSTALL_INCLUDEDIR=include"
+  ];
   enableParallelBuilding = true;
   meta = {
     description = "Library for real-time communications with async IO support and a complete SIP stack";

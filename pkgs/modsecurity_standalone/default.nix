@@ -1,72 +1,90 @@
 {
-  stdenv,
   lib,
+  stdenv,
   fetchFromGitHub,
-  pkg-config,
   autoreconfHook,
+  bison,
+  flex,
+  pkg-config,
   curl,
-  apacheHttpd,
-  pcre2,
-  apr,
-  aprutil,
+  geoip,
+  libmaxminddb,
   libxml2,
-  perl,
+  lmdb,
+  lua,
+  pcre2,
+  ssdeep,
+  yajl,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "modsecurity";
-  version = "2.9.12";
+  version = "3.0.17";
 
   src = fetchFromGitHub {
     owner = "owasp-modsecurity";
-    repo = "modsecurity";
+    repo = "ModSecurity";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-scMOiu8oI3+VcXe05gLNQ8ILmnP4iwls8ZZ9r+3ei5Y=";
+    hash = "sha256-OebDDhaOQfOf22MoQ1htHwB25O52OnJBSzZlxhnJ0Zo=";
+    fetchSubmodules = true;
   };
 
   nativeBuildInputs = [
-    pkg-config
     autoreconfHook
+    bison
+    flex
+    pkg-config
   ];
+
   buildInputs = [
     curl
-    apacheHttpd
-    pcre2
-    apr
-    aprutil
+    geoip
+    libmaxminddb
     libxml2
+    lmdb
+    lua
+    pcre2
+    ssdeep
+    yajl
   ];
 
   configureFlags = [
-    "--enable-standalone-module"
-    "--enable-static"
-    "--with-curl=${curl.dev}"
-    "--with-apxs=${apacheHttpd.dev}/bin/apxs"
-    "--with-pcre2=${lib.getDev pcre2}/bin/pcre2-config"
-    "--with-apr=${apr.dev}"
-    "--with-apu=${aprutil.dev}/bin/apu-1-config"
-    "--with-libxml=${libxml2.dev}"
-    "--with-lua=no"
+    "--enable-parser-generation"
+    "--disable-doxygen-doc"
+    "--disable-examples"
+    "--with-lmdb=${lmdb}"
+    "--with-ssdeep=${ssdeep}"
   ];
+
+  postPatch = ''
+    # https://github.com/owasp-modsecurity/ModSecurity/blob/v3.0.15/build.sh#L6-L25
+    echo "noinst_HEADERS = \\" > ./src/headers.mk
+    ls -1 ./src/ \
+        actions/*.h \
+        actions/ctl/*.h \
+        actions/data/*.h \
+        actions/disruptive/*.h \
+        actions/transformations/*.h \
+        debug_log/*.h \
+        audit_log/writer/*.h \
+        collection/backend/*.h \
+        operators/*.h \
+        parser/*.h \
+        request_body_processor/*.h \
+        utils/*.h \
+        variables/*.h \
+        engine/*.h \
+        *.h | tr "\012" " " >> ./src/headers.mk
+
+    substituteInPlace modsecurity.conf-recommended \
+      --replace-fail "SecUnicodeMapFile unicode.mapping 20127" "SecUnicodeMapFile $out/share/modsecurity/unicode.mapping 20127"
+  '';
 
   enableParallelBuilding = true;
 
-  outputs = [
-    "out"
-    "nginx"
-  ];
-  patches = [
-    # by default modsecurity's install script copies compiled output to httpd's modules folder
-    # this patch removes those lines
-    ./Makefile.am.patch
-  ];
-
-  doCheck = true;
-  nativeCheckInputs = [ perl ];
-
   postInstall = ''
-    mkdir -p $nginx
-    cp -R * $nginx
+    mkdir -p $out/share/modsecurity
+    cp ${finalAttrs.src}/{AUTHORS,CHANGES,LICENSE,README.md,modsecurity.conf-recommended,unicode.mapping} $out/share/modsecurity
   '';
 
   meta = {
@@ -74,5 +92,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.asl20;
     homepage = "https://github.com/owasp-modsecurity/ModSecurity";
     platforms = lib.platforms.linux;
+    mainProgram = "modsec-rules-check";
   };
 })

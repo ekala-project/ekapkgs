@@ -21,11 +21,11 @@
 
 stdenv.mkDerivation rec {
   pname = "virglrenderer";
-  version = "1.1.1";
+  version = "1.3.0";
 
   src = fetchurl {
     url = "https://gitlab.freedesktop.org/virgl/virglrenderer/-/archive/${version}/virglrenderer-${version}.tar.bz2";
-    hash = "sha256-D+SJqBL76z1nGBmcJ7Dzb41RvFxU2Ak6rVOwDRB94rM=";
+    hash = "sha256-CIBA0TDqoEWKl4/nhn+/sfzx/f9SvzsnoAZYgovEGJ8=";
   };
 
   separateDebugInfo = true;

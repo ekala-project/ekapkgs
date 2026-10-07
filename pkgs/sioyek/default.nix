@@ -14,7 +14,7 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "sioyek";
-  version = "2.0.0-unstable-2026-08-17";
+  version = "2.0.0";
 
   src = fetchFromGitHub {
     owner = "ahrm";

@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libfabric";
-  version = "2.6.0";
+  version = "2.7.0";
 
   src = fetchFromGitHub {
     owner = "ofiwg";
     repo = "libfabric";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-/zQnXfEveIGCpPZ3lgrOLnXSS7m8U2spVjkqsXuaL0o=";
+    sha256 = "sha256-YDqCgRW+ZJSyf6+9aZebVEA5SAQHMwxofwuYkfGhT4M=";
   };
 
   outputs = [

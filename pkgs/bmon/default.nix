@@ -12,13 +12,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "bmon";
-  version = "4.0";
+  version = "5.0";
 
   src = fetchFromGitHub {
     owner = "tgraf";
     repo = "bmon";
     rev = "v${finalAttrs.version}";
-    sha256 = "1ilba872c09mnlvylslv4hqv6c9cz36l76q74rr99jvis1dg69gf";
+    sha256 = "sha256-JBjyOKhAwrBibRZXjJE4yehO+6BbW0bic4N9TBPg7KU=";
   };
 
   patches = [

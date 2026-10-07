@@ -14,22 +14,14 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "nfft";
-  version = "3.5.3";
+  version = "3.6.0";
 
   src = fetchFromGitHub {
     owner = "NFFT";
     repo = "nfft";
     rev = finalAttrs.version;
-    hash = "sha256-HR8ME9PVC+RAv1GIgV2vK6eLU8Wk28+rSzbutThBv3w=";
+    hash = "sha256-3x2IHbtPVpaA1AGolDsu1QCygmF3bkSPkCFVBlMtrqE=";
   };
-
-  patches = [
-    (fetchpatch {
-      name = "fix-gcc15.patch";
-      url = "https://github.com/NFFT/nfft/commit/b06d01be964be7490aed797468f9722e2de1dbfa.patch";
-      hash = "sha256-Ynhsyzf8ECVw4eBq50okd0oikiIfOCqFRHivuceg0KU=";
-    })
-  ];
 
   nativeBuildInputs = [
     autoconf

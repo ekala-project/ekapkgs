@@ -5,14 +5,14 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-  version = "4.29.0";
+  version = "4.30.0";
   pname = "modsecurity-crs";
 
   src = fetchFromGitHub {
     owner = "coreruleset";
     repo = "coreruleset";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-NvBwGFgch+7tnGjcpm47n0mGy0vj5i+JWtb7d033u2s=";
+    sha256 = "sha256-fwy6LwwccZ7wrcmXZdWkkwmprfd7PhikQToO4mdEfFE=";
   };
 
   installPhase = ''

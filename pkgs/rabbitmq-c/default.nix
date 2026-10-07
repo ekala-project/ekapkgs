@@ -8,7 +8,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "rabbitmq-c";
-  version = "0.17.0";
+  version = "0.18.0";
 
   outputs = [
     "out"
@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "alanxz";
     repo = "rabbitmq-c";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-ywTNvVO1M8mwyjgJBlo7iEeCDLISTMWk7PM6AUuiIjc=";
+    hash = "sha256-eU38nCp3KOCT42BXHk2HXDv6dexWy3JtBayLgz/K/qs=";
   };
 
   nativeBuildInputs = [

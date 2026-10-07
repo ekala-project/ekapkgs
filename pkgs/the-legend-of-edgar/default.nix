@@ -2,7 +2,6 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  fetchpatch,
   buildPackages,
   sdl2-compat,
   SDL2_image,
@@ -16,29 +15,19 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "the-legend-of-edgar";
-  version = "1.37";
+  version = "1.38";
 
   src = fetchFromGitHub {
     owner = "riksweeney";
     repo = "edgar";
     rev = finalAttrs.version;
-    hash = "sha256-hhzDNnoQCwHOwknABTz4a9AQ7MkU9vayi2tZvJtK1PQ=";
+    hash = "sha256-8Q2R6DrDb8ajWeewp10NlDYPPOu7HOl4LxO6DluitWQ=";
   };
 
   patches = [
-    # Fix _FORTIFY_SOURCE startup crash:
-    #   https://github.com/riksweeney/edgar/pull/67
-    (fetchpatch {
-      url = "https://github.com/riksweeney/edgar/commit/cec80a04d765fd2f6563d1cf060ad5000f9efe0a.patch";
-      hash = "sha256-RJpIt7M3c989nXkWRTY+dIUGqqttyTTGx8s5u/iTWX4=";
-    })
-
-    (fetchpatch {
-      # https://github.com/riksweeney/edgar/pull/68
-      name = "add-cross-compilation-support.patch";
-      url = "https://github.com/riksweeney/edgar/commit/9cc071d06b97e20aee3841c2eaa8078c6ed396d7.patch";
-      hash = "sha256-+yHzLgqBI8qgD40pSCmwF68SDDnC/4QdCXEz/g7l0a4=";
-    })
+    # https://github.com/riksweeney/edgar/pull/68
+    # Rebased onto 1.38 (upstream patch targets a newer makefile layout)
+    ./add-cross-compilation-support.patch
   ];
 
   strictDeps = true;

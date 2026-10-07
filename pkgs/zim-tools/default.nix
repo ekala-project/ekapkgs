@@ -16,18 +16,14 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "zim-tools";
-  version = "3.6.0";
+  version = "3.8.0";
 
   src = fetchFromGitHub {
     owner = "openzim";
     repo = "zim-tools";
     tag = finalAttrs.version;
-    hash = "sha256-8+/3+FOq35FSYzpQdpqs5MTMtUO5SYbKLPECFi+IIKw=";
+    hash = "sha256-KW1SkV6/tiTzmg+OY4oSz7Ly7qniJT6N1UavcLKDrZE=";
   };
-
-  patches = [
-    ./fix_build_with_icu76.patch
-  ];
 
   postPatch = ''
     # Disable werror, since the use of deprecated functions in libzim causes the build to fail

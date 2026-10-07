@@ -7,16 +7,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "snip";
-  version = "0.24.1";
+  version = "0.25.2";
 
   src = fetchFromGitHub {
     owner = "edouard-claude";
     repo = "snip";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-17vAgwuOrDN81+XKa2vn60T9RyZktOoF2xfF/RE+BNw=";
+    hash = "sha256-Uyd8GcHX1HhdSdcRtYyygxkfYXBcU3RuAUqNwHMFRmE=";
   };
 
-  vendorHash = "sha256-2MxFZqjNuLzcuu+bsLyOyHIakCxh7j0FUx8LsjZRhrY=";
+  vendorHash = "sha256-gfCZn2B4o4nz/NL8QIrl76yUc4g66RDCr1RVlGsI9rk=";
 
   nativeCheckInputs = [ gitMinimal ];
 

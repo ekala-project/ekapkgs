@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "rapidjson";
-  version = "1.1.0-unstable-2025-02-05";
+  version = "1.1.0";
 
   src = fetchFromGitHub {
     owner = "Tencent";

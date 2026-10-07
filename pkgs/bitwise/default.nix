@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "bitwise";
-  version = "0.60";
+  version = "0.70";
 
   src = fetchFromGitHub {
     owner = "mellowcandle";
     repo = "bitwise";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-Ir5IwvB+oFFJmpHlmHrk470bg3gSmKAHPbfQ4df2iYM=";
+    sha256 = "sha256-UJHgW89VXMNuqxSncI7Di0GzrMShBLWGx2mDOVZkIxc=";
   };
 
   buildInputs = [

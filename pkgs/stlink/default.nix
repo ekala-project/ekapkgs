@@ -9,23 +9,14 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "stlink";
-  version = "1.8.0";
+  version = "1.9.0";
 
   src = fetchFromGitHub {
     owner = "stlink-org";
     repo = "stlink";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-hlFI2xpZ4ldMcxZbg/T5/4JuFFdO9THLcU0DQKSFqrw=";
+    sha256 = "sha256-RtblGRTRenJVC9HHKDbLtNZpzikVZvwDzXjKCQXxLTs=";
   };
-
-  patches = [
-    (fetchpatch {
-      name = "calloc-argument-order.patch";
-      url = "https://github.com/stlink-org/stlink/commit/6a6718b3342b6c5e282a4e33325b9f97908a0692.patch";
-      includes = [ "src/stlink-lib/chipid.c" ];
-      sha256 = "sha256-sAfcrDdoKy5Gl1o/PHEUr8uL9OBq0g1nfRe7Y0ijWAM=";
-    })
-  ];
 
   buildInputs = [ libusb1 ];
   nativeBuildInputs = [

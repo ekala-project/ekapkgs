@@ -25,13 +25,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "openimageio";
-  version = "3.1.16.0";
+  version = "3.2.1.1";
 
   src = fetchFromGitHub {
     owner = "AcademySoftwareFoundation";
     repo = "OpenImageIO";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-6oeJHdMToAqPJs4po6QbKCu4Xqbi5nawNXT35Eckv2Q=";
+    hash = "sha256-51N3kMVBFTtn5ntCojpqHBxgRrG29pmQ1s7X+xCszzw=";
   };
 
   outputs = [
@@ -81,6 +81,8 @@ stdenv.mkDerivation (finalAttrs: {
     # libultrahdr and libheif are not available
     "-DUSE_LIBUHDR=OFF"
     "-DUSE_HEIF=OFF"
+    # Use pybind11 backend (nanobind default requires FindPython hints we don't set)
+    "-DOIIO_PYTHON_BINDINGS_BACKEND=pybind11"
   ]
   ++ lib.optionals enablePython [
     (lib.cmakeFeature "Python3_ROOT" "${python3}")

@@ -66,7 +66,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "flatpak";
-  version = "1.18.0";
+  version = "1.18.4";
 
   outputs = [
     "out"
@@ -82,14 +82,13 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchurl {
     url = "https://github.com/flatpak/flatpak/releases/download/${finalAttrs.version}/flatpak-${finalAttrs.version}.tar.xz";
-    hash = "sha256-pYV6ZsQDndoF2SvcsrAz14jNJYlhAWfw7F8OyNT6xvI=";
+    hash = "sha256-uJmnoAxI0sYmy47DP+VWcgs3bCWAXXIiQwwP3KTGrI0=";
   };
 
   patches = [
     ./binary-path.patch
     ./fix-fonts-icons.patch
     ./unset-env-vars.patch
-    ./flatpak-spawn-env.patch
 
     (replaceVars ./fix-icon-validation.patch {
       inherit (builtins) storeDir;

@@ -8,13 +8,13 @@
 
 buildGoModule (finalAttrs: {
   pname = "go-containerregistry";
-  version = "0.21.9";
+  version = "0.22.1";
 
   src = fetchFromGitHub {
     owner = "google";
     repo = "go-containerregistry";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-D4N8ONuhoajYwb0SOtvwbrxI/st86KI4YXd9X1moKKQ=";
+    sha256 = "sha256-OxywOhruteTqkCVhTvWuxMqx7HQfPoSZM+mEXVihUl4=";
   };
   vendorHash = null;
 

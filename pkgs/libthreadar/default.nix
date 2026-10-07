@@ -6,20 +6,13 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-  version = "1.5.0";
+  version = "1.6.1";
   pname = "libthreadar";
 
   src = fetchurl {
     url = "mirror://sourceforge/libthreadar/libthreadar-${finalAttrs.version}.tar.gz";
-    sha256 = "sha256-wJAkIUGK7Ud6n2p1275vNkSx/W7LlgKWXQaDevetPko=";
+    sha256 = "sha256-RncJMgxUIVrIgp70joVtiQyqT2p4MWM9OZLgtTWfONg=";
   };
-
-  postPatch = ''
-    # this field is not present on Darwin, ensure it is zero everywhere
-    substituteInPlace src/thread_signal.cpp \
-      --replace-fail 'sigac.sa_restorer = nullptr;' "" \
-      --replace-fail 'struct sigaction sigac;' 'struct sigaction sigac = {0};'
-  '';
 
   outputs = [
     "out"

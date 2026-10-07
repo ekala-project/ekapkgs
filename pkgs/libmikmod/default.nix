@@ -8,11 +8,11 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libmikmod";
-  version = "3.3.13";
+  version = "3.3.14";
 
   src = fetchurl {
     url = "mirror://sourceforge/mikmod/libmikmod-${finalAttrs.version}.tar.gz";
-    sha256 = "sha256-n8F5n36mqVx8WILemL6F/H0gugpKb8rK4RyMazgrsgc=";
+    sha256 = "sha256-3/2CuPJUw0icMgmNqDHzPqxxNoQ9HnzLgC8SVK1bQhk=";
   };
 
   buildInputs = [ texinfo ] ++ lib.optional stdenv.hostPlatform.isLinux alsa-lib;

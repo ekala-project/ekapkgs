@@ -15,13 +15,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "bcftools";
-  version = "1.23.2";
+  version = "1.24";
 
   src = fetchFromGitHub {
     owner = "samtools";
     repo = "bcftools";
     tag = finalAttrs.version;
-    hash = "sha256-NFXNB2i54du6JpSX69SsKn01ZyLzAqqbSoyKE66EAwM=";
+    hash = "sha256-ZwlrnfCUwrBpS1CfwPtw1To94ygbK4qoGeiuhkDPm2Q=";
   };
 
   nativeBuildInputs = [
@@ -55,9 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs test/
     sed -i -e 's|/bin/bash|${bash}/bin/bash|' test/test.pl
 
-    # Fix test expectation for view.vectors.C.out: when built against system
-    # htslib, the FGS FORMAT field is dropped from the output at line 28
-    sed -i '28s/GT:FAF:FRF:FGF:FAI:FRI:FGI:FAS:FRS:FGS\t0\/1:.:.:.:.:.:.:.:.:./GT:FAF:FRF:FGF:FAI:FRI:FGI:FAS:FRS\t0\/1:.:.:.:.:.:.:.:./' test/view.vectors.C.out
   '';
 
   enableParallelBuilding = true;

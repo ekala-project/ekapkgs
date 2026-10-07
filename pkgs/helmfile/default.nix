@@ -10,16 +10,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "helmfile";
-  version = "1.7.4";
+  version = "1.8.1";
 
   src = fetchFromGitHub {
     owner = "helmfile";
     repo = "helmfile";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-/igJVn3d9rsclr87z3q6BklE9+QzZ1NDRVRZhF3OQIc=";
+    hash = "sha256-G9gOc7gIj2AoROPRppHqkeGcVUOpYx/qaEVkec4c4rk=";
   };
 
-  vendorHash = "sha256-X3y6a5YcBAHuOxYKHj8dGRt8841lZBrA91e0nFjdR7o=";
+  vendorHash = "sha256-GBTUYoXCcRD6kZI52VWE46GDlO13ZpxDEYrDd7nRR3s=";
 
   proxyVendor = true;
 

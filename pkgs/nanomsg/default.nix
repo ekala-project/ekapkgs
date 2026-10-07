@@ -6,14 +6,14 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-  version = "1.2.4";
+  version = "1.2.5";
   pname = "nanomsg";
 
   src = fetchFromGitHub {
     owner = "nanomsg";
     repo = "nanomsg";
     rev = finalAttrs.version;
-    sha256 = "sha256-Tz3JyDUBSuzWdRjnBw8X9aqiMfziMfkY75Tuj3be28g=";
+    sha256 = "sha256-GnpWBME9oN6Rqq+MDUwQhRKtNkoG/OKxXASCdvJHNvQ=";
   };
 
   nativeBuildInputs = [

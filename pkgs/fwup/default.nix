@@ -10,7 +10,6 @@
   libsodium,
   xz,
   zlib,
-  coreutils,
   dosfstools,
   mtools,
   unzip,
@@ -21,13 +20,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "fwup";
-  version = "1.16.0";
+  version = "1.17.1";
 
   src = fetchFromGitHub {
     owner = "fwup-home";
     repo = "fwup";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-FIC6zAb7y1GlexgVSP7pFq2Zmr1J/eOUxNqZ6Y/zpwE=";
+    hash = "sha256-xs2aChvYa1Dn90hhlwhd5tec9BcZMPvvQSucvlxE6gg=";
   };
 
   nativeBuildInputs = [
@@ -44,19 +43,13 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  propagatedBuildInputs = [
-    coreutils
-    unzip
-    zip
-  ]
-  ++ lib.optionals finalAttrs.finalPackage.doCheck [
-    mtools
-    dosfstools
-  ];
-
   nativeCheckInputs = [
+    dosfstools
+    mtools
+    unzip
     which
     xdelta
+    zip
   ];
 
   doCheck = !stdenv.hostPlatform.isDarwin;

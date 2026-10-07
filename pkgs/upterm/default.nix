@@ -9,13 +9,13 @@
 
 buildGoModule (finalAttrs: {
   pname = "upterm";
-  version = "0.24.0";
+  version = "0.35.0";
 
   src = fetchFromGitHub {
     owner = "owenthereal";
     repo = "upterm";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-b52Rny6mYkmfF6Umn2tzlnUhNkENHPFpCzp55OWj92w=";
+    hash = "sha256-73CnLXncbS+TyTF14QX/Zr7XVaQczNmO2POP/ybablk=";
   };
 
   ldflags = [
@@ -24,7 +24,7 @@ buildGoModule (finalAttrs: {
     "-X github.com/owenthereal/upterm/internal/version.Version=${finalAttrs.version}"
   ];
 
-  vendorHash = "sha256-UkZnLbxn0dPT43ycuevcwMw0dXnX1OPHLh5F1XMHWDI=";
+  vendorHash = "sha256-gBk8Kn5zw/ZyiryvOx1KU4rp5q5XmtCgnidqliUBBVo=";
 
   subPackages = [
     "cmd/upterm"

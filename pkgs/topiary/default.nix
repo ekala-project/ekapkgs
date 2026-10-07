@@ -7,16 +7,16 @@
 }:
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "topiary";
-  version = "0.7.3";
+  version = "0.8.0";
 
   src = fetchFromGitHub {
     owner = "tweag";
     repo = "topiary";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-3zHO+a/m4Rv+pUm0Y1dBjFfHPZCfjsyAq56EiHSGJ1Y=";
+    hash = "sha256-Acn9sHbYsDO7zJpEP7QyoCKnN+R3G6bWC1ZdSTeJdfY=";
   };
 
-  cargoHash = "sha256-oJoRuWzaP4F+bS2xdFsOWcuLGyTEcCIHLRdPjG8X2CU=";
+  cargoHash = "sha256-1WKKIVCRM0DLk2RyWObVfb+F2ixH5dxEoODoO458pXU=";
 
   nativeBuildInputs = [ installShellFiles ];
 
@@ -67,7 +67,8 @@ rustPlatform.buildRustPackage (finalAttrs: {
   env.TOPIARY_LANGUAGE_DIR = "${placeholder "out"}/share/queries";
 
   postInstall = ''
-    install -Dm444 topiary-queries/queries/* -t $out/share/queries
+    mkdir -p $out/share/queries
+    cp -r topiary-queries/queries/* $out/share/queries/
   ''
   + lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd topiary \

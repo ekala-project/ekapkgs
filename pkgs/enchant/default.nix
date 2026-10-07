@@ -11,7 +11,7 @@
 
 stdenv.mkDerivation rec {
   pname = "enchant";
-  version = "2.8.19";
+  version = "2.8.21";
 
   outputs = [
     "out"
@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "https://github.com/rrthomas/${pname}/releases/download/v${version}/${pname}-${version}.tar.gz";
-    hash = "sha256-yNcJkdVE7jknS5a9AdKFigCf5zL/Q/Kq9gX9YezQb2A=";
+    hash = "sha256-3Sp2JpfEYxSKj1mGcIml6/LdFEnYafk3ZLdsErz4rMA=";
   };
 
   strictDeps = true;

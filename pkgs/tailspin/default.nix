@@ -2,26 +2,20 @@
   lib,
   rustPlatform,
   fetchFromGitHub,
-  stdenv,
 }:
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "tailspin";
-  version = "5.5.0";
+  version = "7.0.0";
 
   src = fetchFromGitHub {
     owner = "bensadeh";
     repo = "tailspin";
     tag = finalAttrs.version;
-    hash = "sha256-coatx8Ud6iLnXvr+/X9hUEe3+0j9jnP5N3+aHQ+eWV8=";
+    hash = "sha256-RI604v8ImQSgvNUGsnCLe6FuzEMJwE0tNVuFLmJLwvM=";
   };
 
-  cargoHash = "sha256-7N/vkhytkDF2ef0T6RJv8YzCpjzi+hjg061Uz9dyEM0=";
-
-  postPatch = ''
-    substituteInPlace tests/utils.rs --replace-fail \
-      'target/debug' "target/${stdenv.hostPlatform.rust.rustcTargetSpec}/$cargoCheckType"
-  '';
+  cargoHash = "sha256-kcd6rBoonoCKuybVIVtZqt+njHFhVDTjTyF2UURuOSI=";
 
   versionCheckProgram = "${placeholder "out"}/bin/tspin";
   doInstallCheck = true;

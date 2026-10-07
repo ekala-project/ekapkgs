@@ -21,15 +21,14 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-Z1x6pA4oRDtrf9tRAnpJ0e+mmh6nSCIpQrtQGSyxFak=";
   };
 
-  buildInputs = [ uthash ];
+  buildInputs = [ uthash ] ++ lib.optionals (finalAttrs.finalPackage.doCheck) [ check ];
 
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook
     ninja
     pkg-config
-  ]
-  ++ lib.optionals (finalAttrs.finalPackage.doCheck) [ check ];
+  ];
 
   mesonBuildType = "release";
 

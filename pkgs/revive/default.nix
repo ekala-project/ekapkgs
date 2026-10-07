@@ -6,20 +6,20 @@
 
 buildGoModule (finalAttrs: {
   pname = "revive";
-  version = "1.16.0";
+  version = "1.17.0";
 
   src = fetchFromGitHub {
     owner = "mgechev";
     repo = "revive";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-7uYNDIhl7iyI2cko+KqGBgL24b8mjNnjt2tZP77nNmg=";
+    hash = "sha256-RbWpGQ5rGkp2yBZ42if3hYyelWEZg+hlelw3WQ1VFRg=";
 
     postFetch = ''
       rm -r $out/testdata/package_directory_mismatch/api
     '';
   };
 
-  vendorHash = "sha256-2JYqTgJy97qUgwLxhtluapWArH28wd+XnJsl9iFtddk=";
+  vendorHash = "sha256-467AG0QMO565IBaUyZnqpUbLW6/J87x2b7zfbWqHecM=";
 
   subPackages = [ "." ];
 

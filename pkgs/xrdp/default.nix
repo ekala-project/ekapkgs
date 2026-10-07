@@ -75,7 +75,7 @@ let
 
   xrdp = stdenv.mkDerivation rec {
     pname = "xrdp";
-    version = "0.10.6";
+    version = "0.10.6.1";
 
     src = applyPatches {
       inherit version;
@@ -86,7 +86,7 @@ let
         repo = "xrdp";
         rev = "v${version}";
         fetchSubmodules = true;
-        hash = "sha256-BoIpWafUWznRHN8BaZmld8vVbZtywaGiooGPnDtDCjM=";
+        hash = "sha256-yvPgIgM2NxAp9unlm+XVMGqpbHKsTKn33k6RvscdymU=";
       };
     };
 
@@ -148,7 +148,7 @@ let
 
     postInstall = ''
       # remove generated keys (as non-deterministic)
-      rm $out/etc/xrdp/{rsakeys.ini,key.pem,cert.pem}
+      rm -f $out/etc/xrdp/{rsakeys.ini,key.pem,cert.pem}
 
       cp $src/keygen/openssl.conf $out/share/xrdp/openssl.conf
 

@@ -11,14 +11,14 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "uutils-coreutils";
-  version = "0.10.0";
+  version = "0.12.0";
   __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "uutils";
     repo = "coreutils";
     tag = finalAttrs.version;
-    hash = "sha256-bqMrYVFa21Tu3t2Y5na9gFYr6AkklSnszbX8vKxI4gg=";
+    hash = "sha256-/Zi7/vh8hwniMxa+keYjW7KBeq3Xg2rqDlqyN2GOZN4=";
   };
 
   postPatch = ''
@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit (finalAttrs) pname src version;
-    hash = "sha256-7ROe9xrFcaXWYxoe9lfAfZxDxPcrETU8Mcj2HsdoqpA=";
+    hash = "sha256-aLnQOXiQD9IL6ZiBi/ENF0aHud0kCyHZrnetkV+ZTFE=";
   };
 
   nativeBuildInputs = [

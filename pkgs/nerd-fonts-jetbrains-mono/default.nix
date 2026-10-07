@@ -6,11 +6,11 @@
 
 stdenvNoCC.mkDerivation rec {
   pname = "nerd-fonts-jetbrains-mono";
-  version = "3.5.0";
+  version = "3.5.1";
 
   src = fetchurl {
     url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v${version}/JetBrainsMono.tar.xz";
-    hash = "sha256-AieyIDYKb4Gbnq2SND6BErNHMwVHglYa9Qz7oeivq2M=";
+    hash = "sha256-BNXo+QNpP53RPhb4Z+mUg05oHrPHLA0zencNzaCQEM8=";
   };
 
   sourceRoot = ".";

@@ -64,7 +64,7 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "fwupd";
-  version = "2.1.7";
+  version = "2.1.8";
 
   outputs = [
     "out"
@@ -79,7 +79,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "fwupd";
     repo = "fwupd";
     tag = finalAttrs.version;
-    hash = "sha256-TkF6Bdg4iFnjlLnRysU2+jXlfpg/3yN/hugntaI2xYE=";
+    hash = "sha256-96YywlleFv3JRNQ/qy14qJC2ryQZDTHT3kNchtyB0cE=";
   };
 
   patches = [
@@ -118,6 +118,7 @@ stdenv.mkDerivation (finalAttrs: {
     libjcat.bin
     libxml2
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     shared-mime-info

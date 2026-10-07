@@ -7,19 +7,19 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "du-dust";
-  version = "1.2.5";
+  version = "1.2.6";
 
   src = fetchFromGitHub {
     owner = "bootandy";
     repo = "dust";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-tK7cAckvRmWcaDTd92+XccswKHLAr4r8IzYYzcZYu/g=";
+    hash = "sha256-BHlasERvwS/mr6EUfgItvrL/oozFta4/XwwI3hYyMGo=";
     postFetch = ''
       rm -r $out/tests/test_dir_unicode/
     '';
   };
 
-  cargoHash = "sha256-KQPCRQLTmltoJTgbA3ri5U/w+JJb/J+iclK7Mcb4hfU=";
+  cargoHash = "sha256-oIR10K/vn9sexW+m9vOuGJDqXRk2gjB0WoPj71cT+eg=";
 
   nativeBuildInputs = [ installShellFiles ];
 

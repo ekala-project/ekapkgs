@@ -4,6 +4,7 @@
   meson,
   ninja,
   curl,
+  mimalloc,
   pkg-config,
   stdenv,
   nixVersions,
@@ -15,17 +16,18 @@ in
 
 stdenv.mkDerivation rec {
   pname = "nix-eval-jobs";
-  version = "2.35.2";
+  version = "2.35.4";
 
   src = fetchFromGitHub {
     owner = "NixOS";
     repo = "nix-eval-jobs";
     tag = "v${version}";
-    hash = "sha256-qHxk1wVKqz/UMtVC14ugkhySbqYcRQbwobyeO/fhAf0=";
+    hash = "sha256-t1FbcjvTWQ1WO3hJNKN+viNXuz4BX9Pte5K4F+IJLDk=";
   };
 
   buildInputs = [
     curl
+    mimalloc
     nixComponents.nix-store
     nixComponents.nix-fetchers
     nixComponents.nix-expr

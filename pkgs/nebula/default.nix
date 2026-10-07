@@ -7,16 +7,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "nebula";
-  version = "1.11.1";
+  version = "1.11.2";
 
   src = fetchFromGitHub {
     owner = "slackhq";
     repo = "nebula";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-3YxOq9kxNShkIbFZ6P9kCkNl8nraICMlp2jSCBnlSP4=";
+    hash = "sha256-jzXfKPefw+V2RQBUuxXWoKj1CsVrB4GHdzZJD0zZ0g8=";
   };
 
-  vendorHash = "sha256-I0pV4nosm1j7FqGmgkQWe24umRzBnMb2gvEiZr0uTFo=";
+  vendorHash = "sha256-5+DTf3muD82UKZ+toBh1Ypz/5pvIVZIaqA5j3DBhppU=";
 
   subPackages = [
     "cmd/nebula"

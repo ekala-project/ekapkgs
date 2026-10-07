@@ -2,33 +2,33 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  fetchpatch,
   cmake,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "zlog";
-  version = "1.2.18";
+  version = "1.2.19";
 
   src = fetchFromGitHub {
     owner = "HardySimpson";
     repo = "zlog";
     tag = finalAttrs.version;
-    hash = "sha256-79yyOGKgqUR1KI2+ngZd7jfVcz4Dw1IxaYfBJyjsxYc=";
+    hash = "sha256-orPxSyqQBTuEKKso5BBlNChqJRSzqs85EgAsoD2sxJc=";
   };
-
-  patches = [
-    # upgrade cmake minimum version
-    (fetchpatch {
-      url = "https://github.com/HardySimpson/zlog/commit/3715879775f725260aeda14f94887bbc7a007e29.patch?full_index=1";
-      hash = "sha256-RCI+jZauSO0O0ETjs0nUd4CC2wLLVsjH8iuOmIgWhck=";
-    })
-  ];
 
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
   ];
+
+  # Fix broken .pc file paths: upstream uses ${exec_prefix}/${LIBDIR} but
+  # Nix sets LIBDIR to an absolute path, producing double-slash paths.
+  # See https://github.com/NixOS/nixpkgs/issues/144170
+  postInstall = ''
+    substituteInPlace $out/lib/pkgconfig/zlog.pc \
+      --replace-fail "\''${exec_prefix}/$out/lib" "$out/lib" \
+      --replace-fail "\''${prefix}/$out/include" "$out/include"
+  '';
 
   meta = {
     description = "Reliable, high-performance, thread safe, flexible, clear-model, pure C logging library";

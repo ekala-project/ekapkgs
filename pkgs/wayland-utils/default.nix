@@ -13,11 +13,11 @@
 
 stdenv.mkDerivation rec {
   pname = "wayland-utils";
-  version = "1.2.0";
+  version = "1.3.0";
 
   src = fetchurl {
     url = "https://gitlab.freedesktop.org/wayland/wayland-utils/-/releases/${version}/downloads/wayland-utils-${version}.tar.xz";
-    sha256 = "sha256-2SeMIlVFhogYAlQHUbzEJWkmK/gM2aybD9Ev9L0JqeQ=";
+    sha256 = "sha256-o50OZWF8auGG12jCI/VwYKOkNfb58C0DB0+UUxO/zw0=";
   };
 
   strictDeps = true;

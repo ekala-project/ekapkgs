@@ -7,6 +7,7 @@
 
   # dependencies
   glib,
+  libxi,
   libxfixes,
   libxinerama,
   gperf,
@@ -86,13 +87,13 @@ assert extrasSupport -> python3 != null;
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "conky";
-  version = "1.22.3";
+  version = "1.25.2";
 
   src = fetchFromGitHub {
     owner = "brndnmtthws";
     repo = "conky";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-WZjYs68/u7XUUriLPW3VMJIFP/HsnraHT6w84usQMYM=";
+    hash = "sha256-XlHzcl1W4MJDjy2c+LsSwqOgV9r5QYEABEH7LApO5Bk=";
   };
 
   # pkg-config doesn't detect wayland-scanner in cross-compilation for some reason
@@ -126,6 +127,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional ncursesSupport ncurses
   ++ lib.optionals x11Support [
     freetype
+    libxi
     libxfixes
     libice
     libx11

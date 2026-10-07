@@ -18,13 +18,13 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "rebuilderd";
-  version = "0.27.0";
+  version = "0.28.0";
 
   src = fetchFromGitHub {
     owner = "kpcyrd";
     repo = "rebuilderd";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-f+WfmkV0P4VfaOXxX3t5t9g/uJYCh2A587HEq9OK5QU=";
+    hash = "sha256-ALYL407mWi8DCY+rLcURuPE1imPmcXfEFCn9ryp35Fo=";
   };
 
   postPatch = ''
@@ -38,7 +38,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
       --replace-fail '/bin/echo' 'echo'
   '';
 
-  cargoHash = "sha256-se5u7+SF3fW5WqdUA3qmztUw5oPa0YXbgOp9GIVOQu0=";
+  cargoHash = "sha256-2z7EfGwdSBaW8qhcPXrhknAkRRf8pH6D7kVRY4ZV1bg=";
 
   nativeBuildInputs = [
     pkg-config
@@ -60,6 +60,8 @@ rustPlatform.buildRustPackage (finalAttrs: {
       emulator = stdenv.hostPlatform.emulator buildPackages;
     in
     ''
+      export SSL_CERT_FILE=${cacert.out}/etc/ssl/certs/ca-bundle.crt
+
       mkdir -p $out/etc
 
       # install config files

@@ -14,7 +14,7 @@
 
 rustPlatform.buildRustPackage {
   pname = "nushell";
-  version = "0.110.0";
+  version = "0.116.1";
 
   src = fetchFromGitHub {
     owner = "nushell";

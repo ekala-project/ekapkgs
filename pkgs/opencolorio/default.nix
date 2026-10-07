@@ -23,13 +23,13 @@
 
 stdenv.mkDerivation rec {
   pname = "opencolorio";
-  version = "2.5.2";
+  version = "2.6.0";
 
   src = fetchFromGitHub {
     owner = "AcademySoftwareFoundation";
     repo = "OpenColorIO";
     rev = "v${version}";
-    hash = "sha256-b4tdQ9VH9M7hAD5Uuxu4QKwwpaVwroj/Bvg+Zsy0M1M=";
+    hash = "sha256-+EeQbu8739inUW6Az5TfDxajDzUZ1lmh7rgpBSHtp+U=";
   };
 
   postPatch = lib.optionalString stdenv.hostPlatform.isDarwin ''

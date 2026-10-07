@@ -6,13 +6,13 @@
 
 buildGoModule rec {
   pname = "consul";
-  version = "1.22.7";
+  version = "2.0.4";
 
   src = fetchFromGitHub {
     owner = "hashicorp";
     repo = "consul";
     tag = "v${version}";
-    hash = "sha256-lcb2Dbr5rpNbtstEk7kQxEYHdN3/FQEHFH+NIa6czDU=";
+    hash = "sha256-vjGlxmruHuIfBjmw/KHOm6xoKMAsZ+fVpfx+93nFJc8=";
   };
 
   subPackages = [
@@ -20,7 +20,7 @@ buildGoModule rec {
     "connect/certgen"
   ];
 
-  vendorHash = "sha256-tFa8UKeaAQR4q+WpRl/u5P+TpjdBh9Gf6bVQcwzP5QQ=";
+  vendorHash = "sha256-rUYjQqEoZ4RzhJIGYot7LXbwLFmfWEie8F7F6Oczh4Q=";
 
   doCheck = false;
 

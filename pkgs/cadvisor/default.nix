@@ -6,18 +6,18 @@
 
 buildGoModule (finalAttrs: {
   pname = "cadvisor";
-  version = "0.60.5";
+  version = "0.60.6";
 
   src = fetchFromGitHub {
     owner = "google";
     repo = "cadvisor";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-j/QImeIRafeRmtZMZAtyaee81uJk8t/Ij3MEUpQMuwo=";
+    hash = "sha256-WVa0KeMSeZ4syAIQv2Xz0mhEBiPZEpPGdUiKwx+873E=";
   };
 
   modRoot = "./cmd";
 
-  vendorHash = "sha256-lkxftA6LOzI73xHza3t0/SINfZM3UmtTiJu2gVe0/F0=";
+  vendorHash = "sha256-P4hBs5kUovCdlbo8oGlG2pNLcUNhrdD/ig/RkH71llw=";
 
   ldflags = [
     "-s"

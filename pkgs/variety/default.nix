@@ -6,7 +6,6 @@
   gobject-introspection,
   gtk3,
   hicolor-icon-theme,
-  intltool,
   libnotify,
   librsvg,
   runtimeShell,
@@ -23,18 +22,17 @@
 
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "variety";
-  version = "0.9.0-b1";
+  version = "0.9.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "varietywalls";
     repo = "variety";
     tag = finalAttrs.version;
-    hash = "sha256-uDQZfWY0RuTsdD/IxpjzSTMMtNq632VAwAjB+CeUIbw=";
+    hash = "sha256-JeW4+qeqOiXxz3uAZEmRH4EvhJ7tSsotgEVrmZ5grUg=";
   };
 
   nativeBuildInputs = [
-    intltool
     gtk3.wrapGAppsHook
     gobject-introspection
   ];
@@ -85,14 +83,14 @@ python3Packages.buildPythonApplication (finalAttrs: {
       --replace-fail '[script,' '["${runtimeShell}", script,' \
       --replace-fail 'check_output(script)' 'check_output(["${runtimeShell}", script])' \
       --replace-fail 'os.stat(path).st_mode | stat.S_IEXEC' 'os.stat(path).st_mode | stat.S_IEXEC | stat.S_IWUSR'
-    substituteInPlace data/variety-autostart.desktop.template \
+    substituteInPlace variety/data/variety-autostart.desktop.template \
       --replace-fail "/bin/bash" "${lib.getExe bash}" \
       --replace-fail "{VARIETY_PATH}" "variety"
   '';
 
   postInstall = ''
     mkdir -p $out/share/applications
-    intltool-merge --desktop-style po variety.desktop.in $out/share/applications/variety.desktop
+    install -Dm644 variety.desktop $out/share/applications/variety.desktop
 
     mkdir -p $out/share/icons/hicolor/scalable/apps
     cp variety/data/icons/scalable/apps/variety.svg $out/share/icons/hicolor/scalable/apps/variety.svg

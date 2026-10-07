@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation rec {
   pname = "tbb";
-  version = "2021.11.0";
+  version = "2023.1.0";
 
   outputs = [
     "out"
@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
     owner = "oneapi-src";
     repo = "oneTBB";
     rev = "v${version}";
-    hash = "sha256-zGZHMtAUVzBKFbCshpepm3ce3tW6wQ+F30kYYXAQ/TE=";
+    hash = "sha256-7C6h2wcQW/t3J6/PX+aoRFHeHpy0s0km9ZLvxvOBdpY=";
   };
 
   nativeBuildInputs = [
@@ -35,31 +35,15 @@ stdenv.mkDerivation rec {
       url = "https://patch-diff.githubusercontent.com/raw/oneapi-src/oneTBB/pull/899.patch";
       hash = "sha256-kU6RRX+sde0NrQMKlNtW3jXav6J4QiVIUmD50asmBPU=";
     })
-    (fetchpatch {
-      name = "fix-tbb-mingw-compile.patch";
-      url = "https://patch-diff.githubusercontent.com/raw/oneapi-src/oneTBB/pull/1361.patch";
-      hash = "sha256-jVa4HQetZv0vImdv549MyTy6/8t9dy8m6YAmjPGNQ18=";
-    })
-    (fetchpatch {
-      name = "fix-tbb-mingw-link.patch";
-      url = "https://patch-diff.githubusercontent.com/raw/oneapi-src/oneTBB/pull/1193.patch";
-      hash = "sha256-ZQbwUmuIZoGVBof8QNR3V8vU385e2X7EvU3+Fbj4+M8=";
-    })
-    (fetchpatch {
-      name = "fix-tbb-freebsd-and-windows-tests.patch";
-      url = "https://patch-diff.githubusercontent.com/raw/uxlfoundation/oneTBB/pull/1696.patch";
-      hash = "sha256-yjX2FkOK8bz29a/XSA7qXgQw9lxzx8VIgEBREW32NN4=";
-    })
-    (fetchpatch {
-      name = "fix-cmake-threads-threads-target-for-static.patch";
-      url = "https://patch-diff.githubusercontent.com/raw/uxlfoundation/oneTBB/pull/1248.patch";
-      hash = "sha256-3WKzxU93vxuy7NgW+ap+ocZz5Q5utZ/pK7+FQExzLLA=";
-    })
   ];
 
   patchFlags = [
     "-p1"
     "--ignore-whitespace"
+  ];
+
+  cmakeFlags = [
+    "-DTBB_TEST=OFF"
   ];
 
   # Fix build with modern gcc

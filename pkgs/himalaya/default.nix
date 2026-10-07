@@ -11,7 +11,7 @@
 }:
 
 let
-  version = "2.0.0";
+  version = "2.2.1";
   withOpenssl = stdenv.hostPlatform.isLinux && builtins.elem "native-tls" buildFeatures;
 in
 rustPlatform.buildRustPackage {
@@ -27,10 +27,10 @@ rustPlatform.buildRustPackage {
     owner = "pimalaya";
     repo = "himalaya";
     rev = "v${version}";
-    hash = "sha256-rOCMjJV0lFSIlvstkSMqGwXKDZsBkWtTYhvXpA73ucA=";
+    hash = "sha256-fYspChAGb0PLdsgP5GViAwp4NdmDXDyait0mpqIkGfQ=";
   };
 
-  cargoHash = "sha256-ppZYlGWNS5lXQZNt7RcwJIvU5jp07cXhEpmFJ9UtxRE=";
+  cargoHash = "sha256-KDsvF8wHMIEw+rjBJpUTgX6QIhcCMVjLWcPWklpxG3Q=";
 
   env.OPENSSL_NO_VENDOR = 1;
 
@@ -40,11 +40,6 @@ rustPlatform.buildRustPackage {
   ];
 
   buildInputs = lib.optional withOpenssl openssl;
-
-  postInstall = ''
-    mkdir -p $out/share/{applications,completions,man,schemas}
-    cp assets/himalaya.desktop "$out"/share/applications/
-  '';
 
   meta = {
     description = "CLI to manage emails";

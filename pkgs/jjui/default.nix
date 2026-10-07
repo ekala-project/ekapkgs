@@ -6,7 +6,7 @@
 }:
 buildGoModule (finalAttrs: {
   pname = "jjui";
-  version = "0.10.9";
+  version = "0.10.11";
   __structuredAttrs = true;
   strictDeps = true;
 
@@ -14,10 +14,12 @@ buildGoModule (finalAttrs: {
     owner = "idursun";
     repo = "jjui";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-D/ZBH9bsiWO26+xxixD8RKgnoA3x74YdYAIoRznsBTQ=";
+    hash = "sha256-dHw1imeAenwa1/+bgcpS9LUs59UlJDS5LAujoIabVH0=";
   };
 
-  vendorHash = "sha256-BldmFVYpRPdnyeswPKGspH4oZ2mjvFS5VbTu3DN5bJg=";
+  vendorHash = "sha256-gHfE924uFXtSyRbt2uxK+1/lU04aC1wCgoHWJ3gE7xo=";
+
+  excludedPackages = [ "e2e" ];
 
   ldflags = [ "-X main.Version=${finalAttrs.version}" ];
 

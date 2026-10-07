@@ -9,16 +9,16 @@
 
 buildGoModule {
   pname = "terraform";
-  version = "1.15.9";
+  version = "1.16.5";
 
   src = fetchFromGitHub {
     owner = "hashicorp";
     repo = "terraform";
-    rev = "v1.15.9";
-    hash = "sha256-3awEA6qML/WM9OFzdlp1eFUTxbcIFP7ZnFU4AQN0PQ8=";
+    rev = "v1.16.5";
+    hash = "sha256-lGgwneshh+edUl2taJWTAIkst84FTn07Df9tRKNQi/s=";
   };
 
-  vendorHash = "sha256-V7UHC9r0HzrjCxBiiczUUP4+jiJXmw82UCmY7lJoExs=";
+  vendorHash = "sha256-1NR5xhfZrHvG8VUwAJMgKCRvfs2AA8y5KPB/IYQiQB0=";
 
   # Set CGO_ENABLED based on platform:
   # - Linux: CGO_ENABLED=0 for static linking (avoids LTO plugin issues)

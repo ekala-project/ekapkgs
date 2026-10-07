@@ -15,11 +15,11 @@
 
 stdenv.mkDerivation rec {
   pname = "gnuplot";
-  version = "6.0.2";
+  version = "6.0.5";
 
   src = fetchurl {
     url = "mirror://sourceforge/gnuplot/${pname}-${version}.tar.gz";
-    sha256 = "sha256-9oo7C7t7u7Q3ZJZ0EG2UUiwAvy8oXM4MGcMYCx7n5zg=";
+    sha256 = "sha256-cyN/N/AzBtaL+uEzqaUNXpNBOE4ZjVqzfuypq1NN7tg=";
   };
 
   nativeBuildInputs = [

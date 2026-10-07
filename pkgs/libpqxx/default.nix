@@ -2,20 +2,20 @@
   lib,
   stdenv,
   fetchFromGitHub,
+  cmake,
   libpq,
   python3,
-  autoreconfHook,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libpqxx";
-  version = "7.10.7";
+  version = "8.0.2";
 
   src = fetchFromGitHub {
     owner = "jtv";
     repo = "libpqxx";
     rev = finalAttrs.version;
-    hash = "sha256-A33Z6xSIReYHHS3KerBSDTuo59tixduxXVEMfa/2I7A=";
+    hash = "sha256-f5mGtag+AfGCXDio/tE2TWhWx5VfVUrSUjX/Jwc5xsc=";
   };
 
   outputs = [
@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [
-    autoreconfHook
+    cmake
     python3
   ];
 
@@ -32,23 +32,12 @@ stdenv.mkDerivation (finalAttrs: {
     libpq
   ];
 
-  postPatch = ''
-    # Disable linting step for tests, it tries to install packages with pip.
-    substituteInPlace Makefile.am \
-      --replace-fail "TESTS = tools/lint" ""
-
-    patchShebangs ./tools/splitconfig.py
-    patchShebangs tools/*.py
-  '';
-
-  configureFlags = [
-    "--disable-documentation"
-    "--enable-shared"
+  cmakeFlags = [
+    "-DBUILD_DOC=OFF"
+    "-DBUILD_TEST=OFF"
   ];
 
   doCheck = false;
-
-  enableParallelBuilding = true;
 
   strictDeps = true;
 

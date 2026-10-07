@@ -24,6 +24,7 @@
   libsixel,
   libraw,
   libdrm,
+  ffmpeg,
   luajit,
   openexr,
   openjpeg,
@@ -32,13 +33,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "swayimg";
-  version = "5.5";
+  version = "5.6";
 
   src = fetchFromGitHub {
     owner = "artemsen";
     repo = "swayimg";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-PaxVcuEafLdUETSG78lGSaDukPv/2m1TUbfvpBZTT40=";
+    hash = "sha256-R+tdrKnQXLMu+nrcZRiH9SoiMYoV2LTFHS+jYXLJb7g=";
   };
 
   strictDeps = true;
@@ -79,6 +80,7 @@ stdenv.mkDerivation (finalAttrs: {
     libsixel
     libraw
     libdrm
+    ffmpeg
     luajit
     openexr
     openjpeg
