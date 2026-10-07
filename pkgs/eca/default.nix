@@ -25,8 +25,9 @@ let
     aarch64-darwin = "eca-native-macos-aarch64.zip";
   };
 
-  file = urlMap.${stdenv.hostPlatform.system}
-    or (throw "Unsupported system for eca: ${stdenv.hostPlatform.system}");
+  file =
+    urlMap.${stdenv.hostPlatform.system}
+      or (throw "Unsupported system for eca: ${stdenv.hostPlatform.system}");
 in
 stdenv.mkDerivation {
   pname = "eca";
@@ -37,8 +38,7 @@ stdenv.mkDerivation {
     hash = hashes.${stdenv.hostPlatform.system};
   };
 
-  nativeBuildInputs = [ unzip ]
-  ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
+  nativeBuildInputs = [ unzip ] ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ zlib ];
 

@@ -14,8 +14,9 @@ let
     aarch64-linux = "aarch64-unknown-linux-gnu";
     aarch64-darwin = "aarch64-apple-darwin";
   };
-  platform = platformMap.${stdenv.hostPlatform.system}
-    or (throw "Unsupported system for tui-test: ${stdenv.hostPlatform.system}");
+  platform =
+    platformMap.${stdenv.hostPlatform.system}
+      or (throw "Unsupported system for tui-test: ${stdenv.hostPlatform.system}");
 
   hashes = {
     x86_64-linux = "sha256-R4hTnPMT/m0wsyHeW756yLWDDISyqm9oFTNWhtoZ3IM=";

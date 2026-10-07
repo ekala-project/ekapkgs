@@ -44,24 +44,26 @@ let
     dontUnpack = true;
     installPhase = ''
       mkdir -p $out/bin
-      for t in ${lib.makeBinPath [
-        gitMinimal
-        ripgrep
-        fd
-        coreutils
-        grep
-        sed
-        gawk
-        findutils
-        which
-        tree
-        curl
-        wget
-        jq
-        less
-        zsh
-        nix
-      ]}; do
+      for t in ${
+        lib.makeBinPath [
+          gitMinimal
+          ripgrep
+          fd
+          coreutils
+          grep
+          sed
+          gawk
+          findutils
+          which
+          tree
+          curl
+          wget
+          jq
+          less
+          zsh
+          nix
+        ]
+      }; do
         for f in "$t"/*; do
           [ -e "$f" ] && ln -sf "$f" "$out/bin/$(basename "$f")"
         done

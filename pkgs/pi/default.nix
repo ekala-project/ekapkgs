@@ -3,6 +3,7 @@
   stdenv,
   fetchurl,
   fetchFromGitHub,
+  fetchNpmDeps,
   importNpmLock,
   nodejs,
   makeWrapper,
@@ -23,12 +24,12 @@ let
     hash = "sha256-twDmQRr7vsrYzhS8o3TrlqdBzRFCbOOn/4hbCXD/u3Q=";
   };
 
-  packageJson = lib.importJSON (src + "/packages/coding-agent/package.json");
+  packageJson = lib.importJSON ./coding-agent-package.json;
 
   # Lockfile root used by the pi.dev installer. It pins the coding agent's
   # runtime dependency tree and is kept in sync with package-lock.json by
   # `npm run check`.
-  installLock = src + "/packages/coding-agent/install-lock";
+  installLock = ./install-lock;
 
   # The typed catalog is the representation whose bytes the revision hashes.
   modelCatalogRevision = "sha256-c5d5070c7592ca8e27743e892a7eec1d6c883be8034f888735238cdfdb3ab70f";
@@ -38,21 +39,26 @@ let
     sha256 = lib.removePrefix "sha256-" modelCatalogRevision;
   };
 
+  workspaceNpmDeps = fetchNpmDeps {
+    inherit src;
+    hash = "sha256-1H7z6y8czHF3Dewqqy5DA/RNeo2//J1eBYZqryX0MbU=";
+  };
+
   workspacePackages = stdenv.mkDerivation {
     pname = "pi-workspace-packages";
     inherit (packageJson) version;
     src = src;
 
-    npmDeps = importNpmLock { npmRoot = src; };
-    npmRebuildFlags = [ "--ignore-scripts" ];
-
-    nativeBuildInputs = [
-      nodejs
-      importNpmLock.npmConfigHook
-    ];
+    nativeBuildInputs = [ nodejs ];
 
     buildPhase = ''
       runHook preBuild
+      export HOME=$TMPDIR
+      export npm_config_cache=$TMPDIR/.npm
+      cp -r ${workspaceNpmDeps} $npm_config_cache
+      chmod -R +w $npm_config_cache
+      npm ci --offline --ignore-scripts --cache=$npm_config_cache
+      patchShebangs node_modules
       node packages/ai/scripts/hydrate-model-catalog.ts ${modelCatalog}
       npm run build:offline
       runHook postBuild
@@ -115,7 +121,10 @@ stdenv.mkDerivation {
   ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
-  buildInputs = [ nodejs ] ++ lib.optionals stdenv.hostPlatform.isLinux [
+  buildInputs = [
+    nodejs
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     stdenv.cc.cc.lib
     libxcb
   ];

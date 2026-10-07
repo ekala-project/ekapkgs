@@ -19,8 +19,9 @@ let
     aarch64-linux = "aarch64-unknown-linux-gnu";
     aarch64-darwin = "aarch64-apple-darwin";
   };
-  platform = platformMap.${stdenv.hostPlatform.system}
-    or (throw "Unsupported system for auv: ${stdenv.hostPlatform.system}");
+  platform =
+    platformMap.${stdenv.hostPlatform.system}
+      or (throw "Unsupported system for auv: ${stdenv.hostPlatform.system}");
 
   hashes = {
     x86_64-linux = "sha256-5+VZFQt6CLyDuL42PWz8mGuV/8aqYLX881A+0IogGOM=";

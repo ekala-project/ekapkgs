@@ -1,6 +1,7 @@
 {
   lib,
   fetchzip,
+  importNpmLock,
   nodejs,
   runCommand,
 }:
@@ -23,6 +24,7 @@ nodejs.buildNpmApplication {
   pname = "copilot-language-server";
   npmPackName = "@github/copilot-language-server";
   inherit version src;
+  npmDeps = importNpmLock { npmRoot = ./.; };
 
   # dist/ is prebuilt.
   dontNpmBuild = true;

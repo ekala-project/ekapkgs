@@ -2,6 +2,7 @@
   lib,
   stdenv,
   fetchurl,
+  importNpmLock,
   gitMinimal,
   jq,
   nodejs,
@@ -29,6 +30,7 @@ in
 nodejs.buildNpmApplication {
   pname = "bb-app";
   inherit version src;
+  npmDeps = importNpmLock { npmRoot = ./.; };
 
   # The published package already contains the application, server, host
   # daemon, and web UI bundles.

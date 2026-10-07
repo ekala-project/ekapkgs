@@ -37,7 +37,11 @@ stdenv.mkDerivation {
     hash = hashes.${system};
   };
 
-  nativeBuildInputs = [ unzip makeWrapper ] ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
+  nativeBuildInputs = [
+    unzip
+    makeWrapper
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
   # The bundled JRE contains modules for AWT/sound/etc that the CLI doesn't need.
   autoPatchelfIgnoreMissingDeps = [
@@ -68,29 +72,28 @@ stdenv.mkDerivation {
   # Don't strip: the bundled JRE's jimage (lib/modules) gets corrupted.
   dontStrip = true;
 
-  installPhase =
-    ''
-      runHook preInstall
-      mkdir -p $out/bin
-    ''
-    + (
-      if stdenv.hostPlatform.isDarwin then
-        ''
-          mkdir -p $out/Applications
-          cp -R Applications/junie.app $out/Applications/
-          makeWrapper $out/Applications/junie.app/Contents/MacOS/junie $out/bin/junie
-        ''
-      else
-        # Linux archive is a plain jpackage app-image: junie-app/{bin,lib}.
-        ''
-          mkdir -p $out/opt
-          cp -r junie-app $out/opt/junie
-          ln -s $out/opt/junie/bin/junie $out/bin/junie
-        ''
-    )
-    + ''
-      runHook postInstall
-    '';
+  installPhase = ''
+    runHook preInstall
+    mkdir -p $out/bin
+  ''
+  + (
+    if stdenv.hostPlatform.isDarwin then
+      ''
+        mkdir -p $out/Applications
+        cp -R Applications/junie.app $out/Applications/
+        makeWrapper $out/Applications/junie.app/Contents/MacOS/junie $out/bin/junie
+      ''
+    else
+      # Linux archive is a plain jpackage app-image: junie-app/{bin,lib}.
+      ''
+        mkdir -p $out/opt
+        cp -r junie-app $out/opt/junie
+        ln -s $out/opt/junie/bin/junie $out/bin/junie
+      ''
+  )
+  + ''
+    runHook postInstall
+  '';
 
   doInstallCheck = true;
   nativeInstallCheckInputs = [

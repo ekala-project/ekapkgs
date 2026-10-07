@@ -73,7 +73,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
         lib.makeBinPath [
           wtype
           dotool
-            # TODO(corepkgs): add wl-clipboard
+          # TODO(corepkgs): add wl-clipboard
           ydotool
           xdotool
           xclip

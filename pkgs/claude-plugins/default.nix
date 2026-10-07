@@ -30,14 +30,14 @@ let
       runHook postBuild
     '';
     installPhase = ''
-      runHook preInstall
-    find node_modules -maxdepth 1 -type l -delete
-    find node_modules/.bin -xtype l -delete 2>/dev/null || true
-      mkdir -p $out
-      cp -r node_modules $out/node_modules
-      cp package.json $out/package.json
-      [ -f bun.lock ] && cp bun.lock $out/ || true
-      runHook postInstall
+        runHook preInstall
+      find node_modules -maxdepth 1 -type l -delete
+      find node_modules/.bin -xtype l -delete 2>/dev/null || true
+        mkdir -p $out
+        cp -r node_modules $out/node_modules
+        cp package.json $out/package.json
+        [ -f bun.lock ] && cp bun.lock $out/ || true
+        runHook postInstall
     '';
     dontFixup = true;
     outputHash = "sha256-5dRGbVsBQ5ZFjfpg1lxlTSATBLxwaZlQtyUXh+bYOE4=";
@@ -48,7 +48,10 @@ in
 stdenv.mkDerivation {
   pname = "claude-plugins";
   inherit version src;
-  nativeBuildInputs = [ bun makeWrapper ];
+  nativeBuildInputs = [
+    bun
+    makeWrapper
+  ];
   dontConfigure = true;
   buildPhase = ''
     runHook preBuild

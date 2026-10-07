@@ -40,8 +40,9 @@ let
       nodeTag = "linux-x64";
     };
   };
-  platform = platformsBySystem.${stdenv.hostPlatform.system}
-    or (throw "Unsupported platform for omp: ${stdenv.hostPlatform.system}");
+  platform =
+    platformsBySystem.${stdenv.hostPlatform.system}
+      or (throw "Unsupported platform for omp: ${stdenv.hostPlatform.system}");
   rustTarget = stdenv.hostPlatform.rust.rustcTarget;
 
   src = fetchFromGitHub {
@@ -96,7 +97,10 @@ let
     pname = "omp-node_modules";
     inherit version src;
 
-    nativeBuildInputs = [ bun python3 ];
+    nativeBuildInputs = [
+      bun
+      python3
+    ];
 
     dontConfigure = true;
 

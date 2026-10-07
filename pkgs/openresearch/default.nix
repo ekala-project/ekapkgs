@@ -62,17 +62,15 @@ rustPlatform.buildRustPackage (finalAttrs: {
   postInstall = ''
     wrapProgram $out/bin/orx \
       --prefix PATH : ${
-        lib.makeBinPath (
-          [
-            bash
-            coreutils
-            gitMinimal
-            tar
-            openssh
-            procps
-            # TODO(corepkgs): add xdg-utils for opening URLs
-          ]
-        )
+        lib.makeBinPath ([
+          bash
+          coreutils
+          gitMinimal
+          tar
+          openssh
+          procps
+          # TODO(corepkgs): add xdg-utils for opening URLs
+        ])
       } \
       --set OPENRESEARCH_CLI_DISABLE_UPDATE 1 \
       --set ORX_NO_UPDATE_CHECK 1

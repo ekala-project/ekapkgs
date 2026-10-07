@@ -2,6 +2,7 @@
   lib,
   bashInteractive,
   fetchurl,
+  importNpmLock,
   jq,
   makeWrapper,
   nodejs,
@@ -28,6 +29,7 @@ nodejs.buildNpmApplication {
   pname = "dsh";
   npmPackName = "@deepseek-ai/dsh";
   inherit version src;
+  npmDeps = importNpmLock { npmRoot = ./.; };
 
   dontNpmBuild = true;
 

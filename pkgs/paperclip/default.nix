@@ -1,6 +1,7 @@
 {
   lib,
   fetchzip,
+  importNpmLock,
   nodejs,
   postgresql,
   python3,
@@ -26,6 +27,7 @@ nodejs.buildNpmApplication {
   pname = "paperclip";
   npmPackName = "paperclipai";
   inherit version src;
+  npmDeps = importNpmLock { npmRoot = ./.; };
 
   # The npm tarball is already built.
   dontNpmBuild = true;
