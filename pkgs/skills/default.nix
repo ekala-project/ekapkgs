@@ -1,30 +1,34 @@
 {
   lib,
-  fetchurl,
-  makeWrapper,
   nodejs,
-  runCommand,
+  fetchFromGitHub,
+  pnpm,
 }:
 
 let
-  version = "1.7.0";
-
-  src = runCommand "skills-src" { } ''
-    mkdir -p $out
-    tar -xzf ${
-      fetchurl {
-        url = "https://registry.npmjs.org/skills/-/skills-${version}.tgz";
-        hash = "sha256-jRRm95K6rulF2uiOBe5APW+eeKOujcv2FJYDXKJ0QY0=";
-      }
-    } -C $out --strip-components=1
-    cp ${./package-lock.json} $out/package-lock.json
-  '';
+  version = "1.7.1";
 in
-nodejs.buildNpmApplication {
+nodejs.buildPnpmApplication {
   pname = "skills";
-  inherit version src;
+  inherit version;
 
-  dontNpmBuild = true;
+  src = fetchFromGitHub {
+    owner = "vercel-labs";
+    repo = "skills";
+    tag = "v${version}";
+    hash = "sha256-wynuiFQK0QR6bbClhGNM+tsoyAE/bsHSSwDUPVb8+gE=";
+  };
+
+  pnpm = pnpm.v10;
+  fetcherVersion = 3;
+  pnpmDepsHash = "sha256-kDjPsOHkQaFrRNQMb2EoLrkepOjMxeHglL88YDLFMWM=";
+
+  # The license-generation step shells out to `npx license-checker` (network).
+  # The repo already ships a committed ThirdPartyNoticeText.txt, so build only.
+  postPatch = ''
+    substituteInPlace package.json \
+      --replace-fail 'node scripts/generate-licenses.ts && obuild' 'obuild'
+  '';
 
   postInstall = ''
     for bin in skills add-skill; do
