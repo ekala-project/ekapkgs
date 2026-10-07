@@ -33,7 +33,6 @@ stdenv.mkDerivation {
     "--enable-osdi"
   ];
 
-
   meta = {
     description = "Next Generation Spice (shared library)";
     homepage = "http://ngspice.sourceforge.net";

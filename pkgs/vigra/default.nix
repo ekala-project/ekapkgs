@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-DCMAKE_C_FLAGS=-fPIC"
   ];
 
-
   meta = {
     description = "Novel computer vision C++ library with customizable algorithms and data structures";
     mainProgram = "vigra-config";

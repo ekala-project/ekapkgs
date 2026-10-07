@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-
   meta = {
     description = "SDL image library";
     homepage = "https://github.com/libsdl-org/SDL_image";

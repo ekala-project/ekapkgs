@@ -31,7 +31,6 @@ stdenv.mkDerivation rec {
     librevenge
   ];
 
-
   meta = {
     description = "Import library for some old mac text documents";
     license = lib.licenses.mpl20;

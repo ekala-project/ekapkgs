@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     "INTROSPECTION_TYPELIBDIR=$(out)/lib/girepository-1.0"
   ];
 
-
   meta = {
     broken = stdenv.hostPlatform.isDarwin;
     description = "Menu system for MATE";

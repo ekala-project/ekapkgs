@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     "zerocallusedregs"
   ];
 
-
   meta = {
     description = "BPF-based auto-tuning of Linux system parameters";
     mainProgram = "bpftune";

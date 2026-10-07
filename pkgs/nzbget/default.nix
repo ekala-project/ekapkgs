@@ -81,7 +81,6 @@ stdenv.mkDerivation (finalAttrs: {
     install -Dm444 nzbget.conf $out/share/nzbget/nzbget.conf
   '';
 
-
   meta = {
     homepage = "https://nzbget.com/";
     changelog = "https://github.com/nzbgetcom/nzbget/releases/tag/v${finalAttrs.version}";

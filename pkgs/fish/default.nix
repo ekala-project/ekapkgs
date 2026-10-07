@@ -73,7 +73,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    CMAKE_INSTALL_DOCDIR = "${placeholder ";
+    CMAKE_INSTALL_DOCDIR = "${placeholder "doc"}/share/doc/fish";
     Rust_CARGO_TARGET = stdenv.hostPlatform.rust.rustcTarget;
   };
 

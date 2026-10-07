@@ -32,7 +32,6 @@ stdenv.mkDerivation rec {
     pkg-config
   ];
 
-
   postPatch = lib.optionalString stdenv.hostPlatform.isFreeBSD ''
     substituteInPlace libraw*.pc.in --replace-fail -lstdc++ ""
   '';

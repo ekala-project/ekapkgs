@@ -22,7 +22,6 @@ stdenv.mkDerivation {
     substituteInPlace configure --replace "./conftest" "echo"
   '';
 
-
   makeFlags = [
     "PKG_CONFIG=${buildPackages.pkg-config}/bin/${buildPackages.pkg-config.targetPrefix}pkg-config"
   ];

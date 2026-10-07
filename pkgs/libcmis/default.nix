@@ -51,7 +51,6 @@ stdenv.mkDerivation rec {
 
   doCheck = true;
 
-
   meta = with lib; {
     description = "C++ client library for the CMIS interface";
     homepage = "https://github.com/tdf/libcmis";

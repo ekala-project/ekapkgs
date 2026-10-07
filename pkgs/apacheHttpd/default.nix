@@ -89,7 +89,6 @@ stdenv.mkDerivation rec {
     "ap_cv_void_ptr_lt_long=no"
   ];
 
-
   stripDebugList = [
     "lib"
     "modules"

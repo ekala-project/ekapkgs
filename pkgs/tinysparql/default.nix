@@ -100,7 +100,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonEntries = {
     docs = true;
-    systemd_user_services_dir = "${placeholder ";
+    systemd_user_services_dir = "${placeholder "out"}/lib/systemd/user";
   };
 
   mesonFeatures = {
@@ -109,8 +109,8 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   mesonFlags = [
-      out"}/lib/systemd/user"
-    ] ++ (
+  ]
+  ++ (
     let
       # https://gitlab.gnome.org/GNOME/tinysparql/-/blob/3.7.3/meson.build#L170
       crossFile = writeText "cross-file.conf" ''

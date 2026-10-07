@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional stdenv.hostPlatform.isDarwin libiconv;
 
-
   doCheck = true;
 
   meta = {

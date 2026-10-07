@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
   ])
   ++ (lib.optional aria2Support aria2);
 
-
   preFixup = lib.optionalString aria2Support ''gappsWrapperArgs+=(--suffix PATH : "${aria2}/bin")'';
 
   meta = {

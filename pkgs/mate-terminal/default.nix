@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     vte
   ];
 
-
   meta = {
     description = "MATE desktop terminal emulator";
     homepage = "https://mate-desktop.org";

@@ -24,7 +24,6 @@ stdenv.mkDerivation rec {
     yelp-tools
   ];
 
-
   meta = with lib; {
     description = "User and system administration help for the GNOME desktop";
     homepage = "https://help.gnome.org/users/gnome-help/";

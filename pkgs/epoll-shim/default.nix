@@ -21,13 +21,13 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    CMAKE_INSTALL_PKGCONFIGDIR = "${placeholder ";
+    CMAKE_INSTALL_PKGCONFIGDIR = "${placeholder "out"}/lib/pkgconfig";
     BUILD_TESTING = "${lib.boolToString finalAttrs.finalPackage.doCheck}";
   };
 
   cmakeFlags = [
-      out"}/lib/pkgconfig"
-    ] ++ lib.optionals (stdenv.buildPlatform != stdenv.hostPlatform && stdenv.hostPlatform.isFreeBSD) [
+  ]
+  ++ lib.optionals (stdenv.buildPlatform != stdenv.hostPlatform && stdenv.hostPlatform.isFreeBSD) [
     "-DALLOWS_ONESHOT_TIMERS_WITH_TIMEOUT_ZERO=YES"
   ];
 

@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     export DESTDIR=$out
   '';
 
-
   meta = {
     description = "Implementation of the Precision Time Protocol (PTP) according to IEEE standard 1588 for Linux";
     homepage = "https://linuxptp.nwtime.org";

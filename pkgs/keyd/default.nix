@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   installFlags = [ "DESTDIR=${placeholder "out"}" ];
 
-
   postInstall = ''
     rm -rf $out/etc
   '';

@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     "PREFIX=${placeholder "out"}"
   ];
 
-
   meta = {
     homepage = "https://www.zamaudio.com/?p=976";
     description = "Collection of LV2/LADSPA/VST/JACK audio plugins by ZamAudio";

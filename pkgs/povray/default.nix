@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-x"
   ];
 
-
   preInstall = ''
     mkdir "$TMP/bin"
     for i in chown chgrp; do

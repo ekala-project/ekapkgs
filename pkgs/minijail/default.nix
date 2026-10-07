@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     installManPage minijail0.1 minijail0.5
   '';
 
-
   meta = {
     homepage = "https://chromium.googlesource.com/chromiumos/platform/minijail/+/refs/heads/main/README.md";
     description = "Sandboxing library and application using Linux namespaces and capabilities";

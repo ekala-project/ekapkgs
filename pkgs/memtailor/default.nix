@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.withFeature finalAttrs.doCheck "gtest")
   ];
 
-
   doCheck = true;
 
   meta = {

@@ -43,7 +43,6 @@ stdenv.mkDerivation {
   ];
   buildInputs = [ ncurses ];
 
-
   preConfigure = "./autogen.sh";
 
   installPhase = ''

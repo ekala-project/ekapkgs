@@ -49,12 +49,11 @@ stdenv.mkDerivation (finalAttrs: {
   cmakeBuildType = "MinSizeRel";
 
   cmakeEntries = {
-    INSTALL_PREFIX = "${placeholder ";
+    INSTALL_PREFIX = "${placeholder "out"}";
   };
 
   cmakeFlags = [
     "-Wno-dev"
-    out"}"
   ];
 
   postFixup = lib.optionalString stdenv.hostPlatform.isLinux ''

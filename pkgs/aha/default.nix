@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "PREFIX=$(out)" ];
 
-
   meta = {
     description = "ANSI HTML Adapter";
     mainProgram = "aha";

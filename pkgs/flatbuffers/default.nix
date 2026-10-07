@@ -24,13 +24,9 @@ stdenv.mkDerivation rec {
   ];
 
   cmakeEntries = {
-    FLATBUFFERS_BUILD_TESTS = "${if doCheck then ";
+    FLATBUFFERS_BUILD_TESTS = doCheck;
     FLATBUFFERS_OSX_BUILD_UNIVERSAL = false;
   };
-
-  cmakeFlags = [
-    ON" else "OFF"}"
-  ];
 
   doCheck = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
   checkTarget = "test";

@@ -136,7 +136,6 @@ stdenv.mkDerivation (finalAttrs: {
         }:$PATH'
   '';
 
-
   meta = {
     description = "Lightweight GTK based image viewer";
     mainProgram = "geeqie";

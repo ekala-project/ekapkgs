@@ -26,7 +26,6 @@ stdenv.mkDerivation {
     flex
   ];
 
-
   meta = {
     homepage = "http://www.rc0.org.uk/mairix";
     license = lib.licenses.gpl2Plus;

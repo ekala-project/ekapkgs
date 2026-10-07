@@ -21,7 +21,6 @@ stdenv.mkDerivation {
     cmake.configurePhaseHook
   ];
 
-
   meta = {
     description = "Tool for visualizing and communicating the errors in rendered images";
     homepage = "https://github.com/NVlabs/flip";

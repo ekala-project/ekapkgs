@@ -48,7 +48,6 @@ stdenv.mkDerivation {
     SDL2_mixer
   ];
 
-
   sconsFlags = [ "sdl2=1" ];
 
   env.NIX_CFLAGS_COMPILE = toString [

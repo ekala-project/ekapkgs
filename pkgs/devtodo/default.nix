@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     ncurses
   ];
 
-
   meta = {
     homepage = "https://swapoff.org/devtodo1.html";
     description = "Hierarchical command-line task manager";

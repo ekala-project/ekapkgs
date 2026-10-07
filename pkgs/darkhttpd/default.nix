@@ -15,7 +15,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-d5pDUY1EbVjykb4in4hhbgbjIXJtj133nRAQ84ASicQ=";
   };
 
-
   installPhase = ''
     runHook preInstall
     install -Dm555 -t $out/bin darkhttpd

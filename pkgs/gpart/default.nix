@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ autoreconfHook ];
 
-
   doCheck = true;
 
   outputs = [

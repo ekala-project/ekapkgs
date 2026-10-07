@@ -63,9 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
     libglycin-gtk4 = false;
     vapi = false;
     tests = false;
-    loaders = (
-      lib.concatMapStringsSep "," (loader: "glycin-${loader}") enabledLoaders
-    );
+    loaders = (lib.concatMapStringsSep "," (loader: "glycin-${loader}") enabledLoaders);
   };
 
   postPatch = ''

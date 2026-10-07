@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     "host"
   ];
 
-
   meta = {
     homepage = "https://github.com/libmtp/libmtp";
     description = "Implementation of Microsoft's Media Transfer Protocol";

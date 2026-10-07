@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-
   meta = {
     homepage = "https://github.com/ERGO-Code/HiGHS";
     description = "Linear optimization software";

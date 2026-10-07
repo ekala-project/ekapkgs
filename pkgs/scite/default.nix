@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     popd
   '';
 
-
   meta = {
     homepage = "https://www.scintilla.org/SciTE.html";
     description = "SCIntilla based Text Editor";

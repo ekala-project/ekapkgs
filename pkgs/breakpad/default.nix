@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-
   buildInputs = [ zlib ];
 
   configureFlags = lib.optionals stdenv.hostPlatform.isMusl [ "--disable-tools" ];

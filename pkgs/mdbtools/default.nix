@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     cp -v ${gettext}/share/gettext/m4/lib-{link,prefix,ld}.m4 $sourceRoot/m4
   '';
 
-
   meta = {
     changelog = "https://github.com/mdbtools/mdbtools/releases/tag/v${finalAttrs.version}";
     description = ".mdb (MS Access) format tools";

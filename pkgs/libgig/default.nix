@@ -33,7 +33,6 @@ stdenv.mkDerivation rec {
 
   preConfigure = "make -f Makefile.svn";
 
-
   meta = {
     homepage = "http://www.linuxsampler.org";
     description = "Gigasampler file access library";

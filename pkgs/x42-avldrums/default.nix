@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     "PREFIX=$(out)"
   ];
 
-
   meta = {
     broken = (stdenv.hostPlatform.isLinux && stdenv.hostPlatform.isAarch64);
     description = "Drum sample player LV2 plugin dedicated to Glen MacArthur's AVLdrums";

@@ -13,7 +13,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     sha256 = "QrfCzuJo9x1+HBrU9pvNoOzWVXipZyIYfGt2N40mugo=";
   };
 
-
   meta = {
     description = "Common files for development of MATE packages";
     homepage = "https://mate-desktop.org";

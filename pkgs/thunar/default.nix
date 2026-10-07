@@ -67,7 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-custom-thunarx-dirs-enabled"
   ];
 
-
   postPatch = ''
     sed -i -e 's|thunar_dialogs_show_insecure_program (parent, _(".*"), file, exec)|1|' thunar/thunar-file.c
   '';

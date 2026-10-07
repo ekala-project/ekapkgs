@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
   nativeCheckInputs = [ cppunit ];
   doCheck = false; # needs the net
 
-
   meta = {
     homepage = "https://aria2.github.io";
     changelog = "https://github.com/aria2/aria2/releases/tag/release-${finalAttrs.version}";

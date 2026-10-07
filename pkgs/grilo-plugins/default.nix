@@ -97,7 +97,6 @@ stdenv.mkDerivation rec {
     gstreamer
   ];
 
-
   meta = {
     description = "Collection of plugins for the Grilo framework";
     homepage = "https://gitlab.gnome.org/GNOME/grilo-plugins";

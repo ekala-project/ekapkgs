@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     "USE_UPNP=${lib.boolToYesNo upnpSupport}"
   ];
 
-
   installPhase = ''
     install -D i2pd $out/bin/i2pd
     install --mode=444 -D 'contrib/i2pd.service' "$out/etc/systemd/system/i2pd.service"

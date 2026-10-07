@@ -44,14 +44,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    CMAKE_INSTALL_PREFIX = "${placeholder ";
-    SHAREDIR = "${placeholder ";
+    CMAKE_INSTALL_PREFIX = "${placeholder "out"}";
+    SHAREDIR = "${placeholder "out"}/share";
   };
-
-  cmakeFlags = [
-    out"}"
-    out"}/share"
-  ];
 
   makeFlags = [
     "DESTDIR=${placeholder "out"}"

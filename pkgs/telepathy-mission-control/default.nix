@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-
   preFixup = ''
     wrapProgram "$lib/libexec/mission-control-5" \
       --prefix GIO_EXTRA_MODULES : "${lib.getLib dconf}/lib/gio/modules" \

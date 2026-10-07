@@ -61,13 +61,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    PIONEER_DATA_DIR = "${placeholder ";
+    PIONEER_DATA_DIR = "${placeholder "out"}/share/pioneer/data";
     USE_SYSTEM_LIBLUA = true;
   };
-
-  cmakeFlags = [
-    out"}/share/pioneer/data"
-  ];
 
   makeFlags = [
     "all"

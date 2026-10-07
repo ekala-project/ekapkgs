@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
     CMAKE_POLICY_VERSION_MINIMUM = "3.10";
   };
 

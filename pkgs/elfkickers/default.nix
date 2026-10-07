@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     "prefix:=${placeholder "out"}"
   ];
 
-
   meta = {
     homepage = "https://www.muppetlabs.com/~breadbox/software/elfkickers.html";
     description = "Collection of programs that access and manipulate ELF files";

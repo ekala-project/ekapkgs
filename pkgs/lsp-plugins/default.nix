@@ -92,7 +92,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-
   meta = {
     description = "Collection of open-source audio plugins";
     homepage = "https://lsp-plug.in";

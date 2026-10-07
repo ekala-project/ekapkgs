@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     zstd
   ];
 
-
   meta = {
     homepage = "https://github.com/AgentD/squashfs-tools-ng";
     license = lib.licenses.gpl3Plus;

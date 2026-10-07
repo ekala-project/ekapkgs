@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     "BUILD_PKG_CONFIG=$(PKG_CONFIG_FOR_BUILD)"
   ];
 
-
   meta = {
     homepage = "https://www.parallelrealities.co.uk/games/edgar";
     description = "2D platform game with a persistent world";

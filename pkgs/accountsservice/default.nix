@@ -76,12 +76,8 @@ stdenv.mkDerivation rec {
   mesonEntries = {
     admin_group = "wheel";
     localstatedir = "/var";
-    systemdsystemunitdir = "${placeholder ";
+    systemdsystemunitdir = "${placeholder "out"}/etc/systemd/system";
   };
-
-  mesonFlags = [
-    out"}/etc/systemd/system"
-  ];
 
   postPatch = ''
     chmod +x meson_post_install.py

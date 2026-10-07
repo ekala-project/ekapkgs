@@ -80,7 +80,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail "SecUnicodeMapFile unicode.mapping 20127" "SecUnicodeMapFile $out/share/modsecurity/unicode.mapping 20127"
   '';
 
-
   postInstall = ''
     mkdir -p $out/share/modsecurity
     cp ${finalAttrs.src}/{AUTHORS,CHANGES,LICENSE,README.md,modsecurity.conf-recommended,unicode.mapping} $out/share/modsecurity

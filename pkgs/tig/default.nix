@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     rm contrib/config.make-*
   '';
 
-
   installPhase = ''
     make install
     make install-doc

@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     "prefix=${placeholder "out"}"
   ];
 
-
   meta = {
     description = "Icons of the Nix logo, in Freedesktop Icon Directory Layout";
     homepage = "https://github.com/NixOS/nixos-artwork";

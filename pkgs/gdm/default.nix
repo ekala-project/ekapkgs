@@ -56,14 +56,12 @@ stdenv.mkDerivation (finalAttrs: {
   mesonEntries = {
     gdm-xsession = true;
     initial-vt = "1";
-    systemdsystemunitdir = "${placeholder ";
-    systemduserunitdir = "${placeholder ";
+    systemdsystemunitdir = "${placeholder "out"}/lib/systemd/system";
+    systemduserunitdir = "${placeholder "out"}/lib/systemd/user";
     run-dir = "/run/gdm";
   };
 
   mesonFlags = [
-    out"}/lib/systemd/system"
-    out"}/lib/systemd/user"
     "--sysconfdir=/etc"
     "--localstatedir=/var"
   ];

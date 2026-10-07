@@ -50,16 +50,11 @@ stdenv.mkDerivation (finalAttrs: {
   cmakeEntries = {
     ENABLE_DAEMON = true;
     ENABLE_CLI = true;
-    ENABLE_GTK = "${if enableGTK then ";
-    ENABLE_QT = "${if enableQt then ";
+    ENABLE_GTK = enableGTK;
+    ENABLE_QT = enableQt;
     ENABLE_TESTS = false;
     INSTALL_DOC = false;
   };
-
-  cmakeFlags = [
-    ON" else "OFF"}"
-    ON" else "OFF"}"
-  ];
 
   meta = {
     description = "Fast, easy, and free BitTorrent client";

@@ -16,7 +16,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "partimage";
   version = "0.6.9";
 
-
   src = fetchurl {
     url = "mirror://sourceforge/partimage/partimage-${finalAttrs.version}.tar.bz2";
     sha256 = "0db6xiphk6xnlpbxraiy31c5xzj0ql6k4rfkmqzh665yyj0nqfkm";

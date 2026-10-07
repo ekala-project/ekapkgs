@@ -31,7 +31,6 @@ stdenv.mkDerivation rec {
     "doc"
   ];
 
-
   preConfigure = ''
     cd ./INCHI_API/libinchi/gcc
   ''

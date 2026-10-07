@@ -40,12 +40,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   mesonEntries = {
-    gdk_pixbuf_moduledir = "${placeholder ";
+    gdk_pixbuf_moduledir = "${placeholder "out"}/${moduleDir}";
   };
-
-  mesonFlags = [
-    out"}/${moduleDir}"
-  ];
 
   postPatch = ''
     # It looks for gdk-pixbuf-thumbnailer in this package's bin rather than the gdk-pixbuf bin. We need to patch that.

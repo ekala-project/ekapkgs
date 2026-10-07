@@ -38,14 +38,10 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   mesonEntries = {
-    systemunitdir = "${placeholder ";
+    systemunitdir = "${placeholder "out"}/etc/systemd/system";
     sharedstatedir = "/var/cache";
     dbpath = "locatedb";
   };
-
-  mesonFlags = [
-    out"}/etc/systemd/system"
-  ];
 
   meta = {
     description = "Much faster locate";

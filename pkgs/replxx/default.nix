@@ -23,12 +23,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    BUILD_SHARED_LIBS = "${if enableStatic then ";
+    BUILD_SHARED_LIBS = !enableStatic;
   };
-
-  cmakeFlags = [
-    OFF" else "ON"}"
-  ];
 
   meta = {
     homepage = "https://github.com/AmokHuginnsson/replxx";

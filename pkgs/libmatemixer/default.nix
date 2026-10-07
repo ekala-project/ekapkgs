@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = lib.optional ossSupport "--enable-oss";
 
-
   meta = {
     description = "Mixer library for MATE";
     homepage = "https://github.com/mate-desktop/libmatemixer";

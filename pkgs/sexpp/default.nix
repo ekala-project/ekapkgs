@@ -26,17 +26,13 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    CMAKE_INSTALL_PREFIX = "${placeholder ";
+    CMAKE_INSTALL_PREFIX = "${placeholder "out"}";
     BUILD_SHARED_LIBS = "on";
     WITH_SEXP_TESTS = "on";
     DOWNLOAD_GTEST = "off";
     WITH_SEXP_CLI = "on";
     WITH_SANITIZERS = "off";
   };
-
-  cmakeFlags = [
-    out"}"
-  ];
 
   nativeBuildInputs = [
     cmake

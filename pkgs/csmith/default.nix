@@ -56,7 +56,6 @@ stdenv.mkDerivation rec {
     mv $out/bin/compiler_test.in $out/share/csmith/
   '';
 
-
   meta = {
     description = "Random generator of C programs";
     homepage = "https://embed.cs.utah.edu/csmith";

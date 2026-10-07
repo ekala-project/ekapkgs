@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     out"}"
   ];
 
-
   meta = {
     changelog = "https://freedesktop.org/software/pulseaudio/pavucontrol/#news";
     description = "PulseAudio Volume Control";

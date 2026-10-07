@@ -39,16 +39,12 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    CMAKE_INSTALL_INCLUDEDIR = "${placeholder ";
+    CMAKE_INSTALL_INCLUDEDIR = "${placeholder "dev"}/include/lib3mf";
     USE_INCLUDED_ZLIB = false;
     USE_INCLUDED_LIBZIP = false;
     USE_INCLUDED_GTEST = false;
     USE_INCLUDED_SSL = false;
   };
-
-  cmakeFlags = [
-    dev"}/include/lib3mf"
-  ];
 
   buildInputs = [
     gtest

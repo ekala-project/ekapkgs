@@ -51,7 +51,6 @@ stdenv.mkDerivation rec {
     samba
   ];
 
-
   env.DATADIR = "/share/${pname}";
 
   meta = {

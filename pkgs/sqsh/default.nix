@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
   # 'bool' used as identifier rejected by gcc 15's C23 default.
   env.NIX_CFLAGS_COMPILE = "-std=gnu17";
 
-
   buildInputs = [
     freetds
     readline

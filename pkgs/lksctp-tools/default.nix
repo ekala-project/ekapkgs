@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ autoreconfHook ];
 
-
   meta = {
     description = "Linux Kernel Stream Control Transmission Protocol Tools";
     homepage = "https://github.com/sctp/lksctp-tools/wiki";

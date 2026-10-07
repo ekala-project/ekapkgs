@@ -98,7 +98,6 @@ stdenv.mkDerivation (finalAttrs: {
     runHook postInstall
   '';
 
-
   passthru = {
     firmware = "${finalAttrs.finalPackage}/${firmwareBinary}";
   };

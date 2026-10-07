@@ -173,11 +173,12 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   mesonFlags = [
-      "--localstatedir=/var"
-      "--sysconfdir=/etc"
-      "--libexecdir=${placeholder "
+    "--localstatedir=/var"
+    "--sysconfdir=/etc"
+    "--libexecdir=${placeholder "
       out"}/libexec"
-    ] ++ lib.optionals (!enablePassim) [
+  ]
+  ++ lib.optionals (!enablePassim) [
     (lib.mesonEnable "passim" false)
   ];
 

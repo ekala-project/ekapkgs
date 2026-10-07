@@ -220,7 +220,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   installTargets = [ "install" ] ++ lib.optional x11Support "install-gui";
 
-
   postInstall = lib.optionalString (!fontconfigSupport) ''
     mkdir -p $out/share/mplayer
     cp ${freefont_ttf}/share/fonts/truetype/FreeSans.ttf $out/share/mplayer/subfont.ttf

@@ -102,7 +102,6 @@ stdenv.mkDerivation (finalAttrs: {
     systemd
   ];
 
-
   configureFlags = [
     "--with-curl"
     "--with-systemdsystemunitdir=${placeholder "out"}/lib/systemd/system"

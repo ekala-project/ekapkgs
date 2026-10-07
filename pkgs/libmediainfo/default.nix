@@ -42,7 +42,6 @@ stdenv.mkDerivation rec {
     "--with-libcurl"
   ];
 
-
   postInstall = ''
     install -vD -m 644 libmediainfo.pc "$out/lib/pkgconfig/libmediainfo.pc"
   '';

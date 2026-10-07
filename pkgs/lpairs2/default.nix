@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     SDL2_ttf
   ];
 
-
   meta = {
     homepage = "http://lgames.sourceforge.net/LPairs/";
     description = "Matching the pairs - a typical Memory Game";

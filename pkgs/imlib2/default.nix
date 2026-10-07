@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ pkg-config ];
 
-
   configureFlags =
     lib.optional stdenv.hostPlatform.isDarwin "--enable-amd64=no"
     ++ lib.optional (!x11Support) "--without-x";

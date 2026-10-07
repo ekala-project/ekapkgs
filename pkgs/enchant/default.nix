@@ -39,7 +39,6 @@ stdenv.mkDerivation rec {
     aspell
   ];
 
-
   configureFlags = [
     "--enable-relocatable"
     "--with-aspell"

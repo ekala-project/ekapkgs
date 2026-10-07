@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--localstatedir=/var"
   ];
 
-
   meta = {
     homepage = "https://troglobit.com/projects/inadyn/";
     description = "Free dynamic DNS client";

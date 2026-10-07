@@ -29,7 +29,6 @@ let
 
     buildInputs = [ libusb-compat-0_1 ];
 
-
     meta = {
       description = "Provides low-level access to Logitech G11/G15 keyboards and Z10 speakers";
       inherit license;
@@ -50,7 +49,6 @@ let
     ];
 
     buildInputs = [ libg15 ];
-
 
     meta = {
       description = "Small graphics library optimised for drawing on an LCD";
@@ -93,7 +91,6 @@ stdenv.mkDerivation rec {
   #  ld: g15_plugins.o:/build/g15daemon-1.9.5.3/g15daemon/./g15daemon.h:218:
   #   multiple definition of `lcdlist_mutex'; utility_funcs.o:g15daemon.h:218: first defined here
   env.NIX_CFLAGS_COMPILE = "-fcommon";
-
 
   meta = {
     description = "Daemon that makes it possible to use the Logitech keyboard G-Buttons and draw on various Logitech LCDs";

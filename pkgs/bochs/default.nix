@@ -130,7 +130,6 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.withFeature true "x11")
   ];
 
-
   meta = {
     homepage = "https://bochs.sourceforge.io/";
     description = "Open-source IA-32 (x86) PC emulator";

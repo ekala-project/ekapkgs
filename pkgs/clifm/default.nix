@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     "DATADIR=${placeholder "out"}/share"
   ];
 
-
   doCheck = true;
 
   meta = {

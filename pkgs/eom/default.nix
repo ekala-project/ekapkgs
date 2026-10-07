@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     hicolor-icon-theme
   ];
 
-
   meta = {
     description = "Image viewing and cataloging program for the MATE desktop";
     mainProgram = "eom";

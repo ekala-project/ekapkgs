@@ -118,7 +118,6 @@ stdenv.mkDerivation (finalAttrs: {
     make makefiles CCARGS='${ccargs}' AUXLIBS='${auxlibs}'
   '';
 
-
   env = lib.optionalAttrs withLDAP {
     NIX_LDFLAGS = "-llber";
   };

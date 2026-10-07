@@ -145,18 +145,13 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   cmakeEntries = {
-    BUILD_wireshark = "${if withQt then ";
+    BUILD_wireshark = withQt;
     CMAKE_INSTALL_LIBDIR = "lib";
     ENABLE_APPLICATION_BUNDLE = false;
     LEMON_C_COMPILER = "cc";
   };
 
-  cmakeFlags = [
-      ON"
-      else
-      "OFF"
-      }"
-    ] ++ lib.optionals (stdenv.buildPlatform != stdenv.hostPlatform) [
+  cmakeFlags = lib.optionals (stdenv.buildPlatform != stdenv.hostPlatform) [
     "-DHAVE_C99_VSNPRINTF_EXITCODE__TRYRUN_OUTPUT="
     "-DHAVE_C99_VSNPRINTF_EXITCODE=0"
   ];

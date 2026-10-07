@@ -59,7 +59,6 @@ stdenv.mkDerivation {
     pulseaudio
   ];
 
-
   meta = {
     description = "Sample Rate Converter for audio";
     homepage = "https://sox.sourceforge.net/";

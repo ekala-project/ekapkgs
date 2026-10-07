@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-
   postPatch = ''
     substituteInPlace Makefile --replace 'fc-cache' '#fc-cache'
     substituteInPlace Makefile --replace 'gzip'     'gzip -n'

@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.strings.enableFeature finalAttrs.finalPackage.doCheck "tests")
   ];
 
-
   preBuild = ''
     export XDG_CACHE_HOME=$TMPDIR
   '';

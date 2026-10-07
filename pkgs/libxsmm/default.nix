@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     which
   ];
 
-
   dontConfigure = true;
 
   makeFlags =

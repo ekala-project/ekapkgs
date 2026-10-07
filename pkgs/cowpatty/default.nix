@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     libpcap
   ];
 
-
   makeFlags = [
     "DESTDIR=$(out)"
     "BINDIR=/bin"

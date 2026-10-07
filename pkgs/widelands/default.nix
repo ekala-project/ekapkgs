@@ -44,16 +44,13 @@ stdenv.mkDerivation rec {
   '';
 
   cmakeEntries = {
-    WL_INSTALL_BASEDIR = "${placeholder ";
-    WL_INSTALL_DATADIR = "${placeholder ";
-    WL_INSTALL_BINDIR = "${placeholder ";
+    WL_INSTALL_BASEDIR = "${placeholder "out"}/share/widelands";
+    WL_INSTALL_DATADIR = "${placeholder "out"}/share/widelands";
+    WL_INSTALL_BINDIR = "${placeholder "out"}/bin";
   };
 
   cmakeFlags = [
     "-Wno-dev"
-    out"}/share/widelands"
-    out"}/share/widelands"
-    out"}/bin"
   ];
 
   nativeBuildInputs = [
@@ -65,7 +62,6 @@ stdenv.mkDerivation rec {
     installShellFiles
     pkg-config
   ];
-
 
   buildInputs = [
     sdl2-compat

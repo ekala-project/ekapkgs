@@ -52,12 +52,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonEntries = {
     installed_tests = true;
-    installed_test_prefix = "${placeholder ";
+    installed_test_prefix = "${placeholder "installedTests"}";
   };
-
-  mesonFlags = [
-    installedTests"}"
-  ];
 
   postPatch = ''
     # Note: Does not appear to be needed by anything.

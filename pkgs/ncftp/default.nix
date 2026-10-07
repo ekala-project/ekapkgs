@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ ncurses ];
 
-
   env = {
     NIX_CFLAGS_COMPILE = toString [
       # Workaround build failure on -fno-common toolchains like upstream

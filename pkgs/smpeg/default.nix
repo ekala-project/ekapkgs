@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace 'register Uint16' 'Uint16'
   '';
 
-
   configureFlags = [
     "--enable-gtk-player=no"
     "--enable-opengl-player=no"

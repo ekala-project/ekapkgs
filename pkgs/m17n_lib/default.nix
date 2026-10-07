@@ -24,7 +24,6 @@ stdenv.mkDerivation rec {
     m17n_db
   ];
 
-
   meta = {
     homepage = "https://www.nongnu.org/m17n/";
     description = "Multilingual text processing library (runtime)";

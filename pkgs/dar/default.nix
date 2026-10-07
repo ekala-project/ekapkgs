@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   hardeningDisable = [ "format" ];
 
-
   postInstall = ''
     # Disable html help
     rm -r "$out"/share/dar

@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   preConfigure = "./bootstrap";
 
-
   meta = {
     description = "Screen color temperature manager";
     license = lib.licenses.gpl3Plus;

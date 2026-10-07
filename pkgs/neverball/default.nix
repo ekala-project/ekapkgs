@@ -99,7 +99,6 @@ stdenv.mkDerivation (finalAttrs: {
     cp mapc $out/bin
   '';
 
-
   meta = {
     homepage = "https://neverball.org/";
     description = "Tilt the floor to roll a ball";

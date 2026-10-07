@@ -76,7 +76,6 @@ stdenv.mkDerivation {
     "man"
   ];
 
-
   # Provide libgpm.so for compatibility
   postInstall = ''
     if test -e "$out/lib/libgpm.so.2"; then

@@ -51,8 +51,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeEntries = {
     WITH_STATIC = false;
-    -DCMAKE_BUILD_WITH_INSTALL_NAME_DIR = true;
-    -DCMAKE_SKIP_BUILD_RPATH = true;
+    CMAKE_BUILD_WITH_INSTALL_NAME_DIR = true;
+    CMAKE_SKIP_BUILD_RPATH = true;
   };
 
   postPatch = ''

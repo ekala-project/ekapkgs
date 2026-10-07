@@ -45,7 +45,6 @@ stdenv.mkDerivation rec {
       --replace /bin/rm rm
   '';
 
-
   meta = {
     homepage = "https://github.com/jstedfast/gmime/";
     description = "C/C++ library for creating, editing and parsing MIME messages and structures";

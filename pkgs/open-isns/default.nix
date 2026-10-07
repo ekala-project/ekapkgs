@@ -42,16 +42,12 @@ stdenv.mkDerivation (finalAttrs: {
   configureFlags = [ "--enable-shared" ];
 
   mesonEntries = {
-    systemddir = "${placeholder ";
+    systemddir = "${placeholder "out"}/lib/systemd";
   };
 
   mesonFeatures = {
     slp = false;
   };
-
-  mesonFlags = [
-    out"}/lib/systemd"
-  ];
 
   meta = {
     description = "iSNS server and client for Linux";

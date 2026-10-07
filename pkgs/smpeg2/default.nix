@@ -46,7 +46,6 @@ stdenv.mkDerivation {
       --prefix PKG_CONFIG_PATH ":" "${lib.getDev sdl2-compat}/lib/pkgconfig"
   '';
 
-
   meta = {
     homepage = "https://icculus.org/smpeg/";
     description = "sdl2-compat MPEG Player Library";

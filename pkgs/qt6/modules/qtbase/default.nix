@@ -202,7 +202,6 @@ stdenv.mkDerivation {
 
   strictDeps = true;
 
-
   patches = [
     # look for Qt plugins in directories on PATH
     ./derive-plugin-load-path-from-PATH.patch
@@ -254,19 +253,17 @@ stdenv.mkDerivation {
     QT_FEATURE_vulkan = true;
     CMAKE_SYSTEM_VERSION = "";
     QT_FEATURE_sctp = true;
-    QT_FEATURE_journald = "${if systemdSupport then ";
+    QT_FEATURE_journald = systemdSupport;
   };
 
   cmakeFlags = [
-      "--log-level=STATUS"
-      ON"
-      else
-      "OFF"
-      }"
-    ] ++ lib.optionals isCrossBuild [
+    "--log-level=STATUS"
+  ]
+  ++ lib.optionals isCrossBuild [
     "-DQT_HOST_PATH=${pkgsBuildBuild.qt6.qtbase}"
     "-DQt6HostInfo_DIR=${pkgsBuildBuild.qt6.qtbase}/lib/cmake/Qt6HostInfo"
-  ] ++ lib.optional (
+  ]
+  ++ lib.optional (
     qttranslations != null && !isCrossBuild
   ) "-DINSTALL_TRANSLATIONSDIR=${qttranslations}/translations";
 

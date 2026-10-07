@@ -36,7 +36,6 @@ stdenv.mkDerivation {
     libiconv
   ];
 
-
   meta = with lib; {
     homepage = "https://lib.filezilla-project.org/";
     description = "Modern C++ library, offering some basic functionality to build high-performing, platform-independent programs";

@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildFlags = [ "library" ];
 
-
   meta = {
     description = "HTTP message parser written in C";
     homepage = "https://github.com/nodejs/http-parser";

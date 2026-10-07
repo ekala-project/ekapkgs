@@ -65,7 +65,9 @@ stdenv.mkDerivation (finalAttrs: {
     system-nanosvg = true;
   };
 
-  mesonFlags = map (t: lib.mesonEnable "${t}-shaping" (lib.elem t withShapingTypes)) availableShapingTypes;
+  mesonFlags = map (
+    t: lib.mesonEnable "${t}-shaping" (lib.elem t withShapingTypes)
+  ) availableShapingTypes;
 
   doCheck = true;
 

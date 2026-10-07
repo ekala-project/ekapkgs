@@ -52,7 +52,8 @@ qtModule {
     Python_EXECUTABLE = "${lib.getExe pkgsBuildBuild.python3}";
   };
 
-  cmakeFlags = # Conditional is required to prevent infinite recursion during a cross build ++ lib.optionals (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) [
+  # Conditional is required to prevent infinite recursion during a cross build
+  cmakeFlags = lib.optionals (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) [
     "-DQt6QmlTools_DIR=${pkgsBuildBuild.qt6.qtdeclarative}/lib/cmake/Qt6QmlTools"
   ];
 }

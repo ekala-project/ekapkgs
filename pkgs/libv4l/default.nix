@@ -45,7 +45,6 @@ stdenv.mkDerivation rec {
     patchShebangs utils/
   '';
 
-
   meta = {
     description = "V4L utils and libv4l, provide common image formats regardless of the v4l device";
     homepage = "https://linuxtv.org/projects.php";

@@ -60,12 +60,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   mesonEntries = {
-    configdir = "${placeholder ";
+    configdir = "${placeholder "out"}/etc/xdg/qman";
   };
-
-  mesonFlags = [
-    out"}/etc/xdg/qman"
-  ];
 
   doInstallCheck = true;
   versionCheckKeepEnvironment = [

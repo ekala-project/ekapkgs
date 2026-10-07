@@ -57,8 +57,11 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   mesonFlags = [
-      (lib.strings.mesonEnable "testing" finalAttrs.finalPackage.doCheck)
-    ] ++ lib.optional (cryptominisat != null) "-Dcryptominisat=true" ++ lib.optional (kissat != null) "-Dkissat=true" ++ lib.optional (aiger != null) "-Daiger=true";
+    (lib.strings.mesonEnable "testing" finalAttrs.finalPackage.doCheck)
+  ]
+  ++ lib.optional (cryptominisat != null) "-Dcryptominisat=true"
+  ++ lib.optional (kissat != null) "-Dkissat=true"
+  ++ lib.optional (aiger != null) "-Daiger=true";
 
   nativeCheckInputs = [ python3 ];
   checkInputs = lib.optional (gtest != null) gtest;

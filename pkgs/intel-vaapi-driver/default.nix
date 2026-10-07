@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     wayland
   ];
 
-
   meta = {
     homepage = "https://github.com/irql-notlessorequal/intel-vaapi-driver";
     license = lib.licenses.mit;

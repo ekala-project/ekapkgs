@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
-
   makeFlags = [
     "LOCK=no"
     "ds9097"

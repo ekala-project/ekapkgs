@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.ZSTD_SYS_USE_PKG_CONFIG = true;
 
-
   # Disable automated version-check
   buildNoDefaultFeatures = true;
 

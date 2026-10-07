@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   strictDeps = true;
 
-
   meta = {
     homepage = "https://git.causal.agency/catgirl/about/";
     description = "TLS-only terminal IRC client";

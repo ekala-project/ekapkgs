@@ -44,7 +44,6 @@ stdenv.mkDerivation rec {
     gpm
   ];
 
-
   configureFlags = [
     "PERL=${perl}/bin/perl"
     "PERL_FOR_BUILD=${buildPackages.perl}/bin/perl"

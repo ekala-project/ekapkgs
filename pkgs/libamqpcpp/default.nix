@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   patches = [ ./libamqpcpp-darwin.patch ];
 
-
   meta = {
     description = "Library for communicating with a RabbitMQ server";
     homepage = "https://github.com/CopernicaMarketingSoftware/AMQP-CPP";

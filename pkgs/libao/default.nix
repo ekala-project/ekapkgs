@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-
   meta = {
     homepage = "https://xiph.org/ao/";
     description = "Xiph.org's cross-platform audio output library";

@@ -130,7 +130,7 @@ stdenv.mkDerivation (finalAttrs: {
   cmakeEntries = {
     ENABLE_VALA_BINDINGS = true;
     ENABLE_INTROSPECTION = true;
-    INCLUDE_INSTALL_DIR = "${placeholder ";
+    INCLUDE_INSTALL_DIR = "${placeholder "dev"}/include";
     WITH_PHONENUMBER = true;
     ENABLE_GTK = "${lib.boolToString withGtk3}";
     ENABLE_EXAMPLES = "${lib.boolToString withGtk3}";
@@ -141,8 +141,8 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   cmakeFlags = [
-      dev"}/include"
-    ] ++ lib.optionals (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) [
+  ]
+  ++ lib.optionals (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) [
     (lib.cmakeFeature "CMAKE_CROSSCOMPILING_EMULATOR" (stdenv.hostPlatform.emulator buildPackages))
   ];
 

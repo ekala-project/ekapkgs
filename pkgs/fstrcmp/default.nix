@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
   ];
 
-
   meta = {
     description = "Make fuzzy comparisons of strings and byte arrays";
     mainProgram = "fstrcmp";

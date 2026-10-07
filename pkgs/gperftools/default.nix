@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   dontDisableStatic = true;
 
-
   meta = {
     homepage = "https://github.com/gperftools/gperftools";
     description = "Fast, multi-threaded malloc() and nifty performance analysis tools";

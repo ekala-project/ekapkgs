@@ -65,18 +65,13 @@ stdenv.mkDerivation rec {
   ];
 
   mesonEntries = {
-    pkcs11-config = "${placeholder ";
-    pkcs11-modules = "${placeholder ";
+    pkcs11-config = "${placeholder "out"}/etc/pkcs11";
+    pkcs11-modules = "${placeholder "out"}/lib/pkcs11";
   };
 
   mesonFeatures = {
     systemd = false;
   };
-
-  mesonFlags = [
-    out"}/etc/pkcs11"
-    out"}/lib/pkcs11"
-  ];
 
   doCheck = false;
   strictDeps = true;

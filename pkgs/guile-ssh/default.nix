@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     libssh
   ];
 
-
   # FAIL: server-client.scm
   doCheck = !stdenv.hostPlatform.isDarwin;
 

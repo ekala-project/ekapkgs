@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--sbindir=\${out}/bin"
   ];
 
-
   meta = {
     description = "Power manager for the Xfce Desktop Environment";
     homepage = "https://gitlab.xfce.org/xfce/xfce4-power-manager";

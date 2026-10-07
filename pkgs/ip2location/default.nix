@@ -13,7 +13,6 @@ stdenv.mkDerivation (finalAttrs: {
     url = "https://www.ip2location.com/downloads/ip2location-${finalAttrs.version}.tar.gz";
   };
 
-
   doCheck = true;
 
   meta = {

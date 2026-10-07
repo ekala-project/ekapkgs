@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-
   env = lib.optionalAttrs stdenv.cc.isClang {
     NIX_CFLAGS_COMPILE = toString [
       "-Wno-error=implicit-function-declaration"

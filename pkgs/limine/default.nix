@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-QWv9A2imYES+0AYEFXUjd+EbdRMZChssYvhl9lKlrJ4=";
   };
 
-
   hardeningDisable = lib.optionals missingZerocallusedregs [
     "zerocallusedregs"
   ];

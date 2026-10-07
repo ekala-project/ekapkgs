@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     guile
   ];
 
-
   doCheck = false; # Cannot find unit-test module from guile-lib
   nativeCheckInputs = [ guile-lib ];
 

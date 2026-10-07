@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     net-snmp
   ];
 
-
   nativeBuildInputs = [
     pkg-config
     autoreconfHook

@@ -37,7 +37,6 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ pkg-config ];
 
-
   meta = {
     description = "Library providing ability to interpret and import Corel Draw drawings into various applications";
     homepage = "https://wiki.documentfoundation.org/DLP/Libraries/libcdr";

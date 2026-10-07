@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     "man"
   ];
 
-
   meta = {
     description = "Vertical Blanking Interval (VBI) utilities";
     homepage = "https://github.com/zapping-vbi/zvbi";

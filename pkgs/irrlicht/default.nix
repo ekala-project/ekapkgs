@@ -34,7 +34,6 @@ stdenv.mkDerivation {
     makeFlagsArray+=(sharedlib NDEBUG=1 LDFLAGS="-lX11 -lGL -lXxf86vm")
   '';
 
-
   preInstall = ''
     sed -i s,/usr/local/lib,$out/lib, Makefile
     mkdir -p $out/lib

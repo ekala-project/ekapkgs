@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook # for the patch
   ];
 
-
   meta = {
     description = "Implements Wake On LAN functionality in a small program";
     homepage = "https://sourceforge.net/projects/wake-on-lan/";

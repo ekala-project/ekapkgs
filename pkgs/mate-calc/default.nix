@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     mpfr
   ];
 
-
   meta = {
     description = "Calculator for the MATE desktop";
     homepage = "https://mate-desktop.org";

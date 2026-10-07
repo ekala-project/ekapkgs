@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals withUpower [ "--enable-upower-glib" ]
   ++ lib.optionals withColord [ "--enable-colord" ];
 
-
   meta = {
     description = "Settings manager for Xfce";
     homepage = "https://gitlab.xfce.org/xfce/xfce4-settings";

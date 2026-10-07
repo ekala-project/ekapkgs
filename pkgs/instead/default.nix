@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
     popd
   '';
 
-
   meta = {
     description = "Simple text adventure interpreter for Unix and Windows";
     homepage = "https://instead.syscall.ru/";

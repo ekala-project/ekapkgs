@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     "man"
   ];
 
-
   nativeBuildInputs = [
     autoconf
     bison

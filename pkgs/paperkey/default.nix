@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     done
   '';
 
-
   meta = {
     description = "Store OpenPGP or GnuPG on paper";
     mainProgram = "paperkey";

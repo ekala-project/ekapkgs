@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs --build src/helpztags
   '';
 
-
   meta = {
     description = "Vi-like file manager";
     mainProgram = "vifm";

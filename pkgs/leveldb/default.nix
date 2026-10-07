@@ -40,14 +40,10 @@ stdenv.mkDerivation (finalAttrs: {
   buildFlags = [ "all" ];
 
   cmakeEntries = {
-    BUILD_SHARED_LIBS = "${if stdenv.hostPlatform.isStatic then ";
+    BUILD_SHARED_LIBS = !stdenv.hostPlatform.isStatic;
     LEVELDB_BUILD_TESTS = false;
     LEVELDB_BUILD_BENCHMARKS = false;
   };
-
-  cmakeFlags = [
-    OFF" else "ON"}"
-  ];
 
   postInstall = ''
     substituteInPlace "$out"/lib/cmake/leveldb/leveldbTargets.cmake \

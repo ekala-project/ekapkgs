@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
-
   meta = {
     description = "Hard drive and file system benchmark suite";
     homepage = "http://www.coker.com.au/bonnie++/";

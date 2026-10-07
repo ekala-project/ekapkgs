@@ -34,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeEntries = {
     USE_SYSTEM_SIMPLEINI = true;
-    LIRI_DATA_DIR = "${placeholder ";
+    LIRI_DATA_DIR = "${placeholder "out"}/share/Li-ri/";
   };
 
   meta = {

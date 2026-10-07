@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makefile = "makefile.shared";
 
-
   meta = {
     description = "Fairly comprehensive, modular and portable cryptographic toolkit";
     homepage = "https://www.libtom.net/LibTomCrypt/";

@@ -51,14 +51,10 @@ stdenv.mkDerivation rec {
   cmakeEntries = {
     RUN_SWIG = true;
     PYTHON_BINDINGS = true;
-    PYTHON_INSTDIR = "${placeholder ";
+    PYTHON_INSTDIR = "${placeholder "out"}/${python3.sitePackages}";
     WITH_MAEPARSER = false;
     WITH_COORDGEN = false;
   };
-
-  cmakeFlags = [
-    out"}/${python3.sitePackages}"
-  ];
 
   postFixup = ''
     cat << EOF > $out/${python3.sitePackages}/setup.py

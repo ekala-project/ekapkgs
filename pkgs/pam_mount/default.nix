@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     util-linux
   ];
 
-
   configureFlags = [
     "--prefix=${placeholder "out"}"
     "--localstatedir=${placeholder "out"}/var"

@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
-
   installPhase = ''
     mkdir -p $out $out/lib $out/bin $out/include
     cp -r include/* $out/include/

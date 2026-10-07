@@ -109,7 +109,6 @@ stdenv.mkDerivation rec {
 
   doCheck = true;
 
-
   meta = {
     description = "Bar code reader";
     longDescription = ''

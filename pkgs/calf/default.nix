@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     "doc"
   ];
 
-
   cmakeEntries = {
     WANT_GUI = false;
   };

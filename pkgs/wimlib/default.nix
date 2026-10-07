@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-hCIaOr1bkSKPFfjmBlwzWjNiN7VzgZe3W/QZ7qVhoZQ=";
   };
 
-
   preBuild = lib.optionalString (syslinux != null) ''
     substituteInPlace programs/mkwinpeimg.in \
       --replace '/usr/lib/syslinux' "${syslinux}/share/syslinux"

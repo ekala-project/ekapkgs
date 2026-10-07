@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     db
   ];
 
-
   meta = {
     description = "Try to find password of encrypted cryptocurrency wallet";
     homepage = "https://github.com/glv2/bruteforce-wallet";

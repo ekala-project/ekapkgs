@@ -28,14 +28,9 @@ stdenv.mkDerivation (finalAttrs: {
   cmakeEntries = {
     USE_PCAP = true;
     USE_SSL = true;
-    USE_SCTP = "${if stdenv.hostPlatform.isLinux then ";
+    USE_SCTP = if stdenv.hostPlatform.isLinux then "1" else "0";
     CMAKE_SKIP_BUILD_RPATH = true;
   };
-
-  cmakeFlags = [
-    1" else "0"}"
-  ];
-
 
   nativeBuildInputs = [
     cmake

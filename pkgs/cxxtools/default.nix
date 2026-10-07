@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     openssl
   ];
 
-
   meta = {
     homepage = "http://www.tntnet.org/cxxtools.html";
     description = "Comprehensive C++ class library for Unix and Linux";

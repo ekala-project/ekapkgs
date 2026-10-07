@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ libintl ];
 
-
   meta = {
     homepage = "https://github.com/rrthomas/recode";
     description = "Converts files between various character sets and usages";

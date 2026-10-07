@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-cxx11=yes"
   ];
 
-
   doCheck = true;
 
   preCheck = ''

@@ -85,7 +85,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-group=nutmon"
   ];
 
-
   stripDebugList = [
     "cgi-bin"
     "lib"

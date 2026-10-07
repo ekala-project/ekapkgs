@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
   ];
 
-
   patchPhase = ''
     substituteInPlace getver.sh --replace ver=unknown ver=${finalAttrs.version}
     substituteInPlace Makefile --replace pkg-config "$PKG_CONFIG"

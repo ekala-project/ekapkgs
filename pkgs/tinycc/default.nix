@@ -75,7 +75,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--config-musl"
   ];
 
-
   env.NIX_CFLAGS_COMPILE = toString [
     "-Wno-error=implicit-int"
     "-Wno-error=int-conversion"

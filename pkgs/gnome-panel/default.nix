@@ -78,7 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-eds"
   ];
 
-
   doCheck = true;
 
   meta = {

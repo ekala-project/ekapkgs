@@ -52,17 +52,12 @@ stdenv.mkDerivation rec {
   ];
 
   mesonEntries = {
-    udev_rules_dir = "${placeholder ";
+    udev_rules_dir = "${placeholder "out"}/lib/udev/rules.d";
     drivers = "all";
-    udev_hwdb_dir = "${placeholder ";
+    udev_hwdb_dir = "${placeholder "out"}/lib/udev/hwdb.d";
     introspection = false;
     doc = false;
   };
-
-  mesonFlags = [
-    out"}/lib/udev/rules.d"
-    out"}/lib/udev/hwdb.d"
-  ];
 
   doCheck = false;
 

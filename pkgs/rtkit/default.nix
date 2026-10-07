@@ -46,20 +46,12 @@ stdenv.mkDerivation {
 
   mesonEntries = {
     installed_tests = false;
-    dbus_systemservicedir = "${placeholder ";
-    dbus_interfacedir = "${placeholder ";
-    dbus_rulesdir = "${placeholder ";
-    polkit_actiondir = "${placeholder ";
-    systemd_systemunitdir = "${placeholder ";
+    dbus_systemservicedir = "${placeholder "out"}/share/dbus-1/system-services";
+    dbus_interfacedir = "${placeholder "out"}/share/dbus-1/interfaces";
+    dbus_rulesdir = "${placeholder "out"}/etc/dbus-1/system.d";
+    polkit_actiondir = "${placeholder "out"}/share/polkit-1/actions";
+    systemd_systemunitdir = "${placeholder "out"}/etc/systemd/system";
   };
-
-  mesonFlags = [
-    out"}/share/dbus-1/system-services"
-    out"}/share/dbus-1/interfaces"
-    out"}/etc/dbus-1/system.d"
-    out"}/share/polkit-1/actions"
-    out"}/etc/systemd/system"
-  ];
 
   meta = {
     homepage = "https://github.com/heftig/rtkit";

@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs .
   '';
 
-
   postInstall = ''
     for binary in vsid x128 x64 x64dtv xcbm2 xpet xplus4 xscpu64 xvic; do
       for size in 16 24 32 48 64 256; do

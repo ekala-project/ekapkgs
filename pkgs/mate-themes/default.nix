@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     gtk-update-icon-cache "$out"/share/icons/ContrastHigh
   '';
 
-
   meta = {
     description = "Set of themes from MATE";
     homepage = "https://mate-desktop.org";

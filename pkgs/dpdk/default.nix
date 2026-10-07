@@ -88,9 +88,11 @@ stdenv.mkDerivation (finalAttrs: {
     developer_mode = false;
   };
 
-  mesonFlags = lib.optionals (machine != null) [ (lib.mesonOption "machine" machine) ] ++ lib.optionals (withExamples != [ ]) [
-    (lib.mesonOption "examples" (lib.concatStringsSep "," withExamples))
-  ];
+  mesonFlags =
+    lib.optionals (machine != null) [ (lib.mesonOption "machine" machine) ]
+    ++ lib.optionals (withExamples != [ ]) [
+      (lib.mesonOption "examples" (lib.concatStringsSep "," withExamples))
+    ];
 
   postInstall = ''
     rm -rf $out/share/doc/dpdk/html/.doctrees

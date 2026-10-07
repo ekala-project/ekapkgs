@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     "all"
   ];
 
-
   installPhase = ''
     mkdir -p $out/bin/
     cp msieve $out/bin/

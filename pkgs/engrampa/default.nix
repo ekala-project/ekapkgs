@@ -69,7 +69,6 @@ stdenv.mkDerivation (finalAttrs: {
       "--enable-magic"
     ];
 
-
   meta = {
     description = "Archive Manager for MATE";
     mainProgram = "engrampa";

@@ -16,7 +16,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ gettext ];
 
-
   makeFlags = [ "PREFIX=$(out)" ];
 
   outputs = [

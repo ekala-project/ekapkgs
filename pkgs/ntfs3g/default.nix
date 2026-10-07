@@ -71,7 +71,6 @@ stdenv.mkDerivation (finalAttrs: {
     ln -sv mount.ntfs-3g $out/sbin/mount.ntfs
   '';
 
-
   meta = {
     homepage = "https://github.com/tuxera/ntfs-3g";
     description = "FUSE-based NTFS driver with full write support";

@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     "STATIC_UTILITIES="
   ];
 
-
   meta = {
     description = "Audio Processing Technology codec (aptX)";
     license = lib.licenses.gpl3Plus;

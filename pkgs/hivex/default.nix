@@ -43,7 +43,6 @@ stdenv.mkDerivation rec {
     "--disable-ocaml"
   ];
 
-
   postInstall = ''
     wrapProgram $out/bin/hivexregedit \
         --set PERL5LIB "$out/${perlPackages.perl.libPrefix}" \

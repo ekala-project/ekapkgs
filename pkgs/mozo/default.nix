@@ -39,7 +39,6 @@ python3.pkgs.buildPythonApplication rec {
     glib
   ];
 
-
   meta = {
     description = "MATE Desktop menu editor";
     mainProgram = "mozo";

@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-
   meta = {
     description = "Library for import of reflowable e-book formats";
     license = lib.licenses.lgpl21Plus;

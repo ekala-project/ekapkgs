@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "PREFIX=$(out)" ];
 
-
   postInstall = ''
     installShellCompletion contrib/_mblaze
   ''

@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-
   cmakeEntries = {
     Z3_BUILD_PYTHON_BINDINGS = false;
     Z3_BUILD_JAVA_BINDINGS = false;

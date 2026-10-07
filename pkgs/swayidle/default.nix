@@ -41,20 +41,10 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optionals (systemdSupport && systemdLibs != null) [ systemdLibs ];
 
-  mesonEntries = {
-    logind = "${if systemdSupport then ";
-  };
-
   mesonFeatures = {
+    logind = systemdSupport;
     man-pages = true;
   };
-
-  mesonFlags = [
-    enabled"
-    else
-    "disabled"
-    }"
-  ];
 
   postPatch = ''
     substituteInPlace main.c \

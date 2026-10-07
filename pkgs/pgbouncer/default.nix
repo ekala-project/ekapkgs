@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional stdenv.hostPlatform.isLinux systemd;
 
-
   configureFlags = lib.optional stdenv.hostPlatform.isLinux "--with-systemd";
 
   meta = {

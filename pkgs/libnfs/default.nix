@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     ENABLE_MULTITHREADING = true;
   };
 
-
   meta = {
     description = "NFS client library";
     homepage = "https://github.com/sahlberg/libnfs";

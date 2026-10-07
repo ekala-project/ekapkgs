@@ -103,7 +103,6 @@ stdenv.mkDerivation (finalAttrs: {
     nuke-refs src/version.c
   '';
 
-
   __darwinAllowLocalNetworking = true;
   doCheck = true;
   preCheck = ''

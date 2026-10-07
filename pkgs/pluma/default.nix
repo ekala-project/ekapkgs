@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     python3
   ];
 
-
   pythonPath = with python3.pkgs; [
     pycairo
   ];

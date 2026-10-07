@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ flex ];
 
-
   outputs = [
     "out"
     "man"

@@ -34,7 +34,9 @@ stdenv.mkDerivation (finalAttrs: {
     NCNN_PYTHON = false;
   };
 
-  cmakeFlags = # Requires setting `Vulkan_LIBRARY` on Darwin. Otherwise the build fails due to missing symbols. ++ lib.optionals stdenv.hostPlatform.isDarwin [ "-DVulkan_LIBRARY=-lvulkan" ];
+  cmakeFlags =
+    # Requires setting `Vulkan_LIBRARY` on Darwin. Otherwise the build fails due to missing symbols.
+    lib.optionals stdenv.hostPlatform.isDarwin [ "-DVulkan_LIBRARY=-lvulkan" ];
 
   nativeBuildInputs = [
     cmake

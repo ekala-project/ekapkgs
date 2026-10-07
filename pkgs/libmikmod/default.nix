@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     NIX_LDFLAGS = "-lasound";
   };
 
-
   postInstall = ''
     moveToOutput bin/libmikmod-config "$dev"
   '';

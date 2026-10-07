@@ -13,7 +13,6 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-RyNFHdezJyE8rJohxW3FmcqD+4N+7+ejD1z/DplQHe8=";
   };
 
-
   meta = {
     homepage = "https://www.ssisc.org/lis/";
     description = "Library of Iterative Solvers for linear systems";

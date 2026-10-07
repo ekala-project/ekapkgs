@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--disable-icatok"
   ];
 
-
   installFlags = [ "DESTDIR=${placeholder "out"}" ];
 
   meta = {

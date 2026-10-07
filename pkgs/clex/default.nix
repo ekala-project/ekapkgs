@@ -16,7 +16,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ ncurses ];
 
-
   meta = {
     description = "File manager with full-screen terminal interface";
     longDescription = ''

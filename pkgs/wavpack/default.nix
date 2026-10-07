@@ -25,7 +25,6 @@ stdenv.mkDerivation rec {
     "man"
   ];
 
-
   nativeBuildInputs = [
     autoreconfHook
     gettext

@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   sourceRoot = "ntl-${finalAttrs.version}/src";
 
-
   dontAddPrefix = true; # DEF_PREFIX instead
 
   # Written in perl, does not support autoconf-style

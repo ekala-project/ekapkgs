@@ -57,12 +57,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonEntries = {
     soup2 = false;
-    installed_test_prefix = "${placeholder ";
+    installed_test_prefix = "${placeholder "installedTests"}";
   };
-
-  mesonFlags = [
-    installedTests"}"
-  ];
 
   meta = {
     changelog = "https://gitlab.gnome.org/GNOME/geocode-glib/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";

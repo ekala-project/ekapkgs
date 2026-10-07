@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [ "CXXFLAGS=-std=c++11" ];
 
-
   postInstall = ''
     mv -v $out/share/man/man1/coan.1.{1,gz}
   '';

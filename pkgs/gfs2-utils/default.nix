@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
   nativeCheckInputs = [ check ];
   doCheck = true;
 
-
   meta = {
     homepage = "https://pagure.io/gfs2-utils";
     description = "Tools for creating, checking and working with gfs2 filesystems";

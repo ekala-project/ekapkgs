@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   hardeningDisable = lib.optionals stdenv.hostPlatform.isStatic [ "fortify" ];
 
-
   meta = {
     description = "Provide detailed information on the hardware configuration of the machine";
     homepage = "https://ezix.org/project/wiki/HardwareLiSter";

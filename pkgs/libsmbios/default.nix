@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [ "--disable-graphviz" ];
 
-
   postInstall = ''
     mkdir -p $out/include
     cp -a src/include/smbios_c $out/include/

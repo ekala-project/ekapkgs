@@ -97,7 +97,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]);
 
   mesonEntries = {
-    systemduserunitdir = "${placeholder ";
+    systemduserunitdir = "${placeholder "out"}/lib/systemd/user";
     tmpfilesdir = "no";
     udisks2 = false;
     gcr = false;
@@ -107,8 +107,8 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   mesonFlags = [
-      out"}/lib/systemd/user"
-    ] ++ lib.optionals (!udevSupport) [
+  ]
+  ++ lib.optionals (!udevSupport) [
     "-Dgudev=false"
     "-Dfuse=false"
     "-Dcdda=false"
@@ -118,9 +118,11 @@ stdenv.mkDerivation (finalAttrs: {
     "-Dgphoto2=false"
     "-Dlibusb=false"
     "-Dlogind=false"
-  ] ++ lib.optionals (avahi == null) [
+  ]
+  ++ lib.optionals (avahi == null) [
     "-Ddnssd=false"
-  ] ++ lib.optionals (samba == null) [
+  ]
+  ++ lib.optionals (samba == null) [
     "-Dsmb=false"
   ];
 

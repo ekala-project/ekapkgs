@@ -29,7 +29,6 @@ stdenv.mkDerivation rec {
     ./gcc-14-fixes.diff
   ];
 
-
   buildInputs = [
     ncurses
     libuuid

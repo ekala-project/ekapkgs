@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     "CFLAGS=-std=gnu17"
   ];
 
-
   meta = {
     description = "File editor/viewer/analyzer for executables";
     homepage = "https://hte.sourceforge.net";

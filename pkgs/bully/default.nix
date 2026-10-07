@@ -18,7 +18,6 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ libpcap ];
 
-
   sourceRoot = "${src.name}/src";
 
   installPhase = ''

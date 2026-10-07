@@ -104,7 +104,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (withPgSQL && libpq != null) [ libpq ]
   ++ lib.optionals (withSQLite && sqlite != null) [ sqlite ];
 
-
   postPatch =
     let
       saslLib = if cyrus_sasl != null then cyrus_sasl else openssl;

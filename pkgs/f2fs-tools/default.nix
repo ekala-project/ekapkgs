@@ -48,7 +48,6 @@ stdenv.mkDerivation rec {
     })
   ];
 
-
   meta = {
     homepage = "https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/";
     description = "Userland tools for the f2fs filesystem";

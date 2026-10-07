@@ -37,7 +37,6 @@ stdenv.mkDerivation rec {
     })
   ];
 
-
   nativeBuildInputs = [
     autoreconfHook
     pkg-config

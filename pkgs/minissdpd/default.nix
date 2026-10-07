@@ -26,7 +26,6 @@ stdenv.mkDerivation rec {
     "INSTALLPREFIX=$(out)"
   ];
 
-
   doCheck = true;
 
   meta = {

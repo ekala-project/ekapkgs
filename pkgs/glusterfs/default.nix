@@ -139,7 +139,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "DESTDIR=$(out)" ];
 
-
   postInstall = ''
     cp -r $out/$out/* $out
     rm -r $out/nix

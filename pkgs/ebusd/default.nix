@@ -49,16 +49,10 @@ stdenv.mkDerivation rec {
   '';
 
   cmakeEntries = {
-    CMAKE_INSTALL_SYSCONFDIR = "${placeholder ";
-    CMAKE_INSTALL_BINDIR = "${placeholder ";
-    CMAKE_INSTALL_LOCALSTATEDIR = "${placeholder ";
+    CMAKE_INSTALL_SYSCONFDIR = "${placeholder "out"}/etc";
+    CMAKE_INSTALL_BINDIR = "${placeholder "out"}/bin";
+    CMAKE_INSTALL_LOCALSTATEDIR = "${placeholder "TMPDIR"}";
   };
-
-  cmakeFlags = [
-    out"}/etc"
-    out"}/bin"
-    TMPDIR"}"
-  ];
 
   postInstall = ''
     rmdir $out/usr/bin

@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = lib.optional stdenv.hostPlatform.isStatic "--disable-dynamic";
 
-
   meta = {
     homepage = "http://www.chiark.greenend.org.uk/~ian/adns/";
     description = "Asynchronous DNS resolver library";

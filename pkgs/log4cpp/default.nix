@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     touch configure config.h.in include/config.h.in Makefile.in */Makefile.in
   '';
 
-
   meta = {
     homepage = "https://log4cpp.sourceforge.net/";
     description = "Logging framework for C++ patterned after Apache log4j";

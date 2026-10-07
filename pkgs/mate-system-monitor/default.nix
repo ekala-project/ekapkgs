@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail 'DATADIR "/mate-about/mate-version.xml"' '"${mate-desktop}/share/mate-about/mate-version.xml"'
   '';
 
-
   meta = {
     description = "System monitor for the MATE desktop";
     mainProgram = "mate-system-monitor";

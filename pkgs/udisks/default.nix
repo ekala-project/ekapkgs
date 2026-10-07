@@ -132,7 +132,6 @@ stdenv.mkDerivation (finalAttrs: {
     "sysconfdir=${placeholder "out"}/etc"
   ];
 
-
   meta = {
     description = "Daemon, tools and libraries to access and manipulate disks and storage devices";
     homepage = "https://www.freedesktop.org/wiki/Software/udisks/";

@@ -67,7 +67,6 @@ stdenv.mkDerivation rec {
 
   installTargets = [ "install" ] ++ lib.optionals enablePython [ "install-pywrap" ];
 
-
   meta = removeAttrs libsepol.meta [ "outputsToInstall" ] // {
     description = "Policy management tools for SELinux";
     license = lib.licenses.lgpl21;

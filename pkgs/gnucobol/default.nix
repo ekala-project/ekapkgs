@@ -82,7 +82,6 @@ stdenv.mkDerivation (finalAttrs: {
     in
     if stdenv.cc.isGNU && lib.versionAtLeast stdenv.cc.version "15.0.0" then gcc15Flags else "";
 
-
   installFlags = [
     "install-pdf"
     "install-html"

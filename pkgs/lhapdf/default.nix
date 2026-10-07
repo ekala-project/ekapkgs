@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-
   passthru = {
     pdf_sets = import ./pdf_sets.nix { inherit lib stdenv fetchurl; };
   };

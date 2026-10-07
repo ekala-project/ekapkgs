@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     texinfo
   ];
 
-
   meta = {
     description = "Cross-platform file change monitor with multiple backends";
     mainProgram = "fswatch";

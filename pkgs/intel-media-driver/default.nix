@@ -38,14 +38,10 @@ stdenv.mkDerivation rec {
 
   cmakeEntries = {
     INSTALL_DRIVER_SYSCONF = false;
-    LIBVA_DRIVERS_PATH = "${placeholder ";
+    LIBVA_DRIVERS_PATH = "${placeholder "out"}/lib/dri";
     MEDIA_RUN_TEST_SUITE = false;
     MEDIA_BUILD_FATAL_WARNINGS = false;
   };
-
-  cmakeFlags = [
-    out"}/lib/dri"
-  ];
 
   env.NIX_CFLAGS_COMPILE = lib.optionalString (
     stdenv.hostPlatform.system == "i686-linux"

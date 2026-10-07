@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     "PREFIX=${placeholder "out"}"
   ];
 
-
   meta = {
     description = "Generates HTML from scdoc source files";
     homepage = "https://git.sr.ht/~bitfehler/scd2html";

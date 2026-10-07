@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-nilfs2"
   ];
 
-
   meta = {
     description = "Utilities to save and restore used blocks on a partition";
     longDescription = ''

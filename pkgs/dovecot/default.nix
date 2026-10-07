@@ -69,7 +69,6 @@ stdenv.mkDerivation rec {
     hash = "sha256-LZCheMQpdhEIi/farlSSo7w9WrYyjDoDLrQl0sJJCX4=";
   };
 
-
   env.NIX_LDFLAGS = "-licuuc -licui18n -licudata";
 
   postPatch = ''

@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     "IS_AARCH64=1"
   ];
 
-
   preFixup = ''
     for f in $out/share/hashcat/OpenCL/*.cl; do
       # Rewrite files to be included for compilation at runtime for opencl offload

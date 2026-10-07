@@ -46,7 +46,6 @@ stdenv.mkDerivation rec {
     libxinerama
   ];
 
-
   configureFlags = [
     "--disable-imlib2"
   ];

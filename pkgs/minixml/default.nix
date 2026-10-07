@@ -19,7 +19,6 @@ stdenv.mkDerivation rec {
     "--with-archflags=\"-mmacosx-version-min=10.14\""
   ];
 
-
   meta = {
     description = "Small XML library";
     homepage = "https://www.msweet.org/mxml/";

@@ -85,7 +85,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-pmix-libdir=${lib.getLib pmix}/lib"
   ];
 
-
   meta = {
     description = "PMIx Reference Runtime Environment";
     homepage = "https://docs.prrte.org/";

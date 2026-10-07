@@ -70,7 +70,6 @@ stdenv.mkDerivation rec {
   ];
   buildFlags = [ "build" ];
 
-
   nativeInstallCheckInputs = [ ];
   doInstallCheck = true;
   versionCheckProgram = "${placeholder "out"}/bin/stockfish";

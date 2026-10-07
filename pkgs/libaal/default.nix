@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace Makefile --replace ./run-ldconfig true
   '';
 
-
   meta = {
     homepage = "http://www.namesys.com/";
     description = "Support library for Reiser4";

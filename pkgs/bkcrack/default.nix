@@ -22,12 +22,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    BKCRACK_BUILD_TESTING = "${if finalAttrs.finalPackage.doCheck then ";
+    BKCRACK_BUILD_TESTING = finalAttrs.finalPackage.doCheck;
   };
-
-  cmakeFlags = [
-    ON" else "OFF"}"
-  ];
 
   postInstall = ''
     mkdir -p $out/bin $out/share/doc/bkcrack $out/share/licenses/bkcrack
