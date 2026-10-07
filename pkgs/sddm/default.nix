@@ -58,6 +58,7 @@ let
 
     nativeBuildInputs = [
       cmake
+      cmake.configurePhaseHook
       pkg-config
       qttools
       docutils
@@ -82,7 +83,7 @@ let
       CONFIG_DIR = "/etc/sddm.conf.d";
       UID_MIN = "1000";
       UID_MAX = "29999";
-      SDDM_INITIAL_VT = true;
+      SDDM_INITIAL_VT = "1";
       CMAKE_INSTALL_SYSCONFDIR = "${placeholder "out"}/etc";
       SYSTEMD_SYSTEM_UNIT_DIR = "${placeholder "out"}/lib/systemd/system";
       SYSTEMD_SYSUSERS_DIR = "${placeholder "out"}/lib/sysusers.d";
