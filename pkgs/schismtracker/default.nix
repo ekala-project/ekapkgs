@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     libxext
   ];
 
-
   # Our Darwin sdl2-compat doesn't have a SDL2main to link against
   preConfigure = lib.optionalString stdenv.hostPlatform.isDarwin ''
     substituteInPlace configure.ac \

@@ -59,7 +59,6 @@ stdenv.mkDerivation {
     am_cv_func_iconv_works = "yes";
   };
 
-
   meta = {
     homepage = "https://github.com/L1L1/cardpeek";
     description = "Tool to read the contents of ISO7816 smart cards";

@@ -33,7 +33,6 @@ stdenv.mkDerivation rec {
     ncurses
   ];
 
-
   meta = {
     description = "Free Telnet/SSH Client";
     longDescription = ''

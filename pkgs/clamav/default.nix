@@ -67,14 +67,15 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeEntries = {
     APP_CONFIG_DIRECTORY = "/etc/clamav";
-    CVD_CERTS_DIRECTORY = "${placeholder ";
+    CVD_CERTS_DIRECTORY = "${placeholder "out"}/share/clamav/certs";
   };
 
   cmakeFlags = [
-      out"}/share/clamav/certs"
-    ] ++ lib.optionals (enableSystemd && systemd != null) [
+  ]
+  ++ lib.optionals (enableSystemd && systemd != null) [
     "-DSYSTEMD_UNIT_DIR=${placeholder "out"}/lib/systemd"
-  ] ++ lib.optionals (!enableSystemd || systemd == null) [
+  ]
+  ++ lib.optionals (!enableSystemd || systemd == null) [
     "-DENABLE_SYSTEMD=OFF"
   ];
 

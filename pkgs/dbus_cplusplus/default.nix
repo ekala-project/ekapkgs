@@ -74,7 +74,6 @@ stdenv.mkDerivation rec {
     "--disable-examples"
   ];
 
-
   meta = {
     homepage = "https://dbus-cplusplus.sourceforge.net";
     description = "C++ API for D-BUS";

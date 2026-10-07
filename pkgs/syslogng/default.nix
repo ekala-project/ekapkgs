@@ -138,7 +138,6 @@ stdenv.mkDerivation (finalAttrs: {
     "man"
   ];
 
-
   meta = {
     homepage = "https://www.syslog-ng.com";
     description = "Next-generation syslogd with advanced networking and filtering capabilities";

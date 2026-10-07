@@ -93,13 +93,13 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   mesonEntries = {
-    installed_test_prefix = "${placeholder ";
+    installed_test_prefix = "${placeholder "installedTests"}";
     skip_gtk_tests = (!finalAttrs.finalPackage.doCheck);
   };
 
   mesonFlags = [
-      installedTests"}"
-    ] ++ lib.optionals (!stdenv.hostPlatform.isLinux || stdenv.hostPlatform.isMusl) [
+  ]
+  ++ lib.optionals (!stdenv.hostPlatform.isLinux || stdenv.hostPlatform.isMusl) [
     "-Dprofiler=disabled"
   ];
 

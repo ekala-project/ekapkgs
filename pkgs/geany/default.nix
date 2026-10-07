@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-
   meta = {
     description = "Small and lightweight IDE";
     homepage = "https://www.geany.org/";

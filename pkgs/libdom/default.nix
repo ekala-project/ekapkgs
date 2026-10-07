@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     "NSSHARED=${netsurf-buildsystem}/share/netsurf-buildsystem"
   ];
 
-
   meta = {
     homepage = "https://www.netsurf-browser.org/projects/libdom/";
     description = "Document Object Model library for netsurf browser";

@@ -17,7 +17,6 @@ stdenv.mkDerivation rec {
 
   doCheck = true;
 
-
   meta = {
     description = "State machine compiler";
     homepage = "https://www.colm.net/open-source/ragel/";

@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-polkit"
   ];
 
-
   postInstall = ''
     installShellCompletion --bash --name usbguard.bash scripts/bash_completion/usbguard
     installShellCompletion --zsh --name _usbguard scripts/usbguard-zsh-completion

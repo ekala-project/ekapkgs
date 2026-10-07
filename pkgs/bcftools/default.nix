@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   '';
 
-
   doCheck = true;
 
   meta = {

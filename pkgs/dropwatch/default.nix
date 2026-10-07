@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-
   meta = {
     description = "Linux kernel dropped packet monitor";
     homepage = "https://github.com/nhorman/dropwatch";

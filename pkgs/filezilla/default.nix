@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-
   preFixup = ''
     gappsWrapperArgs+=(
       --suffix PATH : "${lib.makeBinPath [ xdg-utils ]}"

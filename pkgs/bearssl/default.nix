@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     "out"
   ];
 
-
   makeFlags = [
     "AR=${stdenv.cc.targetPrefix}ar"
     "CC=${stdenv.cc.targetPrefix}cc"

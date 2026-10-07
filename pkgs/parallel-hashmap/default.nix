@@ -30,13 +30,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    PHMAP_BUILD_TESTS = "${if finalAttrs.finalPackage.doCheck then ";
+    PHMAP_BUILD_TESTS = finalAttrs.finalPackage.doCheck;
     PHMAP_BUILD_EXAMPLES = false;
   };
-
-  cmakeFlags = [
-    ON" else "OFF"}"
-  ];
 
   nativeCheckInputs = [
     gtest

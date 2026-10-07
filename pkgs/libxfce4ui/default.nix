@@ -62,7 +62,6 @@ stdenv.mkDerivation rec {
     "--with-vendor-info=NixOS"
   ];
 
-
   meta = {
     description = "Widgets library for Xfce";
     homepage = "https://gitlab.xfce.org/xfce/libxfce4ui";

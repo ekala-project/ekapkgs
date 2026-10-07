@@ -43,7 +43,6 @@ stdenv.mkDerivation rec {
     "--without-aquaterm"
   ];
 
-
   meta = {
     homepage = "http://www.gnuplot.info/";
     description = "Portable command-line driven graphing utility for many platforms";

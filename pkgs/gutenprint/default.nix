@@ -67,7 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
         configure
     '';
 
-
   # Testing is very, very long.
   # doCheck = true;
 

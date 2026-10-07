@@ -66,14 +66,10 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   cmakeEntries = {
-    INSTALL_EXAMPLE_SCRIPTS = "${if installExampleScripts then ";
+    INSTALL_EXAMPLE_SCRIPTS = installExampleScripts;
     INSTALL_DOCUMENTATION = true;
     WITH_GBM = true;
   };
-
-  cmakeFlags = [
-    ON" else "OFF"}"
-  ];
 
   postInstall = ''
     installShellCompletion --cmd wl-mirror \

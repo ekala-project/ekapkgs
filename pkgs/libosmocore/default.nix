@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     pcsclite
   ];
 
-
   meta = {
     description = "Set of Osmocom core libraries";
     homepage = "https://github.com/osmocom/libosmocore";

@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     adwaita-icon-theme
   ];
 
-
   postFixup = ''
     wrapProgram $out/bin/gsmartcontrol \
       --prefix PATH : ${

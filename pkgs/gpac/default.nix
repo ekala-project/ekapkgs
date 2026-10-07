@@ -81,7 +81,6 @@ stdenv.mkDerivation (finalAttrs: {
     ]
   );
 
-
   meta = {
     description = "Open Source multimedia framework for research and academic purposes";
     homepage = "https://gpac.wp.imt.fr";

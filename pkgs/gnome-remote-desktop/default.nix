@@ -78,20 +78,13 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonEntries = {
     conf_dir = "/etc/gnome-remote-desktop";
-    systemd_user_unit_dir = "${placeholder ";
-    systemd_system_unit_dir = "${placeholder ";
-    systemd_sysusers_dir = "${placeholder ";
-    systemd_tmpfiles_dir = "${placeholder ";
+    systemd_user_unit_dir = "${placeholder "out"}/lib/systemd/user";
+    systemd_system_unit_dir = "${placeholder "out"}/lib/systemd/system";
+    systemd_sysusers_dir = "${placeholder "out"}/lib/sysusers.d";
+    systemd_tmpfiles_dir = "${placeholder "out"}/lib/tmpfiles.d";
     tests = false;
     c_args = "-I${freerdp}/include/winpr3";
   };
-
-  mesonFlags = [
-    out"}/lib/systemd/user"
-    out"}/lib/systemd/system"
-    out"}/lib/sysusers.d"
-    out"}/lib/tmpfiles.d"
-  ];
 
   meta = {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-remote-desktop";

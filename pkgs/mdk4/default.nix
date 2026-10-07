@@ -37,7 +37,6 @@ stdenv.mkDerivation {
     "SBINDIR=$(PREFIX)/bin"
   ];
 
-
   meta = {
     description = "Tool that injects data into wireless networks";
     homepage = "https://github.com/aircrack-ng/mdk4";

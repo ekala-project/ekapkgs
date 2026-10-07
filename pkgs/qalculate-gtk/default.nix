@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     curl
   ];
 
-
   meta = {
     description = "Ultimate desktop calculator";
     homepage = "http://qalculate.github.io";

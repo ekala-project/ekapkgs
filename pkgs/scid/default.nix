@@ -46,7 +46,6 @@ tcl.mkTclDerivation rec {
     "CC=${stdenv.cc.targetPrefix}cc"
   ];
 
-
   meta = {
     description = "Chess database with play and training functionality";
     homepage = "https://scid.sourceforge.net/";

@@ -70,19 +70,17 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   mesonEntries = {
-    systemd-system-unit-dir = "${placeholder ";
+    systemd-system-unit-dir = "${placeholder "out"}/lib/systemd/system";
     demo-agent = false;
-    sysconfdir_install = "${placeholder ";
+    sysconfdir_install = "${placeholder "out"}/etc";
     dbus-srv-user = "geoclue";
+    "3g-source" = false;
     cdma-source = false;
     modem-gps-source = false;
   };
 
   mesonFlags = [
-    out"}/lib/systemd/system"
     "--sysconfdir=/etc"
-    out"}/etc"
-    "-D3g-source=false"
   ];
 
   postPatch = ''

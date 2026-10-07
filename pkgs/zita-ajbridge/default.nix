@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     "MANDIR=$(out)/share/man/man1"
   ];
 
-
   meta = {
     description = "Connect additional ALSA devices to JACK";
     homepage = "http://kokkinizita.linuxaudio.org/linuxaudio/index.html";

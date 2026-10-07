@@ -76,7 +76,6 @@ stdenv.mkDerivation (finalAttrs: {
     fi
   '';
 
-
   meta = {
     description = "Daemon which collects system performance statistics periodically";
     homepage = "https://collectd.org";

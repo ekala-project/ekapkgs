@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-
   hardeningDisable = [ "format" ];
 
   meta = {

@@ -92,12 +92,8 @@ stdenv.mkDerivation rec {
 
   mesonEntries = {
     installed_tests = true;
-    installed_test_prefix = "${placeholder ";
+    installed_test_prefix = "${placeholder "installedTests"}";
   };
-
-  mesonFlags = [
-    installedTests"}"
-  ];
 
   postPatch = ''
     chmod +x meson_post_install.py

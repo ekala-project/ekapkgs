@@ -184,32 +184,21 @@ clangStdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    ENABLE_INTROSPECTION = "${if withGtk3 then ";
+    ENABLE_INTROSPECTION = !withGtk3;
     PORT = "GTK";
-    USE_LIBSECRET = "${if withLibsecret then ";
-    ENABLE_EXPERIMENTAL_FEATURES = "${if enableExperimental then ";
+    USE_LIBSECRET = withLibsecret;
+    ENABLE_EXPERIMENTAL_FEATURES = enableExperimental;
     ENABLE_GAMEPAD = false;
   };
 
-  cmakeFlags = [
-      OFF"
-      else
-      "ON"
-      }"
-      ON"
-      else
-      "OFF"
-      }"
-      ON"
-      else
-      "OFF"
-      }"
-    ] ++ lib.optionals clangStdenv.hostPlatform.isLinux [
-    "-DBWRAP_EXECUTABLE=${lib.getExe bubblewrap}"
-    "-DDBUS_PROXY_EXECUTABLE=${lib.getExe xdg-dbus-proxy}"
-  ] ++ lib.optionals withGtk3 [
-    "-DUSE_GTK4=OFF"
-  ];
+  cmakeFlags =
+    lib.optionals clangStdenv.hostPlatform.isLinux [
+      "-DBWRAP_EXECUTABLE=${lib.getExe bubblewrap}"
+      "-DDBUS_PROXY_EXECUTABLE=${lib.getExe xdg-dbus-proxy}"
+    ]
+    ++ lib.optionals withGtk3 [
+      "-DUSE_GTK4=OFF"
+    ];
 
   postPatch = ''
     patchShebangs .

@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     ./0001-use-static_cast-for-static-cast-fixes-319.patch
   ];
 
-
   env = lib.optionalAttrs stdenv.cc.isClang {
     CXXFLAGS = "-std=c++14";
   };

@@ -94,7 +94,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-
   env = {
     PKG_CONFIG_LIBGNOME_PANEL_LAYOUTSDIR = "${placeholder "out"}/share/gnome-panel/layouts";
     PKG_CONFIG_LIBGNOME_PANEL_MODULESDIR = "${placeholder "out"}/lib/gnome-panel/modules";

@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-geosconfig=${lib.getExe' (lib.getDev geos) "geos-config"}"
   ];
 
-
   doCheck = false;
 
   preCheck = ''

@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = lib.optional stdenv.cc.isClang "--host=${stdenv.hostPlatform.system}";
 
-
   buildInputs = [
     glib
     cairo

@@ -25,14 +25,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    STLINK_MODPROBED_DIR = "${placeholder ";
-    STLINK_UDEV_RULES_DIR = "${placeholder ";
+    STLINK_MODPROBED_DIR = "${placeholder "out"}/etc/modprobe.d";
+    STLINK_UDEV_RULES_DIR = "${placeholder "out"}/lib/udev/rules.d";
   };
-
-  cmakeFlags = [
-    out"}/etc/modprobe.d"
-    out"}/lib/udev/rules.d"
-  ];
 
   meta = {
     description = "In-circuit debug and programming for ST-Link devices";

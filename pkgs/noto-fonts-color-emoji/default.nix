@@ -54,7 +54,6 @@ stdenvNoCC.mkDerivation rec {
 
   buildFlags = [ "BYPASS_SEQUENCE_CHECK=True" ];
 
-
   installPhase = ''
     runHook preInstall
     mkdir -p $out/share/fonts/noto

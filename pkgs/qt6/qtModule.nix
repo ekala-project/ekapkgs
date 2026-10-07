@@ -37,8 +37,9 @@ stdenv.mkDerivation (
     };
 
     cmakeFlags = [
-        "--log-level=STATUS"
-      ] ++ args.cmakeFlags or [ ];
+      "--log-level=STATUS"
+    ]
+    ++ args.cmakeFlags or [ ];
 
     moveToDev = false;
 

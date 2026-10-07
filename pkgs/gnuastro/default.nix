@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     wcslib
   ];
 
-
   hardeningDisable = lib.optionals stdenv.hostPlatform.isDarwin [ "format" ];
 
   meta = {

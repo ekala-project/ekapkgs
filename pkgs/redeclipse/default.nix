@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     "prefix=$(out)"
   ];
 
-
   installTargets = [ "system-install" ];
 
   postInstall = ''

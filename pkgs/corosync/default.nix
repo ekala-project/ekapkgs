@@ -78,7 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
     "LOGROTATEDIR=$(out)/etc/logrotate.d"
   ];
 
-
   preConfigure = lib.optionalString enableInfiniBandRdma ''
     export rdmacm_LIBS=-lrdmacm
     export rdmacm_CFLAGS=" "

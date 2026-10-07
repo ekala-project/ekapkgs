@@ -37,7 +37,6 @@ stdenv.mkDerivation {
 
   hardeningDisable = [ "format" ];
 
-
   buildPhase = ''
     runHook preBuild
 

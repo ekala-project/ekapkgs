@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     ];
   };
 
-
   makeFlags = [ "CXX=${stdenv.cc.targetPrefix}c++" ];
   installFlags = [ "PREFIX=$(out)" ];
 

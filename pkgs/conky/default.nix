@@ -175,7 +175,7 @@ stdenv.mkDerivation (finalAttrs: {
     BUILD_NVIDIA = nvidiaSupport;
     BUILD_PULSEAUDIO = pulseSupport;
     BUILD_JOURNAL = journalSupport;
-    CMAKE_INSTALL_DATAROOTDIR = "${placeholder ";
+    CMAKE_INSTALL_DATAROOTDIR = "${placeholder "out"}/share";
   };
 
   meta = {

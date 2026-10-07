@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals withUtempter [ "--enable-utempter" ]
   ++ lib.optionals withUtf8proc [ "--enable-utf8proc" ];
 
-
   passthru.terminfo = runCommand "tmux-terminfo" { nativeBuildInputs = [ ncurses ]; } ''
     mkdir -p $out/share/terminfo/t
     ln -sv ${ncurses}/share/terminfo/t/{tmux,tmux-256color,tmux-direct} $out/share/terminfo/t

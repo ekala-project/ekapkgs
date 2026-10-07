@@ -72,7 +72,6 @@ stdenv.mkDerivation rec {
       $out/share/icons/hicolor/64x64/apps/xfig.png
   '';
 
-
   meta = {
     changelog = "https://sourceforge.net/p/mcj/xfig/ci/${version}/tree/CHANGES";
     description = "Interactive drawing tool for X11";

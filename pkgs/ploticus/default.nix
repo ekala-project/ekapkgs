@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "CC:=$(CC)" ];
 
-
   preInstall = ''
     mkdir -p "$out/bin"
   '';

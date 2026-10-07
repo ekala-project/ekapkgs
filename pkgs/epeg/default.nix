@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-lttqarR8gScNIlSrc5uU3FLfvwxxJ2A1S4oESUW7oIw=";
   };
 
-
   nativeBuildInputs = [
     pkg-config
     libtool

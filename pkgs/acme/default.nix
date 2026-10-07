@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail "= gcc" "?= gcc"
   '';
 
-
   makeFlags = [ "BINDIR=$(out)/bin" ];
 
   meta = {

@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     boost
   ];
 
-
   meta = {
     description = "Implementation of XMP (Adobe's Extensible Metadata Platform)";
     mainProgram = "exempi";

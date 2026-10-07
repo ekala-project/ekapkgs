@@ -74,7 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
     rm -rf $out/{bin,etc,lib/speech-dispatcher,lib/systemd,libexec,share}
   '';
 
-
   meta = {
     description = "Common interface to speech synthesis - client libraries only";
     homepage = "https://devel.freebsoft.org/speechd";

@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--datadir=${placeholder "lib"}/share"
   ];
 
-
   doCheck = true;
   nativeCheckInputs = [ dejagnu ];
 

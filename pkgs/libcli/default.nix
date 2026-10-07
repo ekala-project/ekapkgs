@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     libxcrypt
   ];
 
-
   makeFlags = [
     "CC=${stdenv.cc.targetPrefix}cc"
     "AR=${stdenv.cc.targetPrefix}ar"

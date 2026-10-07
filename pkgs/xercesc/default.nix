@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-transcoder-icu"
   ];
 
-
   meta = {
     description = "Validating XML parser written in a portable subset of C++";
     homepage = "https://xerces.apache.org/xerces-c/";

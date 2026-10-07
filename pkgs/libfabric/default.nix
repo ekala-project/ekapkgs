@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-opx"
   ];
 
-
   meta = {
     homepage = "https://ofiwg.github.io/libfabric/";
     description = "Open Fabric Interfaces";

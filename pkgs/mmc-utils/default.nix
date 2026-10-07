@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     "mandir=$(out)/share/man"
   ];
 
-
   passthru.updateScript = gitUpdater {
     rev-prefix = "v";
   };

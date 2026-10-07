@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-Wno-deprecated-non-prototype"
   ];
 
-
   meta = {
     description = "Collection of routines for representation theory and combinatorics";
     license = lib.licenses.isc;

@@ -93,11 +93,11 @@ stdenv.mkDerivation (finalAttrs: {
     use_system_wlroots = true;
     use_system_wfconfig = true;
     xwayland = false;
-    wf-touch:tests = false;
   };
 
   mesonFlags = [
     "--sysconfdir /etc"
+    (lib.mesonEnable "wf-touch:tests" false)
   ];
 
   passthru.providedSessions = [ "wayfire" ];

@@ -48,7 +48,6 @@ stdenv.mkDerivation {
 
   makeFlags = [ "GAMEPERM=744" ];
 
-
   postInstall = ''
     cp -r /tmp/unnethack $out/share/unnethack/profile
     mv $out/bin/unnethack $out/bin/.wrapped_unnethack

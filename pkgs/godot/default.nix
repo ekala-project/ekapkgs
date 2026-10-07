@@ -136,7 +136,6 @@ stdenv.mkDerivation {
     redirect_build_objects = false;
   };
 
-
   strictDeps = true;
 
   postPatch = ''

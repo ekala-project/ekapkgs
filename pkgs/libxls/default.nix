@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     autoconf-archive
   ];
 
-
   doCheck = true;
 
   meta = {

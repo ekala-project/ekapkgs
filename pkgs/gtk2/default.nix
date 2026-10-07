@@ -101,7 +101,6 @@ stdenv.mkDerivation (finalAttrs: {
     ];
   };
 
-
   installFlags = [
     "sysconfdir=${placeholder "out"}/etc"
   ];

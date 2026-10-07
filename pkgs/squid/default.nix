@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     systemd
   ];
 
-
   configureFlags = [
     "--disable-strict-error-checking"
     "--disable-arch-native"

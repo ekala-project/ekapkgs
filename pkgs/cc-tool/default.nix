@@ -37,7 +37,6 @@ stdenv.mkDerivation {
     "--with-boost=${lib.getDev boost}"
   ];
 
-
   postInstall = ''
     install -D udev/90-cc-debugger.rules $out/lib/udev/rules.d/90-cc-debugger.rules
   '';

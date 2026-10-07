@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   installFlags = [ "PREFIX=$(out)" ];
 
-
   meta = {
     homepage = "https://github.com/sjaehn/BChoppr";
     description = "Audio stream chopping LV2 plugin";

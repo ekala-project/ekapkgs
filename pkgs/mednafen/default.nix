@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     "pic"
   ];
 
-
   strictDeps = true;
 
   postInstall = ''

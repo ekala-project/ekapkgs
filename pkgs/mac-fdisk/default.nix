@@ -77,7 +77,6 @@ stdenv.mkDerivation {
     installShellFiles
   ];
 
-
   env.NIX_CFLAGS_COMPILE = "-D_GNU_SOURCE";
 
   hardeningDisable = [ "format" ];

@@ -48,7 +48,6 @@ stdenv.mkDerivation rec {
     patchShebangs xdt-gen-visibility
   '';
 
-
   meta = {
     description = "Extension library for Xfce";
     homepage = "https://gitlab.xfce.org/xfce/libxfce4util";

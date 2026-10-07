@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional (libcanberra-gtk3 != null) libcanberra-gtk3;
 
-
   doCheck = true;
 
   meta = {

@@ -90,7 +90,6 @@ stdenv.mkDerivation {
     "out"
   ];
 
-
   buildInputs = [
     dbus
     zlib

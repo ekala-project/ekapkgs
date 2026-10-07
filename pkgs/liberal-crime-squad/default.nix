@@ -28,7 +28,6 @@ stdenv.mkDerivation {
     SDL2_mixer
   ];
 
-
   meta = {
     description = "Humorous politically themed ncurses game";
     longDescription = ''

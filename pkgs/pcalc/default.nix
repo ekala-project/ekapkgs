@@ -28,7 +28,6 @@ stdenv.mkDerivation {
     flex
   ];
 
-
   meta = {
     homepage = "https://vapier.github.io/pcalc/";
     description = "Programmer's calculator";

@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     "CXXFLAGS=-std=c++14"
   ];
 
-
   buildInputs = [
     xercesc
   ];

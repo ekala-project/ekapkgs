@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [ "--without-gtk-app" ];
 
-
   meta = {
     homepage = "http://sarrazip.com/dev/verbiste.html";
     description = "French and Italian verb conjugator";

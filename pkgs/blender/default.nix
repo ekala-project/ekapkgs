@@ -141,11 +141,13 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   cmakeFlags = [
-      "-C../build_files/cmake/config/blender_release.cmake"
-    ] ++ lib.optionals waylandSupport [
+    "-C../build_files/cmake/config/blender_release.cmake"
+  ]
+  ++ lib.optionals waylandSupport [
     (lib.cmakeBool "WITH_GHOST_WAYLAND" true)
     (lib.cmakeBool "WITH_GHOST_WAYLAND_DYNLOAD" false)
-  ] ++ lib.optionals stdenv.cc.isClang [
+  ]
+  ++ lib.optionals stdenv.cc.isClang [
     (lib.cmakeFeature "PYTHON_LINKFLAGS" "")
   ];
 

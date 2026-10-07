@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     libnetfilter_queue
   ];
 
-
   meta = {
     broken = stdenv.hostPlatform.isDarwin;
     homepage = "http://tcpcrypt.org/";

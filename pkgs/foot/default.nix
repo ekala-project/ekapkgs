@@ -151,17 +151,13 @@ stdenv.mkDerivation {
     b_lto = true;
     default-terminfo = "foot";
     custom-terminfo-install-location = "${terminfoDir}";
-    systemd-units-dir = "${placeholder ";
+    systemd-units-dir = "${placeholder "out"}/lib/systemd/user";
     werror = false;
   };
 
   mesonFeatures = {
     terminfo = true;
   };
-
-  mesonFlags = [
-    out"}/lib/systemd/user"
-  ];
 
   # build and run binary generating PGO profiles,
   # then reconfigure to build the normal foot binary utilizing PGO

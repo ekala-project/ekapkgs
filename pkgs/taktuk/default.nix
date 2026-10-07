@@ -30,7 +30,6 @@ stdenv.mkDerivation {
     substituteInPlace ./taktuk --replace-fail "/usr/bin/perl" "${lib.getExe buildPackages.perl}"
   '';
 
-
   preFixup = ''
     substituteInPlace ./taktuk --replace-fail "${lib.getExe buildPackages.perl}" "/usr/bin/env perl"
   '';

@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     libGLU
   ];
 
-
   postPatch = ''
     substituteInPlace src/main.cc --replace /usr/local $out
     substituteInPlace Makefile    --replace /usr/local $out

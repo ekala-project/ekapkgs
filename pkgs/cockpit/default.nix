@@ -178,7 +178,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-admin-group=root" # TODO: really? Maybe "wheel"?
   ];
 
-
   fixupPhase = ''
     runHook preFixup
 

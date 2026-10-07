@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
     hiredis
   ];
 
-
   postPatch = ''
     mkdir -p bpf_stubs_workaround/gnu
     touch bpf_stubs_workaround/gnu/stubs-32.h

@@ -16,7 +16,6 @@ stdenv.mkDerivation {
     hash = "sha256-xveVcwAwtqKGD3/UvnBz5ASvTyg/6jAlTedZElhV2HE=";
   };
 
-
   nativeBuildInputs = [
     autoreconfHook
     sdcc

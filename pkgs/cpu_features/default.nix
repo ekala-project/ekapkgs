@@ -28,12 +28,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    BUILD_SHARED_LIBS = "${if static then ";
+    BUILD_SHARED_LIBS = !static;
   };
-
-  cmakeFlags = [
-    OFF" else "ON"}"
-  ];
 
   meta = {
     description = "Cross platform C99 library to get cpu features at runtime";

@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
     done
   '';
 
-
   passthru =
     mkVariantPassthru variantArgs
     // lib.optionalAttrs (gtkSupport != null) {

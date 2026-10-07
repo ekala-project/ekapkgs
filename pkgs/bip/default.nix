@@ -46,7 +46,6 @@ stdenv.mkDerivation {
     openssl
   ];
 
-
   meta = {
     description = "IRC proxy (bouncer)";
     homepage = "http://bip.milkypond.org/";

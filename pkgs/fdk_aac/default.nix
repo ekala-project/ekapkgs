@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
   ];
 
-
   meta = {
     description = "High-quality implementation of the AAC codec from Android";
     homepage = "https://sourceforge.net/projects/opencore-amr/";

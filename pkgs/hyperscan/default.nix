@@ -65,11 +65,13 @@ stdenv.mkDerivation (finalAttrs: {
     FAT_RUNTIME = true;
   };
 
-  cmakeFlags = lib.optionals withStatic [
-    (lib.cmakeBool "BUILD_STATIC_AND_SHARED" true)
-  ] ++ lib.optionals (!withStatic) [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" true)
-  ];
+  cmakeFlags =
+    lib.optionals withStatic [
+      (lib.cmakeBool "BUILD_STATIC_AND_SHARED" true)
+    ]
+    ++ lib.optionals (!withStatic) [
+      (lib.cmakeBool "BUILD_SHARED_LIBS" true)
+    ];
 
   preConfigure = lib.optionalString withStatic (
     ''

@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   buildInputs = [ lzlib ];
 
-
   doCheck = true;
 
   meta = {

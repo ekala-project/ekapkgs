@@ -37,14 +37,10 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [ openssl ];
 
   cmakeEntries = {
-    BUILD_SHARED_LIBS = "${if enableStatic then ";
+    BUILD_SHARED_LIBS = !enableStatic;
     OQS_DIST_BUILD = true;
     OQS_BUILD_ONLY_LIB = true;
   };
-
-  cmakeFlags = [
-    OFF" else "ON"}"
-  ];
 
   outputs = [
     "out"

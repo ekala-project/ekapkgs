@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-
   meta = {
     homepage = "https://think-async.com/Asio";
     description = "Cross-platform C++ library for network and low-level I/O programming";

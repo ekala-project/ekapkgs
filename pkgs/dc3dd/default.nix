@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     "CC=${stdenv.cc.targetPrefix}cc"
   ];
 
-
   meta = {
     description = "Patched version of dd that includes a number of features useful for computer forensics";
     mainProgram = "dc3dd";

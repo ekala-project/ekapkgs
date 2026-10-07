@@ -40,17 +40,13 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    CMAKE_INSTALL_PREFIX = "${placeholder ";
+    CMAKE_INSTALL_PREFIX = "${placeholder "out"}";
     BUILD_SHARED_LIBS = "on";
     BUILD_TESTING = "on";
     DOWNLOAD_GTEST = "off";
     DOWNLOAD_RUBYRNP = "off";
     SYSTEM_LIBSEXPP = "on";
   };
-
-  cmakeFlags = [
-    out"}"
-  ];
 
   nativeBuildInputs = [
     asciidoctor

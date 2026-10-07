@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     lv2
   ];
 
-
   strictDeps = true;
 
   meta = {

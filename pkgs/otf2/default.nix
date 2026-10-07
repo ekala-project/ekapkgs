@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     which # used in configure script
   ];
 
-
   doCheck = true;
   enableParallelChecking = true;
   versionCheckProgram = [ "${placeholder "out"}/bin/otf2-config" ];

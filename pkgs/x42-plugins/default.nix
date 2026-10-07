@@ -61,7 +61,6 @@ stdenv.mkDerivation rec {
     patchShebangs ./matrixmixer.lv2/genhead.sh
   '';
 
-
   meta = {
     description = "Collection of LV2 plugins by Robin Gareus";
     homepage = "https://github.com/x42/x42-plugins";

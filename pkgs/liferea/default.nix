@@ -61,7 +61,6 @@ stdenv.mkDerivation rec {
     gstreamer.plugins-bad
   ];
 
-
   postFixup = ''
     buildPythonPath ${python3Packages.pycairo}
     patchPythonScript $out/lib/liferea/plugins/trayicon.py

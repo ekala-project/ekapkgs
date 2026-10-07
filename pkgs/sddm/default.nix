@@ -83,23 +83,17 @@ let
       UID_MIN = "1000";
       UID_MAX = "29999";
       SDDM_INITIAL_VT = true;
-      QT_IMPORTS_DIR = "${placeholder ";
-      CMAKE_INSTALL_SYSCONFDIR = "${placeholder ";
-      SYSTEMD_SYSTEM_UNIT_DIR = "${placeholder ";
-      SYSTEMD_SYSUSERS_DIR = "${placeholder ";
-      SYSTEMD_TMPFILES_DIR = "${placeholder ";
-      DBUS_CONFIG_DIR = "${placeholder ";
+      CMAKE_INSTALL_SYSCONFDIR = "${placeholder "out"}/etc";
+      SYSTEMD_SYSTEM_UNIT_DIR = "${placeholder "out"}/lib/systemd/system";
+      SYSTEMD_SYSUSERS_DIR = "${placeholder "out"}/lib/sysusers.d";
+      SYSTEMD_TMPFILES_DIR = "${placeholder "out"}/lib/tmpfiles.d";
+      DBUS_CONFIG_DIR = "${placeholder "out"}/share/dbus-1/system.d";
     };
 
     cmakeFlags = [
-      out"}/${
-      if qtbase != null then qtbase.qtQmlPrefix else "lib/qt/qml"
+      "-DQT_IMPORTS_DIR=${placeholder "out"}/${
+        if qtbase != null then qtbase.qtQmlPrefix else "lib/qt/qml"
       }"
-      out"}/etc"
-      out"}/lib/systemd/system"
-      out"}/lib/sysusers.d"
-      out"}/lib/tmpfiles.d"
-      out"}/share/dbus-1/system.d"
     ];
 
     postInstall = ''

@@ -47,7 +47,6 @@ stdenv.mkDerivation rec {
 
   installFlags = [ "PREFIX=$(out)" ];
 
-
   meta = {
     description = "File transfer program supporting a number of network protocols";
     homepage = "https://lftp.yar.ru/";

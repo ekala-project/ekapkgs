@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-
   configureFlags = [
     "--sysconfdir=/etc"
     "--enable-lock-dir=/var/lock"

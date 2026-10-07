@@ -104,7 +104,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-dpa"
   ];
 
-
   hardeningDisable = [ "format" ];
 
   dontDisableStatic = true;

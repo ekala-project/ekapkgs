@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     install -Dm 644 README.md -t $out/share/doc/havoc-${finalAttrs.version}/
   '';
 
-
   meta = {
     homepage = "https://github.com/ii8/havoc";
     description = "Minimal terminal emulator for Wayland";

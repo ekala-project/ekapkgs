@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
   doCheck = true;
   nativeCheckInputs = [ lzip ];
 
-
   meta = {
     homepage = "https://www.nongnu.org/lzip/lziprecover.html";
     description = "Data recovery tool for lzip compressed files";

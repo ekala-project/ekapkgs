@@ -102,7 +102,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   stripDebugList = [ "cgit" ];
 
-
   meta = {
     homepage = "https://git.zx2c4.com/cgit/about/";
     description = "Web frontend for git repositories";

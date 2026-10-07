@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     libpng
   ];
 
-
   meta = {
     description = "Library for encoding and decoding Kate streams";
     homepage = "https://wiki.xiph.org/index.php/OggKate";

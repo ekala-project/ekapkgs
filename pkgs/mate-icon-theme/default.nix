@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     done
   '';
 
-
   meta = {
     description = "Icon themes from MATE";
     homepage = "https://mate-desktop.org";

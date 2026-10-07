@@ -44,7 +44,7 @@ stdenv.mkDerivation rec {
   ];
 
   cmakeEntries = {
-    HDF5_INSTALL_CMAKE_DIR = "${placeholder ";
+    HDF5_INSTALL_CMAKE_DIR = "${placeholder "dev"}/lib/cmake";
     BUILD_SHARED_LIBS = true;
     BUILD_STATIC_LIBS = false;
     HDF5_BUILD_CPP_LIB = true;
@@ -57,7 +57,6 @@ stdenv.mkDerivation rec {
   };
 
   cmakeFlags = [
-    dev"}/lib/cmake"
     (lib.cmakeBool "HDF5_ENABLE_NONSTANDARD_FEATURE_FLOAT16" (
       with stdenv.hostPlatform; !(isDarwin && isx86_64)
     ))
@@ -84,7 +83,6 @@ stdenv.mkDerivation rec {
     mpiSupport = false;
     mpi = null;
   };
-
 
   meta = {
     description = "Data model, library, and file format for storing and managing data";

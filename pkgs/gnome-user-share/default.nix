@@ -55,12 +55,8 @@ stdenv.mkDerivation (finalAttrs: {
   mesonEntries = {
     httpd = "${apacheHttpd.out}/bin/httpd";
     modules_path = "${apacheHttpd}/modules";
-    systemduserunitdir = "${placeholder ";
+    systemduserunitdir = "${placeholder "out"}/etc/systemd/user";
   };
-
-  mesonFlags = [
-    out"}/etc/systemd/user"
-  ];
 
   nativeBuildInputs = [
     pkg-config

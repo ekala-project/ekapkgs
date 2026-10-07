@@ -53,17 +53,11 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   mesonEntries = {
-    iscsi_sbindir = "${placeholder ";
-    rulesdir = "${placeholder ";
-    systemddir = "${placeholder ";
+    iscsi_sbindir = "${placeholder "out"}/sbin";
+    rulesdir = "${placeholder "out"}/etc/udev/rules.d";
+    systemddir = "${placeholder "out"}/lib/systemd";
     dbroot = "/etc/iscsi";
   };
-
-  mesonFlags = [
-    out"}/sbin"
-    out"}/etc/udev/rules.d"
-    out"}/lib/systemd"
-  ];
   meta = {
     description = "High performance, transport independent, multi-platform implementation of RFC3720";
     license = lib.licenses.gpl2Plus;

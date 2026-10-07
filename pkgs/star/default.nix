@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ zlib ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ llvmPackages.openmp ];
 
-
   makeFlags = lib.optionals stdenv.hostPlatform.isAarch64 [ "CXXFLAGS_SIMD=" ];
 
   preBuild = lib.optionalString stdenv.hostPlatform.isDarwin ''

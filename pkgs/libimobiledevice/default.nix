@@ -57,7 +57,6 @@ stdenv.mkDerivation rec {
     "dev"
   ];
 
-
   meta = {
     homepage = "https://github.com/libimobiledevice/libimobiledevice";
     description = "Software library that talks the protocols to support iPhone, iPod Touch and iPad devices on Linux";

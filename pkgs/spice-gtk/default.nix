@@ -117,18 +117,20 @@ stdenv.mkDerivation (finalAttrs: {
   env.PKG_CONFIG_POLKIT_GOBJECT_1_POLICYDIR = "${placeholder "out"}/share/polkit-1/actions";
 
   mesonEntries = {
-    usb-acl-helper-dir = "${placeholder ";
+    usb-acl-helper-dir = "${placeholder "out"}/bin";
     usb-ids-path = "${hwdata}/share/hwdata/usb.ids";
   };
 
   mesonFlags = [
-      out"}/bin"
-    ] ++ lib.optionals (!withPolkit) [
+  ]
+  ++ lib.optionals (!withPolkit) [
     "-Dpolkit=disabled"
-  ] ++ lib.optionals (!stdenv.hostPlatform.isLinux) [
+  ]
+  ++ lib.optionals (!stdenv.hostPlatform.isLinux) [
     "-Dlibcap-ng=disabled"
     "-Degl=disabled"
-  ] ++ lib.optionals stdenv.hostPlatform.isMusl [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isMusl [
     "-Dcoroutine=gthread" # Fixes "Function missing:makecontext"
   ];
 

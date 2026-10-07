@@ -109,15 +109,19 @@ stdenv.mkDerivation (finalAttrs: {
     nautilus = false;
   };
 
-  mesonFlags = lib.optionals (ghostscript != null) [
-    "-Dps=enabled"
-  ] ++ lib.optionals (ghostscript == null) [
-    "-Dps=disabled"
-  ] ++ lib.optionals (!withLibsecret) [
-    "-Dkeyring=disabled"
-  ] ++ lib.optionals (!supportMultimedia) [
-    "-Dmultimedia=disabled"
-  ];
+  mesonFlags =
+    lib.optionals (ghostscript != null) [
+      "-Dps=enabled"
+    ]
+    ++ lib.optionals (ghostscript == null) [
+      "-Dps=disabled"
+    ]
+    ++ lib.optionals (!withLibsecret) [
+      "-Dkeyring=disabled"
+    ]
+    ++ lib.optionals (!supportMultimedia) [
+      "-Dmultimedia=disabled"
+    ];
 
   # Fix build with gcc15
   env.NIX_CFLAGS_COMPILE = toString [

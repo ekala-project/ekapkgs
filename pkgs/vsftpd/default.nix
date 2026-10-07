@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-lseccomp"
   ];
 
-
   meta = {
     description = "Very secure FTP daemon";
     mainProgram = "vsftpd";

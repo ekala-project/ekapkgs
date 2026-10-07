@@ -19,11 +19,11 @@ let
     hash = "sha256-L2LCRm1Fsg+xRdPc8YmgxDnuXJo92nxs862ewzObZ3I=";
   };
 
-  cmakeEntries = {
-    QUICK_LINT_JS_ENABLE_BUILD_TOOLS = true;
-    CMAKE_SKIP_BUILD_RPATH = true;
-    CMAKE_POLICY_VERSION_MINIMUM = "3.10";
-  };
+  cmakeFlags = [
+    (lib.cmakeBool "QUICK_LINT_JS_ENABLE_BUILD_TOOLS" true)
+    (lib.cmakeBool "CMAKE_SKIP_BUILD_RPATH" true)
+    (lib.cmakeFeature "CMAKE_POLICY_VERSION_MINIMUM" "3.10")
+  ];
 
   quick-lint-js-build-tools = buildPackages.stdenv.mkDerivation {
     pname = "quick-lint-js-build-tools";

@@ -53,11 +53,13 @@ stdenv.mkDerivation (finalAttrs: {
     VERBOSE_CONFIGURE = true;
   };
 
-  cmakeFlags = lib.optionals (!guiSupport) [
-    "-DGUI=OFF"
-    "-DSYSTEMD=ON"
-    "-DSYSTEMD_SERVICES_INSTALL_DIR=${placeholder "out"}/lib/systemd/system"
-  ] ++ lib.optionals (!webuiSupport) [ "-DWEBUI=OFF" ];
+  cmakeFlags =
+    lib.optionals (!guiSupport) [
+      "-DGUI=OFF"
+      "-DSYSTEMD=ON"
+      "-DSYSTEMD_SERVICES_INSTALL_DIR=${placeholder "out"}/lib/systemd/system"
+    ]
+    ++ lib.optionals (!webuiSupport) [ "-DWEBUI=OFF" ];
 
   qtWrapperArgs = lib.optionals trackerSearch [
     "--prefix PATH : ${lib.makeBinPath [ python3 ]}"

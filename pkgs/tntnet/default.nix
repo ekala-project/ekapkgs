@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     zip
   ];
 
-
   meta = {
     homepage = "http://www.tntnet.org/tntnet.html";
     description = "Web server which allows users to develop web applications using C++";

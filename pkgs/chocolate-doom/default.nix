@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     "man"
   ];
 
-
   strictDeps = true;
 
   meta = {

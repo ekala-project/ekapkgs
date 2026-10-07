@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-geosconfig=${lib.getExe' (lib.getDev geos) "geos-config"}"
   ];
 
-
   meta = {
     description = "RT Topology Library";
     homepage = "https://git.osgeo.org/rttopo/librttopo";

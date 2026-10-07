@@ -41,7 +41,12 @@ rustPlatform.buildRustPackage (finalAttrs: {
   meta = {
     description = "Fast, keyboard-first file manager for Omarchy";
     homepage = "https://github.com/thisisgm/flea";
-    license = with lib.licenses; [ mit asl20 epl20 bsd2 ];
+    license = with lib.licenses; [
+      mit
+      asl20
+      epl20
+      bsd2
+    ];
     platforms = lib.platforms.linux;
     mainProgram = "flea";
   };

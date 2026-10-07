@@ -48,21 +48,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ geoip ];
 
-  mesonEntries = {
-    use_geoip = "${if withGeo then ";
-  };
-
   mesonFeatures = {
+    use_geoip = withGeo;
     use_maxminddb = false;
     use_runtime_linking = false;
   };
-
-  mesonFlags = [
-    en"
-    else
-    "dis"
-    }abled"
-  ];
 
   doCheck = true;
 

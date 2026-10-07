@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     "MANDIR=/share/man/man1"
   ];
 
-
   doCheck = false; # needs sudo root
 
   installCheckPhase = ''

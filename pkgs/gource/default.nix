@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-tinyxml"
   ];
 
-
   meta = {
     homepage = "https://gource.io/";
     description = "Software version control visualization tool";

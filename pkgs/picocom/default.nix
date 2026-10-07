@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     "doc"
   ];
 
-
   installPhase = ''
     runHook preInstall
 

@@ -75,7 +75,6 @@ stdenv.mkDerivation rec {
     ./_autosetup
   '';
 
-
   configureFlags = [
     "--disable-server"
     "--sysconfdir=${placeholder "out"}/etc"

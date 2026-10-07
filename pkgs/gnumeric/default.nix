@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     XMLParser
   ]);
 
-
   postPatch = ''
     substituteInPlace configure.ac \
       --replace-fail 'GLIB_COMPILE_RESOURCES=' 'GLIB_COMPILE_RESOURCES="glib-compile-resources"#'

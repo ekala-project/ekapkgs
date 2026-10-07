@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     opencryptoki
   ];
 
-
   meta = {
     description = "Simple PKCS11 provider for TPM chips";
     longDescription = ''

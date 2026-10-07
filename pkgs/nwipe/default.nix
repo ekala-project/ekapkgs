@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
       }
   '';
 
-
   meta = {
     description = "Securely erase disks";
     mainProgram = "nwipe";

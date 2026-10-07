@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace Makefile --replace "/usr/local/games" "$out/bin"
   '';
 
-
   desktopItems = [
     (makeDesktopItem {
       name = "quakespasm";

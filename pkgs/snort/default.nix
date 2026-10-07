@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     xz
   ];
 
-
   meta = {
     description = "Network intrusion prevention and detection system (IDS/IPS)";
     homepage = "https://www.snort.org";

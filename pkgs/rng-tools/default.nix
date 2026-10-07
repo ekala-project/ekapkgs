@@ -42,7 +42,6 @@ stdenv.mkDerivation rec {
     "--without-qrypt"
   ];
 
-
   makeFlags = [
     "AR:=$(AR)"
     "PKCS11_ENGINE=${opensc}/lib/opensc-pkcs11.so"

@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     runHook postInstall
   '';
 
-
   meta = {
     description = "Command line tool to extract main content from a webpage";
     homepage = "https://github.com/eafer/rdrview";

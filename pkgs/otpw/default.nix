@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-Wno-error=int-conversion"
   ];
 
-
   installPhase = ''
     mkdir -p $out/bin $out/lib/security $out/share/man/man{1,8}
     cp pam_*.so $out/lib/security

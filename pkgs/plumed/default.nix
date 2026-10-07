@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ blas ];
 
-
   meta = {
     description = "Molecular metadynamics library";
     homepage = "https://github.com/plumed/plumed2";

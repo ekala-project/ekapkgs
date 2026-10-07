@@ -87,12 +87,8 @@ stdenv.mkDerivation (finalAttrs: {
   cmakeEntries = {
     WITH_GTKDOC = false;
     WITH_HTML = false;
-    PYTHON_DESIRED = "${lib.head (lib.splitString [ ";
+    PYTHON_DESIRED = lib.head (lib.splitString "." python3.version);
   };
-
-  cmakeFlags = [
-    ." ] python3.version)}"
-  ];
 
   postInstall = ''
     rm -r $out/${python3.sitePackages}/hawkey/test

@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace "/usr" "$out"
   '';
 
-
   preInstall = ''
     mkdir -p $out/{bin,lib/udev/rules.d}
   '';

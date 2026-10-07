@@ -40,14 +40,10 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   cmakeEntries = {
-    PLUGIN_INSTALL_PATH = "${placeholder ";
+    PLUGIN_INSTALL_PATH = "${placeholder "plugin"}/hdf5/lib/plugin";
     CMAKE_INSTALL_LIBDIR = "lib";
     BUILD_TESTS = true;
   };
-
-  cmakeFlags = [
-    plugin"}/hdf5/lib/plugin"
-  ];
 
   postPatch = ''
     substituteInPlace CMakeLists.txt \

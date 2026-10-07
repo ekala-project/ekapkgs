@@ -35,12 +35,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    CMAKE_INSTALL_SYSCONF_PREFIX = "${placeholder ";
+    CMAKE_INSTALL_SYSCONF_PREFIX = "${placeholder "out"}/etc";
   };
-
-  cmakeFlags = [
-    out"}/etc"
-  ];
 
   nativeBuildInputs = [
     cmake

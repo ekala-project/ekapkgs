@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
       (lib.cmakeBool "SDL12TESTS" finalAttrs.finalPackage.doCheck)
     ];
 
-
   doCheck = !stdenv.hostPlatform.isDarwin;
   checkPhase = ''
     runHook preCheck

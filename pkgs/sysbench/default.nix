@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "1sanvl2a52ff4shj62nw395zzgdgywplqvwip74ky8q7s6qjf5qy";
   };
 
-
   configureFlags = [
     "--with-system-luajit"
     "--with-mysql-includes=${lib.getDev mariadb-connector-c}/include/mysql"

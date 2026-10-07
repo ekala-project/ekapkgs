@@ -36,7 +36,6 @@ stdenv.mkDerivation rec {
     libsecret
   ];
 
-
   postInstall = ''
     install -Dm444 -t $out/share/doc/msmtp doc/*.example
     ln -s msmtp $out/bin/sendmail

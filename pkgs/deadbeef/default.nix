@@ -150,7 +150,6 @@ clangStdenv.mkDerivation (finalAttrs: {
     gtk3.wrapGAppsHook
   ];
 
-
   meta = {
     description = "Ultimate Music Player for GNU/Linux";
     mainProgram = "deadbeef";

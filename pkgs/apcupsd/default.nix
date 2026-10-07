@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-cgi-bin=${placeholder "out"}/libexec/cgi-bin"
   ];
 
-
   postInstall = ''
     for file in "$out"/etc/apcupsd/*; do
         sed -i -e 's|^WALL=.*|WALL="${wall}/bin/wall"|g' \

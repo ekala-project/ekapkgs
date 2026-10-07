@@ -25,7 +25,6 @@ stdenv.mkDerivation rec {
     ./skip-gmp-check.patch
   ];
 
-
   nativeBuildInputs = [
     autoreconfHook
     autoconf

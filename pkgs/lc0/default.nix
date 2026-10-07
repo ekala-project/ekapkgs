@@ -66,8 +66,9 @@ stdenv.mkDerivation (finalAttrs: {
     metal = false;
   };
 
-  mesonFlags = # in version 31 this option will be required ++ lib.optionals (lib.versionAtLeast finalAttrs.version "0.31") [ "-Dnative_cuda=false" ];
-
+  mesonFlags =
+    # in version 31 this option will be required
+    lib.optionals (lib.versionAtLeast finalAttrs.version "0.31") [ "-Dnative_cuda=false" ];
 
   doCheck = true;
 

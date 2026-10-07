@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs subprojects
   '';
 
-
   buildPhase =
     let
       muonBool = lib.mesonBool;

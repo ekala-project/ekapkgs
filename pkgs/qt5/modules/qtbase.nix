@@ -178,7 +178,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-
   outputs = [
     "bin"
     "dev"

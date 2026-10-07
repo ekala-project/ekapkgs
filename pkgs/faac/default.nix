@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     b_lto = false;
   };
 
-
   meta = {
     changelog = "https://github.com/knik0/faac/releases/tag/${finalAttrs.src.tag}";
     description = "Open source MPEG-4 and MPEG-2 AAC encoder";

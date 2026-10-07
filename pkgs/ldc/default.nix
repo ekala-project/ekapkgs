@@ -82,12 +82,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeEntries = {
     D_FLAGS = "-d-version=TZDatabaseDir;-d-version=LibcurlPath;-J${pathConfig}";
-    INCLUDE_INSTALL_DIR = "${placeholder ";
+    INCLUDE_INSTALL_DIR = "${placeholder "include"}/include/d";
   };
-
-  cmakeFlags = [
-    include"}/include/d"
-  ];
 
   postConfigure = ''
     export DMD=$PWD/bin/ldmd2

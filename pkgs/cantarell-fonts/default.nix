@@ -24,13 +24,9 @@ stdenv.mkDerivation rec {
 
   mesonEntries = {
     buildappstream = false;
-    fontsdir = "${placeholder ";
+    fontsdir = "${placeholder "out"}/share/fonts/cantarell";
     useprebuilt = true;
   };
-
-  mesonFlags = [
-    out"}/share/fonts/cantarell"
-  ];
 
   meta = {
     description = "Default typeface used in the user interface of GNOME since version 3.0";

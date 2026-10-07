@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
     "PKIDIR=$(TMPDIR)/dummy"
   ];
 
-
   postInstall = ''
     # Install bash completions in correct location
     rm -f $out/etc/bash_completion.d/ovs-*.bash

@@ -53,7 +53,6 @@ stdenv.mkDerivation rec {
     NIX_LDFLAGS = "-framework OpenGL";
   };
 
-
   meta = {
     description = "High-performance, high-quality video filters for the GPU";
     homepage = "https://movit.sesse.net";

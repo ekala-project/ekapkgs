@@ -39,19 +39,14 @@ stdenv.mkDerivation rec {
   ];
 
   mesonEntries = {
-    systemdsystemunitdir = "${placeholder ";
-    udevrulesdir = "${placeholder ";
+    systemdsystemunitdir = "${placeholder "out"}/lib/systemd/system";
+    udevrulesdir = "${placeholder "out"}/lib/udev/rules.d";
   };
 
   mesonFeatures = {
     avahi = false;
     gtk_doc = false;
   };
-
-  mesonFlags = [
-    out"}/lib/systemd/system"
-    out"}/lib/udev/rules.d"
-  ];
 
   doInstallCheck = true;
 

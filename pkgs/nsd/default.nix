@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     protobufc
   ];
 
-
   postPatch = ''
     sed 's@$(INSTALL_DATA) nsd.conf.sample $(DESTDIR)$(nsdconfigfile).sample@@g' -i Makefile.in
   '';

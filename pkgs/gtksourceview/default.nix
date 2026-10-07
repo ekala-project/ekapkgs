@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
   };
 
-
   doCheck = false;
 
   meta = {

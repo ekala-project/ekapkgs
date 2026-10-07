@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     gtk3
   ];
 
-
   doCheck = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
 
   passthru.tests.pkg-config = testers.testMetaPkgConfig finalAttrs.finalPackage;

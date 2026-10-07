@@ -74,8 +74,10 @@ stdenv.mkDerivation rec {
   };
 
   cmakeFlags = [
-      "-Dminizip-ng_INCLUDE_DIR=${minizip-ng}/include/minizip-ng"
-    ] ++ lib.optional (!pythonBindings) "-DOCIO_BUILD_PYTHON=OFF" ++ lib.optional (!buildApps) "-DOCIO_BUILD_APPS=OFF";
+    "-Dminizip-ng_INCLUDE_DIR=${minizip-ng}/include/minizip-ng"
+  ]
+  ++ lib.optional (!pythonBindings) "-DOCIO_BUILD_PYTHON=OFF"
+  ++ lib.optional (!buildApps) "-DOCIO_BUILD_APPS=OFF";
 
   doCheck = false;
 

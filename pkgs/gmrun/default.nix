@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-
   # Problem with component size on wayland
   preFixup = ''
     gappsWrapperArgs+=(--set-default GDK_BACKEND x11)

@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-mcsat"
   ];
 
-
   meta = {
     description = "High-performance theorem prover and SMT solver";
     homepage = "https://yices.csl.sri.com";

@@ -176,7 +176,6 @@ let
       EOF
     '';
 
-
     passthru = {
       inherit xorgxrdp;
     };

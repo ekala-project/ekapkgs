@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     "VERSION=v${finalAttrs.version}"
   ];
 
-
   preConfigure = ''
     patchShebangs tests/runtests.sh
     cd src

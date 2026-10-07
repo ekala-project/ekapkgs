@@ -119,7 +119,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-json"
   ];
 
-
   installTargets = [
     "tags"
     "install"

@@ -21,7 +21,6 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [ autoreconfHook ];
 
-
   meta = {
     description = "Small Footprint CIM Client Library";
     homepage = "https://sourceforge.net/projects/sblim/";

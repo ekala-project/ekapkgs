@@ -46,7 +46,6 @@ stdenv.mkDerivation rec {
     "--disable-gtk-doc"
   ];
 
-
   meta = {
     description = "GLib/GObject wrapper for the Facebook Graph API";
     homepage = "https://gitlab.gnome.org/GNOME/libgfbgraph";

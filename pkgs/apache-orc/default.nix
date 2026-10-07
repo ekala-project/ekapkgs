@@ -71,8 +71,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   cmakeFlags = [
-      (lib.cmakeBool "STOP_BUILD_ON_WARNING" stdenv.hostPlatform.isLinux)
-    ] ++ lib.optional (stdenv.hostPlatform != stdenv.buildPlatform) [
+    (lib.cmakeBool "STOP_BUILD_ON_WARNING" stdenv.hostPlatform.isLinux)
+  ]
+  ++ lib.optional (stdenv.hostPlatform != stdenv.buildPlatform) [
     # Fix (RiscV) cross-compilation
     # See https://github.com/apache/orc/issues/2334
     (lib.cmakeFeature "HAS_PRE_1970_EXITCODE" "0")

@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
   ];
 
-
   configureFlags = [ "--enable-soap" ];
 
   env.NIX_LDFLAGS = "-lgcrypt";

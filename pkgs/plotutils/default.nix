@@ -30,7 +30,6 @@ stdenv.mkDerivation rec {
 
   doCheck = true;
 
-
   meta = {
     description = "Powerful C/C++ library for exporting 2D vector graphics";
     homepage = "https://www.gnu.org/software/plotutils/";

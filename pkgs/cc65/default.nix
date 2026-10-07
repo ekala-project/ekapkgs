@@ -17,7 +17,6 @@ gccStdenv.mkDerivation rec {
 
   makeFlags = [ "PREFIX=${placeholder "out"}" ];
 
-
   meta = {
     homepage = "https://cc65.github.io/";
     description = "C compiler for processors of 6502 family";

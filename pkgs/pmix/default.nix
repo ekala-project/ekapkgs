@@ -115,7 +115,6 @@ stdenv.mkDerivation (finalAttrs: {
       --set PMIX_PKGDATADIR "''${!outputDev}"/share/pmix
   '';
 
-
   meta = {
     description = "Process Management Interface for HPC environments";
     homepage = "https://openpmix.github.io/";

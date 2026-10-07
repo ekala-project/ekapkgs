@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs test/
   '';
 
-
   doCheck = true;
 
   meta = {

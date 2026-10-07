@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "0x969152znxxjbj7387xb38waslr4yv6bnj5jmhb4rpqxphvk54f";
   };
 
-
   meta = {
     description = "Simple tool to make temporary file handling in shells scripts safe and simple";
     mainProgram = "mktemp";

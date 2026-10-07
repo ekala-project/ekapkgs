@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-Wno-error=${if stdenv.cc.isGNU then "maybe-uninitialized" else "uninitialized"}"
   ];
 
-
   meta = {
     homepage = "https://www.netsurf-browser.org/projects/libcss/";
     description = "Cascading Style Sheets library for netsurf browser";

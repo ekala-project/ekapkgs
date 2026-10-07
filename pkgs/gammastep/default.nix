@@ -91,7 +91,6 @@ stdenv.mkDerivation rec {
     fi
   '';
 
-
   meta = {
     description = "Screen color temperature manager";
     longDescription = ''

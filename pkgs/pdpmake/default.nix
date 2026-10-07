@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
   doCheck = true;
   checkTarget = "test";
 
-
   meta = {
     homepage = "https://github.com/rmyorston/pdpmake";
     description = "Public domain POSIX make";

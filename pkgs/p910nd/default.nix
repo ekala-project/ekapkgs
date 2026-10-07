@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ installShellFiles ];
 
-
   # instead of mucking around with the Makefile, just install the bits we need
   installPhase = ''
     runHook preInstall

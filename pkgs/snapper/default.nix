@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     "RMBIN=${coreutils}/bin/rm"
   ];
 
-
   postInstall = ''
     rm -r $out/etc/cron.*
     patchShebangs $out/lib/zypp/plugins/commit/*

@@ -71,16 +71,12 @@ stdenv.mkDerivation rec {
 
   mesonEntries = {
     installed_tests = false;
-    pamlibdir = "${placeholder ";
+    pamlibdir = "${placeholder "pam"}/lib/security";
   };
 
   mesonFeatures = {
     ui = false;
   };
-
-  mesonFlags = [
-    pam"}/lib/security"
-  ];
 
   postPatch = ''
     substituteInPlace libmalcontent/tests/app-filter.c \

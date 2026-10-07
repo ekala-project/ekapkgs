@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     ncurses
   ];
 
-
   meta = {
     description = "Terminal pager similar to 'more' and 'less'";
     homepage = "https://www.jedsoft.org/most/index.html";

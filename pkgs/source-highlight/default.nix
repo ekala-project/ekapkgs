@@ -28,7 +28,6 @@ stdenv.mkDerivation rec {
 
   doCheck = false;
 
-
   meta = {
     description = "Source code renderer with syntax highlighting";
     homepage = "https://www.gnu.org/software/src-highlite/";

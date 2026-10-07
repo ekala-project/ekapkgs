@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     "CC=${stdenv.cc.targetPrefix}cc"
   ];
 
-
   postInstall = ''
     installManPage doc/masscan.?
 

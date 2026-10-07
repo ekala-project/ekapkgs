@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [ "--enable-desktop-integration" ];
 
-
   meta = {
     homepage = "https://fuse-emulator.sourceforge.net/";
     description = "ZX Spectrum emulator";

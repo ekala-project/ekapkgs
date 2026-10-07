@@ -77,9 +77,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonEntries = {
     systemd = enableSystemd;
-    dbus_sys = "${placeholder ";
-    dbus_services = "${placeholder ";
-    systemdsystemunitdir = "${placeholder ";
+    dbus_sys = "${placeholder "out"}/share/dbus-1/system.d";
+    dbus_services = "${placeholder "out"}/share/dbus-1/system-services";
+    systemdsystemunitdir = "${placeholder "out"}/lib/systemd/system";
     cron = false;
     gtk_doc = true;
     bash_completion = false;
@@ -87,9 +87,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   mesonFlags = [
-    out"}/share/dbus-1/system.d"
-    out"}/share/dbus-1/system-services"
-    out"}/lib/systemd/system"
     "--sysconfdir=/etc"
     "--localstatedir=/var"
   ];

@@ -108,7 +108,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonEntries = {
     installed-tests = true;
-    installed_test_prefix = "${placeholder ";
+    installed_test_prefix = "${placeholder "installedTests"}";
   };
 
   mesonFeatures = {
@@ -117,11 +117,12 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   mesonFlags = [
-      "--sysconfdir=/etc"
-      installedTests"}"
-    ] ++ lib.optionals (!enableGeoLocation) [
+    "--sysconfdir=/etc"
+  ]
+  ++ lib.optionals (!enableGeoLocation) [
     "-Dgeoclue=disabled"
-  ] ++ lib.optionals (!finalAttrs.finalPackage.doCheck) [
+  ]
+  ++ lib.optionals (!finalAttrs.finalPackage.doCheck) [
     "-Dtests=disabled"
   ];
 

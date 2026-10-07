@@ -38,7 +38,6 @@ stdenv.mkDerivation rec {
   ];
   separateDebugInfo = stdenv.hostPlatform.isLinux;
 
-
   nativeBuildInputs = [
     curl
     perl

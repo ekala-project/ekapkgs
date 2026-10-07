@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     libmicrohttpd
   ];
 
-
   postPatch = ''
     patchShebangs ./bootstrap
   '';

@@ -70,7 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-
   cmakeEntries = {
     DCMTK_DICTIONARY_DIR_AUTO = "${dcmtk}/share/dcmtk-${dcmtk.version}";
     DCMTK_LIBRARIES = "dcmjpls;oflog;ofstd";

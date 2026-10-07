@@ -22,7 +22,6 @@ stdenv.mkDerivation rec {
     hash = "sha256-c3S4mTbZkWaeEB9Ol/LJWSA24ejNqnuvwlmnerb7B84=";
   };
 
-
   hardeningEnable = [ "pic" ];
 
   configureFlags = [

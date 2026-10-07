@@ -47,7 +47,6 @@ stdenv.mkDerivation {
     "PREFIX=${placeholder "out"}"
   ];
 
-
   doCheck = true;
 
   meta = {

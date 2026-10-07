@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     rm tests/various/plugin.sh tests/various/ezcmdline_plugin.sh
   '';
 
-
   nativeBuildInputs = [
     bison
     cmake

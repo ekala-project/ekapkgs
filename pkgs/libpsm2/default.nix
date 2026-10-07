@@ -16,7 +16,6 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace ./Makefile --replace "udevrulesdir}" "prefix}/etc/udev";
   '';
 
-
   nativeBuildInputs = [
     pkg-config
     udevCheckHook

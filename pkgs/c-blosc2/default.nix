@@ -41,22 +41,16 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    BUILD_STATIC = "${if static then ";
-    BUILD_SHARED = "${if static then ";
+    BUILD_STATIC = static;
+    BUILD_SHARED = !static;
     PREFER_EXTERNAL_LZ4 = true;
     PREFER_EXTERNAL_ZLIB = true;
     PREFER_EXTERNAL_ZSTD = true;
     BLOSC_ENABLE_ZFP = false;
     BUILD_EXAMPLES = false;
     BUILD_BENCHMARKS = false;
-    BUILD_TESTS = "${if finalAttrs.finalPackage.doCheck then ";
+    BUILD_TESTS = finalAttrs.finalPackage.doCheck;
   };
-
-  cmakeFlags = [
-    ON" else "OFF"}"
-    OFF" else "ON"}"
-    ON" else "OFF"}"
-  ];
 
   doCheck = !static;
   enableParallelChecking = false;

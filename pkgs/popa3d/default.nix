@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     ./fix-gcc15.patch
   ];
 
-
   makeFlags = [
     "PREFIX=$(out)"
     "MANDIR=$(out)/share/man"

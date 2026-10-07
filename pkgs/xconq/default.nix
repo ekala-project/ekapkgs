@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-Wno-writable-strings"
   ];
 
-
   hardeningDisable = [ "format" ];
 
   patchPhase = ''

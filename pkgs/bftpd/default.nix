@@ -40,7 +40,6 @@ stdenv.mkDerivation rec {
     rm -rf $out/{etc,var}
   '';
 
-
   meta = {
     description = "Minimal ftp server";
     mainProgram = "bftpd";

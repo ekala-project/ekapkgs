@@ -67,12 +67,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    GVM_RUN_DIR = "${placeholder ";
+    GVM_RUN_DIR = "${placeholder "out"}/run/gvm";
   };
-
-  cmakeFlags = [
-    out"}/run/gvm"
-  ];
 
   # causes redefinition of _FORTIFY_SOURCE
   hardeningDisable = [ "fortify3" ];

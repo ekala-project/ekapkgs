@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-
   nativeBuildInputs = [
     autoreconfHook
     pkg-config

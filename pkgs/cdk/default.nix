@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     ncurses
   ];
 
-
   meta = {
     description = "Curses development kit";
     mainProgram = "cdk5-config";

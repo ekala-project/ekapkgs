@@ -25,7 +25,6 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ openssl ];
 
-
   meta = {
     description = "Library that simplifies the interaction with PKCS#11 providers";
     homepage = "https://github.com/OpenSC/pkcs11-helper";

@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ autoreconfHook ];
 
-
   postInstall = ''
     mv $out/bin/ifstat $out/bin/ifstat-legacy
     mv $out/share/man/man1/ifstat.1 $out/share/man/man1/ifstat-legacy.1

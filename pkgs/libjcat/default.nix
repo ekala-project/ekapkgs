@@ -64,12 +64,8 @@ stdenv.mkDerivation rec {
 
   mesonEntries = {
     gtkdoc = true;
-    installed_test_prefix = "${placeholder ";
+    installed_test_prefix = "${placeholder "installedTests"}";
   };
-
-  mesonFlags = [
-    installedTests"}"
-  ];
 
   doCheck = true;
 

@@ -106,14 +106,12 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeEntries = {
     PROC_TARGET_NUMBER = "2";
-    CACHE_NAME_SUFFIX = "\";
-    WITH_SYSTEM_LIBRAW = "\";
+    CACHE_NAME_SUFFIX = "";
+    WITH_SYSTEM_LIBRAW = true;
     WITH_JXL = enableJxl;
   };
 
   cmakeFlags = [
-    \""
-    ON\""
     (lib.cmakeBool "USE_LIBCANBERRA" (libcanberra-gtk3 != null))
   ];
 

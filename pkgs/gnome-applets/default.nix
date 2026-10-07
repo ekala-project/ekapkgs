@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     linux.pkgs.cpupower
   ];
 
-
   doCheck = true;
 
   # Don't try to install modules to gnome panel's directory, as it's read only

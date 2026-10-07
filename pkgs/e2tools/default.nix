@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ e2fsprogs ];
 
-
   meta = {
     homepage = "https://e2tools.github.io/";
     description = "Utilities to read/write/manipulate files in an ext2/ext3 filesystem";

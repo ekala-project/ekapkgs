@@ -72,7 +72,6 @@ stdenv.mkDerivation rec {
     DESKTOP
   '';
 
-
   meta = with lib; {
     homepage = "http://www.dosbox.com/";
     changelog = "https://www.dosbox.com/wiki/Releases";

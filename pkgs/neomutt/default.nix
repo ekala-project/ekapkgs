@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-
   postPatch = ''
     substituteInPlace auto.def --replace /usr/sbin/sendmail sendmail
     substituteInPlace smime/smime_keys \

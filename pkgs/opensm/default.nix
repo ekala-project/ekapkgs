@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     ./autogen.sh
   '';
 
-
   meta = {
     description = "Infiniband subnet manager";
     homepage = "https://www.openfabrics.org/";

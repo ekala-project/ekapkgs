@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     expat
   ];
 
-
   meta = {
     description = "WMF library from wvWare";
     homepage = "https://wvware.sourceforge.net/libwmf.html";

@@ -42,12 +42,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeEntries = {
     LOGIOPS_VERSION = "${finalAttrs.version}";
-    DBUS_SYSTEM_POLICY_INSTALL_DIR = "${placeholder ";
+    DBUS_SYSTEM_POLICY_INSTALL_DIR = "${placeholder "out"}/share/dbus-1/system.d";
   };
-
-  cmakeFlags = [
-    out"}/share/dbus-1/system.d"
-  ];
 
   env.PKG_CONFIG_SYSTEMD_SYSTEMDSYSTEMUNITDIR = "${placeholder "out"}/lib/systemd/system";
 

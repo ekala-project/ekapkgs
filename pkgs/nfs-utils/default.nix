@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     cyrus_sasl
   ];
 
-
   preConfigure = ''
     substituteInPlace configure \
       --replace '$dir/include/gssapi' ${lib.getDev libkrb5}/include/gssapi \

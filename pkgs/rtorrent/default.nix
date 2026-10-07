@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optionals withLua [ "--with-lua" ];
 
-
   postInstall = ''
     installManPage doc/old/rtorrent.1
     install -Dm644 doc/rtorrent.rc-example -t $out/share/doc/rtorrent/rtorrent.rc

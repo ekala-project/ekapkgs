@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-
   meta = {
     homepage = "http://www.linuxsampler.org";
     description = "LinuxSampler Control Protocol (LSCP) wrapper library";

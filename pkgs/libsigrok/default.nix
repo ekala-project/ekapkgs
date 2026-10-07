@@ -28,7 +28,6 @@ stdenv.mkDerivation {
     hash = "sha256-j79Wx5FFFKptcwtIjQ0Cvtzl46lnow6bExpMNzI8KlM=";
   };
 
-
   nativeBuildInputs = [
     autoreconfHook
     doxygen

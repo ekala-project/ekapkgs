@@ -97,7 +97,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configurePlatforms = [ ];
 
-
   preConfigure = ''
     export MOZBUILD_STATE_PATH=$TMPDIR/mozbuild
     export LIBXUL_DIST=$out

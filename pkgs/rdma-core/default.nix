@@ -46,13 +46,9 @@ stdenv.mkDerivation (finalAttrs: {
   cmakeEntries = {
     CMAKE_INSTALL_RUNDIR = "/run";
     CMAKE_INSTALL_SHAREDSTATEDIR = "/var/lib";
-    SYSUSERS_DIR = "${placeholder ";
+    SYSUSERS_DIR = "${placeholder "out"}/lib/sysusers.d";
     NO_MAN_PAGES = true;
   };
-
-  cmakeFlags = [
-    out"}/lib/sysusers.d"
-  ];
 
   postPatch = ''
     substituteInPlace srp_daemon/srp_daemon.sh.in \

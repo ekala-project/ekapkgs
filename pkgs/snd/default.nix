@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [ "--with-motif" ];
 
-
   meta = {
     description = "Sound editor";
     homepage = "https://ccrma.stanford.edu/software/snd/";

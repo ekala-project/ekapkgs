@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     SDL2_net
   ];
 
-
   makeFlags = [ "prefix=${placeholder "out"}" ];
 
   postInstall = ''

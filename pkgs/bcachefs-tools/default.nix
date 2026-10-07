@@ -94,7 +94,6 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional fuseSupport "BCACHEFS_FUSE=1";
 
-
   installFlags = [
     "install"
     "install_dkms"

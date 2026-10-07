@@ -37,7 +37,6 @@ stdenv.mkDerivation rec {
     (cd tools/xmlrpc && make && make install)
   '';
 
-
   env.NIX_CFLAGS_COMPILE = lib.optionalString stdenv.cc.isClang "-Wno-error=implicit-function-declaration";
 
   meta = {

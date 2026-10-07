@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     "man"
   ];
 
-
   meta = {
     description = "C-language implementation of Javascript Object Signing and Encryption";
     mainProgram = "jose";

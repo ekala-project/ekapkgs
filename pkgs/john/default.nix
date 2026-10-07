@@ -89,7 +89,6 @@ stdenv.mkDerivation {
       perlldap
     ]);
 
-
   postInstall = ''
     mkdir -p "$out/bin" "$out/etc/john" "$out/share/john" "$out/share/doc/john" "$out/share/john/rules" "$out/share/john/opencl" "$out/${perlPackages.perl.libPrefix}"
     find -L ../run -mindepth 1 -maxdepth 1 -type f -executable \

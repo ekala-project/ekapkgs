@@ -61,7 +61,7 @@ stdenv.mkDerivation (finalAttrs: {
   cmakeEntries = {
     CMAKE_VERBOSE_MAKEFILE = true;
     OpenGL_GL_PREFERENCE = "GLVND";
-    CMAKE_INSTALL_DATAROOTDIR = "${placeholder ";
+    CMAKE_INSTALL_DATAROOTDIR = "${placeholder "out"}/share";
   };
 
   # This makes sure the default engine (dreamer) will be called from

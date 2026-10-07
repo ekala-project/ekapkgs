@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.NIX_CFLAGS_COMPILE = "-Wno-error=implicit-function-declaration";
 
-
   nativeInstallCheckInputs = [
   ];
   doInstallCheck = true;

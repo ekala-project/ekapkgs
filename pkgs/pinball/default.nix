@@ -46,7 +46,6 @@ stdenv.mkDerivation {
     "-I${lib.getDev SDL2_mixer}/include/sdl2-compat"
   ];
 
-
   meta = {
     homepage = "https://github.com/adoptware/pinball";
     description = "Emilia Pinball simulator";

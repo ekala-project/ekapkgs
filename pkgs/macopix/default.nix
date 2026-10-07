@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     export ac_cv_prog_WINDRES=
   '';
 
-
   env = {
     # Workaround build failure on -fno-common toolchains:
     #   ld: dnd.o:src/main.h:136: multiple definition of

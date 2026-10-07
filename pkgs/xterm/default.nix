@@ -74,7 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
     echo '#define USE_UTMP_SETGID 1'
   '';
 
-
   postInstall = ''
     for bin in $out/bin/*; do
       wrapProgram $bin --set XAPPLRESDIR $out/lib/X11/app-defaults/

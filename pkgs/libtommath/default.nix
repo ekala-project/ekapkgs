@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makefile = "makefile.shared";
 
-
   meta = {
     homepage = "https://www.libtom.net/LibTomMath/";
     description = "Library for integer-based number-theoretic applications";

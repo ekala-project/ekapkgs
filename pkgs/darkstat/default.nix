@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-
   meta = {
     description = "Network statistics web interface";
     homepage = "http://unix4lyfe.org/darkstat";

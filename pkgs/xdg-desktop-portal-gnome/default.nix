@@ -46,12 +46,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   mesonEntries = {
-    systemduserunitdir = "${placeholder ";
+    systemduserunitdir = "${placeholder "out"}/lib/systemd/user";
   };
-
-  mesonFlags = [
-    out"}/lib/systemd/user"
-  ];
 
   # TODO: nixpkgs pulls in WebP and JXL pixbuf loaders for gnome-backgrounds
   # via gnome._gdkPixbufCacheBuilder_DO_NOT_USE; needs libjxl, librsvg,

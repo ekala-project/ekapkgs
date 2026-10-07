@@ -34,7 +34,6 @@ stdenv.mkDerivation {
     sed '/^XGETTEXT_OPTIONS =/ s,$, --from-code=utf-8,' -i po/Makevars
   '';
 
-
   meta = {
     description = "Quickly find duplicate files";
     mainProgram = "duff";

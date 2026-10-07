@@ -54,15 +54,10 @@ stdenv.mkDerivation (finalAttrs: {
     tools-multicall = true;
     tools = false;
     usernet-config-path = "/etc/lxc/lxc-usernet";
-    distrosysconfdir = "${placeholder ";
-    systemd-unitdir = "${placeholder ";
+    distrosysconfdir = "${placeholder "out"}/etc/lxc";
+    systemd-unitdir = "${placeholder "out"}/lib/systemd/system";
     man = false;
   };
-
-  mesonFlags = [
-    out"}/etc/lxc"
-    out"}/lib/systemd/system"
-  ];
 
   postInstall = ''
     substituteInPlace $out/etc/lxc/lxc --replace-fail "$out/etc/lxc" "/etc/lxc"
@@ -76,7 +71,6 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace $out/share/lxc/config/userns.conf --replace-fail "$out/share" "/run/current-system/sw/share"
     substituteInPlace $out/share/lxc/config/oci.common.conf --replace-fail "$out/share" "/run/current-system/sw/share"
   '';
-
 
   doCheck = true;
 

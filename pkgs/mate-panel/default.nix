@@ -94,7 +94,6 @@ stdenv.mkDerivation (finalAttrs: {
     )
   '';
 
-
   meta = {
     description = "MATE panel";
     homepage = "https://github.com/mate-desktop/mate-panel";

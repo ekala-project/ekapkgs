@@ -72,7 +72,6 @@ stdenv.mkDerivation (finalAttrs: {
     mkdir build/euktopst_build
   '';
 
-
   preInstall = ''
     mkdir -p $out/bin
   '';

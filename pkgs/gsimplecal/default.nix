@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     sed -i -e '/sys\/sysctl.h/d' src/Unique.cpp
   '';
 
-
   nativeBuildInputs = [
     pkg-config
     automake

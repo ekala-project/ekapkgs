@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     "FHEROES2_DATA=\"${placeholder "out"}/share/fheroes2\""
   ];
 
-
   postBuild = ''
     # Pick guaranteed to be present UTF-8 locale.
     # Otherwise `iconv` calls fail to produce valid translations.

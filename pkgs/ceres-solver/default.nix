@@ -44,12 +44,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    BUILD_SHARED_LIBS = "${if enableStatic then ";
+    BUILD_SHARED_LIBS = !enableStatic;
   };
-
-  cmakeFlags = [
-    OFF" else "ON"}"
-  ];
 
   # The Basel BUILD file conflicts with the cmake build directory on
   # case-insensitive filesystems, eg. darwin.

@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     openssl
   ];
 
-
   meta = {
     description = "Try to find the password of file encrypted with OpenSSL";
     homepage = "https://github.com/glv2/bruteforce-salted-openssl";

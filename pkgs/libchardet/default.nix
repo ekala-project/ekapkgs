@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     perl
   ];
 
-
   meta = {
     description = "Mozilla's Universal Charset Detector C/C++ API";
     mainProgram = "chardet-config";

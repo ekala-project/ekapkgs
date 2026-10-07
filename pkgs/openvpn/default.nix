@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     cp -r sample/sample-{config-files,keys,scripts}/ $out/share/doc/openvpn/examples
   '';
 
-
   meta = {
     description = "Robust and highly flexible tunneling application";
     homepage = "https://openvpn.net/";

@@ -36,11 +36,13 @@ stdenv.mkDerivation (finalAttrs: {
     REDIS_PLUS_PLUS_BUILD_TEST = false;
   };
 
-  cmakeFlags = lib.optionals (!enableShared) [
-    "-DREDIS_PLUS_PLUS_BUILD_SHARED=OFF"
-  ] ++ lib.optionals (!enableStatic) [
-    "-DREDIS_PLUS_PLUS_BUILD_STATIC=OFF"
-  ];
+  cmakeFlags =
+    lib.optionals (!enableShared) [
+      "-DREDIS_PLUS_PLUS_BUILD_SHARED=OFF"
+    ]
+    ++ lib.optionals (!enableStatic) [
+      "-DREDIS_PLUS_PLUS_BUILD_STATIC=OFF"
+    ];
 
   meta = {
     homepage = "https://github.com/sewenew/redis-plus-plus";

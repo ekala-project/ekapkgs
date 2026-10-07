@@ -41,7 +41,6 @@ stdenv.mkDerivation rec {
     })
   ];
 
-
   configureFlags = [
     "--disable-doc"
     "--enable-xhost-root"
