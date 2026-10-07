@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   dontDisableStatic = true;
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/gperftools/gperftools";

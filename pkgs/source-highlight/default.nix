@@ -28,7 +28,6 @@ stdenv.mkDerivation rec {
 
   doCheck = false;
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Source code renderer with syntax highlighting";

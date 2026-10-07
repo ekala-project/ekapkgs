@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ autoreconfHook ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     install -Dm444 -t $out/share/doc/mscompress ChangeLog README TODO

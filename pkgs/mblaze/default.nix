@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "PREFIX=$(out)" ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     installShellCompletion contrib/_mblaze

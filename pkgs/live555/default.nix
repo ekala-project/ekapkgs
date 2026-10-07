@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  enableParallelBuilding = true;
 
   # required for whitespaces in makeFlags
   __structuredAttrs = true;

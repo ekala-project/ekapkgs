@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-Wno-error=int-conversion"
   ];
 
-  enableParallelBuilding = true;
 
   installPhase = ''
     mkdir -p $out/bin $out/lib/security $out/share/man/man{1,8}

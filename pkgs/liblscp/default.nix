@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "http://www.linuxsampler.org";

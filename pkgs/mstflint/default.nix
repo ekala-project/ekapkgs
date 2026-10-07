@@ -104,7 +104,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-dpa"
   ];
 
-  enableParallelBuilding = true;
 
   hardeningDisable = [ "format" ];
 

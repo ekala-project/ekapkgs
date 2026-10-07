@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional withUtempter libutempter;
 
   strictDeps = true;
-  enableParallelBuilding = true;
 
   patches = [
     ./ssh_path.patch

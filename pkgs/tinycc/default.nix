@@ -75,7 +75,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--config-musl"
   ];
 
-  enableParallelBuilding = true;
 
   env.NIX_CFLAGS_COMPILE = toString [
     "-Wno-error=implicit-int"

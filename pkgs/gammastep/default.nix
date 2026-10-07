@@ -91,7 +91,6 @@ stdenv.mkDerivation rec {
     fi
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Screen color temperature manager";

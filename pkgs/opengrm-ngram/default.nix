@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ openfst ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Library to make and modify n-gram language models encoded as weighted finite-state transducers";

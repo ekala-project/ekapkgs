@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     ./use-non-existent-file-with-proper-permissions.patch
   ];
 
-  enableParallelBuilding = true;
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

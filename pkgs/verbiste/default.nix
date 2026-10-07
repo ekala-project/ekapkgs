@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [ "--without-gtk-app" ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "http://sarrazip.com/dev/verbiste.html";

@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ libintl ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/rrthomas/recode";

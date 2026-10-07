@@ -74,7 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
     echo '#define USE_UTMP_SETGID 1'
   '';
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     for bin in $out/bin/*; do

@@ -29,7 +29,6 @@ gccStdenv.mkDerivation {
 
   strictDeps = true;
 
-  enableParallelBuilding = true;
 
   installPhase = ''
     mkdir -p $out/{bin,share/uemacs}

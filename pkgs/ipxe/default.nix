@@ -98,7 +98,6 @@ stdenv.mkDerivation (finalAttrs: {
     runHook postInstall
   '';
 
-  enableParallelBuilding = true;
 
   passthru = {
     firmware = "${finalAttrs.finalPackage}/${firmwareBinary}";

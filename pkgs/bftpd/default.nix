@@ -40,7 +40,6 @@ stdenv.mkDerivation rec {
     rm -rf $out/{etc,var}
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Minimal ftp server";

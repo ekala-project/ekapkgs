@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     NOCONFIGURE=1 ./autogen.sh
   '';
 
-  enableParallelBuilding = true;
 
   passthru = {
     tests.version = testers.testVersion { package = finalAttrs.finalPackage; };

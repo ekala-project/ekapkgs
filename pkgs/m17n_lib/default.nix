@@ -24,7 +24,6 @@ stdenv.mkDerivation rec {
     m17n_db
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://www.nongnu.org/m17n/";

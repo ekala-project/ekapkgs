@@ -41,7 +41,6 @@ stdenv.mkDerivation rec {
     ./no-build-only-refs.patch
   ];
 
-  enableParallelBuilding = true;
   strictDeps = true;
 
   nativeBuildInputs = [

@@ -60,7 +60,6 @@ stdenv.mkDerivation rec {
     pkg-config
   ];
 
-  enableParallelBuilding = true;
 
   buildInputs = [
     sdl2-compat

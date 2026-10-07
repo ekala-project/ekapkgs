@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     libxcrypt
   ];
 
-  enableParallelBuilding = true;
 
   makeFlags = [
     "CC=${stdenv.cc.targetPrefix}cc"

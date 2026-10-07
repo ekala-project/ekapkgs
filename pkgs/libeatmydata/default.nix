@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Small LD_PRELOAD library to disable fsync and friends";

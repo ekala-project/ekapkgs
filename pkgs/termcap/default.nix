@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
   ];
 
-  enableParallelBuilding = true;
 
   strictDeps = true;
 

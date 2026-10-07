@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     "prefix=$(out)"
   ];
 
-  enableParallelBuilding = true;
 
   installTargets = [ "system-install" ];
 

@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = lib.optional ossSupport "--enable-oss";
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Mixer library for MATE";

@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     "pic"
   ];
 
-  enableParallelBuilding = true;
 
   strictDeps = true;
 

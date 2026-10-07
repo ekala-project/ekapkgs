@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Open source library to extract valid data from within an Open Street Map input file";

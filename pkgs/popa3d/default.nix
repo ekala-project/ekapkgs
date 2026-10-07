@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     ./fix-gcc15.patch
   ];
 
-  enableParallelBuilding = true;
 
   makeFlags = [
     "PREFIX=$(out)"

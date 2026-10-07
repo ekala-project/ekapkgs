@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     "HAVE_RULES=yes"
   ];
 
-  enableParallelBuilding = true;
   strictDeps = true;
 
   doCheck = false;

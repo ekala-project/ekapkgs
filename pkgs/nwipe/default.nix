@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
       }
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Securely erase disks";

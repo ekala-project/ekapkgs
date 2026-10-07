@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     autoconf-archive
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

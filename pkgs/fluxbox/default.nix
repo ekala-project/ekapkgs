@@ -46,7 +46,6 @@ stdenv.mkDerivation rec {
     libxinerama
   ];
 
-  enableParallelBuilding = true;
 
   configureFlags = [
     "--disable-imlib2"

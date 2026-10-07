@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     libpng
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Library for encoding and decoding Kate streams";

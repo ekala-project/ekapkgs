@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     NIX_LDFLAGS = "-lm";
   };
 
-  enableParallelBuilding = true;
 
   buildInputs = [ ncurses ] ++ lib.optional stdenv.hostPlatform.isDarwin gettext;
 

@@ -58,7 +58,6 @@ stdenv.mkDerivation rec {
 
   NIX_CFLAGS_LINK = lib.optionalString stdenv.cc.isGNU "-lgcc_s";
 
-  enableParallelBuilding = true;
 
   # disable tests on linux aarch32
   # https://gitlab.torproject.org/tpo/core/tor/-/issues/40912

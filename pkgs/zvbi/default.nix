@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     "man"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Vertical Blanking Interval (VBI) utilities";

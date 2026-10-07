@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--localstatedir=/var"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://troglobit.com/projects/inadyn/";

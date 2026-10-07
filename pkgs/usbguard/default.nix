@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-polkit"
   ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     installShellCompletion --bash --name usbguard.bash scripts/bash_completion/usbguard

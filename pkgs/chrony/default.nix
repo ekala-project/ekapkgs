@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     rm test/unit/nts_ke_session.c
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Sets your computer's clock from time servers on the Net";

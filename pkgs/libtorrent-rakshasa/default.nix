@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [ "--enable-aligned=yes" ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "BitTorrent library written in C++ for *nix, with focus on high performance and good code";

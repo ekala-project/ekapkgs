@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals withUpower [ "--enable-upower-glib" ]
   ++ lib.optionals withColord [ "--enable-colord" ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Settings manager for Xfce";

@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
-  enableParallelBuilding = true;
 
   nativeInstallCheckInputs = [
   ];

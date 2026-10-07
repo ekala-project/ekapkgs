@@ -76,7 +76,6 @@ stdenv.mkDerivation {
     "man"
   ];
 
-  enableParallelBuilding = true;
 
   # Provide libgpm.so for compatibility
   postInstall = ''

@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     done
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Icon themes from MATE";

@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   makeFlags = [ "CC=${stdenv.cc.targetPrefix}cc" ];
-  enableParallelBuilding = true;
 
   installPhase = ''
     runHook preInstall

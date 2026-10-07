@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     "doc"
   ];
 
-  enableParallelBuilding = true;
 
   installPhase = ''
     runHook preInstall

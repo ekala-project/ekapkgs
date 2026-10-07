@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-DCMAKE_INSTALL_LIBDIR=lib"
     "-DCMAKE_INSTALL_INCLUDEDIR=include"
   ];
-  enableParallelBuilding = true;
   meta = {
     description = "Library for real-time communications with async IO support and a complete SIP stack";
     homepage = "https://github.com/baresip/re";

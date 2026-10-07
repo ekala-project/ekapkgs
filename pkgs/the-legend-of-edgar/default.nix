@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     "BUILD_PKG_CONFIG=$(PKG_CONFIG_FOR_BUILD)"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://www.parallelrealities.co.uk/games/edgar";

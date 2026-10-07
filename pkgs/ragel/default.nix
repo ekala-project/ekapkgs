@@ -17,7 +17,6 @@ stdenv.mkDerivation rec {
 
   doCheck = true;
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "State machine compiler";

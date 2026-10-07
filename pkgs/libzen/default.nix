@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   preConfigure = "sh autogen.sh";
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Shared library for libmediainfo and mediainfo";

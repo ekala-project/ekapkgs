@@ -46,7 +46,6 @@ stdenv.mkDerivation rec {
     "--disable-gtk-doc"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "GLib/GObject wrapper for the Facebook Graph API";

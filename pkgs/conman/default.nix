@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-CHWvHYTmTiEpEfHm3TF5aCKBOW2GsT9Vv4ehpj775NQ=";
   };
 
-  enableParallelBuilding = true;
 
   nativeBuildInputs = [
     autoreconfHook

@@ -43,7 +43,6 @@ stdenv.mkDerivation {
   ];
   buildInputs = [ ncurses ];
 
-  enableParallelBuilding = true;
 
   preConfigure = "./autogen.sh";
 

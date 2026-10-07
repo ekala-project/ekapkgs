@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  enableParallelBuilding = true;
 
   preConfigure = ''
     substituteInPlace tboot/Makefile --replace /usr/bin/perl ${perl}/bin/perl

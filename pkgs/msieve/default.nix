@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     "all"
   ];
 
-  enableParallelBuilding = true;
 
   installPhase = ''
     mkdir -p $out/bin/

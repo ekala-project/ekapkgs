@@ -25,7 +25,6 @@ stdenv.mkDerivation rec {
     ./skip-gmp-check.patch
   ];
 
-  enableParallelBuilding = true;
 
   nativeBuildInputs = [
     autoreconfHook

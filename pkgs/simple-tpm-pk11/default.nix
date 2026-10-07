@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     opencryptoki
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Simple PKCS11 provider for TPM chips";

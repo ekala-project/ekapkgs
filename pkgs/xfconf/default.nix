@@ -44,7 +44,6 @@ stdenv.mkDerivation rec {
 
   configureFlags = [ "--enable-maintainer-mode" ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Simple client-server configuration storage and query system for Xfce";

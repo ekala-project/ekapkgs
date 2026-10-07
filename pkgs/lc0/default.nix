@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
   # in version 31 this option will be required
   ++ lib.optionals (lib.versionAtLeast finalAttrs.version "0.31") [ "-Dnative_cuda=false" ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

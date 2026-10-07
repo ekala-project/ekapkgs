@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-geosconfig=${lib.getExe' (lib.getDev geos) "geos-config"}"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "RT Topology Library";

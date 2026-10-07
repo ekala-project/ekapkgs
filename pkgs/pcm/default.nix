@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
-  enableParallelBuilding = true;
 
   meta = {
     description = "Processor counter monitor";

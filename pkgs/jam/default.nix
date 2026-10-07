@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     NIX_CFLAGS_COMPILE = "-std=c89";
   };
 
-  enableParallelBuilding = true;
 
   strictDeps = true;
 

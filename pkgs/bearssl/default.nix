@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     "out"
   ];
 
-  enableParallelBuilding = true;
 
   makeFlags = [
     "AR=${stdenv.cc.targetPrefix}ar"

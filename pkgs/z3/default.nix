@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  enableParallelBuilding = true;
 
   cmakeFlags = [
     (lib.cmakeBool "Z3_BUILD_PYTHON_BINDINGS" false)

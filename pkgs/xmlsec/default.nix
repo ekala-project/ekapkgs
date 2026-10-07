@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
   ];
 
-  enableParallelBuilding = true;
 
   configureFlags = [ "--enable-soap" ];
 

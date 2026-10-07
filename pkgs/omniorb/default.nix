@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ python3 ];
 
-  enableParallelBuilding = true;
   hardeningDisable = [ "format" ];
 
   # Transform omniidl_be into a PEP420 namespace to allow other projects to define

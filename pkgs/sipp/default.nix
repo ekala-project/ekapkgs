@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-DCMAKE_SKIP_BUILD_RPATH=ON"
   ];
 
-  enableParallelBuilding = true;
 
   nativeBuildInputs = [
     cmake

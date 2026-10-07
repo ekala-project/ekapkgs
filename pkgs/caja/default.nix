@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [ "--disable-update-mimedb" ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "File manager for the MATE desktop";

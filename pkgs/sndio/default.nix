@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     install -Dm644 contrib/sndiod.service $out/lib/systemd/system/sndiod.service
   '';
 
-  enableParallelBuilding = true;
   dontDisableStatic = true;
 
   meta = {

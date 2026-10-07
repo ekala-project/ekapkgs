@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     systemd
   ];
 
-  enableParallelBuilding = true;
   meta = {
     description = "GNOME test runner for installed tests";
     homepage = "https://gitlab.gnome.org/GNOME/gnome-desktop-testing";

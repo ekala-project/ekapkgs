@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-pdt"
   ];
 
-  enableParallelBuilding = true;
 
   nativeBuildInputs = [ autoreconfHook ];
 

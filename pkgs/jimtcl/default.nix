@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--ipv6"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Open source small-footprint implementation of the Tcl programming language";

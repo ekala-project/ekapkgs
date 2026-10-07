@@ -90,7 +90,6 @@ stdenv.mkDerivation (finalAttrs: {
     cp ${finalAttrs.src}/{AUTHORS,CHANGES,LICENSE,README.md,modsecurity.conf-recommended,unicode.mapping} $out/share/modsecurity
   '';
 
-  enableParallelBuilding = true;
 
   passthru.tests = { };
 

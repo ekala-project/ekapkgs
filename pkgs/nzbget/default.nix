@@ -81,7 +81,6 @@ stdenv.mkDerivation (finalAttrs: {
     install -Dm444 nzbget.conf $out/share/nzbget/nzbget.conf
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://nzbget.com/";

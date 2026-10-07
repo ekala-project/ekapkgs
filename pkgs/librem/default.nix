@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional (stdenv.cc.cc != null) "SYSROOT_ALT=${lib.getDev stdenv.cc.cc}"
   ++ lib.optional (stdenv.cc.libc != null) "SYSROOT=${lib.getDev stdenv.cc.libc}";
-  enableParallelBuilding = true;
   meta = {
     description = "Library for real-time audio and video processing";
     homepage = "https://github.com/baresip/rem";

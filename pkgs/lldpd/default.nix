@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     export PATH=$PATH:${net-snmp.dev}/bin
   '';
 
-  enableParallelBuilding = true;
 
   outputs = [
     "out"

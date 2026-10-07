@@ -33,7 +33,6 @@ stdenv.mkDerivation rec {
     ncurses
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Free Telnet/SSH Client";

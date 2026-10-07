@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-systemdsystemunitdir=${placeholder "out"}/lib/systemd/system"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Client for PPP+SSL VPN tunnel services";

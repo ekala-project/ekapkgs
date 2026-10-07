@@ -16,7 +16,6 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace ./Makefile --replace "udevrulesdir}" "prefix}/etc/udev";
   '';
 
-  enableParallelBuilding = true;
 
   nativeBuildInputs = [
     pkg-config

@@ -57,7 +57,6 @@ stdenv.mkDerivation {
   # to be tested.
   doCheck = false;
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Parma Polyhedra Library";

@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
     rm $out/lib/libfm-extra.so $out/lib/libfm-extra.so.* $out/lib/libfm-extra.la $out/lib/pkgconfig/libfm-extra.pc
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://blog.lxde.org/category/pcmanfm/";

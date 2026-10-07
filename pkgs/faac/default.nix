@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-Db_lto=false"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     changelog = "https://github.com/knik0/faac/releases/tag/${finalAttrs.src.tag}";

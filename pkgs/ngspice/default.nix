@@ -34,7 +34,6 @@ stdenv.mkDerivation rec {
     "--enable-osdi"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Next Generation Spice (Electronic Circuit Simulator)";

@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     "DATADIR=${placeholder "out"}/share"
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

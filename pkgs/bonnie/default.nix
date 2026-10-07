@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Hard drive and file system benchmark suite";

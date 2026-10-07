@@ -92,7 +92,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Collection of open-source audio plugins";

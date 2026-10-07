@@ -38,7 +38,6 @@ stdenv.mkDerivation rec {
     pcsclite
   ];
 
-  enableParallelBuilding = true;
 
   env.NIX_CFLAGS_COMPILE = "-Wno-error=narrowing";
 

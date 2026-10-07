@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optionals withLua [ "--with-lua" ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     installManPage doc/old/rtorrent.1

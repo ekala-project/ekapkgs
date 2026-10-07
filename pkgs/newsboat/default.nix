@@ -75,7 +75,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   makeFlags = [ "prefix=$(out)" ];
-  enableParallelBuilding = true;
 
   doCheck = true;
   checkTarget = "test";

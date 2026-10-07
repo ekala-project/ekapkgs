@@ -72,7 +72,6 @@ stdenv.mkDerivation rec {
       $out/share/icons/hicolor/64x64/apps/xfig.png
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     changelog = "https://sourceforge.net/p/mcj/xfig/ci/${version}/tree/CHANGES";

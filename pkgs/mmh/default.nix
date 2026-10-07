@@ -34,7 +34,6 @@ stdenv.mkDerivation {
   #  1031 |                 putstr((c1->c_flags & RTRIM) ? rtrim(cp) : cp);
   env.NIX_CFLAGS_COMPILE = toString [ "-Wno-error=incompatible-pointer-types" ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Set of electronic mail handling programs";

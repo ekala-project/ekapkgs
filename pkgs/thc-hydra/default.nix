@@ -51,7 +51,6 @@ stdenv.mkDerivation rec {
     samba
   ];
 
-  enableParallelBuilding = true;
 
   env.DATADIR = "/share/${pname}";
 

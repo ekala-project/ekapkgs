@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     libpcap
   ];
 
-  enableParallelBuilding = true;
 
   makeFlags = [
     "DESTDIR=$(out)"

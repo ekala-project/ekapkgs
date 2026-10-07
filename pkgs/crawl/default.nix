@@ -71,7 +71,6 @@ stdenv.mkDerivation rec {
     install -Dm444 dat/tiles/stone_soup_icon-512x512.png $out/share/icons/hicolor/512x512/apps/crawl.png
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Open-source, single-player, role-playing roguelike game";

@@ -136,7 +136,6 @@ stdenv.mkDerivation (finalAttrs: {
         }:$PATH'
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Lightweight GTK based image viewer";

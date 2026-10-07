@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
   __structuredAttrs = true;
-  enableParallelBuilding = true;
 
   meta = {
     description = "Visualize the layout of a mounted btrfs";

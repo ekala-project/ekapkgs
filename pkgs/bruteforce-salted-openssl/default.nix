@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     openssl
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Try to find the password of file encrypted with OpenSSL";

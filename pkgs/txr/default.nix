@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ libffi ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
   checkTarget = "tests";

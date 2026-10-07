@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     wcslib
   ];
 
-  enableParallelBuilding = true;
 
   hardeningDisable = lib.optionals stdenv.hostPlatform.isDarwin [ "format" ];
 

@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     "prefix:=${placeholder "out"}"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://www.muppetlabs.com/~breadbox/software/elfkickers.html";

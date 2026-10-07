@@ -92,7 +92,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail /bin/false ${coreutils}/bin/false
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://git.kernel.org/pub/scm/network/wireless/iwd.git";

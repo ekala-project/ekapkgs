@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     "INTROSPECTION_TYPELIBDIR=$(out)/lib/girepository-1.0"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     broken = stdenv.hostPlatform.isDarwin;

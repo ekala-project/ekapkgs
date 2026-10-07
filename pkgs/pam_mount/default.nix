@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     util-linux
   ];
 
-  enableParallelBuilding = true;
 
   configureFlags = [
     "--prefix=${placeholder "out"}"

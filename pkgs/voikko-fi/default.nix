@@ -19,7 +19,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
 
   sourceRoot = "${finalAttrs.src.name}/voikko-fi";
 
-  enableParallelBuilding = true;
 
   installTargets = "vvfst-install DESTDIR=$(out)/share/voikko-fi";
 

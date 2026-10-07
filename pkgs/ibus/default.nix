@@ -166,7 +166,6 @@ stdenv.mkDerivation (finalAttrs: {
     wayland-scanner
   ];
 
-  enableParallelBuilding = true;
   strictDeps = true;
 
   doCheck = false;

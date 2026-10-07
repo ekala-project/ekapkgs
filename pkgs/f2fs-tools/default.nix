@@ -48,7 +48,6 @@ stdenv.mkDerivation rec {
     })
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/";

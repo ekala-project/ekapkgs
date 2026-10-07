@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     sed -i -e '/sys\/sysctl.h/d' src/Unique.cpp
   '';
 
-  enableParallelBuilding = true;
 
   nativeBuildInputs = [
     pkg-config

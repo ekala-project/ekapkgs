@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     "man"
   ];
 
-  enableParallelBuilding = true;
 
   strictDeps = true;
 

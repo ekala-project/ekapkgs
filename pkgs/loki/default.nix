@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-std=c++11"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "C++ library of designs, containing flexible implementations of common design patterns and idioms";

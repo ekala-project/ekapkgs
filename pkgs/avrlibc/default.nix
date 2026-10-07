@@ -25,7 +25,6 @@ stdenvNoLibc.mkDerivation (finalAttrs: {
   stripDebugList = [ "bin" ];
   dontPatchELF = true;
 
-  enableParallelBuilding = true;
 
   passthru = {
     incdir = "/avr/include";

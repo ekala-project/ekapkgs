@@ -18,7 +18,6 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ libpcap ];
 
-  enableParallelBuilding = true;
 
   sourceRoot = "${src.name}/src";
 

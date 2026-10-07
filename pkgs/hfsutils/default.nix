@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
   # Tcl code doesn't pass const strings to API
   env.NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
 
-  enableParallelBuilding = true;
 
   # Makefile.in expects already-existing target dirs
   preInstall = ''

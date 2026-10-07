@@ -59,7 +59,6 @@ stdenv.mkDerivation {
     am_cv_func_iconv_works = "yes";
   };
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/L1L1/cardpeek";

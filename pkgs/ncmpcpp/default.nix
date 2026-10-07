@@ -32,7 +32,6 @@ stdenv.mkDerivation rec {
     hash = "sha256-w3deSy71SWWD2kZKREowZh3KMNCBfBJbrjM0vW4/GrI=";
   };
 
-  enableParallelBuilding = true;
 
   strictDeps = true;
 

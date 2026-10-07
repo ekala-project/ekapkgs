@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     done
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Store OpenPGP or GnuPG on paper";

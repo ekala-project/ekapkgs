@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     "PREFIX=${placeholder "out"}"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Generates HTML from scdoc source files";

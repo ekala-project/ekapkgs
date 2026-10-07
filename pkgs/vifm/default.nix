@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs --build src/helpztags
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Vi-like file manager";

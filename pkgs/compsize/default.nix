@@ -22,7 +22,6 @@ stdenv.mkDerivation {
 
   __structuredAttrs = true;
   strictDeps = true;
-  enableParallelBuilding = true;
 
   outputs = [
     "out"

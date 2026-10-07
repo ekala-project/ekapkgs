@@ -36,7 +36,6 @@ stdenv.mkDerivation rec {
     libsecret
   ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     install -Dm444 -t $out/share/doc/msmtp doc/*.example

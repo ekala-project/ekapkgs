@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (xfce4-exo != null) [ xfce4-exo ];
 
   configureFlags = [ "--enable-maintainer-mode" ];
-  enableParallelBuilding = true;
 
   meta = {
     description = "Thunar extension for automatic management of removable drives and media";

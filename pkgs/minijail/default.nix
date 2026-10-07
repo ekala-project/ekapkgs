@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     installManPage minijail0.1 minijail0.5
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://chromium.googlesource.com/chromiumos/platform/minijail/+/refs/heads/main/README.md";

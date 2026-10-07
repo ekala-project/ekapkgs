@@ -30,7 +30,6 @@ stdenv.mkDerivation rec {
 
   doCheck = true;
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Powerful C/C++ library for exporting 2D vector graphics";

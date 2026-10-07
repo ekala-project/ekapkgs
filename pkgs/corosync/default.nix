@@ -78,7 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
     "LOGROTATEDIR=$(out)/etc/logrotate.d"
   ];
 
-  enableParallelBuilding = true;
 
   preConfigure = lib.optionalString enableInfiniBandRdma ''
     export rdmacm_LIBS=-lrdmacm

@@ -178,7 +178,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-admin-group=root" # TODO: really? Maybe "wheel"?
   ];
 
-  enableParallelBuilding = true;
 
   fixupPhase = ''
     runHook preFixup

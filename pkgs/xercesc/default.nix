@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-transcoder-icu"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Validating XML parser written in a portable subset of C++";

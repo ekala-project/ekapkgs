@@ -52,7 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-reproducible-builds"
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

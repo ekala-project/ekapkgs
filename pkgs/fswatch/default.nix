@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     texinfo
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Cross-platform file change monitor with multiple backends";

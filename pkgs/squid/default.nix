@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     systemd
   ];
 
-  enableParallelBuilding = true;
 
   configureFlags = [
     "--disable-strict-error-checking"

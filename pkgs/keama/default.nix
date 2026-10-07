@@ -13,7 +13,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-CsQWu1WZfKhjIXT9EHN/1hzbjbonUhYKM1d1vCHcc8c=";
   };
 
-  enableParallelBuilding = true;
 
   # The Kea Migration Assistant lives as a subdirectory of the
   # original ISC DHCP server source code.

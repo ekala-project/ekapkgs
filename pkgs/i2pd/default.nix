@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     "USE_UPNP=${lib.boolToYesNo upnpSupport}"
   ];
 
-  enableParallelBuilding = true;
 
   installPhase = ''
     install -D i2pd $out/bin/i2pd

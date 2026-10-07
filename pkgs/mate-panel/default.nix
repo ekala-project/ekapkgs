@@ -94,7 +94,6 @@ stdenv.mkDerivation (finalAttrs: {
     )
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "MATE panel";

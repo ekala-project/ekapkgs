@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     net-snmp
   ];
 
-  enableParallelBuilding = true;
 
   nativeBuildInputs = [
     pkg-config

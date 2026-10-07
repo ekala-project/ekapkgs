@@ -34,7 +34,6 @@ stdenv.mkDerivation {
     sed '/^XGETTEXT_OPTIONS =/ s,$, --from-code=utf-8,' -i po/Makevars
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Quickly find duplicate files";

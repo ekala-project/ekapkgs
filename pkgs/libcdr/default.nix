@@ -37,7 +37,6 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ pkg-config ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Library providing ability to interpret and import Corel Draw drawings into various applications";

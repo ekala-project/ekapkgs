@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     XMLParser
   ]);
 
-  enableParallelBuilding = true;
 
   postPatch = ''
     substituteInPlace configure.ac \

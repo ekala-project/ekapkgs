@@ -69,7 +69,6 @@ stdenv.mkDerivation (finalAttrs: {
       "--enable-magic"
     ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Archive Manager for MATE";

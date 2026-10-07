@@ -159,7 +159,6 @@ python3Packages.buildPythonApplication {
       --replace "GZIP_ENV = --best" "GZIP_ENV = --best -n"
   '';
 
-  enableParallelBuilding = true;
   enableParallelInstalling = false;
 
   env = {

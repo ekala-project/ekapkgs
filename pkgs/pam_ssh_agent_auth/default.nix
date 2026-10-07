@@ -91,7 +91,6 @@ stdenv.mkDerivation rec {
 
   prePatch = "cp -r ${ed25519-donna}/. ed25519-donna/.";
 
-  enableParallelBuilding = true;
   meta = {
     homepage = "https://github.com/jbeverly/pam_ssh_agent_auth";
     description = "PAM module for authentication through the SSH agent";

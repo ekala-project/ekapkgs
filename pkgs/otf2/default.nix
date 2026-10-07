@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     which # used in configure script
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
   enableParallelChecking = true;

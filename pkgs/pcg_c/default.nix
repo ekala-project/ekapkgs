@@ -13,7 +13,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "0smm811xbvs03a5nc2668zd0178wnyri2h023pqffy767bpy1vlv";
   };
 
-  enableParallelBuilding = true;
 
   patches = [
     ./prefix-variable.patch

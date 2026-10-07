@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     ];
   };
 
-  enableParallelBuilding = true;
 
   makeFlags = [ "CXX=${stdenv.cc.targetPrefix}c++" ];
   installFlags = [ "PREFIX=$(out)" ];

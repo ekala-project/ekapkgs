@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--datadir=${placeholder "lib"}/share"
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
   nativeCheckInputs = [ dejagnu ];

@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional stdenv.hostPlatform.isLinux systemd;
 
-  enableParallelBuilding = true;
 
   configureFlags = lib.optional stdenv.hostPlatform.isLinux "--with-systemd";
 

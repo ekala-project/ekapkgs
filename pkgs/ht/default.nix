@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     "CFLAGS=-std=gnu17"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "File editor/viewer/analyzer for executables";

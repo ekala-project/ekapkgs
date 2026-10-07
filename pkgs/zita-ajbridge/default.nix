@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     "MANDIR=$(out)/share/man/man1"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Connect additional ALSA devices to JACK";

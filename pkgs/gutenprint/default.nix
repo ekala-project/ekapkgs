@@ -67,7 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
         configure
     '';
 
-  enableParallelBuilding = true;
 
   # Testing is very, very long.
   # doCheck = true;

@@ -107,7 +107,6 @@ stdenv.mkDerivation rec {
     popd
   ";
 
-  enableParallelBuilding = true;
 
   passthru = {
     inherit compat28 compat30 unicode;

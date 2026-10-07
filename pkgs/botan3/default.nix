@@ -13,7 +13,6 @@ stdenv.mkDerivation (finalAttrs: {
   version = "3.12.0";
 
   __structuredAttrs = true;
-  enableParallelBuilding = true;
   strictDeps = true;
 
   outputs = [

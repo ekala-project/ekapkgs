@@ -32,7 +32,6 @@ stdenv.mkDerivation {
     tools/svn-bootstrap.sh
   '';
 
-  enableParallelBuilding = true;
 
   nativeBuildInputs = [
     autoconf

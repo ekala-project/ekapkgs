@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   strictDeps = true;
-  enableParallelBuilding = true;
 
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [

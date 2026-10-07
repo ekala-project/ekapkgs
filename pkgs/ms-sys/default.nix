@@ -16,7 +16,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ gettext ];
 
-  enableParallelBuilding = true;
 
   makeFlags = [ "PREFIX=$(out)" ];
 

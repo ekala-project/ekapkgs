@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/ERGO-Code/HiGHS";

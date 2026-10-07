@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional stdenv.hostPlatform.isDarwin libiconv;
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

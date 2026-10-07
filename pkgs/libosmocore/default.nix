@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     pcsclite
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Set of Osmocom core libraries";

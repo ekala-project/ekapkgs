@@ -80,7 +80,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail "SecUnicodeMapFile unicode.mapping 20127" "SecUnicodeMapFile $out/share/modsecurity/unicode.mapping 20127"
   '';
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     mkdir -p $out/share/modsecurity

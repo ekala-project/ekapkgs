@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Library and a set of tools for reading and converting Apple iWork documents (Keynote, Pages and Numbers)";

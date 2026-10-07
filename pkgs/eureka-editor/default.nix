@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     libGLU
   ];
 
-  enableParallelBuilding = true;
 
   postPatch = ''
     substituteInPlace src/main.cc --replace /usr/local $out

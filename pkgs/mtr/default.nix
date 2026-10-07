@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional stdenv.hostPlatform.isLinux libcap;
 
-  enableParallelBuilding = true;
 
   outputs = [
     "out"

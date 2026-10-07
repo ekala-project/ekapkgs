@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional (!withRuby) "--without-ruby";
 
   setOutputFlags = false;
-  enableParallelBuilding = true;
   makeFlags = [ "V=1" ];
 
   outputs = [

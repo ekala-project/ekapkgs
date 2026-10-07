@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  enableParallelBuilding = true;
 
   configureFlags = [
     "--sysconfdir=/etc"

@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   configureFlags = [ "--enable-maintainer-mode" ];
-  enableParallelBuilding = true;
 
   meta = {
     description = "Xfce menu support library";

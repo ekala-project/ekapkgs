@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     "PREFIX=$(out)"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "IPv6 attack toolkit";

@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     libx11
     libxcomposite
   ];
-  enableParallelBuilding = true;
 
   preConfigure = ''
     ./autogen.sh

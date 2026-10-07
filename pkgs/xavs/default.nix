@@ -14,7 +14,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "0drw16wm95dqszpl7j33y4gckz0w0107lnz6wkzb66f0dlbv48cf";
   };
 
-  enableParallelBuilding = true;
 
   patchPhase = ''
     patchShebangs configure

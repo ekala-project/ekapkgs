@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     export DESTDIR="$(realpath .install)"
   '';
 
-  enableParallelBuilding = true;
   enableParallelInstalling = false;
 
   doCheck = false;

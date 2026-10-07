@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     hicolor-icon-theme
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Image viewing and cataloging program for the MATE desktop";

@@ -45,7 +45,6 @@ stdenv.mkDerivation rec {
       --replace /bin/rm rm
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/jstedfast/gmime/";

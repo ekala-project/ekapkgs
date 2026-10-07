@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     "VERSION=v${finalAttrs.version}"
   ];
 
-  enableParallelBuilding = true;
 
   preConfigure = ''
     patchShebangs tests/runtests.sh

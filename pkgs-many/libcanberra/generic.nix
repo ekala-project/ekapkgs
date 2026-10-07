@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
     done
   '';
 
-  enableParallelBuilding = true;
 
   passthru =
     mkVariantPassthru variantArgs

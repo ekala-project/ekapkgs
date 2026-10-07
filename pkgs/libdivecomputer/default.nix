@@ -13,7 +13,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-p7gLkIOiETpDKA7ntR1I1m6lp3n8P+5X33xFHaAlHGU=";
   };
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://www.libdivecomputer.org";

@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace src/tun.cpp --replace "/sbin/" "${net-tools}/bin/"
   '';
 
-  enableParallelBuilding = true;
 
   installPhase = ''
     install -D -m0755 hans $out/bin/hans

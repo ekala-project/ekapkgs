@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     python3
   ];
 
-  enableParallelBuilding = true;
 
   pythonPath = with python3.pkgs; [
     pycairo

@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
   nativeCheckInputs = [ check ];
   doCheck = true;
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://pagure.io/gfs2-utils";

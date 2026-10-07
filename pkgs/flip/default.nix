@@ -21,7 +21,6 @@ stdenv.mkDerivation {
     cmake.configurePhaseHook
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Tool for visualizing and communicating the errors in rendered images";

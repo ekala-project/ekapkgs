@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
   # `faac' expects `mp4.h'.
   postInstall = "ln -s mp4v2/mp4v2.h $out/include/mp4.h";
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Provides functions to read, create, and modify mp4 files";

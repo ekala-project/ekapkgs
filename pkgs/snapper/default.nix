@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     "RMBIN=${coreutils}/bin/rm"
   ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     rm -r $out/etc/cron.*

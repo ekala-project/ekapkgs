@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--disable-icatok"
   ];
 
-  enableParallelBuilding = true;
 
   installFlags = [ "DESTDIR=${placeholder "out"}" ];
 

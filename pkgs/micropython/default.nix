@@ -107,7 +107,6 @@ stdenv.mkDerivation rec {
     export MPY_CROSS="$PWD/mpy-cross/build/mpy-cross"
   '';
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

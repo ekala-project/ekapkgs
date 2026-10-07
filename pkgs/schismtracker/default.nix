@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     libxext
   ];
 
-  enableParallelBuilding = true;
 
   # Our Darwin sdl2-compat doesn't have a SDL2main to link against
   preConfigure = lib.optionalString stdenv.hostPlatform.isDarwin ''

@@ -48,7 +48,6 @@ stdenv.mkDerivation {
     SDL2_mixer
   ];
 
-  enableParallelBuilding = true;
 
   sconsFlags = [ "sdl2=1" ];
 

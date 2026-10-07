@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   installFlags = [ "PREFIX=$(out)" ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/sjaehn/BChoppr";

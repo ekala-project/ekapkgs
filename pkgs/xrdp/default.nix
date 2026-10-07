@@ -70,7 +70,6 @@ let
       export XRDP_CFLAGS="-I${xrdp.src}/common -I${libdrm.dev}/include -I${libdrm.dev}/include/libdrm"
     '';
 
-    enableParallelBuilding = true;
   };
 
   xrdp = stdenv.mkDerivation rec {
@@ -177,7 +176,6 @@ let
       EOF
     '';
 
-    enableParallelBuilding = true;
 
     passthru = {
       inherit xorgxrdp;

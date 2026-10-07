@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-opx"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://ofiwg.github.io/libfabric/";

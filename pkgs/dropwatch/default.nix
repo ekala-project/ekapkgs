@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Linux kernel dropped packet monitor";

@@ -16,7 +16,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "partimage";
   version = "0.6.9";
 
-  enableParallelBuilding = true;
 
   src = fetchurl {
     url = "mirror://sourceforge/partimage/partimage-${finalAttrs.version}.tar.bz2";

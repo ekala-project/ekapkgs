@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makefile = "makefile.shared";
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://www.libtom.net/LibTomMath/";

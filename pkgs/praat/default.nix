@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
   buildFlags = [ "PRAAT_AUDIO=pulse" ];
   installFlags = [ "PREFIX=${placeholder "out"}" ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     mv $out/share/applications/org.praat.Praat.desktop $out/share/applications/praat.desktop

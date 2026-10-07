@@ -60,7 +60,6 @@ stdenv.mkDerivation rec {
 
   LC_ALL = "en_US.UTF-8";
 
-  enableParallelBuilding = true;
 
   preConfigure = ''
     substituteInPlace telepathy-glib/telepathy-glib.pc.in --replace Requires.private Requires

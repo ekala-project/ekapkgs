@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     "CC=${stdenv.cc.targetPrefix}cc"
   ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     installManPage doc/masscan.?

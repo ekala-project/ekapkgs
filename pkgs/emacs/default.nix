@@ -119,7 +119,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-json"
   ];
 
-  enableParallelBuilding = true;
 
   installTargets = [
     "tags"

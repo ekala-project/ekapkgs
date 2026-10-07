@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-tinyxml"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://gource.io/";

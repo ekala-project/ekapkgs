@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     zstd
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/AgentD/squashfs-tools-ng";

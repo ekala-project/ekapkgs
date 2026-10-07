@@ -72,7 +72,6 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace $out/share/lxc/config/oci.common.conf --replace-fail "$out/share" "/run/current-system/sw/share"
   '';
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ e2fsprogs ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://e2tools.github.io/";

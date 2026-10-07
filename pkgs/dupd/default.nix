@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     "INSTALL_PREFIX=$(out)"
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

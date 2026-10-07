@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   nativeCheckInputs = [ cmocka ];
 
-  enableParallelBuilding = true;
 
   # Emulate the required behavior of ./bootstrap in the original
   # package

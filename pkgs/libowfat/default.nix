@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     "prefix=$(out)"
     "CC=${stdenv.cc.targetPrefix}cc"
   ];
-  enableParallelBuilding = true;
 
   env.NIX_CFLAGS_COMPILE = toString [ "-Wno-error=incompatible-pointer-types" ];
 

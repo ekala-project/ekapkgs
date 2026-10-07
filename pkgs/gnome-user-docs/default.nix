@@ -24,7 +24,6 @@ stdenv.mkDerivation rec {
     yelp-tools
   ];
 
-  enableParallelBuilding = true;
 
   meta = with lib; {
     description = "User and system administration help for the GNOME desktop";

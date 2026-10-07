@@ -81,7 +81,6 @@ stdenv.mkDerivation rec {
     mpi = null;
   };
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Data model, library, and file format for storing and managing data";

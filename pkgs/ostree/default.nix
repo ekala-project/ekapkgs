@@ -102,7 +102,6 @@ stdenv.mkDerivation (finalAttrs: {
     systemd
   ];
 
-  enableParallelBuilding = true;
 
   configureFlags = [
     "--with-curl"

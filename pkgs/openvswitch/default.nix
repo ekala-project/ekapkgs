@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
     "PKIDIR=$(TMPDIR)/dummy"
   ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     # Install bash completions in correct location

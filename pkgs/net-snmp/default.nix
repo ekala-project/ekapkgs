@@ -50,7 +50,6 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ openssl ];
 
-  enableParallelBuilding = true;
   enableParallelInstalling = false;
   doCheck = false;
 

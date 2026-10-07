@@ -28,7 +28,6 @@ stdenv.mkDerivation {
     flex
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://vapier.github.io/pcalc/";

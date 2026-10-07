@@ -45,7 +45,6 @@ stdenv.mkDerivation rec {
     patchShebangs utils/
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "V4L utils and libv4l, provide common image formats regardless of the v4l device";

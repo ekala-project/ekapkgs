@@ -37,7 +37,6 @@ stdenv.mkDerivation {
     "SBINDIR=$(PREFIX)/bin"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Tool that injects data into wireless networks";

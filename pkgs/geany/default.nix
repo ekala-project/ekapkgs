@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Small and lightweight IDE";

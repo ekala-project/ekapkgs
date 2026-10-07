@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-plugin-dir=${placeholder "out"}/lib/hdf5-plugins"
   ];
 
-  enableParallelBuilding = true;
 
   disallowedReferences = [ stdenv.cc ];
 

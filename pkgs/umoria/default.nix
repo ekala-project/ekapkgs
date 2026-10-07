@@ -60,7 +60,6 @@ stdenv.mkDerivation rec {
     cmake.configurePhaseHook
   ];
   buildInputs = [ ncurses ];
-  enableParallelBuilding = true;
 
   installPhase = ''
     runHook preInstall

@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     "IS_AARCH64=1"
   ];
 
-  enableParallelBuilding = true;
 
   preFixup = ''
     for f in $out/share/hashcat/OpenCL/*.cl; do

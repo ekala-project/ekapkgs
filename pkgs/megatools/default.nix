@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
-  enableParallelBuilding = true;
   strictDeps = true;
 
   meta = {

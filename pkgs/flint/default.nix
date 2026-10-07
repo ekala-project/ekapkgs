@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-gc=${boehmgc}"
   ];
 
-  enableParallelBuilding = true;
   enableParallelChecking = true;
   doCheck = true;
 

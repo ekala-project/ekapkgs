@@ -90,7 +90,6 @@ stdenv.mkDerivation (finalAttrs: {
     ]
   );
 
-  enableParallelBuilding = true;
   strictDeps = true;
 
   env.CFLAGS = toString [

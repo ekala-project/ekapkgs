@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [ "--disable-graphviz" ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     mkdir -p $out/include

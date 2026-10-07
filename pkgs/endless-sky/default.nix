@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail '%NIXPKGS_RESOURCES_PATH%' "$out/share/games/endless-sky/"
   '';
 
-  enableParallelBuilding = true;
 
   nativeBuildInputs = [
     cmake

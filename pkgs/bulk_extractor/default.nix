@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace src/be20_api/feature_recorder_set.cpp --replace-fail '#warn ' '#warning '
   '';
 
-  enableParallelBuilding = true;
   nativeBuildInputs = [
     pkg-config
     python3

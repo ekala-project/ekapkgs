@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     mpfr
     icu
   ];
-  enableParallelBuilding = true;
 
   postPatch = lib.optionalString (gnuplotBinary != "") ''
     substituteInPlace libqalculate/Calculator-plot.cc \

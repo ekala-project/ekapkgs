@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
   dontUseMesonConfigure = true;
   configureFlags = [ "--enable-maintainer-mode" ];
 
-  enableParallelBuilding = true;
 
   setupHook = ./setup-hook.sh;
 

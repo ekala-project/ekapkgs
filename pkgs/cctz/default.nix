@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     install_name_tool -id $out/lib/libcctz.so $out/lib/libcctz.so
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/google/cctz";
