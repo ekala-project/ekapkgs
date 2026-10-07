@@ -39,10 +39,10 @@ stdenv.mkDerivation rec {
     zlib
   ];
 
-  cmakeFlags = [
-    "-DOPENVDB_CORE_STATIC=OFF"
-    "-DOPENVDB_BUILD_NANOVDB=ON"
-  ];
+  cmakeEntries = {
+    OPENVDB_CORE_STATIC = false;
+    OPENVDB_BUILD_NANOVDB = true;
+  };
 
   meta = with lib; {
     description = "Open framework for voxel";

@@ -46,11 +46,11 @@ stdenv.mkDerivation {
     "lib"
   ];
 
-  cmakeFlags = [
-    # RPATH of binary /nix/store/.../bin/btorsim contains a forbidden reference to /build/
-    "-DCMAKE_SKIP_BUILD_RPATH=ON"
-  ]
-  ++ lib.optionals stdenv.hostPlatform.isDarwin [
+  cmakeEntries = {
+    CMAKE_SKIP_BUILD_RPATH = true;
+  };
+
+  cmakeFlags = lib.optionals stdenv.hostPlatform.isDarwin [
     "-DCMAKE_BUILD_WITH_INSTALL_NAME_DIR=ON"
   ];
 

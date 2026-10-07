@@ -30,9 +30,9 @@ stdenv.mkDerivation (finalAttrs: {
     libsndfile
   ]; # Both are needed for includes.
 
-  cmakeFlags = [
-    "-DLIB_SUFFIX=" # Install in $out/lib.
-  ];
+  cmakeEntries = {
+    LIB_SUFFIX = "";
+  };
 
   meta = {
     homepage = "http://www.swamiproject.org/";

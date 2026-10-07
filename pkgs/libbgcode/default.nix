@@ -38,9 +38,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-  cmakeFlags = [
-    (lib.cmakeBool "LibBGCode_BUILD_TESTS" finalAttrs.finalPackage.doCheck)
-  ];
+  cmakeEntries = {
+    LibBGCode_BUILD_TESTS = finalAttrs.finalPackage.doCheck;
+  };
 
   meta = {
     homepage = "https://github.com/prusa3d/libbgcode";

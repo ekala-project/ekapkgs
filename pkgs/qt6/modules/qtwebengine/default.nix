@@ -147,30 +147,26 @@ qtModule {
       src/3rdparty/chromium/gpu/config/gpu_info_collector_linux.cc
   '';
 
-  cmakeFlags = [
-    "-DQT_FEATURE_qtpdf_build=ON"
-    "-DQT_FEATURE_qtpdf_widgets_build=ON"
-    "-DQT_FEATURE_qtpdf_quick_build=ON"
-    "-DQT_FEATURE_pdf_v8=ON"
-    "-DQT_FEATURE_pdf_xfa=ON"
-    "-DQT_FEATURE_pdf_xfa_bmp=ON"
-    "-DQT_FEATURE_pdf_xfa_gif=ON"
-    "-DQT_FEATURE_pdf_xfa_png=ON"
-    "-DQT_FEATURE_pdf_xfa_tiff=ON"
-    "-DQT_FEATURE_webengine_system_libevent=ON"
-    "-DQT_FEATURE_webengine_system_ffmpeg=ON"
-    # android only. https://bugreports.qt.io/browse/QTBUG-100293
-    # "-DQT_FEATURE_webengine_native_spellchecker=ON"
-    "-DQT_FEATURE_webengine_sanitizer=ON"
-    "-DQT_FEATURE_webengine_kerberos=ON"
-    "-DQT_FEATURE_webengine_system_libxml=ON"
-    "-DQT_FEATURE_webengine_webrtc_pipewire=ON"
+  cmakeEntries = {
+    QT_FEATURE_qtpdf_build = true;
+    QT_FEATURE_qtpdf_widgets_build = true;
+    QT_FEATURE_qtpdf_quick_build = true;
+    QT_FEATURE_pdf_v8 = true;
+    QT_FEATURE_pdf_xfa = true;
+    QT_FEATURE_pdf_xfa_bmp = true;
+    QT_FEATURE_pdf_xfa_gif = true;
+    QT_FEATURE_pdf_xfa_png = true;
+    QT_FEATURE_pdf_xfa_tiff = true;
+    QT_FEATURE_webengine_system_libevent = true;
+    QT_FEATURE_webengine_system_ffmpeg = true;
+    QT_FEATURE_webengine_sanitizer = true;
+    QT_FEATURE_webengine_kerberos = true;
+    QT_FEATURE_webengine_system_libxml = true;
+    QT_FEATURE_webengine_webrtc_pipewire = true;
+    QT_FEATURE_webengine_system_icu = true;
+  };
 
-    # Appears not to work on some platforms
-    # https://github.com/Homebrew/homebrew-core/issues/104008
-    "-DQT_FEATURE_webengine_system_icu=ON"
-  ]
-  ++ lib.optionals enableProprietaryCodecs [
+  cmakeFlags = lib.optionals enableProprietaryCodecs [
     "-DQT_FEATURE_webengine_proprietary_codecs=ON"
   ];
 

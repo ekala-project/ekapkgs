@@ -72,35 +72,32 @@ stdenv.mkDerivation (finalAttrs: {
     cairo
   ];
 
+  cmakeEntries = {
+    OPTION_USE_SYSTEM_ZLIB = true;
+    OPTION_USE_SYSTEM_LIBJPEG = true;
+    OPTION_USE_SYSTEM_LIBPNG = true;
+    OPTION_USE_XINERAMA = true;
+    OPTION_USE_XFIXES = true;
+    OPTION_USE_XCURSOR = true;
+    OPTION_USE_XFT = true;
+    OPTION_USE_XRENDER = true;
+    OPTION_USE_XDBE = true;
+    OPTION_USE_GL = true;
+    OpenGL_GL_PREFERENCE = "GLVND";
+    OPTION_CAIRO = true;
+    OPTION_CAIROEXT = true;
+    FLTK_BUILD_EXAMPLES = true;
+    FLTK_BUILD_TEST = true;
+    OPTION_BUILD_HTML_DOCUMENTATION = false;
+    OPTION_INSTALL_HTML_DOCUMENTATION = false;
+    OPTION_INCLUDE_DRIVER_DOCUMENTATION = false;
+    OPTION_BUILD_PDF_DOCUMENTATION = false;
+    OPTION_INSTALL_PDF_DOCUMENTATION = false;
+    CMAKE_SKIP_BUILD_RPATH = true;
+  };
+
   cmakeFlags = [
     (lib.cmakeBool "OPTION_BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-    (lib.cmakeBool "OPTION_USE_SYSTEM_ZLIB" true)
-    (lib.cmakeBool "OPTION_USE_SYSTEM_LIBJPEG" true)
-    (lib.cmakeBool "OPTION_USE_SYSTEM_LIBPNG" true)
-
-    (lib.cmakeBool "OPTION_USE_XINERAMA" true)
-    (lib.cmakeBool "OPTION_USE_XFIXES" true)
-    (lib.cmakeBool "OPTION_USE_XCURSOR" true)
-    (lib.cmakeBool "OPTION_USE_XFT" true)
-    (lib.cmakeBool "OPTION_USE_XRENDER" true)
-    (lib.cmakeBool "OPTION_USE_XDBE" true)
-
-    (lib.cmakeBool "OPTION_USE_GL" true)
-    "-DOpenGL_GL_PREFERENCE=GLVND"
-
-    (lib.cmakeBool "OPTION_CAIRO" true)
-    (lib.cmakeBool "OPTION_CAIROEXT" true)
-
-    (lib.cmakeBool "FLTK_BUILD_EXAMPLES" true)
-    (lib.cmakeBool "FLTK_BUILD_TEST" true)
-
-    (lib.cmakeBool "OPTION_BUILD_HTML_DOCUMENTATION" false)
-    (lib.cmakeBool "OPTION_INSTALL_HTML_DOCUMENTATION" false)
-    (lib.cmakeBool "OPTION_INCLUDE_DRIVER_DOCUMENTATION" false)
-    (lib.cmakeBool "OPTION_BUILD_PDF_DOCUMENTATION" false)
-    (lib.cmakeBool "OPTION_INSTALL_PDF_DOCUMENTATION" false)
-
-    (lib.cmakeBool "CMAKE_SKIP_BUILD_RPATH" true)
   ];
 
   postInstall = ''

@@ -26,7 +26,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   propagatedBuildInputs = [ (python3.withPackages (p: with p; [ pybind11 ])) ];
 
-  cmakeFlags = [ "-DXCFUN_MAX_ORDER=3" ];
+  cmakeEntries = {
+    XCFUN_MAX_ORDER = "3";
+  };
 
   meta = {
     description = "Library of exchange-correlation functionals with arbitrary-order derivatives";

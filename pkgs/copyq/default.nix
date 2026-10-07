@@ -47,14 +47,14 @@ stdenv.mkDerivation (finalAttrs: {
     miniaudio
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "WITH_QT6" true)
-    (lib.cmakeBool "WITH_QCA_ENCRYPTION" false)
-    (lib.cmakeBool "WITH_KEYCHAIN" false)
-    (lib.cmakeBool "WITH_NATIVE_NOTIFICATIONS" false)
-    (lib.cmakeFeature "MINIAUDIO_INCLUDE_DIR" "${lib.getInclude miniaudio}/include/miniaudio")
-    (lib.cmakeFeature "ECM_DIR" "${extra-cmake-modules}/share/ECM/cmake")
-  ];
+  cmakeEntries = {
+    WITH_QT6 = true;
+    WITH_QCA_ENCRYPTION = false;
+    WITH_KEYCHAIN = false;
+    WITH_NATIVE_NOTIFICATIONS = false;
+    MINIAUDIO_INCLUDE_DIR = "${lib.getInclude miniaudio}/include/miniaudio";
+    ECM_DIR = "${extra-cmake-modules}/share/ECM/cmake";
+  };
 
   meta = {
     homepage = "https://hluk.github.io/CopyQ";

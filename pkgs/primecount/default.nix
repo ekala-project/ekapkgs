@@ -33,12 +33,15 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
+  cmakeEntries = {
+    BUILD_LIBPRIMESIEVE = true;
+    BUILD_PRIMECOUNT = true;
+    BUILD_TESTS = true;
+  };
+
   cmakeFlags = [
-    (lib.cmakeBool "BUILD_LIBPRIMESIEVE" true)
-    (lib.cmakeBool "BUILD_PRIMECOUNT" true)
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
     (lib.cmakeBool "BUILD_STATIC_LIBS" stdenv.hostPlatform.isStatic)
-    (lib.cmakeBool "BUILD_TESTS" true)
   ];
 
   meta = {

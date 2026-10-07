@@ -28,9 +28,9 @@ stdenv.mkDerivation (finalAttrs: {
     doctest
   ];
 
-  cmakeFlags = [
-    "-DBUILD_TESTS=ON"
-  ];
+  cmakeEntries = {
+    BUILD_TESTS = true;
+  };
 
   doCheck = true;
   checkTarget = "xtest";

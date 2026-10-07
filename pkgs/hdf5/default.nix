@@ -43,17 +43,21 @@ stdenv.mkDerivation rec {
     zlib
   ];
 
+  cmakeEntries = {
+    HDF5_INSTALL_CMAKE_DIR = "${placeholder ";
+    BUILD_SHARED_LIBS = true;
+    BUILD_STATIC_LIBS = false;
+    HDF5_BUILD_CPP_LIB = true;
+    HDF5_BUILD_FORTRAN = false;
+    HDF5_ENABLE_SZIP_SUPPORT = false;
+    HDF5_ENABLE_PARALLEL = false;
+    HDF5_BUILD_JAVA = false;
+    HDF5_ENABLE_THREADSAFE = false;
+    HDF5_BUILD_HL_LIB = true;
+  };
+
   cmakeFlags = [
-    "-DHDF5_INSTALL_CMAKE_DIR=${placeholder "dev"}/lib/cmake"
-    (lib.cmakeBool "BUILD_SHARED_LIBS" true)
-    (lib.cmakeBool "BUILD_STATIC_LIBS" false)
-    (lib.cmakeBool "HDF5_BUILD_CPP_LIB" true)
-    (lib.cmakeBool "HDF5_BUILD_FORTRAN" false)
-    (lib.cmakeBool "HDF5_ENABLE_SZIP_SUPPORT" false)
-    (lib.cmakeBool "HDF5_ENABLE_PARALLEL" false)
-    (lib.cmakeBool "HDF5_BUILD_JAVA" false)
-    (lib.cmakeBool "HDF5_ENABLE_THREADSAFE" false)
-    (lib.cmakeBool "HDF5_BUILD_HL_LIB" true)
+    dev"}/lib/cmake"
     (lib.cmakeBool "HDF5_ENABLE_NONSTANDARD_FEATURE_FLOAT16" (
       with stdenv.hostPlatform; !(isDarwin && isx86_64)
     ))

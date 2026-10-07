@@ -67,15 +67,15 @@ stdenv.mkDerivation rec {
     openexr
   ];
 
+  cmakeEntries = {
+    OCIO_INSTALL_EXT_PACKAGES = "NONE";
+    OCIO_USE_SSE2NEON = false;
+    OCIO_BUILD_GPU_TESTS = false;
+  };
+
   cmakeFlags = [
-    "-DOCIO_INSTALL_EXT_PACKAGES=NONE"
-    "-DOCIO_USE_SSE2NEON=OFF"
-    # GPU test fails with: libglut (GPU tests): failed to open display ''
-    "-DOCIO_BUILD_GPU_TESTS=OFF"
-    "-Dminizip-ng_INCLUDE_DIR=${minizip-ng}/include/minizip-ng"
-  ]
-  ++ lib.optional (!pythonBindings) "-DOCIO_BUILD_PYTHON=OFF"
-  ++ lib.optional (!buildApps) "-DOCIO_BUILD_APPS=OFF";
+      "-Dminizip-ng_INCLUDE_DIR=${minizip-ng}/include/minizip-ng"
+    ] ++ lib.optional (!pythonBindings) "-DOCIO_BUILD_PYTHON=OFF" ++ lib.optional (!buildApps) "-DOCIO_BUILD_APPS=OFF";
 
   doCheck = false;
 

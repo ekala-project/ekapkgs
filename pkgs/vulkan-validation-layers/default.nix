@@ -63,10 +63,13 @@ stdenv.mkDerivation (finalAttrs: {
     wayland
   ];
 
+  cmakeEntries = {
+    BUILD_LAYER_SUPPORT_FILES = true;
+    UPDATE_DEPS = false;
+  };
+
   cmakeFlags = [
-    "-DBUILD_LAYER_SUPPORT_FILES=ON"
     "-Wno-dev"
-    "-DUPDATE_DEPS=OFF"
   ];
 
   # Tests require access to vulkan-compatible GPU

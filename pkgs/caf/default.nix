@@ -24,9 +24,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ openssl ];
 
-  cmakeFlags = [
-    "-DCAF_ENABLE_EXAMPLES:BOOL=OFF"
-  ];
+  cmakeEntries = {
+    CAF_ENABLE_EXAMPLES = false;
+  };
 
   doCheck = !stdenv.hostPlatform.isDarwin;
   checkTarget = "test";

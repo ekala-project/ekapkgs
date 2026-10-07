@@ -26,9 +26,9 @@ stdenv.mkDerivation (finalAttrs: {
     openssl
     libre
   ];
-  cmakeFlags = [
-    "-DRE_INCLUDE_DIR=${libre}/include/re"
-  ];
+  cmakeEntries = {
+    RE_INCLUDE_DIR = "${libre}/include/re";
+  };
   makeFlags = [
     "LIBRE_MK=${libre}/share/re/re.mk"
     "PREFIX=$(out)"

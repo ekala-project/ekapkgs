@@ -21,11 +21,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    # Undefined reference to the sc_core::sc_api_version_2_3_4_XXX
-    # https://github.com/accellera-official/systemc/issues/21
-    "-DCMAKE_CXX_STANDARD=17"
-  ];
+  cmakeEntries = {
+    CMAKE_CXX_STANDARD = "17";
+  };
 
   doCheck = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
 

@@ -39,12 +39,12 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.NIX_CFLAGS_COMPILE = "-Wno-error=implicit-int -Wno-error=incompatible-pointer-types";
 
-  cmakeFlags = [
-    "-DBUILD_COMPRESSION=ON"
-    "-DPOSTGRESQL_INCLUDE_DIR=${lib.getDev libpq}/include/postgresql/server"
-    "-DPOSTGRESQL_LIBRARY=${libpq}/lib"
-    "-DPOSTGRESQL_LIBPGPORT=${lib.getDev libpq}/lib"
-  ];
+  cmakeEntries = {
+    BUILD_COMPRESSION = true;
+    POSTGRESQL_INCLUDE_DIR = "${lib.getDev libpq}/include/postgresql/server";
+    POSTGRESQL_LIBRARY = "${libpq}/lib";
+    POSTGRESQL_LIBPGPORT = "${lib.getDev libpq}/lib";
+  };
 
   installPhase = ''
     install -Dm755 -t $out/bin sources/odyssey

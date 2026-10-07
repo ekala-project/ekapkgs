@@ -21,9 +21,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeFeature "CMAKE_POLICY_VERSION_MINIMUM" "3.5")
-  ];
+  cmakeEntries = {
+    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
+  };
 
   meta = {
     description = "Smart pointer constructs for the (GNU) C programming language";

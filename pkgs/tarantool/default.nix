@@ -62,10 +62,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeBuildType = "RelWithDebInfo";
 
-  cmakeFlags = [
-    "-DENABLE_DIST=ON"
-    "-DTARANTOOL_VERSION=${finalAttrs.version}.builtByNix" # expects the commit hash as well
-  ];
+  cmakeEntries = {
+    ENABLE_DIST = true;
+    TARANTOOL_VERSION = "${finalAttrs.version}.builtByNix";
+  };
   meta = {
     description = "In-memory computing platform consisting of a database and an application server";
     homepage = "https://www.tarantool.io/";

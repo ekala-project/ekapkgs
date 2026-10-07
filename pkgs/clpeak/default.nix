@@ -29,9 +29,9 @@ stdenv.mkDerivation (finalAttrs: {
     opencl-clhpp
   ];
 
-  cmakeFlags = [
-    "-DCLPEAK_ENABLE_CPU=OFF"
-  ];
+  cmakeEntries = {
+    CLPEAK_ENABLE_CPU = false;
+  };
 
   meta = {
     description = "Tool which profiles OpenCL devices to find their peak capacities";

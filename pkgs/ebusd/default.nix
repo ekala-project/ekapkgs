@@ -48,10 +48,16 @@ stdenv.mkDerivation rec {
     mkdir -p $out/usr/bin
   '';
 
+  cmakeEntries = {
+    CMAKE_INSTALL_SYSCONFDIR = "${placeholder ";
+    CMAKE_INSTALL_BINDIR = "${placeholder ";
+    CMAKE_INSTALL_LOCALSTATEDIR = "${placeholder ";
+  };
+
   cmakeFlags = [
-    "-DCMAKE_INSTALL_SYSCONFDIR=${placeholder "out"}/etc"
-    "-DCMAKE_INSTALL_BINDIR=${placeholder "out"}/bin"
-    "-DCMAKE_INSTALL_LOCALSTATEDIR=${placeholder "TMPDIR"}"
+    out"}/etc"
+    out"}/bin"
+    TMPDIR"}"
   ];
 
   postInstall = ''

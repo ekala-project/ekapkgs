@@ -27,10 +27,10 @@ stdenv.mkDerivation rec {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DBUILD_SHARED_LIBS=ON"
-    "-DCMAKE_BUILD_WITH_INSTALL_RPATH=ON"
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+    CMAKE_BUILD_WITH_INSTALL_RPATH = true;
+  };
 
   postPatch = ''
     substituteInPlace CMakeLists.txt \

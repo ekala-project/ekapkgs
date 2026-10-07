@@ -46,13 +46,16 @@ stdenv.mkDerivation (finalAttrs: {
     libunwind
   ]);
 
+  cmakeEntries = {
+    CPPTRACE_USE_EXTERNAL_LIBDWARF = true;
+    CPPTRACE_FIND_LIBDWARF_WITH_PKGCONFIG = true;
+    CPPTRACE_USE_EXTERNAL_GTEST = true;
+    CPPTRACE_UNWIND_WITH_LIBUNWIND = true;
+  };
+
   cmakeFlags = [
-    (lib.cmakeBool "CPPTRACE_USE_EXTERNAL_LIBDWARF" true)
-    (lib.cmakeBool "CPPTRACE_FIND_LIBDWARF_WITH_PKGCONFIG" true)
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!static))
     (lib.cmakeBool "BUILD_TESTING" finalAttrs.finalPackage.doCheck)
-    (lib.cmakeBool "CPPTRACE_USE_EXTERNAL_GTEST" true)
-    (lib.cmakeBool "CPPTRACE_UNWIND_WITH_LIBUNWIND" true)
   ];
 
   checkInputs = [ gtest ];

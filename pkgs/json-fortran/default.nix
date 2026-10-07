@@ -23,9 +23,9 @@ stdenv.mkDerivation (finalAttrs: {
     gfortran
   ];
 
-  cmakeFlags = [
-    "-DUSE_GNU_INSTALL_CONVENTION=ON"
-  ];
+  cmakeEntries = {
+    USE_GNU_INSTALL_CONVENTION = true;
+  };
 
   # Due to some misconfiguration in CMake the Fortran modules end up in $out/$out.
   # Move them back to the desired location.

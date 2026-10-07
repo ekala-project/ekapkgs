@@ -35,10 +35,10 @@ stdenv.mkDerivation (finalAttrs: {
     udev
   ];
 
-  cmakeFlags = [
-    "-DBUILD_SHARED_LIBS=1"
-    "-DHAVE_LINUX_API=1"
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+    HAVE_LINUX_API = true;
+  };
 
   meta = {
     description = "Allows you (with the right hardware) to control your device with your TV remote control using existing HDMI cabling";

@@ -24,7 +24,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [ "-DSHARED=ON" ];
+  cmakeEntries = {
+    SHARED = true;
+  };
 
   # Fix the build with CMake 4.
   postPatch = ''

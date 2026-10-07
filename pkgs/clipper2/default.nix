@@ -23,11 +23,11 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DCLIPPER2_EXAMPLES=OFF"
-    "-DCLIPPER2_TESTS=OFF"
-    "-DBUILD_SHARED_LIBS=ON"
-  ];
+  cmakeEntries = {
+    CLIPPER2_EXAMPLES = false;
+    CLIPPER2_TESTS = false;
+    BUILD_SHARED_LIBS = true;
+  };
 
   meta = {
     description = "Polygon Clipping and Offsetting - C++ Only";

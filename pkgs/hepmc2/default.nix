@@ -19,10 +19,13 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
+  cmakeEntries = {
+    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
+  };
+
   cmakeFlags = [
     "-Dmomentum:STRING=GEV"
     "-Dlength:STRING=MM"
-    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
   ];
 
   meta = {

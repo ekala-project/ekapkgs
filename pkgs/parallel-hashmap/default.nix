@@ -29,9 +29,13 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
+  cmakeEntries = {
+    PHMAP_BUILD_TESTS = "${if finalAttrs.finalPackage.doCheck then ";
+    PHMAP_BUILD_EXAMPLES = false;
+  };
+
   cmakeFlags = [
-    "-DPHMAP_BUILD_TESTS=${if finalAttrs.finalPackage.doCheck then "ON" else "OFF"}"
-    "-DPHMAP_BUILD_EXAMPLES=OFF"
+    ON" else "OFF"}"
   ];
 
   nativeCheckInputs = [

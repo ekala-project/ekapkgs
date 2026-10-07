@@ -28,16 +28,17 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-nl1g1BKauSXV54xjO/1jDQMbr1WfycupR0CPqkgkzrA=";
   };
 
-  cmakeFlags = [
-    "-DENABLE_COMPLEX_DEPS=true"
-    (lib.cmakeBool "ENABLE_CONDA" withConda)
-    "-DENABLE_LZMA_COMPRESSION=true"
-    "-DENABLE_BZIP2_COMPRESSION=true"
-    "-DENABLE_ZSTD_COMPRESSION=true"
-    "-DENABLE_ZCHUNK_COMPRESSION=true"
-    "-DWITH_SYSTEM_ZCHUNK=true"
-  ]
-  ++ lib.optionals withRpm [
+  cmakeEntries = {
+    ENABLE_COMPLEX_DEPS = "true";
+    ENABLE_CONDA = withConda;
+    ENABLE_LZMA_COMPRESSION = "true";
+    ENABLE_BZIP2_COMPRESSION = "true";
+    ENABLE_ZSTD_COMPRESSION = "true";
+    ENABLE_ZCHUNK_COMPRESSION = "true";
+    WITH_SYSTEM_ZCHUNK = "true";
+  };
+
+  cmakeFlags = lib.optionals withRpm [
     "-DENABLE_COMPS=true"
     "-DENABLE_PUBKEY=true"
     "-DENABLE_RPMDB=true"

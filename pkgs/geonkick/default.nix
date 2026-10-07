@@ -42,9 +42,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   # Without this, the lv2 ends up in
   # /nix/store/$HASH/nix/store/$HASH/lib/lv2
-  cmakeFlags = [
-    "-DCMAKE_INSTALL_LIBDIR=lib"
-  ];
+  cmakeEntries = {
+    CMAKE_INSTALL_LIBDIR = "lib";
+  };
 
   meta = {
     homepage = "https://gitlab.com/iurie-sw/geonkick";

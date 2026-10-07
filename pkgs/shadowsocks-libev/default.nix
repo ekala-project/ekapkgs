@@ -49,12 +49,11 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "WITH_STATIC" false)
-    (lib.cmakeBool "-DCMAKE_BUILD_WITH_INSTALL_NAME_DIR" true)
-    # RPATH of binary /nix/store/.../bin/... contains a forbidden reference to /build/
-    (lib.cmakeBool "-DCMAKE_SKIP_BUILD_RPATH" true)
-  ];
+  cmakeEntries = {
+    WITH_STATIC = false;
+    -DCMAKE_BUILD_WITH_INSTALL_NAME_DIR = true;
+    -DCMAKE_SKIP_BUILD_RPATH = true;
+  };
 
   postPatch = ''
     substituteInPlace cmake/shadowsocks-libev.pc.cmake \

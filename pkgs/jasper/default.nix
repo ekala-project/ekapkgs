@@ -41,15 +41,15 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeBuildDir = "build-directory";
-  cmakeFlags = [
-    (lib.cmakeBool "ALLOW_IN_SOURCE_BUILD" true)
-    (lib.cmakeBool "JAS_ENABLE_HEIC_CODEC" false)
-    (lib.cmakeBool "JAS_INCLUDE_HEIC_CODEC" false)
-    (lib.cmakeBool "JAS_ENABLE_JPG_CODEC" true)
-    (lib.cmakeBool "JAS_INCLUDE_JPG_CODEC" true)
-    (lib.cmakeBool "JAS_ENABLE_MIF_CODEC" false)
-    (lib.cmakeBool "JAS_ENABLE_OPENGL" true)
-  ];
+  cmakeEntries = {
+    ALLOW_IN_SOURCE_BUILD = true;
+    JAS_ENABLE_HEIC_CODEC = false;
+    JAS_INCLUDE_HEIC_CODEC = false;
+    JAS_ENABLE_JPG_CODEC = true;
+    JAS_INCLUDE_JPG_CODEC = true;
+    JAS_ENABLE_MIF_CODEC = false;
+    JAS_ENABLE_OPENGL = true;
+  };
 
   strictDeps = true;
 

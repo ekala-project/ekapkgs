@@ -29,9 +29,9 @@ stdenv.mkDerivation (finalAttrs: {
     libpng
   ];
 
-  cmakeFlags = [
-    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
-  ];
+  cmakeEntries = {
+    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
+  };
 
   meta = {
     description = "Microsoft EMF to SVG conversion library";

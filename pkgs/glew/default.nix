@@ -41,10 +41,10 @@ stdenv.mkDerivation (finalAttrs: {
   propagatedBuildInputs = [ libGLU ];
 
   cmakeDir = "cmake";
-  cmakeFlags = [
-    "-DBUILD_SHARED_LIBS=ON"
-    "-DGLEW_EGL=ON"
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+    GLEW_EGL = true;
+  };
 
   postInstall = ''
     moveToOutput lib/cmake "''${!outputDev}"

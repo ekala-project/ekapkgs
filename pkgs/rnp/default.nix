@@ -39,13 +39,17 @@ stdenv.mkDerivation (finalAttrs: {
     ./0001-fix-build-with-Botan-3.11.patch
   ];
 
+  cmakeEntries = {
+    CMAKE_INSTALL_PREFIX = "${placeholder ";
+    BUILD_SHARED_LIBS = "on";
+    BUILD_TESTING = "on";
+    DOWNLOAD_GTEST = "off";
+    DOWNLOAD_RUBYRNP = "off";
+    SYSTEM_LIBSEXPP = "on";
+  };
+
   cmakeFlags = [
-    "-DCMAKE_INSTALL_PREFIX=${placeholder "out"}"
-    "-DBUILD_SHARED_LIBS=on"
-    "-DBUILD_TESTING=on"
-    "-DDOWNLOAD_GTEST=off"
-    "-DDOWNLOAD_RUBYRNP=off"
-    "-DSYSTEM_LIBSEXPP=on"
+    out"}"
   ];
 
   nativeBuildInputs = [

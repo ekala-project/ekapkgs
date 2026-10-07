@@ -26,9 +26,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" true)
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+  };
 
   meta = {
     description = "Portable, open-source, coherent noise-generating library for C++";

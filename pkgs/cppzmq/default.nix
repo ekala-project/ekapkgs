@@ -24,9 +24,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   propagatedBuildInputs = [ zeromq ];
 
-  cmakeFlags = [
-    "-DCPPZMQ_BUILD_TESTS=OFF"
-  ];
+  cmakeEntries = {
+    CPPZMQ_BUILD_TESTS = false;
+  };
 
   meta = {
     homepage = "https://github.com/zeromq/cppzmq";

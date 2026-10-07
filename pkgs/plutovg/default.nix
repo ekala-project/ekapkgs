@@ -16,11 +16,14 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-JP/nNHszTABIat79vcUqFdtv+/Z13D28aYKEt7BALCw=";
   };
 
+  cmakeEntries = {
+    CMAKE_INSTALL_INCLUDEDIR = "include";
+    CMAKE_INSTALL_LIBDIR = "lib";
+  };
+
   cmakeFlags = [
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
     (lib.cmakeBool "PLUTOVG_DISABLE_FONT_FACE_CACHE_LOAD" (!fontFaceCache))
-    "-DCMAKE_INSTALL_INCLUDEDIR=include"
-    "-DCMAKE_INSTALL_LIBDIR=lib"
   ];
 
   nativeBuildInputs = [

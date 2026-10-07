@@ -31,10 +31,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  cmakeFlags = [
-    (lib.cmakeBool "OPENCL_CLHPP_BUILD_TESTING" false)
-    (lib.cmakeBool "BUILD_EXAMPLES" false)
-  ];
+  cmakeEntries = {
+    OPENCL_CLHPP_BUILD_TESTING = false;
+    BUILD_EXAMPLES = false;
+  };
 
   meta = {
     description = "OpenCL Host API C++ bindings";

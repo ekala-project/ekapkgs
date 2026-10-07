@@ -183,18 +183,31 @@ clangStdenv.mkDerivation (finalAttrs: {
     libsoup_3
   ];
 
+  cmakeEntries = {
+    ENABLE_INTROSPECTION = "${if withGtk3 then ";
+    PORT = "GTK";
+    USE_LIBSECRET = "${if withLibsecret then ";
+    ENABLE_EXPERIMENTAL_FEATURES = "${if enableExperimental then ";
+    ENABLE_GAMEPAD = false;
+  };
+
   cmakeFlags = [
-    "-DENABLE_INTROSPECTION=${if withGtk3 then "OFF" else "ON"}"
-    "-DPORT=GTK"
-    "-DUSE_LIBSECRET=${if withLibsecret then "ON" else "OFF"}"
-    "-DENABLE_EXPERIMENTAL_FEATURES=${if enableExperimental then "ON" else "OFF"}"
-    "-DENABLE_GAMEPAD=OFF"
-  ]
-  ++ lib.optionals clangStdenv.hostPlatform.isLinux [
+      OFF"
+      else
+      "ON"
+      }"
+      ON"
+      else
+      "OFF"
+      }"
+      ON"
+      else
+      "OFF"
+      }"
+    ] ++ lib.optionals clangStdenv.hostPlatform.isLinux [
     "-DBWRAP_EXECUTABLE=${lib.getExe bubblewrap}"
     "-DDBUS_PROXY_EXECUTABLE=${lib.getExe xdg-dbus-proxy}"
-  ]
-  ++ lib.optionals withGtk3 [
+  ] ++ lib.optionals withGtk3 [
     "-DUSE_GTK4=OFF"
   ];
 

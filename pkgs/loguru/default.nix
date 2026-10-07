@@ -31,9 +31,9 @@ stdenv.mkDerivation {
     })
   ];
 
-  cmakeFlags = [
-    "-DLOGURU_WITH_STREAMS=1"
-  ];
+  cmakeEntries = {
+    LOGURU_WITH_STREAMS = true;
+  };
 
   nativeBuildInputs = [
     cmake

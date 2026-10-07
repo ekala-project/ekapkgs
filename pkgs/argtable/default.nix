@@ -21,9 +21,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" true)
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+  };
 
   postPatch = ''
     patchShebangs tools/build

@@ -49,11 +49,11 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DBUILD_TZ_LIB=true"
-    "-DBUILD_SHARED_LIBS=true"
-    "-DUSE_SYSTEM_TZ_DB=true"
-  ];
+  cmakeEntries = {
+    BUILD_TZ_LIB = "true";
+    BUILD_SHARED_LIBS = "true";
+    USE_SYSTEM_TZ_DB = "true";
+  };
 
   outputs = [
     "out"

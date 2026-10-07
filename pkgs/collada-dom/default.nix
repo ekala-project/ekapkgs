@@ -48,9 +48,9 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional (pcre-cpp != null) pcre-cpp;
 
-  cmakeFlags = [
-    (lib.cmakeBool "OPT_COMPILE_TESTS" finalAttrs.doCheck)
-  ];
+  cmakeEntries = {
+    OPT_COMPILE_TESTS = finalAttrs.doCheck;
+  };
 
   doCheck = true;
 

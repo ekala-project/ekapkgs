@@ -22,10 +22,9 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-7pcYxl6m7mkoXGawA3gr8NTfkJlkgl+DtK79CA8dRec=";
   };
 
-  cmakeFlags = [
-    # gtest no longer supports C++11.
-    "-DCMAKE_CXX_STANDARD=14"
-  ];
+  cmakeEntries = {
+    CMAKE_CXX_STANDARD = "14";
+  };
 
   nativeBuildInputs = [
     cmake

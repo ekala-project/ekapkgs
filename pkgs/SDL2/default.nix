@@ -43,9 +43,12 @@ stdenv.mkDerivation (finalAttrs: {
   # SDL3 is dlopened at runtime, leave it in runpath
   dontPatchELF = true;
 
+  cmakeEntries = {
+    CMAKE_INSTALL_RPATH = (lib.makeLibraryPath [ sdl3 ]);
+  };
+
   cmakeFlags = [
     (lib.cmakeBool "SDL2COMPAT_TESTS" finalAttrs.finalPackage.doCheck)
-    (lib.cmakeFeature "CMAKE_INSTALL_RPATH" (lib.makeLibraryPath [ sdl3 ]))
   ];
 
   # skip timing-based tests as those are flaky

@@ -20,7 +20,9 @@ stdenv.mkDerivation (finalAttrs: {
     fetchSubmodules = true;
   };
 
-  cmakeFlags = [ (lib.cmakeBool "ENABLE_MODTOOL" enableModTool) ];
+  cmakeEntries = {
+    ENABLE_MODTOOL = enableModTool;
+  };
 
   nativeBuildInputs = [
     cmake

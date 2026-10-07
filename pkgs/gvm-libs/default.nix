@@ -66,7 +66,13 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  cmakeFlags = [ "-DGVM_RUN_DIR=${placeholder "out"}/run/gvm" ];
+  cmakeEntries = {
+    GVM_RUN_DIR = "${placeholder ";
+  };
+
+  cmakeFlags = [
+    out"}/run/gvm"
+  ];
 
   # causes redefinition of _FORTIFY_SOURCE
   hardeningDisable = [ "fortify3" ];

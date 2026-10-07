@@ -32,10 +32,10 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  cmakeFlags = [
-    "-DBUILD_SHARED_LIBS=YES"
-    "-DCMAKE_INSTALL_PREFIX="
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+    CMAKE_INSTALL_PREFIX = "";
+  };
 
   meta = {
     description = "Extensible Binary Meta Language library";

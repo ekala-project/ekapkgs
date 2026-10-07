@@ -23,9 +23,9 @@ stdenv.mkDerivation (finalAttrs: {
     python3
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "Kokkos_ENABLE_TESTS" true)
-  ];
+  cmakeEntries = {
+    Kokkos_ENABLE_TESTS = true;
+  };
 
   postPatch = ''
     patchShebangs .

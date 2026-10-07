@@ -40,9 +40,9 @@ stdenv.mkDerivation {
 
   dontUseCmakeConfigure = true;
 
-  cmakeFlags = [
-    "-DCMAKE_BUILD_WITH_INSTALL_NAME_DIR=ON"
-  ];
+  cmakeEntries = {
+    CMAKE_BUILD_WITH_INSTALL_NAME_DIR = true;
+  };
 
   buildPhase = ''
     runHook preBuild

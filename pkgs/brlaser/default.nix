@@ -29,10 +29,10 @@ stdenv.mkDerivation (finalAttrs: {
     cups
   ];
 
-  cmakeFlags = [
-    "-DCUPS_SERVER_BIN=lib/cups"
-    "-DCUPS_DATA_DIR=share/cups"
-  ];
+  cmakeEntries = {
+    CUPS_SERVER_BIN = "lib/cups";
+    CUPS_DATA_DIR = "share/cups";
+  };
 
   meta = {
     description = "CUPS driver for Brother laser printers";

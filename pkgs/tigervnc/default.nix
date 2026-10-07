@@ -80,12 +80,13 @@ stdenv.mkDerivation (finalAttrs: {
 
   dontUseCmakeBuildDir = true;
 
-  cmakeFlags = [
-    (lib.cmakeFeature "CMAKE_INSTALL_PREFIX" (placeholder "out"))
-    (lib.cmakeFeature "CMAKE_INSTALL_SBINDIR" "${placeholder "out"}/bin")
-    (lib.cmakeFeature "CMAKE_INSTALL_LIBEXECDIR" "${placeholder "out"}/bin")
-  ]
-  ++ lib.optionals stdenv.hostPlatform.isLinux [
+  cmakeEntries = {
+    CMAKE_INSTALL_PREFIX = (placeholder "out");
+    CMAKE_INSTALL_SBINDIR = "${placeholder "out"}/bin";
+    CMAKE_INSTALL_LIBEXECDIR = "${placeholder "out"}/bin";
+  };
+
+  cmakeFlags = lib.optionals stdenv.hostPlatform.isLinux [
     (lib.cmakeBool "ENABLE_WAYLAND" waylandSupport)
   ];
 

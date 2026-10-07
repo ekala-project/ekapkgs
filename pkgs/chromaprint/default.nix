@@ -33,10 +33,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   hardeningDisable = [ "trivialautovarinit" ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_TOOLS" true)
-    (lib.cmakeBool "BUILD_TESTS" false)
-  ];
+  cmakeEntries = {
+    BUILD_TOOLS = true;
+    BUILD_TESTS = false;
+  };
 
   meta = {
     changelog = "https://github.com/acoustid/chromaprint/releases/tag/v${finalAttrs.version}";

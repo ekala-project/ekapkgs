@@ -26,10 +26,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_TESTING" false)
-    (lib.cmakeBool "BUILD_SHARED_LIBS" true)
-  ];
+  cmakeEntries = {
+    BUILD_TESTING = false;
+    BUILD_SHARED_LIBS = true;
+  };
 
   # Case sensitivity issue
   preConfigure = lib.optionalString stdenv.hostPlatform.isDarwin ''

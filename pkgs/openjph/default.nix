@@ -29,9 +29,9 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "OJPH_ENABLE_TIFF_SUPPORT" false)
-  ];
+  cmakeEntries = {
+    OJPH_ENABLE_TIFF_SUPPORT = false;
+  };
 
   strictDeps = true;
 

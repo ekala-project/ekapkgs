@@ -26,17 +26,20 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
+  cmakeEntries = {
+    NLOPT_CXX = true;
+    NLOPT_PYTHON = false;
+    NLOPT_OCTAVE = false;
+    NLOPT_JAVA = false;
+    NLOPT_SWIG = false;
+    NLOPT_FORTRAN = false;
+    NLOPT_MATLAB = false;
+    NLOPT_GUILE = false;
+    NLOPT_TESTS = false;
+  };
+
   cmakeFlags = [
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-    (lib.cmakeBool "NLOPT_CXX" true)
-    (lib.cmakeBool "NLOPT_PYTHON" false)
-    (lib.cmakeBool "NLOPT_OCTAVE" false)
-    (lib.cmakeBool "NLOPT_JAVA" false)
-    (lib.cmakeBool "NLOPT_SWIG" false)
-    (lib.cmakeBool "NLOPT_FORTRAN" false)
-    (lib.cmakeBool "NLOPT_MATLAB" false)
-    (lib.cmakeBool "NLOPT_GUILE" false)
-    (lib.cmakeBool "NLOPT_TESTS" false)
   ];
 
   postFixup = ''

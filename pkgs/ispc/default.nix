@@ -71,15 +71,18 @@ stdenv.mkDerivation (finalAttrs: {
     done
   '';
 
+  cmakeEntries = {
+    FILE_CHECK_EXECUTABLE = "${llvmPackages.llvm}/bin/FileCheck";
+    LLVM_AS_EXECUTABLE = "${llvmPackages.llvm}/bin/llvm-as";
+    LLVM_CONFIG_EXECUTABLE = "${llvmPackages.llvm.dev}/bin/llvm-config";
+    CLANG_EXECUTABLE = "${llvmPackages.clang}/bin/clang";
+    CLANGPP_EXECUTABLE = "${llvmPackages.clang}/bin/clang++";
+    ISPC_INCLUDE_EXAMPLES = false;
+    ISPC_INCLUDE_UTILS = false;
+    XE_ENABLED = false;
+  };
+
   cmakeFlags = [
-    (lib.cmakeFeature "FILE_CHECK_EXECUTABLE" "${llvmPackages.llvm}/bin/FileCheck")
-    (lib.cmakeFeature "LLVM_AS_EXECUTABLE" "${llvmPackages.llvm}/bin/llvm-as")
-    (lib.cmakeFeature "LLVM_CONFIG_EXECUTABLE" "${llvmPackages.llvm.dev}/bin/llvm-config")
-    (lib.cmakeFeature "CLANG_EXECUTABLE" "${llvmPackages.clang}/bin/clang")
-    (lib.cmakeFeature "CLANGPP_EXECUTABLE" "${llvmPackages.clang}/bin/clang++")
-    (lib.cmakeBool "ISPC_INCLUDE_EXAMPLES" false)
-    (lib.cmakeBool "ISPC_INCLUDE_UTILS" false)
-    (lib.cmakeBool "XE_ENABLED" false)
     (lib.cmakeBool "ARM_ENABLED" (stdenv.hostPlatform.isAarch64 || stdenv.hostPlatform.isAarch32))
     (lib.cmakeBool "X86_ENABLED" (stdenv.hostPlatform.isx86_64 || stdenv.hostPlatform.isx86_32))
   ];

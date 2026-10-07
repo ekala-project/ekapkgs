@@ -50,12 +50,15 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional (libavif != null) libavif
   ++ lib.optional (!enableSTB) libjpeg;
 
+  cmakeEntries = {
+    SDLIMAGE_STRICT = false;
+    SDLIMAGE_DEPS_SHARED = false;
+    SDLIMAGE_BACKEND_STB = enableSTB;
+    SDLIMAGE_BACKEND_IMAGEIO = false;
+    SDLIMAGE_TESTS = enableTests;
+  };
+
   cmakeFlags = [
-    (lib.cmakeBool "SDLIMAGE_STRICT" false)
-    (lib.cmakeBool "SDLIMAGE_DEPS_SHARED" false)
-    (lib.cmakeBool "SDLIMAGE_BACKEND_STB" enableSTB)
-    (lib.cmakeBool "SDLIMAGE_BACKEND_IMAGEIO" false)
-    (lib.cmakeBool "SDLIMAGE_TESTS" enableTests)
     (lib.cmakeBool "SDLIMAGE_AVIF" (libavif != null))
   ];
 

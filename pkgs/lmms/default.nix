@@ -70,27 +70,26 @@ stdenv.mkDerivation (finalAttrs: {
     perl
   ];
 
-  cmakeFlags = [
-    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
-    (lib.cmakeBool "WANT_ALSA" true)
-    (lib.cmakeBool "WANT_PULSEAUDIO" true)
-    (lib.cmakeBool "WANT_SOUNDIO" false)
-    (lib.cmakeBool "WANT_PORTAUDIO" false)
-    (lib.cmakeBool "WANT_SNDIO" false)
-    (lib.cmakeBool "WANT_JACK" true)
-    (lib.cmakeBool "WANT_WEAKJACK" true)
-    (lib.cmakeBool "WANT_SDL" true)
-    (lib.cmakeBool "WANT_OGGVORBIS" true)
-    (lib.cmakeBool "WANT_MP3LAME" true)
-    (lib.cmakeBool "WANT_SF2" true)
-    (lib.cmakeBool "WANT_GIG" true)
-    (lib.cmakeBool "WANT_SID" true)
-    (lib.cmakeBool "WANT_SWH" true)
-    (lib.cmakeBool "WANT_LV2" true)
-    (lib.cmakeBool "WANT_VST" false)
-    # TODO(corepkgs): port carla for Carla plugin host support
-    (lib.cmakeBool "WANT_CARLA" false)
-  ];
+  cmakeEntries = {
+    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
+    WANT_ALSA = true;
+    WANT_PULSEAUDIO = true;
+    WANT_SOUNDIO = false;
+    WANT_PORTAUDIO = false;
+    WANT_SNDIO = false;
+    WANT_JACK = true;
+    WANT_WEAKJACK = true;
+    WANT_SDL = true;
+    WANT_OGGVORBIS = true;
+    WANT_MP3LAME = true;
+    WANT_SF2 = true;
+    WANT_GIG = true;
+    WANT_SID = true;
+    WANT_SWH = true;
+    WANT_LV2 = true;
+    WANT_VST = false;
+    WANT_CARLA = false;
+  };
 
   meta = {
     description = "DAW similar to FL Studio (music production software)";

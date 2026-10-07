@@ -36,9 +36,9 @@ stdenv.mkDerivation (finalAttrs: {
     lz4
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "INSTALL_GDALCPP" true)
-  ];
+  cmakeEntries = {
+    INSTALL_GDALCPP = true;
+  };
 
   doCheck = true;
 

@@ -21,9 +21,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DRH_STANDALONE_PROJECT=OFF"
-  ];
+  cmakeEntries = {
+    RH_STANDALONE_PROJECT = false;
+  };
 
   meta = {
     description = "Faster, more efficient replacement for std::unordered_map / std::unordered_set";

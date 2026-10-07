@@ -36,12 +36,12 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  cmakeFlags = [
-    "-DUSE_PTHREADS=ON"
-    "-DTESTS=OFF"
-    "-DUTILS=ON"
-    "-DUSE_BZIP2=ON"
-  ];
+  cmakeEntries = {
+    USE_PTHREADS = true;
+    TESTS = false;
+    UTILS = true;
+    USE_BZIP2 = true;
+  };
 
   hardeningDisable = [ "format" ];
 

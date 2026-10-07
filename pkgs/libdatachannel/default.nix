@@ -45,11 +45,11 @@ stdenv.mkDerivation (finalAttrs: {
     plog
   ];
 
-  cmakeFlags = [
-    "-DUSE_NICE=ON"
-    "-DPREFER_SYSTEM_LIB=ON"
-    "-DNO_EXAMPLES=ON"
-  ];
+  cmakeEntries = {
+    USE_NICE = true;
+    PREFER_SYSTEM_LIB = true;
+    NO_EXAMPLES = true;
+  };
 
   postFixup = ''
     # Fix include path that will be incorrect due to the "dev" output

@@ -43,11 +43,17 @@ stdenv.mkDerivation rec {
       --replace 'Exec=widelands' "Exec=$out/bin/widelands"
   '';
 
+  cmakeEntries = {
+    WL_INSTALL_BASEDIR = "${placeholder ";
+    WL_INSTALL_DATADIR = "${placeholder ";
+    WL_INSTALL_BINDIR = "${placeholder ";
+  };
+
   cmakeFlags = [
     "-Wno-dev"
-    "-DWL_INSTALL_BASEDIR=${placeholder "out"}/share/widelands"
-    "-DWL_INSTALL_DATADIR=${placeholder "out"}/share/widelands"
-    "-DWL_INSTALL_BINDIR=${placeholder "out"}/bin"
+    out"}/share/widelands"
+    out"}/share/widelands"
+    out"}/bin"
   ];
 
   nativeBuildInputs = [

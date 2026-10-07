@@ -24,9 +24,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "FLATCC_INSTALL" true)
-  ];
+  cmakeEntries = {
+    FLATCC_INSTALL = true;
+  };
   doInstallCheck = true;
 
   meta = {

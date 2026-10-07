@@ -47,9 +47,12 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
+  cmakeEntries = {
+    CMAKE_BUILD_WITH_INSTALL_NAME_DIR = true;
+  };
+
   cmakeFlags = [
     (lib.cmakeBool "PODOFO_BUILD_STATIC" stdenv.hostPlatform.isStatic)
-    (lib.cmakeBool "CMAKE_BUILD_WITH_INSTALL_NAME_DIR" true)
   ];
 
   strictDeps = true;

@@ -28,10 +28,10 @@ stdenv.mkDerivation (finalAttrs: {
     fmt
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_SOPHUS_TESTS" false)
-    (lib.cmakeBool "BUILD_SOPHUS_EXAMPLES" false)
-  ];
+  cmakeEntries = {
+    BUILD_SOPHUS_TESTS = false;
+    BUILD_SOPHUS_EXAMPLES = false;
+  };
 
   meta = {
     description = "C++ implementation of Lie Groups using Eigen";

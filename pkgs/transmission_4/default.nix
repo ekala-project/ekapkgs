@@ -34,7 +34,7 @@
 }:
 
 let
-  inherit (lib) cmakeBool optionals optionalString;
+  inherit (lib) optionals optionalString;
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "transmission";
@@ -55,15 +55,15 @@ stdenv.mkDerivation (finalAttrs: {
     ./0001-Skip-bundle-fixup.patch
   ];
 
-  cmakeFlags = [
-    (cmakeBool "ENABLE_CLI" enableCli)
-    (cmakeBool "ENABLE_DAEMON" enableDaemon)
-    (cmakeBool "ENABLE_GTK" enableGTK)
-    (cmakeBool "ENABLE_MAC" false)
-    (cmakeBool "ENABLE_QT" false)
-    (cmakeBool "INSTALL_LIB" installLib)
-    (cmakeBool "RUN_CLANG_TIDY" false)
-  ];
+  cmakeEntries = {
+    ENABLE_CLI = enableCli;
+    ENABLE_DAEMON = enableDaemon;
+    ENABLE_GTK = enableGTK;
+    ENABLE_MAC = false;
+    ENABLE_QT = false;
+    INSTALL_LIB = installLib;
+    RUN_CLANG_TIDY = false;
+  };
 
   postPatch = ''
     # Clean third-party libraries to ensure system ones are used where possible.

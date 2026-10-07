@@ -144,14 +144,19 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
+  cmakeEntries = {
+    BUILD_wireshark = "${if withQt then ";
+    CMAKE_INSTALL_LIBDIR = "lib";
+    ENABLE_APPLICATION_BUNDLE = false;
+    LEMON_C_COMPILER = "cc";
+  };
+
   cmakeFlags = [
-    "-DBUILD_wireshark=${if withQt then "ON" else "OFF"}"
-    # Fix `extcap` and `plugins` paths. See https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=16444
-    "-DCMAKE_INSTALL_LIBDIR=lib"
-    "-DENABLE_APPLICATION_BUNDLE=OFF"
-    "-DLEMON_C_COMPILER=cc"
-  ]
-  ++ lib.optionals (stdenv.buildPlatform != stdenv.hostPlatform) [
+      ON"
+      else
+      "OFF"
+      }"
+    ] ++ lib.optionals (stdenv.buildPlatform != stdenv.hostPlatform) [
     "-DHAVE_C99_VSNPRINTF_EXITCODE__TRYRUN_OUTPUT="
     "-DHAVE_C99_VSNPRINTF_EXITCODE=0"
   ];

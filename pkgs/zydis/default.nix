@@ -29,10 +29,10 @@ stdenv.mkDerivation (finalAttrs: {
     python3
   ];
   propagatedBuildInputs = [ zycore ];
-  cmakeFlags = [
-    "-DCMAKE_INSTALL_LIBDIR=lib"
-    "-DCMAKE_INSTALL_INCLUDEDIR=include"
-  ];
+  cmakeEntries = {
+    CMAKE_INSTALL_LIBDIR = "lib";
+    CMAKE_INSTALL_INCLUDEDIR = "include";
+  };
 
   passthru = { inherit zycore; };
 

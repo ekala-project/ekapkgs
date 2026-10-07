@@ -29,11 +29,12 @@ stdenv.mkDerivation (finalAttrs: {
     boost
   ];
 
-  cmakeFlags = [
-    "-DMSGPACK_BUILD_DOCS=OFF" # docs are not installed even if built
-    "-DMSGPACK_CXX20=ON"
-  ]
-  ++ lib.optional finalAttrs.finalPackage.doCheck "-DMSGPACK_BUILD_TESTS=ON";
+  cmakeEntries = {
+    MSGPACK_BUILD_DOCS = false;
+    MSGPACK_CXX20 = true;
+  };
+
+  cmakeFlags = lib.optional finalAttrs.finalPackage.doCheck "-DMSGPACK_BUILD_TESTS=ON";
 
   checkInputs = [
     zlib

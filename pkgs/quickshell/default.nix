@@ -68,11 +68,11 @@ stdenv.mkDerivation (finalAttrs: {
     layer-shell-qt
   ];
 
-  cmakeFlags = [
-    "-DDISTRIBUTOR=ekapkgs"
-    "-DINSTALL_QML_PREFIX=${qt6.qtbase.qtQmlPrefix}"
-    "-DGIT_REVISION=tag-v${finalAttrs.version}"
-  ];
+  cmakeEntries = {
+    DISTRIBUTOR = "ekapkgs";
+    INSTALL_QML_PREFIX = "${qt6.qtbase.qtQmlPrefix}";
+    GIT_REVISION = "tag-v${finalAttrs.version}";
+  };
 
   cmakeBuildType = "RelWithDebInfo";
   dontStrip = false;

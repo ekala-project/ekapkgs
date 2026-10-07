@@ -66,10 +66,13 @@ stdenv.mkDerivation rec {
 
   env.PKG_CONFIG_WAYLAND_SCANNER_WAYLAND_SCANNER = lib.getExe buildPackages.wayland-scanner;
 
+  cmakeEntries = {
+    BUILD_ICD = false;
+    CMAKE_INSTALL_RPATH = "${libraryPath}";
+    GLSLANG_INSTALL_DIR = "${glslang}";
+  };
+
   cmakeFlags = [
-    "-DBUILD_ICD=OFF"
-    "-DCMAKE_INSTALL_RPATH=${libraryPath}"
-    "-DGLSLANG_INSTALL_DIR=${glslang}"
     "-Wno-dev"
   ];
 

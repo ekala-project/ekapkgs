@@ -21,6 +21,7 @@ ci/repos-packages.nix  # Unified derivation list for automated updates
 ## Package Defaults
 
 - **`enableParallelBuilding`** defaults to `true` — do not set it explicitly unless disabling it (`= false`).
+- **`cmakeFlags`** should not be used for `-D` cache entries. Use **`cmakeEntries`** instead (booleans auto-convert to `ON`/`OFF`). Reserve `cmakeFlags` only for non-`-D` flags (e.g., `--log-level=STATUS`, `-G Ninja`) or dynamic/conditional flag lists that can't be expressed as a static attrset.
 
 ## Key Differences from corepkgs
 

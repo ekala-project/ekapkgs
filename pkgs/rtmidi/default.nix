@@ -28,10 +28,10 @@ stdenv.mkDerivation (finalAttrs: {
     alsa-lib
   ];
 
-  cmakeFlags = [
-    "-DRTMIDI_API_ALSA=ON"
-    "-DRTMIDI_API_JACK=OFF"
-  ];
+  cmakeEntries = {
+    RTMIDI_API_ALSA = true;
+    RTMIDI_API_JACK = false;
+  };
 
   meta = {
     description = "Set of C++ classes that provide a cross platform API for realtime MIDI input/output";

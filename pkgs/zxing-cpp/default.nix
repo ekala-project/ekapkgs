@@ -21,11 +21,11 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DZXING_BLACKBOX_TESTS=OFF"
-    "-DZXING_DEPENDENCIES=LOCAL"
-    "-DZXING_EXAMPLES=OFF"
-  ];
+  cmakeEntries = {
+    ZXING_BLACKBOX_TESTS = false;
+    ZXING_DEPENDENCIES = "LOCAL";
+    ZXING_EXAMPLES = false;
+  };
 
   meta = {
     homepage = "https://github.com/zxing-cpp/zxing-cpp";

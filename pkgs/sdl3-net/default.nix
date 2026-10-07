@@ -35,9 +35,12 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ sdl3 ];
 
+  cmakeEntries = {
+    SDLNET_SAMPLES_INSTALL = true;
+  };
+
   cmakeFlags = [
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-    (lib.cmakeBool "SDLNET_SAMPLES_INSTALL" true)
   ];
 
   postInstall = ''

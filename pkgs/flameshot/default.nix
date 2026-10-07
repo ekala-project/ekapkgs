@@ -28,13 +28,13 @@ stdenv.mkDerivation (finalAttrs: {
   # under set -e -o pipefail, so we set this explicitly.
   shareDocName = "flameshot";
 
-  cmakeFlags = [
-    "-DCMAKE_CXX_FLAGS=-I${kdsingleapplication}/include/kdsingleapplication-qt6"
-    (lib.cmakeBool "USE_BUNDLED_KDSINGLEAPPLICATION" false)
-    (lib.cmakeBool "DISABLE_UPDATE_CHECKER" true)
-    (lib.cmakeBool "USE_MONOCHROME_ICON" enableMonochromeIcon)
-    (lib.cmakeBool "USE_WAYLAND_CLIPBOARD" false)
-  ];
+  cmakeEntries = {
+    CMAKE_CXX_FLAGS = "-I${kdsingleapplication}/include/kdsingleapplication-qt6";
+    USE_BUNDLED_KDSINGLEAPPLICATION = false;
+    DISABLE_UPDATE_CHECKER = true;
+    USE_MONOCHROME_ICON = enableMonochromeIcon;
+    USE_WAYLAND_CLIPBOARD = false;
+  };
 
   patches = [
     ./load-missing-deps.patch

@@ -35,12 +35,13 @@ stdenv.mkDerivation (finalAttrs: {
     "out"
   ];
 
-  cmakeFlags = [
-    "-DMESHOPT_BUILD_GLTFPACK=ON"
-    "-DMESHOPT_GLTFPACK_BASISU_PATH=${basis_universal}"
-    "-DMESHOPT_GLTFPACK_LIBWEBP_PATH=${libwebp.src}"
-  ]
-  ++ lib.optional (!stdenv.hostPlatform.isStatic) "-DMESHOPT_BUILD_SHARED_LIBS:BOOL=ON";
+  cmakeEntries = {
+    MESHOPT_BUILD_GLTFPACK = true;
+    MESHOPT_GLTFPACK_BASISU_PATH = "${basis_universal}";
+    MESHOPT_GLTFPACK_LIBWEBP_PATH = "${libwebp.src}";
+  };
+
+  cmakeFlags = lib.optional (!stdenv.hostPlatform.isStatic) "-DMESHOPT_BUILD_SHARED_LIBS:BOOL=ON";
   meta = {
     description = "Mesh optimization library that makes meshes smaller and faster to render";
     homepage = "https://github.com/zeux/meshoptimizer";

@@ -27,7 +27,9 @@ stdenv.mkDerivation (finalAttrs: {
     libiconv # needed on Darwin, see https://github.com/Martchus/cpp-utilities/issues/4
   ];
 
-  cmakeFlags = [ "-DBUILD_SHARED_LIBS=ON" ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+  };
 
   # Otherwise, tests fail since the resulting shared object libc++utilities.so is only available in PWD of the make files
   preCheck = ''

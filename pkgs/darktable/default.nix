@@ -157,11 +157,14 @@ stdenv.mkDerivation rec {
   ]
   ++ lib.optional stdenv.cc.isClang llvmPackages.openmp;
 
+  cmakeEntries = {
+    BUILD_USERMANUAL = "False";
+    USE_AVIF = enableAvif;
+    USE_LIBHEIF = enableHeif;
+  };
+
   cmakeFlags = [
-    "-DBUILD_USERMANUAL=False"
     (lib.cmakeBool "USE_GMIC" (gmic != null))
-    (lib.cmakeBool "USE_AVIF" enableAvif)
-    (lib.cmakeBool "USE_LIBHEIF" enableHeif)
   ];
 
   # darktable changed its rpath handling and as a result the

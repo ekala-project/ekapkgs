@@ -99,15 +99,15 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "CMAKE_SKIP_BUILD_RPATH" true)
-    (lib.cmakeBool "MOD_OPENCV" false)
-    (lib.cmakeBool "MOD_SOX" false)
-    (lib.cmakeBool "MOD_RTAUDIO" false)
-    (lib.cmakeBool "MOD_QT6" false)
-    (lib.cmakeBool "MOD_GLAXNIMATE_QT6" false)
-    (lib.cmakeBool "RELOCATABLE" false)
-  ];
+  cmakeEntries = {
+    CMAKE_SKIP_BUILD_RPATH = true;
+    MOD_OPENCV = false;
+    MOD_SOX = false;
+    MOD_RTAUDIO = false;
+    MOD_QT6 = false;
+    MOD_GLAXNIMATE_QT6 = false;
+    RELOCATABLE = false;
+  };
 
   preFixup = ''
     wrapProgram $out/bin/melt \

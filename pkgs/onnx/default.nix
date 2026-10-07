@@ -32,15 +32,15 @@ stdenv.mkDerivation (finalAttrs: {
     protobuf
   ];
 
-  cmakeFlags = [
-    "-DONNX_USE_PROTOBUF_SHARED_LIBS=ON"
-    "-DBUILD_SHARED_LIBS=ON"
-    "-DONNX_BUILD_PYTHON=OFF"
-    "-DONNX_BUILD_TESTS=OFF"
-    "-DONNX_ML=ON"
-    "-DONNX_NAMESPACE=onnx"
-    "-DCMAKE_CXX_FLAGS=-DONNX_NO_EXCEPTIONS"
-  ];
+  cmakeEntries = {
+    ONNX_USE_PROTOBUF_SHARED_LIBS = true;
+    BUILD_SHARED_LIBS = true;
+    ONNX_BUILD_PYTHON = false;
+    ONNX_BUILD_TESTS = false;
+    ONNX_ML = true;
+    ONNX_NAMESPACE = "onnx";
+    CMAKE_CXX_FLAGS = "-DONNX_NO_EXCEPTIONS";
+  };
 
   postInstall = ''
     find "$out/include/onnx" -type d -empty -delete || true

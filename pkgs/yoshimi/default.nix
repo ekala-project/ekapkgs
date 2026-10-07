@@ -72,7 +72,9 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  cmakeFlags = [ "-DFLTK_MATH_LIBRARY=${stdenv.cc.libc}/lib/libm.so" ];
+  cmakeEntries = {
+    FLTK_MATH_LIBRARY = "${stdenv.cc.libc}/lib/libm.so";
+  };
 
   # fltk static libraries need their transitive deps linked explicitly
   env.NIX_LDFLAGS = "-lpng -ljpeg -lXrender -lfontconfig -lXft -lXfixes -lXcursor -lXinerama";

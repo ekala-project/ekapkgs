@@ -40,10 +40,10 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "ZINT_QT6" false)
-    (lib.cmakeBool "ZINT_FRONTEND" true)
-  ];
+  cmakeEntries = {
+    ZINT_QT6 = false;
+    ZINT_FRONTEND = true;
+  };
 
   meta = {
     description = "Barcode generating tool and library";

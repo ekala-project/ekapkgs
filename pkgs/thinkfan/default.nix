@@ -34,11 +34,11 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail "/bin/kill" "${lib.getExe' procps "kill"}"
   '';
 
-  cmakeFlags = [
-    "-DCMAKE_INSTALL_DOCDIR=share/doc/thinkfan"
-    "-DUSE_NVML=OFF"
-    "-DSYSTEMD_FOUND=ON"
-  ];
+  cmakeEntries = {
+    CMAKE_INSTALL_DOCDIR = "share/doc/thinkfan";
+    USE_NVML = false;
+    SYSTEMD_FOUND = true;
+  };
 
   nativeBuildInputs = [
     cmake

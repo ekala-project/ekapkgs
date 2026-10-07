@@ -29,11 +29,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "CROW_BUILD_EXAMPLES" false)
-    # Requires more non-trivial patches to get around CPM
-    (lib.cmakeBool "CROW_GENERATE_SBOM" false)
-  ];
+  cmakeEntries = {
+    CROW_BUILD_EXAMPLES = false;
+    CROW_GENERATE_SBOM = false;
+  };
 
   doCheck = true;
   nativeCheckInputs = [

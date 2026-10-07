@@ -41,9 +41,12 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional enableFreetype freetype;
 
+  cmakeEntries = {
+    PLUTOSVG_ENABLE_FREETYPE = enableFreetype;
+  };
+
   cmakeFlags = [
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-    (lib.cmakeBool "PLUTOSVG_ENABLE_FREETYPE" enableFreetype)
   ];
 
   meta = {

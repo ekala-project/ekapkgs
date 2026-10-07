@@ -33,12 +33,12 @@ let
       NIX_CFLAGS_COMPILE = "-std=gnu17";
     };
 
-    cmakeFlags = [
-      "-DBLAS_LIBRARIES=${blas}/lib"
-      "-DBLA_STATIC=OFF"
-      "-DBUILD_SUPERLU=OFF"
-      "-DCMAKE_C_FLAGS=-Wno-error=implicit-int"
-    ];
+    cmakeEntries = {
+      BLAS_LIBRARIES = "${blas}/lib";
+      BLA_STATIC = false;
+      BUILD_SUPERLU = false;
+      CMAKE_C_FLAGS = "-Wno-error=implicit-int";
+    };
 
     buildInputs = [
       blas

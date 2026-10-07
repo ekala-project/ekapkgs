@@ -64,7 +64,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   # as of 0.5.0.1 FreeOrion doesn't work with "-DOpenGL_GL_PREFERENCE=GLVND"
-  cmakeFlags = [ "-DOpenGL_GL_PREFERENCE=LEGACY" ];
+  cmakeEntries = {
+    OpenGL_GL_PREFERENCE = "LEGACY";
+  };
 
   postInstall = ''
     mkdir -p $out/libexec

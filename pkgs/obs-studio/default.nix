@@ -134,23 +134,26 @@ stdenv.mkDerivation (finalAttrs: {
     cp ${./CMakeUserPresets.json} ./CMakeUserPresets.json
   '';
 
+  cmakeEntries = {
+    OBS_VERSION_OVERRIDE = "${finalAttrs.version}";
+    ECM_DIR = "${extra-cmake-modules}/share/ECM/cmake";
+    ENABLE_JACK = true;
+    ENABLE_WEBRTC = true;
+    ENABLE_LIBFDK = withFdk;
+    ENABLE_SCRIPTING = scriptingSupport;
+    ENABLE_ALSA = alsaSupport;
+    ENABLE_PULSEAUDIO = pulseaudioSupport;
+    ENABLE_PIPEWIRE = pipewireSupport;
+    ENABLE_AJA = false;
+    ENABLE_BROWSER = false;
+    ENABLE_VLC = false;
+  };
+
   cmakeFlags = [
     "--preset"
     "nixpkgs-linux"
-    "-DOBS_VERSION_OVERRIDE=${finalAttrs.version}"
     "-Wno-dev"
-    "-DECM_DIR=${extra-cmake-modules}/share/ECM/cmake"
-    "-DENABLE_JACK=ON"
-    "-DENABLE_WEBRTC=ON"
     (lib.cmakeBool "ENABLE_QSV11" stdenv.hostPlatform.isx86_64)
-    (lib.cmakeBool "ENABLE_LIBFDK" withFdk)
-    (lib.cmakeBool "ENABLE_SCRIPTING" scriptingSupport)
-    (lib.cmakeBool "ENABLE_ALSA" alsaSupport)
-    (lib.cmakeBool "ENABLE_PULSEAUDIO" pulseaudioSupport)
-    (lib.cmakeBool "ENABLE_PIPEWIRE" pipewireSupport)
-    (lib.cmakeBool "ENABLE_AJA" false)
-    (lib.cmakeBool "ENABLE_BROWSER" false)
-    (lib.cmakeBool "ENABLE_VLC" false)
   ];
 
   env.NIX_CFLAGS_COMPILE = toString [

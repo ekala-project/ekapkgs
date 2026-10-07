@@ -39,14 +39,10 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  cmakeFlags = [
-    # the cmake package does not handle absolute CMAKE_INSTALL_XXXDIR
-    # correctly (setting it to an absolute path causes include files to go to
-    # $out/$out/include, because the absolute path is interpreted with root at
-    # $out).
-    "-DCMAKE_INSTALL_INCLUDEDIR=include"
-    "-DCMAKE_INSTALL_LIBDIR=lib"
-  ];
+  cmakeEntries = {
+    CMAKE_INSTALL_INCLUDEDIR = "include";
+    CMAKE_INSTALL_LIBDIR = "lib";
+  };
 
   meta = {
     description = "Multi-purpose finite-state toolkit designed for applications ranging from natural language processing to research in automata theory";

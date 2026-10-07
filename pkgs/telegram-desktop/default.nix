@@ -79,13 +79,11 @@ let
 
     dontWrapQtApps = true;
 
-    cmakeFlags = [
-      # We're allowed to used the API ID of the Snap package:
-      (lib.cmakeFeature "TDESKTOP_API_ID" "611335")
-      (lib.cmakeFeature "TDESKTOP_API_HASH" "d524b414d21f4d37f08684c1df41ac9c")
-      # swift 6 is not available
-      (lib.cmakeBool "DESKTOP_APP_DISABLE_SWIFT6" true)
-    ];
+    cmakeEntries = {
+      TDESKTOP_API_ID = "611335";
+      TDESKTOP_API_HASH = "d524b414d21f4d37f08684c1df41ac9c";
+      DESKTOP_APP_DISABLE_SWIFT6 = true;
+    };
 
     meta = {
       description = "Telegram Desktop messaging app";

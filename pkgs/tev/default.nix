@@ -74,9 +74,9 @@ stdenv.mkDerivation rec {
     libxrandr
   ];
 
-  cmakeFlags = [
-    "-DTEV_DEPLOY=1"
-  ];
+  cmakeEntries = {
+    TEV_DEPLOY = true;
+  };
 
   meta = {
     description = "High dynamic range (HDR) image viewer for people who care about colors";

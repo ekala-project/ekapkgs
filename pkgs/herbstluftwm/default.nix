@@ -34,8 +34,12 @@ stdenv.mkDerivation (finalAttrs: {
     "man"
   ];
 
+  cmakeEntries = {
+    CMAKE_INSTALL_SYSCONF_PREFIX = "${placeholder ";
+  };
+
   cmakeFlags = [
-    "-DCMAKE_INSTALL_SYSCONF_PREFIX=${placeholder "out"}/etc"
+    out"}/etc"
   ];
 
   nativeBuildInputs = [

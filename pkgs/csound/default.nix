@@ -33,9 +33,9 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-l3dSVt5rgyj98ZCZltqKAJx/0Afl4R03flLXBcivtwg=";
   };
 
-  cmakeFlags = [
-    "-DBUILD_CSOUND_AC=0"
-  ];
+  cmakeEntries = {
+    BUILD_CSOUND_AC = false;
+  };
 
   nativeBuildInputs = [
     cmake

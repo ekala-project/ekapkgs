@@ -42,10 +42,10 @@ stdenv.mkDerivation (finalAttrs: {
     gtest
   ];
 
-  cmakeFlags = [
-    "-DELFIO_BUILD_TESTS=ON"
-    "-DFETCHCONTENT_TRY_FIND_PACKAGE_MODE=ALWAYS"
-  ];
+  cmakeEntries = {
+    ELFIO_BUILD_TESTS = true;
+    FETCHCONTENT_TRY_FIND_PACKAGE_MODE = "ALWAYS";
+  };
 
   doCheck = true;
 

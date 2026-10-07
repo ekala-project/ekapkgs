@@ -38,11 +38,11 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   strictDeps = true;
 
-  cmakeFlags = [
-    "-DBUILD_SHARED_LIBS=ON"
-    "-DOVERRIDE_CXX_STANDARD_FLAGS=OFF"
-    "-DUSE_THIRDPARTY_LIBRARIES=OFF"
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+    OVERRIDE_CXX_STANDARD_FLAGS = false;
+    USE_THIRDPARTY_LIBRARIES = false;
+  };
 
   outputs = [
     "out"

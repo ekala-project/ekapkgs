@@ -56,12 +56,15 @@ stdenv.mkDerivation (finalAttrs: {
     libxcb-image
   ];
 
+  cmakeEntries = {
+    SFML_INSTALL_PKGCONFIG_FILES = true;
+    SFML_MISC_INSTALL_PREFIX = "share/SFML";
+    SFML_BUILD_FRAMEWORKS = false;
+    SFML_USE_SYSTEM_DEPS = true;
+  };
+
   cmakeFlags = [
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-    (lib.cmakeBool "SFML_INSTALL_PKGCONFIG_FILES" true)
-    (lib.cmakeFeature "SFML_MISC_INSTALL_PREFIX" "share/SFML")
-    (lib.cmakeBool "SFML_BUILD_FRAMEWORKS" false)
-    (lib.cmakeBool "SFML_USE_SYSTEM_DEPS" true)
   ];
 
   meta = {

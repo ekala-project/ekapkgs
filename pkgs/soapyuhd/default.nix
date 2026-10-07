@@ -37,7 +37,9 @@ stdenv.mkDerivation {
     soapysdr
   ];
 
-  cmakeFlags = [ "-DSoapySDR_DIR=${soapysdr}/share/cmake/SoapySDR/" ];
+  cmakeEntries = {
+    SoapySDR_DIR = "${soapysdr}/share/cmake/SoapySDR/";
+  };
 
   # SoapyUHD was originally pinned to C++14 as that was required by UHD at the
   # time, but UHD 4.10 upgrades to C++20, so we switch to that here as well.

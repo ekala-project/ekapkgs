@@ -27,9 +27,9 @@ stdenv.mkDerivation (finalAttrs: {
     libxkbfile
   ];
 
-  cmakeFlags = [
-    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
-  ];
+  cmakeEntries = {
+    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
+  };
 
   meta = {
     description = "Switch your X keyboard layouts from the command line";

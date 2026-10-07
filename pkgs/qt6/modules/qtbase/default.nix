@@ -244,28 +244,29 @@ stdenv.mkDerivation {
     . ${fix_qt_module_paths}
   '';
 
-  cmakeFlags = [
-    # makes Qt print the configure summary
-    "--log-level=STATUS"
+  cmakeEntries = {
+    QT_EMBED_TOOLCHAIN_COMPILER = false;
+    INSTALL_PLUGINSDIR = "${qtPluginPrefix}";
+    INSTALL_QMLDIR = "${qtQmlPrefix}";
+    QT_FEATURE_libproxy = true;
+    QT_FEATURE_system_sqlite = true;
+    QT_FEATURE_openssl_linked = true;
+    QT_FEATURE_vulkan = true;
+    CMAKE_SYSTEM_VERSION = "";
+    QT_FEATURE_sctp = true;
+    QT_FEATURE_journald = "${if systemdSupport then ";
+  };
 
-    "-DQT_EMBED_TOOLCHAIN_COMPILER=OFF"
-    "-DINSTALL_PLUGINSDIR=${qtPluginPrefix}"
-    "-DINSTALL_QMLDIR=${qtQmlPrefix}"
-    "-DQT_FEATURE_libproxy=ON"
-    "-DQT_FEATURE_system_sqlite=ON"
-    "-DQT_FEATURE_openssl_linked=ON"
-    "-DQT_FEATURE_vulkan=ON"
-    # don't leak OS version into the final output
-    # https://bugreports.qt.io/browse/QTBUG-136060
-    "-DCMAKE_SYSTEM_VERSION="
-    "-DQT_FEATURE_sctp=ON"
-    "-DQT_FEATURE_journald=${if systemdSupport then "ON" else "OFF"}"
-  ]
-  ++ lib.optionals isCrossBuild [
+  cmakeFlags = [
+      "--log-level=STATUS"
+      ON"
+      else
+      "OFF"
+      }"
+    ] ++ lib.optionals isCrossBuild [
     "-DQT_HOST_PATH=${pkgsBuildBuild.qt6.qtbase}"
     "-DQt6HostInfo_DIR=${pkgsBuildBuild.qt6.qtbase}/lib/cmake/Qt6HostInfo"
-  ]
-  ++ lib.optional (
+  ] ++ lib.optional (
     qttranslations != null && !isCrossBuild
   ) "-DINSTALL_TRANSLATIONSDIR=${qttranslations}/translations";
 

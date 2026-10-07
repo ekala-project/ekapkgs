@@ -83,14 +83,14 @@ let
       tar -xzf ${lua-compat-53} -C $sourceRoot/deps/lua-compat-5.3 --strip-components=1
     '';
 
-    cmakeFlags = [
-      (lib.cmakeFeature "LUA_BUILD_TYPE" "System")
-      (lib.cmakeFeature "LUA_COMPAT53_DIR" "deps/lua-compat-5.3")
-      (lib.cmakeBool "WITH_SHARED_LIBUV" true)
-      (lib.cmakeBool "BUILD_STATIC_LIBS" true)
-      (lib.cmakeBool "BUILD_MODULE" false)
-      (lib.cmakeFeature "WITH_LUA_ENGINE" "LuaJit")
-    ];
+    cmakeEntries = {
+      LUA_BUILD_TYPE = "System";
+      LUA_COMPAT53_DIR = "deps/lua-compat-5.3";
+      WITH_SHARED_LIBUV = true;
+      BUILD_STATIC_LIBS = true;
+      BUILD_MODULE = false;
+      WITH_LUA_ENGINE = "LuaJit";
+    };
   };
 
   # Build a single treesitter parser grammar

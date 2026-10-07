@@ -63,7 +63,13 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  cmakeFlags = [ "-DSYSTEM_DATA_DIR=${placeholder "out"}/share" ];
+  cmakeEntries = {
+    SYSTEM_DATA_DIR = "${placeholder ";
+  };
+
+  cmakeFlags = [
+    out"}/share"
+  ];
 
   env.NIX_CFLAGS_COMPILE = "-I${lib.getDev libxml2}/include/libxml2";
 

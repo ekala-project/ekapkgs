@@ -32,11 +32,10 @@ stdenv.mkDerivation (finalAttrs: {
     ocl-icd
   ];
 
-  cmakeFlags = [
-    # https://github.com/NixOS/nixpkgs/issues/144170
-    "-DCMAKE_INSTALL_INCLUDEDIR=include"
-    "-DCMAKE_INSTALL_LIBDIR=lib"
-  ];
+  cmakeEntries = {
+    CMAKE_INSTALL_INCLUDEDIR = "include";
+    CMAKE_INSTALL_LIBDIR = "lib";
+  };
 
   meta = {
     description = "Tuned OpenCL BLAS library";

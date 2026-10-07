@@ -51,12 +51,14 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
+  cmakeEntries = {
+    MUSE_APP_BUILD_MODE = "release";
+    MUSE_MODULE_DIAGNOSTICS_CRASHPAD_CLIENT = false;
+  };
+
   cmakeFlags = [
-    (lib.cmakeFeature "MUSE_APP_BUILD_MODE" "release")
-    (lib.cmakeBool "MUSE_MODULE_DIAGNOSTICS_CRASHPAD_CLIENT" false)
-    (lib.cmakeBool "MUSE_ENABLE_UNIT_TESTS" finalAttrs.finalPackage.doCheck)
-  ]
-  ++ map (l: lib.cmakeBool "MUE_COMPILE_USE_SYSTEM_${l}" true) [
+      (lib.cmakeBool "MUSE_ENABLE_UNIT_TESTS" finalAttrs.finalPackage.doCheck)
+    ] ++ map (l: lib.cmakeBool "MUE_COMPILE_USE_SYSTEM_${l}" true) [
     "FREETYPE"
     "HARFBUZZ"
     "MNXDOM"
@@ -65,8 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
     "PUGIXML"
     "LAME"
     "UTF8CPP"
-  ]
-  ++ lib.optionals stdenv.hostPlatform.isDarwin [
+  ] ++ lib.optionals stdenv.hostPlatform.isDarwin [
     (lib.cmakeBool "MUE_BUILD_MACOS_INTEGRATION" false)
   ];
 

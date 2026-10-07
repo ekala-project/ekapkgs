@@ -26,7 +26,9 @@ stdenv.mkDerivation (finalAttrs: {
     cd angelscript/projects/cmake
   '';
 
-  cmakeFlags = [ "-DBUILD_SHARED_LIBS=ON" ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+  };
 
   postInstall = ''
     mkdir -p "$out/share/docs/angelscript"

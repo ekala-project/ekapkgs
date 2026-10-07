@@ -27,7 +27,9 @@ stdenv.mkDerivation {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [ (lib.cmakeFeature "ASMJIT_DIR" (toString asmjit.src)) ];
+  cmakeEntries = {
+    ASMJIT_DIR = (toString asmjit.src);
+  };
 
   meta = {
     description = "2D Vector Graphics Engine Powered by a JIT Compiler";

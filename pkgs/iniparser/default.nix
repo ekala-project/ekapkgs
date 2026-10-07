@@ -25,9 +25,9 @@ stdenv.mkDerivation (finalAttrs: {
     validatePkgConfig
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_TESTING" false)
-  ];
+  cmakeEntries = {
+    BUILD_TESTING = false;
+  };
 
   doCheck = false;
 

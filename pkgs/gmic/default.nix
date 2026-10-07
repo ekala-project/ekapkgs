@@ -69,12 +69,15 @@ stdenv.mkDerivation (finalAttrs: {
     llvmPackages.openmp
   ];
 
+  cmakeEntries = {
+    BUILD_LIB_STATIC = false;
+    ENABLE_CURL = false;
+    ENABLE_DYNAMIC_LINKING = true;
+    ENABLE_XSHM = true;
+  };
+
   cmakeFlags = [
-    (lib.cmakeBool "BUILD_LIB_STATIC" false)
-    (lib.cmakeBool "ENABLE_CURL" false)
-    (lib.cmakeBool "ENABLE_DYNAMIC_LINKING" true)
     (lib.cmakeBool "ENABLE_OPENCV" (opencv != null))
-    (lib.cmakeBool "ENABLE_XSHM" true)
     (lib.cmakeBool "USE_SYSTEM_CIMG" (cimg != null))
   ];
 

@@ -33,14 +33,14 @@ stdenv.mkDerivation (finalAttrs: {
     yaml-cpp
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "WITH_DOCS" false)
-    (lib.cmakeBool "WITH_PYTHON" false)
-    (lib.cmakeBool "WITH_TESTS" false)
-    (lib.cmakeBool "WITH_CODE_COVERAGE" false)
-    (lib.cmakeFeature "CMAKE_INSTALL_INCLUDEDIR" "include")
-    (lib.cmakeFeature "CMAKE_INSTALL_LIBDIR" "lib")
-  ];
+  cmakeEntries = {
+    WITH_DOCS = false;
+    WITH_PYTHON = false;
+    WITH_TESTS = false;
+    WITH_CODE_COVERAGE = false;
+    CMAKE_INSTALL_INCLUDEDIR = "include";
+    CMAKE_INSTALL_LIBDIR = "lib";
+  };
 
   meta = {
     description = "Library for working with RPM manifests";

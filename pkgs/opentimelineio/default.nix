@@ -31,10 +31,10 @@ stdenv.mkDerivation (finalAttrs: {
     rapidjson
   ];
 
-  cmakeFlags = [
-    "-DOTIO_DEPENDENCIES_INSTALL=0"
-    "-DOTIO_FIND_IMATH=1"
-  ];
+  cmakeEntries = {
+    OTIO_DEPENDENCIES_INSTALL = false;
+    OTIO_FIND_IMATH = true;
+  };
 
   meta = {
     description = "Open Source API and interchange format for editorial timeline information";

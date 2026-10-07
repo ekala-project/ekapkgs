@@ -24,10 +24,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ pugixml ];
 
-  cmakeFlags = [
-    "-DLSL_UNIXFOLDERS=ON"
-    "-DLSL_FETCH_PUGIXML=OFF"
-  ];
+  cmakeEntries = {
+    LSL_UNIXFOLDERS = true;
+    LSL_FETCH_PUGIXML = false;
+  };
 
   meta = {
     description = "C++ lsl library for multi-modal time-synched data transmission over the local network";

@@ -19,10 +19,10 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-TyLYTk7vlpNmYJxaH9zhGwFvv1BEcShTDr7JYfgu6f0=";
   };
 
-  cmakeFlags = [
-    "-DCPP_JWT_USE_VENDORED_NLOHMANN_JSON=OFF"
-    "-DCPP_JWT_BUILD_EXAMPLES=OFF"
-  ];
+  cmakeEntries = {
+    CPP_JWT_USE_VENDORED_NLOHMANN_JSON = false;
+    CPP_JWT_BUILD_EXAMPLES = false;
+  };
 
   nativeBuildInputs = [
     cmake

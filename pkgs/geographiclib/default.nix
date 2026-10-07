@@ -28,10 +28,10 @@ stdenv.mkDerivation (finalAttrs: {
     doxygen
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_DOCUMENTATION" true)
-    (lib.cmakeFeature "CMAKE_INSTALL_LIBDIR" "lib")
-  ];
+  cmakeEntries = {
+    BUILD_DOCUMENTATION = true;
+    CMAKE_INSTALL_LIBDIR = "lib";
+  };
 
   meta = {
     description = "C++ geographic library";

@@ -32,10 +32,10 @@ stdenv.mkDerivation (finalAttrs: {
     gumbo
   ];
 
-  cmakeFlags = [
-    "-DEXTERNAL_GUMBO=ON"
-    "-DLITEHTML_BUILD_TESTING=OFF"
-  ];
+  cmakeEntries = {
+    EXTERNAL_GUMBO = true;
+    LITEHTML_BUILD_TESTING = false;
+  };
 
   meta = {
     description = "Fast and lightweight HTML/CSS rendering engine";

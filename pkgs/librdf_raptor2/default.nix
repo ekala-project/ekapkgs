@@ -24,9 +24,9 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-Eic63pV2p154YkSmkqWr86fGTr+XmVGy5l5/6q14LQM=";
   };
 
-  cmakeFlags = [
-    "-DBUILD_SHARED_LIBS=ON"
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+  };
 
   patches = [
     (fetchpatch {

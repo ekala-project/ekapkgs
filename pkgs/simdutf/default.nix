@@ -19,9 +19,9 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-MZUEZWibRgoVwjz3SqkNTepAHgreWYkZTWh74jXtRfY=";
   };
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = !stdenv.hostPlatform.isStatic;
+  };
 
   nativeBuildInputs = [
     cmake

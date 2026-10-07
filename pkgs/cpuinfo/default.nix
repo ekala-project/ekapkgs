@@ -28,11 +28,14 @@ stdenv.mkDerivation (finalAttrs: {
 
   checkInputs = [ gtest ];
 
+  cmakeEntries = {
+    CPUINFO_BUILD_BENCHMARKS = false;
+    USE_SYSTEM_LIBS = true;
+  };
+
   cmakeFlags = [
     (lib.cmakeBool "CPUINFO_BUILD_UNIT_TESTS" finalAttrs.finalPackage.doCheck)
     (lib.cmakeBool "CPUINFO_BUILD_MOCK_TESTS" finalAttrs.finalPackage.doCheck)
-    (lib.cmakeBool "CPUINFO_BUILD_BENCHMARKS" false)
-    (lib.cmakeBool "USE_SYSTEM_LIBS" true)
   ];
 
   # The tests check what CPU the host has and makes sure it can query information.

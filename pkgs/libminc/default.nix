@@ -37,12 +37,12 @@ stdenv.mkDerivation (finalAttrs: {
     hdf5
   ];
 
-  cmakeFlags = [
-    "-DLIBMINC_MINC1_SUPPORT=ON"
-    "-DLIBMINC_BUILD_SHARED_LIBS=ON"
-    "-DLIBMINC_USE_NIFTI=ON"
-    "-DLIBMINC_USE_SYSTEM_NIFTI=ON"
-  ];
+  cmakeEntries = {
+    LIBMINC_MINC1_SUPPORT = true;
+    LIBMINC_BUILD_SHARED_LIBS = true;
+    LIBMINC_USE_NIFTI = true;
+    LIBMINC_USE_SYSTEM_NIFTI = true;
+  };
 
   doCheck = !stdenv.hostPlatform.isDarwin;
   # -j1: see https://github.com/BIC-MNI/libminc/issues/110

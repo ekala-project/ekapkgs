@@ -31,9 +31,9 @@ stdenv.mkDerivation (finalAttrs: {
     perl
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" withShared)
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = withShared;
+  };
 
   env.NIX_CFLAGS_COMPILE = toString (
     lib.optionals stdenv.cc.isGNU [

@@ -49,15 +49,15 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (guiSupport && stdenv.hostPlatform.isLinux) [ qt6.qtwayland ]
   ++ lib.optionals trackerSearch [ python3 ];
 
-  cmakeFlags = [
-    "-DVERBOSE_CONFIGURE=ON"
-  ]
-  ++ lib.optionals (!guiSupport) [
+  cmakeEntries = {
+    VERBOSE_CONFIGURE = true;
+  };
+
+  cmakeFlags = lib.optionals (!guiSupport) [
     "-DGUI=OFF"
     "-DSYSTEMD=ON"
     "-DSYSTEMD_SERVICES_INSTALL_DIR=${placeholder "out"}/lib/systemd/system"
-  ]
-  ++ lib.optionals (!webuiSupport) [ "-DWEBUI=OFF" ];
+  ] ++ lib.optionals (!webuiSupport) [ "-DWEBUI=OFF" ];
 
   qtWrapperArgs = lib.optionals trackerSearch [
     "--prefix PATH : ${lib.makeBinPath [ python3 ]}"

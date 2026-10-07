@@ -57,12 +57,12 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail "cmake_minimum_required(VERSION 2.6)" "cmake_minimum_required(VERSION 3.5)"
   '';
 
-  cmakeFlags = [
-    "-DBUILD_EXAMPLES:BOOL=OFF"
-    "-DBUILD_TESTS:BOOL=OFF"
-    "-DBUILD_MATLAB_BINDINGS:BOOL=OFF"
-    "-DBUILD_PYTHON_BINDINGS:BOOL=OFF"
-  ];
+  cmakeEntries = {
+    BUILD_EXAMPLES = false;
+    BUILD_TESTS = false;
+    BUILD_MATLAB_BINDINGS = false;
+    BUILD_PYTHON_BINDINGS = false;
+  };
 
   nativeBuildInputs = [
     cmake

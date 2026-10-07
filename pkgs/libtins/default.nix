@@ -47,11 +47,9 @@ stdenv.mkDerivation rec {
     boost
   ];
 
-  cmakeFlags = [
-    # CMake 4 dropped support of versions lower than 3.5,
-    # versions lower than 3.10 are deprecated.
-    (lib.cmakeFeature "CMAKE_POLICY_VERSION_MINIMUM" "3.10")
-  ];
+  cmakeEntries = {
+    CMAKE_POLICY_VERSION_MINIMUM = "3.10";
+  };
 
   configureFlags = [
     "--with-boost-libdir=${boost.out}/lib"

@@ -43,11 +43,15 @@ stdenv.mkDerivation (finalAttrs: {
     udev
   ];
 
+  cmakeEntries = {
+    CMAKE_INSTALL_RUNDIR = "/run";
+    CMAKE_INSTALL_SHAREDSTATEDIR = "/var/lib";
+    SYSUSERS_DIR = "${placeholder ";
+    NO_MAN_PAGES = true;
+  };
+
   cmakeFlags = [
-    "-DCMAKE_INSTALL_RUNDIR=/run"
-    "-DCMAKE_INSTALL_SHAREDSTATEDIR=/var/lib"
-    "-DSYSUSERS_DIR=${placeholder "out"}/lib/sysusers.d"
-    "-DNO_MAN_PAGES=1"
+    out"}/lib/sysusers.d"
   ];
 
   postPatch = ''

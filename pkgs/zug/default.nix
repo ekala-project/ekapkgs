@@ -28,10 +28,10 @@ stdenv.mkDerivation (finalAttrs: {
     catch2
   ];
 
-  cmakeFlags = [
-    "-Dzug_BUILD_EXAMPLES=OFF"
-    "-Dzug_BUILD_TESTS=OFF"
-  ];
+  cmakeEntries = {
+    zug_BUILD_EXAMPLES = false;
+    zug_BUILD_TESTS = false;
+  };
 
   preConfigure = ''
     rm BUILD

@@ -37,13 +37,16 @@ stdenv.mkDerivation (finalAttrs: {
   doCheck = true;
   enableParallelChecking = false;
 
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+    EIGEN = true;
+    ICB = true;
+    MPI = false;
+  };
+
   cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" true)
-    (lib.cmakeBool "EIGEN" true)
     (lib.cmakeBool "EXAMPLES" finalAttrs.finalPackage.doCheck)
-    (lib.cmakeBool "ICB" true)
     (lib.cmakeBool "INTERFACE64" blas.isILP64)
-    (lib.cmakeBool "MPI" false)
     (lib.cmakeBool "TESTS" finalAttrs.finalPackage.doCheck)
   ];
 

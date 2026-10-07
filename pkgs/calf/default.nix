@@ -28,7 +28,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
 
-  cmakeFlags = [ (lib.cmakeBool "WANT_GUI" false) ];
+  cmakeEntries = {
+    WANT_GUI = false;
+  };
 
   nativeBuildInputs = [
     cmake

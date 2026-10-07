@@ -37,16 +37,19 @@ stdenv.mkDerivation (finalAttrs: {
     alsa-lib
   ];
 
+  cmakeEntries = {
+    MINIAUDIO_NO_RUNTIME_LINKING = true;
+    MINIAUDIO_BUILD_TESTS = false;
+    MINIAUDIO_BUILD_EXAMPLES = false;
+    MINIAUDIO_ENABLE_ONLY_SPECIFIC_BACKENDS = true;
+    MINIAUDIO_ENABLE_PULSEAUDIO = false;
+    MINIAUDIO_ENABLE_JACK = false;
+    MINIAUDIO_ENABLE_SNDIO = false;
+    MINIAUDIO_ENABLE_ALSA = true;
+  };
+
   cmakeFlags = [
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-    (lib.cmakeBool "MINIAUDIO_NO_RUNTIME_LINKING" true)
-    (lib.cmakeBool "MINIAUDIO_BUILD_TESTS" false)
-    (lib.cmakeBool "MINIAUDIO_BUILD_EXAMPLES" false)
-    (lib.cmakeBool "MINIAUDIO_ENABLE_ONLY_SPECIFIC_BACKENDS" true)
-    (lib.cmakeBool "MINIAUDIO_ENABLE_PULSEAUDIO" false)
-    (lib.cmakeBool "MINIAUDIO_ENABLE_JACK" false)
-    (lib.cmakeBool "MINIAUDIO_ENABLE_SNDIO" false)
-    (lib.cmakeBool "MINIAUDIO_ENABLE_ALSA" true)
   ];
 
   meta = {

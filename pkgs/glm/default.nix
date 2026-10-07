@@ -38,9 +38,12 @@ stdenv.mkDerivation (finalAttrs: {
     else
       "";
 
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = false;
+    BUILD_STATIC_LIBS = false;
+  };
+
   cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" false)
-    (lib.cmakeBool "BUILD_STATIC_LIBS" false)
     (lib.cmakeBool "GLM_TEST_ENABLE" finalAttrs.doCheck)
   ];
 

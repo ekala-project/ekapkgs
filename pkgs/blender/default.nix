@@ -103,52 +103,49 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.NIX_CFLAGS_COMPILE = "-I${python3}/include/${python3.libPrefix}";
 
+  cmakeEntries = {
+    PYTHON_INCLUDE_DIR = "${python3}/include/${python3.libPrefix}";
+    PYTHON_LIBPATH = "${python3}/lib";
+    PYTHON_LIBRARY = "${python3.libPrefix}";
+    PYTHON_NUMPY_INCLUDE_DIRS = "${python3Packages.numpy}/${python3.sitePackages}/numpy/_core/include";
+    PYTHON_NUMPY_PATH = "${python3Packages.numpy}/${python3.sitePackages}";
+    PYTHON_VERSION = "${python3.pythonVersion}";
+    WITH_BUILDINFO = false;
+    WITH_CPU_CHECK = false;
+    WITH_CYCLES_CUDA_BINARIES = false;
+    WITH_CYCLES_DEVICE_CUDA = false;
+    WITH_CYCLES_DEVICE_HIP = false;
+    WITH_CYCLES_DEVICE_ONEAPI = false;
+    WITH_CYCLES_DEVICE_OPTIX = false;
+    WITH_CYCLES_EMBREE = embreeSupport;
+    WITH_CYCLES_OSL = false;
+    WITH_CYCLES_PARALLEL_DEVICE_KERNEL_BUILD = true;
+    WITH_HYDRA = false;
+    WITH_INSTALL_PORTABLE = false;
+    WITH_JACK = jackaudioSupport;
+    WITH_LIBS_PRECOMPILED = false;
+    WITH_MATERIALX = false;
+    WITH_OPENIMAGEDENOISE = false;
+    WITH_PIPEWIRE = false;
+    WITH_PULSEAUDIO = false;
+    WITH_PYTHON_INSTALL = false;
+    WITH_PYTHON_INSTALL_NUMPY = false;
+    WITH_PYTHON_INSTALL_REQUESTS = false;
+    WITH_STRICT_BUILD_OPTIONS = true;
+    WITH_SYSTEM_GLOG = true;
+    WITH_USD = false;
+    WITH_ALEMBIC = false;
+    WITH_MANIFOLD = false;
+    WITH_OPENVDB = false;
+    WITH_NANOVDB = false;
+  };
+
   cmakeFlags = [
-    "-C../build_files/cmake/config/blender_release.cmake"
-
-    (lib.cmakeFeature "PYTHON_INCLUDE_DIR" "${python3}/include/${python3.libPrefix}")
-    (lib.cmakeFeature "PYTHON_LIBPATH" "${python3}/lib")
-    (lib.cmakeFeature "PYTHON_LIBRARY" "${python3.libPrefix}")
-    (lib.cmakeFeature "PYTHON_NUMPY_INCLUDE_DIRS" "${python3Packages.numpy}/${python3.sitePackages}/numpy/_core/include")
-    (lib.cmakeFeature "PYTHON_NUMPY_PATH" "${python3Packages.numpy}/${python3.sitePackages}")
-    (lib.cmakeFeature "PYTHON_VERSION" "${python3.pythonVersion}")
-
-    (lib.cmakeBool "WITH_BUILDINFO" false)
-    (lib.cmakeBool "WITH_CPU_CHECK" false)
-    (lib.cmakeBool "WITH_CYCLES_CUDA_BINARIES" false)
-    (lib.cmakeBool "WITH_CYCLES_DEVICE_CUDA" false)
-    (lib.cmakeBool "WITH_CYCLES_DEVICE_HIP" false)
-    (lib.cmakeBool "WITH_CYCLES_DEVICE_ONEAPI" false)
-    (lib.cmakeBool "WITH_CYCLES_DEVICE_OPTIX" false)
-    (lib.cmakeBool "WITH_CYCLES_EMBREE" embreeSupport)
-    (lib.cmakeBool "WITH_CYCLES_OSL" false)
-    (lib.cmakeBool "WITH_CYCLES_PARALLEL_DEVICE_KERNEL_BUILD" true)
-    (lib.cmakeBool "WITH_HYDRA" false)
-    (lib.cmakeBool "WITH_INSTALL_PORTABLE" false)
-    (lib.cmakeBool "WITH_JACK" jackaudioSupport)
-    (lib.cmakeBool "WITH_LIBS_PRECOMPILED" false)
-    (lib.cmakeBool "WITH_MATERIALX" false)
-    (lib.cmakeBool "WITH_OPENIMAGEDENOISE" false)
-    (lib.cmakeBool "WITH_PIPEWIRE" false)
-    (lib.cmakeBool "WITH_PULSEAUDIO" false)
-    (lib.cmakeBool "WITH_PYTHON_INSTALL" false)
-    (lib.cmakeBool "WITH_PYTHON_INSTALL_NUMPY" false)
-    (lib.cmakeBool "WITH_PYTHON_INSTALL_REQUESTS" false)
-    (lib.cmakeBool "WITH_STRICT_BUILD_OPTIONS" true)
-    (lib.cmakeBool "WITH_SYSTEM_GLOG" true)
-    (lib.cmakeBool "WITH_USD" false)
-
-    # Disable features with missing deps
-    (lib.cmakeBool "WITH_ALEMBIC" false)
-    (lib.cmakeBool "WITH_MANIFOLD" false)
-    (lib.cmakeBool "WITH_OPENVDB" false)
-    (lib.cmakeBool "WITH_NANOVDB" false)
-  ]
-  ++ lib.optionals waylandSupport [
+      "-C../build_files/cmake/config/blender_release.cmake"
+    ] ++ lib.optionals waylandSupport [
     (lib.cmakeBool "WITH_GHOST_WAYLAND" true)
     (lib.cmakeBool "WITH_GHOST_WAYLAND_DYNLOAD" false)
-  ]
-  ++ lib.optionals stdenv.cc.isClang [
+  ] ++ lib.optionals stdenv.cc.isClang [
     (lib.cmakeFeature "PYTHON_LINKFLAGS" "")
   ];
 

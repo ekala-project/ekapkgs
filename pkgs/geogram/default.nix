@@ -31,27 +31,16 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
   __structuredAttrs = true;
 
+  cmakeEntries = {
+    GEOGRAM_WITH_TRIANGLE = false;
+    GEOGRAM_WITH_LEGACY_NUMERICS = false;
+    GEOGRAM_WITH_LUA = false;
+    GEOGRAM_WITH_GRAPHICS = false;
+    GEOGRAM_FOR_DEBIAN = true;
+    GEOGRAM_LIB_ONLY = true;
+  };
+
   cmakeFlags = [
-    # Triangle is unfree
-    (lib.cmakeBool "GEOGRAM_WITH_TRIANGLE" false)
-
-    # If GEOGRAM_WITH_LEGACY_NUMERICS is enabled GeoGram will build its own version of
-    # ARPACK, CBLAS, CLAPACK, LIBF2C and SUPERLU
-    (lib.cmakeBool "GEOGRAM_WITH_LEGACY_NUMERICS" false)
-
-    # Don't build Lua
-    (lib.cmakeBool "GEOGRAM_WITH_LUA" false)
-
-    # Disable certain features requiring GLFW
-    (lib.cmakeBool "GEOGRAM_WITH_GRAPHICS" false)
-
-    # Enables a packaging mode in some places
-    (lib.cmakeBool "GEOGRAM_FOR_DEBIAN" true)
-
-    # Only build the library itself
-    (lib.cmakeBool "GEOGRAM_LIB_ONLY" true)
-
-    # NOTE: Options introduced by patch (see below)
     (lib.cmakeOptionType "path" "GEOGRAM_INSTALL_CMAKE_DIR" "${placeholder "dev"}/lib/cmake")
     (lib.cmakeOptionType "path" "GEOGRAM_INSTALL_PKGCONFIG_DIR" "${placeholder "dev"}/lib/pkgconfig")
   ];

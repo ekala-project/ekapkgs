@@ -65,10 +65,14 @@ stdenv.mkDerivation (finalAttrs: {
       --replace 'WLR_PROTOCOL_DIR "/usr' 'WLR_PROTOCOL_DIR "${wlr-protocols}'
   '';
 
+  cmakeEntries = {
+    INSTALL_EXAMPLE_SCRIPTS = "${if installExampleScripts then ";
+    INSTALL_DOCUMENTATION = true;
+    WITH_GBM = true;
+  };
+
   cmakeFlags = [
-    "-DINSTALL_EXAMPLE_SCRIPTS=${if installExampleScripts then "ON" else "OFF"}"
-    "-DINSTALL_DOCUMENTATION=ON"
-    "-DWITH_GBM=ON"
+    ON" else "OFF"}"
   ];
 
   postInstall = ''

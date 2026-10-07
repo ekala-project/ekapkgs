@@ -24,8 +24,8 @@ qtModule {
     assimp
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "FEATURE_qt3d_system_assimp" true) # use nix assimp
-    (lib.cmakeBool "TEST_assimp" true) # required for internal cmake asserts
-  ];
+  cmakeEntries = {
+    FEATURE_qt3d_system_assimp = true;
+    TEST_assimp = true;
+  };
 }

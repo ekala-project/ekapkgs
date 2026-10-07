@@ -36,14 +36,16 @@ stdenv.mkDerivation (finalAttrs: {
     gbenchmark
   ];
 
+  cmakeEntries = {
+    ADA_TOOLS = false;
+    ADA_USE_SIMDUTF = true;
+    FETCHCONTENT_FULLY_DISCONNECTED = true;
+    CPM_USE_LOCAL_PACKAGES = true;
+  };
+
   cmakeFlags = [
-    # uses CPM that requires network access
-    (lib.cmakeBool "ADA_TOOLS" false)
     (lib.cmakeBool "ADA_TESTING" finalAttrs.finalPackage.doCheck)
-    (lib.cmakeBool "ADA_USE_SIMDUTF" true)
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-    (lib.cmakeBool "FETCHCONTENT_FULLY_DISCONNECTED" true)
-    (lib.cmakeBool "CPM_USE_LOCAL_PACKAGES" true)
   ];
 
   passthru = {

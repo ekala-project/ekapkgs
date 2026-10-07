@@ -21,11 +21,14 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
+  cmakeEntries = {
+    CMAKE_INSTALL_LIBDIR = "lib";
+    BUILD_SHARED_LIBS = true;
+    REPROC_TEST = true;
+  };
+
   cmakeFlags = [
-    "-DCMAKE_INSTALL_LIBDIR=lib"
-    "-DBUILD_SHARED_LIBS=ON"
     "-DREPROC++=ON"
-    "-DREPROC_TEST=ON"
   ];
 
   # https://github.com/DaanDeMeyer/reproc/issues/81

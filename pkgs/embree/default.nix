@@ -35,13 +35,14 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace common/math/emath.h --replace 'defined(__WIN32__) || defined(__FreeBSD__)' 'defined(__WIN32__) || defined(__FreeBSD__) || defined(__MACOSX__)'
   '';
 
-  cmakeFlags = [
-    "-DEMBREE_TUTORIALS=OFF"
-    "-DEMBREE_RAY_MASK=ON"
-    "-DTBB_ROOT=${onetbb}"
-    "-DTBB_INCLUDE_DIR=${onetbb.dev}/include"
-  ]
-  ++ lib.optionals (ispc == null) [
+  cmakeEntries = {
+    EMBREE_TUTORIALS = false;
+    EMBREE_RAY_MASK = true;
+    TBB_ROOT = "${onetbb}";
+    TBB_INCLUDE_DIR = "${onetbb.dev}/include";
+  };
+
+  cmakeFlags = lib.optionals (ispc == null) [
     "-DEMBREE_ISPC_SUPPORT=OFF"
   ];
 

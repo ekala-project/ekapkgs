@@ -40,7 +40,9 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  cmakeFlags = [ "-DUSE_HDF5=ON" ];
+  cmakeEntries = {
+    USE_HDF5 = true;
+  };
 
   enableParallelBuilding = false;
 

@@ -40,9 +40,12 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
+  cmakeEntries = {
+    VVENC_INSTALL_FULLFEATURE_APP = true;
+    VVENC_ENABLE_THIRDPARTY_JSON = true;
+  };
+
   cmakeFlags = [
-    (lib.cmakeBool "VVENC_INSTALL_FULLFEATURE_APP" true)
-    (lib.cmakeBool "VVENC_ENABLE_THIRDPARTY_JSON" true)
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
   ];
 

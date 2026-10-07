@@ -69,19 +69,17 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail '"/etc/timidity.cfg"' '"${timidity}/share/timidity/timidity.cfg"'
   '';
 
-  cmakeFlags = [
-    (lib.cmakeBool "SDLMIXER_STRICT" true)
-    (lib.cmakeBool "SDLMIXER_DEPS_SHARED" false)
-    (lib.cmakeBool "SDLMIXER_TESTS" finalAttrs.finalPackage.doCheck)
-    (lib.cmakeBool "SDLMIXER_EXAMPLES" false)
+  cmakeEntries = {
+    SDLMIXER_STRICT = true;
+    SDLMIXER_DEPS_SHARED = false;
+    SDLMIXER_EXAMPLES = false;
+    SDLMIXER_FLAC_DRFLAC = false;
+    SDLMIXER_MP3_DRMP3 = false;
+    SDLMIXER_VORBIS_STB = false;
+  };
 
-    # Prefer libFLAC for feature parity with other distros and better diagnostics.
-    (lib.cmakeBool "SDLMIXER_FLAC_DRFLAC" false)
-    # Prefer mpg123: more capable, better maintained.
-    # Built-in dr_mp3 may introduce subtle decoding differences; use only as a fallback.
-    (lib.cmakeBool "SDLMIXER_MP3_DRMP3" false)
-    # Prefer libvorbisfile to keep backend behavior aligned with system libraries.
-    (lib.cmakeBool "SDLMIXER_VORBIS_STB" false)
+  cmakeFlags = [
+    (lib.cmakeBool "SDLMIXER_TESTS" finalAttrs.finalPackage.doCheck)
   ];
 
   meta = {

@@ -31,7 +31,9 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-V2+yw747t2w3AgxJaRfRvwaEpRGUB+Bl7G2QpLP764E=";
   };
 
-  cmakeFlags = [ "-DCMAKE_POLICY_VERSION_MINIMUM=3.10" ];
+  cmakeEntries = {
+    CMAKE_POLICY_VERSION_MINIMUM = "3.10";
+  };
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

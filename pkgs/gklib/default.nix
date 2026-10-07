@@ -24,11 +24,12 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = lib.optional stdenv.cc.isClang llvmPackages.openmp;
 
+  cmakeEntries = {
+    OPENMP = true;
+  };
+
   cmakeFlags = [
-    (lib.cmakeBool "OPENMP" true)
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-    # Turns off using clflush/sfence insns in gkuniq test app
-    # https://github.com/KarypisLab/GKlib/issues/11#issuecomment-1532597211
     (lib.cmakeBool "NO_X86" (!stdenv.hostPlatform.isx86))
   ];
 

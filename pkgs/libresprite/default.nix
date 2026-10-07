@@ -72,11 +72,11 @@ stdenv.mkDerivation (finalAttrs: {
     libxi
   ];
 
-  cmakeFlags = [
-    "-DWITH_DESKTOP_INTEGRATION=ON"
-    "-DWITH_WEBP_SUPPORT=ON"
-    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
-  ];
+  cmakeEntries = {
+    WITH_DESKTOP_INTEGRATION = true;
+    WITH_WEBP_SUPPORT = true;
+    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
+  };
 
   hardeningDisable = lib.optional stdenv.hostPlatform.isDarwin "format";
 

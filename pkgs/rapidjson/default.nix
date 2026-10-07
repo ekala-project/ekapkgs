@@ -23,12 +23,12 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "RAPIDJSON_BUILD_DOC" false)
-    (lib.cmakeBool "RAPIDJSON_BUILD_TESTS" false)
-    (lib.cmakeBool "RAPIDJSON_BUILD_EXAMPLES" false)
-    (lib.cmakeBool "RAPIDJSON_ENABLE_INSTRUMENTATION_OPT" false)
-  ];
+  cmakeEntries = {
+    RAPIDJSON_BUILD_DOC = false;
+    RAPIDJSON_BUILD_TESTS = false;
+    RAPIDJSON_BUILD_EXAMPLES = false;
+    RAPIDJSON_ENABLE_INSTRUMENTATION_OPT = false;
+  };
 
   meta = {
     description = "Fast JSON parser/generator for C++ with both SAX/DOM style API";

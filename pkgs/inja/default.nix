@@ -35,10 +35,13 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   propagatedBuildInputs = [ nlohmann_json ];
 
+  cmakeEntries = {
+    INJA_USE_EMBEDDED_JSON = false;
+    BUILD_BENCHMARK = false;
+  };
+
   cmakeFlags = [
     (lib.cmakeBool "INJA_BUILD_TESTS" finalAttrs.finalPackage.doCheck)
-    (lib.cmakeBool "INJA_USE_EMBEDDED_JSON" false)
-    (lib.cmakeBool "BUILD_BENCHMARK" false)
   ];
 
   checkInputs = [ doctest ];

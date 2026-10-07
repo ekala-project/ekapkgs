@@ -38,11 +38,11 @@ stdenv.mkDerivation (finalAttrs: {
     zstd
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "ENABLE_STRICT" false)
-    (lib.cmakeFeature "CMAKE_INSTALL_INCLUDEDIR" "include")
-    (lib.cmakeFeature "CMAKE_INSTALL_LIBDIR" "lib")
-  ];
+  cmakeEntries = {
+    ENABLE_STRICT = false;
+    CMAKE_INSTALL_INCLUDEDIR = "include";
+    CMAKE_INSTALL_LIBDIR = "lib";
+  };
 
   env.NIX_CFLAGS_COMPILE = "-Wno-array-bounds";
   meta = {

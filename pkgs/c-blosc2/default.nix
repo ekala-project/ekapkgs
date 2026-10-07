@@ -40,20 +40,22 @@ stdenv.mkDerivation (finalAttrs: {
     zstd
   ];
 
+  cmakeEntries = {
+    BUILD_STATIC = "${if static then ";
+    BUILD_SHARED = "${if static then ";
+    PREFER_EXTERNAL_LZ4 = true;
+    PREFER_EXTERNAL_ZLIB = true;
+    PREFER_EXTERNAL_ZSTD = true;
+    BLOSC_ENABLE_ZFP = false;
+    BUILD_EXAMPLES = false;
+    BUILD_BENCHMARKS = false;
+    BUILD_TESTS = "${if finalAttrs.finalPackage.doCheck then ";
+  };
+
   cmakeFlags = [
-    "-DBUILD_STATIC=${if static then "ON" else "OFF"}"
-    "-DBUILD_SHARED=${if static then "OFF" else "ON"}"
-
-    "-DPREFER_EXTERNAL_LZ4=ON"
-    "-DPREFER_EXTERNAL_ZLIB=ON"
-    "-DPREFER_EXTERNAL_ZSTD=ON"
-
-    # ZFP uses FetchContent to download during build, which doesn't work in the sandbox
-    "-DBLOSC_ENABLE_ZFP=OFF"
-
-    "-DBUILD_EXAMPLES=OFF"
-    "-DBUILD_BENCHMARKS=OFF"
-    "-DBUILD_TESTS=${if finalAttrs.finalPackage.doCheck then "ON" else "OFF"}"
+    ON" else "OFF"}"
+    OFF" else "ON"}"
+    ON" else "OFF"}"
   ];
 
   doCheck = !static;

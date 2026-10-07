@@ -51,12 +51,12 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  cmakeFlags = [
-    "-DAWK=${lib.getBin gawk}/bin/awk"
-    "-DGREP=${lib.getBin grep}/bin/grep"
-    "-DSED=${lib.getBin sed}/bin/sed"
-    "-DSH=${runtimeShell}"
-  ];
+  cmakeEntries = {
+    AWK = "${lib.getBin gawk}/bin/awk";
+    GREP = "${lib.getBin grep}/bin/grep";
+    SED = "${lib.getBin sed}/bin/sed";
+    SH = "${runtimeShell}";
+  };
 
   meta = {
     homepage = "https://www.pekwm.se/";

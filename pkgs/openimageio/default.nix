@@ -71,20 +71,17 @@ stdenv.mkDerivation (finalAttrs: {
     fmt
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "USE_PYTHON" enablePython)
-    "-DUSE_QT=OFF"
-    # GNUInstallDirs
-    "-DCMAKE_INSTALL_LIBDIR=lib" # needs relative path for pkg-config
-    # Do not install a copy of fmt header files
-    "-DINTERNALIZE_FMT=OFF"
-    # libultrahdr and libheif are not available
-    "-DUSE_LIBUHDR=OFF"
-    "-DUSE_HEIF=OFF"
-    # Use pybind11 backend (nanobind default requires FindPython hints we don't set)
-    "-DOIIO_PYTHON_BINDINGS_BACKEND=pybind11"
-  ]
-  ++ lib.optionals enablePython [
+  cmakeEntries = {
+    USE_PYTHON = enablePython;
+    USE_QT = false;
+    CMAKE_INSTALL_LIBDIR = "lib";
+    INTERNALIZE_FMT = false;
+    USE_LIBUHDR = false;
+    USE_HEIF = false;
+    OIIO_PYTHON_BINDINGS_BACKEND = "pybind11";
+  };
+
+  cmakeFlags = lib.optionals enablePython [
     (lib.cmakeFeature "Python3_ROOT" "${python3}")
     (lib.cmakeFeature "Python3_FIND_STRATEGY" "LOCATION")
   ];

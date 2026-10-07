@@ -34,10 +34,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "UPNPC_BUILD_SHARED" (!stdenv.hostPlatform.isStatic))
-    (lib.cmakeBool "UPNPC_BUILD_STATIC" stdenv.hostPlatform.isStatic)
-  ];
+  cmakeEntries = {
+    UPNPC_BUILD_SHARED = !stdenv.hostPlatform.isStatic;
+    UPNPC_BUILD_STATIC = stdenv.hostPlatform.isStatic;
+  };
 
   doCheck = !stdenv.hostPlatform.isFreeBSD;
 

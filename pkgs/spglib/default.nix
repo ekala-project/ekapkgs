@@ -25,7 +25,9 @@ stdenv.mkDerivation rec {
     gtest
   ];
 
-  cmakeFlags = [ "-DSPGLIB_WITH_Fortran=On" ];
+  cmakeEntries = {
+    SPGLIB_WITH_Fortran = "On";
+  };
 
   doCheck = true;
 

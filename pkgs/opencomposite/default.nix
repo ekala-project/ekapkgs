@@ -40,12 +40,11 @@ stdenv.mkDerivation (finalAttrs: {
     libx11
   ];
 
-  cmakeFlags = [
-    (lib.cmakeFeature "CMAKE_CXX_FLAGS" "-Wno-error=format-security")
-    # See https://gitlab.com/znixian/OpenOVR/-/issues/416
-    (lib.cmakeBool "USE_SYSTEM_OPENXR" false)
-    (lib.cmakeBool "USE_SYSTEM_GLM" true)
-  ];
+  cmakeEntries = {
+    CMAKE_CXX_FLAGS = "-Wno-error=format-security";
+    USE_SYSTEM_OPENXR = false;
+    USE_SYSTEM_GLM = true;
+  };
 
   installPhase = ''
     runHook preInstall

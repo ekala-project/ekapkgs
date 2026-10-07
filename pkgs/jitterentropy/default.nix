@@ -29,9 +29,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   # disable internal timer thread and only use processor high-resolution timer
   # this also fixes the rng-tools build
-  cmakeFlags = [
-    "-DINTERNAL_TIMER=OFF"
-  ];
+  cmakeEntries = {
+    INTERNAL_TIMER = false;
+  };
 
   # this package internally compiles without optimization by choice,
   # as it introduces more execution time jitter, therefore disable fortify.

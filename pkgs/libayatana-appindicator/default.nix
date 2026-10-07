@@ -49,11 +49,11 @@ stdenv.mkDerivation (finalAttrs: {
     sed -i '/^find_package(GObjectIntrospection/,$d' src/CMakeLists.txt
   '';
 
-  cmakeFlags = [
-    "-DENABLE_BINDINGS_MONO=False"
-    "-DENABLE_GTKDOC=False"
-    "-DENABLE_BINDINGS_VALA=False"
-  ];
+  cmakeEntries = {
+    ENABLE_BINDINGS_MONO = "False";
+    ENABLE_GTKDOC = "False";
+    ENABLE_BINDINGS_VALA = "False";
+  };
 
   meta = {
     description = "Ayatana Application Indicators Shared Library";

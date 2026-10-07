@@ -21,10 +21,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DPEGTL_BUILD_TESTS=OFF"
-    "-DPEGTL_BUILD_EXAMPLES=OFF"
-  ];
+  cmakeEntries = {
+    PEGTL_BUILD_TESTS = false;
+    PEGTL_BUILD_EXAMPLES = false;
+  };
 
   meta = {
     homepage = "https://github.com/taocpp/pegtl";

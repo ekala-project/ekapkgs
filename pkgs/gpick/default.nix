@@ -26,9 +26,9 @@ stdenv.mkDerivation (finalAttrs: {
     ./dot-version.patch
   ];
 
-  cmakeFlags = [
-    "-DLUA_TYPE=C"
-  ];
+  cmakeEntries = {
+    LUA_TYPE = "C";
+  };
 
   nativeBuildInputs = [
     cmake

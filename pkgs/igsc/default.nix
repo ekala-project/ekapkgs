@@ -25,10 +25,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DMETEE_LIB_PATH=${metee}/lib"
-    "-DMETEE_HEADER_PATH=${metee}/include"
-  ];
+  cmakeEntries = {
+    METEE_LIB_PATH = "${metee}/lib";
+    METEE_HEADER_PATH = "${metee}/include";
+  };
   meta = {
     mainProgram = "igsc";
     description = "Intel graphics system controller firmware update library";

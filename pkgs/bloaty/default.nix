@@ -34,11 +34,11 @@ stdenv.mkDerivation {
     hash = "sha256-16Ic2x5JctSCuHJZjK96xkgJw8qyy8GqFupwWuc2U/k=";
   };
 
-  cmakeFlags = [
-    "-DLIT_EXECUTABLE=${lit}/bin/lit"
-    "-DFILECHECK_EXECUTABLE=${llvmPackages.libllvm}/bin/FileCheck"
-    "-DYAML2OBJ_EXECUTABLE=${llvmPackages.libllvm}/bin/yaml2obj"
-  ];
+  cmakeEntries = {
+    LIT_EXECUTABLE = "${lit}/bin/lit";
+    FILECHECK_EXECUTABLE = "${llvmPackages.libllvm}/bin/FileCheck";
+    YAML2OBJ_EXECUTABLE = "${llvmPackages.libllvm}/bin/yaml2obj";
+  };
 
   postPatch = ''
     # Build system relies on some of those source files

@@ -49,9 +49,9 @@ stdenv'.mkDerivation (finalAttrs: {
     cd src
   '';
 
-  cmakeFlags = [
-    "-DBUILD_TEST=OFF"
-  ];
+  cmakeEntries = {
+    BUILD_TEST = false;
+  };
 
   nativeBuildInputs = [
     cmake

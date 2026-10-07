@@ -53,7 +53,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.NIX_CFLAGS_COMPILE = "-DSHOTCUT_NOUPGRADE";
 
-  cmakeFlags = [ "-DSHOTCUT_VERSION=${finalAttrs.version}" ];
+  cmakeEntries = {
+    SHOTCUT_VERSION = "${finalAttrs.version}";
+  };
 
   patches = [
     (replaceVars ./fix-mlt-ffmpeg-path.patch {

@@ -41,9 +41,9 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail '$'{prefix}/@_INSTALL_LIBDIR@ @_INSTALL_FULL_LIBDIR@
   '';
 
-  cmakeFlags = [
-    (lib.cmakeBool "python-bindings" false)
-  ];
+  cmakeEntries = {
+    python-bindings = false;
+  };
 
   meta = {
     homepage = "https://libtorrent.org/";

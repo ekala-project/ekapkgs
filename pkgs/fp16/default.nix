@@ -21,11 +21,11 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "FP16_BUILD_TESTS" false)
-    (lib.cmakeBool "FP16_BUILD_BENCHMARKS" false)
-    (lib.cmakeBool "FP16_USE_SYSTEM_LIBS" true)
-  ];
+  cmakeEntries = {
+    FP16_BUILD_TESTS = false;
+    FP16_BUILD_BENCHMARKS = false;
+    FP16_USE_SYSTEM_LIBS = true;
+  };
 
   doCheck = true;
 

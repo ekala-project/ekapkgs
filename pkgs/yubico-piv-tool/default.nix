@@ -49,14 +49,14 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optionals (!withApplePCSC) [ pcsclite ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "GENERATE_MAN_PAGES" true)
-    (lib.cmakeFeature "BACKEND" (if withApplePCSC then "macscard" else "pcsc"))
-    (lib.cmakeFeature "CMAKE_INSTALL_BINDIR" "bin")
-    (lib.cmakeFeature "CMAKE_INSTALL_INCLUDEDIR" "include")
-    (lib.cmakeFeature "CMAKE_INSTALL_LIBDIR" "lib")
-    (lib.cmakeFeature "CMAKE_INSTALL_MANDIR" "share/man")
-  ];
+  cmakeEntries = {
+    GENERATE_MAN_PAGES = true;
+    BACKEND = (if withApplePCSC then "macscard" else "pcsc");
+    CMAKE_INSTALL_BINDIR = "bin";
+    CMAKE_INSTALL_INCLUDEDIR = "include";
+    CMAKE_INSTALL_LIBDIR = "lib";
+    CMAKE_INSTALL_MANDIR = "share/man";
+  };
 
   doCheck = true;
 

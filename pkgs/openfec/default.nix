@@ -24,8 +24,11 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
+  cmakeEntries = {
+    DEBUG = false;
+  };
+
   cmakeFlags = [
-    "-DDEBUG:STRING=OFF"
     (lib.cmakeBool "BUILD_STATIC_LIBS" stdenv.hostPlatform.isStatic)
   ];
 

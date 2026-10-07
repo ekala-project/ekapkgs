@@ -21,12 +21,12 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DENABLE_NC=ON"
-    "-DCMAKE_C_FLAGS=-DHAVE_GNU_STACK"
-    "-DTLS_DEFAULT_CA_FILE=${cacert}/etc/ssl/certs/ca-bundle.crt"
-    "-DBUILD_SHARED_LIBS=ON"
-  ];
+  cmakeEntries = {
+    ENABLE_NC = true;
+    CMAKE_C_FLAGS = "-DHAVE_GNU_STACK";
+    TLS_DEFAULT_CA_FILE = "${cacert}/etc/ssl/certs/ca-bundle.crt";
+    BUILD_SHARED_LIBS = true;
+  };
 
   patches = [
     (fetchpatch {

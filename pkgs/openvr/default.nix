@@ -57,10 +57,10 @@ stdenv.mkDerivation (finalAttrs: {
     libGL
   ];
 
-  cmakeFlags = [
-    "-DUSE_SYSTEM_JSONCPP=ON"
-    "-DBUILD_SHARED=1"
-  ];
+  cmakeEntries = {
+    USE_SYSTEM_JSONCPP = true;
+    BUILD_SHARED = true;
+  };
 
   meta = {
     broken = stdenv.hostPlatform.isDarwin;

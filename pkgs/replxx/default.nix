@@ -22,7 +22,13 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [ "-DBUILD_SHARED_LIBS=${if enableStatic then "OFF" else "ON"}" ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = "${if enableStatic then ";
+  };
+
+  cmakeFlags = [
+    OFF" else "ON"}"
+  ];
 
   meta = {
     homepage = "https://github.com/AmokHuginnsson/replxx";

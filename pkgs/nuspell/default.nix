@@ -31,7 +31,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   propagatedBuildInputs = [ icu ];
 
-  cmakeFlags = [ "-DBUILD_DOCS=OFF" ];
+  cmakeEntries = {
+    BUILD_DOCS = false;
+  };
 
   outputs = [
     "out"

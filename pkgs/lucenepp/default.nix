@@ -29,10 +29,10 @@ stdenv.mkDerivation rec {
     zlib
   ];
 
-  cmakeFlags = [
-    (lib.cmakeFeature "CMAKE_INSTALL_LIBDIR" "lib")
-    (lib.cmakeBool "ENABLE_TEST" doCheck)
-  ];
+  cmakeEntries = {
+    CMAKE_INSTALL_LIBDIR = "lib";
+    ENABLE_TEST = doCheck;
+  };
 
   # FIXME: 7 tests fail, https://github.com/luceneplusplus/LucenePlusPlus/issues/212
   doCheck = false;

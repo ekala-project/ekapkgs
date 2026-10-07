@@ -17,7 +17,9 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "0hamm6nvbjdjjd5md4jahzvn5559frigxaiybnjkh59ckxwb1hy4";
   };
 
-  cmakeFlags = [ "-DDOWNLOAD_TEST_DATA=OFF" ];
+  cmakeEntries = {
+    DOWNLOAD_TEST_DATA = false;
+  };
 
   nativeBuildInputs = [
     cmake

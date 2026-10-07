@@ -71,30 +71,29 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
 
-  cmakeFlags = [
-    (lib.cmakeFeature "DCMTK_DICTIONARY_DIR_AUTO" "${dcmtk}/share/dcmtk-${dcmtk.version}")
-    (lib.cmakeFeature "DCMTK_LIBRARIES" "dcmjpls;oflog;ofstd")
-    (lib.cmakeFeature "CMAKE_BUILD_TYPE" "Release")
-
-    (lib.cmakeBool "BUILD_CONNECTIVITY_CHECKS" false)
-    (lib.cmakeBool "UNIT_TESTS_WITH_HTTP_CONNEXIONS" false)
-    (lib.cmakeBool "STANDALONE_BUILD" true)
-    (lib.cmakeBool "USE_SYSTEM_BOOST" true)
-    (lib.cmakeBool "USE_SYSTEM_CIVETWEB" true)
-    (lib.cmakeBool "USE_SYSTEM_DCMTK" true)
-    (lib.cmakeBool "USE_SYSTEM_GOOGLE_TEST" true)
-    (lib.cmakeBool "USE_SYSTEM_JSONCPP" true)
-    (lib.cmakeBool "USE_SYSTEM_LIBICONV" true)
-    (lib.cmakeBool "USE_SYSTEM_LIBJPEG" true)
-    (lib.cmakeBool "USE_SYSTEM_LIBPNG" true)
-    (lib.cmakeBool "USE_SYSTEM_LUA" true)
-    (lib.cmakeBool "USE_SYSTEM_OPENSSL" true)
-    (lib.cmakeBool "USE_SYSTEM_PROTOBUF" true)
-    (lib.cmakeBool "USE_SYSTEM_PUGIXML" true)
-    (lib.cmakeBool "USE_SYSTEM_SQLITE" true)
-    (lib.cmakeBool "USE_SYSTEM_UUID" true)
-    (lib.cmakeBool "USE_SYSTEM_ZLIB" true)
-  ];
+  cmakeEntries = {
+    DCMTK_DICTIONARY_DIR_AUTO = "${dcmtk}/share/dcmtk-${dcmtk.version}";
+    DCMTK_LIBRARIES = "dcmjpls;oflog;ofstd";
+    CMAKE_BUILD_TYPE = "Release";
+    BUILD_CONNECTIVITY_CHECKS = false;
+    UNIT_TESTS_WITH_HTTP_CONNEXIONS = false;
+    STANDALONE_BUILD = true;
+    USE_SYSTEM_BOOST = true;
+    USE_SYSTEM_CIVETWEB = true;
+    USE_SYSTEM_DCMTK = true;
+    USE_SYSTEM_GOOGLE_TEST = true;
+    USE_SYSTEM_JSONCPP = true;
+    USE_SYSTEM_LIBICONV = true;
+    USE_SYSTEM_LIBJPEG = true;
+    USE_SYSTEM_LIBPNG = true;
+    USE_SYSTEM_LUA = true;
+    USE_SYSTEM_OPENSSL = true;
+    USE_SYSTEM_PROTOBUF = true;
+    USE_SYSTEM_PUGIXML = true;
+    USE_SYSTEM_SQLITE = true;
+    USE_SYSTEM_UUID = true;
+    USE_SYSTEM_ZLIB = true;
+  };
 
   env.NIX_CFLAGS_COMPILE = "-Wno-builtin-macro-redefined";
 

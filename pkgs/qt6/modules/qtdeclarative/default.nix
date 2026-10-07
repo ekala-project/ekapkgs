@@ -47,12 +47,12 @@ qtModule {
     })
   ];
 
-  cmakeFlags = [
-    "-DQt6ShaderToolsTools_DIR=${pkgsBuildBuild.qt6.qtshadertools}/lib/cmake/Qt6ShaderTools"
-    "-DPython_EXECUTABLE=${lib.getExe pkgsBuildBuild.python3}"
-  ]
-  # Conditional is required to prevent infinite recursion during a cross build
-  ++ lib.optionals (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) [
+  cmakeEntries = {
+    Qt6ShaderToolsTools_DIR = "${pkgsBuildBuild.qt6.qtshadertools}/lib/cmake/Qt6ShaderTools";
+    Python_EXECUTABLE = "${lib.getExe pkgsBuildBuild.python3}";
+  };
+
+  cmakeFlags = # Conditional is required to prevent infinite recursion during a cross build ++ lib.optionals (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) [
     "-DQt6QmlTools_DIR=${pkgsBuildBuild.qt6.qtdeclarative}/lib/cmake/Qt6QmlTools"
   ];
 }

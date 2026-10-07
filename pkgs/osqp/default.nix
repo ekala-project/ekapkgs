@@ -28,7 +28,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
   propagatedBuildInputs = [ qdldl ];
-  cmakeFlags = [ (lib.cmakeFeature "OSQP_VERSION" finalAttrs.version) ];
+  cmakeEntries = {
+    OSQP_VERSION = finalAttrs.version;
+  };
 
   meta = {
     description = "Quadratic programming solver using operator splitting";

@@ -47,13 +47,18 @@ stdenv.mkDerivation (finalAttrs: {
     inotify-tools
   ];
 
+  cmakeEntries = {
+    ENABLE_DAEMON = true;
+    ENABLE_CLI = true;
+    ENABLE_GTK = "${if enableGTK then ";
+    ENABLE_QT = "${if enableQt then ";
+    ENABLE_TESTS = false;
+    INSTALL_DOC = false;
+  };
+
   cmakeFlags = [
-    "-DENABLE_DAEMON=ON"
-    "-DENABLE_CLI=ON"
-    "-DENABLE_GTK=${if enableGTK then "ON" else "OFF"}"
-    "-DENABLE_QT=${if enableQt then "ON" else "OFF"}"
-    "-DENABLE_TESTS=OFF"
-    "-DINSTALL_DOC=OFF"
+    ON" else "OFF"}"
+    ON" else "OFF"}"
   ];
 
   meta = {

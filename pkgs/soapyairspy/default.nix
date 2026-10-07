@@ -39,7 +39,9 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
-  cmakeFlags = [ "-DSoapySDR_DIR=${soapysdr}/share/cmake/SoapySDR/" ];
+  cmakeEntries = {
+    SoapySDR_DIR = "${soapysdr}/share/cmake/SoapySDR/";
+  };
 
   meta = {
     homepage = "https://github.com/pothosware/SoapyAirspy";

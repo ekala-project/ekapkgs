@@ -23,9 +23,13 @@ stdenv.mkDerivation rec {
     python3
   ];
 
+  cmakeEntries = {
+    FLATBUFFERS_BUILD_TESTS = "${if doCheck then ";
+    FLATBUFFERS_OSX_BUILD_UNIVERSAL = false;
+  };
+
   cmakeFlags = [
-    "-DFLATBUFFERS_BUILD_TESTS=${if doCheck then "ON" else "OFF"}"
-    "-DFLATBUFFERS_OSX_BUILD_UNIVERSAL=OFF"
+    ON" else "OFF"}"
   ];
 
   doCheck = stdenv.buildPlatform.canExecute stdenv.hostPlatform;

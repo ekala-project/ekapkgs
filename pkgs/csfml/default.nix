@@ -31,9 +31,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
   buildInputs = [ sfml ];
-  cmakeFlags = [
-    (lib.cmakeFeature "CMAKE_MODULE_PATH" "${sfml}/share/SFML/cmake/Modules/")
-  ];
+  cmakeEntries = {
+    CMAKE_MODULE_PATH = "${sfml}/share/SFML/cmake/Modules/";
+  };
 
   meta = {
     homepage = "https://www.sfml-dev.org/";

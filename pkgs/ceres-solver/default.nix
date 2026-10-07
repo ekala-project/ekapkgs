@@ -43,8 +43,12 @@ stdenv.mkDerivation (finalAttrs: {
     metis
   ];
 
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = "${if enableStatic then ";
+  };
+
   cmakeFlags = [
-    "-DBUILD_SHARED_LIBS=${if enableStatic then "OFF" else "ON"}"
+    OFF" else "ON"}"
   ];
 
   # The Basel BUILD file conflicts with the cmake build directory on

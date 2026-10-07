@@ -58,11 +58,11 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     makeWrapper
   ];
-  cmakeFlags = [
-    (lib.cmakeBool "CMAKE_VERBOSE_MAKEFILE" true)
-    (lib.cmakeFeature "OpenGL_GL_PREFERENCE" "GLVND")
-    (lib.cmakeFeature "CMAKE_INSTALL_DATAROOTDIR" "${placeholder "out"}/share")
-  ];
+  cmakeEntries = {
+    CMAKE_VERBOSE_MAKEFILE = true;
+    OpenGL_GL_PREFERENCE = "GLVND";
+    CMAKE_INSTALL_DATAROOTDIR = "${placeholder ";
+  };
 
   # This makes sure the default engine (dreamer) will be called from
   # the /nix/store/ as well when starting a new game

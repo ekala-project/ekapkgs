@@ -22,7 +22,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [ "-DTARGET=${withTarget}" ];
+  cmakeEntries = {
+    TARGET = "${withTarget}";
+  };
 
   meta = {
     description = "Basic linear algebra subroutines for embedded optimization";

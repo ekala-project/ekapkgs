@@ -35,9 +35,9 @@ stdenv.mkDerivation (finalAttrs: {
     llvmPackages.openmp
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "USE_CMAPLE" false) # tries to download googletest
-  ];
+  cmakeEntries = {
+    USE_CMAPLE = false;
+  };
 
   meta = {
     homepage = "https://iqtree.github.io/";

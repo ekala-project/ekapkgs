@@ -39,11 +39,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  cmakeFlags = [
-    (lib.cmakeBool "ASSIMP_BUILD_ASSIMP_TOOLS" true)
-    (lib.cmakeBool "ASSIMP_BUILD_TESTS" false)
-    (lib.cmakeBool "ASSIMP_WARNINGS_AS_ERRORS" false)
-  ];
+  cmakeEntries = {
+    ASSIMP_BUILD_ASSIMP_TOOLS = true;
+    ASSIMP_BUILD_TESTS = false;
+    ASSIMP_WARNINGS_AS_ERRORS = false;
+  };
 
   meta = {
     description = "Library to import various 3D model formats";

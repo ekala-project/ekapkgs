@@ -34,11 +34,11 @@ stdenv.mkDerivation (finalAttrs: {
     pulseaudio
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "RTAUDIO_API_ALSA" true)
-    (lib.cmakeBool "RTAUDIO_API_PULSE" true)
-    (lib.cmakeBool "RTAUDIO_API_JACK" false)
-  ];
+  cmakeEntries = {
+    RTAUDIO_API_ALSA = true;
+    RTAUDIO_API_PULSE = true;
+    RTAUDIO_API_JACK = false;
+  };
 
   meta = {
     description = "Set of C++ classes that provide a cross platform API for realtime audio input/output";

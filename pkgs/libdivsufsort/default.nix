@@ -16,10 +16,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-4p+L1bq9SBgWSHXx+WYWAe60V2g1AN+zlJvC+F367Tk=";
   };
 
-  cmakeFlags = [
-    "-DBUILD_DIVSUFSORT64=YES"
-    "-DCMAKE_POLICY_VERSION_MINIMUM=3.10"
-  ];
+  cmakeEntries = {
+    BUILD_DIVSUFSORT64 = true;
+    CMAKE_POLICY_VERSION_MINIMUM = "3.10";
+  };
 
   nativeBuildInputs = [
     cmake

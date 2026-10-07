@@ -27,9 +27,9 @@ stdenv.mkDerivation (finalAttrs: {
     openssl
   ];
 
-  cmakeFlags = [
-    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
-  ];
+  cmakeEntries = {
+    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
+  };
 
   postFixup = ''
     substituteInPlace "$out"/lib/pkgconfig/rtrlib.pc \
