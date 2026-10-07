@@ -90,7 +90,6 @@ stdenv.mkDerivation {
     "out"
   ];
 
-  enableParallelBuilding = true;
 
   buildInputs = [
     dbus

@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     expat
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "WMF library from wvWare";

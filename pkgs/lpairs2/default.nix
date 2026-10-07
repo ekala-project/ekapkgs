@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     SDL2_ttf
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "http://lgames.sourceforge.net/LPairs/";

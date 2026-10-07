@@ -52,7 +52,6 @@ stdenv.mkDerivation rec {
 
   doCheck = true;
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Library providing ability to interpret and import visio diagrams into various applications";

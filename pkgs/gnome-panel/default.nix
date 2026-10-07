@@ -78,7 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-eds"
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

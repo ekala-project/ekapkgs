@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
   doCheck = true;
   checkTarget = "test";
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/rmyorston/pdpmake";

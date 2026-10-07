@@ -63,7 +63,6 @@ stdenv.mkDerivation {
   # g_string_free now returns a value
   env.NIX_CFLAGS_COMPILE = "-Wno-error=unused-result";
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Library that uses DBus to provide objects allowing you to create Model-View-Controller type programs across DBus";

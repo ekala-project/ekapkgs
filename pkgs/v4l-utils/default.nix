@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
     ln -s "$dev/include/libv4l1-videodev.h" "$dev/include/videodev.h"
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "V4L utils and libv4l, provide common image formats regardless of the v4l device";

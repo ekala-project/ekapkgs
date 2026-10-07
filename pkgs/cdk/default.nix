@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     ncurses
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Curses development kit";

@@ -39,7 +39,6 @@ stdenv.mkDerivation rec {
     aspell
   ];
 
-  enableParallelBuilding = true;
 
   configureFlags = [
     "--enable-relocatable"

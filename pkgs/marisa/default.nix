@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
-  enableParallelBuilding = true;
 
   nativeBuildInputs = [
     cmake

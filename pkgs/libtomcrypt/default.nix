@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makefile = "makefile.shared";
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Fairly comprehensive, modular and portable cryptographic toolkit";

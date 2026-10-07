@@ -72,7 +72,6 @@ stdenv.mkDerivation rec {
     DESKTOP
   '';
 
-  enableParallelBuilding = true;
 
   meta = with lib; {
     homepage = "http://www.dosbox.com/";

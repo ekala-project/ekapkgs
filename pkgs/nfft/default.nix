@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
 
-  enableParallelBuilding = true;
 
   buildInputs = lib.optionals stdenv.cc.isClang [ llvmPackages.openmp ];
 

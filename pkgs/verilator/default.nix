@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-ZOwBBbVNP0PaYUvrjdvbWu88fZOZ6IJ8BHAiajcOjP8=";
   };
-  enableParallelBuilding = true;
   buildInputs = [
     perl
     systemc

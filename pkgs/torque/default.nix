@@ -53,7 +53,6 @@ stdenv.mkDerivation {
     zlib
   ];
 
-  enableParallelBuilding = true;
 
   # added to fix build with gcc7
   env.NIX_CFLAGS_COMPILE = "-Wno-error -fpermissive";

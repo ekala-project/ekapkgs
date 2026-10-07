@@ -138,7 +138,6 @@ stdenv.mkDerivation (finalAttrs: {
     "man"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://www.syslog-ng.com";

@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     "CC=${stdenv.cc.targetPrefix}cc"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Reliable, high performance TCP/HTTP load balancer";

@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   '';
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

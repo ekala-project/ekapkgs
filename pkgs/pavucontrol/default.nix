@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.mesonEnable "lynx" false)
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     changelog = "https://freedesktop.org/software/pulseaudio/pavucontrol/#news";

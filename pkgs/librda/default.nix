@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     gtk3
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
 

@@ -90,7 +90,6 @@ stdenv.mkDerivation (finalAttrs: {
   # don't know how and probably won't have the time to find out.
   doCheck = false; # try to re-enable after next version update
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Computer algebra system";

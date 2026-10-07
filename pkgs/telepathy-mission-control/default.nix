@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-  enableParallelBuilding = true;
 
   preFixup = ''
     wrapProgram "$lib/libexec/mission-control-5" \

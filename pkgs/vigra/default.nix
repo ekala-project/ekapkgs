@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-DCMAKE_C_FLAGS=-fPIC"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Novel computer vision C++ library with customizable algorithms and data structures";

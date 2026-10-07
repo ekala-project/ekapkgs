@@ -26,7 +26,6 @@ stdenv.mkDerivation {
     flex
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "http://www.rc0.org.uk/mairix";

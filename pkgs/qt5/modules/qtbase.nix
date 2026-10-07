@@ -178,7 +178,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  enableParallelBuilding = true;
 
   outputs = [
     "bin"

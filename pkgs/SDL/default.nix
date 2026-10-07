@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
       (lib.cmakeBool "SDL12TESTS" finalAttrs.finalPackage.doCheck)
     ];
 
-  enableParallelBuilding = true;
 
   doCheck = !stdenv.hostPlatform.isDarwin;
   checkPhase = ''

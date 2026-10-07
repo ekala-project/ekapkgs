@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     libmicrohttpd
   ];
 
-  enableParallelBuilding = true;
 
   postPatch = ''
     patchShebangs ./bootstrap

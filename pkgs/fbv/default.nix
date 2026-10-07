@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     libpng12
   ];
 
-  enableParallelBuilding = true;
 
   preInstall = ''
     mkdir -p $out/{bin,man/man1}

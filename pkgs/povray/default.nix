@@ -68,7 +68,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-x"
   ];
 
-  enableParallelBuilding = true;
 
   preInstall = ''
     mkdir "$TMP/bin"

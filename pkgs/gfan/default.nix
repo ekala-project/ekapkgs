@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     mpir
     cddlib
   ];
-  enableParallelBuilding = true;
   hardeningDisable = [ "libcxxhardeningfast" ];
 
   doCheck = true;

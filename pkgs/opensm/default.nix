@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     ./autogen.sh
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Infiniband subnet manager";

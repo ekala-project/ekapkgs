@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-liblzma"
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = false;
 

@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
   nativeCheckInputs = [ cppunit ];
   doCheck = false; # needs the net
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://aria2.github.io";

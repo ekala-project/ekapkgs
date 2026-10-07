@@ -41,7 +41,6 @@ stdenv.mkDerivation rec {
     })
   ];
 
-  enableParallelBuilding = true;
 
   configureFlags = [
     "--disable-doc"

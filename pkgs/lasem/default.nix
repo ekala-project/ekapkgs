@@ -46,7 +46,6 @@ stdenv.mkDerivation rec {
     "--disable-introspection"
   ];
 
-  enableParallelBuilding = true;
   doCheck = true;
 
   meta = {

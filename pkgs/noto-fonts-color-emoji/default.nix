@@ -54,7 +54,6 @@ stdenvNoCC.mkDerivation rec {
 
   buildFlags = [ "BYPASS_SEQUENCE_CHECK=True" ];
 
-  enableParallelBuilding = true;
 
   installPhase = ''
     runHook preInstall

@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   sourceRoot = "ntl-${finalAttrs.version}/src";
 
-  enableParallelBuilding = true;
 
   dontAddPrefix = true; # DEF_PREFIX instead
 

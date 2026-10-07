@@ -33,7 +33,6 @@ stdenv.mkDerivation {
     "--enable-osdi"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Next Generation Spice (shared library)";

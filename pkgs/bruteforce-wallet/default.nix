@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     db
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Try to find password of encrypted cryptocurrency wallet";

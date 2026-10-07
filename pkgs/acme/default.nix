@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail "= gcc" "?= gcc"
   '';
 
-  enableParallelBuilding = true;
 
   makeFlags = [ "BINDIR=$(out)/bin" ];
 

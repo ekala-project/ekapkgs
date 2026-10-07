@@ -65,7 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs subprojects
   '';
 
-  enableParallelBuilding = true;
 
   buildPhase =
     let

@@ -29,7 +29,6 @@ let
 
     buildInputs = [ libusb-compat-0_1 ];
 
-    enableParallelBuilding = true;
 
     meta = {
       description = "Provides low-level access to Logitech G11/G15 keyboards and Z10 speakers";
@@ -52,7 +51,6 @@ let
 
     buildInputs = [ libg15 ];
 
-    enableParallelBuilding = true;
 
     meta = {
       description = "Small graphics library optimised for drawing on an LCD";
@@ -96,7 +94,6 @@ stdenv.mkDerivation rec {
   #   multiple definition of `lcdlist_mutex'; utility_funcs.o:g15daemon.h:218: first defined here
   env.NIX_CFLAGS_COMPILE = "-fcommon";
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Daemon that makes it possible to use the Logitech keyboard G-Buttons and draw on various Logitech LCDs";

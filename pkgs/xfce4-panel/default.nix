@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   configureFlags = [ "--enable-maintainer-mode" ];
-  enableParallelBuilding = true;
 
   meta = {
     description = "Panel for the Xfce desktop environment";

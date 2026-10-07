@@ -36,7 +36,6 @@ stdenv.mkDerivation {
     libiconv
   ];
 
-  enableParallelBuilding = true;
 
   meta = with lib; {
     homepage = "https://lib.filezilla-project.org/";

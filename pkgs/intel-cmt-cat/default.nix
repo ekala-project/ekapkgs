@@ -15,7 +15,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-4rpmbQzxLD7FrtIzE+iE4G0sU7Dvz4rWs4MSlJqZcok=";
   };
 
-  enableParallelBuilding = true;
 
   makeFlags = [
     "PREFIX=$(out)"

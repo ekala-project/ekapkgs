@@ -56,7 +56,6 @@ stdenv.mkDerivation rec {
     mv $out/bin/compiler_test.in $out/share/csmith/
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Random generator of C programs";

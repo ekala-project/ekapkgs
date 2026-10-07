@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     libssh
   ];
 
-  enableParallelBuilding = true;
 
   # FAIL: server-client.scm
   doCheck = !stdenv.hostPlatform.isDarwin;

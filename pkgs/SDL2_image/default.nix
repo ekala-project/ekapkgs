@@ -58,7 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "SDL image library";

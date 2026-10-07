@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   dontDisableStatic = true;
 
-  enableParallelBuilding = true;
 
   configurePlatforms = [ "host" ];
   configureFlags = [

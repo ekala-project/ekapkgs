@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   hardeningDisable = [ "all" ];
-  enableParallelBuilding = true;
 
   env.NIX_CFLAGS_COMPILE = "-DHAVE_STRLCAT -DHAVE_STRLCPY";
   installFlags = [ "INSTALL_NONROOT=1" ];

@@ -44,7 +44,6 @@ stdenv.mkDerivation rec {
     gpm
   ];
 
-  enableParallelBuilding = true;
 
   configureFlags = [
     "PERL=${perl}/bin/perl"

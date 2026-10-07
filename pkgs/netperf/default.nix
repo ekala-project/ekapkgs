@@ -45,7 +45,6 @@ stdenv.mkDerivation {
     "--enable-demo"
     "CFLAGS=-D_GNU_SOURCE"
   ];
-  enableParallelBuilding = true;
 
   meta = {
     description = "Benchmark to measure the performance of many different types of networking";

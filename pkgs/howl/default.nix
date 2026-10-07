@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     gtk3
     librsvg
   ];
-  enableParallelBuilding = true;
 
   # Required for the program to properly load its SVG assets
   postInstall = ''

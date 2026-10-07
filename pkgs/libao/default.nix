@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://xiph.org/ao/";

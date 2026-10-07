@@ -17,7 +17,6 @@ stdenv.mkDerivation {
 
   strictDeps = true;
   __structuredAttrs = true;
-  enableParallelBuilding = true;
 
   # Uses oconfigure
   env.prefixKey = "PREFIX=";

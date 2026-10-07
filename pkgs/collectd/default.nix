@@ -76,7 +76,6 @@ stdenv.mkDerivation (finalAttrs: {
     fi
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Daemon which collects system performance statistics periodically";

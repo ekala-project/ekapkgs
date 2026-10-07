@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     "man"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "C-language implementation of Javascript Object Signing and Encryption";

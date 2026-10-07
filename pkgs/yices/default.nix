@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-mcsat"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "High-performance theorem prover and SMT solver";

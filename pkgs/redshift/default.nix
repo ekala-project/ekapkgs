@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   preConfigure = "./bootstrap";
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Screen color temperature manager";

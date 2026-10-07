@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   buildInputs = [ tzdata ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

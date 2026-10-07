@@ -102,7 +102,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   stripDebugList = [ "cgit" ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://git.zx2c4.com/cgit/about/";

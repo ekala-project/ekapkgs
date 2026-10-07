@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     perl
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Mozilla's Universal Charset Detector C/C++ API";

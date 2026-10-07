@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "PREFIX=$(out)" ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ "mac" ];
 
-  enableParallelBuilding = true;
 
   hardeningDisable = [ "format" ];
 

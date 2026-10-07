@@ -71,7 +71,6 @@ stdenv.mkDerivation (finalAttrs: {
     ln -sv mount.ntfs-3g $out/sbin/mount.ntfs
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/tuxera/ntfs-3g";

@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     wayland
   ];
 
-  enableParallelBuilding = true;
 
   # Workaround build failure on -fno-common toolchains like upstream gcc-10.
   env.NIX_CFLAGS_COMPILE = "-fcommon";

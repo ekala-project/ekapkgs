@@ -61,7 +61,6 @@ stdenv.mkDerivation rec {
     gstreamer.plugins-bad
   ];
 
-  enableParallelBuilding = true;
 
   postFixup = ''
     buildPythonPath ${python3Packages.pycairo}

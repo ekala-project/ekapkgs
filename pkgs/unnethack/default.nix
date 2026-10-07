@@ -48,7 +48,6 @@ stdenv.mkDerivation {
 
   makeFlags = [ "GAMEPERM=744" ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     cp -r /tmp/unnethack $out/share/unnethack/profile

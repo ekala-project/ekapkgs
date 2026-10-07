@@ -18,6 +18,10 @@ pins.nix               # Pinned dependencies from flake.lock
 ci/repos-packages.nix  # Unified derivation list for automated updates
 ```
 
+## Package Defaults
+
+- **`enableParallelBuilding`** defaults to `true` — do not set it explicitly unless disabling it (`= false`).
+
 ## Key Differences from corepkgs
 
 - **Packages go in `pkgs/`** — there is no `pkgs-many/` directory in this repo.

@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     linux.pkgs.cpupower
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

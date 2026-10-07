@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-  enableParallelBuilding = true;
 
   # Problem with component size on wayland
   preFixup = ''

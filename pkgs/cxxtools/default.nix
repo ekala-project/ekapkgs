@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     openssl
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "http://www.tntnet.org/cxxtools.html";

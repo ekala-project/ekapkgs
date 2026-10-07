@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
-  enableParallelBuilding = true;
 
   postPatch = ''
     patchShebangs ./tools/cdump/xp/cdump.pl ./po/ui-backport.pl

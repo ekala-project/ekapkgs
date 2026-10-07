@@ -26,7 +26,6 @@ stdenv.mkDerivation rec {
     "INSTALLPREFIX=$(out)"
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

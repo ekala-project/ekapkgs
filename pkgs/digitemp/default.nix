@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
-  enableParallelBuilding = true;
 
   makeFlags = [
     "LOCK=no"

@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Library for import of reflowable e-book formats";

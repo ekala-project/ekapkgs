@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ pkg-config ];
 
-  enableParallelBuilding = true;
 
   configureFlags =
     lib.optional stdenv.hostPlatform.isDarwin "--enable-amd64=no"

@@ -115,7 +115,6 @@ stdenv.mkDerivation (finalAttrs: {
       --set PMIX_PKGDATADIR "''${!outputDev}"/share/pmix
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Process Management Interface for HPC environments";

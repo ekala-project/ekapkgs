@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     "host"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/libmtp/libmtp";

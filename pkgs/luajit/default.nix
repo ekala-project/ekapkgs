@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional stdenv.hostPlatform.isStatic "BUILDMODE=static";
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     ( cd "$out/include"; ln -s luajit-*/* . )

@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-rPiYzG5KvJyKt7b99AImmO6wTYxZPFcf/6Xhz8SrgIo=";
   };
 
-  enableParallelBuilding = true;
 
   nativeBuildInputs = [
     meson

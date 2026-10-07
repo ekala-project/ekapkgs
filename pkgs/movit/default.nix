@@ -53,7 +53,6 @@ stdenv.mkDerivation rec {
     NIX_LDFLAGS = "-framework OpenGL";
   };
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "High-performance, high-quality video filters for the GPU";

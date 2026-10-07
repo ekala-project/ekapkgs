@@ -15,7 +15,6 @@ stdenv.mkDerivation {
 
   strictDeps = true;
   __structuredAttrs = true;
-  enableParallelBuilding = true;
 
   src = fetchFromGitHub {
     owner = "miekg";

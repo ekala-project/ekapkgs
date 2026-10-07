@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [ autoreconfHook ];
   buildInputs = lib.optional stdenv.hostPlatform.isMusl argp-standalone;
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Intel® 64 and IA-32 processor microcode tool";

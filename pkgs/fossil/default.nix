@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional stdenv.hostPlatform.isDarwin libiconv
   ++ lib.optional (!withInternalSqlite) sqlite;
 
-  enableParallelBuilding = true;
 
   doCheck = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
 

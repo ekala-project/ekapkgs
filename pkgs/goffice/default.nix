@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--disable-introspection"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Glib/GTK set of document centric objects and utilities";

@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ autoreconfHook ];
   buildInputs = lib.optionals (lib.meta.availableOn stdenv.hostPlatform systemdLibs) [ systemdLibs ];
-  enableParallelBuilding = true;
 
   drivedb = fetchFromGitHub {
     owner = "smartmontools";

@@ -34,7 +34,6 @@ stdenv.mkDerivation rec {
     "libcryptopp.pc"
   ];
 
-  enableParallelBuilding = true;
   hardeningDisable = [ "fortify" ];
 
   doCheck = true;

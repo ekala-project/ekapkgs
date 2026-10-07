@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "High-quality implementation of the AAC codec from Android";

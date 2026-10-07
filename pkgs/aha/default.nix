@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "PREFIX=$(out)" ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "ANSI HTML Adapter";

@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     sed --in-place '/^READSB_VERSION :=/d' Makefile
   '';
 
-  enableParallelBuilding = true;
   makeFlags = [
     # set something for version, we removed the original value in postPatch
     "READSB_VERSION=${finalAttrs.version}"

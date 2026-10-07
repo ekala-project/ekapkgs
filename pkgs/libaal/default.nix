@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace Makefile --replace ./run-ldconfig true
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "http://www.namesys.com/";

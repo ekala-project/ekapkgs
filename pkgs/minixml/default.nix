@@ -19,7 +19,6 @@ stdenv.mkDerivation rec {
     "--with-archflags=\"-mmacosx-version-min=10.14\""
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Small XML library";

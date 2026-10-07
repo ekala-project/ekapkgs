@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     libstartup_notification
   ];
 
-  enableParallelBuilding = true;
 
   passthru.updateScript = gitUpdater {
     url = "https://git.mate-desktop.org/mate-desktop";

@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [ "--with-motif" ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Sound editor";

@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://think-async.com/Asio";

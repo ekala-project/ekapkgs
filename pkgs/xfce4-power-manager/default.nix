@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--sbindir=\${out}/bin"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Power manager for the Xfce Desktop Environment";

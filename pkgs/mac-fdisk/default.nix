@@ -77,7 +77,6 @@ stdenv.mkDerivation {
     installShellFiles
   ];
 
-  enableParallelBuilding = true;
 
   env.NIX_CFLAGS_COMPILE = "-D_GNU_SOURCE";
 

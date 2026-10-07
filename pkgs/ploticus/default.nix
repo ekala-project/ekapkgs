@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "CC:=$(CC)" ];
 
-  enableParallelBuilding = true;
 
   preInstall = ''
     mkdir -p "$out/bin"

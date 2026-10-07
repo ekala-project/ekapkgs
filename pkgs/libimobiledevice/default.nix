@@ -57,7 +57,6 @@ stdenv.mkDerivation rec {
     "dev"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/libimobiledevice/libimobiledevice";

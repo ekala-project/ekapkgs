@@ -48,7 +48,6 @@ stdenv.mkDerivation rec {
     patchShebangs xdt-gen-visibility
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Extension library for Xfce";

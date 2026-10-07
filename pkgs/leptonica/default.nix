@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = false;
 

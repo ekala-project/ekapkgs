@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
   doCheck = true;
   nativeCheckInputs = [ lzip ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://www.nongnu.org/lzip/lziprecover.html";

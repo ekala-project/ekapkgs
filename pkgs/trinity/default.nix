@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
   # https://salsa.debian.org/debian/trinity/-/merge_requests/2
   env.NIX_CFLAGS_COMPILE = "-fomit-frame-pointer";
 
-  enableParallelBuilding = true;
 
   installFlags = [ "DESTDIR=$(out)" ];
   meta = {

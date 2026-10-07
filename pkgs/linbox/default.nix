@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
   # https://github.com/linbox-team/linbox/issues/304
   hardeningDisable = [ "fortify3" ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "C++ library for exact, high-performance linear algebra";

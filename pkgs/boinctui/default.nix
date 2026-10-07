@@ -31,7 +31,6 @@ stdenv.mkDerivation {
   ];
   separateDebugInfo = stdenv.hostPlatform.isLinux;
 
-  enableParallelBuilding = true;
 
   configureFlags = [ "--without-gnutls" ];
   nativeBuildInputs = [ autoreconfHook ];

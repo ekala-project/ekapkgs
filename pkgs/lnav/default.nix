@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-JVoLTzuA/ulLbBZFtI8ALmttaqrSbajryIu1j8THt3s=";
   };
 
-  enableParallelBuilding = true;
 
   separateDebugInfo = true;
 

@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   configureFlags = [ "--enable-maintainer-mode" ];
-  enableParallelBuilding = true;
 
   meta = {
     description = "Appfinder for the Xfce4 Desktop Environment";

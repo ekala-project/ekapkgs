@@ -59,7 +59,6 @@ stdenv.mkDerivation {
 
   env.SDL_CONFIG = lib.getExe' (lib.getDev sdl12-compat) "sdl-config";
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Isometric 3D RPG similar to game Diablo";

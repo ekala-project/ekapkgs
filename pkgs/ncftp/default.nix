@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ ncurses ];
 
-  enableParallelBuilding = true;
 
   env = {
     NIX_CFLAGS_COMPILE = toString [

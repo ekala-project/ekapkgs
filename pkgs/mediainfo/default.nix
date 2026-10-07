@@ -32,7 +32,6 @@ stdenv.mkDerivation rec {
 
   configureFlags = [ "--with-libmediainfo=${libmediainfo}" ];
 
-  enableParallelBuilding = true;
 
   meta = with lib; {
     description = "Supplies technical and tag information about a video or audio file";

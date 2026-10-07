@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     adwaita-icon-theme
   ];
 
-  enableParallelBuilding = true;
 
   postFixup = ''
     wrapProgram $out/bin/gsmartcontrol \

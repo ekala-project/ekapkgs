@@ -56,7 +56,6 @@ stdenv.mkDerivation {
     patchShebangs src/makeman.pl
   '';
 
-  enableParallelBuilding = true;
   enableParallelInstalling = false;
   strictDeps = true;
 

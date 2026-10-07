@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   hardeningDisable = [ "format" ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     # Disable html help

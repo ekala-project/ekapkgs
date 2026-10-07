@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     ncurses
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Terminal pager similar to 'more' and 'less'";

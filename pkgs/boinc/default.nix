@@ -75,7 +75,6 @@ stdenv.mkDerivation rec {
     ./_autosetup
   '';
 
-  enableParallelBuilding = true;
 
   configureFlags = [
     "--disable-server"

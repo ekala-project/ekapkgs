@@ -43,7 +43,6 @@ stdenv.mkDerivation rec {
     "--disable-ocaml"
   ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     wrapProgram $out/bin/hivexregedit \

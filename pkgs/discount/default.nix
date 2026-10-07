@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--h1-title"
   ];
 
-  enableParallelBuilding = true;
   installTargets = [ "install.everything" ];
 
   doCheck = true;

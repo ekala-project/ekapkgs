@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildFlags = [ "library" ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "HTTP message parser written in C";

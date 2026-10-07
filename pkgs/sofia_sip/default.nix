@@ -82,7 +82,6 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.strings.enableFeature true "expensive-checks")
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
 

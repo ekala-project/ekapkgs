@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [ libmrss ];
 
   makeFlags = [ "prefix=$(out)" ];
-  enableParallelBuilding = true;
 
   env = lib.optionalAttrs stdenv.hostPlatform.isDarwin {
     NIX_LDFLAGS = "-liconv";

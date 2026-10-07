@@ -43,7 +43,6 @@ stdenv.mkDerivation rec {
     "--without-aquaterm"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "http://www.gnuplot.info/";

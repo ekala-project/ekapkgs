@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ zlib ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ llvmPackages.openmp ];
 
-  enableParallelBuilding = true;
 
   makeFlags = lib.optionals stdenv.hostPlatform.isAarch64 [ "CXXFLAGS_SIMD=" ];
 

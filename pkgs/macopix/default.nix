@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     export ac_cv_prog_WINDRES=
   '';
 
-  enableParallelBuilding = true;
 
   env = {
     # Workaround build failure on -fno-common toolchains:

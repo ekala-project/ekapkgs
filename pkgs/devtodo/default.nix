@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     ncurses
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://swapoff.org/devtodo1.html";

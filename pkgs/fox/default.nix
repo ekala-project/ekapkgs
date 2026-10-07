@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-  enableParallelBuilding = true;
 
   hardeningDisable = [ "format" ];
 

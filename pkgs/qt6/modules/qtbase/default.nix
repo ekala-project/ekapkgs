@@ -202,7 +202,6 @@ stdenv.mkDerivation {
 
   strictDeps = true;
 
-  enableParallelBuilding = true;
 
   patches = [
     # look for Qt plugins in directories on PATH

@@ -24,7 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ blas ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Molecular metadynamics library";

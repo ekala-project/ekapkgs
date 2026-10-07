@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     cyrus_sasl
   ];
 
-  enableParallelBuilding = true;
 
   preConfigure = ''
     substituteInPlace configure \

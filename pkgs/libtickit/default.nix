@@ -47,7 +47,6 @@ stdenv.mkDerivation {
     "PREFIX=${placeholder "out"}"
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

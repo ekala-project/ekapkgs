@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     udev
   ];
 
-  enableParallelBuilding = true;
   doInstallCheck = true;
 
   meta = {

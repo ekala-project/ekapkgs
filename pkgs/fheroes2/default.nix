@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     "FHEROES2_DATA=\"${placeholder "out"}/share/fheroes2\""
   ];
 
-  enableParallelBuilding = true;
 
   postBuild = ''
     # Pick guaranteed to be present UTF-8 locale.

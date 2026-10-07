@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     libnetfilter_queue
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     broken = stdenv.hostPlatform.isDarwin;

@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.NIX_CFLAGS_COMPILE = "-D_GNU_SOURCE";
 
-  enableParallelBuilding = true;
 
   installPhase = ''
     runHook preInstall

@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail '$(DESTDIR)/$(DBDIR)' '$(DESTDIR)/$(SHAREDIR)'
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/void-linux/xbps";

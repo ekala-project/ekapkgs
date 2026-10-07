@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ flex ];
 
-  enableParallelBuilding = true;
 
   outputs = [
     "out"

@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     "STATIC_UTILITIES="
   ];
 
-  enableParallelBuilding = true;
 
   postInstall = lib.optionalString stdenv.hostPlatform.isDarwin ''
     install_name_tool -change libfreeaptx.dylib.0 $out/lib/libfreeaptx.dylib.0 $out/bin/freeaptxdec

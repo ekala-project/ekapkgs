@@ -74,7 +74,6 @@ stdenv.mkDerivation rec {
     "--disable-examples"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://dbus-cplusplus.sourceforge.net";

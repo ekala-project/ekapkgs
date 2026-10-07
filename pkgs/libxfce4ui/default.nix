@@ -62,7 +62,6 @@ stdenv.mkDerivation rec {
     "--with-vendor-info=NixOS"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Widgets library for Xfce";

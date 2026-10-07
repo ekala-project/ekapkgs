@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     "BINDIR=$(EXEC_PREFIX)/bin"
   ];
 
-  enableParallelBuilding = true;
   doInstallCheck = true;
 
   meta = {

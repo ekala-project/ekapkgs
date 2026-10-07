@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-cxx11=yes"
   ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

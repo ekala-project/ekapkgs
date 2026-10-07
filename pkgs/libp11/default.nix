@@ -31,7 +31,6 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ openssl ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Small layer on top of PKCS#11 API to make PKCS#11 implementations easier";

@@ -21,7 +21,6 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [ autoreconfHook ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Small Footprint CIM Client Library";

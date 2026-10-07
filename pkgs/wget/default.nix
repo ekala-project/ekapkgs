@@ -103,7 +103,6 @@ stdenv.mkDerivation (finalAttrs: {
     nuke-refs src/version.c
   '';
 
-  enableParallelBuilding = true;
 
   __darwinAllowLocalNetworking = true;
   doCheck = true;

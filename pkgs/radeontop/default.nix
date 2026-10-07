@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
   ];
 
-  enableParallelBuilding = true;
 
   patchPhase = ''
     substituteInPlace getver.sh --replace ver=unknown ver=${finalAttrs.version}

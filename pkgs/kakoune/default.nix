@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     echo "v${finalAttrs.version}" >.version
   '';
 
-  enableParallelBuilding = true;
   preBuild = ''
     appendToVar makeFlags "CXX=$CXX"
   '';

@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     runHook postInstall
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Command line tool to extract main content from a webpage";

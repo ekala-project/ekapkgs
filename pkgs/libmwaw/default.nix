@@ -31,7 +31,6 @@ stdenv.mkDerivation rec {
     librevenge
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Import library for some old mac text documents";

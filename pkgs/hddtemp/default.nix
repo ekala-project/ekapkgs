@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     install -Dm444 ${db} $out/share/hddtemp/hddtemp.db
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Tool for displaying hard disk temperature";

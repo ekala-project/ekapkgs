@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-hCIaOr1bkSKPFfjmBlwzWjNiN7VzgZe3W/QZ7qVhoZQ=";
   };
 
-  enableParallelBuilding = true;
 
   preBuild = lib.optionalString (syslinux != null) ''
     substituteInPlace programs/mkwinpeimg.in \

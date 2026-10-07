@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace 'PATH=".:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$PATH"' ""
   '';
 
-  enableParallelBuilding = true;
 
   doCheck = false; # memory intensive
 

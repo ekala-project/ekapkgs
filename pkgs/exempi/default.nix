@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     boost
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Implementation of XMP (Adobe's Extensible Metadata Platform)";

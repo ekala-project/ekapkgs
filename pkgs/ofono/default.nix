@@ -59,7 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   installFlags = [ "sysconfdir=${placeholder "out"}/etc" ];
 
-  enableParallelBuilding = true;
   enableParallelChecking = false;
 
   doCheck = stdenv.buildPlatform.canExecute stdenv.hostPlatform;

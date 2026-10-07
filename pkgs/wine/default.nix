@@ -215,7 +215,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = false;
 
-  enableParallelBuilding = true;
 
   hardeningDisable = [
     "bindnow"

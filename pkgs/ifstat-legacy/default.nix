@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ autoreconfHook ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     mv $out/bin/ifstat $out/bin/ifstat-legacy

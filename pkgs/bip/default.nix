@@ -46,7 +46,6 @@ stdenv.mkDerivation {
     openssl
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "IRC proxy (bouncer)";

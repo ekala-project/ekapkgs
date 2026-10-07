@@ -97,7 +97,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configurePlatforms = [ ];
 
-  enableParallelBuilding = true;
 
   preConfigure = ''
     export MOZBUILD_STATE_PATH=$TMPDIR/mozbuild

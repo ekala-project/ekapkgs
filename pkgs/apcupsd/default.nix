@@ -64,7 +64,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-cgi-bin=${placeholder "out"}/libexec/cgi-bin"
   ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     for file in "$out"/etc/apcupsd/*; do

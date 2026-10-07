@@ -62,7 +62,6 @@ buildPythonPackage rec {
     EOF
   '';
 
-  enableParallelBuilding = true;
   postUnpack = ''
     export MAKEFLAGS+="''${enableParallelBuilding:+-j$NIX_BUILD_CORES}"
   '';

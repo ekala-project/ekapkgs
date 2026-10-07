@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs ld.hugetlbfs
   '';
 
-  enableParallelBuilding = true;
   makeFlags = [
     "BUILDTYPE=NATIVEONLY"
     "PREFIX=$(out)"

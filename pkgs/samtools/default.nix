@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs test/
   '';
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

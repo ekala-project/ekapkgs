@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "http://www.gltron.org/";

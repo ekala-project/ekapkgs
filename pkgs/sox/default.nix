@@ -59,7 +59,6 @@ stdenv.mkDerivation {
     pulseaudio
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Sample Rate Converter for audio";

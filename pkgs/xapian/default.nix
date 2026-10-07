@@ -29,7 +29,6 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ autoreconfHook ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

@@ -132,7 +132,6 @@ stdenv.mkDerivation (finalAttrs: {
     "sysconfdir=${placeholder "out"}/etc"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Daemon, tools and libraries to access and manipulate disks and storage devices";

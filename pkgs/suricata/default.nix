@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
     hiredis
   ];
 
-  enableParallelBuilding = true;
 
   postPatch = ''
     mkdir -p bpf_stubs_workaround/gnu

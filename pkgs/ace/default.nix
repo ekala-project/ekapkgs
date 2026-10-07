@@ -16,7 +16,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-r+LRiu/u1qMcbrjkSr8ErnemX6zvhgvc5cLWu8AQhww=";
   };
 
-  enableParallelBuilding = true;
 
   nativeBuildInputs = [
     pkg-config

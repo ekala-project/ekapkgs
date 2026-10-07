@@ -126,7 +126,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-std=gnu17"
   ];
 
-  enableParallelBuilding = true;
 
   # copy tools for cross builds
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''

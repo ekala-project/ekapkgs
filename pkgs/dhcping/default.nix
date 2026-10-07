@@ -13,7 +13,6 @@ stdenv.mkDerivation (finalAttrs: {
     url = "https://www.mavetju.org/download/dhcping-${finalAttrs.version}.tar.gz";
   };
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

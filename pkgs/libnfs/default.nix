@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-DENABLE_MULTITHREADING=ON"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "NFS client library";

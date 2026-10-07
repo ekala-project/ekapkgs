@@ -15,7 +15,6 @@ perlPackages.buildPerlPackage rec {
 
   outputs = [ "out" ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

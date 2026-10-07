@@ -70,7 +70,6 @@ stdenv.mkDerivation rec {
   ];
   buildFlags = [ "build" ];
 
-  enableParallelBuilding = true;
 
   nativeInstallCheckInputs = [ ];
   doInstallCheck = true;

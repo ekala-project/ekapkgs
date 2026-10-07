@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     "PREFIX=${placeholder "out"}"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://www.zamaudio.com/?p=976";

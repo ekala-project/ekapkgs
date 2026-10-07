@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     "CC=${stdenv.cc.targetPrefix}cc"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Patched version of dd that includes a number of features useful for computer forensics";

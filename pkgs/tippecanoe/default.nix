@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "PREFIX=$(out)" ];
 
-  enableParallelBuilding = true;
 
   # https://github.com/felt/tippecanoe/issues/148
   doCheck = false;

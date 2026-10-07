@@ -83,7 +83,6 @@ stdenv.mkDerivation (finalAttrs: {
     sed -i '/ExecStart=/a ExecStartPost=${coreutils}/bin/sleep 5' $out/etc/systemd/system/tgtd.service
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "iSCSI Target daemon with RDMA support";

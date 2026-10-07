@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
   # Classic 'incompatible pointer type'
   env.NIX_CFLAGS_COMPILE = "-std=gnu17";
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     install -Dm0444 src/gtk-gnutella.man $out/share/man/man1/gtk-gnutella.1

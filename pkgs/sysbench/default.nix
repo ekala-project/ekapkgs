@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "1sanvl2a52ff4shj62nw395zzgdgywplqvwip74ky8q7s6qjf5qy";
   };
 
-  enableParallelBuilding = true;
 
   configureFlags = [
     "--with-system-luajit"

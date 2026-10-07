@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     rm contrib/config.make-*
   '';
 
-  enableParallelBuilding = true;
 
   installPhase = ''
     make install

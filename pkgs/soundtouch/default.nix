@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   preConfigure = "./bootstrap";
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Program and library for changing the tempo, pitch and playback rate of audio";

@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-Wno-error=${if stdenv.cc.isGNU then "maybe-uninitialized" else "uninitialized"}"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://www.netsurf-browser.org/projects/libcss/";

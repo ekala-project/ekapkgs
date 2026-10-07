@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "DESTDIR:=${placeholder "out"}" ];
 
-  enableParallelBuilding = true;
 
   doCheck = false;
 

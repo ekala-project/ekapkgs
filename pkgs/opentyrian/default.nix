@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     SDL2_net
   ];
 
-  enableParallelBuilding = true;
 
   makeFlags = [ "prefix=${placeholder "out"}" ];
 

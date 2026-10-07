@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     curl
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Ultimate desktop calculator";

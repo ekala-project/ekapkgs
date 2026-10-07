@@ -139,7 +139,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "DESTDIR=$(out)" ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     cp -r $out/$out/* $out

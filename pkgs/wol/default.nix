@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook # for the patch
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Implements Wake On LAN functionality in a small program";

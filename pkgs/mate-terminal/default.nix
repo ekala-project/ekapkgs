@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     vte
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "MATE desktop terminal emulator";

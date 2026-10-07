@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ autoreconfHook ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Linux Kernel Stream Control Transmission Protocol Tools";

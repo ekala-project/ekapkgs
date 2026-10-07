@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   __structuredAttrs = true;
-  enableParallelBuilding = true;
 
   hardeningDisable = lib.optional stdenv.hostPlatform.isi686 "pic";
 

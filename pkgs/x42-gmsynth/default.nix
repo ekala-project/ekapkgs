@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     "PREFIX=$(out)"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     broken = (stdenv.hostPlatform.isLinux && stdenv.hostPlatform.isAarch64);

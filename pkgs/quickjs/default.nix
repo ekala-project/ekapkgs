@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     "AR=${stdenv.cc.targetPrefix}ar"
     "PREFIX=$(out)"
   ];
-  enableParallelBuilding = true;
 
   strictDeps = true;
 

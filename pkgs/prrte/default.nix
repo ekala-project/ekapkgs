@@ -85,7 +85,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-pmix-libdir=${lib.getLib pmix}/lib"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "PMIx Reference Runtime Environment";

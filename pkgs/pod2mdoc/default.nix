@@ -30,7 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     runHook postInstall
   '';
 
-  enableParallelBuilding = true;
   strictDeps = true;
   __structuredAttrs = true;
 

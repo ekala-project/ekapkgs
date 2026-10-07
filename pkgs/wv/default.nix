@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   hardeningDisable = [ "format" ];
 
-  enableParallelBuilding = true;
 
   # autoreconfHook fails hard if these two files do not exist.
   # The extra move is to work around case-insensitive filesystems.

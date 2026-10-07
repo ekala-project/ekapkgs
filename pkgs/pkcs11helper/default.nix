@@ -25,7 +25,6 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ openssl ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Library that simplifies the interaction with PKCS#11 providers";

@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace src/which.sh --replace '$PATH' '$HOST_PATH'
   '';
 
-  enableParallelBuilding = true;
   enableParallelInstalling = false;
 
   postInstall =

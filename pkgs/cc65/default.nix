@@ -17,7 +17,6 @@ gccStdenv.mkDerivation rec {
 
   makeFlags = [ "PREFIX=${placeholder "out"}" ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://cc65.github.io/";

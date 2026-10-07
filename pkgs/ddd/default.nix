@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   makeFlags = [ "EXEEXT=exe" ];
-  enableParallelBuilding = true;
 
   postInstall = ''
     mv $out/bin/dddexe $out/bin/ddd

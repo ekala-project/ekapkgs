@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "http://www.ferzkopp.net/wordpress/2016/01/02/sdl_gfx-sdl2_gfx/";

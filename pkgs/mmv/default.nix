@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  enableParallelBuilding = true;
 
   env = lib.optionalAttrs stdenv.cc.isClang {
     NIX_CFLAGS_COMPILE = toString [

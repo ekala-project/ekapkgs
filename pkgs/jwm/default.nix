@@ -72,7 +72,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   preConfigure = "NOCONFIGURE=1 ./autogen.sh";
 
-  enableParallelBuilding = true;
 
   passthru.updateScript = gitUpdater {
     rev-prefix = "v";

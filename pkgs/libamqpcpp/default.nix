@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   patches = [ ./libamqpcpp-darwin.patch ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Library for communicating with a RabbitMQ server";

@@ -39,7 +39,6 @@ python3.pkgs.buildPythonApplication rec {
     glib
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "MATE Desktop menu editor";

@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-sysfsgpio"
   ];
 
-  enableParallelBuilding = true;
 
   env.NIX_CFLAGS_COMPILE = toString [
     "-Wno-error=cpp"

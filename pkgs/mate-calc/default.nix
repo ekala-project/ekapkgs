@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     mpfr
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Calculator for the MATE desktop";

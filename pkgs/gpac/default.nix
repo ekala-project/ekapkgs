@@ -81,7 +81,6 @@ stdenv.mkDerivation (finalAttrs: {
     ]
   );
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Open Source multimedia framework for research and academic purposes";

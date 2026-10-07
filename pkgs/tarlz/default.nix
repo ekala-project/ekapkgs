@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-fhJ/HhsbYspuNBf94y864EgbpYhvVqhVOiFbGdgcbBk=";
   };
 
-  enableParallelBuilding = true;
   makeFlags = [ "CXX:=$(CXX)" ];
 
   doCheck = false; # system clock issues

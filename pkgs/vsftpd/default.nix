@@ -62,7 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-lseccomp"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Very secure FTP daemon";

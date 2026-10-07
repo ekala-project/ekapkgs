@@ -42,7 +42,6 @@ stdenv.mkDerivation rec {
     "--without-qrypt"
   ];
 
-  enableParallelBuilding = true;
 
   makeFlags = [
     "AR:=$(AR)"

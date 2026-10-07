@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     "STATIC_UTILITIES="
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Audio Processing Technology codec (aptX)";

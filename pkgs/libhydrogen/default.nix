@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ pkg-config ];
-  enableParallelBuilding = true;
 
   makeFlags = [
     "PREFIX=${placeholder "out"}"

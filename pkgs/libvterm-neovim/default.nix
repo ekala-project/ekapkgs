@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     "PREFIX=$(out)"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "VT220/xterm/ECMA-48 terminal emulator library";

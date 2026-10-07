@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   installFlags = [ "DESTDIR=${placeholder "out"}" ];
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     rm -rf $out/etc

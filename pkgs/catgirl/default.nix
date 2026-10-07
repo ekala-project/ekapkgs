@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   strictDeps = true;
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://git.causal.agency/catgirl/about/";

@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   strictDeps = true;
-  enableParallelBuilding = true;
 
   env.NIX_CFLAGS_COMPILE = toString [
     "-fsigned-char"

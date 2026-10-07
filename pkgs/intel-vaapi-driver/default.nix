@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     wayland
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/irql-notlessorequal/intel-vaapi-driver";

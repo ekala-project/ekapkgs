@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  enableParallelBuilding = true;
 
   postPatch = ''
     substituteInPlace auto.def --replace /usr/sbin/sendmail sendmail

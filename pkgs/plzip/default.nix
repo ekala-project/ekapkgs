@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   buildInputs = [ lzlib ];
 
-  enableParallelBuilding = true;
 
   doCheck = true;
 

@@ -89,7 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
     popd
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Simple text adventure interpreter for Unix and Windows";

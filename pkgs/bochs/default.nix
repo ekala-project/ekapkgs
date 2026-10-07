@@ -130,7 +130,6 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.withFeature true "x11")
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://bochs.sourceforge.io/";

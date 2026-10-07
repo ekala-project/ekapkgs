@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     zip
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "http://www.tntnet.org/tntnet.html";

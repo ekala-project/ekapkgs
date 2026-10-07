@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     popd
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://www.scintilla.org/SciTE.html";

@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     libtool
   ];
 
-  enableParallelBuilding = true;
 
   postPatch = ''
     substituteInPlace bootstrap --replace-fail glibtoolize libtoolize

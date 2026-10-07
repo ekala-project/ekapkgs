@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
   configureFlags = [ ] ++ lib.optional withGnuTLS "--with-tls=gnutls";
 
   doCheck = true;
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://git.madhouse-project.org/algernon/riemann-c-client";

@@ -44,7 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     "NSSHARED=${netsurf-buildsystem}/share/netsurf-buildsystem"
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://www.netsurf-browser.org/projects/libdom/";

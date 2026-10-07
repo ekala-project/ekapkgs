@@ -53,7 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     libtool
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/WizardMac/ReadStat";

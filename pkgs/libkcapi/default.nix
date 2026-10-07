@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
-  enableParallelBuilding = true;
 
   configureFlags =
     lib.optional kcapi-test "--enable-kcapi-test"

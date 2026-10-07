@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     "doc"
   ];
 
-  enableParallelBuilding = true;
 
   cmakeFlags = [ (lib.cmakeBool "WANT_GUI" false) ];
 

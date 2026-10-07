@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     xz
   ];
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Network intrusion prevention and detection system (IDS/IPS)";

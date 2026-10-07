@@ -220,7 +220,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   installTargets = [ "install" ] ++ lib.optional x11Support "install-gui";
 
-  enableParallelBuilding = true;
 
   postInstall = lib.optionalString (!fontconfigSupport) ''
     mkdir -p $out/share/mplayer

@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs .
   '';
 
-  enableParallelBuilding = true;
 
   postInstall = ''
     for binary in vsid x128 x64 x64dtv xcbm2 xpet xplus4 xscpu64 xvic; do

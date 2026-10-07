@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-Dtests=disabled"
   ];
 
-  enableParallelBuilding = true;
   meta = {
     homepage = "https://github.com/linux-msm/qdl";
     description = "Tool for flashing images to Qualcomm devices";

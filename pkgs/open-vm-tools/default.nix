@@ -158,7 +158,6 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ optional (!withX) "--without-x";
 
-  enableParallelBuilding = true;
 
   doInstallCheck = true;
 

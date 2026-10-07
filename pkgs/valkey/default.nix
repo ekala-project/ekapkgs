@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals withSystemd [ "USE_SYSTEMD=yes" ]
   ++ lib.optionals tlsSupport [ "BUILD_TLS=yes" ];
 
-  enableParallelBuilding = true;
 
   env.NIX_CFLAGS_COMPILE = toString (lib.optionals stdenv.cc.isClang [ "-std=c11" ]);
 

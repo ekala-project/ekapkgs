@@ -104,7 +104,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (withPgSQL && libpq != null) [ libpq ]
   ++ lib.optionals (withSQLite && sqlite != null) [ sqlite ];
 
-  enableParallelBuilding = true;
 
   postPatch =
     let

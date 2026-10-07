@@ -61,7 +61,6 @@ stdenv.mkDerivation rec {
     patchShebangs ./matrixmixer.lv2/genhead.sh
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     description = "Collection of LV2 plugins by Robin Gareus";

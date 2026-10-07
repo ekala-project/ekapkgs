@@ -235,7 +235,6 @@ stdenv.mkDerivation (finalAttrs: {
         ${freefont_ttf}/share/fonts/truetype
   '';
 
-  enableParallelBuilding = true;
 
   # Most of the libraries are auto-detected so we don't need to set a bunch of
   # "--enable-foo" flags here

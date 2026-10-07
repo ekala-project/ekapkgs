@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://github.com/animetosho/par2cmdline-turbo";

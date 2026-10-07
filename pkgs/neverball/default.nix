@@ -99,7 +99,6 @@ stdenv.mkDerivation (finalAttrs: {
     cp mapc $out/bin
   '';
 
-  enableParallelBuilding = true;
 
   meta = {
     homepage = "https://neverball.org/";

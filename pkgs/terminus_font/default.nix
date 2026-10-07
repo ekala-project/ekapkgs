@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  enableParallelBuilding = true;
 
   postPatch = ''
     substituteInPlace Makefile --replace 'fc-cache' '#fc-cache'

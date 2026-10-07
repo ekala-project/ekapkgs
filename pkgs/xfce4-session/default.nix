@@ -61,7 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-wayland-session-prefix=${placeholder "out"}"
   ];
 
-  enableParallelBuilding = true;
 
   passthru = {
     xinitrc = "${finalAttrs.finalPackage}/etc/xdg/xfce4/xinitrc";
