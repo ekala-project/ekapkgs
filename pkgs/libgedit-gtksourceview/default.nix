@@ -49,10 +49,10 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=false"
-    "-Dgobject_introspection=false"
-  ];
+  mesonEntries = {
+    gtk_doc = false;
+    gobject_introspection = false;
+  };
 
   buildInputs = [
     libgedit-amtk

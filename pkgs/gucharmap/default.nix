@@ -86,11 +86,11 @@ stdenv.mkDerivation (finalAttrs: {
     pcre2
   ];
 
-  mesonFlags = [
-    "-Ducd_path=${ucd}/share/unicode"
-    "-Dvapi=false"
-    "-Dgir=false"
-  ];
+  mesonEntries = {
+    ucd_path = "${ucd}/share/unicode";
+    vapi = false;
+    gir = false;
+  };
 
   doCheck = true;
 

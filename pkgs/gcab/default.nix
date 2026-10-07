@@ -46,10 +46,10 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
-  mesonFlags = [
-    "-Dinstalled_tests=false"
-    "-Ddocs=false"
-  ];
+  mesonEntries = {
+    installed_tests = false;
+    docs = false;
+  };
 
   doCheck = true;
 

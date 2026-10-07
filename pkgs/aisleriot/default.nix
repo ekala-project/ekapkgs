@@ -49,7 +49,9 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs src/lib/meson_compileschemas.py
   '';
 
-  mesonFlags = [ "-Dtheme_kde=false" ];
+  mesonEntries = {
+    theme_kde = false;
+  };
 
   meta = {
     homepage = "https://gitlab.gnome.org/GNOME/aisleriot";

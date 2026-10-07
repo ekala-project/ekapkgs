@@ -50,10 +50,13 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
+  mesonEntries = {
+    prefix-dev = "${placeholder ";
+  };
+
   mesonFlags = [
-    "-Dprefix-dev=${placeholder "dev"}"
-  ]
-  ++ lib.optionals (stdenv.buildPlatform != stdenv.hostPlatform) [
+      dev"}"
+    ] ++ lib.optionals (stdenv.buildPlatform != stdenv.hostPlatform) [
     "-Dwith-docs=true"
     "-Denable-gir=true"
   ];

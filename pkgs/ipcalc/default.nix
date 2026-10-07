@@ -48,11 +48,20 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ geoip ];
 
+  mesonEntries = {
+    use_geoip = "${if withGeo then ";
+  };
+
+  mesonFeatures = {
+    use_maxminddb = false;
+    use_runtime_linking = false;
+  };
+
   mesonFlags = [
-    "-Duse_geoip=${if withGeo then "en" else "dis"}abled"
-    "-Duse_maxminddb=disabled"
-    # runtime linking doesn't work on NixOS anyway
-    "-Duse_runtime_linking=disabled"
+    en"
+    else
+    "dis"
+    }abled"
   ];
 
   doCheck = true;

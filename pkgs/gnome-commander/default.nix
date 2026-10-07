@@ -56,7 +56,9 @@ stdenv.mkDerivation (finalAttrs: {
     samba
   ];
 
-  mesonFlags = [ (lib.mesonEnable "tests" finalAttrs.finalPackage.doCheck) ];
+  mesonFeatures = {
+    tests = finalAttrs.finalPackage.doCheck;
+  };
 
   checkInputs = [ gtest ];
 

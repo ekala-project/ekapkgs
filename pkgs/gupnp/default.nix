@@ -43,11 +43,11 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=false"
-    "-Dintrospection=false"
-    "-Dvapi=false"
-  ];
+  mesonEntries = {
+    gtk_doc = false;
+    introspection = false;
+    vapi = false;
+  };
 
   doCheck = true;
 

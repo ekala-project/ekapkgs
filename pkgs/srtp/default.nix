@@ -42,12 +42,15 @@ stdenv.mkDerivation rec {
        test/rtpw_test_gcm.sh
   '';
 
-  mesonFlags = [
-    "-Dcrypto-library=openssl"
-    "-Dcrypto-library-kdf=disabled"
-    "-Ddoc=disabled"
-    "-Dtests=disabled"
-  ];
+  mesonEntries = {
+    crypto-library = "openssl";
+  };
+
+  mesonFeatures = {
+    crypto-library-kdf = false;
+    doc = false;
+    tests = false;
+  };
 
   meta = {
     homepage = "https://github.com/cisco/libsrtp";

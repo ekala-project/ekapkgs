@@ -32,9 +32,9 @@ stdenv.mkDerivation rec {
     freetype
   ];
 
-  mesonFlags = [
-    "-Dbdj_jar=disabled"
-  ];
+  mesonFeatures = {
+    bdj_jar = false;
+  };
 
   meta = {
     homepage = "http://www.videolan.org/developers/libbluray.html";

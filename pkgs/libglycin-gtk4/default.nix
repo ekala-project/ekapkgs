@@ -62,15 +62,15 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  mesonFlags = [
-    (lib.mesonBool "glycin-loaders" false)
-    (lib.mesonBool "glycin-thumbnailer" false)
-    (lib.mesonBool "libglycin" false)
-    (lib.mesonBool "libglycin-gtk4" true)
-    (lib.mesonBool "introspection" true)
-    (lib.mesonBool "vapi" true)
-    (lib.mesonBool "capi_docs" true)
-  ];
+  mesonEntries = {
+    glycin-loaders = false;
+    glycin-thumbnailer = false;
+    libglycin = false;
+    libglycin-gtk4 = true;
+    introspection = true;
+    vapi = true;
+    capi_docs = true;
+  };
 
   postPatch = ''
     patchShebangs \

@@ -73,9 +73,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeCheckInputs = lib.optionals (xvfb-run != null) [ xvfb-run ] ++ [ dbus ];
 
-  mesonFlags = [
-    "-Ddocumentation=true"
-  ];
+  mesonEntries = {
+    documentation = true;
+  };
 
   doCheck = stdenv.hostPlatform.isLinux && xvfb-run != null;
 

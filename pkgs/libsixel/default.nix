@@ -27,14 +27,14 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-  mesonFlags = [
-    "-Dtests=enabled"
-    "-Dimg2sixel=enabled"
-    "-Dsixel2png=enabled"
-    "-Dgd=disabled"
-    "-Djpeg=disabled"
-    "-Dpng=disabled"
-  ];
+  mesonFeatures = {
+    tests = true;
+    img2sixel = true;
+    sixel2png = true;
+    gd = false;
+    jpeg = false;
+    png = false;
+  };
 
   meta = {
     description = "SIXEL library for console graphics, and converter programs";

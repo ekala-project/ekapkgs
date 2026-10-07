@@ -48,10 +48,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  mesonFlags = [
-    # TODO: https://github.com/NixOS/nixpkgs/issues/36468
-    "-Dc_args=-I${glib.dev}/include/gio-unix-2.0"
-  ];
+  mesonEntries = {
+    c_args = "-I${glib.dev}/include/gio-unix-2.0";
+  };
 
   meta = {
     description = "Wayland native snapshot editing tool, inspired by Snappy on macOS";

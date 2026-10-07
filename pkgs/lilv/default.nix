@@ -39,11 +39,12 @@ stdenv.mkDerivation rec {
 
   propagatedBuildInputs = [ lv2 ];
 
-  mesonFlags = [
-    "-Ddocs=disabled"
-    "-Dtests=disabled"
-  ]
-  ++ lib.optional stdenv.hostPlatform.isLinux (
+  mesonFeatures = {
+    docs = false;
+    tests = false;
+  };
+
+  mesonFlags = lib.optional stdenv.hostPlatform.isLinux (
     lib.mesonOption "default_lv2_path" "~/.lv2:/usr/local/lib/lv2:/usr/lib/lv2:~/.nix-profile/lib/lv2:/run/current-system/sw/lib/lv2"
   );
 

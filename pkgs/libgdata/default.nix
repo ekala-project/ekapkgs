@@ -64,10 +64,10 @@ stdenv.mkDerivation rec {
     json-glib
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=false"
-    "-Dinstalled_tests=false"
-  ];
+  mesonEntries = {
+    gtk_doc = false;
+    installed_tests = false;
+  };
 
   meta = {
     description = "GData API library";

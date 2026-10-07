@@ -64,11 +64,14 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonBuildType = "release";
 
-  mesonFlags = [
-    (lib.mesonEnable "enable-cairo" enableCairo)
-    (lib.mesonOption "png-backend" (if pngSupport then "libpng" else "none"))
-    (lib.mesonOption "svg-backend" (if svgSupport then svgBackend else "none"))
-  ];
+  mesonEntries = {
+    png-backend = (if pngSupport then "libpng" else "none");
+    svg-backend = (if svgSupport then svgBackend else "none");
+  };
+
+  mesonFeatures = {
+    enable-cairo = enableCairo;
+  };
 
   meta = {
     changelog = "https://codeberg.org/dnkl/fuzzel/releases/tag/${finalAttrs.version}";

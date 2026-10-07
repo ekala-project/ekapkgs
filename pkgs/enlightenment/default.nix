@@ -64,9 +64,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonBuildType = "release";
 
-  mesonFlags = [
-    "-D systemdunitdir=lib/systemd/user"
-  ];
+  mesonEntries = {
+    systemdunitdir = "lib/systemd/user";
+  };
 
   passthru.providedSessions = [ "enlightenment" ];
 

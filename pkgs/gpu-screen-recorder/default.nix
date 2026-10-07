@@ -67,13 +67,13 @@ stdenv.mkDerivation (finalAttrs: {
     libxfixes
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "systemd" true)
-    (lib.mesonBool "portal" true)
-    (lib.mesonBool "capabilities" false)
-    (lib.mesonBool "nvidia_suspend_fix" false)
-    (lib.mesonBool "ffmpeg_static" false)
-  ];
+  mesonEntries = {
+    systemd = true;
+    portal = true;
+    capabilities = false;
+    nvidia_suspend_fix = false;
+    ffmpeg_static = false;
+  };
 
   postInstall = ''
     mkdir $out/bin/.wrapped

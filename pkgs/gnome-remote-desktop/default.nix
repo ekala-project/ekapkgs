@@ -76,14 +76,21 @@ stdenv.mkDerivation (finalAttrs: {
     vulkan-loader
   ];
 
+  mesonEntries = {
+    conf_dir = "/etc/gnome-remote-desktop";
+    systemd_user_unit_dir = "${placeholder ";
+    systemd_system_unit_dir = "${placeholder ";
+    systemd_sysusers_dir = "${placeholder ";
+    systemd_tmpfiles_dir = "${placeholder ";
+    tests = false;
+    c_args = "-I${freerdp}/include/winpr3";
+  };
+
   mesonFlags = [
-    "-Dconf_dir=/etc/gnome-remote-desktop"
-    "-Dsystemd_user_unit_dir=${placeholder "out"}/lib/systemd/user"
-    "-Dsystemd_system_unit_dir=${placeholder "out"}/lib/systemd/system"
-    "-Dsystemd_sysusers_dir=${placeholder "out"}/lib/sysusers.d"
-    "-Dsystemd_tmpfiles_dir=${placeholder "out"}/lib/tmpfiles.d"
-    "-Dtests=false"
-    "-Dc_args=-I${freerdp}/include/winpr3"
+    out"}/lib/systemd/user"
+    out"}/lib/systemd/system"
+    out"}/lib/sysusers.d"
+    out"}/lib/tmpfiles.d"
   ];
 
   meta = {

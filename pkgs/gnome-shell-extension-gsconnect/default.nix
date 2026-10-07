@@ -62,16 +62,16 @@ stdenv.mkDerivation (finalAttrs: {
     evolution-data-server-gtk4 # for libebook-contacts typelib
   ];
 
-  mesonFlags = [
-    (lib.mesonOption "gnome_shell_libdir" "${gnome-shell}/lib")
-    (lib.mesonOption "chrome_nmhdir" "${placeholder "out"}/etc/opt/chrome/native-messaging-hosts")
-    (lib.mesonOption "chromium_nmhdir" "${placeholder "out"}/etc/chromium/native-messaging-hosts")
-    (lib.mesonOption "openssl_path" "${openssl}/bin/openssl")
-    (lib.mesonOption "sshadd_path" "${openssh}/bin/ssh-add")
-    (lib.mesonOption "sshkeygen_path" "${openssh}/bin/ssh-keygen")
-    (lib.mesonOption "session_bus_services_dir" "${placeholder "out"}/share/dbus-1/services")
-    (lib.mesonOption "installed_test_prefix" "${placeholder "out"}")
-  ];
+  mesonEntries = {
+    gnome_shell_libdir = "${gnome-shell}/lib";
+    chrome_nmhdir = "${placeholder "out"}/etc/opt/chrome/native-messaging-hosts";
+    chromium_nmhdir = "${placeholder "out"}/etc/chromium/native-messaging-hosts";
+    openssl_path = "${openssl}/bin/openssl";
+    sshadd_path = "${openssh}/bin/ssh-add";
+    sshkeygen_path = "${openssh}/bin/ssh-keygen";
+    session_bus_services_dir = "${placeholder "out"}/share/dbus-1/services";
+    installed_test_prefix = "${placeholder "out"}";
+  };
 
   postPatch = ''
     patchShebangs installed-tests/prepare-tests.sh

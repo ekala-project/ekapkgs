@@ -145,12 +145,12 @@ stdenv.mkDerivation (finalAttrs: {
     expat
   ];
 
-  mesonFlags = [
-    # while we technically support 4.9 and 4.14, the NixOS module will throw an
-    # error when using a kernel that's too old
-    "-D=linux-4-17=true"
-    "-D=system-console-users=gdm,sddm,lightdm"
-  ];
+  # while we technically support 4.9 and 4.14, the NixOS module will throw an
+  # error when using a kernel that's too old
+  mesonEntries = {
+    linux-4-17 = true;
+    system-console-users = "gdm,sddm,lightdm";
+  };
 
   env = {
     PKG_CONFIG_SYSTEMD_SYSTEMDSYSTEMUNITDIR = "${placeholder "out"}/lib/systemd/system";

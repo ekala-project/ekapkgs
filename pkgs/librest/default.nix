@@ -55,13 +55,13 @@ stdenv.mkDerivation rec {
     libxml2
   ];
 
-  mesonFlags = [
-    "-Dexamples=false"
-    "-Dintrospection=false"
-    "-Dgtk_doc=false"
-    "-Dca_certificates=true"
-    "-Dca_certificates_path=/etc/ssl/certs/ca-certificates.crt"
-  ];
+  mesonEntries = {
+    examples = false;
+    introspection = false;
+    gtk_doc = false;
+    ca_certificates = true;
+    ca_certificates_path = "/etc/ssl/certs/ca-certificates.crt";
+  };
 
   postPatch = ''
     substituteInPlace meson.build \

@@ -25,11 +25,11 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  mesonFlags = [
-    "-Dplugins=disabled"
-    "-Dtests=disabled"
-    "-Ddocs=disabled"
-  ];
+  mesonFeatures = {
+    plugins = false;
+    tests = false;
+    docs = false;
+  };
 
   meta = {
     homepage = "https://lv2plug.in";

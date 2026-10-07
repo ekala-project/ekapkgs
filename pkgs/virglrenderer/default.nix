@@ -54,10 +54,10 @@ stdenv.mkDerivation rec {
     ]))
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "video" vaapiSupport)
-    (lib.mesonBool "venus" vulkanSupport)
-  ];
+  mesonEntries = {
+    video = vaapiSupport;
+    venus = vulkanSupport;
+  };
 
   meta = {
     description = "Virtual 3D GPU library that allows a qemu guest to use the host GPU for accelerated 3D rendering";

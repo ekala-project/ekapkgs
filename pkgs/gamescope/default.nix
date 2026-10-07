@@ -104,15 +104,14 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs default_extras_install.sh
   '';
 
-  mesonFlags = [
-    (lib.mesonBool "enable_gamescope" enableExecutable)
-    (lib.mesonBool "enable_gamescope_wsi_layer" enableWsi)
-    (lib.mesonBool "enable_tests" false)
-    (lib.mesonOption "benchmark" "disabled")
-
-    (lib.mesonOption "glm_include_dir" "${lib.getInclude glm}/include")
-    (lib.mesonOption "stb_include_dir" "${lib.getInclude stb}/include/stb")
-  ];
+  mesonEntries = {
+    enable_gamescope = enableExecutable;
+    enable_gamescope_wsi_layer = enableWsi;
+    enable_tests = false;
+    benchmark = "disabled";
+    glm_include_dir = "${lib.getInclude glm}/include";
+    stb_include_dir = "${lib.getInclude stb}/include/stb";
+  };
 
   # don't install vendored vkroots etc
   mesonInstallFlags = [ "--skip-subprojects" ];

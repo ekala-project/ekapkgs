@@ -73,11 +73,11 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
-  mesonFlags = [
-    "-Dwith-usb-ids-path=${hwdata}/share/hwdata/usb.ids"
-    "-Dwith-pci-ids-path=${hwdata}/share/hwdata/pci.ids"
-    "-Denable-gtk-doc=true"
-  ];
+  mesonEntries = {
+    with-usb-ids-path = "${hwdata}/share/hwdata/usb.ids";
+    with-pci-ids-path = "${hwdata}/share/hwdata/pci.ids";
+    enable-gtk-doc = true;
+  };
 
   preCheck = ''
     patchShebangs ../osinfo/check-symfile.pl ../osinfo/check-symsorting.pl

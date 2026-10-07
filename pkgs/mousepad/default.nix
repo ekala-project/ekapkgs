@@ -50,7 +50,9 @@ stdenv.mkDerivation (finalAttrs: {
     polkit
   ];
 
-  mesonFlags = [ "-Dkeyfile-settings=true" ];
+  mesonEntries = {
+    keyfile-settings = true;
+  };
 
   meta = {
     description = "Simple text editor for Xfce";

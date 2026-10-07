@@ -56,9 +56,9 @@ stdenv.mkDerivation (finalAttrs: {
     wayland
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "tests" false)
-  ];
+  mesonEntries = {
+    tests = false;
+  };
 
   meta = {
     description = "VNC server for wlroots based Wayland compositors";

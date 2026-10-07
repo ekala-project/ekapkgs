@@ -85,11 +85,14 @@ stdenv.mkDerivation (finalAttrs: {
     # TODO: webkitgtk (not wired up)
   ];
 
-  mesonFlags = [
-    "-Dibus=disabled"
-    "-Dparental_controls=disabled"
-    "-Dvendor-conf-file=${./vendor.conf}"
-  ];
+  mesonEntries = {
+    vendor-conf-file = "${./vendor.conf}";
+  };
+
+  mesonFeatures = {
+    ibus = false;
+    parental_controls = false;
+  };
 
   meta = {
     description = "Simple, easy, and safe way to prepare a new system";

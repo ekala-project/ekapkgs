@@ -21,10 +21,10 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-IPidlFv1F8TWi/d6d6NZ/bE4QqsSlejSHtp5vitbNc4=";
   };
 
-  mesonFlags = [
-    (lib.mesonOption "systemd_user_unit_dir" "etc/systemd/user")
-    (lib.mesonOption "systemd_system_unit_dir" "etc/systemd/system")
-  ];
+  mesonEntries = {
+    systemd_user_unit_dir = "etc/systemd/user";
+    systemd_system_unit_dir = "etc/systemd/system";
+  };
 
   postPatch = ''
     sed '1i#include <ctime>' -i src/Log.cxx # gcc12

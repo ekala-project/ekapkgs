@@ -46,9 +46,9 @@ stdenv.mkDerivation rec {
     gstreamer.plugins-base
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=true"
-  ];
+  mesonEntries = {
+    gtk_doc = true;
+  };
 
   doCheck = true;
 

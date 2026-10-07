@@ -75,11 +75,12 @@ stdenv.mkDerivation rec {
     gweather-locations
   ];
 
-  mesonFlags = [
-    "-Dzoneinfo_dir=${tzdata}/share/zoneinfo"
-    (lib.mesonBool "introspection" withIntrospection)
-  ]
-  ++ lib.optionals stdenv.hostPlatform.isDarwin [
+  mesonEntries = {
+    zoneinfo_dir = "${tzdata}/share/zoneinfo";
+    introspection = withIntrospection;
+  };
+
+  mesonFlags = lib.optionals stdenv.hostPlatform.isDarwin [
     "-Dc_args=-D_DARWIN_C_SOURCE"
   ];
 

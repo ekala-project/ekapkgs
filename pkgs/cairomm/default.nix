@@ -42,9 +42,9 @@ stdenv.mkDerivation rec {
     libsigcxx
   ];
 
-  mesonFlags = [
-    "-Dbuild-tests=true"
-  ];
+  mesonEntries = {
+    build-tests = true;
+  };
 
   doCheck = !stdenv.hostPlatform.isDarwin;
 

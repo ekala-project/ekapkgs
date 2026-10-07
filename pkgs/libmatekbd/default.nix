@@ -39,9 +39,9 @@ stdenv.mkDerivation (finalAttrs: {
     libxklavier
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "gir" false)
-  ];
+  mesonEntries = {
+    gir = false;
+  };
 
   postInstall = ''
     glib-compile-schemas $out/share/glib-2.0/schemas

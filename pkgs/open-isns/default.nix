@@ -41,9 +41,16 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [ "--enable-shared" ];
 
+  mesonEntries = {
+    systemddir = "${placeholder ";
+  };
+
+  mesonFeatures = {
+    slp = false;
+  };
+
   mesonFlags = [
-    "-Dslp=disabled" # openslp is not maintained and labeled unsafe
-    "-Dsystemddir=${placeholder "out"}/lib/systemd"
+    out"}/lib/systemd"
   ];
 
   meta = {

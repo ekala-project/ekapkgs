@@ -40,10 +40,10 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   # TODO(ekapkgs): re-enable introspection/vapi when gtk3 provides Gtk-3.0.gir
-  mesonFlags = [
-    (lib.mesonBool "introspection" false)
-    (lib.mesonBool "vapi" false)
-  ];
+  mesonEntries = {
+    introspection = false;
+    vapi = false;
+  };
 
   strictDeps = true;
 

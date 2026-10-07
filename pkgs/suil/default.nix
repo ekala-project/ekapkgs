@@ -31,13 +31,13 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  mesonFlags = [
-    (lib.mesonEnable "docs" false)
-    (lib.mesonEnable "gtk2" false)
-    (lib.mesonEnable "gtk3" withGtk3)
-    (lib.mesonEnable "qt5" withQt5)
-    (lib.mesonEnable "x11" withX11)
-  ];
+  mesonFeatures = {
+    docs = false;
+    gtk2 = false;
+    gtk3 = withGtk3;
+    qt5 = withQt5;
+    x11 = withX11;
+  };
 
   buildInputs = [
     lv2

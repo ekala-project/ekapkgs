@@ -23,11 +23,11 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  mesonFlags = [
-    "-Ddocs=disabled"
-    "-Dman_html=disabled"
-    "-Dtests=disabled"
-  ];
+  mesonFeatures = {
+    docs = false;
+    man_html = false;
+    tests = false;
+  };
 
   meta = {
     description = "Lightweight C library for RDF syntax which supports reading and writing Turtle and NTriples";

@@ -59,12 +59,15 @@ stdenv.mkDerivation rec {
     libdecor
   ];
 
-  mesonFlags = [
-    "-Degl=auto"
-    (lib.mesonEnable "libdrm" true)
-    (lib.mesonEnable "osmesa" false)
-    (lib.mesonEnable "wayland" true)
-  ];
+  mesonEntries = {
+    egl = "auto";
+  };
+
+  mesonFeatures = {
+    libdrm = true;
+    osmesa = false;
+    wayland = true;
+  };
 
   meta = {
     inherit (mesa.meta) homepage platforms;

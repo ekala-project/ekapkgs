@@ -205,60 +205,62 @@ stdenv.mkDerivation (finalAttrs: {
   # Valgrind binary is required for running one optional test.
   nativeCheckInputs = lib.optional (lib.meta.availableOn stdenv.hostPlatform valgrind) valgrind;
 
-  mesonFlags = [
-    (lib.mesonEnable "pipewire-alsa" stdenv.hostPlatform.isLinux)
-    (lib.mesonEnable "alsa" stdenv.hostPlatform.isLinux)
-    (lib.mesonEnable "docs" true)
-    (lib.mesonOption "udevrulesdir" "lib/udev/rules.d")
-    (lib.mesonEnable "installed_tests" true)
-    (lib.mesonOption "installed_test_prefix" (placeholder "installedTests"))
-    (lib.mesonOption "libjack-path" "${placeholder "jack"}/lib")
-    (lib.mesonEnable "echo-cancel-webrtc" webrtcAudioProcessingSupport)
-    (lib.mesonEnable "libcamera" (lib.meta.availableOn stdenv.hostPlatform libcamera))
-    (lib.mesonEnable "libffado" ffadoSupport)
-    (lib.mesonEnable "roc" rocSupport)
-    (lib.mesonEnable "libpulse" true)
-    (lib.mesonEnable "avahi" zeroconfSupport)
-    (lib.mesonEnable "gstreamer" true)
-    (lib.mesonEnable "gstreamer-device-provider" true)
-    (lib.mesonOption "logind-provider" (if enableSystemd then "libsystemd" else "libelogind"))
-    (lib.mesonEnable "logind" stdenv.hostPlatform.isLinux)
-    (lib.mesonEnable "selinux" stdenv.hostPlatform.isLinux)
-    (lib.mesonEnable "avb" stdenv.hostPlatform.isLinux)
-    (lib.mesonEnable "v4l2" stdenv.hostPlatform.isLinux)
-    (lib.mesonEnable "pipewire-v4l2" stdenv.hostPlatform.isLinux)
-    (lib.mesonEnable "libsystemd" enableSystemd)
-    (lib.mesonEnable "systemd-system-service" enableSystemd)
-    (lib.mesonEnable "udev" stdenv.hostPlatform.isLinux)
-    (lib.mesonEnable "ffmpeg" true)
-    (lib.mesonEnable "pw-cat-ffmpeg" true)
-    (lib.mesonEnable "bluez5" bluezSupport)
-    (lib.mesonEnable "bluez5-backend-hsp-native" bluezSupport)
-    (lib.mesonEnable "bluez5-backend-hfp-native" bluezSupport)
-    (lib.mesonEnable "bluez5-backend-native-mm" bluezSupport)
-    (lib.mesonEnable "bluez5-backend-ofono" bluezSupport)
-    (lib.mesonEnable "bluez5-backend-hsphfpd" bluezSupport)
-    # source code is not easily obtainable
-    (lib.mesonEnable "bluez5-codec-lc3plus" false)
-    (lib.mesonEnable "bluez5-codec-lc3" bluezSupport)
-    (lib.mesonEnable "bluez5-codec-ldac" (bluezSupport && ldacbtSupport))
-    (lib.mesonEnable "bluez5-codec-ldac-dec" (bluezSupport && ldacbtSupport))
-    (lib.mesonEnable "opus" true)
-    (lib.mesonOption "sysconfdir" "/etc")
-    (lib.mesonEnable "raop" raopSupport)
-    (lib.mesonOption "session-managers" "")
-    (lib.mesonEnable "vulkan" vulkanSupport)
-    (lib.mesonEnable "x11" x11Support)
-    (lib.mesonEnable "x11-xfixes" x11Support)
-    (lib.mesonEnable "libcanberra" x11Support)
-    (lib.mesonEnable "libmysofa" true)
-    (lib.mesonEnable "sdl2" false) # required only to build examples, causes dependency loop
-    (lib.mesonBool "rlimits-install" false) # installs to /etc, we won't use this anyway
-    (lib.mesonEnable "compress-offload" true)
-    (lib.mesonEnable "man" true)
-    (lib.mesonEnable "snap" false) # we don't currently have a working snapd
-    (lib.mesonEnable "onnxruntime" onnxruntimeSupport)
-  ];
+  mesonEntries = {
+    udevrulesdir = "lib/udev/rules.d";
+    installed_test_prefix = (placeholder "installedTests");
+    libjack-path = "${placeholder "jack"}/lib";
+    logind-provider = (if enableSystemd then "libsystemd" else "libelogind");
+    sysconfdir = "/etc";
+    session-managers = "";
+    rlimits-install = false;
+  };
+
+  mesonFeatures = {
+    pipewire-alsa = stdenv.hostPlatform.isLinux;
+    alsa = stdenv.hostPlatform.isLinux;
+    docs = true;
+    installed_tests = true;
+    echo-cancel-webrtc = webrtcAudioProcessingSupport;
+    libcamera = (lib.meta.availableOn stdenv.hostPlatform libcamera);
+    libffado = ffadoSupport;
+    roc = rocSupport;
+    libpulse = true;
+    avahi = zeroconfSupport;
+    gstreamer = true;
+    gstreamer-device-provider = true;
+    logind = stdenv.hostPlatform.isLinux;
+    selinux = stdenv.hostPlatform.isLinux;
+    avb = stdenv.hostPlatform.isLinux;
+    v4l2 = stdenv.hostPlatform.isLinux;
+    pipewire-v4l2 = stdenv.hostPlatform.isLinux;
+    libsystemd = enableSystemd;
+    systemd-system-service = enableSystemd;
+    udev = stdenv.hostPlatform.isLinux;
+    ffmpeg = true;
+    pw-cat-ffmpeg = true;
+    bluez5 = bluezSupport;
+    bluez5-backend-hsp-native = bluezSupport;
+    bluez5-backend-hfp-native = bluezSupport;
+    bluez5-backend-native-mm = bluezSupport;
+    bluez5-backend-ofono = bluezSupport;
+    bluez5-backend-hsphfpd = bluezSupport;
+    bluez5-codec-lc3plus = false;
+    bluez5-codec-lc3 = bluezSupport;
+    bluez5-codec-ldac = (bluezSupport && ldacbtSupport);
+    bluez5-codec-ldac-dec = (bluezSupport && ldacbtSupport);
+    opus = true;
+    raop = raopSupport;
+    vulkan = vulkanSupport;
+    x11 = x11Support;
+    x11-xfixes = x11Support;
+    libcanberra = x11Support;
+    libmysofa = true;
+    sdl2 = false;
+    compress-offload = true;
+    man = true;
+    snap = false;
+    onnxruntime = onnxruntimeSupport;
+  };
 
   # Fontconfig error: Cannot load default config file
   env.FONTCONFIG_FILE = makeFontsConf { fontDirectories = [ ]; };

@@ -43,9 +43,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonBuildType = "release";
 
-  mesonFlags = [
-    (lib.mesonEnable "tests" false)
-  ];
+  mesonFeatures = {
+    tests = false;
+  };
 
   meta = {
     homepage = "https://github.com/WayfireWM/wf-config";

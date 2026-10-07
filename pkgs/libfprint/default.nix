@@ -51,12 +51,17 @@ stdenv.mkDerivation rec {
     openssl
   ];
 
+  mesonEntries = {
+    udev_rules_dir = "${placeholder ";
+    drivers = "all";
+    udev_hwdb_dir = "${placeholder ";
+    introspection = false;
+    doc = false;
+  };
+
   mesonFlags = [
-    "-Dudev_rules_dir=${placeholder "out"}/lib/udev/rules.d"
-    "-Ddrivers=all"
-    "-Dudev_hwdb_dir=${placeholder "out"}/lib/udev/hwdb.d"
-    "-Dintrospection=false"
-    "-Ddoc=false"
+    out"}/lib/udev/rules.d"
+    out"}/lib/udev/hwdb.d"
   ];
 
   doCheck = false;

@@ -74,10 +74,10 @@ stdenv.mkDerivation rec {
 
   env.NIX_CFLAGS_COMPILE = "-fno-stack-protector";
 
-  mesonFlags = [
-    "-Dgstreamer=no"
-    "-Dtests=false"
-  ];
+  mesonEntries = {
+    gstreamer = "no";
+    tests = false;
+  };
 
   postPatch = ''
     patchShebangs build-aux

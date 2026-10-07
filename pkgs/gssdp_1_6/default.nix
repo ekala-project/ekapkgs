@@ -51,12 +51,11 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=true"
-    "-Dsniffer=false"
-    # This packages only has manpages for gssdp-device-sniffer, which we disabled above.
-    "-Dmanpages=false"
-  ];
+  mesonEntries = {
+    gtk_doc = true;
+    sniffer = false;
+    manpages = false;
+  };
 
   doCheck = true;
 

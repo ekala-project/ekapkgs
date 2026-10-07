@@ -29,9 +29,9 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  mesonFlags = [
-    "-Ddoc=false"
-  ];
+  mesonEntries = {
+    doc = false;
+  };
 
   meta = {
     description = "Linux kernel trace event library";

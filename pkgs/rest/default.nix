@@ -46,13 +46,11 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
   ];
 
-  mesonFlags = [
-    "-Dexamples=false"
-
-    # Remove when https://gitlab.gnome.org/GNOME/librest/merge_requests/2 is merged.
-    "-Dca_certificates=true"
-    "-Dca_certificates_path=/etc/ssl/certs/ca-certificates.crt"
-  ];
+  mesonEntries = {
+    examples = false;
+    ca_certificates = true;
+    ca_certificates_path = "/etc/ssl/certs/ca-certificates.crt";
+  };
 
   postFixup = ''
     # Cannot be in postInstall, otherwise _multioutDocs hook in preFixup will move right back.

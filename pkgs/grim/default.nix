@@ -48,7 +48,9 @@ stdenv.mkDerivation (finalAttrs: {
     wayland-protocols
   ];
 
-  mesonFlags = [ (lib.mesonBool "werror" false) ];
+  mesonEntries = {
+    werror = false;
+  };
 
   strictDeps = true;
 

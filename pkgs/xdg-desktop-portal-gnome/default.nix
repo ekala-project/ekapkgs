@@ -45,8 +45,12 @@ stdenv.mkDerivation (finalAttrs: {
     wayland # required by GTK 4
   ];
 
+  mesonEntries = {
+    systemduserunitdir = "${placeholder ";
+  };
+
   mesonFlags = [
-    "-Dsystemduserunitdir=${placeholder "out"}/lib/systemd/user"
+    out"}/lib/systemd/user"
   ];
 
   # TODO: nixpkgs pulls in WebP and JXL pixbuf loaders for gnome-backgrounds

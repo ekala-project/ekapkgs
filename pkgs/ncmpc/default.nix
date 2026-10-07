@@ -43,9 +43,9 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optionals (sphinx != null) [ sphinx ];
 
-  mesonFlags = [
-    (lib.mesonEnable "lirc" false)
-  ];
+  mesonFeatures = {
+    lirc = false;
+  };
 
   outputs = [
     "out"

@@ -92,20 +92,19 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
-  mesonFlags = [
-    "-Degl_device=true"
-    "-Dinstalled_tests=false"
-    "-Dtests=disabled"
-    # For NVIDIA proprietary driver up to 470.
-    # https://src.fedoraproject.org/rpms/mutter/pull-request/49
-    "-Dwayland_eglstream=true"
-    "-Dprofiler=true"
-    "-Dxwayland_path=${lib.getExe xwayland}"
-    # This should be auto detected, but it looks like it manages a false
-    # positive.
-    "-Dxwayland_initfd=disabled"
-    "-Ddocs=true"
-  ];
+  mesonEntries = {
+    egl_device = true;
+    installed_tests = false;
+    wayland_eglstream = true;
+    profiler = true;
+    xwayland_path = "${lib.getExe xwayland}";
+    docs = true;
+  };
+
+  mesonFeatures = {
+    tests = false;
+    xwayland_initfd = false;
+  };
 
   propagatedBuildInputs = [
     # required for pkg-config to detect mutter-mtk

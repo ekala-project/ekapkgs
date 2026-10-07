@@ -73,11 +73,14 @@ stdenv.mkDerivation rec {
     wayland-protocols
   ];
 
-  mesonFlags = [
-    "-Dimdkit=false"
-    "-Ddrun=true"
-    "-Dcheck=disabled"
-  ];
+  mesonEntries = {
+    imdkit = false;
+    drun = true;
+  };
+
+  mesonFeatures = {
+    check = false;
+  };
 
   doCheck = false;
 

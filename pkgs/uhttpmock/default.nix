@@ -54,10 +54,13 @@ stdenv.mkDerivation (finalAttrs: {
     libsoup_3
   ];
 
-  mesonFlags = [
-    "-Dintrospection=false"
-    "-Dvapi=disabled"
-  ];
+  mesonEntries = {
+    introspection = false;
+  };
+
+  mesonFeatures = {
+    vapi = false;
+  };
 
   meta = {
     description = "Project for mocking web service APIs which use HTTP or HTTPS";

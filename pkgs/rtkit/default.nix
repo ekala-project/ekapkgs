@@ -44,13 +44,21 @@ stdenv.mkDerivation {
     systemd
   ];
 
+  mesonEntries = {
+    installed_tests = false;
+    dbus_systemservicedir = "${placeholder ";
+    dbus_interfacedir = "${placeholder ";
+    dbus_rulesdir = "${placeholder ";
+    polkit_actiondir = "${placeholder ";
+    systemd_systemunitdir = "${placeholder ";
+  };
+
   mesonFlags = [
-    "-Dinstalled_tests=false"
-    "-Ddbus_systemservicedir=${placeholder "out"}/share/dbus-1/system-services"
-    "-Ddbus_interfacedir=${placeholder "out"}/share/dbus-1/interfaces"
-    "-Ddbus_rulesdir=${placeholder "out"}/etc/dbus-1/system.d"
-    "-Dpolkit_actiondir=${placeholder "out"}/share/polkit-1/actions"
-    "-Dsystemd_systemunitdir=${placeholder "out"}/etc/systemd/system"
+    out"}/share/dbus-1/system-services"
+    out"}/share/dbus-1/interfaces"
+    out"}/etc/dbus-1/system.d"
+    out"}/share/polkit-1/actions"
+    out"}/etc/systemd/system"
   ];
 
   meta = {

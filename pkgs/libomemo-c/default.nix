@@ -33,9 +33,9 @@ stdenv.mkDerivation (finalAttrs: {
     openssl
     protobufc
   ];
-  mesonFlags = [
-    "-Dtests=false"
-  ];
+  mesonEntries = {
+    tests = false;
+  };
 
   meta = {
     description = "Fork of libsignal-protocol-c adding support for OMEMO XEP-0384 0.5.0+";

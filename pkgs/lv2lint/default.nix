@@ -39,11 +39,11 @@ stdenv.mkDerivation (finalAttrs: {
     libx11
   ];
 
-  mesonFlags = [
-    (lib.mesonEnable "online-tests" true)
-    (lib.mesonEnable "elf-tests" true)
-    (lib.mesonEnable "x11-tests" true)
-  ];
+  mesonFeatures = {
+    online-tests = true;
+    elf-tests = true;
+    x11-tests = true;
+  };
 
   meta = {
     description = "Check whether a given LV2 plugin is up to the specification";

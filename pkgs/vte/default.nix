@@ -100,13 +100,13 @@ stdenv.mkDerivation (finalAttrs: {
     pango
   ];
 
-  mesonFlags = [
-    "-Ddocs=true"
-    (lib.mesonBool "app" withApp)
-    (lib.mesonBool "gtk3" (gtkVersion == "3"))
-    (lib.mesonBool "gtk4" (gtkVersion == "4"))
-    (lib.mesonBool "_systemd" systemdSupport)
-  ];
+  mesonEntries = {
+    docs = true;
+    app = withApp;
+    gtk3 = (gtkVersion == "3");
+    gtk4 = (gtkVersion == "4");
+    _systemd = systemdSupport;
+  };
 
   # error: argument unused during compilation: '-pie' [-Werror,-Wunused-command-line-argument]
   env.NIX_CFLAGS_COMPILE = toString (

@@ -162,15 +162,18 @@ stdenv.mkDerivation (finalAttrs: {
     )
   '';
 
-  mesonFlags = [
-    "-Duse_system_spdlog=enabled"
-    "-Dtests=disabled"
-    (lib.mesonEnable "with_x11" x11Support)
-    (lib.mesonEnable "with_wayland" waylandSupport)
-    (lib.mesonEnable "with_xnvctrl" nvidiaSupport)
-    (lib.mesonBool "mangoapp" mangoappSupport)
-    (lib.mesonBool "mangohudctl" mangohudctlSupport)
-  ];
+  mesonEntries = {
+    mangoapp = mangoappSupport;
+    mangohudctl = mangohudctlSupport;
+  };
+
+  mesonFeatures = {
+    use_system_spdlog = true;
+    tests = false;
+    with_x11 = x11Support;
+    with_wayland = waylandSupport;
+    with_xnvctrl = nvidiaSupport;
+  };
 
   strictDeps = true;
 

@@ -92,11 +92,14 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
+  mesonEntries = {
+    installed_test_prefix = "${placeholder ";
+    skip_gtk_tests = (!finalAttrs.finalPackage.doCheck);
+  };
+
   mesonFlags = [
-    "-Dinstalled_test_prefix=${placeholder "installedTests"}"
-    (lib.mesonBool "skip_gtk_tests" (!finalAttrs.finalPackage.doCheck))
-  ]
-  ++ lib.optionals (!stdenv.hostPlatform.isLinux || stdenv.hostPlatform.isMusl) [
+      installedTests"}"
+    ] ++ lib.optionals (!stdenv.hostPlatform.isLinux || stdenv.hostPlatform.isMusl) [
     "-Dprofiler=disabled"
   ];
 

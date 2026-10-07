@@ -44,11 +44,11 @@ stdenv.mkDerivation rec {
     gtk3
   ];
 
-  mesonFlags = [
-    "-Denable_gtk_doc=false"
-    "-Dwith_introspection=false"
-    "-Dwith_vapi=false"
-  ];
+  mesonEntries = {
+    enable_gtk_doc = false;
+    with_introspection = false;
+    with_vapi = false;
+  };
 
   doCheck = false;
 

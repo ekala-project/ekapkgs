@@ -97,20 +97,23 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals spellcheckSupport [ enchant ]
   ++ lib.optionals avatarScalingSupport [ gdk-pixbuf ];
 
-  mesonFlags = [
-    (lib.mesonBool "tests" false)
-    (lib.mesonEnable "notifications" notifySupport)
-    (lib.mesonEnable "python-plugins" pythonPluginSupport)
-    (lib.mesonEnable "c-plugins" true)
-    (lib.mesonEnable "otr" otrSupport)
-    (lib.mesonEnable "pgp" pgpSupport)
-    (lib.mesonEnable "omemo" omemoSupport)
-    (lib.mesonEnable "omemo-qrcode" omemoSupport)
-    (lib.mesonEnable "icons-and-clipboard" traySupport)
-    (lib.mesonEnable "gdk-pixbuf" avatarScalingSupport)
-    (lib.mesonEnable "xscreensaver" autoAwaySupport)
-    (lib.mesonEnable "spellcheck" spellcheckSupport)
-  ];
+  mesonEntries = {
+    tests = false;
+  };
+
+  mesonFeatures = {
+    notifications = notifySupport;
+    python-plugins = pythonPluginSupport;
+    c-plugins = true;
+    otr = otrSupport;
+    pgp = pgpSupport;
+    omemo = omemoSupport;
+    omemo-qrcode = omemoSupport;
+    icons-and-clipboard = traySupport;
+    gdk-pixbuf = avatarScalingSupport;
+    xscreensaver = autoAwaySupport;
+    spellcheck = spellcheckSupport;
+  };
 
   meta = {
     homepage = "https://profanity-im.github.io";

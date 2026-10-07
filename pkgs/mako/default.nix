@@ -49,10 +49,10 @@ stdenv.mkDerivation (finalAttrs: {
     wayland
   ];
 
-  mesonFlags = [
-    "-Dzsh-completions=true"
-    "-Dsd-bus-provider=libsystemd"
-  ];
+  mesonEntries = {
+    zsh-completions = true;
+    sd-bus-provider = "libsystemd";
+  };
 
   preFixup = ''
     gappsWrapperArgs+=(

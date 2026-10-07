@@ -31,10 +31,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonAutoFeatures = "auto";
 
-  mesonFlags = [
-    "-Dasm=disabled"
-    "-Ddocs=disabled"
-  ];
+  mesonFeatures = {
+    asm = false;
+    docs = false;
+  };
 
   meta = {
     description = "Modern audio compression for the internet";

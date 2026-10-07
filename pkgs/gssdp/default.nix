@@ -44,13 +44,13 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=false"
-    "-Dsniffer=false"
-    "-Dmanpages=false"
-    "-Dintrospection=false"
-    "-Dvapi=false"
-  ];
+  mesonEntries = {
+    gtk_doc = false;
+    sniffer = false;
+    manpages = false;
+    introspection = false;
+    vapi = false;
+  };
 
   doCheck = true;
 

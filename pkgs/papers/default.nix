@@ -92,9 +92,9 @@ stdenv.mkDerivation (finalAttrs: {
     libsecret
   ];
 
-  mesonFlags = [
-    "-Dnautilus=true"
-  ];
+  mesonEntries = {
+    nautilus = true;
+  };
 
   env.CARGO_BUILD_TARGET = stdenv.hostPlatform.rust.rustcTargetSpec;
 

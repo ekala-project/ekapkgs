@@ -44,9 +44,9 @@ stdenv.mkDerivation rec {
     libnl
   ];
 
-  mesonFlags = [
-    "-Dpulseaudio=false"
-  ];
+  mesonEntries = {
+    pulseaudio = false;
+  };
 
   meta = {
     description = "Generates a status line for i3bar, dzen2, xmobar or lemonbar";

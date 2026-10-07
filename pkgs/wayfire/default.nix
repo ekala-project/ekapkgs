@@ -89,13 +89,15 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonBuildType = "release";
 
+  mesonFeatures = {
+    use_system_wlroots = true;
+    use_system_wfconfig = true;
+    xwayland = false;
+    wf-touch:tests = false;
+  };
+
   mesonFlags = [
     "--sysconfdir /etc"
-    "-Duse_system_wlroots=enabled"
-    "-Duse_system_wfconfig=enabled"
-    # TODO: wayfire doesn't pass enableXWayland to its wlroots dep; disable for now
-    (lib.mesonEnable "xwayland" false)
-    (lib.mesonEnable "wf-touch:tests" false)
   ];
 
   passthru.providedSessions = [ "wayfire" ];

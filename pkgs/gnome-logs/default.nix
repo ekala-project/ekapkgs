@@ -55,7 +55,9 @@ stdenv.mkDerivation (finalAttrs: {
     gsettings-desktop-schemas
   ];
 
-  mesonFlags = [ "-Dman=true" ];
+  mesonEntries = {
+    man = true;
+  };
 
   doCheck = true;
 

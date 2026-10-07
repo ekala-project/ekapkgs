@@ -74,13 +74,16 @@ stdenv.mkDerivation rec {
     gsettings-desktop-schemas
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=true"
-    "-Ddesktop_docs=false"
-    "-Dbuild_gtk4=false"
-    "-Dintrospection=false"
-    (lib.mesonEnable "systemd" false)
-  ];
+  mesonEntries = {
+    gtk_doc = true;
+    desktop_docs = false;
+    build_gtk4 = false;
+    introspection = false;
+  };
+
+  mesonFeatures = {
+    systemd = false;
+  };
 
   separateDebugInfo = true;
 

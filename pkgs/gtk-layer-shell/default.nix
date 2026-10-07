@@ -45,12 +45,12 @@ stdenv.mkDerivation (finalAttrs: {
     gtk3
   ];
 
-  mesonFlags = [
-    "-Ddocs=false"
-    "-Dexamples=true"
-    "-Dintrospection=false"
-    "-Dvapi=false"
-  ];
+  mesonEntries = {
+    docs = false;
+    examples = true;
+    introspection = false;
+    vapi = false;
+  };
 
   meta = with lib; {
     description = "Library to create panels and other desktop components for Wayland using the Layer Shell protocol";

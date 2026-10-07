@@ -45,9 +45,9 @@ stdenv.mkDerivation (finalAttrs: {
     gdk-pixbuf
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=false"
-  ];
+  mesonEntries = {
+    gtk_doc = false;
+  };
 
   meta = {
     description = "Library tasked with managing, extracting and handling media art caches";

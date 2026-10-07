@@ -55,10 +55,10 @@ stdenv.mkDerivation (finalAttrs: {
     ))
   ];
 
-  mesonFlags = [
-    "-Dsystemd-unit-dir=./lib/systemd/system/"
-    "-Dtests=false"
-  ];
+  mesonEntries = {
+    systemd-unit-dir = "./lib/systemd/system/";
+    tests = false;
+  };
 
   meta = {
     description = "Configuration library for gaming mice";

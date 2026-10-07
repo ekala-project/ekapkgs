@@ -52,11 +52,15 @@ stdenv.mkDerivation rec {
     zstd
   ];
 
+  mesonEntries = {
+    gtkdoc = false;
+    introspection = true;
+    tests = false;
+  };
+
   mesonFlags = [
-    "--libexecdir=${placeholder "out"}/libexec"
-    "-Dgtkdoc=false"
-    "-Dintrospection=true"
-    "-Dtests=false"
+    "--libexecdir=${placeholder "
+    out"}/libexec"
   ];
 
   doCheck = false;

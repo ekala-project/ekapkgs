@@ -50,9 +50,13 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
+  mesonEntries = {
+    installed_tests = true;
+    installed_test_prefix = "${placeholder ";
+  };
+
   mesonFlags = [
-    "-Dinstalled_tests=true"
-    "-Dinstalled_test_prefix=${placeholder "installedTests"}"
+    installedTests"}"
   ];
 
   postPatch = ''

@@ -47,16 +47,21 @@ stdenv.mkDerivation (finalAttrs: {
     systemd
   ];
 
+  mesonEntries = {
+    install-init-files = true;
+    install-state-dirs = false;
+    specfile = false;
+    tools-multicall = true;
+    tools = false;
+    usernet-config-path = "/etc/lxc/lxc-usernet";
+    distrosysconfdir = "${placeholder ";
+    systemd-unitdir = "${placeholder ";
+    man = false;
+  };
+
   mesonFlags = [
-    "-Dinstall-init-files=true"
-    "-Dinstall-state-dirs=false"
-    "-Dspecfile=false"
-    "-Dtools-multicall=true"
-    "-Dtools=false"
-    "-Dusernet-config-path=/etc/lxc/lxc-usernet"
-    "-Ddistrosysconfdir=${placeholder "out"}/etc/lxc"
-    "-Dsystemd-unitdir=${placeholder "out"}/lib/systemd/system"
-    "-Dman=false"
+    out"}/etc/lxc"
+    out"}/lib/systemd/system"
   ];
 
   postInstall = ''

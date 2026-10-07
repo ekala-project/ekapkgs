@@ -46,10 +46,10 @@ stdenv.mkDerivation rec {
 
   propagatedBuildInputs = [ libarchive ];
 
-  mesonFlags = [
-    "-Denable-test=false"
-    "-Ddisable-introspection=true"
-  ];
+  mesonEntries = {
+    enable-test = false;
+    disable-introspection = true;
+  };
 
   meta = {
     description = "GObject based library for handling and rendering XPS documents";

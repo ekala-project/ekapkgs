@@ -43,9 +43,9 @@ stdenv.mkDerivation (finalAttrs: {
     librsvg
   ];
 
-  mesonFlags = [
-    "-Dlayershell=enabled"
-  ];
+  mesonFeatures = {
+    layershell = true;
+  };
 
   postPatch = ''
     substituteInPlace meson.build \

@@ -46,8 +46,8 @@ stdenv.mkDerivation {
   # Fontconfig error: Cannot load default config file: No such file: (null)
   env.FONTCONFIG_FILE = makeFontsConf { fontDirectories = [ ]; };
 
-  mesonFlags = [
-    (lib.mesonOption "themes" (
+  mesonEntries = {
+    themes = (
       lib.concatStringsSep "," [
         "cinnamon"
         "gnome-shell"
@@ -59,14 +59,11 @@ stdenv.mkDerivation {
         "unity"
         "xfwm"
       ]
-    ))
-
-    (lib.mesonOption "cinnamon_version" cinnamon-menus.version)
-    (lib.mesonOption "gnome_shell_version" gnome-shell.version)
-
-    # You will need to patch gdm to make use of this.
-    (lib.mesonBool "gnome_shell_gresource" true)
-  ];
+    );
+    cinnamon_version = cinnamon-menus.version;
+    gnome_shell_version = gnome-shell.version;
+    gnome_shell_gresource = true;
+  };
 
   meta = {
     description = "Flat theme with transparent elements for GTK 3, GTK 2 and Gnome Shell";

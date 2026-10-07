@@ -62,15 +62,18 @@ stdenv.mkDerivation (finalAttrs: {
     gtk4
   ];
 
-  mesonFlags = [
-    (lib.mesonEnable "backend-gtk3" (variant == "gtk3"))
-    (lib.mesonEnable "backend-gtk4" (variant == "gtk4"))
-    (lib.mesonEnable "backend-qt5" false)
-    (lib.mesonEnable "backend-qt6" false)
-    (lib.mesonBool "vapi" true)
-    (lib.mesonBool "introspection" true)
-    (lib.mesonBool "docs" true)
-  ];
+  mesonEntries = {
+    vapi = true;
+    introspection = true;
+    docs = true;
+  };
+
+  mesonFeatures = {
+    backend-gtk3 = (variant == "gtk3");
+    backend-gtk4 = (variant == "gtk4");
+    backend-qt5 = false;
+    backend-qt6 = false;
+  };
 
   postFixup = ''
     moveToOutput "share/doc" "$devdoc"

@@ -42,9 +42,9 @@ stdenv.mkDerivation rec {
     json-glib
   ];
 
-  mesonFlags = [
-    "-Denable_gtk_doc=true"
-  ];
+  mesonEntries = {
+    enable_gtk_doc = true;
+  };
 
   # Tests fail non-deterministically
   # https://gitlab.gnome.org/GNOME/jsonrpc-glib/issues/2

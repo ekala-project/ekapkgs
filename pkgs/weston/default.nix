@@ -112,23 +112,24 @@ stdenv.mkDerivation (finalAttrs: {
     xwayland
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "backend-pipewire" pipewireSupport)
-    (lib.mesonBool "backend-rdp" (rdpSupport && freerdp != null))
-    (lib.mesonBool "backend-vnc" vncSupport)
-    (lib.mesonBool "color-management-lcms" lcmsSupport)
-    (lib.mesonBool "demo-clients" demoSupport)
-    (lib.mesonBool "image-jpeg" jpegSupport)
-    (lib.mesonBool "image-webp" webpSupport)
-    (lib.mesonBool "deprecated-pipewire" pipewireSupport)
-    (lib.mesonBool "deprecated-remoting" remotingSupport)
-    (lib.mesonBool "renderer-vulkan" vulkanSupport)
-    (lib.mesonOption "simple-clients" "")
-    (lib.mesonBool "shell-lua" (luaSupport && lua.v5_4_compat != null))
-    (lib.mesonBool "test-junit-xml" false)
-    (lib.mesonBool "xwayland" xwaylandSupport)
-  ]
-  ++ lib.optionals (xwaylandSupport && xwayland != null) [
+  mesonEntries = {
+    backend-pipewire = pipewireSupport;
+    backend-rdp = (rdpSupport && freerdp != null);
+    backend-vnc = vncSupport;
+    color-management-lcms = lcmsSupport;
+    demo-clients = demoSupport;
+    image-jpeg = jpegSupport;
+    image-webp = webpSupport;
+    deprecated-pipewire = pipewireSupport;
+    deprecated-remoting = remotingSupport;
+    renderer-vulkan = vulkanSupport;
+    simple-clients = "";
+    shell-lua = (luaSupport && lua.v5_4_compat != null);
+    test-junit-xml = false;
+    xwayland = xwaylandSupport;
+  };
+
+  mesonFlags = lib.optionals (xwaylandSupport && xwayland != null) [
     (lib.mesonOption "xwayland-path" (lib.getExe xwayland))
   ];
 

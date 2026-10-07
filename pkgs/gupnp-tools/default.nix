@@ -41,10 +41,9 @@ stdenv.mkDerivation (finalAttrs: {
     gtksourceview4
   ];
 
-  mesonFlags = [
-    # Work around https://gitlab.gnome.org/GNOME/gupnp-tools/-/issues/29
-    "-Dc_args=-Wno-error=deprecated-declarations"
-  ];
+  mesonEntries = {
+    c_args = "-Wno-error=deprecated-declarations";
+  };
 
   meta = {
     description = "Set of utilities and demos to work with UPnP";

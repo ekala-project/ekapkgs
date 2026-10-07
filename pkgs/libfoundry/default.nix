@@ -98,10 +98,10 @@ stdenv.mkDerivation (finalAttrs: {
     libpeas2
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "docs" true)
-    (lib.mesonBool "gtk" withGtk)
-  ];
+  mesonEntries = {
+    docs = true;
+    gtk = withGtk;
+  };
 
   postFixup = ''
     moveToOutput "share/doc" "$devdoc"

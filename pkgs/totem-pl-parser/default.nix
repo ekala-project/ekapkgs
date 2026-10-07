@@ -44,9 +44,9 @@ stdenv.mkDerivation rec {
     glib
   ];
 
-  mesonFlags = [
-    "-Dintrospection=false"
-  ];
+  mesonEntries = {
+    introspection = false;
+  };
 
   meta = {
     homepage = "https://gitlab.gnome.org/GNOME/totem-pl-parser";

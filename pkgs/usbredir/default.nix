@@ -36,11 +36,11 @@ stdenv.mkDerivation (finalAttrs: {
     libusb1
   ];
 
-  mesonFlags = [
-    "-Dgit_werror=disabled"
-    "-Dtools=enabled"
-    "-Dfuzzing=disabled"
-  ];
+  mesonFeatures = {
+    git_werror = false;
+    tools = true;
+    fuzzing = false;
+  };
 
   outputs = [
     "out"

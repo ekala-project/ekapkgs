@@ -25,11 +25,11 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  mesonFlags = [
-    "-Dbenchmarks=disabled"
-    "-Ddocs=disabled"
-    "-Dtests=disabled"
-  ];
+  mesonFeatures = {
+    benchmarks = false;
+    docs = false;
+    tests = false;
+  };
 
   meta = {
     description = "Lightweight C99 portability and data structure library";

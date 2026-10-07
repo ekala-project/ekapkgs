@@ -104,19 +104,22 @@ stdenv.mkDerivation (finalAttrs: {
     popd
   '';
 
-  mesonFlags = [
-    (lib.mesonOption "default_library" "shared")
-    (lib.mesonOption "sysconfdir" "/etc")
-    (lib.mesonBool "libmpv" true)
-    (lib.mesonEnable "manpage-build" true)
-    (lib.mesonEnable "cdda" false)
-    (lib.mesonEnable "dvbin" dvbinSupport)
-    (lib.mesonEnable "dvdnav" dvdnavSupport)
-    (lib.mesonEnable "openal" openalSupport)
-    (lib.mesonEnable "sdl2-audio" sdl2Support)
-    (lib.mesonEnable "sdl2-gamepad" sdl2Support)
-    (lib.mesonEnable "sdl2-video" sdl2Support)
-  ];
+  mesonEntries = {
+    default_library = "shared";
+    sysconfdir = "/etc";
+    libmpv = true;
+  };
+
+  mesonFeatures = {
+    manpage-build = true;
+    cdda = false;
+    dvbin = dvbinSupport;
+    dvdnav = dvdnavSupport;
+    openal = openalSupport;
+    sdl2-audio = sdl2Support;
+    sdl2-gamepad = sdl2Support;
+    sdl2-video = sdl2Support;
+  };
 
   mesonAutoFeatures = "auto";
 

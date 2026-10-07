@@ -47,14 +47,17 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  mesonFlags = [
-    (lib.mesonBool "gtk_doc" false)
-    (lib.mesonEnable "glade_catalog" false)
-    (lib.mesonEnable "introspection" false)
-    (lib.mesonBool "vapi" false)
-    (lib.mesonBool "tests" false)
-    (lib.mesonBool "examples" false)
-  ];
+  mesonEntries = {
+    gtk_doc = false;
+    vapi = false;
+    tests = false;
+    examples = false;
+  };
+
+  mesonFeatures = {
+    glade_catalog = false;
+    introspection = false;
+  };
 
   doCheck = false;
 

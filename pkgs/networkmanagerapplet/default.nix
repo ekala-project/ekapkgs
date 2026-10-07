@@ -66,10 +66,10 @@ stdenv.mkDerivation rec {
     adwaita-icon-theme
   ];
 
-  mesonFlags = [
-    "-Dselinux=false"
-    "-Dappindicator=yes"
-  ];
+  mesonEntries = {
+    selinux = false;
+    appindicator = "yes";
+  };
 
   postPatch = ''
     chmod +x meson_post_install.py

@@ -53,10 +53,11 @@ stdenv.mkDerivation (finalAttrs: {
     desktop-file-utils # for validate-desktop-file
   ];
 
-  mesonFlags = [
-    "-Ddocumentation=true"
-  ]
-  ++ lib.optionals (!finalAttrs.finalPackage.doCheck) [
+  mesonEntries = {
+    documentation = true;
+  };
+
+  mesonFlags = lib.optionals (!finalAttrs.finalPackage.doCheck) [
     "-Dtests=false"
   ];
 

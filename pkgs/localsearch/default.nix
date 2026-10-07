@@ -103,9 +103,9 @@ stdenv.mkDerivation (finalAttrs: {
     upower
   ];
 
-  mesonFlags = [
-    "-Dfunctional_tests=false"
-  ];
+  mesonEntries = {
+    functional_tests = false;
+  };
 
   postInstall = ''
     glib-compile-schemas "$out/share/glib-2.0/schemas"

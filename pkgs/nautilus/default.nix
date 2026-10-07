@@ -102,10 +102,10 @@ stdenv.mkDerivation (finalAttrs: {
     gtk4
   ];
 
-  mesonFlags = [
-    "-Ddocs=false"
-    "-Dtests=none"
-  ];
+  mesonEntries = {
+    docs = false;
+    tests = "none";
+  };
 
   preFixup = ''
     gappsWrapperArgs+=(

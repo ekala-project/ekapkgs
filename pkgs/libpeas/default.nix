@@ -50,11 +50,11 @@ stdenv.mkDerivation rec {
     gobject-introspection
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=false"
-    "-Dintrospection=false"
-    "-Dpython3=false"
-  ];
+  mesonEntries = {
+    gtk_doc = false;
+    introspection = false;
+    python3 = false;
+  };
 
   meta = {
     description = "GObject-based plugins engine";

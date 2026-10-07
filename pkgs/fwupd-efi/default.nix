@@ -40,17 +40,20 @@ stdenv.mkDerivation (finalAttrs: {
       efi/generate_sbat.py
   '';
 
-  mesonFlags = [
-    "-Defi-includedir=${gnu-efi}/include/efi"
-    "-Defi-libdir=${gnu-efi}/lib"
-    "-Defi-ldsdir=${gnu-efi}/lib"
-    "-Defi_sbat_distro_id=nixos"
-    "-Defi_sbat_distro_summary=NixOS"
-    "-Defi_sbat_distro_pkgname=${finalAttrs.pname}"
-    "-Defi_sbat_distro_version=${finalAttrs.version}"
-    "-Defi_sbat_distro_url=https://search.nixos.org/packages?channel=unstable&show=fwupd-efi&from=0&size=50&sort=relevance&query=fwupd-efi"
-    "-Dgenpeimg=disabled"
-  ];
+  mesonEntries = {
+    efi-includedir = "${gnu-efi}/include/efi";
+    efi-libdir = "${gnu-efi}/lib";
+    efi-ldsdir = "${gnu-efi}/lib";
+    efi_sbat_distro_id = "nixos";
+    efi_sbat_distro_summary = "NixOS";
+    efi_sbat_distro_pkgname = "${finalAttrs.pname}";
+    efi_sbat_distro_version = "${finalAttrs.version}";
+    efi_sbat_distro_url = "https://search.nixos.org/packages?channel=unstable&show=fwupd-efi&from=0&size=50&sort=relevance&query=fwupd-efi";
+  };
+
+  mesonFeatures = {
+    genpeimg = false;
+  };
 
   meta = {
     homepage = "https://fwupd.org/";

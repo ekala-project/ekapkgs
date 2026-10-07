@@ -38,10 +38,10 @@ stdenv.mkDerivation (finalAttrs: {
     lv2
   ];
 
-  mesonFlags = [
-    "-Dtests=disabled"
-    "-Djni=disabled"
-  ];
+  mesonFeatures = {
+    tests = false;
+    jni = false;
+  };
 
   meta = {
     description = "High quality software library for audio time-stretching and pitch-shifting";

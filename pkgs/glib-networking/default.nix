@@ -37,12 +37,15 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonBuildType = "release";
 
-  mesonFlags = [
-    "-Dlibproxy=disabled"
-    "-Dgnome_proxy=disabled"
-    "-Denvironment_proxy=enabled"
-    "-Dinstalled_tests=false"
-  ];
+  mesonEntries = {
+    installed_tests = false;
+  };
+
+  mesonFeatures = {
+    libproxy = false;
+    gnome_proxy = false;
+    environment_proxy = true;
+  };
 
   doCheck = false;
 

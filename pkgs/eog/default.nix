@@ -75,9 +75,9 @@ stdenv.mkDerivation (finalAttrs: {
     shared-mime-info
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=true"
-  ];
+  mesonEntries = {
+    gtk_doc = true;
+  };
 
   preFixup = ''
     gappsWrapperArgs+=(

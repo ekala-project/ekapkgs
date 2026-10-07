@@ -51,10 +51,10 @@ stdenv.mkDerivation (finalAttrs: {
     libssh2
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=true"
-    "-Dpython=false"
-  ];
+  mesonEntries = {
+    gtk_doc = true;
+    python = false;
+  };
 
   postPatch = ''
     chmod +x meson_python_compile.py

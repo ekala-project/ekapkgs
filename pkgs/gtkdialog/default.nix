@@ -39,7 +39,9 @@ stdenv.mkDerivation (finalAttrs: {
     vte
   ];
 
-  mesonFlags = [ (lib.mesonBool "docs" true) ];
+  mesonEntries = {
+    docs = true;
+  };
 
   # make it a little bit easier to run examples
   postInstall = ''

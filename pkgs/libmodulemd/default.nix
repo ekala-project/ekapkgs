@@ -52,9 +52,9 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
-  mesonFlags = [
-    "-Dwith_py3=false"
-  ];
+  mesonEntries = {
+    with_py3 = false;
+  };
 
   postPatch = ''
     substituteInPlace meson.build --replace-fail \

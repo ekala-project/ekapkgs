@@ -47,10 +47,10 @@ stdenv.mkDerivation (finalAttrs: {
     gtk3
   ];
 
-  mesonFlags = [
-    "-Ddocs=disabled"
-    (lib.mesonEnable "tests" false)
-  ];
+  mesonFeatures = {
+    docs = false;
+    tests = false;
+  };
 
   doCheck = false;
 

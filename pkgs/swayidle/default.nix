@@ -41,9 +41,19 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optionals (systemdSupport && systemdLibs != null) [ systemdLibs ];
 
+  mesonEntries = {
+    logind = "${if systemdSupport then ";
+  };
+
+  mesonFeatures = {
+    man-pages = true;
+  };
+
   mesonFlags = [
-    "-Dman-pages=enabled"
-    "-Dlogind=${if systemdSupport then "enabled" else "disabled"}"
+    enabled"
+    else
+    "disabled"
+    }"
   ];
 
   postPatch = ''

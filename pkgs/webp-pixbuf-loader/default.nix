@@ -39,8 +39,12 @@ stdenv.mkDerivation (finalAttrs: {
     libwebp
   ];
 
+  mesonEntries = {
+    gdk_pixbuf_moduledir = "${placeholder ";
+  };
+
   mesonFlags = [
-    "-Dgdk_pixbuf_moduledir=${placeholder "out"}/${moduleDir}"
+    out"}/${moduleDir}"
   ];
 
   postPatch = ''

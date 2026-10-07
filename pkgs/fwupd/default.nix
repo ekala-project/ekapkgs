@@ -154,24 +154,30 @@ stdenv.mkDerivation (finalAttrs: {
     xz
   ];
 
+  mesonEntries = {
+    systemd_root_prefix = "${placeholder "out"}";
+    installed_test_prefix = "${placeholder "installedTests"}";
+    sysconfdir_install = "${placeholder "out"}/etc";
+    efi_os_dir = "nixos";
+    efi_app_location = "${fwupd-efi}/libexec/fwupd/efi";
+    vendor_metadata = true;
+    plugin_uefi_capsule_splash = false;
+    vendor_ids_dir = "${hwdata}/share/hwdata";
+  };
+
+  mesonFeatures = {
+    supported_build = true;
+    hsi = isx86;
+    umockdev_tests = false;
+    plugin_modem_manager = false;
+  };
+
   mesonFlags = [
-    (lib.mesonEnable "supported_build" true)
-    (lib.mesonOption "systemd_root_prefix" "${placeholder "out"}")
-    (lib.mesonOption "installed_test_prefix" "${placeholder "installedTests"}")
-    "--localstatedir=/var"
-    "--sysconfdir=/etc"
-    (lib.mesonOption "sysconfdir_install" "${placeholder "out"}/etc")
-    (lib.mesonOption "efi_os_dir" "nixos")
-    (lib.mesonOption "efi_app_location" "${fwupd-efi}/libexec/fwupd/efi")
-    (lib.mesonEnable "hsi" isx86)
-    (lib.mesonBool "vendor_metadata" true)
-    (lib.mesonBool "plugin_uefi_capsule_splash" false)
-    (lib.mesonOption "vendor_ids_dir" "${hwdata}/share/hwdata")
-    (lib.mesonEnable "umockdev_tests" false)
-    (lib.mesonEnable "plugin_modem_manager" false)
-    "--libexecdir=${placeholder "out"}/libexec"
-  ]
-  ++ lib.optionals (!enablePassim) [
+      "--localstatedir=/var"
+      "--sysconfdir=/etc"
+      "--libexecdir=${placeholder "
+      out"}/libexec"
+    ] ++ lib.optionals (!enablePassim) [
     (lib.mesonEnable "passim" false)
   ];
 

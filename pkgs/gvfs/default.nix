@@ -96,14 +96,19 @@ stdenv.mkDerivation (finalAttrs: {
     libcdio-paranoia
   ]);
 
+  mesonEntries = {
+    systemduserunitdir = "${placeholder ";
+    tmpfilesdir = "no";
+    udisks2 = false;
+    gcr = false;
+    goa = false;
+    keyring = false;
+    onedrive = false;
+  };
+
   mesonFlags = [
-    "-Dsystemduserunitdir=${placeholder "out"}/lib/systemd/user"
-    "-Dtmpfilesdir=no"
-  ]
-  ++ [
-    "-Dudisks2=false"
-  ]
-  ++ lib.optionals (!udevSupport) [
+      out"}/lib/systemd/user"
+    ] ++ lib.optionals (!udevSupport) [
     "-Dgudev=false"
     "-Dfuse=false"
     "-Dcdda=false"
@@ -113,18 +118,9 @@ stdenv.mkDerivation (finalAttrs: {
     "-Dgphoto2=false"
     "-Dlibusb=false"
     "-Dlogind=false"
-  ]
-  ++ [
-    # Always disable GNOME-specific features (no gtk4/libadwaita)
-    "-Dgcr=false"
-    "-Dgoa=false"
-    "-Dkeyring=false"
-    "-Donedrive=false"
-  ]
-  ++ lib.optionals (avahi == null) [
+  ] ++ lib.optionals (avahi == null) [
     "-Ddnssd=false"
-  ]
-  ++ lib.optionals (samba == null) [
+  ] ++ lib.optionals (samba == null) [
     "-Dsmb=false"
   ];
 

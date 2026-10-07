@@ -56,17 +56,20 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonBuildType = "release";
 
-  mesonFlags = [
-    "-Dtls_check=false"
-    "-Dgssapi=disabled"
-    "-Dntlm=disabled"
-    "-Dautobahn=disabled"
-    "-Dpkcs11_tests=disabled"
-    (lib.mesonEnable "docs" false)
-    (lib.mesonEnable "introspection" false)
-    (lib.mesonEnable "sysprof" false)
-    (lib.mesonEnable "vapi" false)
-  ];
+  mesonEntries = {
+    tls_check = false;
+  };
+
+  mesonFeatures = {
+    gssapi = false;
+    ntlm = false;
+    autobahn = false;
+    pkcs11_tests = false;
+    docs = false;
+    introspection = false;
+    sysprof = false;
+    vapi = false;
+  };
 
   env.PKG_CONFIG_PATH = "${nghttp2.dev}/lib/pkgconfig";
 

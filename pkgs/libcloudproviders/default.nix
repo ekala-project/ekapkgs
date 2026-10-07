@@ -30,9 +30,9 @@ stdenv.mkDerivation rec {
     "devdoc"
   ];
 
-  mesonFlags = [
-    "-Denable-gtk-doc=true"
-  ];
+  mesonEntries = {
+    enable-gtk-doc = true;
+  };
 
   strictDeps = true;
   nativeBuildInputs = [

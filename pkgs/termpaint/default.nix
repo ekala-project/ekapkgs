@@ -28,12 +28,12 @@ stdenv.mkDerivation (finalAttrs: {
     python3
   ];
 
-  mesonFlags = [
-    "-Dttyrescue-fexec-blob=false"
-    "-Dtools-path=libexec/"
-    "-Dttyrescue-path=libexec/"
-    "-Dttyrescue-install=true"
-  ];
+  mesonEntries = {
+    ttyrescue-fexec-blob = false;
+    tools-path = "libexec/";
+    ttyrescue-path = "libexec/";
+    ttyrescue-install = true;
+  };
 
   doCheck = true;
 

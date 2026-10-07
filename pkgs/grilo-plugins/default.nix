@@ -97,8 +97,6 @@ stdenv.mkDerivation rec {
     gstreamer
   ];
 
-  mesonFlags = [
-  ];
 
   meta = {
     description = "Collection of plugins for the Grilo framework";

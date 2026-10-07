@@ -98,12 +98,16 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-2JTs/hj6t9wEZKoUpcLDFulbdU/grDlQkuEAE7uayDs=";
   };
 
-  mesonFlags = [
-    (lib.mesonOption "windows" withWindowSystem)
-    (lib.mesonEnable "test" finalAttrs.finalPackage.doCheck)
-    (lib.mesonEnable "man" false)
-  ]
-  ++ backendFlags;
+  mesonEntries = {
+    windows = withWindowSystem;
+  };
+
+  mesonFeatures = {
+    test = finalAttrs.finalPackage.doCheck;
+    man = false;
+  };
+
+  mesonFlags = backendFlags;
 
   strictDeps = true;
 

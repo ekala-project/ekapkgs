@@ -96,14 +96,17 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
-  mesonFlags = [
-    (lib.mesonEnable "pdfium" false)
-    (lib.mesonEnable "nifti" false)
-    (lib.mesonEnable "introspection" false)
-    (lib.mesonEnable "cgif" false)
-    (lib.mesonEnable "openslide" false)
-    (lib.mesonBool "gtk_doc" true)
-  ];
+  mesonEntries = {
+    gtk_doc = true;
+  };
+
+  mesonFeatures = {
+    pdfium = false;
+    nifti = false;
+    introspection = false;
+    cgif = false;
+    openslide = false;
+  };
 
   meta = {
     homepage = "https://www.libvips.org/";

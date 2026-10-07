@@ -75,15 +75,21 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
+  mesonEntries = {
+    systemd = enableSystemd;
+    dbus_sys = "${placeholder ";
+    dbus_services = "${placeholder ";
+    systemdsystemunitdir = "${placeholder ";
+    cron = false;
+    gtk_doc = true;
+    bash_completion = false;
+    bash_command_not_found = false;
+  };
+
   mesonFlags = [
-    (lib.mesonBool "systemd" enableSystemd)
-    "-Ddbus_sys=${placeholder "out"}/share/dbus-1/system.d"
-    "-Ddbus_services=${placeholder "out"}/share/dbus-1/system-services"
-    "-Dsystemdsystemunitdir=${placeholder "out"}/lib/systemd/system"
-    "-Dcron=false"
-    "-Dgtk_doc=true"
-    "-Dbash_completion=false"
-    "-Dbash_command_not_found=false"
+    out"}/share/dbus-1/system.d"
+    out"}/share/dbus-1/system-services"
+    out"}/lib/systemd/system"
     "--sysconfdir=/etc"
     "--localstatedir=/var"
   ];

@@ -187,27 +187,30 @@ stdenv.mkDerivation (finalAttrs: {
     ostree
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "auto_sideloading" withAutoSideloading)
-    (lib.mesonBool "installed_tests" false)
-    (lib.mesonBool "tests" false)
-    (lib.mesonEnable "dconf" withDconf)
-    (lib.mesonEnable "docbook_docs" withDocbookDocs)
-    (lib.mesonEnable "gir" withIntrospection)
-    (lib.mesonEnable "gtkdoc" withGtkDoc)
-    (lib.mesonEnable "malcontent" false)
-    (lib.mesonEnable "man" withMan)
-    (lib.mesonEnable "selinux_module" withSELinuxModule)
-    (lib.mesonEnable "system_helper" withPolkit)
-    (lib.mesonEnable "systemd" withSystemd)
-    (lib.mesonOption "dbus_config_dir" (placeholder "out" + "/share/dbus-1/system.d"))
-    (lib.mesonOption "profile_dir" (placeholder "out" + "/etc/profile.d"))
-    (lib.mesonOption "system_bubblewrap" (lib.getExe bubblewrap))
-    (lib.mesonOption "system_dbus_proxy" (lib.getExe xdg-dbus-proxy))
-    (lib.mesonOption "system_fusermount" "/run/wrappers/bin/fusermount3")
-    (lib.mesonOption "system_install_dir" "/var/lib/flatpak")
-    (lib.mesonOption "sysconfdir" "/etc")
-  ];
+  mesonEntries = {
+    auto_sideloading = withAutoSideloading;
+    installed_tests = false;
+    tests = false;
+    dbus_config_dir = (placeholder "out" + "/share/dbus-1/system.d");
+    profile_dir = (placeholder "out" + "/etc/profile.d");
+    system_bubblewrap = (lib.getExe bubblewrap);
+    system_dbus_proxy = (lib.getExe xdg-dbus-proxy);
+    system_fusermount = "/run/wrappers/bin/fusermount3";
+    system_install_dir = "/var/lib/flatpak";
+    sysconfdir = "/etc";
+  };
+
+  mesonFeatures = {
+    dconf = withDconf;
+    docbook_docs = withDocbookDocs;
+    gir = withIntrospection;
+    gtkdoc = withGtkDoc;
+    malcontent = false;
+    man = withMan;
+    selinux_module = withSELinuxModule;
+    system_helper = withPolkit;
+    systemd = withSystemd;
+  };
 
   doCheck = false;
 

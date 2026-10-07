@@ -96,15 +96,13 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonBuildType = "release";
 
-  mesonFlags =
-    let
-      inherit (lib.strings) mesonEnable mesonOption;
-      sd-bus-provider = if systemdSupport then "libsystemd" else "basu";
-    in
-    [
-      (mesonOption "sd-bus-provider" sd-bus-provider)
-      (mesonEnable "tray" finalAttrs.trayEnabled)
-    ];
+  mesonEntries = {
+    sd-bus-provider = if systemdSupport then "libsystemd" else "basu";
+  };
+
+  mesonFeatures = {
+    tray = finalAttrs.trayEnabled;
+  };
 
   passthru = {
     providedSessions = [ "sway" ];

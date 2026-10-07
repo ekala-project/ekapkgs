@@ -48,9 +48,9 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
-  mesonFlags = [
-    "-Ddocs=true"
-  ];
+  mesonEntries = {
+    docs = true;
+  };
 
   doCheck = true;
 

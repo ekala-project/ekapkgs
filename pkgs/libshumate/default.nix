@@ -61,11 +61,14 @@ stdenv.mkDerivation (finalAttrs: {
     protobufc
   ];
 
-  mesonFlags = [
-    "-Ddemos=false"
-    "-Dgtk_doc=true"
-    "-Dsysprof=enabled"
-  ];
+  mesonEntries = {
+    demos = false;
+    gtk_doc = true;
+  };
+
+  mesonFeatures = {
+    sysprof = true;
+  };
 
   doCheck = false;
 

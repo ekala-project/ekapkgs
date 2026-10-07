@@ -53,14 +53,19 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-ikZ55Hzd/osKG9nTg2BC3raPs+Gw5+Yt/QYx3FtvxUE=";
   };
 
+  mesonEntries = {
+    gdm-xsession = true;
+    initial-vt = "1";
+    systemdsystemunitdir = "${placeholder ";
+    systemduserunitdir = "${placeholder ";
+    run-dir = "/run/gdm";
+  };
+
   mesonFlags = [
-    "-Dgdm-xsession=true"
-    "-Dinitial-vt=1"
-    "-Dsystemdsystemunitdir=${placeholder "out"}/lib/systemd/system"
-    "-Dsystemduserunitdir=${placeholder "out"}/lib/systemd/user"
+    out"}/lib/systemd/system"
+    out"}/lib/systemd/user"
     "--sysconfdir=/etc"
     "--localstatedir=/var"
-    (lib.mesonOption "run-dir" "/run/gdm")
   ];
 
   nativeBuildInputs = [

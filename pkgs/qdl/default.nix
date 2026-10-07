@@ -44,14 +44,17 @@ stdenv.mkDerivation (finalAttrs: {
     libzip
   ];
 
-  mesonFlags = [
-    "--prefix=${placeholder "out"}"
-    "-DVERSION=${finalAttrs.src.rev}"
+  mesonEntries = {
+    VERSION = "${finalAttrs.src.rev}";
+  };
 
-    # Tests currently fail to link but seem rather new
-    # https://github.com/linux-msm/qdl/issues/260
-    # test_contents_selectors.c:(.text+0x234e): undefined reference to `firehose_alloc_op'
-    "-Dtests=disabled"
+  mesonFeatures = {
+    tests = false;
+  };
+
+  mesonFlags = [
+    "--prefix=${placeholder "
+    out"}"
   ];
 
   meta = {

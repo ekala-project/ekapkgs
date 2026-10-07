@@ -66,10 +66,13 @@ stdenv.mkDerivation (finalAttrs: {
     systemd
   ];
 
+  mesonEntries = {
+    with-pam-limits-dir = "etc/security/limits.d";
+    with-systemd-user-unit-dir = "lib/systemd/user";
+    with-systemd-group-dir = "lib/sysusers.d";
+  };
+
   mesonFlags = [
-    "-Dwith-pam-limits-dir=etc/security/limits.d"
-    "-Dwith-systemd-user-unit-dir=lib/systemd/user"
-    "-Dwith-systemd-group-dir=lib/sysusers.d"
     "--libexecdir=libexec"
   ];
 

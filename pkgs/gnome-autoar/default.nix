@@ -40,10 +40,13 @@ stdenv.mkDerivation rec {
     glib
   ];
 
-  mesonFlags = [
-    "-Dintrospection=disabled"
-    "-Dvapi=false"
-  ];
+  mesonEntries = {
+    vapi = false;
+  };
+
+  mesonFeatures = {
+    introspection = false;
+  };
 
   meta = {
     platforms = lib.platforms.linux;
