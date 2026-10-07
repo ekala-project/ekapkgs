@@ -21,9 +21,9 @@ stdenv.mkDerivation {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DTINYALSA_USES_PLUGINS=ON"
-  ];
+  cmakeEntries = {
+    TINYALSA_USES_PLUGINS = true;
+  };
 
   env.NIX_CFLAGS_COMPILE = toString [
     "-Wno-error=sign-compare"

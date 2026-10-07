@@ -54,8 +54,8 @@ qtModule {
     gst-libav
   ];
 
-  cmakeFlags = [
-    "-DENABLE_DYNAMIC_RESOLVE_VAAPI_SYMBOLS=0"
-    "-DQt6ShaderToolsTools_DIR=${pkgsBuildBuild.qt6.qtshadertools}/lib/cmake/Qt6ShaderToolsTools"
-  ];
+  cmakeEntries = {
+    ENABLE_DYNAMIC_RESOLVE_VAAPI_SYMBOLS = false;
+    Qt6ShaderToolsTools_DIR = "${pkgsBuildBuild.qt6.qtshadertools}/lib/cmake/Qt6ShaderToolsTools";
+  };
 }

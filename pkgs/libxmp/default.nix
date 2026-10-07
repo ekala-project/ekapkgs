@@ -31,10 +31,10 @@ stdenv.mkDerivation (finalAttrs: {
     docutils
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED" true)
-    (lib.cmakeBool "BUILD_STATIC" false)
-  ];
+  cmakeEntries = {
+    BUILD_SHARED = true;
+    BUILD_STATIC = false;
+  };
 
   meta = {
     description = "Extended module player library";

@@ -27,7 +27,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [ "-DBUILD_SHARED_LIBS=ON" ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+  };
 
   doCheck = true;
 

@@ -81,12 +81,13 @@ stdenv.mkDerivation rec {
     })
   ];
 
-  cmakeFlags = [
-    "-DBUILD_JAVASCRIPT:BOOL=OFF"
-    "-DBUILD_NODEJS:BOOL=OFF"
-    "-DBUILD_TESTING:BOOL=OFF"
-  ]
-  ++ lib.optionals static [
+  cmakeEntries = {
+    BUILD_JAVASCRIPT = false;
+    BUILD_NODEJS = false;
+    BUILD_TESTING = false;
+  };
+
+  cmakeFlags = lib.optionals static [
     "-DWITH_STATIC_LIB:BOOL=ON"
     "-DOPENSSL_USE_STATIC_LIBS=ON"
   ];

@@ -55,14 +55,15 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional withUnicode icu
   ++ lib.optional withZlib zlib;
 
-  cmakeFlags = [
-    (lib.cmakeBool "WANT_PERL" withPerl)
-    (lib.cmakeBool "WANT_PYTHON" withPython)
-    (lib.cmakeBool "WANT_TCL" withTcl)
-    (lib.cmakeBool "WANT_CYRUS" withCyrus)
-    (lib.cmakeBool "WANT_IPV6" withIPv6)
-  ]
-  ++ lib.optionals withTcl [ "-DTCL_LIBRARY=${tcl}/lib" ];
+  cmakeEntries = {
+    WANT_PERL = withPerl;
+    WANT_PYTHON = withPython;
+    WANT_TCL = withTcl;
+    WANT_CYRUS = withCyrus;
+    WANT_IPV6 = withIPv6;
+  };
+
+  cmakeFlags = lib.optionals withTcl [ "-DTCL_LIBRARY=${tcl}/lib" ];
 
   meta = {
     description = "Advanced IRC bouncer";

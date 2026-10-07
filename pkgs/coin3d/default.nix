@@ -32,7 +32,9 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional stdenv.hostPlatform.isLinux xorg.libX11;
 
-  cmakeFlags = [ "-DCOIN_USE_CPACK=OFF" ];
+  cmakeEntries = {
+    COIN_USE_CPACK = false;
+  };
 
   meta = {
     homepage = "https://github.com/coin3d/coin";

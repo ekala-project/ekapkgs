@@ -95,14 +95,17 @@ stdenv.mkDerivation (finalAttrs: {
     ++ lib.optionals (libelf != null) [ libelf ]
   );
 
+  cmakeEntries = {
+    ENABLE_CHAFA = false;
+    ENABLE_DIRECTX_HEADERS = false;
+    ENABLE_SYSTEM_YYJSON = true;
+    ENABLE_IMAGEMAGICK6 = false;
+    ENABLE_EMBEDDED_PCIIDS = true;
+    ENABLE_EMBEDDED_AMDGPUIDS = true;
+  };
+
   cmakeFlags = [
     (lib.cmakeOptionType "filepath" "CMAKE_INSTALL_SYSCONFDIR" "${placeholder "out"}/etc")
-    (lib.cmakeBool "ENABLE_CHAFA" false)
-    (lib.cmakeBool "ENABLE_DIRECTX_HEADERS" false)
-    (lib.cmakeBool "ENABLE_SYSTEM_YYJSON" true)
-    (lib.cmakeBool "ENABLE_IMAGEMAGICK6" false)
-    (lib.cmakeBool "ENABLE_EMBEDDED_PCIIDS" true)
-    (lib.cmakeBool "ENABLE_EMBEDDED_AMDGPUIDS" true)
   ];
 
   postPatch = ''

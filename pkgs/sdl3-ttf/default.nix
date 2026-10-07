@@ -39,11 +39,11 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "SDLTTF_STRICT" true)
-    (lib.cmakeBool "SDLTTF_HARFBUZZ" true)
-    (lib.cmakeBool "SDLTTF_PLUTOSVG" false)
-  ];
+  cmakeEntries = {
+    SDLTTF_STRICT = true;
+    SDLTTF_HARFBUZZ = true;
+    SDLTTF_PLUTOSVG = false;
+  };
 
   meta = {
     description = "SDL TrueType font library";

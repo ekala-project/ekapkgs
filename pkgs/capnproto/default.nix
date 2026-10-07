@@ -30,11 +30,11 @@ clangStdenv.mkDerivation rec {
     zlib
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" true)
-    (lib.cmakeBool "WITH_FIBERS" false)
-    (lib.cmakeFeature "CMAKE_BUILD_TYPE" "None")
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+    WITH_FIBERS = false;
+    CMAKE_BUILD_TYPE = "None";
+  };
 
   env = {
     CXXFLAGS = "-std=c++20";

@@ -43,7 +43,9 @@ stdenv.mkDerivation (finalAttrs: {
     wayland
   ];
 
-  cmakeFlags = [ "-DBUILD_TESTS=ON" ];
+  cmakeEntries = {
+    BUILD_TESTS = true;
+  };
 
   outputs = [
     "out"

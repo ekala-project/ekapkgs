@@ -31,15 +31,15 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
 
-  cmakeFlags = [
-    (lib.cmakeBool "Z3_BUILD_PYTHON_BINDINGS" false)
-    (lib.cmakeBool "Z3_BUILD_JAVA_BINDINGS" false)
-    (lib.cmakeBool "Z3_BUILD_OCAML_BINDINGS" false)
-    (lib.cmakeBool "Z3_SINGLE_THREADED" false)
-    (lib.cmakeBool "Z3_BUILD_LIBZ3_SHARED" true)
-    (lib.cmakeBool "Z3_BUILD_TEST_EXECUTABLES" false)
-    (lib.cmakeBool "Z3_ENABLE_EXAMPLE_TARGETS" false)
-  ];
+  cmakeEntries = {
+    Z3_BUILD_PYTHON_BINDINGS = false;
+    Z3_BUILD_JAVA_BINDINGS = false;
+    Z3_BUILD_OCAML_BINDINGS = false;
+    Z3_SINGLE_THREADED = false;
+    Z3_BUILD_LIBZ3_SHARED = true;
+    Z3_BUILD_TEST_EXECUTABLES = false;
+    Z3_ENABLE_EXAMPLE_TARGETS = false;
+  };
 
   outputs = [
     "out"

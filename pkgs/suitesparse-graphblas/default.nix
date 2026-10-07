@@ -32,11 +32,9 @@ stdenv.mkDerivation (finalAttrs: {
     export HOME=$(mktemp -d)
   '';
 
-  cmakeFlags = [
-    (lib.cmakeBool "GRAPHBLAS_USE_JIT" (
-      !(stdenv.hostPlatform.isLinux && stdenv.hostPlatform.isAarch64)
-    ))
-  ];
+  cmakeEntries = {
+    GRAPHBLAS_USE_JIT = !(stdenv.hostPlatform.isLinux && stdenv.hostPlatform.isAarch64);
+  };
 
   meta = {
     description = "Graph algorithms in the language of linear algebra";

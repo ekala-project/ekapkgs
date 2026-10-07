@@ -27,9 +27,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DPLOG_BUILD_SAMPLES=NO"
-  ];
+  cmakeEntries = {
+    PLOG_BUILD_SAMPLES = false;
+  };
 
   meta = {
     description = "Portable, simple and extensible C++ logging library";

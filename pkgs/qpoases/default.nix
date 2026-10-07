@@ -34,9 +34,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" withShared)
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = withShared;
+  };
 
   meta = {
     description = "Open-source C++ implementation of the recently proposed online active set strategy";

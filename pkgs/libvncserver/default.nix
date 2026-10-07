@@ -42,12 +42,12 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "WITH_SYSTEMD" false)
-    (lib.cmakeBool "BUILD_SHARED_LIBS" true)
-    (lib.cmakeBool "WITH_EXAMPLES" false)
-    (lib.cmakeBool "WITH_TESTS" false)
-  ];
+  cmakeEntries = {
+    WITH_SYSTEMD = false;
+    BUILD_SHARED_LIBS = true;
+    WITH_EXAMPLES = false;
+    WITH_TESTS = false;
+  };
 
   postPatch = ''
     substituteInPlace CMakeLists.txt \

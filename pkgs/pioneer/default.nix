@@ -60,9 +60,13 @@ stdenv.mkDerivation (finalAttrs: {
     SDL2_image
   ];
 
+  cmakeEntries = {
+    PIONEER_DATA_DIR = "${placeholder ";
+    USE_SYSTEM_LIBLUA = true;
+  };
+
   cmakeFlags = [
-    "-DPIONEER_DATA_DIR:PATH=${placeholder "out"}/share/pioneer/data"
-    "-DUSE_SYSTEM_LIBLUA:BOOL=YES"
+    out"}/share/pioneer/data"
   ];
 
   makeFlags = [

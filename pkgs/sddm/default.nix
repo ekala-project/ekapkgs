@@ -75,22 +75,31 @@ let
 
     dontWrapQtApps = true;
 
+    cmakeEntries = {
+      BUILD_WITH_QT6 = isQt6;
+      BUILD_MAN_PAGES = true;
+      CONFIG_FILE = "/etc/sddm.conf";
+      CONFIG_DIR = "/etc/sddm.conf.d";
+      UID_MIN = "1000";
+      UID_MAX = "29999";
+      SDDM_INITIAL_VT = true;
+      QT_IMPORTS_DIR = "${placeholder ";
+      CMAKE_INSTALL_SYSCONFDIR = "${placeholder ";
+      SYSTEMD_SYSTEM_UNIT_DIR = "${placeholder ";
+      SYSTEMD_SYSUSERS_DIR = "${placeholder ";
+      SYSTEMD_TMPFILES_DIR = "${placeholder ";
+      DBUS_CONFIG_DIR = "${placeholder ";
+    };
+
     cmakeFlags = [
-      (lib.cmakeBool "BUILD_WITH_QT6" isQt6)
-      (lib.cmakeBool "BUILD_MAN_PAGES" true)
-      "-DCONFIG_FILE=/etc/sddm.conf"
-      "-DCONFIG_DIR=/etc/sddm.conf.d"
-      "-DUID_MIN=1000"
-      "-DUID_MAX=29999"
-      "-DSDDM_INITIAL_VT=1"
-      "-DQT_IMPORTS_DIR=${placeholder "out"}/${
-        if qtbase != null then qtbase.qtQmlPrefix else "lib/qt/qml"
+      out"}/${
+      if qtbase != null then qtbase.qtQmlPrefix else "lib/qt/qml"
       }"
-      "-DCMAKE_INSTALL_SYSCONFDIR=${placeholder "out"}/etc"
-      "-DSYSTEMD_SYSTEM_UNIT_DIR=${placeholder "out"}/lib/systemd/system"
-      "-DSYSTEMD_SYSUSERS_DIR=${placeholder "out"}/lib/sysusers.d"
-      "-DSYSTEMD_TMPFILES_DIR=${placeholder "out"}/lib/tmpfiles.d"
-      "-DDBUS_CONFIG_DIR=${placeholder "out"}/share/dbus-1/system.d"
+      out"}/etc"
+      out"}/lib/systemd/system"
+      out"}/lib/sysusers.d"
+      out"}/lib/tmpfiles.d"
+      out"}/share/dbus-1/system.d"
     ];
 
     postInstall = ''

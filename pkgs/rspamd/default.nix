@@ -32,11 +32,6 @@
   withLuaJIT ? (luajit != null),
 }:
 
-let
-  inherit (lib) cmakeFeature;
-  cmakeBool' = feature: condition: cmakeFeature feature (if condition then "ON" else "OFF");
-in
-
 stdenv.mkDerivation (finalAttrs: {
   pname = "rspamd";
   version = "4.2.1";
@@ -79,20 +74,20 @@ stdenv.mkDerivation (finalAttrs: {
     ]
   );
 
-  cmakeFlags = [
-    (cmakeFeature "RUNDIR" "/run/rspamd")
-    (cmakeFeature "DBDIR" "/var/lib/rspamd")
-    (cmakeFeature "LOGDIR" "/var/log/rspamd")
-    (cmakeFeature "LOCAL_CONFDIR" "/etc/rspamd")
-    (cmakeBool' "ENABLE_BLAS" withBlas)
-    (cmakeBool' "ENABLE_HYPERSCAN" (vectorscan != null))
-    (cmakeBool' "ENABLE_JEMALLOC" true)
-    (cmakeBool' "ENABLE_LUAJIT" withLuaJIT)
-    (cmakeBool' "ENABLE_PCRE2" true)
-    (cmakeBool' "SYSTEM_DOCTEST" false)
-    (cmakeBool' "SYSTEM_XXHASH" true)
-    (cmakeBool' "SYSTEM_ZSTD" true)
-  ];
+  cmakeEntries = {
+    RUNDIR = "/run/rspamd";
+    DBDIR = "/var/lib/rspamd";
+    LOGDIR = "/var/log/rspamd";
+    LOCAL_CONFDIR = "/etc/rspamd";
+    ENABLE_BLAS = withBlas;
+    ENABLE_HYPERSCAN = (vectorscan != null);
+    ENABLE_JEMALLOC = true;
+    ENABLE_LUAJIT = withLuaJIT;
+    ENABLE_PCRE2 = true;
+    SYSTEM_DOCTEST = false;
+    SYSTEM_XXHASH = true;
+    SYSTEM_ZSTD = true;
+  };
 
   meta = {
     changelog = "https://github.com/rspamd/rspamd/releases/tag/${finalAttrs.src.tag}";

@@ -30,7 +30,9 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  cmakeFlags = [ (lib.strings.cmakeFeature "CMAKE_POLICY_VERSION_MINIMUM" "3.5") ];
+  cmakeEntries = {
+    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
+  };
 
   # Workaround for upstream bug https://bugs.kde.org/show_bug.cgi?id=357181
   preConfigure = ''

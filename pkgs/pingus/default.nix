@@ -64,12 +64,12 @@ stdenv.mkDerivation {
     xdgcpp
   ];
 
-  cmakeFlags = [
-    "-DWARNINGS=ON"
-    "-DWERROR=ON"
-    "-DBUILD_EXTRA=OFF"
-    "-DBUILD_TESTS=OFF"
-  ];
+  cmakeEntries = {
+    WARNINGS = true;
+    WERROR = true;
+    BUILD_EXTRA = false;
+    BUILD_TESTS = false;
+  };
 
   doCheck = true;
 

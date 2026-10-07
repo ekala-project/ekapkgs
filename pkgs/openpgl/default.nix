@@ -28,10 +28,10 @@ stdenv.mkDerivation (finalAttrs: {
     onetbb
   ];
 
-  cmakeFlags = [
-    "-DOPENPGL_BUILD_STATIC=OFF"
-    "-DTBB_ROOT=${onetbb.out}"
-  ];
+  cmakeEntries = {
+    OPENPGL_BUILD_STATIC = false;
+    TBB_ROOT = "${onetbb.out}";
+  };
 
   env.NIX_CFLAGS_COMPILE = lib.optionalString (
     stdenv.hostPlatform.isAarch64 && !stdenv.hostPlatform.isDarwin

@@ -29,11 +29,11 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_TESTING" false)
-    "-DCMAKE_INSTALL_INCLUDEDIR=include"
-    "-DCMAKE_INSTALL_LIBDIR=lib"
-  ];
+  cmakeEntries = {
+    BUILD_TESTING = false;
+    CMAKE_INSTALL_INCLUDEDIR = "include";
+    CMAKE_INSTALL_LIBDIR = "lib";
+  };
 
   meta = {
     description = "Extensible spatial index library in C++";

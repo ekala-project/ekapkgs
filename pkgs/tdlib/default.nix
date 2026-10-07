@@ -51,9 +51,9 @@ stdenv.mkDerivation {
     cmake --build native-build -j $NIX_BUILD_CORES
   '';
 
-  cmakeFlags = [
-    (lib.cmakeBool "TD_E2E_ONLY" tde2eOnly)
-  ];
+  cmakeEntries = {
+    TD_E2E_ONLY = tde2eOnly;
+  };
 
   # https://github.com/tdlib/td/issues/1974
   postPatch = ''

@@ -23,11 +23,11 @@ stdenv.mkDerivation rec {
 
   dontUseCmakeBuildDir = true;
 
-  cmakeFlags = [
-    "-DCMAKE_INSTALL_LIBDIR=lib"
-    "-DCMAKE_INSTALL_INCLUDEDIR=include"
-    "-DHWY_ENABLE_TESTS=OFF"
-  ];
+  cmakeEntries = {
+    CMAKE_INSTALL_LIBDIR = "lib";
+    CMAKE_INSTALL_INCLUDEDIR = "include";
+    HWY_ENABLE_TESTS = false;
+  };
 
   meta = {
     description = "Performance-portable, length-agnostic SIMD with runtime dispatch";

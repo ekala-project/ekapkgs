@@ -22,9 +22,9 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "GSL_LITE_OPT_BUILD_TESTS" finalAttrs.finalPackage.doCheck)
-  ];
+  cmakeEntries = {
+    GSL_LITE_OPT_BUILD_TESTS = finalAttrs.finalPackage.doCheck;
+  };
 
   # Building tests is broken on Darwin.
   doCheck = !stdenv.hostPlatform.isDarwin;

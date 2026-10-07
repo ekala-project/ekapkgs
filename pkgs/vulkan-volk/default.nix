@@ -24,7 +24,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ vulkan-headers ];
 
-  cmakeFlags = [ "-DVOLK_INSTALL=1" ];
+  cmakeEntries = {
+    VOLK_INSTALL = true;
+  };
 
   meta = {
     description = "Meta loader for Vulkan API";

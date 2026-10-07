@@ -24,9 +24,14 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
+  cmakeEntries = {
+    STLINK_MODPROBED_DIR = "${placeholder ";
+    STLINK_UDEV_RULES_DIR = "${placeholder ";
+  };
+
   cmakeFlags = [
-    "-DSTLINK_MODPROBED_DIR=${placeholder "out"}/etc/modprobe.d"
-    "-DSTLINK_UDEV_RULES_DIR=${placeholder "out"}/lib/udev/rules.d"
+    out"}/etc/modprobe.d"
+    out"}/lib/udev/rules.d"
   ];
 
   meta = {

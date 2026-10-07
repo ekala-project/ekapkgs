@@ -43,12 +43,12 @@ stdenv.mkDerivation (finalAttrs: {
     installShellFiles
   ];
 
-  cmakeFlags = [
-    (lib.cmakeFeature "CMAKE_INSTALL_LIBDIR" "lib")
-    (lib.cmakeBool "BUILD_DOCS" true)
-    (lib.cmakeBool "USE_PYTHON" false)
-    (lib.cmakeBool "USE_GPGME" false)
-  ];
+  cmakeEntries = {
+    CMAKE_INSTALL_LIBDIR = "lib";
+    BUILD_DOCS = true;
+    USE_PYTHON = false;
+    USE_GPGME = false;
+  };
 
   installTargets = [
     "doc"

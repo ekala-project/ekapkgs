@@ -20,12 +20,12 @@ stdenv.mkDerivation rec {
   ];
 
   # ECM is a pure CMake module package, no actual compilation
-  cmakeFlags = [
-    "-DBUILD_TESTING=OFF"
-    "-DBUILD_HTML_DOCS=OFF"
-    "-DBUILD_MAN_DOCS=OFF"
-    "-DBUILD_QTHELP_DOCS=OFF"
-  ];
+  cmakeEntries = {
+    BUILD_TESTING = false;
+    BUILD_HTML_DOCS = false;
+    BUILD_MAN_DOCS = false;
+    BUILD_QTHELP_DOCS = false;
+  };
 
   meta = {
     homepage = "https://invent.kde.org/frameworks/extra-cmake-modules";

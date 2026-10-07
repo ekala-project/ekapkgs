@@ -19,7 +19,9 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "puppetlabs";
   };
 
-  cmakeFlags = [ "-DLEATHERMAN_ENABLE_TESTING=OFF" ];
+  cmakeEntries = {
+    LEATHERMAN_ENABLE_TESTING = false;
+  };
 
   # CMake4 3.2.2 is deprecated and no longer supported by CMake > 4
   # https://github.com/NixOS/nixpkgs/issues/445447

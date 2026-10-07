@@ -29,9 +29,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ sdl3 ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "SDLNET_SAMPLES" false)
-  ];
+  cmakeEntries = {
+    SDLNET_SAMPLES = false;
+  };
 
   strictDeps = true;
 

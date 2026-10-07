@@ -45,10 +45,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  cmakeFlags = [
-    "-D2GEOM_BUILD_SHARED=ON"
-    "-D2GEOM_TESTING=OFF"
-  ];
+  cmakeEntries = {
+    "2GEOM_BUILD_SHARED" = true;
+    "2GEOM_TESTING" = false;
+  };
 
   doCheck = false;
 

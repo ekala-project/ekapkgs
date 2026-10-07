@@ -40,18 +40,13 @@ stdenv.mkDerivation (finalAttrs: {
     openssl
   ];
 
-  cmakeFlags = [
-    # all three of these are required to use system libbson
-    "-DUSE_SHARED_LIBBSON=ON"
-    "-DMONGOCRYPT_MONGOC_DIR=USE-SYSTEM"
-    "-DENABLE_ONLINE_TESTS=OFF"
-
-    # this pulls in a library we don't have
-    "-DMONGOCRYPT_ENABLE_DECIMAL128=OFF"
-
-    # this avoids a dependency on Python
-    "-DBUILD_VERSION=${finalAttrs.version}"
-  ];
+  cmakeEntries = {
+    USE_SHARED_LIBBSON = true;
+    MONGOCRYPT_MONGOC_DIR = "USE-SYSTEM";
+    ENABLE_ONLINE_TESTS = false;
+    MONGOCRYPT_ENABLE_DECIMAL128 = false;
+    BUILD_VERSION = "${finalAttrs.version}";
+  };
 
   meta = {
     description = "Required C library for client-side and queryable encryption in MongoDB";

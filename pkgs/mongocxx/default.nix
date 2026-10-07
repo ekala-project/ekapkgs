@@ -39,11 +39,11 @@ stdenv.mkDerivation (finalAttrs: {
     cyrus_sasl
   ];
 
-  cmakeFlags = [
-    "-DCMAKE_CXX_STANDARD=20"
-    "-DBUILD_VERSION=${finalAttrs.version}"
-    "-DENABLE_UNINSTALL=OFF"
-  ];
+  cmakeEntries = {
+    CMAKE_CXX_STANDARD = "20";
+    BUILD_VERSION = "${finalAttrs.version}";
+    ENABLE_UNINSTALL = false;
+  };
 
   passthru.tests.pkg-config = testers.testMetaPkgConfig finalAttrs.finalPackage;
 

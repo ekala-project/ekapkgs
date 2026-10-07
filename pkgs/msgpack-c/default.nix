@@ -23,10 +23,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "MSGPACK_BUILD_EXAMPLES" false)
-    (lib.cmakeBool "MSGPACK_BUILD_TESTS" false)
-  ];
+  cmakeEntries = {
+    MSGPACK_BUILD_EXAMPLES = false;
+    MSGPACK_BUILD_TESTS = false;
+  };
 
   meta = {
     description = "MessagePack implementation for C";

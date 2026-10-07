@@ -33,9 +33,9 @@ stdenv.mkDerivation (finalAttrs: {
     qt6.qt5compat
   ];
 
-  cmakeFlags = [
-    (lib.cmakeFeature "CMAKE_BUILD_TYPE" "\"Release\"")
-  ];
+  cmakeEntries = {
+    CMAKE_BUILD_TYPE = "\"Release\"";
+  };
 
   dontWrapGApps = true;
 

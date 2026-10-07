@@ -69,10 +69,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  cmakeFlags = [
-    (lib.cmakeBool "FCS_WITH_TEST_SUITE" false)
-    (lib.cmakeBool "BUILD_STATIC_LIBRARY" false)
-  ];
+  cmakeEntries = {
+    FCS_WITH_TEST_SUITE = false;
+    BUILD_STATIC_LIBRARY = false;
+  };
 
   postPatch = ''
     # Remove assertion for pysol_cards which is not available

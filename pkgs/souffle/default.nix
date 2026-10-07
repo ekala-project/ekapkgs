@@ -78,7 +78,9 @@ stdenv.mkDerivation (finalAttrs: {
     libffi
   ];
 
-  cmakeFlags = [ "-DSOUFFLE_GIT=OFF" ];
+  cmakeEntries = {
+    SOUFFLE_GIT = false;
+  };
 
   env = lib.optionalAttrs stdenv.cc.isClang {
     NIX_CFLAGS_COMPILE = "-Wno-error=unused-but-set-variable";

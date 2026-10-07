@@ -32,10 +32,10 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "FOONATHAN_MEMORY_BUILD_TESTS" finalAttrs.finalPackage.doCheck)
-    (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-  ];
+  cmakeEntries = {
+    FOONATHAN_MEMORY_BUILD_TESTS = finalAttrs.finalPackage.doCheck;
+    BUILD_SHARED_LIBS = !stdenv.hostPlatform.isStatic;
+  };
 
   nativeBuildInputs = [
     cmake

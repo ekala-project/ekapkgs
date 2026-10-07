@@ -21,10 +21,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
-  cmakeFlags = [
-    "-DBUILD_TESTS=OFF"
-    "-DCMAKE_PROJECT_VERSION=${finalAttrs.version}"
-  ];
+  cmakeEntries = {
+    BUILD_TESTS = false;
+    CMAKE_PROJECT_VERSION = "${finalAttrs.version}";
+  };
 
   meta = {
     description = "WebAssembly Binary Toolkit";

@@ -24,7 +24,9 @@ stdenv.mkDerivation rec {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [ "-DSDLSOUND_DECODER_MIDI=0" ];
+  cmakeEntries = {
+    SDLSOUND_DECODER_MIDI = false;
+  };
 
   buildInputs = [
     sdl3

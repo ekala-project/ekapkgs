@@ -30,10 +30,10 @@ stdenv.mkDerivation (finalAttrs: {
     fftw.float
   ];
 
-  cmakeFlags = [
-    "-DUDEV_RULES_GROUP=plugdev"
-    "-DUDEV_RULES_PATH=lib/udev/rules.d"
-  ];
+  cmakeEntries = {
+    UDEV_RULES_GROUP = "plugdev";
+    UDEV_RULES_PATH = "lib/udev/rules.d";
+  };
 
   preConfigure = ''
     cd host

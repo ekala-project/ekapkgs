@@ -33,7 +33,9 @@ stdenv.mkDerivation (finalAttrs: {
         'cmake_minimum_required(VERSION 3.10)'
   '';
 
-  cmakeFlags = [ "-DPACKAGE_VERSION=${finalAttrs.version}" ];
+  cmakeEntries = {
+    PACKAGE_VERSION = "${finalAttrs.version}";
+  };
 
   nativeBuildInputs = [
     cmake

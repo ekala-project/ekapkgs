@@ -41,13 +41,13 @@ stdenv.mkDerivation (finalAttrs: {
     gtk3
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" enableShared)
-    (lib.cmakeBool "nfd_ROOT_PROJECT" true)
-    (lib.cmakeBool "NFD_BUILD_TESTS" true)
-    (lib.cmakeBool "NFD_BUILD_SDL2_TESTS" true)
-    (lib.cmakeBool "NFD_INSTALL" true)
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = enableShared;
+    nfd_ROOT_PROJECT = true;
+    NFD_BUILD_TESTS = true;
+    NFD_BUILD_SDL2_TESTS = true;
+    NFD_INSTALL = true;
+  };
 
   # NOTE: Although the tests have been compiled, they still require GUI
   # interactions. Let's disable running them for now.

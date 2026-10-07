@@ -56,7 +56,9 @@ stdenv.mkDerivation {
     libpng
   ];
 
-  cmakeFlags = [ "-DINSTALL_HELPER_SCRIPTS=OFF" ];
+  cmakeEntries = {
+    INSTALL_HELPER_SCRIPTS = false;
+  };
 
   meta = {
     platforms = lib.platforms.linux;

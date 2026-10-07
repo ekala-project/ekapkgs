@@ -37,10 +37,13 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
+  cmakeEntries = {
+    YAML_CPP_BUILD_TOOLS = "false";
+    INSTALL_GTEST = "false";
+  };
+
   cmakeFlags = [
-    "-DYAML_CPP_BUILD_TOOLS=false"
     (lib.cmakeBool "YAML_BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-    "-DINSTALL_GTEST=false"
   ];
 
   meta = {

@@ -56,14 +56,14 @@ stdenv.mkDerivation (finalAttrs: {
     gcr
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "WANT_GSPELL" spellChecking)
-    (lib.cmakeBool "WANT_GKR" gnomeSupport)
-    (lib.cmakeBool "ENABLE_MANUAL" true)
-    (lib.cmakeBool "WANT_GMIME_CRYPTO" true)
-    (lib.cmakeBool "WANT_WEBKIT" false)
-    (lib.cmakeBool "WANT_NOTIFY" true)
-  ];
+  cmakeEntries = {
+    WANT_GSPELL = spellChecking;
+    WANT_GKR = gnomeSupport;
+    ENABLE_MANUAL = true;
+    WANT_GMIME_CRYPTO = true;
+    WANT_WEBKIT = false;
+    WANT_NOTIFY = true;
+  };
 
   preFixup = ''
     gappsWrapperArgs+=(--prefix PATH : ${lib.makeBinPath [ gnupg ]})

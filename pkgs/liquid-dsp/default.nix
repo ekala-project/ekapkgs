@@ -42,11 +42,10 @@ stdenv.mkDerivation rec {
     fixDarwinDylibNames
   ];
 
-  cmakeFlags = [
-    # Prevent native cpu arch from leaking into binaries.
-    (lib.cmakeBool "ENABLE_SIMD" false)
-    (lib.cmakeBool "FIND_SIMD" false)
-  ];
+  cmakeEntries = {
+    ENABLE_SIMD = false;
+    FIND_SIMD = false;
+  };
 
   doCheck = true;
 

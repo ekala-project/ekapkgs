@@ -22,11 +22,12 @@ stdenv.mkDerivation (finalAttrs: {
 
   propagatedBuildInputs = lib.optionals enableUnicodeHelp [ icu.dev ];
 
-  cmakeFlags = [
-    "-DCXXOPTS_BUILD_EXAMPLES=OFF"
-    "-DCXXOPTS_CXX_STANDARD=17"
-  ]
-  ++ lib.optional enableUnicodeHelp "-DCXXOPTS_USE_UNICODE_HELP=TRUE";
+  cmakeEntries = {
+    CXXOPTS_BUILD_EXAMPLES = false;
+    CXXOPTS_CXX_STANDARD = "17";
+  };
+
+  cmakeFlags = lib.optional enableUnicodeHelp "-DCXXOPTS_USE_UNICODE_HELP=TRUE";
 
   nativeBuildInputs = [
     cmake

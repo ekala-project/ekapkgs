@@ -21,10 +21,9 @@ stdenv.mkDerivation (finalAttrs: {
     fetchSubmodules = true;
   };
 
-  cmakeFlags = [
-    # Prevent -Werror=deprecated-copy from failing the build
-    "-DCMAKE_CXX_FLAGS=-Wno-error=deprecated-copy"
-  ];
+  cmakeEntries = {
+    CMAKE_CXX_FLAGS = "-Wno-error=deprecated-copy";
+  };
 
   nativeBuildInputs = [
     pkg-config

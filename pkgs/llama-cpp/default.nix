@@ -25,7 +25,7 @@
 
 let
   effectiveStdenv = if cudaSupport then cudaPackages.backendStdenv else stdenv;
-  inherit (lib) cmakeBool cmakeFeature optionals;
+  inherit (lib) optionalAttrs optionals;
 in
 effectiveStdenv.mkDerivation (finalAttrs: {
   pname = "llama-cpp";
@@ -77,25 +77,25 @@ effectiveStdenv.mkDerivation (finalAttrs: {
     vulkan-loader
   ];
 
-  cmakeFlags = [
-    (cmakeBool "GGML_NATIVE" false)
-    (cmakeBool "LLAMA_BUILD_EXAMPLES" false)
-    (cmakeBool "LLAMA_BUILD_SERVER" true)
-    (cmakeBool "LLAMA_BUILD_TESTS" false)
-    (cmakeBool "LLAMA_OPENSSL" true)
-    (cmakeBool "BUILD_SHARED_LIBS" true)
-    (cmakeBool "GGML_BLAS" blasSupport)
-    (cmakeBool "GGML_CUDA" cudaSupport)
-    (cmakeBool "GGML_VULKAN" vulkanSupport)
-    (cmakeBool "GGML_METAL" false)
-    (cmakeFeature "LLAMA_BUILD_NUMBER" finalAttrs.version)
+  cmakeEntries = {
+    GGML_NATIVE = false;
+    LLAMA_BUILD_EXAMPLES = false;
+    LLAMA_BUILD_SERVER = true;
+    LLAMA_BUILD_TESTS = false;
+    LLAMA_OPENSSL = true;
+    BUILD_SHARED_LIBS = true;
+    GGML_BLAS = blasSupport;
+    GGML_CUDA = cudaSupport;
+    GGML_VULKAN = vulkanSupport;
+    GGML_METAL = false;
+    LLAMA_BUILD_NUMBER = finalAttrs.version;
     # Build CPU backend variants for runtime dynamic dispatch
-    (cmakeBool "GGML_CPU_ALL_VARIANTS" true)
-    (cmakeBool "GGML_BACKEND_DL" true)
-  ]
-  ++ optionals cudaSupport [
-    (cmakeFeature "CMAKE_CUDA_ARCHITECTURES" cudaPackages.flags.cmakeCudaArchitecturesString)
-  ];
+    GGML_CPU_ALL_VARIANTS = true;
+    GGML_BACKEND_DL = true;
+  }
+  // optionalAttrs cudaSupport {
+    CMAKE_CUDA_ARCHITECTURES = cudaPackages.flags.cmakeCudaArchitecturesString;
+  };
 
   preConfigure = ''
     prependToVar cmakeFlags "-DLLAMA_BUILD_COMMIT:STRING=$(cat COMMIT)"

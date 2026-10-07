@@ -38,9 +38,9 @@ stdenv.mkDerivation rec {
 
   dontWrapQtApps = true;
 
-  cmakeFlags = [
-    "-DBUILD_TESTING=OFF"
-  ];
+  cmakeEntries = {
+    BUILD_TESTING = false;
+  };
 
   meta = {
     description = "File compression and decompression framework";

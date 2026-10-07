@@ -61,19 +61,19 @@ stdenv.mkDerivation (finalAttrs: {
     export NIX_CFLAGS_COMPILE="$NIX_CFLAGS_COMPILE -I$TMPDIR/minizip-ints-shim"
   '';
 
-  cmakeFlags = [
-    (lib.cmakeFeature "KEEPASSXC_BUILD_TYPE" "Release")
-    (lib.cmakeBool "WITH_GUI_TESTS" true)
-    (lib.cmakeBool "WITH_XC_UPDATECHECK" false)
-    (lib.cmakeBool "WITH_XC_X11" withKeePassX11)
-    (lib.cmakeBool "WITH_XC_BROWSER" withKeePassBrowser)
-    (lib.cmakeBool "WITH_XC_BROWSER_PASSKEYS" withKeePassBrowserPasskeys)
-    (lib.cmakeBool "WITH_XC_KEESHARE" withKeePassKeeShare)
-    (lib.cmakeBool "WITH_XC_NETWORKING" withKeePassNetworking)
-    (lib.cmakeBool "WITH_XC_SSHAGENT" withKeePassSSHAgent)
-    (lib.cmakeBool "WITH_XC_FDOSECRETS" withKeePassFDOSecrets)
-    (lib.cmakeBool "WITH_XC_YUBIKEY" withKeePassYubiKey)
-  ];
+  cmakeEntries = {
+    KEEPASSXC_BUILD_TYPE = "Release";
+    WITH_GUI_TESTS = true;
+    WITH_XC_UPDATECHECK = false;
+    WITH_XC_X11 = withKeePassX11;
+    WITH_XC_BROWSER = withKeePassBrowser;
+    WITH_XC_BROWSER_PASSKEYS = withKeePassBrowserPasskeys;
+    WITH_XC_KEESHARE = withKeePassKeeShare;
+    WITH_XC_NETWORKING = withKeePassNetworking;
+    WITH_XC_SSHAGENT = withKeePassSSHAgent;
+    WITH_XC_FDOSECRETS = withKeePassFDOSecrets;
+    WITH_XC_YUBIKEY = withKeePassYubiKey;
+  };
 
   # Tests segfault due to duktape/glibc IFUNC incompatibility in the build environment
   doCheck = false;

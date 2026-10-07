@@ -36,10 +36,10 @@ stdenv.mkDerivation (finalAttrs: {
     mimalloc
   ];
 
-  cmakeFlags = [
-    "-DMOLD_USE_SYSTEM_MIMALLOC:BOOL=ON"
-    "-DMOLD_USE_SYSTEM_TBB:BOOL=ON"
-  ];
+  cmakeEntries = {
+    MOLD_USE_SYSTEM_MIMALLOC = true;
+    MOLD_USE_SYSTEM_TBB = true;
+  };
 
   meta = {
     description = "Faster drop-in replacement for existing Unix linkers";

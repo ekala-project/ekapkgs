@@ -116,14 +116,15 @@ stdenv.mkDerivation rec {
   ]
   ++ map (p: p.name) enabledPlugins;
 
-  cmakeFlags = [
-    (lib.cmakeBool "ENABLE_MAN" true)
-    (lib.cmakeBool "ENABLE_DOC" true)
-    (lib.cmakeBool "ENABLE_DOC_INCOMPLETE" true)
-    (lib.cmakeBool "ENABLE_TESTS" enableTests)
-    (lib.cmakeBool "ENABLE_SPELL" false)
-  ]
-  ++ map (p: lib.cmakeBool p.cmakeFlag p.enabled) plugins;
+  cmakeEntries = {
+    ENABLE_MAN = true;
+    ENABLE_DOC = true;
+    ENABLE_DOC_INCOMPLETE = true;
+    ENABLE_TESTS = enableTests;
+    ENABLE_SPELL = false;
+  };
+
+  cmakeFlags = map (p: lib.cmakeBool p.cmakeFlag p.enabled) plugins;
 
   nativeBuildInputs = [
     cmake

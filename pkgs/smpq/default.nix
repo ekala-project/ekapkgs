@@ -15,10 +15,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-tdLcil3oYptx7l02ErboTYhBi4bFzTm6MV6esEYvGMs=";
   };
 
-  cmakeFlags = [
-    (lib.cmakeBool "WITH_KDE" false)
-    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
-  ];
+  cmakeEntries = {
+    WITH_KDE = false;
+    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
+  };
 
   nativeBuildInputs = [
     cmake

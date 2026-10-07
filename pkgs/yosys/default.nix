@@ -79,12 +79,13 @@ stdenv.mkDerivation (finalAttrs: {
     python3
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "YOSYS_SKIP_ABC_SUBMODULE_CHECK" true)
-    (lib.cmakeFeature "YOSYS_CHECKOUT_INFO" "v${finalAttrs.version}")
-    (lib.cmakeBool "YOSYS_WITH_PYTHON" enablePython)
-  ]
-  ++ lib.optionals enablePython [
+  cmakeEntries = {
+    YOSYS_SKIP_ABC_SUBMODULE_CHECK = true;
+    YOSYS_CHECKOUT_INFO = "v${finalAttrs.version}";
+    YOSYS_WITH_PYTHON = enablePython;
+  };
+
+  cmakeFlags = lib.optionals enablePython [
     (lib.cmakeBool "YOSYS_INSTALL_PYTHON" true)
     (lib.cmakeFeature "YOSYS_INSTALL_PYTHON_SITEDIR" "${placeholder "out"}/${python3.sitePackages}")
   ];

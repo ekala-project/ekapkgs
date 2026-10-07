@@ -84,10 +84,14 @@ stdenv.mkDerivation (finalAttrs: {
       --replace "@PYTHON_INSTALL_DIR@" "$out/${python3.sitePackages}"
   '';
 
+  cmakeEntries = {
+    WITH_GTKDOC = false;
+    WITH_HTML = false;
+    PYTHON_DESIRED = "${lib.head (lib.splitString [ ";
+  };
+
   cmakeFlags = [
-    "-DWITH_GTKDOC=OFF"
-    "-DWITH_HTML=OFF"
-    "-DPYTHON_DESIRED=${lib.head (lib.splitString [ "." ] python3.version)}"
+    ." ] python3.version)}"
   ];
 
   postInstall = ''

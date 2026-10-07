@@ -28,10 +28,10 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   buildInputs = [ zlib ];
 
-  cmakeFlags = [
-    "-DBUILD_TESTS=OFF"
-    "-DCODE_COVERAGE=OFF"
-  ];
+  cmakeEntries = {
+    BUILD_TESTS = false;
+    CODE_COVERAGE = false;
+  };
 
   meta = {
     description = "Reader for AES SOFA files to get better HRTFs";

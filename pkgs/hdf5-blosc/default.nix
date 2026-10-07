@@ -39,10 +39,14 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace CMakeLists.txt --replace-fail 'set(BLOSC_INSTALL_DIR "''${CMAKE_CURRENT_BINARY_DIR}/blosc")' 'set(BLOSC_INSTALL_DIR "${c-blosc}")'
   '';
 
+  cmakeEntries = {
+    PLUGIN_INSTALL_PATH = "${placeholder ";
+    CMAKE_INSTALL_LIBDIR = "lib";
+    BUILD_TESTS = true;
+  };
+
   cmakeFlags = [
-    "-DPLUGIN_INSTALL_PATH=${placeholder "plugin"}/hdf5/lib/plugin"
-    "-DCMAKE_INSTALL_LIBDIR=lib"
-    "-DBUILD_TESTS=ON"
+    plugin"}/hdf5/lib/plugin"
   ];
 
   postPatch = ''

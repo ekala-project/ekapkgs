@@ -34,11 +34,11 @@ stdenv.mkDerivation (finalAttrs: {
     sblim-sfcc
   ];
 
-  cmakeFlags = [
-    "-DCMAKE_BUILD_RUBY_GEM=no"
-    "-DBUILD_PYTHON=no"
-    "-DBUILD_PYTHON3=yes"
-  ];
+  cmakeEntries = {
+    CMAKE_BUILD_RUBY_GEM = "no";
+    BUILD_PYTHON = "no";
+    BUILD_PYTHON3 = "yes";
+  };
 
   preConfigure = ''
     appendToVar cmakeFlags "-DPACKAGE_ARCHITECTURE=$(uname -m)"

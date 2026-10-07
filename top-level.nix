@@ -28,7 +28,11 @@ final: prev: {
   # Fix zeromq: disable doc generation (asciidoc binary not available)
   # TODO: remove once corepkgs zeromq fix is upstream
   zeromq = prev.zeromq.overrideAttrs (old: {
-    cmakeFlags = (old.cmakeFlags or [ ]) ++ [ "-DWITH_DOC=OFF" ];
+    cmakeEntries = {
+      WITH_DOC = false;
+    };
+
+    cmakeFlags = (old.cmakeFlags or [ ]);
     postBuild = "";
     postInstall = "";
   });

@@ -28,10 +28,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeFeature "CMAKE_CXX_STANDARD" "20")
-    (lib.cmakeBool "TF_BUILD_TESTS" false)
-  ];
+  cmakeEntries = {
+    CMAKE_CXX_STANDARD = "20";
+    TF_BUILD_TESTS = false;
+  };
 
   meta = {
     description = "General-purpose Parallel and Heterogeneous Task Programming System";

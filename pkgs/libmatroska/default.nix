@@ -40,7 +40,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ libebml ];
 
-  cmakeFlags = [ "-DBUILD_SHARED_LIBS=YES" ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+  };
 
   meta = {
     description = "Library to parse Matroska files";

@@ -72,10 +72,10 @@ stdenv.mkDerivation (finalAttrs: {
     pcre2
   ];
 
-  cmakeFlags = [
-    (lib.cmakeFeature "CMAKE_INSTALL_DOCDIR" "${placeholder "doc"}/share/doc/fish")
-    (lib.cmakeFeature "Rust_CARGO_TARGET" stdenv.hostPlatform.rust.rustcTarget)
-  ];
+  cmakeEntries = {
+    CMAKE_INSTALL_DOCDIR = "${placeholder ";
+    Rust_CARGO_TARGET = stdenv.hostPlatform.rust.rustcTarget;
+  };
 
   preConfigure = ''
     patchShebangs ./build_tools/git_version_gen.sh

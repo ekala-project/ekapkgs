@@ -43,10 +43,10 @@ stdenv.mkDerivation rec {
     perl scripts/config.pl set MBEDTLS_THREADING_PTHREAD
   '';
 
-  cmakeFlags = [
-    "-DUSE_SHARED_MBEDTLS_LIBRARY=on"
-    "-DGEN_FILES=off"
-  ];
+  cmakeEntries = {
+    USE_SHARED_MBEDTLS_LIBRARY = "on";
+    GEN_FILES = "off";
+  };
 
   doCheck = false;
 

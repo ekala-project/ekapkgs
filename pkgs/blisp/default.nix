@@ -30,10 +30,10 @@ stdenv.mkDerivation (finalAttrs: {
     libserialport
   ];
 
-  cmakeFlags = [
-    "-DBLISP_BUILD_CLI=ON"
-    "-DBLISP_USE_SYSTEM_LIBRARIES=ON"
-  ];
+  cmakeEntries = {
+    BLISP_BUILD_CLI = true;
+    BLISP_USE_SYSTEM_LIBRARIES = true;
+  };
 
   env.NIX_CFLAGS_COMPILE = lib.optionalString stdenv.hostPlatform.isDarwin "-Wno-error=implicit-function-declaration";
 

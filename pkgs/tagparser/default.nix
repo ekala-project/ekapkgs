@@ -29,9 +29,9 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  cmakeFlags = [
-    "-DLANGUAGE_FILE_ISO_639_2=${isocodes}/share/iso-codes/json/iso_639-2.json"
-  ];
+  cmakeEntries = {
+    LANGUAGE_FILE_ISO_639_2 = "${isocodes}/share/iso-codes/json/iso_639-2.json";
+  };
 
   meta = {
     homepage = "https://github.com/Martchus/tagparser";

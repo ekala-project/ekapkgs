@@ -48,12 +48,16 @@ stdenv.mkDerivation rec {
     pkg-config
   ];
 
+  cmakeEntries = {
+    RUN_SWIG = true;
+    PYTHON_BINDINGS = true;
+    PYTHON_INSTDIR = "${placeholder ";
+    WITH_MAEPARSER = false;
+    WITH_COORDGEN = false;
+  };
+
   cmakeFlags = [
-    "-DRUN_SWIG=ON"
-    "-DPYTHON_BINDINGS=ON"
-    "-DPYTHON_INSTDIR=${placeholder "out"}/${python3.sitePackages}"
-    "-DWITH_MAEPARSER=OFF"
-    "-DWITH_COORDGEN=OFF"
+    out"}/${python3.sitePackages}"
   ];
 
   postFixup = ''

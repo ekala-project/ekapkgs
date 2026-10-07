@@ -23,10 +23,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "URIPARSER_BUILD_DOCS" false)
-    (lib.cmakeBool "URIPARSER_BUILD_TESTS" false)
-  ];
+  cmakeEntries = {
+    URIPARSER_BUILD_DOCS = false;
+    URIPARSER_BUILD_TESTS = false;
+  };
 
   meta = {
     description = "Strictly RFC 3986 compliant URI parsing library";

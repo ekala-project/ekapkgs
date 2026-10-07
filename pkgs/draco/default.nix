@@ -37,12 +37,12 @@ stdenv.mkDerivation (finalAttrs: {
     python3
   ];
 
-  cmakeFlags = [
-    "-DDRACO_ANIMATION_ENCODING=${cmakeBool withAnimation}"
-    "-DDRACO_GOOGLETEST_PATH=${gtest}"
-    "-DBUILD_SHARED_LIBS=${cmakeBool true}"
-    "-DDRACO_TRANSCODER_SUPPORTED=OFF"
-  ];
+  cmakeEntries = {
+    DRACO_ANIMATION_ENCODING = "${cmakeBool withAnimation}";
+    DRACO_GOOGLETEST_PATH = "${gtest}";
+    BUILD_SHARED_LIBS = "${cmakeBool true}";
+    DRACO_TRANSCODER_SUPPORTED = false;
+  };
 
   meta = with lib; {
     description = "Library for compressing and decompressing 3D geometric meshes and point clouds";

@@ -40,12 +40,11 @@ stdenv.mkDerivation (finalAttrs: {
     xercesc
   ];
 
+  cmakeEntries = {
+    E57_RELEASE_LTO = false;
+  };
+
   cmakeFlags = [
-    # Without this, LTO will be enabled, which seems to cause
-    # errors when consumers try to link the `.a` file, see:
-    #     https://github.com/asmaloney/libE57Format/pull/313#issuecomment-2907797367
-    "-DE57_RELEASE_LTO=OFF"
-    # See https://github.com/asmaloney/libE57Format/blob/9372bdea8db2cc0c032a08f6d655a53833d484b8/test/README.md
     (
       if finalAttrs.finalPackage.doCheck then
         "-DE57_TEST_DATA_PATH=${finalAttrs.libE57Format-test-data_src}"

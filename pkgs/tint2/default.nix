@@ -75,9 +75,9 @@ stdenv.mkDerivation rec {
     libstartup_notification
   ];
 
-  cmakeFlags = [
-    "-Ddocdir=share/doc/${pname}"
-  ];
+  cmakeEntries = {
+    docdir = "share/doc/${pname}";
+  };
 
   postPatch = ''
     # Add missing dependency on libm

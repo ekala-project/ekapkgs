@@ -21,11 +21,11 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DBOX2D_UNIT_TESTS=OFF"
-    "-DBOX2D_SAMPLES=OFF"
-    "-DBOX2D_BENCHMARKS=OFF"
-  ];
+  cmakeEntries = {
+    BOX2D_UNIT_TESTS = false;
+    BOX2D_SAMPLES = false;
+    BOX2D_BENCHMARKS = false;
+  };
 
   meta = {
     description = "2D physics engine";

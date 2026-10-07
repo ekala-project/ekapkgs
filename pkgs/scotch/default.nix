@@ -32,10 +32,13 @@ stdenv.mkDerivation (finalAttrs: {
     "out"
   ];
 
+  cmakeEntries = {
+    BUILD_PTSCOTCH = withPtScotch;
+    SCOTCH_METIS_PREFIX = true;
+  };
+
   cmakeFlags = [
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-    (lib.cmakeBool "BUILD_PTSCOTCH" withPtScotch)
-    (lib.cmakeBool "SCOTCH_METIS_PREFIX" true)
     (lib.cmakeBool "ENABLE_TESTS" finalAttrs.finalPackage.doCheck)
   ];
 

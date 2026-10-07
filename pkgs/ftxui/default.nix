@@ -32,9 +32,12 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
 
+  cmakeEntries = {
+    FTXUI_BUILD_EXAMPLES = false;
+    FTXUI_BUILD_DOCS = false;
+  };
+
   cmakeFlags = [
-    (lib.cmakeBool "FTXUI_BUILD_EXAMPLES" false)
-    (lib.cmakeBool "FTXUI_BUILD_DOCS" false)
     (lib.cmakeBool "FTXUI_BUILD_TESTS" finalAttrs.finalPackage.doCheck)
   ];
 

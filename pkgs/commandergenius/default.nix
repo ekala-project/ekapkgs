@@ -43,9 +43,14 @@ stdenv.mkDerivation (finalAttrs: {
     libx11
   ];
 
+  cmakeEntries = {
+    CMAKE_INSTALL_PREFIX = "${placeholder ";
+    SHAREDIR = "${placeholder ";
+  };
+
   cmakeFlags = [
-    "-DCMAKE_INSTALL_PREFIX=${placeholder "out"}"
-    "-DSHAREDIR=${placeholder "out"}/share"
+    out"}"
+    out"}/share"
   ];
 
   makeFlags = [

@@ -41,7 +41,9 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  cmakeFlags = [ "-DBUILD_STATIC_LIBS=OFF" ];
+  cmakeEntries = {
+    BUILD_STATIC_LIBS = false;
+  };
 
   postInstall = ''
     mkdir -p $out/bin

@@ -15,10 +15,10 @@ stdenv.mkDerivation rec {
     sha256 = "1cjxgh41r8k6j029yxs8msp3z6lcnpm16g5pvckk35kc7zhfpykn";
   };
 
-  cmakeFlags = [
-    "-DGKLIB_PATH=../GKlib"
-    "-DCMAKE_SKIP_BUILD_RPATH=ON"
-  ];
+  cmakeEntries = {
+    GKLIB_PATH = "../GKlib";
+    CMAKE_SKIP_BUILD_RPATH = true;
+  };
 
   nativeBuildInputs = [
     unzip

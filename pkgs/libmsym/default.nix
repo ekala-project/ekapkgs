@@ -21,7 +21,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
   ];
 
-  cmakeFlags = [ "-DCMAKE_POLICY_VERSION_MINIMUM=3.5" ];
+  cmakeEntries = {
+    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
+  };
 
   meta = {
     description = "Molecular point group symmetry lib";

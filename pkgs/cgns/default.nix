@@ -49,12 +49,15 @@ stdenv.mkDerivation (finalAttrs: {
     ++ lib.optionals (libGLU != null) [ libGLU ]
   );
 
+  cmakeEntries = {
+    CGNS_ENABLE_FORTRAN = true;
+    CGNS_ENABLE_LEGACY = true;
+    CGNS_ENABLE_HDF5 = true;
+    CGNS_BUILD_CGNSTOOLS = withTools;
+  };
+
   cmakeFlags = [
-    (lib.cmakeBool "CGNS_ENABLE_FORTRAN" true)
-    (lib.cmakeBool "CGNS_ENABLE_LEGACY" true)
-    (lib.cmakeBool "CGNS_ENABLE_HDF5" true)
     (lib.cmakeBool "HDF5_NEED_MPI" (hdf5.mpiSupport or false))
-    (lib.cmakeBool "CGNS_BUILD_CGNSTOOLS" withTools)
     (lib.cmakeBool "CGNS_ENABLE_TESTS" finalAttrs.finalPackage.doCheck)
     (lib.cmakeBool "CGNS_BUILD_SHARED" (!stdenv.hostPlatform.isStatic))
   ];

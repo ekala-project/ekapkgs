@@ -51,7 +51,9 @@ stdenv.mkDerivation rec {
   ];
 
   NIX_CFLAGS_COMPILE = [ "-fpermissive" ];
-  cmakeFlags = [ "-DUSE_RAPIDJSON=ON" ];
+  cmakeEntries = {
+    USE_RAPIDJSON = true;
+  };
 
   meta = with lib; {
     description = "Open CASCADE Technology, libraries for 3D modeling and numerical simulation";

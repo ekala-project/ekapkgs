@@ -71,6 +71,21 @@ stdenv.mkDerivation (finalAttrs: {
     ./runtime_stock_data_path.patch
   ];
 
+  cmakeEntries = {
+    wxWidgets_CONFIG_EXECUTABLE = "${wxGTK}/bin/wx-config";
+    wxWidgets_ROOT_DIR = "${wxGTK}";
+    wxWidgets_LIB_DIR = "${wxGTK}/lib";
+    CMAKE_PREFIX_PATH = "${wxGTK}";
+    CMAKE_LIBRARY_PATH = "${wxGTK}/lib";
+    wxWidgets_INCLUDE_DIRS = "${wxGTK}/lib/wx/include/gtk3-unicode-3.2;${wxGTK}/include/wx-3.2";
+    wxWidgets_LIBRARIES = "-L${wxGTK}/lib;-pthread;-lwx_gtk3u_xrc-3.2;-lwx_gtk3u_html-3.2;-lwx_gtk3u_qa-3.2;-lwx_gtk3u_core-3.2;-lwx_baseu_xml-3.2;-lwx_baseu_net-3.2;-lwx_baseu-3.2";
+    wxWidgets_LIBRARY_DIRS = "${wxGTK}/lib";
+    wxWidgets_CXX_FLAGS = "-I${wxGTK}/lib/wx/include/gtk3-unicode-3.2 -I${wxGTK}/include/wx-3.2 -D_FILE_OFFSET_BITS=64 -DWXUSINGDLL -D__WXGTK__ -pthread";
+    PROTOC_EXE = "${protobuf}/bin/protoc";
+    Protobuf_PROTOC_EXE = "${protobuf}/bin/protoc";
+    Protobuf_PROTOC_EXECUTABLE = "${protobuf}/bin/protoc";
+  };
+
   cmakeFlags = [
     (cmakeBool "KICAD_USE_EGL" true)
     (cmakeFeature "OCC_INCLUDE_DIR" "${opencascade-occt}/include/opencascade")
@@ -84,19 +99,6 @@ stdenv.mkDerivation (finalAttrs: {
     (cmakeBool "KICAD_SANITIZE_ADDRESS" false)
     (cmakeBool "KICAD_SANITIZE_THREADS" false)
     (cmakeBool "KICAD_SPICE" false)
-    "-DwxWidgets_CONFIG_EXECUTABLE=${wxGTK}/bin/wx-config"
-    "-DwxWidgets_ROOT_DIR=${wxGTK}"
-    "-DwxWidgets_LIB_DIR=${wxGTK}/lib"
-    "-DCMAKE_PREFIX_PATH=${wxGTK}"
-    "-DCMAKE_LIBRARY_PATH=${wxGTK}/lib"
-    "-DwxWidgets_INCLUDE_DIRS=${wxGTK}/lib/wx/include/gtk3-unicode-3.2;${wxGTK}/include/wx-3.2"
-    "-DwxWidgets_LIBRARIES=-L${wxGTK}/lib;-pthread;-lwx_gtk3u_xrc-3.2;-lwx_gtk3u_html-3.2;-lwx_gtk3u_qa-3.2;-lwx_gtk3u_core-3.2;-lwx_baseu_xml-3.2;-lwx_baseu_net-3.2;-lwx_baseu-3.2"
-    "-DwxWidgets_LIBRARY_DIRS=${wxGTK}/lib"
-    "-DwxWidgets_CXX_FLAGS=-I${wxGTK}/lib/wx/include/gtk3-unicode-3.2 -I${wxGTK}/include/wx-3.2 -D_FILE_OFFSET_BITS=64 -DWXUSINGDLL -D__WXGTK__ -pthread"
-    # Fix broken @build_protobuf@ placeholder from corepkgs protobuf setup hook
-    "-DPROTOC_EXE=${protobuf}/bin/protoc"
-    "-DProtobuf_PROTOC_EXE=${protobuf}/bin/protoc"
-    "-DProtobuf_PROTOC_EXECUTABLE=${protobuf}/bin/protoc"
   ];
 
   cmakeBuildType = "Release";

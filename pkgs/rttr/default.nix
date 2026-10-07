@@ -23,11 +23,11 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
   ];
 
-  cmakeFlags = [
-    "-DBUILD_EXAMPLES=OFF"
-    "-DBUILD_UNIT_TESTS=OFF"
-    "-DBUILD_PACKAGE=OFF"
-  ];
+  cmakeEntries = {
+    BUILD_EXAMPLES = false;
+    BUILD_UNIT_TESTS = false;
+    BUILD_PACKAGE = false;
+  };
 
   postPatch = ''
     substituteInPlace CMakeLists.txt \

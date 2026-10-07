@@ -97,10 +97,10 @@ gccStdenv.mkDerivation (finalAttrs: {
     pcre2
   ];
 
-  cmakeFlags = [
-    "-DPREFIX=$out"
-    "-DCFGDIR=/etc/icewm"
-  ];
+  cmakeEntries = {
+    PREFIX = "$out";
+    CFGDIR = "/etc/icewm";
+  };
 
   # install legacy themes
   postInstall = ''

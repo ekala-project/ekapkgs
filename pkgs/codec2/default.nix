@@ -64,12 +64,13 @@ stdenv.mkDerivation (finalAttrs: {
         "\"$dev/include/codec2"
     '';
 
-  cmakeFlags = [
-    "-DCMAKE_SKIP_BUILD_RPATH=ON"
-    "-DCMAKE_C_COMPILER=${stdenv.cc.targetPrefix}cc"
-    "-DCMAKE_CXX_COMPILER=${stdenv.cc.targetPrefix}c++"
-  ]
-  ++ lib.optionals freedvSupport [
+  cmakeEntries = {
+    CMAKE_SKIP_BUILD_RPATH = true;
+    CMAKE_C_COMPILER = "${stdenv.cc.targetPrefix}cc";
+    CMAKE_CXX_COMPILER = "${stdenv.cc.targetPrefix}c++";
+  };
+
+  cmakeFlags = lib.optionals freedvSupport [
     "-DLPCNET=ON"
   ];
 

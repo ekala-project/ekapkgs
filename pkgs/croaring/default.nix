@@ -26,10 +26,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "ROARING_USE_CPM" false)
-    (lib.cmakeBool "ENABLE_ROARING_TESTS" false)
-  ];
+  cmakeEntries = {
+    ROARING_USE_CPM = false;
+    ENABLE_ROARING_TESTS = false;
+  };
 
   meta = {
     description = "Compressed bitset library for C and C++";

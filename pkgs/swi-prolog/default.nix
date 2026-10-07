@@ -106,10 +106,11 @@ stdenv.mkDerivation {
 
   hardeningDisable = [ "format" ];
 
-  cmakeFlags = [
-    "-DSWIPL_INSTALL_IN_LIB=ON"
-  ]
-  ++ lib.optionals (!withNativeCompiler) [
+  cmakeEntries = {
+    SWIPL_INSTALL_IN_LIB = true;
+  };
+
+  cmakeFlags = lib.optionals (!withNativeCompiler) [
     "-DSWIPL_CC=gcc"
     "-DSWIPL_CXX=g++"
   ];

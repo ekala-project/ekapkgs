@@ -24,11 +24,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   propagatedBuildInputs = [ gflags ];
 
-  cmakeFlags = [
-    "-DBUILD_SHARED_LIBS=ON"
-    "-DWITH_UNWIND=OFF"
-    "-DBUILD_TESTING=OFF"
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+    WITH_UNWIND = false;
+    BUILD_TESTING = false;
+  };
 
   meta = {
     homepage = "https://github.com/google/glog";

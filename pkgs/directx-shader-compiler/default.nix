@@ -35,11 +35,13 @@ stdenv.mkDerivation (finalAttrs: {
     python3
   ];
 
+  cmakeEntries = {
+    LLVM_INCLUDE_TESTS = false;
+    HLSL_INCLUDE_TESTS = false;
+  };
+
   cmakeFlags = [
     "-C../cmake/caches/PredefinedParams.cmake"
-    # Tries to download prebuilt dxcs
-    (lib.cmakeBool "LLVM_INCLUDE_TESTS" false)
-    (lib.cmakeBool "HLSL_INCLUDE_TESTS" false)
   ];
 
   # The default install target installs heaps of LLVM stuff.

@@ -26,8 +26,11 @@ stdenv.mkDerivation (finalAttrs: {
   # a grep failure that kills the build with set -e + inherit_errexit.
   shareDocName = "simdjson";
 
+  cmakeEntries = {
+    SIMDJSON_DEVELOPER_MODE = false;
+  };
+
   cmakeFlags = [
-    (lib.cmakeBool "SIMDJSON_DEVELOPER_MODE" false)
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
   ];
 

@@ -38,12 +38,12 @@ stdenv.mkDerivation rec {
     snappy
   ];
 
-  cmakeFlags = [
-    "-DBUILD_VERSION=${version}"
-    "-DENABLE_UNINSTALL=OFF"
-    "-DENABLE_AUTOMATIC_INIT_AND_CLEANUP=OFF"
-    "-DCMAKE_INSTALL_LIBDIR=lib"
-  ];
+  cmakeEntries = {
+    BUILD_VERSION = "${version}";
+    ENABLE_UNINSTALL = false;
+    ENABLE_AUTOMATIC_INIT_AND_CLEANUP = false;
+    CMAKE_INSTALL_LIBDIR = "lib";
+  };
 
   # remove forbidden reference to $TMPDIR
   preFixup = ''

@@ -21,9 +21,9 @@ stdenv.mkDerivation {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DCMAKE_SKIP_RPATH=ON"
-  ];
+  cmakeEntries = {
+    CMAKE_SKIP_RPATH = true;
+  };
 
   postPatch = ''
     substituteInPlace {./,lzhamcomp/,lzhamdecomp/,lzhamdll/,lzhamtest/}CMakeLists.txt \

@@ -17,11 +17,11 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-qDEiow4ymmh6z3/bvSrQXPDv3aOZ/DThMNz4ym7Twk8=";
   };
 
-  cmakeFlags = [
-    (lib.cmakeBool "GENERATE_SRS_SECRET" false)
-    (lib.cmakeBool "INSTALL_SYSTEMD_SERVICE" false)
-    (lib.cmakeFeature "FETCHCONTENT_TRY_FIND_PACKAGE_MODE" "ALWAYS")
-  ];
+  cmakeEntries = {
+    GENERATE_SRS_SECRET = false;
+    INSTALL_SYSTEMD_SERVICE = false;
+    FETCHCONTENT_TRY_FIND_PACKAGE_MODE = "ALWAYS";
+  };
 
   nativeBuildInputs = [
     cmake

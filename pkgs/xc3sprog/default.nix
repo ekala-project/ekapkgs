@@ -31,12 +31,10 @@ stdenv.mkDerivation (finalAttrs: {
     libftdi1
   ];
 
-  cmakeFlags = [
-    # file RPATH_CHANGE could not write new RPATH
-    "-DCMAKE_SKIP_BUILD_RPATH=ON"
-    # fix build with gcc 11+
-    "-DCMAKE_CXX_STANDARD=14"
-  ];
+  cmakeEntries = {
+    CMAKE_SKIP_BUILD_RPATH = true;
+    CMAKE_CXX_STANDARD = "14";
+  };
 
   postPatch = ''
     substituteInPlace CMakeLists.txt \

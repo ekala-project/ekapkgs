@@ -44,10 +44,10 @@ stdenv.mkDerivation rec {
     openexr
   ];
 
-  cmakeFlags = [
-    "-DBUILD_TESTING=OFF"
-    "-DKIMAGEFORMATS_HEIF=ON"
-  ];
+  cmakeEntries = {
+    BUILD_TESTING = false;
+    KIMAGEFORMATS_HEIF = true;
+  };
 
   meta = {
     description = "Image format plugins for Qt6 providing AVIF, HEIF, JXL and other formats";

@@ -37,15 +37,15 @@ stdenv.mkDerivation (finalAttrs: {
     openssl
   ];
 
-  cmakeFlags = [
-    "-DBUILD_SHARED_LIBS=ON"
-    "-DMZ_OPENSSL=ON"
-    "-DMZ_PPMD=OFF"
-    "-DMZ_LIBCOMP=OFF"
-    "-DMZ_BUILD_TESTS=OFF"
-    "-DMZ_BUILD_UNIT_TESTS=OFF"
-    (lib.cmakeBool "MZ_COMPAT" enableCompat)
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+    MZ_OPENSSL = true;
+    MZ_PPMD = false;
+    MZ_LIBCOMP = false;
+    MZ_BUILD_TESTS = false;
+    MZ_BUILD_UNIT_TESTS = false;
+    MZ_COMPAT = enableCompat;
+  };
 
   strictDeps = true;
 

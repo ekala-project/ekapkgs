@@ -20,12 +20,11 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-k8qWtU4j3ipIHvY60ae7kdNnPvWnUa0qgacqlSIJijo=";
   };
 
-  cmakeFlags = [
-    # Fix the build with CMake 4
-    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
-    "-DENABLE_STATIC=NO"
-    "-DPNG_SUPPORTED=TRUE"
-  ]; # See https://github.com/mozilla/mozjpeg/issues/351
+  cmakeEntries = {
+    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
+    ENABLE_STATIC = false;
+    PNG_SUPPORTED = true;
+  }; # See https://github.com/mozilla/mozjpeg/issues/351
 
   nativeBuildInputs = [
     cmake

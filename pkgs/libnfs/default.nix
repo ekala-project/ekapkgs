@@ -21,9 +21,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DENABLE_MULTITHREADING=ON"
-  ];
+  cmakeEntries = {
+    ENABLE_MULTITHREADING = true;
+  };
 
 
   meta = {

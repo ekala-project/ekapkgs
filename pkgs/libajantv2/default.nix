@@ -43,9 +43,9 @@ stdenv.mkDerivation (finalAttrs: {
     udev
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "AJANTV2_BUILD_SHARED" true)
-  ];
+  cmakeEntries = {
+    AJANTV2_BUILD_SHARED = true;
+  };
 
   postInstall = ''
     mkdir -p "$dev/lib/pkgconfig"

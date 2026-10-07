@@ -27,11 +27,12 @@ stdenv.mkDerivation (finalAttrs: {
     fetchSubmodules = true;
   };
 
-  cmakeFlags = [
-    (lib.cmakeBool "DHT_BOOTSTRAP" true)
-    (lib.cmakeBool "BOOTSTRAP_DAEMON" true)
-  ]
-  ++ lib.optional buildToxAV (lib.cmakeBool "MUST_BUILD_TOXAV" true);
+  cmakeEntries = {
+    DHT_BOOTSTRAP = true;
+    BOOTSTRAP_DAEMON = true;
+  };
+
+  cmakeFlags = lib.optional buildToxAV (lib.cmakeBool "MUST_BUILD_TOXAV" true);
 
   buildInputs = [
     libsodium

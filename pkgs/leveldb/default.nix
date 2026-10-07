@@ -39,10 +39,14 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildFlags = [ "all" ];
 
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = "${if stdenv.hostPlatform.isStatic then ";
+    LEVELDB_BUILD_TESTS = false;
+    LEVELDB_BUILD_BENCHMARKS = false;
+  };
+
   cmakeFlags = [
-    "-DBUILD_SHARED_LIBS=${if stdenv.hostPlatform.isStatic then "OFF" else "ON"}"
-    "-DLEVELDB_BUILD_TESTS=OFF"
-    "-DLEVELDB_BUILD_BENCHMARKS=OFF"
+    OFF" else "ON"}"
   ];
 
   postInstall = ''

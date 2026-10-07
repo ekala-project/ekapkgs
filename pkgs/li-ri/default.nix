@@ -32,10 +32,10 @@ stdenv.mkDerivation (finalAttrs: {
     simpleini
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "USE_SYSTEM_SIMPLEINI" true)
-    (lib.cmakeFeature "LIRI_DATA_DIR" "${placeholder "out"}/share/Li-ri/")
-  ];
+  cmakeEntries = {
+    USE_SYSTEM_SIMPLEINI = true;
+    LIRI_DATA_DIR = "${placeholder ";
+  };
 
   meta = {
     homepage = "https://github.com/petitlapin/Li-Ri";

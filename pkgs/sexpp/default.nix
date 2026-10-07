@@ -25,13 +25,17 @@ stdenv.mkDerivation (finalAttrs: {
     bzip2
   ];
 
+  cmakeEntries = {
+    CMAKE_INSTALL_PREFIX = "${placeholder ";
+    BUILD_SHARED_LIBS = "on";
+    WITH_SEXP_TESTS = "on";
+    DOWNLOAD_GTEST = "off";
+    WITH_SEXP_CLI = "on";
+    WITH_SANITIZERS = "off";
+  };
+
   cmakeFlags = [
-    "-DCMAKE_INSTALL_PREFIX=${placeholder "out"}"
-    "-DBUILD_SHARED_LIBS=on"
-    "-DWITH_SEXP_TESTS=on"
-    "-DDOWNLOAD_GTEST=off"
-    "-DWITH_SEXP_CLI=on"
-    "-DWITH_SANITIZERS=off"
+    out"}"
   ];
 
   nativeBuildInputs = [

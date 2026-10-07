@@ -127,12 +127,13 @@ stdenv.mkDerivation rec {
   ]
   ++ lib.optional gtk3Support gtk3;
 
-  cmakeFlags = [
-    "-DOVERRIDE_VERSION=${version}"
-    "-DGENERATE_DOC=OFF"
-    "-DDO_COVERAGE=OFF"
-  ]
-  ++ lib.optional lua.pkgs.isLuaJIT "-DLUA_LIBRARY=${lua}/lib/libluajit-5.1.so";
+  cmakeEntries = {
+    OVERRIDE_VERSION = "${version}";
+    GENERATE_DOC = false;
+    DO_COVERAGE = false;
+  };
+
+  cmakeFlags = lib.optional lua.pkgs.isLuaJIT "-DLUA_LIBRARY=${lua}/lib/libluajit-5.1.so";
 
   env = {
     GI_TYPELIB_PATH = "${pango.out}/lib/girepository-1.0";

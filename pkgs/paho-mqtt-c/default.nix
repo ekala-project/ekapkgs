@@ -32,11 +32,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ openssl ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "PAHO_WITH_SSL" true)
-    (lib.cmakeBool "PAHO_BUILD_STATIC" enableStatic)
-    (lib.cmakeBool "PAHO_BUILD_SHARED" enableShared)
-  ];
+  cmakeEntries = {
+    PAHO_WITH_SSL = true;
+    PAHO_BUILD_STATIC = enableStatic;
+    PAHO_BUILD_SHARED = enableShared;
+  };
 
   meta = {
     description = "Eclipse Paho MQTT C Client Library";

@@ -43,12 +43,15 @@ stdenv.mkDerivation (finalAttrs: {
     gtest
   ];
 
+  cmakeEntries = {
+    USE_SYSTEM_NLOHMANN_JSON = true;
+    USE_SYSTEM_JSON_SCHEMA_VALIDATOR = true;
+    USE_SYSTEM_GOOGLETEST = true;
+    MNX_W3C_SOURCE = (toString (finalAttrs.finalPackage.mnx_w3c));
+  };
+
   cmakeFlags = [
-    (lib.cmakeBool "USE_SYSTEM_NLOHMANN_JSON" true)
-    (lib.cmakeBool "USE_SYSTEM_JSON_SCHEMA_VALIDATOR" true)
-    (lib.cmakeBool "USE_SYSTEM_GOOGLETEST" true)
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-    (lib.cmakeFeature "MNX_W3C_SOURCE" (toString (finalAttrs.finalPackage.mnx_w3c)))
   ];
   doCheck = true;
 

@@ -32,10 +32,13 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
+  cmakeEntries = {
+    WITH_LIBTOMCRYPT = true;
+    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
+  };
+
   cmakeFlags = [
     (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-    (lib.cmakeBool "WITH_LIBTOMCRYPT" true)
-    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
   ];
 
   strictDeps = true;

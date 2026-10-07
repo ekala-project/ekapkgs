@@ -29,10 +29,10 @@ stdenv.mkDerivation (finalAttrs: {
     hdf5
   ];
 
-  cmakeFlags = [
-    "-DLAPACK_LIBRARY=${lapack}/lib/liblapack${stdenv.hostPlatform.extensions.sharedLibrary}"
-    "-DDETECT_HDF5=ON"
-  ];
+  cmakeEntries = {
+    LAPACK_LIBRARY = "${lapack}/lib/liblapack${stdenv.hostPlatform.extensions.sharedLibrary}";
+    DETECT_HDF5 = true;
+  };
 
   patches = [ ./use-unix-config-on-OS-X.patch ];
 

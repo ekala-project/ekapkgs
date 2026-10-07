@@ -59,10 +59,10 @@ stdenv.mkDerivation (finalAttrs: {
     sqlite
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_OSSIM_TESTS" false)
-    (lib.cmakeFeature "CMAKE_POLICY_VERSION_MINIMUM" "3.10")
-  ];
+  cmakeEntries = {
+    BUILD_OSSIM_TESTS = false;
+    CMAKE_POLICY_VERSION_MINIMUM = "3.10";
+  };
 
   postInstall = ''
     for binary in $out/bin/ossim-*; do

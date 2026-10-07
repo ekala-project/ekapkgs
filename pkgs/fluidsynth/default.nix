@@ -61,9 +61,12 @@ stdenv.mkDerivation (finalAttrs: {
     pulseaudio
   ];
 
+  cmakeEntries = {
+    osal = "cpp11";
+  };
+
   cmakeFlags = [
     "-Denable-framework=off"
-    "-Dosal=cpp11"
     "-Denable-libinstpatch=0"
     "-Denable-jack=0"
     "-DFETCHCONTENT_SOURCE_DIR_SIGNALSMITH-LINEAR=${signalsmith-linear}"

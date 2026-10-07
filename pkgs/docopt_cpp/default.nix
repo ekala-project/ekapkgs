@@ -37,7 +37,9 @@ stdenv.mkDerivation (finalAttrs: {
     python3
   ];
 
-  cmakeFlags = [ "-DWITH_TESTS=ON" ];
+  cmakeEntries = {
+    WITH_TESTS = true;
+  };
 
   strictDeps = true;
 

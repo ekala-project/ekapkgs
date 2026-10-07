@@ -34,9 +34,9 @@ stdenv.mkDerivation (finalAttrs: {
     "out"
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" (!isStatic))
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = !isStatic;
+  };
 
   meta = {
     description = "WebM file parser";

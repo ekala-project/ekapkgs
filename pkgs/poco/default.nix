@@ -50,11 +50,11 @@ stdenv.mkDerivation rec {
     "dev"
   ];
 
-  cmakeFlags = [
-    "-DPOCO_UNBUNDLED=ON"
-    "-DENABLE_TESTS=OFF"
-    "-DENABLE_DATA_MYSQL=OFF"
-  ];
+  cmakeEntries = {
+    POCO_UNBUNDLED = true;
+    ENABLE_TESTS = false;
+    ENABLE_DATA_MYSQL = false;
+  };
 
   postFixup = ''
     grep -rlF INTERFACE_INCLUDE_DIRECTORIES "$dev/lib/cmake/Poco" | while read -r f; do

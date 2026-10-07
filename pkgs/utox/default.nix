@@ -55,10 +55,10 @@ stdenv.mkDerivation (finalAttrs: {
     libopus
   ];
 
-  cmakeFlags = [
-    "-DENABLE_AUTOUPDATE=OFF"
-    "-DENABLE_TESTS=OFF"
-  ];
+  cmakeEntries = {
+    ENABLE_AUTOUPDATE = false;
+    ENABLE_TESTS = false;
+  };
 
   postPatch = ''
     substituteInPlace CMakeLists.txt \

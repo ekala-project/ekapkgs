@@ -26,10 +26,13 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   propagatedBuildInputs = lib.optionals enableSSL [ openssl ];
 
+  cmakeEntries = {
+    glaze_ENABLE_SSL = enableSSL;
+    glaze_BUILD_INTEROP = enableInterop;
+  };
+
   cmakeFlags = [
     (lib.cmakeBool "glaze_DISABLE_SIMD_WHEN_SUPPORTED" (!enableSIMD))
-    (lib.cmakeBool "glaze_ENABLE_SSL" enableSSL)
-    (lib.cmakeBool "glaze_BUILD_INTEROP" enableInterop)
   ];
 
   meta = {

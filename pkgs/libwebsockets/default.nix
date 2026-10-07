@@ -35,15 +35,16 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DLWS_WITH_PLUGINS=ON"
-    "-DLWS_WITH_IPV6=ON"
-    "-DLWS_WITH_SOCKS5=ON"
-    "-DDISABLE_WERROR=ON"
-    "-DLWS_BUILD_HASH=no_hash"
-    "-DLWS_WITHOUT_TESTAPPS=ON"
-  ]
-  ++ (
+  cmakeEntries = {
+    LWS_WITH_PLUGINS = true;
+    LWS_WITH_IPV6 = true;
+    LWS_WITH_SOCKS5 = true;
+    DISABLE_WERROR = true;
+    LWS_BUILD_HASH = "no_hash";
+    LWS_WITHOUT_TESTAPPS = true;
+  };
+
+  cmakeFlags = (
     if stdenv.hostPlatform.isStatic then
       [ "-DLWS_WITH_SHARED=OFF" ]
     else

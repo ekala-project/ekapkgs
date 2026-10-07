@@ -44,9 +44,9 @@ stdenv.mkDerivation {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "NVTT_SHARED" true)
-  ];
+  cmakeEntries = {
+    NVTT_SHARED = true;
+  };
 
   postInstall = ''
     moveToOutput include "$dev"

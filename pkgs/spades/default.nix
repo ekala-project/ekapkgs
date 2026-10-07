@@ -22,10 +22,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   sourceRoot = "${finalAttrs.src.name}/src";
 
-  cmakeFlags = [
-    "-DZLIB_ENABLE_TESTS=OFF"
-    "-DSPADES_BUILD_INTERNAL=OFF"
-  ];
+  cmakeEntries = {
+    ZLIB_ENABLE_TESTS = false;
+    SPADES_BUILD_INTERNAL = false;
+  };
 
   preConfigure = ''
     # The CMakeListsInternal.txt file should be empty in the release tarball

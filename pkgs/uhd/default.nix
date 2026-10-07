@@ -72,30 +72,32 @@ stdenv.mkDerivation (finalAttrs: {
       ];
   };
 
+  cmakeEntries = {
+    RUNTIME_PYTHON_EXECUTABLE = "${lib.getExe finalAttrs.passthru.runtimePython}";
+  };
+
   cmakeFlags = [
-    (cmakeBool "ENABLE_LIBUHD" true)
-    (cmakeBool "ENABLE_USB" true)
-    (cmakeBool "ENABLE_TESTS" true)
-    (cmakeBool "ENABLE_EXAMPLES" enableExamples)
-    (cmakeBool "ENABLE_UTILS" enableUtils)
-    (cmakeBool "ENABLE_C_API" enableCApi)
-    (cmakeBool "ENABLE_PYTHON_API" enablePythonApi)
-    "-DRUNTIME_PYTHON_EXECUTABLE=${lib.getExe finalAttrs.passthru.runtimePython}"
-    (cmakeBool "ENABLE_DPDK" enableDpdk)
-    (cmakeBool "ENABLE_OCTOCLOCK" enableOctoClock)
-    (cmakeBool "ENABLE_MPMD" enableMpmd)
-    (cmakeBool "ENABLE_B100" enableB100)
-    (cmakeBool "ENABLE_B200" enableB200)
-    (cmakeBool "ENABLE_USRP1" enableUsrp1)
-    (cmakeBool "ENABLE_USRP2" enableUsrp2)
-    (cmakeBool "ENABLE_X300" enableX300)
-    (cmakeBool "ENABLE_X400" enableX400)
-    (cmakeBool "ENABLE_N300" enableN300)
-    (cmakeBool "ENABLE_N320" enableN320)
-    (cmakeBool "ENABLE_E300" enableE300)
-    (cmakeBool "ENABLE_E320" enableE320)
-  ]
-  ++ optionals stdenv.hostPlatform.isAarch32 [
+      (cmakeBool "ENABLE_LIBUHD" true)
+      (cmakeBool "ENABLE_USB" true)
+      (cmakeBool "ENABLE_TESTS" true)
+      (cmakeBool "ENABLE_EXAMPLES" enableExamples)
+      (cmakeBool "ENABLE_UTILS" enableUtils)
+      (cmakeBool "ENABLE_C_API" enableCApi)
+      (cmakeBool "ENABLE_PYTHON_API" enablePythonApi)
+      (cmakeBool "ENABLE_DPDK" enableDpdk)
+      (cmakeBool "ENABLE_OCTOCLOCK" enableOctoClock)
+      (cmakeBool "ENABLE_MPMD" enableMpmd)
+      (cmakeBool "ENABLE_B100" enableB100)
+      (cmakeBool "ENABLE_B200" enableB200)
+      (cmakeBool "ENABLE_USRP1" enableUsrp1)
+      (cmakeBool "ENABLE_USRP2" enableUsrp2)
+      (cmakeBool "ENABLE_X300" enableX300)
+      (cmakeBool "ENABLE_X400" enableX400)
+      (cmakeBool "ENABLE_N300" enableN300)
+      (cmakeBool "ENABLE_N320" enableN320)
+      (cmakeBool "ENABLE_E300" enableE300)
+      (cmakeBool "ENABLE_E320" enableE320)
+    ] ++ optionals stdenv.hostPlatform.isAarch32 [
     "-DCMAKE_CXX_FLAGS=-Wno-psabi"
   ];
 

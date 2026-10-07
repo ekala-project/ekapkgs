@@ -38,9 +38,9 @@ stdenv.mkDerivation rec {
     wayland-protocols
   ];
 
-  cmakeFlags = [
-    "-DBUILD_TESTING=OFF"
-  ];
+  cmakeEntries = {
+    BUILD_TESTING = false;
+  };
 
   meta = {
     description = "Qt6 component to allow creating desktop shell components with layer-shell";

@@ -31,9 +31,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DBUILD_SHARED_LIBS=On"
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = "On";
+  };
 
   meta = {
     description = "Tools and library to read/write to the Linux power capping framework (sysfs interface)";

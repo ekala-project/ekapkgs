@@ -25,10 +25,10 @@ stdenv.mkDerivation (finalAttrs: {
     ./cmake-3.10.patch
   ];
 
-  cmakeFlags = [
-    "-DBUILD_SHARED_LIBS=ON"
-    "-DCMAKE_INSTALL_LIBDIR=lib"
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+    CMAKE_INSTALL_LIBDIR = "lib";
+  };
 
   nativeBuildInputs = [
     pkg-config

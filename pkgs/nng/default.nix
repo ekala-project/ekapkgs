@@ -30,12 +30,15 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeFlags = [
     "-G Ninja"
-    (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-  ]
-  ++ lib.optionals mbedtlsSupport [
-    "-DMBEDTLS_ROOT_DIR=${mbedtls}"
-    "-DNNG_ENABLE_TLS=ON"
   ];
+
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = (!stdenv.hostPlatform.isStatic);
+  }
+  // lib.optionalAttrs mbedtlsSupport {
+    MBEDTLS_ROOT_DIR = "${mbedtls}";
+    NNG_ENABLE_TLS = true;
+  };
 
   meta = {
     homepage = "https://nng.nanomsg.org/";

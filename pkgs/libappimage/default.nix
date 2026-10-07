@@ -60,13 +60,13 @@ stdenv.mkDerivation (finalAttrs: {
       --replace 'includedir=''${prefix}/@CMAKE_INSTALL_INCLUDEDIR@' 'includedir=@CMAKE_INSTALL_FULL_INCLUDEDIR@'
   '';
 
-  cmakeFlags = [
-    "-DUSE_SYSTEM_BOOST=1"
-    "-DUSE_SYSTEM_LIBARCHIVE=1"
-    "-DUSE_SYSTEM_SQUASHFUSE=1"
-    "-DUSE_SYSTEM_XDGUTILS=1"
-    "-DUSE_SYSTEM_XZ=1"
-  ];
+  cmakeEntries = {
+    USE_SYSTEM_BOOST = true;
+    USE_SYSTEM_LIBARCHIVE = true;
+    USE_SYSTEM_SQUASHFUSE = true;
+    USE_SYSTEM_XDGUTILS = true;
+    USE_SYSTEM_XZ = true;
+  };
 
   nativeBuildInputs = [
     cmake

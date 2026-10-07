@@ -42,9 +42,9 @@ stdenv.mkDerivation rec {
     "--ignore-whitespace"
   ];
 
-  cmakeFlags = [
-    "-DTBB_TEST=OFF"
-  ];
+  cmakeEntries = {
+    TBB_TEST = false;
+  };
 
   # Fix build with modern gcc
   NIX_CFLAGS_COMPILE =

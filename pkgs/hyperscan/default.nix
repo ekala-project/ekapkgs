@@ -60,14 +60,14 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_AVX512" true)
-    (lib.cmakeBool "FAT_RUNTIME" true)
-  ]
-  ++ lib.optionals withStatic [
+  cmakeEntries = {
+    BUILD_AVX512 = true;
+    FAT_RUNTIME = true;
+  };
+
+  cmakeFlags = lib.optionals withStatic [
     (lib.cmakeBool "BUILD_STATIC_AND_SHARED" true)
-  ]
-  ++ lib.optionals (!withStatic) [
+  ] ++ lib.optionals (!withStatic) [
     (lib.cmakeBool "BUILD_SHARED_LIBS" true)
   ];
 

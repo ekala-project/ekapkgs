@@ -22,8 +22,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   # The absolute paths set by the Nix CMake build manager confuse
   # Zycore's config generation (which appends them to the package path).
-  cmakeFlags = [
-    "-DCMAKE_INSTALL_LIBDIR=lib"
-    "-DCMAKE_INSTALL_INCLUDEDIR=include"
-  ];
+  cmakeEntries = {
+    CMAKE_INSTALL_LIBDIR = "lib";
+    CMAKE_INSTALL_INCLUDEDIR = "include";
+  };
 })

@@ -21,8 +21,12 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
+  cmakeEntries = {
+    BKCRACK_BUILD_TESTING = "${if finalAttrs.finalPackage.doCheck then ";
+  };
+
   cmakeFlags = [
-    "-DBKCRACK_BUILD_TESTING=${if finalAttrs.finalPackage.doCheck then "ON" else "OFF"}"
+    ON" else "OFF"}"
   ];
 
   postInstall = ''

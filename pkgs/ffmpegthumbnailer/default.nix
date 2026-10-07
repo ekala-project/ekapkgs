@@ -32,10 +32,10 @@ stdenv.mkDerivation (finalAttrs: {
     libjpeg
   ];
 
-  cmakeFlags = [
-    "-DENABLE_THUMBNAILER=ON"
-    "-DENABLE_AUDIO_THUMBNAILER=ON"
-  ];
+  cmakeEntries = {
+    ENABLE_THUMBNAILER = true;
+    ENABLE_AUDIO_THUMBNAILER = true;
+  };
 
   # https://github.com/dirkvdb/ffmpegthumbnailer/issues/215
   postPatch = ''

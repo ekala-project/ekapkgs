@@ -32,8 +32,11 @@ stdenv.mkDerivation (finalAttrs: {
     texinfo
   ];
 
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+  };
+
   cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" true)
     (lib.cmakeBool "BUILD_STATIC_QJS_EXE" stdenv.hostPlatform.isStatic)
   ];
 

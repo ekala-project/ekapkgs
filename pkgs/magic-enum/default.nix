@@ -21,13 +21,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    # the cmake package does not handle absolute CMAKE_INSTALL_INCLUDEDIR correctly
-    # (setting it to an absolute path causes include files to go to $out/$out/include,
-    #  because the absolute path is interpreted with root at $out).
-    (lib.cmakeFeature "CMAKE_INSTALL_INCLUDEDIR" "include")
-    (lib.cmakeFeature "CMAKE_INSTALL_LIBDIR" "lib")
-  ];
+  cmakeEntries = {
+    CMAKE_INSTALL_INCLUDEDIR = "include";
+    CMAKE_INSTALL_LIBDIR = "lib";
+  };
 
   meta = {
     description = "Static reflection for enums (to string, from string, iteration) for modern C++";

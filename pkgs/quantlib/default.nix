@@ -29,7 +29,9 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [ boost ];
 
   # Required by RQuantLib, may be beneficial for others too
-  cmakeFlags = [ "-DQL_HIGH_RESOLUTION_DATE=ON" ];
+  cmakeEntries = {
+    QL_HIGH_RESOLUTION_DATE = true;
+  };
 
   # Needed for RQuantLib and possible others
   postInstall = ''

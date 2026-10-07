@@ -25,10 +25,10 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_TESTS" false)
-    (lib.cmakeBool "BUILD_TOOLS" false)
-  ];
+  cmakeEntries = {
+    BUILD_TESTS = false;
+    BUILD_TOOLS = false;
+  };
 
   patches = [
     (replaceVars ./opengl-driver-lib.patch {

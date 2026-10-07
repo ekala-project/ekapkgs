@@ -42,10 +42,10 @@ let
 
     cmakeDir = "../runtime/Cpp";
 
-    cmakeFlags = [
-      (lib.cmakeBool "ANTLR4_INSTALL" true)
-      (lib.cmakeBool "ANTLR_BUILD_CPP_TESTS" false)
-    ];
+    cmakeEntries = {
+      ANTLR4_INSTALL = true;
+      ANTLR_BUILD_CPP_TESTS = false;
+    };
 
     meta = {
       description = "C++ target for ANTLR 4";

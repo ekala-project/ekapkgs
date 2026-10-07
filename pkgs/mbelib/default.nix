@@ -21,7 +21,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [ (lib.cmakeFeature "CMAKE_POLICY_VERSION_MINIMUM" "3.10") ];
+  cmakeEntries = {
+    CMAKE_POLICY_VERSION_MINIMUM = "3.10";
+  };
 
   doCheck = true;
 

@@ -32,11 +32,11 @@ stdenv.mkDerivation rec {
     alsa-lib
   ];
 
-  cmakeFlags = [
-    "-DALSOFT_DLOPEN=OFF"
-    "-DALSOFT_SEARCH_INSTALL_DATADIR=1"
-    "-DALSOFT_BACKEND_OSS=OFF"
-  ];
+  cmakeEntries = {
+    ALSOFT_DLOPEN = false;
+    ALSOFT_SEARCH_INSTALL_DATADIR = true;
+    ALSOFT_BACKEND_OSS = false;
+  };
 
   meta = {
     description = "OpenAL alternative";

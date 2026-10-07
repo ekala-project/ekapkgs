@@ -58,14 +58,10 @@ stdenv.mkDerivation rec {
   # Qt setup hook complains about missing `wrapQtAppsHook` otherwise.
   dontWrapQtApps = true;
 
-  cmakeFlags = [
-    "-DGLIB_SCHEMAS_DIR=${glib.getSchemaPath gsettings-desktop-schemas}"
-    # TODO: uncomment once qtbase available
-    # "-DQT_PLUGINS_DIR=${placeholder "out"}/${qtbase.qtPluginPrefix}"
-
-    # Workaround CMake 4 compat
-    (lib.cmakeFeature "CMAKE_POLICY_VERSION_MINIMUM" "3.31")
-  ];
+  cmakeEntries = {
+    GLIB_SCHEMAS_DIR = "${glib.getSchemaPath gsettings-desktop-schemas}";
+    CMAKE_POLICY_VERSION_MINIMUM = "3.31";
+  };
 
   meta = {
     description = "QPlatformTheme for a better Qt application inclusion in GNOME";

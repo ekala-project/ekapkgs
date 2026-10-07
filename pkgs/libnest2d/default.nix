@@ -42,7 +42,9 @@ stdenv.mkDerivation {
 
   env.CLIPPER_PATH = clipper.out;
 
-  cmakeFlags = [ "-DLIBNEST2D_HEADER_ONLY=OFF" ];
+  cmakeEntries = {
+    LIBNEST2D_HEADER_ONLY = false;
+  };
 
   meta = {
     description = "2D irregular bin packaging and nesting library written in modern C++";

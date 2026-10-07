@@ -21,10 +21,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    # Fix configure with cmake4
-    (lib.cmakeFeature "CMAKE_POLICY_VERSION_MINIMUM" "3.10")
-  ];
+  cmakeEntries = {
+    CMAKE_POLICY_VERSION_MINIMUM = "3.10";
+  };
 
   meta = {
     description = "Public domain mDNS/DNS-SD library in C";

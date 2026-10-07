@@ -26,11 +26,11 @@ stdenv.mkDerivation rec {
     zlib
   ];
 
-  cmakeFlags = [
-    "-DBUILD_CONTRIBS=ON"
-    "-DBUILD_CONTRIBS_LIB=ON"
-    "-DCMAKE_BUILD_WITH_INSTALL_NAME_DIR=ON"
-  ];
+  cmakeEntries = {
+    BUILD_CONTRIBS = true;
+    BUILD_CONTRIBS_LIB = true;
+    CMAKE_BUILD_WITH_INSTALL_NAME_DIR = true;
+  };
 
   patches = [
     ./Fix-pkgconfig-file-by-adding-clucene-shared-library.patch

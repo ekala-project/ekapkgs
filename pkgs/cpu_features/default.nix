@@ -27,7 +27,13 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [ "-DBUILD_SHARED_LIBS=${if static then "OFF" else "ON"}" ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = "${if static then ";
+  };
+
+  cmakeFlags = [
+    OFF" else "ON"}"
+  ];
 
   meta = {
     description = "Cross platform C99 library to get cpu features at runtime";

@@ -32,14 +32,13 @@ stdenv.mkDerivation (
       (lib.warnIf (args ? qtInputs) "qt6.qtModule's qtInputs argument is deprecated" args.qtInputs or [ ])
       ++ (args.propagatedBuildInputs or [ ]);
 
+    cmakeEntries = {
+      CMAKE_SYSTEM_VERSION = "";
+    };
+
     cmakeFlags = [
-      # be more verbose
-      "--log-level=STATUS"
-      # don't leak OS version into the final output
-      # https://bugreports.qt.io/browse/QTBUG-136060
-      "-DCMAKE_SYSTEM_VERSION="
-    ]
-    ++ args.cmakeFlags or [ ];
+        "--log-level=STATUS"
+      ] ++ args.cmakeFlags or [ ];
 
     moveToDev = false;
 

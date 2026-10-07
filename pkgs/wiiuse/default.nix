@@ -34,10 +34,13 @@ stdenv.mkDerivation (finalAttrs: {
 
   propagatedBuildInputs = lib.optionals stdenv.hostPlatform.isLinux [ bluez ];
 
+  cmakeEntries = {
+    BUILD_EXAMPLE_SDL = false;
+  };
+
   cmakeFlags = [
-    "-DBUILD_EXAMPLE_SDL=OFF"
-  ]
-  ++ [ (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic)) ];
+    (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
+  ];
 
   # On Darwin (and Windows), upstream's CMakeLists.txt forcibly overrides
   # CMAKE_INSTALL_LIBDIR to "lib", ignoring the value passed by the cmake

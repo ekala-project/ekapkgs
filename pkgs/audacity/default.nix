@@ -133,18 +133,18 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (libsbsms_2_3_0 != null) [ libsbsms_2_3_0 ]
   ++ [ wxwidgets ];
 
-  cmakeFlags = [
-    "-DAUDACITY_BUILD_LEVEL=2"
-    "-DAUDACITY_REV_LONG=nixpkgs"
-    "-DAUDACITY_REV_TIME=nixpkgs"
-    "-DDISABLE_DYNAMIC_LOADING_FFMPEG=ON"
-    "-Daudacity_conan_enabled=Off"
-    "-Daudacity_use_ffmpeg=loaded"
-    "-Daudacity_has_vst3=Off"
-    "-Daudacity_has_crashreports=Off"
-    "-DCMAKE_SKIP_BUILD_RPATH=ON"
-    "-DCMAKE_INSTALL_LIBDIR=lib"
-  ];
+  cmakeEntries = {
+    AUDACITY_BUILD_LEVEL = "2";
+    AUDACITY_REV_LONG = "nixpkgs";
+    AUDACITY_REV_TIME = "nixpkgs";
+    DISABLE_DYNAMIC_LOADING_FFMPEG = true;
+    audacity_conan_enabled = "Off";
+    audacity_use_ffmpeg = "loaded";
+    audacity_has_vst3 = "Off";
+    audacity_has_crashreports = "Off";
+    CMAKE_SKIP_BUILD_RPATH = true;
+    CMAKE_INSTALL_LIBDIR = "lib";
+  };
 
   preBuild = ''
     export LD_LIBRARY_PATH=$PWD/Release/lib/audacity

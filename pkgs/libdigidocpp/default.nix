@@ -50,9 +50,9 @@ stdenv.mkDerivation (finalAttrs: {
     "bin"
   ];
 
-  cmakeFlags = [
-    (lib.cmakeFeature "PKCS11_MODULE" "${lib.getLib opensc}/lib/opensc-pkcs11.so")
-  ];
+  cmakeEntries = {
+    PKCS11_MODULE = "${lib.getLib opensc}/lib/opensc-pkcs11.so";
+  };
 
   # This wants to link to ${CMAKE_DL_LIBS} (ltdl), and there doesn't seem to be
   # a way to tell CMake where this should be pulled from.

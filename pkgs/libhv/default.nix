@@ -25,14 +25,14 @@ stdenv.mkDerivation (finalAttrs: {
     openssl
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "ENABLE_UDS" true)
-    (lib.cmakeBool "WITH_MQTT" true)
-    (lib.cmakeBool "WITH_CURL" true)
-    (lib.cmakeBool "WITH_NGHTTP2" true)
-    (lib.cmakeBool "WITH_OPENSSL" true)
-    (lib.cmakeBool "WITH_KCP" true)
-  ];
+  cmakeEntries = {
+    ENABLE_UDS = true;
+    WITH_MQTT = true;
+    WITH_CURL = true;
+    WITH_NGHTTP2 = true;
+    WITH_OPENSSL = true;
+    WITH_KCP = true;
+  };
 
   meta = {
     description = "C/c++ network library for developing TCP/UDP/SSL/HTTP/WebSocket/MQTT client/server";

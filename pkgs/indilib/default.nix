@@ -46,10 +46,10 @@ stdenv.mkDerivation (finalAttrs: {
     fftw
   ];
 
-  cmakeFlags = [
-    "-DCMAKE_INSTALL_LIBDIR=lib"
-    "-DUDEVRULES_INSTALL_DIR=lib/udev/rules.d"
-  ];
+  cmakeEntries = {
+    CMAKE_INSTALL_LIBDIR = "lib";
+    UDEVRULES_INSTALL_DIR = "lib/udev/rules.d";
+  };
 
   postFixup = lib.optionalString stdenv.hostPlatform.isLinux ''
     for f in $out/lib/udev/rules.d/*.rules

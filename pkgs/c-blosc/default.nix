@@ -49,16 +49,16 @@ stdenv.mkDerivation (finalAttrs: {
     zstd
   ];
 
-  cmakeFlags = [
-    "-DBUILD_STATIC=OFF"
-    "-DBUILD_SHARED=ON"
-    "-DPREFER_EXTERNAL_LZ4=ON"
-    "-DPREFER_EXTERNAL_ZLIB=ON"
-    "-DPREFER_EXTERNAL_ZSTD=ON"
-    "-DBUILD_EXAMPLES=OFF"
-    "-DBUILD_BENCHMARKS=OFF"
-    "-DBUILD_TESTS=ON"
-  ];
+  cmakeEntries = {
+    BUILD_STATIC = false;
+    BUILD_SHARED = true;
+    PREFER_EXTERNAL_LZ4 = true;
+    PREFER_EXTERNAL_ZLIB = true;
+    PREFER_EXTERNAL_ZSTD = true;
+    BUILD_EXAMPLES = false;
+    BUILD_BENCHMARKS = false;
+    BUILD_TESTS = true;
+  };
 
   doCheck = true;
 

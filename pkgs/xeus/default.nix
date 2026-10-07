@@ -31,9 +31,9 @@ stdenv.mkDerivation (finalAttrs: {
     libuuid
   ];
 
-  cmakeFlags = [
-    "-DXEUS_BUILD_TESTS=ON"
-  ];
+  cmakeEntries = {
+    XEUS_BUILD_TESTS = true;
+  };
 
   doCheck = true;
   preCheck = "export LD_LIBRARY_PATH=$PWD";

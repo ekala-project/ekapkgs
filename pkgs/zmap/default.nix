@@ -26,7 +26,9 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-Mym0pyd43pcbnZzPW3P+N5syjTJBuMsH2ZsjOJmqZgA=";
   };
 
-  cmakeFlags = [ "-DRESPECT_INSTALL_PREFIX_CONFIG=ON" ];
+  cmakeEntries = {
+    RESPECT_INSTALL_PREFIX_CONFIG = true;
+  };
 
   nativeBuildInputs = [
     cmake

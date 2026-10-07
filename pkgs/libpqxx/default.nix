@@ -32,10 +32,10 @@ stdenv.mkDerivation (finalAttrs: {
     libpq
   ];
 
-  cmakeFlags = [
-    "-DBUILD_DOC=OFF"
-    "-DBUILD_TEST=OFF"
-  ];
+  cmakeEntries = {
+    BUILD_DOC = false;
+    BUILD_TEST = false;
+  };
 
   doCheck = false;
 

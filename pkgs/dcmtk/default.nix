@@ -60,21 +60,21 @@ stdenv.mkDerivation (finalAttrs: {
     libiconv
   ];
 
-  cmakeFlags = [
-    (lib.cmakeFeature "CMAKE_CXX_STANDARD" "17")
-    (lib.cmakeBool "CMAKE_SKIP_RPATH" true)
-    "-DCMAKE_VERBOSE_MAKEFILE=ON"
-    (lib.cmakeBool "DCMTK_ENABLE_PRIVATE_TAGS" true)
-    (lib.cmakeBool "DCMTK_ENABLE_STL" true)
-    (lib.cmakeBool "DCMTK_WITH_ICONV" true)
-    (lib.cmakeBool "DCMTK_WITH_ICU" true)
-    (lib.cmakeBool "DCMTK_WITH_OPENSSL" true)
-    (lib.cmakeBool "DCMTK_WITH_TIFF" true)
-    (lib.cmakeBool "DCMTK_WITH_XML" true)
-    (lib.cmakeBool "DCMTK_WITH_ZLIB" true)
-    (lib.cmakeBool "USE_COMPILER_HIDDEN_VISIBILITY" true)
-    (lib.cmakeBool "BUILD_TESTING" false)
-  ];
+  cmakeEntries = {
+    CMAKE_CXX_STANDARD = "17";
+    CMAKE_SKIP_RPATH = true;
+    CMAKE_VERBOSE_MAKEFILE = true;
+    DCMTK_ENABLE_PRIVATE_TAGS = true;
+    DCMTK_ENABLE_STL = true;
+    DCMTK_WITH_ICONV = true;
+    DCMTK_WITH_ICU = true;
+    DCMTK_WITH_OPENSSL = true;
+    DCMTK_WITH_TIFF = true;
+    DCMTK_WITH_XML = true;
+    DCMTK_WITH_ZLIB = true;
+    USE_COMPILER_HIDDEN_VISIBILITY = true;
+    BUILD_TESTING = false;
+  };
 
   doCheck = true;
 

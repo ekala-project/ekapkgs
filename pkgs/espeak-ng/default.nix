@@ -110,15 +110,15 @@ stdenv.mkDerivation rec {
     ++ lib.optional pcaudiolibSupport pcaudiolib
     ++ lib.optional sonicSupport sonic;
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" true)
-    (lib.cmakeBool "USE_ASYNC" asyncSupport)
-    (lib.cmakeBool "USE_KLATT" klattSupport)
-    (lib.cmakeBool "USE_LIBPCAUDIO" pcaudiolibSupport)
-    (lib.cmakeBool "USE_LIBSONIC" sonicSupport)
-    (lib.cmakeBool "USE_MBROLA" mbrolaSupport)
-    (lib.cmakeBool "USE_SPEECHPLAYER" speechPlayerSupport)
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+    USE_ASYNC = asyncSupport;
+    USE_KLATT = klattSupport;
+    USE_LIBPCAUDIO = pcaudiolibSupport;
+    USE_LIBSONIC = sonicSupport;
+    USE_MBROLA = mbrolaSupport;
+    USE_SPEECHPLAYER = speechPlayerSupport;
+  };
 
   postInstall = lib.optionalString stdenv.hostPlatform.isLinux ''
     wrapProgram $out/bin/espeak-ng \

@@ -25,7 +25,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [ (lib.cmakeBool "immer_BUILD_TESTS" finalAttrs.finalPackage.doCheck) ];
+  cmakeEntries = {
+    immer_BUILD_TESTS = finalAttrs.finalPackage.doCheck;
+  };
 
   # immer is a header only library
   dontBuild = true;

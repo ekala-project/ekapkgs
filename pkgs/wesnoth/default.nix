@@ -67,9 +67,9 @@ stdenv.mkDerivation (finalAttrs: {
     curl
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "ENABLE_SYSTEM_LUA" true)
-  ];
+  cmakeEntries = {
+    ENABLE_SYSTEM_LUA = true;
+  };
 
   meta = {
     description = "Battle for Wesnoth, a free, turn-based strategy game with a fantasy theme";

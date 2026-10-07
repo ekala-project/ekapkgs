@@ -69,9 +69,9 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "SFIZZ_TESTS" true)
-  ];
+  cmakeEntries = {
+    SFIZZ_TESTS = true;
+  };
 
   meta = {
     homepage = "https://github.com/sfztools/sfizz";

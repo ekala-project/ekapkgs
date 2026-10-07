@@ -30,7 +30,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [ "-DTERMCOLOR_TESTS=ON" ];
+  cmakeEntries = {
+    TERMCOLOR_TESTS = true;
+  };
   env.CXXFLAGS = toString [
     # GCC 13: error: 'uint8_t' has not been declared
     "-include cstdint"

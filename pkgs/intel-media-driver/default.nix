@@ -36,11 +36,15 @@ stdenv.mkDerivation rec {
     })
   ];
 
+  cmakeEntries = {
+    INSTALL_DRIVER_SYSCONF = false;
+    LIBVA_DRIVERS_PATH = "${placeholder ";
+    MEDIA_RUN_TEST_SUITE = false;
+    MEDIA_BUILD_FATAL_WARNINGS = false;
+  };
+
   cmakeFlags = [
-    "-DINSTALL_DRIVER_SYSCONF=OFF"
-    "-DLIBVA_DRIVERS_PATH=${placeholder "out"}/lib/dri"
-    "-DMEDIA_RUN_TEST_SUITE=OFF"
-    "-DMEDIA_BUILD_FATAL_WARNINGS=OFF"
+    out"}/lib/dri"
   ];
 
   env.NIX_CFLAGS_COMPILE = lib.optionalString (

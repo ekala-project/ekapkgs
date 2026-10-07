@@ -127,20 +127,22 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional (db != null) db
   ++ lib.optional (nss != null) nss;
 
+  cmakeEntries = {
+    ENABLE_VALA_BINDINGS = true;
+    ENABLE_INTROSPECTION = true;
+    INCLUDE_INSTALL_DIR = "${placeholder ";
+    WITH_PHONENUMBER = true;
+    ENABLE_GTK = "${lib.boolToString withGtk3}";
+    ENABLE_EXAMPLES = "${lib.boolToString withGtk3}";
+    ENABLE_CANBERRA = "${lib.boolToString (withGtk3 && libcanberra-gtk3 != null)}";
+    ENABLE_GTK4 = "${lib.boolToString withGtk4}";
+    ENABLE_OAUTH2_WEBKITGTK = false;
+    ENABLE_OAUTH2_WEBKITGTK4 = false;
+  };
+
   cmakeFlags = [
-    "-DENABLE_VALA_BINDINGS=ON"
-    "-DENABLE_INTROSPECTION=ON"
-    "-DINCLUDE_INSTALL_DIR=${placeholder "dev"}/include"
-    "-DWITH_PHONENUMBER=ON"
-    "-DENABLE_GTK=${lib.boolToString withGtk3}"
-    "-DENABLE_EXAMPLES=${lib.boolToString withGtk3}"
-    "-DENABLE_CANBERRA=${lib.boolToString (withGtk3 && libcanberra-gtk3 != null)}"
-    "-DENABLE_GTK4=${lib.boolToString withGtk4}"
-    # TODO: OAuth2 disabled because webkitgtk is not available in ekapkgs
-    "-DENABLE_OAUTH2_WEBKITGTK=OFF"
-    "-DENABLE_OAUTH2_WEBKITGTK4=OFF"
-  ]
-  ++ lib.optionals (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) [
+      dev"}/include"
+    ] ++ lib.optionals (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) [
     (lib.cmakeFeature "CMAKE_CROSSCOMPILING_EMULATOR" (stdenv.hostPlatform.emulator buildPackages))
   ];
 

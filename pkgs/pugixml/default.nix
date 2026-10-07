@@ -27,10 +27,10 @@ stdenv.mkDerivation (finalAttrs: {
     validatePkgConfig
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_TESTS" true)
-    (lib.cmakeBool "BUILD_SHARED_LIBS" shared)
-  ];
+  cmakeEntries = {
+    BUILD_TESTS = true;
+    BUILD_SHARED_LIBS = shared;
+  };
 
   nativeCheckInputs = [ check ];
 

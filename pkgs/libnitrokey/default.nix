@@ -35,10 +35,10 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  cmakeFlags = [
-    "-DADD_GIT_INFO=OFF"
-    "-DCMAKE_INSTALL_UDEVRULESDIR=etc/udev/rules.d"
-  ];
+  cmakeEntries = {
+    ADD_GIT_INFO = false;
+    CMAKE_INSTALL_UDEVRULESDIR = "etc/udev/rules.d";
+  };
 
   buildInputs = [ libusb1 ];
 

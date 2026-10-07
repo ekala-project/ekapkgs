@@ -23,9 +23,9 @@ stdenv.mkDerivation (finalAttrs: {
     scdoc
   ];
 
-  cmakeFlags = [
-    "-DINSTALL_DOCUMENTATION=ON"
-  ];
+  cmakeEntries = {
+    INSTALL_DOCUMENTATION = true;
+  };
 
   meta = {
     homepage = "https://github.com/Ferdi265/pipectl";

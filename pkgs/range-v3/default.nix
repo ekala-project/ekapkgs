@@ -21,10 +21,11 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DRANGES_ENABLE_WERROR=OFF"
-  ]
-  ++ lib.optional stdenv.hostPlatform.isAarch64 "-DRANGE_V3_TESTS=OFF";
+  cmakeEntries = {
+    RANGES_ENABLE_WERROR = false;
+  };
+
+  cmakeFlags = lib.optional stdenv.hostPlatform.isAarch64 "-DRANGE_V3_TESTS=OFF";
 
   doCheck = !stdenv.hostPlatform.isAarch64;
   checkTarget = "test";

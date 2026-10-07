@@ -21,10 +21,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    # Fix the build with CMake 4.
-    "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
-  ];
+  cmakeEntries = {
+    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
+  };
 
   meta = {
     description = "REPL for taskwarrior";

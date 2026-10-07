@@ -82,9 +82,9 @@ stdenv.mkDerivation (finalAttrs: {
     gstreamer
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "ENABLE_GPOD" false)
-  ];
+  cmakeEntries = {
+    ENABLE_GPOD = false;
+  };
 
   postInstall = ''
     qtWrapperArgs+=(

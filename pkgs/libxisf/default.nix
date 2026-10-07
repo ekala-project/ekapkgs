@@ -32,10 +32,11 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  cmakeFlags = [
-    "-DUSE_BUNDLED_LIBS=OFF"
-  ]
-  ++ lib.optional stdenv.hostPlatform.isStatic "-DBUILD_SHARED_LIBS=OFF";
+  cmakeEntries = {
+    USE_BUNDLED_LIBS = false;
+  };
+
+  cmakeFlags = lib.optional stdenv.hostPlatform.isStatic "-DBUILD_SHARED_LIBS=OFF";
 
   buildInputs = [
     lz4

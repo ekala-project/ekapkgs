@@ -41,11 +41,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   propagatedBuildInputs = [ blas ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" true)
-    (lib.cmakeBool "enable_fortran" true)
-    (lib.cmakeFeature "BLA_VENDOR" "Generic")
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = true;
+    enable_fortran = true;
+    BLA_VENDOR = "Generic";
+  };
 
   doCheck = true;
 

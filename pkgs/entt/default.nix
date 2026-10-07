@@ -20,9 +20,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DENTT_INSTALL=ON"
-  ];
+  cmakeEntries = {
+    ENTT_INSTALL = true;
+  };
 
   meta = {
     homepage = "https://github.com/skypjack/entt";

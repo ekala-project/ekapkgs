@@ -22,9 +22,9 @@ stdenv.mkDerivation (finalAttrs: {
     gfortran
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BUILD_SHARED_LIBS" (!stdenv.hostPlatform.isStatic))
-  ];
+  cmakeEntries = {
+    BUILD_SHARED_LIBS = !stdenv.hostPlatform.isStatic;
+  };
 
   meta = {
     homepage = "https://www.imcce.fr/inpop/calceph/";

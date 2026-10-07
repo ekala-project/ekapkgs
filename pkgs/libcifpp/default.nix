@@ -21,10 +21,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ cmake ];
 
-  cmakeFlags = [
-    # disable network access
-    "-DCIFPP_DOWNLOAD_CCD=OFF"
-  ];
+  cmakeEntries = {
+    CIFPP_DOWNLOAD_CCD = false;
+  };
 
   buildInputs = [
     boost

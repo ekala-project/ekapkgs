@@ -21,7 +21,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [ "-DJUST_INSTALL_CEREAL=yes" ];
+  cmakeEntries = {
+    JUST_INSTALL_CEREAL = "yes";
+  };
 
   meta = {
     homepage = "https://uscilab.github.io/cereal/";

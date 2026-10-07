@@ -32,13 +32,13 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   propagatedBuildInputs = [ hiredis ];
 
-  cmakeFlags = [
-    "-DREDIS_PLUS_PLUS_BUILD_TEST=OFF"
-  ]
-  ++ lib.optionals (!enableShared) [
+  cmakeEntries = {
+    REDIS_PLUS_PLUS_BUILD_TEST = false;
+  };
+
+  cmakeFlags = lib.optionals (!enableShared) [
     "-DREDIS_PLUS_PLUS_BUILD_SHARED=OFF"
-  ]
-  ++ lib.optionals (!enableStatic) [
+  ] ++ lib.optionals (!enableStatic) [
     "-DREDIS_PLUS_PLUS_BUILD_STATIC=OFF"
   ];
 

@@ -59,10 +59,10 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
   ];
 
-  cmakeFlags = [
-    "-DPYTHON_DESIRED=${lib.substring 0 1 python3.pythonVersion}"
-    "-DPYTHON_EXECUTABLE=${python3.interpreter}"
-  ];
+  cmakeEntries = {
+    PYTHON_DESIRED = "${lib.substring 0 1 python3.pythonVersion}";
+    PYTHON_EXECUTABLE = "${python3.interpreter}";
+  };
 
   postFixup = ''
     moveToOutput "lib/${python3.libPrefix}" "$py"

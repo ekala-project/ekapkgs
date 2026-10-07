@@ -48,20 +48,18 @@ stdenv.mkDerivation (finalAttrs: {
     suitesparse
   ];
 
-  cmakeFlags = [
-    (lib.cmakeFeature "EXAMPLES_INSTALL_PATH" "${placeholder "examples"}/share/examples")
-  ]
-  ++ lib.optionals lapackSupport [
+  cmakeEntries = {
+    EXAMPLES_INSTALL_PATH = "${placeholder "examples"}/share/examples";
+    SUNDIALS_INDEX_SIZE = (toString (if blas.isILP64 then 64 else 32));
+  };
+
+  cmakeFlags = lib.optionals lapackSupport [
     (lib.cmakeBool "ENABLE_LAPACK" true)
     (lib.cmakeFeature "LAPACK_LIBRARIES" "${lapack}/lib/liblapack${stdenv.hostPlatform.extensions.sharedLibrary}")
-  ]
-  ++ lib.optionals kluSupport [
+  ] ++ lib.optionals kluSupport [
     (lib.cmakeBool "ENABLE_KLU" true)
     (lib.cmakeFeature "KLU_INCLUDE_DIR" "${lib.getDev suitesparse}/include")
     (lib.cmakeFeature "KLU_LIBRARY_DIR" "${suitesparse}/lib")
-  ]
-  ++ [
-    (lib.cmakeFeature "SUNDIALS_INDEX_SIZE" (toString (if blas.isILP64 then 64 else 32)))
   ];
 
   postInstall = ''

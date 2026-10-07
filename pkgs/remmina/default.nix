@@ -104,13 +104,20 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
 
+  cmakeEntries = {
+    WITH_FREERDP3 = "${if freerdp != null then ";
+    WITH_VTE = "${if withVte then ";
+    WITH_TELEPATHY = false;
+    WITH_AVAHI = false;
+    WITH_LIBSECRET = "${if withLibsecret then ";
+    WITH_WEBKIT2GTK = "${if withWebkitGtk && webkitgtk_4_1 != null then ";
+  };
+
   cmakeFlags = [
-    "-DWITH_FREERDP3=${if freerdp != null then "ON" else "OFF"}"
-    "-DWITH_VTE=${if withVte then "ON" else "OFF"}"
-    "-DWITH_TELEPATHY=OFF"
-    "-DWITH_AVAHI=OFF"
-    "-DWITH_LIBSECRET=${if withLibsecret then "ON" else "OFF"}"
-    "-DWITH_WEBKIT2GTK=${if withWebkitGtk && webkitgtk_4_1 != null then "ON" else "OFF"}"
+    ON" else "OFF"}"
+    ON" else "OFF"}"
+    ON" else "OFF"}"
+    ON" else "OFF"}"
   ];
 
   dontWrapQtApps = true;

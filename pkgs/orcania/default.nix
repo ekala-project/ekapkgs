@@ -21,7 +21,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [ "-DBUILD_ORCANIA_TESTING=off" ];
+  cmakeEntries = {
+    BUILD_ORCANIA_TESTING = "off";
+  };
 
   env.NIX_CFLAGS_COMPILE = toString (
     lib.optionals stdenv.cc.isClang [

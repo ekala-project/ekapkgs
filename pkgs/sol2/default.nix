@@ -21,10 +21,10 @@ stdenv.mkDerivation (finalAttrs: {
     lua
   ];
 
-  cmakeFlags = [
-    "-DSOL2_LUA_VERSION=${lua.version}"
-    "-DSOL2_BUILD_LUA=FALSE"
-  ];
+  cmakeEntries = {
+    SOL2_LUA_VERSION = "${lua.version}";
+    SOL2_BUILD_LUA = false;
+  };
 
   meta = {
     description = "Lua API wrapper with advanced features and top notch performance";

@@ -20,7 +20,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   # For pthread_cancel
-  cmakeFlags = [ "-DCMAKE_EXE_LINKER_FLAGS=-lgcc_s" ];
+  cmakeEntries = {
+    CMAKE_EXE_LINKER_FLAGS = "-lgcc_s";
+  };
 
   nativeBuildInputs = [
     cmake

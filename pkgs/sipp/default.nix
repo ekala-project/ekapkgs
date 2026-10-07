@@ -25,13 +25,15 @@ stdenv.mkDerivation (finalAttrs: {
     echo '#define VERSION "v${finalAttrs.version}"' >> include/version.h
   '';
 
-  cmakeFlags = [
-    "-DUSE_PCAP=1"
-    "-DUSE_SSL=1"
-    "-DUSE_SCTP=${if stdenv.hostPlatform.isLinux then "1" else "0"}"
+  cmakeEntries = {
+    USE_PCAP = true;
+    USE_SSL = true;
+    USE_SCTP = "${if stdenv.hostPlatform.isLinux then ";
+    CMAKE_SKIP_BUILD_RPATH = true;
+  };
 
-    # file RPATH_CHANGE could not write new RPATH
-    "-DCMAKE_SKIP_BUILD_RPATH=ON"
+  cmakeFlags = [
+    1" else "0"}"
   ];
 
 

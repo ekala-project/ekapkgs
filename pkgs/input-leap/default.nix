@@ -60,10 +60,11 @@ stdenv.mkDerivation (finalAttrs: {
     libportal
   ];
 
-  cmakeFlags = [
-    "-DINPUTLEAP_REVISION=${builtins.substring 0 8 finalAttrs.src.rev}"
-  ]
-  ++ lib.optional withLibei "-DINPUTLEAP_BUILD_LIBEI=ON";
+  cmakeEntries = {
+    INPUTLEAP_REVISION = "${builtins.substring 0 8 finalAttrs.src.rev}";
+  };
+
+  cmakeFlags = lib.optional withLibei "-DINPUTLEAP_BUILD_LIBEI=ON";
 
   dontWrapGApps = true;
   preFixup = ''

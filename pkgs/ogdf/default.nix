@@ -23,11 +23,11 @@ stdenv.mkDerivation {
     doxygen
   ];
 
-  cmakeFlags = [
-    "-DCMAKE_CXX_FLAGS=-fPIC"
-    "-DBUILD_SHARED_LIBS=ON"
-    "-DOGDF_WARNING_ERRORS=OFF"
-  ];
+  cmakeEntries = {
+    CMAKE_CXX_FLAGS = "-fPIC";
+    BUILD_SHARED_LIBS = true;
+    OGDF_WARNING_ERRORS = false;
+  };
 
   meta = {
     description = "Open Graph Drawing Framework/Open Graph algorithms and Data structure Framework";

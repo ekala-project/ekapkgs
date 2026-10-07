@@ -80,9 +80,13 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   outputInclude = "include";
 
+  cmakeEntries = {
+    D_FLAGS = "-d-version=TZDatabaseDir;-d-version=LibcurlPath;-J${pathConfig}";
+    INCLUDE_INSTALL_DIR = "${placeholder ";
+  };
+
   cmakeFlags = [
-    "-DD_FLAGS=-d-version=TZDatabaseDir;-d-version=LibcurlPath;-J${pathConfig}"
-    "-DINCLUDE_INSTALL_DIR=${placeholder "include"}/include/d"
+    include"}/include/d"
   ];
 
   postConfigure = ''

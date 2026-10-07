@@ -40,11 +40,14 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ recode ];
 
+  cmakeEntries = {
+    LOCALDIR = "${placeholder ";
+    DISABLE_RECODE = "false";
+  };
+
   cmakeFlags = [
-    "-DLOCALDIR=${placeholder "out"}/share/fortunes"
-    "-DDISABLE_RECODE=false"
-  ]
-  ++ lib.optional (!withOffensive) "-DNO_OFFENSIVE=true";
+      out"}/share/fortunes"
+    ] ++ lib.optional (!withOffensive) "-DNO_OFFENSIVE=true";
 
   postPatch = ''
     # Remove man page generation which requires docmake (AppXMLDocBookBuilder perl module)

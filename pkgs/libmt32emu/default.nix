@@ -30,10 +30,10 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
   ];
 
-  cmakeFlags = [
-    "-Dmunt_WITH_MT32EMU_SMF2WAV=OFF"
-    "-Dmunt_WITH_MT32EMU_QT=OFF"
-  ];
+  cmakeEntries = {
+    munt_WITH_MT32EMU_SMF2WAV = false;
+    munt_WITH_MT32EMU_QT = false;
+  };
 
   postFixup = ''
     substituteInPlace "$dev"/lib/pkgconfig/mt32emu.pc \

@@ -43,11 +43,11 @@ stdenv.mkDerivation (finalAttrs: {
     nlohmann_json
   ];
 
-  cmakeFlags = [
-    "-DNLOHMANN_JSON_ORIGIN=external"
-    "-DEXE_SQLITE3=${sqlite}/bin/sqlite3"
-    "-DBUILD_TESTING=OFF"
-  ];
+  cmakeEntries = {
+    NLOHMANN_JSON_ORIGIN = "external";
+    EXE_SQLITE3 = "${sqlite}/bin/sqlite3";
+    BUILD_TESTING = false;
+  };
 
   env.CXXFLAGS = toString [
     "-include"

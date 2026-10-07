@@ -28,10 +28,10 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   doCheck = true;
 
-  cmakeFlags = [
-    "-DSQLITECPP_INTERNAL_SQLITE=OFF"
-    "-DSQLITECPP_BUILD_TESTS=ON"
-  ];
+  cmakeEntries = {
+    SQLITECPP_INTERNAL_SQLITE = false;
+    SQLITECPP_BUILD_TESTS = true;
+  };
 
   meta = {
     homepage = "https://srombauts.github.io/SQLiteCpp/";

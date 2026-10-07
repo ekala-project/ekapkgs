@@ -25,9 +25,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [
-    "-DBUILD_EXAMPLE=OFF"
-  ];
+  cmakeEntries = {
+    BUILD_EXAMPLE = false;
+  };
 
   buildInputs = [
     glew

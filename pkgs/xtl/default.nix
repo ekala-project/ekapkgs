@@ -21,7 +21,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  cmakeFlags = [ "-DBUILD_TESTS=ON" ];
+  cmakeEntries = {
+    BUILD_TESTS = true;
+  };
 
   doCheck = true;
   nativeCheckInputs = [ doctest ];

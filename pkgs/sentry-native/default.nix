@@ -32,10 +32,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeBuildType = "RelWithDebInfo";
 
-  cmakeFlags = [
-    "-DSENTRY_BREAKPAD_SYSTEM=On"
-    "-DSENTRY_BACKEND=breakpad"
-  ];
+  cmakeEntries = {
+    SENTRY_BREAKPAD_SYSTEM = "On";
+    SENTRY_BACKEND = "breakpad";
+  };
 
   meta = {
     homepage = "https://github.com/getsentry/sentry-native";

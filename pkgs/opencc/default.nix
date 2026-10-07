@@ -28,9 +28,9 @@ stdenv.mkDerivation rec {
     rapidjson
   ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "USE_SYSTEM_RAPIDJSON" true)
-  ];
+  cmakeEntries = {
+    USE_SYSTEM_RAPIDJSON = true;
+  };
 
   meta = {
     homepage = "https://github.com/BYVoid/OpenCC";

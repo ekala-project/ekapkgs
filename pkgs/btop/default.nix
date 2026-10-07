@@ -24,11 +24,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   installFlags = [ "PREFIX=$(out)" ];
 
-  cmakeFlags = [
-    (lib.cmakeBool "BTOP_LTO" (!stdenv.hostPlatform.isDarwin))
-    (lib.cmakeBool "BTOP_STATIC" (stdenv.hostPlatform.isStatic))
-    (lib.cmakeBool "BTOP_FORTIFY" (!stdenv.hostPlatform.isStatic))
-  ];
+  cmakeEntries = {
+    BTOP_LTO = !stdenv.hostPlatform.isDarwin;
+    BTOP_STATIC = stdenv.hostPlatform.isStatic;
+    BTOP_FORTIFY = !stdenv.hostPlatform.isStatic;
+  };
 
   hardeningDisable = lib.optionals stdenv.hostPlatform.isStatic [ "fortify" ];
 
