@@ -1,0 +1,66 @@
+Fix for GCC 15 / C23, which interprets empty function parameter lists as
+having no parameters instead of an unspecified signature.
+
+Adapted from Fedora patch for global 6.6.15 where upstream partially
+changed the cast style to use __P() macros.
+
+diff --git a/libdb/db.c b/libdb/db.c
+--- a/libdb/db.c
++++ b/libdb/db.c
+@@ -30,7 +30,37 @@
+ #include "recno.h"
+
+ static int
+-__dberr(void)
++__dberr_del(const DB *dbp, const DBT *key, u_int flags)
++{
++	return (RET_ERROR);
++}
++
++static int
++__dberr_fd(const DB *dbp)
++{
++	return (RET_ERROR);
++}
++
++static int
++__dberr_get(const DB *dbp, const DBT *key, DBT *data, u_int flags)
++{
++	return (RET_ERROR);
++}
++
++static int
++__dberr_put(const DB *dbp, DBT *key, const DBT *data, u_int flags)
++{
++	return (RET_ERROR);
++}
++
++static int
++__dberr_seq(const DB *dbp, DBT *key, DBT *data, u_int flags)
++{
++	return (RET_ERROR);
++}
++
++static int
++__dberr_sync(const DB *dbp, u_int flags)
+ {
+ 	return (RET_ERROR);
+ }
+@@ -89,12 +119,12 @@
+ __dbpanic(DB *dbp)
+ {
+ 	/* The only thing that can succeed is a close. */
+-	dbp->del = (int (*)__P((const struct __db *, const DBT *, u_int)))__dberr;
+-	dbp->fd = (int (*)__P((const struct __db *)))__dberr;
+-	dbp->get = (int (*)__P((const struct __db *, const DBT *, DBT *, u_int)))__dberr;
+-	dbp->put = (int (*)__P((const struct __db *, DBT *, const DBT *, u_int)))__dberr;
+-	dbp->seq = (int (*)__P((const struct __db *, DBT *, DBT *, u_int)))__dberr;
+-	dbp->sync = (int (*)__P((const struct __db *, u_int)))__dberr;
++	dbp->del = __dberr_del;
++	dbp->fd = __dberr_fd;
++	dbp->get = __dberr_get;
++	dbp->put = __dberr_put;
++	dbp->seq = __dberr_seq;
++	dbp->sync = __dberr_sync;
+ 	return (RET_ERROR);
+ }
