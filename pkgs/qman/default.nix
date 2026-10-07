@@ -59,8 +59,12 @@ stdenv.mkDerivation (finalAttrs: {
     cunit
   ];
 
+  mesonEntries = {
+    configdir = "${placeholder ";
+  };
+
   mesonFlags = [
-    "-Dconfigdir=${placeholder "out"}/etc/xdg/qman"
+    out"}/etc/xdg/qman"
   ];
 
   doInstallCheck = true;

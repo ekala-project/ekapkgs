@@ -42,13 +42,13 @@ stdenv.mkDerivation (finalAttrs: {
     enchant
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "gobject_introspection" false)
-    (lib.mesonBool "gtk_doc" false)
-    (lib.mesonBool "vapi" false)
-    (lib.mesonBool "tests" false)
-    (lib.mesonBool "install_tests" false)
-  ];
+  mesonEntries = {
+    gobject_introspection = false;
+    gtk_doc = false;
+    vapi = false;
+    tests = false;
+    install_tests = false;
+  };
 
   meta = {
     description = "Spell-checking library for GTK applications";

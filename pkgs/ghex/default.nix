@@ -53,10 +53,10 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=true"
-    "-Dvapi=true"
-  ];
+  mesonEntries = {
+    gtk_doc = true;
+    vapi = true;
+  };
 
   postFixup = ''
     # Cannot be in postInstall, otherwise _multioutDocs hook in preFixup will move right back.

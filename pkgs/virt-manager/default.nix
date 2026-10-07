@@ -44,10 +44,13 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  mesonFlags = [
-    (lib.mesonBool "compile-schemas" false)
-    (lib.mesonEnable "tests" false)
-  ];
+  mesonEntries = {
+    compile-schemas = false;
+  };
+
+  mesonFeatures = {
+    tests = false;
+  };
 
   nativeBuildInputs = [
     meson

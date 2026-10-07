@@ -76,20 +76,19 @@ stdenv.mkDerivation (finalAttrs: {
     babl
   ];
 
-  mesonFlags = [
-    "-Dmrg=disabled"
-    "-Dsdl2=disabled"
-    "-Dpygobject=disabled"
-    "-Dlibav=disabled"
-    "-Dlibv4l=disabled"
-    "-Dlibv4l2=disabled"
-    "-Djasper=disabled"
-    "-Dlua=disabled"
-    "-Dmaxflow=disabled"
-    "-Dumfpack=disabled"
-    # vapigen pkg-config detection fails under strictDeps
-    "-Dvapigen=disabled"
-  ];
+  mesonFeatures = {
+    mrg = false;
+    sdl2 = false;
+    pygobject = false;
+    libav = false;
+    libv4l = false;
+    libv4l2 = false;
+    jasper = false;
+    lua = false;
+    maxflow = false;
+    umfpack = false;
+    vapigen = false;
+  };
 
   postPatch = ''
     chmod +x tests/opencl/opencl_test.sh

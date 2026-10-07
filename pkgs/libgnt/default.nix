@@ -57,10 +57,10 @@ stdenv.mkDerivation (finalAttrs: {
       "ncurses_sys_prefix = '/usr'" \
       "ncurses_sys_prefix = '${lib.getDev ncurses}'"
   '';
-  mesonFlags = [
-    (lib.mesonBool "doc" buildDocs)
-    (lib.mesonBool "python2" false)
-  ];
+  mesonEntries = {
+    doc = buildDocs;
+    python2 = false;
+  };
 
   meta = {
     description = "Ncurses toolkit for creating text-mode graphical user interfaces";

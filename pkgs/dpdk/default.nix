@@ -78,14 +78,17 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs config/arm buildtools
   '';
 
-  mesonFlags = [
-    (lib.mesonBool "tests" false)
-    (lib.mesonBool "enable_docs" true)
-    (lib.mesonEnable "developer_mode" false)
-    (lib.mesonOption "default_library" (if shared then "shared" else "static"))
-  ]
-  ++ lib.optionals (machine != null) [ (lib.mesonOption "machine" machine) ]
-  ++ lib.optionals (withExamples != [ ]) [
+  mesonEntries = {
+    tests = false;
+    enable_docs = true;
+    default_library = (if shared then "shared" else "static");
+  };
+
+  mesonFeatures = {
+    developer_mode = false;
+  };
+
+  mesonFlags = lib.optionals (machine != null) [ (lib.mesonOption "machine" machine) ] ++ lib.optionals (withExamples != [ ]) [
     (lib.mesonOption "examples" (lib.concatStringsSep "," withExamples))
   ];
 

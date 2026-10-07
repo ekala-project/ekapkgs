@@ -104,9 +104,13 @@ stdenv.mkDerivation (finalAttrs: {
     systemd
   ];
 
+  mesonEntries = {
+    udev_dir = "${placeholder ";
+    systemd = withSystemd;
+  };
+
   mesonFlags = [
-    "-Dudev_dir=${placeholder "out"}/lib/udev"
-    (lib.mesonBool "systemd" withSystemd)
+    out"}/lib/udev"
   ];
   # TODO: uncomment once gnome-session-ctl is available
   # ++ lib.optionals withSystemd [

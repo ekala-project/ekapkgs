@@ -62,9 +62,13 @@ stdenv.mkDerivation rec {
     gpgme
   ];
 
+  mesonEntries = {
+    gtkdoc = true;
+    installed_test_prefix = "${placeholder ";
+  };
+
   mesonFlags = [
-    "-Dgtkdoc=true"
-    "-Dinstalled_test_prefix=${placeholder "installedTests"}"
+    installedTests"}"
   ];
 
   doCheck = true;

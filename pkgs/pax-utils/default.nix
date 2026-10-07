@@ -27,11 +27,14 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  mesonFlags = [
-    (lib.mesonBool "use_fuzzing" withFuzzing)
-    (lib.mesonEnable "use_libcap" withLibcap)
-    (lib.mesonBool "use_seccomp" false)
-  ];
+  mesonEntries = {
+    use_fuzzing = withFuzzing;
+    use_seccomp = false;
+  };
+
+  mesonFeatures = {
+    use_libcap = withLibcap;
+  };
 
   depsBuildBuild = [ buildPackages.stdenv.cc ];
   nativeBuildInputs = [

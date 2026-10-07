@@ -52,11 +52,14 @@ stdenv.mkDerivation (finalAttrs: {
       --replace 'GROUP="plugdev"' 'TAG+="uaccess", TAG+="udev-acl"'
   '';
 
-  mesonFlags = [
-    (lib.mesonOption "programmer" "auto")
-    (lib.mesonEnable "man-pages" true)
-    (lib.mesonEnable "tests" (!stdenv.buildPlatform.isDarwin))
-  ];
+  mesonEntries = {
+    programmer = "auto";
+  };
+
+  mesonFeatures = {
+    man-pages = true;
+    tests = (!stdenv.buildPlatform.isDarwin);
+  };
 
   doCheck = !stdenv.hostPlatform.isDarwin;
 

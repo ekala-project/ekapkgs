@@ -61,9 +61,9 @@ stdenv.mkDerivation (finalAttrs: {
     systemd
   ];
 
-  mesonFlags = [
-    (lib.mesonOption "profile" "default")
-  ];
+  mesonEntries = {
+    profile = "default";
+  };
 
   preFixup = ''
     gappsWrapperArgs+=(--prefix PATH : ${lib.makeBinPath finalAttrs.runtimeDeps})

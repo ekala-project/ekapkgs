@@ -56,9 +56,9 @@ stdenv.mkDerivation (finalAttrs: {
     wayland-scanner
   ];
 
-  mesonFlags = [
-    (lib.mesonOption "version" finalAttrs.version)
-  ];
+  mesonEntries = {
+    version = finalAttrs.version;
+  };
 
   buildInputs = [
     bash-completion

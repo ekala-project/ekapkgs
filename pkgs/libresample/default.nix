@@ -48,7 +48,9 @@ stdenv.mkDerivation (finalAttrs: {
     libsamplerate
   ];
 
-  mesonFlags = [ (lib.mesonEnable "compareresample" (!libsamplerate.meta.broken)) ];
+  mesonFeatures = {
+    compareresample = (!libsamplerate.meta.broken);
+  };
 
   doCheck = true;
 

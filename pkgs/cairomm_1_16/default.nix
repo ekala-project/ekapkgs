@@ -42,9 +42,9 @@ stdenv.mkDerivation (finalAttrs: {
     libsigcxx30
   ];
 
-  mesonFlags = [
-    "-Dbuild-tests=true"
-  ];
+  mesonEntries = {
+    build-tests = true;
+  };
 
   doCheck = true;
 

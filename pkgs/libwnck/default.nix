@@ -52,10 +52,13 @@ stdenv.mkDerivation (finalAttrs: {
     gtk3
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=false"
-    (lib.mesonEnable "introspection" false)
-  ];
+  mesonEntries = {
+    gtk_doc = false;
+  };
+
+  mesonFeatures = {
+    introspection = false;
+  };
 
   meta = {
     description = "Library to manage X windows and workspaces (via pagers, tasklists, etc.)";

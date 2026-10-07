@@ -39,11 +39,11 @@ stdenv.mkDerivation (finalAttrs: {
   ];
   buildInputs = [ glib ];
 
-  mesonFlags = [
-    (lib.mesonBool "bash-completions" true)
-    (lib.mesonBool "zsh-completions" true)
-    (lib.mesonBool "gtk-doc" withDocs)
-  ];
+  mesonEntries = {
+    bash-completions = true;
+    zsh-completions = true;
+    gtk-doc = withDocs;
+  };
 
   meta = {
     description = "Command-line utility and library for controlling media players that implement MPRIS";

@@ -64,13 +64,13 @@ stdenv.mkDerivation (finalAttrs: {
     gdk-pixbuf
   ];
 
-  mesonFlags = [
-    "-Drpm=false"
-    "-Ddep11=false"
-    "-Dintrospection=false"
-    "-Dbuilder=false"
-    "-Dfonts=false"
-  ];
+  mesonEntries = {
+    rpm = false;
+    dep11 = false;
+    introspection = false;
+    builder = false;
+    fonts = false;
+  };
 
   doCheck = false;
 

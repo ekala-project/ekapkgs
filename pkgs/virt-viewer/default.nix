@@ -80,9 +80,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   propagatedUserEnvPkgs = lib.optional (spiceSupport && spice-gtk != null) spice-gtk;
 
-  mesonFlags = [
-    (lib.mesonEnable "ovirt" ovirtSupport)
-  ];
+  mesonFeatures = {
+    ovirt = ovirtSupport;
+  };
 
   strictDeps = true;
 

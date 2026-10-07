@@ -43,10 +43,9 @@ stdenv.mkDerivation (finalAttrs: {
     gupnp-dlna
   ];
 
-  mesonFlags = [
-    # Sphinx docs not installed, do not depend on sphinx
-    "-Ddocs=false"
-  ];
+  mesonEntries = {
+    docs = false;
+  };
 
   meta = {
     description = "Library of utility functions that are used by the higher level dLeyna";

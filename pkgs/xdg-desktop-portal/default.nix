@@ -106,17 +106,22 @@ stdenv.mkDerivation (finalAttrs: {
     systemdMinimal
   ];
 
+  mesonEntries = {
+    installed-tests = true;
+    installed_test_prefix = "${placeholder ";
+  };
+
+  mesonFeatures = {
+    documentation = false;
+    systemd = enableSystemd;
+  };
+
   mesonFlags = [
-    "--sysconfdir=/etc"
-    "-Dinstalled-tests=true"
-    "-Dinstalled_test_prefix=${placeholder "installedTests"}"
-    "-Ddocumentation=disabled"
-    (lib.mesonEnable "systemd" enableSystemd)
-  ]
-  ++ lib.optionals (!enableGeoLocation) [
+      "--sysconfdir=/etc"
+      installedTests"}"
+    ] ++ lib.optionals (!enableGeoLocation) [
     "-Dgeoclue=disabled"
-  ]
-  ++ lib.optionals (!finalAttrs.finalPackage.doCheck) [
+  ] ++ lib.optionals (!finalAttrs.finalPackage.doCheck) [
     "-Dtests=disabled"
   ];
 

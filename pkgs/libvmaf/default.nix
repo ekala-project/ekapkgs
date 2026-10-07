@@ -40,7 +40,9 @@ stdenv.mkDerivation (finalAttrs: {
     NIX_CFLAGS_COMPILE = "-D__BSD_VISIBLE=1";
   };
 
-  mesonFlags = [ "-Denable_avx512=true" ];
+  mesonEntries = {
+    enable_avx512 = true;
+  };
 
   outputs = [
     "out"

@@ -39,9 +39,9 @@ stdenv.mkDerivation (finalAttrs: {
     wayland-protocols
   ];
 
-  mesonFlags = [
-    "-Dfishcompletiondir=share/fish/vendor_completions.d"
-  ];
+  mesonEntries = {
+    fishcompletiondir = "share/fish/vendor_completions.d";
+  };
 
   postInstall = ''
     wrapProgram $out/bin/wl-copy \

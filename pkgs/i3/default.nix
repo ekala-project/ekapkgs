@@ -54,10 +54,10 @@ stdenv.mkDerivation (finalAttrs: {
     findXMLCatalogs
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "docs" true)
-    (lib.mesonBool "mans" true)
-  ];
+  mesonEntries = {
+    docs = true;
+    mans = true;
+  };
 
   buildInputs = [
     libxcb

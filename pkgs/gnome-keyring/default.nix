@@ -64,10 +64,18 @@ stdenv.mkDerivation rec {
     python3
   ];
 
+  mesonEntries = {
+    pkcs11-config = "${placeholder ";
+    pkcs11-modules = "${placeholder ";
+  };
+
+  mesonFeatures = {
+    systemd = false;
+  };
+
   mesonFlags = [
-    "-Dpkcs11-config=${placeholder "out"}/etc/pkcs11"
-    "-Dpkcs11-modules=${placeholder "out"}/lib/pkcs11"
-    "-Dsystemd=disabled"
+    out"}/etc/pkcs11"
+    out"}/lib/pkcs11"
   ];
 
   doCheck = false;

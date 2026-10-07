@@ -52,13 +52,16 @@ stdenv.mkDerivation (finalAttrs: {
     libtraceevent
   ];
 
-  mesonFlags = [
-    (lib.mesonOption "rootprefix" "${placeholder "out"}")
-    (lib.mesonOption "sysconfdir" "${placeholder "out"}/etc/ndctl.conf.d")
-    (lib.mesonEnable "asciidoctor" true)
-    (lib.mesonEnable "systemd" false)
-    (lib.mesonOption "iniparserdir" "${iniparser}")
-  ];
+  mesonEntries = {
+    rootprefix = "${placeholder "out"}";
+    sysconfdir = "${placeholder "out"}/etc/ndctl.conf.d";
+    iniparserdir = "${iniparser}";
+  };
+
+  mesonFeatures = {
+    asciidoctor = true;
+    systemd = false;
+  };
 
   postPatch = ''
     patchShebangs test

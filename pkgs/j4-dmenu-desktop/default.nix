@@ -38,12 +38,13 @@ stdenv.mkDerivation (finalAttrs: {
     spdlog
   ];
 
-  mesonFlags = [
-    # Disable unit tests.
-    "-Denable-tests=false"
-    # Copy pre-generated shell completions.
-    "-Dgenerate-shell-completions=disabled"
-  ];
+  mesonEntries = {
+    enable-tests = false;
+  };
+
+  mesonFeatures = {
+    generate-shell-completions = false;
+  };
 
   meta = {
     changelog = "https://github.com/enkore/j4-dmenu-desktop/blob/${finalAttrs.src.rev}/CHANGELOG";

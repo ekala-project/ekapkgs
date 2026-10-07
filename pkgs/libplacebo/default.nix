@@ -57,13 +57,16 @@ stdenv.mkDerivation (finalAttrs: {
     fast-float
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "demos" false)
-    (lib.mesonEnable "d3d11" false)
-    (lib.mesonEnable "glslang" false)
-    (lib.mesonEnable "vk-proc-addr" vulkanSupport)
-    (lib.mesonOption "vulkan-registry" "${vulkan-headers}/share/vulkan/registry/vk.xml")
-  ];
+  mesonEntries = {
+    demos = false;
+    vulkan-registry = "${vulkan-headers}/share/vulkan/registry/vk.xml";
+  };
+
+  mesonFeatures = {
+    d3d11 = false;
+    glslang = false;
+    vk-proc-addr = vulkanSupport;
+  };
 
   postPatch = ''
     substituteInPlace meson.build \

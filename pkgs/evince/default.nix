@@ -105,19 +105,17 @@ stdenv.mkDerivation (finalAttrs: {
     ]
   );
 
-  mesonFlags = [
-    "-Dnautilus=false"
-  ]
-  ++ lib.optionals (ghostscript != null) [
+  mesonEntries = {
+    nautilus = false;
+  };
+
+  mesonFlags = lib.optionals (ghostscript != null) [
     "-Dps=enabled"
-  ]
-  ++ lib.optionals (ghostscript == null) [
+  ] ++ lib.optionals (ghostscript == null) [
     "-Dps=disabled"
-  ]
-  ++ lib.optionals (!withLibsecret) [
+  ] ++ lib.optionals (!withLibsecret) [
     "-Dkeyring=disabled"
-  ]
-  ++ lib.optionals (!supportMultimedia) [
+  ] ++ lib.optionals (!supportMultimedia) [
     "-Dmultimedia=disabled"
   ];
 

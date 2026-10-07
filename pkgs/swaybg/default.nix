@@ -48,10 +48,10 @@ stdenv.mkDerivation (finalAttrs: {
     librsvg
   ];
 
-  mesonFlags = [
-    "-Dgdk-pixbuf=enabled"
-    "-Dman-pages=enabled"
-  ];
+  mesonFeatures = {
+    gdk-pixbuf = true;
+    man-pages = true;
+  };
 
   meta = {
     description = "Wallpaper tool for Wayland compositors";

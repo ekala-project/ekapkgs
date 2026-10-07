@@ -63,12 +63,19 @@ stdenv.mkDerivation (finalAttrs: {
     libfprint
   ];
 
+  mesonEntries = {
+    gtk_doc = true;
+    pam_modules_dir = "${placeholder ";
+    sysconfdir = "${placeholder ";
+    dbus_service_dir = "${placeholder ";
+    systemd_system_unit_dir = "${placeholder ";
+  };
+
   mesonFlags = [
-    "-Dgtk_doc=true"
-    "-Dpam_modules_dir=${placeholder "out"}/lib/security"
-    "-Dsysconfdir=${placeholder "out"}/etc"
-    "-Ddbus_service_dir=${placeholder "out"}/share/dbus-1/system-services"
-    "-Dsystemd_system_unit_dir=${placeholder "out"}/lib/systemd/system"
+    out"}/lib/security"
+    out"}/etc"
+    out"}/share/dbus-1/system-services"
+    out"}/lib/systemd/system"
   ];
 
   env = {

@@ -59,10 +59,10 @@ stdenv.mkDerivation rec {
   ]
   ++ (if withGtk4 then [ gtk4 ] else [ gtk3 ]);
 
-  mesonFlags = [
-    "-Dgtk4=${lib.boolToString withGtk4}"
-    "-Dgtk3=${lib.boolToString (!withGtk4)}"
-  ];
+  mesonEntries = {
+    gtk4 = "${lib.boolToString withGtk4}";
+    gtk3 = "${lib.boolToString (!withGtk4)}";
+  };
 
   meta = {
     homepage = "https://www.freedesktop.org/software/colord/intro.html";

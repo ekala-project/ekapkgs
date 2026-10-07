@@ -51,9 +51,9 @@ stdenv.mkDerivation (finalAttrs: {
     pythonEnv
   ];
 
-  mesonFlags = [
-    "-Dpython-path=${lib.getExe pythonEnv}"
-  ];
+  mesonEntries = {
+    python-path = "${lib.getExe pythonEnv}";
+  };
 
   meta = {
     homepage = "https://docs.xfce.org/apps/xfce4-panel-profiles/start";

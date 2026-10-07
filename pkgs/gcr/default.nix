@@ -61,13 +61,16 @@ stdenv.mkDerivation (finalAttrs: {
     p11-kit
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "ssh_agent" false)
-    "-Dgpg_path=${lib.getBin gnupg}/bin/gpg"
-    (lib.mesonBool "gtk_doc" false)
-    (lib.mesonBool "introspection" false)
-    (lib.mesonEnable "systemd" false)
-  ];
+  mesonEntries = {
+    ssh_agent = false;
+    gpg_path = "${lib.getBin gnupg}/bin/gpg";
+    gtk_doc = false;
+    introspection = false;
+  };
+
+  mesonFeatures = {
+    systemd = false;
+  };
 
   doCheck = false;
 

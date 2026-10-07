@@ -56,9 +56,9 @@ stdenv.mkDerivation (finalAttrs: {
     libcap_ng
   ];
 
-  mesonFlags = [
-    "-Ddocs=disabled"
-  ];
+  mesonFeatures = {
+    docs = false;
+  };
 
   meta = {
     description = "Wrapper library of libvirt for glib-based applications";

@@ -97,10 +97,9 @@ stdenv.mkDerivation (finalAttrs: {
     gstreamer.plugins-good
   ];
 
-  mesonFlags = [
-    # Requires /etc/machine-id, D-Bus system bus, etc.
-    "-Dtests=false"
-  ];
+  mesonEntries = {
+    tests = false;
+  };
 
   meta = {
     description = "Software store that lets you install and update applications and system extensions";

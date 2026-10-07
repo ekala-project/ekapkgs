@@ -67,10 +67,10 @@ stdenv.mkDerivation (finalAttrs: {
     gcr_4
   ];
 
-  mesonFlags = [
-    "-Dgcr=${lib.boolToString withGnome}"
-    "-Dlibnma_gtk4=${lib.boolToString withGtk4}"
-  ];
+  mesonEntries = {
+    gcr = "${lib.boolToString withGnome}";
+    libnma_gtk4 = "${lib.boolToString withGtk4}";
+  };
 
   postPatch = ''
     substituteInPlace src/nma-ws/nma-eap.c --subst-var-by \

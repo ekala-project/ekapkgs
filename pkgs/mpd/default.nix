@@ -217,18 +217,15 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional (builtins.elem "documentation" features_) "man";
 
-  mesonFlags = [
-    (lib.mesonBool "test" true)
-    (lib.mesonBool "manpages" true)
-    (lib.mesonBool "html_manual" true)
-  ]
-  ++ map (x: lib.mesonEnable x true) features_
-  ++ map (x: lib.mesonEnable x false) (lib.subtractLists features_ knownFeatures)
-  ++ lib.optional (builtins.elem "zeroconf" features_) (lib.mesonOption "zeroconf" "avahi")
-  ++ lib.optional (builtins.elem "systemd" features_) (
+  mesonEntries = {
+    test = true;
+    manpages = true;
+    html_manual = true;
+  };
+
+  mesonFlags = map (x: lib.mesonEnable x true) features_ ++ map (x: lib.mesonEnable x false) (lib.subtractLists features_ knownFeatures) ++ lib.optional (builtins.elem "zeroconf" features_) (lib.mesonOption "zeroconf" "avahi") ++ lib.optional (builtins.elem "systemd" features_) (
     lib.mesonOption "systemd_system_unit_dir" "etc/systemd/system"
-  )
-  ++ lib.optional (builtins.elem "qobuz" features_) (lib.mesonEnable "nlohmann_json" true);
+  ) ++ lib.optional (builtins.elem "qobuz" features_) (lib.mesonEnable "nlohmann_json" true);
 
   meta = {
     description = "Flexible, powerful daemon for playing music";

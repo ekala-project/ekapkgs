@@ -56,9 +56,9 @@ stdenv.mkDerivation (finalAttrs: {
     ))
   ];
 
-  mesonFlags = [
-    "-Dtests=disabled"
-  ];
+  mesonFeatures = {
+    tests = false;
+  };
 
   postPatch = ''
     ln -s "${munit}" ./subprojects/munit

@@ -49,9 +49,9 @@ stdenv.mkDerivation (finalAttrs: {
     systemd
   ];
 
-  mesonFlags = [
-    "-Dconsolekit=false"
-  ];
+  mesonEntries = {
+    consolekit = false;
+  };
 
   meta = {
     homepage = "https://gitlab.gnome.org/World/gnome-firmware";

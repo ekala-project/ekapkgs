@@ -88,10 +88,13 @@ stdenv.mkDerivation (finalAttrs: {
     webkitgtk.gtk3
   ];
 
-  mesonFlags = [
-    "-Dprofile=release"
-    "-Dcontractor=enabled" # install the contractor file (Pantheon specific)
-  ];
+  mesonEntries = {
+    profile = "release";
+  };
+
+  mesonFeatures = {
+    contractor = true;
+  };
 
   strictDeps = true;
 

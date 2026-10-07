@@ -50,9 +50,9 @@ stdenv.mkDerivation (finalAttrs: {
     libadwaita
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "install-examples" true)
-  ];
+  mesonEntries = {
+    install-examples = true;
+  };
 
   postFixup = ''
     moveToOutput "share/doc" "$devdoc"

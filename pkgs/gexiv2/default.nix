@@ -42,13 +42,13 @@ stdenv.mkDerivation rec {
     exiv2
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=false"
-    "-Dintrospection=true"
-    "-Dvapi=true"
-    "-Dtests=false"
-    "-Dpython3=false"
-  ];
+  mesonEntries = {
+    gtk_doc = false;
+    introspection = true;
+    vapi = true;
+    tests = false;
+    python3 = false;
+  };
 
   meta = {
     homepage = "https://gitlab.gnome.org/GNOME/gexiv2";

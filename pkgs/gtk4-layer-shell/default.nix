@@ -59,10 +59,10 @@ stdenv.mkDerivation (finalAttrs: {
     wayland-protocols
   ];
 
-  mesonFlags = [
-    "-Ddocs=true"
-    "-Dexamples=true"
-  ];
+  mesonEntries = {
+    docs = true;
+    examples = true;
+  };
 
   meta = {
     description = "Library to create panels and other desktop components for Wayland using the Layer Shell protocol and GTK4";

@@ -147,19 +147,20 @@ stdenv.mkDerivation {
   mesonBuildType = "release";
 
   # See https://codeberg.org/dnkl/foot/src/tag/1.9.2/INSTALL.md#options
+  mesonEntries = {
+    b_lto = true;
+    default-terminfo = "foot";
+    custom-terminfo-install-location = "${terminfoDir}";
+    systemd-units-dir = "${placeholder ";
+    werror = false;
+  };
+
+  mesonFeatures = {
+    terminfo = true;
+  };
+
   mesonFlags = [
-    # Use lto
-    "-Db_lto=true"
-    # "Build" and install terminfo db
-    "-Dterminfo=enabled"
-    # Ensure TERM=foot is used
-    "-Ddefault-terminfo=foot"
-    # Tell foot to set TERMINFO and where to install the terminfo files
-    "-Dcustom-terminfo-install-location=${terminfoDir}"
-    # Install systemd user units for foot-server
-    "-Dsystemd-units-dir=${placeholder "out"}/lib/systemd/user"
-    # Especially -Wunused-command-line-argument is a problem with clang
-    "-Dwerror=false"
+    out"}/lib/systemd/user"
   ];
 
   # build and run binary generating PGO profiles,

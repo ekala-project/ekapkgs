@@ -55,9 +55,13 @@ stdenv.mkDerivation (finalAttrs: {
     json-glib
   ];
 
+  mesonEntries = {
+    soup2 = false;
+    installed_test_prefix = "${placeholder ";
+  };
+
   mesonFlags = [
-    "-Dsoup2=false"
-    "-Dinstalled_test_prefix=${placeholder "installedTests"}"
+    installedTests"}"
   ];
 
   meta = {

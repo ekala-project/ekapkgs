@@ -37,10 +37,14 @@ stdenv.mkDerivation (finalAttrs: {
     zstd
   ];
 
+  mesonEntries = {
+    systemunitdir = "${placeholder ";
+    sharedstatedir = "/var/cache";
+    dbpath = "locatedb";
+  };
+
   mesonFlags = [
-    "-Dsystemunitdir=${placeholder "out"}/etc/systemd/system"
-    "-Dsharedstatedir=/var/cache"
-    "-Ddbpath=locatedb"
+    out"}/etc/systemd/system"
   ];
 
   meta = {

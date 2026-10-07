@@ -58,9 +58,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.LC_ALL = "en_US.UTF-8";
 
-  mesonFlags = [
-    "-Dinstall-py-overrides=false"
-  ];
+  mesonEntries = {
+    install-py-overrides = false;
+  };
 
   meta = {
     description = "Library for managing accounts which can be used from GLib applications";

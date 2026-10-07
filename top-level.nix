@@ -111,7 +111,11 @@ final: prev: {
   # Enable GObject introspection in gtk3 (needed by GIMP, etc.)
   gtk3 = prev.gtk3.overrideAttrs (old: {
     nativeBuildInputs = old.nativeBuildInputs ++ [ final.gobject-introspection ];
-    mesonFlags = (old.mesonFlags or [ ]) ++ [ "-Dintrospection=true" ];
+    mesonEntries = {
+      introspection = true;
+    };
+
+    mesonFlags = (old.mesonFlags or [ ]);
   });
   gtk4 =
     (prev.gtk4.override {

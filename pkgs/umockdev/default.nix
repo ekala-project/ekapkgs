@@ -58,9 +58,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  mesonFlags = [
-    "-Dgtk_doc=true"
-  ];
+  mesonEntries = {
+    gtk_doc = true;
+  };
 
   doCheck = false;
 

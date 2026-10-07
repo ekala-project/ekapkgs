@@ -186,10 +186,10 @@ stdenv.mkDerivation (finalAttrs: {
     pythonEnv
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=true"
-    "-Dtests=false"
-  ];
+  mesonEntries = {
+    gtk_doc = true;
+    tests = false;
+  };
 
   postPatch = ''
     patchShebangs \

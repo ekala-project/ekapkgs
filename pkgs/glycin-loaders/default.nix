@@ -56,17 +56,17 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  mesonFlags = [
-    (lib.mesonBool "glycin-loaders" true)
-    (lib.mesonBool "glycin-thumbnailer" false)
-    (lib.mesonBool "libglycin" false)
-    (lib.mesonBool "libglycin-gtk4" false)
-    (lib.mesonBool "vapi" false)
-    (lib.mesonBool "tests" false)
-    (lib.mesonOption "loaders" (
+  mesonEntries = {
+    glycin-loaders = true;
+    glycin-thumbnailer = false;
+    libglycin = false;
+    libglycin-gtk4 = false;
+    vapi = false;
+    tests = false;
+    loaders = (
       lib.concatMapStringsSep "," (loader: "glycin-${loader}") enabledLoaders
-    ))
-  ];
+    );
+  };
 
   postPatch = ''
     substituteInPlace glycin-loaders/meson.build \

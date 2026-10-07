@@ -26,12 +26,15 @@ stdenv.mkDerivation rec {
     hash = "sha256-xVQKrvtg4dY7HFh8BfIoTr5y7OfQwOXkp3jP1YRLa1g=";
   };
 
-  mesonFlags = [
-    "-Dtests=false"
-    "-Ddocbook_docs=disabled"
-    "-Dgtk_doc=false"
-    "-Dintrospection=disabled"
-  ];
+  mesonEntries = {
+    tests = false;
+    gtk_doc = false;
+  };
+
+  mesonFeatures = {
+    docbook_docs = false;
+    introspection = false;
+  };
 
   strictDeps = true;
 

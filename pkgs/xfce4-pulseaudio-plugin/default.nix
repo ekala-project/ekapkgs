@@ -41,9 +41,9 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  mesonFlags = [
-    (lib.mesonOption "libcanberra" "disabled")
-  ];
+  mesonEntries = {
+    libcanberra = "disabled";
+  };
 
   buildInputs = [
     xfce4-exo

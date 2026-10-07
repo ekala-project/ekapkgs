@@ -39,9 +39,9 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "CGnIHRmrE5xmfXlWfBTdy2y1y/wBCNBMreKH6ylTZwY=";
   };
 
-  mesonFlags = [
-    "-Denable-gtk-doc=true"
-  ];
+  mesonEntries = {
+    enable-gtk-doc = true;
+  };
 
   nativeBuildInputs = [
     meson

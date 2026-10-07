@@ -62,10 +62,10 @@ stdenv.mkDerivation (finalAttrs: {
     libunwind
   ];
 
-  mesonFlags = [
-    "-Dsystemdunitdir=lib/systemd/system"
-    "-Dinstall-static=false"
-  ];
+  mesonEntries = {
+    systemdunitdir = "lib/systemd/system";
+    install-static = false;
+  };
 
   meta = {
     description = "System-wide profiler for Linux";

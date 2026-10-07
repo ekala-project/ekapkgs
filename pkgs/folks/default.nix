@@ -81,12 +81,12 @@ stdenv.mkDerivation (finalAttrs: {
     ))
   ];
 
-  mesonFlags = [
-    "-Ddocs=false"
-    "-Dtelepathy_backend=false"
-    "-Dtests=false"
-    "-Deds_backend=true"
-  ];
+  mesonEntries = {
+    docs = false;
+    telepathy_backend = false;
+    tests = false;
+    eds_backend = true;
+  };
 
   doCheck = false;
 

@@ -35,10 +35,10 @@ stdenv.mkDerivation (finalAttrs: {
     zix
   ];
 
-  mesonFlags = [
-    "-Ddocs=disabled"
-    "-Dtests=disabled"
-  ];
+  mesonFeatures = {
+    docs = false;
+    tests = false;
+  };
 
   meta = {
     homepage = "http://drobilla.net/software/sord";

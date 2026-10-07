@@ -85,10 +85,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonBuildType = "release";
 
-  mesonFlags = [
-    (lib.mesonEnable "xwayland" enableXWayland)
-    (lib.mesonEnable "systemd-session" enableSystemd)
-  ];
+  mesonFeatures = {
+    xwayland = enableXWayland;
+    systemd-session = enableSystemd;
+  };
 
   strictDeps = true;
 

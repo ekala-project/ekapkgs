@@ -38,11 +38,19 @@ stdenv.mkDerivation rec {
     libxml2
   ];
 
+  mesonEntries = {
+    systemdsystemunitdir = "${placeholder ";
+    udevrulesdir = "${placeholder ";
+  };
+
+  mesonFeatures = {
+    avahi = false;
+    gtk_doc = false;
+  };
+
   mesonFlags = [
-    "-Davahi=disabled"
-    "-Dsystemdsystemunitdir=${placeholder "out"}/lib/systemd/system"
-    "-Dgtk_doc=disabled"
-    "-Dudevrulesdir=${placeholder "out"}/lib/udev/rules.d"
+    out"}/lib/systemd/system"
+    out"}/lib/udev/rules.d"
   ];
 
   doInstallCheck = true;

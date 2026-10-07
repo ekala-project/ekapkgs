@@ -69,10 +69,17 @@ stdenv.mkDerivation rec {
 
   strictDeps = true;
 
+  mesonEntries = {
+    installed_tests = false;
+    pamlibdir = "${placeholder ";
+  };
+
+  mesonFeatures = {
+    ui = false;
+  };
+
   mesonFlags = [
-    "-Dinstalled_tests=false"
-    "-Dpamlibdir=${placeholder "pam"}/lib/security"
-    "-Dui=disabled"
+    pam"}/lib/security"
   ];
 
   postPatch = ''

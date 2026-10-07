@@ -61,10 +61,9 @@ stdenv.mkDerivation (finalAttrs: {
     systemd
   ];
 
-  mesonFlags = [
-    # <artificial>:(.text.startup+0x56): undefined reference to `GsmApplication::get()'
-    "-Db_lto=false"
-  ];
+  mesonEntries = {
+    b_lto = false;
+  };
 
   doCheck = true;
 

@@ -45,9 +45,9 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail "dependency('sdl3', static: true)" "dependency('sdl3', static: false)"
   '';
 
-  mesonFlags = [
-    "-Duse_system_lua=true"
-  ];
+  mesonEntries = {
+    use_system_lua = true;
+  };
 
   meta = {
     description = "Lightweight text editor written in Lua";

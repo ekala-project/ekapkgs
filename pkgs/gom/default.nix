@@ -38,10 +38,10 @@ stdenv.mkDerivation rec {
     sqlite
   ];
 
-  mesonFlags = [
-    "-Denable-introspection=false"
-    "-Dpygobject-override-dir="
-  ];
+  mesonEntries = {
+    enable-introspection = false;
+    pygobject-override-dir = "";
+  };
 
   doCheck = stdenv.hostPlatform.isx86_64;
 

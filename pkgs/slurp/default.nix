@@ -44,7 +44,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  mesonFlags = [ (lib.mesonEnable "man-pages" true) ];
+  mesonFeatures = {
+    man-pages = true;
+  };
 
   meta = {
     description = "Select a region in a Wayland compositor";

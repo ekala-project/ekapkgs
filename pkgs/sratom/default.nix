@@ -34,10 +34,10 @@ stdenv.mkDerivation rec {
     sord
   ];
 
-  mesonFlags = [
-    "-Ddocs=disabled"
-    "-Dtests=disabled"
-  ];
+  mesonFeatures = {
+    docs = false;
+    tests = false;
+  };
 
   meta = {
     homepage = "https://drobilla.net/software/sratom";

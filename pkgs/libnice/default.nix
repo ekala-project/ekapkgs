@@ -51,14 +51,14 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
-  mesonFlags = [
-    "-Dgstreamer=disabled"
-    "-Dgupnp=disabled"
-    "-Dgtk_doc=disabled"
-    "-Dintrospection=enabled"
-    "-Dexamples=disabled"
-    "-Dtests=disabled"
-  ];
+  mesonFeatures = {
+    gstreamer = false;
+    gupnp = false;
+    gtk_doc = false;
+    introspection = true;
+    examples = false;
+    tests = false;
+  };
 
   doCheck = false;
 

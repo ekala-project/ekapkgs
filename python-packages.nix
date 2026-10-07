@@ -55,9 +55,9 @@ final: prev: {
       final.pkgs.gobject-introspection
     ];
 
-    mesonFlags = [
-      "-Dpython=${final.python.pythonOnBuildForHost.interpreter}"
-    ];
+    mesonEntries = {
+      python = "${final.python.pythonOnBuildForHost.interpreter}";
+    };
 
     meta = {
       homepage = "https://pygobject.readthedocs.io/";

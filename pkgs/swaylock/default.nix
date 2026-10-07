@@ -50,11 +50,11 @@ stdenv.mkDerivation (finalAttrs: {
     librsvg
   ];
 
-  mesonFlags = [
-    "-Dpam=enabled"
-    "-Dgdk-pixbuf=enabled"
-    "-Dman-pages=enabled"
-  ];
+  mesonFeatures = {
+    pam = true;
+    gdk-pixbuf = true;
+    man-pages = true;
+  };
 
   meta = {
     description = "Screen locker for Wayland";

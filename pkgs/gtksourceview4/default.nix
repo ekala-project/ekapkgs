@@ -92,10 +92,10 @@ stdenv.mkDerivation (finalAttrs: {
     dbus
   ];
 
-  mesonFlags = [
-    "-Dgir=false"
-    "-Dvapi=false"
-  ];
+  mesonEntries = {
+    gir = false;
+    vapi = false;
+  };
 
   postPatch = ''
     # https://gitlab.gnome.org/GNOME/gtksourceview/-/merge_requests/295

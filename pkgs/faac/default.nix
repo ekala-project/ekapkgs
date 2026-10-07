@@ -23,9 +23,9 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
   ];
 
-  mesonFlags = [
-    "-Db_lto=false"
-  ];
+  mesonEntries = {
+    b_lto = false;
+  };
 
 
   meta = {

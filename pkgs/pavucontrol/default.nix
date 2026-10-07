@@ -46,9 +46,13 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
   ];
 
+  mesonFeatures = {
+    lynx = false;
+  };
+
   mesonFlags = [
-    "--prefix=${placeholder "out"}"
-    (lib.mesonEnable "lynx" false)
+    "--prefix=${placeholder "
+    out"}"
   ];
 
 

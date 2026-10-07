@@ -33,10 +33,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-qEcESH6jr+FIXEf7KrWYuPd59UCuDcvwocX4XmSn4lM=";
   };
 
-  mesonFlags = [
-    "-Dselinux=false"
-    "-Dappindicator=yes"
-  ];
+  mesonEntries = {
+    selinux = false;
+    appindicator = "yes";
+  };
 
   outputs = [
     "out"

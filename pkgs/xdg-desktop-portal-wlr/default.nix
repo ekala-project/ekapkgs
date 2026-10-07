@@ -52,9 +52,9 @@ stdenv.mkDerivation (finalAttrs: {
     wayland-protocols
   ];
 
-  mesonFlags = [
-    "-Dsd-bus-provider=libsystemd"
-  ];
+  mesonEntries = {
+    sd-bus-provider = "libsystemd";
+  };
 
   postInstall = ''
     wrapProgram $out/libexec/xdg-desktop-portal-wlr --prefix PATH ":" ${

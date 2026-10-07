@@ -79,9 +79,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonBuildType = "release";
 
-  mesonFlags = [
-    "-Dwith_docs=true"
-  ];
+  mesonEntries = {
+    with_docs = true;
+  };
 
   installFlags = [ "PREFIX=$(out)" ];
 

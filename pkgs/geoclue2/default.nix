@@ -69,15 +69,20 @@ stdenv.mkDerivation (finalAttrs: {
     glib-networking
   ];
 
+  mesonEntries = {
+    systemd-system-unit-dir = "${placeholder ";
+    demo-agent = false;
+    sysconfdir_install = "${placeholder ";
+    dbus-srv-user = "geoclue";
+    cdma-source = false;
+    modem-gps-source = false;
+  };
+
   mesonFlags = [
-    "-Dsystemd-system-unit-dir=${placeholder "out"}/lib/systemd/system"
-    "-Ddemo-agent=false"
+    out"}/lib/systemd/system"
     "--sysconfdir=/etc"
-    "-Dsysconfdir_install=${placeholder "out"}/etc"
-    "-Ddbus-srv-user=geoclue"
+    out"}/etc"
     "-D3g-source=false"
-    "-Dcdma-source=false"
-    "-Dmodem-gps-source=false"
   ];
 
   postPatch = ''

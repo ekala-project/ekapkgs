@@ -57,17 +57,19 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonFlags = [
     "--prefix=${placeholder "out"}"
-  ]
-  ++ (lib.mapAttrsToList lib.mesonEnable {
-    "uwsm-app" = uwsmAppSupport;
-    "fumon" = fumonSupport;
-    "uuctl" = uuctlSupport;
-    "man-pages" = true;
-    "canonicalize-bins" = true;
-  })
-  ++ (lib.mapAttrsToList lib.mesonOption {
-    "python-bin" = python.interpreter;
-  });
+  ];
+
+  mesonFeatures = {
+    uwsm-app = uwsmAppSupport;
+    fumon = fumonSupport;
+    uuctl = uuctlSupport;
+    man-pages = true;
+    canonicalize-bins = true;
+  };
+
+  mesonEntries = {
+    python-bin = python.interpreter;
+  };
 
   postInstall =
     let

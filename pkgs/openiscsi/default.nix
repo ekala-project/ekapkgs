@@ -52,11 +52,17 @@ stdenv.mkDerivation (finalAttrs: {
     sed -i '/install_dir: db_root/d' meson.build
   '';
 
+  mesonEntries = {
+    iscsi_sbindir = "${placeholder ";
+    rulesdir = "${placeholder ";
+    systemddir = "${placeholder ";
+    dbroot = "/etc/iscsi";
+  };
+
   mesonFlags = [
-    "-Discsi_sbindir=${placeholder "out"}/sbin"
-    "-Drulesdir=${placeholder "out"}/etc/udev/rules.d"
-    "-Dsystemddir=${placeholder "out"}/lib/systemd"
-    "-Ddbroot=/etc/iscsi"
+    out"}/sbin"
+    out"}/etc/udev/rules.d"
+    out"}/lib/systemd"
   ];
   meta = {
     description = "High performance, transport independent, multi-platform implementation of RFC3720";

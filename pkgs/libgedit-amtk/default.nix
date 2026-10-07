@@ -42,10 +42,10 @@ stdenv.mkDerivation (finalAttrs: {
     docbook-xsl-nons
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=false"
-    "-Dgobject_introspection=false"
-  ];
+  mesonEntries = {
+    gtk_doc = false;
+    gobject_introspection = false;
+  };
 
   propagatedBuildInputs = [
     glib

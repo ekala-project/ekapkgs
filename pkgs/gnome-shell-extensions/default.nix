@@ -40,7 +40,9 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
-  mesonFlags = [ "-Dextension_set=all" ];
+  mesonEntries = {
+    extension_set = "all";
+  };
 
   preFixup = ''
     # Since we do not install the schemas to central location,

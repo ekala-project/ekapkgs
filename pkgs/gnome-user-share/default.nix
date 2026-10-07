@@ -52,10 +52,14 @@ stdenv.mkDerivation (finalAttrs: {
         "run_command(['${stdenv.hostPlatform.emulator buildPackages}', httpd, '-v']"
     '';
 
+  mesonEntries = {
+    httpd = "${apacheHttpd.out}/bin/httpd";
+    modules_path = "${apacheHttpd}/modules";
+    systemduserunitdir = "${placeholder ";
+  };
+
   mesonFlags = [
-    "-Dhttpd=${apacheHttpd.out}/bin/httpd"
-    "-Dmodules_path=${apacheHttpd}/modules"
-    "-Dsystemduserunitdir=${placeholder "out"}/etc/systemd/user"
+    out"}/etc/systemd/user"
   ];
 
   nativeBuildInputs = [

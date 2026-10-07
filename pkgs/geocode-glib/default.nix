@@ -45,12 +45,12 @@ stdenv.mkDerivation (finalAttrs: {
     json-glib
   ];
 
-  mesonFlags = [
-    "-Dsoup2=false"
-    "-Denable-installed-tests=false"
-    "-Denable-introspection=false"
-    "-Denable-gtk-doc=false"
-  ];
+  mesonEntries = {
+    soup2 = false;
+    enable-installed-tests = false;
+    enable-introspection = false;
+    enable-gtk-doc = false;
+  };
 
   meta = {
     description = "Convenience library for geocoding and reverse geocoding using Nominatim service";

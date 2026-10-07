@@ -41,10 +41,10 @@ stdenv.mkDerivation (finalAttrs: {
     gupnp
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=false"
-    "-Dintrospection=false"
-  ];
+  mesonEntries = {
+    gtk_doc = false;
+    introspection = false;
+  };
 
   meta = {
     description = "Library to handle UPnP IGD port mapping";

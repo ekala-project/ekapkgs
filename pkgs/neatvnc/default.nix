@@ -46,10 +46,13 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "tests" false)
-    (lib.mesonEnable "h264" false)
-  ];
+  mesonEntries = {
+    tests = false;
+  };
+
+  mesonFeatures = {
+    h264 = false;
+  };
 
   meta = {
     description = "VNC server library";

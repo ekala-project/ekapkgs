@@ -101,16 +101,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   # TODO: nativeCheckInputs = [ dbus xvfb-run ]; # xvfb-run not available
 
-  mesonFlags = [
-    "-Ddocs=true"
-
-    # Making the build system correctly detect clang header and library paths
-    # is difficult. Somebody should look into fixing this.
-    "-Dplugin_clang=false"
-
-    # Do not try to check if appstream images exist
-    "-Dnetwork_tests=false"
-  ];
+  mesonEntries = {
+    docs = true;
+    plugin_clang = false;
+    network_tests = false;
+  };
 
   doCheck = false; # TODO: enable when xvfb-run is available for tests
 

@@ -45,9 +45,9 @@ stdenv.mkDerivation (finalAttrs: {
     gtk3.wrapGAppsHook
   ];
 
-  mesonFlags = [
-    (lib.mesonOption "sound" "disabled")
-  ];
+  mesonEntries = {
+    sound = "disabled";
+  };
 
   buildInputs = [
     dbus

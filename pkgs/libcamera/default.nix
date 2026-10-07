@@ -78,16 +78,20 @@ stdenv.mkDerivation rec {
   ]
   ++ lib.optionals stdenv.hostPlatform.isAarch [ libpisp ];
 
-  mesonFlags = [
-    "-Dv4l2=true"
-    "-Dtracing=disabled"
-    "-Dqcam=disabled"
-    "-Dlibunwind=disabled"
-    "-Dlc-compliance=disabled"
-    "-Dwerror=false"
-    "-Ddocumentation=disabled"
-  ]
-  ++ lib.optionals stdenv.hostPlatform.isAarch [
+  mesonEntries = {
+    v4l2 = true;
+    werror = false;
+  };
+
+  mesonFeatures = {
+    tracing = false;
+    qcam = false;
+    libunwind = false;
+    lc-compliance = false;
+    documentation = false;
+  };
+
+  mesonFlags = lib.optionals stdenv.hostPlatform.isAarch [
     "-Drpi-awb-nn=disabled"
   ];
 

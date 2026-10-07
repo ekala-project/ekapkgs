@@ -45,10 +45,10 @@ stdenv.mkDerivation rec {
     pkg-config
   ];
 
-  mesonFlags = [
-    (lib.mesonOption "udevrulesdir" "${placeholder "out"}/lib/udev/rules.d")
-    (lib.mesonOption "systemdsystemunitdir" "${placeholder "out"}/lib/systemd/system")
-  ];
+  mesonEntries = {
+    udevrulesdir = "${placeholder "out"}/lib/udev/rules.d";
+    systemdsystemunitdir = "${placeholder "out"}/lib/systemd/system";
+  };
 
   meta = {
     description = "Proxy for sending IIO sensor data to D-Bus";

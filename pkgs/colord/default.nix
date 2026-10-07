@@ -55,18 +55,21 @@ stdenv.mkDerivation rec {
     done
   '';
 
+  mesonEntries = {
+    installed_tests = true;
+    libcolordcompat = true;
+    sane = true;
+    vapi = false;
+    argyllcms_sensor = false;
+    introspection = false;
+    daemon = "${lib.boolToString enableDaemon}";
+    daemon_user = "colord";
+    systemd = enableSystemd;
+    udev_rules = (lib.elem "udev" udev.meta.pkgConfigModules);
+  };
+
   mesonFlags = [
     "--localstatedir=/var"
-    "-Dinstalled_tests=true"
-    "-Dlibcolordcompat=true"
-    "-Dsane=true"
-    "-Dvapi=false"
-    "-Dargyllcms_sensor=false"
-    "-Dintrospection=false"
-    "-Ddaemon=${lib.boolToString enableDaemon}"
-    "-Ddaemon_user=colord"
-    (lib.mesonBool "systemd" enableSystemd)
-    (lib.mesonBool "udev_rules" (lib.elem "udev" udev.meta.pkgConfigModules))
   ];
 
   nativeBuildInputs = [

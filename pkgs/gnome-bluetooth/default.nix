@@ -65,9 +65,9 @@ stdenv.mkDerivation (finalAttrs: {
     gsettings-desktop-schemas
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=true"
-  ];
+  mesonEntries = {
+    gtk_doc = true;
+  };
 
   meta = {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-bluetooth";

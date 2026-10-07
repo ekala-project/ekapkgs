@@ -38,10 +38,10 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   # Disable introspection/vapi: Gtk-3.0.gir not available in ekapkgs (corepkgs issue)
-  mesonFlags = [
-    "-Dintrospection=false"
-    "-Dvapi=false"
-  ];
+  mesonEntries = {
+    introspection = false;
+    vapi = false;
+  };
 
   buildInputs = [
     libepoxy

@@ -62,13 +62,13 @@ stdenv.mkDerivation rec {
     json-glib
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "docs" false)
-    (lib.mesonBool "introspection" false)
-    (lib.mesonBool "tests" false)
-    (lib.mesonBool "vapi" false)
-    (lib.mesonOption "usb_ids" "${hwdata}/share/hwdata/usb.ids")
-  ];
+  mesonEntries = {
+    docs = false;
+    introspection = false;
+    tests = false;
+    vapi = false;
+    usb_ids = "${hwdata}/share/hwdata/usb.ids";
+  };
 
   doCheck = false;
 

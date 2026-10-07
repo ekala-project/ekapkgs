@@ -68,12 +68,6 @@
   libxcb,
   zlib,
 }:
-let
-  inherit (lib)
-    mesonBool
-    mesonOption
-    ;
-in
 stdenv.mkDerivation (finalAttrs: {
   pname = "efl";
   version = "1.28.1";
@@ -169,19 +163,19 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonBuildType = "release";
 
-  mesonFlags = [
-    (mesonBool "build-tests" false)
-    (mesonOption "ecore-imf-loaders-disabler" "ibus,scim")
-    (mesonOption "evas-loaders-disabler" "avif,heif,jxl,json")
-    (mesonBool "embedded-lz4" false)
-    (mesonBool "fb" true)
-    (mesonOption "network-backend" "connman")
-    (mesonBool "sdl" true)
-    (mesonBool "elua" true)
-    (mesonOption "bindings" "lua,cxx")
-    (mesonBool "wl" true)
-    (mesonBool "drm" true)
-  ];
+  mesonEntries = {
+    build-tests = false;
+    ecore-imf-loaders-disabler = "ibus,scim";
+    evas-loaders-disabler = "avif,heif,jxl,json";
+    embedded-lz4 = false;
+    fb = true;
+    network-backend = "connman";
+    sdl = true;
+    elua = true;
+    bindings = "lua,cxx";
+    wl = true;
+    drm = true;
+  };
 
   patches = [
     ./efl-elua.patch

@@ -53,9 +53,14 @@ python3Packages.buildPythonApplication {
   #   python3Packages.pygobject3
   # ];
 
+  mesonEntries = {
+    systemdsystemunitdir = "${placeholder ";
+    hwdbdir = "${placeholder ";
+  };
+
   mesonFlags = [
-    "-Dsystemdsystemunitdir=${placeholder "out"}/etc/systemd/system"
-    "-Dhwdbdir=${placeholder "out"}/etc/udev/hwdb.d"
+    out"}/etc/systemd/system"
+    out"}/etc/udev/hwdb.d"
   ];
 
   dontWrapGApps = true;

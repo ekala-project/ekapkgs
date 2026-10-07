@@ -47,12 +47,12 @@ stdenv.mkDerivation (finalAttrs: {
     glib
   ];
 
-  mesonFlags = [
-    "-Drelease=true"
-    "-Ddocs=false"
-    "-Dintrospection=false"
-    "-Dconfig-gnome=false"
-  ];
+  mesonEntries = {
+    release = true;
+    docs = false;
+    introspection = false;
+    config-gnome = false;
+  };
 
   meta = {
     description = "Library that provides automatic proxy configuration management";

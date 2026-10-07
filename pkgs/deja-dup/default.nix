@@ -61,14 +61,15 @@ stdenv.mkDerivation (finalAttrs: {
     json-glib
   ];
 
-  mesonFlags = [
-    # TODO(ekapkgs): borgbackup build is broken
-    # (lib.mesonOption "borg_command" (lib.getExe borgbackup))
-    (lib.mesonOption "duplicity_command" (lib.getExe duplicity))
-    (lib.mesonOption "rclone_command" (lib.getExe rclone))
-    (lib.mesonOption "restic_command" (lib.getExe restic))
-    (lib.mesonEnable "packagekit" false)
-  ];
+  mesonEntries = {
+    duplicity_command = (lib.getExe duplicity);
+    rclone_command = (lib.getExe rclone);
+    restic_command = (lib.getExe restic);
+  };
+
+  mesonFeatures = {
+    packagekit = false;
+  };
 
   preFixup = ''
     gappsWrapperArgs+=(

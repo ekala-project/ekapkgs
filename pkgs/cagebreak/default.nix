@@ -64,11 +64,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonBuildType = "release";
 
-  mesonFlags = [
-    "-Dman-pages=true"
-    "-Dversion_override=${finalAttrs.version}"
-    "-Dxwayland=${lib.boolToString withXwayland}"
-  ];
+  mesonEntries = {
+    man-pages = true;
+    version_override = "${finalAttrs.version}";
+    xwayland = "${lib.boolToString withXwayland}";
+  };
 
   postPatch = ''
     sed -i -e 's|<drm_fourcc.h>|<libdrm/drm_fourcc.h>|' *.c

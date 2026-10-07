@@ -36,10 +36,10 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  mesonFlags = [
-    "-Dbuild_tests=${lib.boolToString finalAttrs.finalPackage.doCheck}"
-    "-Dbuild_examples=true"
-  ];
+  mesonEntries = {
+    build_tests = "${lib.boolToString finalAttrs.finalPackage.doCheck}";
+    build_examples = true;
+  };
 
   doCheck = false;
 

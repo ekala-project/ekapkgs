@@ -40,15 +40,18 @@ stdenv.mkDerivation (finalAttrs: {
     "out"
   ];
 
-  mesonFlags = [
-    "-Dmanpages=disabled"
-    "-Dconvert-icon=disabled"
-    "-Dsynctex=disabled"
-    "-Dtests=disabled"
-    "-Dsysconfdir=/etc"
-    (lib.mesonEnable "seccomp" stdenv.hostPlatform.isLinux)
-    (lib.mesonEnable "landlock" stdenv.hostPlatform.isLinux)
-  ];
+  mesonEntries = {
+    sysconfdir = "/etc";
+  };
+
+  mesonFeatures = {
+    manpages = false;
+    convert-icon = false;
+    synctex = false;
+    tests = false;
+    seccomp = stdenv.hostPlatform.isLinux;
+    landlock = stdenv.hostPlatform.isLinux;
+  };
 
   nativeBuildInputs = [
     meson

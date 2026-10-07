@@ -27,9 +27,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonBuildType = "release";
 
-  mesonFlags = [
-    "-Ddev_build=true"
-  ];
+  mesonEntries = {
+    dev_build = true;
+  };
 
   outputs = [
     "out"

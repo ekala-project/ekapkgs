@@ -57,11 +57,11 @@ stdenv.mkDerivation rec {
   ++ [
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=false"
-    "-Dvapi=true"
-    (lib.mesonBool "libsoup3" true)
-  ];
+  mesonEntries = {
+    gtk_doc = false;
+    vapi = true;
+    libsoup3 = true;
+  };
 
   meta = {
     description = "C library providing a ClutterActor to display maps";

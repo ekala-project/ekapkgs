@@ -51,14 +51,13 @@ stdenv.mkDerivation rec {
     glib
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=true"
-    "-Dvapi=true"
-    # gjs/spidermonkey, lua lgi, and pygobject3 are not available
-    "-Dgjs=false"
-    "-Dlua51=false"
-    "-Dpython3=false"
-  ];
+  mesonEntries = {
+    gtk_doc = true;
+    vapi = true;
+    gjs = false;
+    lua51 = false;
+    python3 = false;
+  };
 
   strictDeps = true;
 

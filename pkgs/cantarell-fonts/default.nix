@@ -22,10 +22,14 @@ stdenv.mkDerivation rec {
     gettext
   ];
 
+  mesonEntries = {
+    buildappstream = false;
+    fontsdir = "${placeholder ";
+    useprebuilt = true;
+  };
+
   mesonFlags = [
-    "-Dbuildappstream=false"
-    "-Dfontsdir=${placeholder "out"}/share/fonts/cantarell"
-    "-Duseprebuilt=true"
+    out"}/share/fonts/cantarell"
   ];
 
   meta = {

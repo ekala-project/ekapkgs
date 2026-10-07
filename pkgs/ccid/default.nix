@@ -28,9 +28,9 @@ stdenv.mkDerivation rec {
       "'$out/pcsc/drivers'"
   '';
 
-  mesonFlags = [
-    (lib.mesonBool "serial" true)
-  ];
+  mesonEntries = {
+    serial = true;
+  };
 
   nativeBuildInputs = [
     flex

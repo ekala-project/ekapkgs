@@ -52,13 +52,13 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional (kissat != null) kissat
   ++ lib.optional (aiger != null) aiger;
 
+  mesonEntries = {
+    default_library = "shared";
+  };
+
   mesonFlags = [
-    "-Ddefault_library=shared"
-    (lib.strings.mesonEnable "testing" finalAttrs.finalPackage.doCheck)
-  ]
-  ++ lib.optional (cryptominisat != null) "-Dcryptominisat=true"
-  ++ lib.optional (kissat != null) "-Dkissat=true"
-  ++ lib.optional (aiger != null) "-Daiger=true";
+      (lib.strings.mesonEnable "testing" finalAttrs.finalPackage.doCheck)
+    ] ++ lib.optional (cryptominisat != null) "-Dcryptominisat=true" ++ lib.optional (kissat != null) "-Dkissat=true" ++ lib.optional (aiger != null) "-Daiger=true";
 
   nativeCheckInputs = [ python3 ];
   checkInputs = lib.optional (gtest != null) gtest;

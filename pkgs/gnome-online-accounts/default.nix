@@ -48,13 +48,13 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  mesonFlags = [
-    "-Dfedora=false"
-    "-Dgoabackend=${lib.boolToString enableBackend}"
-    "-Ddocumentation=${lib.boolToString enableBackend}"
-    "-Dman=${lib.boolToString enableBackend}"
-    "-Dwebdav=true"
-  ];
+  mesonEntries = {
+    fedora = false;
+    goabackend = "${lib.boolToString enableBackend}";
+    documentation = "${lib.boolToString enableBackend}";
+    man = "${lib.boolToString enableBackend}";
+    webdav = true;
+  };
 
   nativeBuildInputs = [
     docbook-xsl-nons # for goa-daemon.xml

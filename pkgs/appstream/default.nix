@@ -107,15 +107,16 @@ stdenv.mkDerivation (finalAttrs: {
     systemd
   ];
 
-  mesonFlags = [
-    "-Dapidocs=false"
-    "-Dc_args=-Wno-error=missing-include-dirs"
-    "-Ddocs=false"
-    "-Dvapi=true"
-    "-Dcompose=true"
-    (lib.mesonBool "gir" withIntrospection)
-  ]
-  ++ lib.optionals (!withSystemd) [
+  mesonEntries = {
+    apidocs = false;
+    c_args = "-Wno-error=missing-include-dirs";
+    docs = false;
+    vapi = true;
+    compose = true;
+    gir = withIntrospection;
+  };
+
+  mesonFlags = lib.optionals (!withSystemd) [
     "-Dsystemd=false"
   ];
 

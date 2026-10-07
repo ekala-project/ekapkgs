@@ -69,7 +69,9 @@ stdenv.mkDerivation (finalAttrs: {
     adwaita-icon-theme
   ];
 
-  mesonFlags = [ "-Dupdate_mimedb=false" ];
+  mesonEntries = {
+    update_mimedb = false;
+  };
 
   meta = {
     description = "Note editor designed to remain simple to use";

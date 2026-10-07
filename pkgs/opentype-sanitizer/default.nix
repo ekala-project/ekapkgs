@@ -22,7 +22,9 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-dDhs1PWFhYwm8pzohX0rop0w9x8HVm6Ey4TqXqwL6HI=";
   };
 
-  mesonFlags = [ "-Dcpp_std=c++17" ]; # required by gtest
+  mesonEntries = {
+    cpp_std = "c++17";
+  }; # required by gtest
 
   buildInputs = [
     freetype

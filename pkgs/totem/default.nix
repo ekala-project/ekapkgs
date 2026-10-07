@@ -84,9 +84,9 @@ stdenv.mkDerivation (finalAttrs: {
     python3Packages.pygobject3
   ];
 
-  mesonFlags = [
-    "-Dc_args=-I${glib.dev}/include/gio-unix-2.0"
-  ];
+  mesonEntries = {
+    c_args = "-I${glib.dev}/include/gio-unix-2.0";
+  };
 
   doCheck = false;
 

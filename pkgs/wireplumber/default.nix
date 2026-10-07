@@ -77,15 +77,18 @@ stdenv.mkDerivation (finalAttrs: {
     pipewire
   ];
 
-  mesonFlags = [
-    (lib.mesonBool "system-lua" true)
-    (lib.mesonEnable "elogind" false)
-    (lib.mesonEnable "doc" enableDocs)
-    (lib.mesonEnable "introspection" enableGI)
-    (lib.mesonBool "systemd-system-service" true)
-    (lib.mesonOption "systemd-system-unit-dir" "${placeholder "out"}/lib/systemd/system")
-    (lib.mesonOption "sysconfdir" "/etc")
-  ];
+  mesonEntries = {
+    system-lua = true;
+    systemd-system-service = true;
+    systemd-system-unit-dir = "${placeholder "out"}/lib/systemd/system";
+    sysconfdir = "/etc";
+  };
+
+  mesonFeatures = {
+    elogind = false;
+    doc = enableDocs;
+    introspection = enableGI;
+  };
 
   meta = {
     description = "Modular session / policy manager for PipeWire";

@@ -49,9 +49,9 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
   ];
 
-  mesonFlags = [
-    "-Dgtk_doc=true"
-  ];
+  mesonEntries = {
+    gtk_doc = true;
+  };
 
   doCheck = true;
 

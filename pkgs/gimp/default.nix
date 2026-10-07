@@ -198,24 +198,22 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  mesonFlags = [
-    "-Dbug-report-url=https://github.com/NixOS/nixpkgs/issues/new"
-    "-Dicc-directory=/run/current-system/sw/share/color/icc"
-    "-Dcheck-update=no"
-    (lib.mesonEnable "gudev" true)
-    (lib.mesonEnable "headless-tests" false)
-    (lib.mesonEnable "linux-input" true)
-    # libheif is broken in ekapkgs (libaom cmake issue)
-    "-Dheif=disabled"
-    # libwmf depends on imagemagick which depends on broken libheif
-    "-Dwmf=disabled"
-    # libiff/libilbm broken in ekapkgs (help2man issue)
-    "-Dilbm=disabled"
-    # vapigen can't find gegl-0.4 vapi (vapigen disabled in gegl)
-    "-Dvala=disabled"
-    # Not very important to do downstream, save a dependency.
-    "-Dappdata-test=disabled"
-  ];
+  mesonEntries = {
+    bug-report-url = "https://github.com/NixOS/nixpkgs/issues/new";
+    icc-directory = "/run/current-system/sw/share/color/icc";
+    check-update = "no";
+  };
+
+  mesonFeatures = {
+    gudev = true;
+    headless-tests = false;
+    linux-input = true;
+    heif = false;
+    wmf = false;
+    ilbm = false;
+    vala = false;
+    appdata-test = false;
+  };
 
   doCheck = false;
 

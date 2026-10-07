@@ -73,10 +73,13 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs xdt-gen-visibility
   '';
 
-  mesonFlags = [
-    (lib.mesonBool "introspection" false)
-    (lib.mesonEnable "vala" false)
-  ];
+  mesonEntries = {
+    introspection = false;
+  };
+
+  mesonFeatures = {
+    vala = false;
+  };
 
   meta = {
     description = "Windowing concept abstraction library for X11 and Wayland";
