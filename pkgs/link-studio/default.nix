@@ -8,7 +8,6 @@
   libadwaita,
   python3Packages,
   v4l-utils,
-  wrapGAppsHook4,
 }:
 
 python3Packages.buildPythonApplication (finalAttrs: {
@@ -34,7 +33,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
 
   nativeBuildInputs = [
     gobject-introspection
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   build-system = [ python3Packages.setuptools ];
