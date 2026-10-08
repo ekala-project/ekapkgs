@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [
+    gtest
     zlib
     bzip2
     json_c
@@ -45,7 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
     BUILD_TESTING = "on";
     DOWNLOAD_GTEST = "off";
     DOWNLOAD_RUBYRNP = "off";
-    SYSTEM_LIBSEXPP = "on";
+    SYSTEM_LIBSEXPP = true;
   };
 
   nativeBuildInputs = [
@@ -53,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
     gnupg
-    gtest
     pkg-config
     python3
   ];
