@@ -44,8 +44,8 @@ stdenv.mkDerivation rec {
   '';
 
   cmakeEntries = {
-    USE_SHARED_MBEDTLS_LIBRARY = "on";
-    GEN_FILES = "off";
+    USE_SHARED_MBEDTLS_LIBRARY = true;
+    GEN_FILES = false;
   };
 
   doCheck = false;
