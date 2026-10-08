@@ -18,7 +18,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-YIWXdAZsWeSdtPtBaf/t9t68dFKw2nY0bvgMrzCEE5U=";
   };
 
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
 
   buildInputs = [
     curl
