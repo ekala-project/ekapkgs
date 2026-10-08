@@ -23,7 +23,6 @@ buildZigPackage {
 
   nativeBuildInputs = [ makeWrapper ];
 
-
   doCheck = true;
   nativeCheckInputs = [ curl ];
 
