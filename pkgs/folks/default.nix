@@ -53,6 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
     # docbook-xsl-nons
     # docbook-xml-dtd.v4_3
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     vala
