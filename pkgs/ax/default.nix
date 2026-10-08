@@ -81,7 +81,6 @@ stdenv.mkDerivation {
     writableTmpDirAsHomeHook
   ];
 
-
   meta = {
     description = "The AI-era curl: fetch, discover, extract";
     homepage = "https://github.com/yusukebe/ax";

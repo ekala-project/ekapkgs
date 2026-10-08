@@ -20,7 +20,10 @@ let
     pname = "backlog-md-node_modules";
     inherit version src;
 
-    nativeBuildInputs = [ bun jq ];
+    nativeBuildInputs = [
+      bun
+      jq
+    ];
 
     dontConfigure = true;
 
