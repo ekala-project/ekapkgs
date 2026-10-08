@@ -38,8 +38,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    YAML_CPP_BUILD_TOOLS = "false";
-    INSTALL_GTEST = "false";
+    YAML_CPP_BUILD_TOOLS = false;
+    INSTALL_GTEST = false;
   };
 
   cmakeFlags = [
