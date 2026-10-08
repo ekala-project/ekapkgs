@@ -41,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     docbook-xml-dtd.v4_4
     docbook_xsl
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     xmlto
