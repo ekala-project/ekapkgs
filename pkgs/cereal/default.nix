@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    JUST_INSTALL_CEREAL = "yes";
+    JUST_INSTALL_CEREAL = true;
   };
 
   meta = {
