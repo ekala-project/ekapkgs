@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     desktop-file-utils
     meson
+    meson.configurePhaseHook
     ninja
     vala
     libxslt
