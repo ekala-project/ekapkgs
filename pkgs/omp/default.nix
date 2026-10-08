@@ -19,7 +19,11 @@
 }:
 
 let
-  versionData = builtins.fromJSON (builtins.readFile ./hashes.json);
+  versionData = {
+    version = "18.4.6";
+    hash = "sha256-3XCC12fRSk/iU/hKYk0v53HOMHG0Sk4R1GXzcFXnfYo=";
+    cargoHash = "sha256-kB3UoRsL9Dv70iLrEO6nK+G3QQlWOgUdgIAx2ysK/4s=";
+  };
   inherit (versionData) version hash cargoHash;
 
   platformsBySystem = {
