@@ -25,7 +25,6 @@ stdenv.mkDerivation {
     makeWrapper
   ];
 
-
   doCheck = true;
   nativeCheckInputs = [ curl ];
 
