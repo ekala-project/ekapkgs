@@ -26,7 +26,7 @@ nix flake update
 Run the existing detection script:
 
 ```
-nix-instantiate --eval --strict shadowed-packages.nix -A pkgsDir --json
+nix-instantiate --eval --strict ci/shadowed-packages.nix -A pkgsDir --json
 ```
 
 This returns a JSON array of package names in `pkgs/` that now exist in
@@ -35,7 +35,7 @@ corepkgs (either in its `pkgs/`, `pkgs-many/`, or `top-level.nix`).
 Also check for top-level shadows:
 
 ```
-nix-instantiate --eval --strict shadowed-packages.nix -A topLevel --json
+nix-instantiate --eval --strict ci/shadowed-packages.nix -A topLevel --json
 ```
 
 ### 3. Prune shadowed `pkgs/` directories
