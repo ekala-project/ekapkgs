@@ -8,7 +8,7 @@
   coreutils,
   gawk,
   gitMinimal,
-  gnutar,
+  tar,
   openssh,
   procps,
   testers,
@@ -54,7 +54,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     coreutils
     gawk
     gitMinimal
-    gnutar
+    tar
     openssh
     procps
   ];
@@ -67,7 +67,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
             bash
             coreutils
             gitMinimal
-            gnutar
+            tar
             openssh
             procps
             # TODO(corepkgs): add xdg-utils for opening URLs

@@ -10,7 +10,7 @@
   findutils,
   gawk,
   gitMinimal,
-  gnused,
+  sed,
   versionCheckHook,
   writableTmpDirAsHomeHook,
 }:
@@ -29,7 +29,7 @@ let
     findutils
     gawk
     gitMinimal
-    gnused
+    sed
   ];
 in
 rustPlatform.buildRustPackage {
