@@ -11,7 +11,12 @@
 }:
 
 let
-  versionData = builtins.fromJSON (builtins.readFile ./hashes.json);
+  versionData = {
+    version = "0.21.6";
+    hash = "sha256-Gf2wLW1W/h3HklgCRoTnsYoE/QpMYLYsdINxUyM8lxk=";
+    cargoHash = "sha256-G8szrXsDrN2kK4UmsXaAxaytM5zm3E+BOOfGy1Z6jH0=";
+    npmDepsHash = "sha256-m6Bk6q1Kku2jlvJRV6dklogDjCBz6Y9GZTdltVPOZDs=";
+  };
   pname = "oh-my-codex";
   inherit (versionData)
     version

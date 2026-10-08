@@ -13,7 +13,11 @@
 }:
 
 let
-  versionData = builtins.fromJSON (builtins.readFile ./hashes.json);
+  versionData = {
+    version = "0.99.2";
+    sourceHash = "sha256-W7GXvtjka1NSp6lA3chow1hyWyFPJ/OtTTPnfumDJVg=";
+    npmDepsHash = "sha256-3RGSzm6ALmTbxpG+sdhtYWGeCNvXENEQ7nMvFGx8NeQ=";
+  };
   version = versionData.version;
 
   nativeTargets = {
