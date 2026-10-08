@@ -21,23 +21,23 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [
+    gtest
     zlib
     bzip2
   ];
 
   cmakeEntries = {
     CMAKE_INSTALL_PREFIX = "${placeholder "out"}";
-    BUILD_SHARED_LIBS = "on";
-    WITH_SEXP_TESTS = "on";
-    DOWNLOAD_GTEST = "off";
-    WITH_SEXP_CLI = "on";
-    WITH_SANITIZERS = "off";
+    BUILD_SHARED_LIBS = true;
+    WITH_SEXP_TESTS = true;
+    DOWNLOAD_GTEST = false;
+    WITH_SEXP_CLI = true;
+    WITH_SANITIZERS = false;
   };
 
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
-    gtest
     pkg-config
   ];
 
