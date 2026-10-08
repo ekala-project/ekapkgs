@@ -10,7 +10,13 @@
 }:
 
 let
-  hashes = builtins.fromJSON (builtins.readFile ./hashes.json);
+  hashes = {
+    version = "0.161.2";
+    x86_64-linux = "sha256-iDpadJcB3p+NB+ujk8puZtJU+QtSz8guIu0jFtcLQRY=";
+    aarch64-linux = "sha256-hmVq2UnuZH+sm4Dr9V6puAiEctHtMR0zZ9fbsRlLy/E=";
+    aarch64-darwin = "sha256-forsfElk1WoHcssgFbIkeadL477FhE6U6p/BGMGIH/Q=";
+    jar = "sha256-xclS+1q8xmk+/AzHXi1MIxWqn6pgxN3/cgDZ8thnlvA=";
+  };
   inherit (hashes) version;
 
   urlMap = {
