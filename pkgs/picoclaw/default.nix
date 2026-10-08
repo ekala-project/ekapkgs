@@ -21,16 +21,8 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-mN+eI8JtqIqBCxheVlTw7nL200WgVAd8xLhUsrYdohE=";
 
-  # mautrix-go's crypto backend links libolm via cgo. libolm is marked
-  # insecure in nixpkgs (deprecated upstream, timing side-channels in its
-  # AES/SHA primitives). Accepted here because Matrix is an optional chat
-  # backend and the pure-Go goolm alternative is still experimental.
   buildInputs = [
-    (olm.overrideAttrs (old: {
-      meta = old.meta // {
-        knownVulnerabilities = [ ];
-      };
-    }))
+    olm
   ];
 
   postPatch = ''
