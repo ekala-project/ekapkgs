@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
   absolutizeEglExternalPlatformIcdJson = true;
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   meta = {
     description = "Dma-buf-based Wayland external platform library";

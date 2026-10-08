@@ -14,7 +14,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "esh";
   version = "0.1.1";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

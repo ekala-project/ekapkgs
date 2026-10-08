@@ -13,7 +13,6 @@ stdenv.mkDerivation rec {
   version = "0.142.0";
   pname = "jbang";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchzip {

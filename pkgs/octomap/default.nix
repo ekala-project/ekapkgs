@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   meta = {
     changelog = "https://github.com/OctoMap/octomap/releases/tag/${finalAttrs.src.tag}";

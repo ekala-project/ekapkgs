@@ -23,7 +23,6 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "sdl3-mixer";
   version = "3.2.4";
-  __structuredAttrs = true;
 
   outputs = [
     "dev"

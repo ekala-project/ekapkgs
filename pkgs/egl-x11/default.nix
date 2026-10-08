@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
   absolutizeEglExternalPlatformIcdJson = true;
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   meta = {
     description = "X11/XCB external platform library";

@@ -8,8 +8,6 @@ buildGoModule (finalAttrs: {
   pname = "git-pages-cli";
   version = "1.10.1";
 
-  __structuredAttrs = true;
-
   src = fetchFromCodeberg {
     owner = "git-pages";
     repo = "git-pages-cli";

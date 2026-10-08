@@ -14,7 +14,6 @@ stdenv.mkDerivation {
   version = "1.1.16-unstable-2024-03-05";
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "miekg";

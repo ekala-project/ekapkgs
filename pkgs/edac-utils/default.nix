@@ -36,7 +36,6 @@ stdenv.mkDerivation {
   # a Perl script. Perl from buildInputs is used by patchShebangsAuto in
   # fixupPhase to update the hash bang line.
   strictDeps = true;
-  __structuredAttrs = true;
   nativeBuildInputs = [ perl ];
   buildInputs = [
     perl

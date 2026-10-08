@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   # required for whitespaces in makeFlags
-  __structuredAttrs = true;
 
   postPatch = ''
     sed -i -e 's|/bin/rm|rm|g' genMakefiles

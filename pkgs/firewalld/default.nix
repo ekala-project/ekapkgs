@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "firewalld";
   version = "2.5.2";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

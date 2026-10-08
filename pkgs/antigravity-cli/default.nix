@@ -31,7 +31,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   inherit version;
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = sourceData.${stdenvNoCC.hostPlatform.system} or throwSystem;
 

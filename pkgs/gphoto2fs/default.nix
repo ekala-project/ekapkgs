@@ -15,7 +15,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "gphoto2fs";
   version = "1.0";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

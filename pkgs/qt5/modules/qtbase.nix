@@ -481,8 +481,6 @@ stdenv.mkDerivation (finalAttrs: {
     tests.pkg-config = testers.testMetaPkgConfig finalAttrs.finalPackage;
   };
 
-  __structuredAttrs = true;
-
   meta = {
     homepage = "https://www.qt.io/";
     description = "Cross-platform application framework for C++";

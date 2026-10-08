@@ -13,8 +13,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   pname = "bat";
   version = "0.26.1";
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "sharkdp";
     repo = "bat";

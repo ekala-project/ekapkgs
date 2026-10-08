@@ -7,7 +7,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "keyd";
   version = "2.6.0";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

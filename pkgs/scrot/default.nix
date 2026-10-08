@@ -20,7 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
   version = "2.0.0";
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "resurrecting-open-source-projects";

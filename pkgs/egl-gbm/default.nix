@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
   absolutizeEglExternalPlatformIcdJson = true;
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   meta = {
     description = "GBM EGL external platform library";

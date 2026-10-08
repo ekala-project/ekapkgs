@@ -12,7 +12,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "polyml";
   version = "5.9.2";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

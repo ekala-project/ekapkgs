@@ -15,8 +15,6 @@ buildGoModule (finalAttrs: {
   pname = "restish";
   version = "2.3.0";
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "danielgtaylor";
     repo = "restish";

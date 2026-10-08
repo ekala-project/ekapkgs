@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "gnome-settings-daemon";
   version = "50.1";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchurl {

@@ -10,8 +10,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   pname = "bore";
   version = "0.4.1";
 
-  __structuredAttrs = true;
-
   src = fetchFromBitbucket {
     owner = "delan";
     repo = "nonymous";

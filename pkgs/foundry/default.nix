@@ -14,8 +14,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   pname = "foundry";
   version = "1.8.4";
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "foundry-rs";
     repo = "foundry";

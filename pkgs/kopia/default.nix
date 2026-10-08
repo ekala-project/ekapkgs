@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
     hash = "sha256-yjeLV7N/U88oVdP4iJYgSM/QJLAMREaB/2jBcbTDWkA=";
   };
 
-  __structuredAttrs = true;
-
   vendorHash = "sha256-5p/MUNkqNb+iAFxXXYRR2NB1WiGVIcNrTADsd/VjapU=";
 
   subPackages = [ "." ];

@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "collada-dom";
   version = "2.5.4";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

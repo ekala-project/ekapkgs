@@ -25,8 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     gtest
   ];
 
-  __structuredAttrs = true;
-
   strictDeps = true;
 
   configureFlags = [

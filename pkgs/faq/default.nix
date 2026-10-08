@@ -11,8 +11,6 @@ buildGoModule (finalAttrs: {
   # Latest git release (0.0.7) presents vendor issues - using latest commit instead.
   version = "0.0.7-unstable-2022-01-09";
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "jzelinskie";
     repo = "faq";

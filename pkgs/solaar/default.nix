@@ -26,8 +26,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     hash = "sha256-h/uiy0TtMicKch2cdXHur5DkvQun2sAw2HpFI7Qstqg=";
   };
 
-  __structuredAttrs = true;
-
   outputs = [
     "out"
     "udev"

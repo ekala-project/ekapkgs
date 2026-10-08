@@ -37,8 +37,6 @@ buildGoModule (finalAttrs: {
       --zsh <($out/bin/dexter completion zsh)
   '';
 
-  __structuredAttrs = true;
-
   meta = {
     description = "A fast, full-featured Elixir LSP optimized for large codebases";
     homepage = "https://github.com/remoteoss/dexter";

@@ -11,8 +11,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "bliss";
   version = "0.77";
 
-  __structuredAttrs = true;
-
   src = fetchurl {
     url = "https://users.aalto.fi/~tjunttil/bliss/downloads/bliss-${finalAttrs.version}.zip";
     hash = "sha256-rMi5gDTzD60kyJfzZavYZsE9nxuyB+OY0MrxNodZcqQ=";

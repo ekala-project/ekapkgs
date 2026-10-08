@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   meta = {
     description = "Visualize the layout of a mounted btrfs";

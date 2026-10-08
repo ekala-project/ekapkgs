@@ -53,7 +53,6 @@ let
         --replace-fail /out $out
     '';
 
-    __structuredAttrs = true;
   };
 in
 buildGoModule rec {

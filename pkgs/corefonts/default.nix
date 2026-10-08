@@ -141,8 +141,6 @@ stdenv.mkDerivation {
     done
   '';
 
-  __structuredAttrs = true;
-
   meta = {
     description = "Microsoft's TrueType core fonts for the Web";
     homepage = "https://corefonts.sourceforge.net/";

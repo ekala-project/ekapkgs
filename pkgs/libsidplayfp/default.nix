@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals docSupport [ "doc" ];
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   postPatch = ''
     patchShebangs .

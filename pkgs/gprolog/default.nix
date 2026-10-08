@@ -17,8 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-ZwZCtDwPqifr1olh77F+vnB2iPkbaAlWbd1gYTlRLAE=";
   };
 
-  __structuredAttrs = true;
-
   hardeningDisable = lib.optional stdenv.hostPlatform.isi686 "pic";
 
   patchPhase = ''

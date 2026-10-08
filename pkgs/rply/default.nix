@@ -16,7 +16,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   buildPhase = ''
     runHook preBuild

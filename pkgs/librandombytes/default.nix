@@ -21,8 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs scripts-build
   '';
 
-  __structuredAttrs = true;
-
   # NOTE: librandombytes uses a custom Python `./configure`: it does not expect standard
   # autoconfig --build --host etc. arguments: disable
   configurePlatforms = [ ];

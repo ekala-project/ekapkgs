@@ -38,7 +38,6 @@
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "rustdesk";
   version = "1.5.0";
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "rustdesk";

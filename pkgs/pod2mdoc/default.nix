@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   meta = {
     homepage = "https://mandoc.bsd.lv/pod2mdoc/";

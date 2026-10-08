@@ -10,7 +10,6 @@ stdenv.mkDerivation (finalAttrs: {
   version = "2.2.1";
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = fetchurl {
     url = "mirror://sourceforge/iperf2/files/iperf-${finalAttrs.version}.tar.gz";

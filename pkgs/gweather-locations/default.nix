@@ -44,8 +44,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       --prefix GI_TYPELIB_PATH : ${lib.getLib buildPackages.glib}/lib/girepository-1.0
   '';
 
-  __structuredAttrs = true;
-
   meta = {
     description = "GWeather locations database";
     homepage = "https://gitlab.gnome.org/GNOME/gweather-locations";

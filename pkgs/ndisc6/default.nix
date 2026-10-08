@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     "sysconfdir=\${out}/etc"
     "localstatedir=$(TMPDIR)"
   ];
-  __structuredAttrs = true;
   strictDeps = true;
 
   meta = {

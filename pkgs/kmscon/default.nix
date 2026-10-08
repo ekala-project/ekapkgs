@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   depsBuildBuild = [
     buildPackages.stdenv.cc

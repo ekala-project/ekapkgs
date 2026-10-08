@@ -14,7 +14,6 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-viVbaU21tI4lU+0WoSzRW81aUPzCIkJKjJR/BPEFO2c=";
   };
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   patches = [ ./format-security.patch ];

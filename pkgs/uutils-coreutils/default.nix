@@ -12,7 +12,6 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "uutils-coreutils";
   version = "0.12.0";
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "uutils";

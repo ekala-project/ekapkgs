@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "openomf";
   version = "0.8.6";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

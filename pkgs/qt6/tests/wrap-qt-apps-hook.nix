@@ -9,7 +9,6 @@ let
   testProgram = stdenv.mkDerivation {
     pname = "qt-wrapper-test-program";
     version = "0.0.1";
-    __structuredAttrs = true;
 
     dontUnpack = true;
 
@@ -68,7 +67,6 @@ let
         inherit qtWrapperArgs;
         buildInputs = [ qtbase ];
         nativeBuildInputs = [ wrapQtAppsHook ];
-        __structuredAttrs = true;
       }
       ''
         ${lib.toShellVars {
@@ -154,7 +152,6 @@ lib.fix (self: {
 
         buildInputs = [ qtbase ];
         nativeBuildInputs = [ wrapQtAppsHook ];
-        __structuredAttrs = true;
       }
       ''
         # Install the test program

@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
   version = "5.4.1";
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "TheTumultuousUnicornOfDarkness";

@@ -14,8 +14,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "libtorrent-rakshasa";
   version = "0.16.24";
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "rakshasa";
     repo = "libtorrent";

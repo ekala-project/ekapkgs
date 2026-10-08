@@ -34,7 +34,6 @@ in
 stdenv.mkDerivation (finalAttrs: {
   pname = "river";
   version = "0.4.1";
-  __structuredAttrs = true;
 
   outputs = [ "out" ] ++ lib.optionals withManpages [ "man" ];
 
