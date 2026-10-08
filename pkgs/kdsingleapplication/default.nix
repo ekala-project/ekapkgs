@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [ qt6.qtbase ];
 
   cmakeEntries = {
-    KDSingleApplication_QT6 = "true";
+    KDSingleApplication_QT6 = true;
   };
 
   # The multiline project() in CMakeLists.txt causes parseShareDocName to fail
