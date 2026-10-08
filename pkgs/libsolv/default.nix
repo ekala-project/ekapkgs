@@ -29,13 +29,13 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   cmakeEntries = {
-    ENABLE_COMPLEX_DEPS = "true";
+    ENABLE_COMPLEX_DEPS = true;
     ENABLE_CONDA = withConda;
-    ENABLE_LZMA_COMPRESSION = "true";
-    ENABLE_BZIP2_COMPRESSION = "true";
-    ENABLE_ZSTD_COMPRESSION = "true";
-    ENABLE_ZCHUNK_COMPRESSION = "true";
-    WITH_SYSTEM_ZCHUNK = "true";
+    ENABLE_LZMA_COMPRESSION = true;
+    ENABLE_BZIP2_COMPRESSION = true;
+    ENABLE_ZSTD_COMPRESSION = true;
+    ENABLE_ZCHUNK_COMPRESSION = true;
+    WITH_SYSTEM_ZCHUNK = true;
   };
 
   cmakeFlags = lib.optionals withRpm [
