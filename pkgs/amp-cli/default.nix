@@ -39,7 +39,10 @@ stdenv.mkDerivation {
   # bun-compiled binary: stripping corrupts the embedded bytecode.
   dontStrip = true;
 
-  nativeBuildInputs = [ makeWrapper ] ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
+  nativeBuildInputs = [
+    makeWrapper
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
   installPhase = ''
     runHook preInstall

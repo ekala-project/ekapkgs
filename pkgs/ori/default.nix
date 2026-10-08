@@ -37,9 +37,10 @@ stdenv.mkDerivation {
   # bun-compiled binary: stripping corrupts the embedded bytecode.
   dontStrip = true;
 
-  nativeBuildInputs =
-    [ makeBinaryWrapper ]
-    ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
+  nativeBuildInputs = [
+    makeBinaryWrapper
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
   installPhase = ''
     runHook preInstall
@@ -53,9 +54,7 @@ stdenv.mkDerivation {
   doInstallCheck = true;
   installCheckPhase = ''
     runHook preInstallCheck
-    HOME=$(mktemp -d) $out/bin/ori --version | grep -F "${
-      lib.replaceStrings [ "-" ] [ "+" ] version
-    }"
+    HOME=$(mktemp -d) $out/bin/ori --version | grep -F "${lib.replaceStrings [ "-" ] [ "+" ] version}"
     runHook postInstallCheck
   '';
 

@@ -45,8 +45,11 @@ stdenv.mkDerivation {
 
   sourceRoot = "package";
 
-  nativeBuildInputs = [ makeWrapper nodejs ]
-    ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
+  nativeBuildInputs = [
+    makeWrapper
+    nodejs
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
   dontBuild = true;
   dontStrip = true;
@@ -70,7 +73,12 @@ stdenv.mkDerivation {
       --replace-fail '#!/usr/bin/env node' '#!${nodejs}/bin/node'
 
     makeWrapper $out/lib/cline-launcher/bin/cline $out/bin/cline \
-      --suffix PATH : ${lib.makeBinPath [ bash nodejs ]} \
+      --suffix PATH : ${
+        lib.makeBinPath [
+          bash
+          nodejs
+        ]
+      } \
       --set-default SSL_CERT_FILE ${cacert}/etc/ssl/certs/ca-bundle.crt \
       --set-default SSL_CERT_DIR ${cacert}/etc/ssl/certs
 

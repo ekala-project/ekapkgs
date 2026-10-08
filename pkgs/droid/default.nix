@@ -30,8 +30,9 @@ let
     aarch64-darwin = "darwin/arm64";
   };
 
-  platformPath = platformMap.${stdenv.hostPlatform.system}
-    or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
+  platformPath =
+    platformMap.${stdenv.hostPlatform.system}
+      or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
 in
 stdenv.mkDerivation {
   pname = "droid";

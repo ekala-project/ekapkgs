@@ -34,7 +34,10 @@ stdenv.mkDerivation {
     hash = hashes.${system};
   };
 
-  nativeBuildInputs = [ makeWrapper ] ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
+  nativeBuildInputs = [
+    makeWrapper
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
   # The tarball extracts to a directory with the jules binary and a licenses/
   # subdirectory; pin sourceRoot so Nix doesn't pick licenses/ as the source.

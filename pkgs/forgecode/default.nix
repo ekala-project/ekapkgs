@@ -15,8 +15,9 @@ let
     aarch64-linux = "aarch64-unknown-linux-gnu";
     aarch64-darwin = "aarch64-apple-darwin";
   };
-  platform = platformMap.${stdenv.hostPlatform.system}
-    or (throw "Unsupported system for forgecode: ${stdenv.hostPlatform.system}");
+  platform =
+    platformMap.${stdenv.hostPlatform.system}
+      or (throw "Unsupported system for forgecode: ${stdenv.hostPlatform.system}");
 
   hashes = {
     x86_64-linux = "sha256-MArPaeOepaRS5lRPMZFHAxehQia2sakYIclYFeB6i4g=";
@@ -36,7 +37,9 @@ stdenv.mkDerivation {
   dontUnpack = true;
   dontStrip = true;
 
-  nativeBuildInputs = [ makeWrapper ]
+  nativeBuildInputs = [
+    makeWrapper
+  ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ stdenv.cc.cc.lib ];

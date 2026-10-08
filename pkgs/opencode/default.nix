@@ -48,10 +48,11 @@ stdenv.mkDerivation {
     hash = hashes.${platform};
   };
 
-  nativeBuildInputs =
-    [ makeWrapper ]
-    ++ lib.optionals platformInfo.isZip [ unzip ]
-    ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
+  nativeBuildInputs = [
+    makeWrapper
+  ]
+  ++ lib.optionals platformInfo.isZip [ unzip ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ stdenv.cc.cc.lib ];
 
@@ -78,7 +79,12 @@ stdenv.mkDerivation {
     mkdir -p $out/bin
     install -m755 opencode $out/bin/opencode
     wrapProgram $out/bin/opencode \
-      --prefix PATH : ${lib.makeBinPath [ fzf ripgrep ]}
+      --prefix PATH : ${
+        lib.makeBinPath [
+          fzf
+          ripgrep
+        ]
+      }
     runHook postInstall
   '';
 
