@@ -51,12 +51,13 @@ stdenvNoCC.mkDerivation {
   # Preserve the upstream code signature; fixup could modify sealed files.
   dontFixup = !isLinux;
 
-  nativeBuildInputs =
-    [ installShellFiles ]
-    ++ lib.optionals isLinux [
-      autoPatchelfHook
-      makeBinaryWrapper
-    ];
+  nativeBuildInputs = [
+    installShellFiles
+  ]
+  ++ lib.optionals isLinux [
+    autoPatchelfHook
+    makeBinaryWrapper
+  ];
 
   # mkfs.erofs and libsailor.so are dynamically linked.
   buildInputs = lib.optionals isLinux [

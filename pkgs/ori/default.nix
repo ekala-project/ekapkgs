@@ -37,9 +37,10 @@ stdenv.mkDerivation {
   # bun-compiled binary: stripping corrupts the embedded bytecode.
   dontStrip = true;
 
-  nativeBuildInputs =
-    [ makeBinaryWrapper ]
-    ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
+  nativeBuildInputs = [
+    makeBinaryWrapper
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
   installPhase = ''
     install -Dm755 $src $out/bin/ori
