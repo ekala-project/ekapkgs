@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    BUILD_ORCANIA_TESTING = "off";
+    BUILD_ORCANIA_TESTING = false;
   };
 
   env.NIX_CFLAGS_COMPILE = toString (
