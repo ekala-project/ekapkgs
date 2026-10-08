@@ -2,109 +2,196 @@
   lib,
   stdenv,
   fetchurl,
-  runCommand,
+  fetchFromGitHub,
+  fetchNpmDeps,
+  importNpmLock,
   nodejs,
-  bun,
-  fd,
-  ripgrep,
   makeWrapper,
   autoPatchelfHook,
   libxcb,
+  fd,
+  ripgrep,
+  xclip,
 }:
 
 let
-  versionData = {
-    version = "0.99.2";
-    sourceHash = "sha256-W7GXvtjka1NSp6lA3chow1hyWyFPJ/OtTTPnfumDJVg=";
-    npmDepsHash = "sha256-3RGSzm6ALmTbxpG+sdhtYWGeCNvXENEQ7nMvFGx8NeQ=";
-  };
-  version = versionData.version;
+  version = "1.0.4";
 
-  nativeTargets = {
-    aarch64-darwin = "darwin-arm64";
-    aarch64-linux = "linux-arm64";
-    x86_64-linux = "linux-x64";
+  src = fetchFromGitHub {
+    owner = "earendil-works";
+    repo = "pi";
+    tag = "v${version}";
+    hash = "sha256-twDmQRr7vsrYzhS8o3TrlqdBzRFCbOOn/4hbCXD/u3Q=";
   };
-  nativeTarget = nativeTargets.${stdenv.hostPlatform.system}
-    or (throw "Unsupported Pi platform: ${stdenv.hostPlatform.system}");
-  nativePlatform = if stdenv.hostPlatform.isDarwin then "darwin" else "linux";
-  nativeFile = "${nativePlatform}-platform${lib.optionalString stdenv.hostPlatform.isLinux "-x11"}.node";
 
-  srcWithLock = runCommand "pi-src-with-lock" { } ''
-    mkdir -p $out
-    tar -xzf ${
-      fetchurl {
-        url = "https://registry.npmjs.org/@earendil-works/pi-coding-agent/-/pi-coding-agent-${version}.tgz";
-        hash = versionData.sourceHash;
+  packageJson = lib.importJSON ./coding-agent-package.json;
+
+  # Lockfile root used by the pi.dev installer. It pins the coding agent's
+  # runtime dependency tree and is kept in sync with package-lock.json by
+  # `npm run check`.
+  installLock = ./install-lock;
+
+  # The typed catalog is the representation whose bytes the revision hashes.
+  modelCatalogRevision = "sha256-c5d5070c7592ca8e27743e892a7eec1d6c883be8034f888735238cdfdb3ab70f";
+  modelCatalog = fetchurl {
+    name = "pi-model-catalog.json";
+    url = "https://pi.dev/api/models/revisions/${modelCatalogRevision}?types=chat,image,classifier";
+    sha256 = lib.removePrefix "sha256-" modelCatalogRevision;
+  };
+
+  workspaceNpmDeps = fetchNpmDeps {
+    inherit src;
+    hash = "sha256-1H7z6y8czHF3Dewqqy5DA/RNeo2//J1eBYZqryX0MbU=";
+  };
+
+  workspacePackages = stdenv.mkDerivation {
+    pname = "pi-workspace-packages";
+    inherit (packageJson) version;
+    src = src;
+
+    nativeBuildInputs = [ nodejs ];
+
+    buildPhase = ''
+      runHook preBuild
+      export HOME=$TMPDIR
+      export npm_config_cache=$TMPDIR/.npm
+      cp -r ${workspaceNpmDeps} $npm_config_cache
+      chmod -R +w $npm_config_cache
+      npm ci --offline --ignore-scripts --cache=$npm_config_cache
+      patchShebangs node_modules
+      node packages/ai/scripts/hydrate-model-catalog.ts ${modelCatalog}
+      npm run build:offline
+      runHook postBuild
+    '';
+
+    installPhase = ''
+      runHook preInstall
+
+      pack_package() {
+        local package_dir="$1"
+        local output_name="$2"
+        local tarball
+
+        tarball="$(cd "$package_dir" && npm pack --ignore-scripts --silent --pack-destination "$TMPDIR")"
+        mv "$TMPDIR/$tarball" "$out/$output_name.tgz"
       }
-    } -C $out --strip-components=1
-    rm -f $out/npm-shrinkwrap.json
-    cp ${./package-lock.json} $out/package-lock.json
-    sed -i '/"@earendil-works\/pi-protocol"/a\    "@earendil-works\/pi-server": "^\${version}",' $out/package.json
-    grep -q pi-server $out/package.json
-  '';
+
+      mkdir -p "$out"
+      pack_package packages/chord chord
+      pack_package packages/telemetry telemetry
+      pack_package packages/ai ai
+      pack_package packages/tui tui
+      pack_package packages/agent agent
+      pack_package packages/codemode codemode
+      pack_package packages/mcp mcp
+      pack_package packages/coding-agent coding-agent
+
+      runHook postInstall
+    '';
+  };
+
+  npmDeps = importNpmLock {
+    npmRoot = installLock;
+    # The install lock points internal packages at registry releases. Replace
+    # them with the packages built from this checkout.
+    packageSourceOverrides = {
+      "node_modules/@earendil-works/chord" = workspacePackages + "/chord.tgz";
+      "node_modules/@earendil-works/pi-agent-core" = workspacePackages + "/agent.tgz";
+      "node_modules/@earendil-works/pi-ai" = workspacePackages + "/ai.tgz";
+      "node_modules/@earendil-works/pi-codemode" = workspacePackages + "/codemode.tgz";
+      "node_modules/@earendil-works/pi-coding-agent" = workspacePackages + "/coding-agent.tgz";
+      "node_modules/@earendil-works/pi-mcp" = workspacePackages + "/mcp.tgz";
+      "node_modules/@earendil-works/pi-telemetry" = workspacePackages + "/telemetry.tgz";
+      "node_modules/@earendil-works/pi-tui" = workspacePackages + "/tui.tgz";
+    };
+  };
 in
-nodejs.buildNpmApplication {
+stdenv.mkDerivation {
   pname = "pi";
-  inherit version;
-  src = srcWithLock;
+  inherit (packageJson) version;
+  src = installLock;
+  inherit npmDeps;
 
-  dontNpmBuild = true;
+  npmRebuildFlags = [ "--ignore-scripts" ];
 
-  nativeBuildInputs = [ bun ]
+  nativeBuildInputs = [
+    nodejs
+    importNpmLock.npmConfigHook
+    makeWrapper
+  ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
-  buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ libxcb ];
+  buildInputs = [
+    nodejs
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
+    stdenv.cc.cc.lib
+    libxcb
+  ];
 
-  preInstall = ''
-    # Upstream embeds the worker as ./src/utils/image-resize-worker.ts and
-    # loads it by that path at runtime; the npm tarball only ships dist/.
-    mkdir -p src/utils src/modes src/core
-    echo 'import "../../dist/utils/image-resize-worker.js";' > src/utils/image-resize-worker.ts
-    ln -s ../../dist/modes/interactive src/modes/interactive
-    ln -s ../../dist/core/export-html src/core/export-html
+  dontBuild = true;
+  dontStrip = true;
 
-    bun build --compile ./dist/bun/cli.js ./src/utils/image-resize-worker.ts --outfile dist/pi
+  installPhase = ''
+    runHook preInstall
+
+    mkdir -p "$out/lib/pi" "$out/bin"
+    cp -R . "$out/lib/pi"
+
+    makeWrapper ${nodejs}/bin/node "$out/bin/pi" \
+      --add-flags "$out/lib/pi/node_modules/@earendil-works/pi-coding-agent/dist/bundle/cli.js" \
+      --prefix PATH : ${
+        lib.makeBinPath (
+          [
+            nodejs
+            fd
+            ripgrep
+          ]
+          ++ lib.optionals stdenv.hostPlatform.isLinux [
+            xclip
+          ]
+        )
+      }
+
+    runHook postInstall
   '';
 
-  postInstall = ''
-    pkgdir=$out/libexec/pi
-
-    rm -rf "$out/lib" "$out/bin"
-    mkdir -p "$out/bin" "$pkgdir/theme" "$pkgdir/assets"
-    cp dist/pi "$pkgdir/"
-    cp package.json README.md CHANGELOG.md "$pkgdir/"
-    mkdir -p "$pkgdir/native/${nativePlatform}/prebuilds"
-    cp -r node_modules/@earendil-works/pi-tui/native/${nativePlatform}/prebuilds/${nativeTarget} \
-      "$pkgdir/native/${nativePlatform}/prebuilds/"
-    cp node_modules/@silvia-odwyer/photon-node/photon_rs_bg.wasm "$pkgdir/"
-    cp dist/modes/interactive/theme/*.json "$pkgdir/theme/"
-    cp dist/modes/interactive/assets/* "$pkgdir/assets/"
-    cp -r dist/core/export-html "$pkgdir/"
-    cp -r docs examples "$pkgdir/"
-    find "$pkgdir" -name '*.js' -exec chmod -x {} +
-
-    makeWrapper "$pkgdir/pi" "$out/bin/pi" \
-      --prefix PATH : ${lib.makeBinPath [ fd ripgrep ]} \
-      --set PI_PACKAGE_DIR "$pkgdir" \
-      --set PI_SKIP_VERSION_CHECK 1 \
-      --set PI_TELEMETRY 0
+  doInstallCheck = true;
+  installCheckPhase = ''
+    runHook preInstallCheck
+    test "$("$out/bin/pi" --version)" = "${packageJson.version}"
+    ${nodejs}/bin/node -e \
+      "require('$out/lib/pi/node_modules/esbuild').transformSync('const value: number = 1', { loader: 'ts' })"
+    # Load host-platform TUI helpers directly so missing native dependencies
+    # fail the build rather than silently disabling clipboard support.
+    ${nodejs}/bin/node -e \
+      "const fs = require('node:fs');
+       const path = require('node:path');
+       const dir = '$out/lib/pi/node_modules/@earendil-works/pi-tui/native/' + process.platform + '/prebuilds/' + process.platform + '-' + process.arch;
+       if (fs.existsSync(dir)) {
+         for (const file of fs.readdirSync(dir)) {
+           if (file.endsWith('.node')) require(path.join(dir, file));
+         }
+       }"
+    ${nodejs}/bin/node -e \
+      "require('$out/lib/pi/node_modules/@silvia-odwyer/photon-node')"
+    runHook postInstallCheck
   '';
-
-  # The CLI's --version output does not match the package version format.
-  doInstallCheck = false;
 
   meta = {
-    description = "A terminal-based coding agent with multi-model support";
-    homepage = "https://github.com/earendil-works/pi";
-    changelog = "https://github.com/earendil-works/pi/releases";
+    description = packageJson.description;
+    homepage = "https://pi.dev";
     license = lib.licenses.mit;
-    sourceProvenance = [ lib.sourceTypes.binaryBytecode ];
     mainProgram = "pi";
     platforms = [
-      "x86_64-linux"
-      "aarch64-linux"
       "aarch64-darwin"
+      "aarch64-linux"
+      "x86_64-darwin"
+      "x86_64-linux"
+    ];
+    sourceProvenance = with lib.sourceTypes; [
+      fromSource
+      binaryNativeCode
     ];
   };
 }

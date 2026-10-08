@@ -1,6 +1,7 @@
 {
   lib,
   fetchurl,
+  importNpmLock,
   jq,
   nodejs,
   runCommand,
@@ -25,6 +26,7 @@ in
 nodejs.buildNpmApplication {
   pname = "command-code";
   inherit version src;
+  npmDeps = importNpmLock { npmRoot = ./.; };
 
   # dist/ is a prebuilt bundle.
   dontNpmBuild = true;

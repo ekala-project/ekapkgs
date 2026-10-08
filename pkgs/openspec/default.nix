@@ -57,7 +57,10 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   doInstallCheck = true;
-  nativeInstallCheckInputs = [ versionCheckHook writableTmpDirAsHomeHook ];
+  nativeInstallCheckInputs = [
+    versionCheckHook
+    writableTmpDirAsHomeHook
+  ];
 
   meta = {
     description = "Spec-driven development for AI coding assistants";

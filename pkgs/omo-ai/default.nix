@@ -55,7 +55,13 @@ buildNpmPackage rec {
       done
     done
     wrapProgram "$out/bin/omo" \
-      --prefix PATH : ${lib.makeBinPath [ nodejs fd ripgrep ]}
+      --prefix PATH : ${
+        lib.makeBinPath [
+          nodejs
+          fd
+          ripgrep
+        ]
+      }
   '';
 
   doInstallCheck = true;

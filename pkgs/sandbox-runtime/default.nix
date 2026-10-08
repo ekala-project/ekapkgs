@@ -2,6 +2,7 @@
   lib,
   stdenv,
   fetchFromGitHub,
+  importNpmLock,
   nodejs,
   bun,
   libseccomp,
@@ -17,6 +18,7 @@ nodejs.buildNpmApplication {
   pname = "sandbox-runtime";
   npmPackName = "@anthropic-ai/sandbox-runtime";
   inherit version;
+  npmDeps = importNpmLock { npmRoot = ./.; };
 
   src = fetchFromGitHub {
     owner = "anthropic-experimental";

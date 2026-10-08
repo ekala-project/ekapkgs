@@ -38,7 +38,12 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   pnpmDeps = fetchPnpmDeps {
-    inherit (finalAttrs) pname version src pnpmWorkspaces;
+    inherit (finalAttrs)
+      pname
+      version
+      src
+      pnpmWorkspaces
+      ;
     pnpm = pnpm.v10;
     hash = pin.pnpmDepsHash;
     fetcherVersion = 3;
@@ -80,7 +85,13 @@ stdenv.mkDerivation (finalAttrs: {
         --add-flags --no-warnings \
         --add-flags --no-deprecation \
         --add-flags $out/lib/happy/bin/$bin.mjs \
-        --prefix PATH : ${lib.makeBinPath [ nodejs ripgrep difftastic ]}
+        --prefix PATH : ${
+          lib.makeBinPath [
+            nodejs
+            ripgrep
+            difftastic
+          ]
+        }
     done
 
     runHook postInstall

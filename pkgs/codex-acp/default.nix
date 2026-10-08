@@ -1,6 +1,7 @@
 {
   lib,
   fetchFromGitHub,
+  importNpmLock,
   nodejs,
   makeWrapper,
   codex,
@@ -12,6 +13,7 @@ in
 nodejs.buildNpmApplication {
   pname = "codex-acp";
   inherit version;
+  npmDeps = importNpmLock { npmRoot = ./.; };
 
   src = fetchFromGitHub {
     owner = "agentclientprotocol";

@@ -71,7 +71,12 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper ${nodejs}/bin/node $out/bin/kimi \
       --add-flags $out/lib/kimi-code/dist/main.mjs \
       --set KIMI_CODE_NO_AUTO_UPDATE 1 \
-      --prefix PATH : ${lib.makeBinPath [ fd ripgrep ]}
+      --prefix PATH : ${
+        lib.makeBinPath [
+          fd
+          ripgrep
+        ]
+      }
 
     runHook postInstall
   '';
