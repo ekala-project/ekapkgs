@@ -42,10 +42,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeEntries = {
     CMAKE_INSTALL_PREFIX = "${placeholder "out"}";
-    BUILD_SHARED_LIBS = "on";
-    BUILD_TESTING = "on";
-    DOWNLOAD_GTEST = "off";
-    DOWNLOAD_RUBYRNP = "off";
+    BUILD_SHARED_LIBS = true;
+    BUILD_TESTING = true;
+    DOWNLOAD_GTEST = false;
+    DOWNLOAD_RUBYRNP = false;
     SYSTEM_LIBSEXPP = true;
   };
 
