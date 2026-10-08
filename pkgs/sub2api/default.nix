@@ -13,7 +13,12 @@
 }:
 
 let
-  versionData = builtins.fromJSON (builtins.readFile ./hashes.json);
+  versionData = {
+    version = "0.2.11";
+    hash = "sha256-QsbJ3DW6fsGg9Tyre/bMh4WrHWfLdZdPQNfpHtx5u7g=";
+    pnpmDepsHash = "sha256-231sRyDAntTejGhJbxCBnEHUHuVZFM5yYEkztDWKveE=";
+    vendorHash = "sha256-9TK51JZvK+kW4IIrcdw1GANLndPBa+nrmB74GtPsYRU=";
+  };
   inherit (versionData)
     version
     hash
