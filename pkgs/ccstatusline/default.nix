@@ -46,7 +46,10 @@ in
 stdenv.mkDerivation {
   pname = "ccstatusline";
   inherit version src;
-  nativeBuildInputs = [ bun makeWrapper ];
+  nativeBuildInputs = [
+    bun
+    makeWrapper
+  ];
   dontConfigure = true;
   buildPhase = ''
     runHook preBuild
