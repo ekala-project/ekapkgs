@@ -50,9 +50,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    BUILD_TZ_LIB = "true";
-    BUILD_SHARED_LIBS = "true";
-    USE_SYSTEM_TZ_DB = "true";
+    BUILD_TZ_LIB = true;
+    BUILD_SHARED_LIBS = true;
+    USE_SYSTEM_TZ_DB = true;
   };
 
   outputs = [
