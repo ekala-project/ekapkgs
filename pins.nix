@@ -10,6 +10,15 @@ let
       builtins.fetchTree {
         inherit (node) type path narHash;
       }
+    else if node.type == "git" then
+      builtins.fetchTree {
+        inherit (node)
+          type
+          url
+          narHash
+          rev
+          ;
+      }
     else
       builtins.fetchTree {
         inherit (node)
