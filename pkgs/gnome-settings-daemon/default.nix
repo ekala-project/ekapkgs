@@ -69,6 +69,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     glib
     meson
+    meson.configurePhaseHook
     ninja
     perl
     pkg-config
