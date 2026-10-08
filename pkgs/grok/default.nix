@@ -17,8 +17,9 @@ let
     aarch64-linux = "linux-aarch64";
     aarch64-darwin = "macos-aarch64";
   };
-  platform = platformMap.${stdenv.hostPlatform.system}
-    or (throw "Unsupported system for grok: ${stdenv.hostPlatform.system}");
+  platform =
+    platformMap.${stdenv.hostPlatform.system}
+      or (throw "Unsupported system for grok: ${stdenv.hostPlatform.system}");
 
   hashes = {
     x86_64-linux = "sha256-QWJqUykjJBQLklVrnUL/VULj3NBK/4Xq+4aJ3UrbRPw=";
@@ -38,7 +39,9 @@ stdenv.mkDerivation {
   dontUnpack = true;
   dontStrip = true;
 
-  nativeBuildInputs = [ makeWrapper ]
+  nativeBuildInputs = [
+    makeWrapper
+  ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ lttng-ust ];
