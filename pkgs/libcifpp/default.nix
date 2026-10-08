@@ -19,7 +19,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-+lD543SYLoHrds97en4zfDHkQBf4wL0NOg2LcshJI8k=";
   };
 
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
 
   cmakeEntries = {
     CIFPP_DOWNLOAD_CCD = false;
