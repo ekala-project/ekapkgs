@@ -3,6 +3,7 @@
   stdenv,
   stdenvNoCC,
   buildGoModule,
+  go,
   fetchFromGitHub,
   fetchPnpmDeps,
   pnpmConfigHook,
@@ -125,6 +126,33 @@ let
     ]) agentRuntimeEnvironment
   );
 
+  # All platforms the agentctl helper is cross-compiled for.  The host
+  # target is built natively; the remaining three are built with CGO off.
+  agentctlTargets = [
+    {
+      goos = "linux";
+      goarch = "amd64";
+    }
+    {
+      goos = "linux";
+      goarch = "arm64";
+    }
+    {
+      goos = "darwin";
+      goarch = "arm64";
+    }
+    {
+      goos = "darwin";
+      goarch = "amd64";
+    }
+  ];
+  hostTarget = {
+    goos = go.GOOS;
+    goarch = go.GOARCH;
+  };
+  crossTargets = builtins.filter (t: t != hostTarget) agentctlTargets;
+  agentctlName = t: "agentctl-${t.goos}-${t.goarch}";
+
   pnpm9 = pnpm.v10.overrideAttrs (_: {
     version = "9.15.9";
     src = fetchurl {
@@ -212,25 +240,25 @@ buildGoModule (_finalAttrs: {
 
   postBuild = ''
     helper_ldflags="-s -w"
-    env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
-      go build -ldflags "$helper_ldflags" -o agentctl-linux-amd64 ./cmd/agentctl
-    env CGO_ENABLED=0 GOOS=linux GOARCH=arm64 \
-      go build -ldflags "$helper_ldflags" -o agentctl-linux-arm64 ./cmd/agentctl
-    env CGO_ENABLED=0 GOOS=darwin GOARCH=arm64 \
-      go build -ldflags "$helper_ldflags" -o agentctl-darwin-arm64 ./cmd/agentctl
-    env CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 \
-      go build -ldflags "$helper_ldflags" -o agentctl-darwin-amd64 ./cmd/agentctl
-  '';
+  ''
+  + lib.concatMapStrings (t: ''
+    env CGO_ENABLED=0 GOOS=${t.goos} GOARCH=${t.goarch} \
+      go build -ldflags "$helper_ldflags" -o ${agentctlName t} ./cmd/agentctl
+  '') crossTargets;
 
   nativeBuildInputs = [ makeWrapper ];
 
   postInstall = ''
     mkdir -p $out/libexec/kandev/bin
     mv $out/bin/kandev $out/bin/agentctl $out/libexec/kandev/bin/
-    install -Dm755 agentctl-linux-amd64 $out/libexec/kandev/bin/agentctl-linux-amd64
-    install -Dm755 agentctl-linux-arm64 $out/libexec/kandev/bin/agentctl-linux-arm64
-    install -Dm755 agentctl-darwin-arm64 $out/libexec/kandev/bin/agentctl-darwin-arm64
-    install -Dm755 agentctl-darwin-amd64 $out/libexec/kandev/bin/agentctl-darwin-amd64
+    # The native agentctl is already at $out/libexec/kandev/bin/agentctl;
+    # symlink the host-specific name to it.
+    ln -s agentctl "$out/libexec/kandev/bin/${agentctlName hostTarget}"
+  ''
+  + lib.concatMapStrings (t: ''
+    install -Dm755 ${agentctlName t} $out/libexec/kandev/bin/${agentctlName t}
+  '') crossTargets
+  + ''
 
     makeWrapper $out/libexec/kandev/bin/kandev $out/bin/kandev \
       --set KANDEV_BUNDLE_DIR $out/libexec/kandev \
@@ -267,9 +295,9 @@ buildGoModule (_finalAttrs: {
     test "$status" -eq 1
     grep -F "Usage: agentctl kandev" <<<"$output"
 
-    helpers="agentctl-linux-amd64 agentctl-linux-arm64 agentctl-darwin-arm64 agentctl-darwin-amd64"
+    helpers="${lib.concatMapStringsSep " " agentctlName agentctlTargets}"
     for helper in $helpers; do
-      test -x "$out/libexec/kandev/bin/$helper"
+      test -e "$out/libexec/kandev/bin/$helper"
     done
 
     runHook postInstallCheck
@@ -296,6 +324,7 @@ buildGoModule (_finalAttrs: {
     platforms = [
       "x86_64-linux"
       "aarch64-linux"
+      "x86_64-darwin"
       "aarch64-darwin"
     ];
   };
