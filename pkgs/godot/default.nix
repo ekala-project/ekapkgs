@@ -67,7 +67,6 @@ let
   ];
 in
 stdenv.mkDerivation {
-  __structuredAttrs = true;
 
   pname = "godot";
   inherit version;

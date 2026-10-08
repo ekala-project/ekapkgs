@@ -11,7 +11,6 @@ stdenv.mkDerivation (finalAttrs: {
   version = "1.0";
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     # original sourceforge mirror does not provide direct access to tag 1.0

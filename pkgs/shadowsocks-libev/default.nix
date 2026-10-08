@@ -17,7 +17,6 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-  __structuredAttrs = true;
   strictDeps = true;
 
   pname = "shadowsocks-libev";

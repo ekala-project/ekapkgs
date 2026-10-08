@@ -30,8 +30,6 @@ buildGoModule (finalAttrs: {
   pname = "sub2api";
   inherit version;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "Wei-Shaw";
     repo = "sub2api";

@@ -20,7 +20,6 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "qman";
   version = "1.5.1";
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

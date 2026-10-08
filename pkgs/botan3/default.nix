@@ -12,7 +12,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "botan";
   version = "3.12.0";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   outputs = [

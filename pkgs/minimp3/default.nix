@@ -7,7 +7,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "minimp3";
   version = "0-unstable-2026-03-12";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

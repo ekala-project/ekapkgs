@@ -66,8 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
     moveToOutput "share/doc" "$devdoc"
   '';
 
-  __structuredAttrs = true;
-
   meta = {
     description = "Image pixel format conversion library";
     mainProgram = "babl";

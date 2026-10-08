@@ -7,7 +7,6 @@
 buildGoModule (finalAttrs: {
   pname = "sesh";
   version = "2.32.0";
-  __structuredAttrs = true;
 
   nativeBuildInputs = [
     writableTmpDirAsHomeHook

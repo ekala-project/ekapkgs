@@ -15,8 +15,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "breakpad";
   version = "2024.02.16";
 
-  __structuredAttrs = true;
-
   src = fetchgit {
     url = "https://chromium.googlesource.com/breakpad/breakpad";
     rev = "v${finalAttrs.version}";

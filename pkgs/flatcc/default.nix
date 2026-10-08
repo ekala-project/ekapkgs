@@ -9,7 +9,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "flatcc";
   version = "0.6.4";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

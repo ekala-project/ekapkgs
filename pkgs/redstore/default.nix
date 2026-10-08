@@ -14,7 +14,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "redstore";
   version = "0.5.4";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchurl {

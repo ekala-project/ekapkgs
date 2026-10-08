@@ -18,7 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   doInstallCheck = true;
 

@@ -7,7 +7,6 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "magic-enum";
   version = "0.9.8";
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "Neargye";

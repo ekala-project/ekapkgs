@@ -13,7 +13,6 @@ stdenv.mkDerivation (finalAttrs: {
   version = "0.6.1";
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "rpm-software-management";

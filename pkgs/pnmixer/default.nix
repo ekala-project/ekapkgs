@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
   version = "0.7.2";
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "nicklan";

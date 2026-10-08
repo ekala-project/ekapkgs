@@ -15,7 +15,6 @@ stdenvNoCC.mkDerivation rec {
   ];
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = fetchzip {
     url = "https://github.com/adobe-fonts/source-sans/archive/${version}R.zip";

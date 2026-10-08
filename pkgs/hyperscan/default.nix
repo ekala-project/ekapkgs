@@ -16,7 +16,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "hyperscan";
   version = "5.4.2";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

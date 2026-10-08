@@ -18,7 +18,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     hash = "sha256-m2cYppfitpBDKK8CC9i/lUrC9rfSYTuqUSZSyIKKGyg=";
   };
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   makeFlags = [ "prefix=${placeholder "out"}" ];

@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     );
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   doCheck = true;
 

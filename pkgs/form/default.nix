@@ -22,8 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "form";
   version = "5.0.2";
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "form-dev";
     repo = "form";

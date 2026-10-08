@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
     hash = "sha256-CQOmVVTegOZVwWjGzSek6BehdJCQ5ddOR6M9seWqZRw=";
   };
 
-  __structuredAttrs = true;
-
   modRoot = "cli";
   vendorHash = "sha256-Q3CbeKrenZr1kGFhSrXW7dcnn3iGKWhWO2qofqAFwgk=";
 

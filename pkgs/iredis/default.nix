@@ -9,7 +9,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   pname = "iredis";
   version = "1.16.1";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "laixintao";

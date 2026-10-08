@@ -9,7 +9,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "ggml";
   version = "0.25.3";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

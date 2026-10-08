@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "fbida";
   version = "2.15-1";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitLab {

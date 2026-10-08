@@ -8,8 +8,6 @@ buildGoModule (finalAttrs: {
   pname = "nerdlog";
   version = "1.13.0";
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "dimonomid";
     repo = "nerdlog";

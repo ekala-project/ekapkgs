@@ -228,8 +228,6 @@ stdenv.mkDerivation (finalAttrs: {
     fi
   '';
 
-  __structuredAttrs = true;
-
   meta = {
     description = "Movie player that supports many video formats";
     homepage = "http://mplayerhq.hu";

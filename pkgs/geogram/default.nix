@@ -29,7 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   cmakeEntries = {
     GEOGRAM_WITH_TRIANGLE = false;

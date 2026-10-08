@@ -14,7 +14,6 @@ stdenv.mkDerivation (finalAttrs: {
   version = "0.9.12";
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "baskerville";

@@ -7,7 +7,6 @@
 buildGoModule (finalAttrs: {
   pname = "git-pages";
   version = "0.9.1";
-  __structuredAttrs = true;
 
   src = fetchFromCodeberg {
     owner = "git-pages";

@@ -11,7 +11,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "isa-l";
   version = "2.32.1";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

@@ -10,8 +10,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "libcotp";
   version = "4.2.2";
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "paolostivanin";
     repo = "libcotp";

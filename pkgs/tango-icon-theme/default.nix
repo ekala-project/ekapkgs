@@ -49,8 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     gtk-update-icon-cache $out/share/icons/Tango
   '';
 
-  __structuredAttrs = true;
-
   meta = {
     description = "Basic set of icons";
     homepage = "https://tango.freedesktop.org/Tango_Icon_Library";

@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-  __structuredAttrs = true;
   meta = {
     description = "Raster image scaling and processing utility";
     longDescription = ''

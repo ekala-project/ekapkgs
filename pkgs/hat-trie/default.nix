@@ -15,7 +15,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     hash = "sha256-5L3qSlwYc2G60GPFrEz06eAWdUcdBQTVBLLOf1sLP0c=";
   };
 
-  __structuredAttrs = true;
   strictDeps = true;
   dontBuild = true;
 

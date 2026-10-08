@@ -92,8 +92,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doInstallCheck = true;
 
-  __structuredAttrs = true;
-
   meta = {
     homepage = "https://fc-solve.shlomifish.org/";
     description = "FreeCell automatic solver";

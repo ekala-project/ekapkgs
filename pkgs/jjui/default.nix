@@ -7,7 +7,6 @@
 buildGoModule (finalAttrs: {
   pname = "jjui";
   version = "0.10.11";
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

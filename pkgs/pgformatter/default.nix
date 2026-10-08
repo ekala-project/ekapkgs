@@ -16,7 +16,6 @@ perlPackages.buildPerlPackage rec {
   };
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   outputs = [ "out" ];
 

@@ -26,8 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "gammu";
   version = "1.45.0";
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "gammu";
     repo = "gammu";

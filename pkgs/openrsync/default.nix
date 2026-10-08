@@ -16,7 +16,6 @@ stdenv.mkDerivation {
   };
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   # Uses oconfigure
   env.prefixKey = "PREFIX=";

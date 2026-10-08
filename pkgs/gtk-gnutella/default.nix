@@ -17,7 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "gtk-gnutella";
   version = "1.3.1";
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "gtk-gnutella";

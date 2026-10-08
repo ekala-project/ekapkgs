@@ -21,8 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "rtorrent";
   version = "0.16.24";
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "rakshasa";
     repo = "rtorrent";

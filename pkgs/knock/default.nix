@@ -9,8 +9,6 @@ buildGoModule (finalAttrs: {
   pname = "knock";
   version = "0.0.2";
 
-  __structuredAttrs = true;
-
   src = fetchFromCodeberg {
     owner = "nat-418";
     repo = "knock";

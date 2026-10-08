@@ -24,7 +24,6 @@ stdenv.mkDerivation {
   version = "4.3-unstable-2022-03-06";
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = fetchhg {
     url = "http://hg.code.sf.net/p/enblend/code";

@@ -49,7 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   patches = [
     ./0001-Skip-bundle-fixup.patch

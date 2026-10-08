@@ -10,8 +10,6 @@ stdenv.mkDerivation (finalAttrs: {
   version = "1.0.93";
   pname = "toluapp";
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "LuaDist";
     repo = "toluapp";

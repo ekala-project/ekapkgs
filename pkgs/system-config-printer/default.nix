@@ -41,7 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   prePatch = ''
     touch README ChangeLog

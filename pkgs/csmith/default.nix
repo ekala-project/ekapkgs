@@ -21,7 +21,6 @@ stdenv.mkDerivation rec {
   };
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   nativeBuildInputs = [
     cmake
