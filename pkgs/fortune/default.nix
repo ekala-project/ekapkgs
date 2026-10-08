@@ -42,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeEntries = {
     LOCALDIR = "${placeholder "out"}/share/fortunes";
-    DISABLE_RECODE = "false";
+    DISABLE_RECODE = false;
   };
 
   cmakeFlags = [
