@@ -15,7 +15,7 @@
   llvmPackages,
 }:
 let
-  # Old vendored package which has no other use than here, so not packaged in nixpkgs.
+  # Old vendored package which has no other use than here, so not packaged in at top scope.
   demumble = fetchFromGitHub {
     owner = "nico";
     repo = "demumble";
@@ -25,13 +25,13 @@ let
 in
 stdenv.mkDerivation {
   pname = "bloaty";
-  version = "1.1";
+  version = "1.1-unstable-20260926";
 
   src = fetchFromGitHub {
     owner = "google";
     repo = "bloaty";
-    rev = "4a601b636e2347322d0371c8bf8ca5eaeaca4bac";
-    hash = "sha256-16Ic2x5JctSCuHJZjK96xkgJw8qyy8GqFupwWuc2U/k=";
+    rev = "f1a83e63f36beb628dcf022e1201a2eb391a22a6";
+    hash = "sha256-48ibsWM6SqLCh3q7UoV7OdDsiG7ttDoxl6kAXX8vUys=";
   };
 
   cmakeEntries = {
@@ -41,6 +41,10 @@ stdenv.mkDerivation {
   };
 
   postPatch = ''
+    # Capstone 6 renamed CS_ARCH_ARM64 to CS_ARCH_AARCH64
+    substituteInPlace src/elf.cc \
+      --replace-fail "CS_ARCH_ARM64" "CS_ARCH_AARCH64"
+
     # Build system relies on some of those source files
     rm -rf third_party/googletest third_party/abseil-cpp third_party/demumble
     ln -s ${gtest.src} third_party/googletest
@@ -57,6 +61,7 @@ stdenv.mkDerivation {
     cmake
     cmake.configurePhaseHook
     pkg-config
+    protobuf
   ];
 
   buildInputs = [
