@@ -3,7 +3,6 @@
   stdenv,
   rustPlatform,
   fetchFromGitHub,
-  runCommand,
   nodejs,
   importNpmLock,
   versionCheckHook,
@@ -20,12 +19,6 @@ let
     tag = "v${version}";
     hash = "sha256-X+2hSmbGibS0LJDew+CnXpJFW2k7w3fj/D54XHqLLzI=";
   };
-
-  # fetchNpmDeps needs package-lock.json at the source root.
-  frontendSrc = runCommand "${pname}-web-src-${version}" { } ''
-    mkdir -p $out
-    cp -r ${src}/web/. $out/
-  '';
 in
 rustPlatform.buildRustPackage {
   inherit pname version src;
@@ -44,7 +37,7 @@ rustPlatform.buildRustPackage {
   };
 
   npmDeps = importNpmLock.importNpmLock {
-    npmRoot = frontendSrc;
+    npmRoot = ./web;
   };
   npmRoot = "web";
   makeCacheWritable = true;
