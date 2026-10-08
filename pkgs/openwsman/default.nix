@@ -35,9 +35,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    CMAKE_BUILD_RUBY_GEM = "no";
-    BUILD_PYTHON = "no";
-    BUILD_PYTHON3 = "yes";
+    CMAKE_BUILD_RUBY_GEM = false;
+    BUILD_PYTHON = false;
+    BUILD_PYTHON3 = true;
   };
 
   preConfigure = ''
