@@ -19,7 +19,10 @@ stdenv.mkDerivation (finalAttrs: {
     ./libap4.patch # include all libraries as shared, not static
   ];
 
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
 
   cmakeEntries = {
     BUILD_SHARED_LIBS = true;
