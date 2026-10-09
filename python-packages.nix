@@ -339,5 +339,4 @@ final: prev: {
       mainProgram = "chroma";
     };
   });
-
 }
