@@ -191,4 +191,81 @@ final: prev: {
     };
   };
 
+
+  django-tagging = final.buildPythonPackage rec {
+    pname = "django-tagging";
+    version = "0.5.0";
+    format = "setuptools";
+
+    src = final.pkgs.fetchPypi {
+      inherit pname version;
+      sha256 = "28d68fa4831705e51ad7d1e845ed6dd9e354f9b6f8a5f63b655a430646ef4e8d";
+    };
+
+    # error: invalid command 'test'
+    doCheck = false;
+
+    propagatedBuildInputs = [ final.django ];
+
+    meta = {
+      description = "Generic tagging application for Django projects";
+      homepage = "https://github.com/Fantomas42/django-tagging";
+    };
+  };
+
+  graphite-web = final.buildPythonPackage (finalAttrs: {
+    pname = "graphite-web";
+    version = "1.1.10-unstable-2025-02-24";
+    format = "setuptools";
+
+    src = final.pkgs.fetchFromGitHub {
+      owner = "graphite-project";
+      repo = "graphite-web";
+      rev = "49c28e2015d605ad9ec93524f7076dd924a4731a";
+      hash = "sha256-TxsQPhnI5WhQvKKkDEYZ8xnyg/qf+N9Icej6d6A0jC0=";
+    };
+
+    postPatch = ''
+      substituteInPlace webapp/graphite/settings.py \
+        --replace-fail \
+          "join(WEBAPP_DIR, 'content')" \
+          "join('$out/webapp', 'content')"
+    '';
+
+    dependencies = with final; [
+      cairocffi
+      django
+      django-tagging
+      gunicorn
+      pyparsing
+      python-memcached
+      pytz
+      six
+      txamqp
+      urllib3
+      whisper
+    ];
+
+    pythonRelaxDeps = [
+      "django"
+      "django-tagging"
+    ];
+
+    env = {
+      GRAPHITE_NO_PREFIX = "True";
+      REDIS_HOST = "127.0.0.1";
+    };
+
+    pythonImportsCheck = [ "graphite" ];
+
+    # Tests need a running redis (valkey) and a full django test harness.
+    doCheck = false;
+
+    meta = {
+      description = "Enterprise scalable realtime graphing";
+      homepage = "http://graphiteapp.org/";
+      license = final.pkgs.lib.licenses.asl20;
+    };
+  });
+
 }
