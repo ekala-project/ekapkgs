@@ -1,0 +1,32 @@
+From 20cdb774da566401f784db27dbe040362fc7d4d2 Mon Sep 17 00:00:00 2001
+From: x <a@b.c>
+Date: Mon, 29 Jun 2026 15:48:01 +0200
+Subject: [PATCH] disable self-update for Nix-managed installs
+
+tu self update rewrites its own binary or shells out to cargo install,
+which is wrong for a read-only Nix store install. Refuse and defer to
+the Nix configuration instead.
+
+Signed-off-by: x <a@b.c>
+---
+ src/commands/self_cmd.rs | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/commands/self_cmd.rs b/src/commands/self_cmd.rs
+index d101dbc..e43c9bc 100644
+--- a/src/commands/self_cmd.rs
++++ b/src/commands/self_cmd.rs
+@@ -23,6 +23,10 @@ pub async fn run(action: SelfAction) -> Result<()> {
+ }
+ 
+ async fn run_update(args: UpdateArgs) -> Result<()> {
++    eprintln!("tu was installed via Nix; update it through your Nix configuration.");
++    return Ok(());
++
++    #[allow(unreachable_code)]
+     if version_check::is_dev_build() {
+         eprintln!("Running a dev build (0.0.0) — self-update is not supported.");
+         return Ok(());
+-- 
+2.54.0
+

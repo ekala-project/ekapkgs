@@ -1,0 +1,44 @@
+From 76ec05f7d717cc15b03a9e188022b1ef04762bd5 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?J=C3=B6rg=20Thalheim?= <joerg@thalheim.io>
+Date: Sat, 29 Aug 2026 13:45:52 +0200
+Subject: [PATCH] daemon: report unknown status when launchctl cannot inspect
+ the GUI domain
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+launchctl print gui/<uid>/... fails with exit code 125 when the calling
+session has no per-user launchd domain (sandboxed builds, plain SSH
+sessions). Doctor should degrade to loaded=unknown instead of erroring.
+
+Signed-off-by: Jörg Thalheim <joerg@thalheim.io>
+---
+ src/daemon/service.rs | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/src/daemon/service.rs b/src/daemon/service.rs
+index 1a158b6..db7bec4 100644
+--- a/src/daemon/service.rs
++++ b/src/daemon/service.rs
+@@ -240,12 +240,15 @@ fn status_with_runner(runner: &impl LaunchctlRunner) -> Result<ServiceStatus> {
+     let program_matches_current = program
+         .as_ref()
+         .map(|program| paths_resolve_to_same_file(program, &current_executable));
+-    let runtime = service_runtime(runner, &spec)?;
++    // Report "unknown" instead of failing when launchctl cannot inspect
++    // the GUI domain (e.g. sandboxed builds or SSH sessions without a
++    // per-user launchd domain).
++    let runtime = service_runtime(runner, &spec).ok();
+     Ok(ServiceStatus {
+         platform_supported: true,
+         installed: spec.plist_path.exists(),
+-        loaded: Some(runtime.loaded),
+-        running: runtime.running,
++        loaded: runtime.map(|r| r.loaded),
++        running: runtime.and_then(|r| r.running),
+         plist_path: spec.plist_path,
+         program,
+         current_executable,
+-- 
+2.55.0
+
