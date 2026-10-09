@@ -191,7 +191,6 @@ final: prev: {
     };
   };
 
-
   django-tagging = final.buildPythonPackage rec {
     pname = "django-tagging";
     version = "0.5.0";
