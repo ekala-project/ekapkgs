@@ -9,7 +9,24 @@ applied, giving access to the full ekapkgs package set.
 ### Standalone
 
 ```nix
-# flake.nix
+# flake.nix — using mkFlake (recommended)
+{
+  inputs.ekapkgs.url = "github:ekala-project/ekapkgs";
+
+  outputs = { ekapkgs, ... }:
+    ekapkgs.lib.mkFlake {
+      homeConfigurations.alice = {
+        system = "x86_64-linux";
+        modules = [ ./home.nix ];
+      };
+    };
+}
+```
+
+Or call `eval-home.nix` directly:
+
+```nix
+# flake.nix — direct evaluation
 {
   inputs.ekapkgs.url = "github:ekala-project/ekapkgs";
 
@@ -17,8 +34,7 @@ applied, giving access to the full ekapkgs package set.
     let
       system = "x86_64-linux";
       pkgs = ekapkgs.legacyPackages.${system};
-      pins = import "${ekapkgs}/pins.nix";
-      evalHome = import "${pins.corepkgs}/ekaos/eval-home.nix" {
+      evalHome = import "${ekapkgs}/ekaos/eval-home.nix" {
         inherit (pkgs) lib;
         inherit pkgs;
       };
@@ -85,6 +101,20 @@ All options live under `home.users.<name>`:
 | `programs.git` | `~/.config/git/config`, signing, aliases, LFS |
 | `programs.ssh` | `~/.ssh/config`, match blocks, forwarding |
 | `programs.gpg-agent` | `~/.gnupg/gpg-agent.conf`, SSH support, cache TTLs |
+
+### Program modules (ekapkgs)
+
+| Module | Manages |
+|--------|---------|
+| `programs.neovim` | Wrapped nvim with plugins, `init.vim`, CoC, LSP packages |
+| `programs.alacritty` | `~/.config/alacritty/alacritty.toml` |
+| `programs.htop` | `~/.config/htop/htoprc` |
+| `programs.direnv` | `~/.config/direnv/direnv.toml`, bash hook |
+| `programs.fzf` | Keybindings, fuzzy completion, `FZF_DEFAULT_OPTS` |
+| `programs.waybar` | `~/.config/waybar/config.jsonc`, `style.css` |
+| `programs.obs-studio` | OBS wrapped with plugin paths |
+| `programs.vscode` | VSCode with optional FHS wrapping |
+| `programs.xdg` | `XDG_*` env vars, directory creation |
 
 ## Activation
 
