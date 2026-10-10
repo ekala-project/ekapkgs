@@ -26,19 +26,6 @@ in
       description = "Service description.";
     };
 
-    command = mkOption {
-      type = types.str;
-      internal = true;
-      description = "Command to run (set automatically).";
-    };
-
-    args = mkOption {
-      type = types.listOf types.str;
-      internal = true;
-      default = [ ];
-      description = "Command arguments (set automatically).";
-    };
-
     user = mkOption {
       type = types.str;
       description = "User to run Syncthing as.";
@@ -48,30 +35,6 @@ in
       type = types.str;
       default = "syncthing";
       description = "Group to run Syncthing as.";
-    };
-
-    restartPolicy = mkOption {
-      type = types.str;
-      default = "on-failure";
-      description = "Restart policy.";
-    };
-
-    systemd = mkOption {
-      type = types.attrsOf types.anything;
-      default = { };
-      description = "Systemd-specific options.";
-    };
-
-    ports = mkOption {
-      type = types.attrsOf types.anything;
-      default = { };
-      description = "Port contracts for this service.";
-    };
-
-    environment = mkOption {
-      type = types.attrsOf types.str;
-      default = { };
-      description = "Environment variables for the service.";
     };
 
     package = mkOption {

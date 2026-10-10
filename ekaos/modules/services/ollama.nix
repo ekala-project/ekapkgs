@@ -26,19 +26,6 @@ in
       description = "Service description.";
     };
 
-    command = mkOption {
-      type = types.str;
-      internal = true;
-      description = "Command to run (set automatically).";
-    };
-
-    args = mkOption {
-      type = types.listOf types.str;
-      internal = true;
-      default = [ ];
-      description = "Command arguments (set automatically).";
-    };
-
     user = mkOption {
       type = types.str;
       default = "ollama";
@@ -49,30 +36,6 @@ in
       type = types.str;
       default = "ollama";
       description = "Group to run Ollama as.";
-    };
-
-    environment = mkOption {
-      type = types.attrsOf types.anything;
-      default = { };
-      description = "Environment variables (set automatically).";
-    };
-
-    restartPolicy = mkOption {
-      type = types.str;
-      default = "always";
-      description = "Restart policy.";
-    };
-
-    systemd = mkOption {
-      type = types.attrsOf types.anything;
-      default = { };
-      description = "Systemd-specific options.";
-    };
-
-    ports = mkOption {
-      type = types.attrsOf types.anything;
-      default = { };
-      description = "Port contracts for this service.";
     };
 
     package = mkOption {

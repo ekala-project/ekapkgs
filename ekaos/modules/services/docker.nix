@@ -26,53 +26,10 @@ in
       description = "Service description.";
     };
 
-    command = mkOption {
-      type = types.str;
-      internal = true;
-      description = "Command to run (set automatically).";
-    };
-
-    args = mkOption {
-      type = types.listOf types.str;
-      internal = true;
-      default = [ ];
-      description = "Command arguments (set automatically).";
-    };
-
-    user = mkOption {
-      type = types.str;
-      default = "root";
-      description = "User to run Docker as.";
-    };
-
     group = mkOption {
       type = types.str;
       default = "docker";
       description = "Group for Docker socket access.";
-    };
-
-    restartPolicy = mkOption {
-      type = types.str;
-      default = "always";
-      description = "Restart policy.";
-    };
-
-    systemd = mkOption {
-      type = types.attrsOf types.anything;
-      default = { };
-      description = "Systemd-specific options.";
-    };
-
-    ports = mkOption {
-      type = types.attrsOf types.anything;
-      default = { };
-      description = "Port contracts for this service.";
-    };
-
-    environment = mkOption {
-      type = types.attrsOf types.str;
-      default = { };
-      description = "Environment variables for the service.";
     };
 
     package = mkOption {

@@ -110,57 +110,6 @@ in
         description = "Service description.";
       };
 
-      command = mkOption {
-        type = types.str;
-        internal = true;
-        description = "Command to run (set automatically).";
-      };
-
-      args = mkOption {
-        type = types.listOf types.str;
-        internal = true;
-        default = [ ];
-        description = "Command arguments (set automatically).";
-      };
-
-      restartPolicy = mkOption {
-        type = types.str;
-        default = "always";
-        description = "Restart policy.";
-      };
-
-      environment = mkOption {
-        type = types.attrsOf types.str;
-        default = { };
-        internal = true;
-        description = "Environment variables (set automatically).";
-      };
-
-      preStart = mkOption {
-        type = types.str;
-        default = "";
-        internal = true;
-        description = "Pre-start script (set automatically).";
-      };
-
-      workingDirectory = mkOption {
-        type = types.nullOr types.str;
-        default = null;
-        internal = true;
-        description = "Working directory for the service.";
-      };
-
-      systemd = mkOption {
-        type = types.attrsOf types.anything;
-        default = { };
-        description = "Systemd-specific options.";
-      };
-
-      ports = mkOption {
-        type = types.attrsOf types.anything;
-        default = { };
-        description = "Port contracts for this service.";
-      };
     };
   };
 

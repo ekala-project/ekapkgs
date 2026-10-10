@@ -48,37 +48,6 @@ in
         default = "ydotoold - backend for ydotool";
         description = "Service description.";
       };
-
-      command = mkOption {
-        type = types.str;
-        internal = true;
-        description = "Command to run.";
-      };
-
-      args = mkOption {
-        type = types.listOf types.str;
-        internal = true;
-        default = [ ];
-        description = "Command arguments.";
-      };
-
-      user = mkOption {
-        type = types.str;
-        default = "root";
-        description = "User to run service as.";
-      };
-
-      restartPolicy = mkOption {
-        type = types.str;
-        default = "always";
-        description = "Restart policy.";
-      };
-
-      systemd = mkOption {
-        type = types.attrsOf types.anything;
-        default = { };
-        description = "Systemd-specific options.";
-      };
     };
   };
 

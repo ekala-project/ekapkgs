@@ -43,35 +43,10 @@ in
         description = "Service description.";
       };
 
-      command = mkOption {
-        type = types.str;
-        internal = true;
-        description = "Command to run (set automatically).";
-      };
-
-      args = mkOption {
-        type = types.listOf types.str;
-        internal = true;
-        default = [ ];
-        description = "Command arguments (set automatically).";
-      };
-
       user = mkOption {
         type = types.str;
         default = "jackaudio";
         description = "User to run JACK as.";
-      };
-
-      restartPolicy = mkOption {
-        type = types.str;
-        default = "never";
-        description = "Restart policy.";
-      };
-
-      systemd = mkOption {
-        type = types.attrsOf types.anything;
-        default = { };
-        description = "Systemd-specific options.";
       };
 
       package = mkOption {
