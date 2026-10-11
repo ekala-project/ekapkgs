@@ -397,6 +397,7 @@
   ./programs/k6.nix
   ./programs/kalker.nix
   ./programs/kanshi.nix
+  ./programs/keyd.nix
   ./programs/keychain.nix
   ./programs/ko.nix
   ./programs/krew.nix
