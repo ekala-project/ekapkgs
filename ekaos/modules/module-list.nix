@@ -681,6 +681,7 @@
   ./services/dsearch.nix
   ./services/docker.nix
   ./services/evolution-data-server.nix
+  ./services/fprintd.nix
   ./services/gcr-ssh-agent.nix
   ./services/gdm.nix
   ./services/glib-networking.nix
