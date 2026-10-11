@@ -696,6 +696,7 @@
   ./services/gnome-user-share.nix
   ./services/gvfs.nix
   ./services/hypridle.nix
+  ./services/iwd.nix
   ./services/hyprland.nix
   ./services/jack.nix
   ./services/kubo.nix
