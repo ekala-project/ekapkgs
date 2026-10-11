@@ -1,38 +1,31 @@
-# ekapkgs Home Gaps
+# ekapkgs Module Gaps
 
 Gaps in ekapkgs program/service modules that block a full home-manager
-migration. These are modules that either don't exist or exist only as
-system-wide (`/etc`) configuration with no per-user equivalent.
+migration or system configuration. Tracks both per-user home modules
+and system service modules.
 
-Last reviewed: 2026-10-09
+Last reviewed: 2026-10-11
 
 ---
 
 ## 1. Neovim module — RESOLVED
 
-**Status:** Resolved
-
 `ekaos/modules/home/programs/neovim.nix` provides per-user Neovim
 configuration with `plugins`, `extraConfig`, `extraLuaConfig`,
 `extraPackages`, `viAlias`, `vimAlias`, `defaultEditor`, and
-`coc` settings. Generates `~/.config/nvim/init.vim` and wraps
-neovim with plugin runtime paths and extra packages on PATH.
+`coc` settings.
 
 ---
 
 ## 2. SSH client module — RESOLVED
 
-**Status:** Resolved
-
-`ekaos/modules/home/programs/ssh.nix` (in corepkgs) provides full
-per-user SSH client configuration with `matchBlocks`, global options,
-`includes`, and `extraConfig`. Generates `~/.ssh/config`.
+`home/programs/ssh.nix` (corepkgs) provides per-user SSH client
+configuration with `matchBlocks`, global options, `includes`, and
+`extraConfig`.
 
 ---
 
 ## 3. VSCode module — RESOLVED
-
-**Status:** Resolved
 
 `ekaos/modules/home/programs/vscode.nix` provides per-user VSCode
 with optional FHS wrapping via `fhs.enable` and `fhs.packages`.
@@ -41,38 +34,26 @@ with optional FHS wrapping via `fhs.enable` and `fhs.packages`.
 
 ## 4. Waybar module — RESOLVED
 
-**Status:** Resolved
-
 `ekaos/modules/home/programs/waybar.nix` provides per-user Waybar
-configuration with `settings` (JSON) and `style` (CSS). Generates
-`~/.config/waybar/config.jsonc` and `~/.config/waybar/style.css`.
+configuration with `settings` (JSON) and `style` (CSS).
 
 ---
 
 ## 5. OBS Studio module — RESOLVED
 
-**Status:** Resolved
-
 `ekaos/modules/home/programs/obs-studio.nix` provides per-user OBS
-Studio with `plugins` list. Wraps OBS with plugin paths via
-`OBS_PLUGINS_PATH` and `OBS_DATA_PATH`.
+Studio with `plugins` list wrapping.
 
 ---
 
 ## 6. GPG agent module — RESOLVED
 
-**Status:** Resolved
-
-`ekaos/modules/home/programs/gpg-agent.nix` (in corepkgs) provides
-per-user GPG agent configuration with `enable`, `pinentryPackage`,
-`enableSshSupport`, cache TTL settings, and `extraConfig`. Generates
-`~/.gnupg/gpg-agent.conf` and systemd user units.
+`home/programs/gpg-agent.nix` (corepkgs) provides per-user GPG agent
+with pinentry, SSH support, cache TTLs, and systemd user units.
 
 ---
 
 ## 7. Per-user program modules — RESOLVED
-
-All program modules now have per-user variants:
 
 | Module | Per-user? | Location |
 |--------|-----------|----------|
@@ -88,62 +69,88 @@ All program modules now have per-user variants:
 
 ---
 
-## 8. `jq` module (does not exist) — OPEN (trivial)
+## 8. `jq` module — OPEN (trivial)
 
-**What exists:** Nothing (jq is available as a package)
-
-**Workaround:** Add `pkgs.jq` to user packages
-
-**Severity:** None — just a package, no config needed
+Just a package, no config needed. Use `pkgs.jq` in user packages.
 
 ---
 
-## 9. `xdg.enable` equivalent — RESOLVED
-
-**Status:** Resolved
+## 9. XDG per-user setup — RESOLVED
 
 `ekaos/modules/home/programs/xdg.nix` provides per-user XDG base
-directory setup with `XDG_CACHE_HOME`, `XDG_CONFIG_HOME`,
-`XDG_DATA_HOME`, `XDG_STATE_HOME` environment variables and optional
-directory creation via activation script.
+directory variables and optional directory creation.
 
 ---
 
 ## 10. `mkFlake` home support — RESOLVED
 
-**Status:** Resolved
+`lib/mk-flake.nix` accepts `homeConfigurations` evaluated through
+ekapkgs' `eval-home.nix`.
 
-`lib/mk-flake.nix` now accepts a `homeConfigurations` parameter.
-Each entry specifies `modules` and `system`, evaluated through
-ekapkgs' `eval-home.nix`. Exposed as
-`homeConfigurations.<name>.activationPackage`.
+---
 
-Usage:
-```nix
-ekapkgs.lib.mkFlake {
-  homeConfigurations.alice = {
-    system = "x86_64-linux";
-    modules = [ ./home.nix ];
-  };
-};
-```
+## 11. Service module type conflicts — RESOLVED
+
+Removed conflicting option declarations (`command`, `restartPolicy`,
+`systemd`, `ports`, `environment`) from 11 ekapkgs service modules
+that clashed with corepkgs' `serviceOpts` types. App-specific options
+preserved.
+
+Affected: docker, tailscale, ollama, plex, syncthing, transmission,
+kubo, jack, pipewire, xserver, ydotool.
+
+---
+
+## 12. yubikey-touch-detector service — RESOLVED
+
+`ekaos/modules/services/yubikey-touch-detector.nix` provides a user
+service with socket activation. Previously blocked on corepkgs
+`user.services` support.
+
+---
+
+## 13. dsearch service — RESOLVED
+
+`ekaos/modules/services/dsearch.nix` provides a user service for the
+dsearch filesystem search daemon. Previously blocked on corepkgs
+`user.services` support.
+
+---
+
+## 14. seahorse dbus integration — RESOLVED
+
+`ekaos/modules/programs/seahorse.nix` registers seahorse with
+`services.dbus.packages`. Previously blocked on corepkgs
+`services.dbus` module.
+
+---
+
+## 15. xfconf dbus integration — RESOLVED
+
+`ekaos/modules/programs/xfconf.nix` registers xfconf with
+`services.dbus.packages`. Previously blocked on corepkgs
+`services.dbus` module.
 
 ---
 
 ## Summary
 
-| # | Gap | Severity | Status |
-|---|-----|----------|--------|
-| 1 | Neovim module | — | Resolved |
-| 2 | SSH client module | — | Resolved |
-| 3 | VSCode module | — | Resolved |
-| 4 | Waybar module | — | Resolved |
-| 5 | OBS Studio module | — | Resolved |
-| 6 | GPG agent module | — | Resolved |
-| 7 | Per-user modules | — | Resolved |
-| 8 | jq module | None | Open — package in list |
-| 9 | XDG per-user setup | — | Resolved |
-| 10 | mkFlake home support | — | Resolved |
+| # | Gap | Status |
+|---|-----|--------|
+| 1 | Neovim module | Resolved |
+| 2 | SSH client module | Resolved |
+| 3 | VSCode module | Resolved |
+| 4 | Waybar module | Resolved |
+| 5 | OBS Studio module | Resolved |
+| 6 | GPG agent module | Resolved |
+| 7 | Per-user modules | Resolved |
+| 8 | jq module | Open (trivial) |
+| 9 | XDG per-user setup | Resolved |
+| 10 | mkFlake home support | Resolved |
+| 11 | Service type conflicts | Resolved |
+| 12 | yubikey-touch-detector | Resolved |
+| 13 | dsearch service | Resolved |
+| 14 | seahorse dbus | Resolved |
+| 15 | xfconf dbus | Resolved |
 
-**No remaining blockers.** All gaps except #8 (trivial, just a package)
-are resolved with dedicated per-user home modules.
+All gaps resolved except #8 (trivial — jq is just a package).
