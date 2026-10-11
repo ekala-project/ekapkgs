@@ -2,6 +2,10 @@
 
 Ekapkgs is an overlay repository that extends [corepkgs](https://github.com/ekala-project/corepkgs). All packaging conventions, build system guides, validation requirements, and porting workflows from corepkgs apply here. See the [corepkgs AGENTS.md](https://github.com/ekala-project/corepkgs/blob/master/AGENTS.md) for the full guide.
 
+## Commit Conventions
+
+- **One logical change per commit** — squash small linting fixes and trivial corrections into the commit they belong to rather than creating separate fixup commits
+
 ## Repository Structure
 
 Ekapkgs aggregates corepkgs and satellite repositories (Python, Haskell, CUDA, R, Vim plugins) into a single unified package set via `pkgs-module.nix`.
@@ -23,6 +27,12 @@ ci/repos-packages.nix  # Unified derivation list for automated updates
 - **`enableParallelBuilding`** defaults to `true` — do not set it explicitly unless disabling it (`= false`).
 - **`cmakeFlags`** should not be used for `-D` cache entries. Use **`cmakeEntries`** instead (booleans auto-convert to `ON`/`OFF`). Reserve `cmakeFlags` only for non-`-D` flags (e.g., `--log-level=STATUS`, `-G Ninja`) or dynamic/conditional flag lists that can't be expressed as a static attrset.
 - **`mesonFlags`** should not be used for `-D` options. Use **`mesonEntries`** (booleans auto-convert to `true`/`false`) for plain options and **`mesonFeatures`** (booleans auto-convert to `enabled`/`disabled`) for Meson `feature` type options. Reserve `mesonFlags` only for non-`-D` flags or dynamic/conditional lists.
+
+## Writing Packages
+
+| Task | Guide |
+|------|-------|
+| Go (buildGoModule, vendorHash, ldflags, CGO_ENABLED, tags, subPackages, version pinning) | [go](.agents/skills/go/SKILL.md) |
 
 ## Reviewing Packages
 
