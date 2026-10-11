@@ -637,6 +637,7 @@
   ./programs/wofi.nix
   ./programs/wtype.nix
   ./programs/wush.nix
+  ./programs/xfconf.nix
   ./programs/xwayland.nix
   ./programs/xautolock.nix
   ./programs/xclip.nix
