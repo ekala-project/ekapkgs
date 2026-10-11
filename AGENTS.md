@@ -24,6 +24,10 @@ ci/repos-packages.nix  # Unified derivation list for automated updates
 - **`cmakeFlags`** should not be used for `-D` cache entries. Use **`cmakeEntries`** instead (booleans auto-convert to `ON`/`OFF`). Reserve `cmakeFlags` only for non-`-D` flags (e.g., `--log-level=STATUS`, `-G Ninja`) or dynamic/conditional flag lists that can't be expressed as a static attrset.
 - **`mesonFlags`** should not be used for `-D` options. Use **`mesonEntries`** (booleans auto-convert to `true`/`false`) for plain options and **`mesonFeatures`** (booleans auto-convert to `enabled`/`disabled`) for Meson `feature` type options. Reserve `mesonFlags` only for non-`-D` flags or dynamic/conditional lists.
 
+## Reviewing Packages
+
+Use the [best-practices](.agents/skills/best-practices/SKILL.md) skill to review package expressions for meta completeness, build-system idioms, dependency placement, and packaging conventions.
+
 ## Key Differences from corepkgs
 
 - **Packages go in `pkgs/`** — there is no `pkgs-many/` directory in this repo.
