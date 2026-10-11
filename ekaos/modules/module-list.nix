@@ -310,6 +310,7 @@
   ./programs/exercism.nix
   ./programs/eza.nix
   ./programs/fail2ban.nix
+  ./programs/fail2ban.nix
   ./programs/fcp.nix
   ./programs/fdupes.nix
   ./programs/ffuf.nix
