@@ -705,4 +705,5 @@
   ./services/tinysparql.nix
   ./services/transmission.nix
   ./services/xserver.nix
+  ./services/yubikey-touch-detector.nix
 ]
