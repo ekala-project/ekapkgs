@@ -1,8 +1,8 @@
 # ekapkgs Module Gaps
 
 Gaps in ekapkgs program/service modules that block a full home-manager
-migration or system configuration. Tracks both per-user home modules
-and system service modules.
+migration or system configuration. Tracks per-user home modules,
+system service modules, and test coverage.
 
 Last reviewed: 2026-10-11
 
@@ -104,32 +104,68 @@ kubo, jack, pipewire, xserver, ydotool.
 ## 12. yubikey-touch-detector service — RESOLVED
 
 `ekaos/modules/services/yubikey-touch-detector.nix` provides a user
-service with socket activation. Previously blocked on corepkgs
-`user.services` support.
+service with socket activation.
 
 ---
 
 ## 13. dsearch service — RESOLVED
 
 `ekaos/modules/services/dsearch.nix` provides a user service for the
-dsearch filesystem search daemon. Previously blocked on corepkgs
-`user.services` support.
+dsearch filesystem search daemon.
 
 ---
 
 ## 14. seahorse dbus integration — RESOLVED
 
 `ekaos/modules/programs/seahorse.nix` registers seahorse with
-`services.dbus.packages`. Previously blocked on corepkgs
-`services.dbus` module.
+`services.dbus.packages`.
 
 ---
 
 ## 15. xfconf dbus integration — RESOLVED
 
 `ekaos/modules/programs/xfconf.nix` registers xfconf with
-`services.dbus.packages`. Previously blocked on corepkgs
-`services.dbus` module.
+`services.dbus.packages`.
+
+---
+
+## 16. Missing system service modules — RESOLVED
+
+Added 20 service/program modules for packages that ship systemd
+units and/or dbus services but previously had no ekaos module:
+
+| Module | Type | Integration |
+|--------|------|-------------|
+| keyd | program | systemd |
+| fail2ban | program | systemd |
+| fprintd | service | dbus + systemd |
+| iwd | service | dbus + systemd |
+| rtkit | service | dbus + systemd + polkit |
+| geoclue2 | service | dbus + systemd + user/group |
+| wpa_supplicant | service | dbus + systemd |
+| blueman | service | systemd |
+| thermald | service | dbus + systemd |
+| brltty | service | systemd + udev |
+| input-remapper | service | dbus + systemd + udev |
+| autorandr | program | systemd + udev |
+| caddy | service | systemd |
+| speech-dispatcher | program | systemd |
+| openfortivpn | program | systemd |
+| logiops | service | dbus + systemd |
+| realmd | service | dbus + systemd |
+| packagekit | service | dbus + systemd + polkit |
+| gpsd | service | systemd + udev + user/group |
+| snapper | service | dbus + systemd |
+
+---
+
+## 17. Home module tests — RESOLVED
+
+`ekaos/tests/home.nix` validates all 9 ekapkgs per-user home
+modules (alacritty, htop, direnv, fzf, neovim, waybar, obs-studio,
+vscode, xdg). Tests file generation, env vars, aliases, activation
+scripts, package counts, and verifies disabled modules produce no
+output. Registered in `ekaos/tests/default.nix` as `home`.
 
 ---
 
@@ -152,5 +188,7 @@ dsearch filesystem search daemon. Previously blocked on corepkgs
 | 13 | dsearch service | Resolved |
 | 14 | seahorse dbus | Resolved |
 | 15 | xfconf dbus | Resolved |
+| 16 | System service modules | Resolved |
+| 17 | Home module tests | Resolved |
 
 All gaps resolved except #8 (trivial — jq is just a package).
