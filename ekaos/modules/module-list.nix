@@ -531,6 +531,7 @@
   ./programs/scdoc.nix
   ./programs/scooter.nix
   ./programs/screen.nix
+  ./programs/seahorse.nix
   ./programs/sd.nix
   ./programs/shellharden.nix
   ./programs/shfmt.nix
