@@ -19,7 +19,10 @@ stdenvNoCC.mkDerivation (finalAttrs: {
 
   buildInputs = [ perl ];
 
-  nativeBuildInputs = [ installShellFiles ];
+  nativeBuildInputs = [
+    installShellFiles
+    perl
+  ];
 
   postBuild = ''
     pod2man $src/when when.1
