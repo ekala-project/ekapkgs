@@ -18,6 +18,8 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-xi049dp99Cmaw6ZSUI6VlTd1JEAYHjTHayrs69fzAbk=";
   };
 
+  nativeBuildInputs = [ python3 ];
+
   buildInputs = [
     ncurses
     popt
