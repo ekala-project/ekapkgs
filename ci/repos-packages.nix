@@ -15,6 +15,14 @@ let
   };
   mkProjection = overlay: base: lib.fix (self: base // overlay self base);
 
+  # Check whether a value is a derivation whose drvPath can be forced.
+  isBuildable =
+    value:
+    let
+      result = builtins.tryEval (lib.isDerivation value && builtins.seq value.drvPath true);
+    in
+    result.success && result.value;
+
   # --- Native packages (pkgs/ directory + top-level.nix overrides) ---
   nativeOverlay = lib.packageSets.mkAutoCalledPackageDir ../pkgs;
   nativeOverrides = import ../top-level.nix;
@@ -35,5 +43,17 @@ let
   pythonPkgs = removeAttrs (builtins.intersectAttrs pythonOverlayKeys projectedPython) [
     "_internalCallByNamePackageFile"
   ];
+
+  all = nativePkgs // pythonPkgs;
+
+  topLevel = map (name: {
+    inherit name;
+    value = all.${name};
+  }) (builtins.attrNames all);
 in
-nativePkgs // pythonPkgs
+{
+  inherit all;
+
+  # Attribute set of all buildable derivations, keyed by name.
+  buildable = builtins.listToAttrs (builtins.filter (pair: isBuildable pair.value) topLevel);
+}
