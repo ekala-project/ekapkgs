@@ -51,27 +51,44 @@ in
 {
   imports = allPkgsModules;
 
-  overlays.pkgs = [
-    pkgsOverlay
-    pkgsManyOverlay
-    pkgsOverrides
-  ]
-  ++ lib.optional config.aliases.nixpkgs nixpkgsAliases;
+  options.overlays.postgresql = lib.mkOption {
+    type = lib.types.listOf (
+      lib.mkOptionType {
+        name = "overlay";
+        description = "overlay";
+        check = lib.isFunction;
+        merge = lib.mergeOneOption;
+      }
+    );
+    default = [ ];
+    description = ''
+      Overlays to be applied to the PostgreSQL extension scope (`postgresql.pkgs`).
+    '';
+  };
 
-  overlays.python = [
-    pythonAutoCallOverlay
-    pythonOverrides
-  ];
+  config = {
+    overlays.pkgs = [
+      pkgsOverlay
+      pkgsManyOverlay
+      pkgsOverrides
+    ]
+    ++ lib.optional config.aliases.nixpkgs nixpkgsAliases;
 
-  overlays.perl = [
-    perlOverrides
-  ];
+    overlays.python = [
+      pythonAutoCallOverlay
+      pythonOverrides
+    ];
 
-  overlays.haskell = [
-    haskellFixes
-  ];
+    overlays.perl = [
+      perlOverrides
+    ];
 
-  overlays.writers = [
-    writersOverlay
-  ];
+    overlays.haskell = [
+      haskellFixes
+    ];
+
+    overlays.writers = [
+      writersOverlay
+    ];
+  };
 }
