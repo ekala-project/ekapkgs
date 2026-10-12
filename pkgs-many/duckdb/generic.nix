@@ -1,4 +1,13 @@
 {
+  version,
+  src-hash,
+  withJdbc ? false,
+  withOdbc ? false,
+  mkVariantPassthru,
+  ...
+}@variantArgs:
+
+{
   lib,
   stdenv,
   fetchFromGitHub,
@@ -8,19 +17,14 @@
   java,
   python3,
   unixODBC,
-  withJdbc ? false,
-  withOdbc ? false,
 }:
 
-let
-  versions = lib.importJSON ./versions.json;
-in
 stdenv.mkDerivation (finalAttrs: {
   pname = "duckdb";
-  inherit (versions) rev version;
+  inherit version;
 
   src = fetchFromGitHub {
-    inherit (versions) hash;
+    hash = src-hash;
     owner = "duckdb";
     repo = "duckdb";
     tag = "v${finalAttrs.version}";
@@ -44,13 +48,17 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals withJdbc [ java.v11 ]
   ++ lib.optionals withOdbc [ unixODBC ];
 
-  cmakeFlags = [
-    (lib.cmakeFeature "DUCKDB_EXTENSION_CONFIGS" "${finalAttrs.src}/.github/config/in_tree_extensions.cmake")
-    (lib.cmakeBool "BUILD_ODBC_DRIVER" withOdbc)
-    (lib.cmakeBool "JDBC_DRIVER" withJdbc)
-    (lib.cmakeFeature "OVERRIDE_GIT_DESCRIBE" "v${finalAttrs.version}-0-g${finalAttrs.rev}")
-    (lib.cmakeBool "BUILD_UNITTESTS" false)
-  ];
+  extensions = lib.optionals withJdbc [ "jdbc" ] ++ lib.optionals withOdbc [ "odbc" ];
+
+  cmakeEntries = {
+    DUCKDB_EXTENSION_CONFIGS = "${finalAttrs.src}/.github/config/in_tree_extensions.cmake";
+    BUILD_ODBC_DRIVER = withOdbc;
+    JDBC_DRIVER = withJdbc;
+    OVERRIDE_GIT_DESCRIBE = "v${finalAttrs.version}";
+    BUILD_UNITTESTS = false;
+  };
+
+  passthru = mkVariantPassthru variantArgs;
 
   meta = {
     changelog = "https://github.com/duckdb/duckdb/releases/tag/v${finalAttrs.version}";
