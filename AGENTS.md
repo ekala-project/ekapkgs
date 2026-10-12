@@ -5,6 +5,7 @@ Ekapkgs is an overlay repository that extends [corepkgs](https://github.com/ekal
 ## Commit Conventions
 
 - **One logical change per commit** — squash small linting fixes and trivial corrections into the commit they belong to rather than creating separate fixup commits
+- **Prefer `finalAttrs` over `rec`** for package expressions — use the `finalAttrs` pattern (e.g., `stdenv.mkDerivation (finalAttrs: { ... })`) instead of `rec { ... }`
 
 ## Repository Structure
 
