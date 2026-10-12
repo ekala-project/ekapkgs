@@ -35,6 +35,12 @@ ci/repos-packages.nix  # Unified derivation list for automated updates
 |------|-------|
 | Go (buildGoModule, vendorHash, ldflags, CGO_ENABLED, tags, subPackages, version pinning) | [go](.agents/skills/go/SKILL.md) |
 
+## Fixing Build Failures
+
+| Symptom | Guide |
+|---------|-------|
+| Fix all broken builds across the repo (background build + iterative fix loop) | [fix-builds](.agents/skills/fix-builds/SKILL.md) |
+
 ## Reviewing Packages
 
 Use the [best-practices](.agents/skills/best-practices/SKILL.md) skill to review package expressions for meta completeness, build-system idioms, dependency placement, and packaging conventions.
