@@ -11,6 +11,10 @@ final: prev: {
 
   # Rust infrastructure aliases
   rustPlatform = final.rust.packages.stable.rustPlatform;
+  # nixpkgs attr parity: the unprefixed jemalloc variant used by some Rust crates.
+  rust-jemalloc-sys-unprefixed = final.rust-jemalloc-sys.override { unprefixed = true; };
+  # Maven artifact fetcher, used to vendor single jars (e.g. opentsdb).
+  fetchMavenArtifact = final.callPackage ./build-support/fetchmavenartifact/default.nix { };
 
   # dnsutils is just the utils output of bind
   dnsutils = final.bind.utils;
