@@ -47,8 +47,6 @@ buildGoModule (finalAttrs: {
     runHook postInstall
   '';
 
-  doCheck = false;
-
   meta = {
     description = "GitHub CLI tool";
     homepage = "https://cli.github.com/";
