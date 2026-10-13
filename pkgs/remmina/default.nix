@@ -52,7 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitLab {
     owner = "Remmina";
     repo = "Remmina";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7nY2NhlWp+4FTTmeam1B+sotqis0lSwhozSC8I14aMI=";
   };
 
