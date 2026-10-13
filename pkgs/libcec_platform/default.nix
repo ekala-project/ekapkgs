@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Pulse-Eight";
     repo = "platform";
-    rev = "p8-platform-${finalAttrs.version}";
+    tag = "p8-platform-${finalAttrs.version}";
     hash = "sha256-zAI/AOLJAunv+cCQ6bOXrgkW+wl5frj3ktzx2cDeCCk=";
   };
 
