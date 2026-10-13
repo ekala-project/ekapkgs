@@ -21,8 +21,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-C9XOiNjo+TZ+erdnypRhhfpbuBhB3yEqNpbtwjEv14g=";
 
-  doCheck = false;
-
   postFixup = lib.optionalString (wireshark-cli != null) ''
     wrapProgram $out/bin/termshark --suffix PATH : ${lib.makeBinPath [ wireshark-cli ]}
   '';
