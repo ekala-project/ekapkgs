@@ -23,8 +23,6 @@ buildGoModule (finalAttrs: {
     "-X=github.com/Chocapikk/wpprobe/internal/version.Version=v${finalAttrs.version}"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "WordPress plugin enumeration tool";
     homepage = "https://github.com/Chocapikk/wpprobe";
