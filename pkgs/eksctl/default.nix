@@ -19,8 +19,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-cWggtB2pv3RM67O9K/wDLczkU5SZrwGc0LJQ5emDptc=";
 
-  doCheck = false;
-
   subPackages = [ "cmd/eksctl" ];
 
   tags = [
