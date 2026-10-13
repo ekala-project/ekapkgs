@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitLab {
     owner = "grobian";
     repo = "html2text";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-C229ogU2YStXWizb51whQXc6oSkVnclnOeJYlIMvHWM=";
   };
 
