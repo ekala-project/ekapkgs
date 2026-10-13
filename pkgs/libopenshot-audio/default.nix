@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "OpenShot";
     repo = "libopenshot-audio";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-t7yj9iVS0y5zO/1Fu7QYO8pEPyCz5uZhrm3A/SfzKzA=";
   };
 
