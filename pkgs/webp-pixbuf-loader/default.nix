@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "aruiz";
     repo = "webp-pixbuf-loader";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-IJEweV2ACFp+Ua2ESrRUNApXWBg3NED60FDKijYO5TI=";
   };
 
