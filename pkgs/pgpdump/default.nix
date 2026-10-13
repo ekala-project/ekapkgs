@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kazu-yamamoto";
     repo = "pgpdump";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-nB7f6VTxRidymi9RV7W1x9JbWi9Eoa/CYzYmekYDVOo=";
   };
 
