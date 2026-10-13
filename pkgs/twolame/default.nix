@@ -26,8 +26,6 @@ stdenv.mkDerivation {
 
   configureFlags = [ "CFLAGS=-std=gnu17" ];
 
-  doCheck = false;
-
   meta = {
     description = "MP2 encoder";
     mainProgram = "twolame";
