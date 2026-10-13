@@ -34,7 +34,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   '';
 
   # Test suite requires an S3 bucket
-  doCheck = false;
 
   pythonImportsCheck = [ "s4cmd" ];
 
