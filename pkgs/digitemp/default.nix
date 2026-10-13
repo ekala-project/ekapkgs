@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "bcl";
     repo = "digitemp";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "19zka5fcdxhhginaspak76l984iqq9v2j6qrwvi5mvca7bcj8f72";
   };
 
