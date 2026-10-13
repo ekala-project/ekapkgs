@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "epsilonrt";
     repo = "mbpoll";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Dzitr5zwkXztRDQ5l0Cb9JRf7sugYPBRKmibREWtfIc=";
   };
 
