@@ -15,7 +15,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "alexellis";
     repo = "k3sup";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-6S8PMIRITXbS5fFexCBEekVDZwTvZ4bN9sanjiDY39M=";
   };
 
