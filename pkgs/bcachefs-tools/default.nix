@@ -104,8 +104,6 @@ stdenv.mkDerivation (finalAttrs: {
     "CARGO_TARGET_${stdenv.hostPlatform.rust.cargoEnvVarTarget}_LINKER" = "${stdenv.cc.targetPrefix}cc";
   };
 
-  doCheck = false;
-
   preCheck = lib.optionalString (!fuseSupport) ''
     rm tests/test_fuse.py
   '';
