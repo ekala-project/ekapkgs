@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ubuntu";
     repo = "yaru";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-3cSVPObfmr62S6yTD2c8AO3s7lxb9KFVuYSydTIJ1jE=";
   };
 
