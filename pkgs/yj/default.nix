@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "sclevine";
     repo = "yj";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-lsn5lxtix5W7po6nzvGcHmifbyhrtHgvaKYT7RPPCOg=";
   };
 
