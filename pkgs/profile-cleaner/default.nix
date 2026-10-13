@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "graysky2";
     repo = "profile-cleaner";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-gY6fmm6B6H7tg3xENnqaoy1QEMIf+a3k/C+JcnkyZwo=";
   };
 
