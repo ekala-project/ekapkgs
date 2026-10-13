@@ -28,8 +28,6 @@ buildGoModule (finalAttrs: {
 
   strictDeps = true;
 
-  doCheck = false;
-
   passthru = {
     shellPath = "/bin/elvish";
     tests = {
