@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jovanlanik";
     repo = "gtklock-userinfo-module";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-4k50UBy3FplTL0/utFQ7tKi0eGofmgXr1iFVTN/SGok=";
   };
 
