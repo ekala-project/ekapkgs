@@ -16,7 +16,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   src = fetchFromGitHub {
     owner = "fail2ban";
     repo = "fail2ban";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-6L8lSoFdf/KL1AQfN0lfGthEfeLlxodVsMI3LXCq+XY=";
   };
 
