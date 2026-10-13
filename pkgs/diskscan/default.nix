@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "baruch";
     repo = "diskscan";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-2y1ncPg9OKxqImBN5O5kXrTsuwZ/Cg/8exS7lWyZY1c=";
   };
 
