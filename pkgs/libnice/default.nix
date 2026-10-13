@@ -60,8 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     tests = false;
   };
 
-  doCheck = false;
-
   meta = {
     description = "GLib ICE implementation";
     homepage = "https://libnice.freedesktop.org/";
