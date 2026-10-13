@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "qhull";
     repo = "qhull";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-djUO3qzY8ch29AuhY3Bn1ajxWZ4/W70icWVrxWRAxRc=";
   };
 
