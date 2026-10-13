@@ -45,8 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  doCheck = false;
-
   outputs = [
     "bin"
     "dev"
