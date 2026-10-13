@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "coreos";
     repo = "butane";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-lijMfxhUBopwbfEP4fEgszXh7zaRz7Xy1Y8PmatXXTE=";
   };
 
