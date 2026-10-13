@@ -29,7 +29,7 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "graysky2";
     repo = "pulseaudio-ctl";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "sha256-ZB1jrr31PF7+vNB+Xo5CATJmYbuDAPwewpDxCVnAowY=";
   };
 
