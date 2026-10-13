@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "genuinetools";
     repo = "reg";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tfBetjoJkr84XLEEcfdRTtc0UZ4m/uRH1Fpr91lQn8o=";
   };
 
