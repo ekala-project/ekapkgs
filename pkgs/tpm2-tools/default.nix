@@ -43,7 +43,6 @@ stdenv.mkDerivation rec {
     '';
 
   # Unit tests disabled, as they rely on a dbus session
-  doCheck = false;
 
   meta = {
     description = "Command line tools that provide access to a TPM 2.0 compatible device";
