@@ -21,7 +21,6 @@ buildGoModule (finalAttrs: {
   propagatedBuildInputs = [ git ];
 
   # Tests require a repository
-  doCheck = false;
 
   meta = {
     description = "Command-line tool for git";
