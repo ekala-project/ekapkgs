@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Etersoft";
     repo = "libnatspec";
-    rev = "0.3.3-alt1";
+    tag = "0.3.3-alt1";
     hash = "sha256-lg3kjrvv7G+nX6xlR7TQKvXqQJFcQTHarSpD0qYLZsw=";
   };
 
