@@ -17,8 +17,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   cargoHash = "sha256-dxTR5mvov5FvnkIZalDMnl99BH8sBx6EsqJyGRMiPfQ=";
 
-  doCheck = false; # needs git which is broken in ekapkgs
-
   cargoBuildFlags = [
     # don't install the `mgf_dev`
     "--bin"
