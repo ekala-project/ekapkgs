@@ -26,8 +26,6 @@ perlPackages.buildPerlPackage {
     SpreadsheetParseExcel
   ];
 
-  doCheck = false; # hangs
-
   preConfigure = ''
     sed -i.bak -e 's;#!/usr/bin/perl;#!${perl}/bin/perl;g' \
         ./bin/ninka-excel ./bin/ninka ./bin/ninka-sqlite \
