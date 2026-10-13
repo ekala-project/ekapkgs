@@ -41,8 +41,6 @@ python3Packages.buildPythonApplication rec {
     dnspython
   ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/dlenski/vpn-slice";
     description = "vpnc-script replacement for easy and secure split-tunnel VPN setup";
