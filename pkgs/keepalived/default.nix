@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "acassen";
     repo = "keepalived";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-Xv/UGIeZhRHQO5lxkaWgHDUW+3qBi3wFU4+Us1A2uE0=";
   };
 
