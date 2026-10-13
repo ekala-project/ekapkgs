@@ -17,8 +17,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   cargoHash = "sha256-kbHNFVu5OIg/eKefhsYRGvlXFduB0aBVflPV9hkM4Ec=";
 
-  doCheck = false;
-
   meta = {
     description = "Command-line shell like fish, but POSIX compatible";
     mainProgram = "nsh";
