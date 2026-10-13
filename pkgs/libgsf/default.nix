@@ -63,8 +63,6 @@ stdenv.mkDerivation rec {
     libiconv
   ];
 
-  doCheck = false;
-
   preConfigure = ''
     export PKG_CONFIG="$(command -v "$PKG_CONFIG")"
   '';
