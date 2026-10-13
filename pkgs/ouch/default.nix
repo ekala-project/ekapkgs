@@ -20,7 +20,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ouch-org";
     repo = "ouch";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-dQK+kfTsh+w0Ul7RGkkIUKEsgfRNpyKUt94YcUAx8r8=";
   };
 
