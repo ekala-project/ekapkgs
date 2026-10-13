@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "TwiN";
     repo = "gatus";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-t/XKrXBMf9r6Nrctyc4ZgB8elybhDh8dAV4ATjdNJpo=";
   };
 
