@@ -16,8 +16,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-Nw9mz5zefkRwqkTIyBQyDlANHEx4dztiIiTuXUnuCKM=";
   };
 
-  doCheck = false;
-
   buildInputs = [ libjpeg ];
 
   meta = {
