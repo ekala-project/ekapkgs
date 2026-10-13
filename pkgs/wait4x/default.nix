@@ -10,7 +10,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "wait4x";
     repo = "wait4x";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-07+6noaevhkr9MqMFquEDpPKcNJSzHMIL2qREwX3tjM=";
   };
 
