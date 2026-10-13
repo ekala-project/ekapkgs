@@ -41,6 +41,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "gnucap-mg-vams";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })
