@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "etr";
     repo = "libhttpserver";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-x/JSjTjDHfknr1VB1uApGgSGTdDkhGCZQCYj8PQ2UUE=";
   };
 
