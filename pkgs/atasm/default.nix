@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "CycoPH";
     repo = "atasm";
-    rev = "V${version}";
+    tag = "V${version}";
     hash = "sha256-NCxXMaBh3ZplsjmrIuuZg9YReKAPqO0XTKY/PUYjdI8=";
   };
 
