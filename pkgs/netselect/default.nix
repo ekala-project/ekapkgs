@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "apenwarr";
     repo = "netselect";
-    rev = "${pname}-${version}";
+    tag = "${pname}-${version}";
     sha256 = "1zncyvjzllrjbdvz7c50d1xjyhs9mwqfy92ndpfc5b3mxqslw4kx";
   };
 
