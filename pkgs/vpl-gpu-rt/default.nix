@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "intel";
     repo = "vpl-gpu-rt";
-    rev = "intel-onevpl-${finalAttrs.version}";
+    tag = "intel-onevpl-${finalAttrs.version}";
     hash = "sha256-YNLgCpxz8rARPClzWN/w484LWOdfA+v8KUB3TiCbUxU=";
   };
 
