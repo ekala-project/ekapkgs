@@ -35,7 +35,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   # error[E0602]: unknown lint: `clippy::unnecessary_debug_formatting`
-  doCheck = false;
 
   meta = {
     description = "Modern, performance focused unix commands";
