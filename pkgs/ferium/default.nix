@@ -22,7 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildNoDefaultFeatures = true;
 
   # Requires an internet connection
-  doCheck = false;
 
   nativeBuildInputs = [ installShellFiles ];
 
