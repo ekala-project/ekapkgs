@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jcorporation";
     repo = "myMPD";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-OwTYcyiRT/2K09UirhcNobXo1g9aDpz7eh5OYtA0eIo=";
   };
 
