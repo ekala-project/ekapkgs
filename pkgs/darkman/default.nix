@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitLab {
     owner = "WhyNotHugo";
     repo = "darkman";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Kpuuxxwn/huA5WwmnVGG0HowNBGyexDRpdUc3bNmB18=";
   };
 
