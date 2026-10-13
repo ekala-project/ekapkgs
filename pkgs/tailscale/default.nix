@@ -63,8 +63,6 @@ buildGoModule (finalAttrs: {
     rm -rf ./tool
   '';
 
-  doCheck = false;
-
   postInstall = ''
     ln -s $out/bin/tailscaled $out/bin/tailscale
     moveToOutput "bin/derper" "$derper"
