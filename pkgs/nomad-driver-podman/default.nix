@@ -20,7 +20,6 @@ buildGoModule (finalAttrs: {
   subPackages = [ "." ];
 
   # some tests require a running podman service
-  doCheck = false;
 
   meta = {
     homepage = "https://www.github.com/hashicorp/nomad-driver-podman";
