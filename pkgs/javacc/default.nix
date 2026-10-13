@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "javacc";
     repo = "javacc";
-    rev = "javacc-${finalAttrs.version}";
+    tag = "javacc-${finalAttrs.version}";
     hash = "sha256-nDJvKIbJc23Tvfn7Zqvt5tDDffNf4KQ0juGQQCZ+i1c=";
   };
 
