@@ -12,7 +12,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "canonical";
     repo = "Ubuntu-Sans-fonts";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-PvDNQaOgJUb3/ubhqVSUMfinxfbhuQ0BnqYs3xshrhc=";
   };
 
