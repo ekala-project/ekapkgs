@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     repo = "git-quick-stats";
     owner = "git-quick-stats";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-QWWIRhQ7OYtNoaApb+6B80NASngsjcZL7whpQF2Lpus=";
   };
 
