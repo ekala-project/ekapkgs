@@ -23,7 +23,6 @@ buildGoModule (finalAttrs: {
   nativeBuildInputs = [ installShellFiles ];
 
   # Some tests require running Kubernetes instance
-  doCheck = false;
 
   ldflags = [
     "-s"
