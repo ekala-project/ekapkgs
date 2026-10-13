@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "brainboxdotcc";
     repo = "DPP";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-hLXRz5z6iluoO34oSrSKiqhaxl2MOOoiBNCBf0QqXlU=";
   };
 
