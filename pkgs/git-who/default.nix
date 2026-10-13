@@ -17,7 +17,6 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-e2P7szjtAn4EFTy+eGi/9cYf/Raw/7O+PbYEOD8i3Hs=";
   # some automated tests require submodule to clone and will fail.
   # see project readme
-  doCheck = false;
 
   meta = {
     description = "Git blame for file trees";
