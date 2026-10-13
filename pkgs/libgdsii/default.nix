@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "HomerReid";
     repo = "libGDSII";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-EXEt7l69etcBdDdEDlD1ODOdhTBZCVjgY1jhRUDd/W0=";
   };
 
