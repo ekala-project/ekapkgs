@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "bazelbuild";
     repo = "buildtools";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6yWPmjKyZsYZZ73a+yryZl1xAREiPFiBANnZZJ4Qv5o=";
   };
 
