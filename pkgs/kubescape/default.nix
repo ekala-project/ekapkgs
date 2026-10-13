@@ -26,8 +26,6 @@ buildGoModule (finalAttrs: {
     installShellFiles
   ];
 
-  doCheck = false;
-
   ldflags = [
     "-s"
     "-w"
