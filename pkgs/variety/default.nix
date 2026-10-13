@@ -69,8 +69,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     ++ lib.optional fehSupport feh
     ++ lib.optional imagemagickSupport imagemagick;
 
-  doCheck = false;
-
   # Prevent double wrapping, let the Python wrapper use the args in preFixup.
   dontWrapGApps = true;
 
