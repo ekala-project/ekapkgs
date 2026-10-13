@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchgit {
     url = "https://git.kernel.org/pub/scm/linux/kernel/git/colyli/bcache-tools.git";
-    rev = "bcache-tools-${finalAttrs.version}";
+    tag = "bcache-tools-${finalAttrs.version}";
     hash = "sha256-8BiHC8qxk4otFPyKnvGNk57JSZytEOy51AGertWo2O0=";
   };
 
