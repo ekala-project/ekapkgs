@@ -42,8 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     "man"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Open-source HEVC encoder";
     homepage = "https://github.com/ultravideo/kvazaar";
