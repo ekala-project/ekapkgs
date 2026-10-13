@@ -42,8 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/unittest-cpp/unittest-cpp";
     description = "Lightweight unit testing framework for C++";
