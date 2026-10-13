@@ -61,8 +61,6 @@ stdenv.mkDerivation {
     "cvs_LDFLAGS="
   ];
 
-  doCheck = false;
-
   meta = {
     homepage = "http://cvs.nongnu.org";
     description = "Concurrent Versions System - a source control system";
