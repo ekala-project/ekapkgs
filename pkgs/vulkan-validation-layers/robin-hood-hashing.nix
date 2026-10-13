@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/martinus/robin-hood-hashing";
     platforms = lib.platforms.unix;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })
