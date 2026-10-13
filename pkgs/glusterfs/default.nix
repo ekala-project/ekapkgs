@@ -165,9 +165,6 @@ stdenv.mkDerivation (finalAttrs: {
     wrapProgram $out/libexec/glusterfs/glusterfind/changelog.py --set PATH "$GLUSTER_PATH" --set PYTHONPATH "$GLUSTER_PYTHONPATH" --set LD_LIBRARY_PATH "$GLUSTER_LD_LIBRARY_PATH"
   '';
 
-  # installCheck disabled: gfid_to_path.py requires pyxattr which is not available
-  doInstallCheck = false;
-
   env = {
     DETERMINISTIC_BUILD = 1;
     PYTHONHASHSEED = 0;
