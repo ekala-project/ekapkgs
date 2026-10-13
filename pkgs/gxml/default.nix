@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   # https://github.com/NixOS/nixpkgs/issues/407969
-  doCheck = false;
   meta = {
     description = "Provides a GObject API for manipulating XML and a Serializable framework from GObject to XML";
     homepage = "https://gitlab.gnome.org/GNOME/gxml";
