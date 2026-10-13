@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "casey";
     repo = "intermodal";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Ny/BOgLe2fWC9LQp2g2DvYAArdEujl6Rf1bvrAkSt2A=";
   };
 
