@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "curl";
     repo = "trurl";
-    rev = "trurl-${version}";
+    tag = "trurl-${version}";
     hash = "sha256-VCMT4WgZ6LG7yiKaRy7KTgTkbACVXb4rw62lWnVAuP0=";
   };
 
