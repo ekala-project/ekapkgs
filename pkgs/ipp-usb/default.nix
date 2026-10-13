@@ -14,7 +14,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "openprinting";
     repo = "ipp-usb";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-4xZf8Q1MfQcB13vHRdb8dQyZWrwnJzubdi+zln1lRc8=";
   };
 
