@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "optiv";
     repo = "Freeze";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-BE5MvCU+NfEccauOdWNty/FwMiWwLttPh7eE9+UzEMY=";
   };
 
