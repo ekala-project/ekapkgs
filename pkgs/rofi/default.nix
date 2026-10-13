@@ -82,8 +82,6 @@ stdenv.mkDerivation rec {
     check = false;
   };
 
-  doCheck = false;
-
   meta = {
     description = "Window switcher, run dialog and dmenu replacement";
     homepage = "https://github.com/davatorium/rofi";
