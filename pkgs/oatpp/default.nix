@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "oatpp";
     repo = "oatpp";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-pTQ0DD4naE9m+6FfCVGg/i3WpNbtaR+38yyqjqN0uH0=";
   };
 
