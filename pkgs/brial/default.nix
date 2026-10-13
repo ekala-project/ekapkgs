@@ -21,7 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   # FIXME package boost-test and enable checks
-  doCheck = false;
 
   configureFlags = [
     "--with-boost-unit-test-framework=no"
