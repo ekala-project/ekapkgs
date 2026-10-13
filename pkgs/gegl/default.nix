@@ -99,8 +99,6 @@ stdenv.mkDerivation (finalAttrs: {
     moveToOutput "share/doc" "$devdoc"
   '';
 
-  doCheck = false;
-
   meta = {
     description = "Graph-based image processing framework";
     homepage = "https://www.gegl.org";
