@@ -168,8 +168,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  doCheck = false;
-
   postInstall = ''
     moveToOutput "bin/ibus-desktop-testing-runner" "$installedTests"
   '';
