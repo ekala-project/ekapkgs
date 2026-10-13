@@ -28,7 +28,6 @@ buildGoModule (finalAttrs: {
   '';
 
   # Tests contain network calls
-  doCheck = false;
 
   meta = {
     description = "Transifex command-line client";
