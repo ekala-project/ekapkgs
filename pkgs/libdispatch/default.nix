@@ -13,7 +13,7 @@ clangStdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "apple";
     repo = "swift-corelibs-libdispatch";
-    rev = "swift-5.10.1-RELEASE";
+    tag = "swift-5.10.1-RELEASE";
     name = "swift-corelibs-libdispatch-5.10.1-src";
     hash = "sha256-pta3wJj2LJ/lsYAWQpw0wSGLDMO41mN8Zbl78LUCaQo=";
   };
