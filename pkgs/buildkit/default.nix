@@ -27,8 +27,6 @@ buildGoModule (finalAttrs: {
     "-X github.com/moby/buildkit/version.Revision=${finalAttrs.src.rev}"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit";
     homepage = "https://github.com/moby/buildkit";
