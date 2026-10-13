@@ -48,7 +48,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   #
   # When "machine_type" explorer figures out that it is running inside
   # chroot, it assumes that it has enough privileges to escape it.
-  doCheck = false;
 
   pythonImportsCheck = [ "cdist" ];
 
