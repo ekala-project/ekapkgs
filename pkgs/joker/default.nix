@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-yH8QVzliAFZlOvprfdh/ClCWK2/7F96f0yLWvuAhGY8=";
 
-  doCheck = false;
-
   preBuild = ''
     go generate ./...
   '';
