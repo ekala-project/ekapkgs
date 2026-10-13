@@ -26,7 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kfl";
     repo = "mosml";
-    rev = "ver-${finalAttrs.version}";
+    tag = "ver-${finalAttrs.version}";
     sha256 = "sha256-GK39WvM7NNhoC5f0Wjy4/5VWT+Rbh2qo+W71hWrbPso=";
   };
 
