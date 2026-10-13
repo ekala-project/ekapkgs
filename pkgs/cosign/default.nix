@@ -46,8 +46,6 @@ buildGoModule (finalAttrs: {
     "-X sigs.k8s.io/release-utils/version.gitTreeState=clean"
   ];
 
-  doCheck = false;
-
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd cosign \
       --bash <($out/bin/cosign completion bash) \
