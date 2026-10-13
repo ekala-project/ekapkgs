@@ -24,8 +24,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
 
   build-system = [ python3Packages.setuptools ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "iotop" ];
 
   meta = {
