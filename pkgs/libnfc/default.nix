@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nfc-tools";
     repo = "libnfc";
-    rev = "libnfc-${finalAttrs.version}";
+    tag = "libnfc-${finalAttrs.version}";
     sha256 = "5gMv/HajPrUL/vkegEqHgN2d6Yzf01dTMrx4l34KMrQ=";
   };
 
