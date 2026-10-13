@@ -24,7 +24,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "xortool" ];
 
