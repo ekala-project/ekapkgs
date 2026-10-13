@@ -29,7 +29,6 @@ buildGoModule rec {
   };
 
   # There are no tests for cmd/serf.
-  doCheck = false;
 
   meta = {
     description = "Service orchestration and management tool";
