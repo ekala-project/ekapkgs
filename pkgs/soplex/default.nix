@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "scipopt";
     repo = "soplex";
-    rev = "release-${builtins.replaceStrings [ "." ] [ "" ] finalAttrs.version}";
+    tag = "release-${builtins.replaceStrings [ "." ] [ "" ] finalAttrs.version}";
     hash = "sha256-v2lDtnY3O1nP8RYALqpeO8q4b3bUAKZe4b3QhtnGiGg=";
   };
 
