@@ -15,7 +15,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "gpanders";
     repo = "ijq";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-U4UKhWI/xd7+rLa350oIFlCqbiMSZe3ztPFR0uierOo=";
   };
 
