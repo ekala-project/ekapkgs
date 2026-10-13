@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "gruntwork-io";
     repo = "kubergrunt";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-cLy+KpnDCGw1YpKrx5SCYh1eUjehAHTzAL9Y+a43+KM=";
   };
 
