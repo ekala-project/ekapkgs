@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
     domain = "gitlab.xfce.org";
     owner = "xfce";
     repo = "libxfce4util";
-    rev = "libxfce4util-${version}";
+    tag = "libxfce4util-${version}";
     sha256 = "sha256-QlT5ev4NhjR/apbgYQsjrweJ2IqLySozLYLzCAnmkfM=";
   };
 
