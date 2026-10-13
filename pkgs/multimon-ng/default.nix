@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "EliasOenal";
     repo = "multimon-ng";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-FxX01+bFcca+wvnilOV4xJx1bSV9lxy83EhpwWhi/Cs=";
   };
 
