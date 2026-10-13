@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "xapp-project";
     repo = "gnome-online-accounts-gtk";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-tBBCnB3JhGaaN/uv6BqyJDSvSyV1mPA4WvsvNS8cbOA=";
   };
 
