@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "minamijoyo";
     repo = "tfupdate";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-bvMm+BFdJQ4DTDJwg9eRwAUp1QdJWzCZL1+wOBCJGX4=";
   };
 
