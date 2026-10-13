@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Z3Prover";
     repo = "z3";
-    rev = "z3-${finalAttrs.version}";
+    tag = "z3-${finalAttrs.version}";
     hash = "sha256-DnhX3kxggnFmyYwXEPBsBA1rh4oor1oIJR5TMJk/jvc=";
   };
 
