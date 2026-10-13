@@ -19,8 +19,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-dqjayduNW43OuORg027Mnq1RIgJyeC7JM487Mrgu9Bo=";
 
-  doCheck = false;
-
   postInstall = ''
     ln -rs "$out/bin/azure-storage-azcopy" "$out/bin/azcopy"
   '';
