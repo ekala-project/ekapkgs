@@ -23,7 +23,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   dependencies = with python3Packages; [ six ];
 
   # tests fail only on hydra.
-  doCheck = false;
 
   meta = {
     description = "BMAP Tools";
