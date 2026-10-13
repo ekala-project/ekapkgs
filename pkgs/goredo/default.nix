@@ -28,8 +28,6 @@ buildGoModule (finalAttrs: {
     cd ..
   '';
 
-  doCheck = false;
-
   postInstall = ''
     mkdir -p "$out/share/info"
     cp goredo.info "$out/share/info"
