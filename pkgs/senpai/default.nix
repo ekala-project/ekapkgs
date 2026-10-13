@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~delthas";
     repo = "senpai";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-VjXgKdy4IpBhAP6uw/NtlexPki7nJzQi/HuY/+5lE/o=";
   };
 
