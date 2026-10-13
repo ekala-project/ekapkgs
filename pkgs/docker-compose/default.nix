@@ -27,8 +27,6 @@ buildGoModule rec {
     "-w"
   ];
 
-  doCheck = false;
-
   installPhase = ''
     runHook preInstall
     install -D $GOPATH/bin/cmd $out/libexec/docker/cli-plugins/docker-compose
