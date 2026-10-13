@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     repo = "minimap2";
     owner = "lh3";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-RH9IvpmcDEnuFEXucORpzeWc+yJlAvW4r6RnaUT+//c=";
   };
 
