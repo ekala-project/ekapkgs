@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "jbeverly";
     repo = "pam_ssh_agent_auth";
-    rev = "pam_ssh_agent_auth-${version}";
+    tag = "pam_ssh_agent_auth-${version}";
     sha256 = "YD1R8Cox0UoNiuWleKGzWSzxJ5lhDRCB2mZPp9OM6Cs=";
   };
 
