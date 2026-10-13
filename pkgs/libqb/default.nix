@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "ClusterLabs";
     repo = "libqb";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "sha256-AlBGGtZlXa1VngAe1sf8xVuERsEuptJvo/AX1A+YnQs=";
   };
 
