@@ -26,7 +26,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "phiresky";
     repo = "ripgrep-all";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fDSetB2UGzth+3KkCKsXUHj3y08RSfQ2nCKDa8OurW4=";
   };
 
