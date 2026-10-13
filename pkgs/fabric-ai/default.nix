@@ -19,7 +19,6 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-Y/6RURwsm2V4ssKC74izxwLK/GyI+yrIHeXHTrjjrA8=";
 
   # Fabric introduced plugin tests that fail in the nix build sandbox.
-  doCheck = false;
 
   ldflags = [
     "-s"
