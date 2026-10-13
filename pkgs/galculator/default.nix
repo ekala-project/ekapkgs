@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "galculator";
     repo = "galculator";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-XLDQdUGin7b9SgYV1kwMChBF+l0mYc9sAscY4YRZEGA=";
   };
 
