@@ -23,8 +23,6 @@ buildGoModule (finalAttrs: {
     "-X github.com/hashicorp/envconsul/version.Name=envconsul"
   ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/hashicorp/envconsul/";
     description = "Read and set environmental variables for processes from Consul";
