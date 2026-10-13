@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ltratt";
     repo = "multitime";
-    rev = "multitime-${finalAttrs.version}";
+    tag = "multitime-${finalAttrs.version}";
     sha256 = "sha256-oLtBUJbu+tVhzsUv+toz2oLeXCVLYKHQXUNsqpCZBGc=";
   };
 
