@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~bitfehler";
     repo = "scd2html";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-oZSHv5n/WOrvy77tC94Z8pYugLpHkcv7U1PrzR+8fHM=";
   };
 
