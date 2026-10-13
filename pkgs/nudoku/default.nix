@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jubalh";
     repo = "nudoku";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-8xSvW+oNMfPMIDTGLp6okGd1lzu/ZmZI4eYZBFhm45I=";
   };
 
