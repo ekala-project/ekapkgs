@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "mongodb";
     repo = "libmongocrypt";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-u8g/ITw1nro4RVi+2aFfXAorUEPasOuptIBUFmw+hDc=";
   };
 
