@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "writefreely";
     repo = "writefreely";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-CzIlXy1StXuK8fY3+uZd2pu5hB/MWdJrN+WEdEZEzfk=";
   };
 
