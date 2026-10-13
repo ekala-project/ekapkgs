@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "stlink-org";
     repo = "stlink";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-RtblGRTRenJVC9HHKDbLtNZpzikVZvwDzXjKCQXxLTs=";
   };
 
