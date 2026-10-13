@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "technion";
     repo = "libscrypt";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-QWWqC10bENemG5FYEog87tT7IxDaBJUDqu6j/sO3sYE=";
   };
 
