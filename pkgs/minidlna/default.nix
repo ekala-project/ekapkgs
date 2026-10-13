@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchgit {
     url = "https://git.code.sf.net/p/minidlna/git";
-    rev = "v${builtins.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
+    tag = "v${builtins.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
     hash = "sha256-InsSguoGi1Gp8R/bd4/c16xqRuk0bRsgw7wvcbokgKo=";
   };
 
