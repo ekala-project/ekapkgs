@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Azure";
     repo = "kubelogin";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-cizq2jWhv75fAetk58XaHphAk3nwMkicaX4PFkFdx5s=";
   };
 
