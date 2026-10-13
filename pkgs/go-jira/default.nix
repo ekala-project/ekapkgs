@@ -9,7 +9,7 @@ buildGoModule (finalAttrs: {
   version = "1.0.28";
 
   src = fetchFromGitHub {
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     owner = "go-jira";
     repo = "jira";
     sha256 = "sha256-h/x77xGqdOxPBxdchElZU9GFgjnNo89o9gx4fYM5dME=";
