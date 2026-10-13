@@ -33,8 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
 
-  doCheck = false; # "check" target is probably meant to do "installcheck" or something
-
   meta = {
     description = "Parse formatted man pages and man page source from most flavors of UNIX and converts them to HTML, ASCII, TkMan, DocBook, and other formats";
     license = lib.licenses.artistic1;
