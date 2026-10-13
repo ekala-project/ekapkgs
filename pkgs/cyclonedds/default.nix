@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "eclipse-cyclonedds";
     repo = "cyclonedds";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-+p1J6xEwrUPLheuQL4gm4x1e6rH/+qYsWc9eeJrmRR4=";
   };
 
