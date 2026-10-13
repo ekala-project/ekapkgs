@@ -25,8 +25,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     setuptools
   ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/wireservice/csvkit";
     description = "Suite of command-line tools for converting to and working with CSV";
