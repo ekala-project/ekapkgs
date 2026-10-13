@@ -45,7 +45,9 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional stdenv.hostPlatform.isLinux libseccomp;
 
-  mesonFlags = lib.optional stdenv.hostPlatform.isLinux "-Dseccomp=enabled";
+  mesonFeatures = lib.optionalAttrs stdenv.hostPlatform.isLinux {
+    seccomp = true;
+  };
 
   meta = {
     inherit (finalAttrs.src.meta) homepage;
