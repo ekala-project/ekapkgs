@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~leon_plickat";
     repo = "wlopm";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GrcV51mUZUaiiYhko8ysaTieJoZDcunLn1yG5k+TpQQ=";
   };
 
