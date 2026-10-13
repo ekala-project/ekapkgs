@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "PaddiM8";
     repo = "kalker";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-AuQtGgzAKA/AcfruZ6XK4d6qNr9/+sTAEgvh83R+zo8=";
   };
 
