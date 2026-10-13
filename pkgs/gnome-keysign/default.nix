@@ -21,7 +21,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     domain = "gitlab.gnome.org";
     owner = "GNOME";
     repo = "gnome-keysign";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-k77z8Yligzs4rHpPckRGcC5qnCHynHQRjdDkzxwt1Ss=";
   };
 
