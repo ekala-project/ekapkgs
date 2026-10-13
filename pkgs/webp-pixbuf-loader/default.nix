@@ -70,6 +70,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/aruiz/webp-pixbuf-loader";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.unix;
-    teams = [ ];
   };
 })
