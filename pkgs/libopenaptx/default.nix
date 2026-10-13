@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "pali";
     repo = "libopenaptx";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-4FYKxw1U+efCfzKOPSDJH8a/dG0KV+anJDgxjqzD80k=";
   };
 
