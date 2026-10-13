@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
     group = "tpo";
     owner = "anti-censorship/pluggable-transports";
     repo = "snowflake";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-MvV1kP+Xm3a4Q8+YZLwC9vpVK54ltb73cRkJhReSA2U=";
   };
 
