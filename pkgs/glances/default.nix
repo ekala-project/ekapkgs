@@ -21,8 +21,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
 
   build-system = with python3Packages; [ setuptools ];
 
-  doCheck = false;
-
   dependencies =
     with python3Packages;
     [
