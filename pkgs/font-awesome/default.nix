@@ -11,7 +11,7 @@ stdenvNoCC.mkDerivation {
   src = fetchFromGitHub {
     owner = "FortAwesome";
     repo = "Font-Awesome";
-    rev = "7.3.1";
+    tag = "7.3.1";
     hash = "sha256-FQ2XvDi2JQ/XR8xgy3f8uJnsQW/lF0/IehCJvSHS1Y4=";
   };
 
