@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
     # 2020-06-20: THE current upstream, maintained and used in distros fork.
     owner = "TechSmith";
     repo = "mp4v2";
-    rev = "Release-ThirdParty-MP4v2-${finalAttrs.version}";
+    tag = "Release-ThirdParty-MP4v2-${finalAttrs.version}";
     sha256 = "sha256-OP+oVTH9pqYfHtYL1Kjrs1qey/J40ijLi5Gu8GJnvSY=";
   };
 
