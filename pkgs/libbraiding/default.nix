@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "miguelmarco";
     repo = "libbraiding";
-    rev = version;
+    tag = version;
     hash = "sha256-Vo4nwzChjrI4PeNB+adPwDeL3gb++DEc4isX4/iDHMc=";
   };
 
