@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "KhronosGroup";
     repo = "Vulkan-ValidationLayers";
-    rev = "vulkan-sdk-${finalAttrs.version}";
+    tag = "vulkan-sdk-${finalAttrs.version}";
     hash = "sha256-3qUZP/R29eqTR4IAWH6jBGgmRqE0d1ahcdKbxUOAmTY=";
   };
 
