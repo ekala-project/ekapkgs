@@ -32,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitLab {
     owner = "accounts-sso";
     repo = "libaccounts-glib";
-    rev = "VERSION_${finalAttrs.version}";
+    tag = "VERSION_${finalAttrs.version}";
     hash = "sha256-mLhcwp8rhCGSB1K6rTWT0tuiINzgwULwXINfCbgPKEg=";
   };
 
