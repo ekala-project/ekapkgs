@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "windtf";
     repo = "wireproxy";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-TnwkBkLMYc8TLvgDnzNSKvJy1MBXtjeVo+nY8ePf/T4=";
   };
 
