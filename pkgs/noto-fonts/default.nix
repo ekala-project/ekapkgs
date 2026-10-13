@@ -11,7 +11,7 @@ stdenvNoCC.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "notofonts";
     repo = "notofonts.github.io";
-    rev = "noto-monthly-release-${version}";
+    tag = "noto-monthly-release-${version}";
     hash = "sha256-6lbNJjkf6lnPPZzHO3vtsXEuPQs6ewslgnQIeDhF2yk=";
   };
 
