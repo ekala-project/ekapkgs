@@ -52,8 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   enableParallelInstalling = false;
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/latchset/pkcs11-provider";
     description = "OpenSSL 3.x provider to access hardware or software tokens using the PKCS#11 Cryptographic Token Interface";
