@@ -78,7 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
       fullName = "Custom, BSD-like. See COPYING file.";
       free = true;
     };
-    teams = [ ];
     platforms = lib.platforms.unix;
   };
 })
