@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "maxmind";
     repo = "geoipupdate";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-JGJOHFxRjK9N1jWgOwot84biWyNQEvbVXOFqrxRtRlY=";
   };
 
