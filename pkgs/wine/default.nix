@@ -213,8 +213,6 @@ stdenv.mkDerivation (finalAttrs: {
   # Don't shrink the ELF RPATHs to keep the extra RPATH elements.
   dontPatchELF = true;
 
-  doCheck = false;
-
   hardeningDisable = [
     "bindnow"
     "stackclashprotection"
