@@ -24,8 +24,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     six
   ];
 
-  doCheck = false;
-
   patchPhase = ''
     # remove broken symlink
     rm bin/qtextasdata.py
