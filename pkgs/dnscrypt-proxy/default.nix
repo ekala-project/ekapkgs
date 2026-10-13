@@ -11,8 +11,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = null;
 
-  doCheck = false;
-
   src = fetchFromGitHub {
     owner = "DNSCrypt";
     repo = "dnscrypt-proxy";
