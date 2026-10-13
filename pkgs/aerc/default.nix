@@ -20,7 +20,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~rjarry";
     repo = "aerc";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-JeIhZvUPrvWdeTae558jbn0reQuDAxNl29ziGcB+7ts=";
   };
 
