@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "aces-aswf";
     repo = "CTL";
-    rev = "ctl-${finalAttrs.version}";
+    tag = "ctl-${finalAttrs.version}";
     hash = "sha256-X6W6IXZUMBTZJTzpAk7FmoEhSPELTmhYv68dZmqUJ2g=";
   };
 
