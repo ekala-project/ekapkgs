@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "MrMarble";
     repo = "termsvg";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-wV5b0HXf+DVSn5FbPU9/AXTaNKyenbxEGB9yI29e/cc=";
   };
 
