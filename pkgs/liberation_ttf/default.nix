@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "liberationfonts";
     repo = "liberation-fonts";
-    rev = version;
+    tag = version;
     hash = "sha256-Wg1uoD2k/69Wn6XU+7wHqf2KO/bt4y7pwgmG7+IUh4Q=";
   };
 
