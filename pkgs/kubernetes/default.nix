@@ -32,8 +32,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = null;
 
-  doCheck = false;
-
   nativeBuildInputs = [
     makeWrapper
     which
