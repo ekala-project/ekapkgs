@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "rra";
     repo = "remctl";
-    rev = "release/${finalAttrs.version}";
+    tag = "release/${finalAttrs.version}";
     hash = "sha256-4KzNhFswNTwcXrDBAfRyr502zwRQ3FACV8gDfBm7M0A=";
   };
 
