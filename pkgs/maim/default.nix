@@ -56,8 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     icu
   ];
 
-  doCheck = false;
-
   meta = {
     mainProgram = "maim";
     inherit (finalAttrs.src.meta) homepage;
