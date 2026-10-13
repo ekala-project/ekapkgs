@@ -72,8 +72,6 @@ buildGoModule (finalAttrs: {
     fi
   '';
 
-  doCheck = false;
-
   ldflags = [
     "-s"
     "-w"
