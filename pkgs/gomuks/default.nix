@@ -13,7 +13,7 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "gomuks";
     repo = "gomuks";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "sha256-bDJXo8d9K5UO599HDaABpfwc9/dJJy+9d24KMVZHyvI=";
   };
 
