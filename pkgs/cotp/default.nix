@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "replydev";
     repo = "cotp";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-L/HxdNufqmNZ8pF8tQ1VuOJIz+pEQN5IRpmg2+QTYos=";
   };
 
