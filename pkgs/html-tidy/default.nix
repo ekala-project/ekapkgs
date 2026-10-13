@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "htacg";
     repo = "tidy-html5";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-vzVWQodwzi3GvC9IcSQniYBsbkJV20iZanF33A0Gpe0=";
   };
 
