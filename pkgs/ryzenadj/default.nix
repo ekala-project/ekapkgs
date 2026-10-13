@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "FlyGoat";
     repo = "RyzenAdj";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-SNtCKZ3bugawzD8R3DjwPs/ls3kyTw1LdIcXuR6fumc=";
   };
 
