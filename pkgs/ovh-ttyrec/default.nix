@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ovh";
     repo = "ovh-ttyrec";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-UC0+LW4iheVasCEznXw+OTyxMt3hO59gFhB2YiXCFZI=";
   };
 
