@@ -28,7 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # https://github.com/leptos-rs/cargo-leptos#dependencies
   buildFeatures = [ "no_downloads" ];
-  doCheck = false;
 
   meta = {
     description = "Build tool for the Leptos web framework";
