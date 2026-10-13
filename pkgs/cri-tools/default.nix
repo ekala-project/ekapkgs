@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kubernetes-sigs";
     repo = "cri-tools";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-8TjS7cZXgiaSD7tEQbZmQIQUBkniIHjgAqyMEVqQrd0=";
   };
 
