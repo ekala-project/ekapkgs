@@ -22,8 +22,6 @@ buildGoModule (finalAttrs: {
     rm -r sharness/dependencies/
   '';
 
-  doCheck = false;
-
   passthru.tests = {
   };
 
