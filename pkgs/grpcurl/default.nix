@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "fullstorydev";
     repo = "grpcurl";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-Id3F5EEO5qf5kUKKeULX8u7aDIZEw5c1MkP4JMrwc6I=";
   };
 
