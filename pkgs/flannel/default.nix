@@ -21,7 +21,6 @@ buildGoModule rec {
   ldflags = [ "-X github.com/flannel-io/flannel/pkg/version.Version=${rev}" ];
 
   # TestRouteCache/TestV6RouteCache fail with "Failed to create newns: operation not permitted"
-  doCheck = false;
 
   meta = {
     description = "Network fabric for containers, designed for Kubernetes";
