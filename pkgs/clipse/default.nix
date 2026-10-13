@@ -25,8 +25,6 @@ buildGoModule (finalAttrs: {
 
   proxyVendor = true;
 
-  doCheck = false;
-
   meta = {
     changelog = "https://github.com/savedra1/clipse/blob/main/CHANGELOG.md";
     description = "Useful clipboard manager TUI for Unix";
