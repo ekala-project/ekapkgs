@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
       inherit domain;
       owner = "Skollsoft-Public";
       repo = "Remind";
-      rev = version;
+      tag = version;
       hash = "sha256-+5ms52n5W2fmW7YhloB67vI0gF4+q8i1CyciSvY5lg0=";
     };
 
