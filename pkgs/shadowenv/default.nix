@@ -12,7 +12,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Shopify";
     repo = "shadowenv";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-1LsOt0+jF00EEDLALXZhrKpLTpoNINgh23OevK0KztM=";
   };
 
