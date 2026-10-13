@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "xqq";
     repo = "libaribcaption";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-y2POfwIcn3Fs3h7aoEYJo6IjRZNKqwDPbV3LHwPdYT8=";
   };
 
