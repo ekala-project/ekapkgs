@@ -24,7 +24,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "minio";
     repo = "minio";
-    rev = "RELEASE.${finalAttrs.version}";
+    tag = "RELEASE.${finalAttrs.version}";
     hash = "sha256-HbjmCJYkWyRRHKriLP6QohaXYLk3QEVfi32Krq3ujjo=";
   };
 
