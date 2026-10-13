@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "strophe";
     repo = "libstrophe";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-53O8hHyw9y0Bzs+BpGouAxuSGJxh6NSNNWZqi7RHAsY=";
   };
 
