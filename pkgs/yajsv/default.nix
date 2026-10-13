@@ -22,8 +22,6 @@ buildGoModule {
     "-w"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Yet Another JSON Schema Validator";
     homepage = "https://github.com/neilpa/yajsv";
