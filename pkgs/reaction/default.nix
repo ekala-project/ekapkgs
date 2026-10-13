@@ -73,6 +73,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     license = lib.licenses.agpl3Plus;
     mainProgram = "reaction";
     platforms = lib.platforms.unix;
-    teams = [ ];
   };
 })
