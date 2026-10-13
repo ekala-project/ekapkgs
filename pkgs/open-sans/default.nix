@@ -12,7 +12,7 @@ stdenvNoCC.mkDerivation {
     domain = "salsa.debian.org";
     owner = "fonts-team";
     repo = "fonts-open-sans";
-    rev = "debian/1.11-1";
+    tag = "debian/1.11-1";
     hash = "sha256-gkq5RPa83dND91q1hiA9Qokq1iA8gLQ8XvCNWe+e8Bw=";
   };
 
