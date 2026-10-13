@@ -32,6 +32,5 @@ buildGoModule (finalAttrs: {
     longDescription = "Miniature version of Boulder, Pebble is a small RFC 8555 ACME test server not suited for a production CA";
     license = lib.licenses.mpl20;
     mainProgram = "pebble";
-    teams = [ ];
   };
 })
