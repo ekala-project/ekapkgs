@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitLab {
     owner = "OldManProgrammer";
     repo = "unix-tree";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-hmnBG96qQXvTulPnUYyliqidfKC+Wvky+d7xzYrCdTw=";
   };
 
