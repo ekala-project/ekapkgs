@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "alex-courtis";
     repo = "way-displays";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-HncxKLByhGy9huyFQscmieaof/dxV6qVhXl7xKo6aVM=";
   };
 
