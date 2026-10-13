@@ -37,8 +37,6 @@ buildGoModule (finalAttrs: {
       "-X ${modulePath}/src/cmd.buildDate=nix"
     ];
 
-  doCheck = false;
-
   postInstall =
     lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
       installShellCompletion --cmd git-town \
