@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "onetrueawk";
     repo = "awk";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-ndhSOl4xEwbDQ51g7yuwe3MOfmQrzePuanmyXYhWp+I=";
   };
 
