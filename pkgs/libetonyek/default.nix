@@ -21,7 +21,7 @@ let
     src = fetchFromGitLab {
       owner = "mdds";
       repo = "mdds";
-      rev = "2.1.1";
+      tag = "2.1.1";
       hash = "sha256-a412LpgDiYM8TMToaUrTlHtblYS1HehzrDOwvIAAxiA=";
     };
   };
