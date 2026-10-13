@@ -7,11 +7,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1791821051,
-        "narHash": "sha256-75fzJB4fW/ifgK0e7W7MXjcma3fZRnS1JMEudahtu5c=",
+        "lastModified": 1791913148,
+        "narHash": "sha256-rpA6VRIWf7kB5Eb48/YMNT5B/lvlMKXd7ALb3KZbyPk=",
         "owner": "ekala-project",
         "repo": "corepkgs",
-        "rev": "6228c3bcadd9a4cf93428571a98d0bf7185411fd",
+        "rev": "1000b0c039ef3cea9da99c9f020e30a59d97463d",
         "type": "github"
       },
       "original": {
