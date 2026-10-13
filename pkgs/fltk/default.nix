@@ -29,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "fltk";
     repo = "fltk";
-    rev = "release-${finalAttrs.version}";
+    tag = "release-${finalAttrs.version}";
     hash = "sha256-8Go/UNuZ1LEn8BniAyBbAPk7jdvSs5QvXxin9LAFvhU=";
   };
 
