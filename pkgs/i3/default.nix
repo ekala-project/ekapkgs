@@ -80,8 +80,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs .
   '';
 
-  doCheck = false;
-
   postInstall = ''
     wrapProgram "$out/bin/i3-save-tree" --prefix PERL5LIB ":" "$PERL5LIB"
     for program in $out/bin/i3-sensible-*; do
