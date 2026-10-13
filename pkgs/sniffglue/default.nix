@@ -15,7 +15,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kpcyrd";
     repo = "sniffglue";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-i4qTqFCoQ3gXTGQ6PD4R2YhRfWztw8cd6XuZuKRlS+U=";
   };
 
