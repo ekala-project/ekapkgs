@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   # tests are run as part of the compilation process
-  doCheck = false;
 
   meta = {
     description = "Functional Scheme for world domination";
