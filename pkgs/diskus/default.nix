@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "sharkdp";
     repo = "diskus";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-z0w2wzlbF7mY8kr6N//Rsm8G5P1jhrEwoOJ7MYrbKIE=";
   };
 
