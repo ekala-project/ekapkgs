@@ -34,7 +34,7 @@ stdenv.mkDerivation rec {
     name = "${pname}-${version}-src";
     owner = "BOINC";
     repo = "boinc";
-    rev = "client_release/${lib.versions.majorMinor version}/${version}";
+    tag = "client_release/${lib.versions.majorMinor version}/${version}";
     hash = "sha256-BzP3yDGAhJ1DtrxLEc3s27EwJilMVi6A1NoTv0NwH9c=";
   };
 
