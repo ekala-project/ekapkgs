@@ -28,8 +28,6 @@ buildGoModule (finalAttrs: {
     "-X=github.com/entireio/cli/cmd/entire/cli/versioninfo.Version=${finalAttrs.version}"
   ];
 
-  doCheck = false;
-
   doInstallCheck = true;
   nativeInstallCheckInputs = [
     versionCheckHook
