@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "milkytracker";
     repo = "MilkyTracker";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-IMX1+gJUghBxnaSTWnfDYzQVbKFQzQIS70H+L6ogVro=";
   };
 
