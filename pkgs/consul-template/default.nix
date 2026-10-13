@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "hashicorp";
     repo = "consul-template";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-54+MHi6ZmcDcHk1Swwt+25ZQOLPRytgZ8oDdlXsGVKo=";
   };
 
