@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
     domain = "gitlab.xfce.org";
     owner = "xfce";
     repo = "xfconf";
-    rev = "xfconf-${version}";
+    tag = "xfconf-${version}";
     sha256 = "sha256-U+Sk7ubBr1ZD1GLQXlxrx0NQdhV/WpVBbnLcc94Tjcw=";
   };
 
