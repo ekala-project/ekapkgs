@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "quickfix";
     repo = "quickfix";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-IVf7IxK/orqlI2RF8toJ6V0AuACpS78nHcDeR+CwK8c=";
   };
 
