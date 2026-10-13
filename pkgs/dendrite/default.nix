@@ -25,8 +25,6 @@ buildGoModule (finalAttrs: {
     "cmd/resolve-state"
   ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://element-hq.github.io/dendrite";
     mainProgram = "dendrite";
