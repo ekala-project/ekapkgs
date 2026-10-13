@@ -9,7 +9,7 @@ buildGoModule (finalAttrs: {
   version = "0.2.1";
 
   src = fetchFromGitHub {
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     owner = "jmespath";
     repo = "jp";
     hash = "sha256-a3WvLAdUZk+Y+L+opPDMBvdN5x5B6nAi/lL8JHJG/gY=";
