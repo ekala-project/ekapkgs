@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "tesseract-ocr";
     repo = "tesseract";
-    rev = version;
+    tag = version;
     sha256 = "sha256-n+ZtLAVi6+dOusK040i/sSjJqw58Ef62uTeimYbMUHk=";
   };
 
