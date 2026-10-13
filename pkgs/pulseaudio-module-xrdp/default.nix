@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "neutrinolabs";
     repo = "pulseaudio-module-xrdp";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-R1ZPifEjlueTJma6a0UiGdiNwTSa5+HnW4w9qGrauxE=";
   };
 
