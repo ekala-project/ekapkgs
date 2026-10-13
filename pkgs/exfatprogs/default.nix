@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "exfatprogs";
     repo = "exfatprogs";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-twzHX8Uee0Uf8w1OsXWjecOl+Qs51jdJXK1sqdt6+4k=";
   };
 
