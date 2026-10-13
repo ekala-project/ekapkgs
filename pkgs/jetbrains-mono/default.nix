@@ -11,7 +11,7 @@ stdenvNoCC.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "jetbrains";
     repo = "jetbrainsmono";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-SW9d5yVud2BWUJpDOlqYn1E1cqicIHdSZjbXjqOAQGw=";
   };
 
