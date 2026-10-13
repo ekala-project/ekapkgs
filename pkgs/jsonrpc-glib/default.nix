@@ -48,7 +48,6 @@ stdenv.mkDerivation rec {
 
   # Tests fail non-deterministically
   # https://gitlab.gnome.org/GNOME/jsonrpc-glib/issues/2
-  doCheck = false;
 
   postFixup = ''
     # Cannot be in postInstall, otherwise _multioutDocs hook in preFixup will move right back.
