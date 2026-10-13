@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nomeata";
     repo = "screen-message";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-fwKle+aXZuiNo5ksrigj7BGLv2fUILN2GluHHZ6co6s=";
   };
 
