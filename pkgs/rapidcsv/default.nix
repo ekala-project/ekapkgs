@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "d99kris";
     repo = "rapidcsv";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-pU9vQAqftIV54+5aUxedomw+g8tUV1iGeHsLL70OuuI=";
   };
 
