@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "quantumsheep";
     repo = "sshs";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-pC1UmnE0ePs5I+qUwWJO/heX781JueirXwtef1m6CTQ=";
   };
 
