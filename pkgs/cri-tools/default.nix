@@ -19,8 +19,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = null;
 
-  doCheck = false;
-
   nativeBuildInputs = [ installShellFiles ];
 
   buildPhase = ''
