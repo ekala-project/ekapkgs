@@ -18,7 +18,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-GzVdcQzYmKwb3GWhmbTb9HdBPosKgbimgvwZTfBMEk8=";
 
   # tests assume the authors macbook, and thus fail
-  doCheck = false;
 
   meta = {
     description = "Your filesystem as a dungeon";
