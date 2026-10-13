@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "zsh-users";
     repo = "zsh-completions";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-XCSC7DyhfnxzKjtbdsu7/pyw8eoVLPdthEoFZ8rBAyo=";
   };
 
