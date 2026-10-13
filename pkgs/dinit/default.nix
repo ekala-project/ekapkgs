@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "davmac314";
     repo = "dinit";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     # fix for case-insensitive filesystems
     postFetch = ''
       [ -f "$out/BUILD" ] && rm "$out/BUILD"
