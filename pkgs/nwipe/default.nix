@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "martijnvanbrummelen";
     repo = "nwipe";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-Z9Grptk+wlTIh46mXY38JdTK4wr+J3W+CD6ZH0YrZXs=";
   };
 
