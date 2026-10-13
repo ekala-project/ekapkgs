@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   # Tests require access to vulkan-compatible GPU
-  doCheck = false;
 
   separateDebugInfo = true;
 
