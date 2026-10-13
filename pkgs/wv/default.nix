@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "AbiWord";
     repo = "wv";
-    rev = "wv-${builtins.replaceStrings [ "." ] [ "-" ] finalAttrs.version}";
+    tag = "wv-${builtins.replaceStrings [ "." ] [ "-" ] finalAttrs.version}";
     hash = "sha256-xcC+/M1EzFqQFeF5Dw9qd8VIy7r8JdKMp2X/GHkFiPA=";
   };
 
