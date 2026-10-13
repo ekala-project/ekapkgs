@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-rD+QCQKgCZU5ktItV8NYqoyQPR7lk8sutvJwSJxFfZQ=";
 
-  doCheck = false;
-
   meta = {
     description = "Command-line tool to run Firecracker microVMs";
     homepage = "https://github.com/firecracker-microvm/firectl";
