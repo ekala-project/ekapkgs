@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ibara";
     repo = "oed";
-    rev = "oed-${finalAttrs.version}";
+    tag = "oed-${finalAttrs.version}";
     hash = "sha256-bbV89YhrmL7tOgKly5OfQDRz4QE0UzZrVsmoXiJ7ZZw=";
   };
 
