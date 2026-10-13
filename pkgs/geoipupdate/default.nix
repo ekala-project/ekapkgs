@@ -19,8 +19,6 @@ buildGoModule (finalAttrs: {
 
   ldflags = [ "-X main.version=${finalAttrs.version}" ];
 
-  doCheck = false;
-
   meta = {
     description = "Automatic GeoIP database updater";
     homepage = "https://github.com/maxmind/geoipupdate";
