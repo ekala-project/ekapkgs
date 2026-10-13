@@ -20,8 +20,6 @@ buildGoModule (finalAttrs: {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  doCheck = false;
-
   ldflags = [
     "-s"
     "-w"
