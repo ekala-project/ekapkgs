@@ -19,7 +19,6 @@ buildGoModule (finalAttrs: {
 
   subPackages = [ "." ];
 
-  doCheck = false;
   meta = {
     description = "Incoming webhook server that executes shell commands";
     mainProgram = "webhook";
