@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "freequaos";
     repo = "schedtool";
-    rev = "schedtool-${finalAttrs.version}";
+    tag = "schedtool-${finalAttrs.version}";
     hash = "sha256-1987n2JilQlNJAc7KhxUe4W7kK0Dqgal6wGo5KwzvPE=";
   };
 
