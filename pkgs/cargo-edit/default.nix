@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "killercup";
     repo = "cargo-edit";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-yaY6krZ+kt2g3Wnnzsw4P3xnpsaZuNwFfRk9GLvwps8=";
   };
 
