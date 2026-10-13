@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "major";
     repo = "MySQLTuner-perl";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-e49JKGwpZv8lr08HtqLKPm0IESTQdna3DmSnPg1rrnE=";
   };
 
