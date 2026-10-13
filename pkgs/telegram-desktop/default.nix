@@ -36,7 +36,7 @@ let
     src = fetchFromGitHub {
       owner = "telegramdesktop";
       repo = "tdesktop";
-      rev = "v${finalAttrs.version}";
+      tag = "v${finalAttrs.version}";
       fetchSubmodules = true;
       hash = "sha256-G/A5J2m1sXHD50zDmMD9ehnorAGRjnQ+YGMv6DEiJcQ=";
     };
