@@ -18,7 +18,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-zKbw73lnOhgjSiCiXezo71S/9DaNfe7HII0QwUADrFA=";
 
   # too many tests require internet access
-  doCheck = false;
 
   meta = {
     description = "Mutation testing tool for Rust";
