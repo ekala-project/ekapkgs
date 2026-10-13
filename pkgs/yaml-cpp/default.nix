@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jbeder";
     repo = "yaml-cpp";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-J87oS6Az1/vNdyXu3L7KmUGWzU0IAkGrGMUUha+xDXI=";
   };
 
