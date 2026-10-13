@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "lite-xl";
     repo = "lite-xl";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9JpD7f5vOGhLW8dBjjYUI5PSaz/XWW5sIOZCAbKhxtE=";
   };
 
