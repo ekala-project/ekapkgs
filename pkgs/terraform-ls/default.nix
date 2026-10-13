@@ -23,7 +23,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # There's a mixture of tests that use networking and several that fail on aarch64
-  doCheck = false;
 
   installCheckPhase = ''
     runHook preInstallCheck
