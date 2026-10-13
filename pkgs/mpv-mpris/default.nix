@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "hoyon";
     repo = "mpv-mpris";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-jPncHlY2fIUzURhQ35ude1D8WkKQurAOdPedz1/osBU=";
   };
 
