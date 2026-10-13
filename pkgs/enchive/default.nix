@@ -10,7 +10,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "skeeto";
     repo = "enchive";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "0fdrfc5l42lj2bvmv9dmkmhmm7qiszwk7cmdvnqad3fs7652g0qa";
   };
 
