@@ -23,8 +23,6 @@ buildGoModule (finalAttrs: {
     "-X main.BuildVersion=${finalAttrs.version}"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Compute various size metrics for a Git repository";
     homepage = "https://github.com/github/git-sizer";
