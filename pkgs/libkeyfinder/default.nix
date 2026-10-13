@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "mixxxdj";
     repo = "libkeyfinder";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-Et8u5j/ke9u2bwHFriPCCBiXkPel37gwx+kwuViAr4o=";
   };
 
