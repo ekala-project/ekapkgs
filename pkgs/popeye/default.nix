@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   version = "0.22.1";
 
   src = fetchFromGitHub {
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     owner = "derailed";
     repo = "popeye";
     sha256 = "sha256-CbVYQIE7kjUah+SDEjs5Qz+n4+f3HriQNxYPqDcdr/I=";
