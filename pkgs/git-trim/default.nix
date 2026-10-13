@@ -43,8 +43,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     install -Dm644 -t $out/share/man/man1/ docs/git-trim.1
   '';
 
-  doCheck = false;
-
   meta = {
     description = "Automatically trims your branches whose tracking remote refs are merged or gone";
     homepage = "https://github.com/foriequal0/git-trim";
