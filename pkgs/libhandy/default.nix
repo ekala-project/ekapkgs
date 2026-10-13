@@ -59,8 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     introspection = false;
   };
 
-  doCheck = false;
-
   meta = {
     description = "Building blocks for modern adaptive GNOME apps";
     homepage = "https://gitlab.gnome.org/GNOME/libhandy";
