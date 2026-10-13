@@ -17,7 +17,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "sigstore";
     repo = "cosign";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6YgCEeDwjNNMMh1tE/DUbScR7ZYf+FNMhFs+q7b0MuM=";
   };
 
