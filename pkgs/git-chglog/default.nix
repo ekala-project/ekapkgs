@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "git-chglog";
     repo = "git-chglog";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-rTJn2vUrEnmG2japqCxHv3BR9MpmMfpMLO2FBP6ONbw=";
   };
 
