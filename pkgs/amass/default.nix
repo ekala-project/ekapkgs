@@ -22,8 +22,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-3MpE61ixMps4IRIZkqjzG225zk4fsERkssoNoItUXbQ=";
 
-  doCheck = false;
-
   meta = {
     description = "In-Depth DNS Enumeration and Network Mapping";
     homepage = "https://owasp.org/www-project-amass/";
