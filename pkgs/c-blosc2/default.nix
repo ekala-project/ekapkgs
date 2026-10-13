@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Blosc";
     repo = "c-blosc2";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-X/LR88pHbCk0TPu0oGPsg9phXmwnHlXCxdxd+Wa69UY=";
   };
 
