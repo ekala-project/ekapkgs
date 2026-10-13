@@ -28,8 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-liblzma"
   ];
 
-  doCheck = false;
-
   installPhase = ''
     install -D -m755 xdelta3 $out/bin/xdelta3
     install -D -m644 xdelta3.1 $out/share/man/man1/xdelta3.1
