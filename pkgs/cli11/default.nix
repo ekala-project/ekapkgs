@@ -21,8 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Command line parser for C++11";
     homepage = "https://github.com/CLIUtils/CLI11";
