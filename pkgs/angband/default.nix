@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "angband";
     repo = "angband";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-lx2EfE3ylcH1vLAHwNT1me1l4e4Jspkw4YJIAOlu/0E=";
   };
 
