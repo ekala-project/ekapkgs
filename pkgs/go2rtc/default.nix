@@ -24,8 +24,6 @@ buildGoModule (finalAttrs: {
     "-w"
   ];
 
-  doCheck = false; # tests fail
-
   meta = {
     description = "Ultimate camera streaming application with support RTSP, RTMP, HTTP-FLV, WebRTC, MSE, HLS, MJPEG, HomeKit, FFmpeg, etc";
     homepage = "https://github.com/AlexxIT/go2rtc";
