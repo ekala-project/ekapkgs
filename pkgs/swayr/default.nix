@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~tsdh";
     repo = "swayr";
-    rev = "swayr-${finalAttrs.version}";
+    tag = "swayr-${finalAttrs.version}";
     hash = "sha256-uT8MYgH9kANQ0t+7jqjOOvQIZf5ImdQruZLLlCejwcc=";
   };
 
