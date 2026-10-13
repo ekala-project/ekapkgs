@@ -10,7 +10,7 @@ buildGoModule (finalAttrs: {
   version = "0.6.3";
 
   src = fetchFromGitHub {
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     owner = "pulumi";
     repo = "kubespy";
     sha256 = "sha256-l/vOIFvCQHq+gOr38SpVZ8ShZdI1bP4G5PY4hKhkCU0=";
