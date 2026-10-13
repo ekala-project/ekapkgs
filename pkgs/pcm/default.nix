@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "intel";
     repo = "pcm";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-TWE/5rsCCfoKDAy9i9YDRiUXVnqAX7I08Oq6QgCbzaY=";
   };
 
