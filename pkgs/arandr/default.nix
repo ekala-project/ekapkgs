@@ -63,7 +63,6 @@ buildPythonApplication (finalAttrs: {
   '';
 
   # no tests
-  doCheck = false;
 
   dontWrapGApps = true;
 
