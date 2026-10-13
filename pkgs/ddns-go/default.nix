@@ -22,7 +22,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # network required
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/jeessy2/ddns-go";
