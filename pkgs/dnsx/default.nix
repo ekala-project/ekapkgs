@@ -22,7 +22,6 @@ buildGoModule (finalAttrs: {
   ldflags = [ "-s" ];
 
   # Tests require network access
-  doCheck = false;
 
   meta = {
     description = "Fast and multi-purpose DNS toolkit";
