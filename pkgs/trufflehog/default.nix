@@ -29,7 +29,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # Test cases run git clone and require network access
-  doCheck = false;
 
   postInstall = ''
     rm $out/bin/{generate,snifftest}
