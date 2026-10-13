@@ -24,8 +24,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     ./Cargo.lock.patch
   ];
 
-  doCheck = false;
-
   buildInputs = [
     openssl
     zlib
