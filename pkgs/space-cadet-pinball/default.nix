@@ -27,7 +27,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "k4zmu2a";
     repo = "SpaceCadetPinball";
-    rev = "Release_${version}";
+    tag = "Release_${version}";
     hash = "sha256-W2P7Txv3RtmKhQ5c0+b4ghf+OMsN+ydUZt+6tB+LClM=";
   };
 
