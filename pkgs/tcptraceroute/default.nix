@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "mct";
     repo = "tcptraceroute";
-    rev = "${pname}-${version}";
+    tag = "${pname}-${version}";
     hash = "sha256-KU4MLWtOFzzNr+I99fRbhBokhS1JUNL+OgVltkOGav4=";
   };
 
