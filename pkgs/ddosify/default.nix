@@ -27,8 +27,6 @@ buildGoModule (finalAttrs: {
     "-X=main.BuildDate=unknown"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "High-performance load testing tool, written in Golang";
     homepage = "https://ddosify.com/";
