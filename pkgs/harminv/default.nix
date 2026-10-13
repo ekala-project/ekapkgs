@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "NanoComp";
     repo = "harminv";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-a2xf1CUyWUsCE+xUZfJJaKKktn2XznFnJQRE0AxVuuY=";
   };
 
