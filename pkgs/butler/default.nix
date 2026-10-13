@@ -18,8 +18,6 @@ buildGoModule (finalAttrs: {
 
   buildInputs = [ brotli ];
 
-  doCheck = false; # disabled because the tests don't work in a non-FHS compliant environment.
-
   vendorHash = "sha256-4Uleff7XO9hs72/G+s8Ak1yaDLNpdHZa2GKx1aCtLZI=";
 
   meta = {
