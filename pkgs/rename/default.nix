@@ -11,7 +11,7 @@ perlPackages.buildPerlPackage rec {
   src = fetchFromGitHub {
     owner = "pstray";
     repo = "rename";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "KQsBO94fsa4CbTHNyJxOD96AwUfKNLa9p44odlNgQao=";
   };
   meta = {
