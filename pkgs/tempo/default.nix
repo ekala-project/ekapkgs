@@ -34,7 +34,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # tests use docker
-  doCheck = false;
   meta = {
     description = "High volume, minimal dependency trace storage";
     changelog = "https://github.com/grafana/tempo/releases/tag/v${finalAttrs.version}";
