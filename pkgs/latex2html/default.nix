@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "latex2html";
     repo = "latex2html";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "sha256-xylIU2GY/1t9mA8zJzEjHwAIlvVxZmUAUdQ/IXEy+Wg=";
   };
 
