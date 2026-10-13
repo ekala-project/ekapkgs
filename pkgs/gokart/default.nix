@@ -18,7 +18,6 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-lgKYVgJlmUJ/msdIqG7EKAZuISie1lG7+VeCF/rcSlE=";
 
   # Would need files to scan which are not shipped by the project
-  doCheck = false;
 
   meta = {
     description = "Static analysis tool for securing Go code";
