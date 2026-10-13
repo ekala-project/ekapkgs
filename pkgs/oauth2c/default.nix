@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-H5iRmX6Wcef7IVOY5NQ+jX9zyJCzZ34Haf7cIflK5GY=";
 
-  doCheck = false; # tests want to talk to oauth2c.us.authz.cloudentity.io
-
   meta = {
     homepage = "https://github.com/SecureAuthCorp/oauth2c";
     description = "User-friendly OAuth2 CLI";
