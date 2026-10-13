@@ -17,7 +17,6 @@ buildGoModule (finalAttrs: {
     sha256 = "sha256-gjEwl1MbITsXY6lSd18hJYOoZGYi6k4APiHeSdmnQYQ=";
   };
 
-  doCheck = false;
   vendorHash = null;
 
   subPackages = [ "." ];
