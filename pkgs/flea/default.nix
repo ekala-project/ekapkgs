@@ -17,8 +17,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   cargoHash = "sha256-BbFN/3fzKX+KNS+jabWFTTZDHS3uVjybGKZ1uR7Cz54=";
 
-  doCheck = false;
-
   postInstall = ''
     install -Dm755 tools/flea-gio-auth "$out/lib/flea/flea-gio-auth"
     install -Dm755 tools/flea-portal "$out/lib/flea/flea-portal"
