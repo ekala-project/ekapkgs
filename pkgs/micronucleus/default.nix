@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "micronucleus";
     repo = "micronucleus";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-IngVHeYgPUwSsboTZ5h55iLUxtdBSdugiLk5HbyHIvI=";
   };
 
