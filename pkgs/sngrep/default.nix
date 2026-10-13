@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "irontec";
     repo = "sngrep";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tKIyU8W6Jvp0hoegCpOOIsJkMfEEtmfv9Se7VIQ7hVo=";
   };
 
