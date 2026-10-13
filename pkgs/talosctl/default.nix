@@ -41,7 +41,6 @@ buildGoModule (finalAttrs: {
       --zsh <($out/bin/talosctl completion zsh)
   '';
 
-  doCheck = false; # no tests
   meta = {
     description = "CLI for out-of-band management of Kubernetes nodes created by Talos";
     mainProgram = "talosctl";
