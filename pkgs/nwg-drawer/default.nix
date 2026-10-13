@@ -17,7 +17,7 @@ buildGoModule {
   src = fetchFromGitHub {
     owner = "nwg-piotr";
     repo = "nwg-drawer";
-    rev = "v0.7.5";
+    tag = "v0.7.5";
     hash = "sha256-G101SX/UjbZaBks8NL2BHps/ydk2EeazyPjb5II9ZLg=";
   };
 
