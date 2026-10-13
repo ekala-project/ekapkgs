@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "maekitalo";
     repo = "cxxtools";
-    rev = "V${finalAttrs.version}";
+    tag = "V${finalAttrs.version}";
     hash = "sha256-AiMVmtvI20nyv/nuHHxGH4xFnlc9AagVkKlnRlaYCPM=";
   };
 
