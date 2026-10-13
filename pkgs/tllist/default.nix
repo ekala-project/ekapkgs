@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "dnkl";
     repo = "tllist";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-4WW0jGavdFO3LX9wtMPzz3Z1APCPgUQOktpmwAM0SQw=";
   };
 
