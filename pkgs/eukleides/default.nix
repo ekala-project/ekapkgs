@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "salsa.debian.org";
     owner = "georgesk";
     repo = "eukleides";
-    rev = "upstream/${finalAttrs.version}";
+    tag = "upstream/${finalAttrs.version}";
     hash = "sha256-keX7k14X/97zHh87A/7vUsfGc/S6fByd+rewW+LkJeM=";
   };
 
