@@ -12,7 +12,7 @@ stdenvNoCC.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "raspberrypi";
     repo = "firmware";
-    rev = version;
+    tag = version;
     hash = "sha256-vZxjq5icaVdlQUn5saJhJskW59xxr8IBO9iRULO6ppg=";
   };
 
