@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "dmtx";
     repo = "libdmtx";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-/sV+t7RAr5dTwfUsGz0KEZYgm0DzQWRdiwrbbEbC1OY=";
   };
 
