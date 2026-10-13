@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "google";
     repo = "cpu_features";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-TrC1WMLAhko57rAyDCiAC/IJ0unAqVhyjkh7gKibyi4=";
   };
 
