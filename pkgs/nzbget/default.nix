@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nzbgetcom";
     repo = "nzbget";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-e8uzUjuVH237G/sajpyL2FYpyN0TcXcJQqV2KOjNFTU=";
   };
 
