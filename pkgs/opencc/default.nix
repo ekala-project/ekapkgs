@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "BYVoid";
     repo = "OpenCC";
-    rev = "ver.${version}";
+    tag = "ver.${version}";
     sha256 = "sha256-FgpAnN9bo2H6cuLEuxxSg5I4R0zViDrJ8KueNEoTVF8=";
   };
 
