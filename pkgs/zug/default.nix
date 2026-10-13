@@ -37,8 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     rm BUILD
   '';
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/arximboldi/zug";
     description = "Library for functional interactive c++ programs";
