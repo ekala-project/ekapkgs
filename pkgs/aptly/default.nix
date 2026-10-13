@@ -54,8 +54,6 @@ buildGoModule (finalAttrs: {
       }
   '';
 
-  doCheck = false;
-
   meta = {
     homepage = "https://www.aptly.info";
     description = "Debian repository management tool";
