@@ -208,8 +208,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs --update --host $out/bin/umpv $out/bin/mpv_identify.sh
   '';
 
-  doCheck = false;
-
   meta = {
     homepage = "https://mpv.io";
     description = "General-purpose media player, fork of MPlayer and mplayer2";
