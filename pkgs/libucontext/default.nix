@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kaniini";
     repo = "libucontext";
-    rev = "libucontext-${finalAttrs.version}";
+    tag = "libucontext-${finalAttrs.version}";
     hash = "sha256-asT0pV3s4L4zB2qtDJ+2XYxEP6agIEo1LtCuFeOjpRA=";
   };
 
