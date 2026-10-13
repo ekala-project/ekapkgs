@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "firefly-cpp";
     repo = "uARMSolver";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-fJtGZ1Y1mL/JjuaDbLfXb+AjTESEGjoh3ZEmhBZKotA=";
   };
 
