@@ -62,8 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   checkInputs = [ gtest ];
 
-  doCheck = false; # gtest requires C/C++17 but the project is written in C/C++11
-
   meta = {
     description = "Fast and powerful twin-panel file manager for the Linux desktop";
     homepage = "https://gcmd.github.io";
