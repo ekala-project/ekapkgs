@@ -15,7 +15,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "CycloneDX";
     repo = "cyclonedx-rust-cargo";
-    rev = "cargo-cyclonedx-${finalAttrs.version}";
+    tag = "cargo-cyclonedx-${finalAttrs.version}";
     hash = "sha256-0d6e66Cvfm3YYw9Abb0Rs30qAKoNhGi8/hYLKAiPlyE=";
   };
 
