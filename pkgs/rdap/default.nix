@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-fuTi0mM3ch8cjt2Pgdz9AEaMj2T0a10cCuiTsaeLP6Q=";
 
-  doCheck = false;
-
   ldflags = [
     "-s"
     "-X=github.com/openrdap/rdap.version=${finalAttrs.version}"
