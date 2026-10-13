@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "salsa.debian.org";
     owner = "pkg-security-team";
     repo = "recoverdm";
-    rev = "debian/${finalAttrs.version}";
+    tag = "debian/${finalAttrs.version}";
     hash = "sha256-HLaiTeeqXn0mgRnG5FZflkPiDiB8CGzq4FR7lDj5oHI=";
   };
 
