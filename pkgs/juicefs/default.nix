@@ -25,8 +25,6 @@ buildGoModule (finalAttrs: {
     "-X github.com/juicedata/juicefs/pkg/version.version=${finalAttrs.version}"
   ];
 
-  doCheck = false; # requires network access
-
   postInstall = ''
     ln -s $out/bin/juicefs $out/bin/mount.juicefs
   '';
