@@ -39,7 +39,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   # As the version is updated, the number of failed tests continues to grow.
-  doCheck = false;
 
   postInstall = lib.optionalString (stdenv.hostPlatform.emulatorAvailable buildPackages) (
     let
