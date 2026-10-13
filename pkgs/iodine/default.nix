@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "yarrick";
     repo = "iodine";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0vDl/F/57puugrEdOtdlpNPMF9ugO7TP3KLWo/7bP2k=";
   };
 
