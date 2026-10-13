@@ -17,8 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   installPhase = "make PREFIX=/ DESTDIR=$out install";
 
-  doCheck = false;
-
   meta = {
     description = "DTS Coherent Acoustics decoder with support for HD extensions";
     mainProgram = "dcadec";
