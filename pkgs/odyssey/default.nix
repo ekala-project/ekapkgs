@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "yandex";
     repo = "odyssey";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-70h8JJH9+2xmgrADz106DNBLGUH0gnvatoeAbD03eKY=";
   };
 
