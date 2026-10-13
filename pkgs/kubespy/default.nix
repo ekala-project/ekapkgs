@@ -20,8 +20,6 @@ buildGoModule (finalAttrs: {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  doCheck = false;
-
   ldflags = [
     "-X"
     "github.com/pulumi/kubespy/version.Version=${finalAttrs.version}"
