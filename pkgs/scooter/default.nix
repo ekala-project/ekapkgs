@@ -24,7 +24,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   # Many tests require filesystem writes which fail in Nix sandbox
-  doCheck = false;
 
   meta = {
     description = "Interactive find and replace in the terminal";
