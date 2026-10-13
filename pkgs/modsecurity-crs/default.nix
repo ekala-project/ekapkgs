@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "coreruleset";
     repo = "coreruleset";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-fwy6LwwccZ7wrcmXZdWkkwmprfd7PhikQToO4mdEfFE=";
   };
 
