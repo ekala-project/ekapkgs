@@ -26,8 +26,6 @@ buildGoModule (finalAttrs: {
     "-X github.com/linuxsuren/cobra-extension/version.version=${finalAttrs.version}"
   ];
 
-  doCheck = false;
-
   nativeBuildInputs = [ installShellFiles ];
 
   postInstall =
