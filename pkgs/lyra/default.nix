@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "bfgroup";
     repo = "lyra";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-h2IO5cUYY5Xn3nmy2pXmRYqRRWHyOwPCrZgKnJf9gU8=";
   };
 
