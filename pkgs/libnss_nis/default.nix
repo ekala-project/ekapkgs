@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "thkukuk";
     repo = "libnss_nis";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-FWAyf4soSUpNrYzSefNWthEMfQEopfYX9pMDf1rNK6c=";
   };
 
