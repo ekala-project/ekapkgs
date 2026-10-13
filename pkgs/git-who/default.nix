@@ -10,7 +10,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "sinclairtarget";
     repo = "git-who";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-105UUQBAB0/5d0xEoKOr7xwKvXy42RgyOHVFFArXHQ4=";
   };
 
