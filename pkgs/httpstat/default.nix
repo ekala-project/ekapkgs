@@ -13,7 +13,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   src = fetchFromGitHub {
     owner = "reorx";
     repo = "httpstat";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-dOHFLw8suvpuZkcKEzq5HktMYBGE7+vtTD609TkAFfw=";
   };
 
