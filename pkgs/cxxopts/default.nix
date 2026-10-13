@@ -25,9 +25,10 @@ stdenv.mkDerivation (finalAttrs: {
   cmakeEntries = {
     CXXOPTS_BUILD_EXAMPLES = false;
     CXXOPTS_CXX_STANDARD = "17";
+  }
+  // lib.optionalAttrs enableUnicodeHelp {
+    CXXOPTS_USE_UNICODE_HELP = true;
   };
-
-  cmakeFlags = lib.optional enableUnicodeHelp "-DCXXOPTS_USE_UNICODE_HELP=TRUE";
 
   nativeBuildInputs = [
     cmake
