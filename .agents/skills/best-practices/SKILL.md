@@ -77,16 +77,25 @@ When using `buildGoModule`:
 - Do **not** set `doCheck = false` or `doInstallCheck = false` — they are defaults
 - Do **not** set `meta.maintainers` or `meta.teams`
 - Do **not** set `enableParallelBuilding = true` — it is the default
+- Avoid `placeholder` if possible — prefer shell output references for better content-addressed derivation support. E.g. `"PREFIX=${placeholder "out"}"` → `"PREFIX=$(out)"`
+
+### Formatting
+
+- Attributes inside a derivation block (e.g. `mkDerivation`) should be separated by an empty line between each attribute
+- Exception: `pname`, `version`, `extensions`, `pyproject`, and `disabled` may be grouped together without blank lines
 
 ### Dependencies
 
 - Build tools (compilers, code generators, pkg-config) belong in `nativeBuildInputs`, not `buildInputs`
 - Libraries belong in `buildInputs`, not `nativeBuildInputs`
+- Do **not** use `.dev` on dependencies in `buildInputs` — `getDev` is applied automatically, so `pkg.dev` is redundant (just use `pkg`)
 - Test-only deps belong in `checkInputs` or `nativeCheckInputs`
 - `strictDeps = true` should be set when `depsBuildBuild` is used
+- In top-level scope, prefer referencing the interpreter's package set over the top-level alias — e.g. `python3.pkgs` over `python3Packages`
 
 ### Sources
 
+- Prefer forge-specific fetchers (`fetchFromGitHub`, `fetchFromGitLab`, `fetchFromBitbucket`, etc.) for source checkouts — flag `fetchzip`/`fetchurl` pointing at a forge source tarball as "prefer fetchFrom*". Fetching uploaded release artifacts (e.g. pre-built binaries, vendored bundles) with `fetchzip`/`fetchurl` is acceptable.
 - `fetchFromGitHub`/`fetchFromGitLab` should use `tag`, not `rev` with a tag value
 - Hash should be SRI format (`sha256-...`), not bare hex
 
