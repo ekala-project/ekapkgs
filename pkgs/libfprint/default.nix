@@ -22,7 +22,7 @@ stdenv.mkDerivation rec {
     domain = "gitlab.freedesktop.org";
     owner = "libfprint";
     repo = "libfprint";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-UiUdZokgi27LlyO419dd+NIcQD2RSUfdsC08sW3qzko=";
   };
 
