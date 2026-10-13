@@ -17,8 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "PREFIX=$(out)" ];
 
-  doCheck = false;
-
   meta = {
     description = "Tree ldd with an option to bundle dependencies into a single folder";
     mainProgram = "libtree";
