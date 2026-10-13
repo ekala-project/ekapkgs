@@ -23,8 +23,6 @@ buildGoModule (finalAttrs: {
 
   proxyVendor = true;
 
-  doCheck = false;
-
   subPackages = [ "." ];
 
   ldflags = [
