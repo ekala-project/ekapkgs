@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "tenacityteam";
     repo = "libid3tag";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-v3tvZmQE6G8Xsk+eluVtlou0Nyhyaisv0UclivQBi28=";
   };
 
