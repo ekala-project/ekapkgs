@@ -32,8 +32,6 @@ buildGoModule (finalAttrs: {
 
   subPackages = [ "cmd/fence" ];
 
-  doCheck = false;
-
   doInstallCheck = true;
   nativeInstallCheckInputs = [
     versionCheckHook
