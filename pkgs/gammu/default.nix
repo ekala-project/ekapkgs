@@ -29,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "gammu";
     repo = "gammu";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-revz4QrdqGhVgshXqywavqzIX5UthxvD50Txem4fYu8=";
   };
 
