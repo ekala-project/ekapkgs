@@ -17,7 +17,9 @@
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "solaar";
   version = "1.1.20";
-  format = "setuptools";
+  pyproject = true;
+
+  build-system = [ python3Packages.setuptools ];
 
   src = fetchFromGitHub {
     owner = "pwr-Solaar";
