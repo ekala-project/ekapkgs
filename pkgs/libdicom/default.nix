@@ -32,7 +32,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonBuildType = "release";
 
-  mesonFlags = lib.optionals (!finalAttrs.finalPackage.doCheck) [ "-Dtests=false" ];
+  mesonEntries = lib.optionalAttrs (!finalAttrs.finalPackage.doCheck) {
+    tests = false;
+  };
 
   doCheck = true;
 
