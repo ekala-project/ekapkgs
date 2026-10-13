@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "concurrencykit";
     repo = "ck";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-lxJ8WsZ3pBGf4sFYj5+tR37EYDZqpksaoohiIKA4pRI=";
   };
 
