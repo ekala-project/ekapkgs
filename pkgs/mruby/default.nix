@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "mruby";
     repo = "mruby";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-7CDTRQncpjY0HO0S1lM57aUvV6ZseEp+/nxXp4ZuuQs=";
   };
 
