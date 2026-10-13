@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "LibRaw";
     repo = "LibRaw";
-    rev = version;
+    tag = version;
     hash = "sha256-mtDQ3NaHB1ogl61SI0KlKjWlOsNVxeAKal+7YanXJ+s=";
   };
 
