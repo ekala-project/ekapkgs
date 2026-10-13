@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "salsa.debian.org";
     owner = "debian";
     repo = "ccze";
-    rev = "debian/${finalAttrs.version}";
+    tag = "debian/${finalAttrs.version}";
     hash = "sha256-sESbs+HTDRX9w7c+LYnzQoemPIxAtqk27IVSTtiAGEk=";
   };
 
