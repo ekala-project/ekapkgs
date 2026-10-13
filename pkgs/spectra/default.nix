@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "yixuan";
     repo = "spectra";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-lfbOwnTP3GrN/1N/tyMXZrtEHIxAq3EjuHS8M+I87to=";
   };
 
