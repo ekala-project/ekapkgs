@@ -68,8 +68,6 @@ python3Packages.buildPythonPackage rec {
 
   nativeCheckInputs = [ dbus.out ];
 
-  doCheck = false;
-
   meta = {
     description = "Python DBus bindings";
     homepage = "https://gitlab.freedesktop.org/dbus/dbus-python";
