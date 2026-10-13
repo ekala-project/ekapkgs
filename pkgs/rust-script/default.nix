@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "fornwall";
     repo = "rust-script";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-Bb8ULD2MmZiSW/Tx5vAAHv95OMJ0EdWgR+NFhBkTlDU=";
   };
 
