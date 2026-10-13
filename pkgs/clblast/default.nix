@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "CNugteren";
     repo = "CLBlast";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-ikbu7yDE7NgxHhIJpt6LIEqUuon4Qha7FB3EeX5W01c=";
   };
 
