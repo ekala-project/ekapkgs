@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.inria.fr";
     owner = "gf2x";
     repo = "gf2x";
-    rev = "gf2x-${finalAttrs.version}";
+    tag = "gf2x-${finalAttrs.version}";
     sha256 = "04g5jg0i4vz46b4w2dvbmahwzi3k6b8g515mfw7im1inc78s14id";
   };
 
