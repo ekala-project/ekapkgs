@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "OpenSC";
     repo = "openct";
-    rev = "openct-${finalAttrs.version}";
+    tag = "openct-${finalAttrs.version}";
     hash = "sha256-YloE4YsvvYwfwmMCsEMGctApO/ujyZP/iAz21iXAnSc=";
   };
 
