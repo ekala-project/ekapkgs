@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "AcademySoftwareFoundation";
     repo = "openexr";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-6COvxY+LU4YxubpqjNTnYXMfDmMWXslQUYvd68+GgMQ=";
   };
 
