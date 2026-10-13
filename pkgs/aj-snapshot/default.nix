@@ -17,8 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "0z8wd5yvxdmw1h1rj6km9h01xd4xmp4d86gczlix7hsc7zrf0wil";
   };
 
-  doCheck = false;
-
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [
     alsa-lib
