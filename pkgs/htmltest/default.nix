@@ -24,7 +24,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # tests require network access
-  doCheck = false;
 
   meta = {
     description = "Tool to test generated HTML output";
