@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "sewenew";
     repo = "redis-plus-plus";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-0q+pQ2tS04RYKsikTG5QMuTPW3f6+fFIPuJZVf/aIw0=";
   };
 
