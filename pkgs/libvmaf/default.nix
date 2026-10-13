@@ -48,7 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     "out"
     "dev"
   ];
-  doCheck = false;
 
   passthru.tests = {
     inherit libaom;
