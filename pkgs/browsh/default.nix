@@ -39,7 +39,6 @@ buildGoModule rec {
   '';
 
   # Tests require network access
-  doCheck = false;
 
   meta = {
     description = "Fully-modern text-based browser, rendering to TTY and browsers";
