@@ -23,7 +23,6 @@ rustPlatform.buildRustPackage {
   cargoHash = "sha256-lWFleq9uxoshPMx2mYULCyEar72ZjGfgf0HlRoYfG/M=";
 
   # tests require a connected Nitrokey device
-  doCheck = false;
 
   # link against packaged libnitrokey
   env.USE_SYSTEM_LIBNITROKEY = 1;
