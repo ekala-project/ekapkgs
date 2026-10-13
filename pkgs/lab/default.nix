@@ -23,8 +23,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-ChysquNuUffcM3qaWUdqu3Av33gnKkdlotEoFKoedA0=";
 
-  doCheck = false;
-
   nativeBuildInputs = [
     makeBinaryWrapper
     installShellFiles
