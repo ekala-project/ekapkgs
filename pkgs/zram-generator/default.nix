@@ -47,8 +47,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     export SYSTEMD_UTIL_DIR=$($PKG_CONFIG --variable=systemdutildir systemd)
   '';
 
-  doCheck = false;
-
   dontCargoInstall = true;
 
   installFlags = [
