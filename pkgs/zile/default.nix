@@ -38,7 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   # Tests can't be run because most of them rely on the ability to
   # fiddle with the terminal.
-  doCheck = false;
 
   env.NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
 
