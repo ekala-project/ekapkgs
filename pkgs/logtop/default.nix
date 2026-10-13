@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   version = "0.7";
 
   src = fetchFromGitHub {
-    rev = "logtop-${finalAttrs.version}";
+    tag = "logtop-${finalAttrs.version}";
     owner = "JulienPalard";
     repo = "logtop";
     sha256 = "1f8vk9gybldxvc0kwz38jxmwvzwangsvlfslpsx8zf04nvbkqi12";
