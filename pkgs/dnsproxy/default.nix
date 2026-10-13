@@ -27,8 +27,6 @@ buildGoModule (finalAttrs: {
   # Development tool dependencies; not part of the main project
   excludedPackages = [ "internal/tools" ];
 
-  doCheck = false;
-
   meta = {
     description = "Simple DNS proxy with DoH, DoT, and DNSCrypt support";
     homepage = "https://github.com/AdguardTeam/dnsproxy";
