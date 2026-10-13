@@ -29,8 +29,6 @@ buildGoModule (finalAttrs: {
     "-w"
   ];
 
-  doCheck = false;
-
   preFixup = lib.optionalString withSpeech ''
     wrapProgram $out/bin/mob \
       --set MOB_VOICE_COMMAND "${lib.getBin espeak-ng}/bin/espeak"
