@@ -10,7 +10,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "apernet";
     repo = "hysteria";
-    rev = "app/v${finalAttrs.version}";
+    tag = "app/v${finalAttrs.version}";
     hash = "sha256-5qmMn64yuaqHE7R+dFz8zHUYJ/lo3fP2HhndIR5hHdE=";
   };
 
