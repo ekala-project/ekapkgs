@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Genivia";
     repo = "ugrep";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-KLVSsl8I4plrKVHfPD1rFumun4Bo2DEV+mGLS95U9WE=";
   };
 
