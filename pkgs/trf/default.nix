@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Benson-Genomics-Lab";
     repo = "trf";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-73LypVqBdlRdDCblf9JNZQmS5Za8xpId4ha5GjTJHDo=";
   };
 
