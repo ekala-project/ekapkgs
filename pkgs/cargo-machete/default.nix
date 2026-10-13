@@ -18,7 +18,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-cmOMWJOSJxhjXVdwVdDnTORJRSZcQ8kdDUTJaIy8dbk=";
 
   # tests require internet access
-  doCheck = false;
 
   meta = {
     description = "Cargo tool that detects unused dependencies in Rust projects";
