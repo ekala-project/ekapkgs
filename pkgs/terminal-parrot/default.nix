@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jmhobbs";
     repo = "terminal-parrot";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-VOV1KKaZrKyz+Fj//RbPrBE3ImC60FNauayVAMmoxFc=";
   };
 
