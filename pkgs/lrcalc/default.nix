@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromBitbucket {
     owner = "asbuch";
     repo = "lrcalc";
-    rev = "lrcalc-${finalAttrs.version}";
+    tag = "lrcalc-${finalAttrs.version}";
     sha256 = "0s3amf3z75hnrjyszdndrvk4wp5p630dcgyj341i6l57h43d1p4k";
   };
 
