@@ -40,7 +40,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # Tests require runtime configuration and network access.
-  doCheck = false;
 
   doInstallCheck = true;
   versionCheckProgramArg = [ "version" ];
