@@ -38,6 +38,5 @@ stdenvNoCC.mkDerivation rec {
     description = "Mint-X and Mint-Y themes for the cinnamon desktop";
     license = lib.licenses.gpl3; # from debian/copyright
     platforms = lib.platforms.linux;
-    teams = [ ];
   };
 }
