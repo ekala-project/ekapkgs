@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "HDFGroup";
     repo = "hdf5";
-    rev = "hdf5_${version}";
+    tag = "hdf5_${version}";
     hash = "sha256-mJTax+VWAL3Amkq3Ij8fxazY2nfpMOTxYMUQlTvY/rg=";
   };
 
