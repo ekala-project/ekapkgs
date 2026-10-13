@@ -17,8 +17,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   cargoHash = "sha256-QUlR6PuOLbeAHzARtTo7Zn7fmjs2ET6TdXT4VgCYEVg=";
 
-  doCheck = false;
-
   meta = {
     description = "Like jq, but for HTML";
     homepage = "https://github.com/mgdm/htmlq";
