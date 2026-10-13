@@ -18,7 +18,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "go-ethereum";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-FaVO1p7eZsXQN1Ikq2CcgiugHkSyETGagZLw6hIF7to=";
   };
 
