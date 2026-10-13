@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "fwupd";
     repo = "fwupd-efi";
-    rev = "${finalAttrs.version}";
+    tag = "${finalAttrs.version}";
     hash = "sha256-resmgi+t1YahXWxt1ZPgAXW3L0ejBclwcA8W8AS31is=";
   };
 
