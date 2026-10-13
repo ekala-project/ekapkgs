@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   # Tests try to download Catch2 at build time, which doesn't work in the sandbox
-  doCheck = false;
 
   # fix a circular dependency between "out" and "dev" outputs
   postInstall = ''
