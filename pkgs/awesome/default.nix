@@ -131,9 +131,10 @@ stdenv.mkDerivation rec {
     OVERRIDE_VERSION = "${version}";
     GENERATE_DOC = false;
     DO_COVERAGE = false;
+  }
+  // lib.optionalAttrs lua.pkgs.isLuaJIT {
+    LUA_LIBRARY = "${lua}/lib/libluajit-5.1.so";
   };
-
-  cmakeFlags = lib.optional lua.pkgs.isLuaJIT "-DLUA_LIBRARY=${lua}/lib/libluajit-5.1.so";
 
   env = {
     GI_TYPELIB_PATH = "${pango.out}/lib/girepository-1.0";
