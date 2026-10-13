@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "hunspell";
     repo = "hunspell";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-K7r7t1ZIy1/LD1c24hpPEG8/+M9lmuwo2yVJ08I3YPE=";
   };
 
