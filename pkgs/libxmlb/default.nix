@@ -63,8 +63,6 @@ stdenv.mkDerivation rec {
     out"}/libexec"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Library to help create and query binary XML blobs";
     mainProgram = "xb-tool";
