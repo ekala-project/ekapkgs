@@ -16,7 +16,7 @@ tcl.mkTclDerivation rec {
   src = fetchFromGitHub {
     owner = "benini";
     repo = "scid";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-S5G28RB0i97dT/hXWpsA6mp6AuiBylzoeXGIbQKZiNM=";
   };
 
