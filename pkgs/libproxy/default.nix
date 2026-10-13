@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "libproxy";
     repo = "libproxy";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-pkvmeD7O2EUDzw59/e7YcgiHDf2vvIXmd11axGSwCEs=";
   };
 
