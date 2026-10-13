@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "termpaint";
     repo = "termpaint";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-7mfGTC5vJ4806bDbrPMSVthtW05a+M3vgUlHGbtaI4Q=";
   };
 
