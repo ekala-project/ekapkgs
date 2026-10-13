@@ -28,7 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   # requires the wasm32-wasi target
-  doCheck = false;
 
   doInstallCheck = true;
   versionCheckProgramArg = "--version";
