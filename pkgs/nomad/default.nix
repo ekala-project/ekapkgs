@@ -30,8 +30,6 @@ buildGoModule rec {
 
   tags = [ "ui" ];
 
-  doCheck = false;
-
   postInstall = ''
     echo "complete -C $out/bin/nomad nomad" > nomad.bash
     installShellCompletion nomad.bash
