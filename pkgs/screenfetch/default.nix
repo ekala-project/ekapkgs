@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "KittyKatt";
     repo = "screenFetch";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-UNZMCLXhH4wDV0/fGWsB+KAi6aJVuPs6zpWXIQAqnjo=";
   };
 
