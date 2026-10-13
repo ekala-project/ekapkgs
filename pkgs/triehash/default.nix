@@ -12,7 +12,7 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "julian-klode";
     repo = "triehash";
-    rev = "debian/0.3-3";
+    tag = "debian/0.3-3";
     hash = "sha256-LxVcYj2WKHbhNu5x/DFkxQPOYrVkNvwiE/qcODq52Lc=";
   };
 
