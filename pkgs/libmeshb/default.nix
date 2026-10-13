@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "LoicMarechal";
     repo = "libMeshb";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-LdnjdamWzm/iihnBwjbUBMwLXNhtM+LRsTUEX4GYkgk=";
   };
 
