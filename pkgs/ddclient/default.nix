@@ -50,7 +50,6 @@ perlPackages.buildPerlPackage rec {
   '';
 
   # TODO: run upstream tests
-  doCheck = false;
 
   meta = {
     description = "Client for updating dynamic DNS service entries";
