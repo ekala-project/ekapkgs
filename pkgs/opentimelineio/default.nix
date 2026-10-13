@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "AcademySoftwareFoundation";
     repo = "OpenTimelineIO";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-PEqQraLx6wiJecytp37q15VayOn2fvaSlOeLs3qrRqo=";
   };
 
