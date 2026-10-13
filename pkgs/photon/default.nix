@@ -17,7 +17,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   };
 
   dontBuild = true;
-  doCheck = false;
 
   propagatedBuildInputs = with python3Packages; [
     requests
