@@ -23,7 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-cqTSLpmS/9BgtuVXlqBrxpFCPPs+wFhqOalOVhPD5r8=";
 
   # Integration tests fail
-  doCheck = false;
 
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ openssl ];
 
