@@ -19,8 +19,6 @@ buildGoModule (finalAttrs: {
 
   subPackages = [ "." ];
 
-  doCheck = false;
-
   meta = {
     description = "Language server for golangci-lint";
     homepage = "https://github.com/nametake/golangci-lint-langserver";
