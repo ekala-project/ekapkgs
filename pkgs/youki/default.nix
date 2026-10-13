@@ -18,7 +18,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "containers";
     repo = "youki";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-EiBQDMiqqDrJ+FpMbdNZW1DtKxTpVMSfibQlHXs+iLM=";
   };
 
