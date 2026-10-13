@@ -22,8 +22,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-rUYjQqEoZ4RzhJIGYot7LXbwLFmfWEie8F7F6Oczh4Q=";
 
-  doCheck = false;
-
   ldflags = [
     "-X github.com/hashicorp/consul/version.GitDescribe=v${version}"
     "-X github.com/hashicorp/consul/version.Version=${version}"
