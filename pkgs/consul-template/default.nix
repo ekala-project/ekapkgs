@@ -19,7 +19,6 @@ buildGoModule (finalAttrs: {
 
   # consul-template tests depend on vault and consul services running to
   # execute tests so we skip them here
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/hashicorp/consul-template/";
