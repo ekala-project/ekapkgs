@@ -29,7 +29,7 @@ stdenv.mkDerivation rec {
     domain = "gitlab.gnome.org";
     owner = "GNOME";
     repo = "libgsf";
-    rev = "LIBGSF_${lib.replaceStrings [ "." ] [ "_" ] version}";
+    tag = "LIBGSF_${lib.replaceStrings [ "." ] [ "_" ] version}";
     hash = "sha256-vC/6QEoV6FvFxQ0YlMkBbTmAtqbkvgZf+9BU8epi8yo=";
   };
 
