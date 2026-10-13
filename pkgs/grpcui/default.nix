@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-rj7Ha5zsulosy0CEqDSwax3bCf21PpOTELVzw1hXceo=";
 
-  doCheck = false;
-
   subPackages = [ "cmd/grpcui" ];
 
   ldflags = [
