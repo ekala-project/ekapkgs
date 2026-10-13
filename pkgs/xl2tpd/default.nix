@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "xelerance";
     repo = "xl2tpd";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-T4oEMMLb/SPkXfJ55fxBx9ii98qZVZRxPoU/eXlKb4U=";
   };
 
