@@ -52,8 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     tests = false;
   };
 
-  doCheck = false;
-
   meta = {
     homepage = "https://pwmt.org/projects/girara";
     description = "User interface library";
