@@ -39,7 +39,6 @@ buildGoModule (finalAttrs: {
   postInstall = ''
     cp -r "$NIX_BUILD_TOP/$sourceRoot"/{support,VERSION} $out/
   '';
-  doCheck = false;
 
   meta = {
     description = "SSH access and repository management app for GitLab";
