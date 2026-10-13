@@ -75,8 +75,6 @@ perlPackages.buildPerlPackage rec {
     done
   '';
 
-  doCheck = false;
-
   meta = {
     changelog = "https://github.com/OpenPrinting/foomatic-db-engine/blob/${src.rev}/ChangeLog";
     description = "OpenPrinting printer support database engine";
