@@ -39,8 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Image processing and analysis library";
     homepage = "http://www.leptonica.org/";
