@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "go-critic";
     repo = "go-critic";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fR5wWZyBJ0pnKsWkgvFUOqzZ5L+8AgdcGNMbpj+nhyQ=";
   };
 
