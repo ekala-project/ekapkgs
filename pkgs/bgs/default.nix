@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Gottox";
     repo = "bgs";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "V8GP+xLSiCvaYZt8Bi3/3KlTBaGnMYQUeNCHwH6Ejzo=";
   };
 
