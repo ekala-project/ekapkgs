@@ -37,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "dnkl";
     repo = "fcft";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-MkGlph9WpqH4daov5ZZPO2ua2mUbrsuo8Xk6GoKhoxg=";
   };
 
