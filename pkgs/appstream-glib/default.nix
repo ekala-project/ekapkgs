@@ -72,8 +72,6 @@ stdenv.mkDerivation (finalAttrs: {
     fonts = false;
   };
 
-  doCheck = false;
-
   meta = {
     description = "Objects and helper methods to read and write AppStream metadata";
     homepage = "https://people.freedesktop.org/~hughsient/appstream-glib/";
