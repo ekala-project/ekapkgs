@@ -29,8 +29,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-YXzTGtALTC9HQTAeZtweS+GONdgyqrHOJdLZt0QhnJM=";
 
-  doCheck = false;
-
   env = {
     BUILD_USER = "nix";
     BUILD_HOST = "nix";
