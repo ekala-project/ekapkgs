@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-r69aFl3GwgZ1Zr4cEy4oWlqsrjNCrqjwW9BU9+d8xDQ=";
 
-  doCheck = false;
-
   meta = {
     description = "Simple command line client for Atlassian's Jira service written in Go";
     homepage = "https://github.com/go-jira/jira";
