@@ -7,7 +7,7 @@
 let
   lss = fetchgit {
     url = "https://chromium.googlesource.com/linux-syscall-support";
-    rev = "v2022.10.12";
+    tag = "v2022.10.12";
     hash = "sha256-rF10v5oH4u9i9vnmFCVVl2Ew3h+QTiOsW64HeB0nRQU=";
   };
 in
