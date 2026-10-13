@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "danieljprice";
     repo = "giza";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-iax/Tefx33nPuNEfikmiNoCjIUNyhyKwQfGxr+DZxr0=";
   };
 
