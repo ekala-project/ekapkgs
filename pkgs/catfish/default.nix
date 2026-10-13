@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.xfce.org";
     owner = "apps";
     repo = "catfish";
-    rev = "catfish-${finalAttrs.version}";
+    tag = "catfish-${finalAttrs.version}";
     hash = "sha256-mTAunc1GJLkSu+3oWD5+2sCQemWdVsUURlP09UkbVyw=";
   };
 
