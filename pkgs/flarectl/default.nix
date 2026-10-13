@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "cloudflare";
     repo = "cloudflare-go";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-H8B2Dux12bfN0Espwdn051uBOqDA1881w2M70F22zzE=";
   };
 
