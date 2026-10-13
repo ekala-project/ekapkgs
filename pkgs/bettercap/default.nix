@@ -17,7 +17,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "bettercap";
     repo = "bettercap";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-oiJPZW0ywrRlKq9kfKilCxbq9WN5VhhY2T/5iDe78RM=";
   };
 
