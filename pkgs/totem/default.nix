@@ -89,8 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
     c_args = "-I${glib.dev}/include/gio-unix-2.0";
   };
 
-  doCheck = false;
-
   postPatch = ''
     chmod +x meson_compile_python.py
     patchShebangs \
