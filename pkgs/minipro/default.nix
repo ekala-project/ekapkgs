@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitLab {
     owner = "DavidGriffith";
     repo = "minipro";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-2Vi4NAKh+6N/at09egjS04ankEXnSHzsAIFSIau7jNc=";
   };
 
