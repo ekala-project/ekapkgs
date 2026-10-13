@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "alobbs";
     repo = "macchanger";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "1hypx6sxhd2b1nsxj314hpkhj7q4x9p2kfaaf20rjkkkig0nck9r";
   };
 
