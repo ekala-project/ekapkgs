@@ -15,8 +15,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   cargoHash = "sha256-A7kD46gfXWK/OlFVMULlMa7Z9Q1it9/rhGo6pjFa38k=";
 
-  doCheck = false;
-
   meta = {
     description = "Terminal feed reader with a fancy UI";
     mainProgram = "tuifeed";
