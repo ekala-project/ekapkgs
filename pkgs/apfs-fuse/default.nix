@@ -48,7 +48,9 @@ stdenv.mkDerivation {
   ]
   ++ lib.optional stdenv.hostPlatform.isLinux attr;
 
-  cmakeFlags = lib.optional stdenv.hostPlatform.isDarwin "-DUSE_FUSE3=OFF";
+  cmakeEntries = lib.optionalAttrs stdenv.hostPlatform.isDarwin {
+    USE_FUSE3 = false;
+  };
 
   env.NIX_CFLAGS_COMPILE = lib.optionalString stdenv.hostPlatform.isDarwin "-DUSE_FUSE2";
 
