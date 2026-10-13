@@ -19,7 +19,6 @@ buildGoModule rec {
   vendorHash = "sha256-WhXKBG1eCbXFQZmLwKsxjVV6uAfCMEIqco8Jr+vNdPI=";
 
   # dns-lookup is performed for the tests
-  doCheck = false;
   ldflags = [
     "-s"
     "-w"
