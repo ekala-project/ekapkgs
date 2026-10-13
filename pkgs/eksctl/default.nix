@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "eksctl-io";
     repo = "eksctl";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-+YVLF4ORRzKK5c0kZDN6YFFg7ZebKGDB+LXckOzPjpU=";
   };
 
