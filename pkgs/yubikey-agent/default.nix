@@ -29,8 +29,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-+IRPs3wm3EvIgfQRpzcVpo2JBaFQlyY/RI1G7XfVS84=";
 
-  doCheck = false;
-
   subPackages = [ "." ];
 
   ldflags = [
