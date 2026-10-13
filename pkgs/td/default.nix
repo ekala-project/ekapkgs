@@ -25,8 +25,6 @@ buildGoModule (finalAttrs: {
     "-X=main.Version=${finalAttrs.version}"
   ];
 
-  doCheck = false;
-
   doInstallCheck = true;
   nativeInstallCheckInputs = [ versionCheckHook ];
 
