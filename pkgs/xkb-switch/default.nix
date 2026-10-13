@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ierton";
     repo = "xkb-switch";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-DZAIL6+D+Hgs+fkJwRaQb9BHrEjAkxiqhOZyrR+Mpuk=";
   };
 
