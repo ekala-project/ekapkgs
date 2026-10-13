@@ -19,8 +19,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-i3qZ0OSV40oB8X3seixXMeji6CpcSiNK5wTbxF+TFpI=";
 
-  doCheck = false;
-
   meta = {
     description = "Helm Charts (k8s applications) as Code tool";
     mainProgram = "helmsman";
