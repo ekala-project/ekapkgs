@@ -26,7 +26,6 @@ buildGoModule (finalAttrs: {
   subPackages = [ "." ];
 
   # Tests require config files that aren't available in the build environment.
-  doCheck = false;
 
   doInstallCheck = true;
   nativeInstallCheckInputs = [
