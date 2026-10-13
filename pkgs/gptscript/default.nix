@@ -23,7 +23,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # Requires network access
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/gptscript-ai/gptscript";
