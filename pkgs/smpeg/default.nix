@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "icculus";
     repo = "smpeg";
-    rev = "release_${builtins.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
+    tag = "release_${builtins.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
     sha256 = "sha256-nq/i7cFGpJXIuTwN/ScLMX7FN8NMdgdsRM9xOD3uycs=";
   };
 
