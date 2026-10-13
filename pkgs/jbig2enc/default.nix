@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "agl";
     repo = "jbig2enc";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-tOyj5axPfsvlk33URUw90j6lJcG14No+ryAaa0B6Ni8=";
   };
 
