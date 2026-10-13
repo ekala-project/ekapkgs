@@ -21,7 +21,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "stacked-git";
     repo = "stgit";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-mR2XsZrTQhpKU5qfOm9Cbj/2zQ9zE8judJkSGtgZHCI=";
   };
 
