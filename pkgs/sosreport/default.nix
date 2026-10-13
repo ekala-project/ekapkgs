@@ -35,7 +35,6 @@ python3Packages.buildPythonPackage rec {
   ];
 
   # requires avocado-framework 94.0, latest version as of writing is 96.0
-  doCheck = false;
 
   preCheck = ''
     export PYTHONPATH=$PWD/tests:$PYTHONPATH
