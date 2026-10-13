@@ -61,7 +61,6 @@ python3Packages.buildPythonApplication {
   ];
 
   # Tests require a running mailbox server
-  doCheck = false;
 
   postInstall = ''
     install -Dm644 docs/wormhole.1 $out/share/man/man1/wormhole.1
