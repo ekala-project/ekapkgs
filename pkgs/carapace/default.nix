@@ -33,8 +33,6 @@ buildGoModule (finalAttrs: {
     GOOS= GOARCH= go generate ./...
   '';
 
-  doCheck = false;
-
   meta = {
     description = "Multi-shell multi-command argument completer";
     homepage = "https://carapace.sh/";
