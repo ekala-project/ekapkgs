@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "dparrish";
     repo = "libcli";
-    rev = "V${finalAttrs.version}";
+    tag = "V${finalAttrs.version}";
     hash = "sha256-ItmZfclx2mprKUOk/MwlS2w4f0ukiiPA5/QaRdGfEO8=";
   };
 
