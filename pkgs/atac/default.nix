@@ -31,8 +31,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     RUSTONIG_SYSTEM_LIBONIG = true;
   };
 
-  doCheck = false;
-
   postInstall = ''
     export HOME=$(mktemp -d)
     $out/bin/atac completions bash
