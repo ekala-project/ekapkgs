@@ -28,8 +28,6 @@ buildGoModule (finalAttrs: {
     "-X=main.VERSION=${finalAttrs.version}"
   ];
 
-  doCheck = false;
-
   postInstall = ''
     wrapProgram $out/bin/cloud-nuke --set-default DISABLE_TELEMETRY true
   '';
