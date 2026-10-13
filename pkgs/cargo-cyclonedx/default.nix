@@ -23,7 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # Test suite is broken since rustc 1.90, see:
   # https://github.com/CycloneDX/cyclonedx-rust-cargo/issues/807
-  doCheck = false;
 
   nativeBuildInputs = [
     pkg-config
