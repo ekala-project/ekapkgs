@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchgit {
     url = "https://git.code.sf.net/p/abook/git";
-    rev = "ver_${lib.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
+    tag = "ver_${lib.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
     hash = "sha256-aV57Ob6KN6/eNPrxxmNOy/qfhG687uVy5WY0cd4daCU=";
   };
 
