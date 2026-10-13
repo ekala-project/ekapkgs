@@ -11,7 +11,7 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "containernetworking";
     repo = "plugins";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-3OhUvIJPU5Ayc4/po9Rj4Tfa5536aN8bj+51M6Xg5os=";
   };
 
