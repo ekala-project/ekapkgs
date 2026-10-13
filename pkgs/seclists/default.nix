@@ -11,7 +11,7 @@ stdenvNoCC.mkDerivation {
   src = fetchFromGitHub {
     owner = "danielmiessler";
     repo = "SecLists";
-    rev = "2026.1";
+    tag = "2026.1";
     hash = "sha256-S1C+/gX3mvCC9OVxzCO6PrzbvxCz5mTWEXrBqzSuKps=";
   };
 
