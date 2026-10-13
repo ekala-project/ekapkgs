@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ahmetb";
     repo = "kubectx";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-/5VJ7RMq1kt+z9V+UymJ1SKbaFF+E9eHxYzkS37siG8=";
   };
 
