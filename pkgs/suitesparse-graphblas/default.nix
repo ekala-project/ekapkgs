@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "DrTimothyAldenDavis";
     repo = "GraphBLAS";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-N+rpBYcpAjUPPeeqU6pMrPKR+b5rBP+z7Z9i2jS6kNE=";
   };
 
