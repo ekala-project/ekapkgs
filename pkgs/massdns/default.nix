@@ -10,7 +10,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "blechschmidt";
     repo = "massdns";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-hrnAg5ErPt93RV4zobRGVtcKt4aM2tC52r08T7+vRGc=";
   };
 
