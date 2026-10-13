@@ -12,7 +12,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kimono-koans";
     repo = "httm";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-uTQCYEoYj1SySKK+TiIv8P8Pb2SvBkGVZALu6mC0QzM=";
   };
 
