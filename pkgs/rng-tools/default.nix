@@ -47,8 +47,6 @@ stdenv.mkDerivation rec {
     "PKCS11_ENGINE=${opensc}/lib/opensc-pkcs11.so"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Random number generator daemon";
     homepage = "https://github.com/nhorman/rng-tools";
