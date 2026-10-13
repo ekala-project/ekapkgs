@@ -57,8 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     "docs"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Linux kernel trace file system library";
     mainProgram = "sqlhist";
