@@ -81,6 +81,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/lxc/lxcfs/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     platforms = lib.platforms.linux;
-    teams = [ ];
   };
 })
