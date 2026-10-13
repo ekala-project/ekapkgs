@@ -24,8 +24,6 @@ buildGoModule (finalAttrs: {
     "-w"
   ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/bronze1man/yaml2json";
     changelog = "https://github.com/bronze1man/yaml2json/releases/tag/v${finalAttrs.version}";
