@@ -36,8 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Intel Video Processing Library";
     homepage = "https://intel.github.io/libvpl/";
