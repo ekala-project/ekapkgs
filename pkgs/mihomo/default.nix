@@ -31,7 +31,6 @@ buildGoModule rec {
   ];
 
   # network required
-  doCheck = false;
 
   passthru.tests = {
   };
