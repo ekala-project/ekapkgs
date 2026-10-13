@@ -32,8 +32,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     done
   '';
 
-  doCheck = false;
-
   preInstall = ''
     substituteInPlace setup.py --replace /usr/share/doc/ share/doc/
 
