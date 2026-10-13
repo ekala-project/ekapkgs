@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "OLSR";
     repo = "olsrd";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "1xk355dm5pfjil1j4m724vkdnc178lv6hi6s1g0xgpd59avbx90j";
   };
 
