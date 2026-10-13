@@ -38,7 +38,7 @@ lib.mapAttrs mk (lib.importJSON ./srcs-generated.json)
     src = fetchFromGitHub {
       owner = "qt";
       repo = "qtpositioning";
-      rev = "v${version}";
+      tag = "v${version}";
       hash = "sha256-L/P+yAQItm3taPpCNoOOm7PNdOFZiIwJJYflk6JDWvU=";
     };
   };
