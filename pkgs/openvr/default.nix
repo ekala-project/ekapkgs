@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ValveSoftware";
     repo = "openvr";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-xtCqro73fWQ6i0PiVmWYCK30DUSq1WeALoUolUjuWlE=";
   };
 
