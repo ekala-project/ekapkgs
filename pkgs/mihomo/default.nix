@@ -12,7 +12,7 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "MetaCubeX";
     repo = "mihomo";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-tfO2JiG9/1lwf8LpjtexqSSVKGxqklm+kAWLSINAqoE=";
   };
 
