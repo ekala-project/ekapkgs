@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitLab {
     owner = "asus-linux";
     repo = "supergfxctl";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-d3jN4i4oHRFDgr5f6y42gahrCfXBPB61T72x6IeiskM=";
   };
 
