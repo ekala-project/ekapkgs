@@ -36,7 +36,6 @@ buildGoModule (finalAttrs: {
   subPackages = [ "." ];
 
   # Requires network access
-  doCheck = false;
 
   meta = {
     description = "Telegram downloader/tools written in Golang";
