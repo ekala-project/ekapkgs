@@ -29,8 +29,6 @@ buildGoModule (finalAttrs: {
 
   excludedPackages = [ "test/flake" ];
 
-  doCheck = false;
-
   ldflags = [
     "-s"
     "-X github.com/gruntwork-io/go-commons/version.Version=v${finalAttrs.version}"
