@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "CarVac";
     repo = "librtprocess";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-/1o6SWUor+ZBQ6RsK2PoDRu03jcVRG58PNYFttriH2w=";
   };
 
