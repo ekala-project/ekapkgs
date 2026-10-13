@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
     group = "tpo";
     owner = "anti-censorship/pluggable-transports";
     repo = "webtunnel";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9dXlkIkCERy/eFsVrAfBkbjU6aEeJLGmlLjLuXTwAs8=";
   };
 
