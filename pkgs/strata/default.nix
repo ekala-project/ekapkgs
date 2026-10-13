@@ -48,8 +48,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     gstreamer.plugins-good
   ];
 
-  doCheck = false;
-
   meta = {
     description = "A fast, keyboard-first file manager for Linux";
     homepage = "https://github.com/lgse/strata";
