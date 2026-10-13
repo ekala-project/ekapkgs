@@ -72,8 +72,6 @@ stdenv.mkDerivation (finalAttrs: {
     systemd = false;
   };
 
-  doCheck = false;
-
   postPatch = ''
     patchShebangs gcr/fixtures/ || true
 
