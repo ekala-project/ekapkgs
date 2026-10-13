@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ipfs";
     repo = "ipget";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-J3b3v8D/lmHOfqAKi4TvXlDd7CR2P8Nk2EEQEQg+j2E=";
   };
 
