@@ -33,7 +33,6 @@ buildGoModule (finalAttrs: {
   '';
 
   # Network required
-  doCheck = false;
   meta = {
     description = "Feature-packed proxy & relay utility optimized for lossy, unstable connections";
     homepage = "https://github.com/apernet/hysteria";
