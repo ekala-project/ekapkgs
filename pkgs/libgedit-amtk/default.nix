@@ -52,8 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
     gtk3
   ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://gitlab.gnome.org/World/gedit/libgedit-amtk";
     description = "Actions, Menus and Toolbars Kit for GTK applications";
