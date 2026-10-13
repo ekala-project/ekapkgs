@@ -63,7 +63,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   dontCargoBuild = true;
   buildFlags = [ "all" ];
 
-  doCheck = false;
   dontCargoCheck = true;
 
   dontCargoInstall = true;
