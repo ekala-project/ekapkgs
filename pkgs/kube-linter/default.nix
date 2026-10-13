@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "stackrox";
     repo = "kube-linter";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-JpabvLiYnDglf6rLr7HLGPafs9HHV/GZBErXr7CBQbo=";
   };
 
