@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "rocky";
     repo = "libcdio-paranoia";
-    rev = "release-10.2+${finalAttrs.version}";
+    tag = "release-10.2+${finalAttrs.version}";
     hash = "sha256-n05PSVgh6z7BFPq4CjJa5DqCO7Huj8Bsg0x3HQPsbeI=";
   };
 
