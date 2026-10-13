@@ -26,7 +26,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # Tests require connectivity to various backends.
-  doCheck = false;
 
   meta = {
     description = "Helm-like configuration values loader with support for various sources";
