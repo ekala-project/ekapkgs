@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "open-iscsi";
     repo = "open-iscsi";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-omQ1cWVqAoIwKJRUUmGBLDyJy80Pwk3OnHWOrfzdvj8=";
   };
 
