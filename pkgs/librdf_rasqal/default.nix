@@ -34,8 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
   postInstall = "rm -rvf $out/share/gtk-doc";
 
   nativeCheckInputs = [ perl ];
-  doCheck = false;
-  doInstallCheck = false;
 
   meta = {
     description = "Library that handles Resource Description Framework (RDF)";
