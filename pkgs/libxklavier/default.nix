@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
 
   src = fetchgit {
     url = "https://gitlab.freedesktop.org/archived-projects/libxklavier.git";
-    rev = "${pname}-${version}";
+    tag = "${pname}-${version}";
     sha256 = "1w1x5mrgly2ldiw3q2r6y620zgd89gk7n90ja46775lhaswxzv7a";
   };
 
