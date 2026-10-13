@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = null;
 
-  doCheck = false;
-
   subPackages = [ "internal" ];
 
   ldflags = [
