@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchgit {
     url = "https://anongit.gentoo.org/git/proj/pax-utils.git";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-eeWu8XKBAq6U5K5a93BZYGFGfz2R8ysW/VaCyjN0Um8=";
   };
 
