@@ -19,7 +19,6 @@ buildGoModule (finalAttrs: {
   excludedPackages = [ "example" ];
 
   # test suite requires network
-  doCheck = false;
 
   meta = {
     description = "CLI and Go API to Test Internet Speed using speedtest.net";
