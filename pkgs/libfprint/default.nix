@@ -59,8 +59,6 @@ stdenv.mkDerivation rec {
     doc = false;
   };
 
-  doCheck = false;
-
   meta = {
     homepage = "https://fprint.freedesktop.org/";
     description = "Library designed to make it easy to add support for consumer fingerprint readers";
