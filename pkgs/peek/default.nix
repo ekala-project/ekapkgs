@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "phw";
     repo = "peek";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "1xwlfizga6hvjqq127py8vabaphsny928ar7mwqj9cyqfl6fx41x";
   };
 
