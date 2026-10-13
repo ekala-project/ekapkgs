@@ -18,7 +18,7 @@ stdenv.mkDerivation {
     owner = "scitokens";
     repo = "scitokens-cpp";
 
-    rev = "v1.4.1";
+    tag = "v1.4.1";
     hash = "sha256-qZUW+b8drIAm21baUO1+O39O9FPP2McmdjsfGTRGRfQ=";
   };
 
