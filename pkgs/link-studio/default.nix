@@ -62,8 +62,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     makeWrapperArgs+=("''${gappsWrapperArgs[@]}")
   '';
 
-  doCheck = false;
-
   meta = {
     description = "Native Linux controller for Insta360 Link webcams";
     homepage = "https://github.com/jweaver60/link-studio";
