@@ -20,7 +20,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "google";
     repo = "go-containerregistry";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-OxywOhruteTqkCVhTvWuxMqx7HQfPoSZM+mEXVihUl4=";
   };
   vendorHash = null;
