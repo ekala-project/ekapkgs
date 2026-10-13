@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "intel";
     repo = "libvpl";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-K2TWk6e0qzxfHWk1eFynCPGleWU0vll6y6Ah4/BOTRw=";
   };
 
