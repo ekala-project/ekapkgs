@@ -28,8 +28,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-UZLF/oJbWUKwIPyWcT1QX+rIU5SRnav/3GLq2xT+jgk=";
 
-  doCheck = false;
-
   subPackages = [ "." ];
 
   buildInputs = lib.optional stdenv.hostPlatform.isLinux alsa-lib;
