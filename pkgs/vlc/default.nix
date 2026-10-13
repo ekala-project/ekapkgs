@@ -99,7 +99,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "code.videolan.org";
     owner = "videolan";
     repo = "vlc";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-vg/kKNrIpGF7Olz8EiA1ZsW5SB4iHlvFbREDp4JokB0=";
   };
 
