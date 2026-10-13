@@ -184,7 +184,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "MusicPlayerDaemon";
     repo = "MPD";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-ZcSMd+PhO8sWGA96GtwM3ykPS//8SpqDh9lLh3unB8Q=";
   };
 
