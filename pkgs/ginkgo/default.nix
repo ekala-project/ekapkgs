@@ -29,8 +29,6 @@ buildGoModule (finalAttrs: {
     "types"
   ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://onsi.github.io/ginkgo/";
     changelog = "https://github.com/onsi/ginkgo/blob/master/CHANGELOG.md";
