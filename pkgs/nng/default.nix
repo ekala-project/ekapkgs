@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nanomsg";
     repo = "nng";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-WumCZ7Qx/ArKX5GOu7kpc0TCbqQMn1o+BKksBvfSRw8=";
   };
 
