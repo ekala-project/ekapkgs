@@ -54,8 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     "cstdint"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Cartographic Projections Library";
     homepage = "https://proj.org/";
