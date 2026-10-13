@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "rfmoz";
     repo = "tuptime";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-ESdhp65OclwhbqXjC5bA+qTx22H5haINZPg7G1PXnaI=";
   };
 
