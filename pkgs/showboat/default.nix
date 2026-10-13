@@ -28,7 +28,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # Tests require python3 and other executors on PATH.
-  doCheck = false;
 
   doInstallCheck = true;
   nativeInstallCheckInputs = [ versionCheckHook ];
