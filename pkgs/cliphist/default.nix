@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-4XyDLOJHdre/1BpjgFt/W6gOlPOvKztE+MsbwE3JAaQ=";
 
-  doCheck = false;
-
   meta = {
     description = "Wayland clipboard manager";
     homepage = "https://github.com/sentriz/cliphist";
