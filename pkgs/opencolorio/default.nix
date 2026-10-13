@@ -79,8 +79,6 @@ stdenv.mkDerivation rec {
   ++ lib.optional (!pythonBindings) "-DOCIO_BUILD_PYTHON=OFF"
   ++ lib.optional (!buildApps) "-DOCIO_BUILD_APPS=OFF";
 
-  doCheck = false;
-
   meta = with lib; {
     homepage = "https://opencolorio.org";
     description = "Color management framework for visual effects and animation";
