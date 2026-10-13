@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "raboof";
     repo = "nethogs";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-ojbsCoJ8fOaHgm1tWyM59siTDYmCllXOUNqNQJwRhws=";
   };
 
