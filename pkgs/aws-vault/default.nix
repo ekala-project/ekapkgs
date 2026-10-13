@@ -40,8 +40,6 @@ buildGoModule (finalAttrs: {
       --zsh $src/contrib/completions/zsh/aws-vault.zsh
   '';
 
-  doCheck = false;
-
   subPackages = [ "." ];
 
   # set the version. see: aws-vault's Makefile
