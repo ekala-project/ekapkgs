@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "mptre";
     repo = "yank";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-JSkUBKQKl5TlpA2MSk6Lt2n1L8MdhLKzH/urYkOqlJo=";
   };
 
