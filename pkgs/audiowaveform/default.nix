@@ -45,7 +45,6 @@ stdenv.mkDerivation rec {
   '';
 
   # One test is failing, see PR #101947
-  doCheck = false;
 
   meta = {
     description = "C++ program to generate waveform data and render waveform images from audio files";
