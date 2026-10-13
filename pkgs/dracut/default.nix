@@ -33,7 +33,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "dracutdevs";
     repo = "dracut";
-    rev = version;
+    tag = version;
     hash = "sha256-zSyC2SnSQkmS/mDpBXG2DtVVanRRI9COKQJqYZZCPJM=";
   };
 
