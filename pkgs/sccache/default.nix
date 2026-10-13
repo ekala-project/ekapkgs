@@ -29,7 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # Tests fail because of client server setup which is not possible inside the
   # pure environment, see https://github.com/mozilla/sccache/issues/460
-  doCheck = false;
 
   meta = {
     description = "Ccache with Cloud Storage";
