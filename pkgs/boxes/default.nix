@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ascii-boxes";
     repo = "boxes";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-dkL5VYs6j9LzvhCLU4BEbiTDWJpW1vQrmLWQ40P3Yzo=";
   };
 
