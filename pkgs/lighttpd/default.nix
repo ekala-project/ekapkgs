@@ -53,8 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     sed -i "s:/usr/bin/file:${file}/bin/file:g" configure
   '';
 
-  doCheck = false;
-
   postInstall = ''
     mkdir -p "$out/share/lighttpd/doc/config"
     cp -vr doc/config "$out/share/lighttpd/doc/"
