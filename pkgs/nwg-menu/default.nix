@@ -24,8 +24,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-5gazNUZdPZh21lcnVFKPSDc/JLi8d6tqfP4NKMzPa8U=";
 
-  doCheck = false;
-
   buildInputs = [
     at-spi2-core
     gtk3
