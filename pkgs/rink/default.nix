@@ -34,8 +34,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     openssl
   ];
 
-  doCheck = false;
-
   postBuild = ''
     make man
   '';
