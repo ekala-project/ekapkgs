@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "salsa.debian.org";
     owner = "installer-team";
     repo = "os-prober";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-91UTiwg4qIi+aCzAto7tCd5WZFjI15XxR1/hZQ0fUa4=";
   };
 
