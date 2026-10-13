@@ -32,8 +32,6 @@ buildGoModule (finalAttrs: {
     "-X=main.version=${finalAttrs.version}"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Database migration tool which supports SQL migrations and Go functions";
     homepage = "https://pressly.github.io/goose/";
