@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "cinemast";
     repo = "libjson-rpc-cpp";
     sha256 = "sha256-YCCZN4y88AixQeo24pk6YHfSCsJz8jJ97Dg40KM08cQ=";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
   };
 
   env.NIX_CFLAGS_COMPILE = "-I${catch2}/include/catch2";
