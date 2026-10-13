@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "maekitalo";
     repo = "tntnet";
-    rev = "V${finalAttrs.version}";
+    tag = "V${finalAttrs.version}";
     hash = "sha256-ujVPOreCGCFlYHa19yCIiZ0ed+p0jnS14DHDwKYvtc0=";
   };
 
