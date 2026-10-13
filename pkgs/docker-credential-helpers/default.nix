@@ -13,7 +13,7 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "docker";
     repo = "docker-credential-helpers";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "sha256-qrcAMuQxAZE+F5xyTbaUFo4qVDqV/WMS9cO+Vsn7zU8=";
   };
 
