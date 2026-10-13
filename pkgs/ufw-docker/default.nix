@@ -17,7 +17,7 @@ stdenvNoCC.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "chaifeng";
     repo = "ufw-docker";
-    rev = version;
+    tag = version;
     hash = "sha256-02qcqJjvN2d+ljcsUjlXd97Dydh72wsvJ3lNFBjA6b4=";
   };
 
