@@ -29,7 +29,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   ];
 
   # Yokadi doesn't have any tests
-  doCheck = false;
 
   meta = {
     description = "Command line oriented, sqlite powered, todo-list";
