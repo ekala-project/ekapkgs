@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "DaehwanKimLab";
     repo = "hisat2";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-NbCjQNOfR90vYbnUfZLnHlQirUxEOP3XYJ+DDl7L5w8=";
   };
 
