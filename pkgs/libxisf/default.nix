@@ -34,9 +34,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeEntries = {
     USE_BUNDLED_LIBS = false;
+  }
+  // lib.optionalAttrs stdenv.hostPlatform.isStatic {
+    BUILD_SHARED_LIBS = false;
   };
-
-  cmakeFlags = lib.optional stdenv.hostPlatform.isStatic "-DBUILD_SHARED_LIBS=OFF";
 
   buildInputs = [
     lz4
