@@ -30,8 +30,6 @@ buildGoModule (finalAttrs: {
       --zsh <($out/bin/gmailctl completion zsh)
   '';
 
-  doCheck = false;
-
   meta = {
     description = "Declarative configuration for Gmail filters";
     homepage = "https://github.com/mbrt/gmailctl";
