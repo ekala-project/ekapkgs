@@ -28,7 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
   makeFlags = [ "PREFIX=$(out)" ];
 
   # https://github.com/felt/tippecanoe/issues/148
-  doCheck = false;
 
   passthru.tests.version = testers.testVersion {
     package = finalAttrs.finalPackage;
