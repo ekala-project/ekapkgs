@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "caddyserver";
     repo = "xcaddy";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-SXCOKrGaTwcdrVhPenQGjdBaDl8/bUGmm1B3spk8eUA=";
   };
 
