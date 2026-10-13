@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "GoogleCloudPlatform";
     repo = "terraformer";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-xbZm0FOa/W6/qXMnJHuGgJhgu2NWtKrMoP0Ttd+hhdw=";
   };
 
