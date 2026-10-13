@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "eafer";
     repo = "rdrview";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-5BtXwtVvenzTm6JEGh4oSlQQrcwLCWXnlykhfPFhuIQ=";
   };
 
