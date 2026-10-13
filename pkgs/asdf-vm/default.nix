@@ -27,7 +27,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # Tests have additional requirements
-  doCheck = false;
 
   postInstall = ''
     # Install profile.d script for environment setup
