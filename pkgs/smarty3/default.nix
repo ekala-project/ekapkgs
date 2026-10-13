@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "smarty-php";
     repo = "smarty";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-MKLrToUVpLDWH9UkwtnAlYyPY2ow7TskITQKNRLGXjc=";
   };
 
