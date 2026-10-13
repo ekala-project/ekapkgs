@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "mheily";
     repo = "libkqueue";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-hT7/0Cy4UCKN16Rlwyjj1AAYC4/n1+170xsnYrjiglQ=";
   };
 
