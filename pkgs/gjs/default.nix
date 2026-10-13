@@ -103,8 +103,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-Dprofiler=disabled"
   ];
 
-  doCheck = false;
-
   strictDeps = true;
 
   postPatch = ''
