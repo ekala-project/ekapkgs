@@ -70,8 +70,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     uharfbuzz
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "ocrmypdf" ];
 
   postInstall = ''
