@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "SecureAuthCorp";
     repo = "oauth2c";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-pZ7TgmjNMUJSLvKBu4eo8HbGIjtoHHjXhdyMsW/Nkjo=";
   };
 
