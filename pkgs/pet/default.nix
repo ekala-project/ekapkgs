@@ -26,8 +26,6 @@ buildGoModule (finalAttrs: {
     "-X=github.com/knqyf263/pet/cmd.version=${finalAttrs.version}"
   ];
 
-  doCheck = false;
-
   subPackages = [ "." ];
 
   nativeBuildInputs = [
