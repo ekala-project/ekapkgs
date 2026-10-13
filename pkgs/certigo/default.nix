@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "square";
     repo = "certigo";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-Y2m+uO/jxwWdutry859Y6IdNJpXjjkrlJ+LJrjS616Y=";
   };
 
