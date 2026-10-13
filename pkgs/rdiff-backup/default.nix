@@ -29,7 +29,6 @@ pypkgs.buildPythonApplication (finalAttrs: {
   dependencies = with pypkgs; [ pyyaml ];
 
   # no tests from pypi
-  doCheck = false;
 
   pythonImportsCheck = [ "rdiff_backup" ];
 
