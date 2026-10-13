@@ -75,7 +75,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Open Source Software Image Map library";
     homepage = "https://github.com/ossimlabs/ossim";
     license = lib.licenses.mit;
-    teams = [ ];
     platforms = lib.platforms.unix;
   };
 })
