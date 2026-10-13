@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "weidai11";
     repo = "cryptopp";
-    rev = "CRYPTOPP_${underscoredVersion}";
+    tag = "CRYPTOPP_${underscoredVersion}";
     hash = "sha256-HV+afSFkiXdy840JbHBTR8lLL0GMwsN3QdwaoQmicpQ=";
   };
 
