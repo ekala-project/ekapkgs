@@ -21,8 +21,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   cargoHash = "sha256-jIZaGTqqqS4c9ZSKHqbl5ozbtlOVrmDWS+dT4veP9ww=";
 
-  doCheck = false;
-
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd bob \
       --bash <($out/bin/bob complete bash) \
