@@ -16,7 +16,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-2wJBYTOfaPBm+24ABl1cOs4W7UsRPYn70PSFDRRMCyU=";
 
   # tests require rust nightly
-  doCheck = false;
 
   meta = {
     description = "Sass compiler written purely in Rust";
