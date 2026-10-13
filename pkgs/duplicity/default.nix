@@ -20,12 +20,17 @@ let
   self = python3.pkgs.buildPythonApplication rec {
     pname = "duplicity";
     version = "3.0.7";
-    format = "setuptools";
+    pyproject = true;
+
+    build-system = with python3.pkgs; [
+      setuptools
+      setuptools-scm
+    ];
 
     src = fetchFromGitLab {
       owner = "duplicity";
       repo = "duplicity";
-      rev = "rel.${version}";
+      tag = "rel.${version}";
       hash = "sha256-t2YFp/AuQ9xKZSPmNA/IuQYNOcnPO0l8xhXyLBKSuqA=";
     };
 
@@ -51,7 +56,6 @@ let
       gettext
       python3.pkgs.wrapPython
       gtk3.wrapGAppsNoGuiHook
-      python3.pkgs.setuptools-scm
       python3.pkgs.pycodestyle
       python3.pkgs.pylint
     ];
