@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "mpeg5";
     repo = "xevd";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-MMqtgXEcIYLr5gyIpGj1p0aPiEW0zb6ZAQ+75kHhyxU=";
   };
 
