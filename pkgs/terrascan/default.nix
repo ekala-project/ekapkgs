@@ -23,7 +23,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # Tests want to download a vulnerable Terraform project
-  doCheck = false;
 
   meta = {
     description = "Detect compliance and security violations across Infrastructure";
