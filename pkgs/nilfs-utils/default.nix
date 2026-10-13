@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nilfs-dev";
     repo = "nilfs-utils";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-9IUuam5g24+eywEeNZET8TAvKJVevJBwHTHSwN9Tz58=";
   };
 
