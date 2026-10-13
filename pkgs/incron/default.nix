@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "ar-";
     repo = "incron";
-    rev = "${pname}-${version}";
+    tag = "${pname}-${version}";
     sha256 = "11d5f98cjafiv9h9zzzrw2s06s2fvdg8gp64km7mdprd2xmy6dih";
   };
 
