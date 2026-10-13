@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nextdns";
     repo = "nextdns";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-oTxa/iZ13WSrHOxlmKL55veXhGq1m1Md9RZESdwsKJ0=";
   };
 
