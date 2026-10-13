@@ -32,7 +32,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildInputs = [ systemd ];
 
   # upstream doesn't have tests, don't build twice just to find that out
-  doCheck = false;
 
   doInstallCheck = true;
 
