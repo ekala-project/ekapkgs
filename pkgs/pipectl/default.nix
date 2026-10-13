@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Ferdi265";
     repo = "pipectl";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-pNBw1ukNaqu40qPXnORUGApYpJ/0EAO9Tq5zAbDe33I=";
   };
 
