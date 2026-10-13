@@ -72,8 +72,6 @@ stdenv.mkDerivation rec {
     ];
   };
 
-  doCheck = false;
-
   meta = {
     description = "Library for manipulating storage volume encryption keys and storing them separately from volumes";
     mainProgram = "volume_key";
