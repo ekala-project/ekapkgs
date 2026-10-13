@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "miguelmarco";
     repo = "libhomfly";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-ND2ZBKwHlRYTqxC+ltkCQ2lolNAkhZZm5hriIaOLqC4=";
   };
 
