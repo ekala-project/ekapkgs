@@ -32,8 +32,6 @@ buildGoModule rec {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  doCheck = false;
-
   subPackages = [
     "cmd/mutagen"
     "cmd/mutagen-agent"
