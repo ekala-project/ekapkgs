@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "drowe67";
     repo = "codec2";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-69Mp4o3MgV98Fqfai4txv5jQw2WpoPuoWcwHsNAFPQM=";
   };
 
