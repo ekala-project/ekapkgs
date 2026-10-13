@@ -28,7 +28,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ openssl ];
 
-  mesonFlags = lib.optional (stdenv.hostPlatform.libc == "glibc") "-Dc_args=-D_DEFAULT_SOURCE";
+  mesonEntries = lib.optionalAttrs (stdenv.hostPlatform.libc == "glibc") {
+    c_args = "-D_DEFAULT_SOURCE";
+  };
 
   meta = {
     description = "Library for Posting Electronic Mail";
