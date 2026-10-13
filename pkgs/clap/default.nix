@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "free-audio";
     repo = "clap";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-87vmpcfi2+bWZ0GFU91Qd52WddeuHTIDAdz9fc4ciJc=";
   };
 
