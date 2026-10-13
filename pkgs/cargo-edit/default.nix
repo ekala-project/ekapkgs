@@ -27,8 +27,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     zlib
   ];
 
-  doCheck = false; # integration tests depend on changing cargo config
-
   meta = {
     description = "Utility for managing cargo dependencies from the command line";
     homepage = "https://github.com/killercup/cargo-edit";
