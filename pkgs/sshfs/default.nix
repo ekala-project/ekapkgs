@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "libfuse";
     repo = "sshfs";
-    rev = "sshfs-${version}";
+    tag = "sshfs-${version}";
     sha256 = "sha256-BT9qttXyryliR2kV1xVYvcwJhB6gkGf7IEwrTB38SvI=";
   };
 
