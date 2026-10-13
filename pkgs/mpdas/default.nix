@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "hrkfdn";
     repo = "mpdas";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "0fcqc4w6iwbi1n3cllcgj0k61zffhqkbr8668myxap21m35x8y1r";
   };
 
