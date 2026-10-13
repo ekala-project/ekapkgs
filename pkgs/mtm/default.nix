@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "deadpixi";
     repo = "mtm";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "0gibrvah059z37jvn1qs4b6kvd4ivk2mfihmcpgx1vz6yg70zghv";
   };
 
