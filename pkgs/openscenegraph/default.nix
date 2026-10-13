@@ -66,7 +66,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "openscenegraph";
     repo = "OpenSceneGraph";
-    rev = "OpenSceneGraph-${finalAttrs.version}";
+    tag = "OpenSceneGraph-${finalAttrs.version}";
     sha256 = "00i14h82qg3xzcyd8p02wrarnmby3aiwmz0z43l50byc9f8i05n1";
   };
 
