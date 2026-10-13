@@ -184,8 +184,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   dontWrapGApps = true;
 
-  doCheck = false;
-
   env = {
     FONTCONFIG_FILE =
       let
