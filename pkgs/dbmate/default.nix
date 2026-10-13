@@ -19,8 +19,6 @@ buildGoModule (finalAttrs: {
 
   tags = [ "fts5" ];
 
-  doCheck = false;
-
   meta = {
     description = "Database migration tool";
     mainProgram = "dbmate";
