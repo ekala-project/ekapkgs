@@ -76,7 +76,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   # Tests segfault due to duktape/glibc IFUNC incompatibility in the build environment
-  doCheck = false;
 
   nativeBuildInputs = [
     asciidoctor
