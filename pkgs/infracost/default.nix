@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
 
   src = fetchFromGitHub {
     owner = "infracost";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     repo = "infracost";
     sha256 = "sha256-4a29Lu5ShQpM3TfCXh0rA5gtO22MyT6/G2y3C4F3iyo=";
   };
