@@ -14,7 +14,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "reproducible-containers";
     repo = "diffoci";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-rOgnFqjA78JhW3oo3tHDsIjz8GzwK6Og7BqOTEj5fn4=";
   };
 
