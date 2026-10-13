@@ -23,7 +23,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   dependencies = with python3.pkgs; [ dnspython ];
 
   # Tests require network access
-  doCheck = false;
 
   pythonImportsCheck = [ "fierce" ];
 
