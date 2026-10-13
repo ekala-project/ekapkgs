@@ -62,9 +62,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeEntries = {
     INPUTLEAP_REVISION = "${builtins.substring 0 8 finalAttrs.src.rev}";
+  }
+  // lib.optionalAttrs withLibei {
+    INPUTLEAP_BUILD_LIBEI = true;
   };
-
-  cmakeFlags = lib.optional withLibei "-DINPUTLEAP_BUILD_LIBEI=ON";
 
   dontWrapGApps = true;
   preFixup = ''
