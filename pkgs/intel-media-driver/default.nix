@@ -25,7 +25,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "intel";
     repo = "media-driver";
-    rev = "intel-media-${version}";
+    tag = "intel-media-${version}";
     hash = "sha256-kRMBOQpGWVrOvQ2RoYZzoYAfB2r7UqesiaTajjw+SLA=";
   };
 
