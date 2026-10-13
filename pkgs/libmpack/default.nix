@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "libmpack";
     repo = "libmpack";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "0rai5djdkjz7bsn025k5489in7r1amagw1pib0z4qns6b52kiar2";
   };
 
