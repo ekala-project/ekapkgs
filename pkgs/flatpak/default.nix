@@ -212,8 +212,6 @@ stdenv.mkDerivation (finalAttrs: {
     systemd = withSystemd;
   };
 
-  doCheck = false;
-
   separateDebugInfo = true;
 
   meta = {
