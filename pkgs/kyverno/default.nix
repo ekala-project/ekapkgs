@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kyverno";
     repo = "kyverno";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3sFvqB3/18NJWViJynhk5urJ4rdHWrXQkzwNrjIE9iA=";
   };
 
