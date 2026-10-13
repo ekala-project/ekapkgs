@@ -88,7 +88,6 @@ stdenv.mkDerivation (finalAttrs: {
   #
   # These failures don't look serious. It would be nice to fix them, but I
   # don't know how and probably won't have the time to find out.
-  doCheck = false; # try to re-enable after next version update
 
   meta = {
     description = "Computer algebra system";
