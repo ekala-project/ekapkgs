@@ -50,8 +50,6 @@ rustPlatform.buildRustPackage rec {
       --prefix LD_LIBRARY_PATH : "${libPath}"
   '';
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/afnanenayet/diffsitter";
     description = "Tree-sitter based AST difftool to get meaningful semantic diffs";
