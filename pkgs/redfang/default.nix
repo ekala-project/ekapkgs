@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
     group = "kalilinux";
     owner = "packages";
     repo = "redfang";
-    rev = "upstream/${finalAttrs.version}";
+    tag = "upstream/${finalAttrs.version}";
     hash = "sha256-dF9QmBckyHAZ+JbLr0jTmp0eMu947unJqjrTMsJAfIE=";
   };
 
