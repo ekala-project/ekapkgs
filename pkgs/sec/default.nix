@@ -19,7 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [ perl ];
 
   dontBuild = false;
-  doCheck = false;
 
   installPhase = ''
     mkdir -p $out/bin $out/share/man/man1
