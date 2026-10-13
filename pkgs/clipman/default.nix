@@ -25,8 +25,6 @@ buildGoModule (finalAttrs: {
     "man"
   ];
 
-  doCheck = false;
-
   nativeBuildInputs = [
     makeWrapper
     installShellFiles
