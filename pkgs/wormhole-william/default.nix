@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "psanford";
     repo = "wormhole-william";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-KGJfz3nd03vcdrIsX8UUfdw96XwyU9PRzwK8O4/I8JQ=";
   };
 
