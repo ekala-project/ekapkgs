@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "facundoolano";
     repo = "rpg-cli";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-xNkM8qN9vg/WGRR/96aCQRVjIbSdSs2845l6oE6+tzg=";
   };
 
