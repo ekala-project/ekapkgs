@@ -68,7 +68,6 @@ perlPackages.buildPerlPackage rec {
   ];
 
   # Test fails due to "Argument list too long"
-  doCheck = false;
 
   installPhase = ''
     mkdir -p $out
