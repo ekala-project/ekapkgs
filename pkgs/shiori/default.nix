@@ -12,8 +12,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-H2IakJKaX/LzD+vzkGWK9YuCKvBfnKCZT6bm1zDaWeY=";
 
-  doCheck = false;
-
   src = fetchFromGitHub {
     owner = "go-shiori";
     repo = "shiori";
