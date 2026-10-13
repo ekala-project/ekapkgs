@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "so-fancy";
     repo = "diff-so-fancy";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-5laSG8UWsCXAK+Woiz1Opy3VViboCI7J2AsqoDiuq7k=";
   };
 
