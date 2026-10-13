@@ -17,7 +17,6 @@ buildGoModule (finalAttrs: {
 
   # needs network connection and fails at
   # https://github.com/0xERR0R/blocky/blob/development/resolver/upstream_resolver_test.go
-  doCheck = false;
 
   vendorHash = "sha256-QQ+bhLpDa1X4UVl8L3qJtI3lx8Ba3yLVqKoUR+aHSf0=";
 
