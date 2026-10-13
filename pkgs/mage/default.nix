@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = null;
 
-  doCheck = false;
-
   ldflags = [
     "-X github.com/magefile/mage/mage.commitHash=v${finalAttrs.version}"
     "-X github.com/magefile/mage/mage.gitTag=v${finalAttrs.version}"
