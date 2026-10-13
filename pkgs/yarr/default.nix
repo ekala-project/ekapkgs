@@ -29,8 +29,6 @@ buildGoModule (finalAttrs: {
     "sqlite_json"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Yet another rss reader";
     mainProgram = "yarr";
