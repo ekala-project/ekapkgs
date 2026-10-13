@@ -29,7 +29,6 @@ buildGoModule (finalAttrs: {
   __darwinAllowLocalNetworking = true;
 
   # e2e tests require Docker
-  doCheck = false;
 
   versionCheckProgramArg = "-V";
 
