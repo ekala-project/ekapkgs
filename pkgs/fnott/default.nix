@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "dnkl";
     repo = "fnott";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-II8fij64ufwXg71VoSayVpSFim9+2w3j4gdTRDBrYQE=";
   };
 
