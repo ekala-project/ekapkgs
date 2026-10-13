@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "newsraft";
     repo = "newsraft";
-    rev = "newsraft-${finalAttrs.version}";
+    tag = "newsraft-${finalAttrs.version}";
     hash = "sha256-c1IlPs+GxwDeUCpyQ6oy9iLC3YNLCJpjkj1gnwY7lxA=";
   };
 
