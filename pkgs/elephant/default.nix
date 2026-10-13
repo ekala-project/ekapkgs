@@ -33,7 +33,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "abenz1267";
     repo = "elephant";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-IQ/ke26+E174GWI0DqP0FpfS1yjqF53xFSaExyZzLTc=";
   };
 
