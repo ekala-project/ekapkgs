@@ -19,7 +19,7 @@ let
       inherit (self) version;
       owner = "samtay";
       repo = "so";
-      rev = "v${self.version}";
+      tag = "v${self.version}";
       hash = "sha256-25jZEo1C9XF4m9YzDwtecQy468nHyv2wnRuK5oY2siU=";
     };
 
