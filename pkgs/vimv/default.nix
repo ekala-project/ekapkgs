@@ -18,7 +18,6 @@ stdenvNoCC.mkDerivation {
   dontPatch = true;
   dontConfigure = true;
   dontBuild = true;
-  doCheck = false;
 
   installPhase = ''
     install -d $out/bin
