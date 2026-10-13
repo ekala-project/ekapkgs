@@ -13,8 +13,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = null;
 
-  doCheck = false;
-
   subPackages = [ "cmd/doctl" ];
 
   ldflags =
