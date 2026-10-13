@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "protocolbuffers";
     repo = "protobuf-go";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-1jaQXOwy5x2Yqzkkb5l/kbOhFVUgZ0N1yemDhgq32VE=";
   };
 
