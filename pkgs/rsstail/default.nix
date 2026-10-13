@@ -25,7 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   # just runs cppcheck linter
-  doCheck = false;
 
   meta = {
     description = "Monitor RSS feeds for new entries";
