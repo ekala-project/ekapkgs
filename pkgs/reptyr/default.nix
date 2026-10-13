@@ -20,8 +20,6 @@ stdenv.mkDerivation (finalAttrs: {
     "DESTDIR=$(out)"
   ];
 
-  doCheck = false;
-
   meta = {
     platforms = [
       "i686-linux"
