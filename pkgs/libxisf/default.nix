@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitea.nouspiro.space";
     owner = "nou";
     repo = "libXISF";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-vc42Jw7kBbQYu+/6jakxFnSuVkS8t6ZyYuSMLGMnEn4=";
   };
 
