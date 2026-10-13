@@ -9,7 +9,9 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "fail2ban";
   version = "1.1.1";
-  format = "setuptools";
+  pyproject = true;
+
+  build-system = [ python3.pkgs.setuptools ];
 
   src = fetchFromGitHub {
     owner = "fail2ban";
