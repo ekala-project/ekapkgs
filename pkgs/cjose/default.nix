@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "OpenIDC";
     repo = "cjose";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-6Z1mbjoKBmt2xfr6NHqHlaksZCLAELnMMNlrqZagR/c=";
   };
 
