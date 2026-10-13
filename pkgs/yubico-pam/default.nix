@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Yubico";
     repo = "yubico-pam";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "0hb773zlf11xz4bwmsqv2mq5d4aq2g0crdr5cp9xwc4ivi5gd4kg";
   };
 
