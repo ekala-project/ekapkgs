@@ -88,8 +88,6 @@ stdenv.mkDerivation (finalAttrs: {
     "localedir=$out/share/locale"
   ];
 
-  doCheck = false;
-
   doInstallCheck = true;
 
   installCheckPhase = ''
