@@ -33,8 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
   dontBuild = true;
   dontUseCmakeBuildDir = true;
 
-  doCheck = false;
-
   strictDeps = true;
 
   passthru = {
