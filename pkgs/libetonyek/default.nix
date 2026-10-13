@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "LibreOffice";
     repo = "libetonyek";
-    rev = "libetonyek-${finalAttrs.version}";
+    tag = "libetonyek-${finalAttrs.version}";
     hash = "sha256-Dr4QhzZQzLNHf7OMMjUaR6WbnIQbu18LIiAjPD0sCsY=";
   };
 
