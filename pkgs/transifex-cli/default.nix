@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "transifex";
     repo = "cli";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-jzAt/SalItGG0KI3GZb4/pT4T7oHwCji2bjNR1BTJXI=";
   };
 
