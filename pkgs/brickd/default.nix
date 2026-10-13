@@ -13,7 +13,7 @@ let
   daemonlib = fetchFromGitHub {
     owner = "Tinkerforge";
     repo = "daemonlib";
-    rev = "brickd-${version}";
+    tag = "brickd-${version}";
     sha256 = "sha256-0HhuC4r1S4NJa2FSJa7+fNCfcoRTBckikYbGSE+2FbE=";
   };
 in
@@ -25,7 +25,7 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "Tinkerforge";
     repo = "brickd";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "sha256-6w2Ew+dLMmdRf9CF3TdKHa0d5ZgmX5lKIR+5t3QAWFQ=";
   };
 
