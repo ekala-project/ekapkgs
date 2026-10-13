@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jacobwilliams";
     repo = "json-fortran";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-anPasaS4Kq8r6P7EgrQ3auwvSylq/a/ZO1XhYw6zAU4=";
   };
 
