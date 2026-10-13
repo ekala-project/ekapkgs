@@ -90,8 +90,6 @@ stdenv.mkDerivation (finalAttrs: {
     man-db
   ];
 
-  doCheck = false;
-
   postInstall = ''
     substituteInPlace "$out/share/fish/functions/grep.fish" \
       --replace-fail "command grep" "command ${lib.getExe grep}"
