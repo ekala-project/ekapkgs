@@ -20,7 +20,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-yO8Ov2+cJky3JqePy2mnOd4AFEKJRuAirm/iozTwArU=";
 
   # attempts to run the program on .git in src which is not deterministic
-  doCheck = false;
 
   nativeBuildInputs = [ installShellFiles ];
 
