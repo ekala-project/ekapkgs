@@ -42,7 +42,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/AvengeMedia/danksearch";
     changelog = "https://github.com/AvengeMedia/danksearch/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
-    teams = [ ];
     mainProgram = "dsearch";
     platforms = lib.platforms.unix;
   };
