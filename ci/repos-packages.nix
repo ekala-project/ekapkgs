@@ -2,7 +2,9 @@
 #
 # This includes:
 #   - Native packages from pkgs/ and top-level.nix
+#   - Multi-variant packages from pkgs-many/ (each variant enumerated)
 #   - Python package overrides from python-packages.nix
+#   - Perl packages from perl/pkgs/
 #
 # Used by ekapkgs-update to enumerate packages for automated updates.
 { ... }:
@@ -36,6 +38,35 @@ let
     "_internalCallByNamePackageFile"
   ];
 
+  # --- Multi-variant packages (pkgs-many/) ---
+  pkgsManyOverlay = lib.packageSets.mkAutoCalledManyVariantsDir ../pkgs-many;
+  projectedMany = mkProjection pkgsManyOverlay pkgs;
+  pkgsManyKeys = pkgsManyOverlay (_: _: { }) { };
+  manyPkgs = removeAttrs (builtins.intersectAttrs pkgsManyKeys projectedMany) [
+    "_internalCallByNamePackageFile"
+  ];
+
+  # Collect each variant sub-derivation from pkgs-many packages.
+  variantPairs = lib.concatMap (
+    name:
+    let
+      raw = builtins.tryEval manyPkgs.${name};
+    in
+    if !raw.success then
+      [ ]
+    else
+      let
+        variants = builtins.tryEval (raw.value.variants or null);
+      in
+      if !variants.success || variants.value == null then
+        [ ]
+      else
+        map (vname: {
+          name = "${name}.${vname}";
+          value = variants.value.${vname};
+        }) (builtins.attrNames variants.value)
+  ) (builtins.attrNames manyPkgs);
+
   # --- Python package overrides (python-packages.nix) ---
   pythonOverrides = import ../python-packages.nix;
   projectedPython = mkProjection pythonOverrides pkgs.python3Packages;
@@ -44,16 +75,32 @@ let
     "_internalCallByNamePackageFile"
   ];
 
-  all = nativePkgs // pythonPkgs;
+  # --- Perl packages (perl/pkgs/) ---
+  perlOverlay = lib.packageSets.mkAutoCalledPackageDir ../perl/pkgs;
+  projectedPerl = mkProjection perlOverlay pkgs.perlPackages;
+  perlOverlayKeys = perlOverlay (_: _: { }) { };
+  perlPkgs = removeAttrs (builtins.intersectAttrs perlOverlayKeys projectedPerl) [
+    "_internalCallByNamePackageFile"
+  ];
 
-  topLevel = map (name: {
-    inherit name;
-    value = all.${name};
-  }) (builtins.attrNames all);
+  # --- Flatten all into named pairs ---
+  mkPairs =
+    prefix: attrs:
+    map (name: {
+      name = if prefix == "" then name else "${prefix}.${name}";
+      value = attrs.${name};
+    }) (builtins.attrNames attrs);
+
+  allPairs =
+    mkPairs "" nativePkgs
+    ++ variantPairs
+    ++ mkPairs "python3Packages" pythonPkgs
+    ++ mkPairs "perlPackages" perlPkgs;
 in
 {
-  inherit all;
+  # Flat attribute set of everything (for ekapkgs-update).
+  all = nativePkgs // pythonPkgs // perlPkgs;
 
   # Attribute set of all buildable derivations, keyed by name.
-  buildable = builtins.listToAttrs (builtins.filter (pair: isBuildable pair.value) topLevel);
+  buildable = builtins.listToAttrs (builtins.filter (pair: isBuildable pair.value) allPairs);
 }
