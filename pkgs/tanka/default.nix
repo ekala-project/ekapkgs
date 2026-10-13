@@ -18,7 +18,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-oVwQ3P58NZBeLf0WnlS3ewaX2V6H3hzjs34jWuFHa88=";
 
-  doCheck = false;
   # Required for versions >= 0.28 as they introduce a gowork.sum file. This is only used for tests so we can safely disable GOWORK
   env.GOWORK = "off";
 
