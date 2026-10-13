@@ -65,7 +65,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     ++ lib.optional (python3.pkgs ? pygobject3) python3.pkgs.pygobject3;
 
   # bunch of linting
-  doCheck = false;
 
   meta = {
     description = "GTK/GNOME application to use GnuPG for signing other peoples' keys";
