@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "OlafvdSpek";
     repo = "ctemplate";
-    rev = "ctemplate-${finalAttrs.version}";
+    tag = "ctemplate-${finalAttrs.version}";
     sha256 = "1x0p5yym6vvcx70pm8ihnbxxrl2wnblfp72ih5vjyg8mzkc8cxrr";
   };
 
