@@ -50,7 +50,6 @@ let
 
     ldflags = [ "-X go.etcd.io/etcd/api/v3/version.GitSHA=GitNotFound" ];
 
-    doCheck = false;
   };
 
   etcdutl = buildGoModule rec {
