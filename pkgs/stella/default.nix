@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "stella-emu";
     repo = "stella";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-I2R+nILzHDupL0QU76PxqXuD1D6TXXVUvMDzEjWVi00=";
   };
 
