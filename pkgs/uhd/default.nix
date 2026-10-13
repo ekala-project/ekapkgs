@@ -45,7 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "EttusResearch";
     repo = "uhd";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nqazjHfYIVbqFnfiHdkz1Glws4+t5rgWmojWbi0Ymk8=";
   };
 
