@@ -27,7 +27,7 @@ stdenv.mkDerivation {
   # Obtained from https://git.launchpad.net/ubuntu/+source/libunity/log/
   src = fetchgit {
     url = "https://git.launchpad.net/ubuntu/+source/libunity";
-    rev = "import/7.1.4+19.04.20190319-5";
+    tag = "import/7.1.4+19.04.20190319-5";
     sha256 = "LHUs6kl1srS6Xektx+jmm4SXLR47VuQ9IhYbBxf2Wc8=";
   };
 
