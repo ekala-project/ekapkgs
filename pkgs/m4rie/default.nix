@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "malb";
     repo = "m4rie";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-tw6ZX8hKfr9wQLF2nuO1dSkkTYZX6pzNWMlWfzLqQNE=";
   };
 
