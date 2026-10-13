@@ -18,7 +18,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # FIXME: tests fail and I do not have the time to investigate. Temporarily disable
   # tests so that we can manually run and test the package for packaging purposes.
-  doCheck = false;
 
   meta = {
     description = "Command line tool to process CSV files directly from the shell";
