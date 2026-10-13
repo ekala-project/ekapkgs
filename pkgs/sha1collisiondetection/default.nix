@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "cr-marcstevens";
     repo = "sha1collisiondetection";
-    rev = "stable-v${finalAttrs.version}";
+    tag = "stable-v${finalAttrs.version}";
     sha256 = "0xn31hkkqs0kj9203rzx6w4nr0lq8fnrlm5i76g0px3q4v2dzw1s";
   };
 
