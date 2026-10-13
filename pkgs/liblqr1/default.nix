@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "carlobaldassi";
     repo = "liblqr";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-RN58r9AUceziWfZBqyAjjPXrdfilR6cxn3FzQxiQEdE=";
   };
 
