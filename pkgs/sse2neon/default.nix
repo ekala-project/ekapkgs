@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "DLTcollab";
     repo = "sse2neon";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-eD2Z4ZCybbqURHArENyiYVOFXHUEvpP5T3li/Bp8a24=";
   };
 
