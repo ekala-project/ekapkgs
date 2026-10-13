@@ -23,7 +23,6 @@ buildGoModule (finalAttrs: {
   nativeBuildInputs = [ installShellFiles ];
 
   # Some tests violate sandbox constraints.
-  doCheck = false;
 
   ldflags = [
     "-s"
