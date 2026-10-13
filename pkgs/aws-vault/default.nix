@@ -15,7 +15,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ByteNess";
     repo = "aws-vault";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ohg7fe63H2ktQtlk40dp2lAf+Bv3DSjfh/3xO4GcajQ=";
   };
 
