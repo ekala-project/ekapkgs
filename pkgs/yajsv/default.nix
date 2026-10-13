@@ -11,7 +11,7 @@ buildGoModule {
   src = fetchFromGitHub {
     owner = "neilpa";
     repo = "yajsv";
-    rev = "v1.4.1";
+    tag = "v1.4.1";
     hash = "sha256-dp7PBN8yR+gPPUWA+ug11dUN7slU6CJAojuxt5eNTxA=";
   };
 
