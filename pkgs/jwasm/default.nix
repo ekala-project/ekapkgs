@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Baron-von-Riedesel";
     repo = "JWasm";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ZwSXX/vlAlbRFpWtCmSCGoMT5lu8qz870PZPVktHGRo=";
   };
 
