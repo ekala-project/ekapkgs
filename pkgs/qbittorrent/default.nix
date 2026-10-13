@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "qbittorrent";
     repo = "qBittorrent";
-    rev = "release-${finalAttrs.version}";
+    tag = "release-${finalAttrs.version}";
     hash = "sha256-K6YnqKHVo+notbjKxnzcN1DEcpAa2KMge4Ov30poEQY=";
   };
 
