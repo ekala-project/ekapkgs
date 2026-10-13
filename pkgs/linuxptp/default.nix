@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nwtime";
     repo = "linuxptp";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-w1buo+D8Mnd6ytMhQYhvCDqt+RejlNSN/iVjrDR+Khk=";
   };
 
