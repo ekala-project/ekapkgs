@@ -21,7 +21,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   ];
 
   # needs a Docker setup
-  doCheck = false;
 
   pythonImportsCheck = [ "getmailcore" ];
 
