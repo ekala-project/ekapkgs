@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "bluesky-social";
     repo = "indigo";
-    rev = "tap-v${finalAttrs.version}";
+    tag = "tap-v${finalAttrs.version}";
     hash = "sha256-nDOLIRWTyj/R0h+70+bGi85RVe2OKLNbnSaKyyqc93Q=";
   };
 
