@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "wertarbyte";
     repo = "triggerhappy";
-    rev = "release/${finalAttrs.version}";
+    tag = "release/${finalAttrs.version}";
     sha256 = "0gb1qhrxwq7i5abd408d01a2dpf28nr1fph1fg7w7n0i5i1nnk90";
   };
 
