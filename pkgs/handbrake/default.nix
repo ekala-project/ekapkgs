@@ -112,7 +112,6 @@ let
   # Handbrake maintains a set of ffmpeg patches. In particular, these
   # patches are required for subtitle timing to work correctly.
   ffmpeg-hb = ffmpeg.v8.overrideAttrs (old: {
-    doCheck = false;
     patches = (old.patches or [ ]) ++ [
       "${src}/contrib/ffmpeg/A01-mov-read-name-track-tag-written-by-movenc.patch"
       "${src}/contrib/ffmpeg/A02-movenc-write-3gpp-track-titl-tag.patch"
