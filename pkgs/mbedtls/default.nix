@@ -48,8 +48,6 @@ stdenv.mkDerivation rec {
     GEN_FILES = false;
   };
 
-  doCheck = false;
-
   meta = {
     homepage = "https://www.trustedfirmware.org/projects/mbed-tls/";
     description = "Portable cryptographic and TLS library, formerly known as PolarSSL";
