@@ -17,8 +17,6 @@ buildGoModule rec {
 
   vendorHash = null;
 
-  doCheck = false;
-
   ldflags = [
     "-w"
     "-s"
