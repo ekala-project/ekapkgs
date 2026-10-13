@@ -18,8 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ tokyocabinet ];
 
-  doCheck = false; # FIXME
-
   meta = {
     description = "Network interface of the Tokyo Cabinet DBM";
 
