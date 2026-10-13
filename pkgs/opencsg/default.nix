@@ -40,8 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     libx11
   ];
 
-  doCheck = false;
-
   postInstall = ''
     install -D ../copying.txt "$out/share/doc/opencsg/copying.txt"
   '';
