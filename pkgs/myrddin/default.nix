@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     repo = "mc";
     owner = "oridb";
-    rev = "r${finalAttrs.version}";
+    tag = "r${finalAttrs.version}";
     sha256 = "7ImjiG/rIKGPHq3Vh/mftY7pqw/vfOxD3LJeT87HmCk=";
   };
 
