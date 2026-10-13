@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchgit {
     url = "git://git.linux-nfs.org/projects/steved/rpcbind.git";
-    rev = "refs/tags/rpcbind-${builtins.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
+    tag = "rpcbind-${builtins.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
     hash = "sha256-uiUGSCUkFTFl+hqzXgJEjl4WZCcMi+QxuAGmY0g+fs4=";
   };
 
