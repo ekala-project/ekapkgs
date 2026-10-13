@@ -31,8 +31,6 @@ buildGoModule (finalAttrs: {
     gpgme
   ];
 
-  doCheck = false;
-
   subPackages = [
     "cmd/helm-operator"
     "cmd/operator-sdk"
