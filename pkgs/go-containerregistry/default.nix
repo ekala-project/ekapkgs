@@ -63,7 +63,6 @@ buildGoModule (finalAttrs: {
     '';
 
   # NOTE: no tests
-  doCheck = false;
 
   meta = {
     description = "Tools for interacting with remote images and registries including crane and gcrane";
