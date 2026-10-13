@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~nabijaczleweli";
     repo = "archivemount-ng";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-QQeVr3kPLVX543PwM2jtMnVQgkEfiQd09hG9VQvqLng=";
   };
 
