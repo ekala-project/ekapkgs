@@ -26,7 +26,6 @@ rustPlatform.buildRustPackage rec {
   # TODO: enable tests
   # The test suite depends on a number of browsers and network requests,
   # check the Gentoo package for inspiration
-  doCheck = false;
 
   meta = {
     description = "Browser automation framework and ecosystem";
