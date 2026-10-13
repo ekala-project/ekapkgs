@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "dasm-assembler";
     repo = "dasm";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "1bna0bj503xyn5inwzzsrsgi9qg8p20by4dfk7azj91ynw56pl41";
   };
 
