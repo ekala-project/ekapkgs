@@ -19,8 +19,6 @@ buildGoModule (finalAttrs: {
 
   buildInputs = [ libpcap ];
 
-  doCheck = false; # Tests require a network connection.
-
   ldflags = [
     "-s"
     "-w"
