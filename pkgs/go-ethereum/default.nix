@@ -25,8 +25,6 @@ buildGoModule (finalAttrs: {
   proxyVendor = true;
   vendorHash = "sha256-AsKicppcvr7xZ2sZ1pvsu8inXBRM1W3lFMlWAvV/EL0=";
 
-  doCheck = false;
-
   outputs = [ "out" ] ++ bins;
 
   # Move binaries to separate outputs and symlink them back to $out
