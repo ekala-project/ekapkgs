@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "pressly";
     repo = "goose";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-V7kpDIJOyWB0O6uGQmxO1lgfdUYXIGJ3ycmXGu20H94=";
   };
 
