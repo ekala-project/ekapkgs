@@ -15,7 +15,7 @@ tcl.mkTclDerivation rec {
 
   src = fetchgit {
     url = "https://git.openrobots.org/robots/eltclsh.git";
-    rev = "eltclsh-${version}";
+    tag = "eltclsh-${version}";
     hash = "sha256-kNUT190DkY+NNUmBwHfSxgBLbSyc0MutVDLsRh7kFDE=";
   };
 
