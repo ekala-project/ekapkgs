@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "zmap";
     repo = "zmap";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-Mym0pyd43pcbnZzPW3P+N5syjTJBuMsH2ZsjOJmqZgA=";
   };
 
