@@ -22,7 +22,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "sentriz";
     repo = "gonic";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-I0+5mzybWc8NP3yfePFyHEsSTDfniYQjIaZpe4djGGM=";
   };
 
