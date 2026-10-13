@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "netflix";
     repo = "vmaf";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-kypmbtIOHCu9Hd09TugPbbOA9O4LkBqzqRK9el1ncwo=";
   };
 
