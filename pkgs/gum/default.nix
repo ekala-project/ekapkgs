@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "charmbracelet";
     repo = "gum";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-KTRoxYeAT3t4GLWrgmJ6AUD5jnmB3iWBRtqSRzd3z0U=";
   };
 
