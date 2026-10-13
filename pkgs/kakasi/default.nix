@@ -36,8 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     done
   '';
 
-  doCheck = false; # fails 1 of 6 tests
-
   meta = {
     description = "Kanji Kana Simple Inverter";
     longDescription = ''
