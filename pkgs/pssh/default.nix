@@ -30,7 +30,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   '';
 
   # Tests do not run with python3: https://github.com/lilydjwg/pssh/issues/126
-  doCheck = false;
 
   meta = {
     description = "Parallel SSH Tools";
