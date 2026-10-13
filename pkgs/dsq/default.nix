@@ -22,8 +22,6 @@ buildGoModule (finalAttrs: {
     "main.Version=${finalAttrs.version}"
   ];
 
-  doCheck = false;
-
   meta = {
     mainProgram = "dsq";
     description = "Commandline tool for running SQL queries against JSON, CSV, Excel, Parquet, and more";
