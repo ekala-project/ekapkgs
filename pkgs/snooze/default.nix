@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "leahneukirchen";
     repo = "snooze";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-ghWQ/bslWJCcsQ8OqS3MHZiiuGzbgzat6mkG2avSbEk=";
   };
 
