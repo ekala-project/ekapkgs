@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "forthy42";
     repo = "gforth";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-cMVvNSDRN3384e5gX62sApO6mM3lxIEeO2ZRtJSmcHc=";
   };
 
