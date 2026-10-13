@@ -18,7 +18,6 @@ buildGoModule (finalAttrs: {
   vendorHash = null;
 
   # There are not test files
-  doCheck = false;
 
   meta = {
     description = "CLI and API client library";
