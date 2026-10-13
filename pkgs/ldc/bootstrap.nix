@@ -61,7 +61,6 @@ stdenv.mkDerivation {
       ncsa
       gpl2Plus
     ];
-    maintainers = [ ];
     platforms = [
       "x86_64-linux"
       "aarch64-linux"
