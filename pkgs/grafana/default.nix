@@ -28,7 +28,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "grafana";
     repo = "grafana";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Ki3P6ukIj7KgF9sIcJGdO7NXA2ZLIyWFOIHRUZ5uiVk=";
   };
 
