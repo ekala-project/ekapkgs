@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.gnome.org";
     owner = "jrb";
     repo = "libipuz";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-rUFYPtedcNqba2OLPo9nSjyGxuc3Q3RNoOmZx+RUOcU=";
   };
 
