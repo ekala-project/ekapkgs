@@ -13,7 +13,9 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "gnome-keysign";
   version = "1.3.0";
-  format = "setuptools";
+  pyproject = true;
+
+  build-system = [ python3.pkgs.setuptools ];
 
   src = fetchFromGitLab {
     domain = "gitlab.gnome.org";
