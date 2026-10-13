@@ -28,7 +28,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   build-system = with python3Packages; [ setuptools ];
 
   # No tests in archive
-  doCheck = false;
 
   pythonImportsCheck = [ "sqlmap" ];
 
