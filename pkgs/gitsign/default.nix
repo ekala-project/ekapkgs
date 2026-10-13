@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "sigstore";
     repo = "gitsign";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-cXgCgHL1zy4LBYuUxJUO8unkbG1lrxC31i790+6DVv0=";
   };
   vendorHash = "sha256-SitjW9g+GY1YDmJP13eTGL2Om2EsV+HRrXbLb6g+w3Y=";
