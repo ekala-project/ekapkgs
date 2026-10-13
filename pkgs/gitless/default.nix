@@ -27,8 +27,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
 
   pythonRelaxDeps = [ "pygit2" ];
 
-  doCheck = false;
-
   pythonImportsCheck = [
     "gitless"
   ];
