@@ -128,8 +128,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
 
-  doCheck = false;
-
   postPatch = ''
     mkdir -p subprojects/{libglnx,gvdb}
     cp -r ${libglnxSrc}/* subprojects/libglnx/
