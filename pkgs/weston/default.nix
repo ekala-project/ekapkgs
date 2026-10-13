@@ -58,7 +58,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.freedesktop.org";
     owner = "wayland";
     repo = "weston";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-0TBVyqnfd7GMGPAzbYOmDZgv4gF5kxiqaA8+A0+sEqU=";
   };
 
