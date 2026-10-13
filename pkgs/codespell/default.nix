@@ -20,8 +20,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     setuptools-scm
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "codespell_lib" ];
 
   meta = {
