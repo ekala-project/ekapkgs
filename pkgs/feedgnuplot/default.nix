@@ -53,7 +53,6 @@ perlPackages.buildPerlPackage rec {
   '';
 
   # Tests require gnuplot 4.6.4 and are completely skipped with gnuplot 5.
-  doCheck = false;
 
   postInstall = ''
     wrapProgram $out/bin/feedgnuplot \
