@@ -70,8 +70,6 @@ stdenv.mkDerivation rec {
 
   hardeningDisable = [ "format" ];
 
-  doInstallCheck = false;
-
   postInstall = ''
     sed -e 's/@[-a-zA-Z_]*@//g' -i $out/bin/ecl-config
     wrapProgram "$out/bin/ecl" --prefix PATH ':' "${
