@@ -27,8 +27,6 @@ buildGoModule (finalAttrs: {
     "-X=main.Version=${finalAttrs.version}"
   ];
 
-  doCheck = false;
-
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd glow \
       --bash <($out/bin/glow completion bash) \
