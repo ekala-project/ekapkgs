@@ -45,6 +45,5 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://gitlab.com/sfcgal/SFCGAL/-/releases/v${finalAttrs.version}";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.unix;
-    teams = [ ];
   };
 })
