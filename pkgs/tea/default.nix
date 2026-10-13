@@ -15,7 +15,7 @@ buildGoModule (finalAttrs: {
     domain = "gitea.com";
     owner = "gitea";
     repo = "tea";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-FLaOhU9oDZhpRJnWrXgIV3Cup6L9i5JHP5xWiu9aZkI=";
   };
 
