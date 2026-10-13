@@ -12,7 +12,7 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "micro-editor";
     repo = "micro";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-4C6TtMU6PIYX7lO+o4GRVnIsKnYJxjAqPdoOyAwi7Gc=";
   };
 
