@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "uoaerg";
     repo = "wavemon";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-PLdlh9xs0bROShpFESvRYy78Hig4/rZ8MkQ4LMcgXTg=";
   };
 
