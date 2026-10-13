@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromBitbucket {
     owner = "petsc";
     repo = "pkg-sowing";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ol0xNAnL7ULU1CiGCFZrV37IAV4z1bcWa0f+tuMhQC8=";
   };
 
