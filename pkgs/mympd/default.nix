@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     "fortify3"
   ];
   # 5 tests out of 23 fail, probably due to the sandbox...
-  doCheck = false;
 
   strictDeps = true;
   meta = {
