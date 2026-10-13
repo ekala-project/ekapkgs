@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Collection of routines for representation theory and combinatorics";
     license = lib.licenses.isc;
-    teams = [ ];
     platforms = lib.platforms.unix;
     homepage = "https://gitlab.com/sagemath/symmetrica";
   };
