@@ -38,8 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     BUILD_TEST = false;
   };
 
-  doCheck = false;
-
   strictDeps = true;
 
   meta = {
