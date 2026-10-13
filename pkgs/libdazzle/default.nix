@@ -50,8 +50,6 @@ stdenv.mkDerivation rec {
     with_vapi = false;
   };
 
-  doCheck = false;
-
   meta = {
     description = "Library to delight your users with fancy features";
     mainProgram = "dazzle-list-counters";
