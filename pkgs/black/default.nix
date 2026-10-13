@@ -44,8 +44,6 @@ python3Packages.buildPythonApplication rec {
     ];
   };
 
-  doCheck = false;
-
   meta = {
     description = "Uncompromising Python code formatter";
     homepage = "https://github.com/psf/black";
