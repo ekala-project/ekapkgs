@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "DanielAdolfsson";
     repo = "ndppd";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-FqOoN7MxewmOxd4SKnOx4W/c3X4Jso/kFdiTzIRqHaw=";
   };
 
