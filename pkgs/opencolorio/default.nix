@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "AcademySoftwareFoundation";
     repo = "OpenColorIO";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-+EeQbu8739inUW6Az5TfDxajDzUZ1lmh7rgpBSHtp+U=";
   };
 
