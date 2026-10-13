@@ -50,7 +50,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   # timeouts in sandbox
-  doCheck = false;
 
   meta = {
     description = "Rust port of Shadowsocks";
