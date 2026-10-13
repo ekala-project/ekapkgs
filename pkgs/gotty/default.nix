@@ -19,7 +19,6 @@ buildGoModule (finalAttrs: {
 
   # upstream did not update the tests, so they are broken now
   # https://github.com/sorenisanerd/gotty/issues/13
-  doCheck = false;
 
   meta = {
     description = "Share your terminal as a web application";
