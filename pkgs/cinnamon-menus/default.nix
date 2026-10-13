@@ -42,6 +42,5 @@ stdenv.mkDerivation (finalAttrs: {
       lib.licenses.lgpl2
     ];
     platforms = lib.platforms.linux;
-    teams = [ ];
   };
 })
