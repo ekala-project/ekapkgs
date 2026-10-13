@@ -29,7 +29,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # Upstream's suite launches the full TUI and is timing/network sensitive.
-  doCheck = false;
 
   doInstallCheck = true;
   nativeInstallCheckInputs = [
