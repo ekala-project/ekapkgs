@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "tgraf";
     repo = "bmon";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-JBjyOKhAwrBibRZXjJE4yehO+6BbW0bic4N9TBPg7KU=";
   };
 
