@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "rnpgp";
     repo = "rnp";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GEgogKPMqBYYufCcjbaCmlNWtV/hxx3ZMfij+HAoHx8=";
   };
 
