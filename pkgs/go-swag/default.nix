@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "swaggo";
     repo = "swag";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-ixeHj+bqskQJOCxnJaU0IG9Qoe4SQk+McNY0Sy1tUwI=";
   };
 
