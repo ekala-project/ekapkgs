@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "libxmp";
     repo = "xmp-cli";
-    rev = "xmp-${finalAttrs.version}";
+    tag = "xmp-${finalAttrs.version}";
     hash = "sha256-vy1e/d70c2sMOBEPfAdaPrUQ77BQDJkUNwE9BCFIXeg=";
   };
 
