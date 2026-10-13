@@ -15,7 +15,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "biomejs";
     repo = "biome";
-    rev = "@biomejs/biome@${finalAttrs.version}";
+    tag = "@biomejs/biome@${finalAttrs.version}";
     hash = "sha256-jutNefPBi39eM/Db04IHA6RId+Un7xLBv/L7tMaC3iI=";
   };
 
