@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "dyc3";
     repo = "steamguard-cli";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-zjkFVsc0ANXUYNH0tqFewz0xJSCm9Gyo5Ruy+sJJKrg=";
   };
 
