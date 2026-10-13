@@ -18,7 +18,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nwg-piotr";
     repo = "nwg-look";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-a/e1IjkNVtPBNZyXFYWwwe0Zl8eUDPts+oRKapTu328=";
   };
 
