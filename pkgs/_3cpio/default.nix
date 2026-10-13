@@ -21,7 +21,6 @@ rustPlatform.buildRustPackage rec {
   cargoHash = "sha256-q3WcEv2JF6SHdeFPSJrx0aE/DU/v08ihZjklJRVLwPY=";
 
   # Tests attempt to access arbitrary filepaths
-  doCheck = false;
 
   meta = {
     description = "Manage initrd cpio archives";
