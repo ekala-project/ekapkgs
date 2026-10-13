@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "dotenv-linter";
     repo = "dotenv-linter";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-H4a/JM2CFrELmP4w4vrFxbvmvdTQk8k7g3QjQKm++Uk=";
   };
 
