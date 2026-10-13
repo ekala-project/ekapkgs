@@ -59,7 +59,6 @@ buildGoModule (finalAttrs: {
   # changes every release is becoming too much of a hassle resulting in Nixpkgs
   # versions lagging behind which is not ideal for a package with a rapid
   # release cycle.
-  doCheck = false;
 
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     for shell in bash fish zsh; do
