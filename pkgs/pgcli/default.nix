@@ -41,7 +41,6 @@ python3Packages.buildPythonApplication rec {
   ];
 
   # Tests require a running PostgreSQL instance
-  doCheck = false;
 
   pythonImportsCheck = [ "pgcli" ];
 
