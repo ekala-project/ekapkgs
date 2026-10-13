@@ -24,7 +24,6 @@ buildGoModule {
   # found packages pkg (4.go) and foo (blank-import-lib.go) in /build/lint-6edffad/testdata
   # testdata/errorf-custom.go:9:2: cannot find package "." in:
   #         /build/lint-6edffad/vendor/github.com/pkg/errors
-  doCheck = false;
 
   meta = {
     homepage = "https://golang.org";
