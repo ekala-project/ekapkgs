@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "db9052";
     repo = "pdf2svg";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-zME0U+PyENnoLyjo9W2i2MRM00wNmHkYcR2LMEtTbBY=";
   };
 
