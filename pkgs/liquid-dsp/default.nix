@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "jgaeddert";
     repo = "liquid-dsp";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "sha256-QRCPdngQCpC+o8fCLVoixPsZ25yI1ZEo8ePreC2S0Yk=";
   };
 
