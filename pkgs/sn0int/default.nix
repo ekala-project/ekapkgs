@@ -39,7 +39,6 @@ rustPlatform.buildRustPackage rec {
 
   # One of the dependencies (chrootable-https) tries to read "/etc/resolv.conf"
   # in "checkPhase", hence fails in sandbox of "nix".
-  doCheck = false;
 
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd sn0int \
