@@ -24,7 +24,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # Tests require access to the network
-  doCheck = false;
 
   meta = {
     description = "TCP/UDP tunnel over HTTP";
