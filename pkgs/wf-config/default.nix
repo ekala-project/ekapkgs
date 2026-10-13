@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "WayfireWM";
     repo = "wf-config";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-hZcmnteB8/DbKjQGY1QLSI32z+OBnp1b8RjJ8pPH1JY=";
   };
 
