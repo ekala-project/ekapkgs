@@ -14,8 +14,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     hash = "sha256-BxgjoekEUIpv2ar4zC+akml+HfonAAC00RMAFbVvQTc=";
   };
 
-  doCheck = false;
-
   pythonRemoveDeps = [
     "patatt"
     "git-filter-repo"
