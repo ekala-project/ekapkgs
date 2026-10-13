@@ -54,7 +54,7 @@ let
   frogShaders = fetchFromGitHub {
     owner = "misyltoad";
     repo = "GamescopeShaders";
-    rev = "v0.1";
+    tag = "v0.1";
     hash = "sha256-gR1AeAHV/Kn4ntiEDUSPxASLMFusV6hgSGrTbMCBUZA=";
   };
 in
