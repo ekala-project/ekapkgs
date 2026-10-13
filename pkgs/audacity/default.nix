@@ -150,8 +150,6 @@ stdenv.mkDerivation (finalAttrs: {
     export LD_LIBRARY_PATH=$PWD/Release/lib/audacity
   '';
 
-  doCheck = false;
-
   dontWrapGApps = true;
 
   postFixup = ''
