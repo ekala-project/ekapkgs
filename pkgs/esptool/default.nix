@@ -45,8 +45,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
       --fish <(_ESPTOOL_COMPLETE=fish_source $out/bin/esptool)
   '';
 
-  doCheck = false;
-
   meta = {
     description = "ESP8266 and ESP32 serial bootloader utility";
     homepage = "https://github.com/espressif/esptool";
