@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "uxlfoundation";
     repo = "oneDNN";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-DD2PnDWDF5WMjBe1UK6X6saOmP6cWytqvRshKchZRGg=";
   };
 
