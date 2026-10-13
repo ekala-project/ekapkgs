@@ -62,7 +62,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "obsproject";
     repo = "obs-studio";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-JAV3UvM89asUj6P5pD9a+6/Qfa2kFIVQqVfMOZn5MJE=";
     fetchSubmodules = true;
   };
