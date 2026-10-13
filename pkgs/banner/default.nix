@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "pronovic";
     repo = "banner";
-    rev = "BANNER_V${finalAttrs.version}";
+    tag = "BANNER_V${finalAttrs.version}";
     sha256 = "sha256-g9i460W0SanW2xIfZk9Am/vDsRlL7oxJOUhksa+I8zY=";
   };
 
