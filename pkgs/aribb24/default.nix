@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "code.videolan.org";
     owner = "jeeb";
     repo = "aribb24";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-hq3LnLACZfV+E76ZDEHGlN51fS6AqFnNReE3JlWcv9M=";
   };
 
