@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kward";
     repo = "shunit2";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-IZHkgkVqzeh+eEKCDJ87sqNhSA+DU6kBCNDdQaUEeiM=";
   };
 
