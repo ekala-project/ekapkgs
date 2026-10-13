@@ -14,7 +14,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "influxdata";
     repo = "telegraf";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-xP7jfCwj3/tUCGZXbWRfOPfPoQk9T8NjzH4TrTULPlg=";
   };
 
