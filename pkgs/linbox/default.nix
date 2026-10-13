@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "linbox-team";
     repo = "linbox";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-WUSQI9svxbrDTtWBjCF2XMhRFdKwCht8XBmJIJ3DR1E=";
   };
 
