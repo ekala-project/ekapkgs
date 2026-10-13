@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.freedesktop.org";
     owner = "emersion";
     repo = "wlr-randr";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-lHOGpY0IVnR8QdSqJbtIA4FkhmQ/zDiFNqqXyj8iw/s=";
   };
 
