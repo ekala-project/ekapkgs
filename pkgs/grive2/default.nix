@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "vitalif";
     repo = "grive2";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-P6gitA5cXfNbNDy4ohRLyXj/5dUXkCkOdE/9rJPzNCg=";
   };
 
