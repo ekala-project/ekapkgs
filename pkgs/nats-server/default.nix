@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-C2CLryuDRyCTtaZ/oIInsGDWcUqWuSsohPKccykC32k=";
 
-  doCheck = false;
-
   meta = {
     description = "High-Performance server for NATS";
     mainProgram = "nats-server";
