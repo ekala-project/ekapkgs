@@ -22,7 +22,7 @@ stdenv.mkDerivation rec {
 
   src = fetchgit {
     url = "https://pagure.io/volume_key.git";
-    rev = "volume_key-${version}";
+    tag = "volume_key-${version}";
     sha256 = "1sqdbcih1c39bjiv4mm1m7acc3lfh2i2hf2r9i7rk8adfzq8awma";
   };
 
