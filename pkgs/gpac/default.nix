@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "gpac";
     repo = "gpac";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-L4GKXCFsKVxWXZJJeiAegXJySoS9+/V+/cuzEJEse+I=";
   };
 
