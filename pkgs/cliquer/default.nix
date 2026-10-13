@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://users.aalto.fi/~pat/cliquer.html";
     downloadPage = finalAttrs.src.meta.homepage; # autocliquer
     license = lib.licenses.gpl2Plus;
-    teams = [ ];
     mainProgram = "cl";
     platforms = lib.platforms.unix;
   };
