@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kevinlawler";
     repo = "kona";
-    rev = "Win64-${finalAttrs.version}";
+    tag = "Win64-${finalAttrs.version}";
     sha256 = "sha256-m3a9conyKN0qHSSAG8zAb3kx8ir+7dqgxm1XGjCQcfk=";
   };
 
