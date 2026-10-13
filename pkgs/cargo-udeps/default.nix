@@ -26,7 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   # Requires network access
-  doCheck = false;
 
   meta = {
     description = "Find unused dependencies in Cargo.toml";
