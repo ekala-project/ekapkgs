@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ldn-softdev";
     repo = "jtc";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-VATRlOOV4wBInLOm9J0Dp2vhtL5mb0Yxdl/ya0JiqEU=";
   };
 
