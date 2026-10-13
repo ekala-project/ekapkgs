@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "baresip";
     repo = "re";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-lZ/C2+ymPMYq0K0PiuOr/aEpHAWMOZZFBE6wNO/hGcM=";
   };
 
