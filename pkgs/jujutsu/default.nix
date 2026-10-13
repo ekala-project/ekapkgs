@@ -35,8 +35,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     LIBSSH2_SYS_USE_PKG_CONFIG = "1";
   };
 
-  doCheck = false;
-
   postInstall =
     let
       jj = "${stdenv.hostPlatform.emulator buildPackages} $out/bin/jj";
