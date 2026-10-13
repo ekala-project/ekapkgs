@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/jitsi/jitsi-meet/";
     license = lib.licenses.asl20;
-    teams = [ ];
     platforms = lib.platforms.linux;
   };
 })

@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "microsoft";
     repo = "hcsshim";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-n/YYajbQo+s1ssPAbS4gUdFYBHNmoNBKcEM/kcAZR94=";
   };
 

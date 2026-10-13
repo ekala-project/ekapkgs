@@ -40,8 +40,6 @@ stdenv.mkDerivation rec {
     ./pthread-include.patch
   ];
 
-  doCheck = false;
-
   env.NIX_CFLAGS_COMPILE = lib.optionalString stdenv.cc.isClang "-Wno-error=c++11-narrowing";
 
   meta = {

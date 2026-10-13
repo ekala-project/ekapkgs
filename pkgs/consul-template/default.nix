@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "hashicorp";
     repo = "consul-template";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-54+MHi6ZmcDcHk1Swwt+25ZQOLPRytgZ8oDdlXsGVKo=";
   };
 
@@ -19,7 +19,6 @@ buildGoModule (finalAttrs: {
 
   # consul-template tests depend on vault and consul services running to
   # execute tests so we skip them here
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/hashicorp/consul-template/";

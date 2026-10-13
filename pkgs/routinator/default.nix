@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "NLnetLabs";
     repo = "routinator";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-y/L9l++uB627lEHK+mASNwLohqWk+R0FUNYMKKNg38A=";
   };
 

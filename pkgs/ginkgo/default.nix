@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "onsi";
     repo = "ginkgo";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-mevZN35RUpaPmAYw3lfmzvdT2H+yucD8g3/bX9Rl00s=";
   };
   vendorHash = "sha256-I3n1FPINb/nhi4QUzRFEspn7REN1dQEPg8Bhb3PemQU=";
@@ -28,8 +28,6 @@ buildGoModule (finalAttrs: {
     "integration"
     "types"
   ];
-
-  doCheck = false;
 
   meta = {
     homepage = "https://onsi.github.io/ginkgo/";

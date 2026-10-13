@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ericniebler";
     repo = "range-v3";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-bRSX91+ROqG1C3nB9HSQaKgLzOHEFy9mrD2WW3PRBWU=";
   };
 
@@ -23,9 +23,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeEntries = {
     RANGES_ENABLE_WERROR = false;
+  }
+  // lib.optionalAttrs stdenv.hostPlatform.isAarch64 {
+    RANGE_V3_TESTS = false;
   };
-
-  cmakeFlags = lib.optional stdenv.hostPlatform.isAarch64 "-DRANGE_V3_TESTS=OFF";
 
   doCheck = !stdenv.hostPlatform.isAarch64;
   checkTarget = "test";

@@ -26,7 +26,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # Test files are not part of the release tarball
-  doCheck = false;
 
   meta = {
     description = "Tool for configurable targeted scanning";

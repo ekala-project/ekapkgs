@@ -58,7 +58,7 @@ buildGoModule (finalAttrs: {
     domain = "code.forgejo.org";
     owner = "forgejo";
     repo = "runner";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6i87t8LXYYXyQ8UzyUiEOvQ+9wuRz4xeUBivk0VJ0S4=";
   };
 
@@ -107,7 +107,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://code.forgejo.org/forgejo/runner";
     changelog = "https://code.forgejo.org/forgejo/runner/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.gpl3Plus;
-    teams = [ ];
     mainProgram = "forgejo-runner";
   };
 })

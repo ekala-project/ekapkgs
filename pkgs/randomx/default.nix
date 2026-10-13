@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "tevador";
     repo = "randomX";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-jyX4+4yXREcJMJLQ9fxThatIbolJzfnamNR0G+SR9oU=";
   };
 

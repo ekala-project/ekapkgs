@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "cminyard";
     repo = "ser2net";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9PK+P9LO5X4M1q1ExiWngkqRRflJbg70rCoSJ0fqdWk=";
   };
 

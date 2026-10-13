@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kilobyte";
     repo = "colorized-logs";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-m7M/1OuWDUflxTA4E6cSeg7BqkEW8eB/wIgq+z97K/g=";
   };
 

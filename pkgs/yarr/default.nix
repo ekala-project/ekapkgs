@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nkanaev";
     repo = "yarr";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-NvYcl+i3JW18zjYUT1C+ksMJgUJQGP+90UhTQkZRhD4=";
   };
 
@@ -28,8 +28,6 @@ buildGoModule (finalAttrs: {
     "sqlite_foreign_keys"
     "sqlite_json"
   ];
-
-  doCheck = false;
 
   meta = {
     description = "Yet another rss reader";

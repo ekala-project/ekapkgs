@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "haad";
     repo = "proxychains";
-    rev = "proxychains-${finalAttrs.version}";
+    tag = "proxychains-${finalAttrs.version}";
     sha256 = "083xdg6fsn8c2ns93lvy794rixxq8va6jdf99w1z0xi4j7f1nyjw";
   };
 

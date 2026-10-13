@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "git-pages";
     repo = "git-pages-cli";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+M2A1ApHwmRz3SuVZX93iFKWPyuM1Ox0oTf9mEWT3L0=";
   };
 

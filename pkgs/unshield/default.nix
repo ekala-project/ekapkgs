@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "twogood";
     repo = "unshield";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-CYlrPwNPneJIwvQCnzyfi6MZiXoflMDfUDCRL79+yBk=";
   };
 

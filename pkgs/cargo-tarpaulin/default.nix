@@ -31,8 +31,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     curl
   ];
 
-  doCheck = false;
-
   doInstallCheck = true;
   versionCheckProgramArg = "--version";
 

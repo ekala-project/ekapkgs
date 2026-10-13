@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitea.nouspiro.space";
     owner = "nou";
     repo = "libXISF";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-vc42Jw7kBbQYu+/6jakxFnSuVkS8t6ZyYuSMLGMnEn4=";
   };
 
@@ -34,9 +34,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeEntries = {
     USE_BUNDLED_LIBS = false;
+  }
+  // lib.optionalAttrs stdenv.hostPlatform.isStatic {
+    BUILD_SHARED_LIBS = false;
   };
-
-  cmakeFlags = lib.optional stdenv.hostPlatform.isStatic "-DBUILD_SHARED_LIBS=OFF";
 
   buildInputs = [
     lz4

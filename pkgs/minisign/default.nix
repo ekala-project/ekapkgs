@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     repo = "minisign";
     owner = "jedisct1";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-qhAzhht9p4bsa2ntJwhcNurm8QgYYiKi3dA3ifpT8aw=";
   };
 

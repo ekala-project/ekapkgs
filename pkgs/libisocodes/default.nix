@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "toddy15";
     repo = "libisocodes";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-a2gVqiZXDiH1byEw/s3MqDQBBZ/bmnw8OyllGYfYykQ=";
   };
 

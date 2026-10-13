@@ -51,7 +51,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "awesomewm";
     repo = "awesome";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "1i7ajmgbsax4lzpgnmkyv35x8vxqi0j84a14k6zys4blx94m9yjf";
   };
 
@@ -131,9 +131,10 @@ stdenv.mkDerivation rec {
     OVERRIDE_VERSION = "${version}";
     GENERATE_DOC = false;
     DO_COVERAGE = false;
+  }
+  // lib.optionalAttrs lua.pkgs.isLuaJIT {
+    LUA_LIBRARY = "${lua}/lib/libluajit-5.1.so";
   };
-
-  cmakeFlags = lib.optional lua.pkgs.isLuaJIT "-DLUA_LIBRARY=${lua}/lib/libluajit-5.1.so";
 
   env = {
     GI_TYPELIB_PATH = "${pango.out}/lib/girepository-1.0";

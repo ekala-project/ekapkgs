@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromBitbucket {
     owner = "delan";
     repo = "nonymous";
-    rev = "${finalAttrs.pname}-${finalAttrs.version}";
+    tag = "${finalAttrs.pname}-${finalAttrs.version}";
     sha256 = "1fdnnx7d18gj4rkv1dc6q379dqabl66zks9i0rjarjwcci8m30d9";
   };
 

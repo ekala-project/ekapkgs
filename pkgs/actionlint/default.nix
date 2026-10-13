@@ -36,8 +36,6 @@ buildGoModule (finalAttrs: {
     "-X github.com/rhysd/actionlint.version=${finalAttrs.version}"
   ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://rhysd.github.io/actionlint/";
     description = "Static checker for GitHub Actions workflow files";

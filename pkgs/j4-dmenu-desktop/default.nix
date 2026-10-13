@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "enkore";
     repo = "j4-dmenu-desktop";
-    rev = "r${finalAttrs.version}";
+    tag = "r${finalAttrs.version}";
     hash = "sha256-Yrn6d2x9xOSV5FK0YP/mfD6BG9DeWlWobVafEzVYVJY=";
   };
 

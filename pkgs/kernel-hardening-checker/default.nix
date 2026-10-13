@@ -12,7 +12,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   src = fetchFromGitHub {
     owner = "a13xp0p0v";
     repo = "kernel-hardening-checker";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-wkRbiXHLtTDYBrxn9ZPxXMmWJiIBI5AImjFo6NVaKRM=";
   };
 

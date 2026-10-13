@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitLab {
     owner = "asus-linux";
     repo = "supergfxctl";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-d3jN4i4oHRFDgr5f6y42gahrCfXBPB61T72x6IeiskM=";
   };
 
@@ -32,7 +32,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildInputs = [ systemd ];
 
   # upstream doesn't have tests, don't build twice just to find that out
-  doCheck = false;
 
   doInstallCheck = true;
 

@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "chaos";
     repo = "scrub";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "0ndcri2ddzqlsxvy1b607ajyd4dxpiagzx331yyi7hf3ijph129f";
   };
 

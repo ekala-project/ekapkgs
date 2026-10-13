@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kubecfg";
     repo = "kubecfg";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-uJ6G0puANDrnA5NOOWZSGt6gVgIOMUgLfZcBWoXutyo=";
   };
 

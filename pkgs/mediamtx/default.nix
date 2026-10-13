@@ -45,7 +45,6 @@ buildGoModule (finalAttrs: {
   subPackages = [ "." ];
 
   # Tests need docker
-  doCheck = false;
 
   passthru.tests = {
   };

@@ -63,7 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "audacity";
     repo = "audacity";
-    rev = "Audacity-${finalAttrs.version}";
+    tag = "Audacity-${finalAttrs.version}";
     hash = "sha256-Vp3Nx3LuNu5fqeLF6dvZ9/hhkoUCu0eCAdIEDtS1IwU=";
   };
 
@@ -149,8 +149,6 @@ stdenv.mkDerivation (finalAttrs: {
   preBuild = ''
     export LD_LIBRARY_PATH=$PWD/Release/lib/audacity
   '';
-
-  doCheck = false;
 
   dontWrapGApps = true;
 

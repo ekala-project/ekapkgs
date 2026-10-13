@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "google";
     repo = "codesearch";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-i03w8PZ31j5EutUZaamZsHz+z4qgX4prePbj5DLA78s=";
   };
 

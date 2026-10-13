@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromBitbucket {
     owner = "magli143";
     repo = "exomizer";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-HMgj6avGKssEUJIIecu+pebF40S9h/vKA39RWw4t6RA=";
   };
 

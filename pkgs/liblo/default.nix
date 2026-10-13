@@ -18,8 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     doxygen
   ];
 
-  doCheck = false;
-
   meta = {
     changelog = "https://liblo.sourceforge.net/NEWS.html";
     description = "Lightweight library to handle the sending and receiving of messages according to the Open Sound Control (OSC) protocol";

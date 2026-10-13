@@ -21,7 +21,7 @@ let
     src = fetchFromGitLab {
       owner = "mdds";
       repo = "mdds";
-      rev = "2.1.1";
+      tag = "2.1.1";
       hash = "sha256-a412LpgDiYM8TMToaUrTlHtblYS1HehzrDOwvIAAxiA=";
     };
   };
@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "LibreOffice";
     repo = "libetonyek";
-    rev = "libetonyek-${finalAttrs.version}";
+    tag = "libetonyek-${finalAttrs.version}";
     hash = "sha256-Dr4QhzZQzLNHf7OMMjUaR6WbnIQbu18LIiAjPD0sCsY=";
   };
 

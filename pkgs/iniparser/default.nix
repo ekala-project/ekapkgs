@@ -29,8 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     BUILD_TESTING = false;
   };
 
-  doCheck = false;
-
   postFixup = ''
     ln -sv $out/include/iniparser/*.h $out/include/
   '';

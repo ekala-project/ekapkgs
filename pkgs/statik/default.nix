@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "rakyll";
     repo = "statik";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-GfXYlkzPESu9Szl+g90oB2ldrCS5aAOt9m+WPOOXhIE=";
   };
 
@@ -25,7 +25,6 @@ buildGoModule (finalAttrs: {
   # Tests are checking that the files embedded are preserving
   # their meta data like dates etc, but it assumes to be in 2048
   # which is not the case once entered the nix store
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/rakyll/statik";

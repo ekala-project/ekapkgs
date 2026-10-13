@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "grml";
     repo = "grml-etc-core";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-WZ3eyX9ijsU221I4hEhWUtFmtBQ9jm1QvQZh20gcR/s=";
   };
 

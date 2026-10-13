@@ -163,7 +163,6 @@ buildPythonApplication rec {
   ];
 
   # Skip tests - they require a running terminal and network access
-  doCheck = false;
 
   installPhase = ''
     runHook preInstall

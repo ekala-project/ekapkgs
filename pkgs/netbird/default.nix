@@ -34,8 +34,6 @@ buildGoModule (finalAttrs: {
     "-X main.builtBy=nix"
   ];
 
-  doCheck = false;
-
   postPatch = ''
     substituteInPlace client/cmd/root.go \
       --replace-fail 'unix:///var/run/netbird.sock' 'unix:///var/run/netbird/sock'

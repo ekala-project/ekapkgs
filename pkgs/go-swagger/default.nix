@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-bOtZLwX+m+JukowqWeqayaq+L0TP5PTMyox0AWWysmk=";
 
-  doCheck = false;
-
   subPackages = [ "cmd/swagger" ];
 
   ldflags = [

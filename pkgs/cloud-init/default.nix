@@ -62,8 +62,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     requests
   ];
 
-  doCheck = false;
-
   makeWrapperArgs = [
     "--prefix PATH : ${
       lib.makeBinPath [

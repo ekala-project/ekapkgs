@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~adnano";
     repo = "kiln";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-BbKd+0Dmo6RaoS0N7rQmSGJasuJb6dl43GZ7LdMBy/o=";
   };
 

@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "OpenPrinting";
     repo = "cups-browsed";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-Cfk28rxxgzzQs7B+tNmeUzDYL1eCx9zYwRsS/J6QX9s=";
   };
 

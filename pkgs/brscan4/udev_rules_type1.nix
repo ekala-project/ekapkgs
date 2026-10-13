@@ -56,6 +56,5 @@ stdenv.mkDerivation rec {
     homepage = "http://www.brother.com";
     platforms = lib.platforms.linux;
     license = lib.licenses.unfree;
-    maintainers = [ ];
   };
 }

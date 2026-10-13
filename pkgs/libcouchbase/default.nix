@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "couchbase";
     repo = "libcouchbase";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-DE1hSHgxaRH1Kh0dQFlxBkGGp0jmwZdaExxyZnv+abo=";
   };
 

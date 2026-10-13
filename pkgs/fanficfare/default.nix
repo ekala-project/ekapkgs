@@ -30,8 +30,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     urllib3
   ];
 
-  doCheck = false; # no tests exist
-
   meta = {
     description = "Tool for making eBooks from fanfiction web sites";
     mainProgram = "fanficfare";

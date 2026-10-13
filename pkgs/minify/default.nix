@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "tdewolff";
     repo = "minify";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-hEpFUOBHVePNp9Z3ly12Fw1csCmSf4oEIVjkdBXfx+g=";
   };
 

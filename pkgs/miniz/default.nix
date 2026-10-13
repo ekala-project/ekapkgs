@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "richgel999";
     repo = "miniz";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-/MAJWZXZ+pbelFduGE75rK/x9qEzxSFEj8RJWe3JUv0=";
   };
 

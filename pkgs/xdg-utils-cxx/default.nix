@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "azubieta";
     repo = "xdg-utils-cxx";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-hEN0xqZUNfMOIrw3q+x4kEFhYoqmyn7W3f2w8AGw2wI=";
   };
 

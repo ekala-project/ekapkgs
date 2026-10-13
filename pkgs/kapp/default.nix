@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "carvel-dev";
     repo = "kapp";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Fs15mvxg3MxQpis1f9eOGOE516THazTIKs0ZiqV15Xk=";
   };
 

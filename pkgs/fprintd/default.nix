@@ -78,7 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   # Disable tests since they require python dbusmock and pypamtest
-  doCheck = false;
 
   patches = [
     # Skip flaky test "test_removal_during_enroll"

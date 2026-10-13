@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "linux-rdma";
     repo = "qperf";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-x9l8xqwMDHlXRZpWt3XiqN5xyCTV5rk8jp/ClRPPECI=";
   };
 

@@ -26,7 +26,7 @@ stdenv.mkDerivation rec {
 
   src = fetchgit {
     url = "https://git.libcamera.org/libcamera/libcamera.git";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-W9pRE8/0Cf2EEP5bbvy4FsDSeKKSklfJb6T48ZN4dzE=";
   };
 

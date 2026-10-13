@@ -24,7 +24,6 @@ buildGoModule (finalAttrs: {
   '';
 
   # TestScript/search attempts to connect to fdroid
-  doCheck = false;
 
   meta = {
     description = "F-Droid command line interface written in Go";

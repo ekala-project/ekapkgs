@@ -20,7 +20,7 @@ perl.pkgs.toPerlModule (
     src = fetchFromGitHub {
       owner = "oetiker";
       repo = "rrdtool-1.x";
-      rev = "v${version}";
+      tag = "v${version}";
       hash = "sha256-EMnIh8Ug0LkbdER+Tpk0QUKns/dvX8413iQUS79QrVA=";
     };
 

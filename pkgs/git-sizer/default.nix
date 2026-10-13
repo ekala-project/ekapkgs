@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "github";
     repo = "git-sizer";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-On7QBTzKfnuuzwMQ8m1odxGqfIKL+EDg5V05Kxuhmqw=";
   };
 
@@ -22,8 +22,6 @@ buildGoModule (finalAttrs: {
     "-w"
     "-X main.BuildVersion=${finalAttrs.version}"
   ];
-
-  doCheck = false;
 
   meta = {
     description = "Compute various size metrics for a Git repository";

@@ -66,7 +66,6 @@ buildGoModule (finalAttrs: {
   '';
 
   # No tests
-  doCheck = false;
   doInstallCheck = true;
   installCheckInputs = [
     writableTmpDirAsHomeHook

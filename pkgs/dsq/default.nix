@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "multiprocessio";
     repo = "dsq";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-FZBJe+2y4HV3Pgeap4yvD0a8M/j+6pAJEFpoQVVE1ec=";
   };
 
@@ -21,8 +21,6 @@ buildGoModule (finalAttrs: {
     "-X"
     "main.Version=${finalAttrs.version}"
   ];
-
-  doCheck = false;
 
   meta = {
     mainProgram = "dsq";

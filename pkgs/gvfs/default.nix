@@ -127,7 +127,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-Dsmb=false"
   ];
 
-  doCheck = false;
   doInstallCheck = finalAttrs.finalPackage.doCheck;
 
   separateDebugInfo = true;

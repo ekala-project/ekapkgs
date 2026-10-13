@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "d-bahr";
     repo = "CRCpp";
-    rev = "release-${finalAttrs.version}";
+    tag = "release-${finalAttrs.version}";
     sha256 = "sha256-kzTNmVxN7iJ+fNS65g9UFvwtHUPntGa94bVqIr94aCE=";
   };
 

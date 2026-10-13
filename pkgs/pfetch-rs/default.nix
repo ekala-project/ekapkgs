@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Gobidev";
     repo = "pfetch-rs";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-RrsmCSoiTfdWOL0FLbKR8ZQyLMnEnY5fZ0S4pLbwvWY=";
   };
 

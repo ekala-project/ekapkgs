@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kiwix";
     repo = "libkiwix";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-wkUcQSBXrKw4Jx/ij12Nj45Jem6i7kun/gu1pJDOQeA=";
   };
 

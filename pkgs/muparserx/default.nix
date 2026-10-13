@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "beltoforion";
     repo = "muparserx";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-rekPXmncNdVX6LvPQP1M2Pzs3pyiCCcLPLnPFiyWJ4s=";
   };
 

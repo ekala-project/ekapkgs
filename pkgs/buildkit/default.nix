@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "moby";
     repo = "buildkit";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Kw3tTHpdB6hQmE9pfT3pBxzOxN6Lfv8uM/rLGPJrbI4=";
   };
 
@@ -26,8 +26,6 @@ buildGoModule (finalAttrs: {
     "-X github.com/moby/buildkit/version.Version=${finalAttrs.version}"
     "-X github.com/moby/buildkit/version.Revision=${finalAttrs.src.rev}"
   ];
-
-  doCheck = false;
 
   meta = {
     description = "Concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit";

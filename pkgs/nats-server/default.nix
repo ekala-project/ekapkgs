@@ -11,13 +11,11 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nats-io";
     repo = "nats-server";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-cNwtnlIgAIYmx1MD54ZjvYlrugvZ08B18tFpT4Kvy2M=";
   };
 
   vendorHash = "sha256-C2CLryuDRyCTtaZ/oIInsGDWcUqWuSsohPKccykC32k=";
-
-  doCheck = false;
 
   meta = {
     description = "High-Performance server for NATS";

@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "google";
     repo = "cadvisor";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-WVa0KeMSeZ4syAIQv2Xz0mhEBiPZEpPGdUiKwx+873E=";
   };
 

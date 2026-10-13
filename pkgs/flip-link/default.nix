@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "knurling-rs";
     repo = "flip-link";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-HYNaHXgI02xY1/eBkwLPN1AGwO6w98tCjwvP8YinuxE=";
   };
 

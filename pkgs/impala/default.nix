@@ -10,7 +10,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "pythops";
     repo = "impala";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-uCazIX3HToznF2jjTu9+uUeLp2CoQ8cKiP+SxwWlH64=";
   };
 

@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "hashicorp";
     repo = "envconsul";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-F04Cq9iOGP+z6x59pkRye1Fx8ZAgsSnbr7tGsNK2LxM=";
   };
 
@@ -22,8 +22,6 @@ buildGoModule (finalAttrs: {
     "-w"
     "-X github.com/hashicorp/envconsul/version.Name=envconsul"
   ];
-
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/hashicorp/envconsul/";

@@ -25,7 +25,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # Tests require network access
-  doCheck = false;
 
   versionCheckProgramArg = "-version";
 

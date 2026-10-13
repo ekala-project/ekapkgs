@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitLab {
     owner = "agmartin";
     repo = "linuxdoc-tools";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-AsTlrjTYuuLB2jF0zKPVrxOZ2ygUIyMJFV6qDd7ODwA=";
   };
 

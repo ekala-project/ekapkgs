@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "shekyan";
     repo = "slowhttptest";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-D1vzPoUwBUKQo/zCT0OW+53uM+GShE3Q27jicicico4=";
   };
 

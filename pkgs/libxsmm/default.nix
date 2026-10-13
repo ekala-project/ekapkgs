@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "libxsmm";
     repo = "libxsmm";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-s/NEFU4IwQPLyPLwMmrrpMDd73q22Sk2BNid/kedawY=";
   };
 

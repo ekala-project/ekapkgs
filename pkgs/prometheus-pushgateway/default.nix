@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "prometheus";
     repo = "pushgateway";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-qrXMKDV3BU5tZchWNj26l7Eh5Pxc+FZIV3AtLxV9TsM=";
   };
 

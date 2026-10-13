@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~steef";
     repo = "snixembed";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-co32Xlklg6KVyi+xEoDJ6TeN28V+wCSx73phwnl/05E=";
   };
 

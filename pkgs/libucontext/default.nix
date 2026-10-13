@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kaniini";
     repo = "libucontext";
-    rev = "libucontext-${finalAttrs.version}";
+    tag = "libucontext-${finalAttrs.version}";
     hash = "sha256-asT0pV3s4L4zB2qtDJ+2XYxEP6agIEo1LtCuFeOjpRA=";
   };
 
@@ -27,6 +27,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "ucontext implementation featuring glibc-compatible ABI";
     license = lib.licenses.isc;
     platforms = lib.platforms.linux;
-    teams = [ ];
   };
 })

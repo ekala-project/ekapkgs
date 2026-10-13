@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jovanlanik";
     repo = "gtklock-playerctl-module";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-YlnZxp06Bb8eIgZhCvbiX6jgnNuGoSv4wx0N4AD1V7o=";
   };
 

@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitLab {
     owner = "esr";
     repo = "galaxis";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-ZdCddbyWtF8dDAbU4M7snnegiFSEx1E0gKdDb5Xsre0=";
   };
 

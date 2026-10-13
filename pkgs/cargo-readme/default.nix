@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "webern";
     repo = "cargo-readme";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-v158zqrbnrOVTHlOgLuq7fnTDUxrjeY0MskFbB3re90=";
   };
 

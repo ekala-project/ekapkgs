@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.vci.rwth-aachen.de:9000";
     owner = "OpenMesh";
     repo = "OpenMesh";
-    rev = "OpenMesh-${lib.versions.majorMinor finalAttrs.version}";
+    tag = "OpenMesh-${lib.versions.majorMinor finalAttrs.version}";
     fetchSubmodules = true;
     hash = "sha256-1FmAieCaskKaaAWjgEXr/CWpFxrhB2Rca1sXpxLrQHw=";
   };

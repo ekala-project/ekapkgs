@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchgit {
     url = "https://salsa.debian.org/debian/datefudge.git";
-    rev = "debian/${finalAttrs.version}";
+    tag = "debian/${finalAttrs.version}";
     hash = "sha256-BN/Ct1FRZjvpkRCPpRlXmjeRvrNnuJBXwwI1P2HCisc=";
   };
 

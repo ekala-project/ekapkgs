@@ -26,7 +26,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "Nvidia";
     repo = "egl-wayland";
-    rev = version;
+    tag = version;
     hash = "sha256-M+s2R0vSDCEN9lMma6RiJTqzUgClnszwS4aKBJeBvFQ=";
   };
 

@@ -11,7 +11,7 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "prometheus-community";
     repo = "postgres_exporter";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "sha256-uTY26VyFjU7DLn/fseGG1jgIkUAO0cF4lyeFoZ+UC5o=";
   };
 

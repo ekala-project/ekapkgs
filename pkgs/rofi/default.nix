@@ -34,7 +34,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "davatorium";
     repo = "rofi";
-    rev = version;
+    tag = version;
     fetchSubmodules = true;
     hash = "sha256-akKwIYH9OoCh4ZE/bxKPCppxXsUhplvfRjSGsdthFk4=";
   };
@@ -81,8 +81,6 @@ stdenv.mkDerivation rec {
   mesonFeatures = {
     check = false;
   };
-
-  doCheck = false;
 
   meta = {
     description = "Window switcher, run dialog and dmenu replacement";

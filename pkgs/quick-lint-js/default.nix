@@ -43,7 +43,6 @@ let
       runHook postInstall
     '';
 
-    doCheck = false;
   };
 in
 stdenv.mkDerivation (finalAttrs: {

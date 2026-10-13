@@ -25,7 +25,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "DarthSim";
     repo = "overmind";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-wX29nFmzmbxbaXtwIWZNvueXFv9SKIOqexkc5pEITpw=";
   };
 

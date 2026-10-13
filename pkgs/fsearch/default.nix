@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "cboxdoerfer";
     repo = "fsearch";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-IdcNjlloyJEGZ1BbGxaeLGUiDhrku9fIXM45LwQ8iRc=";
   };
 

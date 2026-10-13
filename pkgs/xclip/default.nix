@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "astrand";
     repo = "xclip";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "0q0hmvcjlv8arhh1pzhja2wglyj6n7z209jnpnzd281kqqv4czcs";
   };
 

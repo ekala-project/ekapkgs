@@ -88,8 +88,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     makeWrapperArgs+=("''${gappsWrapperArgs[@]}")
   '';
 
-  doCheck = false;
-
   # handle setup hooks better
   strictDeps = false;
 

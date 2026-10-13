@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "spglib";
     repo = "spglib";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-RFvd/j/14YRIcQTpnYPx5edeF3zbHbi90jb32i3ZU/c=";
   };
 

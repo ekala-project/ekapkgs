@@ -17,7 +17,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   build-system = with python3Packages; [ setuptools ];
 
   # Tests requires to start containers
-  doCheck = false;
 
   meta = {
     description = "TCP/UDP communication suite";

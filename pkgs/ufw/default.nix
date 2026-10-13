@@ -48,8 +48,6 @@ python3Packages.buildPythonApplication rec {
     iproute2
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Uncomplicated Firewall — easy-to-use frontend for iptables";
     homepage = "https://launchpad.net/ufw";

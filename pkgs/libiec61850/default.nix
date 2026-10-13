@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "mz-automation";
     repo = "libiec61850";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jahJ08qOfw3V57gxRSK5fX5MszgKXQVjtDvBPGf776E=";
   };
 

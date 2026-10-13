@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Genivia";
     repo = "RE-flex";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ixyu0FvBMPdTTTjbhvnspxeIEylJyWk5u60YsNlcp38=";
   };
 

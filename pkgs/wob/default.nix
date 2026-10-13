@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "francma";
     repo = "wob";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-Bn/WN9Ix4vm9FDFVKc/vRLP4WeVNaJFz1WBuS9tqJhY=";
   };
 
@@ -45,7 +45,9 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional stdenv.hostPlatform.isLinux libseccomp;
 
-  mesonFlags = lib.optional stdenv.hostPlatform.isLinux "-Dseccomp=enabled";
+  mesonFeatures = lib.optionalAttrs stdenv.hostPlatform.isLinux {
+    seccomp = true;
+  };
 
   meta = {
     inherit (finalAttrs.src.meta) homepage;

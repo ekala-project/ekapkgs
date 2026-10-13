@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchgit {
     url = "https://git.seabios.org/seabios.git";
-    rev = "rel-${finalAttrs.version}";
+    tag = "rel-${finalAttrs.version}";
     hash = "sha256-eDQpl8Mf30p9WRvsNW192ISfBnEtMCdsWjUbWMXWmWw=";
   };
 

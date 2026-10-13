@@ -47,8 +47,6 @@ perlPackages.buildPerlPackage rec {
     )
   '';
 
-  doCheck = false;
-
   installPhase = ''
     mkdir "$out"
     mv wwwroot "$out/wwwroot"

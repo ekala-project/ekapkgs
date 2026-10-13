@@ -12,7 +12,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   src = fetchFromGitHub {
     owner = "SUSE";
     repo = "cpuset";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fW0SXNI10pb6FTn/2TOqxP9qlys0KL/H9m//NjslUaY=";
   };
 

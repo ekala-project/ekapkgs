@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ImagingDataCommons";
     repo = "libdicom";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-Z1x6pA4oRDtrf9tRAnpJ0e+mmh6nSCIpQrtQGSyxFak=";
   };
 
@@ -32,7 +32,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonBuildType = "release";
 
-  mesonFlags = lib.optionals (!finalAttrs.finalPackage.doCheck) [ "-Dtests=false" ];
+  mesonEntries = lib.optionalAttrs (!finalAttrs.finalPackage.doCheck) {
+    tests = false;
+  };
 
   doCheck = true;
 

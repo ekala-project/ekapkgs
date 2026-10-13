@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "dlbeer";
     repo = "quirc";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-zdq/YKL33jJXa10RqmQIl06rRYnrthWG+umT4dipft0=";
   };
 

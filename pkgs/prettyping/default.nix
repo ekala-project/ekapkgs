@@ -10,7 +10,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "denilsonsa";
     repo = "prettyping";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-GhsoWnhX9xBnupmmHuKW9DA2KFgIzVbSO0CyR2FpJ74=";
   };
 

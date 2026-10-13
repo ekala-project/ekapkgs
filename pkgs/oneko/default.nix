@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "IreneKnapp";
     repo = "oneko";
-    rev = finalAttrs.version_name;
+    tag = finalAttrs.version_name;
     sha256 = "0vx12v5fm8ar3f1g6jbpmd3b1q652d32nc67ahkf28djbqjgcbnc";
   };
   nativeBuildInputs = [

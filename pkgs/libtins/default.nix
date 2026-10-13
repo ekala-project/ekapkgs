@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "mfontanini";
     repo = "libtins";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "sha256-Y5cszXGAkpDBIRzu70IjtyxT5fAVhmIgbj5GVscDBtw=";
   };
 

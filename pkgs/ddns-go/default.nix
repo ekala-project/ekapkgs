@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jeessy2";
     repo = "ddns-go";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-pzEtUECJJyUo5DaIORg7a+qVIuS04B5ZsCwU6U8Xx9U=";
   };
 
@@ -22,7 +22,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # network required
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/jeessy2/ddns-go";

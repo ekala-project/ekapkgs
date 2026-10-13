@@ -15,15 +15,13 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "zaquestion";
     repo = "lab";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-VCvjP/bSd/0ywvNWPsseXn/SPkdp+BsXc/jTvB11EOk=";
   };
 
   subPackages = [ "." ];
 
   vendorHash = "sha256-ChysquNuUffcM3qaWUdqu3Av33gnKkdlotEoFKoedA0=";
-
-  doCheck = false;
 
   nativeBuildInputs = [
     makeBinaryWrapper

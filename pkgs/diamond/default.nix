@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "bbuchfink";
     repo = "diamond";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Z1+CJyKBRjTDVDAJ3uWPQd9KLIc03JNIoTTUuzHMB5U=";
   };
 

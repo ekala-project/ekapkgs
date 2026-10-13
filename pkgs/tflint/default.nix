@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-o59/JqIywhqKMkcyq/r1XRE9ldk/dE2v3Qj9IXq0G8s=";
 
-  doCheck = false;
-
   env.CGO_ENABLED = 0;
 
   subPackages = [ "." ];

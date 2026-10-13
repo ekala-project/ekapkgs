@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "wmww";
     repo = "gtk-layer-shell";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Qhbk5g3cYaE6qH/V4t0OMU/PsW233G53v8Ft0ceYfCI=";
   };
 

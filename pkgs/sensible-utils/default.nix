@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "salsa.debian.org";
     owner = "debian";
     repo = "sensible-utils";
-    rev = "debian/${finalAttrs.version}";
+    tag = "debian/${finalAttrs.version}";
     sha256 = "sha256-vxzCICkF3KDBe+IIZ63JMiZmfHOllHf1Xtw/vWaimc8=";
   };
 

@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jtv";
     repo = "libpqxx";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-f5mGtag+AfGCXDio/tE2TWhWx5VfVUrSUjX/Jwc5xsc=";
   };
 
@@ -37,8 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     BUILD_DOC = false;
     BUILD_TEST = false;
   };
-
-  doCheck = false;
 
   strictDeps = true;
 

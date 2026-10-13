@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "rootless-containers";
     repo = "rootlesskit";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-L/0YW5mRSHgBQEA6R1bR21iKEEuy95IWdNN2SFLv6zo=";
   };
 

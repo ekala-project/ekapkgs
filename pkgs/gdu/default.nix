@@ -35,8 +35,6 @@ buildGoModule (finalAttrs: {
     installManPage gdu.1
   '';
 
-  doCheck = false;
-
   meta = {
     description = "Disk usage analyzer with console interface";
     homepage = "https://github.com/dundee/gdu";

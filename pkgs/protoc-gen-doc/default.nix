@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "pseudomuto";
     repo = "protoc-gen-doc";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-19CN62AwqQGq5Gb5kQqVYhs+LKsJ9K2L0VAakwzPD5Y=";
   };
 

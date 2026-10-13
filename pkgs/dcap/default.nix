@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "dCache";
     repo = "dcap";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-hn4nkFTIbSUUhvf9UfsEqVhphAdNWmATaCrv8jOuC0Y=";
   };
 

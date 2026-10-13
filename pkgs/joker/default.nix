@@ -9,15 +9,13 @@ buildGoModule (finalAttrs: {
   version = "1.5.8";
 
   src = fetchFromGitHub {
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     owner = "candid82";
     repo = "joker";
     sha256 = "sha256-srBJiCqxNGfLZCxVHH6Mjs3Ht7Boy64qmPjr2+l/l1I=";
   };
 
   vendorHash = "sha256-yH8QVzliAFZlOvprfdh/ClCWK2/7F96f0yLWvuAhGY8=";
-
-  doCheck = false;
 
   preBuild = ''
     go generate ./...

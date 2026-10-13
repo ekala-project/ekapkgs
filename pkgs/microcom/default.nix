@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "pengutronix";
     repo = "microcom";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-drQpUOl+QLBvwT++bEBk9Bt+tTQxrnFgfuoGIW5Bcyw=";
   };
 

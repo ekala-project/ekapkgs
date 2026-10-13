@@ -20,8 +20,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-9WtBgb1nBGuETWUZZsgJ4G+vN0MNDpZWk/S1+nVPwbE=";
 
-  doCheck = false;
-
   src = fetchFromGitHub {
     owner = "kubernetes";
     repo = "minikube";

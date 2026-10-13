@@ -79,8 +79,6 @@ stdenv.mkDerivation (finalAttrs: {
     "-DENABLE_SYSTEMD=OFF"
   ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://www.clamav.net";
     description = "Antivirus engine designed for detecting Trojans, viruses, malware and other malicious threats";

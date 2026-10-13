@@ -14,7 +14,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   src = fetchFromGitHub {
     owner = "andreafrancia";
     repo = "trash-cli";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-3ogZ4BifUMIAG+94LQ3V1LcM0Cm3OT0jvvmf0xrcJfU=";
   };
 

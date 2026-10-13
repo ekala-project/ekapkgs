@@ -70,8 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
     sysprof = true;
   };
 
-  doCheck = false;
-
   strictDeps = true;
 
   meta = {

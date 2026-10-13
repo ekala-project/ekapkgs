@@ -29,8 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "CXX:=$(CXX)" ];
 
-  doCheck = false; # system clock issues
-
   meta = {
     homepage = "https://www.nongnu.org/lzip/tarlz.html";
     description = "Massively parallel combined implementation of the tar archiver and the lzip compressor";

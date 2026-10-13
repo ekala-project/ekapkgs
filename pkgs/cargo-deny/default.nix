@@ -32,7 +32,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   # tests require internet access
-  doCheck = false;
 
   meta = {
     description = "Cargo plugin for linting your dependencies";

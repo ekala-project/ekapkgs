@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "sleuthkit";
     repo = "sleuthkit";
-    rev = "sleuthkit-${finalAttrs.version}";
+    tag = "sleuthkit-${finalAttrs.version}";
     hash = "sha256-11KK7O7V8bMp0YMt9ZPwAJ00n0VeXMooYTbu+By6b2Q=";
   };
 

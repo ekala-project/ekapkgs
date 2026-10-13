@@ -47,8 +47,6 @@ python3Packages.buildPythonApplication rec {
   # when testing reduce optimisation level to reduce build time by 20%
   env.MYPYC_OPT_LEVEL = 1;
 
-  doCheck = false;
-
   pythonImportsCheck = [
     "mypy"
     "mypy.api"

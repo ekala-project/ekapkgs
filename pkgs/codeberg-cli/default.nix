@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "Aviac";
     repo = "codeberg-cli";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-yjWAL4Tu9nuQsy8fDhga5lsxYwooE0fW70zfp7Dqq3Y=";
   };
 

@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "rpm-software-management";
     repo = "libcomps";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-O60+k3ZnSfP+wFI55s/WfgrPbvu52uXZh88Ebg3Nf+c=";
   };
 

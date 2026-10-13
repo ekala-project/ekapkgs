@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "icculus";
     repo = "SDL_sound";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-Ael8OTLqmPNsX+Q+NwbXgVB9xZ0Wzv1p+IpIDWw1q+s=";
   };
   nativeBuildInputs = [

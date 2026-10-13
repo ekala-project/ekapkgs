@@ -23,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "universal-ctags";
     repo = "ctags";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-x5ZlWTNUc1J/yslKHc8rCIl9LtNTN/HTaAJpFyF0KRI=";
   };
 

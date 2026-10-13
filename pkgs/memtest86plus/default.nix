@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "memtest86plus";
     repo = "memtest86plus";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-gRJmPrJGxb5c2fQxVBL/TFplQpmqHw98MUrWzJKpct0=";
   };
 

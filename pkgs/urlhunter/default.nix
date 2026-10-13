@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "utkusen";
     repo = "urlhunter";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-QRQLN8NFIIvlK+sHNj0MMs7tlBODMKHdWJFh/LwnysI=";
   };
 

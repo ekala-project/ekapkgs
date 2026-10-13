@@ -20,7 +20,7 @@ stdenvNoCC.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "googlefonts";
     repo = "noto-emoji";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-qngf8t5fLYAOtO2GMhbMv7I34RO/eYfNawW+Th/uaYQ=";
   };
 

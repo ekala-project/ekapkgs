@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jinliu";
     repo = "kdotool";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-PQAw7I0Lpi0+JMNZGlmyDDkelkSYUX/sZVEh3PjR8VM=";
   };
 

@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "mobile-shell";
     repo = "mosh";
-    rev = "mosh-${finalAttrs.version}";
+    tag = "mosh-${finalAttrs.version}";
     hash = "sha256-tlSsHu7JnXO+sorVuWWubNUNdb9X0/pCaiGG5Y0X/g8=";
   };
 

@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "lcm-proj";
     repo = "lcm";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2IWIVq2o6R4pU48VXbizYpmZXsq1r5siATDE4j6WiZU=";
   };
 

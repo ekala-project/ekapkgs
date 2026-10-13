@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "cminyard";
     repo = "gensio";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-BCtKGJVmyEZ6zN1yPFtQx5B8zoamjdECAJRGElsm4OA=";
   };
 

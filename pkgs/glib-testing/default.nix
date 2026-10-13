@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.gnome.org";
     owner = "pwithnall";
     repo = "libglib-testing";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-OgKWC4plX4oiIakd/8bHtyiuZijV58URILXUHQqFMW8=";
   };
 

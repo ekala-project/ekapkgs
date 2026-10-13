@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~proycon";
     repo = "clickclack";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-YmlbGEmZgT/30c+mWQzdz4rKc69d75zhoNUA5FdxdMc=";
   };
 

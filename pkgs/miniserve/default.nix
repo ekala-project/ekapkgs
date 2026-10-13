@@ -28,8 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   buildInputs = [ openssl ];
 
-  doCheck = false;
-
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     $out/bin/miniserve --print-manpage >miniserve.1
     installManPage miniserve.1

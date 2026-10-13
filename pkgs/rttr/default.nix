@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "rttrorg";
     repo = "rttr";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "1yxad8sj40wi75hny8w6imrsx8wjasjmsipnlq559n4b6kl84ijp";
   };
 

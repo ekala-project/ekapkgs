@@ -17,8 +17,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
 
   build-system = with python3Packages; [ hatchling ];
 
-  doCheck = false; # no tests
-
   pythonImportsCheck = [ "imapdedup" ];
 
   meta = {

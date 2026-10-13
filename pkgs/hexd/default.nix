@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "FireyFly";
     repo = "hexd";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-b/dROBQVPEiMBTcu4MTi6Lf6ChkFZqZrJ1V0j54rrFY=";
   };
 

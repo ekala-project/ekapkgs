@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Slackadays";
     repo = "clipboard";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-3SloqijgbX3XIwdO2VBOd61or7tnByi7w45dCBKTkm8=";
   };
 

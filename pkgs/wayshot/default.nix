@@ -18,7 +18,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "waycrate";
     repo = "wayshot";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-MihZAAZ+K95jBE1gp0kne/+Z3rBUDqlphmyBI0FI1jE=";
   };
   nativeBuildInputs = [

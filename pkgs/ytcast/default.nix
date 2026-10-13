@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "MarcoLucidi01";
     repo = "ytcast";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-qFKqyBaG3+IltuJ/UDeWxlBy1NqXRZ0ENGiQoTOrWI0=";
   };
 

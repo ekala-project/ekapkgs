@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "AcademySoftwareFoundation";
     repo = "OpenColorIO";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-+EeQbu8739inUW6Az5TfDxajDzUZ1lmh7rgpBSHtp+U=";
   };
 
@@ -78,8 +78,6 @@ stdenv.mkDerivation rec {
   ]
   ++ lib.optional (!pythonBindings) "-DOCIO_BUILD_PYTHON=OFF"
   ++ lib.optional (!buildApps) "-DOCIO_BUILD_APPS=OFF";
-
-  doCheck = false;
 
   meta = with lib; {
     homepage = "https://opencolorio.org";

@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "gnosek";
     repo = "fcgiwrap";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-znAsZk+aB2XO2NK8Mjc+DLwykYKHolnVQPErlaAx3Oc=";
   };
 

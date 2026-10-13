@@ -14,7 +14,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "goreleaser";
     repo = "nfpm";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-khdD5wrTP7YSqnV5qhyvIIbOtx//eE+wgDu5y7pQ+NY=";
   };
 

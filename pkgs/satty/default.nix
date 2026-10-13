@@ -21,7 +21,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Satty-org";
     repo = "Satty";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-76J4ZlBKeow2sWs1SeSkE8R2fKRTFD+B+7Vx3nbbQxY=";
   };
 

@@ -23,7 +23,6 @@ buildGoModule (finalAttrs: {
 
   # Tests require a functioning LSP server setup with writer initialization
   # that doesn't work in the Nix sandbox (nil pointer in sendResponse)
-  doCheck = false;
 
   ldflags = [
     "-s"

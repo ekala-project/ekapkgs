@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "zlib-ng";
     repo = "minizip-ng";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-yPDH9Far8I+tpNeIoXt6w2Aj1/LEYFjwaHyLZMavCCA=";
   };
 

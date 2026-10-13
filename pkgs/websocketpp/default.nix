@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "zaphoyd";
     repo = "websocketpp";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-9fIwouthv2GcmBe/UPvV7Xn9P2o0Kmn2hCI4jCh0hPM=";
   };
 

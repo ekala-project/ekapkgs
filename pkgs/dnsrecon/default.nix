@@ -41,8 +41,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     setuptools
   ];
 
-  doCheck = false;
-
   meta = {
     description = "DNS Enumeration script";
     homepage = "https://github.com/darkoperator/dnsrecon";

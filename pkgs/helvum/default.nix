@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
     domain = "gitlab.freedesktop.org";
     owner = "pipewire";
     repo = "helvum";
-    rev = version;
+    tag = version;
     hash = "sha256-fDsVYFJ2fm5dLpcCp7Pm4s3+jqTx4r9IQokoVQ0sM04=";
   };
 

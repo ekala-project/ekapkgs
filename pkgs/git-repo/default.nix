@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchFromGitiles {
     url = "https://android.googlesource.com/tools/repo";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ToJj5WS74vwCAX53UB5zgy1K54y1gNK+1d4qQLmp1L8=";
   };
 

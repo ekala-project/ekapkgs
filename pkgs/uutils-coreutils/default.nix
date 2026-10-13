@@ -56,8 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     LN = "ln -sf";
   };
 
-  doCheck = false;
-
   meta = {
     description = "Cross-platform Rust rewrite of the GNU coreutils";
     longDescription = ''

@@ -29,7 +29,6 @@ stdenv.mkDerivation {
   ];
 
   # https://github.com/OrangeShark/guile-commonmark/issues/20
-  doCheck = false;
 
   makeFlags = [
     "GUILE_AUTO_COMPILE=0"

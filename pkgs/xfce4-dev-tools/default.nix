@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.xfce.org";
     owner = "xfce";
     repo = "xfce4-dev-tools";
-    rev = "xfce4-dev-tools-${finalAttrs.version}";
+    tag = "xfce4-dev-tools-${finalAttrs.version}";
     hash = "sha256-eUfNa/9ksLCKtVwBRtHaVl7Yl95tukUaDdoLNfeR+Ew=";
   };
 

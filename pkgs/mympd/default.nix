@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jcorporation";
     repo = "myMPD";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-OwTYcyiRT/2K09UirhcNobXo1g9aDpz7eh5OYtA0eIo=";
   };
 
@@ -56,7 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     "fortify3"
   ];
   # 5 tests out of 23 fail, probably due to the sandbox...
-  doCheck = false;
 
   strictDeps = true;
   meta = {

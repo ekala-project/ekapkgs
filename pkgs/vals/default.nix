@@ -9,7 +9,7 @@ buildGoModule (finalAttrs: {
   version = "0.47.0";
 
   src = fetchFromGitHub {
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     owner = "helmfile";
     repo = "vals";
     sha256 = "sha256-pIDwurCylIIJMvutZ3ep/ko0dOpu777H72JJTHnTC9I=";
@@ -26,7 +26,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # Tests require connectivity to various backends.
-  doCheck = false;
 
   meta = {
     description = "Helm-like configuration values loader with support for various sources";

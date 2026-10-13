@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "ibara";
     repo = "oksh";
-    rev = "oksh-${version}";
+    tag = "oksh-${version}";
     hash = "sha256-7YgKRlu/5FGZivANa2z6RQp7qKFX44xFuqNV6nwbAXI=";
   };
 

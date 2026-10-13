@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "tbillington";
     repo = "kondo";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-lbj1usgwfp7IiCNPtmHSHvX3ARGY5UpJYT89U3+kTuk=";
   };
 

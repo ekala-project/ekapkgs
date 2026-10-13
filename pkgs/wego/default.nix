@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "schachmat";
     repo = "wego";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-RKVVOgM6eEWTHYb++AVTTjPLm/4R9SHFly4boRw9Ktw=";
   };
 

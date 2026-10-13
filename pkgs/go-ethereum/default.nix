@@ -18,14 +18,12 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "go-ethereum";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-FaVO1p7eZsXQN1Ikq2CcgiugHkSyETGagZLw6hIF7to=";
   };
 
   proxyVendor = true;
   vendorHash = "sha256-AsKicppcvr7xZ2sZ1pvsu8inXBRM1W3lFMlWAvV/EL0=";
-
-  doCheck = false;
 
   outputs = [ "out" ] ++ bins;
 

@@ -30,7 +30,7 @@ let
     src = fetchFromGitHub {
       owner = "sddm";
       repo = "sddm";
-      rev = "v${finalAttrs.version}";
+      tag = "v${finalAttrs.version}";
       hash = "sha256-r5mnEWham2WnoEqRh5tBj/6rn5mN62ENOCmsLv2Ht+w=";
     };
 

@@ -59,8 +59,6 @@ python3Packages.buildPythonApplication rec {
     installManPage docs/http.1
   '';
 
-  doCheck = false;
-
   pythonImportsCheck = [ "httpie" ];
 
   meta = {

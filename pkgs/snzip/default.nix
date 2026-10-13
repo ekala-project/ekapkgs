@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kubo";
     repo = "snzip";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-trxCGVNw2MugE7kmth62Qrp7JZcHeP1gdTZk32c3hFg=";
   };
 

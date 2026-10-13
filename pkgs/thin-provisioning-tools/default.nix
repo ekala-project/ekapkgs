@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jthornber";
     repo = "thin-provisioning-tools";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-hRGelBHFbyWHwV3fRecGXIEhoDzVQ+Rdj/VHGxcDH1k=";
   };
 
@@ -35,7 +35,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # Uses O_DIRECT, which is not supported on all filesystems.
   # https://github.com/jthornber/thin-provisioning-tools/issues/38
-  doCheck = false;
 
   # required for config compatibility with configs done pre 0.9.0
   # see https://github.com/NixOS/nixpkgs/issues/317018

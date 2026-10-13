@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "tpm2-software";
     repo = "tpm2-abrmd";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-l0ncCMsStaeFACRU3Bt6F1zyiOTGY6wOHewA4AD58Ww=";
   };
 
@@ -47,7 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   # Unit tests are currently broken as the check phase attempts to start a dbus daemon etc.
   #configureFlags = [ "--enable-unit" ];
-  doCheck = false;
 
   # Even though tpm2-tss is in the RUNPATH, starting from 2.3.0 abrmd
   # seems to require the path to the device TCTI (used for accessing

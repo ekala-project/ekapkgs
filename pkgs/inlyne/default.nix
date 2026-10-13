@@ -26,7 +26,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Inlyne-Project";
     repo = "inlyne";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ciQcM7JkrCbb5volFovV8JJSpup1jWC2ah2GZ13YT+Q=";
   };
 

@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "foonathan";
     repo = "memory";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-4AO662ck492aMJJWMFgbYWBrBFMioDp827WHtxOXB6Y=";
   };
 
@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   # Tests try to download Catch2 at build time, which doesn't work in the sandbox
-  doCheck = false;
 
   # fix a circular dependency between "out" and "dev" outputs
   postInstall = ''

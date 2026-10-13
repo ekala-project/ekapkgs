@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "intel";
     repo = "cmrt";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-W6MQI41J9CKeM1eILCkvmW34cbCC8YeEF2mE+Ci8o7s=";
   };
 

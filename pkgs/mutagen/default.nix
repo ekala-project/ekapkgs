@@ -13,7 +13,7 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "mutagen-io";
     repo = "mutagen";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-eT1B2ifs1BA2wcVyz9C9F8YoSbGcpGghu5Z3UrjfBOc=";
   };
 
@@ -31,8 +31,6 @@ buildGoModule rec {
   };
 
   nativeBuildInputs = [ installShellFiles ];
-
-  doCheck = false;
 
   subPackages = [
     "cmd/mutagen"

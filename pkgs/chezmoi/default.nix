@@ -31,8 +31,6 @@ buildGoModule (finalAttrs: {
     "-X main.builtBy=nixpkgs"
   ];
 
-  doCheck = false;
-
   postInstall = ''
     installShellCompletion --bash --name chezmoi.bash completions/chezmoi-completion.bash
     installShellCompletion --fish completions/chezmoi.fish

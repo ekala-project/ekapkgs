@@ -109,7 +109,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "bus1";
     repo = "dbus-broker";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-a9ydcJKZP8MLzu9lv40p9sTyo8IsU++9HOFeGU3+Tok=";
   };
 

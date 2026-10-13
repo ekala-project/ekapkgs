@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "GregoryFaust";
     repo = "samblaster";
-    rev = "v.${finalAttrs.version}";
+    tag = "v.${finalAttrs.version}";
     sha256 = "0g24fq5hplnfgqkh3xqpg3lgx3wmxwnh9c7m6yw7pbi40lmgl1jv";
   };
 

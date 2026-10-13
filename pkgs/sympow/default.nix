@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
     group = "rezozer";
     owner = "forks";
     repo = "sympow";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-sex8gRiBdTcVMV3nSeiTYamAjPoXQdiiZwjRmeKA+mc=";
   };
 
@@ -78,7 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
       fullName = "Custom, BSD-like. See COPYING file.";
       free = true;
     };
-    teams = [ ];
     platforms = lib.platforms.unix;
   };
 })

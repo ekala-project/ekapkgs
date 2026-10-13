@@ -15,7 +15,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ByteNess";
     repo = "aws-vault";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ohg7fe63H2ktQtlk40dp2lAf+Bv3DSjfh/3xO4GcajQ=";
   };
 
@@ -39,8 +39,6 @@ buildGoModule (finalAttrs: {
       --fish $src/contrib/completions/fish/aws-vault.fish \
       --zsh $src/contrib/completions/zsh/aws-vault.zsh
   '';
-
-  doCheck = false;
 
   subPackages = [ "." ];
 

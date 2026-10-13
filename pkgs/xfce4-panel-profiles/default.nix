@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.xfce.org";
     owner = "apps";
     repo = "xfce4-panel-profiles";
-    rev = "xfce4-panel-profiles-${finalAttrs.version}";
+    tag = "xfce4-panel-profiles-${finalAttrs.version}";
     hash = "sha256-4sUNlabWp6WpBlePVFHejq/+TXiJYSQTnZFp5B258Wc=";
   };
 

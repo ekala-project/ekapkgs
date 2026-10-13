@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "graysky2";
     repo = "modprobed-db";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-JcotyXFrxE9DmrGS8cx/+BvHeQ8rLd+0h4jIYD2NZmY=";
   };
 

@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "normaliz";
     repo = "normaliz";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+puqgmLtn+49rv6aTybbNG7MC/ksKijH2KQOEBKbmMQ=";
   };
 

@@ -8,7 +8,9 @@
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "resolve-march-native";
   version = "6.1.0";
-  format = "setuptools";
+  pyproject = true;
+
+  build-system = [ python3Packages.setuptools ];
 
   src = fetchFromGitHub {
     owner = "hartwork";

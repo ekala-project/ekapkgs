@@ -66,8 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
     make doc-devkit-full
   '';
 
-  doCheck = false;
-
   meta = {
     description = "Programming Library with Geometric Algorithms";
     longDescription = ''

@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "any1";
     repo = "wayvnc";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-mx5PjNsRfgF2jm+VEHcJsHl2h1UzXtcucO8o/OnROMk=";
   };
 

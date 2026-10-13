@@ -206,7 +206,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
 
   strictDeps = false;
-  doInstallCheck = false;
 
   meta = {
     description = "Just the built source without the libraries";

@@ -15,7 +15,6 @@ python3Packages.buildPythonApplication rec {
   };
 
   # tests require working internet connection
-  doCheck = false;
 
   meta = {
     description = "Command line interface for testing internet bandwidth using speedtest.net";

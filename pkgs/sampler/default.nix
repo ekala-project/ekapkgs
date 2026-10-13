@@ -14,7 +14,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "sqshq";
     repo = "sampler";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-H7QllAqPp35wHeJ405YSfPX3S4lH0/hdQ8Ja2OGLVtE=";
   };
 
@@ -27,8 +27,6 @@ buildGoModule (finalAttrs: {
   ];
 
   vendorHash = "sha256-UZLF/oJbWUKwIPyWcT1QX+rIU5SRnav/3GLq2xT+jgk=";
-
-  doCheck = false;
 
   subPackages = [ "." ];
 

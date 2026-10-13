@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "andy5995";
     repo = "canfigger";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-vqNfakpouoQGKFCyNsn4Cney0UXVYBMCJhwEhaIGPrI=";
   };
 

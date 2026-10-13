@@ -15,7 +15,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   # XXX: broken tests, failures masked, lets avoid crashing a bunch for now :)
-  doCheck = false;
 
   # install bits not automatically installed
   postInstall = ''

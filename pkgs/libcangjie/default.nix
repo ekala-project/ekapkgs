@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.freedesktop.org";
     owner = "cangjie";
     repo = "libcangjie";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-LZRU2hbAC8xftPAIHDKCa2SfFLuH/PVqvjZmOSoUQwc=";
   };
 

@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "any1";
     repo = "neatvnc";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-yL15sr/Oi0CgXDQl4qPUL7vya3HWL+chRiwHsIQ2ADI=";
   };
 

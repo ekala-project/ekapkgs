@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "google";
     repo = "liblc3";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-4KsvCQ1JZaj0yCT7En7ZcNk0rA8LyDwwcSga2IoVd6A=";
   };
 

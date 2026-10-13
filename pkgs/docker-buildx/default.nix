@@ -11,13 +11,11 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "docker";
     repo = "buildx";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-E24ZFSd8wvCQmIxODnbKDn6mfpHDbLkGummZA8ARZyU=";
   };
 
   vendorHash = null;
-
-  doCheck = false;
 
   ldflags = [
     "-w"

@@ -40,8 +40,6 @@ buildGoModule (finalAttrs: {
 
   excludedPackages = [ "mod/tigron" ];
 
-  doCheck = false;
-
   postInstall =
     let
       runtimePath = lib.makeBinPath (lib.optional (buildkit != null) buildkit ++ extraPackages);

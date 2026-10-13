@@ -22,7 +22,6 @@ buildGoModule (finalAttrs: {
   excludedPackages = [ "tools" ];
 
   # Tests disabled for requiring network access to release.hashicorp.com
-  doCheck = false;
 
   ldflags = [
     "-s"

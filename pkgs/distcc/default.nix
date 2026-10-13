@@ -66,8 +66,6 @@ let
       ./autogen.sh
     '';
 
-    doCheck = false;
-
     passthru = {
       # A derivation that provides gcc and g++ commands, but that
       # will end up calling distcc for the given cacheDir

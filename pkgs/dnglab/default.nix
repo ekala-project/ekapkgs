@@ -10,7 +10,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "dnglab";
     repo = "dnglab";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     # darwin/linux hash mismatch
     postFetch = ''
       rm -rf "$out"/rawler/data/testdata/cameras/Canon/{"EOS REBEL T7i","EOS Rebel T7i"}

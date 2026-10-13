@@ -12,7 +12,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jlu5";
     repo = "icoextract";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-uesnYwv1ig7cnakWpH7MKeN6cfjasxVYLHs1JYG0Tss=";
   };
 
@@ -24,7 +24,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   ];
 
   # tests expect mingw and multiarch
-  doCheck = false;
 
   pythonImportsCheck = [ "icoextract" ];
 

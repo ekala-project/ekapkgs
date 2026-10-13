@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "mstpd";
     repo = "mstpd";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-mZg5DcAR7ZoBTg1Mv/z2YqT6/29z5Gr1tY7I8F7Wdpw=";
   };
 

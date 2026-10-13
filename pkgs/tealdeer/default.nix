@@ -12,7 +12,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "tealdeer-rs";
     repo = "tealdeer";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-aDhSxjRETpSaN+Dd9Aa1E+uZUVCp65QWne7mqJA7E54=";
   };
 

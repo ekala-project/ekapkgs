@@ -62,8 +62,6 @@ in
     pygobject3
   ];
 
-  doCheck = false;
-
   postInstall = ''
     substituteInPlace data/99-input-remapper.rules \
       --replace-fail 'RUN+="/bin/input-remapper-control' "RUN+=\"$out/bin/input-remapper-control"

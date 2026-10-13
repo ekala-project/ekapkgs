@@ -29,7 +29,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "hughsie";
     repo = "libxmlb";
-    rev = version;
+    tag = version;
     hash = "sha256-4Y49Jd3KkEfbZ0ObLGG/e0xkJ1MfyfAnhiKZgLOEFsw=";
   };
 
@@ -62,8 +62,6 @@ stdenv.mkDerivation rec {
     "--libexecdir=${placeholder "
     out"}/libexec"
   ];
-
-  doCheck = false;
 
   meta = {
     description = "Library to help create and query binary XML blobs";

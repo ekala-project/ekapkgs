@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "osmocom";
     repo = "libosmocore";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-lHPpV3wmsJFzanMUF6dhhmKTVCIz5MOfqr8U23sm6eI=";
   };
 

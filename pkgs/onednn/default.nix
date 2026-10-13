@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "uxlfoundation";
     repo = "oneDNN";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-DD2PnDWDF5WMjBe1UK6X6saOmP6cWytqvRshKchZRGg=";
   };
 
@@ -34,7 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = lib.optionals stdenv.hostPlatform.isDarwin [ llvmPackages.openmp ];
 
   # Tests fail on some Hydra builders, because they do not support SSE4.2.
-  doCheck = false;
 
   # Fixup bad cmake paths
   postInstall = ''

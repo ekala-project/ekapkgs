@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ponceto";
     repo = "xcpc-emulator";
-    rev = "xcpc-${finalAttrs.version}";
+    tag = "xcpc-${finalAttrs.version}";
     hash = "sha256-v4ReecpOynlGFNax+Z0Vng5wqvT92fdPr2fSZfbDeRU=";
   };
 

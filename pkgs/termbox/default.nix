@@ -10,7 +10,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "termbox";
     repo = "termbox";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "075swv6ajx8m424dbmgbf6fs6nd5q004gjpvx48gkxmnf9spvykl";
   };
 

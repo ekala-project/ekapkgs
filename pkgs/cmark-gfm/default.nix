@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "github";
     repo = "cmark-gfm";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-HiSGtRsSbW03R6aKoMVVFOLrwP5aXtpeXUC/bE5M/qo=";
   };
 

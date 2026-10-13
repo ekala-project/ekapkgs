@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "elFarto";
     repo = "nvidia-vaapi-driver";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "sha256-cEEPRKoWtNXk8LsDbkhNjnIY7UD1rfYbv2Q6ThG0YLg=";
   };
 

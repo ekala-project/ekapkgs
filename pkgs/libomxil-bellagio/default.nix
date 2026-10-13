@@ -32,8 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
   #    ld: cannot find -lomxil-bellagio
   enableParallelBuilding = false;
 
-  doCheck = false; # fails
-
   env.NIX_CFLAGS_COMPILE =
     # stringop-truncation: see https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1028978
     if stdenv.cc.isGNU then

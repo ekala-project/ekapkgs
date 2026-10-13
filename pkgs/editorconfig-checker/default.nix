@@ -19,7 +19,6 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-DufIXNRFuQ+qymKeAaPNB4j8CS6M1FU3p8V9sPOWmCI=";
 
   # Tests run on source and don't expect vendor dir.
-  doCheck = false;
 
   nativeBuildInputs = [ installShellFiles ];
 

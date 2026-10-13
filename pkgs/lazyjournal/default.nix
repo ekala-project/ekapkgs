@@ -26,7 +26,6 @@ buildGoModule {
 
   # All checks expect a FHS environment with e.g. log files present,
   # which is evidently not possible in a build environment
-  doCheck = false;
 
   meta = {
     description = "TUI for journalctl, file system logs, as well as Docker and Podman containers";

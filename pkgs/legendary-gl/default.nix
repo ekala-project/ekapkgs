@@ -26,7 +26,6 @@ python3Packages.buildPythonApplication {
   ];
 
   # no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "legendary" ];
 

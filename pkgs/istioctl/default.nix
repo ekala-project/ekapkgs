@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "istio";
     repo = "istio";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-CsfV6HLzAMn+Pn7rn/xIbgq5XA7n4aHlaBH/CrwjcY0=";
   };
   vendorHash = "sha256-NvUMAH8wMs34/oZcrKduj0J/CYPObJML+fxbJI8MYt8=";

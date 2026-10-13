@@ -89,8 +89,6 @@ stdenv.mkDerivation (finalAttrs: {
     eds_backend = true;
   };
 
-  doCheck = false;
-
   meta = {
     description = "Library that aggregates people from multiple sources to create metacontacts";
     homepage = "https://gitlab.gnome.org/GNOME/folks";

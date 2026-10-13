@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ThomasHabets";
     repo = "simple-tpm-pk11";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-wJ0U4ZNg60+XJTSAMs9gaMTWVePE5dfv5cZWDqwnSlY=";
   };
 

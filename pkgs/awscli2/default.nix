@@ -108,8 +108,6 @@ py.pkgs.buildPythonApplication rec {
     "PYTHONPATH"
   ];
 
-  doCheck = false;
-
   postInstall = ''
     cat > aws.zsh <<EOF
     #compdef aws

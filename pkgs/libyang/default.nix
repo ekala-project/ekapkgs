@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "CESNET";
     repo = "libyang";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-t2DYY0xMbGuOKllaJeyT+pJJ5wTVtYXHrDtwMmZxjBw=";
   };
 

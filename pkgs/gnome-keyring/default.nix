@@ -73,7 +73,6 @@ stdenv.mkDerivation rec {
     systemd = false;
   };
 
-  doCheck = false;
   strictDeps = true;
 
   postFixup = lib.optionalString useWrappedDaemon ''

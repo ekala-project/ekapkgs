@@ -66,7 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   # tests require network
-  doCheck = false;
 
   meta = {
     description = "Listen to your favorite podcasts";

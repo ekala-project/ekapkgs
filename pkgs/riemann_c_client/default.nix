@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "git.madhouse-project.org";
     owner = "algernon";
     repo = "riemann-c-client";
-    rev = "riemann-c-client-${finalAttrs.version}";
+    tag = "riemann-c-client-${finalAttrs.version}";
     hash = "sha256-l9iUDhagODi58FDT9vEb90tsiIcrcMmGYCmH3ML3RCM=";
   };
 

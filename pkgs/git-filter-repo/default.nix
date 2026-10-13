@@ -33,8 +33,6 @@ python3Packages.buildPythonPackage rec {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "git_filter_repo" ];
 
   meta = {

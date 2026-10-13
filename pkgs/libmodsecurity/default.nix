@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "owasp-modsecurity";
     repo = "ModSecurity";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-OebDDhaOQfOf22MoQ1htHwB25O52OnJBSzZlxhnJ0Zo=";
     fetchSubmodules = true;
   };

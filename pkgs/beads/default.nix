@@ -42,8 +42,6 @@ buildGoModule (finalAttrs: {
 
   subPackages = [ "cmd/bd" ];
 
-  doCheck = false;
-
   postInstall = ''
     wrapProgram $out/bin/bd \
       --prefix PATH : ${lib.makeBinPath [ dolt ]}

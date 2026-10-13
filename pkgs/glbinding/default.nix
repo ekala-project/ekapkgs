@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "cginternals";
     repo = "glbinding";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-oLtOsiXfl/18rY/89vl9JDDWpPmEELOFKAHuClveU0c=";
   };
 

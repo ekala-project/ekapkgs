@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~sircmpwn";
     repo = "wev";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-0ZA44dMDuVYfplfutOfI2EdPNakE9KnOuRfk+CEDCRk=";
   };
 

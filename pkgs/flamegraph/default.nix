@@ -31,8 +31,6 @@ stdenv.mkDerivation {
     runHook postInstall
   '';
 
-  doCheck = false;
-
   meta = {
     license = with lib.licenses; [
       asl20

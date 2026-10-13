@@ -18,8 +18,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-xY3C3emqtPIKyxIN9aEkrLXhTxWNmo0EJXNZVtbtIvs=";
 
-  doCheck = false;
-
   subPackages = [ "./exercism" ];
 
   nativeBuildInputs = [ installShellFiles ];

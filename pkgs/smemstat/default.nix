@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ColinIanKing";
     repo = "smemstat";
-    rev = "V${finalAttrs.version}";
+    tag = "V${finalAttrs.version}";
     hash = "sha256-wxgw5tPdZAhhISbay8BwoL5zxZJV4WstDpOtv9umf54=";
   };
 

@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchgit {
     url = "https://xff.cz/git/megatools";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-XOGjdvMw8wfhBwyOBnQqiiJeOGvYXKMYxiJ6BZeEwDQ=";
   };
 

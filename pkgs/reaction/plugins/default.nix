@@ -27,7 +27,6 @@
           license = lib.licenses.agpl3Plus;
           mainProgram = name;
           platforms = lib.platforms.unix;
-          teams = [ ];
         };
       }
       // extra

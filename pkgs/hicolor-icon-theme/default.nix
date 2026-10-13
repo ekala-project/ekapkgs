@@ -15,7 +15,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     domain = "gitlab.freedesktop.org";
     owner = "xdg";
     repo = "default-icon-theme";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-uoB7u/ok7vMxKDl8pINdnV9VsvmsntBcZuz3Q4zGz7M=";
   };
 

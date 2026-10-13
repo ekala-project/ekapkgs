@@ -26,8 +26,6 @@ buildGoModule (finalAttrs: {
 
   subPackages = [ "./vacuum.go" ];
 
-  doCheck = false;
-
   meta = {
     description = "World's fastest OpenAPI & Swagger linter";
     homepage = "https://quobix.com/vacuum";

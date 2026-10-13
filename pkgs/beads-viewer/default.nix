@@ -34,8 +34,6 @@ buildGoModule (finalAttrs: {
     "-X github.com/Dicklesworthstone/beads_viewer/pkg/version.version=v${finalAttrs.version}"
   ];
 
-  doCheck = false;
-
   doInstallCheck = true;
   nativeInstallCheckInputs = [ versionCheckHook ];
 

@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "DanBloomBerg";
     repo = "leptonica";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-d67gxWmWN3WfSPuHrjpC+emLyQswJbKV7gzm7D4bpI0=";
   };
 
@@ -38,8 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     openjpeg
     zlib
   ];
-
-  doCheck = false;
 
   meta = {
     description = "Image processing and analysis library";

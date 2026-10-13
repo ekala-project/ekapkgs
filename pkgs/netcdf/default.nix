@@ -66,8 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
     remove-references-to -t ${stdenv.cc} "$(readlink -f $out/lib/libnetcdf.settings)"
   '';
 
-  doCheck = false;
-
   meta = {
     description = "Libraries for the Unidata network Common Data Format";
     homepage = "https://www.unidata.ucar.edu/software/netcdf/";

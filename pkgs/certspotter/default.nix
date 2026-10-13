@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "SSLMate";
     repo = "certspotter";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0GwESNuwvwC3HgNy+1dXxgGshlj5sFCnPj25TnDXbFw=";
   };
 

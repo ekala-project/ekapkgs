@@ -37,7 +37,7 @@ let
     src = fetchFromGitHub {
       owner = "neutrinolabs";
       repo = "xorgxrdp";
-      rev = "v${version}";
+      tag = "v${version}";
       hash = "sha256-P7mgdHIq7/Vkk5CR4mUYtQ0xBjh3J2QrYAobKbw1KXM=";
     };
 
@@ -83,7 +83,7 @@ let
       src = fetchFromGitHub {
         owner = "neutrinolabs";
         repo = "xrdp";
-        rev = "v${version}";
+        tag = "v${version}";
         fetchSubmodules = true;
         hash = "sha256-yvPgIgM2NxAp9unlm+XVMGqpbHKsTKn33k6RvscdymU=";
       };

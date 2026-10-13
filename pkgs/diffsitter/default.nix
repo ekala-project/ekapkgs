@@ -26,7 +26,7 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "afnanenayet";
     repo = "diffsitter";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-XkEaOwPv2hKpadtGHpx+QsRLL/Cq9wQvgkTQ7/zXsTQ=";
     fetchSubmodules = false;
   };
@@ -49,8 +49,6 @@ rustPlatform.buildRustPackage rec {
     wrapProgram "$out/bin/diffsitter" \
       --prefix LD_LIBRARY_PATH : "${libPath}"
   '';
-
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/afnanenayet/diffsitter";

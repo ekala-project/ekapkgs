@@ -26,7 +26,7 @@ rustPlatform.buildRustPackage {
   src = fetchFromGitHub {
     owner = "pimalaya";
     repo = "himalaya";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-fYspChAGb0PLdsgP5GViAwp4NdmDXDyait0mpqIkGfQ=";
   };
 

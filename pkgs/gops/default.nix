@@ -14,7 +14,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "google";
     repo = "gops";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-2xY/e+lqE1XtMMOJ+WmbMWibQMCIoEouOXNIJKEikvs=";
   };
 

@@ -14,7 +14,7 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "apache";
     repo = "xalan-c";
-    rev = "Xalan-C_1_12_0";
+    tag = "Xalan-C_1_12_0";
     sha256 = "sha256:0q1204qk97i9h14vxxq7phcfpyiin0i1zzk74ixvg4wqy87b62s8";
   };
 

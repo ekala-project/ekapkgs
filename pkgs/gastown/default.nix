@@ -40,8 +40,6 @@ buildGoModule (finalAttrs: {
     "-X=github.com/steveyegge/gastown/internal/cmd.BuiltProperly=1"
   ];
 
-  doCheck = false;
-
   postInstall = ''
     wrapProgram $out/bin/gt \
       --prefix PATH : ${

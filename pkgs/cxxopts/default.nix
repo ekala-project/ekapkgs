@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jarro2783";
     repo = "cxxopts";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-baM6EX9D0yfrKxuPXyUUV9RqdrVLyygeG6x57xN8lc4=";
   };
 
@@ -25,9 +25,10 @@ stdenv.mkDerivation (finalAttrs: {
   cmakeEntries = {
     CXXOPTS_BUILD_EXAMPLES = false;
     CXXOPTS_CXX_STANDARD = "17";
+  }
+  // lib.optionalAttrs enableUnicodeHelp {
+    CXXOPTS_USE_UNICODE_HELP = true;
   };
-
-  cmakeFlags = lib.optional enableUnicodeHelp "-DCXXOPTS_USE_UNICODE_HELP=TRUE";
 
   nativeBuildInputs = [
     cmake

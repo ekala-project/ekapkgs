@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "birdayz";
     repo = "kaf";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-gLFUv+4wGH1FOpa4DHHwSV7nSCxo+MzdNmo0I0SD/p0=";
   };
 
@@ -22,7 +22,6 @@ buildGoModule (finalAttrs: {
   nativeBuildInputs = [ installShellFiles ];
 
   # Many tests require a running Kafka instance
-  doCheck = false;
 
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd kaf \

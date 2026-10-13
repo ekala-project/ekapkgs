@@ -42,8 +42,6 @@ python3Packages.buildPythonApplication rec {
     watchdog
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "mkdocs" ];
 
   meta = {

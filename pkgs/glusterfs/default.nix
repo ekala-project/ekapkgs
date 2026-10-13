@@ -94,7 +94,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "gluster";
     repo = "glusterfs";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-MGTntR9SVmejgpAkZnhJOaIkZeCMNBGaQSorLOStdjo=";
   };
   inherit buildInputs propagatedBuildInputs;
@@ -164,9 +164,6 @@ stdenv.mkDerivation (finalAttrs: {
     wrapProgram $out/libexec/glusterfs/glusterfind/brickfind.py --set PATH "$GLUSTER_PATH" --set PYTHONPATH "$GLUSTER_PYTHONPATH" --set LD_LIBRARY_PATH "$GLUSTER_LD_LIBRARY_PATH"
     wrapProgram $out/libexec/glusterfs/glusterfind/changelog.py --set PATH "$GLUSTER_PATH" --set PYTHONPATH "$GLUSTER_PYTHONPATH" --set LD_LIBRARY_PATH "$GLUSTER_LD_LIBRARY_PATH"
   '';
-
-  # installCheck disabled: gfid_to_path.py requires pyxattr which is not available
-  doInstallCheck = false;
 
   env = {
     DETERMINISTIC_BUILD = 1;

@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "git.osgeo.org";
     owner = "rttopo";
     repo = "librttopo";
-    rev = "librttopo-${finalAttrs.version}";
+    tag = "librttopo-${finalAttrs.version}";
     hash = "sha256-VxyQr4nBy4PS2IjabBZHvzejFPDNBgSNn528ZCf99EA=";
   };
 

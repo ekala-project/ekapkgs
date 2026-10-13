@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     repo = "vcftools";
     owner = "vcftools";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-IiePgDpaL/6XOpQsOn90clB6ST7F/37sztmHrC7Ysbw=";
   };
 

@@ -105,8 +105,6 @@ stdenv.mkDerivation (finalAttrs: {
     "sysconfdir=${placeholder "out"}/etc"
   ];
 
-  doCheck = false;
-
   postInstall = ''
     moveToOutput share/gtk-2.0/demo "$devdoc"
     moveToOutput bin/gtk-update-icon-cache "$out"

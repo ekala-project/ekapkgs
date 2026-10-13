@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.xiph.org";
     owner = "xiph";
     repo = "libopusenc";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-n4wmIUyCNPpgHhyRpv4Xpw292M6XRFhQtuY77x6+7JA=";
   };
 

@@ -31,8 +31,6 @@ let
 
     vendorHash = "sha256-j5SpZnBWcC8K8lHgc5HOCbGD3DdHr9tVtEhXWTCCogk=";
 
-    doCheck = false;
-
     ldflags = [
       "-s"
       "-w"

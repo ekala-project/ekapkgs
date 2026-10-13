@@ -10,7 +10,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "rmyorston";
     repo = "pdpmake";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-ivRXZxm9RAWSmNfiV7BhVzVFsBKuMMpKjub8ADinYyc=";
   };
 

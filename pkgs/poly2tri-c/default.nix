@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.gnome.org";
     owner = "jtojnar";
     repo = "poly2tri-c";
-    rev = "p2tc-${finalAttrs.version}";
+    tag = "p2tc-${finalAttrs.version}";
     sha256 = "158vm3wqfxs22b74kqc4prlvjny38qqm3kz5wrgasmx0qciwh0g8";
   };
 

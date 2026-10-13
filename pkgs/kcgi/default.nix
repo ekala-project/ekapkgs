@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "kristapsdz";
     repo = "kcgi";
-    rev = "VERSION_${underscoreVersion}";
+    tag = "VERSION_${underscoreVersion}";
     sha256 = "0ha6r7bcgf6pcn5gbd2sl7835givhda1jql49c232f1iair1yqyp";
   };
   patchPhase = ''

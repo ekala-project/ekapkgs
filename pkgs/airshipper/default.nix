@@ -120,7 +120,6 @@ rustPlatform.buildRustPackage {
         --prefix LD_LIBRARY_PATH : "${libPath}"
     '';
 
-  doCheck = false;
   cargoBuildFlags = [
     "--package"
     "airshipper"

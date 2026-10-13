@@ -11,14 +11,13 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "bnjbvr";
     repo = "cargo-machete";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-vC7Oj42GU7YlNtP+TUp+4LH2gxGk55RZ5cOLRaiEQ3w=";
   };
 
   cargoHash = "sha256-cmOMWJOSJxhjXVdwVdDnTORJRSZcQ8kdDUTJaIy8dbk=";
 
   # tests require internet access
-  doCheck = false;
 
   meta = {
     description = "Cargo tool that detects unused dependencies in Rust projects";

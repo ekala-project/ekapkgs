@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "anestisb";
     repo = "android-simg2img";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-sNHdSbms35YnENASFEG+VMLJGkV/JAlQUVMquDrePDc=";
   };
 

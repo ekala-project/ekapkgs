@@ -12,12 +12,11 @@ python3Packages.buildPythonApplication (finalAttrs: {
   src = fetchFromGitHub {
     owner = "s0md3v";
     repo = "Photon";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "02z1xj72bq35dilr4b6njry4kixz6j2a3ag02nla98q0fvgmgnvy";
   };
 
   dontBuild = true;
-  doCheck = false;
 
   propagatedBuildInputs = with python3Packages; [
     requests

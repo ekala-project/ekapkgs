@@ -38,7 +38,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   # Don't run tests because they pull in external dependencies
   # (a specific build of gerrit + maven plugins), and I haven't figured
   # out how to work around this yet.
-  doCheck = false;
 
   pythonImportsCheck = [ "git_review" ];
   meta = {

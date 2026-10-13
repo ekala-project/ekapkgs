@@ -13,15 +13,13 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "gcla";
     repo = "termshark";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-qq7BDGprRkWKRMJiVnqPeTwtHd3tea9dPE8RIPL2YVI=";
   };
 
   nativeBuildInputs = [ makeWrapper ];
 
   vendorHash = "sha256-C9XOiNjo+TZ+erdnypRhhfpbuBhB3yEqNpbtwjEv14g=";
-
-  doCheck = false;
 
   postFixup = lib.optionalString (wireshark-cli != null) ''
     wrapProgram $out/bin/termshark --suffix PATH : ${lib.makeBinPath [ wireshark-cli ]}

@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "cloudflare";
     repo = "cfssl";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-te5qgl+mJnrPMpXbwJY/GG0zNKaHWmwJpNBCQtjhAck=";
   };
 
@@ -27,8 +27,6 @@ buildGoModule (finalAttrs: {
   ];
 
   vendorHash = null;
-
-  doCheck = false;
 
   ldflags = [
     "-s"

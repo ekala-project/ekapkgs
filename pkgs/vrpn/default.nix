@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "vrpn";
     repo = "vrpn";
-    rev = "version_${finalAttrs.version}";
+    tag = "version_${finalAttrs.version}";
     hash = "sha256-eXmj9Wqm+ytsnypC+MrOLnJg9zlri5y0puavamZqFmY=";
   };
 

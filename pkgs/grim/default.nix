@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.freedesktop.org";
     owner = "emersion";
     repo = "grim";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-oPo6zrS3gCnviIK0+gPvtal+6c7fNFWtXnAA0YfaS+U=";
   };
 

@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "Mindwerks";
     repo = "wildmidi";
-    rev = "${pname}-${version}";
+    tag = "${pname}-${version}";
     sha256 = "sha256-KFJW2m7TJ0RExK/C0XHyOefKGFLUszl7Jh6l10NjeHM=";
   };
 

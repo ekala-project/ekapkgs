@@ -28,7 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   # Tests will try to compile with mini-dashboard features which downloads something from the internet.
-  doCheck = false;
 
   meta = {
     description = "Powerful, fast, and an easy to use search engine";

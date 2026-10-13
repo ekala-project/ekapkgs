@@ -13,13 +13,11 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kubernetes-sigs";
     repo = "cri-tools";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-8TjS7cZXgiaSD7tEQbZmQIQUBkniIHjgAqyMEVqQrd0=";
   };
 
   vendorHash = null;
-
-  doCheck = false;
 
   nativeBuildInputs = [ installShellFiles ];
 
@@ -47,6 +45,5 @@ buildGoModule (finalAttrs: {
     description = "CLI and validation tools for Kubelet Container Runtime Interface (CRI)";
     homepage = "https://github.com/kubernetes-sigs/cri-tools";
     license = lib.licenses.asl20;
-    teams = [ ];
   };
 })

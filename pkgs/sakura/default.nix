@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "dabisu";
     repo = "sakura";
-    rev = "SAKURA_${lib.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
+    tag = "SAKURA_${lib.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
     hash = "sha256-YeZIYIfFgkK5nxMHq9mslrjIWTRAebhXyzXv5hTmOpI=";
   };
 

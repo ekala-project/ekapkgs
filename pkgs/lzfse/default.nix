@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "lzfse";
     repo = "lzfse";
-    rev = "lzfse-${finalAttrs.version}";
+    tag = "lzfse-${finalAttrs.version}";
     hash = "sha256-pcGnes966TSdYeIwjJv4F7C++cRzuYorb7rvu4030NU=";
   };
 

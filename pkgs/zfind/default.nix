@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "laktak";
     repo = "zfind";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-zp2YrrvghmXy0LPxCSkOxYwrmoGabTKCD5CiFl3XCOU=";
   };
 

@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "lxi-tools";
     repo = "liblxi";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-mbrl/1IxJhnUhvgEpXBtPg5WXfWap6RbfSSOK1ZZcng=";
   };
 

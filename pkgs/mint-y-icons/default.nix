@@ -14,7 +14,7 @@ stdenvNoCC.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "linuxmint";
     repo = "mint-y-icons";
-    rev = version;
+    tag = version;
     hash = "sha256-kB6JEl6CjVfZ/aY9qotfTogKxcPdZzNLlbA9OoKEvAc=";
   };
 
@@ -47,6 +47,5 @@ stdenvNoCC.mkDerivation rec {
     description = "Mint-Y icon theme";
     license = lib.licenses.gpl3; # from debian/copyright
     platforms = lib.platforms.linux;
-    teams = [ ];
   };
 }

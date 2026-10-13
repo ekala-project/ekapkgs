@@ -11,13 +11,11 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jmhobbs";
     repo = "terminal-parrot";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-VOV1KKaZrKyz+Fj//RbPrBE3ImC60FNauayVAMmoxFc=";
   };
 
   vendorHash = "sha256-EhnmOpT+rx4RVpmqgEQ4qO+Uca1W9uhx4fcExXG9LOI=";
-
-  doCheck = false;
 
   meta = {
     description = "Shows colorful, animated party parrot in your terminal";

@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "sparsehash";
     repo = "sparsehash";
-    rev = "sparsehash-${finalAttrs.version}";
+    tag = "sparsehash-${finalAttrs.version}";
     sha256 = "1pf1cjvcjdmb9cd6gcazz64x0cd2ndpwh6ql2hqpypjv725xwxy7";
   };
 

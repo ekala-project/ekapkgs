@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "Mbed-TLS";
     repo = "mbedtls";
-    rev = "${pname}-${version}";
+    tag = "${pname}-${version}";
     hash = "sha256-+PW41/c8M/Yz0EVWM4Gt4HTNBMUTU5MayaKVZ+upLIo=";
     fetchSubmodules = true;
   };
@@ -47,8 +47,6 @@ stdenv.mkDerivation rec {
     USE_SHARED_MBEDTLS_LIBRARY = true;
     GEN_FILES = false;
   };
-
-  doCheck = false;
 
   meta = {
     homepage = "https://www.trustedfirmware.org/projects/mbed-tls/";

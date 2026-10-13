@@ -138,7 +138,6 @@ buildGoModule (finalAttrs: {
   '';
 
   # Many TSDB tests fail with "no space left on device" in sandboxed builds
-  doCheck = false;
 
   nativeInstallCheckInputs = [
     versionCheckHook

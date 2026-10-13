@@ -17,7 +17,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "arxanas";
     repo = "git-branchless";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-V769kYbmUe6JtVoo83ejxUsegyiBh07tMYPVhJiFNgs=";
   };
 
@@ -44,7 +44,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   # See: https://github.com/arxanas/git-branchless/issues/1416
   #      https://github.com/arxanas/git-branchless/pull/1417
   # To be re-enabled once arxanas/git-branchless#1416 is resolved
-  doCheck = false;
 
   checkFlags = [
     # FIXME: these tests deadlock when run in the Nix sandbox

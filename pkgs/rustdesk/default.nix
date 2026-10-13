@@ -77,7 +77,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildFeatures = lib.optionals stdenv.hostPlatform.isLinux [ "linux-pkg-config" ];
 
   # Checks require an active X server
-  doCheck = false;
 
   buildInputs = [
     at-spi2-core

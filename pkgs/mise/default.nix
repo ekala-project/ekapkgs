@@ -34,7 +34,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   env.NIX_CFLAGS_COMPILE = "-Wno-error";
 
   # Many tests require network access or specific env setup
-  doCheck = false;
 
   postInstall = ''
     installManPage ./man/man1/mise.1

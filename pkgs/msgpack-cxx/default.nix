@@ -32,9 +32,10 @@ stdenv.mkDerivation (finalAttrs: {
   cmakeEntries = {
     MSGPACK_BUILD_DOCS = false;
     MSGPACK_CXX20 = true;
+  }
+  // lib.optionalAttrs finalAttrs.finalPackage.doCheck {
+    MSGPACK_BUILD_TESTS = true;
   };
-
-  cmakeFlags = lib.optional finalAttrs.finalPackage.doCheck "-DMSGPACK_BUILD_TESTS=ON";
 
   checkInputs = [
     zlib

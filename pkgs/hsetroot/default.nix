@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "himdel";
     repo = "hsetroot";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "1jbk5hlxm48zmjzkaq5946s58rqwg1v1ds2sdyd2ba029hmvr722";
   };
 

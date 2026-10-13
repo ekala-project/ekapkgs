@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "fujita";
     repo = "tgt";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-e7rI8/WQl1L78l2Nk9ajomRucPwsSqZ7fLSHSw11jeY=";
   };
 

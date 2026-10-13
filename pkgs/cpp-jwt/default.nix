@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "arun11299";
     repo = "cpp-jwt";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-TyLYTk7vlpNmYJxaH9zhGwFvv1BEcShTDr7JYfgu6f0=";
   };
 

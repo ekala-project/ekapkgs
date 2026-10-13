@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitLab {
     owner = "esr";
     repo = "deheader";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-RaWU6075PvgxbsH1+Lt/CEDAcl9Vx6kxcZAA/A/Af4o=";
   };
 

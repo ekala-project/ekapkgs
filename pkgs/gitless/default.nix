@@ -12,7 +12,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   src = fetchFromGitHub {
     owner = "goldstar611";
     repo = "gitless";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-XDB1i2b1reMCM6i1uK3IzTnsoLXO7jldYtNlYUo1AoQ=";
   };
 
@@ -26,8 +26,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   ];
 
   pythonRelaxDeps = [ "pygit2" ];
-
-  doCheck = false;
 
   pythonImportsCheck = [
     "gitless"

@@ -14,7 +14,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   cargoHash = "sha256-+FWDeR4AcFSFz0gGQ8VMvX68/F0yEm25cNfHeedqsWE=";
-  doCheck = false; # http tests
 
   meta = {
     homepage = "https://dotslash-cli.com";

@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "icculus";
     repo = "physfs";
-    rev = "release-${version}";
+    tag = "release-${version}";
     sha256 = "sha256-FhFIshX7G3uHEzvHGlDIrXa7Ux6ThQNzVssaENs+JMw=";
   };
 

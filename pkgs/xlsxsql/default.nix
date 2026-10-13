@@ -34,8 +34,6 @@ buildGoModule (finalAttrs: {
       --zsh <($out/bin/xlsxsql completion zsh)
   '';
 
-  doCheck = false;
-
   meta = {
     description = "CLI tool that executes SQL queries on various files including xlsx files";
     homepage = "https://github.com/noborus/xlsxsql";

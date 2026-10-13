@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "daveewart";
     repo = "colordiff";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-ZFxBY/QrKlRC7glEGWpB/79Jup0e4RCnS82Ct6lhK4Y=";
   };
 

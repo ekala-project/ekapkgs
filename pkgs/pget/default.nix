@@ -10,7 +10,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Code-Hex";
     repo = "pget";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-SDe9QH1iSRfMBSCfYiOJPXUbDvxH5cCCWvQq9uTWT9Y=";
   };
 

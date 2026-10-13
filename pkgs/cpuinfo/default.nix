@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
   # not all build environments may have this information available. And, cpuinfo may
   # not understand all CPUs (causing test failures such as https://github.com/pytorch/cpuinfo/issues/132)
   # Instead, allow building in any environment.
-  doCheck = false;
 
   meta = {
     description = "Tools and library to detect essential for performance optimization information about host CPU";

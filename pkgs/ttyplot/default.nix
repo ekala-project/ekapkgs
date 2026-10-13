@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "tenox7";
     repo = "ttyplot";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-ez8++rn6tfx2M2FDEU5a0Td0HPC2Ra9dCY1gKesDtbQ=";
   };
 

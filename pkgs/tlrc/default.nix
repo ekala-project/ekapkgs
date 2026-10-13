@@ -12,7 +12,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "tldr-pages";
     repo = "tlrc";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7u1aaBEv9Rco/hVHOmpMrLlNapqHB2FBCL8SEyeB+Xs=";
   };
 

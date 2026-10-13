@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchFromGitHub {
     sha256 = "09mmsalc7dwlvgrda56s2k927rpl3a5dzfa88aslkqcjnr790wjy";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     repo = "xdelta-devel";
     owner = "jmacd";
   };
@@ -27,8 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
   configureFlags = [
     "--with-liblzma"
   ];
-
-  doCheck = false;
 
   installPhase = ''
     install -D -m755 xdelta3 $out/bin/xdelta3

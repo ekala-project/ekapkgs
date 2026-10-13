@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "orhun";
     repo = "rustypaste";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-K8hFpIPk53N4yrA7Q5HvRmEtUw03Z7syhtmJ17epaQM=";
   };
 

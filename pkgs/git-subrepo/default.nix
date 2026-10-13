@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ingydotnet";
     repo = "git-subrepo";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-Fwh4haGXVDsLexe/1kjUhY4lF6u5cTrAwivZiOkPig0=";
   };
 

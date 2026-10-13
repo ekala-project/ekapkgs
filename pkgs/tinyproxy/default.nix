@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
 
   src = fetchFromGitHub {
     hash = "sha256-In/ZG50i2jKl0x7yfSs3KHlBdm8NdXtspMJPiv4BW6g=";
-    rev = version;
+    tag = version;
     repo = "tinyproxy";
     owner = "tinyproxy";
   };

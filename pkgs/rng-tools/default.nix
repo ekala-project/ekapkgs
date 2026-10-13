@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "nhorman";
     repo = "rng-tools";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-wqJvLvxmNG2nb5P525w25Y8byUUJi24QIHNJomCKeG8=";
   };
 
@@ -46,8 +46,6 @@ stdenv.mkDerivation rec {
     "AR:=$(AR)"
     "PKCS11_ENGINE=${opensc}/lib/opensc-pkcs11.so"
   ];
-
-  doCheck = false;
 
   meta = {
     description = "Random number generator daemon";

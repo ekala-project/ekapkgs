@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "mpimd-csc";
     repo = "qrupdate-ng";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-d5bc9JJOM3Tn41yZfqq3/rPMqZQxxICJo49oELSwxjc=";
   };
 

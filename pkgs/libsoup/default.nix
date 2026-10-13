@@ -73,8 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.PKG_CONFIG_PATH = "${nghttp2.dev}/lib/pkgconfig";
 
-  doCheck = false;
-
   postPatch = ''
     patchShebangs libsoup/
   '';

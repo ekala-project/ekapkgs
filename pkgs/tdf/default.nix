@@ -33,7 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   # Tests depend on cpuprofiler, which is not packaged in nixpkgs
-  doCheck = false;
 
   meta = {
     description = "Tui-based PDF viewer";

@@ -24,8 +24,6 @@ buildGoModule (finalAttrs: {
 
   ldflags = [ "-X main.version=${finalAttrs.version}" ];
 
-  doCheck = false;
-
   doInstallCheck = true;
   nativeInstallCheckInputs = [ versionCheckHook ];
 

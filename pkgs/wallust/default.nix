@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "explosion-mental";
     repo = "wallust";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-ZgkeM9gMw9TB5NR+xyxBepKHO16bLVVFJN4IY39gllg=";
   };
 

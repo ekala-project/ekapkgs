@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "virt-manager";
     repo = "virt-manager";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nMWLDo2pfWcqsVuEk0JbzLZ1a0lViTohsZ8gEXGhBuI=";
   };
 

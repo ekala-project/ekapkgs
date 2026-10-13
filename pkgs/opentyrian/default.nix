@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "opentyrian";
     repo = "opentyrian";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-zAYn8/JKGtjj3REuQ3WeeKlQ+ifuhwEF7m3ixg/5154=";
   };
 

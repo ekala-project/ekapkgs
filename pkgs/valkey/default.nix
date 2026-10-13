@@ -23,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "valkey-io";
     repo = "valkey";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-Lq5AqrLKILnsaOdAgWeeukPNF7KerB17R1mUOZjOsUg=";
   };
 
@@ -51,8 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals tlsSupport [ "BUILD_TLS=yes" ];
 
   env.NIX_CFLAGS_COMPILE = toString (lib.optionals stdenv.cc.isClang [ "-std=c11" ]);
-
-  doCheck = false;
 
   meta = {
     homepage = "https://valkey.io/";

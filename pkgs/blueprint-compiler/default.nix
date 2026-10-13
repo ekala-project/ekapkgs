@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.gnome.org";
     owner = "GNOME";
     repo = "blueprint-compiler";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-dA+FQTRmTz6rl5ToZJ8CXY1Zd7Em7VwvF3U3Qoyvu80=";
   };
 

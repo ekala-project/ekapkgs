@@ -26,8 +26,6 @@ buildGoModule (finalAttrs: {
 
   subPackages = [ "cmd/ferretdb" ];
 
-  doCheck = false;
-
   meta = {
     description = "Truly Open Source MongoDB alternative";
     mainProgram = "ferretdb";

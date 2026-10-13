@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "shenwei356";
     repo = "seqkit";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-yKgkzhwUMD37AY3VvX+jShWosI7Eda8TRCJEi0Wz748=";
   };
 

@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.gnome.org";
     owner = "Archive";
     repo = "gnet";
-    rev = "GNET_${lib.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
+    tag = "GNET_${lib.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
     hash = "sha256-B2H8s1JWNrvVR8qn6UFfAaCXQd0zEpNaLUPET99Ex7M=";
   };
 

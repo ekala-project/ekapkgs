@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "miguelmarco";
     repo = "libhomfly";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-ND2ZBKwHlRYTqxC+ltkCQ2lolNAkhZZm5hriIaOLqC4=";
   };
 
@@ -33,7 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/miguelmarco/libhomfly/";
     description = "Library to compute the homfly polynomial of knots and links";
     license = lib.licenses.unlicense;
-    teams = [ ];
     platforms = lib.platforms.all;
   };
 })

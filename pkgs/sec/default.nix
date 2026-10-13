@@ -12,14 +12,13 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "simple-evcorr";
     repo = "sec";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-XF4Wc1uRz1PrIwDGh9AUsR4s5nij1G+DgZUY8ey2ZJA=";
   };
 
   buildInputs = [ perl ];
 
   dontBuild = false;
-  doCheck = false;
 
   installPhase = ''
     mkdir -p $out/bin $out/share/man/man1

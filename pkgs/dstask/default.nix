@@ -17,7 +17,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "naggie";
     repo = "dstask";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-/SXQz+HDkKWGrIArqEjti93mo6Els9haitV0FfWfVTQ=";
   };
 
@@ -27,8 +27,6 @@ buildGoModule (finalAttrs: {
   # Ref <https://github.com/NixOS/nixpkgs/pull/87383#issuecomment-633204382>
   # and <https://github.com/NixOS/nixpkgs/blob/d4226e3a4b5fcf988027147164e86665d382bbfa/pkgs/development/go-modules/generic/default.nix#L18>
   vendorHash = "sha256-HSqAbxkkjuMulFymeqApWr/JZ+a7OUTu5EYLGPL/j2U=";
-
-  doCheck = false;
 
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd dstask \

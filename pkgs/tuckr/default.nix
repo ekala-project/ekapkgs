@@ -11,13 +11,11 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "RaphGL";
     repo = "Tuckr";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-QFGT032gpyzdobGdICEyvgbAMDGbBSNhIH16AlGPK4s=";
   };
 
   cargoHash = "sha256-ffAp+1kkLTaKYPhfwQt4ieR3d/w8SeJPfeaFh0Vzc1w=";
-
-  doCheck = false; # test result: FAILED. 5 passed; 3 failed;
 
   meta = {
     description = "Super powered replacement for GNU Stow";

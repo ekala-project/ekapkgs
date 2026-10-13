@@ -11,7 +11,7 @@ stdenvNoCC.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "marlonrichert";
     repo = "zsh-autocomplete";
-    rev = version;
+    tag = version;
     sha256 = "sha256-aba38Cmnps2n6Tr/1i3BjPZ4TbQPsDBURXF1fcd8cDI=";
   };
 

@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "uncrustify";
     repo = "uncrustify";
-    rev = "uncrustify-${finalAttrs.version}";
+    tag = "uncrustify-${finalAttrs.version}";
     sha256 = "sha256-EcT9A9rQCfSqJqqhfdSIZP/29W+I+PHbfvqQ4Bsq5mE=";
   };
 

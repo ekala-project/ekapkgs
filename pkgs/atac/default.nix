@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Julien-cpsn";
     repo = "ATAC";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-P/m0iDXRymx2fCh11TdryvCFcsE2xxArpcacCty/kWs=";
   };
 
@@ -30,8 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   env = {
     RUSTONIG_SYSTEM_LIBONIG = true;
   };
-
-  doCheck = false;
 
   postInstall = ''
     export HOME=$(mktemp -d)

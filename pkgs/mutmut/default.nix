@@ -20,8 +20,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     substituteInPlace requirements.txt --replace-fail 'junit-xml==1.8' 'junit-xml==1.9'
   '';
 
-  doCheck = false;
-
   build-system = with python3Packages; [ setuptools ];
 
   dependencies = with python3Packages; [

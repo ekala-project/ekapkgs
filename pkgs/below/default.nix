@@ -47,7 +47,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   # needs /sys/fs/cgroup
-  doCheck = false;
 
   meta = {
     platforms = lib.platforms.linux;

@@ -12,7 +12,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   src = fetchFromGitHub {
     owner = "harelba";
     repo = "q";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "18cwyfjgxxavclyd08bmb943c8bvzp1gnqp4klkq5xlgqwivr4sv";
   };
 
@@ -23,8 +23,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   dependencies = with python3Packages; [
     six
   ];
-
-  doCheck = false;
 
   patchPhase = ''
     # remove broken symlink

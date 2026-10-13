@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitLab {
     owner = "owl-lisp";
     repo = "owl";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GfvOkYLo8fgAvGuUa59hDy+sWJSwyntwqMO8TAK/lUo=";
   };
 
@@ -35,7 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   # tests are run as part of the compilation process
-  doCheck = false;
 
   meta = {
     description = "Functional Scheme for world domination";

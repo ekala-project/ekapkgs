@@ -85,7 +85,6 @@ stdenv.mkDerivation (finalAttrs: {
     "INTROSPECTION_TYPELIBDIR=${placeholder "out"}/lib/girepository-1.0"
   ];
 
-  doCheck = false;
   strictDeps = true;
 
   # Ignore deprecation errors

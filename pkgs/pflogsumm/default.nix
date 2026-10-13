@@ -22,7 +22,6 @@ perlPackages.buildPerlPackage rec {
   preConfigure = ''
     touch Makefile.PL
   '';
-  doCheck = false;
 
   installPhase = ''
     mkdir -p "$out/bin"

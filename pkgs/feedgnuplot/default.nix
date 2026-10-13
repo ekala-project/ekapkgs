@@ -24,7 +24,7 @@ perlPackages.buildPerlPackage rec {
   src = fetchFromGitHub {
     owner = "dkogan";
     repo = "feedgnuplot";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "sha256-r5rszxr65lSozkUNaqfBn4I4XjLtvQ6T/BG366JXLRM=";
   };
 
@@ -53,7 +53,6 @@ perlPackages.buildPerlPackage rec {
   '';
 
   # Tests require gnuplot 4.6.4 and are completely skipped with gnuplot 5.
-  doCheck = false;
 
   postInstall = ''
     wrapProgram $out/bin/feedgnuplot \

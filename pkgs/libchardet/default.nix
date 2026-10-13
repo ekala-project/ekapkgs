@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Joungkyun";
     repo = "libchardet";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-JhEiWM3q8X+eEBHxv8k9yYOaTGoJOzI+/iFYC0gZJJs=";
   };
 

@@ -30,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "fedora-modularity";
     repo = "libmodulemd";
-    rev = "libmodulemd-${finalAttrs.version}";
+    tag = "libmodulemd-${finalAttrs.version}";
     sha256 = "sha256-mmaW0Yxn4c3FxzSbHoFbamQoza15/4hJx3zbMcm3NYw=";
   };
 

@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "y-256";
     repo = "libdivsufsort";
-    rev = "${finalAttrs.version}";
+    tag = "${finalAttrs.version}";
     hash = "sha256-4p+L1bq9SBgWSHXx+WYWAe60V2g1AN+zlJvC+F367Tk=";
   };
 

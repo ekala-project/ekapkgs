@@ -12,7 +12,7 @@ buildGoModule rec {
     repo = "oauth2-proxy";
     owner = "oauth2-proxy";
     sha256 = "sha256-X63Bea/0ZiyqbNt6B+3J//dGkAmbT1Qon9hCsGJEVqo=";
-    rev = "v${version}";
+    tag = "v${version}";
   };
 
   vendorHash = "sha256-tgSu/YWL+cvsTs9QUo157dfVIZkPoyux4rgvhMvflMY=";

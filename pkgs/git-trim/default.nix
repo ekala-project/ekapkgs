@@ -16,7 +16,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "foriequal0";
     repo = "git-trim";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-XAO3Qg5I2lYZVNx4+Z5jKHRIFdNwBJsUQwJXFb4CbvM=";
   };
 
@@ -42,8 +42,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   postInstall = ''
     install -Dm644 -t $out/share/man/man1/ docs/git-trim.1
   '';
-
-  doCheck = false;
 
   meta = {
     description = "Automatically trims your branches whose tracking remote refs are merged or gone";

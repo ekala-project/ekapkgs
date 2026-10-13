@@ -38,7 +38,7 @@ lib.mapAttrs mk (lib.importJSON ./srcs-generated.json)
     src = fetchFromGitHub {
       owner = "qt";
       repo = "qtpositioning";
-      rev = "v${version}";
+      tag = "v${version}";
       hash = "sha256-L/P+yAQItm3taPpCNoOOm7PNdOFZiIwJJYflk6JDWvU=";
     };
   };
@@ -60,7 +60,7 @@ lib.mapAttrs mk (lib.importJSON ./srcs-generated.json)
     src = fetchFromGitHub {
       owner = "qt";
       repo = "qtscript";
-      rev = "v${version}-lts";
+      tag = "v${version}-lts";
       hash = "sha256-kUY8uSEoHqQVPd4s5BoAW6n1hGXQOQcberqWF6rK60w=";
     };
   };
@@ -71,7 +71,7 @@ lib.mapAttrs mk (lib.importJSON ./srcs-generated.json)
     src = fetchFromGitHub {
       owner = "qt";
       repo = "qtwebengine";
-      rev = "v${version}-lts";
+      tag = "v${version}-lts";
       hash = "sha256-/R4dF1nu40uH8POmx+7xnwaLNZZVgOSY3mSZLMbtvF4=";
       fetchSubmodules = true;
     };

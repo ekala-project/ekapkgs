@@ -33,7 +33,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
 
   # All checks are for RedHat's weird translation library.
   # Can't package it and not really necessary so disable them.
-  doCheck = false;
 
   pythonImportsCheck = [ "pykickstart" ];
 

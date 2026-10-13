@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "xsco";
     repo = "libdjinterop";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-HwNhCemqVR1xNSbcht0AuwTfpRhVi70ZH5ksSTSRFoc=";
   };
 

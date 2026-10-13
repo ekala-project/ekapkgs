@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "funtoo";
     repo = "keychain";
-    rev = version;
+    tag = version;
     sha256 = "sha256-Sr1joGVJ7VtzubHROcc6DCLUCZmDJ1lrYFMkzaLB6so=";
   };
 

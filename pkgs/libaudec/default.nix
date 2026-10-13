@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "zrythm";
     repo = "libaudec";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-8morbrq8zG+2N3ruMeJa85ci9P0wPQOfZ5H56diFEAo=";
   };
 

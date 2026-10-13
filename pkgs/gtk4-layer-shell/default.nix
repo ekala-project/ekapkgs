@@ -30,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "wmww";
     repo = "gtk4-layer-shell";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2OZsLUUsWVk5oh5Y/UFjTqzcM+u2NSPG/YS7uT3iRfc=";
   };
 

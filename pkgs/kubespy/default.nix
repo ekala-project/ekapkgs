@@ -10,7 +10,7 @@ buildGoModule (finalAttrs: {
   version = "0.6.3";
 
   src = fetchFromGitHub {
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     owner = "pulumi";
     repo = "kubespy";
     sha256 = "sha256-l/vOIFvCQHq+gOr38SpVZ8ShZdI1bP4G5PY4hKhkCU0=";
@@ -19,8 +19,6 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-4q+eFMrcZsEdk1W7aorIrfS3oVAuD4V0KQ7oJ/5d8nk=";
 
   nativeBuildInputs = [ installShellFiles ];
-
-  doCheck = false;
 
   ldflags = [
     "-X"

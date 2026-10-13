@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "tkellogg";
     repo = "dura";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-xAcFk7z26l4BYYBEw+MvbG6g33MpPUvnpGvgmcqhpGM=";
   };
 
@@ -23,8 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoPatches = [
     ./Cargo.lock.patch
   ];
-
-  doCheck = false;
 
   buildInputs = [
     openssl

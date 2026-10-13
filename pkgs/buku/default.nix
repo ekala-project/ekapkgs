@@ -28,8 +28,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     html5lib
   ];
 
-  doCheck = false;
-
   postInstall = ''
     make install PREFIX=$out
 

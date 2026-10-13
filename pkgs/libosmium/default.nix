@@ -50,6 +50,5 @@ stdenv.mkDerivation (finalAttrs: {
       "https://github.com/osmcode/libosmium/releases/tag/v${finalAttrs.version}"
       "https://github.com/osmcode/libosmium/blob/v${finalAttrs.version}/CHANGELOG.md"
     ];
-    teams = [ ];
   };
 })

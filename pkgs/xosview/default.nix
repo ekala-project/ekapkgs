@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "hills";
     repo = "xosview";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-lAVMpdVeYENtJrnRiCVgMbti7fKdQusTBsNCVdJZJkA=";
   };
 

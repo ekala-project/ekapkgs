@@ -12,7 +12,7 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "hashicorp";
     repo = "nomad";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-JOcN8Xyey84R2oA1lr9f6k/aNY1AJreig3fP3IM9C1M=";
   };
 
@@ -29,8 +29,6 @@ buildGoModule rec {
   ];
 
   tags = [ "ui" ];
-
-  doCheck = false;
 
   postInstall = ''
     echo "complete -C $out/bin/nomad nomad" > nomad.bash

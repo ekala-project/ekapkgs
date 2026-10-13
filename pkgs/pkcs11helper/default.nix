@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "OpenSC";
     repo = "pkcs11-helper";
-    rev = "${pname}-${version}";
+    tag = "${pname}-${version}";
     hash = "sha256-FP3y/YHsPPqey4QfxIiC4QjruuK1K2Bg+2QL2gXDT+k=";
   };
 

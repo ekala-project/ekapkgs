@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "bugaevc";
     repo = "wl-clipboard";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-c/EfjrA4H/MiedSVWLN6ZUipxwcsmBueeYJu5b09MGc=";
   };
 

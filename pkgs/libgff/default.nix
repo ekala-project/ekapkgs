@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "COMBINE-lab";
     repo = "libgff";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-OgXnNGIgWZDIChRdEfmHwvl+oQM03V3a/HnndGLjcHk=";
   };
 

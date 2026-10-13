@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ifd3f";
     repo = "caligula";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0KSQd/DvIo813HSLL+Qvn+5GMFRK7CGxOSq4+Fyl8Zk=";
   };
 

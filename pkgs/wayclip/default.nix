@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~noocsharp";
     repo = "wayclip";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-Uej5ggtlPeDid1yKSfZt5FlCen1GLea6EWa4lL+BPRM=";
   };
 

@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "rhboot";
     repo = "efivar";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-s/1k5a3n33iLmSpKQT5u08xoj8ypjf2Vzln88OBrqf0=";
   };
 

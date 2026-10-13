@@ -52,7 +52,6 @@ stdenv.mkDerivation rec {
   # On darwin, tests are linked to dylib in the nix store, so we need to make
   # sure tests run after installPhase.
   installCheckTarget = "check";
-  doCheck = false;
 
   meta = {
     description = "C++ library for arithmetic and algebraic computations";

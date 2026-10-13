@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "blockattack";
     repo = "blockattack-game";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-sp/D0MSLWV1iV89UULlz8IrP5nmiMv6PsoGf1WM5kGw=";
   };
 

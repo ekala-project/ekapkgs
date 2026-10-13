@@ -19,8 +19,6 @@ buildGoModule (finalAttrs: {
 
   ldflags = [ "-s" ];
 
-  doCheck = false;
-
   meta = {
     description = "Tool for passively gathering URLs without active scanning";
     homepage = "https://github.com/projectdiscovery/urlfinder";

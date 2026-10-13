@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "libesmtp";
     repo = "libESMTP";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "1bhh8hlsl9597x0bnfl563k2c09b61qnkb9mfyqcmzlq63m1zw5y";
   };
 
@@ -28,7 +28,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ openssl ];
 
-  mesonFlags = lib.optional (stdenv.hostPlatform.libc == "glibc") "-Dc_args=-D_DEFAULT_SOURCE";
+  mesonEntries = lib.optionalAttrs (stdenv.hostPlatform.libc == "glibc") {
+    c_args = "-D_DEFAULT_SOURCE";
+  };
 
   meta = {
     description = "Library for Posting Electronic Mail";

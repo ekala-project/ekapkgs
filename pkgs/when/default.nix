@@ -13,7 +13,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   src = fetchFromBitbucket {
     repo = "when";
     owner = "ben-crowell";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-+ggYjY6/aTUrdvREn0TTQ4Pu/VR4QTjflDaicRXuOMs=";
   };
 

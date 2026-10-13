@@ -19,7 +19,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   ];
 
   # Project is using a combination of bash/Python for the tests
-  doCheck = false;
 
   pythonImportsCheck = [ "flawfinder" ];
 

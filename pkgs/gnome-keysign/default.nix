@@ -13,13 +13,15 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "gnome-keysign";
   version = "1.3.0";
-  format = "setuptools";
+  pyproject = true;
+
+  build-system = [ python3.pkgs.setuptools ];
 
   src = fetchFromGitLab {
     domain = "gitlab.gnome.org";
     owner = "GNOME";
     repo = "gnome-keysign";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-k77z8Yligzs4rHpPckRGcC5qnCHynHQRjdDkzxwt1Ss=";
   };
 
@@ -65,7 +67,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     ++ lib.optional (python3.pkgs ? pygobject3) python3.pkgs.pygobject3;
 
   # bunch of linting
-  doCheck = false;
 
   meta = {
     description = "GTK/GNOME application to use GnuPG for signing other peoples' keys";

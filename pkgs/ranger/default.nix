@@ -23,8 +23,6 @@ python3Packages.buildPythonApplication {
 
   LC_ALL = "en_US.UTF-8";
 
-  doCheck = false;
-
   build-system = [ python3Packages.setuptools ];
 
   dependencies = [

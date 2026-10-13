@@ -21,8 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     typedef bool boolean;"
   '';
 
-  doCheck = false;
-
   meta = {
     description = "Media Changer Tools";
     longDescription = ''

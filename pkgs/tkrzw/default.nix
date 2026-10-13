@@ -19,8 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace 'PATH=".:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$PATH"' ""
   '';
 
-  doCheck = false; # memory intensive
-
   meta = {
     description = "Set of implementations of DBM";
     homepage = "https://dbmx.net/tkrzw/";

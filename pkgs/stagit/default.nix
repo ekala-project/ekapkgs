@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchgit {
     url = "git://git.codemadness.org/stagit";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-mVYR8THGGfaTsx3aaSbQBxExRo87K47SD+PU5cZ8z58=";
   };
 

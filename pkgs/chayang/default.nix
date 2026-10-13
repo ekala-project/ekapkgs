@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~emersion";
     repo = "chayang";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3Vu9/Bu2WQe2Yx/2BK25pEpuPNwX6g3qoFUMznCFHeI=";
   };
 

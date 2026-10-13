@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "AltraMayor";
     repo = "f3";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-AyNk6qjPIu/Dodq9NLVgVQdslDnoeY7htqvXZCnj3a8=";
   };
 

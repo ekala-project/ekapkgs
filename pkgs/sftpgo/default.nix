@@ -27,8 +27,6 @@ buildGoModule rec {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  doCheck = false;
-
   subPackages = [ "." ];
 
   postInstall = ''

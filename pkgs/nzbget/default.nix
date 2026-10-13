@@ -21,13 +21,13 @@ let
   par2TurboSrc = fetchFromGitHub {
     owner = "nzbgetcom";
     repo = "par2cmdline-turbo";
-    rev = "v1.4.0-20260803"; # from cmake/par2-turbo.cmake
+    tag = "v1.4.0-20260803"; # from cmake/par2-turbo.cmake
     hash = "sha256-9fggVR2Zb9NgAuuuW5ayCyEF6kaaD7GIlX1BX6psiK0=";
   };
   rapidyencSrc = fetchFromGitHub {
     owner = "nzbgetcom";
     repo = "rapidyenc";
-    rev = "v1.1.1-20260821"; # from cmake/rapidyenc.cmake
+    tag = "v1.1.1-20260821"; # from cmake/rapidyenc.cmake
     hash = "sha256-17nny4+BlztfMsLX36wzK/5BP6TMniRgnNbLKvDsNcA=";
   };
 in
@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nzbgetcom";
     repo = "nzbget";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-e8uzUjuVH237G/sajpyL2FYpyN0TcXcJQqV2KOjNFTU=";
   };
 

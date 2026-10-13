@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "AcademySoftwareFoundation";
     repo = "imath";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-kmWj9g6PnvgEOojjiWYpJ9+lXwT1svpezYDsCns4NP0=";
   };
 

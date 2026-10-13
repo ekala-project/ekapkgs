@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.gnome.org";
     owner = "GNOME";
     repo = "gxml";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-/gaWuUytBsvAsC95ee6MtTW6g3ltGbkD+JWqrAjJLDc=";
   };
 
@@ -56,13 +56,11 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   # https://github.com/NixOS/nixpkgs/issues/407969
-  doCheck = false;
   meta = {
     description = "Provides a GObject API for manipulating XML and a Serializable framework from GObject to XML";
     homepage = "https://gitlab.gnome.org/GNOME/gxml";
     changelog = "https://gitlab.gnome.org/GNOME/gxml/-/blob/${finalAttrs.version}/NEWS?ref_type=tags";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.linux;
-    teams = [ ];
   };
 })

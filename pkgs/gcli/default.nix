@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~herrhotzenplotz";
     repo = "gcli";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-k691ocg5rkvGJZDp6X9PRIDaNvVPLcJRoXvwPbyxjLE=";
   };
 

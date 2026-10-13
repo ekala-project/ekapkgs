@@ -101,8 +101,6 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs notmuch-git
   '';
 
-  doCheck = false;
-
   installTargets = [
     "install"
     "install-man"

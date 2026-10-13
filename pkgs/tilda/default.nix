@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "lanoxx";
     repo = "tilda";
-    rev = "tilda-${finalAttrs.version}";
+    tag = "tilda-${finalAttrs.version}";
     hash = "sha256-Gseti810JwhYQSaGdE2KRRqnwNmthNBiFvXH9DyVpak=";
   };
 

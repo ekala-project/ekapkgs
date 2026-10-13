@@ -18,7 +18,7 @@ perlPackages.buildPerlPackage rec {
   src = fetchFromGitHub {
     owner = "fusioninventory";
     repo = "fusioninventory-agent";
-    rev = version;
+    tag = version;
     sha256 = "1hbp5a9m03n6a80xc8z640zs71qhqk4ifafr6fp0vvzzvq097ip2";
   };
 
@@ -68,7 +68,6 @@ perlPackages.buildPerlPackage rec {
   ];
 
   # Test fails due to "Argument list too long"
-  doCheck = false;
 
   installPhase = ''
     mkdir -p $out

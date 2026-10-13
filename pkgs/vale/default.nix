@@ -24,8 +24,6 @@ buildGoModule rec {
     "-X main.version=${version}"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Syntax-aware linter for prose built with speed and extensibility in mind";
     homepage = "https://vale.sh/";

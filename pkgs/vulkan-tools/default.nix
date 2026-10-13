@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "KhronosGroup";
     repo = "Vulkan-Tools";
-    rev = "vulkan-sdk-${version}";
+    tag = "vulkan-sdk-${version}";
     hash = "sha256-+5BL28h7+r+mLr1Tr7UT4UEB8jRrIc2JwoasJ7HzxI0=";
   };
 

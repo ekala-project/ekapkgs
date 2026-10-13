@@ -47,8 +47,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     patchShebangs pre_commit/resources/hook-tmpl
   '';
 
-  doCheck = false;
-
   pythonImportsCheck = [
     "pre_commit"
   ];

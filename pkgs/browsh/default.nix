@@ -28,7 +28,7 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "browsh-org";
     repo = "browsh";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-Abna1bAaqOT44zZJsObLMR5fTW2xlWBg1M0JYH0Yc6g=";
   };
 
@@ -39,7 +39,6 @@ buildGoModule rec {
   '';
 
   # Tests require network access
-  doCheck = false;
 
   meta = {
     description = "Fully-modern text-based browser, rendering to TTY and browsers";

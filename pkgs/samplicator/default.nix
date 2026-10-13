@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "sleinen";
     repo = "samplicator";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "0fv5vldmwd6qrdv2wkk946dk9rn9nrv3c84ldvvqqn1spxfzgirm";
   };
 

@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nfc-tools";
     repo = "mfoc";
-    rev = "mfoc-${finalAttrs.version}";
+    tag = "mfoc-${finalAttrs.version}";
     sha256 = "0hbg1fn4000qdg1cfc7y8l0vh1mxlxcz7gapkcq54xp2l6kk1z65";
   };
 

@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "simdutf";
     repo = "simdutf";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-MZUEZWibRgoVwjz3SqkNTepAHgreWYkZTWh74jXtRfY=";
   };
 

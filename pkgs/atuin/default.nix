@@ -46,7 +46,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   '';
 
   # Tests reference atuin_server which is not included in the selected features
-  doCheck = false;
 
   meta = {
     description = "Replacement for a shell history which records additional commands context with optional encrypted synchronization between machines";

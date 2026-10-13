@@ -12,15 +12,13 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "CircleCI-Public";
     repo = "circleci-cli";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-n+pt2pGKsRvR4fGDnXypfGB/Xm1euVWjH4fEJSHaHj4=";
   };
 
   vendorHash = "sha256-K8Nm6lEHergDFMINJuyJn8tw/4cd6gp30nJbddRJCIE=";
 
   nativeBuildInputs = [ installShellFiles ];
-
-  doCheck = false;
 
   ldflags = [
     "-s"

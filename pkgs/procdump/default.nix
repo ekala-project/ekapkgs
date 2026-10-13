@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Microsoft";
     repo = "ProcDump-for-Linux";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-gVswAezHl7E2cBTJEQhPFXhHkzhWVHSpPF8m0s8+ekc=";
   };
 
@@ -49,8 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     "INSTALLDIR=/bin"
     "MANDIR=/share/man/man1"
   ];
-
-  doCheck = false; # needs sudo root
 
   installCheckPhase = ''
     runHook preInstallCheck

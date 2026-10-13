@@ -10,7 +10,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "riquito";
     repo = "tuc";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-8nvWh/AGGAuv0ztM/+czHlv+6jbbepN2OR6D0Y2CyRc=";
   };
 

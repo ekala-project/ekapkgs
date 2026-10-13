@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "libsixel";
     repo = "libsixel";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-obzBZAknN3N7+Bvtd0+JHuXcemVb7wRv+Pt4VjS6Bck=";
   };
 

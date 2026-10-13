@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "zapping-vbi";
     repo = "zvbi";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Nkg/Y7tHYAEi3ndbiJwwutVrGCOIE5RUCNQW3j12BkM=";
   };
 

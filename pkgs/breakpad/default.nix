@@ -7,7 +7,7 @@
 let
   lss = fetchgit {
     url = "https://chromium.googlesource.com/linux-syscall-support";
-    rev = "v2022.10.12";
+    tag = "v2022.10.12";
     hash = "sha256-rF10v5oH4u9i9vnmFCVVl2Ew3h+QTiOsW64HeB0nRQU=";
   };
 in
@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchgit {
     url = "https://chromium.googlesource.com/breakpad/breakpad";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-yk+TSzjmAr9QMTYduKVe/Aizph/NNmSS385pvGJckiQ=";
   };
 

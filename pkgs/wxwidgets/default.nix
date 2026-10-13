@@ -50,7 +50,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "wxWidgets";
     repo = "wxWidgets";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-CKU0Aa78YrtGKLE9/MF9VNc2fmzPZ1j4lviX1aAv9cQ=";
   };
 

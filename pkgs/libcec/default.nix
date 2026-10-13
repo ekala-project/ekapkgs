@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Pulse-Eight";
     repo = "libcec";
-    rev = "libcec-${finalAttrs.version}";
+    tag = "libcec-${finalAttrs.version}";
     sha256 = "sha256-teh4w6pDn0HJ9W0FnqhnMYFBd6JxgK9QYfVqYHXviiI=";
   };
 

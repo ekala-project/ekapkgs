@@ -18,7 +18,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-NSvlLiLp0kdnWNUSIateGkscL5as+b00d54CP3sEakI=";
 
   # Found argument '--test-threads' which wasn't expected, or isn't valid in this context
-  doCheck = false;
 
   meta = {
     description = "Bash/POSIX-compatible shell implemented in Rust";

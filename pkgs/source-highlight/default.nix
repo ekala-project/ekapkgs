@@ -26,8 +26,6 @@ stdenv.mkDerivation rec {
     "--with-bash-completion=${placeholder "out"}/share/bash-completion/completions"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Source code renderer with syntax highlighting";
     homepage = "https://www.gnu.org/software/src-highlite/";

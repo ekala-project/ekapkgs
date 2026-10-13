@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "alanxz";
     repo = "rabbitmq-c";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-eU38nCp3KOCT42BXHk2HXDv6dexWy3JtBayLgz/K/qs=";
   };
 

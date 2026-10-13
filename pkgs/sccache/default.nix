@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "mozilla";
     repo = "sccache";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-QGsDxUAQzAr6Aia5/D21cGbVV0YJyuH3aBmEr9NynXQ=";
   };
 
@@ -29,7 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # Tests fail because of client server setup which is not possible inside the
   # pure environment, see https://github.com/mozilla/sccache/issues/460
-  doCheck = false;
 
   meta = {
     description = "Ccache with Cloud Storage";

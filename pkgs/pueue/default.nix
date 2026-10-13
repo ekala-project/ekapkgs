@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Nukesor";
     repo = "pueue";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6/Q0+ME1wwHZI5MwMULzS+2iWK2R3JiTM5I+spSjd30=";
   };
 

@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "manugarg";
     repo = "pacparser";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-zAntXNjqkOsILsy7FdQVuBpOM9FCRFcDIVT20FhaVzo=";
   };
 

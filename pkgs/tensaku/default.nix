@@ -44,8 +44,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     gdk-pixbuf
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Modern screenshot annotation tool for Wayland";
     homepage = "https://github.com/jondkinney/tensaku";

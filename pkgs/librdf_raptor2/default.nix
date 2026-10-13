@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "dajobe";
     repo = "raptor";
-    rev = "${pname}_${lib.replaceStrings [ "." ] [ "_" ] version}";
+    tag = "${pname}_${lib.replaceStrings [ "." ] [ "_" ] version}";
     sha256 = "sha256-Eic63pV2p154YkSmkqWr86fGTr+XmVGy5l5/6q14LQM=";
   };
 

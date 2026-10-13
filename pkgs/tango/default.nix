@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "yuanji-dev";
     repo = "tango";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-e/M2iRm/UwfnRVnMo1PmQTkz4IGTxnsCXNSSUkhsiHk=";
   };
 

@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "sharkdp";
     repo = "vivid";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-5SRZq2L49Kn6zwK1DXjtakz2zKrcAdbMdQ0yxykUvm8=";
   };
 

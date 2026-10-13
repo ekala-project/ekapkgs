@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kimwalisch";
     repo = "primesieve";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+k8L2+A2W5v5QmlzGHdNyEKT16yajl+G8ZkhhS6ivIE=";
   };
 

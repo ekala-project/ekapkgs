@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "bazelbuild";
     repo = "buildtools";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6yWPmjKyZsYZZ73a+yryZl1xAREiPFiBANnZZJ4Qv5o=";
   };
 
@@ -22,8 +22,6 @@ buildGoModule (finalAttrs: {
   '';
 
   proxyVendor = true;
-
-  doCheck = false;
 
   excludedPackages = [ "generatetables" ];
 
@@ -39,6 +37,5 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/bazelbuild/buildtools";
     changelog = "https://github.com/bazelbuild/buildtools/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
-    teams = [ ];
   };
 })

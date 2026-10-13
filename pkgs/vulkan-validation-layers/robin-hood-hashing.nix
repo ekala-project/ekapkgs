@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "martinus";
     repo = "robin-hood-hashing";
-    rev = finalAttrs.version; # pin
+    tag = finalAttrs.version; # pin
     sha256 = "sha256-J4u9Q6cXF0SLHbomP42AAn5LSKBYeVgTooOhqxOIpuM=";
   };
 
@@ -30,6 +30,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/martinus/robin-hood-hashing";
     platforms = lib.platforms.unix;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

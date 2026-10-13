@@ -18,7 +18,6 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-WFRxkwMM9D612tLJjij+kwpcwhcl3KhR8xXxx43SC9o=";
 
   # FIXME: tests fail due to read-only nix store
-  doCheck = false;
 
   excludedPackages = [ "docs/node-mixin" ];
 

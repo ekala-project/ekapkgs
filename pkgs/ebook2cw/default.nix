@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
 
   src = fetchgit {
     url = "https://git.fkurz.net/dj1yfk/ebook2cw.git";
-    rev = "${pname}-${version}";
+    tag = "${pname}-${version}";
     sha256 = "0h7lg59m3dcydzkc8szipnwzag8fqwwvppa9fspn5xqd4blpcjd5";
   };
 

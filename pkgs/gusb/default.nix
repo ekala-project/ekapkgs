@@ -70,8 +70,6 @@ stdenv.mkDerivation rec {
     usb_ids = "${hwdata}/share/hwdata/usb.ids";
   };
 
-  doCheck = false;
-
   meta = {
     description = "GLib libusb wrapper";
     mainProgram = "gusbcmd";

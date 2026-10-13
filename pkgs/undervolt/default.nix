@@ -12,7 +12,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   src = fetchFromGitHub {
     owner = "georgewhewell";
     repo = "undervolt";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-G+CK/lnZXkQdyNZPqY9P3owVJsd22H3K8wSpjHFG0ow=";
   };
 

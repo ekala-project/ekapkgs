@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.freedesktop.org";
     owner = "spice";
     repo = "usbredir";
-    rev = "usbredir-${finalAttrs.version}";
+    tag = "usbredir-${finalAttrs.version}";
     sha256 = "sha256-a+RaJO70jxsrVwSG+PzDg2luvBHqBdNdRdLOGhdhjzY=";
   };
 

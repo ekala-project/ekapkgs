@@ -39,7 +39,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # Tests are run upstream, and many perform I/O
   # incompatible with the nix build sandbox.
-  doCheck = false;
 
   env = {
     # The build script in `crates/common/build.rs` uses vergen to embed

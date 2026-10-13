@@ -19,7 +19,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "zsa";
     repo = "wally-cli";
-    rev = "${finalAttrs.version}-linux";
+    tag = "${finalAttrs.version}-linux";
     sha256 = "NuyQHEygy4LNqLtrpdwfCR+fNy3ZUxOClVdRen6AXMc=";
   };
 

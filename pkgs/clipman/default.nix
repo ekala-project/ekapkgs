@@ -14,7 +14,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "chmouel";
     repo = "clipman";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-fAiXivLXpxezvMUKv0HfDvzSN60G4RFfgi6/fO0C1p8=";
   };
 
@@ -24,8 +24,6 @@ buildGoModule (finalAttrs: {
     "out"
     "man"
   ];
-
-  doCheck = false;
 
   nativeBuildInputs = [
     makeWrapper

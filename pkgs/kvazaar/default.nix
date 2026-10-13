@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ultravideo";
     repo = "kvazaar";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Th30XO3m4GVeDvdb/RIwKT6+To9C/YU7y8s8hm7vPi0=";
   };
 
@@ -41,8 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
     "man"
   ];
-
-  doCheck = false;
 
   meta = {
     description = "Open-source HEVC encoder";

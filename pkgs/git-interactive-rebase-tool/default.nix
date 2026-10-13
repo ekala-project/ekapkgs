@@ -11,7 +11,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "MitMaro";
     repo = "git-interactive-rebase-tool";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-NlnESZua4OP7rhMoER/VgBST9THqISQ0LCG1ZakNTqs=";
   };
 

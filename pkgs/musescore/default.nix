@@ -170,8 +170,6 @@ stdenv.mkDerivation (finalAttrs: {
     makeQtWrapper $out/libexec/mscore $out/bin/mscore
   '';
 
-  doCheck = false;
-
   meta = {
     description = "Music notation and composition software";
     homepage = "https://musescore.org/";

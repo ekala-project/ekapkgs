@@ -16,7 +16,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "foxcpp";
     repo = "maddy";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-p/rg/7IERBBel6dX7FnrtE76WYLtaYXmBmRMfAdJ1XU=";
   };
 

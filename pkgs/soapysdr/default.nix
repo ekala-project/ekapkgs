@@ -41,7 +41,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   propagatedBuildInputs = lib.optionals (usePython && python != null) [ python.pkgs.numpy ];
 
-  cmakeFlags = lib.optionals usePython [ "-DUSE_PYTHON_CONFIG=ON" ];
+  cmakeEntries = lib.optionalAttrs usePython {
+    USE_PYTHON_CONFIG = true;
+  };
 
   postFixup = lib.optionalString (extraPackages != [ ]) (
     lib.pipe extraPackages [

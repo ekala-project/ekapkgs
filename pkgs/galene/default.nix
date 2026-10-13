@@ -39,6 +39,5 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/jech/galene/blob/${finalAttrs.src.tag}/CHANGES";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    teams = [ ];
   };
 })

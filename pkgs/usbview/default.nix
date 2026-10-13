@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "gregkh";
     repo = "usbview";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-h+sB83BYsrB2VxwtatPWNiM0WdTCMY289nh+/0o8GOw=";
   };
 

@@ -26,7 +26,7 @@ stdenv.mkDerivation {
 
   src = fetchgit {
     url = "https://git.launchpad.net/ubuntu/+source/dee";
-    rev = "applied/1.2.7+17.10.20170616-8build1";
+    tag = "applied/1.2.7+17.10.20170616-8build1";
     hash = "sha256-ttfppqb0t8cOhWaB97uyD9heVZKlBKYF2zD6yRwPyos=";
   };
 

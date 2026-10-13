@@ -38,8 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     libsigcxx30
   ];
 
-  doCheck = false; # fails. one test needs the net, another /etc/fstab
-
   meta = {
     description = "C++ interface to the GLib library";
     homepage = "https://gtkmm.org/";

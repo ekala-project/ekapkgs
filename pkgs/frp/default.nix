@@ -17,8 +17,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = "sha256-TrO0ZVLazqtUpGREb6kjGiTZhGo3R1QK5iHFlojE7po=";
 
-  doCheck = false;
-
   preBuild = ''
     mkdir -p web/frpc/dist web/frps/dist
     echo '<!DOCTYPE html><html></html>' > web/frpc/dist/index.html

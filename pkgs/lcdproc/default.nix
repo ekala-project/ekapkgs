@@ -23,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "lcdproc";
     repo = "lcdproc";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "1r885zv1gsh88j43x6fvzbdgfkh712a227d369h4fdcbnnfd0kpm";
   };
 

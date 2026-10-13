@@ -24,7 +24,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "wafw00f" ];
 

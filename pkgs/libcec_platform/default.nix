@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Pulse-Eight";
     repo = "platform";
-    rev = "p8-platform-${finalAttrs.version}";
+    tag = "p8-platform-${finalAttrs.version}";
     hash = "sha256-zAI/AOLJAunv+cCQ6bOXrgkW+wl5frj3ktzx2cDeCCk=";
   };
 
@@ -39,13 +39,14 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
-  cmakeFlags = lib.optional stdenv.hostPlatform.isDarwin "-DCMAKE_CXX_FLAGS='-std=c++11'";
+  cmakeEntries = lib.optionalAttrs stdenv.hostPlatform.isDarwin {
+    CMAKE_CXX_FLAGS = "-std=c++11";
+  };
 
   meta = {
     description = "Platform library for libcec and Kodi addons";
     homepage = "https://github.com/Pulse-Eight/platform";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    teams = [ ];
   };
 })

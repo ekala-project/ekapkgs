@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "lballabio";
     repo = "QuantLib";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Bl+Q5BKUg9WCzktaeCr9Zdw38arg3K4/wqBC8tS8ghM=";
   };
 

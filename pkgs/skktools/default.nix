@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "skk-dev";
     repo = "skktools";
-    rev = "skktools-${lib.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
+    tag = "skktools-${lib.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
     sha256 = "1zway8jsm18279xq8zlpr84iqiw373x3v0ysay74n9bjqxbl234a";
   };
   # # See "12.2. Package naming"

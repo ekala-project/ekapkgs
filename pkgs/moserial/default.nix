@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.gnome.org";
     owner = "GNOME";
     repo = "moserial";
-    rev = "moserial_${lib.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
+    tag = "moserial_${lib.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
     sha256 = "sha256-wfdI51ECqVNcUrIVjYBijf/yqpiwSQeMiKaVJSSma3k=";
   };
 

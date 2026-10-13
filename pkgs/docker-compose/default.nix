@@ -11,7 +11,7 @@ buildGoModule rec {
   src = fetchFromGitHub {
     owner = "docker";
     repo = "compose";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-yhaJA7dxNMLt0Bo7Hv6lo/FXpOoOcgs8hNLU+pM1C1w=";
   };
 
@@ -26,8 +26,6 @@ buildGoModule rec {
     "-s"
     "-w"
   ];
-
-  doCheck = false;
 
   installPhase = ''
     runHook preInstall

@@ -44,8 +44,6 @@ stdenv.mkDerivation rec {
 
   NIX_CFLAGS_LINK = "-lraptor2";
 
-  doCheck = false;
-
   meta = {
     description = "C libraries that provide support for the Resource Description Framework (RDF)";
     homepage = "https://librdf.org/";

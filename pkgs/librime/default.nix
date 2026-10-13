@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "rime";
     repo = "librime";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-HhmLA5W4+8BVGTozKCWCNhrXOIlRlLN/FiOBHKvUGcM=";
   };
 

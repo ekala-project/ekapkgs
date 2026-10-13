@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "baskerville";
     repo = "sxhkd";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-kbjbTzYL2dz/RpG+SgBYy+XS3W9PBEWkg6ocqAFG3VQ=";
   };
 

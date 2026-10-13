@@ -20,8 +20,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   cargoHash = "sha256-TGcgiXLgxeOO44eNfd9F0VonTTJhOn1iEJwrO65wcxk=";
 
-  doCheck = false;
-
   nativeBuildInputs = [ installShellFiles ];
 
   buildInputs = [ libgit2 ];

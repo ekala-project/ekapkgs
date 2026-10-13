@@ -50,8 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     "2GEOM_TESTING" = false;
   };
 
-  doCheck = false;
-
   meta = {
     description = "Easy to use 2D geometry library in C++";
     homepage = "https://gitlab.com/inkscape/lib2geom";

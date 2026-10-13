@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitLab {
     owner = "dps8m";
     repo = "dps8m";
-    rev = "R${finalAttrs.version}";
+    tag = "R${finalAttrs.version}";
     hash = "sha256-2PTL9C1sV+UTZibjyxBkQh9Y1xqwawNPwWL4eX0ilvU=";
     fetchSubmodules = true;
   };

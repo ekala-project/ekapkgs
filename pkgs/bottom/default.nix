@@ -22,8 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     installShellFiles
   ];
 
-  doCheck = false;
-
   env = {
     BTM_GENERATE = true;
   };

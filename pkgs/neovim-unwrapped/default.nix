@@ -202,8 +202,6 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.cmakeFeature "LUA_PRG" "${luajit}/bin/luajit")
   ];
 
-  doCheck = false;
-
   preConfigure = ''
     mkdir -p $out/lib/nvim/parser
   ''

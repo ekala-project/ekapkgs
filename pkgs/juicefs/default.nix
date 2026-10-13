@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "juicedata";
     repo = "juicefs";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-S8sQ14FaHW8gp0OA+cea1YMnV1o1M7AyKjh6FcQjXOg=";
   };
 
@@ -24,8 +24,6 @@ buildGoModule (finalAttrs: {
     "-w"
     "-X github.com/juicedata/juicefs/pkg/version.version=${finalAttrs.version}"
   ];
-
-  doCheck = false; # requires network access
 
   postInstall = ''
     ln -s $out/bin/juicefs $out/bin/mount.juicefs

@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "zfsnap";
     repo = "zfsnap";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "0670a5sghvqx32c9gfsird15mg9nqcvwxsrfcjrwc0sj7br9bd2g";
   };
 

@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
     domain = "gitea.osmocom.org";
     owner = "sdr";
     repo = "rtl-sdr";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-+RYSCn+wAkb9e7NRI5kLY8a6OXtJu7QcSUht1R6wDX0=";
   };
 

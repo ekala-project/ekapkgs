@@ -43,7 +43,6 @@ python3Packages.buildPythonPackage {
   dontStrip = true;
 
   # difficult to test
-  doCheck = false;
 
   meta = {
     description = "Radically simple IT automation";

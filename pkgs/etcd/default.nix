@@ -15,7 +15,7 @@ let
   src = fetchFromGitHub {
     owner = "etcd-io";
     repo = "etcd";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = etcdSrcHash;
   };
 
@@ -50,7 +50,6 @@ let
 
     ldflags = [ "-X go.etcd.io/etcd/api/v3/version.GitSHA=GitNotFound" ];
 
-    doCheck = false;
   };
 
   etcdutl = buildGoModule rec {

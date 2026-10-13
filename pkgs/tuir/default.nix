@@ -13,7 +13,7 @@ buildPythonApplication (finalAttrs: {
   src = fetchFromGitLab {
     owner = "Chocimier";
     repo = "tuir";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-lUK6gXwvVjiYrJXMSFlzp07Yt+nSkU933J4vBJWOLlg=";
   };
 

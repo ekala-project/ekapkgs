@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "jabl";
     repo = "fsv";
-    rev = "${pname}-${version}";
+    tag = "${pname}-${version}";
     hash = "sha256-fxsA3qcBPvK4H5P4juGTe6eg1lkygvzFpNW36B9lsE4=";
   };
 

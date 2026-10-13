@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "openAVproductions";
     repo = "openAV-Sorcer";
-    rev = "release-${finalAttrs.version}";
+    tag = "release-${finalAttrs.version}";
     sha256 = "1x7pi77nal10717l02qpnhrx6d7w5nqrljkn9zx5w7gpb8fpb3vp";
   };
 

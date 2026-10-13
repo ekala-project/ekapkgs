@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "charmbracelet";
     repo = "glow";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-JgFJwfLzw1DS5I2x75B0IFsotJF3W9ZDHVgl+VJXFps=";
   };
 
@@ -26,8 +26,6 @@ buildGoModule (finalAttrs: {
     "-w"
     "-X=main.Version=${finalAttrs.version}"
   ];
-
-  doCheck = false;
 
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd glow \

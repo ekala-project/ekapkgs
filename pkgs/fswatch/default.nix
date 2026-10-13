@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "emcrisostomo";
     repo = "fswatch";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-vzTegBbAgwscFuHbMKlXOmw6PuDRGeJiUciFxF55pKE=";
   };
 

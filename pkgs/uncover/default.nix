@@ -21,8 +21,6 @@ buildGoModule (finalAttrs: {
 
   ldflags = [ "-s" ];
 
-  doCheck = false;
-
   meta = {
     description = "API wrapper to search for exposed hosts";
     homepage = "https://github.com/projectdiscovery/uncover";

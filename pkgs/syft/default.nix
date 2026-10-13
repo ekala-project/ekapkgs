@@ -55,7 +55,6 @@ buildGoModule (finalAttrs: {
   '';
 
   # tests require a running docker instance
-  doCheck = false;
 
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd syft \

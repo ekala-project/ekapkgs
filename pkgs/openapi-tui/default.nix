@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "zaghaghi";
     repo = "openapi-tui";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-rC0lfWZpiiAAShyVDqr1gKTeWmWC+gVp4UmL96Y81mE=";
   };
 

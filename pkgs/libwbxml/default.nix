@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "libwbxml";
     repo = "libwbxml";
-    rev = "${pname}-${version}";
+    tag = "${pname}-${version}";
     sha256 = "sha256-yy8+CyNKXuttCmxRxH/XptIloDklto4f5Zg0vnwnneY=";
   };
 

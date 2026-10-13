@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "dagargo";
     repo = "elektroid";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-9ySyjhnFXn4xzLjHbbo+WSpzQINsXKPgETdlJ4eqgvQ=";
   };
 

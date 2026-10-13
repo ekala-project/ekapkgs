@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "mpeg5";
     repo = "xeve";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-QA9+0PsPyg3gQYR2TpIO1nwL5H/BFpOtCX8xBQ4Qjmg=";
   };
 

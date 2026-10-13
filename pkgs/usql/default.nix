@@ -53,7 +53,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # All the checks currently require docker instances to run the databases.
-  doCheck = false;
 
   passthru = {
     tests.version = testers.testVersion {

@@ -89,8 +89,6 @@ stdenv.mkDerivation rec {
       tests/setup.sh
   '';
 
-  doCheck = false;
-
   doInstallCheck = true;
   nativeInstallCheckInputs = [ git ];
   installCheckTarget = "test";

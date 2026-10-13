@@ -18,13 +18,11 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nwg-piotr";
     repo = "nwg-menu";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-3fN89HPwobMiijlvGJ80HexCBdsPLsEvAz9VH8dO4qc=";
   };
 
   vendorHash = "sha256-5gazNUZdPZh21lcnVFKPSDc/JLi8d6tqfP4NKMzPa8U=";
-
-  doCheck = false;
 
   buildInputs = [
     at-spi2-core

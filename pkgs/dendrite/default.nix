@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "element-hq";
     repo = "dendrite";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-VxQ5fuGzkEL371TmnDQ0wNqqmfzupmsTX/v+eFthj8E=";
   };
 
@@ -24,8 +24,6 @@ buildGoModule (finalAttrs: {
     "cmd/generate-keys"
     "cmd/resolve-state"
   ];
-
-  doCheck = false;
 
   meta = {
     homepage = "https://element-hq.github.io/dendrite";

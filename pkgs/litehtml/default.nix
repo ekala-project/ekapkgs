@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "litehtml";
     repo = "litehtml";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-OPyluMC7dSVvS4/tFNzeogOT6elA7paW3duTR+8/VuE=";
   };
 

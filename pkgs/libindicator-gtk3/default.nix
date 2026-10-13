@@ -47,8 +47,6 @@ stdenv.mkDerivation rec {
     "localstatedir=\${TMPDIR}"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Set of symbols and convenience functions for Ayatana indicators";
     homepage = "https://launchpad.net/libindicator";

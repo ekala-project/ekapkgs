@@ -30,8 +30,6 @@ stdenv.mkDerivation rec {
 
   patches = [ ./cgal_path.patch ];
 
-  doCheck = false;
-
   meta = {
     description = "Computational Geometry Algorithms Library";
     homepage = "http://cgal.org";

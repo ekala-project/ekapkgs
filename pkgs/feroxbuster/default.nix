@@ -29,7 +29,6 @@ rustPlatform.buildRustPackage rec {
   buildInputs = [ openssl ];
 
   # Tests require network access
-  doCheck = false;
 
   meta = {
     description = "Recursive content discovery tool";

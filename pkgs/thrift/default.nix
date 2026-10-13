@@ -97,8 +97,6 @@ stdenv.mkDerivation rec {
     "PythonThriftTNonblockingServer"
   ];
 
-  doCheck = false;
-
   checkPhase = ''
     runHook preCheck
     LD_LIBRARY_PATH=$PWD/lib ctest -E "($(echo "$disabledTests" | tr " " "|"))"

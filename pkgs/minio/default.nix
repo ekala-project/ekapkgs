@@ -24,13 +24,11 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "minio";
     repo = "minio";
-    rev = "RELEASE.${finalAttrs.version}";
+    tag = "RELEASE.${finalAttrs.version}";
     hash = "sha256-HbjmCJYkWyRRHKriLP6QohaXYLk3QEVfi32Krq3ujjo=";
   };
 
   vendorHash = "sha256-BFnTJE9QFWmPsx90hDTG8MusdnwaBPYJxM5bCFk3hew=";
-
-  doCheck = false;
 
   subPackages = [ "." ];
 

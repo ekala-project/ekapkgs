@@ -12,7 +12,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "leptos-rs";
     repo = "cargo-leptos";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-UxiV9nahz3Ir49pNr9hDC9FBikkeUHp7L4Rv9Cz8K4Q=";
   };
 
@@ -28,7 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # https://github.com/leptos-rs/cargo-leptos#dependencies
   buildFeatures = [ "no_downloads" ];
-  doCheck = false;
 
   meta = {
     description = "Build tool for the Leptos web framework";

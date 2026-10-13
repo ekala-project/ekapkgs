@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jarun";
     repo = "bcal";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-Jub6nzol5Wmt/B8U5jmuyTHEKnsg3N28zDjWn/wRhOY=";
   };
 

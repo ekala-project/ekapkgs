@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "greymd";
     repo = "tmux-xpanes";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-PF2K2A49c5djQqSO7ZLFyBwPZaJRK58qZTFpY7n+Z0w=";
   };
 

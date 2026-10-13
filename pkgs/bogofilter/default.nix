@@ -20,8 +20,6 @@ stdenv.mkDerivation rec {
     db
   ];
 
-  doCheck = false; # needs "y" tool
-
   meta = {
     homepage = "http://bogofilter.sourceforge.net/";
     description = "Mail filter that classifies mail as spam or ham by statistical analysis";

@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jasper-software";
     repo = "jasper";
-    rev = "version-${finalAttrs.version}";
+    tag = "version-${finalAttrs.version}";
     hash = "sha256-Z3eg3xNGFpvzvDp9ldYwh0JnrqfoaZQ7jc58hcZo+Qo=";
   };
 

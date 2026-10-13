@@ -12,7 +12,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   src = fetchFromGitHub {
     owner = "s0md3v";
     repo = "uro";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-aDFUyWkje4TqsmxnPfQAhf2k4rFMdibxfHHvQks9yRA=";
   };
 

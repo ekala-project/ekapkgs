@@ -54,7 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   # Requires a dbus-daemon environment
-  doCheck = false;
 
   meta = {
     changelog = "https://pagure.io/oddjob/blob/oddjob-${finalAttrs.version}/f/ChangeLog";

@@ -10,7 +10,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "benbjohnson";
     repo = "litestream";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-NOSyBKmxy+gtLFl4XgmU4xkKT06yRhEEdfcM0mB7ajU=";
   };
 

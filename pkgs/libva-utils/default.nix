@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "intel";
     repo = "libva-utils";
-    rev = version;
+    tag = version;
     sha256 = "sha256-ezYoJ9hyG0pAficudoS4oiXbdrw4oCUU8C6qmJrNQRc=";
   };
 

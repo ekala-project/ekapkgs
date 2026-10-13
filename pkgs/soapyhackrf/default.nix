@@ -16,7 +16,7 @@ stdenv.mkDerivation {
   src = fetchFromGitHub {
     owner = "pothosware";
     repo = "SoapyHackRF";
-    rev = "soapy-hackrf-0.3.4";
+    tag = "soapy-hackrf-0.3.4";
     sha256 = "sha256-fzPYHJAPX8FkFxPXpLlUagTd/NoamRX0YnxHwkbV1nI=";
   };
 

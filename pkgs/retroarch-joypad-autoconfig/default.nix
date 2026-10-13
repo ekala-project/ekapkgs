@@ -11,7 +11,7 @@ stdenvNoCC.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "libretro";
     repo = "retroarch-joypad-autoconfig";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-j49K3uvi3cJeAfwC1olgmLAAOjK9IAv6fJYuamQJjDk=";
   };
 
@@ -22,7 +22,6 @@ stdenvNoCC.mkDerivation rec {
     description = "Joypad autoconfig files";
     homepage = "https://www.libretro.com/";
     license = lib.licenses.mit;
-    teams = [ ];
     platforms = lib.platforms.all;
   };
 }

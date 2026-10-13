@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "zeux";
     repo = "meshoptimizer";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Q4oHUJKifmqrfPB7pixZsJqsABGqD6RYnLt17/OQMME=";
   };
 
@@ -39,9 +39,10 @@ stdenv.mkDerivation (finalAttrs: {
     MESHOPT_BUILD_GLTFPACK = true;
     MESHOPT_GLTFPACK_BASISU_PATH = "${basis_universal}";
     MESHOPT_GLTFPACK_LIBWEBP_PATH = "${libwebp.src}";
+  }
+  // lib.optionalAttrs (!stdenv.hostPlatform.isStatic) {
+    MESHOPT_BUILD_SHARED_LIBS = true;
   };
-
-  cmakeFlags = lib.optional (!stdenv.hostPlatform.isStatic) "-DMESHOPT_BUILD_SHARED_LIBS:BOOL=ON";
   meta = {
     description = "Mesh optimization library that makes meshes smaller and faster to render";
     homepage = "https://github.com/zeux/meshoptimizer";

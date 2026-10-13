@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchgit {
     url = "https://git.sesse.net/plocate";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-VvHptw/PG2uWflTmGNCj1PXIguXv9Bikz8qj2hRMnaQ=";
   };
 

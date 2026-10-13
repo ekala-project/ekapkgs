@@ -25,8 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "0yfhqwk0w8q2hyv1jib1008jvzmwlpsxvc8qjllhna6p1hycqj97";
   };
 
-  doCheck = false;
-
   meta = {
     description = "Library for reading, writing, and manipulating ID3v1 and ID3v2 tags";
     homepage = "https://id3lib.sourceforge.net";

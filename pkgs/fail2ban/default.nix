@@ -9,12 +9,14 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "fail2ban";
   version = "1.1.1";
-  format = "setuptools";
+  pyproject = true;
+
+  build-system = [ python3.pkgs.setuptools ];
 
   src = fetchFromGitHub {
     owner = "fail2ban";
     repo = "fail2ban";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-6L8lSoFdf/KL1AQfN0lfGthEfeLlxodVsMI3LXCq+XY=";
   };
 
@@ -31,8 +33,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
         --replace /usr/sbin/sendmail sendmail
     done
   '';
-
-  doCheck = false;
 
   preInstall = ''
     substituteInPlace setup.py --replace /usr/share/doc/ share/doc/

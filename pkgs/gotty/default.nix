@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "sorenisanerd";
     repo = "gotty";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-+ZcFKMx9wfty3DIgN9lb9N9CZaZfO76VwvuzWR9yrvo=";
   };
 
@@ -19,7 +19,6 @@ buildGoModule (finalAttrs: {
 
   # upstream did not update the tests, so they are broken now
   # https://github.com/sorenisanerd/gotty/issues/13
-  doCheck = false;
 
   meta = {
     description = "Share your terminal as a web application";

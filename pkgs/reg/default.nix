@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "genuinetools";
     repo = "reg";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tfBetjoJkr84XLEEcfdRTtc0UZ4m/uRH1Fpr91lQn8o=";
   };
 
@@ -31,7 +31,6 @@ buildGoModule (finalAttrs: {
   ];
 
   vendorHash = null;
-  doCheck = false;
 
   meta = {
     description = "Docker registry v2 command line client and repo listing generator with security checks";

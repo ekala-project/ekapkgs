@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "facebook";
     repo = "PathPicker";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-4BkdGvG/RyF3JBnd/X5r5nboEHG4aqahcYHDunMv2zU=";
   };
 

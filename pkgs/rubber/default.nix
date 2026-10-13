@@ -18,7 +18,7 @@ pypkgs.buildPythonApplication (finalAttrs: {
   src = fetchFromGitLab {
     owner = "latex-rubber";
     repo = "rubber";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-C26PN3jyV6qwSjgPem54bykZrpKj+n8iHYYUyR+8dgI=";
   };
 

@@ -19,6 +19,5 @@ stdenv.mkDerivation rec {
     description = "Themes for Xfce";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.linux;
-    teams = [ ];
   };
 }

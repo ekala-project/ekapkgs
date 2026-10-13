@@ -29,7 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # Most tests rely on external resources and build artifacts.
   # Disabling check here to work with build sandboxing.
-  doCheck = false;
 
   meta = {
     changelog = "https://github.com/wasm-bindgen/wasm-pack/blob/v${finalAttrs.version}/CHANGELOG.md";

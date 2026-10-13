@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "JuliaLang";
     repo = "openspecfun";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-fx9z6bbU2V4x6Pr7/vmlSxkWxZ6qTYuPxnfqKLv08CA=";
   };
 

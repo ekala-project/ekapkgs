@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "xenserver";
     repo = "xe-guest-utilities";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-KUcsCk5ll+fjLS3HORHB6lirFMgGSNZBorgNPUFKW9Y=";
   };
 

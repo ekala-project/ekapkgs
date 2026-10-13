@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nicm";
     repo = "fdm";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-Gqpz+N1ELU5jQpPJAG9s8J9UHWOJNhkT+s7+xuQazd0=";
   };
 

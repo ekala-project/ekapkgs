@@ -11,7 +11,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "JulietaUla";
     repo = "montserrat";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fKgq3eUxrYBZtJuw2gs0K0wpW4BNqX5cDErF3IQ2ft4=";
   };
 

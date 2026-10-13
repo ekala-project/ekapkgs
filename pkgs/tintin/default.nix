@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "scandum";
     repo = "tintin";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-U6i9Xf5nHeCFtGvqNBK3ndCYYKJaBbceOdhqzos62fo=";
   };
 

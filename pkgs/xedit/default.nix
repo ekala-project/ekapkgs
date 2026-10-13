@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
     domain = "gitlab.freedesktop.org";
     owner = "xorg/app";
     repo = "xedit";
-    rev = "${pname}-${version}";
+    tag = "${pname}-${version}";
     sha256 = "sha256-+nWtoqm+5ie2U5nFJRioftMkxJFNtws09kTelmWhqgA=";
   };
 

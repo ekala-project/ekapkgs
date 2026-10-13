@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "malb";
     repo = "m4ri";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-/M/DVl2tRXIz5l3LFwY8Bvxnzjeoluy+zVgBVpPSdZM=";
   };
 
@@ -26,7 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://malb.bitbucket.io/m4ri/";
     description = "Library to do fast arithmetic with dense matrices over F_2";
     license = lib.licenses.gpl2Plus;
-    teams = [ ];
     platforms = lib.platforms.unix;
   };
 })

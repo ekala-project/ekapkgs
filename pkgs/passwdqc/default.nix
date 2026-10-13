@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "openwall";
     repo = "passwdqc";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-EgPeccqS+DDDMBVMc4bd70EMnXFuyglftxuqoaYHwNY=";
   };
 

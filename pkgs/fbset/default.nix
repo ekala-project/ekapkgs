@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "sudipm-mukherjee";
     repo = "fbset";
-    rev = "debian/${finalAttrs.version}-33";
+    tag = "debian/${finalAttrs.version}-33";
     hash = "sha256-nwWkQAA5+v5A8AmKg77mrSq2pXeSivxd0r7JyoBrs9A=";
   };
 

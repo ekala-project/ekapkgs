@@ -14,7 +14,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "knqyf263";
     repo = "pet";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-B0ilobUlp6UUXu6+lVqIHkbFnxVu33eXZFf+F7ODoQU=";
   };
 
@@ -25,8 +25,6 @@ buildGoModule (finalAttrs: {
     "-w"
     "-X=github.com/knqyf263/pet/cmd.version=${finalAttrs.version}"
   ];
-
-  doCheck = false;
 
   subPackages = [ "." ];
 

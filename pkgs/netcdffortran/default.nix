@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Unidata";
     repo = "netcdf-fortran";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-k3cPO293Qc+YGlRI1Lz73zuGPP1A+m+VfOk5hBgeDoM=";
   };
 

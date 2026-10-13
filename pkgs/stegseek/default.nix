@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "RickdeJager";
     repo = "stegseek";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-B5oJffYOYfsH0YRq/Bq0ciIlCsCONyScFBjP7a1lIzo=";
   };
 

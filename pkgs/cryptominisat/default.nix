@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "msoos";
     repo = "cryptominisat";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-8oH9moMjQEWnQXKmKcqmXuXcYkEyvr4hwC1bC4l26mo=";
   };
 

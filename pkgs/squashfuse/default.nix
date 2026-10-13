@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "vasi";
     repo = "squashfuse";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-P7YMKmuXGlWBFQlaclxWveVofC+tcerB6iqMvQpVdS0=";
   };
 

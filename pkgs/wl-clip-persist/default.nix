@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Linus789";
     repo = "wl-clip-persist";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-MEH8ADsFst/CgTc9QW4x0dBXJ5ssQDVa55qPcsALJRg=";
   };
 

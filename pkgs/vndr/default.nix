@@ -21,8 +21,6 @@ buildGoModule {
     go mod init github.com/LK4D4/vndr
   '';
 
-  doCheck = false;
-
   meta = {
     description = "Stupid golang vendoring tool, inspired by docker vendor script";
     mainProgram = "vndr";

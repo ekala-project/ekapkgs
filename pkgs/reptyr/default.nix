@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "nelhage";
     repo = "reptyr";
-    rev = "reptyr-${finalAttrs.version}";
+    tag = "reptyr-${finalAttrs.version}";
     sha256 = "sha256-jlO/ykrwGJkgKiPxfRQEX4TSksrbPQhkQs+QddwqaQ4=";
   };
 
@@ -19,8 +19,6 @@ stdenv.mkDerivation (finalAttrs: {
     "PREFIX="
     "DESTDIR=$(out)"
   ];
-
-  doCheck = false;
 
   meta = {
     platforms = [

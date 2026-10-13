@@ -39,7 +39,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ArturKovacs";
     repo = "emulsion";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-+C4YB5usNKfNydyEyIvaScnjK0h/PKN1x8gnt7Lz2kQ=";
   };
 

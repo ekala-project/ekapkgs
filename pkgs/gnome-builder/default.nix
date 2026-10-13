@@ -107,8 +107,6 @@ stdenv.mkDerivation (finalAttrs: {
     network_tests = false;
   };
 
-  doCheck = false; # TODO: enable when xvfb-run is available for tests
-
   postPatch = ''
     patchShebangs build-aux/meson/post_install.py
     substituteInPlace build-aux/meson/post_install.py \

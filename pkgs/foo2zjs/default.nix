@@ -73,7 +73,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   nativeCheckInputs = [ time ];
-  doCheck = false; # fails to find its own binary. Also says "Tests will pass only if you are using ghostscript-8.71-16.fc14".
   doInstallCheck = true;
 
   preInstall = ''

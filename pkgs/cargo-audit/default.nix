@@ -30,7 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildFeatures = [ "fix" ];
 
   # The tests require network access which is not available in sandboxed Nix builds.
-  doCheck = false;
 
   meta = {
     description = "Audit Cargo.lock files for crates with security vulnerabilities";

@@ -15,7 +15,7 @@ let
         src = fetchFromGitHub {
           owner = "pyparsing";
           repo = "pyparsing";
-          rev = "pyparsing_${version}";
+          tag = "pyparsing_${version}";
           sha256 = "14pfy80q2flgzjcx8jkracvnxxnr59kjzp3kdm5nh232gk1v6g6h";
         };
         nativeBuildInputs = [ super.setuptools ];
@@ -32,7 +32,7 @@ python.pkgs.buildPythonApplication rec {
   src = fetchFromGitHub {
     owner = "yandex";
     repo = "gixy";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "sha256-Ak2UTP0gDKoac/rR2h1XCUKld1b41O466ogZNQ1yQN0=";
   };
 

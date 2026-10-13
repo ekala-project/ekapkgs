@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "flann-lib";
     repo = "flann";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "13lg9nazj5s9a41j61vbijy04v6839i67lqd925xmxsbybf36gjc";
   };
 

@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "scummvm";
     repo = "scummvm";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-wFEYg3hRVNVlxpw3xP8O8s4ILKy487k5hyWENaLiOlw=";
   };
 

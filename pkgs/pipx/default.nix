@@ -44,8 +44,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
       --fish <(register-python-argcomplete pipx --shell fish)
   '';
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pipx" ];
 
   meta = {

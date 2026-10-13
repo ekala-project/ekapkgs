@@ -18,7 +18,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   # Tests relies on the presence of network
-  doCheck = false;
   cargoBuildFlags = [
     "--package"
     "tombi-cli"

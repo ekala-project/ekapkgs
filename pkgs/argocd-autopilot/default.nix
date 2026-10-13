@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "argoproj-labs";
     repo = "argocd-autopilot";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-JLh41ZWiDcDrUtd8d+Ak5TFca4L6VHzUguS55P9lmj0=";
   };
 

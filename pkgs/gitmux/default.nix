@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "arl";
     repo = "gitmux";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-TObnmV/NiMCcyC9zG0OcCuCqUChQZmpqPptQUDtF85A=";
   };
 
@@ -25,7 +25,6 @@ buildGoModule (finalAttrs: {
   #   vendor/github.com/rogpeppe/go-internal/testscript/exe_go118.go:14:27:
   #   cannot use nopTestDeps{} (value of struct type nopTestDeps) as testing.testDeps value in argument to testing.MainStart:
   #   nopTestDeps does not implement testing.testDeps (missing method InitRuntimeCoverage)'.
-  doCheck = false;
 
   ldflags = [ "-X main.version=${finalAttrs.version}" ];
 

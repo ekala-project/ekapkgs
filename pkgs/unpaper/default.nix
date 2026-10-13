@@ -37,8 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     ffmpeg.headless
   ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://www.flameeyes.eu/projects/unpaper";
     changelog = "https://github.com/unpaper/unpaper/blob/unpaper-${finalAttrs.version}/NEWS";

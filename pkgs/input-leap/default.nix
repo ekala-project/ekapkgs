@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "input-leap";
     repo = "input-leap";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-zSaeeMlhpWIX3y4OmZ7eHXCu1HPP7NU5HFkME/JZjuQ=";
     fetchSubmodules = true;
   };
@@ -62,9 +62,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeEntries = {
     INPUTLEAP_REVISION = "${builtins.substring 0 8 finalAttrs.src.rev}";
+  }
+  // lib.optionalAttrs withLibei {
+    INPUTLEAP_BUILD_LIBEI = true;
   };
-
-  cmakeFlags = lib.optional withLibei "-DINPUTLEAP_BUILD_LIBEI=ON";
 
   dontWrapGApps = true;
   preFixup = ''

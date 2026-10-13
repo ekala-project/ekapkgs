@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "projectdiscovery";
     repo = "notify";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-QXioBUCMZ4ANkF2WOXiKUlExVq4abkaVFBd3efAGXMs=";
   };
 
@@ -23,7 +23,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # Test files are not part of the release tarball
-  doCheck = false;
 
   meta = {
     description = "Allows sending the output from any tool to Slack, Discord and Telegram";

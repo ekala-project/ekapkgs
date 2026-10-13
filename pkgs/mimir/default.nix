@@ -8,7 +8,7 @@ buildGoModule (finalAttrs: {
   version = "3.2.1";
 
   src = fetchFromGitHub {
-    rev = "mimir-${finalAttrs.version}";
+    tag = "mimir-${finalAttrs.version}";
     owner = "grafana";
     repo = "mimir";
     hash = "sha256-/i4nF4YGKvNRt/JkB4pOIIrXvZhPTvM8GEePEGP7hY8=";

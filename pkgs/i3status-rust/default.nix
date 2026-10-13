@@ -83,8 +83,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     }
   '';
 
-  doCheck = false;
-
   meta = {
     description = "Very resource-friendly and feature-rich replacement for i3status";
     homepage = "https://github.com/greshake/i3status-rust";

@@ -106,7 +106,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   # Broken by PCRE 2 bump in GLib.
   # https://gitlab.gnome.org/GNOME/gtksourceview/-/issues/283
-  doCheck = false;
 
   checkPhase = ''
     runHook preCheck

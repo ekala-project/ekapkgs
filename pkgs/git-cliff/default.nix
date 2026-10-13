@@ -13,14 +13,13 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "orhun";
     repo = "git-cliff";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fhhlHjVXernPKNXmeIjRGocyHDPCwo+//yTjb5pVGbo=";
   };
 
   cargoHash = "sha256-yO8Ov2+cJky3JqePy2mnOd4AFEKJRuAirm/iozTwArU=";
 
   # attempts to run the program on .git in src which is not deterministic
-  doCheck = false;
 
   nativeBuildInputs = [ installShellFiles ];
 

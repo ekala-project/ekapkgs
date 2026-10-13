@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "strongswan";
     repo = "strongswan";
-    rev = version;
+    tag = version;
     hash = "sha256-Uqyyju7mi/ERQLo4oAAxX2FzpHzulyrManX8NN4ESAo=";
   };
 

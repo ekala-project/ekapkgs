@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "graph-algorithms";
     repo = "edge-addition-planarity-suite";
-    rev = "Version_${finalAttrs.version}";
+    tag = "Version_${finalAttrs.version}";
     sha256 = "sha256-PiBSj0ckCnNvAhjabCyM+m1wrZTrAtq10zVnTVNaC0A=";
   };
 

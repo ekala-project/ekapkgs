@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~xenrox";
     repo = "hut";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-dbFqc+zlUihf/gz4Oo3LtbOClDDDB/khlCbI9/UgD2E=";
   };
 

@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "est31";
     repo = "cargo-udeps";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-yT/EJWGGhQapbU1o1Gus1Vk5cAhso5ALTBecB3BH46g=";
   };
 
@@ -26,7 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   # Requires network access
-  doCheck = false;
 
   meta = {
     description = "Find unused dependencies in Cargo.toml";

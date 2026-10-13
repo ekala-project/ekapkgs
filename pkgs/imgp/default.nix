@@ -12,7 +12,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jarun";
     repo = "imgp";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-CmpF4vIu7tXSnMTl/cBq/L4SHinT/ytO2OUjdjrFQRU=";
   };
 

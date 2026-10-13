@@ -14,7 +14,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitLab {
     owner = "sequoia-pgp";
     repo = "sequoia-sqv";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-z8ZZf5+I8YXR6ugP3EF3zynBicQYKoDfCwWmFfrC8FA=";
   };
 

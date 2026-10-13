@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "zpaq";
     repo = "zpaq";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "0v44rlg9gvwc4ggr2lhcqll8ppal3dk7zsg5bqwcc5lg3ynk2pz4";
   };
 

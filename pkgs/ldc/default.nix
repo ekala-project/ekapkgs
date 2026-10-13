@@ -91,8 +91,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "DMD=$DMD" ];
 
-  doCheck = false;
-
   postInstall = ''
     wrapProgram $out/bin/ldc2 \
       --prefix PATH : ${targetPackages.stdenv.cc}/bin \

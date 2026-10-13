@@ -21,7 +21,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   pythonImportsCheck = [ "bugz" ];
 
   # no tests
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/williamh/pybugz";

@@ -27,7 +27,6 @@ buildGoModule (finalAttrs: {
   ];
 
   # There are no tests.
-  doCheck = false;
 
   meta = {
     description = "Go assembler formatter";

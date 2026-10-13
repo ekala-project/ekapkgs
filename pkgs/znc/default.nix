@@ -61,9 +61,10 @@ stdenv.mkDerivation (finalAttrs: {
     WANT_TCL = withTcl;
     WANT_CYRUS = withCyrus;
     WANT_IPV6 = withIPv6;
+  }
+  // lib.optionalAttrs withTcl {
+    TCL_LIBRARY = "${tcl}/lib";
   };
-
-  cmakeFlags = lib.optionals withTcl [ "-DTCL_LIBRARY=${tcl}/lib" ];
 
   meta = {
     description = "Advanced IRC bouncer";

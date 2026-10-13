@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Matroska-Org";
     repo = "libebml";
-    rev = "release-${finalAttrs.version}";
+    tag = "release-${finalAttrs.version}";
     sha256 = "sha256-PIVBePTWceMgiENdaL9lvXIL/RQIrtg7l0OG2tO0SU8=";
   };
 

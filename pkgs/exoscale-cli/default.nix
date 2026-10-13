@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "exoscale";
     repo = "cli";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-8GEho1mlxqggVFwUtvpMGyJKk/E+eFN2FnCQJwK51L0=";
   };
 

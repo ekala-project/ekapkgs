@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "evilsocket";
     repo = "shellz";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-sUYDopSxaUPyrHev8XXobRoX6uxbdf5goJ75KYEPFNY=";
   };
 

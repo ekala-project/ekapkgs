@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "bats-core";
     repo = "bats-core";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-pUuSjXxMCFLlsTvErgerHLnaQmcA9eXuKZKRkuOGJ8k=";
   };
 

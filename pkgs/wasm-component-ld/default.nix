@@ -20,7 +20,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   # Tests require a rustc that can target wasm32-wasip1, including std. This is awkward for
   # Nixpkgs to provide at the same time as providing a rustc that's targetting the actual target.
   # TODO: work around by patching the test suite to invoke pkgsBuildTarget.rustc rather than just looking in PATH for any old rustc
-  doCheck = false;
 
   meta = {
     description = "Command line linker for creating WebAssembly components";

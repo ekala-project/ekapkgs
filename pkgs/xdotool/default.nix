@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "jordansissel";
     repo = "xdotool";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "sha256-cgCZuvcxD1qQPpzSmYQZJj9TH8Vq9xTZLU8Rg7sUrvI=";
   };
 

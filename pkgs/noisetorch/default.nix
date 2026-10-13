@@ -18,8 +18,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = null;
 
-  doCheck = false;
-
   ldflags = [
     "-s"
     "-w"

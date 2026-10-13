@@ -11,12 +11,10 @@ buildGoModule (finalAttrs: {
 
   vendorHash = null;
 
-  doCheck = false;
-
   src = fetchFromGitHub {
     owner = "DNSCrypt";
     repo = "dnscrypt-proxy";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-o6XZR3w1LfyCGOcF6Gzp39neMp5QjbTxQdL8A81AakM=";
   };
 

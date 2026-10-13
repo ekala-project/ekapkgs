@@ -45,8 +45,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     urwid
   ];
 
-  doCheck = false;
-
   postInstall = ''
     # shell completions
     installShellCompletion --cmd khal \

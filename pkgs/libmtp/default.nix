@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "libmtp";
     repo = "libmtp";
-    rev = "libmtp-${builtins.replaceStrings [ "." ] [ "-" ] finalAttrs.version}";
+    tag = "libmtp-${builtins.replaceStrings [ "." ] [ "-" ] finalAttrs.version}";
     sha256 = "sha256-FlPj9PEeOAWabU11dFTzDgY9TBbgmJclbeL0iULYw6A=";
   };
 

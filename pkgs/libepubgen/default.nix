@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchgit {
     url = "https://git.code.sf.net/p/libepubgen/code";
-    rev = "libepubgen-${finalAttrs.version}";
+    tag = "libepubgen-${finalAttrs.version}";
     hash = "sha256-wPpU8Sfhx9GIgDmT/otT5yV4iQKm9QPZqgSBTfFcbbg=";
   };
 

@@ -27,8 +27,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     tomlkit
   ];
 
-  doCheck = false;
-
   pythonRelaxDeps = [ "astroid" ];
 
   meta = {

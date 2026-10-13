@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ckolivas";
     repo = "cgminer";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "0l1ms3nxnjzh4mpiadikvngcr9k3jnjqy3yna207za0va0c28dj5";
   };
 

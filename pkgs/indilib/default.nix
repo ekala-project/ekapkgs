@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "indilib";
     repo = "indi";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Y2JmlboNU7e2Whvv6snd8Qgotr+AAkUkAd9qCORZoI0=";
   };
 

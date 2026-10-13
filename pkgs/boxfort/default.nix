@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Snaipe";
     repo = "BoxFort";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fgX2Ilb01qa9myuz6yiC67WKeai2m/csncS6u5and3o=";
   };
 

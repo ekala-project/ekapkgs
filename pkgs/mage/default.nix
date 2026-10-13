@@ -11,13 +11,11 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "magefile";
     repo = "mage";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-QYvgKq7I+YGoDbECFGtQHPPP/z8oo5n3BT4LoShrEPc=";
   };
 
   vendorHash = null;
-
-  doCheck = false;
 
   ldflags = [
     "-X github.com/magefile/mage/mage.commitHash=v${finalAttrs.version}"

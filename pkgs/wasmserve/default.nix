@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "hajimehoshi";
     repo = "wasmserve";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-sj2PPCuvh2RkQq5rAPQZdr96a8FG7RL5RCzWBDt2TeI=";
   };
 

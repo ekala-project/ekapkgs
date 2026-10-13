@@ -33,6 +33,5 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     description = "Set of symbolic icons for GTK applications and projects";
     license = lib.licenses.lgpl3Plus;
     platforms = lib.platforms.linux;
-    teams = [ ];
   };
 })

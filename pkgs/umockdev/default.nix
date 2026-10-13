@@ -62,8 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     gtk_doc = true;
   };
 
-  doCheck = false;
-
   postPatch = ''
     substituteInPlace src/umockdev-wrapper \
       --subst-var-by 'LIBDIR' "''${!outputLib}/lib"

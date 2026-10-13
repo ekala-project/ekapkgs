@@ -34,7 +34,6 @@ buildGoModule rec {
   ];
 
   # tests fail due to requiring networking
-  doCheck = false;
   meta = {
     description = "Proxy mechanism to bypass GFW";
     homepage = "https://p4gefau1t.github.io/trojan-go/";

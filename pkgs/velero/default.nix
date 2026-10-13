@@ -35,7 +35,6 @@ buildGoModule (finalAttrs: {
     "velero-restic-restore-helper"
   ];
 
-  doCheck = false; # Tests expect a running cluster see https://github.com/vmware-tanzu/velero/tree/main/test/e2e
   installCheckPhase = ''
     $out/bin/velero version --client-only | grep ${finalAttrs.version} > /dev/null
   '';

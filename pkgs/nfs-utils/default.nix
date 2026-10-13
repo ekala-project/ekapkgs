@@ -148,8 +148,6 @@ stdenv.mkDerivation (finalAttrs: {
     grep -l /usr/bin/python $out/bin/* | xargs -I {} rm -v {}
   '';
 
-  doCheck = false;
-
   disallowedReferences = [ (lib.getDev libkrb5) ];
 
   meta = {

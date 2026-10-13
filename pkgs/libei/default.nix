@@ -30,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.freedesktop.org";
     owner = "libinput";
     repo = "libei";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-fUeMdRK7uoRvgvY3INMorwnTleLrLA5xOeYBFp1qXeI=";
   };
 

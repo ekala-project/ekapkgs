@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "wiiuse";
     repo = "wiiuse";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-kB/iGzpO9lin3bTDlXBwZEdEg5UOivU1mnWDj/E44k4=";
   };
 

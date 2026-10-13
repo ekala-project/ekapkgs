@@ -30,8 +30,6 @@ buildGoModule (finalAttrs: {
 
   vendorHash = null;
 
-  doCheck = false;
-
   meta = {
     description = "Create and view interactive cheatsheets on the command-line";
     license = with lib.licenses; [

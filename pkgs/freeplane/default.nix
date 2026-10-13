@@ -17,7 +17,7 @@ let
   src = fetchFromGitHub {
     owner = "freeplane";
     repo = "freeplane";
-    rev = "release-1.13.2";
+    tag = "release-1.13.2";
     hash = "sha256-NDji6psNXESAY5NWI/Ms63MTgbxZHiIxYAgOSkWHuK0=";
   };
 

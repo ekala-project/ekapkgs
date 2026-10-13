@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "visit1985";
     repo = "mdp";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-7ltqnvNzdr+sJiiiCQpp25dzhOrcUCOAgMTt1RIgVTw=";
   };
 

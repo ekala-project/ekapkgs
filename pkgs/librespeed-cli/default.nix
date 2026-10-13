@@ -18,7 +18,6 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-c7t6cYWB4eifhAKH5cNbzB5eA9pcdzBiJyHmNp3MCr4=";
 
   # Tests have additional requirements
-  doCheck = false;
 
   postInstall = ''
     mv $out/bin/speedtest-cli $out/bin/librespeed-cli

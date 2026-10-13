@@ -13,7 +13,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "svenstaro";
     repo = "genact";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-hz+DZCoZzi4ZtGUQfQJ5f6sGqgbB32bIIdxTE2TeWrY=";
   };
 

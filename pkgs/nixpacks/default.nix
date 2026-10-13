@@ -11,14 +11,13 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "railwayapp";
     repo = "nixpacks";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-y2zrXS56fSsPaVmJcUxTMYhOroYjcNKepuI9tmdORsY=";
   };
 
   cargoHash = "sha256-Oom7CC8WBHd3hEQ62hQU91YbC4ydtdQuhAH6LFRN+P8=";
 
   # skip test due FHS dependency
-  doCheck = false;
 
   meta = {
     description = "App source + Nix packages + Docker = Image Resources";

@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "aria2";
     repo = "aria2";
-    rev = "release-${finalAttrs.version}";
+    tag = "release-${finalAttrs.version}";
     sha256 = "sha256-xbiNSg/Z+CA0x0DQfMNsWdA+TATyX6dCeW2Nf3L3Kfs=";
   };
 
@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   nativeCheckInputs = [ cppunit ];
-  doCheck = false; # needs the net
 
   meta = {
     homepage = "https://aria2.github.io";

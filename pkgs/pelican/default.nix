@@ -38,7 +38,6 @@ python3Packages.buildPythonApplication rec {
   ];
 
   # Tests require complex setup
-  doCheck = false;
 
   dontPatchShebangs = true;
 

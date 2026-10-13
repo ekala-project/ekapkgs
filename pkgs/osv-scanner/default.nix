@@ -29,8 +29,6 @@ buildGoModule (finalAttrs: {
     "-X=main.date=1970-01-01T00:00:00Z"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Vulnerability scanner written in Go which uses the data provided by https://osv.dev";
     mainProgram = "osv-scanner";

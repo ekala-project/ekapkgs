@@ -47,8 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     environment_proxy = true;
   };
 
-  doCheck = false;
-
   meta = {
     description = "Network-related giomodules for glib";
     homepage = "https://gitlab.gnome.org/GNOME/glib-networking";

@@ -29,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchgit {
     url = "https://https.git.savannah.gnu.org/git/emacs.git";
-    rev = "emacs-${finalAttrs.version}";
+    tag = "emacs-${finalAttrs.version}";
     hash = "sha256-3Lfb3HqdlXqSnwJfxe7npa4GGR9djldy8bKRpkQCdSA=";
   };
 

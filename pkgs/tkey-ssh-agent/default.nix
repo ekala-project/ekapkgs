@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "tillitis";
     repo = "tkey-ssh-agent";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ndS9eNxhZTCxaxEF/J3FzIA8xtlVdbm9q9W1I9lC8+k=";
   };
 

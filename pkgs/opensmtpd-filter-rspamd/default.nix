@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "poolpOrg";
     repo = "filter-rspamd";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-mOUFTYXA+cJJpFjvnv9wOtxqAuxaaVqKfhV5Zds9wIY=";
   };
 

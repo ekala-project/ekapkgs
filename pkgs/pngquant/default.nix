@@ -37,8 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     lcms2
   ];
 
-  doCheck = false;
-
   postInstall = ''
     install -Dpm0444 pngquant.1 $man/share/man/man1/pngquant.1
   '';

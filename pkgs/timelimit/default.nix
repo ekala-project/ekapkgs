@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitLab {
     owner = "timelimit";
     repo = "timelimit";
-    rev = "release/${finalAttrs.version}";
+    tag = "release/${finalAttrs.version}";
     hash = "sha256-5IEAF8zCKaCVH6BAxjoa/2rrue9pRGBBkFzN57d+g+g=";
   };
 

@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "hickford";
     repo = "git-credential-oauth";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-M4SsqF5RE2OZv7Ehf5o79lyeNmNlkiYDPyz2G6HYC88=";
   };
 

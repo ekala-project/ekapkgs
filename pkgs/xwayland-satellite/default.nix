@@ -49,8 +49,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     "man"
   ];
 
-  doCheck = false;
-
   postInstall = ''
     installManPage --name xwayland-satellite.1 xwayland-satellite.man
   ''

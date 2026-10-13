@@ -18,7 +18,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "elomatreb";
     repo = "listenbrainz-mpd";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-087+l3calge6hKu3h84C98mIpW6qFAZwRMe4lkQCU4o=";
   };
 

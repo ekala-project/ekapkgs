@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "Thomas-Tsai";
     repo = "partclone";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     sha256 = "sha256-lWnGi8giz7vzdBnuth55h0VMuNyCQaCclRqPJdm0I14=";
   };
 

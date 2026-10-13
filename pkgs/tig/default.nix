@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jonas";
     repo = "tig";
-    rev = "tig-${finalAttrs.version}";
+    tag = "tig-${finalAttrs.version}";
     sha256 = "sha256-Zfmt2rpnH5sxiay1LAsXxvtvqvwEG4MbNI+p0GWJsMc=";
   };
 

@@ -78,8 +78,6 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional stdenv.hostPlatform.isLinux libseccomp;
 
-  doCheck = false;
-
   meta = {
     homepage = "https://pwmt.org/projects/zathura";
     description = "Core component for zathura PDF viewer";

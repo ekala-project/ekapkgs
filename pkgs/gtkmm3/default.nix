@@ -50,8 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     pangomm
   ];
 
-  doCheck = false;
-
   meta = {
     description = "C++ interface to the GTK graphical user interface library";
     homepage = "https://gtkmm.gnome.org/";

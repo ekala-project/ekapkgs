@@ -11,13 +11,11 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "zk-org";
     repo = "zk";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-owHbrQwoQS+SbfZ6EQO/ii10zX73MmUpohuIIltlnw8=";
   };
 
   vendorHash = "sha256-Y5KI3o4HYWyqQl/RnOetyIKOI+CbYWSgrbkGkpAKsX4=";
-
-  doCheck = false;
 
   env.CGO_ENABLED = 1;
 

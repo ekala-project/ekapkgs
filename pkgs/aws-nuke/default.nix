@@ -29,8 +29,6 @@ buildGoModule (finalAttrs: {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  doCheck = false;
-
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd aws-nuke \
       --bash <($out/bin/aws-nuke completion bash) \

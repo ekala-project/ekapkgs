@@ -10,7 +10,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
 
   src = fetchgit {
     url = "https://git.launchpad.net/ubuntu/+source/fonts-ubuntu-classic";
-    rev = "import/${finalAttrs.version}";
+    tag = "import/${finalAttrs.version}";
     hash = "sha256-GrpBVgisVu7NklFYqkEqYi0hui/pCHlsM3Ky4mEUq90=";
   };
 

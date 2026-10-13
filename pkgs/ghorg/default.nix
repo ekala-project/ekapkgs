@@ -13,11 +13,10 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "gabrie30";
     repo = "ghorg";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-gjEwl1MbITsXY6lSd18hJYOoZGYi6k4APiHeSdmnQYQ=";
   };
 
-  doCheck = false;
   vendorHash = null;
 
   subPackages = [ "." ];

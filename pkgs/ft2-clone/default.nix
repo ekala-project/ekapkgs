@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "8bitbubsy";
     repo = "ft2-clone";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Ma68uJBTtLhJjt0C8FHTw+oWj6dszVR09gv7Nq4RspA=";
   };
 

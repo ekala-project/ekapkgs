@@ -59,8 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
     NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
   };
 
-  doCheck = false;
-
   meta = {
     description = "Text editor widget for GTK based on GtkTextView";
     homepage = "https://gitlab.gnome.org/GNOME/gtksourceview";

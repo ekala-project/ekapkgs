@@ -19,7 +19,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   dependencies = with python3Packages; [ stem ];
 
   # ./run_tests.py returns `TypeError: testFailure() takes exactly 1 argument`
-  doCheck = false;
 
   pythonImportsCheck = [ "nyx" ];
 

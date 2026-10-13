@@ -33,7 +33,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "hughsie";
     repo = "libjcat";
-    rev = version;
+    tag = version;
     sha256 = "sha256-PLaxeRWbPWXbS9QvMzYS4FTBNw9BDpMf1z2gYNZQa2c=";
   };
 

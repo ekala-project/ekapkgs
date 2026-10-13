@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromCodeberg {
     owner = "soundtouch";
     repo = "soundtouch";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-srSeFykj6jxAO2OaFCgA8J7SbD2REOKtRp3V17bCFQI=";
   };
 

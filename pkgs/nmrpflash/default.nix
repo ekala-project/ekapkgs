@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jclehner";
     repo = "nmrpflash";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-YkkDvr/wgUFpJ8kp15hlU9iHdfefxQCbyrpT2jAjJro=";
   };
 

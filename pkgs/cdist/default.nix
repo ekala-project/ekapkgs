@@ -19,7 +19,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
     domain = "code.ungleich.ch";
     owner = "ungleich-public";
     repo = "cdist";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-lIx0RtGQJdY2e00azI9yS6TV+5pCegpKOOD0dQmgMqA=";
   };
 
@@ -48,7 +48,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   #
   # When "machine_type" explorer figures out that it is running inside
   # chroot, it assumes that it has enough privileges to escape it.
-  doCheck = false;
 
   pythonImportsCheck = [ "cdist" ];
 

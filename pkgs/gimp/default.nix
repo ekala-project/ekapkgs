@@ -215,8 +215,6 @@ stdenv.mkDerivation (finalAttrs: {
     appdata-test = false;
   };
 
-  doCheck = false;
-
   env = {
     # The check runs before glib-networking is registered
     GIO_EXTRA_MODULES = "${glib-networking}/lib/gio/modules";

@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "timescale";
     repo = "timescaledb-tune";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-3jsRI/ZuFNxjDfRzWQWclUiuC2qrxtUxJ0gcmXXQLUw=";
   };
 

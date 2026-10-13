@@ -15,15 +15,13 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "helmfile";
     repo = "helmfile";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-G9gOc7gIj2AoROPRppHqkeGcVUOpYx/qaEVkec4c4rk=";
   };
 
   vendorHash = "sha256-GBTUYoXCcRD6kZI52VWE46GDlO13ZpxDEYrDd7nRR3s=";
 
   proxyVendor = true;
-
-  doCheck = false;
 
   subPackages = [ "." ];
 

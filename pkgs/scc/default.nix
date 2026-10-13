@@ -12,7 +12,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "boyter";
     repo = "scc";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Kpf0wvCreK+IrfnV79wBP8feu0EG0rvuQQ6P0sLDsQg=";
   };
 

@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "pantor";
     repo = "inja";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-P4XKz2FcMfP0HRMoEC2+RKE/ljZSpusUTDmF9Ao5txo=";
   };
 

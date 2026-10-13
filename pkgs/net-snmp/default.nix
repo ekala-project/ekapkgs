@@ -51,7 +51,6 @@ stdenv.mkDerivation rec {
   buildInputs = [ openssl ];
 
   enableParallelInstalling = false;
-  doCheck = false;
 
   postInstall = ''
     for f in "$lib/lib/"*.la $bin/bin/net-snmp-config $bin/bin/net-snmp-create-v3-user; do

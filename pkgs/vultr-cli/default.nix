@@ -13,7 +13,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "vultr";
     repo = "vultr-cli";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-uHH8Rx7zxmOvW+KWycffvZDu2AoX8geqWzDlGuntPx0=";
   };
 

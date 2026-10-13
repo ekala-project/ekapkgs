@@ -11,13 +11,12 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "0xERR0R";
     repo = "blocky";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-TROP6hwaDo8OAEVATWYCrQZlAjjtjcz5yyZthOVteC8=";
   };
 
   # needs network connection and fails at
   # https://github.com/0xERR0R/blocky/blob/development/resolver/upstream_resolver_test.go
-  doCheck = false;
 
   vendorHash = "sha256-QQ+bhLpDa1X4UVl8L3qJtI3lx8Ba3yLVqKoUR+aHSf0=";
 

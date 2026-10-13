@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "StefanSchippers";
     repo = "xschem";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-ye97VJQ+2F2UbFLmGrZ8xSK9xFeF+Yies6fJKurPOD0=";
   };
 

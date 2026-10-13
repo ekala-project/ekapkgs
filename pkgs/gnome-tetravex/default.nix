@@ -55,7 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/GNOME/gnome-tetravex";
     description = "Complete the puzzle by matching numbered tiles";
     mainProgram = "gnome-tetravex";
-    teams = [ ];
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
   };

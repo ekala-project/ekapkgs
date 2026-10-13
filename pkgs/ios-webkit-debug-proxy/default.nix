@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "google";
     repo = "ios-webkit-debug-proxy";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-42hNAMokjfo7Vi1xclFcjUmioMFQW64HYTMvvTVk5hY=";
   };
 

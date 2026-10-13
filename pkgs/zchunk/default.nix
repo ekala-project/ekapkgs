@@ -16,7 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "zchunk";
     repo = "zchunk";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-cBOcU8e2AA4NNYe4j6NDqhK+21ZWNBoJMgKEhyJHpi4=";
   };
 

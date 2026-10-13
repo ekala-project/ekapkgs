@@ -11,7 +11,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "libigl";
     repo = "libigl";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-/+wE3ZgqHWdLMaZZE/j7unrx10nd6sh9+JF5P0HB8i4=";
   };
 

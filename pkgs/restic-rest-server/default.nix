@@ -11,7 +11,7 @@ buildGoModule (finalAttrs: {
   src = fetchFromGitHub {
     owner = "restic";
     repo = "rest-server";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-cWnZ91mrllhTlCLb+BoJMXqUON2wOWCqVShg+NKU7gs=";
   };
 

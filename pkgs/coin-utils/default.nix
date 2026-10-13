@@ -12,7 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "coin-or";
     repo = "CoinUtils";
-    rev = "releases/${finalAttrs.version}";
+    tag = "releases/${finalAttrs.version}";
     hash = "sha256-fxg6kbCY9cMdJhNGddR9/qUxiR6KamUSDyzW8JxFlbo=";
   };
 

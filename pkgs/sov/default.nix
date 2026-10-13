@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "milgra";
     repo = "sov";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-JgLah21ye3G9jE3UTZu8r+nanwBDIQXmqv9iP1C+aUw=";
   };
 

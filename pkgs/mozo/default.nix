@@ -15,7 +15,6 @@ python3.pkgs.buildPythonApplication rec {
   version = "1.28.0";
 
   pyproject = false;
-  doCheck = false;
 
   src = fetchurl {
     url = "https://pub.mate-desktop.org/releases/${lib.versions.majorMinor version}/mozo-${version}.tar.xz";

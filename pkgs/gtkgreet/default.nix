@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromSourcehut {
     owner = "~kennylevinsen";
     repo = "gtkgreet";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-GKBYql0hzqB6uY87SsAqHwf3qLAr7xznMnAjRtP4HS8=";
   };
 

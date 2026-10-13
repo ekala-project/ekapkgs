@@ -26,7 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   nativeBuildInputs = [ installShellFiles ];
 
   # uses lots of absolute paths outside of the sandbox
-  doCheck = false;
 
   postInstall = ''
     installManPage safe-rm.1

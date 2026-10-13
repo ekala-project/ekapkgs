@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "dimpase";
     repo = "autocliquer";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-SGpur3sF1dYQU97wprERUqlr6LIX+NyXZVl0eSEd3uM=";
   };
 
@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://users.aalto.fi/~pat/cliquer.html";
     downloadPage = finalAttrs.src.meta.homepage; # autocliquer
     license = lib.licenses.gpl2Plus;
-    teams = [ ];
     mainProgram = "cl";
     platforms = lib.platforms.unix;
   };

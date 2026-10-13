@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kistler-group";
     repo = "sdbus-cpp";
-    rev = "v${version}";
+    tag = "v${version}";
     inherit (sources.${version}) hash;
   };
 

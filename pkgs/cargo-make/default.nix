@@ -39,7 +39,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   # However, Travis ensures a proper build.
   # See also:
   #   https://travis-ci.org/sagiegurari/cargo-make
-  doCheck = false;
 
   meta = {
     description = "Rust task runner and build tool";

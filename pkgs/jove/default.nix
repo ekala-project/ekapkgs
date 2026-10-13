@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "jonmacs";
     repo = "jove";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-y0zNrUXHXqBa6xNxRiZSUOSrFT2cDmdpMsCRHJXpUac=";
   };
 
