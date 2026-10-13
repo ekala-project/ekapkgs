@@ -17,7 +17,7 @@ stdenv.mkDerivation rec {
   src = fetchFromGitHub {
     owner = "google";
     repo = "zopfli";
-    rev = "${pname}-${version}";
+    tag = "${pname}-${version}";
     name = "${pname}-${version}-src";
     sha256 = "0dr8n4j5nj2h9n208jns56wglw59gg4qm3s7c6y3hs75d0nnkhm4";
   };
