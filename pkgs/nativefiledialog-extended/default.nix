@@ -51,7 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   # NOTE: Although the tests have been compiled, they still require GUI
   # interactions. Let's disable running them for now.
-  doCheck = false;
 
   passthru.tests = {
     cmake-config = testers.hasCmakeConfigModules {
