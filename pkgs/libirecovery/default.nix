@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "libimobiledevice";
     repo = "libirecovery";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-CSDG8mOLvKAIpxmZnNLMKY1HvQIqk66/rkjmzq7F8vY=";
   };
 
