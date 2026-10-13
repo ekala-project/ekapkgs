@@ -38,7 +38,6 @@ buildGoModule (finalAttrs: {
   # set some regexes `checkFlags = [ "-skip=TestDataValues.*" ]`
   # etc. So far we dont test because passing '*' chars through the Go builder
   # is flawed.
-  doCheck = false;
 
   passthru.tests.version = testers.testVersion {
     package = finalAttrs.finalPackage;
