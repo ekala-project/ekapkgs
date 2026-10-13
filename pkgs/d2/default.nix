@@ -30,8 +30,6 @@ buildGoModule (finalAttrs: {
     installShellFiles
   ];
 
-  doCheck = false;
-
   postInstall = ''
     installManPage ci/release/template/man/d2.1
   '';
