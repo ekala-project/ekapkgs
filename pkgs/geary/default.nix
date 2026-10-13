@@ -111,8 +111,6 @@ stdenv.mkDerivation (finalAttrs: {
     chmod +x desktop/geary-attach
   '';
 
-  doCheck = false;
-
   preFixup = ''
     # Add geary to path for geary-attach
     gappsWrapperArgs+=(--prefix PATH : "$out/bin")
