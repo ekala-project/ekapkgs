@@ -694,4 +694,5 @@
   ./services/tinysparql.nix
   ./services/transmission.nix
   ./services/xserver.nix
+  ./home/programs/zsh.nix
 ]
