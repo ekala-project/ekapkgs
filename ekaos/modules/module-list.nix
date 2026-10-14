@@ -701,4 +701,5 @@
   ./home/programs/foot.nix
   ./home/programs/ghostty.nix
   ./home/programs/wezterm.nix
+  ./home/programs/emacs.nix
 ]
