@@ -703,4 +703,5 @@
   ./home/programs/wezterm.nix
   ./home/programs/emacs.nix
   ./home/programs/neomutt.nix
+  ./home/programs/mpv.nix
 ]
