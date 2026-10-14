@@ -9,4 +9,5 @@
   ./home/programs/kitty.nix
   ./home/programs/foot.nix
   ./home/programs/ghostty.nix
+  ./home/programs/wezterm.nix
 ]
