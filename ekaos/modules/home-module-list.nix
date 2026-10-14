@@ -14,4 +14,5 @@
   ./home/programs/neomutt.nix
   ./home/programs/mpv.nix
   ./home/programs/zathura.nix
+  ./home/services/dunst.nix
 ]
