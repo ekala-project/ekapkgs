@@ -699,4 +699,5 @@
   ./home/programs/tmux.nix
   ./home/programs/kitty.nix
   ./home/programs/foot.nix
+  ./home/programs/ghostty.nix
 ]
