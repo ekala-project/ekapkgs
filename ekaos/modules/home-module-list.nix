@@ -6,4 +6,5 @@
   ./home/programs/zsh.nix
   ./home/programs/fish.nix
   ./home/programs/tmux.nix
+  ./home/programs/kitty.nix
 ]
