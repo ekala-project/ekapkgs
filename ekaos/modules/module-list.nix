@@ -709,4 +709,5 @@
   ./home/services/mako.nix
   ./home/services/gammastep.nix
   ./home/services/darkman.nix
+  ./home/services/udiskie.nix
 ]
