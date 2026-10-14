@@ -16,4 +16,5 @@
   ./home/programs/zathura.nix
   ./home/services/dunst.nix
   ./home/services/mako.nix
+  ./home/services/gammastep.nix
 ]
