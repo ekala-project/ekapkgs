@@ -20,4 +20,5 @@
   ./home/services/darkman.nix
   ./home/services/udiskie.nix
   ./home/services/cliphist.nix
+  ./home/services/mpd.nix
 ]
