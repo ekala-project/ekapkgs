@@ -710,4 +710,5 @@
   ./home/services/gammastep.nix
   ./home/services/darkman.nix
   ./home/services/udiskie.nix
+  ./home/services/cliphist.nix
 ]
