@@ -696,4 +696,5 @@
   ./services/xserver.nix
   ./home/programs/zsh.nix
   ./home/programs/fish.nix
+  ./home/programs/tmux.nix
 ]
