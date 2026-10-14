@@ -1,0 +1,65 @@
+{
+  "name": "openspecui",
+  "version": "13.0.2",
+  "description": "OpenSpec UI - Visual interface for spec-driven development",
+  "type": "module",
+  "main": "dist/index.mjs",
+  "bin": {
+    "openspecui": "./dist/cli.mjs"
+  },
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs"
+    },
+    "./hooks": {
+      "development": "./src/hooks.ts",
+      "import": "./dist/hooks.mjs",
+      "default": "./dist/hooks.mjs",
+      "types": "./dist/hooks.d.mts"
+    }
+  },
+  "files": [
+    "dist",
+    "web",
+    "app"
+  ],
+  "scripts": {
+    "build": "pnpm run build:web && pnpm run build:app && pnpm run build:copy-web && tsdown",
+    "build:web": "pnpm --filter @openspecui/web build",
+    "build:app": "pnpm --filter @openspecui/app build",
+    "build:copy-web": "bun scripts/copy-web-assets.ts",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.command-tests.json --noEmit && tsc -p tsconfig.nested-spec-tests.json --noEmit",
+    "typecheck:nested-spec-tests": "tsc -p tsconfig.nested-spec-tests.json --noEmit",
+    "dev": "tsx --conditions=development src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@lydell/node-pty": "^1.1.0",
+    "@opentray/ext-webview": "0.18.0",
+    "@parcel/watcher": "^2.5.1",
+    "better-sqlite3": "^12.5.0",
+    "opentray": "0.18.0",
+    "zod": "^3.24.1"
+  },
+  "// runtime-note": "The published openspecui package installs heavyweight translation runtimes only when the user asks for them.",
+  "// bundle-note": "tsdown keeps translator package runtime imports external, so the settings-panel install flow resolves ranges on demand instead of preinstalling them.",
+  "peerDependencies": {
+    "ctranslate2": "^1.0.0",
+    "node-llama-cpp": "~3.18.1"
+  },
+  "peerDependenciesMeta": {
+    "ctranslate2": {
+      "optional": true
+    },
+    "node-llama-cpp": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jixoai/openspecui"
+  }
+}

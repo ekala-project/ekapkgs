@@ -1,0 +1,76 @@
+{
+  "name": "@agentclientprotocol/codex-acp",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "2.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "bin": {
+    "codex-acp": "dist/index.js"
+  },
+  "files": [
+    "dist/index.js",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "node build.mjs",
+    "bundle:all": "npm run bundle:linux-x64 && npm run bundle:linux-arm64 && npm run bundle:darwin-x64 && npm run bundle:darwin-arm64 && npm run bundle:win-x64 && npm run bundle:win-arm64",
+    "bundle:linux-x64": "bun build src/index.ts --minify --sourcemap --compile --target=bun-linux-x64-baseline --outfile dist/bin/codex-acp-x64-linux",
+    "bundle:linux-arm64": "bun build src/index.ts --minify --sourcemap --compile --target=bun-linux-arm64 --outfile dist/bin/codex-acp-arm64-linux",
+    "bundle:darwin-x64": "bun build src/index.ts --minify --sourcemap --compile --target=bun-darwin-x64-baseline --outfile dist/bin/codex-acp-x64-darwin",
+    "bundle:darwin-arm64": "bun build src/index.ts --minify --sourcemap --compile --target=bun-darwin-arm64 --outfile dist/bin/codex-acp-arm64-darwin",
+    "bundle:win-x64": "bun build src/index.ts --minify --sourcemap --compile --target=bun-windows-x64-baseline --outfile dist/bin/codex-acp-x64-windows.exe",
+    "bundle:win-arm64": "bun build src/index.ts --minify --sourcemap --compile --target=bun-windows-arm64 --outfile dist/bin/codex-acp-arm64-windows.exe",
+    "package:all": "npm run package:linux-x64 && npm run package:linux-arm64 && npm run package:darwin-x64 && npm run package:darwin-arm64 && npm run package:win-x64 && npm run package:win-arm64",
+    "package:linux-x64": "cd dist/bin && zip codex-acp-x64-linux.zip codex-acp-x64-linux",
+    "package:linux-arm64": "cd dist/bin && zip codex-acp-arm64-linux.zip codex-acp-arm64-linux",
+    "package:darwin-x64": "cd dist/bin && zip codex-acp-x64-darwin.zip codex-acp-x64-darwin",
+    "package:darwin-arm64": "cd dist/bin && zip codex-acp-arm64-darwin.zip codex-acp-arm64-darwin",
+    "package:win-x64": "cd dist/bin && zip codex-acp-x64-windows.zip codex-acp-x64-windows.exe",
+    "package:win-arm64": "cd dist/bin && zip codex-acp-arm64-windows.zip codex-acp-arm64-windows.exe",
+    "start": "node --import tsx src/index.ts",
+    "example:simple-client": "node --import tsx examples/simple-client.ts",
+    "example:steering": "node --import tsx examples/steering.ts",
+    "example:steering:multistep": "node --import tsx examples/steering.ts",
+    "generate-types": "./node_modules/.bin/codex app-server generate-ts --out src/app-server",
+    "release:preflight": "bash scripts/release-preflight.sh",
+    "test": "vitest run --no-file-parallelism --retry=2",
+    "test:e2e": "npm run build && RUN_E2E_TESTS=true vitest run --no-file-parallelism --retry=2 src/__tests__/CodexACPAgent/e2e",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p examples/tsconfig.json",
+    "codex-test": "tsx .claude/skills/run-codex/scripts/run-codex-test.ts"
+  },
+  "homepage": "https://github.com/agentclientprotocol/codex-acp#readme",
+  "bugs": {
+    "url": "https://github.com/agentclientprotocol/codex-acp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agentclientprotocol/codex-acp.git"
+  },
+  "keywords": [],
+  "author": "Agent Client Protocol",
+  "license": "Apache-2.0",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "ajv": "^8.20.0",
+    "esbuild": "^0.28.2",
+    "mcp-hello-world": "^1.1.2",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1"
+  },
+  "dependencies": {
+    "@agentclientprotocol/sdk": "^1.5.0",
+    "@openai/codex": "^0.159.1",
+    "diff": "^9.0.0",
+    "open": "^11.0.1",
+    "vscode-jsonrpc": "^9.0.1",
+    "zod": "^4.0.0"
+  }
+}
