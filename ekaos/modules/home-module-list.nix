@@ -15,4 +15,5 @@
   ./home/programs/mpv.nix
   ./home/programs/zathura.nix
   ./home/services/dunst.nix
+  ./home/services/mako.nix
 ]
