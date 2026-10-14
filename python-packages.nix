@@ -191,4 +191,151 @@ final: prev: {
     };
   };
 
+  onnxruntime = final.buildPythonPackage {
+    inherit (final.pkgs.onnxruntime) pname version;
+    format = "wheel";
+    src = final.pkgs.onnxruntime.dist;
+
+    unpackPhase = ''
+      cp -r $src dist
+      chmod +w dist
+    '';
+
+    nativeBuildInputs = [ final.pkgs.autoPatchelfHook ];
+
+    pythonRemoveDeps = [
+      "flatbuffers"
+      "protobuf"
+      "sympy"
+    ];
+
+    buildInputs = [
+      final.pkgs.oneDNN
+      final.pkgs.re2
+      final.pkgs.onnxruntime.protobuf
+      final.pkgs.onnxruntime
+    ];
+
+    dependencies = with final; [
+      coloredlogs
+      numpy
+      packaging
+    ];
+
+    pythonImportsCheck = [ "onnxruntime" ];
+
+    meta = final.pkgs.onnxruntime.meta;
+  };
+
+  chromadb = final.buildPythonPackage (finalAttrs: {
+    pname = "chromadb";
+    version = "1.4.1";
+    pyproject = true;
+
+    src = final.pkgs.fetchFromGitHub {
+      owner = "chroma-core";
+      repo = "chroma";
+      tag = finalAttrs.version;
+      hash = "sha256-mtUxyuLiwA4l9u+pTPVIsYcvsLPPCI6c8iWK6Lgbwjc=";
+    };
+
+    cargoDeps = final.pkgs.rustPlatform.fetchCargoVendor {
+      inherit (finalAttrs) pname version src;
+      hash = "sha256-WdWc/8vNzcEtdxmAAbBDWxhMamxSnK2YaZPWwQ2zzU4=";
+    };
+
+    # Can't use fetchFromGitHub as the build expects a zipfile
+    swagger-ui = final.pkgs.fetchurl {
+      url = "https://github.com/swagger-api/swagger-ui/archive/refs/tags/v5.22.0.zip";
+      hash = "sha256-H+kXxA/6rKzYA19v7Zlx2HbIg/DGicD5FDIs0noVGSk=";
+    };
+
+    postPatch = ''
+      substituteInPlace pyproject.toml \
+        --replace-fail "dynamic = [\"version\"]" "version = \"${finalAttrs.version}\""
+      substituteInPlace chromadb/config.py \
+        --replace-fail "anonymized_telemetry: bool = True" \
+                       "anonymized_telemetry: bool = False"
+
+      # Newer rustc (1.98) counts async-fn type layout depth more strictly;
+      # several chroma crates overflow the default recursion limit. Raise it
+      # for every crate. The attribute must be the first line of each lib.rs.
+      for lib in rust/*/src/lib.rs; do
+        sed -i '1i #![recursion_limit = "512"]' "$lib"
+      done
+    '';
+
+    pythonRelaxDeps = [
+      "fastapi"
+      "posthog"
+    ];
+
+    build-system = [ final.pkgs.rustPlatform.maturinBuildHook ];
+
+    nativeBuildInputs = [
+      final.pkgs.cargo
+      final.pkgs.cmake
+      final.pkgs.pkg-config
+      final.pkgs.protobuf
+      final.pkgs.rustc
+      final.pkgs.rustPlatform.cargoSetupHook
+    ];
+
+    buildInputs = [
+      final.pkgs.openssl
+      final.pkgs.zstd
+    ];
+
+    dependencies = [
+      final.onnxruntime
+    ]
+    ++ (with final; [
+      bcrypt
+      build
+      fastapi
+      grpcio
+      httpx
+      importlib-resources
+      jsonschema
+      kubernetes
+      mmh3
+      numpy
+      opentelemetry-api
+      opentelemetry-exporter-otlp-proto-grpc
+      opentelemetry-instrumentation-fastapi
+      opentelemetry-sdk
+      orjson
+      overrides
+      posthog
+      pybase64
+      pydantic
+      pypika
+      pyyaml
+      requests
+      tenacity
+      tokenizers
+      tqdm
+      typer
+      typing-extensions
+      uvicorn
+    ]);
+
+    pythonImportsCheck = [ "chromadb" ];
+
+    # Tests need network access and a running server, and the full harness
+    # (hypothesis, pytest-xdist) is not available in the python scope.
+    doCheck = false;
+
+    env = {
+      ZSTD_SYS_USE_PKG_CONFIG = true;
+      SWAGGER_UI_DOWNLOAD_URL = "file://${finalAttrs.swagger-ui}";
+    };
+
+    meta = {
+      description = "AI-native open-source embedding database";
+      homepage = "https://github.com/chroma-core/chroma";
+      license = final.pkgs.lib.licenses.asl20;
+      mainProgram = "chroma";
+    };
+  });
 }
