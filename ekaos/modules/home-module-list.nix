@@ -4,4 +4,5 @@
 # bash, git, ssh, gpg-agent and the core home.users infrastructure).
 [
   ./home/programs/zsh.nix
+  ./home/programs/fish.nix
 ]
