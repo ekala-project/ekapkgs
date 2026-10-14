@@ -29,37 +29,6 @@ in
       description = "Service description.";
     };
 
-    command = mkOption {
-      type = types.str;
-      internal = true;
-      description = "Command to run (set automatically).";
-    };
-
-    args = mkOption {
-      type = types.listOf types.str;
-      internal = true;
-      default = [ ];
-      description = "Command arguments (set automatically).";
-    };
-
-    user = mkOption {
-      type = types.str;
-      default = "";
-      description = "User to run PipeWire as (empty for user service).";
-    };
-
-    restartPolicy = mkOption {
-      type = types.str;
-      default = "on-failure";
-      description = "Restart policy.";
-    };
-
-    systemd = mkOption {
-      type = types.attrsOf types.anything;
-      default = { };
-      description = "Systemd-specific options.";
-    };
-
     package = mkOption {
       type = types.package;
       default = pkgs.pipewire;

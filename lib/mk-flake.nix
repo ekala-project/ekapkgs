@@ -49,6 +49,10 @@ treefmt-nix:
   treefmt ? null,
   apps ? null,
   hydraJobs ? null,
+  # Home configurations: attrset of { modules = [ ... ]; system = "..."; }.
+  # Each entry is evaluated through ekapkgs eval-home.nix and exposed as
+  # homeConfigurations.<name>.activationPackage.
+  homeConfigurations ? { },
   # Non-per-system passthrough outputs.
   nixosModules ? { },
   nixosConfigurations ? { },
@@ -103,6 +107,17 @@ let
     else
       devShells;
 
+  # Evaluate home configurations through ekapkgs eval-home.nix.
+  evaluatedHomes = builtins.mapAttrs (
+    _: homeCfg:
+    let
+      system = homeCfg.system or "x86_64-linux";
+      pkgs = legacyPackages.${system};
+      evalHome = import ../ekaos/eval-home.nix { inherit (pkgs) lib; inherit pkgs; };
+    in
+    evalHome { modules = homeCfg.modules or [ ]; }
+  ) homeConfigurations;
+
   # When treefmt config is provided, build the formatter via treefmt-nix.
   # This takes precedence over a raw `formatter` function.
   effectiveFormatter =
@@ -145,5 +160,6 @@ assert hydraJobs == null || builtins.isFunction hydraJobs;
   ${if overlays != { } then "overlays" else null} = overlays;
   ${if nixosModules != { } then "nixosModules" else null} = nixosModules;
   ${if nixosConfigurations != { } then "nixosConfigurations" else null} = nixosConfigurations;
+  ${if homeConfigurations != { } then "homeConfigurations" else null} = evaluatedHomes;
 }
 // extra

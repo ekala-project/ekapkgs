@@ -131,6 +131,7 @@
   ./programs/autocutsel.nix
   ./programs/autojump.nix
   ./programs/autologin.nix
+  ./programs/autorandr.nix
   ./programs/automaticcomponenttoolkit.nix
   ./programs/autorandr.nix
   ./programs/autorestic.nix
@@ -397,6 +398,7 @@
   ./programs/k6.nix
   ./programs/kalker.nix
   ./programs/kanshi.nix
+  ./programs/keyd.nix
   ./programs/keychain.nix
   ./programs/ko.nix
   ./programs/krew.nix
@@ -472,6 +474,7 @@
   ./programs/oauth2-proxy.nix
   ./programs/oh-my-posh.nix
   ./programs/onefetch.nix
+  ./programs/openfortivpn.nix
   ./programs/openvpn.nix
   ./programs/optipng.nix
   ./programs/oxipng.nix
@@ -531,6 +534,7 @@
   ./programs/scdoc.nix
   ./programs/scooter.nix
   ./programs/screen.nix
+  ./programs/seahorse.nix
   ./programs/sd.nix
   ./programs/shellharden.nix
   ./programs/shfmt.nix
@@ -546,6 +550,7 @@
   ./programs/sops.nix
   ./programs/sox.nix
   ./programs/spectrwm.nix
+  ./programs/speech-dispatcher.nix
   ./programs/ssh-audit.nix
   ./programs/ssh-chat.nix
   ./programs/sshguard.nix
@@ -636,6 +641,7 @@
   ./programs/wofi.nix
   ./programs/wtype.nix
   ./programs/wush.nix
+  ./programs/xfconf.nix
   ./programs/xwayland.nix
   ./programs/xautolock.nix
   ./programs/xclip.nix
@@ -655,6 +661,17 @@
   ./programs/zoxide.nix
   ./programs/zsh.nix
 
+  # Per-user home modules
+  ./home/programs/alacritty.nix
+  ./home/programs/direnv.nix
+  ./home/programs/fzf.nix
+  ./home/programs/htop.nix
+  ./home/programs/neovim.nix
+  ./home/programs/obs-studio.nix
+  ./home/programs/vscode.nix
+  ./home/programs/waybar.nix
+  ./home/programs/xdg.nix
+
   # Config
   ./config/xdg/portals/wlr.nix
 
@@ -662,9 +679,14 @@
   ./services/accounts-daemon.nix
   ./services/alsa.nix
   ./services/at-spi2-core.nix
+  ./services/blueman.nix
+  ./services/brltty.nix
+  ./services/caddy.nix
   ./services/colord.nix
+  ./services/dsearch.nix
   ./services/docker.nix
   ./services/evolution-data-server.nix
+  ./services/fprintd.nix
   ./services/gcr-ssh-agent.nix
   ./services/gdm.nix
   ./services/glib-networking.nix
@@ -677,21 +699,33 @@
   ./services/gnome-settings-daemon.nix
   ./services/gnome-software.nix
   ./services/gnome-user-share.nix
+  ./services/geoclue2.nix
+  ./services/gpsd.nix
   ./services/gvfs.nix
   ./services/hypridle.nix
   ./services/hyprland.nix
+  ./services/input-remapper.nix
+  ./services/iwd.nix
   ./services/jack.nix
   ./services/kubo.nix
   ./services/lightdm.nix
   ./services/localsearch.nix
+  ./services/logiops.nix
   ./services/ollama.nix
+  ./services/packagekit.nix
   ./services/pipewire.nix
   ./services/plex.nix
+  ./services/realmd.nix
+  ./services/rtkit.nix
   ./services/sddm.nix
+  ./services/snapper.nix
   ./services/sushi.nix
   ./services/syncthing.nix
   ./services/tailscale.nix
+  ./services/thermald.nix
   ./services/tinysparql.nix
   ./services/transmission.nix
+  ./services/wpa_supplicant.nix
   ./services/xserver.nix
+  ./services/yubikey-touch-detector.nix
 ]

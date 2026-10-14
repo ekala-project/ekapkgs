@@ -18,4 +18,7 @@
 
   # JACK Audio Connection Kit test
   jack = pkgs.ekaosTest ./jack.nix;
+
+  # Per-user home module tests
+  home = (import ./home.nix { inherit pkgs; }).all;
 }

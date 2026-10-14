@@ -92,49 +92,6 @@ in
       description = "Service description.";
     };
 
-    command = mkOption {
-      type = types.str;
-      internal = true;
-      description = "Command to run (set automatically).";
-    };
-
-    args = mkOption {
-      type = types.listOf types.str;
-      internal = true;
-      default = [ ];
-      description = "Command arguments (set automatically).";
-    };
-
-    user = mkOption {
-      type = types.str;
-      default = "root";
-      description = "User to run the X server as.";
-    };
-
-    restartPolicy = mkOption {
-      type = types.str;
-      default = "always";
-      description = "Restart policy.";
-    };
-
-    systemd = mkOption {
-      type = types.attrsOf types.anything;
-      default = { };
-      description = "Systemd-specific options.";
-    };
-
-    environment = mkOption {
-      type = types.attrsOf types.anything;
-      default = { };
-      description = "Environment variables (set automatically).";
-    };
-
-    ports = mkOption {
-      type = types.attrsOf types.anything;
-      default = { };
-      description = "Port contracts for this service.";
-    };
-
     autorun = mkOption {
       type = types.bool;
       default = true;
