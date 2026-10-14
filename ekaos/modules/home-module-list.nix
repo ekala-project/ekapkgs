@@ -1,0 +1,6 @@
+# ekapkgs-specific home modules
+#
+# Loaded in addition to core-pkgs' home-module-list.nix (which provides
+# bash, git, ssh, gpg-agent and the core home.users infrastructure).
+[
+]
