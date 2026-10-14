@@ -704,4 +704,5 @@
   ./home/programs/emacs.nix
   ./home/programs/neomutt.nix
   ./home/programs/mpv.nix
+  ./home/programs/zathura.nix
 ]
