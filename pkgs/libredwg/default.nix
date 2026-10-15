@@ -1,0 +1,79 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  autoreconfHook,
+  writeShellScript,
+  pkg-config,
+  texinfo,
+  pcre2,
+  swig,
+  libxml2,
+  ncurses,
+  enablePython ? false,
+  python3 ? null,
+}:
+let
+  isPython3 = enablePython && python3.pythonAtLeast "3";
+in
+stdenv.mkDerivation (finalAttrs: {
+  pname = "libredwg";
+  version = "0.14";
+
+  src = fetchFromGitHub {
+    owner = "LibreDWG";
+    repo = "libredwg";
+    tag = finalAttrs.version;
+    hash = "sha256-851VivSnXs0rAUE/z32/G9EYvn6LHkyxbhL4bNh+Alo=";
+    fetchSubmodules = true;
+  };
+
+  postPatch =
+    let
+      printVersion = writeShellScript "print-version" ''
+        echo -n ${lib.escapeShellArg finalAttrs.version}
+      '';
+    in
+    ''
+      # avoid git dependency
+      cp ${printVersion} build-aux/git-version-gen
+    '';
+
+  preConfigure = lib.optionalString (stdenv.hostPlatform.isDarwin && enablePython) ''
+    # prevent configure picking up stack_size from distutils.sysconfig
+    export PYTHON_EXTRA_LDFLAGS=" "
+  '';
+
+  nativeBuildInputs = [
+    autoreconfHook
+    pkg-config
+    texinfo
+  ]
+  ++ lib.optional enablePython swig;
+
+  buildInputs = [
+    pcre2
+  ]
+  ++ lib.optionals enablePython [ python3 ]
+  # configurePhase fails with python 3 when ncurses is missing
+  ++ lib.optional isPython3 ncurses;
+
+  # prevent python tests from running when not building with python
+  configureFlags = lib.optional (!enablePython) "--disable-python";
+
+  # FAIL: alive.test
+  doCheck = !stdenv.hostPlatform.isLinux;
+
+  # the "xmlsuite" test requires the libxml2 c library as well as the python module
+  nativeCheckInputs = lib.optionals enablePython [
+    libxml2
+    libxml2.dev
+  ];
+
+  meta = {
+    description = "Free implementation of the DWG file format";
+    homepage = "https://savannah.gnu.org/projects/libredwg/";
+    license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.all;
+  };
+})
