@@ -205,8 +205,6 @@ let
   # Build the WASI sysroot for RLBox sandboxing using our helper
   wasiComponents = callPackage ./wasi-sysroot.nix {
     inherit wasilibc;
-    inherit (llvmPackages) llvm;
-    llvmPackages = llvmPackagesBuildBuild;
   };
 
   inherit (wasiComponents) wasiSysRoot wasiBin;
