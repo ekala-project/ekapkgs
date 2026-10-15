@@ -10,6 +10,15 @@ final: prev: {
     };
   });
 
+  # Update gpgme to 2.2.0 (corepkgs has 2.0.1, gpgmepp/kde needs >= 2.2.0)
+  gpgme = prev.gpgme.overrideAttrs (old: rec {
+    version = "2.2.0";
+    src = final.fetchurl {
+      url = "mirror://gnupg/gpgme/gpgme-${version}.tar.bz2";
+      hash = "sha256-cWDoDoTa/QDZVshIkcUzu3qxampU++FXSy86zwSWl3s=";
+    };
+  });
+
   jre = final.java;
   qt5Packages = final.qt5;
   libsForQt5 = final.qt5;
