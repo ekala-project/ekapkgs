@@ -221,7 +221,7 @@ final: prev: {
   # Build boost for this specific Python version (provides libboost_python)
   boost = final.toPythonModule (
     final.pkgs.boost.override {
-      inherit (final) python numpy;
+      inherit (final) python;
       enablePython = true;
     }
   );
