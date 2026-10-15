@@ -11,13 +11,13 @@
   zstd,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "karchive";
-  version = "6.27.0";
+  version = "6.30.0";
 
   src = fetchurl {
-    url = "mirror://kde/stable/frameworks/6.27/karchive-${version}.tar.xz";
-    hash = "sha256-Q07feN+PTJ8lAA0QetFSDXrBTbWAogIEe/Gcv3c3ZSI=";
+    url = "mirror://kde/stable/frameworks/6.30/karchive-${finalAttrs.version}.tar.xz";
+    hash = "sha256-TPidkeQp0uzjEQ549+9wEZUrBBLLFQETKVFrRvIemOI=";
   };
 
   nativeBuildInputs = [
@@ -48,4 +48,4 @@ stdenv.mkDerivation rec {
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.unix;
   };
-}
+})
