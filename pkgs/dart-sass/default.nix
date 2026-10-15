@@ -15,7 +15,7 @@ let
     };
     aarch64-linux = fetchurl {
       url = "https://github.com/sass/dart-sass/releases/download/${version}/dart-sass-${version}-linux-arm64.tar.gz";
-      hash = "sha256-fYlFOcPTpOh/3go6crex+yK8VH2BBIPLIfBITe76oEI=";
+      hash = "sha256-f1Oip370qvJKny+MgmdZ7ZOziVRDCi4yEwkhouFqShw=";
     };
   };
 in
