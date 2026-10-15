@@ -226,6 +226,9 @@ final: prev: {
     }
   );
 
+  # VTK with Python support (used by FreeCAD)
+  vtk = final.toPythonModule final.pkgs.vtk;
+
   pydbus = final.buildPythonPackage rec {
     pname = "pydbus";
     version = "0.6.0";
