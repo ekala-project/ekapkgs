@@ -201,12 +201,9 @@ let
     }
   );
 
-  # Build the WASI sysroot for RLBox sandboxing using our helper
-  wasiComponents = callPackage ./wasi-sysroot.nix {
-    inherit wasilibc;
-  };
-
-  inherit (wasiComponents) wasiSysRoot wasiBin;
+  # WASI sysroot disabled -- cross-compilation not working yet
+  # wasiComponents = callPackage ./wasi-sysroot.nix { inherit wasilibc; };
+  # inherit (wasiComponents) wasiSysRoot wasiBin;
 
   distributionIni = pkgs.writeText "distribution.ini" (
     lib.generators.toINI { } {
@@ -339,9 +336,7 @@ buildStdenv.mkDerivation {
 
     export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=system
 
-    # RLBox WASM Sandboxing -- use our custom wasi toolchain
-    export WASM_CC=${wasiBin}/bin/wasm32-unknown-wasip1-cc
-    export WASM_CXX=${wasiBin}/bin/wasm32-unknown-wasip1-c++
+    # RLBox WASM Sandboxing disabled (WASI cross-compilation not working)
   ''
   + lib.optionalString enablePGO ''
     if [ -e "$TMPDIR/merged.profdata" ]; then
@@ -379,7 +374,8 @@ buildStdenv.mkDerivation {
     "--with-app-name=${binaryName}"
     "--with-distribution-id=org.nixos"
     "--with-libclang-path=${lib.getLib llvmPackagesBuildBuild.libclang}/lib"
-    "--with-wasi-sysroot=${wasiSysRoot}"
+    # "--with-wasi-sysroot=${wasiSysRoot}" # disabled: WASI cross-compilation not working
+    "--without-wasm-sandboxed-libraries"
     "--host=${buildStdenv.buildPlatform.config}"
     "--target=${buildStdenv.hostPlatform.config}"
   ]
@@ -554,7 +550,6 @@ buildStdenv.mkDerivation {
       extraPatches
       gtk3
       nspr
-      wasiSysRoot
       withALSA
       withFFmpeg
       withGSSAPI

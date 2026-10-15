@@ -4,6 +4,7 @@
   fetchFromGitHub,
   cmake,
   ninja,
+  python3,
   llvmPackages,
   wasm-tools,
 }:
@@ -23,6 +24,7 @@ let
       cmake
       cmake.configurePhaseHook
       ninja
+      python3
       llvmPackages.clang-unwrapped
       llvmPackages.lld
     ];
