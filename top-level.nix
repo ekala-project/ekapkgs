@@ -3,6 +3,11 @@ final: prev: {
   jre = final.java;
   qt5Packages = final.qt5;
   libsForQt5 = final.qt5;
+
+  # Extend qt5 scope with qscintilla
+  qt5 = prev.qt5 // {
+    qscintilla = prev.qt5.callPackage ./pkgs/qscintilla/default.nix { };
+  };
   docbook_xsl = final.docbook-xsl;
   libxcb-renderutil = final.xcbutilrenderutil;
   libfm-extra = final.libfm.override { extraOnly = true; };
@@ -30,8 +35,14 @@ final: prev: {
   # libcanberra-gtk3 alias for the gtk3 variant from pkgs-many
   libcanberra-gtk3 = final.libcanberra.gtk3;
 
+  # libportal-gtk4 alias for the gtk4 variant from pkgs-many
+  libportal-gtk4 = final.libportal.gtk4;
+
   # WebKit GTK: base variant is GTK4 (ABI 6.0)
   webkitgtk_6_0 = final.webkitgtk;
+
+  # WebKit GTK: GTK3 variant (ABI 4.1) needed by vscode for libmsalruntime
+  webkitgtk_4_1 = final.webkitgtk.gtk3;
 
   # libnma-gtk4 variant
   libnma-gtk4 = final.libnma.override {
@@ -60,6 +71,9 @@ final: prev: {
   # libxcrypt-legacy (all hash algorithms enabled)
   libxcrypt-legacy = final.libxcrypt.override { enableHashes = "all"; };
 
+  # libjpeg8: libjpeg_turbo with JPEG 8 API/ABI compatibility
+  libjpeg8 = final.libjpeg_turbo.override { enableJpeg8 = true; };
+
   # evolution-data-server GTK4 variant
   evolution-data-server-gtk4 = final.evolution-data-server.override {
     withGtk3 = false;
@@ -82,6 +96,96 @@ final: prev: {
       "-DCMAKE_C_FLAGS=-isystem ${final.libx11.dev}/include -isystem ${final.xorgproto.include}/include -isystem ${final.fontconfig.dev}/include -isystem ${final.libGL.dev}/include"
     ];
   });
+
+  # pcre-cpp is pcre built with C++ support
+  pcre-cpp = final.pcre.override { variant = "cpp"; };
+
+  # jre_headless alias
+  jre_headless = final.jre;
+
+  # Minimal kdePackages shim for packages that reference kdePackages.foo
+  kdePackages = {
+    inherit (final)
+      attica
+      extra-cmake-modules
+      kconfigwidgets
+      kcolorpicker
+      kglobalaccel
+      kimageannotator
+      kirigami
+      kpackage
+      kpty
+      kuserfeedback
+      polkit-qt-1
+      sonnet
+      syndication
+      syntax-highlighting
+      breeze-icons
+      karchive
+      kcompletion
+      kconfig
+      kcoreaddons
+      kcrash
+      kguiaddons
+      ki18n
+      kio
+      kitemmodels
+      kitemviews
+      kwidgetsaddons
+      kwindowsystem
+      kauth
+      kbookmarks
+      kcmutils
+      kcodecs
+      kcolorscheme
+      kdbusaddons
+      kdoctools
+      kfilemetadata
+      kiconthemes
+      kjobwidgets
+      knewstuff
+      knotifications
+      knotifyconfig
+      kparts
+      kservice
+      ktexteditor
+      ktextwidgets
+      kwallet
+      kxmlgui
+      purpose
+      prison
+      qtkeychain
+      solid
+      threadweaver
+      mlt
+      poppler
+      quazip
+      libkdcraw
+      ;
+    inherit (final.qt6)
+      qtbase
+      qtsvg
+      qtmultimedia
+      qtwayland
+      qttools
+      wrapQtAppsHook
+      ;
+  };
+
+  # Electron binary packages
+  inherit (final.callPackage ./build-support/electron-bin { })
+    electron_43
+    electron_44
+    ;
+  electron = final.electron_44;
+
+  # Deluge variants
+  deluged = final.deluge.override { withGUI = false; };
+
+  # Common aliases for expected package names
+  yq = final.yq-go;
+  gnome-disks = final.gnome-disk-utility;
+  swaync = final.swaynotificationcenter;
 
   # GNOME Shell extensions convenience set
   gnomeExtensions = {
