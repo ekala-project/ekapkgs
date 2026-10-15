@@ -147,7 +147,10 @@ final: prev: {
       knotifications
       knotifyconfig
       kparts
+      kpipewire
+      kquickimageeditor
       kservice
+      kstatusnotifieritem
       ktexteditor
       ktextwidgets
       kwallet
@@ -156,11 +159,17 @@ final: prev: {
       prison
       qtkeychain
       solid
+      spectacle
       threadweaver
       mlt
       poppler
       quazip
       libkdcraw
+      kplotting
+      qqc2-desktop-style
+      ffmpegthumbs
+      glaxnimate
+      kdenlive
       ;
     inherit (final.qt6)
       qtbase
@@ -171,6 +180,15 @@ final: prev: {
       wrapQtAppsHook
       ;
   };
+
+  # neovim alias (unwrapped for now)
+  neovim = final.neovim-unwrapped;
+
+  # comet-gog heroic variant
+  comet-gog_heroic = final.comet-gog.override { comet-gog_kind = "heroic"; };
+
+  # pnpm version alias - heroic wants pnpm_10 but pnpm 11 should work
+  pnpm_10 = final.pnpm;
 
   # Electron binary packages
   inherit (final.callPackage ./build-support/electron-bin { })
