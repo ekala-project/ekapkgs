@@ -4,7 +4,7 @@
   fetchFromGitHub,
   meson,
   ninja,
-  dart-sass ? null,
+  dart-sass,
 }:
 
 stdenvNoCC.mkDerivation (finalAttrs: {
