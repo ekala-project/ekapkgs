@@ -218,6 +218,14 @@ final: prev: {
     };
   };
 
+  # Build boost for this specific Python version (provides libboost_python)
+  boost = final.toPythonModule (
+    final.pkgs.boost.override {
+      inherit (final) python numpy;
+      enablePython = true;
+    }
+  );
+
   pydbus = final.buildPythonPackage rec {
     pname = "pydbus";
     version = "0.6.0";
