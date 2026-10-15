@@ -1,0 +1,101 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  pnpm,
+  fetchPnpmDeps,
+  pnpmConfigHook,
+  nodejs,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "tsx";
+  version = "4.23.12";
+
+  src = fetchFromGitHub {
+    owner = "privatenumber";
+    repo = "tsx";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-hHiJaLyCJwxSV1fc9Zpn/JHmvRS2fhT1XmL+B94+axw=";
+  };
+
+  pnpmDeps = fetchPnpmDeps {
+    inherit (finalAttrs)
+      pname
+      version
+      src
+      ;
+    inherit pnpm;
+    fetcherVersion = 3;
+    hash = "sha256-KysktlAKCChQW0CwI8qsVJu2rEmMwF+eVNvxuzAYLis=";
+  };
+
+  nativeBuildInputs = [
+    nodejs
+    pnpmConfigHook
+    pnpm
+  ];
+
+  buildInputs = [
+    nodejs
+  ];
+
+  patchPhase = ''
+    runHook prePatch
+
+    # by default pnpm builds the docs workspace and this was just
+    #  the easiest way I found to stop that, as pnpmWorkspaces and
+    #  other flags did not work
+    rm pnpm-workspace.yaml
+
+    # because tsx uses semantic-release, the package.json has a placeholder
+    #  version number. this patches it to match the version of the nix package,
+    #  which in turn is the release version in github.
+    #
+    # also remove the prepare script, which is just used to generate LLM skills
+    substituteInPlace package.json \
+      --replace-fail "0.0.0-semantic-release" "${finalAttrs.version}" \
+      --replace-fail '"prepare": "skills-npm",' ""
+
+    runHook postPatch
+  '';
+
+  buildPhase = ''
+    runHook preBuild
+
+    pnpm run build
+
+    # remove unneeded files
+    find dist -type f \( -name '*.cts' -or -name '*.mts' -or -name '*.ts' \) -delete
+
+    # remove devDependencies that are only required to build
+    #  and package the typescript code
+    CI=true pnpm prune --prod
+
+    # Clean up broken symlinks left behind by `pnpm prune`
+    # https://github.com/pnpm/pnpm/issues/3645
+    find node_modules -xtype l -delete
+
+    runHook postBuild
+  '';
+
+  installPhase = ''
+    runHook preInstall
+
+    mkdir -p $out/{bin,lib/tsx}
+    cp -r {dist,node_modules} $out/lib/tsx
+    chmod +x $out/lib/tsx/dist/cli.mjs
+    ln -s $out/lib/tsx/dist/cli.mjs $out/bin/tsx
+
+    runHook postInstall
+  '';
+
+  doCheck = false;
+
+  meta = {
+    description = "TypeScript Execute (tsx): The easiest way to run TypeScript in Node.js";
+    homepage = "https://tsx.hirok.io/";
+    license = lib.licenses.mit;
+    mainProgram = "tsx";
+  };
+})
