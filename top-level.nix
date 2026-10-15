@@ -97,6 +97,17 @@ final: prev: {
     ];
   });
 
+  # opencascade-occt 7.6.2 (needed by ifcopenshell)
+  opencascade-occt_7_6 = final.opencascade-occt.overrideAttrs rec {
+    pname = "opencascade-occt";
+    version = "7.6.2";
+    src = final.fetchurl {
+      name = "occt-V${builtins.replaceStrings [ "." ] [ "_" ] version}.tar.gz";
+      url = "https://git.dev.opencascade.org/gitweb/?p=occt.git;a=snapshot;h=V${builtins.replaceStrings [ "." ] [ "_" ] version};sf=tgz";
+      hash = "sha256-n3KFrN/mN1SVXfuhEUAQ1fJzrCvhiclxfEIouyj9Z18=";
+    };
+  };
+
   # pcre-cpp is pcre built with C++ support
   pcre-cpp = final.pcre.override { variant = "cpp"; };
 
@@ -177,6 +188,7 @@ final: prev: {
       qtmultimedia
       qtwayland
       qttools
+      qtdeclarative
       wrapQtAppsHook
       ;
   };
@@ -204,6 +216,31 @@ final: prev: {
   yq = final.yq-go;
   gnome-disks = final.gnome-disk-utility;
   swaync = final.swaynotificationcenter;
+
+  # LibreOffice wrapped (libreoffice-unwrapped is auto-called from pkgs/)
+  libreoffice = final.callPackage ./pkgs/libreoffice-unwrapped/wrapper.nix {
+    unwrapped = final.libreoffice-unwrapped;
+  };
+
+  # Noto Fonts LGC+ variant (Latin, Greek, Cyrillic + extras)
+  noto-fonts-lgc-plus = final.noto-fonts.overrideAttrs (old: {
+    pname = "noto-fonts-lgc-plus";
+    installPhase = ''
+      local out_font=$out/share/fonts/noto
+
+      install -m444 -Dt $megamerge/share/fonts/truetype/ megamerge/*.ttf
+
+      for variant in NotoSans NotoSerif NotoSansMono NotoMusic NotoSansSymbols NotoSansSymbols2 NotoSansMath; do
+        if [[ -d fonts/"$variant"/unhinted/variable-ttf ]]; then
+          install -m444 -Dt $out_font fonts/"$variant"/unhinted/variable-ttf/*.ttf
+        elif [[ -d fonts/"$variant"/unhinted/otf ]]; then
+          install -m444 -Dt $out_font fonts/"$variant"/unhinted/otf/*.otf
+        elif [[ -d fonts/"$variant"/unhinted/ttf ]]; then
+          install -m444 -Dt $out_font fonts/"$variant"/unhinted/ttf/*.ttf
+        fi
+      done
+    '';
+  });
 
   # GNOME Shell extensions convenience set
   gnomeExtensions = {
