@@ -450,7 +450,7 @@ buildStdenv.mkDerivation {
     libvpx
     libwebp
     nspr
-    (if lib.versionAtLeast version "144" then nss_latest else nss)
+    nss  # use system NSS (nss_latest override has store corruption issues)
     pango
     libx11
     libxcursor
