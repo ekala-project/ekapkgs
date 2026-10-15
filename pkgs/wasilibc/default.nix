@@ -21,6 +21,7 @@ let
 
     nativeBuildInputs = [
       cmake
+      cmake.configurePhaseHook
       ninja
       llvmPackages.clang-unwrapped
       llvmPackages.lld
@@ -71,6 +72,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     llvmPackages.clang-unwrapped
     llvmPackages.lld
     ninja

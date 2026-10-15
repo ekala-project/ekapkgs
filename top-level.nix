@@ -226,7 +226,7 @@ final: prev: {
     version = "3.130";
     src = final.fetchurl {
       url = "https://github.com/nss-dev/nss/archive/NSS_3_130_RTM.tar.gz";
-      hash = "sha256-+VONkBLHqJzIufh7VCvZfGUJflOAzBemhS3z3aB8cqY=";
+      hash = "sha256-RaldHx526huM+6wKJ0iNU1o272HbIn9usQiX3V3DaQA=";
     };
   });
 
