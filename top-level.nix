@@ -193,6 +193,12 @@ final: prev: {
       ;
   };
 
+  # Mozilla build infrastructure
+  buildMozillaMach = opts: final.callPackage (import ./build-support/buildMozillaMach opts) { };
+
+  # Firefox wrapper (simplified - just passes through the unwrapped build)
+  wrapFirefox = unwrapped: _opts: unwrapped;
+
   # neovim alias (unwrapped for now)
   neovim = final.neovim-unwrapped;
 
