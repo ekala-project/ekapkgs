@@ -194,10 +194,12 @@ final: prev: {
   };
 
   # Mozilla build infrastructure
-  buildMozillaMach = opts: final.callPackage (import ./build-support/buildMozillaMach opts) { };
+  buildMozillaMach =
+    opts: final.callPackage (import ./build-support/buildMozillaMach opts) { };
+  wrapFirefox = final.callPackage ./build-support/buildMozillaMach/wrapFirefox.nix { };
 
-  # Firefox wrapper (simplified - just passes through the unwrapped build)
-  wrapFirefox = unwrapped: _opts: unwrapped;
+  # speechd-minimal: alias to speechd (ekapkgs speechd lacks libsOnly option)
+  speechd-minimal = final.speechd;
 
   # neovim alias (unwrapped for now)
   neovim = final.neovim-unwrapped;
