@@ -36,7 +36,6 @@ let
       (lib.cmakeFeature "CMAKE_SYSTEM_NAME" "WASI")
       (lib.cmakeFeature "CMAKE_SYSTEM_PROCESSOR" "wasm32")
       (lib.cmakeBool "CMAKE_CROSSCOMPILING" true)
-      (lib.cmakeBool "CMAKE_TRY_COMPILE_TARGET_TYPE" false)
       (lib.cmakeFeature "CMAKE_TRY_COMPILE_TARGET_TYPE" "STATIC_LIBRARY")
       (lib.cmakeBool "COMPILER_RT_DEFAULT_TARGET_ONLY" true)
       (lib.cmakeBool "COMPILER_RT_BAREMETAL_BUILD" true)

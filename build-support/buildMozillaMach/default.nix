@@ -75,7 +75,7 @@ in
   fontconfig,
   freetype,
   glib,
-  gnum4,
+  m4,
   gtk3,
   libGL,
   libGLU,
@@ -89,6 +89,7 @@ in
   nasm,
   nspr,
   nss,
+  nss_latest,
   pango,
   libxt,
   libxtst,
@@ -301,7 +302,7 @@ buildStdenv.mkDerivation {
   nativeBuildInputs = [
     autoconf
     cargo
-    gnum4
+    m4
     llvmPackagesBuildBuild.bintools
     makeBinaryWrapper
     nodejs
@@ -451,7 +452,7 @@ buildStdenv.mkDerivation {
     libvpx
     libwebp
     nspr
-    nss
+    (if lib.versionAtLeast version "144" then nss_latest else nss)
     pango
     libx11
     libxcursor
