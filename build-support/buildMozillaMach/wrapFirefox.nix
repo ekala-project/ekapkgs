@@ -13,8 +13,7 @@
   writeText,
 
   ## Runtime libraries
-  ffmpeg_7,
-  ffmpeg_8,
+  ffmpeg,
   libxxf86vm,
   libxxf86dga,
   libxt,
@@ -73,8 +72,8 @@ let
 
     let
       withFFmpeg = browser.withFFmpeg or false;
-      # Use ffmpeg_8 for newer Firefox, ffmpeg_7 for older
-      ffmpegPackage = if lib.versionAtLeast browser.version "153.1" then ffmpeg_8 else ffmpeg_7;
+      # Use ffmpeg v8 for newer Firefox, v7 for older
+      ffmpegPackage = if lib.versionAtLeast browser.version "153.1" then ffmpeg.v8 else ffmpeg.v7;
       withGSSAPI = browser.withGSSAPI or false;
       withALSA = browser.withALSA or false;
       withPipewire = browser.withPipewire or false;

@@ -201,6 +201,16 @@ final: prev: {
   # speechd-minimal: alias to speechd (ekapkgs speechd lacks libsOnly option)
   speechd-minimal = final.speechd;
 
+  # NSS variants for Mozilla products
+  nss_esr = final.nss;
+  nss_latest = final.nss.overrideAttrs (old: rec {
+    version = "3.130";
+    src = final.fetchurl {
+      url = "https://github.com/nss-dev/nss/archive/NSS_3_130_RTM.tar.gz";
+      hash = "sha256-+VONkBLHqJzIufh7VCvZfGUJflOAzBemhS3z3aB8cqY=";
+    };
+  });
+
   # neovim alias (unwrapped for now)
   neovim = final.neovim-unwrapped;
 
