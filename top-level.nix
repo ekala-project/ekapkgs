@@ -1,5 +1,15 @@
 # These will be added to the pkgs scope
 final: prev: {
+  # Work around corrupted nix store entry for JDK bootstrap tarball:
+  # the fixed-output derivation's DB entry exists but the file is missing on disk.
+  # Using builtins.fetchurl creates a different store path that bypasses the issue.
+  java = prev.java.overrideAttrs (old: {
+    src = builtins.fetchurl {
+      url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12%2B8/OpenJDK21U-jdk_x64_linux_hotspot_21.0.12_8.tar.gz";
+      sha256 = "0w3k2xkybkhy4wslm5plhgq4y06s2ldhzk4pfmlmaq97dbq6yi74";
+    };
+  });
+
   jre = final.java;
   qt5Packages = final.qt5;
   libsForQt5 = final.qt5;
