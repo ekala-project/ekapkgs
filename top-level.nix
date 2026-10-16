@@ -19,6 +19,11 @@ final: prev: {
     };
   });
 
+  # Fix libfreehand build with newer GCC (disable -Werror)
+  libfreehand = prev.libfreehand.overrideAttrs (old: {
+    configureFlags = (old.configureFlags or [ ]) ++ [ "--disable-werror" ];
+  });
+
   jre = final.java;
   qt5Packages = final.qt5;
   libsForQt5 = final.qt5;

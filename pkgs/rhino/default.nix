@@ -23,6 +23,12 @@ stdenv.mkDerivation (finalAttrs: {
     data = ./deps.json;
   };
 
+  buildPhase = ''
+    runHook preBuild
+    gradle rhino-all:jar --no-daemon --offline
+    runHook postBuild
+  '';
+
   installPhase = ''
     mkdir -p "$out/share/java"
     cp -v rhino-all/build/libs/rhino-all-*.jar "$out/share/java/js-${finalAttrs.version}.jar"
