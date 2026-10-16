@@ -2,45 +2,34 @@
   stdenv,
   lib,
   fetchgit,
-  fetchpatch,
-  writeText,
   ninja,
   python3,
+
+  # These can be overridden (e.g. by chromium) to build a specific gn version
+  version ? "0-unstable-2026-09-11",
+  rev ? "cfcd774b98f3433e18b722f9a7ff06119825b8eb",
+  hash ? "sha256-HllmWYlbBMhSXVaOjB7+ncBUF8GUdKm8LfNjiV+EdL0=",
 }:
 
-let
-  rev = "df98b86690c83b81aedc909ded18857296406159";
-  revNum = "2168";
-  version = "2024-05-13";
-  revShort = builtins.substring 0 7 rev;
-  lastCommitPosition = writeText "last_commit_position.h" ''
-    #ifndef OUT_LAST_COMMIT_POSITION_H_
-    #define OUT_LAST_COMMIT_POSITION_H_
-
-    #define LAST_COMMIT_POSITION_NUM ${revNum}
-    #define LAST_COMMIT_POSITION "${revNum} (${revShort})"
-
-    #endif  // OUT_LAST_COMMIT_POSITION_H_
-  '';
-in
 stdenv.mkDerivation {
-  pname = "gn-unstable";
+  pname = "gn";
   inherit version;
 
   src = fetchgit {
     url = "https://gn.googlesource.com/gn";
-    inherit rev;
-    hash = "sha256-mNoQeHSSM+rhR0UHrpbyzLJC9vFqfxK1SD0X8GiRsqw=";
+    inherit rev hash;
+    leaveDotGit = true;
+    deepClone = true;
+    postFetch = ''
+      cd "$out"
+      mkdir .nix-files
+      git rev-parse --short=12 HEAD > .nix-files/REV_SHORT
+      git describe --match initial-commit | cut -d- -f3 > .nix-files/REV_NUM
+      find "$out" -name .git -print0 | xargs -0 rm -rf
+    '';
   };
 
-  patches = [
-    (fetchpatch {
-      name = "LFS64.patch";
-      url = "https://gn.googlesource.com/gn/+/b5ff50936a726ff3c8d4dfe2a0ae120e6ce1350d%5E%21/?format=TEXT";
-      decode = "base64 -d";
-      hash = "sha256-/kh8t/Ip1EG2OIhydS//st/C80KJ4P31vGx7j8QpFh0=";
-    })
-  ];
+  strictDeps = true;
 
   nativeBuildInputs = [
     ninja
@@ -48,15 +37,39 @@ stdenv.mkDerivation {
   ];
 
   env.NIX_CFLAGS_COMPILE = "-Wno-error";
+  hardeningDisable = [ "format" ];
+
+  configurePhase = ''
+    runHook preConfigure
+
+    python build/gen.py --no-last-commit-position
+    cat > out/last_commit_position.h << EOF
+    #ifndef OUT_LAST_COMMIT_POSITION_H_
+    #define OUT_LAST_COMMIT_POSITION_H_
+
+    #define LAST_COMMIT_POSITION_NUM $(<.nix-files/REV_NUM)
+    #define LAST_COMMIT_POSITION "$(<.nix-files/REV_NUM) ($(<.nix-files/REV_SHORT))"
+
+    #endif  // OUT_LAST_COMMIT_POSITION_H_
+    EOF
+
+    runHook postConfigure
+  '';
 
   buildPhase = ''
-    python build/gen.py --no-last-commit-position
-    ln -s ${lastCommitPosition} out/last_commit_position.h
-    ninja -j $NIX_BUILD_CORES -C out gn
+    runHook preBuild
+
+    ninja -v -j $NIX_BUILD_CORES -C out gn
+
+    runHook postBuild
   '';
 
   installPhase = ''
+    runHook preInstall
+
     install -vD out/gn "$out/bin/gn"
+
+    runHook postInstall
   '';
 
   setupHook = ./setup-hook.sh;
