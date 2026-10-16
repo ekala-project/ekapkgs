@@ -165,7 +165,7 @@
   linux-libertine-g,
   noto-fonts,
   noto-fonts-cjk-sans,
-  rhino,
+  # rhino,  # gradle deps incomplete, JS macro support disabled
   lp_solve,
   xmlsec,
   libcmis,
@@ -512,8 +512,7 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-qt6"
   ]
   ++ optionals withJava [
-    "--with-system-rhino"
-    "--with-rhino-jar=${rhino}/share/java/js.jar"
+    "--disable-scripting-javascript"  # rhino gradle build broken
 
     "--with-system-beanshell"
     "--with-ant-home=${ant.home}"
