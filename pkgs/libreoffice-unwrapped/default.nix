@@ -39,7 +39,7 @@
   which,
   icu,
   boost,
-  java,
+  jdk21,
   ant,
   cups,
   libixion,
@@ -99,7 +99,7 @@
   libe-book,
   libmwaw,
   glm,
-  gstreamer,
+  gst_all_1,
   gdb,
   adwaita-icon-theme,
   glib,
@@ -165,7 +165,7 @@
   linux-libertine-g,
   noto-fonts,
   noto-fonts-cjk-sans,
-  # rhino,  # gradle deps incomplete, JS macro support disabled
+  rhino,
   lp_solve,
   xmlsec,
   libcmis,
@@ -201,7 +201,7 @@ let
     ];
   };
 
-  jre' = java;
+  jre' = jdk21;
 
   version = import ./src-stable/version.nix;
   srcsAttributes = {
@@ -319,7 +319,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ optionals withJava [
     ant
-    java
+    jdk21
   ];
 
   buildInputs =
@@ -475,7 +475,7 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-system-headers"
     "--with-system-libabw"
     "--with-system-libcmis"
-    "--without-system-libfreehand" # corepkgs version fails with newer compilers
+    "--without-system-libfreehand"  # corepkgs version fails with newer compilers
     "--with-system-libepubgen"
     "--with-system-libetonyek"
     "--with-system-liblangtag"
@@ -512,7 +512,8 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-qt6"
   ]
   ++ optionals withJava [
-    "--disable-scripting-javascript" # rhino gradle build broken
+    "--with-system-rhino"
+    "--with-rhino-jar=${rhino}/share/java/js.jar"
 
     "--with-system-beanshell"
     "--with-ant-home=${ant.home}"
@@ -520,7 +521,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   env = {
-    NIX_CFLAGS_COMPILE = "-I${librdf_rasqal}/include/rasqal" + " -DSAL_LOG_WARN=1 -DSAL_LOG_INFO=1 ";
+    NIX_CFLAGS_COMPILE =
+      "-I${librdf_rasqal}/include/rasqal"
+      + " -DSAL_LOG_WARN=1 -DSAL_LOG_INFO=1 ";
 
     FONTCONFIG_FILE = fontsConf;
   };
@@ -531,7 +534,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildTargets = [ "build-nocheck" ];
 
-  doCheck = false; # sdext_pdfimport test fails in sandbox
+  doCheck = true;
 
   preCheck = ''
     export HOME=$(pwd)
@@ -580,7 +583,7 @@ stdenv.mkDerivation (finalAttrs: {
     inherit kdeIntegration;
     inherit gtk3;
     inherit (qt6) qtbase;
-    gst_packages = with gstreamer.pkgs; [
+    gst_packages = with gst_all_1; [
       gst-libav
       gst-plugins-bad
       gst-plugins-base
