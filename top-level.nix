@@ -77,6 +77,18 @@ final: prev: {
   # libsoup_2_4 has been removed upstream; stub it out
   libsoup_2_4 = null;
 
+  # Backward-compatible aliases for packages moved to pkgs-many
+  cgal_5 = final.cgal.v5;
+  eigen_5 = final.eigen.v5;
+  cairomm_1_16 = final.cairomm.v1_16;
+  glibmm_2_68 = final.glibmm.v2_68;
+  pangomm_2_48 = final.pangomm.v2_48;
+  geocode-glib_2 = final.geocode-glib.v2;
+  gssdp_1_6 = final.gssdp.v1_6;
+  gupnp_1_6 = final.gupnp.v1_6;
+  spidermonkey_140 = final.spidermonkey.v140;
+  transmission_4 = final.transmission.v4;
+
   # Discord variant aliases
   discord-ptb = final.discord.ptb;
   discord-canary = final.discord.canary;
@@ -127,7 +139,9 @@ final: prev: {
     version = "7.6.2";
     src = final.fetchurl {
       name = "occt-V${builtins.replaceStrings [ "." ] [ "_" ] version}.tar.gz";
-      url = "https://git.dev.opencascade.org/gitweb/?p=occt.git;a=snapshot;h=V${builtins.replaceStrings [ "." ] [ "_" ] version};sf=tgz";
+      url = "https://git.dev.opencascade.org/gitweb/?p=occt.git;a=snapshot;h=V${
+        builtins.replaceStrings [ "." ] [ "_" ] version
+      };sf=tgz";
       hash = "sha256-n3KFrN/mN1SVXfuhEUAQ1fJzrCvhiclxfEIouyj9Z18=";
     };
   };
@@ -218,8 +232,7 @@ final: prev: {
   };
 
   # Mozilla build infrastructure
-  buildMozillaMach =
-    opts: final.callPackage (import ./build-support/buildMozillaMach opts) { };
+  buildMozillaMach = opts: final.callPackage (import ./build-support/buildMozillaMach opts) { };
   wrapFirefox = final.callPackage ./build-support/buildMozillaMach/wrapFirefox.nix { };
 
   # speechd-minimal: alias to speechd (ekapkgs speechd lacks libsOnly option)
@@ -227,23 +240,7 @@ final: prev: {
 
   # NSS variants for Mozilla products
   nss_esr = final.nss;
-  nss_latest = final.nss.overrideAttrs (old: rec {
-    version = "3.130";
-    src = builtins.fetchurl {
-      url = "https://github.com/nss-dev/nss/archive/NSS_3_130_RTM.tar.gz";
-      sha256 = "0039qdfxv5q8n5p7y8nvc7pkcnjkim42f2mczf61pskn3qgmvaa5";
-    };
-    unpackPhase = ''
-      tar xzf $src
-      mv nss-NSS_3_130_RTM nss-${version}
-      sourceRoot=nss-${version}
-    '';
-    patches = [ ];
-    postPatch = ''
-      patchShebangs .
-      # The GitHub archive already has correct paths, skip substituteInPlace
-    '';
-  });
+  nss_latest = final.callPackage ./pkgs/nss_latest { };
 
   # neovim alias (unwrapped for now)
   neovim = final.neovim-unwrapped;
