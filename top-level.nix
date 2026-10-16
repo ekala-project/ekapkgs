@@ -229,10 +229,20 @@ final: prev: {
   nss_esr = final.nss;
   nss_latest = final.nss.overrideAttrs (old: rec {
     version = "3.130";
-    src = final.fetchurl {
+    src = builtins.fetchurl {
       url = "https://github.com/nss-dev/nss/archive/NSS_3_130_RTM.tar.gz";
-      hash = "sha256-RaldHx526huM+6wKJ0iNU1o272HbIn9usQiX3V3DaQA=";
+      sha256 = "0039qdfxv5q8n5p7y8nvc7pkcnjkim42f2mczf61pskn3qgmvaa5";
     };
+    unpackPhase = ''
+      tar xzf $src
+      mv nss-NSS_3_130_RTM nss-${version}
+      sourceRoot=nss-${version}
+    '';
+    patches = [ ];
+    postPatch = ''
+      patchShebangs .
+      # The GitHub archive already has correct paths, skip substituteInPlace
+    '';
   });
 
   # neovim alias (unwrapped for now)
