@@ -109,7 +109,7 @@
   gpgmepp,
   libwebp,
   abseil-cpp,
-  libfreehand,
+  # libfreehand,  # using bundled version (system version fails to build)
   libepubgen,
   libetonyek,
   libpng,
@@ -368,7 +368,7 @@ stdenv.mkDerivation (finalAttrs: {
       libargon2
       libcdr
       libcmis
-      libfreehand
+      # libfreehand  # using bundled version
       libe-book
       libepoxy
       libepubgen
@@ -475,7 +475,7 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-system-headers"
     "--with-system-libabw"
     "--with-system-libcmis"
-    "--with-system-libfreehand"
+    "--without-system-libfreehand"  # corepkgs version fails with newer compilers
     "--with-system-libepubgen"
     "--with-system-libetonyek"
     "--with-system-liblangtag"
