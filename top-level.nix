@@ -227,23 +227,7 @@ final: prev: {
 
   # NSS variants for Mozilla products
   nss_esr = final.nss;
-  nss_latest = final.nss.overrideAttrs (old: rec {
-    version = "3.130";
-    src = builtins.fetchurl {
-      url = "https://github.com/nss-dev/nss/archive/NSS_3_130_RTM.tar.gz";
-      sha256 = "0039qdfxv5q8n5p7y8nvc7pkcnjkim42f2mczf61pskn3qgmvaa5";
-    };
-    unpackPhase = ''
-      tar xzf $src
-      mv nss-NSS_3_130_RTM nss-${version}
-      sourceRoot=nss-${version}
-    '';
-    patches = [ ];
-    postPatch = ''
-      patchShebangs .
-      # The GitHub archive already has correct paths, skip substituteInPlace
-    '';
-  });
+  nss_latest = final.callPackage ./pkgs/nss_latest { };
 
   # neovim alias (unwrapped for now)
   neovim = final.neovim-unwrapped;
