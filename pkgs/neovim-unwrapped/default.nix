@@ -66,8 +66,7 @@ let
         inherit language;
       };
 
-      ${if location != null then "setSourceRoot" else null} =
-        "sourceRoot=$(echo */${location})";
+      ${if location != null then "setSourceRoot" else null} = "sourceRoot=$(echo */${location})";
 
       configurePhase = ''
         runHook preConfigure
@@ -105,27 +104,30 @@ let
       '';
     };
 
-  builtParsers = lib.mapAttrs (
-    language: grammar:
-    buildGrammar {
-      inherit (grammar) src;
-      language = grammar.language or language;
-      location = grammar.location or null;
-    }
-  ) (
-    treesitter-parsers
-    // {
-      markdown = treesitter-parsers.markdown // {
-        location = "tree-sitter-markdown";
-      };
-    }
-    // {
-      markdown_inline = treesitter-parsers.markdown // {
-        language = "markdown_inline";
-        location = "tree-sitter-markdown-inline";
-      };
-    }
-  );
+  builtParsers =
+    lib.mapAttrs
+      (
+        language: grammar:
+        buildGrammar {
+          inherit (grammar) src;
+          language = grammar.language or language;
+          location = grammar.location or null;
+        }
+      )
+      (
+        treesitter-parsers
+        // {
+          markdown = treesitter-parsers.markdown // {
+            location = "tree-sitter-markdown";
+          };
+        }
+        // {
+          markdown_inline = treesitter-parsers.markdown // {
+            language = "markdown_inline";
+            location = "tree-sitter-markdown-inline";
+          };
+        }
+      );
 
 in
 
@@ -179,17 +181,16 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.cmakeFeature "LUA_PRG" (lib.getExe' luajit "luajit"))
   ];
 
-  preConfigure =
-    ''
-      mkdir -p $out/lib/nvim/parser
-    ''
-    + lib.concatStrings (
-      lib.mapAttrsToList (language: grammar: ''
-        ln -sf \
-          ${grammar}/parser \
-          $out/lib/nvim/parser/${language}.so
-      '') builtParsers
-    );
+  preConfigure = ''
+    mkdir -p $out/lib/nvim/parser
+  ''
+  + lib.concatStrings (
+    lib.mapAttrsToList (language: grammar: ''
+      ln -sf \
+        ${grammar}/parser \
+        $out/lib/nvim/parser/${language}.so
+    '') builtParsers
+  );
 
   disallowedRequisites = [
     stdenv.cc

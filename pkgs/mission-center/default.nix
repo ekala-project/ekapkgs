@@ -65,42 +65,41 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-RJdIyDcmOBlKTjqzNOsSN6I6v7Nx7qjgNLgd+bc2vME=";
   };
 
-  postPatch =
-    ''
-      substituteInPlace src/magpie_client/client.rs \
-        --replace-fail \
-          '"missioncenter-magpie"' \
-          '"${placeholder "out"}/bin/missioncenter-magpie"'
+  postPatch = ''
+    substituteInPlace src/magpie_client/client.rs \
+      --replace-fail \
+        '"missioncenter-magpie"' \
+        '"${placeholder "out"}/bin/missioncenter-magpie"'
 
-      SRC_DIR=$NIX_BUILD_TOP/source
-      SRC_MAGPIE_DIR=$SRC_DIR/subprojects/magpie
-      SRC_NVTOP_DIR=$SRC_MAGPIE_DIR/platform-linux/3rdparty/nvtop
-    ''
-    + ''
-      substituteInPlace "$SRC_NVTOP_DIR/nvtop.json" \
-        --replace-fail "nvtop-${nvtop.rev}" "nvtop-src"
+    SRC_DIR=$NIX_BUILD_TOP/source
+    SRC_MAGPIE_DIR=$SRC_DIR/subprojects/magpie
+    SRC_NVTOP_DIR=$SRC_MAGPIE_DIR/platform-linux/3rdparty/nvtop
+  ''
+  + ''
+    substituteInPlace "$SRC_NVTOP_DIR/nvtop.json" \
+      --replace-fail "nvtop-${nvtop.rev}" "nvtop-src"
 
-      DEST_NVTOP_DIR=$SRC_DIR/build/subprojects/magpie/src/debug/build/native/nvtop-src
+    DEST_NVTOP_DIR=$SRC_DIR/build/subprojects/magpie/src/debug/build/native/nvtop-src
 
-      mkdir -p "$DEST_NVTOP_DIR"
-      cp -r --no-preserve=mode,ownership "${nvtop}"/* "$DEST_NVTOP_DIR"
+    mkdir -p "$DEST_NVTOP_DIR"
+    cp -r --no-preserve=mode,ownership "${nvtop}"/* "$DEST_NVTOP_DIR"
 
-      pushd "$DEST_NVTOP_DIR"
-      mkdir -p include/libdrm
-    ''
-    + ''
-      for patchfile in "$SRC_NVTOP_DIR"/patches/nvtop*.patch; do
-        patch -p1 --forward < "$patchfile" || true
-      done
-      popd
-    ''
-    + ''
-      patchShebangs $SRC_MAGPIE_DIR/platform-linux/hwdb/generate_hwdb.py
-    ''
-    + ''
-      substituteInPlace subprojects/magpie/platform-linux/src/memory.rs \
-        --replace-fail "udevadm" "${lib.getExe' systemdMinimal "udevadm"}"
-    '';
+    pushd "$DEST_NVTOP_DIR"
+    mkdir -p include/libdrm
+  ''
+  + ''
+    for patchfile in "$SRC_NVTOP_DIR"/patches/nvtop*.patch; do
+      patch -p1 --forward < "$patchfile" || true
+    done
+    popd
+  ''
+  + ''
+    patchShebangs $SRC_MAGPIE_DIR/platform-linux/hwdb/generate_hwdb.py
+  ''
+  + ''
+    substituteInPlace subprojects/magpie/platform-linux/src/memory.rs \
+      --replace-fail "udevadm" "${lib.getExe' systemdMinimal "udevadm"}"
+  '';
 
   cargoDeps =
     let

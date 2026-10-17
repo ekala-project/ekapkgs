@@ -135,9 +135,7 @@ in
   enableElfhack ?
     isElfhackPlatform stdenv && !(stdenv.hostPlatform.isMusl && stdenv.hostPlatform.isAarch64),
   enableLTO ? (
-    stdenv.hostPlatform.isLinux
-    && stdenv.hostPlatform.is64bit
-    && !stdenv.hostPlatform.isRiscV
+    stdenv.hostPlatform.isLinux && stdenv.hostPlatform.is64bit && !stdenv.hostPlatform.isRiscV
   ),
   enablePGO ? (
     stdenv.hostPlatform.isLinux

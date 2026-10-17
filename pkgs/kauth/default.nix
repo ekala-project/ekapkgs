@@ -21,7 +21,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   patches = [ ./fix-paths.patch ];
 
-  outputs = [ "out" "dev" ];
+  outputs = [
+    "out"
+    "dev"
+  ];
 
   nativeBuildInputs = [
     cmake

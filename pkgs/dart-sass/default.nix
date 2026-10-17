@@ -23,8 +23,9 @@ stdenv.mkDerivation {
   pname = "dart-sass";
   inherit version;
 
-  src = sources.${stdenv.hostPlatform.system}
-    or (throw "dart-sass: unsupported system ${stdenv.hostPlatform.system}");
+  src =
+    sources.${stdenv.hostPlatform.system}
+      or (throw "dart-sass: unsupported system ${stdenv.hostPlatform.system}");
 
   sourceRoot = "dart-sass";
 

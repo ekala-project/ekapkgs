@@ -85,7 +85,10 @@ let
 
     meta = {
       description = "libc++ for wasm32-wasip1";
-      license = with lib.licenses; [ asl20 llvm-exception ];
+      license = with lib.licenses; [
+        asl20
+        llvm-exception
+      ];
       platforms = lib.platforms.linux;
     };
   };

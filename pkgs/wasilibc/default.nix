@@ -52,7 +52,10 @@ let
 
     meta = {
       description = "Compiler-RT builtins for wasm32";
-      license = with lib.licenses; [ asl20 llvm-exception ];
+      license = with lib.licenses; [
+        asl20
+        llvm-exception
+      ];
       platforms = lib.platforms.linux;
     };
   };
@@ -114,7 +117,11 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "WASI libc implementation for WebAssembly";
     homepage = "https://wasi.dev";
-    license = with lib.licenses; [ asl20 llvm-exception mit ];
+    license = with lib.licenses; [
+      asl20
+      llvm-exception
+      mit
+    ];
     platforms = lib.platforms.linux;
   };
 })

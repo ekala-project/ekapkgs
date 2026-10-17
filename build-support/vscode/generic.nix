@@ -429,22 +429,21 @@ stdenv.mkDerivation (
           ''
       );
 
-    postFixup =
-      ''
-        patchelf \
-          --add-needed ${libglvnd}/lib/libGLESv2.so.2 \
-          --add-needed ${libglvnd}/lib/libGL.so.1 \
-          --add-needed ${libglvnd}/lib/libEGL.so.1 \
-          $out/lib/${libraryName}/${executableName}
-      ''
-      # restore original vsce-sign, which has integrity checks
-      + (lib.optionalString hasVsceSign ''
-        cp -r ./resources/app/node_modules/@vscode/vsce-sign/bin/vsce-sign "$out/lib/vscode/resources/app/node_modules/@vscode/vsce-sign/bin/vsce-sign"
-        patchelf \
-          --add-needed ${lib.getLib openssl}/lib/libssl.so.3 \
-          $out/lib/vscode/resources/app/node_modules/@vscode/vsce-sign/bin/vsce-sign
-        chmod +x $out/lib/vscode/resources/app/node_modules/@vscode/vsce-sign/bin/vsce-sign
-      '');
+    postFixup = ''
+      patchelf \
+        --add-needed ${libglvnd}/lib/libGLESv2.so.2 \
+        --add-needed ${libglvnd}/lib/libGL.so.1 \
+        --add-needed ${libglvnd}/lib/libEGL.so.1 \
+        $out/lib/${libraryName}/${executableName}
+    ''
+    # restore original vsce-sign, which has integrity checks
+    + (lib.optionalString hasVsceSign ''
+      cp -r ./resources/app/node_modules/@vscode/vsce-sign/bin/vsce-sign "$out/lib/vscode/resources/app/node_modules/@vscode/vsce-sign/bin/vsce-sign"
+      patchelf \
+        --add-needed ${lib.getLib openssl}/lib/libssl.so.3 \
+        $out/lib/vscode/resources/app/node_modules/@vscode/vsce-sign/bin/vsce-sign
+      chmod +x $out/lib/vscode/resources/app/node_modules/@vscode/vsce-sign/bin/vsce-sign
+    '');
 
     inherit meta;
   }

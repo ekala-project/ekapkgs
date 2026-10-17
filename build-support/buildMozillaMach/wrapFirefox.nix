@@ -83,40 +83,39 @@ let
 
       allNativeMessagingHosts = map lib.getBin (lib.unique nativeMessagingHosts);
 
-      libs =
-        [
-          udev
-          libva
-          libgbm
-          libnotify
-          libdbusmenu-gtk3
-          libxscrnsaver
-          cups
-          pciutils
-          vulkan-loader
-        ]
-        ++ lib.optional (cfg.speechSynthesisSupport or true) speechd
-        ++ lib.optional withPipewire pipewire
-        ++ lib.optional withFFmpeg ffmpegPackage
-        ++ lib.optional withGSSAPI libkrb5
-        ++ lib.optional withGlvnd libglvnd
-        ++ lib.optionals (cfg.enableQuakeLive or false) [
-          stdenv.cc
-          libx11
-          libxxf86dga
-          libxxf86vm
-          libxext
-          libxt
-          alsa-lib
-          zlib
-        ]
-        ++ lib.optional (config.pulseaudio or true) libpulseaudio
-        ++ lib.optional withALSA alsa-lib
-        ++ lib.optional withSndio sndio
-        ++ lib.optional withJACK libjack2
-        ++ lib.optional withPCSC opensc
-        ++ pkcs11Modules
-        ++ gtk_modules;
+      libs = [
+        udev
+        libva
+        libgbm
+        libnotify
+        libdbusmenu-gtk3
+        libxscrnsaver
+        cups
+        pciutils
+        vulkan-loader
+      ]
+      ++ lib.optional (cfg.speechSynthesisSupport or true) speechd
+      ++ lib.optional withPipewire pipewire
+      ++ lib.optional withFFmpeg ffmpegPackage
+      ++ lib.optional withGSSAPI libkrb5
+      ++ lib.optional withGlvnd libglvnd
+      ++ lib.optionals (cfg.enableQuakeLive or false) [
+        stdenv.cc
+        libx11
+        libxxf86dga
+        libxxf86vm
+        libxext
+        libxt
+        alsa-lib
+        zlib
+      ]
+      ++ lib.optional (config.pulseaudio or true) libpulseaudio
+      ++ lib.optional withALSA alsa-lib
+      ++ lib.optional withSndio sndio
+      ++ lib.optional withJACK libjack2
+      ++ lib.optional withPCSC opensc
+      ++ pkcs11Modules
+      ++ gtk_modules;
       gtk_modules = [ libcanberra-gtk3 ];
 
       launcherName = "${applicationName}${nameSuffix}";

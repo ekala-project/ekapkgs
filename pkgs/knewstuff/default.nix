@@ -28,7 +28,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   patches = [ ./delay-resolving-knsrcdir.patch ];
 
-  outputs = [ "out" "dev" ];
+  outputs = [
+    "out"
+    "dev"
+  ];
 
   nativeBuildInputs = [
     cmake

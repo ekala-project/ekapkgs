@@ -127,7 +127,9 @@ final: prev: {
     version = "7.6.2";
     src = final.fetchurl {
       name = "occt-V${builtins.replaceStrings [ "." ] [ "_" ] version}.tar.gz";
-      url = "https://git.dev.opencascade.org/gitweb/?p=occt.git;a=snapshot;h=V${builtins.replaceStrings [ "." ] [ "_" ] version};sf=tgz";
+      url = "https://git.dev.opencascade.org/gitweb/?p=occt.git;a=snapshot;h=V${
+        builtins.replaceStrings [ "." ] [ "_" ] version
+      };sf=tgz";
       hash = "sha256-n3KFrN/mN1SVXfuhEUAQ1fJzrCvhiclxfEIouyj9Z18=";
     };
   };
@@ -218,8 +220,7 @@ final: prev: {
   };
 
   # Mozilla build infrastructure
-  buildMozillaMach =
-    opts: final.callPackage (import ./build-support/buildMozillaMach opts) { };
+  buildMozillaMach = opts: final.callPackage (import ./build-support/buildMozillaMach opts) { };
   wrapFirefox = final.callPackage ./build-support/buildMozillaMach/wrapFirefox.nix { };
 
   # speechd-minimal: alias to speechd (ekapkgs speechd lacks libsOnly option)

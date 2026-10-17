@@ -43,7 +43,11 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Qt wrapper around polkit-1 client libraries";
     homepage = "https://invent.kde.org/libraries/polkit-qt-1";
-    license = with lib.licenses; [ bsd3 gpl2Plus lgpl2Plus ];
+    license = with lib.licenses; [
+      bsd3
+      gpl2Plus
+      lgpl2Plus
+    ];
     platforms = lib.platforms.unix;
   };
 })

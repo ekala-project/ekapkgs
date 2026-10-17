@@ -17,18 +17,20 @@
 let
   pypkgs = python3Packages;
 
-  boostPython = (boost.override {
-    enablePython = true;
-    python = python3;
-  }).overrideAttrs (old: {
-    # Fix preConfigure not taking effect in structured attrs by appending
-    # the python config to project-config.jam after bootstrap generates it
-    postConfigure = (old.postConfigure or "") + ''
-      cat >> project-config.jam <<EOF
-      using python : : ${python3}/bin/python3 : ${python3}/include/${python3.libPrefix} : ${python3}/lib ;
-      EOF
-    '';
-  });
+  boostPython =
+    (boost.override {
+      enablePython = true;
+      python = python3;
+    }).overrideAttrs
+      (old: {
+        # Fix preConfigure not taking effect in structured attrs by appending
+        # the python config to project-config.jam after bootstrap generates it
+        postConfigure = (old.postConfigure or "") + ''
+          cat >> project-config.jam <<EOF
+          using python : : ${python3}/bin/python3 : ${python3}/include/${python3.libPrefix} : ${python3}/lib ;
+          EOF
+        '';
+      });
 
   libtorrent-rasterbar-python = libtorrent-rasterbar.overrideAttrs (old: {
     cmakeEntries = old.cmakeEntries // {
@@ -36,7 +38,8 @@ let
     };
     buildInputs = [
       boostPython
-    ] ++ (builtins.filter (x: x != boost) old.buildInputs);
+    ]
+    ++ (builtins.filter (x: x != boost) old.buildInputs);
     nativeBuildInputs = old.nativeBuildInputs ++ [
       python3
     ];
@@ -84,36 +87,34 @@ pypkgs.buildPythonPackage (finalAttrs: {
       libappindicator
     ];
 
-  nativeBuildInputs =
-    [
-      intltool
-      glib
-    ]
-    ++ lib.optionals withGUI [
-      gobject-introspection
-      gtk3.wrapGAppsHook
-    ];
+  nativeBuildInputs = [
+    intltool
+    glib
+  ]
+  ++ lib.optionals withGUI [
+    gobject-introspection
+    gtk3.wrapGAppsHook
+  ];
 
   doCheck = false;
 
-  postInstall =
-    ''
-      install -Dm444 -t $out/lib/systemd/system packaging/systemd/*.service
-    ''
-    + (
-      if withGUI then
-        ''
-          mkdir -p $out/share
-          cp -R deluge/ui/data/{icons,pixmaps} $out/share/
-          install -Dm444 -t $out/share/applications deluge/ui/data/share/applications/deluge.desktop
-        ''
-      else
-        ''
-          rm -r $out/bin/deluge-gtk
-          rm -r $out/${pypkgs.python.sitePackages}/deluge/ui/gtk3
-          rm -r $out/share/{icons,man/man1/deluge-gtk*,pixmaps}
-        ''
-    );
+  postInstall = ''
+    install -Dm444 -t $out/lib/systemd/system packaging/systemd/*.service
+  ''
+  + (
+    if withGUI then
+      ''
+        mkdir -p $out/share
+        cp -R deluge/ui/data/{icons,pixmaps} $out/share/
+        install -Dm444 -t $out/share/applications deluge/ui/data/share/applications/deluge.desktop
+      ''
+    else
+      ''
+        rm -r $out/bin/deluge-gtk
+        rm -r $out/${pypkgs.python.sitePackages}/deluge/ui/gtk3
+        rm -r $out/share/{icons,man/man1/deluge-gtk*,pixmaps}
+      ''
+  );
 
   postFixup = ''
     for f in $out/lib/systemd/system/*; do

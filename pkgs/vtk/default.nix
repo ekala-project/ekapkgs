@@ -121,12 +121,10 @@ stdenv.mkDerivation (finalAttrs: {
   ++ [
     (python3Packages.mkPythonMetaPackage {
       inherit (finalAttrs) pname version meta;
-      dependencies =
-        with python3Packages;
-        [
-          numpy
-          matplotlib
-        ];
+      dependencies = with python3Packages; [
+        numpy
+        matplotlib
+      ];
     })
   ];
 

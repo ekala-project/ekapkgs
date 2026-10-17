@@ -37,7 +37,12 @@ let
   vscodeVersion = "1.126.0";
 in
 buildVscode {
-  inherit sourceRoot commandLineArgs useVSCodeRipgrep vscodeVersion;
+  inherit
+    sourceRoot
+    commandLineArgs
+    useVSCodeRipgrep
+    vscodeVersion
+    ;
 
   pname = "vscodium";
   inherit version;

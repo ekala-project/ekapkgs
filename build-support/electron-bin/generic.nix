@@ -187,8 +187,5 @@ let
   };
 in
 stdenv.mkDerivation (
-  finalAttrs:
-  lib.recursiveUpdate (common stdenv.hostPlatform) (
-    (linux) finalAttrs
-  )
+  finalAttrs: lib.recursiveUpdate (common stdenv.hostPlatform) ((linux) finalAttrs)
 )
