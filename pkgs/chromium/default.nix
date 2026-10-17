@@ -587,9 +587,475 @@ let
     libpulseaudio
   ];
 
-  # ---- Chromium browser derivation (the core build) ----
-  browser = llvmStdenv.mkDerivation {
-    pname = "${lib.optionalString ungoogled "ungoogled-"}chromium-unwrapped";
+  # ---- Shared build dependencies ----
+  # These are needed by both the source preparation and compilation derivations
+  # because build.ninja references absolute store paths to these tools.
+
+  commonNativeBuildInputs = [
+    ninja
+    gnChromium
+    bashInteractive
+    pkg-config
+    python3WithPackages
+    perl
+    which
+    buildPackages.rustc.llvmPackages.bintools
+    bison
+    gperf
+    nodejs
+    npmHooks.npmConfigHook
+  ]
+  ++ lib.optionals (chromiumVersionAtLeast "151") [
+    go
+  ]
+  ++ lib.optionals (chromiumVersionAtLeast "154") [
+    cargo
+  ];
+
+  commonDepsBuildBuild = [
+    buildPlatformLlvmStdenv
+    buildPlatformLlvmStdenv.cc
+    pkg-config
+    libuuid
+  ]
+  ++ (map (
+    dep:
+    if dep == null then
+      null
+    else if lib.isDerivation dep then
+      dep
+    else
+      dep
+  ) commonDeps);
+
+  commonBuildInputs = [
+    dri-pkgconfig-stub
+  ]
+  ++ commonDeps;
+
+  commonEnv = {
+    RUSTC_BOOTSTRAP = 1;
+
+    NIX_CFLAGS_COMPILE =
+      "-Wno-unknown-warning-option -Wno-unused-command-line-argument -Wno-shadow"
+      + lib.optionalString (chromiumVersionAtLeast "149") " -Wno-macro-redefined";
+
+    BUILD_CC = "$CC_FOR_BUILD";
+    BUILD_CXX = "$CXX_FOR_BUILD";
+    BUILD_AR = "$AR_FOR_BUILD";
+    BUILD_NM = "$NM_FOR_BUILD";
+    BUILD_READELF = "$READELF_FOR_BUILD";
+    GOCACHE = "/build/go-cache";
+  }
+  // lib.optionalAttrs (chromiumVersionAtLeast "150") {
+    NIX_LD_USE_RESPONSE_FILE = 1;
+  };
+
+  commonPatches = [
+    ./patches/cross-compile.patch
+  ]
+  ++ lib.optionals (!chromiumVersionAtLeast "153") [
+    ./patches/no-build-timestamps.patch
+  ]
+  ++ lib.optionals (packageName == "chromium") [
+    ./patches/${lib.optionalString (chromiumVersionAtLeast "150") "chromium-150-"}widevine-disable-auto-download-allow-bundle.patch
+  ]
+  ++ lib.optionals (!chromiumVersionAtLeast "150") [
+    ./patches/angle-wayland-include-protocol.patch
+  ]
+  ++ [
+    ./patches/chromium-initial-prefs.patch
+  ]
+  ++ lib.optionals (versionRange "141" "150") [
+    ./patches/chromium-141-rust.patch
+  ]
+  ++ lib.optionals (chromiumVersionAtLeast "150") [
+    ./patches/chromium-150-rust.patch
+  ]
+  ++ [
+    ./patches/chromium-136-nodejs-assert-minimal-version-instead-of-exact-match.patch
+  ]
+  ++ [
+    (fetchpatch {
+      name = "chromium-138-rust-1.86-mismatched_lifetime_syntaxes.patch";
+      url = "https://chromium.googlesource.com/chromium/src/+/94a87ff38c51fd1a71980a5051d3553978391608^!?format=TEXT";
+      decode = "base64 -d";
+      includes = [ "build/rust/cargo_crate.gni" ];
+      hash = "sha256-xf1Jq5v3InXkiVH0uT7+h1HPwZse5MDcHKuJNjSLR6k=";
+    })
+  ]
+  ++ lib.optionals (!chromiumVersionAtLeast "154" && !ungoogled) [
+    (fetchpatch {
+      name = "ungoogled-chromium-145-build-with-wasm-rollup.patch";
+      url = "https://github.com/ungoogled-software/ungoogled-chromium/raw/refs/tags/145.0.7632.159-1/patches/core/ungoogled-chromium/build-with-wasm-rollup.patch";
+      hash = "sha256-Ho5I33FOgtYHvKSZlWXWuBaqnSHqy4+f6EZdiL+/rRQ=";
+    })
+  ]
+  ++ lib.optionals (versionRange "154" "155" && !ungoogled) [
+    (fetchpatch {
+      name = "ungoogled-chromium-154-build-with-wasm-rollup.patch";
+      url = "https://github.com/ungoogled-software/ungoogled-chromium/raw/refs/tags/150.0.7871.46-1/patches/core/ungoogled-chromium/build-with-wasm-rollup.patch";
+      excludes = [ "third_party/devtools-frontend/src/scripts/build/ninja/bundle.gni" ];
+      hash = "sha256-o+jpDMfelVSTGcT9Ehl6zg92GOXg0cOP25MHYzOH4RQ=";
+    })
+  ]
+  ++ lib.optionals (!ungoogled) [
+    (fetchpatch {
+      name = "chromium-146-revert-Add-finch-seeds-to-desktop-perf-builds.patch";
+      url = "https://chromium.googlesource.com/chromium/src/+/d2e8a550eece6051372da94a475a8661da203106^!?format=TEXT";
+      decode = "base64 -d";
+      revert = true;
+      hash = "sha256-tJ//HE7o9R8nSQDGhi+MKXdNUwnkCZI++CzpAmFn2YY=";
+    })
+  ]
+  ++ lib.optionals (versionRange "146" "148" && lib.versionOlder llvmVersion "23") [
+    (fetchpatch {
+      name = "chromium-146-revert-Update-fsanitizer=array-bounds-config.patch";
+      url = "https://chromium.googlesource.com/chromium/src/+/acb47d9a6b56c4889a2ed4216e9968cfc740086c^!?format=TEXT";
+      decode = "base64 -d";
+      revert = true;
+      hash = "sha256-WZsN2qm6lX121bDf7SoN75flXtCTmPPpwtHK0ayjkPc=";
+    })
+  ]
+  ++ lib.optionals (!versionRange "146" "147") [
+    ./patches/chromium-142-bytemuck-rust-1.95.patch
+  ]
+  ++ lib.optionals (chromiumVersionAtLeast "147" && lib.versionOlder llvmVersion "23") [
+    ./patches/chromium-147-llvm-22.patch
+  ]
+  ++ lib.optionals (versionRange "148" "149" && lib.versionOlder llvmVersion "23") [
+    (fetchpatch {
+      name = "chromium-148-revert-build-Add--fsanitizer=return-config.patch";
+      url = "https://chromium.googlesource.com/chromium/src/+/99ba1f5302f9433efdb4df302cb7b7de56c72e4c^!?format=TEXT";
+      decode = "base64 -d";
+      revert = true;
+      hash = "sha256-/qzzxwTdPMwIdsqD/G02S7kKHCj3QxECL+g1WYEaWmU=";
+    })
+    (fetchpatch {
+      name = "chromium-148-revert-build-Enable--fsanitizer=return-config.patch";
+      url = "https://chromium.googlesource.com/chromium/src/+/9357bfbea03753fe52264c9ec36abe74f48cfef5^!?format=TEXT";
+      decode = "base64 -d";
+      revert = true;
+      hash = "sha256-14fTHNh3vGsf4KgeH8uLX+aK3lrjK0VKd1dfK1g7r0I=";
+    })
+    (fetchpatch {
+      name = "archlinux-chromium-146-drop-unknown-clang-flag.patch";
+      url = "https://gitlab.archlinux.org/archlinux/packaging/packages/chromium/-/raw/148.0.7778.96-1/chromium-146-drop-unknown-clang-flag.patch";
+      hash = "sha256-jR0G9z2R8VGl2tkB3u0368RyWM1J6qYXqNWwKkYd5zU=";
+    })
+  ]
+  ++ lib.optionals (versionRange "151" "153" && lib.versionOlder llvmVersion "23") [
+    (fetchpatch {
+      name = "chromium-151-revert-Fix-is_wasm-compile-for-supersize.patch";
+      url = "https://chromium.googlesource.com/chromium/src/+/160ccfd3b5a2dbab95516928716ae586e17de84b^!?format=TEXT";
+      decode = "base64 -d";
+      revert = true;
+      hash = "sha256-musbcTi2XMnJXW79gG+kr9qcYJZ25fv6MeIeId/nAwI=";
+    })
+  ]
+  ++ lib.optionals (versionRange "149" "153" && lib.versionOlder llvmVersion "23") [
+    ./patches/chromium-149-llvm-22.patch
+  ]
+  ++ lib.optionals (versionRange "153" "155" && lib.versionOlder llvmVersion "23") [
+    ./patches/chromium-153-llvm-22.patch
+  ]
+  ++ lib.optionals (chromiumVersionAtLeast "155" && lib.versionOlder llvmVersion "23") [
+    ./patches/chromium-155-llvm-22.patch
+  ]
+  ++ lib.optionals (chromiumVersionAtLeast "149" && llvmStdenv.hostPlatform.isAarch64) [
+    ./patches/chromium-149-use-of-undeclared-identifier-ERROR.patch
+  ]
+  ++ lib.optionals (versionRange "148" "149") [
+    (fetchpatch {
+      name = "chromium-148-revert-Reland-build-use-tool-inputs-instead-of-siso-config-for-rust-actions.patch";
+      url = "https://chromium.googlesource.com/chromium/src/+/9193ab90af24c23ee983e0a8da9bed45712f0d26^!?format=TEXT";
+      decode = "base64 -d";
+      revert = true;
+      hash = "sha256-7xg8IZ2gO+Wtnv7lWLVE3lLpcmMgvtDtcWwUuMBzkrE=";
+    })
+  ]
+  ++ lib.optionals (versionRange "150" "151") [
+    (fetchpatch {
+      name = "chromium-150-backport-build--Omit-ar-from-inputs-when-resolved-via--PATH.patch";
+      url = "https://chromium.googlesource.com/chromium/src/+/60f987d8d5f7272793a40290d060b8f50933f825^!?format=TEXT";
+      decode = "base64 -d";
+      hash = "sha256-MryWxSwBxSIONhl3X1cDxTWwNWy8a4yt/sqkrueSUNs=";
+    })
+  ]
+  ++ lib.optionals (versionRange "151" "152") [
+    (fetchpatch {
+      name = "chromium-151-backport-don't-depends-on-histograms.xml-if-it-is-not-git-checkout.patch";
+      url = "https://chromium.googlesource.com/chromium/src/+/27f8690db999f6e56f0af7a9ea3d28a019ed72ca^!?format=TEXT";
+      decode = "base64 -d";
+      hash = "sha256-nKu1NEuBWYCmHC2P33BqULVU6uK//kBIEOx+fXIwsuQ=";
+    })
+  ]
+  ++ lib.optionals (chromiumVersionAtLeast "151") [
+    ./patches/chromium-151-dawn-use-Go-from-PATH.patch
+  ]
+  ++ lib.optionals (chromiumVersionAtLeast "151.0.7922.169" && !ungoogled) [
+    (fetchpatch {
+      name = "chromium-151-revert-Show-Linux-first-run-terms-of-service-dialog-by-default.patch";
+      url = "https://chromium.googlesource.com/chromium/src/+/ae9b17ac975d4b10af762e9344083d858f1347ce^!?format=TEXT";
+      decode = "base64 -d";
+      revert = true;
+      includes = [ "chrome/browser/first_run/first_run.h" ];
+      hash = "sha256-d1Zm2flZPG++ROF4CCawn9U8T7/qgZFMHTXArqIShTk=";
+    })
+  ]
+  ++ lib.optionals (versionRange "152" "155") [
+    ./patches/ungoogled-chromium-152-crubit.patch
+  ]
+  ++ lib.optionals (versionRange "152" "153" && lib.versionOlder llvmVersion "23") [
+    ./patches/chromium-152-dawn-llvm-22.patch
+  ]
+  ++ lib.optionals (chromiumVersionAtLeast "153") [
+    (fetchpatch {
+      name = "chromium-153-revert-DEPS-use-DEPS-provided-python-instead-of-a-system-one.patch";
+      url = "https://chromium.googlesource.com/chromium/src/+/ce8851b40f37e74adcb7813256930792f35b8039^!?format=TEXT";
+      decode = "base64 -d";
+      revert = true;
+      includes = [ ".gn" ];
+      hash = "sha256-xrtu5YhxJtBFlKpQCqRR1BBkJyiN/DW+aUCVB1zZVHI=";
+    })
+  ]
+  ++ lib.optionals (versionRange "153" "154") [
+    (fetchpatch {
+      name = "chromium-153-revert-Migrate-OpenType-format-check-bindings-to-Crubit.patch";
+      url = "https://chromium.googlesource.com/chromium/src/+/493e6c3911e33cc356856bafbffc6cf95521266b^!?format=TEXT";
+      decode = "base64 -d";
+      revert = true;
+      hash = "sha256-+5lddQSOJz7XTZanDl3/lqQ7CQhnCVzvUMpxvE3Sz2c=";
+    })
+  ]
+  ++ lib.optionals (versionRange "153" "155") [
+    (fetchpatch {
+      name = "chromium-153-revert-devtools-frontend-Remove-TSGO-flag.patch";
+      url = "https://chromium.googlesource.com/devtools/devtools-frontend/+/2691b4ae139d2e7b6244f05139a0b85082c7473c^!?format=TEXT";
+      decode = "base64 -d";
+      stripLen = 1;
+      extraPrefix = "third_party/devtools-frontend/src/";
+      revert = true;
+      hash = "sha256-Dip5axpXSJbdGmtS7t81nLCvjRPBSkAuJA4Lo6MFKLw=";
+    })
+  ];
+
+  commonPostPatch = ''
+    cp ${./files/gclient_args.gni} build/config/gclient_args.gni
+    chmod u+w build/config/gclient_args.gni
+    echo 'checkout_mutter = false' >> build/config/gclient_args.gni
+    echo 'checkout_glic_e2e_tests = false' >> build/config/gclient_args.gni
+    echo 'checkout_clusterfuzz_data = false' >> build/config/gclient_args.gni
+  ''
+  + ''
+
+    echo 'LASTCHANGE=${upstream-info.DEPS."src".rev}-refs/tags/${upstream-info.version}@{#0}' > build/util/LASTCHANGE
+    echo "$SOURCE_DATE_EPOCH" > build/util/LASTCHANGE.committime
+
+    cat << EOF > gpu/config/gpu_lists_version.h
+    /* Generated by lastchange.py, do not edit.*/
+    #ifndef GPU_CONFIG_GPU_LISTS_VERSION_H_
+    #define GPU_CONFIG_GPU_LISTS_VERSION_H_
+    #define GPU_LISTS_VERSION "${upstream-info.DEPS."src".rev}"
+    #endif  // GPU_CONFIG_GPU_LISTS_VERSION_H_
+    EOF
+
+    cat << EOF > skia/ext/skia_commit_hash.h
+    /* Generated by lastchange.py, do not edit.*/
+    #ifndef SKIA_EXT_SKIA_COMMIT_HASH_H_
+    #define SKIA_EXT_SKIA_COMMIT_HASH_H_
+    #define SKIA_COMMIT_HASH "${upstream-info.DEPS."src/third_party/skia".rev}"
+    #endif  // SKIA_EXT_SKIA_COMMIT_HASH_H_
+    EOF
+
+    echo -n '${upstream-info.DEPS."src/third_party/dawn".rev}' > gpu/webgpu/DAWN_VERSION
+
+    mkdir -p third_party/jdk/current/bin
+  ''
+  + ''
+    cat << EOF > gpu/webgpu/dawn_commit_hash.h
+    /* Generated by lastchange.py, do not edit.*/
+    #ifndef GPU_WEBGPU_DAWN_COMMIT_HASH_H_
+    #define GPU_WEBGPU_DAWN_COMMIT_HASH_H_
+    #define DAWN_COMMIT_HASH "${upstream-info.DEPS."src/third_party/dawn".rev}"
+    #endif  // GPU_WEBGPU_DAWN_COMMIT_HASH_H_
+    EOF
+  ''
+  + ''
+    substituteInPlace BUILD.gn \
+      --replace '"//infra/orchestrator:orchestrator_all",' ""
+    substituteInPlace build/config/compiler/BUILD.gn \
+      --replace '"-Xclang",' "" \
+      --replace '"-no-opaque-pointers",' ""
+    for lib in ${toString gnSystemLibraries}; do
+      if [ -d "third_party/$lib" ]; then
+        find "third_party/$lib" -type f \
+          \! -path "third_party/$lib/chromium/*" \
+          \! -path "third_party/$lib/google/*" \
+          \! -path "third_party/$lib/include/*" \
+          \! -path "third_party/harfbuzz-ng/utils/hb_scoped.h" \
+          \! -regex '.*\.\(gn\|gni\|isolate\)' \
+          -delete
+      fi
+    done
+
+    if [[ -e native_client/SConstruct ]]; then
+      substituteInPlace native_client/SConstruct --replace "#! -*- python -*-" ""
+    fi
+    if [ -e third_party/harfbuzz-ng/src/src/update-unicode-tables.make ]; then
+      substituteInPlace third_party/harfbuzz-ng/src/src/update-unicode-tables.make \
+        --replace "/usr/bin/env -S make -f" "/usr/bin/make -f"
+    fi
+    if [ -e third_party/webgpu-cts/src/tools/run_deno ]; then
+      chmod -x third_party/webgpu-cts/src/tools/run_deno
+    fi
+    if [ -e third_party/dawn/third_party/webgpu-cts/tools/run_deno ]; then
+      chmod -x third_party/dawn/third_party/webgpu-cts/tools/run_deno
+    fi
+
+    substituteInPlace sandbox/linux/suid/client/setuid_sandbox_host.cc \
+      --replace \
+        'return sandbox_binary;' \
+        'return base::FilePath(GetDevelSandboxPath());'
+
+    substituteInPlace services/audio/audio_sandbox_hook_linux.cc \
+      --replace \
+        '/usr/share/alsa/' \
+        '${alsa-lib}/share/alsa/' \
+      --replace \
+        '/usr/lib/x86_64-linux-gnu/gconv/' \
+        '${glibc}/lib/gconv/' \
+      --replace \
+        '/usr/share/locale/' \
+        '${glibc}/share/locale/'
+
+  ''
+  + ''
+    sed -i -e 's,/usr,/run/current-system/sw,' chrome/common/chrome_paths.cc
+
+    find . -type f -perm -0100 -exec sed -i -e '$a\' {} +
+
+    patchShebangs .
+  ''
+  + lib.optionalString (chromiumVersionAtLeast "155") ''
+    # Fix TS9025 errors with --isolatedDeclarations in TypeScript 7.0:
+    # optional parameters need explicit undefined union types for declaration emit.
+    substituteInPlace third_party/devtools-frontend/src/front_end/core/host/DispatchHttpRequestClient.ts \
+      --replace-fail \
+        'readonly response?: DispatchHttpRequestResult, options?: ErrorOptions' \
+        'readonly response?: DispatchHttpRequestResult | undefined, options?: ErrorOptions | undefined'
+    substituteInPlace third_party/devtools-frontend/src/front_end/ui/legacy/ARIAUtils.ts \
+      --replace-fail \
+        'container: HTMLElement = document.body, role: AnnouncerRole, opts?' \
+        'container: HTMLElement | undefined = document.body, role: AnnouncerRole, opts?'
+    substituteInPlace third_party/devtools-frontend/src/front_end/ui/legacy/Widget.ts \
+      --replace-fail \
+        'readonly widgetParams?: Partial<WidgetT>)' \
+        'readonly widgetParams?: Partial<WidgetT> | undefined)'
+  ''
+  + lib.optionalString ungoogled ''
+    ${ungoogler}/utils/prune_binaries.py . ${ungoogler}/pruning.list || echo "some errors"
+  ''
+  + ''
+    mkdir -p third_party/node/linux/node-linux-x64/bin${lib.optionalString ungoogled " third_party/jdk/current/bin/"}
+    ln -sf "${pkgsBuildHost.nodejs}/bin/node" third_party/node/linux/node-linux-x64/bin/node
+    ln -s "${pkgsBuildHost.java}/bin/java" third_party/jdk/current/bin/
+
+    sed -i 's/OFFICIAL_BUILD/GOOGLE_CHROME_BUILD/' tools/generate_shim_headers/generate_shim_headers.py
+
+  ''
+  + lib.optionalString (chromiumVersionAtLeast "148") ''
+    mkdir -p third_party/gperf/cipd/bin
+    ln -s "${pkgsBuildHost.gperf}/bin/gperf" third_party/gperf/cipd/bin/gperf
+  ''
+  + lib.optionalString (chromiumVersionAtLeast "149") ''
+    mkdir -p third_party/rust-toolchain/bin
+    ln -s "${buildPackages.rustc}/bin/rustc" third_party/rust-toolchain/bin/rustc
+  ''
+  + lib.optionalString (chromiumVersionAtLeast "154") ''
+    mkdir -p third_party/typescript/linux-amd64/src
+    ${
+      if chromiumVersionAtLeast "155" then "cp -rv" else "ln -sv"
+    } ${buildPackages.typescript}/lib/node_modules/typescript/built/local third_party/typescript/linux-amd64/src/lib
+  ''
+  + lib.optionalString (chromiumVersionAtLeast "155") ''
+    chmod u+w -R third_party/typescript/linux-amd64/src/lib
+    echo '{"type":"commonjs"}' > third_party/typescript/linux-amd64/src/lib/package.json
+    rm -rf third_party/typescript/linux-amd64/src/lib/tsc
+    cat > third_party/typescript/linux-amd64/src/lib/tsc << 'WRAPPER'
+    #!/usr/bin/env bash
+    exec node "$(dirname "$(readlink -f "$0")")/tsc.js" "$@"
+    WRAPPER
+    chmod +x third_party/typescript/linux-amd64/src/lib/tsc
+    patchShebangs third_party/typescript/linux-amd64/src/lib/tsc
+    patch --strip=1 --directory=third_party/typescript/linux-amd64/src --input=../3pp/patches/typescript_native_preview.patch
+  ''
+  + lib.optionalString (chromiumVersionAtLeast "154") ''
+
+    mkdir -p third_party/devtools-frontend/src/third_party/esbuild
+    ln -sv ${esbuild}/bin/esbuild third_party/devtools-frontend/src/third_party/esbuild/esbuild
+
+    mkdir -p buildtools/linux64-format
+    ln -sv ${buildPackages.rustc.llvmPackages.clang-unwrapped}/bin/clang-format buildtools/linux64-format/clang-format
+
+    ln -sv ${buildPackages.cargo}/bin/cargo third_party/rust-toolchain/bin/cargo
+    ln -sv ${buildPackages.rustfmt}/bin/rustfmt third_party/rust-toolchain/bin/rustfmt
+    ln -sv ${crubit}/bin/* third_party/rust-toolchain/bin/
+
+    mkdir -p third_party/rust-toolchain/lib/third_party
+    ln -sv ${crubit.src} third_party/rust-toolchain/lib/third_party/crubit
+
+    mkdir -p third_party/rust-toolchain/lib/rustlib/src/rust
+    cp -r ${rustPlatform.rustcSrc}/. third_party/rust-toolchain/lib/rustlib/src/rust/
+    chmod u+w -R third_party/rust-toolchain/lib/rustlib
+    ln -sv ${rustPlatform.rustVendorSrc} third_party/rust-toolchain/lib/rustlib/src/rust/library/vendor
+
+    ${lib.getExe buildPackages.rustc} -V > third_party/rust-toolchain/VERSION
+  ''
+  +
+    lib.optionalString
+      (llvmStdenv.hostPlatform == llvmStdenv.buildPlatform && llvmStdenv.hostPlatform.isAarch64)
+      ''
+        substituteInPlace build/toolchain/linux/BUILD.gn \
+          --replace 'toolprefix = "aarch64-linux-gnu-"' 'toolprefix = ""'
+      ''
+  + lib.optionalString ungoogled ''
+    ${ungoogler}/utils/patches.py . ${ungoogler}/patches
+    ${ungoogler}/utils/domain_substitution.py apply -r ${ungoogler}/domain_regex.list -f ${ungoogler}/domain_substitution.list -c ./ungoogled-domsubcache.tar.gz .
+  '';
+
+  commonPreConfigure = ''
+    (
+      cd third_party/node
+      grep patch update_npm_deps | sh
+    )
+  ''
+  + ''
+    rm -r third_party/node/node_modules/@lit/reactive-element/development
+  ''
+  + lib.optionalString (chromiumVersionAtLeast "148") ''
+    rm -r third_party/node/node_modules/@types/estree
+  ''
+  + lib.optionalString (chromiumVersionAtLeast "154") ''
+    ${lib.getExe gnrt} gen --for-std "third_party/rust-toolchain/lib/rustlib/src/rust"
+  '';
+
+  npmDeps =
+    (fetchNpmDeps {
+      src = chromiumDeps."src";
+      sourceRoot = "third_party/node";
+      hash = upstream-info.deps.npmHash;
+    }).overrideAttrs
+      (p: {
+        nativeBuildInputs = p.nativeBuildInputs or [ ] ++ [ zstd ];
+      });
+
+  # ---- Source preparation derivation ----
+  # Unpacks all DEPS, applies patches, runs npm setup, and runs gn gen.
+  # This is cached independently so compilation failures don't require
+  # re-doing source preparation (~10-30 min vs 6+ hours).
+  chromiumSource = llvmStdenv.mkDerivation {
+    pname = "${lib.optionalString ungoogled "ungoogled-"}chromium-source";
     inherit (upstream-info) version;
     inherit packageName buildType buildPath;
 
@@ -603,424 +1069,23 @@ let
     '';
 
     npmRoot = "third_party/node";
-    npmDeps =
-      (fetchNpmDeps {
-        src = chromiumDeps."src";
-        sourceRoot = "third_party/node";
-        hash = upstream-info.deps.npmHash;
-      }).overrideAttrs
-        (p: {
-          nativeBuildInputs = p.nativeBuildInputs or [ ] ++ [ zstd ];
-        });
+    inherit npmDeps;
 
-    nativeBuildInputs = [
-      ninja
-      gnChromium
-      bashInteractive
-      pkg-config
-      python3WithPackages
-      perl
-      which
-      buildPackages.rustc.llvmPackages.bintools
-      bison
-      gperf
-      nodejs
-      npmHooks.npmConfigHook
-    ]
-    ++ lib.optionals (chromiumVersionAtLeast "151") [
-      go
-    ]
-    ++ lib.optionals (chromiumVersionAtLeast "154") [
-      cargo
-    ];
+    nativeBuildInputs = commonNativeBuildInputs;
+    depsBuildBuild = commonDepsBuildBuild;
+    buildInputs = commonBuildInputs;
 
-    depsBuildBuild = [
-      buildPlatformLlvmStdenv
-      buildPlatformLlvmStdenv.cc
-      pkg-config
-      libuuid
-    ]
-    ++ (map (dep:
-      if dep == null then null
-      else if lib.isDerivation dep then dep
-      else dep
-    ) commonDeps);
-
-    buildInputs = [
-      dri-pkgconfig-stub
-    ] ++ commonDeps;
-
-    patches = [
-      ./patches/cross-compile.patch
-    ]
-    ++ lib.optionals (!chromiumVersionAtLeast "153") [
-      ./patches/no-build-timestamps.patch
-    ]
-    ++ lib.optionals (packageName == "chromium") [
-      ./patches/${lib.optionalString (chromiumVersionAtLeast "150") "chromium-150-"}widevine-disable-auto-download-allow-bundle.patch
-    ]
-    ++ lib.optionals (!chromiumVersionAtLeast "150") [
-      ./patches/angle-wayland-include-protocol.patch
-    ]
-    ++ [
-      ./patches/chromium-initial-prefs.patch
-    ]
-    ++ lib.optionals (versionRange "141" "150") [
-      ./patches/chromium-141-rust.patch
-    ]
-    ++ lib.optionals (chromiumVersionAtLeast "150") [
-      ./patches/chromium-150-rust.patch
-    ]
-    ++ [
-      ./patches/chromium-136-nodejs-assert-minimal-version-instead-of-exact-match.patch
-    ]
-    ++ [
-      (fetchpatch {
-        name = "chromium-138-rust-1.86-mismatched_lifetime_syntaxes.patch";
-        url = "https://chromium.googlesource.com/chromium/src/+/94a87ff38c51fd1a71980a5051d3553978391608^!?format=TEXT";
-        decode = "base64 -d";
-        includes = [ "build/rust/cargo_crate.gni" ];
-        hash = "sha256-xf1Jq5v3InXkiVH0uT7+h1HPwZse5MDcHKuJNjSLR6k=";
-      })
-    ]
-    ++ lib.optionals (!chromiumVersionAtLeast "154" && !ungoogled) [
-      (fetchpatch {
-        name = "ungoogled-chromium-145-build-with-wasm-rollup.patch";
-        url = "https://github.com/ungoogled-software/ungoogled-chromium/raw/refs/tags/145.0.7632.159-1/patches/core/ungoogled-chromium/build-with-wasm-rollup.patch";
-        hash = "sha256-Ho5I33FOgtYHvKSZlWXWuBaqnSHqy4+f6EZdiL+/rRQ=";
-      })
-    ]
-    ++ lib.optionals (versionRange "154" "155" && !ungoogled) [
-      (fetchpatch {
-        name = "ungoogled-chromium-154-build-with-wasm-rollup.patch";
-        url = "https://github.com/ungoogled-software/ungoogled-chromium/raw/refs/tags/150.0.7871.46-1/patches/core/ungoogled-chromium/build-with-wasm-rollup.patch";
-        excludes = [ "third_party/devtools-frontend/src/scripts/build/ninja/bundle.gni" ];
-        hash = "sha256-o+jpDMfelVSTGcT9Ehl6zg92GOXg0cOP25MHYzOH4RQ=";
-      })
-    ]
-    ++ lib.optionals (!ungoogled) [
-      (fetchpatch {
-        name = "chromium-146-revert-Add-finch-seeds-to-desktop-perf-builds.patch";
-        url = "https://chromium.googlesource.com/chromium/src/+/d2e8a550eece6051372da94a475a8661da203106^!?format=TEXT";
-        decode = "base64 -d";
-        revert = true;
-        hash = "sha256-tJ//HE7o9R8nSQDGhi+MKXdNUwnkCZI++CzpAmFn2YY=";
-      })
-    ]
-    ++ lib.optionals (versionRange "146" "148" && lib.versionOlder llvmVersion "23") [
-      (fetchpatch {
-        name = "chromium-146-revert-Update-fsanitizer=array-bounds-config.patch";
-        url = "https://chromium.googlesource.com/chromium/src/+/acb47d9a6b56c4889a2ed4216e9968cfc740086c^!?format=TEXT";
-        decode = "base64 -d";
-        revert = true;
-        hash = "sha256-WZsN2qm6lX121bDf7SoN75flXtCTmPPpwtHK0ayjkPc=";
-      })
-    ]
-    ++ lib.optionals (!versionRange "146" "147") [
-      ./patches/chromium-142-bytemuck-rust-1.95.patch
-    ]
-    ++ lib.optionals (chromiumVersionAtLeast "147" && lib.versionOlder llvmVersion "23") [
-      ./patches/chromium-147-llvm-22.patch
-    ]
-    ++ lib.optionals (versionRange "148" "149" && lib.versionOlder llvmVersion "23") [
-      (fetchpatch {
-        name = "chromium-148-revert-build-Add--fsanitizer=return-config.patch";
-        url = "https://chromium.googlesource.com/chromium/src/+/99ba1f5302f9433efdb4df302cb7b7de56c72e4c^!?format=TEXT";
-        decode = "base64 -d";
-        revert = true;
-        hash = "sha256-/qzzxwTdPMwIdsqD/G02S7kKHCj3QxECL+g1WYEaWmU=";
-      })
-      (fetchpatch {
-        name = "chromium-148-revert-build-Enable--fsanitizer=return-config.patch";
-        url = "https://chromium.googlesource.com/chromium/src/+/9357bfbea03753fe52264c9ec36abe74f48cfef5^!?format=TEXT";
-        decode = "base64 -d";
-        revert = true;
-        hash = "sha256-14fTHNh3vGsf4KgeH8uLX+aK3lrjK0VKd1dfK1g7r0I=";
-      })
-      (fetchpatch {
-        name = "archlinux-chromium-146-drop-unknown-clang-flag.patch";
-        url = "https://gitlab.archlinux.org/archlinux/packaging/packages/chromium/-/raw/148.0.7778.96-1/chromium-146-drop-unknown-clang-flag.patch";
-        hash = "sha256-jR0G9z2R8VGl2tkB3u0368RyWM1J6qYXqNWwKkYd5zU=";
-      })
-    ]
-    ++ lib.optionals (versionRange "151" "153" && lib.versionOlder llvmVersion "23") [
-      (fetchpatch {
-        name = "chromium-151-revert-Fix-is_wasm-compile-for-supersize.patch";
-        url = "https://chromium.googlesource.com/chromium/src/+/160ccfd3b5a2dbab95516928716ae586e17de84b^!?format=TEXT";
-        decode = "base64 -d";
-        revert = true;
-        hash = "sha256-musbcTi2XMnJXW79gG+kr9qcYJZ25fv6MeIeId/nAwI=";
-      })
-    ]
-    ++ lib.optionals (versionRange "149" "153" && lib.versionOlder llvmVersion "23") [
-      ./patches/chromium-149-llvm-22.patch
-    ]
-    ++ lib.optionals (versionRange "153" "155" && lib.versionOlder llvmVersion "23") [
-      ./patches/chromium-153-llvm-22.patch
-    ]
-    ++ lib.optionals (chromiumVersionAtLeast "155" && lib.versionOlder llvmVersion "23") [
-      ./patches/chromium-155-llvm-22.patch
-    ]
-    ++ lib.optionals (chromiumVersionAtLeast "149" && llvmStdenv.hostPlatform.isAarch64) [
-      ./patches/chromium-149-use-of-undeclared-identifier-ERROR.patch
-    ]
-    ++ lib.optionals (versionRange "148" "149") [
-      (fetchpatch {
-        name = "chromium-148-revert-Reland-build-use-tool-inputs-instead-of-siso-config-for-rust-actions.patch";
-        url = "https://chromium.googlesource.com/chromium/src/+/9193ab90af24c23ee983e0a8da9bed45712f0d26^!?format=TEXT";
-        decode = "base64 -d";
-        revert = true;
-        hash = "sha256-7xg8IZ2gO+Wtnv7lWLVE3lLpcmMgvtDtcWwUuMBzkrE=";
-      })
-    ]
-    ++ lib.optionals (versionRange "150" "151") [
-      (fetchpatch {
-        name = "chromium-150-backport-build--Omit-ar-from-inputs-when-resolved-via--PATH.patch";
-        url = "https://chromium.googlesource.com/chromium/src/+/60f987d8d5f7272793a40290d060b8f50933f825^!?format=TEXT";
-        decode = "base64 -d";
-        hash = "sha256-MryWxSwBxSIONhl3X1cDxTWwNWy8a4yt/sqkrueSUNs=";
-      })
-    ]
-    ++ lib.optionals (versionRange "151" "152") [
-      (fetchpatch {
-        name = "chromium-151-backport-don't-depends-on-histograms.xml-if-it-is-not-git-checkout.patch";
-        url = "https://chromium.googlesource.com/chromium/src/+/27f8690db999f6e56f0af7a9ea3d28a019ed72ca^!?format=TEXT";
-        decode = "base64 -d";
-        hash = "sha256-nKu1NEuBWYCmHC2P33BqULVU6uK//kBIEOx+fXIwsuQ=";
-      })
-    ]
-    ++ lib.optionals (chromiumVersionAtLeast "151") [
-      ./patches/chromium-151-dawn-use-Go-from-PATH.patch
-    ]
-    ++ lib.optionals (chromiumVersionAtLeast "151.0.7922.169" && !ungoogled) [
-      (fetchpatch {
-        name = "chromium-151-revert-Show-Linux-first-run-terms-of-service-dialog-by-default.patch";
-        url = "https://chromium.googlesource.com/chromium/src/+/ae9b17ac975d4b10af762e9344083d858f1347ce^!?format=TEXT";
-        decode = "base64 -d";
-        revert = true;
-        includes = [ "chrome/browser/first_run/first_run.h" ];
-        hash = "sha256-d1Zm2flZPG++ROF4CCawn9U8T7/qgZFMHTXArqIShTk=";
-      })
-    ]
-    ++ lib.optionals (versionRange "152" "155") [
-      ./patches/ungoogled-chromium-152-crubit.patch
-    ]
-    ++ lib.optionals (versionRange "152" "153" && lib.versionOlder llvmVersion "23") [
-      ./patches/chromium-152-dawn-llvm-22.patch
-    ]
-    ++ lib.optionals (chromiumVersionAtLeast "153") [
-      (fetchpatch {
-        name = "chromium-153-revert-DEPS-use-DEPS-provided-python-instead-of-a-system-one.patch";
-        url = "https://chromium.googlesource.com/chromium/src/+/ce8851b40f37e74adcb7813256930792f35b8039^!?format=TEXT";
-        decode = "base64 -d";
-        revert = true;
-        includes = [ ".gn" ];
-        hash = "sha256-xrtu5YhxJtBFlKpQCqRR1BBkJyiN/DW+aUCVB1zZVHI=";
-      })
-    ]
-    ++ lib.optionals (versionRange "153" "154") [
-      (fetchpatch {
-        name = "chromium-153-revert-Migrate-OpenType-format-check-bindings-to-Crubit.patch";
-        url = "https://chromium.googlesource.com/chromium/src/+/493e6c3911e33cc356856bafbffc6cf95521266b^!?format=TEXT";
-        decode = "base64 -d";
-        revert = true;
-        hash = "sha256-+5lddQSOJz7XTZanDl3/lqQ7CQhnCVzvUMpxvE3Sz2c=";
-      })
-    ]
-    ++ lib.optionals (versionRange "153" "155") [
-      (fetchpatch {
-        name = "chromium-153-revert-devtools-frontend-Remove-TSGO-flag.patch";
-        url = "https://chromium.googlesource.com/devtools/devtools-frontend/+/2691b4ae139d2e7b6244f05139a0b85082c7473c^!?format=TEXT";
-        decode = "base64 -d";
-        stripLen = 1;
-        extraPrefix = "third_party/devtools-frontend/src/";
-        revert = true;
-        hash = "sha256-Dip5axpXSJbdGmtS7t81nLCvjRPBSkAuJA4Lo6MFKLw=";
-      })
-    ];
-
-    postPatch =
-      ''
-        cp ${./files/gclient_args.gni} build/config/gclient_args.gni
-        chmod u+w build/config/gclient_args.gni
-        echo 'checkout_mutter = false' >> build/config/gclient_args.gni
-        echo 'checkout_glic_e2e_tests = false' >> build/config/gclient_args.gni
-        echo 'checkout_clusterfuzz_data = false' >> build/config/gclient_args.gni
-      ''
-      + ''
-
-        echo 'LASTCHANGE=${upstream-info.DEPS."src".rev}-refs/tags/${upstream-info.version}@{#0}' > build/util/LASTCHANGE
-        echo "$SOURCE_DATE_EPOCH" > build/util/LASTCHANGE.committime
-
-        cat << EOF > gpu/config/gpu_lists_version.h
-        /* Generated by lastchange.py, do not edit.*/
-        #ifndef GPU_CONFIG_GPU_LISTS_VERSION_H_
-        #define GPU_CONFIG_GPU_LISTS_VERSION_H_
-        #define GPU_LISTS_VERSION "${upstream-info.DEPS."src".rev}"
-        #endif  // GPU_CONFIG_GPU_LISTS_VERSION_H_
-        EOF
-
-        cat << EOF > skia/ext/skia_commit_hash.h
-        /* Generated by lastchange.py, do not edit.*/
-        #ifndef SKIA_EXT_SKIA_COMMIT_HASH_H_
-        #define SKIA_EXT_SKIA_COMMIT_HASH_H_
-        #define SKIA_COMMIT_HASH "${upstream-info.DEPS."src/third_party/skia".rev}"
-        #endif  // SKIA_EXT_SKIA_COMMIT_HASH_H_
-        EOF
-
-        echo -n '${upstream-info.DEPS."src/third_party/dawn".rev}' > gpu/webgpu/DAWN_VERSION
-
-        mkdir -p third_party/jdk/current/bin
-      ''
-      + ''
-        cat << EOF > gpu/webgpu/dawn_commit_hash.h
-        /* Generated by lastchange.py, do not edit.*/
-        #ifndef GPU_WEBGPU_DAWN_COMMIT_HASH_H_
-        #define GPU_WEBGPU_DAWN_COMMIT_HASH_H_
-        #define DAWN_COMMIT_HASH "${upstream-info.DEPS."src/third_party/dawn".rev}"
-        #endif  // GPU_WEBGPU_DAWN_COMMIT_HASH_H_
-        EOF
-      ''
-      + ''
-        substituteInPlace BUILD.gn \
-          --replace '"//infra/orchestrator:orchestrator_all",' ""
-        substituteInPlace build/config/compiler/BUILD.gn \
-          --replace '"-Xclang",' "" \
-          --replace '"-no-opaque-pointers",' ""
-        for lib in ${toString gnSystemLibraries}; do
-          if [ -d "third_party/$lib" ]; then
-            find "third_party/$lib" -type f \
-              \! -path "third_party/$lib/chromium/*" \
-              \! -path "third_party/$lib/google/*" \
-              \! -path "third_party/harfbuzz-ng/utils/hb_scoped.h" \
-              \! -regex '.*\.\(gn\|gni\|isolate\)' \
-              -delete
-          fi
-        done
-
-        if [[ -e native_client/SConstruct ]]; then
-          substituteInPlace native_client/SConstruct --replace "#! -*- python -*-" ""
-        fi
-        if [ -e third_party/harfbuzz-ng/src/src/update-unicode-tables.make ]; then
-          substituteInPlace third_party/harfbuzz-ng/src/src/update-unicode-tables.make \
-            --replace "/usr/bin/env -S make -f" "/usr/bin/make -f"
-        fi
-        if [ -e third_party/webgpu-cts/src/tools/run_deno ]; then
-          chmod -x third_party/webgpu-cts/src/tools/run_deno
-        fi
-        if [ -e third_party/dawn/third_party/webgpu-cts/tools/run_deno ]; then
-          chmod -x third_party/dawn/third_party/webgpu-cts/tools/run_deno
-        fi
-
-        substituteInPlace sandbox/linux/suid/client/setuid_sandbox_host.cc \
-          --replace \
-            'return sandbox_binary;' \
-            'return base::FilePath(GetDevelSandboxPath());'
-
-        substituteInPlace services/audio/audio_sandbox_hook_linux.cc \
-          --replace \
-            '/usr/share/alsa/' \
-            '${alsa-lib}/share/alsa/' \
-          --replace \
-            '/usr/lib/x86_64-linux-gnu/gconv/' \
-            '${glibc}/lib/gconv/' \
-          --replace \
-            '/usr/share/locale/' \
-            '${glibc}/share/locale/'
-
-      ''
-      + ''
-        sed -i -e 's,/usr,/run/current-system/sw,' chrome/common/chrome_paths.cc
-
-        find . -type f -perm -0100 -exec sed -i -e '$a\' {} +
-
-        patchShebangs .
-      ''
-      + lib.optionalString ungoogled ''
-        ${ungoogler}/utils/prune_binaries.py . ${ungoogler}/pruning.list || echo "some errors"
-      ''
-      + ''
-        mkdir -p third_party/node/linux/node-linux-x64/bin${lib.optionalString ungoogled " third_party/jdk/current/bin/"}
-        ln -sf "${pkgsBuildHost.nodejs}/bin/node" third_party/node/linux/node-linux-x64/bin/node
-        ln -s "${pkgsBuildHost.java}/bin/java" third_party/jdk/current/bin/
-
-        sed -i 's/OFFICIAL_BUILD/GOOGLE_CHROME_BUILD/' tools/generate_shim_headers/generate_shim_headers.py
-
-      ''
-      + lib.optionalString (chromiumVersionAtLeast "148") ''
-        mkdir -p third_party/gperf/cipd/bin
-        ln -s "${pkgsBuildHost.gperf}/bin/gperf" third_party/gperf/cipd/bin/gperf
-      ''
-      + lib.optionalString (chromiumVersionAtLeast "149") ''
-        mkdir -p third_party/rust-toolchain/bin
-        ln -s "${buildPackages.rustc}/bin/rustc" third_party/rust-toolchain/bin/rustc
-      ''
-      + lib.optionalString (chromiumVersionAtLeast "154") ''
-        mkdir -p third_party/typescript/linux-amd64/src
-        ${
-          if chromiumVersionAtLeast "155" then "cp -rv" else "ln -sv"
-        } ${buildPackages.typescript}/lib/typescript third_party/typescript/linux-amd64/src/lib
-      ''
-      + lib.optionalString (chromiumVersionAtLeast "155") ''
-        chmod u+w -R third_party/typescript/linux-amd64/src/lib
-        patch --strip=1 --directory=third_party/typescript/linux-amd64/src --input=../3pp/patches/typescript_native_preview.patch
-      ''
-      + lib.optionalString (chromiumVersionAtLeast "154") ''
-
-        mkdir -p third_party/devtools-frontend/src/third_party/esbuild
-        ln -sv ${esbuild}/bin/esbuild third_party/devtools-frontend/src/third_party/esbuild/esbuild
-
-        mkdir -p buildtools/linux64-format
-        ln -sv ${buildPackages.rustc.llvmPackages.clang-tools}/bin/clang-format buildtools/linux64-format/clang-format
-
-        ln -sv ${buildPackages.cargo}/bin/cargo third_party/rust-toolchain/bin/cargo
-        ln -sv ${buildPackages.rustfmt}/bin/rustfmt third_party/rust-toolchain/bin/rustfmt
-        ln -sv ${crubit}/bin/* third_party/rust-toolchain/bin/
-
-        mkdir -p third_party/rust-toolchain/lib/third_party
-        ln -sv ${crubit.src} third_party/rust-toolchain/lib/third_party/crubit
-
-        mkdir -p third_party/rust-toolchain/lib/rustlib/src/rust
-        cp -r ${rustPlatform.rustcSrc}/. third_party/rust-toolchain/lib/rustlib/src/rust/
-        chmod u+w -R third_party/rust-toolchain/lib/rustlib
-        ln -sv ${rustPlatform.rustVendorSrc} third_party/rust-toolchain/lib/rustlib/src/rust/library/vendor
-
-        ${lib.getExe buildPackages.rustc} -V > third_party/rust-toolchain/VERSION
-      ''
-      +
-        lib.optionalString (llvmStdenv.hostPlatform == llvmStdenv.buildPlatform && llvmStdenv.hostPlatform.isAarch64)
-          ''
-            substituteInPlace build/toolchain/linux/BUILD.gn \
-              --replace 'toolprefix = "aarch64-linux-gnu-"' 'toolprefix = ""'
-          ''
-      + lib.optionalString ungoogled ''
-        ${ungoogler}/utils/patches.py . ${ungoogler}/patches
-        ${ungoogler}/utils/domain_substitution.py apply -r ${ungoogler}/domain_regex.list -f ${ungoogler}/domain_substitution.list -c ./ungoogled-domsubcache.tar.gz .
-      '';
+    patches = commonPatches;
+    postPatch = commonPostPatch;
 
     hardeningDisable = [ "strictflexarrays1" ];
+    env = commonEnv;
 
-    preConfigure =
-      ''
-        (
-          cd third_party/node
-          grep patch update_npm_deps | sh
-        )
-      ''
-      + ''
-        rm -r third_party/node/node_modules/@lit/reactive-element/development
-      ''
-      + lib.optionalString (chromiumVersionAtLeast "148") ''
-        rm -r third_party/node/node_modules/@types/estree
-      ''
-      + lib.optionalString (chromiumVersionAtLeast "154") ''
-        ${lib.getExe gnrt} gen --for-std "third_party/rust-toolchain/lib/rustlib/src/rust"
-      '';
+    preConfigure = commonPreConfigure;
 
     configurePhase = ''
       runHook preConfigure
 
-      libExecPath="${libExecPath}"
       ${python3.pythonOnBuildForHost}/bin/python3 build/linux/unbundle/replace_gn_files.py --system-libraries ${toString gnSystemLibraries}
       gn gen --args=${lib.escapeShellArg gnFlags} out/Release | tee gn-gen-outputs.txt
 
@@ -1029,26 +1094,76 @@ let
       runHook postConfigure
     '';
 
-    env = {
-      RUSTC_BOOTSTRAP = 1;
+    dontBuild = true;
 
-      NIX_CFLAGS_COMPILE =
-        "-Wno-unknown-warning-option -Wno-unused-command-line-argument -Wno-shadow"
-        + lib.optionalString (chromiumVersionAtLeast "149") " -Wno-macro-redefined";
+    installPhase = ''
+      runHook preInstall
 
-      BUILD_CC = "$CC_FOR_BUILD";
-      BUILD_CXX = "$CXX_FOR_BUILD";
-      BUILD_AR = "$AR_FOR_BUILD";
-      BUILD_NM = "$NM_FOR_BUILD";
-      BUILD_READELF = "$READELF_FOR_BUILD";
-    }
-    // lib.optionalAttrs (chromiumVersionAtLeast "150") {
-      NIX_LD_USE_RESPONSE_FILE = 1;
-    };
+      # Remove dangling symlinks left by gnSystemLibraries cleanup and
+      # third_party sources that reference sibling dirs not included in DEPS.
+      find . -xtype l -delete
+
+      cp -a --reflink=auto . "$out"
+      runHook postInstall
+    '';
+  };
+
+  # ---- Sandbox derivation ----
+  # Builds only chrome_sandbox from the prepared source.
+  # This is fast (~1-2 min) and independent of the main browser build.
+  chromiumSandbox = llvmStdenv.mkDerivation {
+    pname = "${lib.optionalString ungoogled "ungoogled-"}chromium-sandbox";
+    inherit (upstream-info) version;
+    inherit buildPath;
+
+    dontUnpack = true;
+    dontPatch = true;
+    dontConfigure = true;
+
+    nativeBuildInputs = commonNativeBuildInputs;
+    depsBuildBuild = commonDepsBuildBuild;
+    buildInputs = commonBuildInputs;
+
+    hardeningDisable = [ "strictflexarrays1" ];
+    env = commonEnv;
 
     buildPhase = ''
       runHook preBuild
+      cp -a --reflink=auto "${chromiumSource}/." .
+      chmod -R u+w .
       TERM=dumb ninja -C "${buildPath}" -j$NIX_BUILD_CORES "chrome_sandbox"
+      runHook postBuild
+    '';
+
+    installPhase = ''
+      mkdir -p "$out/bin"
+      cp -v "${buildPath}/chrome_sandbox" "$out/bin/${sandboxExecutableName}"
+    '';
+  };
+
+  # ---- Chromium browser derivation (the core build) ----
+  # Builds the chrome binary from the prepared source.
+  # This is the long build (6+ hours) and runs in parallel with chromiumSandbox.
+  browser = llvmStdenv.mkDerivation {
+    pname = "${lib.optionalString ungoogled "ungoogled-"}chromium-unwrapped";
+    inherit (upstream-info) version;
+    inherit packageName buildType buildPath;
+
+    dontUnpack = true;
+    dontPatch = true;
+    dontConfigure = true;
+
+    nativeBuildInputs = commonNativeBuildInputs;
+    depsBuildBuild = commonDepsBuildBuild;
+    buildInputs = commonBuildInputs;
+
+    hardeningDisable = [ "strictflexarrays1" ];
+    env = commonEnv;
+
+    buildPhase = ''
+      runHook preBuild
+      cp -a --reflink=auto "${chromiumSource}/." .
+      chmod -R u+w .
       TERM=dumb ninja -C "${buildPath}" -j$NIX_BUILD_CORES "chrome"
       bash -s << EOL
       (
@@ -1067,6 +1182,7 @@ let
     ];
 
     installPhase = ''
+      libExecPath="${libExecPath}"
       mkdir -p "$libExecPath"
       cp -v "$buildPath/"*.so "$buildPath/"*.pak "$buildPath/"*.bin "$libExecPath/"
       cp -v "$buildPath/libvulkan.so.1" "$libExecPath/"
@@ -1085,7 +1201,7 @@ let
       fi
 
       mkdir -p "$sandbox/bin"
-      cp -v "$buildPath/chrome_sandbox" "$sandbox/bin/${sandboxExecutableName}"
+      ln -s "${chromiumSandbox}/bin/${sandboxExecutableName}" "$sandbox/bin/${sandboxExecutableName}"
 
       mkdir -vp "$out/share/man/man1"
       cp -v "$buildPath/chrome.1" "$out/share/man/man1/$packageName.1"
@@ -1122,6 +1238,7 @@ let
     '';
 
     postFixup = ''
+      libExecPath="${libExecPath}"
       for chromiumBinary in "$libExecPath/$packageName" "$libExecPath/libGLESv2.so"; do
         patchelf --set-rpath "${
           lib.makeLibraryPath [
@@ -1138,7 +1255,7 @@ let
 
     passthru = {
       inherit sandboxExecutableName;
-      inherit chromiumDeps;
+      inherit chromiumDeps chromiumSource chromiumSandbox;
     };
 
     requiredSystemFeatures = [ "big-parallel" ];
