@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   postPatch = ''
     substituteInPlace cbmbasic.c \
-      --replace-fail "typedef unsigned char bool;" ""
+      --replace-fail "typedef unsigned char bool;" "#include <stdbool.h>"
   '';
 
   installPhase = ''
