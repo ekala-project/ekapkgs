@@ -73,9 +73,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonEntries = {
     soup2 = false;
-  } // lib.optionalAttrs useSoup3 {
+  }
+  // lib.optionalAttrs useSoup3 {
     installed_test_prefix = "${placeholder "installedTests"}";
-  } // lib.optionalAttrs (!useSoup3) {
+  }
+  // lib.optionalAttrs (!useSoup3) {
     enable-installed-tests = false;
     enable-introspection = false;
     enable-gtk-doc = false;

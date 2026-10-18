@@ -67,7 +67,8 @@ stdenv.mkDerivation (finalAttrs: {
     gtk_doc = withIntrospection;
     sniffer = false;
     manpages = false;
-  } // lib.optionalAttrs (!withIntrospection) {
+  }
+  // lib.optionalAttrs (!withIntrospection) {
     introspection = false;
     vapi = false;
   };

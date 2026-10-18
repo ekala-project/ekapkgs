@@ -68,7 +68,8 @@ stdenv.mkDerivation (finalAttrs: {
     ENABLE_QT = false;
     INSTALL_LIB = installLib;
     RUN_CLANG_TIDY = false;
-  } // lib.optionalAttrs (!withFullDeps) {
+  }
+  // lib.optionalAttrs (!withFullDeps) {
     ENABLE_TESTS = false;
     INSTALL_DOC = false;
   };
@@ -135,7 +136,13 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     description = "Fast, easy and free BitTorrent client";
-    mainProgram = if enableGTK then "transmission-gtk" else if enableDaemon then "transmission-daemon" else "transmission-cli";
+    mainProgram =
+      if enableGTK then
+        "transmission-gtk"
+      else if enableDaemon then
+        "transmission-daemon"
+      else
+        "transmission-cli";
     longDescription = ''
       Transmission is a BitTorrent client which features a simple interface
       on top of a cross-platform back-end.

@@ -68,7 +68,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonEntries = {
     gtk_doc = withIntrospection;
-  } // lib.optionalAttrs (!withIntrospection) {
+  }
+  // lib.optionalAttrs (!withIntrospection) {
     introspection = false;
     vapi = false;
   };

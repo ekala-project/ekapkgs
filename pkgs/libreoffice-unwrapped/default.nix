@@ -475,7 +475,7 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-system-headers"
     "--with-system-libabw"
     "--with-system-libcmis"
-    "--without-system-libfreehand"  # corepkgs version fails with newer compilers
+    "--without-system-libfreehand" # corepkgs version fails with newer compilers
     "--with-system-libepubgen"
     "--with-system-libetonyek"
     "--with-system-liblangtag"
@@ -512,7 +512,7 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-qt6"
   ]
   ++ optionals withJava [
-    "--disable-scripting-javascript"  # rhino gradle build broken
+    "--disable-scripting-javascript" # rhino gradle build broken
 
     "--with-system-beanshell"
     "--with-ant-home=${ant.home}"
@@ -520,9 +520,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   env = {
-    NIX_CFLAGS_COMPILE =
-      "-I${librdf_rasqal}/include/rasqal"
-      + " -DSAL_LOG_WARN=1 -DSAL_LOG_INFO=1 ";
+    NIX_CFLAGS_COMPILE = "-I${librdf_rasqal}/include/rasqal" + " -DSAL_LOG_WARN=1 -DSAL_LOG_INFO=1 ";
 
     FONTCONFIG_FILE = fontsConf;
   };
@@ -533,7 +531,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildTargets = [ "build-nocheck" ];
 
-  doCheck = false;  # sdext_pdfimport test fails in sandbox
+  doCheck = false; # sdext_pdfimport test fails in sandbox
 
   preCheck = ''
     export HOME=$(pwd)
