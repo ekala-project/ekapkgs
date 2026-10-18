@@ -39,7 +39,7 @@
   which,
   icu,
   boost,
-  jdk21,
+  java,
   ant,
   cups,
   libixion,
@@ -99,7 +99,7 @@
   libe-book,
   libmwaw,
   glm,
-  gst_all_1,
+  gstreamer,
   gdb,
   adwaita-icon-theme,
   glib,
@@ -201,7 +201,7 @@ let
     ];
   };
 
-  jre' = jdk21;
+  jre' = java;
 
   version = import ./src-stable/version.nix;
   srcsAttributes = {
@@ -319,7 +319,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ optionals withJava [
     ant
-    jdk21
+    java
   ];
 
   buildInputs =
@@ -582,7 +582,7 @@ stdenv.mkDerivation (finalAttrs: {
     inherit kdeIntegration;
     inherit gtk3;
     inherit (qt6) qtbase;
-    gst_packages = with gst_all_1; [
+    gst_packages = with gstreamer.pkgs; [
       gst-libav
       gst-plugins-bad
       gst-plugins-base
