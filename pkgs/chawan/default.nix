@@ -25,12 +25,12 @@ stdenv.mkDerivation (finalAttrs: {
     makeBinaryWrapper
     nim
     pkg-config
-    brotli
   ];
 
   buildInputs = [
     openssl
     libssh2
+    brotli
   ];
 
   buildFlags = [
