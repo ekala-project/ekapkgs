@@ -24,6 +24,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   ];
 
   # tests expect mingw and multiarch
+  doCheck = false;
 
   pythonImportsCheck = [ "icoextract" ];
 

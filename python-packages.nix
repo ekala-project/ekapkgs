@@ -169,6 +169,66 @@ final: prev: {
 
   pyqt5-multimedia = final.pyqt5.override { withMultimedia = true; };
 
+  gst-python = final.buildPythonPackage rec {
+    pname = "gst-python";
+    version = "1.28.6";
+
+    pyproject = false;
+
+    outputs = [
+      "out"
+      "dev"
+    ];
+
+    src = final.pkgs.fetchurl {
+      url = "https://gstreamer.freedesktop.org/src/gst-python/gst-python-${version}.tar.xz";
+      hash = "sha256-NNWEQMU7VJWhI9Ckt7ervG6XkqWyGVTbhqB5Gxb24BI=";
+    };
+
+    depsBuildBuild = [ final.pkgs.pkg-config ];
+
+    nativeBuildInputs = [
+      final.pkgs.pkg-config
+      final.pkgs.meson
+      final.pkgs.meson.configurePhaseHook
+      final.pkgs.ninja
+      final.pkgs.gobject-introspection
+      final.pkgs.gstreamer.pkgs.gst-plugins-base
+    ];
+
+    buildInputs = [
+      final.pkgs.gstreamer.pkgs.gst-plugins-bad
+    ];
+
+    propagatedBuildInputs = [
+      final.pkgs.gstreamer.pkgs.gst-plugins-base
+      final.pygobject3
+    ];
+
+    mesonFlags = [
+      "-Dpygi-overrides-dir=${builtins.placeholder "out"}/${final.python.sitePackages}/gi/overrides"
+      "-Dpython-exe=${final.python.pythonOnBuildForHost.interpreter}"
+      (final.pkgs.lib.mesonEnable "tests" false)
+    ];
+
+    meta = {
+      homepage = "https://gstreamer.freedesktop.org";
+      description = "Python bindings for GStreamer";
+      license = final.pkgs.lib.licenses.lgpl2Plus;
+    };
+  };
+
+  # Build boost for this specific Python version (provides libboost_python)
+  boost = final.toPythonModule (
+    final.pkgs.boost.override {
+      inherit (final) python;
+      enablePython = true;
+    }
+  );
+
+  # VTK with Python support (used by FreeCAD)
+  vtk = final.toPythonModule final.pkgs.vtk;
+
   pydbus = final.buildPythonPackage rec {
     pname = "pydbus";
     version = "0.6.0";

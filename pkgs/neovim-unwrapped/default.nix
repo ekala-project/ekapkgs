@@ -5,95 +5,46 @@
   fetchurl,
   cmake,
   gettext,
+  jq,
   libuv,
   luajit,
-  msgpack-c,
+  lpeg,
+  libluv,
   pkg-config,
-  tree-sitter,
   unibilium,
   utf8proc,
-  libvterm-neovim,
-  wasmSupport ? false,
+  tree-sitter,
 }:
 
 let
-  treesitter-parsers = import ./treesitter-parsers.nix { inherit fetchurl; };
-
-  # Build lpeg from source as a static library for neovim
-  lpeg = stdenv.mkDerivation {
-    pname = "lpeg";
-    version = "1.1.0";
-
-    src = fetchurl {
-      url = "https://github.com/neovim/deps/raw/d495ee6f79e7962a53ad79670cb92488abe0b9b4/opt/lpeg-1.1.0.tar.gz";
-      hash = "sha256-SxVdZ9IkbB/6ete8RmweqJm7xA/vAlfMnAPOy67UNSo=";
+  treesitter-parsers = {
+    c.src = fetchurl {
+      url = "https://github.com/tree-sitter/tree-sitter-c/archive/v0.24.1.tar.gz";
+      hash = "sha256:25dd4bb3dec770769a407e0fc803f424ce02c494a56ce95fedc525316dcf9b48";
     };
-
-    nativeBuildInputs = [ cmake ];
-
-    dontUseCmakeConfigure = true;
-
-    buildPhase = ''
-      runHook preBuild
-      for f in lpcap.c lpcode.c lpcset.c lpprint.c lptree.c lpvm.c; do
-        cc -fPIC -O2 -w -I${luajit}/include/luajit-2.1 -c "$f"
-      done
-      ar rcs liblpeg_a.a lpcap.o lpcode.o lpcset.o lpprint.o lptree.o lpvm.o
-      cc -shared -o lpeg.so lpcap.o lpcode.o lpcset.o lpprint.o lptree.o lpvm.o
-      runHook postBuild
-    '';
-
-    installPhase = ''
-      runHook preInstall
-      mkdir -p $out/lib
-      cp liblpeg_a.a $out/lib/
-      cp lpeg.so $out/lib/
-      runHook postInstall
-    '';
-  };
-
-  # Build libluv (lua bindings for libuv) from source
-  lua-compat-53 = fetchurl {
-    url = "https://github.com/lunarmodules/lua-compat-5.3/archive/v0.13.tar.gz";
-    hash = "sha256-9dww57H9qFbuTTkr5FdkLB8MJZJkqbm/vLaAMCzoj8I=";
-  };
-
-  libluv = stdenv.mkDerivation {
-    pname = "libluv";
-    version = "1.52.1-0";
-
-    src = fetchurl {
-      url = "https://github.com/luvit/luv/archive/1.52.1-0.tar.gz";
-      hash = "sha256-6Lh3SzHSS+T88rAhuQWZ7MzI5HbGHvzFnDwQyrgTqIU=";
+    lua.src = fetchurl {
+      url = "https://github.com/tree-sitter-grammars/tree-sitter-lua/archive/v0.5.0.tar.gz";
+      hash = "sha256:cf01b93f4b61b96a6d27942cf28eeda4cbce7d503c3bef773a8930b3d778a2d9";
     };
-
-    nativeBuildInputs = [
-      cmake
-      cmake.configurePhaseHook
-      pkg-config
-    ];
-
-    buildInputs = [
-      luajit
-      libuv
-    ];
-
-    postUnpack = ''
-      mkdir -p $sourceRoot/deps/lua-compat-5.3
-      tar -xzf ${lua-compat-53} -C $sourceRoot/deps/lua-compat-5.3 --strip-components=1
-    '';
-
-    cmakeEntries = {
-      LUA_BUILD_TYPE = "System";
-      LUA_COMPAT53_DIR = "deps/lua-compat-5.3";
-      WITH_SHARED_LIBUV = true;
-      BUILD_STATIC_LIBS = true;
-      BUILD_MODULE = false;
-      WITH_LUA_ENGINE = "LuaJit";
+    vim.src = fetchurl {
+      url = "https://github.com/tree-sitter-grammars/tree-sitter-vim/archive/v0.8.1.tar.gz";
+      hash = "sha256:93cafb9a0269420362454ace725a118ff1c3e08dcdfdc228aa86334b54d53c2a";
+    };
+    vimdoc.src = fetchurl {
+      url = "https://github.com/neovim/tree-sitter-vimdoc/archive/v4.1.0.tar.gz";
+      hash = "sha256:020e8f117f648c8697fca967995c342e92dbd81dab137a115cc7555207fbc84f";
+    };
+    query.src = fetchurl {
+      url = "https://github.com/tree-sitter-grammars/tree-sitter-query/archive/v0.8.0.tar.gz";
+      hash = "sha256:c2b23b9a54cffcc999ded4a5d3949daf338bebb7945dece229f832332e6e6a7d";
+    };
+    markdown.src = fetchurl {
+      url = "https://github.com/tree-sitter-grammars/tree-sitter-markdown/archive/v0.5.3.tar.gz";
+      hash = "sha256:df845b1ab7c7c163ec57d7fa17170c92b04be199bddab02523636efec5224ab6";
     };
   };
 
-  # Build a single treesitter parser grammar
+  # Build a single treesitter parser grammar into a shared library
   buildGrammar =
     {
       language,
@@ -102,24 +53,43 @@ let
     }:
     stdenv.mkDerivation {
       pname = "tree-sitter-${language}";
-      version = "neovim-0.12.4";
+      version = "neovim-0.12.5";
       inherit src;
 
-      dontConfigure = true;
+      __structuredAttrs = true;
 
-      env.CFLAGS = "-Isrc -O2";
+      nativeBuildInputs = [ jq ];
 
-      setSourceRoot = lib.optionalString (location != null) "sourceRoot=$(echo */${location})";
+      env = {
+        CFLAGS = "-Isrc -O2";
+        CXXFLAGS = "-Isrc -O2";
+        inherit language;
+      };
+
+      ${if location != null then "setSourceRoot" else null} = "sourceRoot=$(echo */${location})";
+
+      configurePhase = ''
+        runHook preConfigure
+        if [[ -e tree-sitter.json ]]; then
+          GRAMMAR=$(jq -c 'first(.grammars[] | select(.name == env.language))' tree-sitter.json)
+          if [[ -z "$GRAMMAR" ]]; then
+            GRAMMAR=$(jq -c 'first(.grammars[]) // {}' tree-sitter.json)
+          fi
+          cd -- $(jq -r '.path // "."' <<< $GRAMMAR)
+        fi
+        runHook postConfigure
+      '';
 
       buildPhase = ''
         runHook preBuild
         if [[ -e src/scanner.cc ]]; then
-          c++ -fPIC -c src/scanner.cc -o scanner.o $CXXFLAGS
+          $CXX -fPIC -c src/scanner.cc -o scanner.o $CXXFLAGS
         elif [[ -e src/scanner.c ]]; then
-          cc -fPIC -c src/scanner.c -o scanner.o $CFLAGS
+          $CC -fPIC -c src/scanner.c -o scanner.o $CFLAGS
         fi
-        cc -fPIC -c src/parser.c -o parser.o $CFLAGS
-        c++ -shared -o parser *.o
+        $CC -fPIC -c src/parser.c -o parser.o $CFLAGS
+        rm -rf parser
+        $CXX -shared -o parser *.o
         runHook postBuild
       '';
 
@@ -127,6 +97,9 @@ let
         runHook preInstall
         mkdir -p $out
         mv parser $out/
+        if [[ -d queries ]]; then
+          cp -r queries $out
+        fi
         runHook postInstall
       '';
     };
@@ -162,6 +135,8 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "neovim-unwrapped";
   version = "0.12.5";
 
+  __structuredAttrs = true;
+
   src = fetchFromGitHub {
     owner = "neovim";
     repo = "neovim";
@@ -172,7 +147,9 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   patches = [
-    # introduce a system-wide rplugin.vim in addition to the user one
+    # Introduce a system-wide rplugin.vim in addition to the user one.
+    # Necessary so that nix can handle UpdateRemotePlugins for plugins
+    # it installs. See https://github.com/neovim/neovim/issues/9413.
     ./system_rplugin_manifest.patch
   ];
 
@@ -191,15 +168,17 @@ stdenv.mkDerivation (finalAttrs: {
     tree-sitter
     unibilium
     utf8proc
-    libvterm-neovim
   ];
+
+  doCheck = false;
 
   cmakeFlags = [
     (lib.cmakeBool "USE_BUNDLED" false)
     (lib.cmakeBool "ENABLE_TRANSLATIONS" true)
-    (lib.cmakeFeature "LUAC_PRG" "${luajit}/bin/luajit -b -s %s -")
-    (lib.cmakeFeature "LUA_GEN_PRG" "${luajit}/bin/luajit")
-    (lib.cmakeFeature "LUA_PRG" "${luajit}/bin/luajit")
+    (lib.cmakeBool "USE_BUNDLED_BUSTED" false)
+    (lib.cmakeFeature "LUAC_PRG" "${lib.getExe' luajit "luajit"} -b -s %s -")
+    (lib.cmakeFeature "LUA_GEN_PRG" (lib.getExe' luajit "luajit"))
+    (lib.cmakeFeature "LUA_PRG" (lib.getExe' luajit "luajit"))
   ];
 
   preConfigure = ''
@@ -213,7 +192,13 @@ stdenv.mkDerivation (finalAttrs: {
     '') builtParsers
   );
 
+  disallowedRequisites = [
+    stdenv.cc
+  ];
+
   separateDebugInfo = true;
+
+  doInstallCheck = false;
 
   meta = {
     description = "Vim text editor fork focused on extensibility and agility";
@@ -226,6 +211,7 @@ stdenv.mkDerivation (finalAttrs: {
       - Improve extensibility with a new plugin architecture
     '';
     homepage = "https://neovim.io";
+    changelog = "https://github.com/neovim/neovim/releases/tag/v${finalAttrs.version}";
     mainProgram = "nvim";
     license = with lib.licenses; [
       asl20

@@ -23,7 +23,7 @@
   writeShellScript,
   writeScript,
   alsa-lib,
-  atk,
+  at-spi2-core,
   cairo,
   cups,
   dbus,
@@ -173,7 +173,7 @@ if stdenv.hostPlatform.isLinux then
         libgbm
         stdenv.cc.cc
         alsa-lib
-        atk
+        at-spi2-core
         cairo
         cups
         dbus
