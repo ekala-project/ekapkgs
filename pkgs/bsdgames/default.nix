@@ -20,11 +20,15 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-Bm+SSu9sHF6pRvWI428wMCH138CTlEc48CXY7bxv/2A=";
   };
 
+  nativeBuildInputs = [
+    flex
+    bison
+  ];
+
   buildInputs = [
     ncurses
     openssl
     flex
-    bison
   ];
 
   patches = [
