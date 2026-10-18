@@ -34,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     domain = "gitlab.freedesktop.org";
     owner = "geoclue";
     repo = "geoclue";
-    tag = "refs/tags/${finalAttrs.version}";
+    tag = finalAttrs.version;
     hash = "sha256-LwL1WtCdHb/NwPr3/OLISwaAwplhJwiZT9vUdX29Bbs=";
   };
 
@@ -93,5 +93,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/geoclue/geoclue/wikis/home";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.linux;
+    # TODO: needs avahi library (libavahi-client) which is not yet packaged
+    broken = true;
   };
 })
