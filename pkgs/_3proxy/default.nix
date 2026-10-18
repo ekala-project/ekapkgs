@@ -24,7 +24,8 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   makeFlags = [
-    "-f Makefile.Linux"
+    "-f"
+    "Makefile.Linux"
     "INSTALL=install"
     "DESTDIR=${placeholder "out"}"
     "CC:=$(CC)"
