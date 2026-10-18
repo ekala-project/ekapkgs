@@ -61,13 +61,7 @@ lib.makeScope newScope (
     qtlanguageserver = callQtModule ./modules/qtlanguageserver.nix { };
     qtlocation = callQtModule ./modules/qtlocation.nix { };
     qtlottie = callQtModule ./modules/qtlottie.nix { };
-    qtmultimedia = callQtModule ./modules/qtmultimedia {
-      gstreamer = gstreamer;
-      gst-plugins-bad = gstreamer.plugins-bad;
-      gst-plugins-base = gstreamer.plugins-base;
-      gst-plugins-good = gstreamer.plugins-good;
-      gst-libav = gstreamer.libav;
-    };
+    qtmultimedia = callQtModule ./modules/qtmultimedia { };
     qtmqtt = callQtModule ./modules/qtmqtt.nix { };
     qtnetworkauth = callQtModule ./modules/qtnetworkauth.nix { };
     qtpositioning = callQtModule ./modules/qtpositioning.nix { };

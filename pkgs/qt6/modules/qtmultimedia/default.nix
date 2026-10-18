@@ -10,10 +10,6 @@
   pkg-config,
   alsa-lib,
   gstreamer,
-  gst-plugins-bad,
-  gst-plugins-base,
-  gst-plugins-good,
-  gst-libav,
   ffmpeg,
   libva,
   libpulseaudio,
@@ -48,10 +44,10 @@ qtModule {
     qtshadertools
     qtquick3d
     gstreamer
-    gst-plugins-bad
-    gst-plugins-base
-    gst-plugins-good
-    gst-libav
+    gstreamer.pkgs.gst-plugins-bad
+    gstreamer.pkgs.gst-plugins-base
+    gstreamer.pkgs.gst-plugins-good
+    gstreamer.pkgs.gst-libav
   ];
 
   cmakeEntries = {

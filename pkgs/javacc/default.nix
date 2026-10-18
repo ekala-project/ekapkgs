@@ -3,14 +3,13 @@
   stdenv,
   fetchFromGitHub,
   ant,
-  jdk8 ? null,
-  jre8 ? null,
+  java ? null,
+  jre ? null,
   makeWrapper,
   stripJavaArchivesHook ? null,
 }:
 let
-  jdk = jdk8;
-  jre = jre8;
+  jdk = java;
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "javacc";
