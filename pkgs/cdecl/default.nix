@@ -41,6 +41,10 @@ stdenv.mkDerivation (finalAttrs: {
         "-Wno-error=int-conversion"
         "-Wno-error=incompatible-function-pointer-types"
       ]
+      ++ lib.optionals stdenv.cc.isGNU [
+        "-Wno-error=implicit-fallthrough"
+        "-std=gnu23"
+      ]
     );
     NIX_LDFLAGS = "-lreadline";
   };
