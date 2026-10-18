@@ -13,7 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitLab {
     owner = "gsasl";
     repo = "libgssglue";
-    tag = "tags/libgssglue-${finalAttrs.version}";
+    tag = "libgssglue-${finalAttrs.version}";
     hash = "sha256-p9dujLklv2ZC1YA1gKGCRJf9EvF3stv5v4Z/5m1nSeM=";
   };
 
