@@ -24,7 +24,10 @@ stdenv.mkDerivation (finalAttrs: {
     "-Wno-error=incompatible-pointer-types"
   ];
 
-  nativeBuildInputs = [ pkg-config ];
+  nativeBuildInputs = [
+    pkg-config
+    libpng
+  ];
   buildInputs = [
     libpng
     zlib
