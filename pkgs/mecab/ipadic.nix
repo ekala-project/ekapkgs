@@ -21,6 +21,8 @@ stdenv.mkDerivation (finalAttrs: {
     rootDir = "mecab-ipadic";
   };
 
+  sourceRoot = "${finalAttrs.src.name}/mecab-ipadic";
+
   buildInputs = [ mecab-nodic ];
 
   configureFlags = [

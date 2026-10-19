@@ -11,6 +11,8 @@ finalAttrs: {
     rootDir = "mecab";
   };
 
+  sourceRoot = "${finalAttrs.src.name}/mecab";
+
   buildInputs = [ libiconv ];
 
   configureFlags = [
