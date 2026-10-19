@@ -46,11 +46,11 @@ gccStdenv.mkDerivation (finalAttrs: {
   };
 
   preAutoreconf = ''
-    cd gnu
+    cd $NIX_BUILD_TOP/$sourceRoot/gnu
   '';
 
   postConfigure = ''
-    cd ..
+    cd $NIX_BUILD_TOP/$sourceRoot
   '';
 
   meta = {
