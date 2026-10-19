@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "svg";
     repo = "svgo";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-HYI3E14MN0XhREQMYkhLB1gZOBtrpjayC1RyVEhvkOU=";
+    hash = "sha256-A9mLXMIVDXpuOZAzvuHo6VrBaBcF4UJiFdDDUGSptUg=";
   };
 
   missingHashes = ./missing-hashes.json;
