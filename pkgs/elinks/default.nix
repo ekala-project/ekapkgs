@@ -51,6 +51,11 @@ stdenv.mkDerivation rec {
     pkg-config
   ];
 
+  postPatch = ''
+    # Fix for gettext >= 0.23 which requires 'external' argument
+    sed -i 's/AM_GNU_GETTEXT$/AM_GNU_GETTEXT([external])/' configure.ac
+  '';
+
   configureFlags = [
     "--enable-finger"
     "--enable-html-highlight"
@@ -74,5 +79,7 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/rkd77/elinks";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
+    # autotools incompatibilities with current autoconf/gettext versions
+    broken = true;
   };
 }
