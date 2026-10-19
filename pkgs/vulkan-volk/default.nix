@@ -8,7 +8,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "volk";
-  version = "1.4.350";
+  version = "1.4.350.0";
 
   src = fetchFromGitHub {
     owner = "zeux";
