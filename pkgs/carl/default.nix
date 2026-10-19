@@ -28,5 +28,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/b1rger/carl/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "carl";
+    # v0.6.0 tag was removed upstream
+    broken = true;
   };
 })
