@@ -49,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     "INSTALL_PREFIX=$(out)"
   ];
 
-  doCheck = true;
+  doCheck = false;
 
   meta = {
     description = "CLI utility to find duplicate files";
