@@ -27,6 +27,8 @@ stdenv.mkDerivation {
     zlib
   ];
 
+  enableParallelBuilding = false;
+
   buildFlags = [
     "CC=${stdenv.cc.targetPrefix}cc"
   ];
