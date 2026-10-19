@@ -22,11 +22,11 @@ stdenv.mkDerivation {
   nativeBuildInputs = [
     makeWrapper
     pkg-config
+    clang
+    llvm
   ];
   buildInputs = [
-    clang
     libffi
-    llvm
     openssl
     readline
   ];
