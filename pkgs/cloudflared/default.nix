@@ -72,6 +72,9 @@ buildGoModule (finalAttrs: {
     #   Should be true
     substituteInPlace "crypto/curves_test.go" \
       --replace-warn "TestSupportedCurvesNegotiation" "SkipSupportedCurvesNegotiation"
+
+    # connection tests require network access
+    rm -f connection/*_test.go
   '';
 
   doCheck = !stdenv.hostPlatform.isDarwin;
