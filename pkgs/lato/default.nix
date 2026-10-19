@@ -27,5 +27,7 @@ stdenvNoCC.mkDerivation {
     description = "Sans-serif typeface family designed in Summer 2010 by Lukasz Dziedzic";
     license = licenses.ofl;
     platforms = platforms.all;
+    # Upstream source URL is dead
+    broken = true;
   };
 }
