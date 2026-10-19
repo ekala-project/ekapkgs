@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "atheme";
     repo = "atheme";
     rev = "b8b23c51cda120f2cfc5af9ac639cd257575f2ce";
-    hash = "sha256-Dx+j+a+Sp2OErARdhcgajnpnpnFw63wkJC5i9FSVmE4=";
+    hash = "sha256-+RbSs6azHB0gZzzVsXDqxPSt6M63kQsQUPjPkiBKno8=";
     # for modules and pinned libmowgli
     fetchSubmodules = true;
     # configure checks for git tree
