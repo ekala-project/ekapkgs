@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
     sha256 = "0br6fs23ybmic3i5s1w4k4l8c2ph85ax94gfp2lzjpxbvl73cz1g";
   };
 
-  buildInputs = [ autoconf ];
+  nativeBuildInputs = [ autoconf ];
 
   preBuild = ''
     substituteInPlace Makefile \
