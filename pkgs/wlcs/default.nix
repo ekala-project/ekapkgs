@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   # GCC14-exclusive maybe-uninitialized error at higher optimisation levels that looks weird
-  env.NIX_CFLAGS_COMPILE = lib.optionalString stdenv.cc.isGNU "-Wno-error=maybe-uninitialized";
+  env.NIX_CFLAGS_COMPILE = lib.optionalString stdenv.cc.isGNU "-Wno-error=maybe-uninitialized -Wno-error=deprecated-declarations";
 
   passthru = {
     tests.pkg-config = testers.testMetaPkgConfig finalAttrs.finalPackage;
