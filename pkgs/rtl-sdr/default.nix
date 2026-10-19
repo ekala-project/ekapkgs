@@ -53,5 +53,7 @@ stdenv.mkDerivation rec {
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
     mainProgram = "rtl_sdr";
+    # fetchFromGitea source download broken
+    broken = true;
   };
 }
