@@ -63,5 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     # Windows support is more complicated.
     # https://getpopfile.org/docs/faq:systemrequirements
     platforms = lib.platforms.linux;
+    broken = true; # getpopfile.org is dead
   };
 })
