@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "so-fancy";
     repo = "diff-so-fancy";
     tag = "v${finalAttrs.version}";
-    sha256 = "sha256-5laSG8UWsCXAK+Woiz1Opy3VViboCI7J2AsqoDiuq7k=";
+    sha256 = "sha256-LCnY8HMzIUyO8wnM9FSL0eC2Coz5j0vxmAWNe2d4jBY=";
   };
 
   nativeBuildInputs = [
