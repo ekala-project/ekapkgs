@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "mirror://gnu/src-highlite/source-highlight-${version}.tar.gz";
-    hash = "sha256-vamMBNdOFpHl0W7hzpN+GEsLlMTj4YlBMDkuR+elJOw=";
+    hash = "sha256-On/Sg3jLVBb43iyedxluyRUUXUTjD/Tg7ovrP+YhHJE=";
   };
 
   buildInputs = [ boost ];
@@ -24,6 +24,7 @@ stdenv.mkDerivation rec {
   configureFlags = [
     "--with-boost=${boost.out}"
     "--with-bash-completion=${placeholder "out"}/share/bash-completion/completions"
+    "CXXFLAGS=-std=c++14 -g -O2"
   ];
 
   meta = {
