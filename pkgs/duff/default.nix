@@ -27,7 +27,7 @@ stdenv.mkDerivation {
     cp ${gettext}/bin/gettextize .
     substituteInPlace gettextize \
       --replace "read dummy" "echo '(Automatically acknowledged)' #"
-    ./gettextize
+    ./gettextize -f
     sed 's@po/Makefile.in\( .*\)po/Makefile.in@po/Makefile.in \1@' \
       -i configure.ac
     # src/main.c is utf8, not ascii
