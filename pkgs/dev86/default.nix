@@ -15,6 +15,8 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-nY5awJzEO+xbJRAbeRJgKjJf30SNz2Bg346KMNDtmls=";
   };
 
+  enableParallelBuilding = false;
+
   makeFlags = [ "PREFIX=${placeholder "out"}" ];
 
   meta = {
