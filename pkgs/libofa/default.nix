@@ -59,5 +59,7 @@ stdenv.mkDerivation rec {
       fingerprint created and provided by MusicIP'';
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2;
+    # Debian mirror source is 404
+    broken = true;
   };
 }
