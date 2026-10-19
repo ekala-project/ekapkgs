@@ -21,7 +21,9 @@ stdenv.mkDerivation {
     ./function-pointers.patch
   ];
 
-  buildInputs = [ m4 ];
+  nativeBuildInputs = [ m4 ];
+
+  enableParallelBuilding = false;
 
   configureFlags = lib.optionals stdenv.hostPlatform.isDarwin [ "--build=x86_64-apple-darwin" ];
 
