@@ -19,7 +19,10 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "0b7wc2gvgnyp54rxf1n9arn6ymrvdb633v6b3ah138hw4gg8lx7k";
   };
 
-  nativeBuildInputs = [ autoreconfHook ];
+  nativeBuildInputs = [
+    autoreconfHook
+    curl
+  ];
   buildInputs = [ curl ];
 
   unpackPhase = ''
