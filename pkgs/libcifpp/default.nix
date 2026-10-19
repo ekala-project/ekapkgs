@@ -45,5 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/PDB-REDO/libcifpp/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
+    # Vendored pcre2 build broken
+    broken = true;
   };
 })
