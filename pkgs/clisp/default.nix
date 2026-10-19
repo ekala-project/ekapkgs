@@ -88,7 +88,7 @@ stdenv.mkDerivation {
   ++ lib.optional (ffcallAvailable && (libffi != null)) "--with-dynamic-ffi"
   ++ lib.optional ffcallAvailable "--with-ffcall"
   ++ lib.optional (!ffcallAvailable) "--without-ffcall"
-  ++ builtins.map (x: " --with-module=" + x) withModules
+  ++ builtins.map (x: "--with-module=" + x) withModules
   ++ lib.optional threadSupport "--with-threads=POSIX_THREADS";
 
   preBuild = ''
@@ -126,5 +126,7 @@ stdenv.mkDerivation {
     mainProgram = "clisp";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
+    # glibc bindings module fails to build
+    broken = true;
   };
 }
