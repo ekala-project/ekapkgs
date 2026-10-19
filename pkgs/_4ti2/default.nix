@@ -34,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     gmp
   ];
 
-  installFlags = [ "install-exec" ];
+  installTargets = [ "install-exec" ];
 
   meta = {
     homepage = "https://4ti2.github.io/";
