@@ -23,13 +23,13 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     fribidi
-    kbd
     xkbutils
-    perl
   ];
   nativeBuildInputs = [
     autoreconfHook
     pkg-config
+    perl
+    kbd
   ];
 
   preConfigure = ''
