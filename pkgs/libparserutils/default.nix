@@ -16,8 +16,9 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-MX7VxxjxeSe1chl0uuXeMsP9bQVdsTGtMbQxKgMu0Tk=";
   };
 
+  nativeBuildInputs = [ perl ];
+
   buildInputs = [
-    perl
     netsurf-buildsystem
   ]
   ++ lib.optionals stdenv.hostPlatform.isDarwin [
