@@ -44,5 +44,7 @@ stdenvNoCC.mkDerivation rec {
       lib.licenses.free
     ];
     platforms = lib.platforms.all;
+    # OSDN mirror is dead
+    broken = true;
   };
 }
