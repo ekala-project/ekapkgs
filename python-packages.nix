@@ -238,7 +238,7 @@ final: prev: {
       owner = "LEW21";
       repo = "pydbus";
       rev = "v${version}";
-      hash = "sha256-MHwt9XaGcjMjq3FuVWMVqyIEgFoZnhmDhbMaEJUbfkA=";
+      hash = "sha256-F1KKXG+7dWlEbToqtF3G7wU0Sco7zH5NqzlL58jyDGw=";
     };
 
     build-system = [ final.setuptools ];
