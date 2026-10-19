@@ -30,6 +30,8 @@ stdenv.mkDerivation (finalAttrs: {
     libuv
   ];
 
+  enableParallelBuilding = false;
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
