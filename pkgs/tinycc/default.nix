@@ -1,7 +1,7 @@
 {
   lib,
   copyPkgconfigItems,
-  fetchzip,
+  fetchFromGitHub,
   makePkgconfigItem,
   perl,
   stdenv,
@@ -21,8 +21,10 @@ stdenv.mkDerivation (finalAttrs: {
     "out"
   ];
 
-  src = fetchzip {
-    url = "https://repo.or.cz/tinycc.git/snapshot/f6385c05308f715bdd2c06336801193a21d69b50.tar.gz";
+  src = fetchFromGitHub {
+    owner = "TinyCC";
+    repo = "tinycc";
+    rev = "f6385c05308f715bdd2c06336801193a21d69b50";
     hash = "sha256-tO3N+NplYy8QUOC2N3x0CO5Ui75j9bQzLSZQF1HQyhY=";
   };
 
