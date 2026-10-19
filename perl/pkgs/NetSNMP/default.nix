@@ -19,27 +19,29 @@ buildPerlModule {
   };
   patches = [
     (fetchpatch2 {
-      url = "https://src.fedoraproject.org/rpms/perl-Net-SNMP/raw/6e1d3e8ff2b9bd38dab48301a9d8b5d81ef3b7fe/f/Net-SNMP-v6.0.1-Switch_from_Socket6_to_Socket.patch";
+      url = "https://src.fedoraproject.org/rpms/perl-Net-SNMP/raw/rawhide/f/Net-SNMP-v6.0.1-Switch_from_Socket6_to_Socket.patch";
       hash = "sha256-IpVhqI+dXqzauTkLF0Doulg5U33FxHUhqFTp0jeMtMY=";
     })
     (fetchpatch2 {
-      url = "https://src.fedoraproject.org/rpms/perl-Net-SNMP/raw/6e1d3e8ff2b9bd38dab48301a9d8b5d81ef3b7fe/f/Net-SNMP-v6.0.1-Simple_rewrite_to_Digest-HMAC-helpers.patch";
+      url = "https://src.fedoraproject.org/rpms/perl-Net-SNMP/raw/rawhide/f/Net-SNMP-v6.0.1-Simple_rewrite_to_Digest-HMAC-helpers.patch";
       hash = "sha256-ZXo9w2YLtPmM1SJLvIiLWefw7SwrTFyTo4eX6DG1yfA=";
     })
     (fetchpatch2 {
-      url = "https://src.fedoraproject.org/rpms/perl-Net-SNMP/raw/6e1d3e8ff2b9bd38dab48301a9d8b5d81ef3b7fe/f/Net-SNMP-v6.0.1-Split_usm.t_to_two_parts.patch";
+      url = "https://src.fedoraproject.org/rpms/perl-Net-SNMP/raw/rawhide/f/Net-SNMP-v6.0.1-Split_usm.t_to_two_parts.patch";
       hash = "sha256-A2gsD6DIX1aFSVLbSL/1zKSM1xiM6hWBadJJH7f5E8o=";
     })
     (fetchpatch2 {
-      url = "https://src.fedoraproject.org/rpms/perl-Net-SNMP/raw/6e1d3e8ff2b9bd38dab48301a9d8b5d81ef3b7fe/f/Net-SNMP-v6.0.1-Add_tests_for_another_usm_scenarios.patch";
+      url = "https://src.fedoraproject.org/rpms/perl-Net-SNMP/raw/rawhide/f/Net-SNMP-v6.0.1-Add_tests_for_another_usm_scenarios.patch";
       hash = "sha256-U7nNuL35l/zdSzx1jgjp1PmLQn3xzzDw9DGnyeydi2E=";
     })
     (fetchpatch2 {
-      url = "https://src.fedoraproject.org/rpms/perl-Net-SNMP/raw/6e1d3e8ff2b9bd38dab48301a9d8b5d81ef3b7fe/f/Net-SNMP-v6.0.1-Rewrite_from_Digest-SHA1-to_Digest-SHA.patch";
+      url = "https://src.fedoraproject.org/rpms/perl-Net-SNMP/raw/rawhide/f/Net-SNMP-v6.0.1-Rewrite_from_Digest-SHA1-to-Digest-SHA.patch";
       hash = "sha256-dznhj1Fcy0iBBl92p825InjkNZixR2MURVQ/b9bVjtc=";
     })
-    ./net-snmp-add-sha-algorithms.patch
   ];
+  postPatch = ''
+    patch -p1 --fuzz=3 < ${./net-snmp-add-sha-algorithms.patch}
+  '';
   preCheck = lib.optionalString stdenv.hostPlatform.isLinux ''
     export NIX_REDIRECTS=/etc/protocols=${iana-etc}/etc/protocols
   '';
