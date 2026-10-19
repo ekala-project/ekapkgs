@@ -32,9 +32,12 @@ let
 
       installPhase = ''
         runHook preInstall
-        mkdir -p $out/share/fonts/truetype $out/share/fonts/opentype
+        mkdir -p $out/share/fonts/truetype
         find . -iname '*.ttf' -exec install -m644 -D -t $out/share/fonts/truetype {} +
-        find . -iname '*.otf' -exec install -m644 -D -t $out/share/fonts/opentype {} + || true
+        if find . -iname '*.otf' -print -quit | grep -q .; then
+          mkdir -p $out/share/fonts/opentype
+          find . -iname '*.otf' -exec install -m644 -D -t $out/share/fonts/opentype {} +
+        fi
         runHook postInstall
       '';
 
