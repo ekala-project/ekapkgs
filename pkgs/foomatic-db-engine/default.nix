@@ -48,6 +48,7 @@ perlPackages.buildPerlPackage rec {
   nativeBuildInputs = [
     autoconf
     automake
+    curl
     file
     makeWrapper
   ];
