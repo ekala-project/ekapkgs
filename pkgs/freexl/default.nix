@@ -2,6 +2,7 @@
   lib,
   stdenv,
   fetchurl,
+  pkg-config,
   validatePkgConfig,
   expat,
   minizip,
@@ -18,7 +19,12 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-F2cF8d5Yq3we679cbeRqt2/Ni4VlCNvSj1ZI98bhp/A=";
   };
 
-  nativeBuildInputs = [ validatePkgConfig ];
+  nativeBuildInputs = [
+    pkg-config
+    validatePkgConfig
+  ];
+
+  # TODO: configure can't find minizip headers despite correct CPPFLAGS
 
   buildInputs = [
     expat
@@ -39,5 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
       mpl11
     ];
     platforms = lib.platforms.unix;
+    # Configure can't find minizip headers
+    broken = true;
   };
 })
