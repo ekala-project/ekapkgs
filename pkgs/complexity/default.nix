@@ -3,6 +3,7 @@
   lib,
   stdenv,
   autogen,
+  pkg-config,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -14,7 +15,11 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "1vfns9xm7w0wrz12a3w15slrqnrfh6qxk15nv7qkj3irll3ff522";
   };
 
-  buildInputs = [ autogen ];
+  nativeBuildInputs = [
+    pkg-config
+    autogen
+  ];
+  buildInputs = [ autogen.lib ];
 
   doCheck = true;
 
