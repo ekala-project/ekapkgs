@@ -15,12 +15,9 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     hash = "sha256-UHOwZL9WpCHk6vZaqI/XfkZogKgycs5lWg1p0XdQt0A=";
   };
 
-  # only extract the variable font because everything else is a duplicate
-  preInstall = "cd ${lib.optionalString useVariableFont "variable_"}ttf";
-
   installPhase = ''
     runHook preInstall
-    find . -iname '*.ttf' -exec install -m644 -D -t "$out/share/fonts/truetype" {} +
+    find ${lib.optionalString useVariableFont "variable_"}ttf -iname '*.ttf' -exec install -m644 -D -t "$out/share/fonts/truetype" {} +
     runHook postInstall
   '';
 
