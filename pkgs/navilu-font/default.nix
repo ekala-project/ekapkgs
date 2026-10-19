@@ -24,11 +24,11 @@ stdenvNoCC.mkDerivation rec {
 
   installPhase = "install -Dm444 -t $out/share/fonts/truetype/ Navilu.ttf";
 
-  meta =
-
-    src.meta // {
-      description = "Kannada handwriting font";
-      license = lib.licenses.gpl3Plus;
-      platforms = lib.platforms.all;
-    };
+  meta = {
+    description = "Kannada handwriting font";
+    license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.all;
+    # Upstream removed release tags
+    broken = true;
+  };
 }
