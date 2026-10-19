@@ -95,5 +95,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://bitwuzla.github.io";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
+    # API mismatch with current cadical version
+    broken = true;
   };
 })
