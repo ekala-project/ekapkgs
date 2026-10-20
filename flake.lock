@@ -39,11 +39,11 @@
     "haskell": {
       "flake": false,
       "locked": {
-        "lastModified": 1790794721,
-        "narHash": "sha256-u2Koo/5gCYPi2wY7RIGO96WtdNB7yIKM6/PqE3qdCvg=",
+        "lastModified": 1792510247,
+        "narHash": "sha256-4oiZA5ncnetqFNYJsJvjVJa73CFrUOE1P2gnPOnpC8Q=",
         "owner": "ekala-project",
         "repo": "haskell-pkgs",
-        "rev": "31cac3eac23e40bf973b2d4cf69efde5bbf31147",
+        "rev": "d3234cb089d3aa3233d35b9ae9c37b51b3b29419",
         "type": "github"
       },
       "original": {
