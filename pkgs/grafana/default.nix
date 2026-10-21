@@ -7,6 +7,7 @@
   tzdata,
   wire,
   yarn-berry_4,
+  zlib-ng,
   buildPackages,
   python3,
   jq,
@@ -43,10 +44,19 @@ buildGoModule (finalAttrs: {
 
   missingHashes = ./missing-hashes.json;
   # Since this is not a dependency attribute the buildPackages has to be specified.
-  offlineCache = buildPackages.yarn-berry_4.fetchYarnBerryDeps {
-    inherit (finalAttrs) src missingHashes;
-    hash = "sha256-wL2m4z/d6NkXYOSBGjju3EQZElTgI2MLK/fYzNucNKU=";
-  };
+  # The yarn-berry satellite input calls zlib-ng.override { withZlibCompat } which
+  # broke when corepkgs moved zlib-ng to mkManyVariants; override libzip to use
+  # the compat variant directly.
+  offlineCache =
+    (buildPackages.yarn-berry_4.overrideScope (
+      _: yarnPrev: {
+        libzip = yarnPrev.libzip.override { zlib = buildPackages.zlib-ng.compat; };
+      }
+    )).fetchYarnBerryDeps
+      {
+        inherit (finalAttrs) src missingHashes;
+        hash = "sha256-wL2m4z/d6NkXYOSBGjju3EQZElTgI2MLK/fYzNucNKU=";
+      };
 
   disallowedRequisites = [ finalAttrs.offlineCache ];
 
