@@ -105,10 +105,10 @@ final: prev: {
   qt6Packages = final.qt6;
 
   # libxcrypt-legacy (all hash algorithms enabled)
-  libxcrypt-legacy = final.libxcrypt.override { enableHashes = "all"; };
+  libxcrypt-legacy = final.libxcrypt.legacy;
 
   # libjpeg8: libjpeg_turbo with JPEG 8 API/ABI compatibility
-  libjpeg8 = final.libjpeg_turbo.override { enableJpeg8 = true; };
+  libjpeg8 = final.libjpeg_turbo.jpeg8;
 
   # evolution-data-server GTK4 variant
   evolution-data-server-gtk4 = final.evolution-data-server.override {
@@ -147,7 +147,7 @@ final: prev: {
   };
 
   # pcre-cpp is pcre built with C++ support
-  pcre-cpp = final.pcre.override { variant = "cpp"; };
+  pcre-cpp = final.pcre.cpp;
 
   # jre_headless alias
   jre_headless = final.jre;
