@@ -3,65 +3,25 @@
   stdenv,
   fetchFromGitHub,
   bun,
-  makeWrapper,
   sqlite,
   autoPatchelfHook,
 }:
 
-let
+bun.buildPackage {
+  pname = "qmd";
   version = "2.8.3";
 
   src = fetchFromGitHub {
     owner = "tobi";
     repo = "qmd";
-    tag = "v${version}";
+    tag = "v2.8.3";
     hash = "sha256-/7Z94r/9rXqzKlz/YkB6/nToSCPamV4Dnxm8EhelTDo=";
   };
 
-  node_modules = stdenv.mkDerivation {
-    pname = "qmd-node_modules";
-    inherit version src;
+  node_modulesHash = "sha256-B4M7Uiocy4F7c7IncERU5QyNNAal+cgNDVohybwRNJA=";
 
-    nativeBuildInputs = [ bun ];
-
-    dontConfigure = true;
-
-    buildPhase = ''
-      runHook preBuild
-      export BUN_INSTALL_CACHE_DIR=$(mktemp -d)
-      bun install --frozen-lockfile --ignore-scripts --no-progress
-      runHook postBuild
-    '';
-
-    installPhase = ''
-      runHook preInstall
-      mkdir -p $out
-      cp -r node_modules $out/node_modules
-      cp package.json $out/package.json
-      [ -f bun.lock ] && cp bun.lock $out/ || true
-      runHook postInstall
-    '';
-
-    dontFixup = true;
-    outputHash = "sha256-B4M7Uiocy4F7c7IncERU5QyNNAal+cgNDVohybwRNJA=";
-    outputHashAlgo = "sha256";
-    outputHashMode = "recursive";
-  };
-in
-stdenv.mkDerivation {
-  pname = "qmd";
-  inherit version src;
-
-  nativeBuildInputs = [
-    bun
-    makeWrapper
-    autoPatchelfHook
-  ];
-
-  buildInputs = [
-    sqlite
-  ]
-  ++ lib.optionals stdenv.hostPlatform.isLinux [ stdenv.cc.cc.lib ];
+  nativeBuildInputs = [ autoPatchelfHook ];
+  buildInputs = [ sqlite ] ++ lib.optionals stdenv.hostPlatform.isLinux [ stdenv.cc.cc.lib ];
 
   autoPatchelfIgnoreMissingDeps = [
     "libc.musl-x86_64.so.1"
@@ -74,14 +34,8 @@ stdenv.mkDerivation {
     "libvulkan.so.1"
   ];
 
-  dontConfigure = true;
-
-  buildPhase = ''
-    runHook preBuild
-    cp -r ${node_modules}/node_modules .
-    chmod -R u+w node_modules
+  bunBuildCommand = ''
     patchShebangs node_modules || true
-    runHook postBuild
   '';
 
   installPhase = ''
@@ -102,10 +56,12 @@ stdenv.mkDerivation {
     runHook postInstall
   '';
 
+  doInstallCheck = false;
+
   meta = {
     description = "mini cli search engine for your docs, knowledge bases, meeting notes, whatever.";
     homepage = "https://github.com/tobi/qmd";
-    changelog = "https://github.com/tobi/qmd/releases/tag/v${version}";
+    changelog = "https://github.com/tobi/qmd/releases/tag/v2.8.3";
     license = lib.licenses.mit;
     sourceProvenance = [
       lib.sourceTypes.fromSource

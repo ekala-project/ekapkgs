@@ -3,7 +3,6 @@
   stdenvNoCC,
   fetchurl,
   bun,
-  makeWrapper,
   versionCheckHook,
   writableTmpDirAsHomeHook,
 }:
@@ -15,39 +14,25 @@ let
     url = "https://registry.npmjs.org/@bitkyc08/opencodex/-/opencodex-${version}.tgz";
     hash = "sha256-uVX2tPxW9umDHUJcajiiRgO1ZH9bx18lKhhf6jUz6DA=";
   };
+in
+bun.buildPackage {
+  pname = "opencodex";
+  inherit version src;
 
-  node_modules = stdenvNoCC.mkDerivation {
-    pname = "opencodex-node_modules";
-    inherit version;
+  sourceRoot = "package";
 
-    src = fetchurl {
-      url = "https://registry.npmjs.org/@bitkyc08/opencodex/-/opencodex-${version}.tgz";
-      hash = "sha256-uVX2tPxW9umDHUJcajiiRgO1ZH9bx18lKhhf6jUz6DA=";
-    };
-
+  bunStdenv = stdenvNoCC;
+  bunInstallFlags = [
+    "--linker=isolated"
+    "--backend=symlink"
+    "--production"
+  ];
+  node_modulesHash = "sha256-ocGgJYx4d+FZlO8I1EunI1pY1pFIKGDManvLsBfhsLE=";
+  node_modulesAttrs = {
     sourceRoot = "package";
-
-    nativeBuildInputs = [ bun ];
-
     postUnpack = ''
       cp ${./bun.lock} "$sourceRoot/bun.lock"
     '';
-
-    dontConfigure = true;
-
-    buildPhase = ''
-      runHook preBuild
-      export BUN_INSTALL_CACHE_DIR=$(mktemp -d)
-      bun install \
-        --frozen-lockfile \
-        --ignore-scripts \
-        --linker=isolated \
-        --backend=symlink \
-        --production \
-        --no-progress
-      runHook postBuild
-    '';
-
     installPhase = ''
       runHook preInstall
       mkdir -p $out
@@ -55,28 +40,18 @@ let
       cp package.json $out/
       runHook postInstall
     '';
-
-    dontFixup = true;
-    outputHash = "sha256-ocGgJYx4d+FZlO8I1EunI1pY1pFIKGDManvLsBfhsLE=";
-    outputHashAlgo = "sha256";
-    outputHashMode = "recursive";
   };
-in
-stdenvNoCC.mkDerivation {
-  pname = "opencodex";
-  inherit version src;
 
-  sourceRoot = "package";
-
-  nativeBuildInputs = [ makeWrapper ];
+  nativeBuildInputs = [ ];
 
   installPhase = ''
     runHook preInstall
 
     mkdir -p $out/lib/opencodex $out/bin
-    # Nix provides bun; drop the npm copy of the runtime.
-    rm -rf ${node_modules}/node_modules/.bun/bun@* 2>/dev/null || true
-    cp -r bin gui src package.json ${node_modules}/node_modules $out/lib/opencodex/
+    # Nix provides bun; drop the npm copy of the runtime and its dangling symlinks.
+    rm -rf node_modules/.bun/bun@* node_modules/.bun/node_modules/bun \
+      node_modules/bun node_modules/.bin/bun node_modules/.bin/bunx 2>/dev/null || true
+    cp -r bin gui src package.json node_modules $out/lib/opencodex/
 
     makeWrapper ${lib.getExe bun} $out/bin/ocx \
       --add-flags "$out/lib/opencodex/src/cli/index.ts"
