@@ -1,72 +1,30 @@
 {
   lib,
-  stdenvNoCC,
   fetchFromGitHub,
+  stdenvNoCC,
   bun,
-  makeWrapper,
   versionCheckHook,
 }:
 
-let
+bun.buildPackage {
+  pname = "agent-slack";
   version = "0.10.2";
 
   src = fetchFromGitHub {
     owner = "stablyai";
     repo = "agent-slack";
-    tag = "v${version}";
+    tag = "v0.10.2";
     hash = "sha256-0eeI3Tvb4LWDXkXvvjUQyHB8UkQ/nksFHMBkFx8ZAqI=";
   };
 
-  node_modules = stdenvNoCC.mkDerivation {
-    pname = "agent-slack-node_modules";
-    inherit version src;
+  bunStdenv = stdenvNoCC;
+  bunInstallFlags = [ "--production" ];
+  node_modulesHash = "sha256-gpTy1hm3aLTR/mqlpTWQr3PCUc7wqkjcxh4PTH1aMcE=";
 
-    nativeBuildInputs = [ bun ];
-
-    dontConfigure = true;
-
-    buildPhase = ''
-      runHook preBuild
-      export BUN_INSTALL_CACHE_DIR=$(mktemp -d)
-      bun install \
-        --frozen-lockfile \
-        --ignore-scripts \
-        --production \
-        --no-progress
-      runHook postBuild
-    '';
-
-    installPhase = ''
-      runHook preInstall
-      mkdir -p $out
-      cp -r node_modules $out/node_modules
-      cp bun.lock package.json $out/
-      runHook postInstall
-    '';
-
-    outputHash = "sha256-gpTy1hm3aLTR/mqlpTWQr3PCUc7wqkjcxh4PTH1aMcE=";
-    outputHashAlgo = "sha256";
-    outputHashMode = "recursive";
-  };
-in
-stdenvNoCC.mkDerivation {
-  pname = "agent-slack";
-  inherit version src;
-
-  nativeBuildInputs = [
-    bun
-    makeWrapper
-  ];
-
-  buildPhase = ''
-    runHook preBuild
-    cp -r ${node_modules}/node_modules .
+  bunBuildCommand = ''
     bun build src/index.ts --target=bun --outfile dist/agent-slack.js \
-      --define 'AGENT_SLACK_BUILD_VERSION="${version}"'
-    runHook postBuild
+      --define 'AGENT_SLACK_BUILD_VERSION="0.10.2"'
   '';
-
-  doCheck = false;
 
   installPhase = ''
     runHook preInstall
@@ -82,7 +40,7 @@ stdenvNoCC.mkDerivation {
   meta = {
     description = "Slack CLI for AI agents";
     homepage = "https://github.com/stablyai/agent-slack";
-    changelog = "https://github.com/stablyai/agent-slack/releases/tag/v${version}";
+    changelog = "https://github.com/stablyai/agent-slack/releases/tag/v0.10.2";
     license = lib.licenses.mit;
     mainProgram = "agent-slack";
     platforms = lib.platforms.all;

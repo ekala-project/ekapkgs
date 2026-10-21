@@ -3,66 +3,32 @@
   stdenv,
   fetchFromGitHub,
   bun,
-  makeWrapper,
   sqlite,
   autoPatchelfHook,
 }:
 
-let
+bun.buildPackage {
+  pname = "gno";
   version = "2.9.0";
 
   src = fetchFromGitHub {
     owner = "gmickel";
     repo = "gno";
-    tag = "v${version}";
+    tag = "v2.9.0";
     hash = "sha256-pHtJjuBXi6W9TWxXYIq8e/OmVv/J6P225reKpzzmLsA=";
   };
 
-  node_modules = stdenv.mkDerivation {
-    pname = "gno-node_modules";
-    inherit version src;
+  node_modulesHash = "sha256-G5+3dmh3EBpzTlnaZIzdiUjHVCJWqF5KrpOgc/TJ61E=";
+  node_modulesAttrs.buildPhase = ''
+    runHook preBuild
+    export BUN_INSTALL_CACHE_DIR=$(mktemp -d)
+    export LC_ALL=C.UTF-8
+    bun install --frozen-lockfile --ignore-scripts --no-progress
+    runHook postBuild
+  '';
 
-    nativeBuildInputs = [ bun ];
-
-    dontConfigure = true;
-
-    buildPhase = ''
-      runHook preBuild
-      export BUN_INSTALL_CACHE_DIR=$(mktemp -d)
-      export LC_ALL=C.UTF-8
-      bun install --frozen-lockfile --ignore-scripts --no-progress
-      runHook postBuild
-    '';
-
-    installPhase = ''
-      runHook preInstall
-      mkdir -p $out
-      cp -r node_modules $out/node_modules
-      cp package.json $out/package.json
-      [ -f bun.lock ] && cp bun.lock $out/ || true
-      runHook postInstall
-    '';
-
-    dontFixup = true;
-    outputHash = "sha256-G5+3dmh3EBpzTlnaZIzdiUjHVCJWqF5KrpOgc/TJ61E=";
-    outputHashAlgo = "sha256";
-    outputHashMode = "recursive";
-  };
-in
-stdenv.mkDerivation {
-  pname = "gno";
-  inherit version src;
-
-  nativeBuildInputs = [
-    bun
-    makeWrapper
-    autoPatchelfHook
-  ];
-
-  buildInputs = [
-    sqlite
-  ]
-  ++ lib.optionals stdenv.hostPlatform.isLinux [ stdenv.cc.cc.lib ];
+  nativeBuildInputs = [ autoPatchelfHook ];
+  buildInputs = [ sqlite ] ++ lib.optionals stdenv.hostPlatform.isLinux [ stdenv.cc.cc.lib ];
 
   autoPatchelfIgnoreMissingDeps = [
     "libc.musl-x86_64.so.1"
@@ -75,14 +41,8 @@ stdenv.mkDerivation {
     "libvulkan.so.1"
   ];
 
-  dontConfigure = true;
-
-  buildPhase = ''
-    runHook preBuild
-    cp -r ${node_modules}/node_modules .
-    chmod -R u+w node_modules
+  bunBuildCommand = ''
     patchShebangs node_modules || true
-    runHook postBuild
   '';
 
   installPhase = ''
@@ -112,7 +72,7 @@ stdenv.mkDerivation {
   meta = {
     description = "Local-first knowledge engine with hybrid search, RAG Q&A, and MCP server integration";
     homepage = "https://github.com/gmickel/gno";
-    changelog = "https://github.com/gmickel/gno/releases/tag/v${version}";
+    changelog = "https://github.com/gmickel/gno/releases/tag/v2.9.0";
     license = lib.licenses.mit;
     sourceProvenance = [
       lib.sourceTypes.fromSource

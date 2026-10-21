@@ -1,67 +1,25 @@
 {
   lib,
-  stdenv,
   fetchFromGitHub,
   bun,
-  makeWrapper,
   versionCheckHook,
 }:
 
-let
+bun.buildPackage {
+  pname = "ralph-tui";
   version = "0.12.0";
 
   src = fetchFromGitHub {
     owner = "subsy";
     repo = "ralph-tui";
-    tag = "v${version}";
+    tag = "v0.12.0";
     hash = "sha256-FqGniyxbOMMbDN/S0gYcdHiOr+nNQuuBgQ8M7M1UP6k=";
   };
 
-  node_modules = stdenv.mkDerivation {
-    pname = "ralph-tui-node_modules";
-    inherit version src;
+  node_modulesHash = "sha256-iClXVYxu2bKqRtp1VNTTYSsMM77LP+leRPgzX6q0xo4=";
 
-    nativeBuildInputs = [ bun ];
-
-    dontConfigure = true;
-
-    buildPhase = ''
-      runHook preBuild
-      export BUN_INSTALL_CACHE_DIR=$(mktemp -d)
-      bun install --frozen-lockfile --ignore-scripts --no-progress
-      runHook postBuild
-    '';
-
-    installPhase = ''
-      runHook preInstall
-      mkdir -p $out
-      cp -r node_modules $out/node_modules
-      cp package.json $out/
-      [ -f bun.lock ] && cp bun.lock $out/ || true
-      runHook postInstall
-    '';
-
-    # fixup rewrites native libs and makes the FOD non-reproducible
-    dontFixup = true;
-    outputHash = "sha256-iClXVYxu2bKqRtp1VNTTYSsMM77LP+leRPgzX6q0xo4=";
-    outputHashAlgo = "sha256";
-    outputHashMode = "recursive";
-  };
-in
-stdenv.mkDerivation {
-  pname = "ralph-tui";
-  inherit version src;
-
-  nativeBuildInputs = [
-    bun
-    makeWrapper
-  ];
-
-  buildPhase = ''
-    runHook preBuild
-    cp -r ${node_modules}/node_modules .
+  bunBuildCommand = ''
     bun run build
-    runHook postBuild
   '';
 
   installPhase = ''
@@ -79,7 +37,7 @@ stdenv.mkDerivation {
   meta = {
     description = "AI Agent Loop Orchestrator TUI";
     homepage = "https://github.com/subsy/ralph-tui";
-    changelog = "https://github.com/subsy/ralph-tui/releases/tag/v${version}";
+    changelog = "https://github.com/subsy/ralph-tui/releases/tag/v0.12.0";
     license = lib.licenses.mit;
     mainProgram = "ralph-tui";
     platforms = lib.platforms.unix;
