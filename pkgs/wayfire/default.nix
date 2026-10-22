@@ -108,5 +108,7 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
     mainProgram = "wayfire";
+    # doctest dependency has disallowedRequisites issue in corepkgs
+    broken = true;
   };
 })
