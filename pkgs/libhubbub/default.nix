@@ -18,11 +18,13 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-isHm9fPUjAUUHVk5FxlTQpDFnNAp78JJ60/brBAs1aU=";
   };
 
-  nativeBuildInputs = [ pkg-config ];
-
-  buildInputs = [
+  nativeBuildInputs = [
+    pkg-config
     gperf
     perl
+  ];
+
+  buildInputs = [
     netsurf-buildsystem
     libparserutils
   ];
