@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     bison
     flex
+    libgcrypt
   ];
 
   meta = {
