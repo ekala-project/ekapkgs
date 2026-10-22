@@ -57,5 +57,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/pantor/inja";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
+    # doctest dependency has disallowed reference issue
+    broken = true;
   };
 })
