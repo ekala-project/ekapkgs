@@ -28,8 +28,11 @@ stdenv.mkDerivation (finalAttrs: {
     "Makefile.Linux"
     "INSTALL=install"
     "DESTDIR=${placeholder "out"}"
+    "prefix=/"
     "CC:=$(CC)"
   ];
+
+  enableParallelInstalling = false;
 
   postInstall = ''
     rm -fr $out/var
