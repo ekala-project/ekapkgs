@@ -22,7 +22,10 @@ stdenv.mkDerivation (finalAttrs: {
     guile
     guile-fibers
   ];
-  nativeBuildInputs = [ pkg-config ];
+  nativeBuildInputs = [
+    pkg-config
+    guile
+  ];
 
   meta = {
     homepage = "https://www.gnu.org/software/shepherd/";
