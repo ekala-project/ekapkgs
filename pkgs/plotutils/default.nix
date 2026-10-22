@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
   buildInputs = [ libpng ];
   patches = map fetchurl (import ./debian-patches.nix) ++ [ ./c++17-register-usage-fix.patch ];
 
-  env.NIX_CFLAGS_COMPILE = "-std=gnu89";
+  env.NIX_CFLAGS_COMPILE = "-std=gnu17";
 
   preBuild = ''
     # Fix parallel building.
@@ -27,7 +27,6 @@ stdenv.mkDerivation rec {
   '';
 
   configureFlags = [ "--enable-libplotter" ];
-
   hardeningDisable = [ "format" ];
 
   doCheck = true;
