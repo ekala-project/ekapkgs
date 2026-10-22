@@ -30,6 +30,7 @@ stdenv.mkDerivation rec {
     pkg-config
     which
     perl
+    python3
     pngcrush
     advancecomp
   ];
