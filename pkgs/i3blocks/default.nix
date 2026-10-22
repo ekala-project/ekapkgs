@@ -27,6 +27,8 @@ stdenv.mkDerivation {
     })
   ];
 
+  enableParallelInstalling = false;
+
   nativeBuildInputs = [
     autoreconfHook
     pkg-config
