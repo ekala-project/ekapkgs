@@ -15,6 +15,8 @@ gccStdenv.mkDerivation rec {
     sha256 = "01a15yvs455qp20hri2pbg2wqvcip0d50kb7dibi9427hqk9cnj4";
   };
 
+  enableParallelBuilding = false;
+
   makeFlags = [ "PREFIX=${placeholder "out"}" ];
 
   meta = {
