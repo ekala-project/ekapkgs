@@ -38,9 +38,6 @@ final: prev: {
   # openal is an alias for openal-soft
   openal = final.openal-soft;
 
-  # Rust infrastructure aliases
-  rustPlatform = final.rust.packages.stable.rustPlatform;
-
   # dnsutils is just the utils output of bind
   dnsutils = final.bind.utils;
 
@@ -171,7 +168,6 @@ final: prev: {
 
   # libjpeg8: libjpeg_turbo with JPEG 8 API/ABI compatibility
   libjpeg8 = final.libjpeg_turbo.jpeg8;
-
   # evolution-data-server GTK4 variant
   evolution-data-server-gtk4 = final.evolution-data-server.override {
     withGtk3 = false;
@@ -305,5 +301,12 @@ final: prev: {
     clipboard-indicator = final.gnome-shell-extension-clipboard-indicator;
     kimpanel = final.gnome-shell-extension-kimpanel;
     freon = final.gnome-shell-extension-freon;
+  };
+
+  # Override lttng-ust to disable man pages — the asciidoc package provides
+  # hasciidoc (Haskell), not the asciidoc binary that lttng-ust expects
+  lttng-ust = prev.lttng-ust.override {
+    asciidoc = null;
+    xmlto = null;
   };
 }
