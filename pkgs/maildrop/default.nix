@@ -18,12 +18,15 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-PFiQ9NQzItTmPz6Aw6YJzeYF9ylm1iNPyIZBjZSdJLk=";
   };
 
-  nativeBuildInputs = [ pkg-config ];
+  nativeBuildInputs = [
+    pkg-config
+    pcre2
+    perl
+  ];
   buildInputs = [
     courier-unicode
     libidn.v2
     pcre2
-    perl
   ];
 
   patches = [ ./maildrop.configure.hack.patch ]; # for building in chroot
