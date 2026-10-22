@@ -34,6 +34,7 @@ let
   pythonAutoCallOverlay = lib.packageSets.mkAutoCalledPackageDir ./python/pkgs;
   pythonOverrides = import ./python-packages.nix;
   perlOverrides = lib.packageSets.mkAutoCalledPackageDir ./perl/pkgs;
+  postgresOverlay = lib.packageSets.mkAutoCalledPackageDir ./postgresql/pkgs;
 
   writersOverlay = lib.packageSets.mkAutoCalledPackageDir ./writers/pkgs;
 
@@ -65,6 +66,10 @@ in
 
   overlays.perl = [
     perlOverrides
+  ];
+
+  overlays.postgresql = [
+    postgresOverlay
   ];
 
   overlays.haskell = [
