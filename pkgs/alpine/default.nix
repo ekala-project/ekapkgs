@@ -22,6 +22,8 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-uAPQlF2IQPSZ0QoK9bwh6RBGsb1X0ktP1eVhs3RO44I=";
   };
 
+  enableParallelBuilding = false;
+
   depsBuildBuild = [ buildPackages.stdenv.cc ];
 
   buildInputs = [
