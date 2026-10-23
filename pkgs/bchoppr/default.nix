@@ -22,7 +22,10 @@ stdenv.mkDerivation (finalAttrs: {
     fetchSubmodules = true;
   };
 
-  nativeBuildInputs = [ pkg-config ];
+  nativeBuildInputs = [
+    pkg-config
+    cpio
+  ];
   buildInputs = [
     cairo
     libx11
