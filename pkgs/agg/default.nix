@@ -78,5 +78,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://agg.sourceforge.net/antigrain.com/index.html";
     platforms = lib.platforms.unix;
     hydraPlatforms = lib.platforms.linux; # build hangs on both Darwin platforms, needs investigation
+    # AM_PATH_SDL autotools macro broken (SDL1 dependency)
+    broken = true;
   };
 })
