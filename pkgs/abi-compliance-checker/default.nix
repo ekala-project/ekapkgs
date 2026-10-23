@@ -19,10 +19,10 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "1f1f9j2nf9j83sfl2ljadch99v6ha8rq8xm7ax5akc05hjpyckij";
   };
 
+  nativeBuildInputs = [ perl ];
   buildInputs = [
     binutils
     ctags
-    perl
   ];
   propagatedBuildInputs = lib.optional (abi-dumper != null) abi-dumper;
 
