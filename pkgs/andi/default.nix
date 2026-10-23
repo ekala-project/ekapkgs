@@ -29,12 +29,11 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     gsl
     libdivsufsort
+    glib
   ]
   ++ lib.optionals stdenv.hostPlatform.isDarwin [ llvmPackages.openmp ];
 
   configureFlags = [ (lib.enableFeature finalAttrs.finalPackage.doCheck "unit-tests") ];
-
-  nativeCheckInputs = [ glib ];
 
   doCheck = true;
 
