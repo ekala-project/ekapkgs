@@ -67,5 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.unfree;
     platforms = lib.platforms.linux;
+    # download.linuxsampler.org DNS is dead
+    broken = true;
   };
 })
