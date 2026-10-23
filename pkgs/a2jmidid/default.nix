@@ -1,7 +1,7 @@
 {
   lib,
   stdenv,
-  fetchFromGitea,
+  fetchFromGitHub,
   makeWrapper,
   pkg-config,
   alsa-lib,
@@ -16,8 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "a2jmidid";
   version = "12";
 
-  src = fetchFromGitea {
-    domain = "gitea.ladish.org";
+  src = fetchFromGitHub {
     owner = "LADI";
     repo = "a2jmidid";
     tag = finalAttrs.version;
@@ -29,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     makeWrapper
     meson
+    meson.configurePhaseHook
     ninja
   ];
   buildInputs = [
