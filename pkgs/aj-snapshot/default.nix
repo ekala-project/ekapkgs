@@ -37,5 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2;
     platforms = lib.platforms.all;
     mainProgram = "aj-snapshot";
+    # minixml v4 provides mxml4.pc, but aj-snapshot expects mxml.pc
+    broken = true;
   };
 })
