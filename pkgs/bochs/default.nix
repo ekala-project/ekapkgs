@@ -37,12 +37,14 @@ stdenv.mkDerivation (finalAttrs: {
     docbook_xsl
     libtool
     pkg-config
-  ];
+  ]
+  ++ lib.optionals enableSDL2 [ sdl2-compat ];
 
   buildInputs = [
     curl
     readline
     wget
+    libtool # for libltdl
   ]
   ++ lib.optionals enableSDL2 [
     sdl2-compat
