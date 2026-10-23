@@ -26,6 +26,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   nativeBuildInputs = [
     # git rev-parse --short HEAD
     (pkgsBuildBuild.writeShellScriptBin "git" "echo 0000000")
+    pkg-config
   ];
 
   buildInputs = [
