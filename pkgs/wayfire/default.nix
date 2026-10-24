@@ -96,7 +96,8 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   mesonFlags = [
-    "--sysconfdir /etc"
+    "--sysconfdir"
+    "/etc"
     (lib.mesonEnable "wf-touch:tests" false)
   ];
 
@@ -108,7 +109,7 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
     mainProgram = "wayfire";
-    # doctest dependency has disallowedRequisites issue in corepkgs
+    # TODO: needs wlroots-0.20 which is not yet available
     broken = true;
   };
 })

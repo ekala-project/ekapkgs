@@ -24,6 +24,9 @@ final: prev: {
     configureFlags = (old.configureFlags or [ ]) ++ [ "--disable-werror" ];
   });
 
+  # Restore C++ doctest — haskell-pkgs shadows it with the Haskell doctest tool (v0.24),
+  # but our C++ packages (wayfire, inja, xeus, etc.) need the C++ testing framework (v2.5)
+  doctest = final.callPackage ((import ./pins.nix).corepkgs + "/pkgs/doctest") { };
   jre = final.java;
   qt5Packages = final.qt5;
   libsForQt5 = final.qt5;
