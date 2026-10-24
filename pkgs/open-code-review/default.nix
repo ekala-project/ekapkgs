@@ -8,16 +8,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "open-code-review";
-  version = "1.12.11";
+  version = "1.13.3";
 
   src = fetchFromGitHub {
     owner = "alibaba";
     repo = "open-code-review";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-t8pUUVNwMFK0XLg2yrRj5ry1fY2Uti7abFuARdSoIEI=";
+    hash = "sha256-dDKNxjI0pWoJGabUvsGTERYKvKtvEm3UGD/FLPKpfnw=";
   };
 
-  vendorHash = "sha256-f5Ty22wicf1J8+RKnHYcEO7flWn9gkWQODlfunn23EA=";
+  vendorHash = "sha256-LpqnNp6gxHatHH68pM59ESQICDDSVrkZm7AJLVvYTao=";
 
   subPackages = [ "cmd/opencodereview" ];
 
@@ -25,15 +25,10 @@ buildGoModule (finalAttrs: {
   # gitMinimal (as in gitleaks): the full git build needs asciidoc for docs.
   nativeCheckInputs = [ gitMinimal ];
 
-  # buildGoModule already forces CGO_ENABLED=0 (static binary, as upstream's
-  # Makefile does) — setting it here collides with the predefined env.
-
   ldflags = [
     "-s"
     "-w"
     "-X main.Version=v${finalAttrs.version}"
-    # Peeled commit of tag v1.12.11 (tag object ee83f15 -> commit a758d9c).
-    "-X main.GitCommit=a758d9cbfb689937c7857ad64b2dd66adb58c0c2"
   ];
 
   # The CLI presents itself as `ocr` (cobra root Use, npm bin, docs) but the
