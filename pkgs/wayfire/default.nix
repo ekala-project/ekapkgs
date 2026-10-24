@@ -79,7 +79,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   propagatedBuildInputs = [
     wf-config
-    wlroots
+    wlroots.v0_20
     wayland
     cairo
     pango
@@ -109,7 +109,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
     mainProgram = "wayfire";
-    # TODO: needs wlroots-0.20 which is not yet available
-    broken = true;
   };
 })
