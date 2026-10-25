@@ -46,6 +46,20 @@ ci/repos-packages.nix  # Unified derivation list for automated updates
 
 Use the [best-practices](.agents/skills/best-practices/SKILL.md) skill to review package expressions for meta completeness, build-system idioms, dependency placement, and packaging conventions.
 
+## Porting from nixpkgs
+
+When porting packages from nixpkgs, apply the following substitutions in addition to the standard porting checklist (strip `meta.maintainers`, `meta.teams`, `updateScript`, add build-system hooks, etc.):
+
+- **`gst_all_1`** has been renamed to **`gstreamer`**. Replace `gst_all_1` in function arguments and `with gst_all_1;` blocks with `gstreamer`. Individual plugins are accessed as `gstreamer.gst-plugins-base`, `gstreamer.gst-plugins-good`, etc.
+- **`docbook_xml_dtd_*`** has been renamed. Use `docbook-xml-dtd` as the function argument and access specific versions as `docbook-xml-dtd.v4_5`, `docbook-xml-dtd.v4_3`, `docbook-xml-dtd.v4_2`, etc.
+- **`nixosTests`** references should be commented out with a `# TODO(ekaos)` marker. NixOS tests will be replaced by EkaOS integration tests via the `integrationTests` passthru attribute in a future sweep. Example:
+  ```nix
+  passthru = {
+    # TODO(ekaos): replace with integrationTests
+    # tests = { inherit (nixosTests) foo; };
+  };
+  ```
+
 ## Key Differences from corepkgs
 
 - **Packages go in `pkgs/`** — there is no `pkgs-many/` directory in this repo.
