@@ -4,6 +4,7 @@
   fetchFromGitHub,
   cmake,
   doctest,
+  gettext,
   meson,
   ninja,
   pkg-config,
@@ -51,6 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
+    gettext
     meson
     meson.configurePhaseHook
     ninja
