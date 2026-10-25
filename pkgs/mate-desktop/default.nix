@@ -8,7 +8,6 @@
   libstartup_notification,
   gtk3,
   dconf,
-  gitUpdater,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -41,12 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     gtk3
     libstartup_notification
   ];
-
-  passthru.updateScript = gitUpdater {
-    url = "https://git.mate-desktop.org/mate-desktop";
-    odd-unstable = true;
-    rev-prefix = "v";
-  };
 
   meta = {
     description = "Library with common API for various MATE modules";

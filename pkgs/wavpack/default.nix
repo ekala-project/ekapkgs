@@ -31,9 +31,10 @@ stdenv.mkDerivation rec {
   ];
   buildInputs = [ libiconv ];
 
-  # autogen.sh:9
+  # autogen.sh:9 - need writable source for config.rpath
   preAutoreconf = ''
-    cp ${gettext}/share/gettext/config.rpath .
+    cp -f ${gettext}/share/gettext/config.rpath . || true
+    chmod +w config.rpath 2>/dev/null || true
     export ACLOCAL_PATH="${gettext}/share/gettext/m4''${ACLOCAL_PATH:+:$ACLOCAL_PATH}"
   '';
 

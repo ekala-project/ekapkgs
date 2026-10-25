@@ -97,6 +97,68 @@ final: prev: {
   # stub for packages that reference nixosTests
   nixosTests = { };
 
+  # Expose mkKdeDerivation at top level for KDE packages in pkgs/
+  inherit (final.kdePackages) mkKdeDerivation;
+
+  # Python packaging helpers for ported Python packages
+  inherit (final.python3Packages) buildPythonPackage buildPythonApplication;
+
+  # Darwin stub (not applicable on Linux)
+  desktopToDarwinBundle = null;
+
+  # Qt6 module aliases (ported packages reference these as top-level args)
+  inherit (final.qt6)
+    qt5compat
+    qtsvg
+    qtdeclarative
+    qtmultimedia
+    qttools
+    qtwebengine
+    qtwebchannel
+    qtlocation
+    qtwayland
+    qtspeech
+    qtscxml
+    qtpositioning
+    qtnetworkauth
+    qtwebsockets
+    qtcharts
+    qtbase
+    ;
+
+  # KDE misc aliases
+  inherit (final.kdePackages)
+    kirigami-addons
+    kquickcharts
+    kcontacts
+    kholidays
+    ;
+
+  # Python package aliases for ported packages
+  inherit (final.python3Packages)
+    click
+    configobj
+    cloudpickle
+    cython
+    freezegun
+    meson-python
+    pyparsing
+    pytestCheckHook
+    python-dateutil
+    flit-core
+    binaryornot
+    setuptools
+    pybind11
+    ;
+
+  # Other commonly needed aliases
+  gtk3-x11 = final.gtk3;
+  gtk2-x11 = final.gtk2;
+  emacs-nox = final.emacs;
+  # fetchbzr not available in ekapkgs (Bazaar VCS deprecated)
+  aspellDicts = final.aspell.dictionaries or { };
+  ImageMagick = final.imagemagick;
+
   # Break qt6 <-> doxygen cycle: doxygen optionally depends on qt6,
   # but qt6.qtbase transitively depends on doxygen through libxml2.
   doxygen = prev.doxygen.override { qt6 = null; };
@@ -152,84 +214,8 @@ final: prev: {
   # jre_headless alias
   jre_headless = final.jre;
 
-  # Minimal kdePackages shim for packages that reference kdePackages.foo
-  kdePackages = {
-    inherit (final)
-      attica
-      extra-cmake-modules
-      kconfigwidgets
-      kcolorpicker
-      kglobalaccel
-      kimageannotator
-      kirigami
-      kpackage
-      kpty
-      kuserfeedback
-      polkit-qt-1
-      sonnet
-      syndication
-      syntax-highlighting
-      breeze-icons
-      karchive
-      kcompletion
-      kconfig
-      kcoreaddons
-      kcrash
-      kguiaddons
-      ki18n
-      kio
-      kitemmodels
-      kitemviews
-      kwidgetsaddons
-      kwindowsystem
-      kauth
-      kbookmarks
-      kcmutils
-      kcodecs
-      kcolorscheme
-      kdbusaddons
-      kdoctools
-      kfilemetadata
-      kiconthemes
-      kjobwidgets
-      knewstuff
-      knotifications
-      knotifyconfig
-      kparts
-      kpipewire
-      kquickimageeditor
-      kservice
-      kstatusnotifieritem
-      ktexteditor
-      ktextwidgets
-      kwallet
-      kxmlgui
-      purpose
-      prison
-      qtkeychain
-      solid
-      spectacle
-      threadweaver
-      mlt
-      poppler
-      quazip
-      libkdcraw
-      kplotting
-      qqc2-desktop-style
-      ffmpegthumbs
-      glaxnimate
-      kdenlive
-      ;
-    inherit (final.qt6)
-      qtbase
-      qtsvg
-      qtmultimedia
-      qtwayland
-      qttools
-      qtdeclarative
-      wrapQtAppsHook
-      ;
-  };
+  # Full KDE Frameworks/Gear/Plasma scope
+  kdePackages = final.callPackage ./kde { qt6Packages = final.qt6; };
 
   # Mozilla build infrastructure
   buildMozillaMach = opts: final.callPackage (import ./build-support/buildMozillaMach opts) { };
@@ -260,6 +246,18 @@ final: prev: {
 
   # Deluge variants
   deluged = final.deluge.override { withGUI = false; };
+
+  # Compatibility aliases for ported packages
+  audacious-bare = final.audacious;
+  iperf = final.iperf3;
+  hamlib_3 = final.hamlib.v3;
+  hamlib_4 = final.hamlib.v4;
+  babeltrace2 = final.babeltrace.v2;
+  hdf5-cpp = final.hdf5; # corepkgs hdf5 already builds with C++ support
+  docbook_xsl_ns = final.docbook-xsl-ns;
+  xkeyboard_config = final.xkeyboard-config;
+  libvlc = final.vlc;
+  libportal-gtk3 = final.libportal.gtk3;
 
   # Common aliases for expected package names
   yq = final.yq-go;

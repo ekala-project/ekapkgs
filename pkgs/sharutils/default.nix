@@ -21,11 +21,13 @@ stdenv.mkDerivation (finalAttrs: {
   hardeningDisable = [ "format" ];
 
   buildInputs = [
-    autoreconfHook
     coreutils
     gettext
   ];
-  nativeBuildInputs = [ updateAutotoolsGnuConfigScriptsHook ];
+  nativeBuildInputs = [
+    autoreconfHook
+    updateAutotoolsGnuConfigScriptsHook
+  ];
 
   patches = [
     # CVE-2018-1000097
