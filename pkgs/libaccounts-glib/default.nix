@@ -37,7 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    check
     docbook-xml-dtd.v4_3
     docbook_xsl
     glibcLocales
@@ -51,6 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
+    check
     glib
     libxml2
     libxslt
