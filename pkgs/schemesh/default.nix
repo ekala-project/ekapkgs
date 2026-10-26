@@ -28,7 +28,11 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
   ];
 
-  makeFlags = [ "prefix=$(out)" ];
+  makeFlags = [
+    "prefix=$(out)"
+    "CHEZ_SCHEME_DIR=${chez}/lib/csv${chez.version}/ta6le"
+    "SCHEMESH_DIR=$(out)/lib/schemesh"
+  ];
 
   meta = {
     description = "A Unix shell and Lisp REPL, fused together";
