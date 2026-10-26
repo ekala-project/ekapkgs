@@ -30,6 +30,8 @@ stdenv.mkDerivation {
     openssl
     readline
   ];
+  env.NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
+
   sourceRoot = "pil21";
   preBuild = ''
     cd src
