@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  jdk,
+  java,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -14,11 +14,11 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "1hqp3xxmsj5vkym0l3blhlaq9g3w0lhjgmp37g6y3rr741znkk8c";
   };
 
-  inherit jdk;
+  inherit java;
 
   builder = ./builder.sh;
 
-  propagatedBuildInputs = [ jdk ];
+  propagatedBuildInputs = [ java ];
 
   meta = {
     description = "Build tooling for Clojure";

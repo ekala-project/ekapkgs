@@ -11,7 +11,6 @@
   iptables,
   libmnl,
   libnftnl, # for nftables
-  nixosTests,
   openconnect,
   openvpn,
   pkg-config,
@@ -185,7 +184,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-  passthru.tests.connman = nixosTests.connman;
+  # TODO(ekaos): replace with integrationTests
+  # passthru.tests.connman = nixosTests.connman;
 
   meta = {
     description = "Daemon for managing internet connections";

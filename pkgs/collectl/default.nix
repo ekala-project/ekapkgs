@@ -8,7 +8,7 @@
   # Runtime dependencies
   coreutils,
   dmidecode,
-  gnugrep,
+  grep,
   inetutils,
   openssh,
   pciutils,
@@ -46,7 +46,7 @@ let
       "stty"
     ])
     // (mkTools util-linux [ "renice" ])
-    // (mkTools gnugrep [
+    // (mkTools grep [
       "grep"
       "egrep"
     ])

@@ -8,7 +8,6 @@
   gettext,
   fcitx5,
   libhangul,
-  nixosTests,
 }:
 
 stdenv.mkDerivation rec {
@@ -36,7 +35,7 @@ stdenv.mkDerivation rec {
   ];
 
   passthru.tests = {
-    inherit (nixosTests) fcitx5;
+    # inherit (nixosTests) fcitx5;
   };
 
   meta = {

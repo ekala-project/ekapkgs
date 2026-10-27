@@ -3,7 +3,6 @@
   stdenv,
   fetchFromGitHub,
   writeText,
-  nixosTests,
   dokuwiki,
 }:
 
@@ -101,7 +100,7 @@ stdenv.mkDerivation (finalAttrs: {
         '';
       });
     tests = {
-      inherit (nixosTests) dokuwiki;
+      # inherit (nixosTests) dokuwiki;
     };
   };
 

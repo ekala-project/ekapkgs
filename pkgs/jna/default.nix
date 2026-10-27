@@ -3,7 +3,7 @@
   lib,
   fetchFromGitHub,
   ant,
-  jdk,
+  java,
   stripJavaArchivesHook,
 }:
 
@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     ant
-    jdk
+    java
     stripJavaArchivesHook
   ];
 

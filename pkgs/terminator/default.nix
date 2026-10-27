@@ -11,7 +11,6 @@
   makeBinaryWrapper,
   wrapGAppsHook3,
   vte,
-  nixosTests,
 }:
 
 python3.pkgs.buildPythonApplication (finalAttrs: {
@@ -73,7 +72,8 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     }
   '';
 
-  passthru.tests.test = nixosTests.terminal-emulators.terminator;
+  # TODO(ekaos): replace with integrationTests
+  # passthru.tests.test = nixosTests.terminal-emulators.terminator;
 
   meta = {
     description = "Terminal emulator with support for tiling and tabs";

@@ -10,7 +10,6 @@
   libvirt-glib,
   systemd,
   lib,
-  nixosTests,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -66,7 +65,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   passthru = {
     tests = {
-      inherit (nixosTests) libvirtd;
+      # inherit (nixosTests) libvirtd;
     };
   };
 

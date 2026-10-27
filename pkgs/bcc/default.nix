@@ -13,7 +13,6 @@
   luajit,
   makeWrapper,
   netperf,
-  nixosTests,
   python3Packages,
   readline,
   removeReferencesTo,
@@ -132,7 +131,7 @@ python3Packages.buildPythonApplication rec {
   ];
 
   passthru.tests = {
-    bpf = nixosTests.bpf;
+    # bpf = nixosTests.bpf;
   };
 
   meta = {

@@ -9,7 +9,6 @@
   iproute2,
   nftables,
   systemd,
-  nixosTests,
 }:
 
 assert (lib.assertMsg systemd.withNetworkd "systemd for clatd must be built with networkd support");
@@ -58,7 +57,8 @@ stdenv.mkDerivation (finalAttrs: {
       }
   '';
 
-  passthru.tests.clatd = nixosTests.clatd;
+  # TODO(ekaos): replace with integrationTests
+  # passthru.tests.clatd = nixosTests.clatd;
 
   meta = {
     description = "464XLAT CLAT implementation for Linux";

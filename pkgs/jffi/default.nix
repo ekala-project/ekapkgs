@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   ant,
-  jdk,
+  java,
   libffi,
   pkg-config,
   texinfo,
@@ -23,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     ant
-    jdk
+    java
     pkg-config
     texinfo
     stripJavaArchivesHook

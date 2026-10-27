@@ -4,7 +4,7 @@
   fetchzip,
   ant,
   stripJavaArchivesHook,
-  jdk,
+  java,
   makeWrapper,
 }:
 
@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     ant
     stripJavaArchivesHook
-    jdk
+    java
     makeWrapper
   ];
 
@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     install -Dm644 dist/lib/calcoo.jar -t $out/share/calcoo
 
-    makeWrapper ${jdk}/bin/java $out/bin/calcoo \
+    makeWrapper ${java}/bin/java $out/bin/calcoo \
         --add-flags "-jar $out/share/calcoo/calcoo.jar"
 
     runHook postInstall
@@ -51,6 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://calcoo.sourceforge.net/";
     license = lib.licenses.gpl2Plus;
     mainProgram = "calcoo";
-    inherit (jdk.meta) platforms;
+    inherit (java.meta) platforms;
   };
 })

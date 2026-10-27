@@ -5,8 +5,8 @@
   curl,
   fetchFromGitHub,
   gawk,
-  gnugrep,
-  gnused,
+  grep,
+  sed,
   installShellFiles,
   makeWrapper,
   nix-update-script,
@@ -67,8 +67,8 @@ stdenv.mkDerivation (finalAttrs: {
       --prefix PATH : ${
         lib.makeBinPath [
           coreutils
-          gnugrep
-          gnused
+          grep
+          sed
         ]
       }
 

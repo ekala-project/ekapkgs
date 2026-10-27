@@ -24,7 +24,6 @@
   libpq,
 
   # tests
-  nixosTests,
   testers,
   kea,
 }:
@@ -108,13 +107,13 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   passthru.tests = {
-    kea = nixosTests.kea;
-    prefix-delegation = nixosTests.systemd-networkd-ipv6-prefix-delegation;
+    # kea = nixosTests.kea;
+    # prefix-delegation = nixosTests.systemd-networkd-ipv6-prefix-delegation;
     networking-scripted = lib.recurseIntoAttrs {
-      inherit (nixosTests.networking.scripted) dhcpDefault dhcpSimple dhcpOneIf;
+      # inherit (nixosTests.networking.scripted) dhcpDefault dhcpSimple dhcpOneIf;
     };
     networking-networkd = lib.recurseIntoAttrs {
-      inherit (nixosTests.networking.networkd) dhcpDefault dhcpSimple dhcpOneIf;
+      # inherit (nixosTests.networking.networkd) dhcpDefault dhcpSimple dhcpOneIf;
     };
 
     version = testers.testVersion {

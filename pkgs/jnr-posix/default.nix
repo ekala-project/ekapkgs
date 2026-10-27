@@ -2,7 +2,7 @@
   stdenv,
   lib,
   fetchFromGitHub,
-  jdk,
+  java,
   maven,
   which,
 }:
@@ -22,7 +22,7 @@ let
     inherit src version;
 
     nativeBuildInputs = [
-      jdk
+      java
       maven
     ];
 

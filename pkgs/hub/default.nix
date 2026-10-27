@@ -8,7 +8,6 @@
   installShellFiles,
   makeWrapper,
   unixtools,
-  nixosTests,
 }:
 
 buildGoModule (finalAttrs: {
@@ -75,7 +74,8 @@ buildGoModule (finalAttrs: {
     git
   ];
 
-  passthru.tests = { inherit (nixosTests) hub; };
+  # TODO(ekaos): replace with integrationTests
+  # passthru.tests = { inherit (nixosTests) hub; };
 
   meta = {
     description = "Command-line wrapper for git that makes you better at GitHub";

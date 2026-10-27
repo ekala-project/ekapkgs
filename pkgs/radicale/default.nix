@@ -1,7 +1,6 @@
 {
   fetchFromGitHub,
   lib,
-  nixosTests,
   python3,
 }:
 
@@ -46,7 +45,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   disabledTests = [ "delay" ];
 
   passthru.tests = {
-    inherit (nixosTests) radicale;
+    # inherit (nixosTests) radicale;
   };
 
   meta = {
