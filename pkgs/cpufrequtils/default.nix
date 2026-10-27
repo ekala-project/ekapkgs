@@ -31,10 +31,11 @@ stdenv.mkDerivation (finalAttrs: {
     "confdir=$(out)/etc/"
   ];
 
+  nativeBuildInputs = [ gettext ];
+
   buildInputs = [
     stdenv.cc.libc.linuxHeaders
     libtool
-    gettext
   ];
 
   outputs = [

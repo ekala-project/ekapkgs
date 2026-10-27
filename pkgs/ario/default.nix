@@ -58,5 +58,7 @@ stdenv.mkDerivation rec {
     homepage = "https://ario-player.sourceforge.net/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
+    # TODO: needs avahi library (libavahi-client) which is not yet packaged
+    broken = true;
   };
 }

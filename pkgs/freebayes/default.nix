@@ -41,5 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     homepage = "https://github.com/freebayes/freebayes";
     platforms = [ "x86_64-linux" ];
+    # Missing tabix.hpp from htslib vendored submodule
+    broken = true;
   };
 })

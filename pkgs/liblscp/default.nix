@@ -32,5 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "LinuxSampler Control Protocol (LSCP) wrapper library";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
+    broken = true; # download.linuxsampler.org DNS is dead
   };
 })

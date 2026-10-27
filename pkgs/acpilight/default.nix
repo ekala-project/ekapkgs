@@ -24,7 +24,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ python3 ];
 
-  makeFlags = [ "DESTDIR=$(out) prefix=" ];
+  makeFlags = [
+    "DESTDIR=$(out)"
+    "prefix="
+  ];
 
   nativeBuildInputs = [
     udevCheckHook

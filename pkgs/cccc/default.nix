@@ -17,10 +17,16 @@ stdenv.mkDerivation (finalAttrs: {
 
   hardeningDisable = [ "format" ];
 
-  buildFlags = [
+  makeFlags = [
     "CCC=c++"
     "LD=c++"
   ];
+
+  buildPhase = ''
+    runHook preBuild
+    make ''${makeFlags[@]} cccc
+    runHook postBuild
+  '';
 
   installPhase = ''
     runHook preInstall

@@ -25,8 +25,10 @@ stdenv.mkDerivation (finalAttrs: {
     done
   '';
 
-  buildInputs = [ perlPackages.perl ];
-  propagatedBuildInputs = with perlPackages; [
+  nativeBuildInputs = [ perlPackages.perl ];
+
+  buildInputs = with perlPackages; [
+    perl
     CryptX
     Error
     MailDKIM

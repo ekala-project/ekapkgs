@@ -105,5 +105,7 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.zlib;
     platforms = lib.platforms.unix;
     mainProgram = "makensis";
+    # Source extraction issue — missing bzip2 sources
+    broken = true;
   };
 })

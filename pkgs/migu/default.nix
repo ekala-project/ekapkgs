@@ -41,5 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     description = "High-quality Japanese font based on modified M+ fonts and IPA fonts";
     homepage = "http://mix-mplus-ipa.osdn.jp/migu/";
     license = lib.licenses.ipa;
+    # OSDN mirror is dead
+    broken = true;
   };
 })

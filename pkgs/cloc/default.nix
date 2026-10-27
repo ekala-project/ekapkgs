@@ -21,7 +21,10 @@ stdenv.mkDerivation (finalAttrs: {
     sourceRoot=$(echo */Unix)
   '';
 
-  nativeBuildInputs = [ makeWrapper ];
+  nativeBuildInputs = [
+    makeWrapper
+    perlPackages.perl
+  ];
   buildInputs = with perlPackages; [
     perl
     AlgorithmDiff

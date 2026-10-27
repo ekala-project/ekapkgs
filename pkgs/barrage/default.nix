@@ -20,6 +20,8 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail "void refresh_screen()" "void refresh_screen(SDL_Surface *screen)"
   '';
 
+  nativeBuildInputs = [ sdl12-compat ];
+
   buildInputs = [
     sdl12-compat
     SDL_mixer

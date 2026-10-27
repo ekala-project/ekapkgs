@@ -32,9 +32,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     autoreconfHook
+    perl
   ];
-
-  buildInputs = [ perl ];
 
   postInstall = ''
     cp -r skeletons/standard-modules $out/share/asn1c

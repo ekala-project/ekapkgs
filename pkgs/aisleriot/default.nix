@@ -41,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     librsvg
     guile
     libcanberra-gtk3
+    libxml2
   ];
 
   prePatch = ''

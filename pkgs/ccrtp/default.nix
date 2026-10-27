@@ -35,5 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.gnu.org/software/ccrtp/";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.linux;
+    # Uses removed OpenSSL 1.x APIs (HMAC_CTX_init, HMAC_CTX_cleanup)
+    broken = lib.versionAtLeast openssl.version "3";
   };
 })

@@ -90,5 +90,7 @@ stdenv.mkDerivation rec {
     homepage = "https://boinc.berkeley.edu/";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.linux;
+    # TODO: needs wxwidgets_3_2 which is not yet available
+    broken = wxwidgets_3_2 == null;
   };
 }

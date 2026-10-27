@@ -28,5 +28,7 @@ stdenv.mkDerivation rec {
     homepage = "https://anthy.osdn.jp/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
+    # OSDN mirror is dead
+    broken = true;
   };
 }

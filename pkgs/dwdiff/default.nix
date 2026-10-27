@@ -16,10 +16,12 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-3xb+xE3LRn1lpCRqQ2KPk3QZlsF3PpMLkMbd4i3Vjgo=";
   };
 
-  nativeBuildInputs = [ pkg-config ];
+  nativeBuildInputs = [
+    pkg-config
+    gettext
+  ];
 
   buildInputs = [
-    gettext
     icu
   ];
 

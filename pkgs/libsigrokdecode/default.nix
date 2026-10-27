@@ -23,6 +23,7 @@ stdenv.mkDerivation {
   nativeBuildInputs = [
     pkg-config
     autoreconfHook
+    python3
   ];
   buildInputs = [
     glib

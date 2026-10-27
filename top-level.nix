@@ -24,6 +24,9 @@ final: prev: {
     configureFlags = (old.configureFlags or [ ]) ++ [ "--disable-werror" ];
   });
 
+  # Restore C++ doctest — haskell-pkgs shadows it with the Haskell doctest tool (v0.24),
+  # but our C++ packages (wayfire, inja, xeus, etc.) need the C++ testing framework (v2.5)
+  doctest = final.callPackage ((import ./pins.nix).corepkgs + "/pkgs/doctest") { };
   jre = final.java;
   qt5Packages = final.qt5;
   libsForQt5 = final.qt5;
@@ -37,9 +40,6 @@ final: prev: {
   libfm-extra = final.libfm.override { extraOnly = true; };
   # openal is an alias for openal-soft
   openal = final.openal-soft;
-
-  # Rust infrastructure aliases
-  rustPlatform = final.rust.packages.stable.rustPlatform;
 
   # dnsutils is just the utils output of bind
   dnsutils = final.bind.utils;
@@ -171,7 +171,6 @@ final: prev: {
 
   # libjpeg8: libjpeg_turbo with JPEG 8 API/ABI compatibility
   libjpeg8 = final.libjpeg_turbo.jpeg8;
-
   # evolution-data-server GTK4 variant
   evolution-data-server-gtk4 = final.evolution-data-server.override {
     withGtk3 = false;
@@ -305,5 +304,12 @@ final: prev: {
     clipboard-indicator = final.gnome-shell-extension-clipboard-indicator;
     kimpanel = final.gnome-shell-extension-kimpanel;
     freon = final.gnome-shell-extension-freon;
+  };
+
+  # Override lttng-ust to disable man pages — the asciidoc package provides
+  # hasciidoc (Haskell), not the asciidoc binary that lttng-ust expects
+  lttng-ust = prev.lttng-ust.override {
+    asciidoc = null;
+    xmlto = null;
   };
 }

@@ -2,16 +2,11 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
-  pkg-config,
-  libpostal ? null,
 }:
 
 buildGoModule (finalAttrs: {
   pname = "amass";
   version = "5.1.1";
-
-  nativeBuildInputs = [ pkg-config ];
-  buildInputs = lib.optionals (libpostal != null) [ libpostal ];
 
   src = fetchFromGitHub {
     owner = "owasp-amass";
@@ -21,6 +16,10 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = "sha256-3MpE61ixMps4IRIZkqjzG225zk4fsERkssoNoItUXbQ=";
+
+  # TODO: libpostal is not yet available in ekapkgs
+  excludedPackages = [ "internal/libpostal" ];
+  tags = [ "nolibpostal" ];
 
   meta = {
     description = "In-Depth DNS Enumeration and Network Mapping";

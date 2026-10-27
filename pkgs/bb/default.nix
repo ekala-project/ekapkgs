@@ -25,7 +25,11 @@ stdenv.mkDerivation (finalAttrs: {
     ./included-files-updates.diff
   ];
 
-  nativeBuildInputs = [ autoreconfHook ];
+  nativeBuildInputs = [
+    autoreconfHook
+    aalib
+    libmikmod
+  ];
 
   buildInputs = [
     aalib

@@ -90,5 +90,7 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/TecharoHQ/anubis/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "anubis";
+    # TODO: needs npmHooks for offline npm deps
+    broken = npmHooks == null;
   };
 })

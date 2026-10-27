@@ -24,11 +24,15 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   makeFlags = [
-    "-f Makefile.Linux"
+    "-f"
+    "Makefile.Linux"
     "INSTALL=install"
     "DESTDIR=${placeholder "out"}"
+    "prefix=/"
     "CC:=$(CC)"
   ];
+
+  enableParallelInstalling = false;
 
   postInstall = ''
     rm -fr $out/var

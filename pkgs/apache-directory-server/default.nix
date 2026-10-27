@@ -31,5 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://directory.apache.org/apacheds/";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
+    # Source no longer available from Apache mirrors
+    broken = true;
   };
 })

@@ -26,5 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://openlab.ring.gr.jp/efont/dist/tools/bdfresize/";
     license = lib.licenses.gpl2Only;
     mainProgram = "bdfresize";
+    # openlab.ring.gr.jp is dead
+    broken = true;
   };
 })

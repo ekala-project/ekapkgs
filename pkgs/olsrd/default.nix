@@ -30,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
   # boolean type guards in olsr_types.h are incompatible with C23
   env.NIX_CFLAGS_COMPILE = "-std=gnu17";
 
-  buildInputs = [
+  nativeBuildInputs = [
     bison
     flex
   ];

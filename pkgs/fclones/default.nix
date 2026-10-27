@@ -27,6 +27,8 @@ rustPlatform.buildRustPackage (finalAttrs: {
   checkFlags = [
     # ofborg sometimes fails with "Resource temporarily unavailable"
     "--skip=cache::test::return_none_if_different_transform_was_used"
+    # reflink tests fail in sandbox
+    "--skip=reflink::test::test_reflink_command"
   ];
 
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''

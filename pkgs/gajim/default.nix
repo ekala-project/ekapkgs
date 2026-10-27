@@ -128,5 +128,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
     mainProgram = "gajim";
+    # fetchFromGitLab API incompatibility with dev.gajim.org
+    broken = true;
   };
 })

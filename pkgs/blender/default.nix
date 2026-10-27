@@ -271,5 +271,7 @@ stdenv.mkDerivation (finalAttrs: {
       "x86_64-linux"
     ];
     mainProgram = "blender";
+    # TODO: missing OpenShadingLanguage dependency
+    broken = true;
   };
 })

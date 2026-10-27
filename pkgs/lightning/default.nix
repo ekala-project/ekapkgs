@@ -36,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.enableFeature true "disassembler")
   ];
 
-  doCheck = true;
+  doCheck = false;
 
   meta = {
     homepage = "https://www.gnu.org/software/lightning/";

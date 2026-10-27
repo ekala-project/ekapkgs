@@ -29,8 +29,9 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [
     autoreconfHook
-    openssl
   ];
+
+  buildInputs = [ openssl ];
 
   configureFlags = [ "--with-openssl=${openssl.dev}" ];
 

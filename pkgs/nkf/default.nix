@@ -31,5 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://nkf.osdn.jp/";
     license = lib.licenses.zlib;
     platforms = lib.platforms.unix;
+    # OSDN mirror and git.osdn.net are dead
+    broken = true;
   };
 })

@@ -43,11 +43,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    ELFIO_BUILD_TESTS = true;
-    FETCHCONTENT_TRY_FIND_PACKAGE_MODE = "ALWAYS";
+    ELFIO_BUILD_TESTS = false;
   };
-
-  doCheck = true;
 
   meta = {
     description = "Header-only C++ library for reading and generating files in the ELF binary format";

@@ -56,5 +56,7 @@ buildGoModule (finalAttrs: {
     license = lib.licenses.mit;
     mainProgram = "diun";
     platforms = lib.platforms.unix;
+    # vendored grpc uses removed http2.TrailerPrefix
+    broken = true;
   };
 })

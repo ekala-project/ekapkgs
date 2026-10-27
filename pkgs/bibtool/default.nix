@@ -15,7 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   # Perl for running test suite.
-  buildInputs = [ perl ];
+  nativeCheckInputs = [ perl ];
 
   # Uses K&R function definitions, which are not supported by GCC >= 14.
   # https://github.com/ge-ne/bibtool/pull/96

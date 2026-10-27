@@ -23,6 +23,7 @@ stdenv.mkDerivation {
     autoreconfHook
     pkg-config
     texinfo # for makeinfo
+    guile
   ];
   buildInputs = [
     guile

@@ -50,8 +50,14 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
+  configureFlags = [
+    "--enable-force-shutdown"
+    "--enable-ignore-busy"
+    "--with-libtirpc"
+  ];
+
   preConfigure = ''
-    configureFlags="--enable-force-shutdown --enable-ignore-busy --with-path=$PATH --with-libtirpc"
+    appendToVar configureFlags "--with-path=$PATH"
   ''
   + lib.optionalString (sssd != null) ''
     export sssldir="${sssd}/lib/sssd/modules"

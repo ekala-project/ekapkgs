@@ -7,6 +7,7 @@
   zlib,
   openssl,
   readline,
+  libxml2,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -31,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     openssl
     zlib
     readline
+    libxml2
   ];
 
   meta = {

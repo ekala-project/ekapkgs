@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoconf
     automake
     pkg-config
+    gtk3 # for glib-compile-resources
   ];
   buildInputs = [
     sdl2-compat

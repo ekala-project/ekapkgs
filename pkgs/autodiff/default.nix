@@ -27,10 +27,13 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
-    eigen
-    catch2_3
     python3Packages.pybind11
     python3Packages.setuptools
+  ];
+
+  buildInputs = [
+    eigen
+    catch2_3
   ];
 
   postPatch =

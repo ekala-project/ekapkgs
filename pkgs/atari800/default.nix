@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     autoreconfHook
+    sdl12-compat
   ];
 
   buildInputs = [

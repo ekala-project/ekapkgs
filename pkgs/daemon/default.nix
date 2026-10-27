@@ -19,7 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     "CC=${stdenv.cc.targetPrefix}cc"
   ];
 
-  buildInputs = [ perl ];
+  nativeBuildInputs = [ perl ];
 
   meta = {
     description = "Turns other processes into daemons";

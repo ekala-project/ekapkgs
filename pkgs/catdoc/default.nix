@@ -21,6 +21,8 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
+  enableParallelInstalling = false;
+
   preInstall = ''
     rm -v INSTALL
   '';

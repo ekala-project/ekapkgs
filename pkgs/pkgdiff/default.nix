@@ -18,8 +18,10 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-/xhORi/ZHC4B2z6UYPOvDzfgov1DcozRjX0K1WYrqXM=";
   };
 
-  buildInputs = [ perl ];
-  nativeBuildInputs = [ makeWrapper ];
+  nativeBuildInputs = [
+    makeWrapper
+    perl
+  ];
 
   dontBuild = true;
 

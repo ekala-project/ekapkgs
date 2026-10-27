@@ -4,6 +4,7 @@
   fetchFromGitHub,
   cmake,
   doctest,
+  gettext,
   meson,
   ninja,
   pkg-config,
@@ -51,6 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
+    gettext
     meson
     meson.configurePhaseHook
     ninja
@@ -79,7 +81,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   propagatedBuildInputs = [
     wf-config
-    wlroots
+    wlroots.v0_20
     wayland
     cairo
     pango
@@ -96,7 +98,8 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   mesonFlags = [
-    "--sysconfdir /etc"
+    "--sysconfdir"
+    "/etc"
     (lib.mesonEnable "wf-touch:tests" false)
   ];
 

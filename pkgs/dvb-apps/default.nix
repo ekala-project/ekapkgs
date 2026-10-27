@@ -49,7 +49,7 @@ stdenv.mkDerivation {
     })
   ];
 
-  buildInputs = [ perl ];
+  nativeBuildInputs = [ perl ];
 
   installFlags = [ "prefix=$(out)" ];
 

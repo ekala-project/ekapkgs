@@ -163,5 +163,7 @@ stdenv.mkDerivation rec {
     homepage = "https://awesomewm.org/";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
+    # TODO: needs lua with lgi module for cmake build check
+    broken = true;
   };
 }

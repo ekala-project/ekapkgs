@@ -41,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     autoreconfHook
+    gtk3 # for AM_GLIB_GNU_GETTEXT m4 macro
     intltool
     makeWrapper
     pkg-config

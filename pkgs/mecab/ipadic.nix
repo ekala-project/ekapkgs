@@ -17,9 +17,11 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "taku910";
     repo = "mecab";
     rev = "2fd29256c6d5e1b10211cac838069ee9ede8c77a";
-    hash = "sha256-FKRm4bIBhmE4gafg9JeMnpjXbAu4c7l7XIJVbnsRVi8=";
+    hash = "sha256-zsTAs+nOmQ8G3QjU57upbBuDxKFIZGqD8X0uLW44W5M=";
     rootDir = "mecab-ipadic";
   };
+
+  sourceRoot = "${finalAttrs.src.name}/mecab-ipadic";
 
   buildInputs = [ mecab-nodic ];
 
