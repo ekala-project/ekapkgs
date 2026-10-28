@@ -6,34 +6,34 @@
   gnutls,
   liburcu,
   lmdb,
-  libcap_ng ? null,
-  libidn,
+  libcap_ng,
+  libidn2 ? null,
   libunistring,
-  systemd ? null,
+  systemdLibs,
   nettle,
   libedit,
   zlib,
-  libiconv ? null,
-  libintl ? null,
-  libmaxminddb ? null,
-  libbpf ? null,
+  libiconv,
+  libintl,
+  libmaxminddb,
+  libbpf,
   nghttp2,
-  libmnl ? null,
-  ngtcp2-gnutls ? null,
+  libmnl,
+  ngtcp2-gnutls,
   xdp-tools ? null,
-  fstrm ? null,
-  protobufc ? null,
-  sphinx ? null,
+  fstrm,
+  protobufc,
   autoreconfHook,
+  tzdata,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "knot-dns";
-  version = "3.5.6";
+  version = "3.6.1";
 
   src = fetchurl {
     url = "https://knot-dns.nic.cz/release/knot-${finalAttrs.version}.tar.xz";
-    sha256 = "8e2dde44c97f8a63ec5e6c11db26099acd5341286af5b6be900b62ccade68898";
+    sha256 = "9af5818f6b53f8a387e013676a308d5c932bdb469d47f1ca926e1842badea75e";
   };
 
   outputs = [
@@ -46,49 +46,50 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-configdir=/etc/knot"
     "--with-rundir=/run/knot"
     "--with-storage=/var/lib/knot"
-  ]
-  ++ lib.optionals (fstrm != null && protobufc != null) [
     "--with-module-dnstap"
     "--enable-dnstap"
+    "--without-xdp"
   ];
 
   patches = [
+    # Don't try to create directories like /var/lib/knot at build time.
+    # They are later created from NixOS itself.
     ./dont-create-run-time-dirs.patch
     ./runtime-deps.patch
   ];
 
   nativeBuildInputs = [
     pkg-config
+    protobufc # dnstap support
     autoreconfHook
-  ]
-  ++ lib.optionals (protobufc != null) [ protobufc ]
-  ++ lib.optionals (sphinx != null) [ sphinx ];
+    tzdata # tests/contrib/test_time
+  ];
 
   buildInputs = [
     gnutls
     liburcu
-    libidn.v2
+    libidn2
     libunistring
     nettle
     libedit
+    libiconv
     lmdb
-    nghttp2
+    libintl
+    nghttp2 # DoH support in kdig
+    ngtcp2-gnutls # DoQ support in kdig (and elsewhere but not much use there yet)
+    libmaxminddb # optional for geoip module (it's tiny)
+    # without sphinx &al. for developer documentation
+    fstrm
+    protobufc # dnstap support
   ]
-  ++ lib.optionals (libiconv != null) [ libiconv ]
-  ++ lib.optionals (libintl != null) [ libintl ]
-  ++ lib.optionals (ngtcp2-gnutls != null) [ ngtcp2-gnutls ]
-  ++ lib.optionals (libmaxminddb != null) [ libmaxminddb ]
-  ++ lib.optionals (fstrm != null) [ fstrm ]
-  ++ lib.optionals (protobufc != null) [ protobufc ]
-  ++ lib.optionals stdenv.hostPlatform.isLinux (
-    lib.filter (x: x != null) [
-      libcap_ng
-      systemd
-      xdp-tools
-      libbpf
-      libmnl
-    ]
-  );
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
+    libcap_ng
+    systemdLibs
+    xdp-tools
+    libbpf
+    libmnl # XDP support (it's Linux kernel API)
+  ]
+  ++ lib.optional stdenv.hostPlatform.isDarwin zlib; # perhaps due to gnutls
 
   strictDeps = true;
 
@@ -97,16 +98,32 @@ stdenv.mkDerivation (finalAttrs: {
     "-DNDEBUG"
   ];
 
+  __darwinAllowLocalNetworking = true;
+
   doCheck = true;
-  checkFlags = [ "V=1" ];
+  checkFlags = [ "V=1" ]; # verbose output in case some test fails
+  doInstallCheck = true;
 
   postInstall = ''
     rm -r "$out"/lib/*.la
   '';
 
+  passthru = {
+    # TODO(ekaos): replace with integrationTests
+    # tests = {
+    #   inherit knot-resolver_5;
+    # }
+    # // lib.optionalAttrs stdenv.hostPlatform.isLinux {
+    #   inherit knot-resolver-manager_6;
+    #   inherit (nixosTests) knot kea;
+    #   prometheus-exporter = nixosTests.prometheus-exporters.knot;
+    # };
+  };
+
   meta = {
     description = "Authoritative-only DNS server from .cz domain registry";
     homepage = "https://knot-dns.cz";
+    changelog = "https://gitlab.nic.cz/knot/knot-dns/-/releases/v${finalAttrs.version}";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
     mainProgram = "knotd";
