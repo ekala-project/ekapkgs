@@ -5,6 +5,7 @@
   cmake,
   python3,
   removeReferencesTo,
+
   enableModTool ? true,
 }:
 
@@ -20,10 +21,6 @@ stdenv.mkDerivation (finalAttrs: {
     fetchSubmodules = true;
   };
 
-  cmakeEntries = {
-    ENABLE_MODTOOL = enableModTool;
-  };
-
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
@@ -32,16 +29,24 @@ stdenv.mkDerivation (finalAttrs: {
     removeReferencesTo
   ];
 
+  cmakeEntries = {
+    ENABLE_MODTOOL = enableModTool;
+  };
+
+  doCheck = true;
+
+  # Don't embed the path to stdenv.cc in the output, see:
+  #
+  # - https://github.com/gnuradio/volk/blob/v3.2.0/lib/constants.c.in#L37-L41
+  # - https://github.com/gnuradio/volk/blob/v3.2.0/lib/CMakeLists.txt#L403-L405
   postInstall = ''
     remove-references-to -t ${stdenv.cc} $(readlink -f "''${!outputLib}"/lib/libvolk${stdenv.hostPlatform.extensions.sharedLibrary})
   '';
 
-  doCheck = true;
-
   meta = {
     homepage = "http://libvolk.org/";
     description = "Vector Optimized Library of Kernels";
-    license = lib.licenses.gpl3Plus;
+    license = lib.licenses.lgpl3Plus;
     platforms = lib.platforms.all;
   };
 })
