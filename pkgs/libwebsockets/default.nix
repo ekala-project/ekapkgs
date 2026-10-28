@@ -44,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     DISABLE_WERROR = true;
     LWS_BUILD_HASH = "no_hash";
     LWS_WITHOUT_TESTAPPS = true;
+    LWS_WITH_MINIMAL_EXAMPLES = false;
   };
 
   cmakeFlags = (
