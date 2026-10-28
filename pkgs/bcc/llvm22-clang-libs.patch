@@ -1,0 +1,32 @@
+--- a/cmake/clang_libs.cmake
++++ b/cmake/clang_libs.cmake
+@@ -60,6 +60,29 @@
+   list(APPEND clang_libs ${libclangAPINotes})
+ endif()
+
++if (${LLVM_PACKAGE_VERSION} VERSION_EQUAL 22 OR ${LLVM_PACKAGE_VERSION} VERSION_GREATER 22)
++  find_library(libclangOptions NAMES clangOptions clang-cpp HINTS ${CLANG_SEARCH})
++  if(libclangOptions)
++    list(APPEND clang_libs ${libclangOptions})
++  endif()
++  find_library(libclangAnalysisLifetimeSafety NAMES clangAnalysisLifetimeSafety clang-cpp HINTS ${CLANG_SEARCH})
++  if(libclangAnalysisLifetimeSafety)
++    list(APPEND clang_libs ${libclangAnalysisLifetimeSafety})
++  endif()
++  find_library(libclangFormat NAMES clangFormat clang-cpp HINTS ${CLANG_SEARCH})
++  if(libclangFormat)
++    list(APPEND clang_libs ${libclangFormat})
++  endif()
++  find_library(libclangToolingCore NAMES clangToolingCore clang-cpp HINTS ${CLANG_SEARCH})
++  if(libclangToolingCore)
++    list(APPEND clang_libs ${libclangToolingCore})
++  endif()
++  find_library(libclangToolingInclusions NAMES clangToolingInclusions clang-cpp HINTS ${CLANG_SEARCH})
++  if(libclangToolingInclusions)
++    list(APPEND clang_libs ${libclangToolingInclusions})
++  endif()
++endif()
++
+ list(APPEND clang_libs
+   ${libclangBasic})
+ endif()
