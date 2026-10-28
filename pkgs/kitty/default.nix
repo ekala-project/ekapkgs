@@ -2,7 +2,6 @@
   lib,
   stdenv,
   fetchFromGitHub,
-  fetchurl,
   replaceVars,
   python3Packages,
   libunistring,
@@ -10,6 +9,7 @@
   fontconfig,
   pkg-config,
   ncurses,
+  imagemagick,
   libstartup_notification,
   libGL,
   libx11,
@@ -22,45 +22,48 @@
   wayland-protocols,
   wayland,
   xxhash,
+  nerd-fonts ? null,
   lcms2,
   librsync,
   openssl,
   installShellFiles,
   dbus,
+  sudo,
   libcanberra,
+  libicns,
   wayland-scanner,
+  libpng,
   python3,
+  zlib,
   simde,
+  bashInteractive,
+  zsh,
+  fish,
   go,
   makeBinaryWrapper,
+  darwin ? null,
   cairo,
+  shader-slang ? null,
 }:
-
-let
-  nerdFontsSymbolsOnly = fetchurl {
-    url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.0/NerdFontsSymbolsOnly.tar.xz";
-    hash = "sha256-t+8ig0YrQ18f6R1yncQS1dvjQmndLH9OHYA+QQXI2IM=";
-  };
-in
 
 with python3Packages;
 buildPythonApplication rec {
   pname = "kitty";
-  version = "0.48.2";
+  version = "0.49.2";
   pyproject = false;
 
   src = fetchFromGitHub {
     owner = "kovidgoyal";
     repo = "kitty";
     tag = "v${version}";
-    hash = "sha256-qNgVPpvMm8Y/nbBjVvWVuZ954ZXIuWmXhldP3w8MBhU=";
+    hash = "sha256-FstfBzwdh1z7Qy9zWDY7L7mpd5bxnypgqEzqeLe16fY=";
   };
 
   goModules =
     (go.v1_26.buildModule {
       pname = "kitty-go-modules";
       inherit src version;
-      vendorHash = "sha256-BZudfNfREwNrgalaimC5Lp+UIdFS+jHFLl9mEXcHYMI=";
+      vendorHash = "sha256-iSPPwwu9jllnIxkQeOlJFdDL4xLUGRP2RMW9DPRY6FQ=";
     }).goModules;
 
   buildInputs = [
@@ -70,8 +73,15 @@ buildPythonApplication rec {
     lcms2
     librsync
     matplotlib
-    openssl.dev
+    openssl
     xxhash
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [
+    libpng
+    python3
+    zlib
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     fontconfig
     libunistring
     libcanberra
@@ -96,11 +106,20 @@ buildPythonApplication rec {
     sphinx
     furo
     sphinx-copybutton
+    sphinx-design
     sphinxext-opengraph
     sphinx-inline-tabs
     go.v1_26
     fontconfig
     makeBinaryWrapper
+  ]
+  ++ lib.optional (shader-slang != null) shader-slang
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [
+    imagemagick
+    libicns # For the png2icns tool.
+    darwin.autoSignDarwinBinariesHook
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
     wayland-scanner
   ];
 
@@ -114,12 +133,27 @@ buildPythonApplication rec {
   ];
 
   patches = [
+    # Gets `test_ssh_shell_integration` to pass for `zsh` when `compinit` complains about
+    # permissions.
     ./zsh-compinit.patch
+
+    # Skip `test_ssh_bootstrap_with_different_launchers` when launcher is `zsh` since it causes:
+    # OSError: master_fd is in error condition
     ./disable-test_ssh_bootstrap_with_different_launchers.patch
+
     (replaceVars ./libxkbcommon-runtime-path.patch {
       libxkbcommon = "${lib.getLib libxkbcommon}/lib/libxkbcommon.so.0";
     })
   ];
+
+  postPatch = lib.optionalString stdenv.hostPlatform.isLinux ''
+    substituteInPlace glfw/x11_init.c \
+      --replace-fail 'libXi.so.6'       '${lib.getLib libxi}/lib/libXi.so.6' \
+      --replace-fail 'libXrandr.so.2'   '${lib.getLib libxrandr}/lib/libXrandr.so.2' \
+      --replace-fail 'libXcursor.so.1'  '${lib.getLib libxcursor}/lib/libXcursor.so.1' \
+      --replace-fail 'libXinerama.so.1' '${lib.getLib libxinerama}/lib/libXinerama.so.1' \
+      --replace-fail 'libXext.so.6'     '${lib.getLib libxext}/lib/libXext.so.6'
+  '';
 
   hardeningDisable = [
     # causes redefinition of _FORTIFY_SOURCE
@@ -130,6 +164,7 @@ buildPythonApplication rec {
     CGO_ENABLED = 0;
     GOFLAGS = "-trimpath";
     GOTOOLCHAIN = "local";
+    FONTCONFIG_FILE = "${fontconfig.out}/etc/fonts/fonts.conf";
   };
 
   configurePhase = ''
@@ -139,44 +174,146 @@ buildPythonApplication rec {
     cp -r --reflink=auto $goModules vendor
   '';
 
-  buildPhase = ''
-    runHook preBuild
+  buildPhase =
+    let
+      commonOptions = ''
+        --update-check-interval=0 \
+        --shell-integration=enabled\ no-rc
+      '';
+      darwinOptions = ''
+        --disable-link-time-optimization \
+        ${commonOptions}
+      '';
+    in
+    ''
+      runHook preBuild
 
-    # Add the nerd font symbols
-    mkdir ./fonts/
-    tar -xf ${nerdFontsSymbolsOnly} -C ./fonts/ --wildcards '*.ttf'
+      # Add the font by hand because fontconfig does not finds it in darwin
+      mkdir ./fonts/
+      ${lib.optionalString (nerd-fonts != null)
+        ''cp "${nerd-fonts.symbols-only}/share/fonts/truetype/NerdFonts/Symbols/SymbolsNerdFontMono-Regular.ttf" ./fonts/''
+      }
 
-    ${python.pythonOnBuildForHost.interpreter} setup.py linux-package \
-    --egl-library='${lib.getLib libGL}/lib/libEGL.so.1' \
-    --startup-notification-library='${libstartup_notification}/lib/libstartup-notification-1.so' \
-    --canberra-library='${libcanberra}/lib/libcanberra.so' \
-    --fontconfig-library='${fontconfig.lib}/lib/libfontconfig.so' \
-    --update-check-interval=0 \
-    --shell-integration=enabled\ no-rc
-    ${python.pythonOnBuildForHost.interpreter} setup.py build-launcher
+      # Skip the NERD font check if nerd-fonts is not available
+      ${lib.optionalString (nerd-fonts == null) ''
+        substituteInPlace setup.py \
+          --replace-fail "add_builtin_fonts(args)" "pass  # add_builtin_fonts(args) - skipped, nerd-fonts not available"
+      ''}
 
-    runHook postBuild
-  '';
+      ${
+        if stdenv.hostPlatform.isDarwin then
+          ''
+            ${python.pythonOnBuildForHost.interpreter} setup.py build ${darwinOptions}
+            make docs
+            ${python.pythonOnBuildForHost.interpreter} setup.py kitty.app ${darwinOptions}
+          ''
+        else
+          ''
+            ${python.pythonOnBuildForHost.interpreter} setup.py linux-package \
+            --egl-library='${lib.getLib libGL}/lib/libEGL.so.1' \
+            --startup-notification-library='${libstartup_notification}/lib/libstartup-notification-1.so' \
+            --canberra-library='${libcanberra}/lib/libcanberra.so' \
+            --fontconfig-library='${fontconfig.lib}/lib/libfontconfig.so' \
+            ${commonOptions}
+            ${python.pythonOnBuildForHost.interpreter} setup.py build-launcher
+          ''
+      }
+      runHook postBuild
+    '';
 
   nativeCheckInputs = [
     pillow
+
+    # Shells needed for shell integration tests
+    bashInteractive
+    zsh
+    fish
+  ]
+  ++ lib.optionals (!stdenv.hostPlatform.isDarwin) [
+    # integration tests need sudo
+    sudo
   ];
 
-  # Skip tests - they require a running terminal and network access
+  # skip failing tests due to darwin sandbox
+  preCheck =
+    lib.optionalString stdenv.hostPlatform.isDarwin ''
+      substituteInPlace kitty_tests/check_build.py \
+        --replace test_macos_dictation_forwarding no_test_macos_dictation_forwarding
+
+      substituteInPlace kitty_tests/file_transmission.py \
+        --replace test_transfer_send dont_test_transfer_send
+
+      substituteInPlace kitty_tests/ssh.py \
+        --replace test_ssh_connection_data no_test_ssh_connection_data \
+        --replace test_ssh_shell_integration no_test_ssh_shell_integration \
+        --replace test_ssh_copy no_test_ssh_copy \
+        --replace test_ssh_env_vars no_test_ssh_env_vars
+
+      substituteInPlace kitty_tests/shell_integration.py \
+        --replace test_fish_integration no_test_fish_integration \
+        --replace test_zsh_integration no_test_zsh_integration
+
+      substituteInPlace kitty_tests/fonts.py \
+        --replace test_fallback_font_not_last_resort no_test_fallback_font_not_last_resort
+
+      # theme collection test starts an http server
+      rm tools/themes/collection_test.go
+      # passwd_test tries to exec /usr/bin/dscl
+      rm tools/utils/passwd_test.go
+    ''
+    + ''
+      # These depend on files that are not available in the sandbox
+      rm tools/utils/machine_id/api_test.go
+
+      # These depend on cgroups and other resources that don't work as the tests expect in the sandbox
+      rm kitty_tests/child.py
+    '';
+
+  checkPhase = ''
+    runHook preCheck
+
+    # Fontconfig error: Cannot load default config file: No such file: (null)
+    export FONTCONFIG_FILE=${fontconfig.out}/etc/fonts/fonts.conf
+    # Required for `test_ssh_shell_integration` to pass.
+    export TERM=kitty
+
+    make test
+    runHook postCheck
+  '';
 
   installPhase = ''
     runHook preInstall
     mkdir -p "$out"
     mkdir -p "$kitten/bin"
+    ${
+      if stdenv.hostPlatform.isDarwin then
+        ''
+          mkdir "$out/bin"
+          ln -s ../Applications/kitty.app/Contents/MacOS/kitty "$out/bin/kitty"
+          ln -s ../Applications/kitty.app/Contents/MacOS/kitten "$out/bin/kitten"
+          cp ./kitty.app/Contents/MacOS/kitten "$kitten/bin/kitten"
+          mkdir "$out/Applications"
+          cp -r kitty.app "$out/Applications/kitty.app"
 
-    cp -r linux-package/{bin,share,lib} "$out"
-    cp linux-package/bin/kitten "$kitten/bin/kitten"
+          installManPage 'docs/_build/man/kitty.1'
+        ''
+      else
+        ''
+          cp -r linux-package/{bin,share,lib} "$out"
+          cp linux-package/bin/kitten "$kitten/bin/kitten"
+        ''
+    }
 
-    # dereference the `kitty` symlink to make sure the actual executable is wrapped
+    # dereference the `kitty` symlink to make sure the actual executable
+    # is wrapped on macOS as well (and not just the symlink)
     wrapProgram $(realpath "$out/bin/kitty") --suffix PATH : "$out/bin:${
-      lib.makeBinPath [
-        ncurses.dev
-      ]
+      lib.makeBinPath (
+        [
+          imagemagick
+          ncurses
+        ]
+        ++ lib.optional (shader-slang != null) shader-slang
+      )
     }"
 
     installShellCompletion --cmd kitty \
@@ -184,8 +321,15 @@ buildPythonApplication rec {
       --fish <("$out/bin/kitty" +complete setup fish2) \
       --zsh  <("$out/bin/kitty" +complete setup zsh)
 
+    terminfo_src=${
+      if stdenv.hostPlatform.isDarwin then
+        ''"$out/Applications/kitty.app/Contents/Resources/terminfo"''
+      else
+        "$out/share/terminfo"
+    }
+
     mkdir -p $terminfo/share
-    mv "$out/share/terminfo" $terminfo/share/terminfo
+    mv "$terminfo_src" $terminfo/share/terminfo
 
     mkdir -p "$out/nix-support"
     echo "$terminfo" >> $out/nix-support/propagated-user-env-packages
@@ -196,7 +340,10 @@ buildPythonApplication rec {
   '';
 
   passthru = {
-    tests = { };
+    # TODO(ekaos): replace with integrationTests
+    # tests = lib.optionalAttrs stdenv.hostPlatform.isLinux {
+    #   default = nixosTests.terminal-emulators.kitty;
+    # };
   };
 
   meta = {
@@ -207,7 +354,7 @@ buildPythonApplication rec {
       "https://sw.kovidgoyal.net/kitty/changelog/"
       "https://github.com/kovidgoyal/kitty/blob/v${version}/docs/changelog.rst"
     ];
-    platforms = lib.platforms.linux;
+    platforms = lib.platforms.darwin ++ lib.platforms.linux;
     mainProgram = "kitty";
   };
 }
