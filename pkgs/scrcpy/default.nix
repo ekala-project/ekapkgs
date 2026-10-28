@@ -1,0 +1,76 @@
+{
+  lib,
+  stdenv,
+  fetchurl,
+  fetchFromGitHub,
+  makeWrapper,
+  meson,
+  ninja,
+  pkg-config,
+  installShellFiles,
+
+  ffmpeg,
+  libusb1,
+  sdl3,
+}:
+
+let
+  version = "4.1";
+  prebuilt_server = fetchurl {
+    name = "scrcpy-server";
+    inherit version;
+    url = "https://github.com/Genymobile/scrcpy/releases/download/v${version}/scrcpy-server-v${version}";
+    hash = "sha256-3qy5ke0lCXFRYP/ceQfke0Fg6zDRVmIX6QR/1biFDK4=";
+  };
+in
+stdenv.mkDerivation (finalAttrs: {
+  pname = "scrcpy";
+  inherit version;
+
+  src = fetchFromGitHub {
+    owner = "Genymobile";
+    repo = "scrcpy";
+    tag = "v${version}";
+    hash = "sha256-x7ICNxR1i3WCPmYLsE/kmQ7vkNL9Be1M4m5SJMiXob4=";
+  };
+
+  nativeBuildInputs = [
+    makeWrapper
+    meson
+    meson.configurePhaseHook
+    ninja
+    pkg-config
+    installShellFiles
+  ];
+
+  buildInputs = [
+    ffmpeg
+    sdl3
+    libusb1
+  ];
+
+  # Manually install the server jar to prevent Meson from "fixing" it
+  preConfigure = ''
+    echo -n > server/meson.build
+  '';
+
+  postInstall = ''
+    mkdir -p "$out/share/scrcpy"
+    ln -s "${prebuilt_server}" "$out/share/scrcpy/scrcpy-server"
+
+    # TODO: android-tools not yet available in ekapkgs for adb wrapping
+  '';
+
+  meta = {
+    description = "Display and control Android devices over USB or TCP/IP";
+    homepage = "https://github.com/Genymobile/scrcpy";
+    changelog = "https://github.com/Genymobile/scrcpy/releases/tag/v${version}";
+    sourceProvenance = with lib.sourceTypes; [
+      fromSource
+      binaryBytecode
+    ];
+    license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
+    mainProgram = "scrcpy";
+  };
+})
