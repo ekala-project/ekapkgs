@@ -13,13 +13,13 @@
   libvorbis,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "timidity";
   version = "2.15.0";
 
   src = fetchurl {
-    url = "mirror://sourceforge/timidity/TiMidity++-${version}.tar.bz2";
-    sha256 = "1xf8n6dqzvi6nr2asags12ijbj1lwk1hgl3s27vm2szib8ww07qn";
+    url = "mirror://sourceforge/timidity/TiMidity++-${finalAttrs.version}.tar.bz2";
+    hash = "sha256-Fh/AOVrxa1H3EXrQB8PkNMglowj6Ka1Etibuj5uxyPU=";
   };
 
   patches = [
@@ -33,6 +33,7 @@ stdenv.mkDerivation rec {
   '';
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     libjack2
     ncurses
@@ -51,13 +52,16 @@ stdenv.mkDerivation rec {
     "oss"
     "alsa"
   ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [
+    "darwin"
+  ]
   ++ lib.optionals enableVorbis [
     "vorbis"
   ];
 
   configureFlags = [
     "--enable-ncurses"
-    ("--enable-audio=" + builtins.concatStringsSep "," enabledOutputModes)
+    ("--enable-audio=" + builtins.concatStringsSep "," finalAttrs.enabledOutputModes)
     "lib_cv_va_copy=yes"
     "lib_cv___va_copy=yes"
   ]
@@ -65,6 +69,15 @@ stdenv.mkDerivation rec {
     "--enable-alsaseq"
     "--with-default-output=alsa"
     "lib_cv_va_val_copy=yes"
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [
+    "lib_cv_va_val_copy=no"
+    "timidity_cv_ccoption_rdynamic=yes"
+    "ac_cv_func_vprintf=yes"
+    "ac_cv_func_popen=yes"
+    "ac_cv_func_vsnprintf=yes"
+    "ac_cv_func_snprintf=yes"
+    "ac_cv_func_open_memstream=yes"
   ];
 
   makeFlags = [
@@ -86,13 +99,19 @@ stdenv.mkDerivation rec {
   # Fix build with gcc15
   env.NIX_CFLAGS_COMPILE = "-std=gnu17";
 
+  # the instruments could be compressed (?)
   postInstall = ''
     mkdir -p $out/share/timidity/;
     cp ${./timidity.cfg} $out/share/timidity/timidity.cfg
     substituteAllInPlace $out/share/timidity/timidity.cfg
     tar --strip-components=1 -xf $instruments -C $out/share/timidity/
-    chmod -Rh u+rwX $out/share/timidity/
+  ''
+  + ''
+    chmod -Rh a+rX $out/share/timidity/
   '';
+
+  # TODO(ekaos): replace with integrationTests
+  # passthru.tests = nixosTests.timidity;
 
   meta = {
     homepage = "https://sourceforge.net/projects/timidity/";
@@ -101,4 +120,4 @@ stdenv.mkDerivation rec {
     platforms = lib.platforms.unix;
     mainProgram = "timidity";
   };
-}
+})
