@@ -10,33 +10,34 @@
   libcap,
   curl,
   which,
-  eventlog ? null,
+  eventlog,
   pkg-config,
   glib,
   hiredis,
-  systemd,
+  systemdLibs,
   perl,
   python3,
-  riemann_c_client ? null,
-  protobufc ? null,
-  paho-mqtt-c ? null,
+  riemann_c_client,
+  protobufc,
+  paho-mqtt-c,
   python3Packages,
-  libnet ? null,
+  libnet,
   json_c,
   libuuid,
-  libivykis ? null,
+  libivykis,
   libxslt,
   docbook_xsl,
   pcre2,
-  mongoc ? null,
-  rabbitmq-c ? null,
-  libesmtp ? null,
-  rdkafka ? null,
+  mongoc,
+  rabbitmq-c,
+  libesmtp,
+  rdkafka,
   gperf,
   withGrpc ? true,
-  grpc ? null,
+  grpc,
   protobuf,
 }:
+
 let
   python-deps =
     ps: with ps; [
@@ -63,6 +64,7 @@ let
     ];
   py = python3.withPackages python-deps;
 in
+
 stdenv.mkDerivation (finalAttrs: {
   pname = "syslog-ng";
   version = "4.12.0";
@@ -85,6 +87,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
     perl
     gperf
+    protobuf
     python3Packages.setuptools
   ];
 
@@ -95,7 +98,7 @@ stdenv.mkDerivation (finalAttrs: {
     eventlog
     glib
     py
-    systemd
+    systemdLibs
     riemann_c_client
     protobufc
     libnet
