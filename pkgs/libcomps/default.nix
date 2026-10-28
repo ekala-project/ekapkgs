@@ -39,7 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   nativeBuildInputs = [
-    check
     cmake
     cmake.configurePhaseHook
     doxygen
@@ -48,6 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
+    check
     expat
     libxml2
     zlib
