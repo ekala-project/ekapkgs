@@ -27,6 +27,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeCheckInputs = [ catch2_3 ];
 
+  cmakeEntries = {
+    FETCHCONTENT_FULLY_DISCONNECTED = true;
+    FETCHCONTENT_SOURCE_DIR_CATCH2 = "${catch2_3.src}";
+  };
+
   doCheck = true;
 
   meta = {
