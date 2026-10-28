@@ -37,6 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   # error: possibly undefined macro: AC_LIB_LINKFLAGS_FROM_LIBS
   preAutoreconf = ''
+    chmod -R u+w m4
     cp ${gettext}/share/gettext/m4/lib-{ld,link,prefix}.m4 m4
   '';
 
