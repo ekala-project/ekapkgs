@@ -17,10 +17,12 @@ stdenv.mkDerivation rec {
 
   patches = [ ./msggen.patch ];
 
-  buildInputs = [
-    opensp
-    perl
-  ];
+  nativeBuildInputs = [ perl ];
+
+  buildInputs = [ opensp ];
+
+  # Prevent 'cd: /homeless-shelter' errors during config.status
+  HOME = "/tmp";
 
   configureFlags = [
     "--enable-spincludedir=${opensp}/include/OpenSP"
