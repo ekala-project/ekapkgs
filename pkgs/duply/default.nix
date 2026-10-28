@@ -8,7 +8,6 @@
   gawk,
   gnupg,
   bash,
-  gnugrep ? grep,
   grep,
   txt2man,
   makeWrapper,
@@ -44,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
           gawk
           gnupg
           bash
-          gnugrep
+          grep
           txt2man
           which
         ]}

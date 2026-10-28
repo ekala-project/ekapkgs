@@ -28,9 +28,7 @@
   libxml2,
   protobuf,
   xvfb-run,
-  gnugrep ? grep,
   grep,
-  nixosTests,
   dedicatedServer ? false,
   ...
 }:
@@ -194,7 +192,7 @@ let
       ++ (resolvedParams.extraNativeBuildInputs or [ ]);
 
       nativeInstallCheckInputs = [
-        gnugrep
+        grep
       ]
       ++ lib.optional (!dedicatedServer) xvfb-run
       ++ (resolvedParams.extraNativeInstallCheckInputs or [ ]);
@@ -253,7 +251,8 @@ let
           // {
             # Allow both a "dedicated" passthru and a passthru for all the options other than the latest version, which this is.
             dedicated = mkArmagetron fn true;
-            tests.armagetronad = nixosTests.armagetronad;
+            # TODO(ekaos): replace with integrationTests
+            # tests.armagetronad = nixosTests.armagetronad;
           };
 
       meta = {

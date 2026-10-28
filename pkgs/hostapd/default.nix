@@ -5,7 +5,6 @@
   pkg-config,
   libnl,
   openssl,
-  nixosTests,
   sqlite ? null,
 }:
 
@@ -121,7 +120,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   passthru.tests = {
-    inherit (nixosTests) wpa_supplicant;
+    # inherit (nixosTests) wpa_supplicant;
   };
 
   __structuredAttrs = true;

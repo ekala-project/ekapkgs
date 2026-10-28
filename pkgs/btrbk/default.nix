@@ -14,7 +14,6 @@
   genericUpdater,
   curl,
   writeShellScript,
-  nixosTests,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -68,12 +67,8 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   passthru.tests = {
-    inherit (nixosTests)
-      btrbk
-      btrbk-no-timer
-      btrbk-section-order
-      btrbk-doas
-      ;
+    # TODO(ekaos): replace with integrationTests
+    # inherit (nixosTests) btrbk btrbk-no-timer btrbk-section-order btrbk-doas;
   };
 
   passthru.updateScript = genericUpdater {

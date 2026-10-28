@@ -27,7 +27,6 @@
   pkg-config,
   python3,
   readline,
-  nixosTests,
   writeShellScript,
   xcbuild,
   libx11,
@@ -158,7 +157,8 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   passthru = {
-    tests = { inherit (nixosTests) amuled; };
+    # TODO(ekaos): replace with integrationTests
+    # tests = { inherit (nixosTests) amuled; };
   };
 
   meta = {

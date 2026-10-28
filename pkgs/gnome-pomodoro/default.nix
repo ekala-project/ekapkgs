@@ -1,0 +1,89 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  replaceVars,
+  meson,
+  ninja,
+  pkg-config,
+  desktop-file-utils,
+  libcanberra,
+  gstreamer,
+  vala,
+  gtk3,
+  gom,
+  sqlite,
+  libxml2,
+  glib,
+  gobject-introspection,
+  json-glib,
+  libpeas,
+  gsettings-desktop-schemas,
+  gettext,
+}:
+stdenv.mkDerivation rec {
+  pname = "gnome-pomodoro";
+  version = "0.28.1";
+
+  src = fetchFromGitHub {
+    owner = "gnome-pomodoro";
+    repo = "gnome-pomodoro";
+    rev = version;
+    hash = "sha256-1G0Sv6uR4rE+/TZqEM57mCdBaXoJNpC0cznY4pnPEa4=";
+  };
+
+  patches = [
+    # Our glib setup hooks moves GSettings schemas to a subdirectory to prevent conflicts.
+    # We need to patch the build script so that the extension can find them.
+    (replaceVars ./fix-schema-path.patch {
+      inherit pname version;
+    })
+  ];
+
+  # Manually compile schemas for package since meson option
+  # gnome.post_install(glib_compile_schemas) used by package tries to compile in
+  # the wrong dir.
+  preFixup = ''
+    glib-compile-schemas ${glib.makeSchemaPath "$out" "${pname}-${version}"}
+  '';
+
+  nativeBuildInputs = [
+    meson
+
+    meson.configurePhaseHook
+    ninja
+    gettext
+    gobject-introspection
+    libxml2
+    pkg-config
+    vala
+    gtk3.wrapGAppsHook
+    desktop-file-utils
+  ];
+
+  buildInputs = [
+    glib
+    gom
+    gsettings-desktop-schemas
+    gstreamer.plugins-base
+    gstreamer.plugins-good
+    gstreamer
+    gtk3
+    json-glib
+    libcanberra
+    libpeas
+    sqlite
+  ];
+
+  meta = {
+    homepage = "https://gnomepomodoro.org/";
+    description = "Time management utility for GNOME based on the pomodoro technique";
+    mainProgram = "gnome-pomodoro";
+    longDescription = ''
+      This GNOME utility helps to manage time according to Pomodoro Technique.
+      It intends to improve productivity and focus by taking short breaks.
+    '';
+    license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.linux;
+  };
+}

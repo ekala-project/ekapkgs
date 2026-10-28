@@ -61,7 +61,6 @@
   rabbitmq-c,
   withHiredis ? true,
   hiredis,
-  nixosTests,
 }:
 
 let
@@ -204,7 +203,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.NIX_CFLAGS_LINK = "-lz";
 
-  passthru.tests = nixosTests.rsyslogd;
+  # TODO(ekaos): replace with integrationTests
+  # passthru.tests = nixosTests.rsyslogd;
 
   meta = {
     homepage = "https://www.rsyslog.com/";

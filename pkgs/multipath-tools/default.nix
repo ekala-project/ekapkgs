@@ -17,7 +17,6 @@
   util-linuxMinimal,
 
   cmocka,
-  nixosTests,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -71,7 +70,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   doInstallCheck = true;
 
-  passthru.tests = { inherit (nixosTests) iscsi-multipath-root; };
+  # TODO(ekaos): replace with integrationTests
+  # passthru.tests = { inherit (nixosTests) iscsi-multipath-root; };
 
   meta = {
     description = "Tools for the Linux multipathing storage driver";

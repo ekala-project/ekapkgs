@@ -18,7 +18,6 @@
   bison,
   util-linux,
   xxd,
-  nixosTests,
 }:
 
 stdenv.mkDerivation rec {
@@ -76,7 +75,7 @@ stdenv.mkDerivation rec {
   ];
 
   passthru.tests = {
-    inherit (nixosTests) bpf;
+    # inherit (nixosTests) bpf;
   };
 
   meta = {

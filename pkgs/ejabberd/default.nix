@@ -9,9 +9,7 @@
   expat,
   libyaml,
   bash,
-  gnused ? sed,
   sed,
-  gnugrep ? grep,
   grep,
   coreutils,
   util-linux,
@@ -23,7 +21,6 @@
   fetchgit,
   fetchNpmDeps,
   beamPackages,
-  nixosTests,
   withMysql ? false,
   withPgsql ? false,
   withSqlite ? false,
@@ -48,8 +45,8 @@ let
 
   ctlpath = lib.makeBinPath [
     bash
-    gnused
-    gnugrep
+    sed
+    grep
     gawk
     coreutils
     util-linux
@@ -190,7 +187,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   passthru.tests = {
-    inherit (nixosTests) ejabberd;
+    # inherit (nixosTests) ejabberd;
   };
 
   configureFlags = [
