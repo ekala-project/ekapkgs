@@ -22,8 +22,10 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeEntries = {
-    UTF8CPP_ENABLE_TESTS = false;
+    UTF8CPP_ENABLE_TESTS = true;
   };
+
+  doCheck = true;
 
   meta = {
     homepage = "https://github.com/nemtrif/utfcpp";
