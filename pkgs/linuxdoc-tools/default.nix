@@ -60,17 +60,20 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     flex
-    which
+    groff
     makeWrapper
+    opensp
+    perl
+    texinfo
+    which
   ];
 
   buildInputs = [
+    flex
     opensp
     groff
     texinfo
     perl
-    sed
-    coreutils
   ];
 
   meta = {
