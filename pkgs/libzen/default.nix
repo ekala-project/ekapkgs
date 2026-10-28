@@ -15,6 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
   configureFlags = [ "--enable-shared" ];
 
   sourceRoot = "ZenLib/Project/GNU/Library";
