@@ -38,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeEntries = {
     BUILD_TESTING = false;
+    QT_MAJOR_VERSION = "6";
   };
 
   meta = {
