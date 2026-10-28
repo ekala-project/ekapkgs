@@ -19,10 +19,11 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
+    gperf
+    guile
     pkg-config
   ];
   buildInputs = [
-    gperf
     guile
     guile-lib
     libffi
