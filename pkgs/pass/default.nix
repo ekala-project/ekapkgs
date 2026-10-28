@@ -24,12 +24,12 @@
 
 assert x11Support -> xclip != null;
 
-stdenv.mkDerivation rec {
-  version = "1.7.4";
+stdenv.mkDerivation (finalAttrs: {
   pname = "password-store";
+  version = "1.7.4";
 
   src = fetchurl {
-    url = "https://git.zx2c4.com/password-store/snapshot/${pname}-${version}.tar.xz";
+    url = "https://git.zx2c4.com/password-store/snapshot/${finalAttrs.pname}-${finalAttrs.version}.tar.xz";
     sha256 = "1h4k6w7g8pr169p5w9n6mkdhxl3pw51zphx7www6pvgjb7vgmafg";
   };
 
@@ -73,7 +73,7 @@ stdenv.mkDerivation rec {
 
     # Ensure all dependencies are in PATH
     wrapProgram $out/bin/pass \
-      --prefix PATH : "${wrapperPath}"
+      --prefix PATH : "${finalAttrs.wrapperPath}"
   '';
 
   postPatch = ''
@@ -107,4 +107,4 @@ stdenv.mkDerivation rec {
       synchronize, generate, and manipulate passwords.
     '';
   };
-}
+})
