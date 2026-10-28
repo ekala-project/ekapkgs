@@ -17,8 +17,15 @@ stdenv.mkDerivation {
   };
   nativeBuildInputs = [
     autoreconfHook
-    help2man
   ];
+
+  # help2man fails to run libtool-wrapped binaries during build;
+  # remove man page generation rules
+  postPatch = ''
+    for f in src/iffjoin/Makefile.am src/iffpp/Makefile.am; do
+      sed -i '/HELP2MAN/d; /man1_MANS/d; /\.1:/d; /EXTRA_DIST.*\.1/d' "$f"
+    done
+  '';
   meta = {
     description = "Parser for the Interchange File Format (IFF)";
     longDescription = ''
