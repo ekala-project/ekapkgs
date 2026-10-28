@@ -1,0 +1,182 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  fetchsvn,
+  cmake,
+  pkg-config,
+  makeWrapper,
+  sdl2-compat,
+  glew,
+  openal,
+  libvorbis,
+  libogg,
+  curl,
+  freetype,
+  libjpeg,
+  libpng,
+  libx11,
+  harfbuzz,
+  mcpp,
+  wiiuse,
+  angelscript,
+  libopenglrecorder ? null,
+  sqlite,
+  libsamplerate,
+  libsquish,
+  shaderc,
+  serverOnly ? false,
+  nameSuffix ? "",
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "supertuxkart${nameSuffix}";
+  version = "1.5";
+
+  src = fetchFromGitHub {
+    owner = "supertuxkart";
+    repo = "stk-code";
+    tag = finalAttrs.version;
+    hash = "sha256-/fp5iqTHVrVcxRqbTy/3r+dp19oUj9MI2JauvtPWTWA=";
+  };
+
+  postPatch = ''
+    # Deletes all bundled libs in stk-code/lib except those
+    # That couldn't be replaced with system packages
+    find lib -mindepth 1 -maxdepth 1 -type d \
+      ${
+        lib.concatMapStringsSep " " (
+          name: "-not -name ${lib.escapeShellArg name}"
+        ) finalAttrs.passthru.bundledLibraries
+      } \
+      -exec rm -rf {} +
+
+    # Allow building with system-installed wiiuse on Darwin
+    substituteInPlace CMakeLists.txt \
+      --replace 'NOT (APPLE OR HAIKU)) AND USE_SYSTEM_WIIUSE' 'NOT (HAIKU)) AND USE_SYSTEM_WIIUSE'
+  '';
+
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+    pkg-config
+    makeWrapper
+  ];
+
+  buildInputs = [
+    curl
+    mcpp
+    angelscript
+    sqlite
+    libsquish
+  ]
+  ++ lib.optionals (!serverOnly) (
+    [
+      shaderc
+      sdl2-compat
+      glew
+      libvorbis
+      libogg
+      freetype
+      libjpeg
+      libpng
+      harfbuzz
+      wiiuse
+    ]
+    ++ lib.optional stdenv.hostPlatform.isLinux libx11
+    ++ lib.optional (stdenv.hostPlatform.isWindows || stdenv.hostPlatform.isLinux) libopenglrecorder
+    ++ lib.optional stdenv.hostPlatform.isLinux openal
+    ++ lib.optional stdenv.hostPlatform.isDarwin libsamplerate
+  );
+
+  cmakeEntries = {
+    SERVER_ONLY = serverOnly;
+    BUILD_RECORDER = stdenv.hostPlatform.isWindows || stdenv.hostPlatform.isLinux;
+    USE_SYSTEM_ANGELSCRIPT = true;
+    CHECK_ASSETS = false;
+    USE_SYSTEM_WIIUSE = true;
+  };
+
+  cmakeFlags = [
+    (lib.cmakeFeature "OpenGL_GL_PREFERENCE" "GLVND")
+  ];
+
+  env.CXXFLAGS = toString [
+    # GCC 13: error: 'snprintf' was not declared in this scope
+    "-include cstdio"
+    # GCC 13: error: 'runtime_error' is not a member of 'std'
+    "-include stdexcept"
+  ];
+
+  # Obtain the assets directly from the fetched store path, to avoid duplicating assets across multiple engine builds
+  preFixup = ''
+    wrapProgram $out/bin/supertuxkart \
+      --set-default SUPERTUXKART_ASSETS_DIR "${finalAttrs.passthru.assets}" \
+      --set-default SUPERTUXKART_DATADIR "$out/share/supertuxkart"
+  ''
+  + lib.optionalString stdenv.hostPlatform.isDarwin ''
+    # patch the copy inside the app bundle so launching via Finder works.
+    cp $out/bin/supertuxkart \
+      $out/Applications/SuperTuxKart.app/Contents/MacOS/supertuxkart
+  '';
+
+  passthru = {
+    assets = fetchsvn {
+      url = "https://svn.code.sf.net/p/supertuxkart/code/stk-assets";
+      rev = "18621";
+      sha256 = "sha256-iqQSezGu0tecA53qhrtYA77SLj28WUUCcL4ZCJbK5C8=";
+      name = "stk-assets";
+    };
+
+    # List of bundled libraries in stk-code/lib to keep
+    # Those are the libraries that cannot be replaced
+    # with system packages.
+    bundledLibraries = [
+      # Bullet 2.87 is incompatible (bullet 2.79 needed whereas 2.87 is packaged)
+      # The api changed in a lot of classes, too much work to adapt
+      "bullet"
+
+      # Upstream Libenet doesn't yet support IPv6,
+      # So we will use the bundled libenet which
+      # has been fixed to support it.
+      "enet"
+
+      # Internal library of STK, nothing to do about it
+      "graphics_engine"
+
+      # Internal library of STK, nothing to do about it
+      "graphics_utils"
+
+      # Internal library.
+      "simd_wrapper"
+
+      # This irrlicht is bundled with cmake
+      # whereas upstream irrlicht still uses
+      # archaic Makefiles, too complicated to switch to.
+      "irrlicht"
+
+      # No USE_SYSTEM_SHEENBIDI flag upstream
+      "sheenbidi"
+
+      # No USE_SYSTEM_TINYGETTEXT flag upstream
+      "tinygettext"
+
+      # Used on Darwin as a static OpenAL replacement (USE_MOJOAL=ON by default on Apple)
+      "mojoal"
+    ];
+  };
+
+  meta = {
+    description = "3D open-source arcade racer";
+    mainProgram = "supertuxkart";
+    longDescription = ''
+      Karts. Nitro. Action! SuperTuxKart is a 3D open-source arcade racer
+      with a variety of characters, tracks, and modes to play.
+      It aims to be more fun than realistic, and provides an enjoyable experience for all ages.
+    '';
+    homepage = "https://supertuxkart.net/";
+    license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.all;
+    changelog = "https://github.com/supertuxkart/stk-code/blob/${finalAttrs.version}/CHANGELOG.md";
+  };
+})
