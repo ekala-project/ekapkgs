@@ -37,6 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     pkg-config
+    cmake.configurePhaseHook
     cmake
     perl
     bison
