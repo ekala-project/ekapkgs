@@ -19,8 +19,8 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
     libtool
+    perl
   ];
-  buildInputs = [ perl ];
 
   env.NIX_CFLAGS_COMPILE = toString [
     "-Wno-error=format-security"
