@@ -4,7 +4,7 @@
   cunit,
   docbook5,
   fetchFromGitHub,
-  gdal, # TODO: gdal is currently marked broken in ekapkgs
+  gdal,
   geos,
   json_c,
   lib,
@@ -124,5 +124,7 @@ postgresqlBuildExtension (finalAttrs: {
     changelog = "https://git.osgeo.org/postgis/postgis/raw/tag/${finalAttrs.version}/NEWS";
     license = lib.licenses.gpl2Plus;
     inherit (postgresql.meta) platforms;
+    # gdal -> libspatialite -> freexl is broken (minizip ints.h not installed)
+    broken = true;
   };
 })
