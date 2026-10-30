@@ -161,18 +161,18 @@ let
   };
 
   groovy = fetchzip {
-    url = "mirror://apache/groovy/4.0.16/distribution/apache-groovy-binary-4.0.16.zip";
-    hash = "sha256-OfZBiMVrhw6VqHRHCSC7ZV3FiZ26n4+F8hsskk+L6yU=";
+    url = "mirror://apache/groovy/4.0.33/distribution/apache-groovy-binary-4.0.33.zip";
+    hash = "sha256-yoS0MApF99ThEbAj1LQY91cmDcveuU1cSaMSscSb7uk=";
   };
 
   apache_commons_lang = fetchzip {
-    url = "mirror://apache/commons/lang/binaries/commons-lang3-3.14.0-bin.zip";
-    hash = "sha512-eKF1IQ6PDtifb4pMHWQ2SYHIh0HbMi3qpc92lfbOo3uSsFJVR3n7JD0AdzrG17tLJQA4z5PGDhwyYw0rLeLsXw==";
+    url = "mirror://apache/commons/lang/binaries/commons-lang3-3.21.0-bin.zip";
+    hash = "sha256-cquzHkNRL3jpTuLwkqSGZn/8isMXhaSpAdfPh34BaZw=";
   };
 
   apache_commons_text = fetchzip {
-    url = "mirror://apache/commons/text/binaries/commons-text-1.11.0-bin.zip";
-    hash = "sha512-P2IvnrHSYRF70LllTMI8aev43h2oe8lq6rrMYw450PEhEa7OuuCjh1Krnc/A4OqENUcidVAAX5dK1RAsZHh8Dg==";
+    url = "mirror://apache/commons/text/binaries/commons-text-1.15.0-bin.zip";
+    hash = "sha256-hzdSESwd8i2gNjPFsYqtiRuWsOR8mVWUBlKMst4hBt0=";
   };
 in
 stdenv.mkDerivation (
