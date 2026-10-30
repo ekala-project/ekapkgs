@@ -60,6 +60,8 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://projects.gnome.org/gconf/";
     description = "Deprecated system for storing application preferences";
+    # ORBit2 is not available in ekapkgs
+    broken = true;
     platforms = lib.platforms.unix;
   };
 })
