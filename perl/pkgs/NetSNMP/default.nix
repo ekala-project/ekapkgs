@@ -1,6 +1,7 @@
 {
   buildPerlModule,
   fetchurl,
+  fetchpatch,
   fetchpatch2,
   lib,
   stdenv,
