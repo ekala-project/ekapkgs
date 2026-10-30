@@ -1,0 +1,76 @@
+{
+  stdenv,
+  lib,
+  fetchFromGitHub,
+  fetchpatch2,
+  cmake,
+  qt6,
+  poppler,
+  quazip,
+  hunspell,
+  zlib,
+  gtk3,
+  pkg-config,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "texstudio";
+  version = "4.9.5";
+
+  src = fetchFromGitHub {
+    owner = "texstudio-org";
+    repo = "texstudio";
+    tag = finalAttrs.version;
+    hash = "sha256-//UhDSyCFIy/xhOKrTVoZFA0nh6q9xShAI5GxJrNz4w=";
+  };
+
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+    qt6.wrapQtAppsHook
+    gtk3.wrapGAppsHook
+    pkg-config
+  ];
+
+  buildInputs = [
+    hunspell
+    qt6.qt5compat
+    qt6.qtbase
+    qt6.qtsvg
+    qt6.qttools
+    poppler
+    quazip
+    zlib
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [
+    qt6.qtwayland
+  ];
+
+  patches = [
+    (fetchpatch2 {
+      name = "disable-auto-update.patch";
+      url = "https://sources.debian.org/data/main/t/texstudio/4.9.1%2Bds-1/debian/patches/0004-disable-auto-update.patch";
+      hash = "sha256-w4/u8ObJSQqHisZmxMSpJeveE+DJSgLqnfpEnizHsBg=";
+    })
+  ];
+
+  postInstall = lib.optionalString stdenv.hostPlatform.isDarwin ''
+    mkdir -p "$out/Applications"
+    mv "$out/bin/texstudio.app" "$out/Applications"
+    rm -d "$out/bin"
+  '';
+
+  meta = {
+    description = "TeX and LaTeX editor";
+    longDescription = ''
+      Fork of TeXMaker, this editor is a full fledged IDE for
+      LaTeX editing with completion, structure viewer, preview,
+      spell checking and support of any compilation chain.
+    '';
+    homepage = "https://texstudio.org";
+    changelog = "https://github.com/texstudio-org/texstudio/blob/${finalAttrs.version}/utilities/manual/source/CHANGELOG.md";
+    license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.unix;
+    mainProgram = "texstudio";
+  };
+})

@@ -5,15 +5,15 @@
   cmake,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "intel-gmmlib";
-  version = "22.7.2";
+  version = "22.10.2";
 
   src = fetchFromGitHub {
     owner = "intel";
     repo = "gmmlib";
-    tag = "intel-gmmlib-${version}";
-    hash = "sha256-TVravPYbOaZBtS5BepRc316m4uIPm5M1YbDWMV5lW0Y=";
+    tag = "intel-gmmlib-${finalAttrs.version}";
+    hash = "sha256-PhW9lW6vMDXt/HS4HKfsK7/5PMygnIek58Sipiub3vs=";
   };
 
   nativeBuildInputs = [
@@ -21,9 +21,9 @@ stdenv.mkDerivation rec {
     cmake.configurePhaseHook
   ];
 
-  meta = with lib; {
+  meta = {
     homepage = "https://github.com/intel/gmmlib";
-    license = licenses.mit;
+    license = lib.licenses.mit;
     description = "Intel Graphics Memory Management Library";
     longDescription = ''
       The Intel(R) Graphics Memory Management Library provides device specific
@@ -35,4 +35,4 @@ stdenv.mkDerivation rec {
       "i686-linux"
     ];
   };
-}
+})

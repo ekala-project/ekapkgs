@@ -1,0 +1,37 @@
+{
+  lib,
+  stdenv,
+  fetchgit,
+  cmake,
+  qt6,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "qbs";
+  version = "3.3.1";
+
+  src = fetchgit {
+    url = "https://code.qt.io/qbs/qbs.git";
+    tag = "v${finalAttrs.version}";
+    sha256 = "sha256-1W7+CZt1mtx8RdcZxhEhgi6+4/SPQAjic8yYXckBuJg=";
+  };
+
+  dontWrapQtApps = true;
+
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
+
+  buildInputs = [
+    qt6.qtbase
+    qt6.qt5compat
+  ];
+
+  meta = {
+    description = "Tool that helps simplify the build process for developing projects across multiple platforms";
+    homepage = "https://wiki.qt.io/Qbs";
+    license = lib.licenses.lgpl3;
+    platforms = lib.platforms.unix;
+  };
+})

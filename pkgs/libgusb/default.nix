@@ -1,0 +1,102 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  replaceVars,
+  meson,
+  ninja,
+  pkg-config,
+  buildPackages,
+  withIntrospection ?
+    lib.meta.availableOn stdenv.hostPlatform gobject-introspection
+    && stdenv.hostPlatform.emulatorAvailable buildPackages,
+  gobject-introspection,
+  gi-docgen,
+  python3,
+  glib,
+  libusb1,
+  json-glib,
+  vala,
+  hwdata,
+  umockdev,
+}:
+
+let
+  pythonEnv = python3.pythonOnBuildForHost.withPackages (
+    ps: with ps; [
+      setuptools
+    ]
+  );
+in
+stdenv.mkDerivation (finalAttrs: {
+  pname = "gusb";
+  version = "0.4.9";
+
+  outputs = [
+    "bin"
+    "out"
+    "dev"
+  ]
+  ++ lib.optionals withIntrospection [ "devdoc" ];
+
+  src = fetchFromGitHub {
+    owner = "hughsie";
+    repo = "libgusb";
+    tag = finalAttrs.version;
+    hash = "sha256-piIPNLc3deToyQaajXFvM+CKh9ni8mb0P3kb+2RoJOs=";
+  };
+
+  patches = [
+    (replaceVars ./fix-python-path.patch {
+      python = "${pythonEnv}/bin/python3";
+    })
+  ];
+
+  strictDeps = true;
+
+  depsBuildBuild = [
+    pkg-config
+  ];
+
+  nativeBuildInputs = [
+    meson
+    meson.configurePhaseHook
+    ninja
+    pkg-config
+  ]
+  ++ lib.optionals withIntrospection [
+    gobject-introspection
+    gi-docgen
+    vala
+  ];
+
+  propagatedBuildInputs = [
+    glib
+    libusb1
+    json-glib
+  ];
+
+  mesonEntries = {
+    tests = false;
+    docs = withIntrospection;
+    usb_ids = "${hwdata}/share/hwdata/usb.ids";
+    introspection = withIntrospection;
+    vapi = withIntrospection;
+  };
+
+  checkInputs = [
+    umockdev
+  ];
+
+  postFixup = lib.optionalString withIntrospection ''
+    moveToOutput "share/doc" "$devdoc"
+  '';
+
+  meta = {
+    description = "GLib libusb wrapper";
+    mainProgram = "gusbcmd";
+    homepage = "https://github.com/hughsie/libgusb";
+    license = lib.licenses.lgpl21;
+    platforms = lib.platforms.unix;
+  };
+})

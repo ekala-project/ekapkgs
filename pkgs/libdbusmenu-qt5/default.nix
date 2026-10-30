@@ -1,0 +1,39 @@
+{
+  lib,
+  stdenv,
+  fetchgit,
+  cmake,
+  qt5,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "libdbusmenu-qt5";
+  version = "0.9.3+16";
+
+  src = fetchgit {
+    url = "https://git.launchpad.net/ubuntu/+source/libdbusmenu-qt";
+    rev = "import/${finalAttrs.version}.04.20160218-1";
+    hash = "sha256-nXZv1m/dQv8vt+xPS7WTC8nKfbEJ45WtZ8vVBencPg0=";
+  };
+
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
+
+  buildInputs = [ qt5.qtbase ];
+
+  cmakeEntries = {
+    WITH_DOC = false;
+    CMAKE_POLICY_VERSION_MINIMUM = "3.5";
+  };
+
+  dontWrapQtApps = true;
+
+  meta = {
+    homepage = "https://launchpad.net/libdbusmenu-qt";
+    description = "Provides a Qt implementation of the DBusMenu spec";
+    inherit (qt5.qtbase.meta) platforms;
+    license = lib.licenses.lgpl2;
+  };
+})

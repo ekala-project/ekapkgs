@@ -9,6 +9,8 @@
   gnome-common,
   gtk-doc,
   gtk3,
+  gtk3-x11,
+  gtk3' ? (if stdenv.hostPlatform.isDarwin then gtk3-x11 else gtk3),
   libx11,
   libxext,
   libxrender,
@@ -22,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kupferlauncher";
     repo = "keybinder";
-    tag = "keybinder-3.0-v${finalAttrs.version}";
+    rev = "keybinder-3.0-v${finalAttrs.version}";
     sha256 = "196ibn86j54fywfwwgyh89i9wygm4vh7ls19fn20vrnm6ijlzh9r";
   };
 
@@ -39,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    gtk3
+    gtk3'
     libx11
     libxext
     libxrender

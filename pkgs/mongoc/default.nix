@@ -12,15 +12,15 @@
   snappy,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "mongoc";
-  version = "2.5.5";
+  version = "1.30.9";
 
   src = fetchFromGitHub {
     owner = "mongodb";
     repo = "mongo-c-driver";
-    tag = version;
-    hash = "sha256-FO3DltAwJ3LVYmJx+3wo5y3NR8Lex7bFfttahBVrIlA=";
+    tag = finalAttrs.version;
+    hash = "sha256-5msXPEt4a/Q/LDSowf2Eu2HD7ktrTrB9Adi/PtPIs5o=";
   };
 
   nativeBuildInputs = [
@@ -39,7 +39,7 @@ stdenv.mkDerivation rec {
   ];
 
   cmakeEntries = {
-    BUILD_VERSION = "${version}";
+    BUILD_VERSION = finalAttrs.version;
     ENABLE_UNINSTALL = false;
     ENABLE_AUTOMATIC_INIT_AND_CLEANUP = false;
     CMAKE_INSTALL_LIBDIR = "lib";
@@ -57,4 +57,4 @@ stdenv.mkDerivation rec {
     mainProgram = "mongoc-stat";
     platforms = lib.platforms.all;
   };
-}
+})

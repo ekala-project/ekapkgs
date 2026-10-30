@@ -4,14 +4,14 @@
   fetchFromGitHub,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "mxml";
   version = "4.0.6";
 
   src = fetchFromGitHub {
     owner = "michaelrsweet";
     repo = "mxml";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-POenTa+7/JLATEN2cjAVFQ72MdZnS2XVNdHDJPjBBrg=";
   };
 
@@ -25,4 +25,4 @@ stdenv.mkDerivation rec {
     license = lib.licenses.asl20;
     platforms = lib.platforms.all;
   };
-}
+})

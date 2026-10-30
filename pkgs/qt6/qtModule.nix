@@ -34,7 +34,8 @@ stdenv.mkDerivation (
 
     cmakeEntries = {
       CMAKE_SYSTEM_VERSION = "";
-    };
+    }
+    // (args.cmakeEntries or { });
 
     cmakeFlags = [
       "--log-level=STATUS"

@@ -7,8 +7,6 @@
   qmake ? null,
 }:
 
-assert qtbase != null -> qmake != null;
-
 let
   qtVersion = if qtbase != null then lib.versions.major qtbase.version else "5";
 in
@@ -27,8 +25,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     unzip
-    qmake
-  ];
+  ]
+  ++ lib.optional (qmake != null) qmake;
 
   # Make sure that libqscintilla2.so is available in $out/lib since it is expected
   # by some packages such as sqlitebrowser

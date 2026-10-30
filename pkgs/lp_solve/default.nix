@@ -1,32 +1,65 @@
 {
   lib,
   stdenv,
-  fetchurl,
+  fetchFromGitHub,
+  cctools,
+  fixDarwinDylibNames,
+  darwin ? null,
+  replaceVars,
+  buildPackages,
+  binutils,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "lp_solve";
-  version = "5.5.2.11";
+  version = "5.5.2.14";
 
-  src = fetchurl {
-    url = "mirror://sourceforge/project/lpsolve/lpsolve/${version}/lp_solve_${version}_source.tar.gz";
-    sha256 = "sha256-bUq/9cxqqpM66ObBeiJt8PwLZxxDj2lxXUHQn+gfkC8=";
+  src = fetchFromGitHub {
+    owner = "lp-solve";
+    repo = "lp_solve";
+    tag = finalAttrs.version;
+    hash = "sha256-mCYstt0vEGZk7rjcXmxqZjYTviF8xfg1mvA4jqKCYgE=";
   };
+
+  nativeBuildInputs =
+    lib.optionals (!stdenv.hostPlatform.isDarwin) [
+      binutils
+    ]
+    ++ lib.optionals stdenv.hostPlatform.isDarwin [
+      cctools
+      fixDarwinDylibNames
+    ]
+    ++ lib.optionals (stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isAarch64) [
+      darwin.autoSignDarwinBinariesHook
+    ];
 
   env = {
     NIX_CFLAGS_COMPILE = "-Wno-error=implicit-int";
+  }
+  // lib.optionalAttrs (stdenv.hostPlatform.isDarwin && stdenv.hostPlatform.isx86_64) {
+    NIX_LDFLAGS = "-headerpad_max_install_names";
   };
 
   dontConfigure = true;
 
-  buildPhase = ''
-    runHook preBuild
+  patches = [
+    (replaceVars ./0001-fix-cross-compilation.patch {
+      emulator = "${stdenv.hostPlatform.emulator buildPackages}";
+    })
+  ];
 
-    (cd lpsolve55 && bash -x -e ccc)
-    (cd lp_solve  && bash -x -e ccc)
+  buildPhase =
+    let
+      ccc = if stdenv.hostPlatform.isDarwin then "ccc.osx" else "ccc";
+    in
+    ''
+      runHook preBuild
 
-    runHook postBuild
-  '';
+      (cd lpsolve55 && bash -x -e ${ccc})
+      (cd lp_solve  && bash -x -e ${ccc})
+
+      runHook postBuild
+    '';
 
   installPhase = ''
     runHook preInstall
@@ -45,8 +78,8 @@ stdenv.mkDerivation rec {
   meta = {
     description = "Mixed Integer Linear Programming (MILP) solver";
     mainProgram = "lp_solve";
-    homepage = "https://lpsolve.sourceforge.net";
-    license = lib.licenses.gpl2Plus;
+    homepage = "https://github.com/lp-solve/lp_solve";
+    license = lib.licenses.lgpl21;
     platforms = lib.platforms.unix;
   };
-}
+})

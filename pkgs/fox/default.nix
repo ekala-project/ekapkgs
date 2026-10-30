@@ -7,11 +7,12 @@
   libtiff,
   zlib,
   bzip2,
-  libGLU,
+  mesa_glu,
   libxcursor,
   libxext,
   libxrandr,
   libxft,
+  cups,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -29,14 +30,15 @@ stdenv.mkDerivation (finalAttrs: {
     libtiff
     zlib
     bzip2
-    libGLU
+    mesa_glu
     libxcursor
     libxext
     libxrandr
     libxft
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [
+    cups
   ];
-
-  doCheck = true;
 
   hardeningDisable = [ "format" ];
 

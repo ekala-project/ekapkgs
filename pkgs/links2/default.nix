@@ -10,6 +10,7 @@
   libjpeg,
   libtiff,
   librsvg,
+  libavif,
   bzip2,
   zlib,
   xz,
@@ -27,12 +28,15 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-xGMca1oRUnzcPLeHL8I7fyslwrAh1Za+QQ2ttAMV8WY=";
   };
 
+  patches = [ ./gcc-16.patch ];
+
   buildInputs = [
     libev
     librsvg
     libpng
     libjpeg
     libtiff
+    libavif
     openssl
     xz
     bzip2

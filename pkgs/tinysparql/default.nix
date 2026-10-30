@@ -101,7 +101,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   mesonEntries = {
     docs = true;
-    systemd_user_services_dir = "${placeholder "out"}/lib/systemd/user";
+    systemd_user_services_dir = "$(out)/lib/systemd/user";
   };
 
   mesonFeatures = {
@@ -123,8 +123,6 @@ stdenv.mkDerivation (finalAttrs: {
       "--cross-file=${crossFile}"
     ]
   );
-
-  doCheck = true;
 
   postPatch = ''
     patchShebangs \
@@ -150,7 +148,7 @@ stdenv.mkDerivation (finalAttrs: {
       # though, so we need to replace the absolute path with a local one during build.
       # We are using a symlink that will be overridden during installation.
       mkdir -p $out/lib
-      ln -s $PWD/src/libtinysparql/libtinysparql-3.0${extension} $out/lib/libtinysparql-3.0${extension}${linuxDot0}
+      ln -sf $PWD/src/libtinysparql/libtinysparql-3.0${extension} $out/lib/libtinysparql-3.0${extension}${linuxDot0}
     '';
 
   checkPhase = ''

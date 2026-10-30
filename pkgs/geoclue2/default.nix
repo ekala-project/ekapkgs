@@ -70,9 +70,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   mesonEntries = {
-    systemd-system-unit-dir = "${placeholder "out"}/lib/systemd/system";
+    systemd-system-unit-dir = "$(out)/lib/systemd/system";
     demo-agent = false;
-    sysconfdir_install = "${placeholder "out"}/etc";
+    sysconfdir_install = "$(out)/etc";
     dbus-srv-user = "geoclue";
     "3g-source" = false;
     cdma-source = false;
@@ -93,7 +93,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.freedesktop.org/geoclue/geoclue/wikis/home";
     license = lib.licenses.lgpl2Plus;
     platforms = lib.platforms.linux;
-    # TODO: needs avahi library (libavahi-client) which is not yet packaged
-    broken = true;
   };
 })

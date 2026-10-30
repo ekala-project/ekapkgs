@@ -7,12 +7,12 @@
   zlib,
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation (finalAttrs: {
   pname = "xapian";
   version = "1.4.27";
 
   src = fetchurl {
-    url = "https://oligarchy.co.uk/xapian/${version}/xapian-core-${version}.tar.xz";
+    url = "https://oligarchy.co.uk/xapian/${finalAttrs.version}/xapian-core-${finalAttrs.version}.tar.xz";
     hash = "sha256-vLyZz78WCAEZwlcfwpZ5T1Ob1ULKOSbxfCmZYAgwq2E=";
   };
 
@@ -44,4 +44,4 @@ stdenv.mkDerivation rec {
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
   };
-}
+})

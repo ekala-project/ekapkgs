@@ -6,7 +6,7 @@
   aspell,
   pkg-config,
   enchant,
-  isocodes,
+  iso-codes,
   intltool,
   gobject-introspection,
   vala,
@@ -32,18 +32,19 @@ stdenv.mkDerivation (finalAttrs: {
     gobject-introspection
     vala
   ];
+
   buildInputs = [
     aspell
     gtk3
     enchant
-    isocodes
-    vala # for vapigen pkg-config detection
+    iso-codes
   ];
+
   propagatedBuildInputs = [ enchant ];
 
   configureFlags = [
     "--enable-introspection"
-    "--enable-vala"
+    "--disable-vala"
   ];
 
   meta = {

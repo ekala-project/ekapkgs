@@ -1,22 +1,22 @@
 {
   lib,
-  fetchFromGitHub,
-  qt6Packages,
   stdenv,
+  fetchFromGitHub,
   cmake,
-  inotify-tools,
+  pkg-config,
+  sphinx,
+  librsvg,
+  qt6Packages,
   extra-cmake-modules,
   kio,
   kdsingleapplication,
+  inotify-tools,
   libcloudproviders,
   libp11,
-  librsvg,
   libsecret,
   openssl,
   pcre2,
-  pkg-config,
   qtkeychain,
-  sphinx,
   sqlite,
   xdg-utils,
   libsysprof-capture,
@@ -55,6 +55,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
     cmake
+    cmake.configurePhaseHook
     extra-cmake-modules
     librsvg
     sphinx
@@ -87,10 +88,13 @@ stdenv.mkDerivation (finalAttrs: {
     "--suffix PATH : ${lib.makeBinPath [ xdg-utils ]}"
   ];
 
+  cmakeEntries = {
+    BUILD_UPDATER = false;
+    MIRALL_VERSION_SUFFIX = "";
+  };
+
   cmakeFlags = [
-    "-DBUILD_UPDATER=off"
-    "-DCMAKE_INSTALL_LIBDIR=lib" # expected to be prefix-relative by build code setting RPATH
-    "-DMIRALL_VERSION_SUFFIX=" # remove git suffix from version
+    (lib.cmakeFeature "CMAKE_INSTALL_LIBDIR" "lib") # expected to be prefix-relative by build code setting RPATH
   ];
 
   meta = {
