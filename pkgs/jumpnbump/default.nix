@@ -2,7 +2,6 @@
   lib,
   stdenv,
   fetchFromGitLab,
-  fetchzip,
   SDL2,
   SDL2_mixer,
   SDL2_net,
@@ -11,13 +10,6 @@
   python3Packages,
   wrapGAppsHook3,
 }:
-
-let
-  data = fetchzip {
-    url = "https://mirandir.pagesperso-orange.fr/files/additional-levels.tar.xz";
-    sha256 = "167hisscsbldrwrs54gq6446shl8h26qdqigmfg0lq3daynqycg2";
-  };
-in
 
 stdenv.mkDerivation {
   pname = "jumpnbump";
@@ -37,7 +29,11 @@ stdenv.mkDerivation {
     python3Packages.wrapPython
     wrapGAppsHook3
     gobject-introspection
+    SDL2
+    SDL2_mixer
+    SDL2_net
   ];
+
   buildInputs = [
     SDL2
     SDL2_mixer
@@ -47,7 +43,7 @@ stdenv.mkDerivation {
 
   postInstall = ''
     make -C menu PREFIX=$out all install
-    cp -r ${data}/* $out/share/jumpnbump/
+    # additional-levels.tar.xz source (pagesperso-orange.fr) is no longer available
     rm $out/share/applications/jumpnbump-menu.desktop
     sed -i -e 's+Exec=jumpnbump+Exec=jumpnbump-menu+' $out/share/applications/jumpnbump.desktop
   '';
@@ -67,6 +63,7 @@ stdenv.mkDerivation {
     description = "Cute, true multiplayer platform game with bunnies";
     homepage = "https://libregames.gitlab.io/jumpnbump/";
     license = lib.licenses.gpl2Plus;
-    platforms = lib.platforms.unix;
+    platforms = lib.platforms.linux;
+    broken = true; # needs SDL2_net 2.x, we have 3.x (SDL3_net)
   };
 }
