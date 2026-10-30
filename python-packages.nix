@@ -311,6 +311,37 @@ final: prev: {
     };
   };
 
+  pyatspi = final.buildPythonPackage rec {
+    pname = "pyatspi";
+    version = "2.58.1";
+
+    pyproject = false;
+
+    src = final.pkgs.fetchurl {
+      url = "mirror://gnome/sources/pyatspi/${final.pkgs.lib.versions.majorMinor version}/pyatspi-${version}.tar.xz";
+      sha256 = "Px8HmTX5JlhDMQJcdTGFjetCJFyZO2USH09LAeawRTY=";
+    };
+
+    nativeBuildInputs = [
+      final.pkgs.pkg-config
+      final.pkgs.meson
+      final.pkgs.meson.configurePhaseHook
+      final.pkgs.ninja
+    ];
+
+    buildInputs = [
+      final.pkgs.at-spi2-core
+      final.pygobject3
+    ];
+
+    meta = {
+      description = "Python client bindings for D-Bus AT-SPI";
+      homepage = "https://gitlab.gnome.org/GNOME/pyatspi2";
+      license = final.pkgs.lib.licenses.lgpl2Only;
+      platforms = final.pkgs.lib.platforms.unix;
+    };
+  };
+
   # Build boost for this specific Python version (provides libboost_python)
   boost = final.toPythonModule (
     final.pkgs.boost.override {
