@@ -281,6 +281,9 @@ final: prev: {
   zmap-network-scanner = final.zmap;
   yq-mikefarah = final.yq-go;
   cpuid-etallen = final.cpuid;
+  radeontool = final.radeontools;
+  zd1211-firmware = final.zd1211fw;
+  youtube-dl = final.yt-dlp; # youtube-dl is deprecated
 
   # LibreOffice wrapped (libreoffice-unwrapped is auto-called from pkgs/)
   libreoffice = final.callPackage ./pkgs/libreoffice-unwrapped/wrapper.nix {
