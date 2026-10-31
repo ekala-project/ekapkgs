@@ -1,9 +1,9 @@
 {
-  buildPerlPackage,
+  buildPerlModule,
   fetchurl,
   DynaLoaderFunctions,
 }:
-buildPerlPackage {
+buildPerlModule {
   pname = "Devel-CallChecker";
   version = "0.010";
   src = fetchurl {

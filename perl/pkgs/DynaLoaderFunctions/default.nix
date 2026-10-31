@@ -1,5 +1,5 @@
-{ buildPerlPackage, fetchurl }:
-buildPerlPackage {
+{ buildPerlModule, fetchurl }:
+buildPerlModule {
   pname = "DynaLoader-Functions";
   version = "0.004";
   src = fetchurl {
