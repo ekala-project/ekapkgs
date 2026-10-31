@@ -127,7 +127,10 @@ stdenv.mkDerivation (finalAttrs: {
     "--without-rpath"
   ]
   ++ (lib.optional (!enableX11) "--disable-x11")
-  ++ (lib.optional enablePAM "--enable-pam --with-pam_dir=${placeholder "out"}/lib/security");
+  ++ (lib.optionals enablePAM [
+    "--enable-pam"
+    "--with-pam_dir=${placeholder "out"}/lib/security"
+  ]);
 
   preConfigure = ''
     patchShebangs ./doc/html/shtml2html.py
