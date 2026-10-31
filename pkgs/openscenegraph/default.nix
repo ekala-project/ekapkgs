@@ -73,6 +73,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
     cmake
+    cmake.configurePhaseHook
     doxygen
   ];
 
