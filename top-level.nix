@@ -260,6 +260,9 @@ final: prev: {
   libvlc = final.vlc;
   libportal-gtk3 = final.libportal.gtk3;
 
+  # linux-libertine alias for the libertine font package
+  linux-libertine = final.libertine;
+
   # Common aliases for expected package names
   yq = final.yq-go;
   gnome-disks = final.gnome-disk-utility;
