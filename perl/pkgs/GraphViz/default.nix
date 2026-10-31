@@ -17,6 +17,8 @@ buildPerlPackage {
     url = "mirror://cpan/authors/id/E/ET/ETJ/GraphViz-2.26.tar.gz";
     hash = "sha256-ml0lILMmK/MEdSct12SkRfjn+TG++Ivg49O/9EXacyg=";
   };
+  nativeBuildInputs = [ graphviz ];
+
   buildInputs = [
     graphviz
     TestPod
