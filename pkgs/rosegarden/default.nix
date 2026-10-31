@@ -44,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     makedepend
     perl
     pkg-config
@@ -76,7 +77,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeFlags = [
-    "-DLILV_INCLUDE_DIR=${lilv.dev}/include/lilv-0"
+    "-DLILV_INCLUDE_DIR=${lilv}/include/lilv-0"
   ];
 
   meta = {
