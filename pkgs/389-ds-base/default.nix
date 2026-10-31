@@ -69,7 +69,8 @@ stdenv.mkDerivation (finalAttrs: {
     rustc
     rustPlatform.cargoSetupHook
   ]
-  ++ lib.optional withCockpit rsync;
+  ++ lib.optional withCockpit rsync
+  ++ lib.optional withNetSnmp net-snmp.dev;
 
   buildInputs = [
     cracklib
