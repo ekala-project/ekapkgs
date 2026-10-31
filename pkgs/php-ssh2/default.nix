@@ -1,13 +1,18 @@
 {
   lib,
   php,
+  fetchurl,
   libssh2,
 }:
 
-php.buildPecl rec {
+php.buildPecl {
   pname = "ssh2";
   version = "1.4.1";
-  sha256 = "sha256-e8pbI/cx252O0K6l25uxXaj/EzsPu6lhArguldpNh2Q=";
+
+  src = fetchurl {
+    url = "https://pecl.php.net/get/ssh2-1.4.1.tgz";
+    hash = "sha256-e8pbI/cx252O0K6l25uxXaj/EzsPu6lhArguldpNh2Q=";
+  };
 
   buildInputs = [ libssh2 ];
   configureFlags = [ "--with-ssh2=${libssh2.dev}" ];

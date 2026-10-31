@@ -1,19 +1,19 @@
 {
   lib,
   php,
+  fetchurl,
 }:
 
 php.buildPecl {
   pname = "igbinary";
   version = "3.2.14";
-  sha256 = "sha256-YzcUek+4iAclZmdIN72pko7gbufwEUtDOLhsgWIykl0=";
+
+  src = fetchurl {
+    url = "https://pecl.php.net/get/igbinary-3.2.14.tgz";
+    hash = "sha256-YzcUek+4iAclZmdIN72pko7gbufwEUtDOLhsgWIykl0=";
+  };
 
   configureFlags = [ "--enable-igbinary" ];
-  makeFlags = [ "phpincludedir=$(dev)/include" ];
-  outputs = [
-    "out"
-    "dev"
-  ];
 
   meta = {
     broken = true; # eval error, missing src argument
