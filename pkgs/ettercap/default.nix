@@ -38,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     bison
     cmake
+    cmake.configurePhaseHook
     flex
     pkg-config
   ];
