@@ -8,6 +8,7 @@
   TestFatal,
   TestNeeds,
   TestRequires,
+  ModuleRuntime,
 }:
 buildPerlPackage {
 
