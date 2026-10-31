@@ -178,7 +178,10 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     homepage = "https://frrouting.org/";
     description = "FRR BGP/OSPF/ISIS/RIP/RIPNG routing daemon suite";
-    license = with lib.licenses; [ gpl2Plus lgpl21Plus ];
+    license = with lib.licenses; [
+      gpl2Plus
+      lgpl21Plus
+    ];
     platforms = lib.platforms.linux;
   };
 })

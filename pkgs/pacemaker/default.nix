@@ -91,7 +91,9 @@ stdenv.mkDerivation (finalAttrs: {
     "--with-corosync"
     "--enable-systemd"
   ]
-  ++ lib.optional (!forOCF && ocf-resource-agents != null) "--with-ocfdir=${ocf-resource-agents}/usr/lib/ocf";
+  ++ lib.optional (
+    !forOCF && ocf-resource-agents != null
+  ) "--with-ocfdir=${ocf-resource-agents}/usr/lib/ocf";
 
   installFlags = [ "DESTDIR=${placeholder "out"}" ];
 

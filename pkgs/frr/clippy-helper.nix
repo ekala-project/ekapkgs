@@ -47,7 +47,10 @@ stdenv.mkDerivation {
   meta = {
     homepage = "https://frrouting.org/";
     description = "FRR routing daemon suite: CLI helper tool clippy";
-    license = with lib.licenses; [ gpl2Plus lgpl21Plus ];
+    license = with lib.licenses; [
+      gpl2Plus
+      lgpl21Plus
+    ];
     platforms = lib.platforms.unix;
   };
 }
