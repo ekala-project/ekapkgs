@@ -1,0 +1,5 @@
+--- a/pysollib/settings.py
++++ b/pysollib/settings.py
+@@ -1,4 +1,4 @@
+-DATA_DIRS = ['data', os.path.join(sys.prefix, 'share', 'PySolFC')]
++DATA_DIRS = ['data', os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'share', 'PySolFC')]
