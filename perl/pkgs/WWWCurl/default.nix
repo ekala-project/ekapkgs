@@ -46,6 +46,8 @@ buildPerlPackage rec {
       })
     ];
   env.NIX_CFLAGS_COMPILE = lib.optionalString stdenv.cc.isClang "-Wno-return-type";
+  nativeBuildInputs = [ curl ];
+
   buildInputs = [ curl ];
   doCheck = false;
   meta = {
