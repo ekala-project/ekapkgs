@@ -102,6 +102,9 @@ final: prev: {
     '';
   });
 
+  # xlib is an alias for python-xlib
+  xlib = final.python-xlib;
+
   # The python pkgconfig package has a broken setup-hook in corepkgs
   # (unsubstituted @wrapperName@/@suffixSalt@ placeholders).
   # uharfbuzz bundles harfbuzz as a submodule and doesn't need system pkg-config,
