@@ -37,13 +37,14 @@ stdenv.mkDerivation (finalAttrs: {
     ];
 
   postPatch = ''
-    sed '/^cmake_minimum_required/Is/VERSION [0-9]\.[0-9]/VERSION 3.5/' -i ./CMakeLists.txt
+    sed '/^cmake_minimum_required/Is/VERSION [0-9][0-9]*\.[0-9][0-9]*/VERSION 3.5/' -i ./CMakeLists.txt
   '';
 
   doCheck = true;
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     which
     gfortran
   ];
