@@ -268,6 +268,20 @@ final: prev: {
   gnome-disks = final.gnome-disk-utility;
   swaync = final.swaynotificationcenter;
 
+  # Aliases for ported packages with alternate names
+  dwarves = final.pahole;
+  slick-greeter = final.lightdm-slick-greeter;
+  trustedqsl = final.tqsl;
+  piper-mice-configurator = final.piper;
+  pd = final.puredata;
+  bitcoind = final.bitcoin.override { withGui = false; };
+  mat2 = final.python3Packages.toPythonApplication final.python3Packages.mat2;
+  signify-openbsd = final.signify;
+  fswatch-mon = final.fswatch;
+  zmap-network-scanner = final.zmap;
+  yq-mikefarah = final.yq-go;
+  cpuid-etallen = final.cpuid;
+
   # LibreOffice wrapped (libreoffice-unwrapped is auto-called from pkgs/)
   libreoffice = final.callPackage ./pkgs/libreoffice-unwrapped/wrapper.nix {
     unwrapped = final.libreoffice-unwrapped;
