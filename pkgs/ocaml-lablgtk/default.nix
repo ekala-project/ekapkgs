@@ -45,6 +45,7 @@ stdenv.mkDerivation rec {
   dontStrip = true;
 
   meta = {
+    broken = true; # unbound module Genlex (OCaml 5 incompatible)
     description = "OCaml interface to GTK";
     homepage = "http://lablgtk.forge.ocamlcore.org/";
     license = lib.licenses.lgpl21Plus;

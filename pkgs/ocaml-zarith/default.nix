@@ -35,6 +35,7 @@ stdenv.mkDerivation rec {
   preInstall = "mkdir -p $out/lib/ocaml/${ocaml.version}/site-lib/stublibs";
 
   meta = {
+    broken = true; # configure error, unknown -installdir flag
     description = "Fast, arbitrary precision OCaml integers";
     homepage = "https://github.com/ocaml/Zarith";
     license = lib.licenses.lgpl2;

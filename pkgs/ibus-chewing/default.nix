@@ -41,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
   enableParallelBuilding = true;
 
   meta = {
+    broken = true; # build failure
     description = "Chewing engine for IBus";
     homepage = "https://codeberg.org/chewing/ibus-chewing";
     license = lib.licenses.gpl2Plus;

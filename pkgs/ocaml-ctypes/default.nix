@@ -39,6 +39,7 @@ stdenv.mkDerivation rec {
   '';
 
   meta = {
+    broken = true; # dune build failure
     homepage = "https://github.com/yallop/ocaml-ctypes";
     description = "Library for binding to C libraries using pure OCaml";
     license = lib.licenses.mit;

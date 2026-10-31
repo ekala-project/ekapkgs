@@ -89,6 +89,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   meta = {
+    broken = true; # build failure
     description = "Retro multiplayer shooter game";
     mainProgram = "teeworlds_srv";
     homepage = "https://teeworlds.com/";

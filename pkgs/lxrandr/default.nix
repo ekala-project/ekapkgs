@@ -51,6 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   meta = {
+    broken = true; # AM_GLIB_GNU_GETTEXT undefined
     description = "Standard screen manager of LXDE";
     mainProgram = "lxrandr";
     homepage = "https://lxde.org/";

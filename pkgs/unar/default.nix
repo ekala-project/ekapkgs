@@ -77,6 +77,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   meta = {
+    broken = true; # build failure
     homepage = "https://theunarchiver.com";
     description = "Archive unpacker program";
     license = lib.licenses.lgpl21Plus;

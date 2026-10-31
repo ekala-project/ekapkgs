@@ -37,6 +37,7 @@ stdenv.mkDerivation rec {
   '';
 
   meta = {
+    broken = true; # dune build failure
     homepage = "https://github.com/ocaml/ocaml-re";
     description = "Pure OCaml regular expressions, with support for Perl and POSIX-style strings";
     license = lib.licenses.lgpl2;

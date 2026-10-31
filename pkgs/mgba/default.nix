@@ -82,6 +82,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   meta = {
+    broken = true; # Discord_ClearPresence link error
     homepage = "https://mgba.io";
     description = "Modern GBA emulator with a focus on accuracy";
     license = lib.licenses.mpl20;

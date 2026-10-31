@@ -16,6 +16,7 @@ php.buildPecl {
   ];
 
   meta = {
+    broken = true; # eval error, missing src argument
     description = "Binary serialization for PHP";
     homepage = "https://github.com/igbinary/igbinary/";
     license = lib.licenses.bsd3;

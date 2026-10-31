@@ -43,6 +43,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   installTargets = [ "install-linux" ];
 
   meta = {
+    broken = true; # eval error, missing bin output
     description = "Console font and keymap setup program";
     homepage = "https://salsa.debian.org/installer-team/console-setup";
     license = lib.licenses.gpl2Only;
