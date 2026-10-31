@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     qt6.wrapQtAppsHook
     pkg-config
   ];

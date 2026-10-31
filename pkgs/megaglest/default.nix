@@ -112,6 +112,7 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     pkg-config
     makeWrapper
     git

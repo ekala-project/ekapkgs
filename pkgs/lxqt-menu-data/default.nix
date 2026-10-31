@@ -20,6 +20,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     lxqt-build-tools
     qt6.qttools
     qt6.wrapQtAppsHook

@@ -23,6 +23,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     pkg-config
     qt6.qttools
   ];

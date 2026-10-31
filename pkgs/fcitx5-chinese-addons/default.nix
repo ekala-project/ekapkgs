@@ -44,6 +44,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     pkg-config
     kdePackages.extra-cmake-modules
     gettext

@@ -60,6 +60,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     docbook-xsl-nons
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     vala

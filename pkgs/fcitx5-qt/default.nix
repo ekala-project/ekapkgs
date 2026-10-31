@@ -37,6 +37,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     kdePackages.extra-cmake-modules
     gettext
     qt6.wrapQtAppsHook
