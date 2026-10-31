@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
+    fox_1_6
     pkg-config
     intltool
   ];
