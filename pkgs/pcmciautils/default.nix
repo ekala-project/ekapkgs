@@ -8,7 +8,7 @@
   sysfsutils,
   kmod,
   udev,
-  firmware ? config.pcmcia-utils.firmware or config.pcmciaUtils.firmware or [],
+  firmware ? config.pcmcia-utils.firmware or config.pcmciaUtils.firmware or [ ],
   configOpts ? config.pcmcia-utils.config or config.pcmciaUtils.config or null,
 }:
 
@@ -21,12 +21,15 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "0sfm3w2n73kl5w7gb1m6q8gy5k4rgwvzz79n6yhs9w3sag3ix8sk";
   };
 
+  nativeBuildInputs = [
+    bison
+    flex
+  ];
+
   buildInputs = [
     udev
-    bison
     sysfsutils
     kmod
-    flex
   ];
 
   patchPhase = ''
@@ -40,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
       s,/etc/pcmcia,$out&,;
     " src/{startup.c,pcmcia-check-broken-cis.c} # fix-color */
   ''
-  + (lib.optionalString (firmware == []) ''sed -i "s,STARTUP = true,STARTUP = false," Makefile'')
+  + (lib.optionalString (firmware == [ ]) ''sed -i "s,STARTUP = true,STARTUP = false," Makefile'')
   + (lib.optionalString (configOpts != null) "ln -sf ${configOpts} ./config/config.opts");
 
   makeFlags = [ "LEX=flex" ];
