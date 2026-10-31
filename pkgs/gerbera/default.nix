@@ -35,13 +35,44 @@
 
 let
   options = [
-    { name = "CURL"; enable = enableCurl; packages = [ curl ]; }
-    { name = "EXIF"; enable = enableLibexif; packages = [ libexif ]; }
-    { name = "INOTIFY"; enable = enableInotifyTools; packages = [ inotify-tools ]; }
-    { name = "JS"; enable = enableDuktape; packages = [ duktape ]; }
-    { name = "MAGIC"; enable = enableLibmagic; packages = [ file ]; }
-    { name = "MATROSKA"; enable = enableLibmatroska; packages = [ libmatroska libebml ]; }
-    { name = "TAGLIB"; enable = enableTaglib; packages = [ taglib ]; }
+    {
+      name = "CURL";
+      enable = enableCurl;
+      packages = [ curl ];
+    }
+    {
+      name = "EXIF";
+      enable = enableLibexif;
+      packages = [ libexif ];
+    }
+    {
+      name = "INOTIFY";
+      enable = enableInotifyTools;
+      packages = [ inotify-tools ];
+    }
+    {
+      name = "JS";
+      enable = enableDuktape;
+      packages = [ duktape ];
+    }
+    {
+      name = "MAGIC";
+      enable = enableLibmagic;
+      packages = [ file ];
+    }
+    {
+      name = "MATROSKA";
+      enable = enableLibmatroska;
+      packages = [
+        libmatroska
+        libebml
+      ];
+    }
+    {
+      name = "TAGLIB";
+      enable = enableTaglib;
+      packages = [ taglib ];
+    }
   ];
 
   inherit (lib) flatten;
@@ -73,6 +104,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     pkg-config
   ];
 
@@ -97,5 +129,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
     mainProgram = "gerbera";
+    broken = true; # missing cstring include in thread_runner.h
   };
 })

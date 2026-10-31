@@ -70,6 +70,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     makeWrapper
     pkg-config
   ];
@@ -112,11 +113,13 @@ stdenv.mkDerivation (finalAttrs: {
     ctestCheckHook
   ];
 
-  disabledTests = [ "PortChecker" ]
-    ++ lib.optionals stdenv.hostPlatform.isAarch64 [
-      "MessageTest"
-      "UnisonTest"
-    ];
+  disabledTests = [
+    "PortChecker"
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isAarch64 [
+    "MessageTest"
+    "UnisonTest"
+  ];
 
   meta = {
     description = "High quality software synthesizer";
@@ -124,5 +127,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
     mainProgram = "zynaddsubfx";
+    broken = true; # mxml pkg-config version mismatch and missing deps
   };
 })

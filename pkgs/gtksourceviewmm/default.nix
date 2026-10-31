@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchurl {
     url = "mirror://gnome/sources/gtksourceviewmm/${lib.versions.majorMinor finalAttrs.version}/gtksourceviewmm-${finalAttrs.version}.tar.xz";
-    hash = "sha256-mMldzuKHsRGBFWpklSNlC45xejkgJKmmigBGYMSW45s=";
+    hash = "sha256-27ALHCjgQHzCfYsHou0LTqIvkuSz4wBkMcvWcmtiVrU=";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -30,5 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C++ wrapper for gtksourceview";
     license = lib.licenses.lgpl2;
     platforms = lib.platforms.unix;
+    broken = true; # gtksourceview dependency fails to build
   };
 })

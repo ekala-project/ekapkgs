@@ -49,5 +49,6 @@ stdenv.mkDerivation rec {
     description = "High-performance, parallel remote shell utility";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
+    broken = true; # bool typedef conflict with modern glibc
   };
 }

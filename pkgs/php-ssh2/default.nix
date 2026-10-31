@@ -21,5 +21,6 @@ php.buildPecl {
     description = "PHP bindings for the libssh2 library";
     homepage = "https://github.com/php/pecl-networking-ssh2";
     license = lib.licenses.php301;
+    broken = true; # autoreconf fails: configure.ac not found
   };
 }
