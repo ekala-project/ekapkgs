@@ -25,6 +25,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-WO2mCXmxJPz53/ixtjzt+8cv2zbZnpIdwb3DEFcQmLY=";
   };
 
+  patches = [
+    ./pkgconfig-2025.patch
+  ];
+
   outputs = [
     "out"
     "dev"
