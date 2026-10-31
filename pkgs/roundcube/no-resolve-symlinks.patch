@@ -1,0 +1,11 @@
+--- a/program/include/iniset.php
++++ b/program/include/iniset.php
+@@ -23,7 +23,7 @@
+ // application constants
+ define('RCMAIL_VERSION', '1.7.4');
+ define('RCMAIL_START', microtime(true));
+-define('INSTALL_PATH', realpath(__DIR__ . '/../../') . '/');
++define('INSTALL_PATH', __DIR__ . '/../../');
+ define('RCMAIL_CONFIG_DIR', INSTALL_PATH . 'config');
+ 
+ // backward compatibility
