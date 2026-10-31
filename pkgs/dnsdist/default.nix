@@ -36,11 +36,13 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     cargo
+    net-snmp.dev
     pkg-config
     protobuf
     python3
     python3.pkgs.pyyaml
     rustPlatform.cargoSetupHook
+    systemd
   ];
 
   buildInputs = [
