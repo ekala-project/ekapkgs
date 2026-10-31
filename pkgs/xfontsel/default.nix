@@ -38,7 +38,11 @@ stdenv.mkDerivation (finalAttrs: {
   meta = {
     description = "Allows testing the fonts available in an X server";
     homepage = "https://gitlab.freedesktop.org/xorg/app/xfontsel";
-    license = with lib.licenses; [ x11 hpnd mit ];
+    license = with lib.licenses; [
+      x11
+      hpnd
+      mit
+    ];
     mainProgram = "xfontsel";
     platforms = lib.platforms.unix;
   };

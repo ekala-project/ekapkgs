@@ -14,7 +14,10 @@ buildRubyGem rec {
   meta = {
     description = "Simple mime type detection using magic numbers, filenames, and extensions";
     homepage = "https://github.com/rails/marcel";
-    license = with lib.licenses; [ mit asl20 ];
+    license = with lib.licenses; [
+      mit
+      asl20
+    ];
     platforms = ruby.meta.platforms;
   };
 }

@@ -16,7 +16,12 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "getdns";
   version = "1.7.3";
 
-  outputs = [ "out" "dev" "lib" "man" ];
+  outputs = [
+    "out"
+    "dev"
+    "lib"
+    "man"
+  ];
 
   src = fetchurl {
     url = "https://getdnsapi.net/releases/getdns-${lib.concatStringsSep "-" (lib.splitVersion finalAttrs.version)}/getdns-${finalAttrs.version}.tar.gz";

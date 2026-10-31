@@ -23,6 +23,9 @@ buildPythonPackage rec {
   meta = {
     description = "Test vectors for the cryptography package";
     homepage = "https://cryptography.io/en/latest/development/test-vectors/";
-    license = with lib.licenses; [ asl20 bsd3 ];
+    license = with lib.licenses; [
+      asl20
+      bsd3
+    ];
   };
 }

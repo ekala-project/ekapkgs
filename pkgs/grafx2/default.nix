@@ -19,7 +19,10 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "grafx2";
   version = "2.8.3091";
 
-  outputs = [ "out" "man" ];
+  outputs = [
+    "out"
+    "man"
+  ];
 
   src = fetchurl {
     name = "grafx2-${finalAttrs.version}.tar.gz";

@@ -30,12 +30,14 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
       --replace-fail share/pixmaps share/icons
   '';
 
-  buildInputs = with qt5; [
-    qtbase
-  ]
-  ++ lib.optionals stdenv.hostPlatform.isLinux [
-    qt5.qtwayland
-  ];
+  buildInputs =
+    with qt5;
+    [
+      qtbase
+    ]
+    ++ lib.optionals stdenv.hostPlatform.isLinux [
+      qt5.qtwayland
+    ];
 
   nativeBuildInputs = with qt5; [
     wrapQtAppsHook
