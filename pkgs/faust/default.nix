@@ -52,7 +52,8 @@ stdenv.mkDerivation {
   preConfigure = ''
     export PATH="${lib.getDev llvm}/bin:$PATH"
     cd build
-  '' + lib.optionalString stdenv.hostPlatform.isLinux ''
+  ''
+  + lib.optionalString stdenv.hostPlatform.isLinux ''
     substituteInPlace Make.llvm.static \
       --replace-fail 'mkdir -p $@ && cd $@ && ar -x ../../$<' \
                     'mkdir -p $@ && cd $@ && ar -x ../source/build/lib/libfaust.a && cd ../source/build/'
@@ -62,7 +63,8 @@ stdenv.mkDerivation {
     sed -i \
       's@LIBNCURSES_PATH ?= .*@LIBNCURSES_PATH ?= ${ncurses_static}/lib/libncurses.a@' \
       Make.llvm.static
-  '' + ''
+  ''
+  + ''
     shopt -s globstar
     for f in **/Makefile **/Makefile.library **/CMakeLists.txt build/Make.llvm.static source/tools/faust2appls/* **/llvm.cmake tools/benchmark/faust2object; do
       substituteInPlace $f \

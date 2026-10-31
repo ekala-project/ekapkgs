@@ -70,19 +70,38 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   env.NIX_LDFLAGS = lib.concatMapStringsSep " " (e: "-rpath ${e}/lib") [
-    SDL2.out SDL2_image SDL2_mixer SDL2_net SDL2_ttf
-    libGL libGLU libpng.out lua5_1 physfs zlib.out
+    SDL2.out
+    SDL2_image
+    SDL2_mixer
+    SDL2_net
+    SDL2_ttf
+    libGL
+    libGLU
+    libpng.out
+    lua5_1
+    physfs
+    zlib.out
   ];
 
   qtWrapperArgs = [
-    "--prefix" "LD_LIBRARY_PATH" ":"
-    (lib.makeLibraryPath [ libGL libGLU libglut physfs ])
+    "--prefix"
+    "LD_LIBRARY_PATH"
+    ":"
+    (lib.makeLibraryPath [
+      libGL
+      libGLU
+      libglut
+      physfs
+    ])
   ];
 
   meta = {
     description = "Funny turn-based artillery game, featuring fighting hedgehogs";
     homepage = "https://hedgewars.org/";
-    license = with lib.licenses; [ gpl2Only fdl12Only ];
+    license = with lib.licenses; [
+      gpl2Only
+      fdl12Only
+    ];
     platforms = lib.platforms.linux;
   };
 })

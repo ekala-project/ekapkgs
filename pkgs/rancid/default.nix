@@ -18,7 +18,13 @@
 }:
 
 let
-  inherit (lib) concatStringsSep getExe makeBinPath mapAttrsToList replaceStrings;
+  inherit (lib)
+    concatStringsSep
+    getExe
+    makeBinPath
+    mapAttrsToList
+    replaceStrings
+    ;
 
   wrappedPing = writeShellScriptBin "ping" ''
     for b in /run/wrappers/bin/ping /usr/bin/ping /usr/local/bin/ping; do
@@ -60,7 +66,14 @@ stdenv.mkDerivation (finalAttrs: {
         makeBinPath [
           "/run/wrappers"
           (placeholder "out")
-          coreutils git gnugrep gnused openssh perl runtimeShell telnet'
+          coreutils
+          git
+          gnugrep
+          gnused
+          openssh
+          perl
+          runtimeShell
+          telnet'
         ]
       }
 

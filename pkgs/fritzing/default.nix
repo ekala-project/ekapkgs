@@ -59,7 +59,8 @@ stdenv.mkDerivation {
     quazip
     libngspice
     clipper
-  ] ++ lib.optionals stdenv.hostPlatform.isLinux [ qt6.qtwayland ];
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ qt6.qtwayland ];
 
   postPatch = ''
     sed -i "/pri\/quazipdetect.pri/d" phoenix.pro
@@ -81,7 +82,10 @@ stdenv.mkDerivation {
   meta = {
     description = "Open-source hardware initiative to make electronics accessible";
     homepage = "https://fritzing.org/";
-    license = with lib.licenses; [ gpl3Plus cc-by-sa-30 ];
+    license = with lib.licenses; [
+      gpl3Plus
+      cc-by-sa-30
+    ];
     platforms = lib.platforms.linux;
     mainProgram = "Fritzing";
   };

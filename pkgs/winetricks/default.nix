@@ -48,16 +48,31 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail 'w_try unrar' 'w_try unrar-free'
   '';
 
-  postInstall = let
-    runtimeDependencies = [
-      bash cabextract coreutils curl gawk gnugrep gnused gnutar
-      gzip p7zip perl unrar-free unzip which zenity
-    ];
-  in ''
-    wrapProgram $out/bin/winetricks \
-      --prefix PATH : "${lib.makeBinPath runtimeDependencies}" \
-      --set WINETRICKS_LATEST_VERSION_CHECK "disabled"
-  '';
+  postInstall =
+    let
+      runtimeDependencies = [
+        bash
+        cabextract
+        coreutils
+        curl
+        gawk
+        gnugrep
+        gnused
+        gnutar
+        gzip
+        p7zip
+        perl
+        unrar-free
+        unzip
+        which
+        zenity
+      ];
+    in
+    ''
+      wrapProgram $out/bin/winetricks \
+        --prefix PATH : "${lib.makeBinPath runtimeDependencies}" \
+        --set WINETRICKS_LATEST_VERSION_CHECK "disabled"
+    '';
 
   meta = {
     description = "Script to install DLLs needed to work around problems in Wine";
