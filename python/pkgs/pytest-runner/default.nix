@@ -15,7 +15,7 @@ buildPythonPackage rec {
     owner = "pytest-dev";
     repo = "pytest-runner";
     rev = "v${version}";
-    hash = "sha256-FbBVY9At+CmunIiB/qh9DPbpBHNMITYNsVP/FYXnSig=";
+    hash = "sha256-l2NJzSaGRYiDf57PaMnCZF3rb9CzDTJA8H8EdzWQTLU=";
   };
 
   build-system = [
