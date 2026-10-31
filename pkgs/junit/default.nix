@@ -75,5 +75,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     license = lib.licenses.epl10;
     platforms = lib.platforms.all;
     sourceProvenance = with lib.sourceTypes; [ fromSource ];
+    broken = true; # java-hamcrest build is broken (gradle bnd plugin resolution)
   };
 })
