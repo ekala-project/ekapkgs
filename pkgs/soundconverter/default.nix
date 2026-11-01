@@ -1,6 +1,5 @@
 {
   lib,
-  faacSupport ? false,
   fetchFromGitHub,
   glib,
   python3Packages,
@@ -31,7 +30,7 @@ python3Packages.buildPythonApplication rec {
     gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-good
     gst_all_1.gst-plugins-ugly
-    (gst_all_1.gst-plugins-bad.override { inherit faacSupport; })
+    gst_all_1.gst-plugins-bad
   ];
 
   nativeBuildInputs = [

@@ -55,5 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
     mainProgram = "pd";
+    broken = true; # compilation error in extra/fiddle~
   };
 })

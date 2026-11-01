@@ -40,7 +40,7 @@ stdenv.mkDerivation rec {
   ];
 
   configureFlags = [
-    "--with-apxs2=${apacheHttpd.dev}/bin/apxs"
+    "--with-apxs=${apacheHttpd.dev}/bin/apxs"
   ];
 
   installFlags = [

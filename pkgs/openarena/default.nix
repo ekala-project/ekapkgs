@@ -49,13 +49,13 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     copyDesktopItems
-    curl
     makeBinaryWrapper
     pkg-config
     which
   ];
 
   buildInputs = [
+    curl
     freetype
     libglvnd
     libjpeg

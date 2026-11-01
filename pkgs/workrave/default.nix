@@ -20,7 +20,7 @@
   gtkmm3,
   atk,
   pango,
-  pangomm_1_4,
+  pangomm,
   cairo,
   cairomm_1_0,
   dbus,
@@ -65,7 +65,7 @@ stdenv.mkDerivation (finalAttrs: {
     gtkmm3
     atk
     pango
-    pangomm_1_4
+    pangomm
     cairo
     cairomm_1_0
     dbus

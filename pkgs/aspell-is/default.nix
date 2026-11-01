@@ -12,7 +12,7 @@ stdenv.mkDerivation {
 
   src = fetchurl {
     url = "mirror://gnu/aspell/dict/is/aspell-is-0.51.1-0.tar.bz2";
-    sha256 = "1mp3ccr4q0a0vam6h2bspm5r6vkkvnmjfhxqilg66y2rc35m10m1";
+    sha256 = "sha256-MDW9KdrZKc5m5qzcfClnDfRY4NE/4XgkGyEvSBER49Y=";
   };
 
   strictDeps = true;

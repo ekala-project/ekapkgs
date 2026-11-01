@@ -29,5 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Tom's Audio Processing plugins";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
+    broken = true; # source download returns 404
   };
 })

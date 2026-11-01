@@ -34,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   postPatch = ''
     substituteInPlace qalculate-qt.pro\
-      --replace "LRELEASE" "${qt6.qttools.dev}/bin/lrelease"
+      --replace "LRELEASE" "${qt6.qttools}/bin/lrelease"
   '';
 
   meta = {

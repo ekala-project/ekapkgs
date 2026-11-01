@@ -39,5 +39,6 @@ php.buildPecl rec {
     homepage = "https://github.com/mongodb/mongo-php-driver";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
+    broken = true; # missing configure.ac for autoreconf
   };
 }

@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
+    mpi
     pkg-config
     gfortran
   ];

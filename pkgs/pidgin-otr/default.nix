@@ -13,7 +13,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "https://otr.cypherpunks.ca/pidgin-otr-${version}.tar.gz";
-    hash = "sha256-HVWB8mRosMOEM2r/+P2wSs9GaaOw8tSlBs0q3IsBXfQ=";
+    hash = "sha256-9LWe70qUsdKdvgwQbdAM3GMOR/GGGfx1Tlr79XJOusQ=";
   };
 
   postInstall = "ln -s $out/lib/pidgin $out/share/pidgin-otr";

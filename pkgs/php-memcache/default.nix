@@ -45,5 +45,6 @@ stdenv.mkDerivation rec {
     description = "PHP extension for interfacing with memcached";
     homepage = "https://github.com/websupport-sk/pecl-memcache";
     license = lib.licenses.php301;
+    broken = true; # missing php_smart_string_public.h header
   };
 }

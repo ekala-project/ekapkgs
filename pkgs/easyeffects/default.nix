@@ -151,5 +151,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Plus;
     mainProgram = "easyeffects";
     platforms = lib.platforms.linux;
+    broken = true; # breeze dependency uses libsForQt5.__internalKF5 which is missing
   };
 })

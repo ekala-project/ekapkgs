@@ -98,5 +98,6 @@ stdenv.mkDerivation {
     description = "Functional programming language for realtime audio signal processing";
     license = lib.licenses.gpl2;
     platforms = lib.platforms.unix;
+    broken = true; # build/Make.llvm.static not found in source tree
   };
 }

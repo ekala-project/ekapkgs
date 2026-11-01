@@ -29,5 +29,6 @@ stdenv.mkDerivation rec {
     description = "Open Source Webmail Software";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.all;
+    broken = true; # patch no-resolve-symlinks.patch fails to apply
   };
 }

@@ -45,6 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
+    fpc
     pkg-config
     qttools
     wrapQtAppsHook
@@ -56,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     SDL2
     SDL2_mixer
     SDL2_image
-    fpc
     lua5_1
     ffmpeg
     libglut

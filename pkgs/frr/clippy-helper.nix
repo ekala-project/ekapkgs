@@ -24,6 +24,7 @@ stdenv.mkDerivation {
     flex
     perl
     pkg-config
+    python3
   ];
 
   buildInputs = [

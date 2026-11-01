@@ -12,7 +12,7 @@ stdenv.mkDerivation {
 
   src = fetchurl {
     url = "mirror://gnu/aspell/dict/ta/aspell6-ta-20040424-1.tar.bz2";
-    sha256 = "0mcyn5g8cqjq3gwdwsqghm96vpsc3iqxm6si4ri71lghnb41ssc6";
+    sha256 = "sha256-UvVS8aLA/FPtTqx1mQ/3W8zz1fFEDKPZSNlur+XzSGo=";
   };
 
   strictDeps = true;

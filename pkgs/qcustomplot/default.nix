@@ -36,8 +36,8 @@ stdenv.mkDerivation (finalAttrs: {
   dontWrapQtApps = true;
 
   postUnpack = ''
-    cp -rv source/* .
-    cp -rv qcustomplot-source/* .
+    cp -rv QCustomPlot-*/* .
+    cp -rv QCustomPlot-source/* .
   '';
 
   installPhase = ''
@@ -55,5 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Qt C++ widget for plotting and data visualization";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.unix;
+    broken = true; # source extraction fails with multiple srcs
   };
 })

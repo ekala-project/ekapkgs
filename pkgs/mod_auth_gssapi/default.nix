@@ -5,6 +5,7 @@
   apacheHttpd,
   autoreconfHook,
   pkg-config,
+  bison,
   krb5,
   openssl,
 }:
@@ -22,6 +23,7 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     autoreconfHook
+    bison
     pkg-config
   ];
 

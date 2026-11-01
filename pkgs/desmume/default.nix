@@ -92,5 +92,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Open-source Nintendo DS emulator";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
+    broken = true; # dependency marked broken in corepkgs
   };
 })

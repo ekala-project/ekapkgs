@@ -5,7 +5,7 @@
   meson,
   ninja,
   pkg-config,
-  zathura_core ? null,
+  zathura,
   girara,
   gettext,
   libarchive,
@@ -38,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     libarchive
-    zathura_core
+    zathura
     girara
   ];
 

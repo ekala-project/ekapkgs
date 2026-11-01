@@ -75,7 +75,7 @@ stdenv.mkDerivation (finalAttrs: {
         rev = "refs/heads/release-R${finalAttrs.passthru.versionFormatted}.B-master";
         hash = "sha256-zOoWpuS/vDLvnRPdA9FNGhNbcwh3PMQwbdfqsyqj858=";
       };
-      mesonFlags = _prev.mesonFlags ++ [ (lib.mesonEnable "documentation" false) ];
+      mesonFlags = (_prev.mesonFlags or [ ]) ++ [ (lib.mesonEnable "documentation" false) ];
       doCheck = false;
     });
   };

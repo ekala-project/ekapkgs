@@ -4,7 +4,7 @@
   fetchFromGitHub,
   glib,
   gtk3,
-  gtksourceview3,
+  gtksourceview,
   gtkspell3,
   poppler,
   texlive,
@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [
     glib
-    gtksourceview3
+    gtksourceview
     gtk3
     gtkspell3
     poppler

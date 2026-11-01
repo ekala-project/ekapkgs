@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    neovim.unwrapped
+    neovim
     qt6.qtbase
     qt6.qtsvg
     msgpack-c

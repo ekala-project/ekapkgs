@@ -70,5 +70,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://docs.puddletag.net";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
+    broken = true; # missing python3.pkgs.pyacoustid
   };
 })

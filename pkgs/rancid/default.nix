@@ -102,6 +102,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     libtool
     makeBinaryWrapper
+    perl
     wrappedPing
   ];
 

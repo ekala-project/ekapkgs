@@ -16,5 +16,6 @@ buildRubyGem rec {
     homepage = "https://github.com/brianmario/mysql2";
     license = lib.licenses.mit;
     platforms = ruby.meta.platforms;
+    broken = true; # native extension needs mysql/mariadb client libraries
   };
 }

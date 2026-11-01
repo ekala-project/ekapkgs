@@ -6,7 +6,7 @@
   ninja,
   pkg-config,
   qt6,
-  qt6Packages,
+  drumstick,
   docbook-xsl-nons,
 }:
 
@@ -30,11 +30,11 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    qt6Packages.drumstick
+    drumstick
   ];
 
   postInstall = ''
-    ln -s ${qt6Packages.drumstick}/share/drumstick $out/share/
+    ln -s ${drumstick}/share/drumstick $out/share/
   '';
 
   meta = {

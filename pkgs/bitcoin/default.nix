@@ -42,11 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     boost
     libevent
-    (zeromq.override {
-      enableCurve = false;
-      enableDrafts = false;
-      libsodium = null;
-    })
+    zeromq
     zlib
     capnproto
   ]

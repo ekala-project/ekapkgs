@@ -63,6 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     makeWrapper
     meson
+    meson.configurePhaseHook
     ninja
     pkg-config
     python3
