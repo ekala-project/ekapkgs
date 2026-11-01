@@ -11,7 +11,7 @@ python3Packages.buildPythonApplication rec {
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-+Kc4/0V0bqWBvZ+78J3R/VRXv/1e19N6HQzl5csCHso=";
+    hash = "sha256-ynu3vIxv9EH79TkhtVN2aAAOONVuKNdjobc5dcZsYTg=";
   };
 
   build-system = [ python3Packages.setuptools ];
