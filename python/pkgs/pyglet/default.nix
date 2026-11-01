@@ -19,7 +19,7 @@
   glibc,
   fontconfig,
   freetype,
-  ffmpeg-full,
+  ffmpeg,
   openal-soft,
   libpulseaudio,
   harfbuzz,
@@ -68,7 +68,7 @@ buildPythonPackage rec {
               elif name == 'freetype':
                   path = '${freetype}/lib/libfreetype${ext}'
               elif name[0:2] == 'av' or name[0:2] == 'sw':
-                  path = '${lib.getLib ffmpeg-full}/lib/lib' + name + '${ext}'
+                  path = '${lib.getLib ffmpeg}/lib/lib' + name + '${ext}'
               elif name == 'openal':
                   path = '${openal-soft}/lib/libopenal${ext}'
               elif name == 'pulse':
