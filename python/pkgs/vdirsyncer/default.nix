@@ -42,5 +42,6 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/pimutils/vdirsyncer";
     license = lib.licenses.bsd3;
     mainProgram = "vdirsyncer";
+    broken = true; # aiohttp dependency fails: backports-zstd doesn't support Python 3.14
   };
 })
