@@ -25,5 +25,6 @@ buildPythonPackage (finalAttrs: {
     description = "Very simple, very easy GUI programming in Python";
     homepage = "https://github.com/robertlugg/easygui";
     license = lib.licenses.bsd3;
+    broken = true; # uses implicit relative imports incompatible with Python 3.12+
   };
 })
