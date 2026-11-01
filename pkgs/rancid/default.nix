@@ -100,6 +100,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     autoreconfHook
+    expect
     libtool
     makeBinaryWrapper
     perl

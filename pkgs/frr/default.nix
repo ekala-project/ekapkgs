@@ -183,5 +183,6 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl21Plus
     ];
     platforms = lib.platforms.linux;
+    broken = true; # incompatible with corepkgs libyang (LYD_ANYDATA_VALUETYPE missing)
   };
 })

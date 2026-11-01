@@ -3,6 +3,8 @@
   stdenv,
   fetchFromGitHub,
   apacheHttpd,
+  apr,
+  aprutil,
   autoreconfHook,
   pkg-config,
   cjose,
@@ -31,6 +33,8 @@ stdenv.mkDerivation rec {
 
   buildInputs = [
     apacheHttpd
+    apr
+    aprutil
     cjose
     curl
     jansson

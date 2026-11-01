@@ -103,5 +103,6 @@ stdenv.mkDerivation (finalAttrs: {
       fdl12Only
     ];
     platforms = lib.platforms.linux;
+    broken = true; # needs SDL2_net 2.x but corepkgs has 3.x
   };
 })

@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
     doxygen
+    neovim
     qt6.wrapQtAppsHook
     (python3.withPackages (ps: [
       ps.jinja2

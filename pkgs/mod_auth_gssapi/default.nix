@@ -6,6 +6,7 @@
   autoreconfHook,
   pkg-config,
   bison,
+  flex,
   krb5,
   openssl,
 }:
@@ -24,6 +25,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     autoreconfHook
     bison
+    flex
     pkg-config
   ];
 

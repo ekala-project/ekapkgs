@@ -84,5 +84,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Chrome OS partitioning and kernel signing tools";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
+    broken = true; # chromeos flashrom fails to build with -Werror
   };
 })

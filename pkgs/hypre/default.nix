@@ -61,5 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
       asl20
       mit
     ];
+    broken = true; # cmake FindMPI fails to locate MPI compilers
   };
 })
