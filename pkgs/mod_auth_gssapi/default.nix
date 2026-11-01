@@ -3,6 +3,7 @@
   stdenv,
   fetchFromGitHub,
   apacheHttpd,
+  apr,
   autoreconfHook,
   pkg-config,
   bison,
@@ -23,9 +24,12 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [
+    apacheHttpd
+    apr
     autoreconfHook
     bison
     flex
+    krb5.dev
     pkg-config
   ];
 
@@ -54,5 +58,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/gssapi/mod_auth_gssapi";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
+    broken = true; # uses deprecated OpenSSL HMAC APIs removed in 3.x
   };
 }
