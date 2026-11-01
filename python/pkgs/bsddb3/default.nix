@@ -20,7 +20,7 @@ buildPythonPackage rec {
 
   buildInputs = [ db ];
 
-  env.BERKELEYDB_DIR = db;
+  env.BERKELEYDB_DIR = db.dev;
 
   doCheck = false;
 
