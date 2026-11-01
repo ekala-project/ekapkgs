@@ -14,7 +14,7 @@ buildPerlPackage {
     url = "mirror://cpan/authors/id/B/BP/BPS/GnuPG-Interface-1.03.tar.gz";
     hash = "sha256-WvVmMPD6wpDXJCGD9kSaoOAoKfRhHcYrxunps4CPGHo=";
   };
-  buildInputs = [
+  nativeBuildInputs = [
     which
     gnupg
   ];
