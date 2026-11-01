@@ -3,10 +3,10 @@
   stdenv,
   buildPythonPackage,
   fetchPypi,
+  pkgs,
   pkg-config,
   cython,
   setuptools,
-  hidapi,
   libusb1,
   udev,
 }:
@@ -29,7 +29,7 @@ buildPythonPackage rec {
   nativeBuildInputs = [ pkg-config ];
 
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [
-    hidapi
+    pkgs.hidapi
     libusb1
   ];
 
