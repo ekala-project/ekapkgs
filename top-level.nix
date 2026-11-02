@@ -41,6 +41,8 @@ final: prev: {
   # openal is an alias for openal-soft
   openal = final.openal-soft;
 
+  # nixpkgs attr parity: the unprefixed jemalloc variant used by some Rust crates.
+  rust-jemalloc-sys-unprefixed = final.rust-jemalloc-sys.override { unprefixed = true; };
   # dnsutils is just the utils output of bind
   dnsutils = final.bind.utils;
 
