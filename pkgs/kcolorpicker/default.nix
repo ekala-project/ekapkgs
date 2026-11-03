@@ -17,7 +17,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-FG/A4pDNuhGPOeJNZlsnX3paEy4ibJVWKxn8rVUGpN8=";
   };
 
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
   buildInputs = [ qt6.qtbase ];
 
   cmakeEntries = {
