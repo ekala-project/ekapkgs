@@ -159,8 +159,6 @@ stdenv.mkDerivation (finalAttrs: {
       rm -f $out/lib/*.la $out/lib/slurm/*.la $out/lib/security/*.la
     '';
 
-  enableParallelBuilding = true;
-
   meta = {
     homepage = "http://www.schedmd.com/";
     description = "Simple Linux Utility for Resource Management";

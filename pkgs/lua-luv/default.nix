@@ -39,8 +39,6 @@ lua.pkgs.buildLuarocksPackage rec {
     WITH_SHARED_LIBUV = "ON";
   };
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/luvit/luv";
     description = "Bare libuv bindings for Lua";

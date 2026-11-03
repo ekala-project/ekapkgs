@@ -23,7 +23,6 @@ buildPythonPackage rec {
   propagatedBuildInputs = [ text-unidecode ];
 
   # Tests require pytestCheckHook
-  doCheck = false;
 
   pythonImportsCheck = [ "slugify" ];
 

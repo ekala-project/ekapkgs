@@ -60,7 +60,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     makeWrapperArgs+=("''${qtWrapperArgs[@]}")
   '';
 
-  doCheck = false;
   dontWrapQtApps = true;
   dontStrip = true;
 

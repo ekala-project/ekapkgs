@@ -60,8 +60,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     install -Dm644 offlineimap.conf.minimal -T $out/share/offlineimap/offlineimap.conf.minimal
   '';
 
-  doCheck = false;
-
   pythonImportsCheck = [
     "offlineimap"
   ];

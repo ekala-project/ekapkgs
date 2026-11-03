@@ -75,8 +75,6 @@ stdenv.mkDerivation (finalAttrs: {
     gappsWrapperArgs+=(--prefix PATH : "${lib.makeBinPath [ gettext ]}")
   '';
 
-  enableParallelBuilding = true;
-
   passthru.updateScript = nix-update-script {
     extraArgs = [
       "--version-regex"

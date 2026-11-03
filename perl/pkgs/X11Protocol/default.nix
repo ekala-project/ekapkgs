@@ -10,7 +10,6 @@ buildPerlPackage {
     url = "mirror://cpan/authors/id/S/SM/SMCCAM/X11-Protocol-0.56.tar.gz";
     hash = "sha256-3pbdbHwfJfMoeqevZJAr+ErKqo4MO7dqoWdjZ+BKCLc=";
   };
-  doCheck = false;
   meta = {
     description = "Perl module for the X Window System Protocol, version 11";
     license = with lib.licenses; [

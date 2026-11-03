@@ -18,7 +18,6 @@ buildPerlPackage {
     Error
     IPCShareLite
   ];
-  doCheck = false;
   meta = {
     description = "Cache Interface";
     license = with lib.licenses; [

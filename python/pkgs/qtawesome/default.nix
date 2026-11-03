@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # Requires qtbot which is unmaintained
-  doCheck = false;
 
   pythonImportsCheck = [ "qtawesome" ];
 

@@ -93,8 +93,6 @@ buildPythonPackage rec {
     ${python.pythonOnBuildForHost.interpreter} buildconfig/config.py
   '';
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pygame" ];
 
   meta = {

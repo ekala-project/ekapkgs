@@ -22,7 +22,6 @@ buildPerlPackage {
     MooXHandlesVia
     MooXlate
   ];
-  doCheck = false;
   meta = {
     description = "Supply object methods for interacting with GnuPG";
     license = with lib.licenses; [

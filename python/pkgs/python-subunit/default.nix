@@ -36,7 +36,6 @@ buildPythonPackage {
   ];
 
   # tests require testscenarios, hypothesis, etc. and are fragile
-  doCheck = false;
 
   pythonImportsCheck = [ "subunit" ];
 }

@@ -54,8 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureFlags = [ "--enable-in-process" ];
 
-  enableParallelBuilding = true;
-
   passthru.updateScript = gitUpdater {
     url = "https://git.mate-desktop.org/mate-sensors-applet";
     odd-unstable = true;

@@ -28,7 +28,6 @@ buildPerlPackage {
     substituteInPlace Makefile.PL --replace pkg-config $PKG_CONFIG
   '';
   env.NIX_CFLAGS_LINK = "-L${lib.getLib pcsclite}/lib -lpcsclite";
-  doCheck = false;
   meta = {
     description = "Communicate with a smart card using PC/SC";
   };

@@ -23,8 +23,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     sha256 = "sha256-s80s5saJCNkuOGgdA7rVMLinBYOcq8h8MPR6lquOHSw=";
   };
 
-  doCheck = false;
-
   nativeBuildInputs = [ gobject-introspection ];
 
   build-system = with python3Packages; [ setuptools ];

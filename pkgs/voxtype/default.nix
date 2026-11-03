@@ -55,7 +55,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   '';
 
   # Audio/voice tests need hardware and downloaded models.
-  doCheck = false;
 
   postInstall = ''
     install -Dm644 packaging/completions/voxtype.bash \

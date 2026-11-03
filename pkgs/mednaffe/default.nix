@@ -30,8 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     mednafen
   ];
 
-  enableParallelBuilding = true;
-
   strictDeps = true;
 
   preFixup = ''

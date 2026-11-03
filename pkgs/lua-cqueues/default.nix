@@ -47,8 +47,6 @@ lua.pkgs.buildLuarocksPackage rec {
     rockspecFilename="$specDir/${pname}-${version}.rockspec"
   '';
 
-  doCheck = false;
-
   meta = {
     homepage = "http://25thandclement.com/~william/projects/cqueues.html";
     description = "Continuation Queues: Embeddable asynchronous networking, threading, and notification framework for Lua";

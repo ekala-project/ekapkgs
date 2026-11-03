@@ -21,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ requests ];
 
   # pypi package missing test_utils and github releases is behind
-  doCheck = false;
 
   pythonImportsCheck = [ "yubico_client" ];
 

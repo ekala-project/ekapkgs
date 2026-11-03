@@ -30,7 +30,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "pbs_installer" ];
 
   # upstream has no test
-  doCheck = false;
 
   meta = {
     description = "Installer for Python Build Standalone";

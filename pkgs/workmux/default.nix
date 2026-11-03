@@ -25,8 +25,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   # TODO(corepkgs): install the bundled agent skills (upstream uses installAgentSkills)
   nativeBuildInputs = [ installShellFiles ];
 
-  doCheck = false;
-
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     export HOME=$(mktemp -d)
     installShellCompletion --cmd workmux \

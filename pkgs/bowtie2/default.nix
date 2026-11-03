@@ -50,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   # ctest fails because of missing dependencies between tests
-  doCheck = false;
 
   passthru.tests = {
     ctest = runCommand "${finalAttrs.pname}-test" { } ''

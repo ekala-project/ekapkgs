@@ -98,8 +98,6 @@ stdenv.mkDerivation (finalAttrs: {
     sed -i -e 's/G_BUS_TYPE_SYSTEM/G_BUS_TYPE_SESSION/g' mpris-service.c
   '';
 
-  enableParallelBuilding = true;
-
   configureFlags = [
     "--without-configfiles"
     "--sysconfdir=/etc"

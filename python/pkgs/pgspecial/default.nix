@@ -31,7 +31,6 @@ buildPythonPackage rec {
   ];
 
   # Tests require postgresqlTestHook which is not available
-  doCheck = false;
 
   pythonImportsCheck = [ "pgspecial" ];
 

@@ -28,7 +28,6 @@ buildPerlPackage {
     URI
   ];
   buildPhase = "perl Build.PL --install_base=$out --install_path=\"sbin=$out/bin\" --install_path=\"lib=$out/${perl.libPrefix}\"; ./Build build ";
-  doCheck = false;
   meta = {
     description = "Object-oriented implementation of Sender Policy Framework";
     license = lib.licenses.bsd3;

@@ -44,7 +44,6 @@ buildPerlModule {
     PodParser
     locallib
   ];
-  doCheck = false;
   meta = {
     description = "Manage perl installations in your $HOME";
     license = lib.licenses.mit;

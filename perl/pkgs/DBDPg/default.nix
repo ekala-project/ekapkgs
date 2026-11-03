@@ -32,7 +32,6 @@ buildPerlPackage {
   nativeBuildInputs = [ postgresql.pg_config ];
 
   # tests freeze in a sandbox
-  doCheck = false;
 
   meta = {
     description = "DBI PostgreSQL interface";

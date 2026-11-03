@@ -21,8 +21,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   nativeBuildInputs = [ makeWrapper ];
 
-  doCheck = false;
-
   postInstall = ''
     mkdir -p $out/libexec/rtk
     cp -r $src/hooks $out/libexec/rtk/hooks

@@ -71,7 +71,6 @@ stdenv.mkDerivation (finalAttrs: {
     ./amuleapi-kad-bootstrap-byte-order.patch
   ];
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   nativeBuildInputs = [

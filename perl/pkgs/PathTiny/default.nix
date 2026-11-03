@@ -10,7 +10,6 @@ buildPerlPackage {
     substituteInPlace lib/Path/Tiny.pm --replace 'use File::Spec 3.40' \
       'use File::Spec 3.39'
   '';
-  doCheck = false;
   meta = {
     description = "File path utility";
   };

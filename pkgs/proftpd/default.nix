@@ -31,7 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
   patches = [ ./no-install-user.patch ];
 
   strictDeps = true;
-  enableParallelBuilding = true;
 
   outputs = [
     "out"

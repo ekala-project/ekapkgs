@@ -67,8 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     speex
   ];
 
-  enableParallelBuilding = true;
-
   preConfigure = ''
     cp ${./Makefile.local} ./Makefile.local
   '';

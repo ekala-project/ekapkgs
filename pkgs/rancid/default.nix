@@ -96,8 +96,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace "'rancid-fe " "'${placeholder "out"}/bin/rancid-fe "
   '';
 
-  enableParallelBuilding = true;
-
   nativeBuildInputs = [
     autoreconfHook
     expect

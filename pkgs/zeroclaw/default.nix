@@ -51,8 +51,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     npm --prefix web run build
   '';
 
-  doCheck = false;
-
   doInstallCheck = true;
   nativeInstallCheckInputs = [
     versionCheckHook

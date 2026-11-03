@@ -37,8 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "gamesdir=$(out)/bin" ];
 
-  enableParallelBuilding = true;
-
   meta = {
     description = "X-windows application that will let it snow on the root, in between and on windows";
     mainProgram = "xsnow";

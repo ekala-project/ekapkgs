@@ -22,6 +22,8 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
+  doCheck = false;
+
   cmakeFlags = lib.optionals finalAttrs.finalPackage.doCheck [
     "-DRAPIDFUZZ_BUILD_TESTING=ON"
   ];

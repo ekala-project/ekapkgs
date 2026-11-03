@@ -12,7 +12,6 @@ buildPerlPackage {
     hash = "sha256-UnnrDRNsUz/4l/aTTDqtbyBQS5l/smBuUsXbvZJ1jnM=";
   };
   propagatedBuildInputs = [ XMLParser ];
-  doCheck = false;
   meta = {
     description = "Data, client and server classes for XML-RPC";
     homepage = "https://github.com/rjray/rpc-xml";

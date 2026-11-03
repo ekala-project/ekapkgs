@@ -71,7 +71,6 @@ buildPythonPackage rec {
   ];
 
   # multiple failures on sandbox
-  doCheck = false;
 
   postInstall = ''
     wrapProgram $out/bin/brz --prefix PYTHONPATH : "$PYTHONPATH"

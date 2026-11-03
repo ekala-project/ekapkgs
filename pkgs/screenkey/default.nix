@@ -50,8 +50,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
       )
   '';
 
-  doCheck = false;
-
   postPatch = ''
     substituteInPlace Screenkey/xlib.py \
       --replace-fail libX11.so.6 ${lib.getLib libx11}/lib/libX11.so.6 \

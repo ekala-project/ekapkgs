@@ -30,8 +30,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
 
   makeFlags = [ "prefix=${placeholder "out"}" ];
 
-  enableParallelBuilding = true;
-
   postPatch = ''
     patchShebangs .
     substituteInPlace Fonts/Makefile --replace-fail '/usr/share/fonts/truetype/dejavu/' '${dejavu_fonts}/share/fonts/truetype/'

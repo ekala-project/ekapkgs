@@ -49,7 +49,6 @@ buildPerlPackage rec {
   nativeBuildInputs = [ curl ];
 
   buildInputs = [ curl ];
-  doCheck = false;
   meta = {
     description = "Perl extension interface for libcurl";
     license = lib.licenses.mit;

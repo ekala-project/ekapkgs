@@ -62,8 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
   # will obviously not work on nix
   patches = [ ./remove-symlink-check.patch ];
 
-  enableParallelBuilding = true;
-
   configureFlags = [
     "--with-girdir=$out/share/gir-1.0"
     "--with-typelibdir=$out/lib/girepository-1.0"

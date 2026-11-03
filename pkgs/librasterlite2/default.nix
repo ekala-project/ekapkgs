@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   # Failed tests:
   # - check_sql_stmt
-  doCheck = false;
 
   meta = {
     description = "Advanced library supporting raster handling methods";

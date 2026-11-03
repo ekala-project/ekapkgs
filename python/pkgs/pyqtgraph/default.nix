@@ -33,8 +33,6 @@ buildPythonPackage rec {
 
   buildInputs = [ pyqt5 ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pyqtgraph" ];
 
   meta = {

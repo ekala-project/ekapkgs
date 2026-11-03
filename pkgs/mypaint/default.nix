@@ -150,7 +150,6 @@ buildPythonApplication (finalAttrs: {
 
   # tests require unmaintained and removed nose, it should switch to pytest
   # https://github.com/mypaint/mypaint/issues/1191
-  doCheck = false;
 
   checkPhase = ''
     runHook preCheck

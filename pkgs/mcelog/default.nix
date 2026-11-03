@@ -30,8 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     done
   '';
 
-  enableParallelBuilding = true;
-
   installFlags = [
     "DESTDIR=$(out)"
     "prefix="

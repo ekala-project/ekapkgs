@@ -28,7 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   # Workspace tests exercise fixtures outside the rust/ source root.
-  doCheck = false;
 
   doInstallCheck = true;
   nativeInstallCheckInputs = [

@@ -21,7 +21,6 @@ buildPythonPackage rec {
   dependencies = [ six ];
 
   # contains no tests
-  doCheck = false;
   pythonImportsCheck = [ "procfs" ];
 
   meta = {

@@ -42,7 +42,6 @@ let
 
     sourceRoot = "${src.name}/ETL";
 
-    __structuredAttrs = true;
     strictDeps = true;
 
     nativeBuildInputs = [
@@ -57,10 +56,7 @@ let
 
     sourceRoot = "${src.name}/synfig-core";
 
-    __structuredAttrs = true;
     strictDeps = true;
-
-    enableParallelBuilding = true;
 
     nativeBuildInputs = [
       pkg-config
@@ -94,7 +90,6 @@ stdenv.mkDerivation {
 
   sourceRoot = "${src.name}/synfig-studio";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   postPatch = ''
@@ -132,8 +127,6 @@ stdenv.mkDerivation {
     openexr
     fftw
   ];
-
-  enableParallelBuilding = true;
 
   passthru = {
     inherit ETL synfig;

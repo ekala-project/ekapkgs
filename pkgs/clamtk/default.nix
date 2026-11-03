@@ -40,7 +40,6 @@ perlPackages.buildPerlPackage rec {
   ];
 
   preConfigure = "touch Makefile.PL";
-  doCheck = false;
 
   outputs = [
     "out"

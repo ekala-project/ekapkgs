@@ -43,7 +43,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   # Workspace tests need fixture crates and insta snapshots the tarball lacks.
-  doCheck = false;
 
   nativeBuildInputs = [ pkg-config ];
 

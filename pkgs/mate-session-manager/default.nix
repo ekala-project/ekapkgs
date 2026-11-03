@@ -57,8 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     polkit
   ];
 
-  enableParallelBuilding = true;
-
   env.NIX_CFLAGS_COMPILE = "-I${glib.dev}/include/gio-unix-2.0";
 
   postFixup = ''

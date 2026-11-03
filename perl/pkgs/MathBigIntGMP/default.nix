@@ -13,7 +13,6 @@ buildPerlPackage {
     hash = "sha256-yxqS4CJn1AUV+OA6TiEvZv0wfJdMu9MT4j3jL98Q9rU=";
   };
   buildInputs = [ gmp ];
-  doCheck = false;
   env.NIX_CFLAGS_COMPILE = "-I${gmp.dev}/include";
   env.NIX_CFLAGS_LINK = "-L${gmp.out}/lib -lgmp";
   propagatedBuildInputs = [ MathBigInt ];

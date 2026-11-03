@@ -47,8 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     sed -i s,/usr/share/xfe,$out/share/xfe, src/xfedefs.h
   '';
 
-  enableParallelBuilding = true;
-
   meta = {
     description = "MS-Explorer like file manager for X";
     homepage = "https://sourceforge.net/projects/xfe/";

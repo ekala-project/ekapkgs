@@ -17,8 +17,6 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "easygui" ];
 
   meta = {

@@ -21,7 +21,6 @@ buildPerlPackage {
     substituteInPlace Makefile.PL --replace '$Config{libpth}' \
       "'${ncurses.out}/lib'"
   '';
-  doCheck = false;
   meta = {
     description = "Perl extension for the GNU Readline/History Library";
   };

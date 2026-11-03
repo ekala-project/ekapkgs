@@ -314,8 +314,6 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace Config.kmk --replace-fail "VBOX_WITH_TESTCASES = 1" "#"
   '';
 
-  enableParallelBuilding = true;
-
   buildPhase = ''
     source env.sh
     kmk -j $NIX_BUILD_CORES BUILD_TYPE="${finalAttrs.buildType}"

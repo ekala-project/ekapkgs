@@ -41,8 +41,6 @@ stdenv.mkDerivation rec {
     gstreamer.plugins-base
   ];
 
-  enableParallelBuilding = true;
-
   meta = {
     description = "C++ interface for GStreamer";
     homepage = "https://gstreamer.freedesktop.org/bindings/cplusplus.html";

@@ -21,7 +21,6 @@ maven.buildMavenPackage (finalAttrs: {
   mvnHash = "sha256-KfIcc1MWGs7vZHPjfNgy3NBCAyTMtyvRTZfcN4LQVv8=";
 
   buildOffline = true;
-  doCheck = false;
 
   nativeBuildInputs = [
     makeWrapper

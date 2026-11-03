@@ -39,8 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "PREFIX=$(out)" ];
 
-  doCheck = false;
-
   postPatch = ''
     patchShebangs src/winetricks
     substituteInPlace src/winetricks \

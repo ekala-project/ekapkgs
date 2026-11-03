@@ -94,8 +94,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     fi
   '';
 
-  doCheck = false;
-
   # codex looks for codex-resources/bwrap and codex-code-mode-host next to
   # its own executable, so the real binaries live together in libexec/.
   postFixup = lib.optionalString stdenv.hostPlatform.isLinux ''

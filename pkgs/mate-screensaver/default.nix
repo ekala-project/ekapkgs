@@ -57,8 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "DBUS_SESSION_SERVICE_DIR=$(out)/etc" ];
 
-  enableParallelBuilding = true;
-
   passthru.updateScript = gitUpdater {
     odd-unstable = true;
     rev-prefix = "v";

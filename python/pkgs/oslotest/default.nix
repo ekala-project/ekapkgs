@@ -25,7 +25,6 @@ buildPythonPackage rec {
   ];
 
   # Tests lead to infinite recursion with other oslo components
-  doCheck = false;
 
   pythonImportsCheck = [ "oslotest" ];
 

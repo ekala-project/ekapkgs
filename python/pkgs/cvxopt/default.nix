@@ -49,8 +49,6 @@ buildPythonPackage rec {
     CVXOPT_FFTW_INC_DIR = "${lib.getDev fftw}/include";
   };
 
-  doCheck = false;
-
   pythonImportsCheck = [ "cvxopt" ];
 
   meta = {

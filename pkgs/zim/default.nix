@@ -44,7 +44,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
 
   # (test.py:800): GLib-GIO-ERROR **: 20:59:45.754:
   # No GSettings schemas are installed on the system
-  doCheck = false;
 
   nativeCheckInputs = [
     xvfb-run

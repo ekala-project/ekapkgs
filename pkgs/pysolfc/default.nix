@@ -54,8 +54,6 @@ python3Packages.buildPythonApplication rec {
     cp -r $cardsets/* $out/share/PySolFC/cardsets
   '';
 
-  doCheck = false;
-
   meta = {
     description = "Collection of more than 1000 solitaire card games";
     mainProgram = "pysol.py";

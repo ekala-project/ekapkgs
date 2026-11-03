@@ -48,8 +48,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   # Disable self_update: not meaningful in Nix.
   buildNoDefaultFeatures = true;
 
-  doCheck = false;
-
   doInstallCheck = true;
   nativeInstallCheckInputs = [ versionCheckHook ];
 

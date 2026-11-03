@@ -84,8 +84,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeCheckInputs = [ python3 ];
-  doCheck = false;
-  enableParallelBuilding = true;
 
   meta = {
     description = "Peer-to-peer electronic cash system";

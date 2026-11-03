@@ -107,8 +107,6 @@ stdenv.mkDerivation (finalAttrs: {
     ]
   );
 
-  enableParallelBuilding = true;
-
   postInstall =
     lib.optionalString withManpages ''
       mkdir -p $man

@@ -65,8 +65,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail 'have_altivec=true' 'have_altivec=false'
   '';
 
-  enableParallelBuilding = true;
-
   outputs = [
     "out"
     "lib"

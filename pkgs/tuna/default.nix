@@ -48,7 +48,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     cp tuna/tuna_gui.glade $out/share/tuna/
   '';
 
-  doCheck = false;
   pythonImportsCheck = [ "tuna" ];
 
   meta = {

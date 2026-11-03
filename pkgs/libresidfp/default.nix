@@ -23,7 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   outputs = [
     "out"
@@ -50,8 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     ))
     (lib.strings.enableFeature finalAttrs.finalPackage.doCheck "tests")
   ];
-
-  enableParallelBuilding = true;
 
   buildFlags = [
     "all"

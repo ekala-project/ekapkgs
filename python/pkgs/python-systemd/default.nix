@@ -25,8 +25,6 @@ buildPythonPackage rec {
 
   buildInputs = [ systemd ];
 
-  doCheck = false;
-
   pythonImportsCheck = [
     "systemd.journal"
     "systemd.id128"

@@ -41,8 +41,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     ''
   );
 
-  doCheck = false;
-
   requiredSystemFeatures = [ "big-parallel" ];
 
   meta = {

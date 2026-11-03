@@ -35,7 +35,6 @@ buildPythonPackage rec {
   ];
 
   # check in passthru.tests to escape infinite recursion with other oslo components
-  doCheck = false;
 
   pythonImportsCheck = [ "stestr" ];
 

@@ -20,7 +20,6 @@ buildPythonPackage rec {
 
   # There is no test code and the check phase fails with:
   # > error: could not create 'PyQt5/sip.cpython-38-x86_64-linux-gnu.so': No such file or directory
-  doCheck = false;
   pythonImportsCheck = [ "PyQt5.sip" ];
 
   meta = {

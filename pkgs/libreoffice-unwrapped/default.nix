@@ -527,8 +527,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makeFlags = [ "SHELL=${bash}/bin/bash" ];
 
-  enableParallelBuilding = true;
-
   buildTargets = [ "build-nocheck" ];
 
   doCheck = false; # sdext_pdfimport test fails in sandbox
@@ -567,8 +565,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   dontWrapQtApps = true;
-
-  __structuredAttrs = true;
 
   strictDeps = true;
 

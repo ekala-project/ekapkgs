@@ -16,7 +16,6 @@ buildPythonPackage rec {
   build-system = [ uv-build ];
 
   # No tests included
-  doCheck = false;
 
   pythonImportsCheck = [ "cryptography_vectors" ];
 

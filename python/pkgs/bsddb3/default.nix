@@ -22,8 +22,6 @@ buildPythonPackage rec {
 
   env.BERKELEYDB_DIR = db.dev;
 
-  doCheck = false;
-
   pythonImportsCheck = [ "bsddb3" ];
 
   meta = {

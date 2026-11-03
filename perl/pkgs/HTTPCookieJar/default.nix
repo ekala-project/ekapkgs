@@ -19,7 +19,6 @@ buildPerlPackage {
     TestRequires
     URI
   ];
-  doCheck = false;
   meta = {
     description = "Minimalist HTTP user agent cookie jar";
   };

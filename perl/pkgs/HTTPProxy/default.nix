@@ -11,7 +11,6 @@ buildPerlPackage {
     hash = "sha256-sFKQU07HNiXCGgVl/DUXCJDasWOEPZUzHCksI/UExp0=";
   };
   propagatedBuildInputs = [ LWP ];
-  doCheck = false;
   meta = {
     description = "Pure Perl HTTP proxy";
   };

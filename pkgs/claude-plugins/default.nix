@@ -72,7 +72,6 @@ stdenv.mkDerivation (finalAttrs: {
       --add-flags "$out/lib/claude-plugins/dist/index.js"
     runHook postInstall
   '';
-  doInstallCheck = false;
   meta = {
     description = "CLI tool for managing Claude Code plugins";
     homepage = "https://github.com/Kamalnrf/claude-plugins";

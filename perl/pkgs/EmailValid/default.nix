@@ -20,7 +20,6 @@ buildPerlPackage {
     NetDNS
     NetDomainTLD
   ];
-  doCheck = false;
   meta = {
     description = "Check validity of Internet email addresses";
     license = with lib.licenses; [

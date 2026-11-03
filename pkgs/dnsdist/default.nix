@@ -88,8 +88,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   doCheck = true;
 
-  enableParallelBuilding = true;
-
   meta = {
     description = "DNS Loadbalancer";
     mainProgram = "dnsdist";

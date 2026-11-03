@@ -22,7 +22,6 @@ buildPythonPackage (finalAttrs: {
 
   propagatedBuildInputs = [ requests ];
 
-  doCheck = false;
   nativeCheckInputs = [
     betamax
     pyopenssl

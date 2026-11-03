@@ -124,8 +124,6 @@ buildPythonPackage rec {
     runHook postInstall
   '';
 
-  doCheck = false;
-
   meta = {
     description = "Cross platform GUI toolkit for Python, Phoenix version";
     homepage = "http://wxpython.org/";

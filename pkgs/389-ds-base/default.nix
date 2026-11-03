@@ -124,7 +124,6 @@ stdenv.mkDerivation (finalAttrs: {
     "--disable-cockpit"
   ];
 
-  enableParallelBuilding = true;
   enableParallelInstalling = false;
 
   doCheck = true;

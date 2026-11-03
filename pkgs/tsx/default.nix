@@ -90,8 +90,6 @@ stdenv.mkDerivation (finalAttrs: {
     runHook postInstall
   '';
 
-  doCheck = false;
-
   meta = {
     description = "TypeScript Execute (tsx): The easiest way to run TypeScript in Node.js";
     homepage = "https://tsx.hirok.io/";

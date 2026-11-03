@@ -79,8 +79,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   preConfigure = "./autogen.sh";
 
-  enableParallelBuilding = true;
-
   meta = {
     description = "Program to help prevent Repetitive Strain Injury";
     mainProgram = "workrave";

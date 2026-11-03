@@ -46,7 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   strictDeps = true;
   doCheck = true;
-  enableParallelBuilding = true;
   enableParallelChecking = true;
 
   meta = {

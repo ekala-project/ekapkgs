@@ -96,7 +96,6 @@ buildPythonPackage rec {
   dependencies = [ pillow ];
 
   # Needs GL setup which isn't possible in a build environment
-  doCheck = false;
 
   pythonImportsCheck = [ "pyglet" ];
 

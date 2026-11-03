@@ -38,8 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.NIX_CFLAGS_COMPILE = "-Wno-error=discarded-qualifiers";
 
-  enableParallelBuilding = true;
-
   postPatch = ''
     substituteInPlace Makefile \
       --replace-fail "ar qc" '${stdenv.cc.bintools.targetPrefix}ar qc'
@@ -76,7 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
         hash = "sha256-zOoWpuS/vDLvnRPdA9FNGhNbcwh3PMQwbdfqsyqj858=";
       };
       mesonFlags = (_prev.mesonFlags or [ ]) ++ [ (lib.mesonEnable "documentation" false) ];
-      doCheck = false;
     });
   };
 

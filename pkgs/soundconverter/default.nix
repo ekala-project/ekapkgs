@@ -52,8 +52,6 @@ python3Packages.buildPythonApplication rec {
       "DATA_PATH = '$out/share/soundconverter'"
   '';
 
-  doCheck = false;
-
   strictDeps = false;
   dontWrapGApps = true;
 

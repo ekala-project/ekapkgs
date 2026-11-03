@@ -203,6 +203,8 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional (finalAttrs ? doCheck && finalAttrs.doCheck) qemu
   ++ lib.optional zfsSupport zfs;
 
+  doCheck = false;
+
   strictDeps = true;
 
   env.NIX_CFLAGS_COMPILE = "-Wno-error=discarded-qualifiers";

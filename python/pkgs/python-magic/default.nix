@@ -29,7 +29,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # Tests require additional patches
-  doCheck = false;
 
   pythonImportsCheck = [ "magic" ];
 

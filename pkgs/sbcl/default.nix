@@ -22,6 +22,7 @@ stdenv.mkDerivation (self: {
     sha256 = "sha256-XxS07ZKUKp44dZT6wAC5bbdGfpzlYTBn/8CSPfPsIHI=";
   };
 
+  doCheck = false;
   nativeBuildInputs = [
     texinfo
   ]
@@ -130,8 +131,6 @@ stdenv.mkDerivation (self: {
 
     runHook postBuild
   '';
-
-  doCheck = false;
 
   installPhase = ''
     runHook preInstall

@@ -57,8 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-YsenzSOMwh+jDOgdYHQhiicdHEHIGzd3UqPyecdgJaI=";
   };
 
-  __structuredAttrs = true;
-
   nativeBuildInputs = [
     autoreconfHook
     docbook_xsl

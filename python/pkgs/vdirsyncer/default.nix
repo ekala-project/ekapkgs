@@ -35,7 +35,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests require hypothesis, pytest-asyncio, trustme, aioresponses
-  doCheck = false;
 
   meta = {
     description = "Synchronize calendars and contacts";

@@ -47,7 +47,6 @@ buildPythonPackage (finalAttrs: {
       --replace-fail "/usr/share/locale" "/run/current-system/sw/share/locale"
   '';
 
-  doCheck = false;
   pythonImportsCheck = [ "xapp" ];
 
   meta = {

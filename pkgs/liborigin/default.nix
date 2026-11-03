@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     ./001-fix-pkg-config-file.patch
   ];
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   meta = {

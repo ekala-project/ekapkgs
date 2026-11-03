@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
   version = "22Jul2025_update5";
   pname = "lammps";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchFromGitHub {

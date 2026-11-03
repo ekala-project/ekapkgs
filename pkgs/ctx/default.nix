@@ -26,7 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   # CoreML acquisition tests fail in the Nix sandbox.
-  doCheck = false;
 
   doInstallCheck = true;
   nativeInstallCheckInputs = [

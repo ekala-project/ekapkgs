@@ -30,8 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ dbus ];
   nativeBuildInputs = lib.optionals stdenv.hostPlatform.isLinux [ pkg-config ];
 
-  doCheck = false;
-
   doInstallCheck = true;
   nativeInstallCheckInputs = [ versionCheckHook ];
 

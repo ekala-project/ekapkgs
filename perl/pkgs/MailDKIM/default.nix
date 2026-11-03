@@ -24,7 +24,6 @@ buildPerlPackage {
     MailTools
     NetDNS
   ];
-  doCheck = false;
   buildInputs = [
     NetDNSResolverMock
     TestRequiresInternet

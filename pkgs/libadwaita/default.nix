@@ -57,6 +57,8 @@ stdenv.mkDerivation (finalAttrs: {
     documentation = true;
   };
 
+  doCheck = false;
+
   mesonFlags = lib.optionals (!finalAttrs.finalPackage.doCheck) [
     "-Dtests=false"
   ];

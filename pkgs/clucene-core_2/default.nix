@@ -77,7 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   # fails with "Unable to find executable:
   # /build/clucene-core-2.3.3.4/build/bin/cl_test"
-  doCheck = false;
 
   env.NIX_CFLAGS_COMPILE = lib.optionalString stdenv.cc.isClang "-Wno-error=c++11-narrowing";
 

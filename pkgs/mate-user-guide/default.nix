@@ -33,8 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace-fail "Exec=yelp" "Exec=${yelp}/bin/yelp"
   '';
 
-  enableParallelBuilding = true;
-
   passthru.updateScript = gitUpdater {
     url = "https://git.mate-desktop.org/mate-user-guide";
     odd-unstable = true;

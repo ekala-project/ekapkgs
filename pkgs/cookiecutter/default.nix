@@ -28,8 +28,6 @@ python3Packages.buildPythonApplication rec {
     rich
   ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/audreyr/cookiecutter";
     description = "Command-line utility that creates projects from project templates";

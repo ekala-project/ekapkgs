@@ -60,7 +60,6 @@ maven.buildMavenPackage (finalAttrs: {
   mvnJdk = java.v11;
   mvnParameters = "-DskipTests -Dmaven.javadoc.skip=true -Drat.skip=true";
   manualMvnArtifacts = [ "org.apache:apache-jar-resource-bundle:1.4" ];
-  doCheck = false;
 
   # Several transitive POMs (sjk-nps, sjk-jfr5) declare `system`-scope deps with
   # non-absolute ${...} systemPaths, which Maven 3.9 rejects. They are optional

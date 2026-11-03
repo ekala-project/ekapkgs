@@ -20,8 +20,6 @@ buildPerlPackage rec {
 
   propagatedBuildInputs = [ FileNext ];
 
-  doCheck = false;
-
   meta = {
     description = "Grep-like tool tailored to working with large trees of source code";
     homepage = "https://beyondgrep.com";

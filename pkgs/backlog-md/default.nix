@@ -86,7 +86,6 @@ stdenv.mkDerivation {
 
   # Upstream's package.json lags the tag (binary reports 1.52.0), so no strict
   # version check.
-  doInstallCheck = false;
 
   meta = {
     description = "Manage project collaboration between humans and AI agents in a git ecosystem";

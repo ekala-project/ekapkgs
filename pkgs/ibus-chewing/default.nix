@@ -38,8 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     libchewing
   ];
 
-  enableParallelBuilding = true;
-
   meta = {
     broken = true; # build failure
     description = "Chewing engine for IBus";

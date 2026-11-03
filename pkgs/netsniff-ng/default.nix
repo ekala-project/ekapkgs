@@ -67,8 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     runHook postConfigure
   '';
 
-  enableParallelBuilding = true;
-
   makeFlags = [
     "PREFIX=$(out)"
     "ETCDIR=$(out)/etc"

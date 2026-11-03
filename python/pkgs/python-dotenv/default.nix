@@ -25,7 +25,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "dotenv" ];
 
   # Tests require additional dependencies
-  doCheck = false;
 
   meta = {
     description = "Add .env support to your django/flask apps in development and deployments";

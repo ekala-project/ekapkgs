@@ -60,7 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   makefile = "Makefile.linux";
 
-  enableParallelBuilding = true;
   dontConfigure = true;
   sourceRoot = "XADMaster";
 

@@ -54,8 +54,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     patchShebangs tests po
   '';
 
-  doCheck = false;
-
   pythonImportsCheck = [ "terminatorlib" ];
 
   dontWrapGApps = true;

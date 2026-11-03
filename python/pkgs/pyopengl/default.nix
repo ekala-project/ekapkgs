@@ -36,8 +36,6 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  doCheck = false;
-
   pythonImportsCheck = [
     "OpenGL"
     "OpenGL.GL"

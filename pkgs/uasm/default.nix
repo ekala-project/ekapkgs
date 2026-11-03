@@ -17,8 +17,6 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-HaiK2ogE71zwgfhWL7fesMrNZYnh8TV/kE3ZIS0l85w=";
   };
 
-  enableParallelBuilding = true;
-
   makefile =
     if stdenv.hostPlatform.isDarwin then
       "Makefile-OSX-Clang-64.mak"

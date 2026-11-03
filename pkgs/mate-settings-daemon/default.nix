@@ -59,8 +59,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   env.NIX_CFLAGS_COMPILE = "-I${glib.dev}/include/gio-unix-2.0";
 
-  enableParallelBuilding = true;
-
   doInstallCheck = true;
 
   passthru.updateScript = gitUpdater {

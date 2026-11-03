@@ -25,8 +25,6 @@ buildPythonPackage rec {
 
   env.SETUPTOOLS_SCM_PRETEND_VERSION = version;
 
-  doCheck = false;
-
   meta = {
     description = "Invoke py.test as distutils command with dependency resolution";
     homepage = "https://github.com/pytest-dev/pytest-runner";

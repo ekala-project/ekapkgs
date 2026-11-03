@@ -48,8 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   configureScript = "./autogen.sh";
 
-  enableParallelBuilding = true;
-
   meta = {
     description = "Library to deal with Japanese kana-to-kanji conversion method";
     mainProgram = "skk";

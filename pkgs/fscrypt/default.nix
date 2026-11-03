@@ -25,9 +25,6 @@ buildGoModule rec {
 
   vendorHash = "sha256-lR3qcRSVQjxyBuqHv5warfVVJy5zdomfE0DEJbA/RkQ=";
 
-  __structuredAttrs = true;
-  doCheck = false;
-
   nativeBuildInputs = [ m4 ];
   buildInputs = [ pam ];
 

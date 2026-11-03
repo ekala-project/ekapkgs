@@ -18,7 +18,6 @@ buildPerlPackage {
   };
   # In a NixOS chroot build, the tests fail because the font configuration
   # at /etc/fonts/font.conf is not available.
-  doCheck = false;
   propagatedBuildInputs = [
     ClassAccessor
     IOStringy

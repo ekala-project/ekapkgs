@@ -21,7 +21,6 @@ stdenv.mkDerivation rec {
   pname = "gexiv2";
   version = "0.14.6";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   outputs = [

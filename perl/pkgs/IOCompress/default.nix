@@ -16,7 +16,6 @@ buildPerlPackage {
     CompressRawBzip2
     CompressRawZlib
   ];
-  doCheck = false;
   meta = {
     description = "IO Interface to compressed data files/buffers";
     homepage = "https://github.com/pmqs/IO-Compress";

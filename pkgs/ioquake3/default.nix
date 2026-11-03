@@ -27,7 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
   version = "0-unstable-2026-07-19";
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "ioquake";

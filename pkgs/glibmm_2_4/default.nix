@@ -15,7 +15,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "glibmm";
   version = "2.66.8";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchurl {

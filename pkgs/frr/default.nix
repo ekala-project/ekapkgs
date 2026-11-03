@@ -173,8 +173,6 @@ stdenv.mkDerivation (finalAttrs: {
     sed -i '/^PATH=/ d' tools/frr.in tools/frrcommon.sh.in
   '';
 
-  enableParallelBuilding = true;
-
   meta = {
     homepage = "https://frrouting.org/";
     description = "FRR BGP/OSPF/ISIS/RIP/RIPNG routing daemon suite";

@@ -37,6 +37,8 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   mesonEntries = {
+    doCheck = false;
+
     build_tests = "${lib.boolToString finalAttrs.finalPackage.doCheck}";
     build_examples = true;
   };

@@ -53,8 +53,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       --replace-fail 'codegen-units = 1' 'codegen-units = 16'
   '';
 
-  doCheck = false;
-
   postInstall = ''
     ln -s code $out/bin/coder
   ''
