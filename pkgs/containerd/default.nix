@@ -49,12 +49,6 @@ buildGoModule rec {
     "VERSION=v${version}"
   ];
 
-  installTargets = [
-    "install"
-    "install-doc"
-  ]
-  ++ lib.optional withMan "install-man";
-
   buildPhase = ''
     runHook preBuild
     make $makeFlags
@@ -63,7 +57,9 @@ buildGoModule rec {
 
   installPhase = ''
     runHook preInstall
-    make $makeFlags $installTargets
+    make $makeFlags install
+    make $makeFlags PREFIX="$doc" install-doc
+    ${lib.optionalString withMan "make $makeFlags MANDIR=\"$man/share/man\" install-man"}
     runHook postInstall
   '';
 
