@@ -23,7 +23,10 @@ stdenv.mkDerivation (finalAttrs: {
     ./cmake-3.10.patch
   ];
 
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
 
   buildInputs = [ libiio ];
 
