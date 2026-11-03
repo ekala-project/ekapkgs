@@ -32,7 +32,10 @@ buildGoModule (finalAttrs: {
   '';
 
   # buildPhase installs the binaries into $out/bin.
-  doInstall = false;
+  installPhase = ''
+    runHook preInstall
+    runHook postInstall
+  '';
 
   ldflags = [
     "-s"
