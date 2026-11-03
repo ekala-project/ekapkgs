@@ -26,7 +26,7 @@
   rtrlib,
   protobufc,
   sqlite,
-  lua5_3,
+  lua,
   # general options
   snmpSupport ? true,
   rpkiSupport ? true,
@@ -105,12 +105,12 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals stdenv.hostPlatform.isLinux [ libcap ]
   ++ lib.optionals snmpSupport [ net-snmp ]
   ++ lib.optionals (lib.meta.availableOn stdenv.hostPlatform elfutils) [ elfutils ]
-  ++ lib.optionals scriptingSupport [ lua5_3 ];
+  ++ lib.optionals scriptingSupport [ lua.v5_3 ];
 
   depsBuildBuild = [
     buildPackages.python3
   ]
-  ++ lib.optionals scriptingSupport [ buildPackages.lua5_3 ];
+  ++ lib.optionals scriptingSupport [ buildPackages.lua.v5_3 ];
 
   clippy-helper = buildPackages.callPackage ./clippy-helper.nix {
     frrVersion = finalAttrs.version;

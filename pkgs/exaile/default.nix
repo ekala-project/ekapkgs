@@ -4,7 +4,6 @@
   fetchFromGitHub,
   gobject-introspection,
   makeWrapper,
-  wrapGAppsHook3,
   gtk3,
   gstreamer,
   python3,
@@ -48,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     gobject-introspection
     makeWrapper
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ]
   ++ lib.optionals documentationSupport [
     help2man

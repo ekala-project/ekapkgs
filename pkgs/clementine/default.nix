@@ -6,7 +6,7 @@
   cmake,
   chromaprint,
   gettext,
-  gst_all_1,
+  gstreamer,
   qt5,
   libsForQt5,
   taglib_1,
@@ -47,12 +47,12 @@ stdenv.mkDerivation (finalAttrs: {
     fftw
     gettext
     glew
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-good
-    gst_all_1.gst-plugins-ugly
-    gst_all_1.gst-libav
+    gstreamer.plugins-base
+    gstreamer.plugins-bad
+    gstreamer
+    gstreamer.plugins-good
+    gstreamer.plugins-ugly
+    gstreamer.libav
     gvfs
     libpulseaudio
     protobuf

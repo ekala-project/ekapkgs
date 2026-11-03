@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   pkg-config,
-  gst_all_1,
+  gstreamer,
   libx11,
   pipewire,
   pulseaudio,
@@ -32,17 +32,17 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    gst_all_1.gstreamer
+    gstreamer
     libx11
     pulseaudio
     qt6.qtbase
     qt6.qtmultimedia
     wayland
     pipewire
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-ugly
+    gstreamer.plugins-base
+    gstreamer.plugins-good
+    gstreamer.plugins-bad
+    gstreamer.plugins-ugly
   ];
 
   preBuild = ''

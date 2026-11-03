@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  jre,
+  java,
 }:
 
 stdenv.mkDerivation rec {
@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
     rm -f $out/bin/jflex.bat
 
     patchShebangs $out
-    sed -i -e '/^JAVA=java/ s#java#${jre}/bin/java#' $out/bin/jflex
+    sed -i -e '/^JAVA=java/ s#java#${java}/bin/java#' $out/bin/jflex
     runHook postInstall
   '';
 

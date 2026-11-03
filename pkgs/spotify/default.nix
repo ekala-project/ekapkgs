@@ -4,7 +4,6 @@
   fetchurl,
   squashfs-tools,
   makeShellWrapper,
-  wrapGAppsHook3,
   openssl,
   nspr,
   nss,
@@ -113,7 +112,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     makeShellWrapper
     squashfs-tools
   ];

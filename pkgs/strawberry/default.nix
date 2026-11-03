@@ -72,7 +72,7 @@ stdenv.mkDerivation (finalAttrs: {
     libselinux
     libsepol
     p11-kit
-    # TODO(corepkgs): add libidn2
+    # TODO(corepkgs): add libidn.v2
     glib-networking
     gstreamer.pkgs.gst-libav
     gstreamer.pkgs.gst-plugins-bad

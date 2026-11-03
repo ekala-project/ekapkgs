@@ -17,7 +17,6 @@
   libxslt,
   at-spi2-core,
   autoreconfHook,
-  wrapGAppsHook3,
   libgee,
   vala,
 }:
@@ -68,7 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
     pythonEnv
     autoreconfHook
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     vala
   ];
 

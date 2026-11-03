@@ -34,7 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     substituteInPlace etc/visualvm.conf \
       --replace-fail "#visualvm_jdkhome=" "visualvm_jdkhome=" \
-      --replace-fail "/path/to/jdk" "${java.home}" \
+      --replace-fail "/path/to/java" "${java.home}" \
 
     cp -r . $out
   '';

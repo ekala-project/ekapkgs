@@ -5,7 +5,7 @@
   makeDesktopItem,
   makeWrapper,
   unzip,
-  jre,
+  java,
   copyDesktopItems,
 }:
 
@@ -24,7 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
     copyDesktopItems
   ];
-  buildInputs = [ jre ];
+  buildInputs = [ java ];
 
   desktopItems = [
     (makeDesktopItem {
@@ -50,7 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     runHook preInstall
 
     install -Dm644 ${finalAttrs.src} $out/share/java/gpsprune.jar
-    makeWrapper ${jre}/bin/java $out/bin/gpsprune \
+    makeWrapper ${java}/bin/java $out/bin/gpsprune \
       --add-flags "-jar $out/share/java/gpsprune.jar"
     mkdir -p $out/share/pixmaps
     ${unzip}/bin/unzip -p $src tim/prune/gui/images/window_icon_64.png > $out/share/pixmaps/gpsprune.png

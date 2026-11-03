@@ -6,7 +6,7 @@
   kdePackages,
   pkg-config,
   writableTmpDirAsHomeHook,
-  gst_all_1,
+  gstreamer,
   kdsingleapplication,
   qxmpp,
   zxing-cpp,
@@ -34,9 +34,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-base
-    gst_all_1.gstreamer
+    gstreamer.plugins-bad
+    gstreamer.plugins-base
+    gstreamer
     kdePackages.kio
     kdePackages.kirigami
     kdePackages.kirigami-addons

@@ -19,7 +19,6 @@
   itstool,
   hicolor-icon-theme,
   texlive,
-  wrapGAppsHook3,
   enableEpub ? true,
   webkitgtk_4_1,
   enableDjvu ? true,
@@ -50,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     itstool
     pkg-config
     gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     yelp-tools
   ];
 

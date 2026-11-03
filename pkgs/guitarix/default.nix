@@ -8,7 +8,7 @@
   boost,
   curl,
   eigen,
-  fftwSinglePrec,
+  fftw,
   gettext,
   glib,
   glib-networking,
@@ -27,8 +27,7 @@
   pkg-config,
   python3,
   sassc,
-  wafHook,
-  wrapGAppsHook3,
+  waf,
   zita-convolver,
   zita-resampler,
 
@@ -67,15 +66,15 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     python3
     sassc
-    wafHook
-    wrapGAppsHook3
+    waf.hook
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
     boost
     curl
     eigen
-    fftwSinglePrec
+    fftw.float
     gettext
     glib
     glib-networking.out

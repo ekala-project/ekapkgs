@@ -2,7 +2,6 @@
   stdenv,
   lib,
   fetchurl,
-  wrapGAppsHook3,
   autoreconfHook,
   bison,
   flex,
@@ -310,7 +309,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     bison
     flex
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
   propagatedBuildInputs = pythonPkgs;
 

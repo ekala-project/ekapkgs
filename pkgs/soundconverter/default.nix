@@ -7,7 +7,7 @@
   gsettings-desktop-schemas,
   intltool,
   gobject-introspection,
-  gst_all_1,
+  gstreamer,
   fdk-aac-encoder,
 }:
 
@@ -26,11 +26,11 @@ python3Packages.buildPythonApplication rec {
   buildInputs = [
     gtk3
     fdk-aac-encoder
-    gst_all_1.gst-libav
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
-    gst_all_1.gst-plugins-ugly
-    gst_all_1.gst-plugins-bad
+    gstreamer.libav
+    gstreamer.plugins-base
+    gstreamer.plugins-good
+    gstreamer.plugins-ugly
+    gstreamer.plugins-bad
   ];
 
   nativeBuildInputs = [

@@ -35,7 +35,6 @@
   wayland,
   wayland-protocols,
   wayland-scanner,
-  wrapGAppsHook3,
   xorg-server,
   xwayland,
   zenity,
@@ -70,7 +69,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     python3
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     xorg-server # for cvt command
     gobject-introspection
     wayland-scanner

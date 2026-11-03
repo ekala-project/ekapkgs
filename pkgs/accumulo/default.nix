@@ -10,7 +10,7 @@
 
 let
   # Accumulo 2.1 supports Java 11 and 17.
-  jre = java.v11;
+  javaRuntime = java.v11;
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "accumulo";
@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ makeWrapper ];
-  buildInputs = [ jre ];
+  buildInputs = [ java ];
 
   installPhase = ''
     runHook preInstall
@@ -32,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs $out/bin
     for i in $out/bin/accumulo $out/bin/accumulo-cluster $out/bin/accumulo-service $out/bin/accumulo-util; do
       wrapProgram $i \
-        --set JAVA_HOME "${jre}" \
+        --set JAVA_HOME "${javaRuntime}" \
         --prefix PATH : "${
           lib.makeBinPath [
             bash
@@ -44,7 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   passthru = {
-    inherit jre;
+    inherit java;
   };
 
   meta = {

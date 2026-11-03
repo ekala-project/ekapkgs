@@ -3,7 +3,7 @@
   stdenv,
   makeWrapper,
   fetchurl,
-  jre,
+  java,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildCommand = ''
     jar=$out/share/java/cfr_${finalAttrs.version}.jar
     install -Dm444 $src $jar
-    makeWrapper ${jre}/bin/java $out/bin/cfr --add-flags "-jar $jar"
+    makeWrapper ${java}/bin/java $out/bin/cfr --add-flags "-jar $jar"
   '';
 
   meta = {

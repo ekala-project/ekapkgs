@@ -1,6 +1,6 @@
 {
   lib,
-  SDL2,
+  sdl2-compat,
   autoreconfHook,
   fetchFromGitHub,
   freetype,
@@ -21,13 +21,13 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    SDL2
+    sdl2-compat
     autoreconfHook
     pkg-config
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     freetype
     pango
   ];
@@ -41,8 +41,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   meta = {
     homepage = "https://github.com/markuskimius/SDL2_Pango";
-    description = "Library for graphically rendering internationalized and tagged text in SDL2 using TrueType fonts";
+    description = "Library for graphically rendering internationalized and tagged text in sdl2-compat using TrueType fonts";
     license = lib.licenses.lgpl21Plus;
-    inherit (SDL2.meta) platforms;
+    inherit (sdl2-compat.meta) platforms;
   };
 })

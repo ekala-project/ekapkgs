@@ -10,7 +10,6 @@
   docbook_xsl,
   docbook-xml-dtd,
   desktop-file-utils,
-  wrapGAppsHook3,
   desktopToDarwinBundle,
 }:
 
@@ -31,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     docbook_xsl
     libxslt
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ]
   ++ lib.optional stdenv.hostPlatform.isDarwin desktopToDarwinBundle;
 

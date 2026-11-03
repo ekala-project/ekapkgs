@@ -25,7 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     ./nosetuid.patch
     (replaceVars ./cat-grep-sort-wc.patch {
       coreutils = "${coreutils}/bin/";
-      gnugrep = "${grep}/bin/";
+      grep = "${grep}/bin/";
     })
   ];
 

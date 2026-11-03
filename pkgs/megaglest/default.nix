@@ -8,7 +8,7 @@
   sdl2-compat,
   xercesc,
   openal-soft,
-  lua5_2_compat,
+  lua,
   libvlc,
   libjpeg,
   wxwidgets_3_2,
@@ -35,7 +35,7 @@
   fetchpatch,
 }:
 let
-  lua = lua5_2_compat;
+  luaInterp = lua.v5_2_compat;
   version = "3.13.0";
   lib-env = buildEnv {
     name = "megaglest-lib-env";
@@ -48,7 +48,7 @@ let
       xercesc
       openal-soft
       libvorbis
-      lua
+      luaInterp
       libjpeg
       libpng
       curl
@@ -123,7 +123,7 @@ stdenv.mkDerivation {
     libx11
     xercesc
     openal-soft
-    lua
+    luaInterp
     libpng
     libjpeg
     libvlc

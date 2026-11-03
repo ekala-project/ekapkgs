@@ -6,7 +6,7 @@
   pkg-config,
   file,
   glibmm_2_4,
-  gst_all_1,
+  gstreamer,
 }:
 
 stdenv.mkDerivation rec {
@@ -38,7 +38,7 @@ stdenv.mkDerivation rec {
 
   propagatedBuildInputs = [
     glibmm_2_4
-    gst_all_1.gst-plugins-base
+    gstreamer.plugins-base
   ];
 
   enableParallelBuilding = true;

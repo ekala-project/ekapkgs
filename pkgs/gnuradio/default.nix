@@ -16,7 +16,7 @@
   python3,
   codec2,
   gsm,
-  fftwFloat ? null,
+  fftw,
   alsa-lib,
   libjack2,
   libiio,
@@ -134,11 +134,11 @@ let
       cmakeEnableFlag = "GR_FEC";
     };
     gr-fft = {
-      runtime = [ fftwFloat ];
+      runtime = [ fftw.float ];
       cmakeEnableFlag = "GR_FFT";
     };
     gr-filter = {
-      runtime = [ fftwFloat ];
+      runtime = [ fftw.float ];
       cmakeEnableFlag = "GR_FILTER";
       pythonRuntime = with python.pkgs; [
         scipy

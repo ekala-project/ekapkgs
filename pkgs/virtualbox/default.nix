@@ -216,7 +216,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   patches =
     optional enableHardening ./hardened.patch
-    # Since VirtualBox 7.0.8, VBoxSDL requires SDL2, but the build framework uses SDL1
+    # Since VirtualBox 7.0.8, VBoxSDL requires sdl2-compat, but the build framework uses SDL1
     ++ optionals (!headless) [
       ./fix-sdl.patch
       # No update patch disables check for update function

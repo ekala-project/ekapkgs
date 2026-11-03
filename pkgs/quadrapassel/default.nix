@@ -1,6 +1,7 @@
 {
   stdenv,
   lib,
+  gtk3,
   fetchurl,
   pkg-config,
   gtk4,
@@ -10,7 +11,6 @@
   librsvg,
   libmanette,
   blueprint-compiler,
-  wrapGAppsHook4,
   meson,
   ninja,
   vala,
@@ -36,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     desktop-file-utils
     pkg-config
     blueprint-compiler
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
   ];
 
   buildInputs = [

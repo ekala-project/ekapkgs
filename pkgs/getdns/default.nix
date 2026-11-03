@@ -5,7 +5,7 @@
   cmake,
   ninja,
   doxygen,
-  libidn2,
+  libidn,
   openssl,
   unbound,
 
@@ -36,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    libidn2
+    libidn.v2
     openssl
   ]
   ++ lib.optional (!enableStubOnly) unbound;

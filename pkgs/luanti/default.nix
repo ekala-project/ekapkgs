@@ -33,9 +33,9 @@
   prometheus-cpp,
   buildClient ? true,
   buildServer ? true,
-  SDL2,
+  sdl2-compat,
   sdl3,
-  # Use SDL3 (experimental) instead of SDL2
+  # Use SDL3 (experimental) instead of sdl2-compat
   useSdl3 ? false,
 
   nix-update-script,
@@ -112,7 +112,7 @@ stdenv.mkDerivation (finalAttrs: {
     openal
     libogg
     libvorbis
-    (if useSdl3 then sdl3 else SDL2)
+    (if useSdl3 then sdl3 else sdl2-compat)
   ]
   ++ lib.optionals (buildClient && !stdenv.hostPlatform.isDarwin) [
     libx11

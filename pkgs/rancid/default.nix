@@ -9,8 +9,8 @@
   coreutils,
   expect,
   git,
-  gnugrep,
-  gnused,
+  grep,
+  sed,
   openssh,
   perl,
   runtimeShell,
@@ -68,8 +68,8 @@ stdenv.mkDerivation (finalAttrs: {
           (placeholder "out")
           coreutils
           git
-          gnugrep
-          gnused
+          grep
+          sed
           openssh
           perl
           runtimeShell

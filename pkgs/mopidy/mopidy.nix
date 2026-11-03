@@ -4,11 +4,10 @@
   fetchFromGitHub,
   pythonPackages,
   wrapGAppsNoGuiHook,
-  gst_all_1,
+  gstreamer,
   glib-networking,
   gobject-introspection,
   pipewire,
-  nixosTests,
 }:
 
 pythonPackages.buildPythonApplication (finalAttrs: {
@@ -25,18 +24,16 @@ pythonPackages.buildPythonApplication (finalAttrs: {
 
   nativeBuildInputs = [ wrapGAppsNoGuiHook ];
 
-  buildInputs =
-    with gst_all_1;
-    [
-      glib-networking
-      gst-plugins-bad
-      gst-plugins-base
-      gst-plugins-good
-      gst-plugins-ugly
-      gst-plugins-rs
-      gst-libav
-    ]
-    ++ lib.optionals (!stdenv.hostPlatform.isDarwin) [ pipewire ];
+  buildInputs = [
+    glib-networking
+    gstreamer.plugins-bad
+    gstreamer.plugins-base
+    gstreamer.plugins-good
+    gstreamer.plugins-ugly
+    # TODO(ekaos): gst-plugins-rs not available
+    gstreamer.libav
+  ]
+  ++ lib.optionals (!stdenv.hostPlatform.isDarwin) [ pipewire ];
 
   propagatedNativeBuildInputs = [ gobject-introspection ];
 
@@ -61,16 +58,16 @@ pythonPackages.buildPythonApplication (finalAttrs: {
   # There are no tests
   doCheck = false;
 
-  passthru.tests = {
-    inherit (nixosTests) mopidy;
-  };
+  # TODO(ekaos): replace with integrationTests
+  # passthru.tests = {
+  #   inherit (nixosTests) mopidy;
+  # };
 
   meta = {
     homepage = "https://www.mopidy.com/";
     description = "Extensible music server that plays music from local disk, Spotify, SoundCloud, and more";
     mainProgram = "mopidy";
     license = lib.licenses.asl20;
-    maintainers = [ lib.maintainers.fpletz ];
     hydraPlatforms = [ ];
   };
 })

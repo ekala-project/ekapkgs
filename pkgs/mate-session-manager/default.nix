@@ -16,7 +16,6 @@
   hicolor-icon-theme,
   mate-desktop,
   mate-screensaver,
-  wrapGAppsHook3,
   fetchpatch,
   gitUpdater,
 }:
@@ -42,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     xtrans
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

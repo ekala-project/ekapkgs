@@ -1,5 +1,6 @@
 {
   lib,
+  gtk3,
   stdenv,
   fetchFromGitLab,
   testers,
@@ -13,7 +14,6 @@
   ninja,
   pkg-config,
   vala,
-  wrapGAppsHook3,
   glib,
   gsound,
   json-glib,
@@ -66,7 +66,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     vala
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     udevCheckHook
   ];
 

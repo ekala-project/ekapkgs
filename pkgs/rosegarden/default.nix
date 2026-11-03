@@ -9,14 +9,14 @@
   qt5,
   alsa-lib,
   dssi,
-  fftwSinglePrec,
+  fftw,
   flac,
   glib,
   ladspa-header,
   ladspaPlugins,
   libjack2,
   liblo,
-  libmpg123,
+  mpg123,
   libopus,
   libsamplerate,
   libsndfile,
@@ -55,14 +55,14 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     alsa-lib
     dssi
-    fftwSinglePrec
+    fftw.float
     flac
     glib
     ladspa-header
     ladspaPlugins
     libjack2
     liblo
-    libmpg123
+    mpg123
     libogg
     libopus
     libsamplerate

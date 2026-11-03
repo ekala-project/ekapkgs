@@ -4,7 +4,6 @@
   fetchFromGitHub,
   autoreconfHook,
   pkg-config,
-  wrapGAppsHook3,
   gstreamer,
   gtk3,
   ncurses,
@@ -24,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     autoreconfHook
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

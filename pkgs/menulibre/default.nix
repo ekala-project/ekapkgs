@@ -6,7 +6,6 @@
   gtk3,
   intltool,
   gobject-introspection,
-  wrapGAppsHook3,
   testers,
   menulibre,
   writableTmpDirAsHomeHook,
@@ -37,7 +36,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
     gtk3
     intltool
     gobject-introspection
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     writableTmpDirAsHomeHook
   ];
 

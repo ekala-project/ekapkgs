@@ -16,7 +16,7 @@ let
     kafkaVersion = "4.1.1";
     scalaVersion = "2.13";
     sha256 = "sha256-eR6O5plpgtgFWCk2eoA5H5TBvKcymy+7ZYv8IRp3Ry4=";
-    jre = java.v17;
+    javaRuntime = java.v17;
   };
   version = "${versionInfo.scalaVersion}-${versionInfo.kafkaVersion}";
 in
@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [ makeWrapper ];
   buildInputs = [
-    versionInfo.jre
+    versionInfo.javaRuntime
     bash
     grep
     sed
@@ -57,7 +57,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     for p in $out/bin/*.sh; do
       wrapProgram $p \
-        --set JAVA_HOME "${versionInfo.jre}" \
+        --set JAVA_HOME "${versionInfo.javaRuntime}" \
         --set KAFKA_LOG_DIR "/tmp/apache-kafka-logs" \
         --prefix PATH : "${
           lib.makeBinPath [
@@ -72,7 +72,7 @@ stdenv.mkDerivation (finalAttrs: {
     runHook postInstall
   '';
 
-  passthru.jre = versionInfo.jre;
+  passthru.java = versionInfo.javaRuntime;
 
   meta = {
     homepage = "https://kafka.apache.org";

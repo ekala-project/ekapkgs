@@ -18,14 +18,14 @@
   glib,
   glibmm_2_4,
   gtkmm3,
-  atk,
+  at-spi2-core,
   pango,
   pangomm,
   cairo,
   cairomm_1_0,
   dbus,
   dbus-glib,
-  gst_all_1,
+  gstreamer,
   libsigcxx_2_0,
   boost,
   python3Packages,
@@ -63,16 +63,16 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     glibmm_2_4
     gtkmm3
-    atk
+    at-spi2-core
     pango
     pangomm
     cairo
     cairomm_1_0
     dbus
     dbus-glib
-    gst_all_1.gstreamer
-    gst_all_1.gst-plugins-base
-    gst_all_1.gst-plugins-good
+    gstreamer
+    gstreamer.plugins-base
+    gstreamer.plugins-good
     libsigcxx_2_0
     boost
   ];

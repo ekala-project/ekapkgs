@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  jre,
+  java,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -23,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     cat > "$out/bin/ditaa" << EOF
     #!${stdenv.shell}
-    exec ${jre}/bin/java -jar "$out/lib/ditaa.jar" "\$@"
+    exec ${java}/bin/java -jar "$out/lib/ditaa.jar" "\$@"
     EOF
 
     chmod a+x "$out/bin/ditaa"

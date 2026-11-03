@@ -49,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.zlib;
     inherit (SDL.meta) platforms;
     knownVulnerabilities = [
-      # CVE applies to SDL2 https://github.com/NixOS/nixpkgs/pull/274836#issuecomment-2708627901
+      # CVE applies to sdl2-compat https://github.com/NixOS/nixpkgs/pull/274836#issuecomment-2708627901
       # "CVE-2022-27470"
     ];
   };

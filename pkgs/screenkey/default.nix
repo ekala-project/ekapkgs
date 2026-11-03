@@ -1,7 +1,6 @@
 {
   lib,
   fetchFromGitLab,
-  wrapGAppsHook3,
   libxtst,
   libx11,
   gobject-introspection,
@@ -24,7 +23,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
   ];
 

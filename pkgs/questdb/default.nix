@@ -11,7 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   version = "9.3.2";
 
   src = fetchurl {
-    url = "https://github.com/questdb/questdb/releases/download/${finalAttrs.version}/questdb-${finalAttrs.version}-no-jre-bin.tar.gz";
+    url = "https://github.com/questdb/questdb/releases/download/${finalAttrs.version}/questdb-${finalAttrs.version}-no-java-bin.tar.gz";
     hash = "sha256-64ffNDBbaPoKGOeidCnqXT8NkWIq+UAOrfRkh8sSQp4=";
   };
 

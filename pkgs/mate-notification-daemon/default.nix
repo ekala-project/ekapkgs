@@ -16,7 +16,6 @@
   mate-common,
   mate-desktop,
   mate-panel,
-  wrapGAppsHook3,
   gitUpdater,
 }:
 
@@ -42,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     libxml2 # for xmllint
     mate-common # mate-common.m4 macros
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

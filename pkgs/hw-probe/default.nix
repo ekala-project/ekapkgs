@@ -8,8 +8,8 @@
   coreutils,
   curl,
   dmidecode,
-  gnugrep,
-  gnutar,
+  grep,
+  tar,
   hwinfo,
   iproute2,
   kmod,
@@ -68,9 +68,9 @@ stdenv.mkDerivation rec {
         usbutils
         iproute2
         coreutils
-        gnugrep
+        grep
         curl
-        gnutar
+        tar
         libv4l
         xz
         kmod

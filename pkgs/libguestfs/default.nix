@@ -37,7 +37,7 @@
   libtirpc,
   appliance ? null,
   javaSupport ? false,
-  jdk ? null,
+  java ? null,
   zstd,
 }:
 
@@ -117,7 +117,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (ocamlPackages ? augeas) [
     ocamlPackages.augeas
   ]
-  ++ lib.optional javaSupport jdk;
+  ++ lib.optional javaSupport java;
 
   prePatch = ''
     patchShebangs .

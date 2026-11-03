@@ -2,7 +2,6 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
-  gnum4 ? m4,
   m4,
   pam,
 }:
@@ -29,7 +28,7 @@ buildGoModule rec {
   __structuredAttrs = true;
   doCheck = false;
 
-  nativeBuildInputs = [ gnum4 ];
+  nativeBuildInputs = [ m4 ];
   buildInputs = [ pam ];
 
   buildPhase = ''

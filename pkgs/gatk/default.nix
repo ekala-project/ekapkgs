@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchzip,
-  jre,
+  java,
   makeWrapper,
   python3,
 }:
@@ -27,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     install -m755 -D $src/gatk $out/bin/
   '';
   postFixup = ''
-    wrapProgram $out/bin/gatk --prefix PATH : ${lib.makeBinPath [ jre ]}
+    wrapProgram $out/bin/gatk --prefix PATH : ${lib.makeBinPath [ java ]}
   '';
 
   meta = {

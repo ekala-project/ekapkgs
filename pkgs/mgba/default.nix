@@ -10,7 +10,7 @@
   libepoxy,
   qt5,
   libzip,
-  lua5_2_compat,
+  lua,
   minizip,
   pkg-config,
   stdenv,
@@ -18,7 +18,7 @@
 }:
 
 let
-  lua = lua5_2_compat;
+  luaInterp = lua.v5_2_compat;
   inherit (qt5)
     qtbase
     qtmultimedia
@@ -61,7 +61,7 @@ stdenv.mkDerivation (finalAttrs: {
     elfutils
     libepoxy
     libzip
-    lua
+    luaInterp
     minizip
     qtbase
     qtmultimedia

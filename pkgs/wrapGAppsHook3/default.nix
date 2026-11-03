@@ -18,7 +18,7 @@ makeSetupHook {
   ];
 
   depsTargetTargetPropagated =
-    assert (!targetPackages ? raw || throw "wrapGAppsHook3 must be in nativeBuildInputs");
+    assert (!targetPackages ? raw || throw "gtk3.wrapGAppsHook must be in nativeBuildInputs");
     [
       librsvg
       gtk3

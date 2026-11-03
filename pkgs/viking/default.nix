@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook-xsl,
   intltool,
   itstool,
@@ -44,7 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook-xsl
     intltool
     itstool

@@ -2,7 +2,7 @@
   lib,
   stdenvNoCC,
   fetchurl,
-  jre,
+  java,
 }:
 
 let
@@ -19,14 +19,14 @@ stdenvNoCC.mkDerivation {
 
   dontUnpack = true;
 
-  nativeBuildInputs = [ jre ];
+  nativeBuildInputs = [ java ];
 
   installPhase = ''
     runHook preInstall
 
     cat >> props <<EOF
     output.dir=$out
-    context.javaPath=${jre}
+    context.javaPath=${java}
     EOF
 
     mkdir -p $out

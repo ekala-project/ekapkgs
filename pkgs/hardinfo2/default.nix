@@ -15,7 +15,7 @@
   libdatrie,
   libdecor,
   libepoxy,
-  libnghttp2 ? null,
+  nghttp2 ? null,
   libpsl,
   libselinux,
   libsepol,
@@ -83,7 +83,7 @@ stdenv.mkDerivation (finalAttrs: {
     libdatrie
     libdecor
     libepoxy
-    libnghttp2
+    nghttp2
     libpsl
     libselinux
     libsepol

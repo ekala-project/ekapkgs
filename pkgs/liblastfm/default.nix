@@ -7,7 +7,7 @@
   which,
   cmake,
   ninja,
-  fftwSinglePrec,
+  fftw,
   libsamplerate,
   qt5,
 }:
@@ -46,7 +46,7 @@ stdenv.mkDerivation {
   ];
 
   buildInputs = [
-    fftwSinglePrec
+    fftw.float
     libsamplerate
     qt5.qtbase
   ];

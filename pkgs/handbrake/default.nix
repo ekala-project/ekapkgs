@@ -58,7 +58,7 @@
   desktop-file-utils,
   meson,
   ninja,
-  # wrapGAppsHook4 is gtk4.wrapGAppsHook in ekapkgs
+  # gtk4.wrapGAppsHook is gtk4.wrapGAppsHook in ekapkgs
   intltool,
   glib,
   gtk4,

@@ -4,7 +4,7 @@
   fetchFromGitHub,
   cmake,
   curl,
-  fftwSinglePrec,
+  fftw,
   netcdf,
   pcre2,
   gdal,
@@ -43,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     pcre2
     dcw-gmt
     gshhg-gmt
-    fftwSinglePrec
+    fftw.float
     blas
     lapack
   ];
@@ -65,7 +65,7 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.cmakeBool "GMT_ENABLE_OPENMP" true)
     (lib.cmakeBool "GMT_INSTALL_MODULE_LINKS" false)
     (lib.cmakeFeature "LICENSE_RESTRICTED" "LGPL")
-    (lib.cmakeFeature "FFTW3_ROOT" "${fftwSinglePrec.dev}")
+    (lib.cmakeFeature "FFTW3_ROOT" "${fftw.float.dev}")
     (lib.cmakeFeature "LAPACK_LIBRARY" "${lib.getLib lapack}/lib/liblapack.so")
     (lib.cmakeFeature "BLAS_LIBRARY" "${lib.getLib blas}/lib/libblas.so")
   ];

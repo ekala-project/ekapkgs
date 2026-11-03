@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   makeDesktopItem,
-  SDL2,
+  sdl2-compat,
   SDL2_net,
 }:
 
@@ -26,7 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_net
   ];
 

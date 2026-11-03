@@ -10,7 +10,7 @@
 }:
 
 let
-  jre = java.v21;
+  javaRuntime = java.v21;
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "neo4j";
@@ -37,12 +37,12 @@ stdenv.mkDerivation (finalAttrs: {
             "$out/bin/$NEO4J_SCRIPT" \
             --prefix PATH : "${
               lib.makeBinPath [
-                jre
+                java
                 which
                 gawk
               ]
             }" \
-            --set JAVA_HOME "${jre}"
+            --set JAVA_HOME "${javaRuntime}"
     done
 
     patchShebangs $out/share/neo4j/bin/neo4j-admin

@@ -15,7 +15,7 @@
   libbpf,
   ncurses,
   libmysqlclient,
-  lua5_2_compat,
+  lua,
   hwloc,
   numactl,
   readline,
@@ -34,7 +34,7 @@
   s2n-tls,
 }:
 let
-  lua = lua5_2_compat;
+  luaInterp = lua.v5_2_compat;
 in
 
 stdenv.mkDerivation (finalAttrs: {
@@ -84,7 +84,7 @@ stdenv.mkDerivation (finalAttrs: {
     ncurses
     lz4
     rdma-core
-    lua
+    luaInterp
     hwloc
     numactl
     readline

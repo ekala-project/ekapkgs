@@ -9,7 +9,7 @@
   perl,
   taglib_1,
   taglib_extras,
-  ffmpeg_6,
+  ffmpeg,
   speex,
   mpg123,
   libmtp,
@@ -42,7 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     (perl.withPackages (ppkgs: [ ppkgs.URI ]))
     taglib_1
     taglib_extras
-    ffmpeg_6
+    ffmpeg
     speex
     mpg123
     libmtp

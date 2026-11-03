@@ -11,7 +11,7 @@
   autoreconfHook,
   libxslt,
   docbook-xsl,
-  docbook_xml_dtd_412,
+  docbook-xml-dtd,
   libxml2,
 }:
 
@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     intltool
     libxslt
     libxml2
-    docbook_xml_dtd_412
+    docbook-xml-dtd.v4_1_2
     docbook-xsl
   ];
 

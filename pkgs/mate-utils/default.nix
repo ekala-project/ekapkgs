@@ -21,7 +21,6 @@
   mate-panel,
   hicolor-icon-theme,
   wayland,
-  wrapGAppsHook3,
   yelp-tools,
   gitUpdater,
 }:
@@ -51,7 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     itstool
     inkscape
     mate-common # mate-common.m4 macros
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     yelp-tools
   ];
 

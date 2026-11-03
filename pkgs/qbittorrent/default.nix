@@ -1,10 +1,10 @@
 {
   lib,
+  gtk3,
   stdenv,
   fetchFromGitHub,
   cmake,
   pkg-config,
-  wrapGAppsHook3,
   boost,
   libtorrent-rasterbar,
   openssl,
@@ -32,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     qt6.wrapQtAppsHook
   ];
 

@@ -2,7 +2,7 @@
   lib,
   lua,
   fetchurl,
-  gnum4,
+  m4,
   openssl,
 }:
 
@@ -21,7 +21,7 @@ lua.pkgs.buildLuarocksPackage rec {
     sha256 = "1i77z3939wk9qq7sqa781wgpzmpwrpdakc8zqykidfgh5yc4avaa";
   };
 
-  nativeBuildInputs = [ gnum4 ];
+  nativeBuildInputs = [ m4 ];
 
   externalDeps = [
     {

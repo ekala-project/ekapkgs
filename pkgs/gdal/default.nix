@@ -39,7 +39,7 @@
   gtest,
   hdf4 ? null,
   hdf5-cpp,
-  jdk ? null,
+  java ? null,
   json_c,
   lerc,
   libaom,
@@ -107,7 +107,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optionals useJava [
     ant
-    jdk
+    java
   ];
 
   cmakeEntries = {

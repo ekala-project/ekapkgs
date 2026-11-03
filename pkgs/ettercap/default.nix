@@ -1,7 +1,7 @@
 {
   lib,
   stdenv,
-  atk,
+  at-spi2-core,
   bison,
   cmake,
   curl,
@@ -44,7 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    atk
+    at-spi2-core
     curl
     geoip
     glib

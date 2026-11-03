@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   apr,
-  jdk,
+  java,
   openssl,
 }:
 
@@ -20,13 +20,13 @@ stdenv.mkDerivation rec {
 
   buildInputs = [
     apr
-    jdk
+    java
     openssl
   ];
 
   configureFlags = [
     "--with-apr=${apr.dev}"
-    "--with-java-home=${jdk}"
+    "--with-java-home=${java}"
     "--with-ssl=${openssl.dev}"
   ];
 

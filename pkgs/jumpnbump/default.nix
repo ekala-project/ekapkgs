@@ -2,13 +2,12 @@
   lib,
   stdenv,
   fetchFromGitLab,
-  SDL2,
+  sdl2-compat,
   SDL2_mixer,
   SDL2_net,
   gtk3,
   gobject-introspection,
   python3Packages,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation {
@@ -27,15 +26,15 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [
     python3Packages.wrapPython
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
-    SDL2
+    sdl2-compat
     SDL2_mixer
     SDL2_net
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_mixer
     SDL2_net
     gtk3

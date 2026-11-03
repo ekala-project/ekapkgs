@@ -1,5 +1,6 @@
 {
   lib,
+  gtk3,
   alsa-lib,
   boost,
   meson,
@@ -28,7 +29,6 @@
   portaudio,
   python3,
   stdenv,
-  wrapGAppsHook3,
   wxwidgets_3_2,
   zlib,
   # Boolean guard flags
@@ -63,7 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     python3
     wxwidgets_3_2
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

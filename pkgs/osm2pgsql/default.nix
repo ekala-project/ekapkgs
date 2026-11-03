@@ -9,7 +9,7 @@
   zlib,
   boost,
   libpq,
-  lua5_5,
+  lua,
   libosmium,
   nlohmann_json,
   opencv,
@@ -47,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
     fmt
     libosmium
     libpq
-    lua5_5
+    lua.v5_5
     nlohmann_json
     opencv
     potrace

@@ -6,7 +6,6 @@
   ninja,
   hwloc,
   fftw,
-  fftwSinglePrec,
   perl,
   python3,
   blas,
@@ -42,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    (if singlePrec then fftwSinglePrec else fftw)
+    (if singlePrec then fftw.float else fftw)
     perl
     python3
     hwloc

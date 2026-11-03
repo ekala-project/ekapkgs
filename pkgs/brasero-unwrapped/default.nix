@@ -14,7 +14,6 @@
   libburn,
   libisofs,
   vcdimager,
-  wrapGAppsHook3,
   hicolor-icon-theme,
 }:
 
@@ -40,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     itstool
     intltool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

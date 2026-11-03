@@ -9,7 +9,7 @@
   libx11,
   libxdmcp,
   libxcb,
-  lua5_1,
+  lua,
   minizip,
   pkg-config,
   qt6,
@@ -40,7 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
     libx11
     libxdmcp
     libxcb
-    lua5_1
+    lua.v5_1
     minizip
     qt6.qttools
   ];

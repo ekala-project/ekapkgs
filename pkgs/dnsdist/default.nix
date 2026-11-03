@@ -8,7 +8,7 @@
   libcap,
   libedit,
   libsodium,
-  lua5_2_compat,
+  lua,
   net-snmp,
   nghttp2,
   openssl,
@@ -22,7 +22,7 @@
   zlib,
 }:
 let
-  lua = lua5_2_compat;
+  luaInterp = lua.v5_2_compat;
 in
 
 stdenv.mkDerivation (finalAttrs: {
@@ -52,7 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
     libcap
     libedit
     libsodium
-    lua
+    luaInterp
     net-snmp
     nghttp2
     openssl

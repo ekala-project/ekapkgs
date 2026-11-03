@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchzip,
-  jre,
+  java,
   makeWrapper,
 }:
 
@@ -32,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     done
 
     mkdir -p $out/bin
-    makeWrapper ${jre}/bin/java $out/bin/epubcheck \
+    makeWrapper ${java}/bin/java $out/bin/epubcheck \
       --add-flags "-classpath $classpath com.adobe.epubcheck.tool.Checker"
   '';
 

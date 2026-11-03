@@ -201,7 +201,7 @@ let
     ];
   };
 
-  jre' = java;
+  java' = java;
 
   version = import ./src-stable/version.nix;
   srcsAttributes = {
@@ -424,7 +424,7 @@ stdenv.mkDerivation (finalAttrs: {
       kdePackages.kio
     ]
     ++ optionals withJava [
-      jre'
+      java'
     ];
 
   preConfigure = ''
@@ -575,7 +575,7 @@ stdenv.mkDerivation (finalAttrs: {
   passthru = {
     inherit srcs;
     inherit withJava;
-    jdk = if withJava then jre' else null;
+    java = if withJava then java' else null;
     python = python3;
     inherit kdeIntegration;
     inherit gtk3;

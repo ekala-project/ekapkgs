@@ -11,8 +11,8 @@
   fetchpatch,
   cmake,
   pkg-config,
-  lua5_1,
-  SDL2,
+  lua,
+  sdl2-compat,
   SDL2_mixer,
   zlib,
   libpng,
@@ -54,10 +54,10 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     SDL2_ttf
     SDL2_net
-    SDL2
+    sdl2-compat
     SDL2_mixer
     SDL2_image
-    lua5_1
+    lua.v5_1
     ffmpeg
     libglut
     physfs
@@ -70,7 +70,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   env.NIX_LDFLAGS = lib.concatMapStringsSep " " (e: "-rpath ${e}/lib") [
-    SDL2.out
+    sdl2-compat.out
     SDL2_image
     SDL2_mixer
     SDL2_net
@@ -78,7 +78,7 @@ stdenv.mkDerivation (finalAttrs: {
     libGL
     libGLU
     libpng.out
-    lua5_1
+    lua.v5_1
     physfs
     zlib.out
   ];

@@ -6,7 +6,6 @@
   deepfilternet,
   fetchFromGitHub,
   fftw,
-  fftwFloat,
   glib,
   gsl,
   intltool,
@@ -34,7 +33,7 @@
   x42-plugins,
   zam-plugins,
   zita-convolver,
-  wrapGAppsHook3,
+  gtk3,
 }:
 
 let
@@ -75,7 +74,7 @@ stdenv.mkDerivation (finalAttrs: {
     intltool
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     wrapQtAppsHook
   ];
 
@@ -86,7 +85,7 @@ stdenv.mkDerivation (finalAttrs: {
     breeze-icons
     deepfilternet
     fftw
-    fftwFloat
+    fftw.float
     glib
     gsl
     kcolorscheme

@@ -12,7 +12,7 @@
 }:
 
 let
-  jdk = java.v17;
+  javaRuntime = java.v17;
 
   src = fetchFromGitHub {
     owner = "freeplane";
@@ -38,7 +38,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     makeBinaryWrapper
-    jdk
+    java
     gradle.v9
     gradle.v9.setupHook
     copyDesktopItems
@@ -50,7 +50,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   };
 
   gradleFlags = [
-    "-Dorg.gradle.java.home=${jdk}"
+    "-Dorg.gradle.javaRuntime.home=${javaRuntime}"
     "-x"
     "test"
   ];
@@ -109,10 +109,10 @@ stdenvNoCC.mkDerivation (finalAttrs: {
 
     makeWrapper $out/share/freeplane/freeplane.sh $out/bin/freeplane \
       --set FREEPLANE_BASE_DIR $out/share/freeplane \
-      --set JAVA_HOME ${jdk} \
+      --set JAVA_HOME ${javaRuntime} \
       --prefix PATH : ${
         lib.makeBinPath [
-          jdk
+          java
           which
         ]
       } \

@@ -16,7 +16,6 @@
   vala,
   desktop-file-utils,
   directoryListingUpdater,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -47,7 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     vala
     desktop-file-utils
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

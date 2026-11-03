@@ -11,7 +11,7 @@
   libxml2,
   libxslt,
   docbook-xsl-nons,
-  docbook_xml_dtd_44,
+  docbook-xml-dtd,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -29,14 +29,14 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     autoreconfHook
     docbook-xsl-nons
-    docbook_xml_dtd_44
+    docbook-xml-dtd.v4_4
     libxml2
     libxslt
     pkg-config
   ];
 
   makeFlags = [
-    "SGML_CATALOG_FILES=${docbook-xsl-nons}/xml/xsl/docbook/catalog.xml ${docbook_xml_dtd_44}/xml/dtd/docbook/catalog.xml"
+    "SGML_CATALOG_FILES=${docbook-xsl-nons}/xml/xsl/docbook/catalog.xml ${docbook-xml-dtd.v4_4}/xml/dtd/docbook/catalog.xml"
     "VERTO_CFLAGS=${libverto}/include"
     "VERTO_LIBS=${libverto}/lib/libverto.so"
   ];

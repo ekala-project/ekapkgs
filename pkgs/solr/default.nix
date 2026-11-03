@@ -10,7 +10,7 @@
 
 let
   # Solr 9.x supports Java 11+ (17 recommended).
-  jre = java.v17;
+  javaRuntime = java.v17;
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "solr";
@@ -22,7 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ makeWrapper ];
-  buildInputs = [ jre ];
+  buildInputs = [ java ];
 
   installPhase = ''
     runHook preInstall
@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     cp CHANGES.txt LICENSE.txt NOTICE.txt README.txt $out
     patchShebangs $out/bin
     wrapProgram $out/bin/solr \
-      --set JAVA_HOME "${jre}" \
+      --set JAVA_HOME "${javaRuntime}" \
       --prefix PATH : "${
         lib.makeBinPath [
           bash
@@ -39,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
         ]
       }"
     wrapProgram $out/bin/post \
-      --set JAVA_HOME "${jre}" \
+      --set JAVA_HOME "${javaRuntime}" \
       --prefix PATH : "${
         lib.makeBinPath [
           bash
@@ -50,7 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   passthru = {
-    inherit jre;
+    inherit java;
   };
 
   meta = {

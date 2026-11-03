@@ -11,7 +11,6 @@
   gupnp_1_6,
   imagemagick,
   mate-desktop,
-  wrapGAppsHook3,
   gitUpdater,
 }:
 
@@ -27,7 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
     gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

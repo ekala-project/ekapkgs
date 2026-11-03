@@ -44,8 +44,8 @@ stdenv.mkDerivation (finalAttrs: {
   postPatch = ''
     grep -Zlr include.*SDL . | xargs -0 \
       sed -i -E \
-        -e 's,"(SDL2?_?[a-zA-Z]*.h),"SDL2/\1,' \
-        -e 's,SDL2/SDL2_Pango.h,SDL2_Pango.h,' || true
+        -e 's,"(sdl2-compat?_?[a-zA-Z]*.h),"sdl2-compat/\1,' \
+        -e 's,sdl2-compat/SDL2_Pango.h,SDL2_Pango.h,' || true
   '';
 
   strictDeps = true;

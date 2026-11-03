@@ -46,7 +46,7 @@
   enableGtk3 ? false,
   gtk3,
   enableFfmpeg ? true,
-  ffmpeg_8-headless ? null,
+  ffmpeg-headless ? null,
   enableGStreamer ? true,
   elfutils,
   gstreamer,
@@ -296,7 +296,7 @@ stdenv.mkDerivation (finalAttrs: {
     openjpeg
   ]
   ++ lib.optionals enableFfmpeg [
-    ffmpeg_8-headless
+    ffmpeg-headless
   ]
   ++ lib.optionals (enableGStreamer && stdenv.hostPlatform.isLinux) [
     elfutils

@@ -1,6 +1,7 @@
 {
   stdenv,
   lib,
+  gtk3,
   fetchFromGitHub,
   kdePackages,
   pkg-config,
@@ -10,7 +11,6 @@
   libgit2,
   clipper,
   quazip,
-  wrapGAppsHook3,
 }:
 
 let
@@ -46,7 +46,7 @@ stdenv.mkDerivation {
     pkg-config
     qt6.qttools
     kdePackages.wrapQtAppsHook
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

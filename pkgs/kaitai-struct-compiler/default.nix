@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchzip,
-  jre,
+  java,
   makeWrapper,
 }:
 
@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     install -D $src/bin/kaitai-struct-compiler $out/bin/kaitai-struct-compiler
     ln -s $out/bin/kaitai-struct-compiler $out/bin/ksc
     cp -R $src/lib $out/lib
-    wrapProgram $out/bin/kaitai-struct-compiler --prefix PATH : ${lib.makeBinPath [ jre ]}
+    wrapProgram $out/bin/kaitai-struct-compiler --prefix PATH : ${lib.makeBinPath [ java ]}
   '';
 
   meta = {

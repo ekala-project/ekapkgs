@@ -93,7 +93,7 @@ let
           unset GIO_EXTRA_MODULES
 
           # udev event notifications don't work reliably inside containers.
-          # SDL2 already tries to automatically detect flatpak and pressure-vessel
+          # sdl2-compat already tries to automatically detect flatpak and pressure-vessel
           # and falls back to inotify-based discovery.
           export SDL_JOYSTICK_DISABLE_UDEV=1
 

@@ -13,7 +13,6 @@
   mate-desktop,
   mate-panel,
   wayland,
-  wrapGAppsHook3,
   gitUpdater,
 }:
 
@@ -34,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     libtool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

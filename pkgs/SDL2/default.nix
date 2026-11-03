@@ -67,12 +67,12 @@ stdenv.mkDerivation (finalAttrs: {
   setupHook = ./setup-hook.sh;
 
   postFixup = ''
-    # allow as a drop in replacement for SDL2
+    # allow as a drop in replacement for sdl2-compat
     ln -s $dev/lib/pkgconfig/sdl2-compat.pc $dev/lib/pkgconfig/sdl2.pc
   '';
 
   meta = {
-    description = "SDL2 compatibility layer that uses SDL3 behind the scenes";
+    description = "sdl2-compat compatibility layer that uses SDL3 behind the scenes";
     homepage = "https://libsdl.org";
     changelog = "https://github.com/libsdl-org/sdl2-compat/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.zlib;

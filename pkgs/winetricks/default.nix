@@ -8,9 +8,9 @@
   coreutils,
   curl,
   gawk,
-  gnugrep,
-  gnused,
-  gnutar,
+  grep,
+  sed,
+  tar,
   gzip,
   p7zip,
   perl,
@@ -56,9 +56,9 @@ stdenv.mkDerivation (finalAttrs: {
         coreutils
         curl
         gawk
-        gnugrep
-        gnused
-        gnutar
+        grep
+        sed
+        tar
         gzip
         p7zip
         perl

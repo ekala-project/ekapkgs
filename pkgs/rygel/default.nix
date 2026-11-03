@@ -1,6 +1,7 @@
 {
   stdenv,
   lib,
+  gtk3,
   fetchurl,
   docbook-xsl-nons,
   meson,
@@ -11,7 +12,6 @@
   libxml2,
   libxslt,
   gobject-introspection,
-  wrapGAppsHook4,
   wrapGAppsNoGuiHook,
   python3,
   gdk-pixbuf,
@@ -21,11 +21,7 @@
   gupnp-av,
   gupnp-dlna,
   gstreamer,
-  gst-editing-services,
-  gst-plugins-base,
-  gst-plugins-good,
-  gst-plugins-bad,
-  gst-plugins-ugly,
+  gstreamerPkgs,
   libgee,
   libsoup_3,
   libx11,
@@ -68,7 +64,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
     libxslt
     gobject-introspection
-    (if withGtk then wrapGAppsHook4 else wrapGAppsNoGuiHook)
+    (if withGtk then gtk4.wrapGAppsHook else wrapGAppsNoGuiHook)
     python3
   ];
 
@@ -92,11 +88,11 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals withGtk [ gtk4 ]
   ++ [
     gstreamer
-    gst-editing-services
-    gst-plugins-base
-    gst-plugins-good
-    gst-plugins-bad
-    gst-plugins-ugly
+    gstreamerPkgs.gst-editing-services
+    gstreamerPkgs.gst-plugins-base
+    gstreamerPkgs.gst-plugins-good
+    gstreamerPkgs.gst-plugins-bad
+    gstreamerPkgs.gst-plugins-ugly
   ];
 
   mesonFlags = [

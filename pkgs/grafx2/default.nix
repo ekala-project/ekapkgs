@@ -10,7 +10,7 @@
   libpng,
   libtiff,
   libx11,
-  lua5_2_compat,
+  lua,
   pkg-config,
   zlib,
 }:
@@ -49,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     libpng
     libtiff
     libx11
-    lua5_2_compat
+    lua.v5_2_compat
     zlib
   ];
 

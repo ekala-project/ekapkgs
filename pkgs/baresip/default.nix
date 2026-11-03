@@ -1,5 +1,5 @@
 {
-  SDL2,
+  sdl2-compat,
   alsa-lib,
   cairo,
   celt,
@@ -58,7 +58,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
   buildInputs = [
-    SDL2
+    sdl2-compat
     alsa-lib
     cairo
     celt

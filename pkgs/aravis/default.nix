@@ -14,7 +14,6 @@
   enableViewer ? true,
   gstreamer,
   gtk3,
-  wrapGAppsHook3,
 
   enableUsb ? true,
   libusb1,
@@ -26,7 +25,7 @@
 assert enableGstPlugin -> gstreamer != null;
 assert enableViewer -> enableGstPlugin;
 assert enableViewer -> gtk3 != null;
-assert enableViewer -> wrapGAppsHook3 != null;
+assert enableViewer -> gtk3.wrapGAppsHook != null;
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "aravis";
@@ -54,7 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
     gi-docgen
     gobject-introspection
   ]
-  ++ lib.optional enableViewer wrapGAppsHook3;
+  ++ lib.optional enableViewer gtk3.wrapGAppsHook;
 
   buildInputs = [
     glib

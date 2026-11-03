@@ -275,7 +275,7 @@ final: prev: {
   piper-mice-configurator = final.piper;
   pd = final.puredata;
   bitcoind = final.bitcoin.override { withGui = false; };
-  mat2 = final.python3Packages.toPythonApplication final.python3Packages.mat2;
+  # mat2 = final.python3Packages.toPythonApplication final.python3Packages.mat2; # TODO: mat2 not yet ported
   signify-openbsd = final.signify;
   fswatch-mon = final.fswatch;
   zmap-network-scanner = final.zmap;

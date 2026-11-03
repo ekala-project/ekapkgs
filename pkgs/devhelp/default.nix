@@ -8,7 +8,6 @@
   gnome,
   adwaita-icon-theme,
   gtk3,
-  wrapGAppsHook3,
   glib,
   gobject-introspection,
   gi-docgen,
@@ -40,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     itstool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
     gi-docgen
     # post install script

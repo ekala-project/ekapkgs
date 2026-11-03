@@ -32,7 +32,7 @@
   libxmlb,
   # TODO: malcontent - not available
   libsysprof-capture,
-  # TODO: valgrind-light - not available
+  # TODO: valgrind.light - not available
   docbook-xsl-nons,
   docbook-xml-dtd,
   gtk-doc,
@@ -64,7 +64,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
     docbook-xml-dtd.v4_2
     docbook-xml-dtd.v4_3
-    # TODO: valgrind-light - not available
+    # TODO: valgrind.light - not available
     docbook-xsl-nons
     gtk-doc
     desktop-file-utils

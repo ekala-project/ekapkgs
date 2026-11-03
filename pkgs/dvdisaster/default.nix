@@ -8,7 +8,6 @@
   util-linux,
   glib,
   gtk3,
-  wrapGAppsHook3,
   withGui ? true,
 }:
 
@@ -29,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     which
     util-linux
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

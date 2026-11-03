@@ -2,7 +2,7 @@
   lib,
   maven,
   fetchFromGitHub,
-  jre,
+  java,
   makeWrapper,
 }:
 maven.buildMavenPackage rec {
@@ -31,7 +31,7 @@ maven.buildMavenPackage rec {
     install -Dm644 target/apgdiff-${version}.jar $out/lib/apgdiff.jar
 
     mkdir -p $out/bin
-    makeWrapper ${jre}/bin/java $out/bin/apgdiff \
+    makeWrapper ${java}/bin/java $out/bin/apgdiff \
       --argv0 apgdiff \
       --add-flags "-jar $out/lib/apgdiff.jar"
   '';
@@ -41,6 +41,6 @@ maven.buildMavenPackage rec {
     mainProgram = "apgdiff";
     homepage = "https://apgdiff.com";
     license = lib.licenses.mit;
-    inherit (jre.meta) platforms;
+    inherit (java.meta) platforms;
   };
 }

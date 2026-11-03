@@ -13,7 +13,7 @@
   libxmu,
   libpcap,
   libtool,
-  lua5_2_compat,
+  lua,
   meson,
   ninja,
   openal,
@@ -24,7 +24,7 @@
 }:
 
 let
-  lua = lua5_2_compat;
+  luaInterp = lua.v5_2_compat;
 in
 
 stdenv.mkDerivation (finalAttrs: {
@@ -54,7 +54,7 @@ stdenv.mkDerivation (finalAttrs: {
     desktop-file-utils
     intltool
     libtool
-    lua
+    luaInterp
     meson
     meson.configurePhaseHook
     ninja

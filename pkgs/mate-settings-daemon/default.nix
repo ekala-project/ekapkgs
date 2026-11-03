@@ -17,7 +17,6 @@
   mate-desktop,
   pulseaudioSupport ? stdenv.config.pulseaudio or true,
   libpulseaudio,
-  wrapGAppsHook3,
   gitUpdater,
   udevCheckHook,
 }:
@@ -38,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     gettext
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     udevCheckHook
   ];
 

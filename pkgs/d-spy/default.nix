@@ -11,7 +11,6 @@
   meson,
   ninja,
   pkg-config,
-  wrapGAppsHook4,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -34,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
     desktop-file-utils
-    wrapGAppsHook4
+    gtk4.wrapGAppsHook
     gettext
     glib
   ];

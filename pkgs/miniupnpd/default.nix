@@ -9,9 +9,9 @@
   pkg-config,
   which,
   iproute2,
-  gnused,
+  sed,
   coreutils,
-  gnugrep,
+  grep,
   gawk,
   makeWrapper,
   firewall ? "iptables",
@@ -29,8 +29,8 @@ let
           which
           iproute2
           iptables
-          gnused
-          gnugrep
+          sed
+          grep
           gawk
         ];
         nftables = [

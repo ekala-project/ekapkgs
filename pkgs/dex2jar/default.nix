@@ -2,7 +2,7 @@
   lib,
   stdenvNoCC,
   fetchurl,
-  jre,
+  java,
   makeWrapper,
   unzip,
 }:
@@ -34,7 +34,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     mv * $f
     for i in $f/*.sh; do
       n=$(basename ''${i%.sh})
-      makeWrapper $i $out/bin/$n --prefix PATH : ${lib.makeBinPath [ jre ]}
+      makeWrapper $i $out/bin/$n --prefix PATH : ${lib.makeBinPath [ java ]}
     done
   '';
 

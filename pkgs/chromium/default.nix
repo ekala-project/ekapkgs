@@ -870,7 +870,7 @@ let
 
     echo -n '${upstream-info.DEPS."src/third_party/dawn".rev}' > gpu/webgpu/DAWN_VERSION
 
-    mkdir -p third_party/jdk/current/bin
+    mkdir -p third_party/java/current/bin
   ''
   + ''
     cat << EOF > gpu/webgpu/dawn_commit_hash.h
@@ -957,9 +957,9 @@ let
     ${ungoogler}/utils/prune_binaries.py . ${ungoogler}/pruning.list || echo "some errors"
   ''
   + ''
-    mkdir -p third_party/node/linux/node-linux-x64/bin${lib.optionalString ungoogled " third_party/jdk/current/bin/"}
+    mkdir -p third_party/node/linux/node-linux-x64/bin${lib.optionalString ungoogled " third_party/java/current/bin/"}
     ln -sf "${pkgsBuildHost.nodejs}/bin/node" third_party/node/linux/node-linux-x64/bin/node
-    ln -s "${pkgsBuildHost.java}/bin/java" third_party/jdk/current/bin/
+    ln -s "${pkgsBuildHost.java}/bin/java" third_party/java/current/bin/
 
     sed -i 's/OFFICIAL_BUILD/GOOGLE_CHROME_BUILD/' tools/generate_shim_headers/generate_shim_headers.py
 

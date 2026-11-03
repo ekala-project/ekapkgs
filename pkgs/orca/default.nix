@@ -14,8 +14,7 @@
   python3,
   gtk3,
   replaceVars,
-  at-spi2-atk ? null,
-  at-spi2-core,
+  at-spi2-core ? null,
   dbus,
   xkbcomp,
   procps,
@@ -121,7 +120,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   buildInputs = [
     python3
     gtk3
-    at-spi2-atk
+    at-spi2-core
     at-spi2-core
     dbus
     gsettings-desktop-schemas

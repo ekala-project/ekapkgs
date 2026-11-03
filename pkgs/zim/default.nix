@@ -5,7 +5,6 @@
   python3Packages,
   gtk3,
   gobject-introspection,
-  wrapGAppsHook3,
   adwaita-icon-theme,
   writableTmpDirAsHomeHook,
   xvfb-run,
@@ -28,7 +27,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
 
   nativeBuildInputs = [
     gobject-introspection
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

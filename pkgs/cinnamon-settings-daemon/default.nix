@@ -9,7 +9,6 @@
   lcms2,
   libcanberra-gtk3,
   libnotify,
-  wrapGAppsHook3,
   pkg-config,
   lib,
   stdenv,
@@ -72,7 +71,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     meson.configurePhaseHook
     ninja
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     pkg-config
   ];
 

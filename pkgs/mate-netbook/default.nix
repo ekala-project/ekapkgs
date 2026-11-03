@@ -9,7 +9,6 @@
   libfakekey,
   libxtst,
   mate-panel,
-  wrapGAppsHook3,
   gitUpdater,
 }:
 
@@ -29,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
     gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

@@ -7,7 +7,7 @@
   makeWrapper,
   pkg-config,
   # Required
-  fftwSinglePrec,
+  fftw,
   liblo,
   minixml,
   zlib,
@@ -76,7 +76,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    fftwSinglePrec
+    fftw.float
     liblo
     minixml
     zlib

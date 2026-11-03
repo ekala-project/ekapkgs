@@ -3,7 +3,7 @@
   stdenvNoCC,
   fetchurl,
   makeBinaryWrapper,
-  jre,
+  java,
 }:
 
 stdenvNoCC.mkDerivation rec {
@@ -16,14 +16,14 @@ stdenvNoCC.mkDerivation rec {
   };
 
   nativeBuildInputs = [ makeBinaryWrapper ];
-  buildInputs = [ jre ];
+  buildInputs = [ java ];
 
   dontUnpack = true;
 
   installPhase = ''
     runHook preInstall
     install -D $src $out/checkstyle/checkstyle-all.jar
-    makeWrapper ${jre}/bin/java $out/bin/checkstyle \
+    makeWrapper ${java}/bin/java $out/bin/checkstyle \
       --add-flags "-jar $out/checkstyle/checkstyle-all.jar"
     runHook postInstall
   '';
@@ -40,6 +40,6 @@ stdenvNoCC.mkDerivation rec {
     changelog = "https://checkstyle.org/releasenotes.html#Release_${version}";
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
     license = lib.licenses.lgpl21;
-    platforms = jre.meta.platforms;
+    platforms = java.meta.platforms;
   };
 }

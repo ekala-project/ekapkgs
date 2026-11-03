@@ -4,7 +4,7 @@
   fetchurl,
   unzip,
   makeWrapper,
-  jre,
+  java,
 }:
 
 stdenv.mkDerivation rec {
@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
     unzip
     makeWrapper
   ];
-  buildInputs = [ jre ];
+  buildInputs = [ java ];
 
   installPhase = ''
      runHook preInstall
@@ -29,12 +29,12 @@ stdenv.mkDerivation rec {
      mkdir -p $out/lib $out/bin
      cp -R hsqldb/lib/*.jar $out/lib
 
-     makeWrapper ${jre}/bin/java $out/bin/hsqldb --add-flags "-classpath $out/lib/hsqldb.jar org.hsqldb.server.Server"
-     makeWrapper ${jre}/bin/java $out/bin/runServer --add-flags "-classpath $out/lib/hsqldb.jar org.hsqldb.server.Server"
-     makeWrapper ${jre}/bin/java $out/bin/runManagerSwing --add-flags "-classpath $out/lib/hsqldb.jar org.hsqldb.util.DatabaseManagerSwing"
-     makeWrapper ${jre}/bin/java $out/bin/runWebServer --add-flags "-classpath $out/lib/hsqldb.jar org.hsqldb.server.WebServer"
-     makeWrapper ${jre}/bin/java $out/bin/runManager --add-flags "-classpath $out/lib/hsqldb.jar org.hsqldb.util.DatabaseManager"
-     makeWrapper ${jre}/bin/java $out/bin/sqltool --add-flags "-jar $out/lib/sqltool.jar"
+     makeWrapper ${java}/bin/java $out/bin/hsqldb --add-flags "-classpath $out/lib/hsqldb.jar org.hsqldb.server.Server"
+     makeWrapper ${java}/bin/java $out/bin/runServer --add-flags "-classpath $out/lib/hsqldb.jar org.hsqldb.server.Server"
+     makeWrapper ${java}/bin/java $out/bin/runManagerSwing --add-flags "-classpath $out/lib/hsqldb.jar org.hsqldb.util.DatabaseManagerSwing"
+     makeWrapper ${java}/bin/java $out/bin/runWebServer --add-flags "-classpath $out/lib/hsqldb.jar org.hsqldb.server.WebServer"
+     makeWrapper ${java}/bin/java $out/bin/runManager --add-flags "-classpath $out/lib/hsqldb.jar org.hsqldb.util.DatabaseManager"
+     makeWrapper ${java}/bin/java $out/bin/sqltool --add-flags "-jar $out/lib/sqltool.jar"
 
     runHook postInstall
   '';

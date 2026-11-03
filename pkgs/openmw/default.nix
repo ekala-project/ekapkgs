@@ -11,7 +11,7 @@
   collada-dom,
   ffmpeg,
   libxt,
-  lua5_2_compat,
+  lua,
   luajit,
   lz4,
   mygui,
@@ -26,7 +26,7 @@
   GLPreference ? "GLVND",
 }:
 let
-  lua = lua5_2_compat;
+  luaInterp = lua.v5_2_compat;
   inherit (stdenv.hostPlatform) isDarwin isLinux isAarch64;
   isAarch64Linux = isLinux && isAarch64;
 in
@@ -103,7 +103,7 @@ stdenv.mkDerivation (finalAttrs: {
     collada-dom
     ffmpeg
     libxt
-    (if isAarch64Linux then lua else luajit)
+    (if isAarch64Linux then luaInterp else luajit)
     lz4
     mygui
     openal-soft

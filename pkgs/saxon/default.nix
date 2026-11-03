@@ -3,7 +3,7 @@
   stdenvNoCC,
   fetchurl,
   unzip,
-  jre,
+  java,
   makeWrapper,
 }:
 
@@ -31,15 +31,15 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     mv lib $out/share/java
 
     mkdir -p $out/bin
-    makeWrapper ${lib.getExe jre} $out/bin/saxon-he \
+    makeWrapper ${lib.getExe java} $out/bin/saxon-he \
       --add-flags "-jar $out/share/java/saxon-he-${finalAttrs.version}.jar"
 
     ln -s $out/bin/saxon-he $out/bin/saxon-he-xslt
 
-    makeWrapper ${lib.getExe jre} $out/bin/transform \
+    makeWrapper ${lib.getExe java} $out/bin/transform \
       --add-flags "-cp $out/share/java/saxon-he-${finalAttrs.version}.jar net.sf.saxon.Transform"
 
-    makeWrapper ${lib.getExe jre} $out/bin/query \
+    makeWrapper ${lib.getExe java} $out/bin/query \
       --add-flags "-cp $out/share/java/saxon-he-${finalAttrs.version}.jar net.sf.saxon.Query"
 
     runHook postInstall

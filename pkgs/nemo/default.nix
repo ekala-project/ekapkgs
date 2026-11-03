@@ -7,7 +7,6 @@
   pkg-config,
   lib,
   stdenv,
-  wrapGAppsHook3,
   libxmlb,
   gtk3,
   gvfs,
@@ -73,7 +72,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     pkg-config
     ninja
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     intltool
     shared-mime-info
     gobject-introspection

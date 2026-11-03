@@ -2,7 +2,7 @@
   buildPerlModule,
   fetchurl,
   lib,
-  libidn2,
+  libidn,
 }:
 buildPerlModule {
   pname = "Net-LibIDN2";
@@ -11,7 +11,7 @@ buildPerlModule {
     url = "mirror://cpan/authors/id/T/TH/THOR/Net-LibIDN2-1.02.tar.gz";
     hash = "sha256-0fMK/GrPplQbAMCafkx059jkuknjJ3wLvEGuNcE5DQc=";
   };
-  propagatedBuildInputs = [ libidn2 ];
+  propagatedBuildInputs = [ libidn.v2 ];
   meta = {
     description = "Perl bindings for GNU Libidn2";
     homepage = "https://github.com/gnuthor/Net--LibIDN2";

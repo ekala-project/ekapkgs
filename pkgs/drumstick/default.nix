@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   cmake,
-  docbook_xml_dtd_45,
+  docbook-xml-dtd,
   docbook_xsl,
   doxygen,
   pkg-config,
@@ -38,7 +38,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
-    docbook_xml_dtd_45
+    docbook-xml-dtd.v4_5
     docbook_xsl
     doxygen
     pkg-config

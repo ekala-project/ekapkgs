@@ -8,7 +8,6 @@
   cdrkit,
   dvdauthor,
   gtk3,
-  wrapGAppsHook3,
   gdk-pixbuf,
   gobject-introspection,
   # The subtitle encoder and mixer 'spumux' looks for the font 'arial' by default (hardcoded in devede)
@@ -46,7 +45,7 @@ buildPythonApplication (finalAttrs: {
 
   nativeBuildInputs = [
     setuptools-gettext
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
   ];
 

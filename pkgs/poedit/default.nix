@@ -20,7 +20,6 @@
   pugixml,
   nlohmann_json,
   hicolor-icon-theme,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -38,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoconf
     automake
     asciidoc
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     libxslt
     xmlto
     boost

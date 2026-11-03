@@ -4,7 +4,6 @@
   fetchFromGitLab,
   autoconf,
   automake,
-  gnum4 ? m4,
   m4,
   pkg-config,
   bison,
@@ -18,7 +17,7 @@
   SDL,
   SDL_image,
   SDL_mixer,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
   libGL,
@@ -89,7 +88,7 @@ let
             libGL
             libGLU
             libx11
-            SDL2
+            sdl2-compat
             SDL2_image
             SDL2_mixer
           ];
@@ -184,7 +183,7 @@ let
       nativeBuildInputs = [
         autoconf
         automake
-        gnum4
+        m4
         pkg-config
         which
         python3
