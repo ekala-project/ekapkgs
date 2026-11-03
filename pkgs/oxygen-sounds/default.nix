@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     extra-cmake-modules
   ];
 
