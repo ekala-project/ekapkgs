@@ -31,7 +31,10 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
 
   doCheck = !stdenv.hostPlatform.isi686; # tests fail on i686
 
