@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     extra-cmake-modules
     qt6.wrapQtAppsHook
     doxygen
