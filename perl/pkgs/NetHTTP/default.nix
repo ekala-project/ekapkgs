@@ -11,7 +11,6 @@ buildPerlPackage {
     hash = "sha256-DWXAndbIWJsq4RGBdNPBphcDtuz8FKNEKox0r2XgyU4=";
   };
   propagatedBuildInputs = [ URI ];
-  doCheck = false;
   meta = {
     description = "Low-level HTTP connection (client)";
   };

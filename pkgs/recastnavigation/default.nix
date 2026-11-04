@@ -4,7 +4,7 @@
   fetchFromGitHub,
   cmake,
   libGL,
-  SDL2,
+  sdl2-compat,
   libGLU,
   catch2_3,
 }:
@@ -23,10 +23,10 @@ stdenv.mkDerivation {
   };
 
   postPatch = lib.optionalString stdenv.hostPlatform.isDarwin ''
-    # Expects SDL2.framework in specific location, which we don't have
-    # Change where SDL2 headers are searched for to match what we do have
+    # Expects sdl2-compat.framework in specific location, which we don't have
+    # Change where sdl2-compat headers are searched for to match what we do have
     substituteInPlace RecastDemo/CMakeLists.txt \
-      --replace 'include_directories(''${SDL2_LIBRARY}/Headers)' 'include_directories(${lib.getInclude SDL2}/include/SDL2)'
+      --replace 'include_directories(''${SDL2_LIBRARY}/Headers)' 'include_directories(${lib.getInclude sdl2-compat}/include/sdl2-compat)'
   '';
 
   doCheck = true;
@@ -39,7 +39,7 @@ stdenv.mkDerivation {
 
   buildInputs = [
     libGL
-    SDL2
+    sdl2-compat
     libGLU
   ];
 

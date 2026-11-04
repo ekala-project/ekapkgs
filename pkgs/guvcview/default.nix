@@ -7,7 +7,7 @@
   intltool,
   pkg-config,
   portaudio,
-  SDL2,
+  sdl2-compat,
   ffmpeg,
   udev,
   libusb1,
@@ -23,7 +23,6 @@
   # can be turned off if used as a library
   useGtk ? true,
   gtk3,
-  wrapGAppsHook3 ? null,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -41,11 +40,11 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ]
-  ++ lib.optionals useGtk [ wrapGAppsHook3 ]
+  ++ lib.optionals useGtk [ gtk3.wrapGAppsHook ]
   ++ lib.optionals useQt [ libsForQt5.wrapQtAppsHook ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     alsa-lib
     ffmpeg
     libusb1

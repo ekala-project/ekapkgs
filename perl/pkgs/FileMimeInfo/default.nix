@@ -12,7 +12,6 @@ buildPerlPackage {
     url = "mirror://cpan/authors/id/M/MI/MICHIELB/File-MimeInfo-0.33.tar.gz";
     hash = "sha256-9r6ms4kGITJeycJ5KvruiOlIoK4dEIcvpyxxELPhscQ=";
   };
-  doCheck = false;
   buildInputs = [
     FileBaseDir
     FileDesktopEntry

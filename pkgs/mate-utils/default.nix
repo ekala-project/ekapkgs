@@ -21,7 +21,6 @@
   mate-panel,
   hicolor-icon-theme,
   wayland,
-  wrapGAppsHook3,
   yelp-tools,
   gitUpdater,
 }:
@@ -51,7 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     itstool
     inkscape
     mate-common # mate-common.m4 macros
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     yelp-tools
   ];
 
@@ -84,8 +83,6 @@ stdenv.mkDerivation (finalAttrs: {
   configureFlags = [ "--enable-wayland" ];
 
   env.NIX_CFLAGS_COMPILE = "-I${glib.dev}/include/gio-unix-2.0";
-
-  enableParallelBuilding = true;
 
   passthru.updateScript = gitUpdater {
     odd-unstable = true;

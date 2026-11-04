@@ -1,5 +1,6 @@
 {
   lib,
+  gtk3,
   stdenv,
   fetchurl,
   cmake,
@@ -18,7 +19,6 @@
   sqlite,
   versionCheckHook,
   xdg-utils,
-  wrapGAppsHook3,
   # TODO: espeak-ng - available in ekapkgs but needs verification
   espeak-ng,
   hunspell,
@@ -112,7 +112,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3Packages.python
     qt6.qmake
     qt6.wrapQtAppsHook
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     # `xdg-icon-resource` & co. are run by the desktop integration setup in `installPhase`
     xdg-utils
   ];

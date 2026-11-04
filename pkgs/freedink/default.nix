@@ -8,7 +8,7 @@
   lib,
   libzip,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   SDL2_gfx,
   SDL2_image,
   SDL2_mixer,
@@ -54,7 +54,7 @@ stdenv.mkDerivation (finalAttrs: {
     fontconfig
     glm
     libzip
-    SDL2
+    sdl2-compat
     SDL2_mixer
     SDL2_image
     SDL2_ttf

@@ -96,7 +96,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   # unfortunately, there's still a few failures with impure tests
-  doCheck = false;
   checkPhase = ''
     export GNUNET_PREFIX="$out"
     export PATH="$out/bin:$PATH"

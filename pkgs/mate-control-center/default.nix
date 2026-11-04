@@ -31,7 +31,6 @@
   udisks,
   systemdLibs,
   hicolor-icon-theme,
-  wrapGAppsHook3,
   yelp-tools,
   gitUpdater,
 }:
@@ -55,7 +54,7 @@ stdenv.mkDerivation (finalAttrs: {
     itstool
     desktop-file-utils
     mate-common # mate-common.m4 macros
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     yelp-tools
   ];
 

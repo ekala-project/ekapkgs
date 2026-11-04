@@ -18,7 +18,6 @@
   gsettings-desktop-schemas,
   gnome,
   adwaita-icon-theme,
-  wrapGAppsHook3,
   fetchpatch,
 }:
 
@@ -52,7 +51,7 @@ stdenv.mkDerivation rec {
     intltool
     itstool
     libxml2
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
   buildInputs = [
     gtk3

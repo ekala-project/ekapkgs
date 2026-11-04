@@ -19,8 +19,10 @@ maven.buildMavenPackage (finalAttrs: {
     hash = "sha256-HVUcjsUYZHmA3+2PPm2tY6XoUUecahG9X6TCO7QBt3M=";
   };
 
-  mvnHash = "sha256-EZmPVZ5cqGq75AsCui7BNISySvb9+wfyu59F9DAw7i4=";
-  doCheck = false;
+  mvnHash = "sha256-nEdY9S1UL0Iwrx5VwNfmMnTa8PUS66FrDbA5aosxYMs=";
+
+  # Tests require fontconfig/X11 which are unavailable in the sandbox
+  mvnParameters = "-DskipTests -Dmaven.test.skip=true";
 
   nativeBuildInputs = [ makeWrapper ];
   buildInputs = [ java ];

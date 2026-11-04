@@ -4,7 +4,7 @@
   maven,
   fetchFromGitHub,
   makeWrapper,
-  jre,
+  java,
   gtk3,
 }:
 
@@ -74,7 +74,7 @@ maven.buildMavenPackage rec {
 
   # gappsWrapperArgs are set in preFixup
   postFixup = ''
-    makeWrapper ${jre}/bin/java $out/bin/jugglinglab \
+    makeWrapper ${java}/bin/java $out/bin/jugglinglab \
         "''${gappsWrapperArgs[@]}" \
         --add-flags "-Xss2048k -Djava.library.path=$out/lib/ortools-lib" \
         --add-flags "-jar $out/share/jugglinglab/JugglingLab.jar"

@@ -11,7 +11,7 @@
 let
   # Latest supported LTS JDK for Zookeeper 3.9:
   # https://zookeeper.apache.org/doc/r3.9.4/zookeeperAdmin.html#sc_requiredSoftware
-  jre = java.v11;
+  javaRuntime = java.v11;
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "zookeeper";
@@ -23,7 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ makeWrapper ];
-  buildInputs = [ jre ];
+  buildInputs = [ java ];
 
   installPhase = ''
     runHook preInstall
@@ -36,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
         --replace-fail /bin/echo ${coreutils}/bin/echo
     for i in $out/bin/{zkCli,zkCleanup,zkServer,zkSnapShotToolkit,zkTxnLogToolkit}.sh; do
       wrapProgram $i \
-        --set JAVA_HOME "${jre}" \
+        --set JAVA_HOME "${javaRuntime}" \
         --prefix PATH : "${bash}/bin"
     done
     chmod -x $out/bin/zkEnv.sh
@@ -44,7 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   passthru = {
-    inherit jre;
+    inherit java;
   };
 
   meta = {

@@ -36,7 +36,7 @@ stdenv.mkDerivation rec {
   ];
 
   meta = {
-    description = "SDL2 sound library";
+    description = "sdl2-compat sound library";
     mainProgram = "playsound";
     platforms = lib.platforms.unix;
     license = lib.licenses.zlib;

@@ -5,7 +5,7 @@
   fetchsvn,
   makeWrapper,
   unzip,
-  jre,
+  java,
   libxxf86vm,
   extraJavaOpts ? "-Djosm.restart=true -Djava.net.useSystemProxies=true",
 }:
@@ -41,7 +41,7 @@ stdenv.mkDerivation {
   dontUnpack = true;
 
   nativeBuildInputs = [ makeWrapper ];
-  buildInputs = lib.optionals (!stdenv.hostPlatform.isDarwin) [ jre ];
+  buildInputs = lib.optionals (!stdenv.hostPlatform.isDarwin) [ java ];
 
   installPhase =
     if stdenv.hostPlatform.isDarwin then
@@ -55,7 +55,7 @@ stdenv.mkDerivation {
         cp -R ${srcs.pkg}/usr/share $out
 
         # Add libXxf86vm to path because it is needed by at least Kendzi3D plugin
-        makeWrapper ${jre}/bin/java $out/bin/josm \
+        makeWrapper ${java}/bin/java $out/bin/josm \
           --add-flags "${baseJavaOpts} ${extraJavaOpts} -jar $out/share/josm/josm.jar" \
           --prefix LD_LIBRARY_PATH ":" '${libxxf86vm}/lib' \
           --prefix _JAVA_AWT_WM_NONREPARENTING : 1 \

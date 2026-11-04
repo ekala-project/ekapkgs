@@ -12,7 +12,6 @@
   gtk3,
   gdk-pixbuf,
   gobject-introspection,
-  wrapGAppsHook3,
   glib,
   gitUpdater,
 }:
@@ -30,7 +29,7 @@ python3Packages.buildPythonApplication rec {
   };
 
   nativeBuildInputs = [
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     intltool
     python3Packages.distutils-extra
     gobject-introspection

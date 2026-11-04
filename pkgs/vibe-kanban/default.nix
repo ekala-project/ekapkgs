@@ -113,8 +113,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     LIBCLANG_PATH = "${llvmPackages.libclang.lib}/lib";
   };
 
-  doCheck = false;
-
   postInstall = ''
     mv $out/bin/server $out/bin/vibe-kanban
     mv $out/bin/review $out/bin/vibe-kanban-review

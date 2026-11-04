@@ -10,7 +10,6 @@
   perl,
   python3,
   pkg-config,
-  wrapGAppsHook3,
   at-spi2-core,
   dbus,
   elfutils,
@@ -79,7 +78,7 @@ stdenv.mkDerivation (finalAttrs: {
     perl # for pod2man and build scripts
     python3 # for build scripts
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection
   ];
 

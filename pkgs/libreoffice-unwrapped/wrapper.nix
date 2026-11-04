@@ -115,7 +115,7 @@ let
     ++ lib.optionals unwrapped.withJava [
       "--set"
       "JAVA_HOME"
-      "${unwrapped.jdk.home}"
+      "${unwrapped.java.home}"
     ]
     ++ [
       "--inherit-argv0"

@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   cmake,
-  SDL2,
+  sdl2-compat,
   libGLU,
   libGL,
   zlib,
@@ -43,7 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     copyDesktopItems
   ];
   buildInputs = [
-    SDL2
+    sdl2-compat
     libGLU
     libGL
     libx11

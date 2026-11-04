@@ -56,7 +56,10 @@ stdenv.mkDerivation (finalAttrs: {
     MUSE_MODULE_DIAGNOSTICS_CRASHPAD_CLIENT = false;
   };
 
+  doCheck = false;
+
   cmakeFlags = [
+
     (lib.cmakeBool "MUSE_ENABLE_UNIT_TESTS" finalAttrs.finalPackage.doCheck)
   ]
   ++ map (l: lib.cmakeBool "MUE_COMPILE_USE_SYSTEM_${l}" true) [

@@ -29,8 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     pkg-config
   ];
 
-  doCheck = false;
-
   doInstallCheck = true;
   nativeInstallCheckInputs = [
     versionCheckHook

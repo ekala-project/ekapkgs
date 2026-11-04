@@ -72,7 +72,6 @@ stdenv.mkDerivation (finalAttrs: {
       --add-flags "$out/lib/skills-installer/dist/cli.js"
     runHook postInstall
   '';
-  doInstallCheck = false;
   meta = {
     description = "Install agent skills across multiple AI coding clients";
     homepage = "https://github.com/Kamalnrf/claude-plugins";

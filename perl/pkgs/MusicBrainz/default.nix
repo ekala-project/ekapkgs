@@ -12,7 +12,6 @@ buildPerlModule {
     hash = "sha256-XpH1ZZZ3w5CJv28lO0Eoe7zTVh9qJaB5Zc6DsmKIUuE=";
   };
   propagatedBuildInputs = [ Mojolicious ];
-  doCheck = false;
   meta = {
     description = "API to search the musicbrainz.org database";
     license = with lib.licenses; [

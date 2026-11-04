@@ -36,8 +36,8 @@
   libcamera ? null,
   libdrm,
   gstreamer,
-  # ffmpeg depends on SDL2 which depends on pipewire by default.
-  # Break the cycle by depending on ffmpeg.headless, which excludes SDL2.
+  # ffmpeg depends on sdl2-compat which depends on pipewire by default.
+  # Break the cycle by depending on ffmpeg.headless, which excludes sdl2-compat.
   # Pipewire only uses libavcodec (via an SPA plugin), which isn't
   # affected by the headless changes.
   ffmpeg,

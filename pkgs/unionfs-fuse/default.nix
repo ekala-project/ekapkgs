@@ -47,7 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
   preConfigure = lib.optionalString (!stdenv.hostPlatform.isDarwin) ''
     mkdir -p $out/sbin
     cp -a mount.unionfs $out/sbin/mount.unionfs-fuse
-    substituteInPlace $out/sbin/mount.unionfs-fuse --replace mount.fuse ${fuse}/sbin/mount.fuse3
+    substituteInPlace $out/sbin/mount.unionfs-fuse --replace mount.fuse ${fuse}/sbin/mount.fuse
     substituteInPlace $out/sbin/mount.unionfs-fuse --replace unionfs $out/bin/unionfs
   '';
   meta = {

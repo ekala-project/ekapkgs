@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [
     boost
     fuse
@@ -44,5 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/johang/btfs";
     license = lib.licenses.gpl3;
     platforms = lib.platforms.unix;
+    broken = true; # libtorrent-rasterbar has broken pkg-config paths
   };
 })

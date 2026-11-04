@@ -124,7 +124,6 @@ buildPythonPackage rec {
   dontConfigure = true;
 
   # Checked using pythonImportsCheck
-  doCheck = false;
 
   pythonImportsCheck = [
     "PyQt5"

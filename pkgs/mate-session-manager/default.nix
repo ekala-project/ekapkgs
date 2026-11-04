@@ -16,7 +16,6 @@
   hicolor-icon-theme,
   mate-desktop,
   mate-screensaver,
-  wrapGAppsHook3,
   fetchpatch,
   gitUpdater,
 }:
@@ -42,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
     xtrans
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
@@ -57,8 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     libepoxy
     polkit
   ];
-
-  enableParallelBuilding = true;
 
   env.NIX_CFLAGS_COMPILE = "-I${glib.dev}/include/gio-unix-2.0";
 

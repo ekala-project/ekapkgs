@@ -46,8 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     EOF
   '';
 
-  doCheck = false;
-
   meta = {
     homepage = "https://google.github.io/snappy/";
     license = lib.licenses.bsd3;

@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   unzip,
-  jre,
+  java,
   coreutils,
   makeDesktopItem,
   copyDesktopItems,
@@ -24,7 +24,7 @@ stdenv.mkDerivation rec {
     unzip
     copyDesktopItems
   ];
-  buildInputs = [ jre ];
+  buildInputs = [ java ];
 
   desktopItems = lib.optional (!stdenv.hostPlatform.isDarwin) (makeDesktopItem {
     name = "basex";
@@ -57,7 +57,7 @@ stdenv.mkDerivation rec {
     # Use substitutions instead of wrapper scripts
     for file in "$out"/bin/*; do
         sed -i -e "s|/usr/bin/env bash|${stdenv.shell}|" \
-               -e "s|java|${jre}/bin/java|" \
+               -e "s|java|${java}/bin/java|" \
                -e "s|readlink|${coreutils}/bin/readlink|" \
                -e "s|dirname|${coreutils}/bin/dirname|" \
                -e "s|basename|${coreutils}/bin/basename|" \

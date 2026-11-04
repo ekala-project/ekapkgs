@@ -17,7 +17,6 @@
   mate-desktop,
   pulseaudioSupport ? stdenv.config.pulseaudio or true,
   libpulseaudio,
-  wrapGAppsHook3,
   gitUpdater,
   udevCheckHook,
 }:
@@ -38,7 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     gettext
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     udevCheckHook
   ];
 
@@ -59,8 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
   configureFlags = lib.optional pulseaudioSupport "--enable-pulse";
 
   env.NIX_CFLAGS_COMPILE = "-I${glib.dev}/include/gio-unix-2.0";
-
-  enableParallelBuilding = true;
 
   doInstallCheck = true;
 

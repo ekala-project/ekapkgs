@@ -1,8 +1,8 @@
 {
   lib,
+  gtk3,
   stdenv,
   fetchFromGitHub,
-  wrapGAppsHook3,
   bash-completion,
   blueprint-compiler,
   dbus,
@@ -58,7 +58,7 @@ stdenv.mkDerivation (finalAttrs: {
     scdoc
     vala
     wayland-scanner
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

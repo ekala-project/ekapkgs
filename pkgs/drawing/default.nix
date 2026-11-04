@@ -9,7 +9,6 @@
   appstream-glib,
   desktop-file-utils,
   gobject-introspection,
-  wrapGAppsHook3,
   glib,
   gdk-pixbuf,
   pango,
@@ -38,7 +37,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     meson.configurePhaseHook
     ninja
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     glib
     gettext
     itstool
@@ -61,7 +60,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     patchShebangs build-aux/meson/postinstall.py
   '';
 
-  # Prevent double wrapping because of wrapGAppsHook3
+  # Prevent double wrapping because of gtk3.wrapGAppsHook
   dontWrapGApps = true;
 
   preFixup = ''

@@ -17,7 +17,6 @@
   mate-panel,
   pam,
   systemdLibs,
-  wrapGAppsHook3,
   gitUpdater,
 }:
 
@@ -39,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     libxml2 # provides xmllint
     mate-common # mate-common.m4 macros
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
@@ -57,8 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
   configureFlags = [ "--without-console-kit" ];
 
   makeFlags = [ "DBUS_SESSION_SERVICE_DIR=$(out)/etc" ];
-
-  enableParallelBuilding = true;
 
   passthru.updateScript = gitUpdater {
     odd-unstable = true;

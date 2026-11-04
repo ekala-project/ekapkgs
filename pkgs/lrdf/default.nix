@@ -34,8 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   inherit doCheck;
 
-  enableParallelBuilding = true;
-
   meta = {
     description = "Lightweight RDF library with special support for LADSPA plugins";
     homepage = "https://sourceforge.net/projects/lrdf/";

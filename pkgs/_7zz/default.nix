@@ -137,7 +137,7 @@ stdenv.mkDerivation (finalAttrs: {
   preBuild = "cd CPP/7zip/Bundles/Alone2";
 
   postBuild = ''
-    make $makeFlags -j $NIX_BUILD_CORES -C ../Format7zF -f ${makefile}
+    make "''${makeFlags[@]}" -j $NIX_BUILD_CORES -C ../Format7zF -f ${makefile}
   '';
 
   installPhase = ''

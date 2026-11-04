@@ -33,7 +33,10 @@ stdenv.mkDerivation (finalAttrs: {
         'cmake_minimum_required(VERSION 3.5 FATAL_ERROR)'
   '';
 
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
 
   buildInputs = [
     onetbb
@@ -47,7 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   # ctest fails because of missing dependencies between tests
-  doCheck = false;
 
   passthru.tests = {
     ctest = runCommand "${finalAttrs.pname}-test" { } ''

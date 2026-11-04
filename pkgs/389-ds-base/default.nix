@@ -1,0 +1,142 @@
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  autoconf,
+  automake,
+  cargo,
+  libtool,
+  pkg-config,
+  cracklib,
+  lmdb,
+  json_c,
+  pam,
+  libevent,
+  libxcrypt,
+  nspr,
+  nss,
+  openldap,
+  withOpenldap ? true,
+  db,
+  withBdb ? true,
+  cyrus_sasl,
+  icu,
+  net-snmp,
+  withNetSnmp ? true,
+  krb5,
+  pcre2,
+  python3,
+  rustPlatform,
+  rustc,
+  openssl,
+  withSystemd ? true,
+  systemd,
+  zlib,
+  rsync,
+  withCockpit ? true,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "389-ds-base";
+  version = "3.3.0";
+
+  src = fetchFromGitHub {
+    owner = "389ds";
+    repo = "389-ds-base";
+    rev = "389-ds-base-${finalAttrs.version}";
+    hash = "sha256-N/+fTTgkqs25ToR/OH9BaBHxheVDZWR4RANFtC71rBg=";
+  };
+
+  patches = [
+    ./0001-remove-hard-coded-vendor-paths.patch
+  ];
+
+  cargoRoot = "src";
+
+  cargoDeps = rustPlatform.fetchCargoVendor {
+    inherit (finalAttrs) src cargoRoot;
+    name = "389-ds-base-${finalAttrs.version}";
+    hash = "sha256-1qCH2Onb69Jcqqs3JfDJslavzMrHO6//OtYtDq2iCgY=";
+  };
+
+  nativeBuildInputs = [
+    autoconf
+    automake
+    libtool
+    pkg-config
+    python3
+    cargo
+    rustc
+    rustPlatform.cargoSetupHook
+  ]
+  ++ lib.optional withCockpit rsync
+  ++ lib.optional withNetSnmp net-snmp.dev;
+
+  buildInputs = [
+    cracklib
+    lmdb
+    json_c
+    pam
+    libevent
+    libxcrypt
+    nspr
+    nss
+    cyrus_sasl
+    icu
+    krb5
+    pcre2
+    openssl
+    zlib
+  ]
+  ++ lib.optional withSystemd systemd
+  ++ lib.optional withOpenldap openldap
+  ++ lib.optional withBdb db
+  ++ lib.optional withNetSnmp net-snmp;
+
+  postPatch = ''
+    patchShebangs ./buildnum.py ./ldap/servers/slapd/mkDBErrStrs.py
+  '';
+
+  preConfigure = ''
+    ./autogen.sh --prefix="$out"
+  '';
+
+  configureFlags = [
+    "--enable-rust-offline"
+    "--enable-autobind"
+  ]
+  ++ lib.optionals withSystemd [
+    "--with-systemd"
+    "--with-systemdsystemunitdir=${placeholder "out"}/etc/systemd/system"
+  ]
+  ++ lib.optionals withOpenldap [
+    "--with-openldap"
+  ]
+  ++ lib.optionals withBdb [
+    "--with-db-inc=${lib.getDev db}/include"
+    "--with-db-lib=${lib.getLib db}/lib"
+  ]
+  ++ lib.optionals withNetSnmp [
+    "--with-netsnmp-inc=${lib.getDev net-snmp}/include"
+    "--with-netsnmp-lib=${lib.getLib net-snmp}/lib"
+  ]
+  ++ lib.optionals (!withCockpit) [
+    "--disable-cockpit"
+  ];
+
+  enableParallelInstalling = false;
+
+  doCheck = true;
+
+  installFlags = [
+    "sysconfdir=${placeholder "out"}/etc"
+    "localstatedir=${placeholder "TMPDIR"}"
+  ];
+
+  meta = {
+    homepage = "https://www.port389.org/";
+    description = "Enterprise-class Open Source LDAP server for Linux";
+    license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.linux;
+  };
+})

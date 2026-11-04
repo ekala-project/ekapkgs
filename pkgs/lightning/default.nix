@@ -36,8 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.enableFeature true "disassembler")
   ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://www.gnu.org/software/lightning/";
     changelog = "https://git.savannah.gnu.org/cgit/lightning.git/tree/ChangeLog?h=lightning-${finalAttrs.version}";

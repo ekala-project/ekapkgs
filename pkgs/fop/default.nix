@@ -2,7 +2,7 @@
   lib,
   fetchurl,
   maven,
-  jre,
+  java,
   makeWrapper,
   stripJavaArchivesHook,
 }:
@@ -21,7 +21,6 @@ maven.buildMavenPackage (finalAttrs: {
   mvnHash = "sha256-KfIcc1MWGs7vZHPjfNgy3NBCAyTMtyvRTZfcN4LQVv8=";
 
   buildOffline = true;
-  doCheck = false;
 
   nativeBuildInputs = [
     makeWrapper
@@ -39,7 +38,7 @@ maven.buildMavenPackage (finalAttrs: {
 
     # There is a fop script in the source archive, but it has many impurities.
     # Instead of patching out 90 % of the script, we write our own.
-    makeWrapper ${lib.getExe jre} "$out/bin/fop" \
+    makeWrapper ${lib.getExe java} "$out/bin/fop" \
         --add-flags "-Djava.awt.headless=true" \
         --add-flags "-classpath $out/lib/\*" \
         --add-flags "org.apache.fop.cli.Main"
@@ -65,7 +64,7 @@ maven.buildMavenPackage (finalAttrs: {
     homepage = "https://xmlgraphics.apache.org/fop/";
     license = lib.licenses.asl20;
     mainProgram = "fop";
-    platforms = jre.meta.platforms;
+    platforms = java.meta.platforms;
     sourceProvenance = with lib.sourceTypes; [
       fromSource
       binaryBytecode # source bundles dependencies as jars

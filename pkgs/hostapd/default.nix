@@ -123,8 +123,6 @@ stdenv.mkDerivation (finalAttrs: {
     # inherit (nixosTests) wpa_supplicant;
   };
 
-  __structuredAttrs = true;
-
   meta = {
     homepage = "https://w1.fi/hostapd/";
     description = "User space daemon for access point and authentication servers";

@@ -1,0 +1,60 @@
+{
+  stdenv,
+  lib,
+  gtk3,
+  fetchurl,
+  pkg-config,
+  gtk4,
+  libadwaita,
+  pango,
+  gdk-pixbuf,
+  librsvg,
+  libmanette,
+  blueprint-compiler,
+  meson,
+  ninja,
+  vala,
+  desktop-file-utils,
+  libsndfile,
+  openal,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "quadrapassel";
+  version = "50.2";
+
+  src = fetchurl {
+    url = "mirror://gnome/sources/quadrapassel/${lib.versions.major finalAttrs.version}/quadrapassel-${finalAttrs.version}.tar.xz";
+    hash = "sha256-z5mB/WbOy9jsWz5i9SXRTy/OXkd7xdkTqKy+7j/6FH0=";
+  };
+
+  nativeBuildInputs = [
+    meson
+    meson.configurePhaseHook
+    ninja
+    vala
+    desktop-file-utils
+    pkg-config
+    blueprint-compiler
+    gtk4.wrapGAppsHook
+  ];
+
+  buildInputs = [
+    gtk4
+    libadwaita
+    pango
+    gdk-pixbuf
+    librsvg
+    libmanette
+    libsndfile
+    openal
+  ];
+
+  meta = {
+    description = "Classic falling-block game, Tetris";
+    mainProgram = "quadrapassel";
+    homepage = "https://gitlab.gnome.org/GNOME/quadrapassel";
+    license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.linux;
+  };
+})

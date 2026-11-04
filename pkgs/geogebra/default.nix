@@ -4,7 +4,7 @@
   fetchurl,
   libGL,
   libxxf86vm,
-  jre,
+  java,
   makeDesktopItem,
   makeWrapper,
   unzip,
@@ -92,7 +92,7 @@ let
           ]
         }" \
         --set MESA_GL_VERSION_OVERRIDE 3.0 \
-        --set JAVACMD "${jre}/bin/java" \
+        --set JAVACMD "${java}/bin/java" \
         --set GG_PATH "$out/libexec/geogebra" \
         --add-flags "--language=${language}"
 

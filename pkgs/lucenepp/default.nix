@@ -29,13 +29,14 @@ stdenv.mkDerivation rec {
     zlib
   ];
 
+  doCheck = false;
+
   cmakeEntries = {
     CMAKE_INSTALL_LIBDIR = "lib";
-    ENABLE_TEST = doCheck;
+    ENABLE_TEST = false;
   };
 
   # FIXME: 7 tests fail, https://github.com/luceneplusplus/LucenePlusPlus/issues/212
-  doCheck = false;
 
   checkPhase = ''
     runHook preCheck

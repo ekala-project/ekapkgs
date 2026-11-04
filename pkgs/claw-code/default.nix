@@ -29,7 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoTestFlags = finalAttrs.cargoBuildFlags;
 
   # Upstream's test block is broken at this rev; the release binary compiles.
-  doCheck = false;
 
   nativeCheckInputs = [ gitMinimal ];
 

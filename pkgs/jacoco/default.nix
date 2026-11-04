@@ -3,7 +3,7 @@
   stdenv,
   fetchzip,
   makeWrapper,
-  jre,
+  java,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -31,7 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     cp -r doc $doc/share/doc/jacoco
     install -Dm444 lib/* -t $out/share/java
 
-    makeWrapper ${jre}/bin/java $out/bin/jacoco \
+    makeWrapper ${java}/bin/java $out/bin/jacoco \
       --add-flags "-jar $out/share/java/jacococli.jar"
 
     runHook postInstall

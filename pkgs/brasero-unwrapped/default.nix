@@ -14,7 +14,6 @@
   libburn,
   libisofs,
   vcdimager,
-  wrapGAppsHook3,
   hicolor-icon-theme,
 }:
 
@@ -40,7 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     itstool
     intltool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
@@ -62,8 +61,6 @@ stdenv.mkDerivation (finalAttrs: {
   # brasero checks that the applications it uses aren't symlinks, but this
   # will obviously not work on nix
   patches = [ ./remove-symlink-check.patch ];
-
-  enableParallelBuilding = true;
 
   configureFlags = [
     "--with-girdir=$out/share/gir-1.0"

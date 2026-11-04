@@ -27,7 +27,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildInputs = [ openssl ];
 
   # Tests need network access.
-  doCheck = false;
 
   doInstallCheck = true;
   nativeInstallCheckInputs = [ versionCheckHook ];

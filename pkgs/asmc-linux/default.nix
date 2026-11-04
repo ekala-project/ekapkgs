@@ -14,8 +14,6 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-JtJsyaw4UqMf9epMLGH+iQA0FYYlE9k2NG1aPOu6pec=";
   };
 
-  enableParallelBuilding = true;
-
   installPhase = ''
     runHook preInstall
 

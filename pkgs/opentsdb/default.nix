@@ -363,7 +363,6 @@ stdenv.mkDerivation (finalAttrs: {
       fromSource
       binaryBytecode # maven dependencies
     ];
-    maintainers = [ ];
     mainProgram = "tsdb";
   };
 })

@@ -260,10 +260,30 @@ final: prev: {
   libvlc = final.vlc;
   libportal-gtk3 = final.libportal.gtk3;
 
+  # linux-libertine alias for the libertine font package
+  linux-libertine = final.libertine;
+
   # Common aliases for expected package names
   yq = final.yq-go;
   gnome-disks = final.gnome-disk-utility;
   swaync = final.swaynotificationcenter;
+
+  # Aliases for ported packages with alternate names
+  dwarves = final.pahole;
+  slick-greeter = final.lightdm-slick-greeter;
+  trustedqsl = final.tqsl;
+  piper-mice-configurator = final.piper;
+  pd = final.puredata;
+  bitcoind = final.bitcoin.override { withGui = false; };
+  # mat2 = final.python3Packages.toPythonApplication final.python3Packages.mat2; # TODO: mat2 not yet ported
+  signify-openbsd = final.signify;
+  fswatch-mon = final.fswatch;
+  zmap-network-scanner = final.zmap;
+  yq-mikefarah = final.yq-go;
+  cpuid-etallen = final.cpuid;
+  radeontool = final.radeontools;
+  zd1211-firmware = final.zd1211fw;
+  youtube-dl = final.yt-dlp; # youtube-dl is deprecated
 
   # LibreOffice wrapped (libreoffice-unwrapped is auto-called from pkgs/)
   libreoffice = final.callPackage ./pkgs/libreoffice-unwrapped/wrapper.nix {

@@ -18,7 +18,6 @@
   libGLU,
   fltk,
   fftw,
-  fftwSinglePrec ? null,
   fast-float,
   zlib,
   curl,
@@ -38,7 +37,7 @@
   enableReadline ? true,
   readline,
   enableJava ? true,
-  jdk ? null,
+  java ? null,
   python3,
   sundials,
   enableQt ? false,
@@ -122,7 +121,7 @@ stdenv.mkDerivation (finalAttrs: {
     lapack'
     libsndfile
     fftw
-    fftwSinglePrec
+    fftw.float
     portaudio
     qrupdate'
     arpack'
@@ -143,7 +142,7 @@ stdenv.mkDerivation (finalAttrs: {
     qt6Packages.qscintilla
   ]
   ++ lib.optionals enableJava [
-    jdk
+    java
   ]
   ++ lib.optionals (!stdenv.hostPlatform.isDarwin) [
     libGL
@@ -189,9 +188,9 @@ stdenv.mkDerivation (finalAttrs: {
     qrupdate = qrupdate';
     arpack = arpack';
     suitesparse = suitesparse';
-    inherit fftw fftwSinglePrec;
+    inherit fftw;
     inherit portaudio;
-    inherit jdk;
+    inherit java;
     python = python3;
     inherit enableQt enableReadline enableJava;
   };

@@ -32,8 +32,6 @@ buildGoModule (finalAttrs: {
     cp -r ${core} ../core
   '';
 
-  __structuredAttrs = true;
-
   meta = {
     description = "Standalone CLI for FVS v2";
     homepage = "https://github.com/fvs-lab/fvs2";

@@ -49,8 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     "INSTALL_PREFIX=$(out)"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "CLI utility to find duplicate files";
     homepage = "http://www.virkki.com/dupd";

@@ -50,8 +50,6 @@ bun.buildPackage {
     runHook postInstall
   '';
 
-  doInstallCheck = false;
-
   meta = {
     description = "Hackable terminal coding agent";
     homepage = "https://github.com/folke/zaly";

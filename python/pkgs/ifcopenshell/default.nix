@@ -135,7 +135,6 @@ buildPythonPackage (finalAttrs: {
   '';
 
   # Skip tests - they require mathutils and other deps not available
-  doCheck = false;
 
   meta = {
     broken = stdenv.hostPlatform.isDarwin;

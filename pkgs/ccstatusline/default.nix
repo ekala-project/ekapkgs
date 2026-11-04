@@ -68,7 +68,6 @@ stdenv.mkDerivation {
       --add-flags "$out/lib/ccstatusline/dist/ccstatusline.js"
     runHook postInstall
   '';
-  doInstallCheck = false;
   meta = {
     description = "Customizable status line formatter for the Claude Code CLI";
     homepage = "https://github.com/sirmalloc/ccstatusline";

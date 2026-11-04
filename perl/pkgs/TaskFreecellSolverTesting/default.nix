@@ -45,7 +45,6 @@ buildPerlModule {
     TemplateToolkit
     YAMLLibYAML
   ];
-  doCheck = false;
   meta = {
     description = "Install the CPAN dependencies of the Freecell Solver test suite";
     license = with lib.licenses; [ mit ];

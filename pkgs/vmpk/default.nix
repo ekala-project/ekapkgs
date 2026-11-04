@@ -1,0 +1,47 @@
+{
+  stdenv,
+  lib,
+  fetchurl,
+  cmake,
+  ninja,
+  pkg-config,
+  qt6,
+  drumstick,
+  docbook-xsl-nons,
+}:
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "vmpk";
+  version = "0.9.2";
+
+  src = fetchurl {
+    url = "mirror://sourceforge/vmpk/${finalAttrs.version}/vmpk-${finalAttrs.version}.tar.bz2";
+    hash = "sha256-FUVI6Ioe4zmQa84pqGlw/my2Rw8fpMcZi9bZu/gzIGA=";
+  };
+
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+    ninja
+    pkg-config
+    qt6.qttools
+    docbook-xsl-nons
+    qt6.wrapQtAppsHook
+  ];
+
+  buildInputs = [
+    drumstick
+  ];
+
+  postInstall = ''
+    ln -s ${drumstick}/share/drumstick $out/share/
+  '';
+
+  meta = {
+    description = "Virtual MIDI Piano Keyboard";
+    mainProgram = "vmpk";
+    homepage = "http://vmpk.sourceforge.net/";
+    license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.linux;
+  };
+})

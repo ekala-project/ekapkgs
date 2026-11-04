@@ -154,7 +154,7 @@ stdenv.mkDerivation (finalAttrs: {
   configureFlags = [
     "--without-kernel-modules"
     "--with-udev-rules-dir=${placeholder "out"}/lib/udev/rules.d"
-    "--with-fuse=fuse3"
+    "--with-fuse=fuse"
   ]
   ++ optional (!withX) "--without-x";
 

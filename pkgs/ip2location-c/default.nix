@@ -20,11 +20,8 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
   ];
 
-  enableParallelBuilding = true;
-
   # Checks require a database, which require registration (although sample
   # databases are available, downloading them for just 1 test seems excessive):
-  doCheck = false;
 
   meta = {
     description = "Library to look up locations of host names and IP addresses";

@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitLab,
   gradle,
-  jre,
+  java,
   runtimeShell,
 }:
 
@@ -35,7 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     cat  << EOF > $out/bin/pdftk
     #!${runtimeShell}
-    exec ${jre}/bin/java -jar "$out/share/pdftk/pdftk-all.jar" "\$@"
+    exec ${java}/bin/java -jar "$out/share/pdftk/pdftk-all.jar" "\$@"
     EOF
     chmod a+x "$out/bin/pdftk"
 

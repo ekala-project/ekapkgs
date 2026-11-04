@@ -4,13 +4,9 @@
   fetchFromGitHub,
   ant,
   java ? null,
-  jre ? null,
   makeWrapper,
   stripJavaArchivesHook ? null,
 }:
-let
-  jdk = java;
-in
 stdenv.mkDerivation (finalAttrs: {
   pname = "javacc";
   version = "7.0.13";
@@ -24,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     ant
-    jdk
+    java
     makeWrapper
     stripJavaArchivesHook
   ];
@@ -42,7 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     install -Dm755 scripts/{javacc,jjdoc,jjtree,jjrun} -t $out/bin
 
     for file in $out/bin/*; do
-      wrapProgram "$file" --suffix PATH : ${lib.optionalString (jre != null) "${jre}/bin"}
+      wrapProgram "$file" --suffix PATH : ${lib.optionalString (java != null) "${java}/bin"}
     done
 
     runHook postInstall

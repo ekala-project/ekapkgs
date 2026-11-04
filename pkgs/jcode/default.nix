@@ -38,8 +38,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   env.JCODE_RELEASE_BUILD = "1";
 
-  doCheck = false;
-
   doInstallCheck = true;
   nativeInstallCheckInputs = [
     versionCheckHook

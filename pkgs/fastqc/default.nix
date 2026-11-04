@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchzip,
-  jre,
+  java,
   perl,
   makeWrapper,
   imagemagick,
@@ -30,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional stdenv.hostPlatform.isLinux copyDesktopItems # postInstallHook
   ++ lib.optional stdenv.hostPlatform.isDarwin desktopToDarwinBundle; # fixupOutputHook
   buildInputs = [
-    jre
+    java
     perl
   ];
 
@@ -61,7 +61,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   preFixup = ''
-    makeWrapper $out/FastQC/fastqc $out/bin/fastqc --prefix PATH : ${jre}/bin
+    makeWrapper $out/FastQC/fastqc $out/bin/fastqc --prefix PATH : ${java}/bin
   '';
 
   passthru.tests.version = testers.testVersion {

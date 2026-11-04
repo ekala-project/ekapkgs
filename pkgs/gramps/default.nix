@@ -9,7 +9,6 @@
   gexiv2_0_10,
   pango,
   gobject-introspection,
-  wrapGAppsHook3,
   gettext,
   desktopToDarwinBundle,
   # Optional packages:
@@ -54,7 +53,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   ];
 
   nativeBuildInputs = [
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     intltool
     gettext
     gobject-introspection

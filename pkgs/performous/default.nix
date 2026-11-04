@@ -63,7 +63,7 @@ stdenv.mkDerivation rec {
       hash = "sha256-23VD/4X4BOtcX5k+koSlRMowlbo2jAXbp3XKTXP7VrM=";
     })
     (fetchpatch {
-      name = "performous-ffmpeg_8.patch";
+      name = "performous-ffmpeg.patch";
       url = "https://github.com/performous/performous/commit/783befe576051458da7ea0d915d2b4cb986eaf86.patch";
       excludes = [ "osx-utils/macos-bundler.py" ];
       hash = "sha256-Srkjr8BI98N8Ws853goonvjOrEyWvzjHAIhypgEydns=";

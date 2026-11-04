@@ -102,6 +102,9 @@ final: prev: {
     '';
   });
 
+  # xlib is an alias for python-xlib
+  xlib = final.python-xlib;
+
   # The python pkgconfig package has a broken setup-hook in corepkgs
   # (unsubstituted @wrapperName@/@suffixSalt@ placeholders).
   # uharfbuzz bundles harfbuzz as a submodule and doesn't need system pkg-config,
@@ -167,6 +170,99 @@ final: prev: {
     ];
   });
 
+  libvirt-python = final.buildPythonPackage rec {
+    pname = "libvirt-python";
+    version = "12.8.0";
+    pyproject = true;
+
+    src = final.pkgs.fetchFromGitLab {
+      owner = "libvirt";
+      repo = "libvirt-python";
+      tag = "v${version}";
+      hash = "sha256-x6ThBAgTOa73kRcsomztqcTNQRpDRNfSYXKNH+SxSXU=";
+    };
+
+    postPatch = ''
+      substituteInPlace setup.py \
+        --replace-fail 'pkg-config' "${final.pkgs.stdenv.cc.targetPrefix}pkg-config"
+    '';
+
+    build-system = [ final.setuptools ];
+
+    nativeBuildInputs = [ final.pkgs.pkg-config ];
+    buildInputs = [
+      final.pkgs.libvirt
+      final.lxml
+    ];
+
+    pythonImportsCheck = [ "libvirt" ];
+
+    meta = {
+      homepage = "https://libvirt.org/python.html";
+      description = "Libvirt Python bindings";
+      license = final.pkgs.lib.licenses.lgpl2;
+    };
+  };
+
+  python-augeas = final.buildPythonPackage rec {
+    pname = "python-augeas";
+    version = "1.2.0";
+    pyproject = true;
+
+    src = final.pkgs.fetchFromGitHub {
+      owner = "hercules-team";
+      repo = "python-augeas";
+      tag = "v${version}";
+      hash = "sha256-Lq8ckra3sqN38zo1d5JsEq6U5TtLKRmqysoWNwR9J9A=";
+    };
+
+    build-system = [ final.setuptools ];
+
+    nativeBuildInputs = [ final.pkgs.pkg-config ];
+
+    buildInputs = [
+      final.pkgs.augeas
+      final.pkgs.libxml2
+    ];
+
+    dependencies = [ final.cffi ];
+
+    pythonImportsCheck = [ "augeas" ];
+
+    meta = {
+      description = "Pure python bindings for augeas";
+      homepage = "https://github.com/hercules-team/python-augeas";
+      license = final.pkgs.lib.licenses.lgpl2Plus;
+      platforms = final.pkgs.lib.platforms.unix;
+    };
+  };
+
+  notify2 = final.buildPythonPackage rec {
+    pname = "notify2";
+    version = "0.3.1";
+    pyproject = true;
+
+    src = final.pkgs.fetchPypi {
+      inherit pname version;
+      sha256 = "0z8rrv9rsg1r2qgh2dxj3dfj5xnki98kgi3w839kqby4a26i1yik";
+    };
+
+    build-system = [ final.setuptools ];
+
+    dependencies = [
+      final.pygobject3
+      final.dbus-python
+    ];
+
+    pythonImportsCheck = [ "notify2" ];
+
+    meta = {
+      description = "Pure Python interface to DBus notifications";
+      homepage = "https://bitbucket.org/takluyver/pynotify2";
+      license = final.pkgs.lib.licenses.bsd2;
+    };
+  };
+
   pyqt5-multimedia = final.pyqt5.override { withMultimedia = true; };
 
   gst-python = final.buildPythonPackage rec {
@@ -215,6 +311,37 @@ final: prev: {
       homepage = "https://gstreamer.freedesktop.org";
       description = "Python bindings for GStreamer";
       license = final.pkgs.lib.licenses.lgpl2Plus;
+    };
+  };
+
+  pyatspi = final.buildPythonPackage rec {
+    pname = "pyatspi";
+    version = "2.58.1";
+
+    pyproject = false;
+
+    src = final.pkgs.fetchurl {
+      url = "mirror://gnome/sources/pyatspi/${final.pkgs.lib.versions.majorMinor version}/pyatspi-${version}.tar.xz";
+      sha256 = "Px8HmTX5JlhDMQJcdTGFjetCJFyZO2USH09LAeawRTY=";
+    };
+
+    nativeBuildInputs = [
+      final.pkgs.pkg-config
+      final.pkgs.meson
+      final.pkgs.meson.configurePhaseHook
+      final.pkgs.ninja
+    ];
+
+    buildInputs = [
+      final.pkgs.at-spi2-core
+      final.pygobject3
+    ];
+
+    meta = {
+      description = "Python client bindings for D-Bus AT-SPI";
+      homepage = "https://gitlab.gnome.org/GNOME/pyatspi2";
+      license = final.pkgs.lib.licenses.lgpl2Only;
+      platforms = final.pkgs.lib.platforms.unix;
     };
   };
 

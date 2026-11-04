@@ -68,8 +68,6 @@ stdenv.mkDerivation rec {
   # Ice 3.7 predates C++20. GCC 16 defaults to -std=gnu++20
   env.NIX_CFLAGS_COMPILE = "-std=gnu++17";
 
-  enableParallelBuilding = true;
-
   outputs = [
     "out"
     "bin"

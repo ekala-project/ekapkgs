@@ -12,7 +12,6 @@ buildPerlPackage {
     hash = "sha256-9AwVQ5kuXWWm94AD1GLVms15rm0w04BHscadmZ0rH9g=";
   };
   propagatedBuildInputs = [ HTMLParser ];
-  doCheck = false;
   meta = {
     description = "Code coverage metrics for Perl";
     homepage = "https://www.pjcj.net/perl.html";

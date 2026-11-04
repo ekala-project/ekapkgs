@@ -96,8 +96,6 @@ pypkgs.buildPythonPackage (finalAttrs: {
     gtk3.wrapGAppsHook
   ];
 
-  doCheck = false;
-
   postInstall = ''
     install -Dm444 -t $out/lib/systemd/system packaging/systemd/*.service
   ''

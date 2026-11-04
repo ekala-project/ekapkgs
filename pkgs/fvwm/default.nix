@@ -76,8 +76,6 @@ stdenv.mkDerivation (finalAttrs: {
     wrapPythonPrograms
   '';
 
-  enableParallelBuilding = true;
-
   meta = {
     homepage = "http://fvwm.org";
     changelog = "https://github.com/fvwmorg/fvwm/releases/tag/${finalAttrs.src.rev}";

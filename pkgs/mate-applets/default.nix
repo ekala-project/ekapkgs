@@ -21,7 +21,6 @@
   upower,
   wirelesstools,
   hicolor-icon-theme,
-  wrapGAppsHook3,
   gitUpdater,
 }:
 
@@ -42,7 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     itstool
     pkg-config
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

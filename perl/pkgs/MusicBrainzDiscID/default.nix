@@ -17,7 +17,6 @@ buildPerlPackage {
       --replace-fail '`which pkg-config`' "'$PKG_CONFIG'"
   '';
   patches = [ ../../MusicBrainz-DiscID---ExtUtils-ParseXS-compat.patch ];
-  doCheck = false;
   nativeBuildInputs = [ pkg-config ];
   propagatedBuildInputs = [ libdiscid ];
   meta = {

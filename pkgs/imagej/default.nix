@@ -1,14 +1,14 @@
 {
   lib,
+  gtk3,
   stdenv,
   fetchurl,
   glib,
-  jre,
+  java,
   unzip,
   makeWrapper,
   makeDesktopItem,
   copyDesktopItems,
-  wrapGAppsHook3,
 }:
 
 let
@@ -29,7 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     copyDesktopItems
     makeWrapper
     unzip
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
   buildInputs = [ glib ];
   dontWrapGApps = true;
@@ -49,7 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   passthru = {
-    inherit jre;
+    inherit java;
   };
 
   # JAR files that are intended to be used by other packages
@@ -68,7 +68,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   postFixup = lib.optionalString stdenv.hostPlatform.isLinux ''
-    makeWrapper ${jre}/bin/java $out/bin/imagej \
+    makeWrapper ${java}/bin/java $out/bin/imagej \
       ''${gappsWrapperArgs[@]} \
       --add-flags "-jar $out/share/java/ij.jar -ijpath $out/share"
 

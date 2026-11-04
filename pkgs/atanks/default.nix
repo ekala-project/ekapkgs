@@ -14,6 +14,8 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "sha256-vGse/J/H52JPrR2DUtcuknvg+6IWC7Jbtri9bGNwv0M=";
   };
 
+  nativeBuildInputs = [ allegro ];
+
   buildInputs = [ allegro ];
 
   makeFlags = [

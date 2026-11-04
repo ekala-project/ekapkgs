@@ -33,8 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     "--skip=windows::pdb::tests::test_oleaut32"
   ];
 
-  __structuredAttrs = true;
-
   meta = {
     changelog = "https://github.com/mozilla/dump_syms/blob/v${finalAttrs.version}/CHANGELOG.md";
     description = "Command-line utility for parsing the debugging information the compiler provides in ELF or stand-alone PDB files";

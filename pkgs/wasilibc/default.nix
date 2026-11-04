@@ -18,8 +18,6 @@ let
     src = llvmPackages.llvm.monorepoSrc;
     sourceRoot = "${llvmPackages.llvm.monorepoSrc.name}/compiler-rt";
 
-    __structuredAttrs = true;
-
     nativeBuildInputs = [
       cmake
       cmake.configurePhaseHook
@@ -65,8 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "wasilibc";
   version = "32";
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "WebAssembly";
     repo = "wasi-libc";
@@ -105,8 +101,6 @@ stdenv.mkDerivation (finalAttrs: {
     # Don't try to generate P2/P3 bindings (needs wit-bindgen and wkg)
     (lib.cmakeBool "BINDINGS_TARGET" false)
   ];
-
-  enableParallelBuilding = true;
 
   passthru = {
     inherit compiler-rt-wasm32;

@@ -57,7 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals udsSupport [ "--with-uds" ];
 
   # Disabled due to exist upstream cases failing 8/15 tests
-  doCheck = false;
 
   postPatch = ''
     # install -s calls the wrong strip program when cross compiling

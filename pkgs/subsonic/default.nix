@@ -2,7 +2,7 @@
   lib,
   stdenv,
   fetchurl,
-  jre,
+  java,
 }:
 
 stdenv.mkDerivation rec {
@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
     sha256 = "180qdk8mnc147az8v9rmc1kgf8b13mmq88l195gjdwiqpflqzdyz";
   };
 
-  inherit jre;
+  inherit java;
 
   # Create temporary directory to extract tarball into to satisfy Nix's need
   # for a directory to be created in the unpack phase.

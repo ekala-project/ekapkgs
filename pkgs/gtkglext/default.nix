@@ -33,7 +33,6 @@ stdenv.mkDerivation {
   };
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   nativeBuildInputs = [
     pkg-config

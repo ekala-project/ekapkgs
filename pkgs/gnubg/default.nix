@@ -10,7 +10,6 @@
   readline,
   copyDesktopItems,
   makeDesktopItem,
-  wrapGAppsHook3,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -28,7 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3
     flex
     glib
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [

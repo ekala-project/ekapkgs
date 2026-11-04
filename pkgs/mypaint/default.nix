@@ -16,7 +16,6 @@
   pkg-config,
   python3,
   swig,
-  wrapGAppsHook3,
 }:
 
 let
@@ -101,7 +100,7 @@ buildPythonApplication (finalAttrs: {
     gettext
     pkg-config
     swig
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gobject-introspection # for setup hook
     hicolor-icon-theme # fór setup hook
     python3.pkgs.setuptools
@@ -151,7 +150,6 @@ buildPythonApplication (finalAttrs: {
 
   # tests require unmaintained and removed nose, it should switch to pytest
   # https://github.com/mypaint/mypaint/issues/1191
-  doCheck = false;
 
   checkPhase = ''
     runHook preCheck

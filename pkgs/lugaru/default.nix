@@ -7,7 +7,7 @@
   pkg-config,
   libogg,
   libvorbis,
-  SDL2,
+  sdl2-compat,
   makeWrapper,
   libpng,
   libjpeg_turbo,
@@ -44,7 +44,7 @@ stdenv.mkDerivation rec {
   buildInputs = [
     libGLU
     openal
-    SDL2
+    sdl2-compat
     libogg
     libvorbis
     libpng

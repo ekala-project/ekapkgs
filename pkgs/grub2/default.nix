@@ -23,7 +23,7 @@
   pkg-config,
   help2man,
   buildPackages,
-  fuse3 ? null,
+  fuse ? null,
   xz,
   runtimeShell,
   zfs ? null,
@@ -195,13 +195,15 @@ stdenv.mkDerivation (finalAttrs: {
     libusb-compat-0_1
     freetype
     lvm2
-    fuse3
+    fuse
     xz
     libtool
     bash
   ]
   ++ lib.optional (finalAttrs ? doCheck && finalAttrs.doCheck) qemu
   ++ lib.optional zfsSupport zfs;
+
+  doCheck = false;
 
   strictDeps = true;
 

@@ -16,7 +16,6 @@ stdenv.mkDerivation (finalAttrs: {
   version = "1.2.15";
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = fetchurl {
     url = "mirror://alsa/tools/alsa-tools-${finalAttrs.version}.tar.bz2";

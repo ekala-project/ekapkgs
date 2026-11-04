@@ -16,7 +16,6 @@
   networkmanager,
   libgudev,
   libwacom,
-  wrapGAppsHook3,
   libnma,
   libxi,
   modemmanager,
@@ -73,7 +72,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     meson.configurePhaseHook
     ninja
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     gettext
     python3
   ];

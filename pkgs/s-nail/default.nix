@@ -4,7 +4,7 @@
   fetchFromGitHub,
   openssl,
   ncurses,
-  libidn2 ? null,
+  libidn,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -21,7 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     openssl
     ncurses
-    libidn2
+    libidn.v2
   ];
 
   configurePhase = ''

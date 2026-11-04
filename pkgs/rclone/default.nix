@@ -37,7 +37,7 @@ buildGoModule (finalAttrs: {
 
   buildInputs = lib.optional (enableCmount && fuse != null) fuse;
 
-  tags = lib.optionals (fuse != null) [ "fuse3" ] ++ lib.optionals enableCmount [ "cmount" ];
+  tags = lib.optionals (fuse != null) [ "fuse" ] ++ lib.optionals enableCmount [ "cmount" ];
 
   ldflags = [
     "-s"
@@ -47,7 +47,7 @@ buildGoModule (finalAttrs: {
 
   postConfigure = lib.optionalString (fuse != null) ''
     substituteInPlace vendor/github.com/winfsp/cgofuse/fuse/host_cgo.go \
-        --replace-fail "fuse.h" "fuse3/fuse.h"
+        --replace-fail "fuse.h" "fuse/fuse.h"
   '';
 
   postInstall =

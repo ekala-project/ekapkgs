@@ -1,5 +1,6 @@
 {
   lib,
+  gtk3,
   stdenv,
   fetchFromGitHub,
   libsForQt5,
@@ -14,7 +15,6 @@
   sord,
   sratom,
   suil,
-  wrapGAppsHook3,
   useJack ? true,
   useQt ? false,
 }:
@@ -36,7 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
   ]
-  ++ lib.optionals (!useQt) [ wrapGAppsHook3 ]
+  ++ lib.optionals (!useQt) [ gtk3.wrapGAppsHook ]
   ++ lib.optionals useQt [ libsForQt5.wrapQtAppsHook ];
 
   buildInputs = [

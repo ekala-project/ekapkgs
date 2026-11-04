@@ -5,7 +5,7 @@
   fetchzip,
   aspell,
   audiofile,
-  binutils-unwrapped ? null,
+  binutils,
   cups,
   giflib,
   gmp,
@@ -56,7 +56,7 @@ clangStdenv.mkDerivation (finalAttrs: {
   propagatedBuildInputs = [
     aspell
     audiofile
-    binutils-unwrapped
+    binutils.unwrapped
     cups
     giflib
     gmp

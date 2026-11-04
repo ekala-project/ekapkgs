@@ -18,7 +18,6 @@
   systemdSupport ? lib.meta.availableOn stdenv.hostPlatform systemd,
   systemd,
   gobject-introspection,
-  wrapGAppsHook3,
   gi-docgen,
   vala,
   gnome,
@@ -29,8 +28,6 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "gcr";
   version = "3.41.2";
-
-  __structuredAttrs = true;
 
   outputs = [
     "out"
@@ -53,7 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     gobject-introspection
     gi-docgen
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     vala
     shared-mime-info
     openssh

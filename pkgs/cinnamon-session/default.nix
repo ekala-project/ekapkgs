@@ -15,7 +15,6 @@
   lib,
   stdenv,
   systemdLibs,
-  wrapGAppsHook3,
   xapp,
   libxtst,
   libxrender,
@@ -77,7 +76,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson
     meson.configurePhaseHook
     ninja
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     libexecinfo
     python3
     pkg-config

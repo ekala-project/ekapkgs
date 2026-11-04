@@ -3,7 +3,6 @@
   stdenv,
   fetchurl,
   pkg-config,
-  gnum4 ? m4,
   m4,
   glib,
   libsigcxx_2_0,
@@ -16,7 +15,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "glibmm";
   version = "2.66.8";
 
-  __structuredAttrs = true;
   strictDeps = true;
 
   src = fetchurl {
@@ -34,7 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     pkg-config
     ninja
-    gnum4
+    m4
     glib # for glib-compile-schemas
   ];
   propagatedBuildInputs = [

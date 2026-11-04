@@ -20,8 +20,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     "cli"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Rust implementation of TOON - Token-Oriented Object Notation for LLM prompts";
     homepage = "https://github.com/toon-format/toon-rust";

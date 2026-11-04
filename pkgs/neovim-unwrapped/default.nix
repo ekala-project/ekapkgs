@@ -56,8 +56,6 @@ let
       version = "neovim-0.12.5";
       inherit src;
 
-      __structuredAttrs = true;
-
       nativeBuildInputs = [ jq ];
 
       env = {
@@ -135,8 +133,6 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "neovim-unwrapped";
   version = "0.12.5";
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "neovim";
     repo = "neovim";
@@ -170,8 +166,6 @@ stdenv.mkDerivation (finalAttrs: {
     utf8proc
   ];
 
-  doCheck = false;
-
   cmakeFlags = [
     (lib.cmakeBool "USE_BUNDLED" false)
     (lib.cmakeBool "ENABLE_TRANSLATIONS" true)
@@ -197,8 +191,6 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   separateDebugInfo = true;
-
-  doInstallCheck = false;
 
   meta = {
     description = "Vim text editor fork focused on extensibility and agility";

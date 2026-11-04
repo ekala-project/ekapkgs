@@ -2,7 +2,6 @@
   lib,
   buildGoModule,
   fetchFromGitHub,
-  gnum4 ? m4,
   m4,
   pam,
 }:
@@ -26,10 +25,7 @@ buildGoModule rec {
 
   vendorHash = "sha256-lR3qcRSVQjxyBuqHv5warfVVJy5zdomfE0DEJbA/RkQ=";
 
-  __structuredAttrs = true;
-  doCheck = false;
-
-  nativeBuildInputs = [ gnum4 ];
+  nativeBuildInputs = [ m4 ];
   buildInputs = [ pam ];
 
   buildPhase = ''

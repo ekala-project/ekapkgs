@@ -126,6 +126,8 @@ stdenv.mkDerivation (finalAttrs: {
     "-Dtests=disabled"
   ];
 
+  doCheck = false;
+
   strictDeps = true;
 
   postPatch = ''

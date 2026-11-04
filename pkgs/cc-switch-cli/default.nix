@@ -23,7 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-OiK0PN1ILtMzl9+QndPnYa1PdFM2Y3BmE7MYJjAWnDc=";
 
   # Tests require network access and runtime configuration
-  doCheck = false;
 
   doInstallCheck = true;
   nativeInstallCheckInputs = [

@@ -1,0 +1,57 @@
+{
+  lib,
+  python3Packages,
+  fetchFromGitHub,
+  gdk-pixbuf,
+  glib,
+  gobject-introspection,
+  gtk3,
+  gtksourceview,
+  pango,
+  webkitgtk_4_1,
+}:
+
+python3Packages.buildPythonApplication (finalAttrs: {
+  pname = "rednotebook";
+  version = "2.43";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "jendrikseipp";
+    repo = "rednotebook";
+    tag = "v${finalAttrs.version}";
+    sha256 = "sha256-s80s5saJCNkuOGgdA7rVMLinBYOcq8h8MPR6lquOHSw=";
+  };
+
+  nativeBuildInputs = [ gobject-introspection ];
+
+  build-system = with python3Packages; [ setuptools ];
+
+  propagatedBuildInputs = [
+    gdk-pixbuf
+    glib
+    gtk3
+    gtksourceview
+    pango
+    webkitgtk_4_1
+  ]
+  ++ (with python3Packages; [
+    pygobject3
+    pyyaml
+  ]);
+
+  makeWrapperArgs = [
+    "--set GI_TYPELIB_PATH $GI_TYPELIB_PATH"
+    "--prefix XDG_DATA_DIRS : $out/share"
+    "--suffix XDG_DATA_DIRS : $XDG_ICON_DIRS:$GSETTINGS_SCHEMAS_PATH"
+  ];
+
+  pythonImportsCheck = [ "rednotebook" ];
+
+  meta = {
+    homepage = "https://rednotebook.sourceforge.io/";
+    description = "Modern journal that includes a calendar navigation, customizable templates, export functionality and word clouds";
+    license = lib.licenses.gpl2Plus;
+    mainProgram = "rednotebook";
+  };
+})

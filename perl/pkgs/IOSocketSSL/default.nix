@@ -19,7 +19,6 @@ buildPerlPackage {
     substituteInPlace lib/IO/Socket/SSL.pm \
       --replace "\$openssldir/cert.pem" "/etc/ssl/certs/ca-certificates.crt"
   '';
-  doCheck = false;
   meta = {
     description = "Nearly transparent SSL encapsulation for IO::Socket::INET";
   };

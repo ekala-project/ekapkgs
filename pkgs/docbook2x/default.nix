@@ -56,8 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
       --replace '${"\$" + "{prefix}"}' "$out"
   '';
 
-  doCheck = false;
-
   postInstall = ''
     perlPrograms="db2x_manxml db2x_texixml db2x_xsltproc
                   docbook2man docbook2texi";

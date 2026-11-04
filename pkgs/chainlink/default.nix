@@ -29,8 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     sed -i '/^\[package\]/,/^\[/{s/^version = ".*"/version = "${lib.versions.pad 3 finalAttrs.version}"/}' chainlink/Cargo.toml
   '';
 
-  doCheck = false;
-
   doInstallCheck = true;
   nativeInstallCheckInputs = [ versionCheckHook ];
 

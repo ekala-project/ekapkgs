@@ -3,7 +3,7 @@
   stdenv,
   fetchFromGitHub,
   pkg-config,
-  SDL2,
+  sdl2-compat,
   SDL2_image,
   SDL2_mixer,
   cmake,
@@ -50,7 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [
-    SDL2
+    sdl2-compat
     SDL2_image
     SDL2_mixer
     gtk3-x11

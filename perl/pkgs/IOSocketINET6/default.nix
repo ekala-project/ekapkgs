@@ -11,7 +11,6 @@ buildPerlModule {
     hash = "sha256-ttp0aFMlPVtKxDGRtPaaRxlZXuE6fKZ2qAVM825tFrs=";
   };
   propagatedBuildInputs = [ Socket6 ];
-  doCheck = false;
   meta = {
     description = "[DEPRECATED] Object interface for AF_INET/AF_INET6 domain sockets";
   };

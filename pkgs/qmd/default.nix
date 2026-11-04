@@ -56,8 +56,6 @@ bun.buildPackage {
     runHook postInstall
   '';
 
-  doInstallCheck = false;
-
   meta = {
     description = "mini cli search engine for your docs, knowledge bases, meeting notes, whatever.";
     homepage = "https://github.com/tobi/qmd";

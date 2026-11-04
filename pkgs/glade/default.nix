@@ -13,7 +13,6 @@
   enableWebkit2gtk ? stdenv.hostPlatform.isLinux,
   webkitgtk_4_1,
   gobject-introspection,
-  wrapGAppsHook3,
   itstool,
   libxml2,
   docbook-xsl-nons,
@@ -41,7 +40,7 @@ stdenv.mkDerivation rec {
     pkg-config
     gettext
     itstool
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
     docbook-xsl-nons
     docbook-xml-dtd.v4_2
     libxslt

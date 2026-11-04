@@ -14,7 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
     sha256 = "07il80sg89xf6ym4bry6hxdacfzqgbwkxzyf7bjaihmw5jj0lclk";
   };
 
-  buildInputs = [ expat.dev ];
+  buildInputs = [ expat ];
 
   makeFlags = [ "PREFIX=$(out)" ];
 

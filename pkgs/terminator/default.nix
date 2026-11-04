@@ -9,7 +9,6 @@
   gobject-introspection,
   libnotify,
   makeBinaryWrapper,
-  wrapGAppsHook3,
   vte,
 }:
 
@@ -30,7 +29,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     intltool
     gobject-introspection
     makeBinaryWrapper
-    wrapGAppsHook3
+    gtk3.wrapGAppsHook
   ];
 
   buildInputs = [
@@ -54,8 +53,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   postPatch = ''
     patchShebangs tests po
   '';
-
-  doCheck = false;
 
   pythonImportsCheck = [ "terminatorlib" ];
 

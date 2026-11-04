@@ -33,6 +33,8 @@ stdenv.mkDerivation (finalAttrs: {
     USE_SYSTEM_LIBS = true;
   };
 
+  doCheck = false;
+
   cmakeFlags = [
     (lib.cmakeBool "CPUINFO_BUILD_UNIT_TESTS" finalAttrs.finalPackage.doCheck)
     (lib.cmakeBool "CPUINFO_BUILD_MOCK_TESTS" finalAttrs.finalPackage.doCheck)

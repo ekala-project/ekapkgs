@@ -92,10 +92,6 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (!static) [ "shared" ];
 
   botanConfigureFlags = [
-    "--prefix=$(out)"
-    "--bindir=$(bin)/bin"
-    "--docdir=$(doc)/share/doc"
-    "--mandir=$(man)/share/man"
     "--no-install-python-module"
     "--build-targets=${lib.concatStringsSep "," finalAttrs.buildTargets}"
     "--with-bzip2"
@@ -125,7 +121,12 @@ stdenv.mkDerivation (finalAttrs: {
 
   configurePhase = ''
     runHook preConfigure
-    python configure.py ''${botanConfigureFlags[@]}
+    python configure.py \
+      --prefix="$out" \
+      --bindir="$bin/bin" \
+      --docdir="$doc/share/doc" \
+      --mandir="$man/share/man" \
+      "''${botanConfigureFlags[@]}"
     runHook postConfigure
   '';
 
