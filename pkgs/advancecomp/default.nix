@@ -18,6 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [ zlib ];
 
   postPatch = ''

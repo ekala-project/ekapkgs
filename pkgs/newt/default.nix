@@ -33,7 +33,9 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   strictDeps = true;
+
   nativeBuildInputs = [ python3 ];
+
   buildInputs = [
     slang
     popt

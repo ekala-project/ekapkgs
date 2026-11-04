@@ -23,5 +23,4 @@ buildGoModule (finalAttrs: {
     license = lib.licenses.asl20;
     mainProgram = "cloudstack-cloudmonkey";
   };
-
 })

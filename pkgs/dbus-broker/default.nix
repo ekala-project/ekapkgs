@@ -28,18 +28,22 @@ let
     }:
     stdenv.mkDerivation {
       inherit pname version;
+
       src = fetchFromGitHub {
         owner = "c-util";
         repo = pname;
         inherit hash rev;
       };
+
       nativeBuildInputs = [
         meson
         meson.configurePhaseHook
         ninja
         pkg-config
       ];
+
       inherit buildInputs;
+
       meta = meta // {
         description = "C-Util Project is a collection of utility libraries for the C11 language";
         homepage = "https://c-util.github.io/";

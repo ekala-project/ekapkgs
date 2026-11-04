@@ -51,15 +51,19 @@ stdenv.mkDerivation (finalAttrs: {
     "CC=${stdenv.cc.targetPrefix}cc"
     "CXX=${stdenv.cc.targetPrefix}c++"
   ];
+
   installFlags = [ "PREFIX=$(out)" ];
+
   buildInputs = [
     gmp
     mpir
     cddlib
   ];
+
   hardeningDisable = [ "libcxxhardeningfast" ];
 
   doCheck = true;
+
   # The test runner still exits successfully when there are failed tests, so check
   # stdout to see if anything failed.
   checkPhase = ''

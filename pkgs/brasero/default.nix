@@ -12,8 +12,10 @@ let
 in
 symlinkJoin {
   pname = "brasero";
+  inherit (brasero-unwrapped) meta version;
 
   paths = [ brasero-unwrapped ];
+
   nativeBuildInputs = [ makeWrapper ];
 
   postBuild = ''
@@ -21,6 +23,4 @@ symlinkJoin {
       --prefix PATH ':' ${binPath} \
       --prefix LD_PRELOAD : ${lib.makeLibraryPath [ libdvdcss ]}/libdvdcss.so
   '';
-
-  inherit (brasero-unwrapped) meta version;
 }

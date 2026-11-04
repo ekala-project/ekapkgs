@@ -22,6 +22,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   doInstallCheck = true;
 
   buildInputs = [
@@ -32,6 +33,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   ];
 
   propagatedBuildInputs = [ git ];
+
   nativeInstallCheckInputs = [ ncurses ];
 
   postPatch = ''

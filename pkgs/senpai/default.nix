@@ -41,6 +41,7 @@ buildGoModule (finalAttrs: {
     install -D -m 444 res/icon.128.png $out/share/icons/hicolor/128x128/apps/senpai.png
     install -D -m 444 res/icon.svg $out/share/icons/hicolor/scalable/apps/senpai.svg
   '';
+
   meta = {
     description = "Your everyday IRC student";
     mainProgram = "senpai";

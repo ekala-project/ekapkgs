@@ -33,6 +33,7 @@ stdenv.mkDerivation rec {
     pkg-config
   ]
   ++ lib.optional perlSupport perl;
+
   buildInputs = [
     libx11
     libxt

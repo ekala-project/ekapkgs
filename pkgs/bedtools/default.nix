@@ -32,8 +32,11 @@ stdenv.mkDerivation rec {
   ];
 
   cxx = if stdenv.cc.isClang then "clang++" else "g++";
+
   cc = if stdenv.cc.isClang then "clang" else "gcc";
+
   buildPhase = "make prefix=$out SHELL=${stdenv.shell} CXX=${cxx} CC=${cc} -j $NIX_BUILD_CORES";
+
   installPhase = "make prefix=$out SHELL=${stdenv.shell} CXX=${cxx} CC=${cc} install";
 
   meta = {

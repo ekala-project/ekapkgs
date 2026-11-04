@@ -20,6 +20,7 @@ stdenv.mkDerivation {
   makeFlags = [ "prefix=${placeholder "out"}" ];
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [ ncurses ];
 
   # Upstream needs quite a bit of porting to c23:
@@ -27,6 +28,7 @@ stdenv.mkDerivation {
   env.NIX_CFLAGS_COMPILE = "-std=gnu17";
 
   preAutoreconf = "cd src";
+
   postAutoreconf = "cd ..";
 
   configurePhase = ''

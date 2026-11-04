@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoconf
     automake
   ];
+
   buildInputs = [ libtool ];
 
   src = fetchurl {

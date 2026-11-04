@@ -14,12 +14,16 @@ stdenv.mkDerivation (finalAttrs: {
     url = "https://invisible-mirror.net/archives/luit/luit-${finalAttrs.version}.tgz";
     hash = "sha256-RpWAYOZvNby4pRuiLaHBPXJtKKhsHPUgURvPeRS+854=";
   };
+
   hardeningDisable = [
     "bindnow"
     "relro"
   ];
+
   strictDeps = true;
+
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ libiconv ];
 
   meta = {

@@ -19,12 +19,14 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "skktools";
   version = "1.3.4";
+
   src = fetchFromGitHub {
     owner = "skk-dev";
     repo = "skktools";
     tag = "skktools-${lib.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
     sha256 = "1zway8jsm18279xq8zlpr84iqiw373x3v0ysay74n9bjqxbl234a";
   };
+
   # # See "12.2. Package naming"
   # name = "skktools-unstable-${finalAttrs.version}";
   # version = "2017-03-05";
@@ -46,6 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     gdbm
     glib

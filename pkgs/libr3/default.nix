@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [ check ];
+
   propagatedBuildInputs = [ pcre ];
 
   strictDeps = true;
@@ -34,5 +35,4 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/c9s/r3";
     license = lib.licenses.mit;
   };
-
 })

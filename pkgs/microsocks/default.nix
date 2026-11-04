@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     runHook postInstall
   '';
+
   meta = {
     changelog = "https://github.com/rofl0r/microsocks/releases/tag/v${finalAttrs.version}";
     description = "Tiny, portable SOCKS5 server with very moderate resource usage";

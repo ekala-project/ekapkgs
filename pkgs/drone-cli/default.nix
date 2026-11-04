@@ -7,6 +7,7 @@
 buildGoModule rec {
   version = "1.9.0";
   pname = "drone-cli";
+
   revision = "v${version}";
 
   src = fetchFromGitHub {

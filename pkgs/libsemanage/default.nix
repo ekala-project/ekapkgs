@@ -17,6 +17,7 @@
 stdenv.mkDerivation rec {
   pname = "libsemanage";
   version = "3.11";
+
   inherit (libsepol) se_url;
 
   src = fetchurl {

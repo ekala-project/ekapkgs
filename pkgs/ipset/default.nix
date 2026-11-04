@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ libmnl ];
 
   configureFlags = [ "--with-kmod=no" ];

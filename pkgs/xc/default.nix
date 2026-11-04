@@ -35,6 +35,7 @@ buildGoModule (finalAttrs: {
       return 1
     fi
   '';
+
   meta = {
     description = "Markdown defined task runner";
     mainProgram = "xc";

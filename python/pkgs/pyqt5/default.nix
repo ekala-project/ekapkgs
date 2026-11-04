@@ -31,6 +31,7 @@ let
     src = fetchPypi {
       pname = "sip";
       inherit version;
+
       hash = "sha256-3C5YwXmKdOGzHCjoNzOYIv6PpVKIrjDomG6ygQDrylo=";
     };
   });

@@ -18,6 +18,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   # some necessary files are absent in the crate version
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     runHook preInstallCheck
     $out/bin/cargo-hack hack --version | grep -F 'cargo-hack ${finalAttrs.version}'

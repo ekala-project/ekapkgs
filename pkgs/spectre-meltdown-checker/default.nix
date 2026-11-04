@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-y0hbqLgq3rCehj1fOqxCcMUsEHNlO/kRNoFENOSH8b0=";
   };
+
   prePatch = ''
     substituteInPlace spectre-meltdown-checker.sh \
       --replace-fail /bin/echo ${coreutils}/bin/echo

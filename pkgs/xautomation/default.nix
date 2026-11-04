@@ -13,12 +13,14 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "xautomation";
   version = "1.09";
+
   src = fetchurl {
     url = "https://www.hoopajoo.net/static/projects/xautomation-${finalAttrs.version}.tar.gz";
     sha256 = "03azv5wpg65h40ip2kk1kdh58vix4vy1r9bihgsq59jx2rhjr3zf";
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     libpng
     libx11

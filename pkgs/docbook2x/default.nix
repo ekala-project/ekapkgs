@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   patches = [ ./db2x_texixml-to-stdout.patch ];
 
   strictDeps = true;
+
   nativeBuildInputs = [
     makeWrapper
     perlPackages.perl
@@ -35,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
     iconv
   ];
+
   buildInputs = [
     groff
     libxml2

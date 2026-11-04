@@ -110,7 +110,9 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   ac_cv_path_MODPROBE = lib.getExe' kmod "modprobe";
+
   ac_cv_path_RMMOD = lib.getExe' kmod "rmmod";
+
   ac_cv_path_SYSCTL = lib.getExe' sysctl "sysctl";
 
   configureFlags = [
@@ -134,6 +136,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   dontWrapGApps = true;
+
   dontWrapQtApps = true;
 
   preFixup = ''

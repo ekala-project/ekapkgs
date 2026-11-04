@@ -61,6 +61,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   nativeCheckInputs = [ dejagnu ];
 
   postInstall = ''

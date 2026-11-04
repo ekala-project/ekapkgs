@@ -105,6 +105,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
 
   passthru.tests = {

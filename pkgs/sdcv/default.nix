@@ -21,11 +21,13 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   hardeningDisable = [ "format" ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
     pkg-config
   ];
+
   buildInputs = [
     glib
     gettext

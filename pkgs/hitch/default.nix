@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     docutils
     libev
@@ -28,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     "doc"
     "man"
   ];
+
   meta = {
     description = "Libev-based high performance SSL/TLS proxy by Varnish Software";
     homepage = "https://hitch-tls.org/";

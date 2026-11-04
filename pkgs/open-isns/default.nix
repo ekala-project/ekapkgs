@@ -31,7 +31,9 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
   ];
+
   propagatedBuildInputs = [ openssl ];
+
   outputs = [
     "out"
     "lib"

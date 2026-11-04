@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     "doc"
   ]
   ++ lib.optional (stdenv.hostPlatform == stdenv.buildPlatform) "test";
+
   separateDebugInfo = true;
 
   nativeBuildInputs = [

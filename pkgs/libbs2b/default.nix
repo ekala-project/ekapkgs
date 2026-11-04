@@ -16,11 +16,13 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ libsndfile ];
 
   configureFlags = [
     "ac_cv_func_malloc_0_nonnull=yes"
   ];
+
   hardeningDisable = [ "format" ];
 
   meta = {

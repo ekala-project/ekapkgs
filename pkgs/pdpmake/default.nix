@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   makeFlags = [ "PREFIX=$(out)" ];
 
   doCheck = true;
+
   checkTarget = "test";
 
   meta = {

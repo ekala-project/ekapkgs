@@ -53,6 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   doCheck = !static;
+
   enableParallelChecking = false;
 
   meta = {

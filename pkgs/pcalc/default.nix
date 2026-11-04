@@ -23,6 +23,7 @@ stdenv.mkDerivation {
   env.NIX_CFLAGS_COMPILE = "-std=gnu17";
 
   makeFlags = [ "DESTDIR= BINDIR=$(out)/bin" ];
+
   nativeBuildInputs = [
     bison
     flex

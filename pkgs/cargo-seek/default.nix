@@ -25,9 +25,11 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildInputs = [ openssl ];
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     writableTmpDirAsHomeHook
   ];
+
   versionCheckKeepEnvironment = [ "HOME" ];
 
   meta = {

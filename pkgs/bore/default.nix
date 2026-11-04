@@ -18,6 +18,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   cargoHash = "sha256-6uIqvX50XoWCPQ8u38rUdi4LwtMTBcNuefNmzGY+vLU=";
+
   cargoBuildFlags = [
     "-p"
     finalAttrs.pname
@@ -31,6 +32,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     "--all-targets"
     "--workspace"
   ];
+
   checkFeatures = [ "std" ];
 
   nativeBuildInputs = [
@@ -43,6 +45,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     printf '\0\0\0\0\0\0\0\0\0\0\0\0' \
     | $out/bin/bore --decode \

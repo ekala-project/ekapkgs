@@ -25,6 +25,7 @@ stdenv.mkDerivation rec {
   '';
 
   premake_cmd = "premake4";
+
   setupHook = ./setup-hook.sh;
 
   meta = {

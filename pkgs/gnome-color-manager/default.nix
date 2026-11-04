@@ -43,6 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
+
   meta = {
     description = "Set of graphical utilities for color management to be used in the GNOME desktop";
     license = lib.licenses.gpl2Plus;

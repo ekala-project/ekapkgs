@@ -8,6 +8,7 @@
 stdenv.mkDerivation rec {
   pname = "incron";
   version = "0.5.12";
+
   src = fetchFromGitHub {
     owner = "ar-";
     repo = "incron";
@@ -22,6 +23,7 @@ stdenv.mkDerivation rec {
   '';
 
   installFlags = [ "PREFIX=$(out)" ];
+
   installTargets = [ "install-man" ];
 
   preInstall = ''
@@ -31,6 +33,7 @@ stdenv.mkDerivation rec {
     # just manually install the binaries instead
     cp incrond incrontab $out/bin/
   '';
+
   meta = {
     description = "Cron-like daemon which handles filesystem events";
     homepage = "https://github.com/ar-/incron";

@@ -37,6 +37,7 @@ stdenv.mkDerivation {
   sourceRoot = ".";
 
   nativeBuildInputs = lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
+
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [
     lttng-ust
     stdenv.cc.cc.lib
@@ -47,6 +48,7 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   meta = {

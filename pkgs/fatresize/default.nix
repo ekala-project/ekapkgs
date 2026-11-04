@@ -8,7 +8,6 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-
   version = "1.1.0";
   pname = "fatresize";
 
@@ -23,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     parted
     util-linux
   ];
+
   nativeBuildInputs = [ pkg-config ];
 
   propagatedBuildInputs = [

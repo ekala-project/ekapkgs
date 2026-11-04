@@ -18,6 +18,7 @@ buildGoModule (finalAttrs: {
   };
 
   proxyVendor = true;
+
   vendorHash = "sha256-ZKOzQL+KZsisiv2zSSBY1RnoiEdcSQYeVfd7zeecvv8=";
 
   checkFlags = "-skip=^(TestReleaseBundle|TestVisibilitySendUsage_RtCurl_E2E)";
@@ -31,6 +32,7 @@ buildGoModule (finalAttrs: {
     nodejs
     writableTmpDirAsHomeHook
   ];
+
   __darwinAllowLocalNetworking = true;
 
   meta = {

@@ -52,6 +52,7 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

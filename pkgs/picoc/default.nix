@@ -31,6 +31,7 @@ stdenv.mkDerivation {
   # Tests are currently broken on i686 see
   # https://hydra.nixos.org/build/24003763/nixlog/1
   doCheck = !stdenv.hostPlatform.isi686 && !stdenv.hostPlatform.isAarch64;
+
   checkTarget = "test";
 
   installPhase = ''

@@ -14,6 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   version = "0.9.5";
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     libx11
     libxft

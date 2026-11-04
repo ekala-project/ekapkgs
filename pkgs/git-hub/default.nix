@@ -25,6 +25,7 @@ stdenv.mkDerivation rec {
   postPatch = ''
     patchShebangs .
   '';
+
   installFlags = [
     "prefix=$(out)"
     "sysconfdir=$(out)/etc"

@@ -22,7 +22,9 @@ bun.buildPackage {
     "--backend=symlink"
     "--production"
   ];
+
   node_modulesHash = "sha256-/ux73JAcarBQWz3ofTIfJkH50RFHex+C6qO/4DkTGj8=";
+
   node_modulesAttrs.installPhase = ''
     runHook preInstall
     mkdir -p $out
@@ -45,6 +47,7 @@ bun.buildPackage {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

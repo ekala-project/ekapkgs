@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   ";
 
   nativeBuildInputs = [ perl ];
+
   buildInputs = [
     pam
     openldap

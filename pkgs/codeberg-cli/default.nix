@@ -19,6 +19,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   cargoHash = "sha256-AD4VLGsxkfl1UwJmZhR183Gk7ltjEyH9tlt+iKNs5J0=";
+
   nativeBuildInputs = [
     pkg-config
     installShellFiles

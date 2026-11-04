@@ -35,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
     zstd
   ];
+
   meta = {
     description = "CLI tool which does in-place conversion of Microsoft's NTFS filesystem to the open-source filesystem Btrfs";
     homepage = "https://github.com/maharmstone/ntfs2btrfs";

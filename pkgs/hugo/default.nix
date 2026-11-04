@@ -66,6 +66,7 @@ buildGoModule (finalAttrs: {
         --fish <(${emulator} $out/bin/hugo completion fish) \
         --zsh  <(${emulator} $out/bin/hugo completion zsh)
     '';
+
   versionCheckProgramArg = "version";
 
   meta = {

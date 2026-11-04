@@ -19,6 +19,7 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = "sha256-6B84e7k+rK9jmhBbb+h1Qm/Y4P0fjb4oOjg+kc7JwzI=";
+
   proxyVendor = true;
 
   ldflags = [

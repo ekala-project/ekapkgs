@@ -24,6 +24,7 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-ssNGy40KMJ9P33uEGyYOer92QRS2T6DQlKaf/3XMFwQ=";
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     libpcap
     libusb1

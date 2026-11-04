@@ -73,8 +73,9 @@ let
 in
 buildRebar3 (finalAttrs: {
   pname = "khepri";
-  name = "khepri";
   version = "0.19.3";
+
+  name = "khepri";
 
   src = fetchFromGitHub {
     owner = "rabbitmq";

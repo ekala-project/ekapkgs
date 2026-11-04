@@ -44,6 +44,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   # Compiling the 130k-line crate with --test in release mode OOMs on some
   # builders; debug keeps peak memory lower.
   checkType = "debug";
+
   env.RUST_MIN_STACK = "4194304";
 
   postInstall = ''
@@ -81,6 +82,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   passthru.tests.version = testers.testVersion {

@@ -28,6 +28,7 @@ buildGoModule (finalAttrs: {
       find "$out" -name .git -print0 | xargs -0 rm -rf
     '';
   };
+
   vendorHash = "sha256-HoHL0h5q3fvIWhnJ9m+r+E3gqgMJpWUNgthJ96ZDAoA=";
 
   excludedPackages = [
@@ -55,6 +56,7 @@ buildGoModule (finalAttrs: {
   # `__darwinAllowLocalNetworking = true;` wasn't sufficient for
   # aarch64 or x86_64
   doCheck = !stdenv.hostPlatform.isDarwin;
+
   preCheck = ''
     # some test data include SOURCE_DATE_EPOCH (which is different from our default)
     # and the default version info which we get by unsetting our ldflags
@@ -84,6 +86,7 @@ buildGoModule (finalAttrs: {
     '';
 
   doInstallCheck = true;
+
   versionCheckProgramArg = "version";
 
   meta = {

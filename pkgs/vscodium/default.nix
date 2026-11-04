@@ -43,12 +43,13 @@ buildVscode {
     useVSCodeRipgrep
     vscodeVersion
     ;
-
   pname = "vscodium";
   inherit version;
 
   executableName = "codium";
+
   longName = "VSCodium";
+
   shortName = "vscodium";
 
   src = fetchurl {

@@ -42,6 +42,7 @@ stdenv.mkDerivation rec {
     cmake.configurePhaseHook
     pkg-config
   ];
+
   buildInputs = [
     texinfo
     libxext

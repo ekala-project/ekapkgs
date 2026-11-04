@@ -16,6 +16,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "hdrmerge";
   version = "0.5.0-unstable-2025-04-26";
+
   src = fetchFromGitHub {
     owner = "jcelaya";
     repo = "hdrmerge";

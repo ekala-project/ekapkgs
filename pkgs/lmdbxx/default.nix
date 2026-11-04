@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ lmdb ];
+
   makeFlags = [ "PREFIX=$(out)" ];
 
   meta = {

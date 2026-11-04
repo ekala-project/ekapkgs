@@ -8,6 +8,7 @@
 buildGoModule rec {
   pname = "tfk8s";
   version = "0.1.10";
+
   tag = "v${version}";
 
   src = fetchFromGitHub {

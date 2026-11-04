@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     cpio
   ];
+
   buildInputs = [
     cairo
     libx11

@@ -26,6 +26,7 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [ unzip ] ++ lib.optional stdenv.hostPlatform.isDarwin fixDarwinDylibNames;
+
   outputs = [
     "out"
     "doc"
@@ -41,6 +42,7 @@ stdenv.mkDerivation rec {
       --replace "-soname" "-install_name" \
       --replace "gcc" $CC
   '';
+
   installPhase =
     let
       versionOneDot = versionMajor + "." + removeDots versionMinor;

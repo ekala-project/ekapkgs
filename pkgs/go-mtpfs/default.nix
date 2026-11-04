@@ -26,6 +26,7 @@ buildGoModule (finalAttrs: {
   ];
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ libusb1 ];
 
   checkFlags = [

@@ -24,6 +24,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   env.OPENSSL_NO_VENDOR = true;
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     openssl
   ]

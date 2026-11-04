@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     gmp
     redland
@@ -43,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
       "CFLAGS=-D_XOPEN_SOURCE=600 -I${librdf_raptor2}/include/raptor2 -I${librdf_rasqal}/include/rasqal"
     )
   '';
+
   meta = {
     description = "HTTP interface to Redland RDF store";
     mainProgram = "redstore";

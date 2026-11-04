@@ -30,6 +30,7 @@ stdenv.mkDerivation {
     pkg-config
     ninja
   ];
+
   buildInputs = [
     libdrm
     libx11

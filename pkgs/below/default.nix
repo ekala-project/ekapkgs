@@ -25,6 +25,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   prePatch = ''
     sed -i "s,ExecStart=.*/bin,ExecStart=$out/bin," etc/below.service
   '';
+
   postInstall = ''
     install -d $out/lib/systemd/system
     install -t $out/lib/systemd/system etc/below.service
@@ -41,6 +42,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     pkg-config
     rustfmt
   ];
+
   buildInputs = [
     elfutils
     zlib

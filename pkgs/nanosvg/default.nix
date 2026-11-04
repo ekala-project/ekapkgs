@@ -20,6 +20,7 @@ stdenv.mkDerivation {
     cmake
     cmake.configurePhaseHook
   ];
+
   meta = {
     description = "Simple stupid SVG parser";
     homepage = "https://github.com/memononen/nanosvg";

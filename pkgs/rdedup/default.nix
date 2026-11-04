@@ -25,6 +25,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     pkg-config
     rustPlatform.bindgenHook
   ];
+
   buildInputs = [
     openssl
     libsodium

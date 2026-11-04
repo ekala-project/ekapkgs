@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [ bzip2 ];
 
   patches = [

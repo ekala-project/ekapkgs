@@ -30,7 +30,6 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "gnome-music";
   version = "50.0";
-
   pyproject = false;
 
   src = fetchurl {

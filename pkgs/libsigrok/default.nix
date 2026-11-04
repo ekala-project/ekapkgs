@@ -34,6 +34,7 @@ stdenv.mkDerivation {
     pkg-config
     python3
   ];
+
   buildInputs = [
     libzip
     glib
@@ -61,6 +62,7 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     runHook preInstallCheck
 

@@ -36,12 +36,14 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   separateDebugInfo = true;
+
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook
     ninja
     pkg-config
   ];
+
   buildInputs = [
     libxcb
     libxcb-keysyms
@@ -55,6 +57,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxkbfile
     libxcb-util
   ];
+
   meta = {
     description = "Simple screen locker like slock";
     longDescription = ''
@@ -67,5 +70,4 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
   };
-
 })

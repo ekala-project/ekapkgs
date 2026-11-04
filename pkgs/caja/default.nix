@@ -19,6 +19,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "caja";
   version = "1.28.0";
+
   outputs = [
     "out"
     "man"

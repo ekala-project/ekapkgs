@@ -20,6 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     openssl
   ];
+
   configureFlags = [
     "--with-openssl=${openssl.dev}"
   ];
@@ -44,7 +45,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
+
   versionCheckProgramArg = "-V";
 
   meta = {

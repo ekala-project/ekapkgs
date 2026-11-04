@@ -7,6 +7,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "asmc-linux";
   version = "2.39.07";
+
   src = fetchFromGitHub {
     owner = "nidud";
     repo = "asmc_linux";
@@ -23,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   nativeInstallCheckInputs = [ versionCheckHook ];
+
   doInstallCheck = true;
 
   meta = {

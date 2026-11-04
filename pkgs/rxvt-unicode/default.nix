@@ -40,6 +40,7 @@ let
     in
     symlinkJoin {
       pname = "rxvt-unicode";
+      inherit (rxvt-unicode-unwrapped) meta version;
 
       paths = [ rxvt-unicode-unwrapped ] ++ plugins ++ extraDeps;
 
@@ -53,8 +54,6 @@ let
           --prefix PERL5LIB : "${perlPackages.makePerlPath perlDeps}" \
           --suffix-each URXVT_PERL_LIB ':' "$out/lib/urxvt/perl"
       '';
-
-      inherit (rxvt-unicode-unwrapped) meta version;
     };
 
 in

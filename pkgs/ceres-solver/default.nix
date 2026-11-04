@@ -32,7 +32,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = lib.optional runTests gflags;
+
   propagatedBuildInputs = [
     eigen
     glog

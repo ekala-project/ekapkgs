@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     installShellFiles
   ];
+
   propagatedBuildInputs = [ gnucap ];
 
   doCheck = true;

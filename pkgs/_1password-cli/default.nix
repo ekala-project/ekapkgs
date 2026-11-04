@@ -38,6 +38,7 @@ in
 
 stdenv.mkDerivation {
   inherit pname version;
+
   src =
     if (builtins.elem system platforms) then
       sources.${system}

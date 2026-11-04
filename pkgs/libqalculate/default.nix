@@ -39,6 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     doxygen
   ];
+
   depsBuildBuild = [
     buildPackages.stdenv.cc
   ];
@@ -49,6 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     libiconv
     readline
   ];
+
   propagatedBuildInputs = [
     libxml2
     mpfr

@@ -40,6 +40,7 @@ stdenv.mkDerivation rec {
     autoreconfHook
     texinfo
   ];
+
   buildInputs = [ mpfr ];
 
   meta = {

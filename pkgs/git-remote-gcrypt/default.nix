@@ -16,6 +16,7 @@
 stdenv.mkDerivation rec {
   pname = "git-remote-gcrypt";
   version = "1.5";
+
   rev = version;
 
   src = fetchFromGitHub {

@@ -17,7 +17,6 @@
 
 stdenv.mkDerivation (finalAttrs: {
   version = "2.11";
-
   pname = "wpa_supplicant";
 
   src = fetchurl {

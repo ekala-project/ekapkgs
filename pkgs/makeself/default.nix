@@ -28,6 +28,7 @@ stdenv.mkDerivation rec {
   # (attribute busybox-sandbox-shell), and that causes problems
   # when running these tests inside build, based on free disk space.
   checkTarget = "test";
+
   nativeCheckInputs = [
     which
     zstd

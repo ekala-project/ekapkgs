@@ -17,7 +17,6 @@
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "udiskie";
   version = "2.7.0";
-
   pyproject = true;
 
   src = fetchFromGitHub {

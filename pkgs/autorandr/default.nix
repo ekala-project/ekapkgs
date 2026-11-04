@@ -26,6 +26,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     desktop-file-utils
     udevCheckHook
   ];
+
   propagatedBuildInputs = with python3.pkgs; [ packaging ];
 
   buildPhase = ''

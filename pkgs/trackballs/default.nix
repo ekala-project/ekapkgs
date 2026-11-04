@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [
     zlib
     sdl2-compat

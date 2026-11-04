@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
   # the default "fortify" hardening sets -O2, -D_FORTIFY_SOURCE=2:
   # since librandombytes uses -O1, we disable the fortify hardening, and then manually re-enable -D_FORTIFY_SOURCE.
   hardeningDisable = [ "fortify" ];
+
   env.NIX_CFLAGS_COMPILE = toString (
     lib.optionals stdenv.cc.isClang [ "-Qunused-arguments" ]
     ++ [

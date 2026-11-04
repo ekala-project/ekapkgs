@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     ncurses
     libsamplerate
   ];
+
   nativeBuildInputs = [ gettext ];
 
   configureFlags = [ "--disable-xmlto" ];

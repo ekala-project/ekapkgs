@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
     rev = "tags/release/${finalAttrs.version}";
     hash = "sha256-2xgb9l0Eko39HJVROAWEIP3qLg5t/5h/rm2MoXoKnJI=";
   };
+
   sourceRoot = "${finalAttrs.src.name}/src";
 
   buildInputs = [ libmd ];

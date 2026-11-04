@@ -38,8 +38,11 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     udevCheckHook
   ];
+
   makefile = "Makefile.linux";
+
   makeFlags = [ "PREFIX=$(out)" ];
+
   postPatch = ''
     cd software
     substituteInPlace init_scripts/infnoise.service --replace "/usr/local" "$out"

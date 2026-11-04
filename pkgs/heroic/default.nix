@@ -13,6 +13,7 @@ steam.buildRuntimeEnv {
   runScript = "heroic";
 
   extraPkgs = pkgs: [ heroic-unwrapped ] ++ extraPkgs pkgs;
+
   inherit extraLibraries extraEnv;
 
   extraInstallCommands = ''

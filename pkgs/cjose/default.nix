@@ -26,10 +26,12 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     doxygen
   ];
+
   buildInputs = [
     jansson
     openssl
   ];
+
   nativeCheckInputs = [ check ];
 
   configureFlags = [

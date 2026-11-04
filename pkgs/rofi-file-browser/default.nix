@@ -38,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     pkg-config
   ];
+
   buildInputs = [
     rofi
     gtk3

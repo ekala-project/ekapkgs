@@ -20,10 +20,12 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ perl ];
+
   buildInputs = [
     binutils
     ctags
   ];
+
   propagatedBuildInputs = lib.optional (abi-dumper != null) abi-dumper;
 
   makeFlags = [ "prefix=$(out)" ];

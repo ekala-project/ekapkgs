@@ -20,11 +20,11 @@ let
     }:
     stdenv.mkDerivation (finalAttrs: {
       inherit pname version;
+
       src = fetchurl { inherit url hash; };
+
       dontUnpack = true;
-      meta = {
-        inherit description license maintainers;
-      };
+
       /*
         in the dprint configuration
         dprint expects a plugin path to end with .wasm extension
@@ -36,11 +36,14 @@ let
         mkdir -p $out
         cp $src $out/plugin.wasm
       '';
+
       doInstallCheck = true;
+
       nativeInstallCheckInputs = [
         dprint
         writableTmpDirAsHomeHook
       ];
+
       # Prevent schema unmatching errors
       # See https://github.com/NixOS/nixpkgs/pull/369415#issuecomment-2566112144 for detail
       installCheckPhase = ''
@@ -51,9 +54,14 @@ let
 
         runHook postInstallCheck
       '';
+
       passthru = {
         updateScript = ./update-plugins.py;
         inherit initConfig updateUrl;
+      };
+
+      meta = {
+        inherit description license maintainers;
       };
     });
   inherit (lib)

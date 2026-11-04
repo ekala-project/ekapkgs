@@ -24,7 +24,9 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [ cryptsetup ];
+
   doCheck = true;
 
   meta = {

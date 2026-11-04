@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   doCheck = !stdenv.hostPlatform.isAarch64;
+
   checkTarget = "test";
 
   env = lib.optionalAttrs stdenv.cc.isGNU {

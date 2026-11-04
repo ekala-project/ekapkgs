@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     python3
   ];
+
   buildInputs = [
     pcre2
     zlib

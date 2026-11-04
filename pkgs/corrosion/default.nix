@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-ppuDNObfKhneD9AlnPAvyCRHKW3BidXKglD1j/LE9CM=";
   };
+
   patches = [
     # Fix for this hard to debug issue in dependent packages:
     # https://github.com/corrosion-rs/corrosion/issues/588

@@ -20,8 +20,11 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   dontAddPrefix = true;
+
   doCheck = true;
+
   checkTarget = "test";
+
   installFlags = [ "PREFIX=$(out)" ];
 
   env.TARGET_OS = stdenv.hostPlatform.uname.system;

@@ -14,6 +14,7 @@
 stdenv.mkDerivation {
   pname = "PicoLisp";
   version = "24.3.30";
+
   src = fetchurl {
     url = "https://www.software-lab.de/picoLisp-24.3.tgz";
     sha256 = "sha256-FB43DAjHBFgxdysoLzBXLxii52a2CCh1skZP/RTzfdc=";
@@ -25,14 +26,17 @@ stdenv.mkDerivation {
     clang
     llvm
   ];
+
   buildInputs = [
     libffi
     openssl
     readline
   ];
+
   env.NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
 
   sourceRoot = "pil21";
+
   preBuild = ''
     cd src
   ''

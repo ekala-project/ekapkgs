@@ -21,6 +21,7 @@ bun.buildPackage {
   node_modulesHash = "sha256-B4M7Uiocy4F7c7IncERU5QyNNAal+cgNDVohybwRNJA=";
 
   nativeBuildInputs = [ autoPatchelfHook ];
+
   buildInputs = [ sqlite ] ++ lib.optionals stdenv.hostPlatform.isLinux [ stdenv.cc.cc.lib ];
 
   autoPatchelfIgnoreMissingDeps = [

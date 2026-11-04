@@ -51,6 +51,7 @@ buildGoModule {
       ]
     }
   '';
+
   meta = {
     mainProgram = "spread";
     license = lib.licenses.gpl3Only;

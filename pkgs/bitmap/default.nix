@@ -48,6 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
   installFlags = [ "appdefaultdir=$(out)/share/X11/app-defaults" ];
 
   passthru.updateScript = nix-update-script { extraArgs = [ "--version-regex=bitmap-(.*)" ]; };
+
   meta = {
     description = "X bitmap (XBM) editor and converter utilities";
     homepage = "https://gitlab.freedesktop.org/xorg/app/bitmap";

@@ -15,6 +15,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "mate-netbook";
   version = "1.26.0";
+
   outputs = [
     "out"
     "man"

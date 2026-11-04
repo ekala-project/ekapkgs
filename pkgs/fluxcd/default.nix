@@ -51,6 +51,7 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     $out/bin/flux --version | grep ${version} > /dev/null
   '';

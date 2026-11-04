@@ -13,6 +13,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "policycoreutils";
   version = "3.9";
+
   inherit (libsepol) se_url;
 
   src = fetchurl {
@@ -31,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     pkg-config
   ];
+
   buildInputs = [
     libsepol
     libselinux

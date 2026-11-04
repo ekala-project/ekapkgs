@@ -16,6 +16,7 @@ stdenvNoCC.mkDerivation rec {
   };
 
   nativeBuildInputs = [ makeBinaryWrapper ];
+
   buildInputs = [ java ];
 
   dontUnpack = true;

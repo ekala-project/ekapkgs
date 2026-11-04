@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
     copyDesktopItems
   ];
+
   buildInputs = [ java ];
 
   desktopItems = [

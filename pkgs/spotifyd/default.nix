@@ -50,6 +50,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   hardeningDisable = [ "strictoverflow" ];
 
   buildNoDefaultFeatures = true;
+
   buildFeatures =
     lib.optional withALSA "alsa_backend"
     ++ lib.optional withJack "rodiojack_backend"

@@ -19,6 +19,7 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = "sha256-PAtt72mGPDyS1wZMHOwrO8crC0mJ1GPAIm3i5T16xQY=";
+
   nativeBuildInputs = [
     installShellFiles
     writableTmpDirAsHomeHook

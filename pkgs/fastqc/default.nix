@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional stdenv.hostPlatform.isLinux copyDesktopItems # postInstallHook
   ++ lib.optional stdenv.hostPlatform.isDarwin desktopToDarwinBundle; # fixupOutputHook
+
   buildInputs = [
     java
     perl
@@ -44,6 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
       categories = [ "Science" ];
     }
   );
+
   desktopItems = [ finalAttrs.desktopItem ];
 
   installPhase = ''

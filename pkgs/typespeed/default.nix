@@ -8,7 +8,9 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "typespeed";
   version = "0.6.5";
+
   buildInputs = [ ncurses ];
+
   src = fetchurl {
     url = "https://typespeed.sourceforge.net/typespeed-${finalAttrs.version}.tar.gz";
     sha256 = "5c860385ceed8a60f13217cc0192c4c2b4705c3e80f9866f7d72ff306eb72961";
@@ -23,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   env.NIX_CFLAGS_COMPILE = "-fcommon";
 
   configureFlags = [ "--datadir=\${out}/share/" ];
+
   makeFlags = [ "CC=${stdenv.cc.targetPrefix}cc" ];
 
   meta = {

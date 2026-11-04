@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     libusb1
     libyubikey

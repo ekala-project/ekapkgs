@@ -27,6 +27,7 @@ stdenv.mkDerivation {
   '';
 
   nativeBuildInputs = [ unzip ];
+
   buildInputs = [ txt2tags ];
 
   meta = {

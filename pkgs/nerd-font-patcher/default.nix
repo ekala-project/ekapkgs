@@ -8,6 +8,7 @@
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "nerd-font-patcher";
   version = "3.5.1";
+  pyproject = false;
 
   src = fetchzip {
     url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v${finalAttrs.version}/FontPatcher.zip";
@@ -16,8 +17,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   };
 
   propagatedBuildInputs = [ fontforge ];
-
-  pyproject = false;
 
   patches = [
     ./use-nix-paths.patch

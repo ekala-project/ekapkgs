@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   cmakeEntries = {
     FLATCC_INSTALL = true;
   };
+
   doInstallCheck = true;
 
   meta = {

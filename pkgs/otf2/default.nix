@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   strictDeps = true;
+
   depsBuildBuild = [ buildPackages.stdenv.cc ];
 
   configureFlags = [
@@ -46,7 +47,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   enableParallelChecking = true;
+
   versionCheckProgram = [ "${placeholder "out"}/bin/otf2-config" ];
 
   meta = {

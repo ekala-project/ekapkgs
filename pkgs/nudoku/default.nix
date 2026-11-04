@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
   ];
+
   buildInputs = [ ncurses ];
 
   meta = {

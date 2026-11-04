@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [ zlib ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

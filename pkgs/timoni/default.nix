@@ -20,6 +20,7 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-PmN6zdxNJFleB3CVjOxI/AMglVEmzqtr4dYSLG3HKWY=";
 
   subPackages = [ "cmd/timoni" ];
+
   nativeBuildInputs = [ installShellFiles ];
 
   # Some tests require running Kubernetes instance
@@ -38,6 +39,7 @@ buildGoModule (finalAttrs: {
 
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
 
   meta = {

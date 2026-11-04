@@ -22,6 +22,7 @@ gccStdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [
     libpthread-stubs
     icu

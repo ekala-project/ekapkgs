@@ -7,6 +7,7 @@
 buildGoModule (finalAttrs: {
   pname = "jjui";
   version = "0.10.11";
+
   strictDeps = true;
 
   src = fetchFromGitHub {
@@ -27,7 +28,9 @@ buildGoModule (finalAttrs: {
   ];
 
   doInstallCheck = true;
+
   versionCheckProgramArg = "-version";
+
   meta = {
     description = "TUI for Jujutsu VCS";
     homepage = "https://github.com/idursun/jjui";

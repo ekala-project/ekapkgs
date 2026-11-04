@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoconf
     automake
   ];
+
   buildInputs = [
     ncurses
   ];

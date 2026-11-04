@@ -38,6 +38,7 @@ stdenv.mkDerivation rec {
     texinfo
     makeWrapper
   ];
+
   propagatedBuildInputs = [
     libffi
     gmp

@@ -24,6 +24,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "mate-settings-daemon";
   version = "1.28.0";
+
   outputs = [
     "out"
     "man"

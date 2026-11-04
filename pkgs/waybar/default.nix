@@ -140,6 +140,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional (cavaSupport || pipewireSupport) pipewire;
 
   nativeCheckInputs = [ catch2_3 ];
+
   doCheck = runTests;
 
   mesonFlags =

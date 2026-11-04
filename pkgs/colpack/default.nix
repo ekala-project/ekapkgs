@@ -6,7 +6,6 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-
   pname = "ColPack";
   version = "1.0.10";
 

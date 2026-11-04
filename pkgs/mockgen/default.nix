@@ -26,6 +26,7 @@ buildGoModule (finalAttrs: {
     "-X=main.date=1970-01-01T00:00:00Z"
     "-X=main.commit=${finalAttrs.src.rev}"
   ];
+
   meta = {
     description = "Mocking framework for the Go programming language";
     homepage = "https://github.com/uber-go/mock";

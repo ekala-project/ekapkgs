@@ -9,6 +9,7 @@
 stdenv.mkDerivation rec {
   pname = "kcgi";
   version = "0.10.8";
+
   underscoreVersion = lib.replaceStrings [ "." ] [ "_" ] version;
 
   src = fetchFromGitHub {
@@ -17,12 +18,14 @@ stdenv.mkDerivation rec {
     tag = "VERSION_${underscoreVersion}";
     sha256 = "0ha6r7bcgf6pcn5gbd2sl7835givhda1jql49c232f1iair1yqyp";
   };
+
   patchPhase = ''
     substituteInPlace configure \
       --replace /usr/local /
   '';
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ ] ++ lib.optionals stdenv.hostPlatform.isLinux [ libbsd ];
 
   dontAddPrefix = true;

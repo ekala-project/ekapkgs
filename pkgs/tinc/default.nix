@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     "--localstatedir=/var"
     "--sysconfdir=/etc"
   ];
+
   meta = {
     description = "VPN daemon with full mesh routing";
     longDescription = ''

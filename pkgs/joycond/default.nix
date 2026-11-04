@@ -27,6 +27,7 @@ stdenv.mkDerivation {
     pkg-config
     udevCheckHook
   ];
+
   buildInputs = [
     libevdev
     udev

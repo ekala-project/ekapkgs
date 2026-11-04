@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     pkg-config
   ];
+
   buildInputs = [ fuse ];
 
   # Put the unionfs mount helper in place as mount.unionfs-fuse. This makes it
@@ -50,6 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace $out/sbin/mount.unionfs-fuse --replace mount.fuse ${fuse}/sbin/mount.fuse
     substituteInPlace $out/sbin/mount.unionfs-fuse --replace unionfs $out/bin/unionfs
   '';
+
   meta = {
     broken = stdenv.hostPlatform.isDarwin;
     description = "FUSE UnionFS implementation";

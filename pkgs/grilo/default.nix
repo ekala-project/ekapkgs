@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     "man"
     "devdoc"
   ];
+
   outputBin = "dev";
 
   setupHook = ./setup-hook.sh;

@@ -20,6 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   env.NIX_CFLAGS_COMPILE = "-Wno-error=implicit-fallthrough";
+
   configureFlags = [
     "--with-systemd"
     "--with-systemdsystemunitdir=$(out)/etc/systemd/system"
@@ -29,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [
     systemd
     fcgi

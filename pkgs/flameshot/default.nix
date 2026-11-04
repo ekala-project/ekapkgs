@@ -59,6 +59,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   dontWrapGApps = true;
+
   dontWrapQtApps = true;
 
   postFixup = ''

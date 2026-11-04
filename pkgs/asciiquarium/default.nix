@@ -9,12 +9,14 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "asciiquarium";
   version = "1.1";
+
   src = fetchurl {
     url = "https://robobunny.com/projects/asciiquarium/asciiquarium_${finalAttrs.version}.tar.gz";
     hash = "sha256-GwjGYTUl516HVG9OiYSrOzPx6SIIAmjHSfF3fVbJ02E=";
   };
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [ perlPackages.perl ];
 
   installPhase = ''

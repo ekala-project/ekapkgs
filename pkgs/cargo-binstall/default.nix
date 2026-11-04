@@ -32,6 +32,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   buildNoDefaultFeatures = true;
+
   buildFeatures = [
     "fancy-no-backtrace"
     "git"
@@ -45,6 +46,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     "-p"
     "cargo-binstall"
   ];
+
   cargoTestFlags = [
     "-p"
     "cargo-binstall"

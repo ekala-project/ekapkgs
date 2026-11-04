@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3Packages.wrapPython
     python3Packages.testscenarios
   ];
+
   buildInputs = [
     check
     cppunit
@@ -41,6 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
+
   meta = {
     description = "Streaming protocol for test results";
     homepage = "https://github.com/testing-cabal/subunit";

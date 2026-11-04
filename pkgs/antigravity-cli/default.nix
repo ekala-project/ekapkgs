@@ -39,6 +39,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   nativeBuildInputs = lib.optionals stdenvNoCC.hostPlatform.isElf [ autoPatchelfHook ];
 
   dontConfigure = true;
+
   dontBuild = true;
 
   installPhase = ''

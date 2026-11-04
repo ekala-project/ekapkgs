@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
   postPatch = if stdenv.cc.isClang then "${perl}/bin/perl ./nomacro.pl" else null;
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [
     curl
     jansson

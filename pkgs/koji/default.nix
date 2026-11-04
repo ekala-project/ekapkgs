@@ -54,6 +54,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
       --fish <($out/bin/koji completions fish) \
       --zsh <($out/bin/koji completions zsh)
   '';
+
   versionCheckProgram = "${placeholder "out"}/bin/${finalAttrs.meta.mainProgram}";
 
   meta = {

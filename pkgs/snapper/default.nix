@@ -44,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
     docbook-xml-dtd.v4_5
   ];
+
   buildInputs = [
     acl
     attr

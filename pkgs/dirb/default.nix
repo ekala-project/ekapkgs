@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     curl
   ];
+
   buildInputs = [ curl ];
 
   unpackPhase = ''

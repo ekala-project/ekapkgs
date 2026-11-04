@@ -20,6 +20,7 @@ postgresqlBuildExtension (finalAttrs: {
   };
 
   nativeBuildInputs = [ flex ];
+
   buildInputs = postgresql.buildInputs ++ [
     curl
     json_c

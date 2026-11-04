@@ -53,6 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
     touch $out/lib/opencomposite/bin/version.txt
     runHook postInstall
   '';
+
   meta = {
     description = "Reimplementation of OpenVR, translating calls to OpenXR";
     homepage = "https://gitlab.com/znixian/OpenOVR";

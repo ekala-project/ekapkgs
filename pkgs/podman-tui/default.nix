@@ -47,6 +47,7 @@ buildGoModule (finalAttrs: {
     command = "HOME=$(mktemp -d) podman-tui version";
     version = "v${finalAttrs.version}";
   };
+
   meta = {
     homepage = "https://github.com/containers/podman-tui";
     description = "Podman Terminal UI";

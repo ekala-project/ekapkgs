@@ -8,7 +8,9 @@
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "dijo";
   version = "0.2.7";
+
   buildInputs = [ ncurses ];
+
   src = fetchFromGitHub {
     owner = "oppiliappan";
     repo = "dijo";

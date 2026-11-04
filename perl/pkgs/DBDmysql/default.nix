@@ -11,7 +11,6 @@
   zstd,
 }:
 buildPerlPackage {
-
   pname = "DBD-mysql";
   version = "5.010";
 
@@ -23,6 +22,7 @@ buildPerlPackage {
   nativeBuildInputs = [
     mysql80.client # for mysql_config
   ];
+
   buildInputs = [
     DevelChecklib
     libxcrypt
@@ -30,6 +30,7 @@ buildPerlPackage {
     zlib
     zstd
   ];
+
   propagatedBuildInputs = [ DBI ];
 
   doCheck = false; # require running database
@@ -42,5 +43,4 @@ buildPerlPackage {
       gpl1Plus
     ];
   };
-
 }

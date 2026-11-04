@@ -22,7 +22,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [ bashNonInteractive ];
+
   strictDeps = true;
 
   installPhase = ''

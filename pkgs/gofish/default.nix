@@ -5,7 +5,6 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-
   pname = "gofish";
   version = "1.2";
 

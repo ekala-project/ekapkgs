@@ -50,6 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
   version = finalAttrs.gclientDeps."src".path.tag;
 
   gclientDeps = gclient2nix.importGclientDeps ./webrtc-sources.json;
+
   sourceRoot = "src";
 
   # Chromium's Darwin toolchain defines _LIBCPP_HARDENING_MODE itself; keep
@@ -177,6 +178,7 @@ stdenv.mkDerivation (finalAttrs: {
       ''host_toolchain="//build/toolchain/linux/unbundle:host"''
       ''v8_snapshot_toolchain="//build/toolchain/linux/unbundle:host"''
     ];
+
   ninjaFlags = [ "webrtc" ];
 
   installPhase = ''

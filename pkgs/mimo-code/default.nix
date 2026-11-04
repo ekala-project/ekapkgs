@@ -56,7 +56,9 @@ stdenv.mkDerivation {
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ stdenv.cc.cc.lib ];
 
   dontConfigure = true;
+
   dontBuild = true;
+
   dontStrip = true;
 
   unpackPhase =
@@ -82,6 +84,7 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

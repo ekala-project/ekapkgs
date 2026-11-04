@@ -16,7 +16,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   patches = [ ./fix-configure-path.patch ];
+
   configureScript = "./configure.sh";
+
   configureFlags = [
     "--shared"
     "--debian-glitch"

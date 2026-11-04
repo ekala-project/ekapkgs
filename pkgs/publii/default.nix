@@ -34,7 +34,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   dontConfigure = true;
+
   dontBuild = true;
+
   dontWrapGApps = true;
 
   nativeBuildInputs = [

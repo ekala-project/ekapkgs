@@ -53,6 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
+
   meta = {
     homepage = "https://github.com/milgra/sov";
     description = "Workspace overview app for sway";

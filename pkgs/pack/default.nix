@@ -25,9 +25,11 @@ buildGoModule (finalAttrs: {
     "-w"
     "-X github.com/buildpacks/pack/pkg/client.Version=${finalAttrs.version}"
   ];
+
   nativeInstallCheckInputs = [
     writableTmpDirAsHomeHook
   ];
+
   versionCheckKeepEnvironment = [ "HOME" ];
 
   meta = {

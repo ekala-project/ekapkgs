@@ -7,6 +7,7 @@
 buildGoModule {
   pname = "dnss";
   version = "0-unstable-2024-03-17";
+
   src = fetchFromGitHub {
     owner = "albertito";
     repo = "dnss";

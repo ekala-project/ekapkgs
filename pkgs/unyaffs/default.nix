@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     runHook postInstall
   '';
+
   meta = {
     description = "Tool to extract files from a YAFFS2 file system image";
     homepage = "https://github.com/whataday/unyaffs";

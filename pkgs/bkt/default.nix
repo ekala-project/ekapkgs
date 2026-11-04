@@ -4,7 +4,6 @@
   lib,
 }:
 rustPlatform.buildRustPackage (finalAttrs: {
-
   pname = "bkt";
   version = "0.8.2";
 

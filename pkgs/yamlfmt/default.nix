@@ -38,6 +38,7 @@ buildGoModule (finalAttrs: {
 
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
 
   meta = {

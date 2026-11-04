@@ -23,6 +23,7 @@ stdenv.mkDerivation rec {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [
     boost
     gtest

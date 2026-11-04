@@ -33,6 +33,7 @@ stdenv.mkDerivation {
   sourceRoot = "${libapparmor.src.name}/changehat/pam_apparmor";
 
   makeFlags = [ "USE_SYSTEM=1" ];
+
   installFlags = [ "DESTDIR=$(out)" ];
 
   meta = libapparmor.meta // {

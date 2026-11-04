@@ -12,7 +12,6 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-
   pname = "dvdisaster";
   version = "0.79.10-pl6";
 
@@ -59,6 +58,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional (stdenv.hostPlatform.isx86_64) "--with-sse2=yes";
 
   doCheck = true;
+
   checkPhase = ''
     runHook preCheck
     pushd regtest

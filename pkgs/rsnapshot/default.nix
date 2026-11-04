@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   configureFlags = [ "--sysconfdir=/etc --prefix=/" ];
+
   makeFlags = [ "DESTDIR=$(out)" ];
 
   patchPhase = ''

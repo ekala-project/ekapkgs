@@ -11,9 +11,11 @@
 
 stdenv.mkDerivation rec {
   pname = "remake";
-  remakeVersion = "4.3";
-  dbgVersion = "1.6";
   version = "${remakeVersion}+dbg-${dbgVersion}";
+
+  remakeVersion = "4.3";
+
+  dbgVersion = "1.6";
 
   src = fetchurl {
     url = "mirror://sourceforge/project/bashdb/remake/${version}/remake-${remakeVersion}+dbg-${dbgVersion}.tar.gz";
@@ -32,6 +34,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [
     pkg-config
   ];
+
   buildInputs = [ readline ] ++ lib.optionals guileSupport [ guile ];
 
   meta = {

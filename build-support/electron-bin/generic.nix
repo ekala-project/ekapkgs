@@ -86,7 +86,9 @@ let
 
   common = platform: {
     inherit pname version meta;
+
     src = fetcher version (get tags platform) (get hashes platform);
+
     passthru.headers = headersFetcher version hashes.headers;
   };
 

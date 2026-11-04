@@ -118,6 +118,10 @@ stdenv.mkDerivation (finalAttrs: {
     done
   '';
 
+  passthru = {
+    shellPath = "/bin/fish";
+  };
+
   meta = {
     description = "Smart and user-friendly command line shell";
     homepage = "https://fishshell.com/";
@@ -125,9 +129,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
     mainProgram = "fish";
-  };
-
-  passthru = {
-    shellPath = "/bin/fish";
   };
 })

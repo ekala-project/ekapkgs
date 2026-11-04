@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
     guile
     pkg-config
   ];
+
   buildInputs = [
     guile
     guile-lib

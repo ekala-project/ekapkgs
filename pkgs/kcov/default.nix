@@ -27,6 +27,7 @@ let
     };
 
     preConfigure = "patchShebangs src/bin-to-c-source.py";
+
     nativeBuildInputs = [
       cmake
       cmake.configurePhaseHook

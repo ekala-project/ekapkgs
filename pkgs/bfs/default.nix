@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     ./configure --prefix=$out --enable-release
     runHook postConfigure
   '';
+
   makeFlags = [ "PREFIX=$(out)" ];
 
   meta = {

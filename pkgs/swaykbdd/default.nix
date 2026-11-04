@@ -20,12 +20,14 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook
     ninja
     pkg-config
   ];
+
   buildInputs = [ json_c ];
 
   meta = {

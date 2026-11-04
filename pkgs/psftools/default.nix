@@ -6,10 +6,12 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "psftools";
   version = "1.1.3";
+
   src = fetchurl {
     url = "https://www.seasip.info/Unix/PSF/psftools-${finalAttrs.version}.tar.gz";
     sha256 = "sha256-uiPWgJblAMKpM79L1FrJg4RzJ0D/XenkfUXNTmvq9B8=";
   };
+
   outputs = [
     "out"
     "man"

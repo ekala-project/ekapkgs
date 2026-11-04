@@ -17,10 +17,12 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     pkg-config
     which
   ];
+
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ alsa-lib ];
 
   configureFlags = [

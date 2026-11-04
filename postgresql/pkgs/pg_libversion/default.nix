@@ -19,6 +19,7 @@ postgresqlBuildExtension (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ libversion ];
 
   meta = {

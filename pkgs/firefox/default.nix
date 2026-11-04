@@ -11,6 +11,7 @@ let
   firefox-unwrapped = buildMozillaMach {
     pname = "firefox";
     version = "157.0.1";
+
     src = fetchurl {
       url = "mirror://mozilla/firefox/releases/157.0.1/source/firefox-157.0.1.source.tar.xz";
       sha512 = "c019202b2f87d25b3605bbf7266f3bb4d59745e48536f297d3f00cc3524a1cd2eba416a5a3cd0ecee6b0762d0f35bf3c5fcce286ebc7bc741263bebd0f102858";

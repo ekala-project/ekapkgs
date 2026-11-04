@@ -28,9 +28,11 @@ rustPlatform.buildRustPackage (finalAttrs: {
     pkg-config
     installShellFiles
   ];
+
   buildInputs = [ zlib ];
 
   buildNoDefaultFeatures = true;
+
   buildFeatures = lib.optional gitSupport "git";
 
   postInstall = ''

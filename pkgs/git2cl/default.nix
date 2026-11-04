@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ perl ];
+
   installPhase = ''
     install -D -m755 git2cl $out/bin/git2cl
     install -D -m644 README.md $out/share/doc/git2cl/README.md

@@ -13,6 +13,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-VcBmo8zpgxowAZyHpe5EVQ/e6zuCYw21Xws0Yf5EZEo=";
   };
+
   cargoHash = "sha256-1Syt8lP/3Efr1A/LuV+k6aMuxDg+AWDg4HPTDFP/UW0=";
 
   postPatch = ''

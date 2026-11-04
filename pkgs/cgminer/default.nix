@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoconf
     automake
   ];
+
   buildInputs = [
     libtool
     curl
@@ -47,6 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   configureScript = "./autogen.sh";
+
   configureFlags = [
     "--enable-scrypt"
     "--enable-opencl"

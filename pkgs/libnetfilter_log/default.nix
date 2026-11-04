@@ -17,7 +17,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ libmnl ];
+
   propagatedBuildInputs = [ libnfnetlink ];
+
   nativeBuildInputs = [ pkg-config ];
 
   meta = {

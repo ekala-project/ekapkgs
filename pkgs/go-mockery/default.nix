@@ -19,6 +19,7 @@ buildGoModule (finalAttrs: {
   };
 
   proxyVendor = true;
+
   vendorHash = "sha256-YOhlytIMgMHwj2BM/6vOeheyQd4nUuDWpkwLdCqru8c=";
 
   ldflags = [
@@ -63,7 +64,9 @@ buildGoModule (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   versionCheckProgram = "${placeholder "out"}/bin/mockery";
+
   versionCheckProgramArg = "version";
 
   meta = {

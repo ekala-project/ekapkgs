@@ -21,6 +21,7 @@ buildGoModule (finalAttrs: {
   modRoot = "cmd/atlas";
 
   proxyVendor = true;
+
   vendorHash = "sha256-9yg8VkRtyaMQjCAAOHIG4A9QSV1VOFOLBK9cTrE83a4=";
 
   nativeBuildInputs = [ installShellFiles ];

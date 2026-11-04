@@ -7,13 +7,15 @@
 }:
 
 replaceVarsWith {
-  name = "lsb_release";
   pname = "lsb_release";
   version = lib.trivial.release or "25.05";
+
+  name = "lsb_release";
 
   src = ./lsb_release.sh;
 
   dir = "bin";
+
   isExecutable = true;
 
   replacements = {

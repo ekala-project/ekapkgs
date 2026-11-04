@@ -19,7 +19,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
+
   meta = {
     description = "Portable TUI Gopher client written in C89 for POSIX systems";
     homepage = "https://github.com/manipuladordedados/tocaia";

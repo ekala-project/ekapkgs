@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   patchPhase = ''
     substituteInPlace Makefile --replace "-o 0 -g 0" "" --replace "\$(RPMDIR)" ""
   '';
+
   makeFlags = [
     "TOPDIR=${placeholder "out"}"
     "PERL=${perl}/bin/perl"

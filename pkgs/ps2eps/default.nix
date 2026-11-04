@@ -17,6 +17,7 @@ perlPackages.buildPerlPackage rec {
     tag = "v${version}";
     hash = "sha256-SPLwsGKLVhANoqSQ/GJ938cYjbjMbUOXkNn9so3aJTA=";
   };
+
   patches = [
     (replaceVars ./hardcode-deps.patch {
       gs = "${ghostscript}/bin/gs";
@@ -48,6 +49,7 @@ perlPackages.buildPerlPackage rec {
     "out"
     "man"
   ];
+
   installPhase = ''
     runHook preInstall
 

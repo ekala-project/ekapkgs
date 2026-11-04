@@ -19,7 +19,9 @@ bun.buildPackage {
   };
 
   node_modulesHash = "sha256-Z9zDpKZ7yeac+b8qFKbG1n+Gi5nB6BImz/28ZnzSemQ=";
+
   node_modulesCopyMode = "overlay";
+
   node_modulesAttrs.installPhase = ''
     runHook preInstall
     mkdir -p $out

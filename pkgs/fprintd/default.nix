@@ -26,6 +26,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "fprintd";
   version = "1.94.5";
+
   outputs = [
     "out"
     "devdoc"

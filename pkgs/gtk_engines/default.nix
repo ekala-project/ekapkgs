@@ -20,6 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     intltool
   ];
+
   buildInputs = [ gtk2 ];
 
   meta = {

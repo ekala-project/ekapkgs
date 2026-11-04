@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
   ];
+
   buildInputs = [
     libmpdclient
     curl

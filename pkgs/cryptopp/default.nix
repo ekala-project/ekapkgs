@@ -7,6 +7,7 @@
 stdenv.mkDerivation rec {
   pname = "crypto++";
   version = "8.9.0";
+
   underscoredVersion = lib.strings.replaceStrings [ "." ] [ "_" ] version;
 
   src = fetchFromGitHub {
@@ -39,6 +40,7 @@ stdenv.mkDerivation rec {
   doCheck = true;
 
   installTargets = [ "install-lib" ];
+
   installFlags = [ "LDCONF=true" ];
 
   meta = {

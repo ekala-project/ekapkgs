@@ -89,14 +89,19 @@ stdenv.mkDerivation rec {
   ];
 
   buildFlags = [ "build" ];
+
   checkTarget = "checkbuild";
+
   installTargets = [ "install" ];
 
   doCheck = true;
 
   dontUseCmakeConfigure = true;
+
   dontUseNinjaBuild = true;
+
   dontUseNinjaInstall = true;
+
   dontUseNinjaCheck = true;
 
   postUnpack =

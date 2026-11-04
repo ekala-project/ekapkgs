@@ -15,6 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   versionCheckProgram = "${placeholder "out"}/bin/bc";
+
   meta = {
     homepage = "https://github.com/gavinhoward/bc";
     description = "Gavin Howard's BC calculator implementation";

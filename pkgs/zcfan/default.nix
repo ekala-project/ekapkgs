@@ -20,6 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace Makefile \
       --replace "/usr/local" $out
   '';
+
   installCheckPhase = ''
     runHook preInstallCheck
 

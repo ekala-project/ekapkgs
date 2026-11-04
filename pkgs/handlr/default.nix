@@ -25,6 +25,7 @@ rustPlatform.buildRustPackage {
     installShellFiles
     shared-mime-info
   ];
+
   buildInputs = lib.optionals stdenv.hostPlatform.isDarwin [ libiconv ];
 
   preCheck = ''

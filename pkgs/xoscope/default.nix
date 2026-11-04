@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     m4
   ];
+
   buildInputs = [
     gtk3
     gtkdatabox

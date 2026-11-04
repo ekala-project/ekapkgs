@@ -61,6 +61,7 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
   '';
 
   dontWrapQtApps = true;
+
   dontStrip = true;
 
   meta = {

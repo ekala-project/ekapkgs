@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     installShellFiles
   ];
+
   buildInputs = [
     grep
     libpq

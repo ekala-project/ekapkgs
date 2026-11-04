@@ -16,6 +16,7 @@ in
 stdenv.mkDerivation {
   pname = "typesense";
   inherit version;
+
   src = fetchurl {
     url = "https://dl.typesense.org/releases/${version}/typesense-server-${version}-${arch}.tar.gz";
     inherit hash;

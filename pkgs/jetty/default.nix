@@ -10,7 +10,6 @@ let
     { version, hash }:
     stdenvNoCC.mkDerivation rec {
       pname = "jetty";
-
       inherit version;
 
       src = fetchurl {

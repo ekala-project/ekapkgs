@@ -11,6 +11,7 @@ stdenv.mkDerivation {
   version = msmtp.version;
 
   dontUnpack = true;
+
   dontBuild = true;
 
   installPhase = ''

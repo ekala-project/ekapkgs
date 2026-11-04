@@ -31,11 +31,15 @@ stdenv.mkDerivation {
   ];
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [ scheme48 ];
+
   configureFlags = [ "--with-scheme48=${scheme48}" ];
+
   makeFlags = [
     "SCHEME48VERSION=${scheme48.version}"
   ];
+
   meta = {
     description = "Scheme shell";
     homepage = "http://www.scsh.net/";

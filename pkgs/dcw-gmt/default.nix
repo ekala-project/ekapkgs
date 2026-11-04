@@ -38,5 +38,4 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.lgpl3Plus;
   };
-
 })

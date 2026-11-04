@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   env.CXXFLAGS = "-std=c++98";
 
   preInstall = "mkdir -pv $out/bin";
+
   postInstall = "chmod -v +w $out/bin/mkcue";
 
   meta = {

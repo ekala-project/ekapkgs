@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [ zlib ];
 
   checkPhase = ''
@@ -32,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     ctest -LE 'NEEDS_DATA'
     runHook postCheck
   '';
+
   doCheck = true;
 
   meta = {

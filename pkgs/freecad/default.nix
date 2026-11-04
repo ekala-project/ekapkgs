@@ -144,11 +144,13 @@ freecad-utils.makeCustomizable (
     '';
 
     nativeInstallCheckInputs = [ versionCheckHook ];
+
     doInstallCheck = true;
 
     versionCheckProgram = writeShellScript "version-check.sh" ''
       exec "$1" --version --safe-mode
     '';
+
     versionCheckProgramArg = "${placeholder "out"}/bin/freecadcmd";
 
     # 6.9k object files, cuts down build time from 2-3 hours to 15 minutes

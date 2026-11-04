@@ -11,7 +11,6 @@
 }:
 
 stdenv.mkDerivation rec {
-
   pname = "intercal";
   version = "0.34";
 

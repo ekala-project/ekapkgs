@@ -35,6 +35,7 @@ stdenv.mkDerivation {
     pkg-config
     docutils
   ];
+
   buildInputs = [
     glib
     libpthread-stubs
@@ -42,6 +43,7 @@ stdenv.mkDerivation {
     libxdmcp
     libxcb-util
   ];
+
   meta = {
     description = "Use external locker (such as i3lock) as X screen saver";
     homepage = "https://github.com/xdbob/xss-lock";

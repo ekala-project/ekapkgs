@@ -15,7 +15,6 @@
 buildPythonPackage (finalAttrs: {
   pname = "python-xapp";
   version = "3.0.3";
-
   pyproject = false;
 
   src = fetchFromGitHub {

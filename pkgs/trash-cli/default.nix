@@ -71,6 +71,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
         --zsh  <("$out/bin/$bin" --print-completion zsh)
     done
   '';
+
   meta = {
     homepage = "https://github.com/andreafrancia/trash-cli";
     description = "Command line interface to the freedesktop.org trashcan";

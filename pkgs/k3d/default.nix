@@ -27,6 +27,7 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = "sha256-QRr8dmiqoNHu30OILwrS9AXK68hnNIqXlKMkASbcKVo=";
+
   deleteVendor = true;
 
   nativeBuildInputs = [ installShellFiles ];
@@ -61,6 +62,7 @@ buildGoModule (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     runHook preInstallCheck
     $out/bin/k3d --help

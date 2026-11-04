@@ -40,6 +40,7 @@ stdenv.mkDerivation rec {
     "man"
     "doc"
   ];
+
   setOutputFlags = false;
 
   depsBuildBuild = [ buildPackages.stdenv.cc ];

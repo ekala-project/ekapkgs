@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [
     sqlite
     zlib

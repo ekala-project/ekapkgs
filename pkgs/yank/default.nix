@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   installFlags = [ "PREFIX=$(out)" ];
+
   makeFlags = [ "YANKCMD=${xsel}/bin/xsel" ];
 
   meta = {
@@ -34,5 +35,4 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = lib.platforms.unix;
     mainProgram = "yank";
   };
-
 })

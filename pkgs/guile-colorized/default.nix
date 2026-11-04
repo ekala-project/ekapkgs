@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   nativeBuildInputs = [ guile ];
+
   buildInputs = [ guile ];
 
   preConfigure = ''

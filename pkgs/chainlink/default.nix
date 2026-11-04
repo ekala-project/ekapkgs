@@ -19,6 +19,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # The Rust crate is in the chainlink subdirectory.
   cargoRoot = "chainlink";
+
   buildAndTestSubdir = "chainlink";
 
   cargoHash = "sha256-WmV6PRSuzdoCMXy4LMSMdHsSbI+A8jx89lwUt64DWmc=";
@@ -30,6 +31,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   passthru.tests.version = testers.testVersion {

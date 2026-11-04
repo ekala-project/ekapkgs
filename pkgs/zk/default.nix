@@ -25,6 +25,7 @@ buildGoModule (finalAttrs: {
     "-X=main.Build=${finalAttrs.version}"
     "-X=main.Version=${finalAttrs.version}"
   ];
+
   tags = [ "fts5" ];
 
   meta = {

@@ -58,6 +58,7 @@ stdenv.mkDerivation rec {
   ];
 
   doCheck = !enableLibPurple; # Checks fail with libpurple for some reason
+
   checkPhase = ''
     # check flags set VERBOSE=y which breaks the build due overriding a command
     make check

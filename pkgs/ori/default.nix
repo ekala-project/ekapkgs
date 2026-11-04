@@ -34,6 +34,7 @@ stdenv.mkDerivation {
   };
 
   dontUnpack = true;
+
   # bun-compiled binary: stripping corrupts the embedded bytecode.
   dontStrip = true;
 
@@ -50,6 +51,7 @@ stdenv.mkDerivation {
   # ori prints the build hash with '+' (0.15.5+74c4cf2) while the release tag
   # spells it with '-', so the stock versionCheckHook grep can never match.
   doInstallCheck = true;
+
   installCheckPhase = ''
     HOME=$(mktemp -d) $out/bin/ori --version | grep -F "${lib.replaceStrings [ "-" ] [ "+" ] version}"
   '';

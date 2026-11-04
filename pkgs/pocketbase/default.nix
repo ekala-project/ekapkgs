@@ -32,6 +32,7 @@ buildGoModule (finalAttrs: {
   postInstall = ''
     mv $out/bin/base $out/bin/pocketbase
   '';
+
   meta = {
     description = "Open Source realtime backend in 1 file";
     homepage = "https://github.com/pocketbase/pocketbase";

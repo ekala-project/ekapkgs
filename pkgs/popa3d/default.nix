@@ -35,7 +35,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
+
   versionCheckProgramArg = "-V";
 
   meta = {

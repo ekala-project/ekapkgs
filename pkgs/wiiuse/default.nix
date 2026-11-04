@@ -7,7 +7,6 @@
   bluez,
 }:
 stdenv.mkDerivation (finalAttrs: {
-
   pname = "WiiUse";
   version = "0.15.7";
 

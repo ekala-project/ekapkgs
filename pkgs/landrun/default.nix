@@ -46,9 +46,11 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-Bs5b5w0mQj1MyT2ctJ7V38Dy60moB36+T8TFH38FA08=";
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     which
   ];
+
   postInstallCheck = ''
     # only check functionality if the builder supports it (Linux 5.13+)
     set +e

@@ -15,7 +15,6 @@ let
 in
 python3Packages.buildPythonApplication {
   inherit pname version;
-
   pyproject = true;
 
   src = fetchFromGitHub {

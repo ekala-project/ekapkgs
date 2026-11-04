@@ -10,8 +10,9 @@
 
 stdenv.mkDerivation rec {
   pname = "glee";
-  rev = "f727ec7463d514b6279981d12833f2e11d62b33d";
   version = "20170205-${lib.strings.substring 0 7 rev}";
+
+  rev = "f727ec7463d514b6279981d12833f2e11d62b33d";
 
   src = fetchgit {
     inherit rev;

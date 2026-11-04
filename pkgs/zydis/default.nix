@@ -28,7 +28,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     python3
   ];
+
   propagatedBuildInputs = [ zycore ];
+
   cmakeEntries = {
     CMAKE_INSTALL_LIBDIR = "lib";
     CMAKE_INSTALL_INCLUDEDIR = "include";

@@ -24,6 +24,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   # atuin's default features include 'check-updates', which do not make sense
   # for distribution builds. List all other default features.
   buildNoDefaultFeatures = true;
+
   buildFeatures = [
     "client"
     "sync"

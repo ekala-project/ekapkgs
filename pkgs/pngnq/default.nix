@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     libpng
   ];
+
   buildInputs = [
     libpng
     zlib

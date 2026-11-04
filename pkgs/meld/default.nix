@@ -19,7 +19,6 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "meld";
   version = "3.23.1";
-
   pyproject = false;
 
   src = fetchurl {

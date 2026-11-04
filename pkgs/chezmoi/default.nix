@@ -36,6 +36,7 @@ buildGoModule (finalAttrs: {
     installShellCompletion --fish completions/chezmoi.fish
     installShellCompletion --zsh completions/chezmoi.zsh
   '';
+
   meta = {
     description = "Manage your dotfiles across multiple machines, securely";
     homepage = "https://www.chezmoi.io/";

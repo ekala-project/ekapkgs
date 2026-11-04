@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     asciidoc
   ];
+
   buildInputs = [
     poppler
     libgcrypt

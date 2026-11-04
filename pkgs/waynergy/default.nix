@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     pkg-config
     meson
@@ -32,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     wayland-scanner
   ];
+
   buildInputs = [
     libdrm
     wayland

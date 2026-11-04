@@ -51,6 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
     zstd
   ];
+
   meta = {
     description = "Reliable PostgreSQL backup & restore";
     homepage = "https://pgbackrest.org";

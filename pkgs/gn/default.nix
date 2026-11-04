@@ -37,6 +37,7 @@ stdenv.mkDerivation {
   ];
 
   env.NIX_CFLAGS_COMPILE = "-Wno-error";
+
   hardeningDisable = [ "format" ];
 
   configurePhase = ''

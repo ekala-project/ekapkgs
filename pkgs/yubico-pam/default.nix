@@ -16,6 +16,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "yubico-pam";
   version = "2.27";
+
   src = fetchFromGitHub {
     owner = "Yubico";
     repo = "yubico-pam";
@@ -30,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxslt
     docbook_xsl
   ];
+
   buildInputs = [
     pam
     yubikey-personalization

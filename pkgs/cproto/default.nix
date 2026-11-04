@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   installCheckPhase = ''
     [ "$("$out/bin/cproto" -V 2>&1)" = '${finalAttrs.version}' ]
   '';

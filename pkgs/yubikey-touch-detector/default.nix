@@ -19,6 +19,7 @@ buildGoModule (finalAttrs: {
     tag = finalAttrs.version;
     hash = "sha256-GaahrYx5ySUIAM073JknQGPwC2pw2VXj3D25sEZANJk=";
   };
+
   vendorHash = "sha256-Uvybz2i2i/EWJvmvlb4VcJo/2SNaDAuj8t997sxlvtY=";
 
   nativeBuildInputs = [

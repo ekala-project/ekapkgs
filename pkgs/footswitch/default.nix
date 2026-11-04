@@ -22,6 +22,7 @@ stdenv.mkDerivation {
     pkg-config
     udevCheckHook
   ];
+
   buildInputs = [ hidapi ];
 
   postPatch = ''

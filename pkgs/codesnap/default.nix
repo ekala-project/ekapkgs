@@ -26,6 +26,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     "-p"
     "codesnap-cli"
   ];
+
   cargoTestFlags = finalAttrs.cargoBuildFlags;
 
   env.OPENSSL_NO_VENDOR = true;

@@ -35,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     make vm image libscheme48 script-interpreter go
     runHook postBuild
   '';
+
   installTargets = "install-no-doc";
 
   meta = {

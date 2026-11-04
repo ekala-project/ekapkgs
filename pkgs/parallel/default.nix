@@ -53,6 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   doCheck = true;
+
   checkTarget = "check";
 
   meta = {

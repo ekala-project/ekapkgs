@@ -47,10 +47,13 @@ rustPlatform.buildRustPackage (finalAttrs: {
   nativeBuildInputs = [ pkg-config ];
 
   env.RUSTFLAGS = lib.optionalString stdenv.hostPlatform.isDarwin "-C link-arg=-Wl,-dead_strip_dylibs";
+
   env.CCUSAGE_PRICING_JSON_PATH = litellm-pricing;
+
   env.CCUSAGE_VERSION = finalAttrs.version;
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

@@ -42,6 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   depsBuildBuild = [ pkg-config ];
+
   nativeBuildInputs = [
     pkg-config
     meson
@@ -49,6 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     scdoc
   ];
+
   buildInputs = [
     freetype
     fontconfig
@@ -58,9 +60,11 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optionals (withShapingTypes != [ ]) [ harfbuzz ]
   ++ lib.optionals (builtins.elem "run" withShapingTypes) [ utf8proc ];
+
   nativeCheckInputs = [ check ];
 
   mesonBuildType = "release";
+
   mesonFeatures = {
     system-nanosvg = true;
   };

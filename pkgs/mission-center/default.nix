@@ -141,6 +141,7 @@ stdenv.mkDerivation (finalAttrs: {
     rustc
     gtk4.wrapGAppsHook
   ];
+
   dontUseCmakeConfigure = true;
 
   buildInputs = [

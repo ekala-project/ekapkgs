@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   buildInputs = [ perl ];
+
   dontBuild = true;
 
   installPhase = ''

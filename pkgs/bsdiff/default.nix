@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ bzip2 ];
+
   patches = [
     (fetchpatch {
       url = "https://sources.debian.org/data/main/b/bsdiff/4.3-22/debian/patches/20-CVE-2014-9862.patch";

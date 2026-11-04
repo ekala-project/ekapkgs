@@ -22,6 +22,7 @@ buildGoModule (finalAttrs: {
   vendorHash = null;
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     openssl
     libpcap
@@ -53,6 +54,7 @@ buildGoModule (finalAttrs: {
 
       runHook postBuild
     '';
+
   meta = {
     homepage = "https://github.com/mongodb/mongo-tools";
     description = "Tools for the MongoDB";

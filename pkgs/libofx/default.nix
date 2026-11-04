@@ -24,6 +24,7 @@ stdenv.mkDerivation rec {
   };
 
   preConfigure = "./autogen.sh";
+
   configureFlags = [ "--with-opensp-includes=${opensp}/include/OpenSP" ];
 
   nativeBuildInputs = [

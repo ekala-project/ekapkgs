@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   makeFlags = [ "PREFIX=${placeholder "out"}" ];
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     libx11
     libxtst

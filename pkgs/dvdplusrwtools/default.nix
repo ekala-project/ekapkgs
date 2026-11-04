@@ -69,6 +69,7 @@ stdenv.mkDerivation rec {
       ];
 
   nativeBuildInputs = [ m4 ];
+
   buildInputs = [ cdrkit ];
 
   makeFlags = [

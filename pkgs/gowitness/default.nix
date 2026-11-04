@@ -21,6 +21,7 @@ buildGoModule (finalAttrs: {
     "-s"
     "-w"
   ];
+
   versionCheckProgramArg = "version";
 
   meta = {

@@ -67,7 +67,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeInstallCheckInputs = [ ];
+
   versionCheckProgram = "${placeholder "out"}/bin/${finalAttrs.meta.mainProgram}";
+
   doInstallCheck = true;
 
   meta = {

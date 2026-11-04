@@ -33,7 +33,9 @@ perlPackages.buildPerlPackage rec {
   '';
 
   buildTools = [ ];
+
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = (
     with perlPackages;
     [
@@ -58,6 +60,7 @@ perlPackages.buildPerlPackage rec {
       TestNoWarnings
     ]
   );
+
   propagatedBuildInputs = with perlPackages; [
     FileWhich
     LWP

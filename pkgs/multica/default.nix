@@ -18,6 +18,7 @@ buildGoModule (finalAttrs: {
   };
 
   sourceRoot = "${finalAttrs.src.name}/server";
+
   subPackages = [ "cmd/multica" ];
 
   vendorHash = "sha256-b6elV4j+7R6L29q8tbCI3MAOY8X63ndzlmCMv7jo7mM=";
@@ -25,6 +26,7 @@ buildGoModule (finalAttrs: {
   ldflags = [ "-X main.version=${finalAttrs.version}" ];
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   passthru.tests.version = testers.testVersion {

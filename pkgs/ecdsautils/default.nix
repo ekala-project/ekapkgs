@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     doxygen
   ];
+
   buildInputs = [ libuecc ];
 
   meta = {

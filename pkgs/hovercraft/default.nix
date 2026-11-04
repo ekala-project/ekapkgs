@@ -30,6 +30,7 @@ python3Packages.buildPythonApplication rec {
     pygments
     watchdog
   ];
+
   patches = [
     (fetchpatch {
       name = "fix tests with pygments 2.14";

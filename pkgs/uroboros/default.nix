@@ -7,6 +7,7 @@
 buildGoModule rec {
   pname = "uroboros";
   version = "20210304-${lib.strings.substring 0 7 rev}";
+
   rev = "9bed95bb4cc44cfd043e8ac192e788df379c7a44";
 
   src = fetchFromGitHub {

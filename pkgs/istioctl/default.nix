@@ -15,6 +15,7 @@ buildGoModule (finalAttrs: {
     tag = finalAttrs.version;
     hash = "sha256-CsfV6HLzAMn+Pn7rn/xIbgq5XA7n4aHlaBH/CrwjcY0=";
   };
+
   vendorHash = "sha256-NvUMAH8wMs34/oZcrKduj0J/CYPObJML+fxbJI8MYt8=";
 
   nativeBuildInputs = [ installShellFiles ];
@@ -36,6 +37,7 @@ buildGoModule (finalAttrs: {
     ++ map (attr: "-X ${attr}") attrs;
 
   subPackages = [ "istioctl/cmd/istioctl" ];
+
   installCheckPhase = ''
     $out/bin/istioctl version --remote=false | grep ${finalAttrs.version} > /dev/null
   '';

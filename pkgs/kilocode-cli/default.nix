@@ -43,6 +43,7 @@ stdenv.mkDerivation {
   ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
   dontBuild = true;
+
   # bun-compiled binary: stripping corrupts the embedded bytecode.
   dontStrip = true;
 
@@ -53,10 +54,12 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook
   ];
+
   versionCheckProgramArg = "--version";
 
   meta = {

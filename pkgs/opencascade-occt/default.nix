@@ -18,6 +18,7 @@
 stdenv.mkDerivation rec {
   pname = "opencascade-occt";
   version = "7.8.1";
+
   commit = "V${builtins.replaceStrings [ "." ] [ "_" ] version}";
 
   src = fetchurl {
@@ -51,6 +52,7 @@ stdenv.mkDerivation rec {
   ];
 
   NIX_CFLAGS_COMPILE = [ "-fpermissive" ];
+
   cmakeEntries = {
     USE_RAPIDJSON = true;
   };

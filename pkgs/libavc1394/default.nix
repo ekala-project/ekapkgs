@@ -16,6 +16,7 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   propagatedBuildInputs = [ libraw1394 ];
 
   meta = {

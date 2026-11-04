@@ -7,6 +7,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "gshhg-gmt";
   version = "2.3.7";
+
   src = fetchurl {
     url = "ftp://ftp.soest.hawaii.edu/gmt/gshhg-gmt-${finalAttrs.version}.tar.gz";
     sha256 = "9bb1a956fca0718c083bef842e625797535a00ce81f175df08b042c2a92cfe7f";
@@ -30,5 +31,4 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.lgpl3Plus;
   };
-
 })

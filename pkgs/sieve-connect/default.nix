@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ perlPackages.perl ];
+
   nativeBuildInputs = [
     makeWrapper
     installShellFiles

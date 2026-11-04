@@ -46,6 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
     pkg-config
   ];
+
   buildInputs = [
     gtk3
     libcddb

@@ -48,6 +48,7 @@ buildGoModule (finalAttrs: {
       --fish <($out/bin/headscale completion fish) \
       --zsh <($out/bin/headscale completion zsh)
   '';
+
   meta = {
     homepage = "https://github.com/juanfont/headscale";
     description = "Open source, self-hosted implementation of the Tailscale control server";

@@ -29,5 +29,4 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "qprint";
     platforms = lib.platforms.all;
   };
-
 })

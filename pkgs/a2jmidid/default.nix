@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
   ];
+
   buildInputs = [
     alsa-lib
     dbus

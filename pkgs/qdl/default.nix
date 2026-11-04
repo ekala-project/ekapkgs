@@ -38,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmocka
     ninja
   ];
+
   buildInputs = [
     libxml2
     libusb1

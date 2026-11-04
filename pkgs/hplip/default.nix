@@ -192,6 +192,7 @@ python3Packages.buildPythonApplication {
   # 1. Calling patchPythonProgram on the original script in $out/share/hplip
   # 2. Making our own wrapper pointing directly to the original script.
   dontWrapPythonPrograms = true;
+
   preFixup = ''
     buildPythonPath "$out ''${pythonPath[*]}"
 

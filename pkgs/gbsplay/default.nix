@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ installShellFiles ];
+
   buildInputs = [
     libpulseaudio
     nas

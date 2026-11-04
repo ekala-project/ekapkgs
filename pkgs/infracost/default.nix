@@ -16,6 +16,7 @@ buildGoModule (finalAttrs: {
     repo = "infracost";
     sha256 = "sha256-4a29Lu5ShQpM3TfCXh0rA5gtO22MyT6/G2y3C4F3iyo=";
   };
+
   vendorHash = "sha256-4s6SAVgEmkwGvt08vsTw+qc0yFK+HtpCUkPkVUZzQUg=";
 
   ldflags = [

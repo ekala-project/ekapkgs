@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [
     versionInfo.javaRuntime
     bash

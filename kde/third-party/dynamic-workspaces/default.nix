@@ -27,6 +27,7 @@ stdenv.mkDerivation {
   ];
 
   dontBuild = true;
+
   dontWrapQtApps = true;
 
   installPhase = ''

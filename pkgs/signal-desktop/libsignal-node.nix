@@ -27,6 +27,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-LJx0g6WOP0U/YcEKaH1VCzO8shb83MH3ZbFTOpDU2dU=";
 
   npmRoot = "node";
+
   npmDeps = fetchNpmDeps {
     name = "${finalAttrs.pname}-npm-deps";
     inherit (finalAttrs) version src;
@@ -54,6 +55,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   patches = [
     ./dont-strip-absolute-paths.patch
   ];
+
   postPatch = ''
     substituteInPlace node/build_node_bridge.py \
       --replace-fail "'prebuilds'" "'$out/lib'" \

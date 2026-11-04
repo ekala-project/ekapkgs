@@ -16,6 +16,7 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "alacarte";
   version = "3.58.0";
+  pyproject = false;
 
   src = fetchFromGitLab {
     domain = "gitlab.gnome.org";
@@ -24,8 +25,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     tag = finalAttrs.version;
     hash = "sha256-U3shnQ1GlDvOQFfjYVfAhCVRVQpTyLwEzHqKIbBChas=";
   };
-
-  pyproject = false;
 
   nativeBuildInputs = [
     autoconf

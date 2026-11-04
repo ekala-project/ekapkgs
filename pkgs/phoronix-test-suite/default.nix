@@ -20,6 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ php ];
+
   nativeBuildInputs = [
     which
     makeWrapper

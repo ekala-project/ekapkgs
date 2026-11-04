@@ -57,6 +57,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     pkg-config
   ];
+
   buildInputs = [
     sdl2-compat
     alsa-lib

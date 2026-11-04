@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   configurePhase = "cd src";
+
   buildPhase = "make all";
 
   # no binaries, so out = library, dev = headers

@@ -9,7 +9,6 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-
   pname = "biblesync";
   version = "2.2.0";
 
@@ -25,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [ libuuid ];
 
   meta = {

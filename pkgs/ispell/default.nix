@@ -16,7 +16,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ bison ];
+
   buildInputs = [ ncurses ];
+
   enableParallelBuilding = false;
 
   postPatch = ''

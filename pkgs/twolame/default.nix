@@ -22,6 +22,7 @@ stdenv.mkDerivation {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [ libsndfile ];
 
   configureFlags = [ "CFLAGS=-std=gnu17" ];

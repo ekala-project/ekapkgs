@@ -18,6 +18,7 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = "sha256-OhfqfLYHCoBU8QyrpaHwKXtGZf5eK8ocfTyjtZxsgSg=";
+
   env.GOWORK = "off";
 
   subPackages = [ "cmd/rr" ];
@@ -42,6 +43,7 @@ buildGoModule (finalAttrs: {
   '';
 
   __darwinAllowLocalNetworking = true;
+
   meta = {
     changelog = "https://github.com/roadrunner-server/roadrunner/blob/v${finalAttrs.version}/CHANGELOG.md";
     description = "High-performance PHP application server, process manager written in Go and powered with plugins";

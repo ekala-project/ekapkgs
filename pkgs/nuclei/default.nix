@@ -20,6 +20,7 @@ buildGoModule (finalAttrs: {
   proxyVendor = true; # hash mismatch between Linux and Darwin
 
   subPackages = [ "cmd/nuclei/" ];
+
   ldflags = [
     "-w"
     "-s"

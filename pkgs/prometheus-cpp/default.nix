@@ -27,15 +27,18 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     pkg-config
   ];
+
   buildInputs = [
     gbenchmark
     gtest
   ];
+
   propagatedBuildInputs = [
     civetweb
     curl
     zlib
   ];
+
   strictDeps = true;
 
   cmakeEntries = {

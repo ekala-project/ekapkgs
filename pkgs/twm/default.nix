@@ -25,6 +25,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     pkg-config
     installShellFiles
   ];
+
   buildInputs = [
     openssl
   ];

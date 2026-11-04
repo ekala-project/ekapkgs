@@ -163,6 +163,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   dontWrapGApps = true;
+
   preFixup =
     let
       wrapperLibraries = [

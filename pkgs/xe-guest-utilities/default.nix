@@ -20,7 +20,9 @@ buildGoModule (finalAttrs: {
   nativeBuildInputs = [
     udevCheckHook
   ];
+
   deleteVendor = true;
+
   vendorHash = "sha256-YhgCs5iYvY34EWh/bl47Dr3Nrfi55QK4T7i47C77B9w=";
 
   postPatch = ''

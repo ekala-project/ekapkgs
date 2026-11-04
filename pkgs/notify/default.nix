@@ -18,6 +18,7 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-jO9d+wJr03rqlPrQ3mmWOxOXw2kL+0x8YkkXu/Msm+Q=";
 
   modRoot = ".";
+
   subPackages = [
     "cmd/notify/"
   ];

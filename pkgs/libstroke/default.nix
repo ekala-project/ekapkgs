@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     automake
     autoconf
   ];
+
   buildInputs = [ libx11 ];
 
   # libstroke ships with an ancient config.sub that doesn't know about x86_64, so regenerate it.

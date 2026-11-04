@@ -39,7 +39,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   depsBuildBuild = [ pkg-config ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
@@ -49,6 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
     installShellFiles
   ];
+
   buildInputs = [
     libGL
     libgbm

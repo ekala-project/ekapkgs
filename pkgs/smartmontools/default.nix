@@ -29,9 +29,11 @@ stdenv.mkDerivation (finalAttrs: {
   prePatch = ''
     cd smartmontools
   '';
+
   patches = [
     ./smartmontools.patch
   ];
+
   postPatch = ''
     ln -sf "$drivedb" drivedb.h
   '';
@@ -48,6 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = lib.optionals (lib.meta.availableOn stdenv.hostPlatform systemdLibs) [ systemdLibs ];
 
   drivedb = fetchFromGitHub {

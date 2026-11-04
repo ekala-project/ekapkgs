@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [
     readline
     ncurses
@@ -38,5 +39,4 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.asl20;
     platforms = with lib.platforms; linux ++ darwin;
   };
-
 })

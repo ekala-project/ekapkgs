@@ -95,6 +95,8 @@ stdenv.mkDerivation rec {
     "DATADIR=${placeholder "out"}/share/globulation2/glob2"
   ];
 
+  passthru.updateInfo.downloadPage = "http://globulation2.org/wiki/Download_and_Install";
+
   meta = {
     description = "RTS without micromanagement";
     mainProgram = "glob2";
@@ -102,5 +104,4 @@ stdenv.mkDerivation rec {
     license = lib.licenses.gpl3;
     broken = !stdenv.buildPlatform.canExecute stdenv.hostPlatform;
   };
-  passthru.updateInfo.downloadPage = "http://globulation2.org/wiki/Download_and_Install";
 }

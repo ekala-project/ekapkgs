@@ -18,6 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   propagatedBuildInputs = [
     ucommon
     openssl

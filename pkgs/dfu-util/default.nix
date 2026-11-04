@@ -11,6 +11,7 @@ stdenv.mkDerivation (finalAttrs: {
   version = "0.11";
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ libusb1 ];
 
   src = fetchurl {

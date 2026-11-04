@@ -19,6 +19,7 @@ stdenv.mkDerivation {
   buildInputs = [ librime ];
 
   buildFlags = [ "all" ];
+
   makeFlags = [ "PREFIX=$(out)" ];
 
   preBuild = import ./fetchSchema.nix fetchFromGitHub;

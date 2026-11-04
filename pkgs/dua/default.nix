@@ -37,6 +37,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   nativeBuildInputs = [ installShellFiles ];
+
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     # TODO: Upstream also provides Elvish and PowerShell completions,
     # but `installShellCompletion` only has support for Bash, Zsh and Fish at the moment.

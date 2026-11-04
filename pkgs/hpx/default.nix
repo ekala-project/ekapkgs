@@ -29,11 +29,13 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   propagatedBuildInputs = [ hwloc ];
+
   buildInputs = [
     asio
     boost
     gperftools
   ];
+
   nativeBuildInputs = [
     cmake
 

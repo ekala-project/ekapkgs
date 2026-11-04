@@ -52,6 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     runHook postInstall
   '';
+
   meta = {
     homepage = "https://github.com/so-fancy/diff-so-fancy";
     description = "Good-looking diffs filter for git";

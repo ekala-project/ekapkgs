@@ -21,12 +21,14 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # disable update check
   buildNoDefaultFeatures = true;
+
   buildFeatures = [
     "keyring"
     "qr"
   ];
 
   nativeBuildInputs = [ installShellFiles ];
+
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd steamguard \
       --bash <($out/bin/steamguard completion --shell bash) \

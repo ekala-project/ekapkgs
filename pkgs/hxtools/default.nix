@@ -35,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ (with perlPackages; [ TextCSV_XS ]);
 
   strictDeps = true;
+
   meta = {
     homepage = "https://inai.de/projects/hxtools/";
     description = "Collection of small tools over the years by j.eng";

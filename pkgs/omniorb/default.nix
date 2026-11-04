@@ -7,7 +7,6 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-
   pname = "omniorb";
   version = "4.3.4";
 
@@ -17,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ python3 ];
 
   hardeningDisable = [ "format" ];

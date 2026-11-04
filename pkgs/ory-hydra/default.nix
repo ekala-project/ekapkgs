@@ -35,11 +35,14 @@ buildGoModule (finalAttrs: {
   ];
 
   nativeBuildInputs = [ installShellFiles ];
+
   # tests use dynamic port assignment via port `0`
   __darwinAllowLocalNetworking = true;
+
   preCheck = ''
     export version="${finalAttrs.src.tag}"
   '';
+
   checkFlags = [
     "-short"
   ];

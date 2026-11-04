@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     autoreconfHook
     which

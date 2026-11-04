@@ -16,7 +16,9 @@ stdenv.mkDerivation {
   };
 
   patches = [ ./fix-output-in-verbose-mode.patch ];
+
   nativeBuildInputs = [ autoreconfHook ];
+
   configureFlags = [ "CFLAGS=-std=gnu17" ];
 
   meta = {

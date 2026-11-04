@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doInstallCheck = true;
+
   preConfigure = ''
     substituteInPlace Makefile \
       --replace /usr/local/bin/dmrconfig $out/bin/dmrconfig

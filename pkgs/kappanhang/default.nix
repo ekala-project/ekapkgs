@@ -20,6 +20,7 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-CnZTUP2JBbhG8VUHbVX+vicfQJC9Y8endlwQHdmzMus=";
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ pulseaudio ];
 
   meta = {

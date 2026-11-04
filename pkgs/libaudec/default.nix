@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     libsndfile
     libsamplerate
   ];
+
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook

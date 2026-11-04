@@ -21,6 +21,7 @@ buildGoModule (finalAttrs: {
     "-s"
     "-w"
   ];
+
   preCheck = "export TZ=UTC";
 
   outputs = [

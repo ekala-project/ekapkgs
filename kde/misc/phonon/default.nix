@@ -41,5 +41,6 @@ mkKdeDerivation rec {
     lgpl21Plus
     gpl2Plus
   ];
+
   meta.mainProgram = "phononsettings";
 }

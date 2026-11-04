@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
     gfortran
     m4
   ];
+
   buildInputs = [
     netcdf
     hdf5

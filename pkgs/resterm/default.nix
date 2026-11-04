@@ -35,8 +35,11 @@ buildGoModule (finalAttrs: {
 
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
+
   versionCheckProgramArg = "--version";
+
   meta = {
     description = "Terminal-based REST client";
     homepage = "https://github.com/unkn0wn-root/resterm";

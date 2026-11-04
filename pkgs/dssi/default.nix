@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     automake
     pkg-config
   ];
+
   buildInputs = [
     ladspa-header
     libjack2

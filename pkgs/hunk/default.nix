@@ -18,6 +18,7 @@ bun.buildPackage {
   };
 
   node_modulesHash = "sha256-Eu71EvMbRac5fraJELQMnD8y++m4wKIzbG9LsSuRsAg=";
+
   node_modulesAttrs.postPatch = ''
     for f in package.json packages/*/package.json; do
       if [ -f "$f" ]; then
@@ -45,6 +46,7 @@ bun.buildPackage {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

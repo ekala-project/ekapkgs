@@ -18,6 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ gmp ];
+
   nativeBuildInputs = [ autoreconfHook ];
 
   # Disable doc build (requires texlive)

@@ -51,6 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   nativeCheckInputs = [ check ];
 
   postInstall = ''
@@ -58,6 +59,7 @@ stdenv.mkDerivation (finalAttrs: {
       --replace '=''${prefix}/' '=' \
 
   '';
+
   # We might be getting the wrong pkg-config file anyway:
   # https://github.com/TokTok/c-toxcore/issues/2334
 

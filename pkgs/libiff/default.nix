@@ -9,12 +9,14 @@
 stdenv.mkDerivation {
   pname = "libiff";
   version = "0-unstable-2024-03-02";
+
   src = fetchFromGitHub {
     owner = "svanderburg";
     repo = "libiff";
     rev = "b5f542a83c824f26e0816770c9a17c22bd388606";
     hash = "sha256-Arh3Ihd5TWg5tdemodrxz2EDxh/hwz9b2/AvrTONFy8=";
   };
+
   nativeBuildInputs = [
     autoreconfHook
   ];
@@ -26,6 +28,7 @@ stdenv.mkDerivation {
       sed -i '/HELP2MAN/d; /man1_MANS/d; /\.1:/d; /EXTRA_DIST.*\.1/d' "$f"
     done
   '';
+
   meta = {
     description = "Parser for the Interchange File Format (IFF)";
     longDescription = ''

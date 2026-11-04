@@ -27,6 +27,7 @@ stdenv.mkDerivation rec {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [
     sqlite
     libmysqlclient
@@ -35,6 +36,7 @@ stdenv.mkDerivation rec {
   ];
 
   cmakeFlags = [ "--no-warn-unused-cli" ];
+
   env.NIX_CFLAGS_COMPILE = "-I${libmysqlclient}/include/mysql -L${libmysqlclient}/lib/mysql";
 
   meta = {

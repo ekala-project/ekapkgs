@@ -10,6 +10,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   pname = "httpstat";
   version = "1.3.2";
   pyproject = true;
+
   src = fetchFromGitHub {
     owner = "reorx";
     repo = "httpstat";
@@ -20,6 +21,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   build-system = with python3Packages; [ setuptools ];
 
   buildInputs = [ glibcLocales ];
+
   runtimeDeps = [ curl ];
 
   env.LC_ALL = "en_US.UTF-8";

@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   depsBuildBuild = [
     pkg-config
   ];
+
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook
@@ -35,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     wayland-scanner
   ];
+
   buildInputs = [
     libxkbcommon
     wayland

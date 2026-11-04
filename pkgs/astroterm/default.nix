@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     xxd
   ];
+
   buildInputs = [
     argtable
     ncurses

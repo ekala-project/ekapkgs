@@ -16,7 +16,9 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
   depsBuildBuild = [ pkgsBuildBuild.stdenv.cc ];
+
   patches = [
     ./cross.patch
     ./fix-source-date.patch

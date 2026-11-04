@@ -154,6 +154,7 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
   cmakeBuildType = if debug then "Debug" else "RelWithDebInfo";
 
   dontStrip = debug;
+
   strictDeps = true;
 
   cmakeFlags = mapAttrsToList cmakeBool {

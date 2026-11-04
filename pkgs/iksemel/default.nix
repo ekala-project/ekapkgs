@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     libtool
     texinfo
   ];
+
   buildInputs = [ gnutls ];
 
   meta = {

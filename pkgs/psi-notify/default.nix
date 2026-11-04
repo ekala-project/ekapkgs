@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     systemd
     libnotify
   ];
+
   nativeBuildInputs = [ pkg-config ];
 
   installPhase = ''

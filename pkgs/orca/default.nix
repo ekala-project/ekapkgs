@@ -28,7 +28,6 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "orca";
   version = "50.2";
-
   pyproject = false;
 
   src = fetchurl {

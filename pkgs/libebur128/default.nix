@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     pkg-config
   ];
+
   buildInputs = [ speexdsp ];
 
   postPatch = ''

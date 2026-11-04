@@ -94,7 +94,6 @@ let
 in
 stdenv.mkDerivation {
   pname = "qtbase";
-
   inherit src version;
 
   propagatedBuildInputs = [
@@ -270,6 +269,7 @@ stdenv.mkDerivation {
   env.NIX_CFLAGS_COMPILE = "-DNIXPKGS_QT_PLUGIN_PREFIX=\"${qtPluginPrefix}\"";
 
   outputs = [ "out" ];
+
   separateDebugInfo = false;
 
   moveToDev = false;

@@ -90,7 +90,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   checkTarget = "test";
+
   doCheck = true;
+
   nativeCheckInputs =
     lib.optionals (gtkwave != null) [ gtkwave ] ++ lib.optionals (iverilog != null) [ iverilog ];
 

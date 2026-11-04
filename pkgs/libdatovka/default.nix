@@ -35,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     autoreconfHook
   ];
+
   buildInputs = [
     expat
     gpgme

@@ -11,6 +11,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "deheader";
   version = "1.11";
+
   outputs = [
     "out"
     "man"

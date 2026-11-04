@@ -25,6 +25,7 @@ let
   libiberty_static = libiberty.override { staticBuild = true; };
   distcc = stdenv.mkDerivation {
     inherit pname version;
+
     src = fetchFromGitHub {
       owner = "distcc";
       repo = "distcc";
@@ -39,6 +40,7 @@ let
       which
       (python3.withPackages (p: [ p.setuptools ]))
     ];
+
     buildInputs = [
       popt
       avahi
@@ -46,6 +48,7 @@ let
       procps
       libiberty_static
     ];
+
     preConfigure = ''
       export CPATH=$(ls -d ${gcc.cc}/lib/gcc/*/${gcc.cc.version}/plugin/include)
 

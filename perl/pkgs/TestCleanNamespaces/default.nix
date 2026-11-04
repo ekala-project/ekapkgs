@@ -15,13 +15,14 @@
   namespaceclean,
 }:
 buildPerlPackage {
-
   pname = "Test-CleanNamespaces";
   version = "0.24";
+
   src = fetchurl {
     url = "mirror://cpan/authors/id/E/ET/ETHER/Test-CleanNamespaces-0.24.tar.gz";
     hash = "sha256-M41VaejommVJNfhD7AvISqpIb+jdGJj7nKs+zOzVMno=";
   };
+
   buildInputs = [
     Filepushd
     Moo
@@ -33,10 +34,12 @@ buildPerlPackage {
     TestWarnings
     namespaceclean
   ];
+
   propagatedBuildInputs = [
     PackageStash
     SubIdentify
   ];
+
   meta = {
     description = "Check for uncleaned imports";
     homepage = "https://github.com/karenetheridge/Test-CleanNamespaces";
@@ -45,5 +48,4 @@ buildPerlPackage {
       gpl1Plus
     ];
   };
-
 }

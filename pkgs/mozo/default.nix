@@ -13,7 +13,6 @@
 python3.pkgs.buildPythonApplication rec {
   pname = "mozo";
   version = "1.28.0";
-
   pyproject = false;
 
   src = fetchurl {

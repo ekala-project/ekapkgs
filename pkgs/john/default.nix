@@ -49,6 +49,7 @@ stdenv.mkDerivation {
   + lib.optionalString withOpenCL ''
     python ./opencl_generate_dynamic_loader.py
   '';
+
   configureFlags = [
     "--disable-native-tests"
     "--with-systemwide"
@@ -69,12 +70,14 @@ stdenv.mkDerivation {
       ocl-icd
     ]
   );
+
   nativeBuildInputs = [
     gcc
     python3Packages.wrapPython
     perl
     makeWrapper
   ];
+
   propagatedBuildInputs =
     (with python3Packages; [
       dpkt

@@ -41,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     sdl2-compat # sdl2-config
     copyDesktopItems
   ];
+
   buildInputs = [
     sdl2-compat
     SDL2_image

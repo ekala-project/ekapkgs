@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [ java ];
 
   installPhase = ''

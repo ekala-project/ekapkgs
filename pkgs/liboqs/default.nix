@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     cmake
   ];
+
   buildInputs = [ openssl ];
 
   cmakeEntries = {

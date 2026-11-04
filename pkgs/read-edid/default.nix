@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = lib.optional stdenv.hostPlatform.isx86 libx86;
 
   cmakeEntries = {

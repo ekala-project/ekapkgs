@@ -63,6 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   depsBuildBuild = [ pkg-config ];
+
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook

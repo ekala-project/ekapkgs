@@ -15,6 +15,7 @@ php.buildPecl {
   };
 
   buildInputs = [ libssh2 ];
+
   configureFlags = [ "--with-ssh2=${libssh2.dev}" ];
 
   meta = {

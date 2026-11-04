@@ -8,6 +8,7 @@
 buildGoModule (finalAttrs: {
   pname = "adguardhome";
   version = "0.107.78";
+
   src = fetchFromGitHub {
     owner = "AdguardTeam";
     repo = "AdGuardHome";

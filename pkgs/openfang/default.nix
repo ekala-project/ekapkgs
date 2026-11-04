@@ -26,6 +26,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     "--package"
     "openfang-cli"
   ];
+
   cargoTestFlags = finalAttrs.cargoBuildFlags;
 
   env = {
@@ -35,10 +36,13 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   nativeBuildInputs = lib.optionals stdenv.hostPlatform.isLinux [ pkg-config ];
+
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ openssl ];
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
+
   versionCheckProgramArg = "--version";
 
   passthru.tests.version = testers.testVersion {

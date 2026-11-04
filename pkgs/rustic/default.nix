@@ -22,6 +22,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-o6tQdAuwawmhhi93dPeg9l5WGekqDKkJS7HCToyniJ0=";
 
   buildFeatures = lib.optionals stdenv.hostPlatform.isLinux [ "mount" ];
+
   checkFeatures = lib.subtractLists [ "mount" ] finalAttrs.buildFeatures; # we do not want `mount` during unit tests because it breaks rustic's test snapshots
 
   nativeBuildInputs = [ installShellFiles ];

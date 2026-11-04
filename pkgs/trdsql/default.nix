@@ -43,6 +43,7 @@ buildGoModule (finalAttrs: {
 
     runHook postInstallCheck
   '';
+
   meta = {
     description = "CLI tool for execute SQL queries on CSV, LTSV, JSON, YAML and TBLN with various output formats";
     homepage = "https://github.com/noborus/trdsql";

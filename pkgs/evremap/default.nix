@@ -19,6 +19,7 @@ rustPlatform.buildRustPackage {
   cargoHash = "sha256-3KXvRbPHM78IGe7Hl8AEHCmK0onroQycyTfOm942e9Y=";
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ libevdev ];
 
   meta = {

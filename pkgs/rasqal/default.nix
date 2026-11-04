@@ -31,7 +31,9 @@ stdenv.mkDerivation (finalAttrs: {
   postInstall = "rm -rvf $out/share/gtk-doc";
 
   nativeCheckInputs = [ perl ];
+
   doCheck = false; # fails with "No testsuite plan file sparql-query-plan.ttl could be created in build/..."
+
   doInstallCheck = false; # fails with "rasqal-config does not support (--help|--version)"
 
   passthru.tests = {

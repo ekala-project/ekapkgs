@@ -18,6 +18,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   cargoRoot = "src-tauri";
+
   buildAndTestSubdir = "src-tauri";
 
   cargoHash = "sha256-OiK0PN1ILtMzl9+QndPnYa1PdFM2Y3BmE7MYJjAWnDc=";
@@ -25,6 +26,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   # Tests require network access and runtime configuration
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

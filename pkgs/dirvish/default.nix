@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [
     perl
   ]
@@ -32,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     "dirvish-expire"
     "dirvish-locate"
   ];
+
   manpages = [
     "dirvish.8"
     "dirvish-runall.8"

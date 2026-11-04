@@ -15,6 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ perlPackages.perl ];
+
   buildInputs = with perlPackages; [
     perl
     IOStringy

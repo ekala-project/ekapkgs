@@ -20,6 +20,7 @@ buildGoModule (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-7nz+0NRoGPnY+u6Sj7l//z/i4vW1S173AoUDIS0LuaI=";
   };
+
   vendorHash = "sha256-ie0U9LkqZgVhduIIvJ9Mp1VljgEKyW3FWtQ/1mF/DIg=";
 
   ldflags = [

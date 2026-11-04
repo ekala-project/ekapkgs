@@ -21,13 +21,16 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   makeFlags = [ "prefix=${placeholder "out"}" ];
+
   buildInputs = [ openssl ];
+
   nativeBuildInputs = [
     asciidoc
     xmlto
     docbook-xsl-nons
     docbook-xml-dtd.v4_5
   ];
+
   meta = {
     mainProgram = "proxytunnel";
     homepage = "http://proxytunnel.sf.net/";

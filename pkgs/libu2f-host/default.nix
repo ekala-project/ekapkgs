@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     json_c
     hidapi

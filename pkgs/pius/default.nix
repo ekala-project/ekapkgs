@@ -8,9 +8,10 @@
 
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "pius";
-  namePrefix = "";
   version = "3.0.0";
   pyproject = true;
+
+  namePrefix = "";
 
   build-system = with python3Packages; [ setuptools ];
 

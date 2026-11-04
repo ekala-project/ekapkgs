@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   configurePhase = false;
+
   installPhase = ''
     mkdir -p $out/bin
     install bin/* $out/bin
@@ -36,6 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   checkTarget = "test";
+
   doCheck = true;
 
   meta = {

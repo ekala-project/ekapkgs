@@ -8,6 +8,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "amb-plugins";
   version = "0.8.1";
+
   src = fetchurl {
     url = "http://kokkinizita.linuxaudio.org/linuxaudio/downloads/AMB-plugins-${finalAttrs.version}.tar.bz2";
     sha256 = "0x4blm4visjqj0ndqr0cg776v3b7lvplpc8cgi9n51llhavn0jpl";

@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
     taglib
   ];
+
   nativeBuildInputs = [
     autoreconfHook
     glibcLocales

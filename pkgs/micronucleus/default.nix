@@ -18,6 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ libusb-compat-0_1 ];
+
   makeFlags = [
     "CC=${stdenv.cc.targetPrefix}cc"
     "STATIC="

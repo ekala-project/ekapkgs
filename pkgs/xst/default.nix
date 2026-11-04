@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
   ];
+
   buildInputs = [
     fontconfig
     libx11
@@ -36,6 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
     "TERMINFO=$(out)/share/terminfo"
     "PREFIX=$(out)"
   ];
+
   meta = {
     homepage = "https://github.com/gnotclub/xst";
     description = "Simple terminal fork that can load config from Xresources";

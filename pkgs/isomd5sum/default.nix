@@ -18,7 +18,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [ python3 ];
+
   buildInputs = [ popt ];
 
   postPatch = ''

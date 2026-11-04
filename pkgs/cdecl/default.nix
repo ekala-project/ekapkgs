@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   preConfigure = "./bootstrap";
 
   nativeBuildInputs = [
@@ -29,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     bison
     flex
   ];
+
   buildInputs = [ readline ];
 
   env = {
@@ -58,6 +60,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   checkTarget = "test";
 
   preInstall = ''

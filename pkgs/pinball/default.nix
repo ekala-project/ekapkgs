@@ -31,6 +31,7 @@ stdenv.mkDerivation {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [
     libglvnd
     libtool
@@ -39,6 +40,7 @@ stdenv.mkDerivation {
     SDL2_mixer
     libsm
   ];
+
   strictDeps = true;
 
   env.NIX_CFLAGS_COMPILE = toString [

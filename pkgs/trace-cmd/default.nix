@@ -70,6 +70,7 @@ stdenv.mkDerivation rec {
     "install_libs"
     "install_doc"
   ];
+
   installFlags = [
     "LDCONFIG=false"
     "bindir=${placeholder "out"}/bin"

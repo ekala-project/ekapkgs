@@ -30,6 +30,7 @@ buildGoModule (finalAttrs: {
   subPackages = [ "cmd/cli/kubectl-kyverno" ];
 
   nativeBuildInputs = [ installShellFiles ];
+
   postInstall = ''
     # we have no integration between krew and kubectl
     # so better rename binary to kyverno and use as a standalone

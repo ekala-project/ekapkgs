@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   makeFlags = [ "PREFIX=$(out)" ];
 
   nativeBuildInputs = [ curl ];
+
   buildInputs = [ curl ];
 
   meta = {

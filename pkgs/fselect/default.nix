@@ -21,6 +21,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-BZKNLOv4PtEyZUETxh4JPL0mXyV2PRrtmg4ROvVLHRY=";
 
   nativeBuildInputs = [ installShellFiles ];
+
   buildInputs = lib.optional stdenv.hostPlatform.isDarwin libiconv;
 
   postInstall = ''

@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     makeWrapper
   ];
+
   buildInputs = [ libx11 ];
 
   postInstall = ''

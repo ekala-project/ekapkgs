@@ -14,6 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   dontBuild = true;
+
   installPhase = ''
     mkdir -p $out/share/themes/Clearlooks-Phenix
     cp -r . $out/share/themes/Clearlooks-Phenix/

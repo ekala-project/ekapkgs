@@ -18,7 +18,9 @@ stdenv.mkDerivation {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [ elfutils ];
+
   nativeCheckInputs = [ dejagnu ];
 
   patches =

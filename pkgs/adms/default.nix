@@ -41,10 +41,12 @@ stdenv.mkDerivation (finalAttrs: {
     perl
     perlPackages.XMLLibXML
   ];
+
   buildInputs = [
     libxml2
     gd
   ];
+
   configureFlags = [ "--enable-maintainer-mode" ];
 
   meta = {

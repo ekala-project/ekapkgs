@@ -24,6 +24,7 @@ lua.pkgs.buildLuarocksPackage rec {
   '';
 
   buildInputs = [ libuv ];
+
   nativeBuildInputs = [ cmake ];
 
   rockspecFilename = "luv-scm-0.rockspec";

@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     libgee
     ncurses
   ];
+
   nativeBuildInputs = [
     perl
     pkg-config

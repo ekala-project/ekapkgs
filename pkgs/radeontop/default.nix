@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     libpciaccess
     libxcb
   ];
+
   nativeBuildInputs = [
     pkg-config
     gettext

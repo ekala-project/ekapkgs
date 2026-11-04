@@ -52,6 +52,7 @@ stdenv.mkDerivation rec {
   ];
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     glib
     libogg

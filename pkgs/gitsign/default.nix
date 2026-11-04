@@ -16,6 +16,7 @@ buildGoModule (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-cXgCgHL1zy4LBYuUxJUO8unkbG1lrxC31i790+6DVv0=";
   };
+
   vendorHash = "sha256-SitjW9g+GY1YDmJP13eTGL2Om2EsV+HRrXbLb6g+w3Y=";
 
   subPackages = [
@@ -24,6 +25,7 @@ buildGoModule (finalAttrs: {
   ];
 
   nativeBuildInputs = [ makeWrapper ];
+
   nativeCheckInputs = [ gitMinimal ];
 
   ldflags = [

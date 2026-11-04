@@ -18,6 +18,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-xxFHIJT935NLF9xl9AF1ipiaLhs4WGW1pqtLPDK4Wnk=";
 
   doInstallCheck = true;
+
   postInstallCheck = ''
     $out/bin/beancount-language-server --help > /dev/null
   '';

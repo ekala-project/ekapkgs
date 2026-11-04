@@ -255,6 +255,7 @@ buildStdenv.mkDerivation {
   inherit src unpackPhase;
 
   __structuredAttrs = true;
+
   strictDeps = true;
 
   inherit meta;
@@ -499,8 +500,11 @@ buildStdenv.mkDerivation {
   '';
 
   makeFlags = extraMakeFlags;
+
   separateDebugInfo = enableDebugSymbols;
+
   enableParallelBuilding = true;
+
   env = {
     HOST_CC = "${llvmPackagesBuildBuild.stdenv.cc}/bin/cc";
     HOST_CXX = "${llvmPackagesBuildBuild.stdenv.cc}/bin/c++";
@@ -536,6 +540,7 @@ buildStdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     $out/bin/${binaryName} --version
   '';
@@ -562,7 +567,10 @@ buildStdenv.mkDerivation {
   // extraPassthru;
 
   hardeningDisable = [ "format" ];
+
   dontFixLibtool = true;
+
   dontUpdateAutotoolsGnuConfigScripts = true;
+
   requiredSystemFeatures = [ "big-parallel" ];
 }

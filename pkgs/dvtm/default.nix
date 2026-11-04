@@ -29,6 +29,7 @@ stdenv.mkDerivation {
   '';
 
   nativeBuildInputs = [ ncurses ];
+
   buildInputs = [ ncurses ];
 
   prePatch = ''

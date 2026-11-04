@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [ sdl2-compat ] ++ lib.optional stdenv.hostPlatform.isLinux alsa-lib;
 
   postInstall = ''

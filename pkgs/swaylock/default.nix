@@ -29,7 +29,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   depsBuildBuild = [ pkg-config ];
+
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook
@@ -40,6 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     gtk3.wrapGAppsNoGuiHook
     gdk-pixbuf
   ];
+
   buildInputs = [
     wayland
     wayland-protocols

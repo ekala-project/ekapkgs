@@ -15,7 +15,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ ncurses ];
+
   dontUnpack = true;
+
   buildPhase = "${stdenv.cc.targetPrefix}cc -o nmon ${finalAttrs.src} -g -O2 -D JFS -D GETUSER -Wall -D LARGEMEM -lncurses -lm -g -D ${
     with stdenv.hostPlatform;
     if isx86 then
@@ -27,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     else
       "UNKNOWN"
   }";
+
   installPhase = ''
     mkdir -p $out/bin
     cp nmon $out/bin

@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [
     flac
     libao

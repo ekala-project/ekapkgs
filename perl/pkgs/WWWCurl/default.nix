@@ -9,10 +9,12 @@
 buildPerlPackage rec {
   pname = "WWW-Curl";
   version = "4.17";
+
   src = fetchurl {
     url = "mirror://cpan/authors/id/S/SZ/SZBALINT/WWW-Curl-4.17.tar.gz";
     hash = "sha256-Uv+rEQ4yNI13XyQclz61b5awju28EQ130lfNsKJKt7o=";
   };
+
   patches =
     let
       pname = "libwww-curl-perl";
@@ -45,10 +47,13 @@ buildPerlPackage rec {
         hash = "sha256-VTp0CtVakGti23DvRJwnuP3//eS4BzV5/n+A2zg/a+k=";
       })
     ];
+
   env.NIX_CFLAGS_COMPILE = lib.optionalString stdenv.cc.isClang "-Wno-return-type";
+
   nativeBuildInputs = [ curl ];
 
   buildInputs = [ curl ];
+
   meta = {
     description = "Perl extension interface for libcurl";
     license = lib.licenses.mit;

@@ -30,6 +30,7 @@ stdenv.mkDerivation rec {
   ];
 
   configureScript = "./Configure";
+
   configureFlags = [
     "--with-gmp=${lib.getDev gmp}"
     "--with-readline=${lib.getDev readline}"

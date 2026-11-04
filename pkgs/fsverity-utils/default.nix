@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   nativeBuildInputs = lib.optional enableManpages pandoc;
+
   buildInputs = [ openssl ];
 
   makeFlags = [

@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ ldc ];
+
   buildInputs = [ curl ];
 
   makeFlags = [
@@ -33,7 +34,9 @@ stdenv.mkDerivation (finalAttrs: {
     "DMD=${ldc.out}/bin/ldmd2"
     "INSTALL_DIR=$(out)"
   ];
+
   doCheck = true;
+
   checkTarget = "test_rdmd";
 
   meta = {

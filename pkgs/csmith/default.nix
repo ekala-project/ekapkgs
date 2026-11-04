@@ -28,6 +28,7 @@ stdenv.mkDerivation rec {
     m4
     makeWrapper
   ];
+
   buildInputs = [
     libbsd
   ]

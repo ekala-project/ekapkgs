@@ -15,6 +15,7 @@ stdenv.mkDerivation rec {
     "out"
     "dev"
   ];
+
   outputBin = "dev";
 
   src = fetchFromGitHub {

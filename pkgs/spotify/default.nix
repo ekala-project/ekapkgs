@@ -118,6 +118,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   dontStrip = true;
+
   dontPatchELF = true;
 
   unpackPhase = ''

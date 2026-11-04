@@ -14,6 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   makefile = "protoMakefile";
+
   preBuild = ''
     makeFlagsArray+=(CC="${stdenv.cc.targetPrefix}cc -c" LINK1=${stdenv.cc.targetPrefix}cc)
   '';

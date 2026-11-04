@@ -30,6 +30,7 @@ stdenv.mkDerivation {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     libusb1
     pmutils

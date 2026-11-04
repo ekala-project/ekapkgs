@@ -34,10 +34,12 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
     cppunit
   ];
+
   nativeBuildInputs = [
     doxygen
     pkg-config
   ];
+
   configureFlags = [ "--disable-werror" ];
 
   meta = {

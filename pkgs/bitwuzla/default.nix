@@ -65,10 +65,13 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional (aiger != null) "-Daiger=true";
 
   nativeCheckInputs = [ python3 ];
+
   checkInputs = lib.optional (gtest != null) gtest;
+
   doCheck = stdenv.hostPlatform.isLinux;
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     runHook preInstallCheck
 

@@ -16,6 +16,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   dontBuild = true;
 
   installPhase = ''

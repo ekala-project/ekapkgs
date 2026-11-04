@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   #   ld: daemonize.o:/build/ucarp-1.5.2/src/ip_carp.h:73: multiple definition of
   #     `__packed'; ucarp.o:/build/ucarp-1.5.2/src/ip_carp.h:73: first defined here
   env.NIX_CFLAGS_COMPILE = "-fcommon";
+
   meta = {
     description = "Userspace implementation of CARP";
     longDescription = ''

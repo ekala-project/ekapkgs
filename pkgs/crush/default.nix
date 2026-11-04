@@ -28,6 +28,7 @@ buildGoModule (finalAttrs: {
   # Tests require config files that aren't available in the build environment.
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     installShellFiles
   ];
+
   buildInputs = [ ncurses ];
 
   postInstall = ''

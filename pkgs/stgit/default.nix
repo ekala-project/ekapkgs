@@ -61,11 +61,13 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   dontCargoBuild = true;
+
   buildFlags = [ "all" ];
 
   dontCargoCheck = true;
 
   dontCargoInstall = true;
+
   installTargets = [
     "install"
     "install-man"

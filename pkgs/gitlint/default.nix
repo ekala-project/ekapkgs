@@ -40,6 +40,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   pythonImportsCheck = [
     "gitlint"
   ];
+
   meta = {
     description = "Linting for your git commit messages";
     homepage = "https://jorisroovers.com/gitlint/";

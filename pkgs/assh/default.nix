@@ -37,6 +37,7 @@ buildGoModule (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     $out/bin/assh --help > /dev/null
   '';

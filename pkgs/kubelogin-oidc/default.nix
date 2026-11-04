@@ -16,6 +16,7 @@ buildGoModule (finalAttrs: {
   };
 
   subPackages = [ "." ];
+
   ldflags = [
     "-s"
     "-w"
@@ -34,6 +35,7 @@ buildGoModule (finalAttrs: {
   postInstall = ''
     mv $out/bin/kubelogin $out/bin/kubectl-oidc_login
   '';
+
   meta = {
     description = "Kubernetes credential plugin implementing OpenID Connect (OIDC) authentication";
     mainProgram = "kubectl-oidc_login";

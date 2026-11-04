@@ -31,6 +31,7 @@ stdenv.mkDerivation {
     cmake.configurePhaseHook
     pkg-config
   ];
+
   buildInputs = [
     pcre
     zlib

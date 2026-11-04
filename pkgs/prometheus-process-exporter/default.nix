@@ -22,6 +22,7 @@ buildGoModule rec {
   '';
 
   doCheck = true;
+
   meta = {
     description = "Prometheus exporter that mines /proc to report on selected processes";
     homepage = "https://github.com/ncabatoff/process-exporter";

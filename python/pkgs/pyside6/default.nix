@@ -57,7 +57,6 @@ in
 toPythonModule (
   stdenv.mkDerivation (finalAttrs: {
     pname = "pyside6";
-
     inherit (shiboken6) version src;
 
     sourceRoot = "${finalAttrs.src.name}/sources/pyside6";

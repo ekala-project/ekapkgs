@@ -39,6 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     protobufc
   ];
+
   buildInputs = [
     file
     protobufc

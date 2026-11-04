@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     # remove unneeded definition of __deprecated__
     sed '/^#define __deprecated__$/d' -i scan/scan_iso8601.c scan/scan_httpdate.c || die
   '';
+
   preBuild = ''
     make headers
   '';

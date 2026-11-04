@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   patches = [ ./gcc.patch ];
+
   buildInputs = [
     sdl12-compat
     SDL_image

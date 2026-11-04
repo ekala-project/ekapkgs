@@ -16,6 +16,7 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = "sha256-Rs1UXvSP3iXQySW5yVkP5JTWmEOej4atTpYpmQccbro=";
+
   ldflags = [
     "-s"
     "-w"

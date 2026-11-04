@@ -88,6 +88,7 @@ in
 clangStdenv.mkDerivation (finalAttrs: {
   pname = "webkitgtk";
   inherit version;
+
   name = "webkitgtk-${finalAttrs.version}+abi=${abiVersion}";
 
   outputs = [

@@ -19,11 +19,13 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [
     mariadb-connector-c
     luajit
     libaio
   ];
+
   depsBuildBuild = [ pkg-config ];
 
   src = fetchFromGitHub {

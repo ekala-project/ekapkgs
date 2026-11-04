@@ -47,6 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   doCheck = true;
+
   checkTarget = "test";
 
   # working around a bug in file. Was fixed in

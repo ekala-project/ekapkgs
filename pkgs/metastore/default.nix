@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ libbsd ];
+
   installFlags = [ "PREFIX=$(out)" ];
 
   meta = {

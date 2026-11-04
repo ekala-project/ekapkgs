@@ -49,10 +49,12 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook
   ];
+
   versionCheckProgramArg = "--version";
 
   meta = {

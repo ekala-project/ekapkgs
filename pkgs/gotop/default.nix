@@ -18,6 +18,7 @@ buildGoModule (finalAttrs: {
   };
 
   proxyVendor = true;
+
   vendorHash = "sha256-KLeVSrPDS1lKsKFemRmgxT6Pxack3X3B/btSCOUSUFY=";
 
   ldflags = [
@@ -27,6 +28,7 @@ buildGoModule (finalAttrs: {
   ];
 
   nativeBuildInputs = [ installShellFiles ];
+
   nativeCheckInputs = [ writableTmpDirAsHomeHook ];
 
   postInstall = ''

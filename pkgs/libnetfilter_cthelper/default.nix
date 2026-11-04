@@ -21,6 +21,7 @@ stdenv.mkDerivation rec {
   ];
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ libmnl ];
 
   meta = {

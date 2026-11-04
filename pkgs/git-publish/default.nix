@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     perl
     installShellFiles
   ];
+
   buildInputs = [ python3 ];
 
   installPhase = ''

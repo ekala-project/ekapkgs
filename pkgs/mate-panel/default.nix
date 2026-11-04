@@ -30,6 +30,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "mate-panel";
   version = "1.28.7";
+
   outputs = [
     "out"
     "man"

@@ -25,6 +25,7 @@ stdenv.mkDerivation {
     $CC $NIX_CFLAGS_COMPILE -c *.c
     $AR rcs libSOIL.a *.o
   '';
+
   installPhase = ''
     mkdir -p $out/lib $out/include/SOIL
     cp libSOIL.a $out/lib/

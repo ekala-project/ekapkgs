@@ -12,6 +12,7 @@ steam.buildRuntimeEnv {
   inherit (umu-launcher-unwrapped) version meta;
 
   extraPkgs = pkgs: [ umu-launcher-unwrapped ] ++ extraPkgs pkgs;
+
   inherit
     extraLibraries
     extraProfile
@@ -19,6 +20,7 @@ steam.buildRuntimeEnv {
     ;
 
   executableName = umu-launcher-unwrapped.meta.mainProgram;
+
   runScript = lib.getExe umu-launcher-unwrapped;
 
   # Legendary spawns UMU, doesn't wait for it to exit,

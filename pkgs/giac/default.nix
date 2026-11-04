@@ -133,6 +133,7 @@ stdenv.mkDerivation (finalAttrs: {
   outputs = [ "out" ] ++ lib.optional (!enableGUI) "doc";
 
   doCheck = true;
+
   preCheck =
     lib.optionalString (!enableGUI) ''
       # even with the nofltk patch, some changes in src/misc.cc (grep

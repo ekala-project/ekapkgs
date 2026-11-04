@@ -29,6 +29,7 @@ stdenv.mkDerivation {
   };
 
   dontConfigure = true;
+
   dontBuild = true;
 
   nativeBuildInputs = [

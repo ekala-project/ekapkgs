@@ -60,6 +60,7 @@ buildGoModule {
   '';
 
   patches = [ ./fix-go-mod-tidy.diff ];
+
   meta = {
     description = "Application Kernel for Containers";
     homepage = "https://github.com/google/gvisor";

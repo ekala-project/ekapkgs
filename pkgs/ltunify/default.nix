@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     udevCheckHook
   ];
+
   makeFlags = [
     "DESTDIR=$(out)"
     "bindir=/bin"

@@ -34,6 +34,7 @@ buildPythonApplication (finalAttrs: {
   pname = "devede";
   version = "4.22.1";
   pyproject = true;
+
   namePrefix = "";
 
   src = fetchFromGitLab {

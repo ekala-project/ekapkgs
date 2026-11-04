@@ -22,13 +22,12 @@ final: prev: {
   pygobject3 = final.buildPythonPackage rec {
     pname = "pygobject";
     version = "3.56.3";
+    pyproject = false;
 
     outputs = [
       "out"
       "dev"
     ];
-
-    pyproject = false;
 
     src = final.pkgs.fetchurl {
       url = "mirror://gnome/sources/pygobject/${final.pkgs.lib.versions.majorMinor version}/pygobject-${version}.tar.gz";

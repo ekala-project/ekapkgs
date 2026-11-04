@@ -7,7 +7,6 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "secp256k1";
-
   version = "0.8.0";
 
   src = fetchFromGitHub {

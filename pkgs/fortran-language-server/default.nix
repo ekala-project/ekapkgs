@@ -19,6 +19,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   ];
 
   checkPhase = "$out/bin/fortls --help 1>/dev/null";
+
   pythonImportsCheck = [ "fortls" ];
 
   meta = {

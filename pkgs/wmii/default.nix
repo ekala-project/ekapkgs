@@ -55,6 +55,7 @@ stdenv.mkDerivation {
     pkg-config
     unzip
   ];
+
   buildInputs = [
     dash
     libx11

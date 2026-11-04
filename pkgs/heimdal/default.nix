@@ -78,6 +78,7 @@ stdenv.mkDerivation {
   ++ lib.optionals withSQLite3 [ sqlite ];
 
   doCheck = true;
+
   nativeCheckInputs = [
     curl
     unzip

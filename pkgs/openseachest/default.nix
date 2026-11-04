@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   makeFlags = [ "--directory=Make/gcc" ];
+
   buildFlags = [ "release" ];
 
   installPhase = ''

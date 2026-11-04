@@ -17,15 +17,19 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     guile
     pkg-config
     texinfo
   ];
+
   buildInputs = [
     guile
   ];
+
   doCheck = true;
+
   makeFlags = [ "GUILE_AUTO_COMPILE=0" ];
 
   meta = {

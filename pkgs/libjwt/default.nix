@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
     jansson
     openssl
   ];
+
   nativeBuildInputs = [
     autoreconfHook
     pkg-config

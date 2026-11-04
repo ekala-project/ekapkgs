@@ -28,6 +28,7 @@ stdenv.mkDerivation rec {
     libsForQt5.qtbase
     libsForQt5.wrapQtAppsHook
   ];
+
   buildInputs = [
     libsForQt5.qtbase
     libsForQt5.qtsvg

@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   configureScript = "./configure-alt";
 
   doCheck = true;
+
   checkTarget = "testall";
 
   meta = {

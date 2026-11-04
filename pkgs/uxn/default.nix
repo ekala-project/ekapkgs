@@ -60,6 +60,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     runHook postInstall
   '';
+
   meta = {
     homepage = "https://wiki.xxiivv.com/site/uxn.html";
     description = "Assembler and emulator for the Uxn stack machine";

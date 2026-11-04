@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gtk3.wrapGAppsHook
   ];
+
   buildInputs = [
     hamlib_4
     gtk2

@@ -24,6 +24,7 @@ stdenv.mkDerivation rec {
   ];
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     gtk3
     glib

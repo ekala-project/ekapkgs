@@ -38,6 +38,7 @@ stdenv.mkDerivation {
   ];
 
   dontConfigure = true;
+
   dontBuild = true;
 
   installPhase = ''

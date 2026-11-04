@@ -29,10 +29,12 @@ buildGoModule (finalAttrs: {
   ];
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook
   ];
+
   versionCheckProgramArg = [ "version" ];
 
   passthru.tests.version = testers.testVersion {

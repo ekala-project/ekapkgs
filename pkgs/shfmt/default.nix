@@ -42,6 +42,7 @@ buildGoModule (finalAttrs: {
     scdoc < cmd/shfmt/shfmt.1.scd > shfmt.1
     installManPage shfmt.1
   '';
+
   versionCheckProgramArg = "--version";
 
   meta = {

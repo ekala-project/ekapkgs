@@ -18,6 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ cmake ];
+
   buildInputs = [ lua.v5_1 ];
 
   patches = [

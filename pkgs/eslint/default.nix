@@ -21,10 +21,13 @@ buildNpmPackage rec {
   '';
 
   npmDepsHash = "sha256-1UjRtZm8ykmxL24MVuELInnOwi+ma+MoZt2tQ7kPsY0=";
+
   npmInstallFlags = [ "--omit=dev" ];
+
   npmFlags = [ "--ignore-scripts" ];
 
   dontNpmBuild = true;
+
   dontNpmPrune = true;
 
   # Delete dangling symlinks

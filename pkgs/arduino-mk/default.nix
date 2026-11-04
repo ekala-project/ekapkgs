@@ -21,12 +21,15 @@ stdenv.mkDerivation (finalAttrs: {
     python3Packages.wrapPython
     installShellFiles
   ];
+
   propagatedBuildInputs = with python3Packages; [ pyserial ];
+
   installPhase = ''
     mkdir $out
     cp -rT $src $out
     installManPage *.1
   '';
+
   postFixupPhase = ''
     wrapPythonPrograms
   '';

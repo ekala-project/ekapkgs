@@ -10,6 +10,7 @@
 stdenv.mkDerivation rec {
   pname = "checkpolicy";
   version = "3.11";
+
   inherit (libsepol) se_url;
 
   src = fetchurl {
@@ -21,6 +22,7 @@ stdenv.mkDerivation rec {
     bison
     flex
   ];
+
   buildInputs = [ libsepol ];
 
   makeFlags = [

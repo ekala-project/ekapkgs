@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
     unzip
     which
   ];
+
   buildInputs = [
     python3
     perl
@@ -58,5 +59,4 @@ stdenv.mkDerivation (finalAttrs: {
       "i686-linux"
     ];
   };
-
 })

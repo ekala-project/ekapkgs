@@ -15,6 +15,7 @@ mkKdeDerivation rec {
   };
 
   extraNativeBuildInputs = [ pkg-config ];
+
   extraBuildInputs = [ pulseaudio ];
 
   meta.license = with lib.licenses; [

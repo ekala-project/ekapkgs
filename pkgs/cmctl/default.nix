@@ -45,6 +45,7 @@ buildGoModule (finalAttrs: {
         --fish <($out/bin/cmctl completion fish) \
         --zsh <($out/bin/cmctl completion zsh)
   '';
+
   meta = {
     description = "Command line utility to interact with a cert-manager instalation on Kubernetes";
     mainProgram = "cmctl";

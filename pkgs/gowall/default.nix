@@ -25,6 +25,7 @@ buildGoModule (finalAttrs: {
     # using writableTmpDirAsHomeHook to prevent issues when creating config dir for shell completions
     writableTmpDirAsHomeHook
   ];
+
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd gowall \
       --bash <($out/bin/gowall completion bash) \

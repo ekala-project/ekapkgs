@@ -23,10 +23,12 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     util-linux
   ];
+
   buildInputs = [
     libusb1
     zlib
   ];
+
   makeFlags = [
     "VERSION=${finalAttrs.version}"
     "PREFIX=$(out)"
@@ -36,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     "CC=${stdenv.cc.targetPrefix}cc"
     "CFLAGS=-O2"
   ];
+
   meta = {
     homepage = "https://gitlab.com/DavidGriffith/minipro";
     description = "Open source program for controlling the MiniPRO TL866xx series of chip programmers";

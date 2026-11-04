@@ -9,8 +9,9 @@
 python3Packages.buildPythonPackage rec {
   pname = "git-filter-repo";
   version = "2.47.0";
-  docs_version = "71d71d4be238628bf9cb9b27be79b8bb824ed1a9";
   pyproject = true;
+
+  docs_version = "71d71d4be238628bf9cb9b27be79b8bb824ed1a9";
 
   src = fetchPypi {
     pname = "git_filter_repo";

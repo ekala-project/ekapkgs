@@ -44,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   dontAddPrefix = true;
+
   installFlags = [ "PREFIX=$(out)" ];
 
   meta = {

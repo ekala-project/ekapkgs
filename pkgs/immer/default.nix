@@ -10,7 +10,6 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "immer";
-
   version = "0.9.1";
 
   src = fetchFromGitHub {
@@ -31,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   # immer is a header only library
   dontBuild = true;
+
   dontUseCmakeBuildDir = true;
 
   strictDeps = true;

@@ -7,6 +7,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "ripmime";
   version = "1.4.1.0";
+
   src = fetchFromGitHub {
     owner = "inflex";
     repo = "ripMIME";

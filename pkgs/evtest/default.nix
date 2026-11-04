@@ -15,6 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [ libxml2 ];
 
   src = fetchFromGitLab {

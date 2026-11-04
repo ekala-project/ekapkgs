@@ -45,6 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     runHook postInstall
   '';
+
   meta = {
     description = "Confluent CLI";
     homepage = "https://docs.confluent.io/confluent-cli/current/overview.html";

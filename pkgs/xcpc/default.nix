@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [ libepoxy ];
+
   postInstall = ''
     install -D $out/share/pixmaps/xcpc.png -t $out/share/icons/hicolor/64x64/apps
     rm -r $out/share/pixmaps

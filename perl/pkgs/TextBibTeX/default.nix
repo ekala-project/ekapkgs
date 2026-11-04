@@ -11,16 +11,20 @@
 buildPerlModule {
   pname = "Text-BibTeX";
   version = "0.91";
+
   src = fetchurl {
     url = "mirror://cpan/authors/id/A/AM/AMBS/Text-BibTeX-0.91.tar.gz";
     hash = "sha256-PwETz4/nHcdIRjbcjipYFjfsvMgtC+KbvUbQvz+M2zc=";
   };
+
   buildInputs = [
     CaptureTiny
     ConfigAutoConf
     ExtUtilsLibBuilder
   ];
+
   patches = [ ./use-lib.patch ];
+
   perlPostHook = lib.optionalString stdenv.hostPlatform.isDarwin ''
     oldPath="$(pwd)/btparse/src/libbtparse.dylib"
     newPath="$out/lib/libbtparse.dylib"

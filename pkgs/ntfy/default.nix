@@ -12,7 +12,6 @@
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "ntfy";
   version = "2.7.1";
-
   pyproject = true;
 
   src = fetchFromGitHub {

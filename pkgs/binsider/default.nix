@@ -20,6 +20,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildNoDefaultFeatures = !stdenv.hostPlatform.isLinux;
 
   checkType = "debug";
+
   checkFlags = [
     "--skip=test_extract_strings"
     "--skip=test_init"

@@ -32,9 +32,11 @@ stdenv.mkDerivation rec {
     ocaml
     ocaml-findlib
   ];
+
   buildInputs = [ gtk2 ];
 
   configureFlags = [ "--with-libdir=$(out)/lib/ocaml/${ocaml.version}/site-lib" ];
+
   buildFlags = [ "world" ];
 
   preInstall = ''

@@ -16,9 +16,11 @@ buildGoModule (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-aqj6RpTuZxb5GdRoNTX2eSz9LwjNB+M/po5ZQKJv2A0=";
   };
+
   vendorHash = "sha256-vKhzDtY5zeZT2AcqdSMP/KdTIiXCFuGGLdb5VvlWXbM=";
 
   nativeBuildInputs = [ installShellFiles ];
+
   postInstall = "installManPage man/xmpp-dns.1";
 
   meta = {

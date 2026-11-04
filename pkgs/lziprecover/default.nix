@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   nativeCheckInputs = [ lzip ];
 
   meta = {

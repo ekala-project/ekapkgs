@@ -29,10 +29,13 @@ stdenv.mkDerivation {
     "out"
     "man"
   ];
+
   separateDebugInfo = stdenv.hostPlatform.isLinux;
 
   configureFlags = [ "--without-gnutls" ];
+
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [
     expat
     ncurses

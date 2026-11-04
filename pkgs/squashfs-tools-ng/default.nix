@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     perl
   ];
+
   buildInputs = [
     bzip2
     zlib

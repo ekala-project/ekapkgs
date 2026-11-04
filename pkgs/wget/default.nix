@@ -67,6 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
     lzip
     nukeReferences
   ];
+
   buildInputs = [
     libidn.v2
     zlib
@@ -104,7 +105,9 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   __darwinAllowLocalNetworking = true;
+
   doCheck = true;
+
   preCheck = ''
     patchShebangs tests fuzz
 

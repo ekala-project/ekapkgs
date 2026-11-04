@@ -79,6 +79,7 @@ in
 stdenv.mkDerivation (finalAttrs: {
   pname = "dsniff";
   version = "2.4b1";
+
   # upstream is so old that nearly every distribution packages the beta version.
   # Also, upstream only serves the latest version, so we use debian's sources.
   # this way we can benefit the numerous debian patches to be able to build
@@ -96,6 +97,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     rpcsvc-proto
   ];
+
   buildInputs = [
     glib
     pcap
@@ -117,11 +119,13 @@ stdenv.mkDerivation (finalAttrs: {
       "-std=gnu17"
     ];
   };
+
   postPatch = ''
     for patch in debian/patches/*.patch; do
       patch < $patch
     done;
   '';
+
   configureFlags = [
     "--with-db=${staticdb}"
     "--with-libpcap=${pcap}"

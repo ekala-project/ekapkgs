@@ -36,6 +36,7 @@ buildGoModule (finalAttrs: {
     installManPage doc/lyrebird.1
     ln -s $out/share/man/man1/{lyrebird,obfs4proxy}.1
   '';
+
   passthru.meta = {
     description = "Circumvents censorship by transforming Tor traffic between clients and bridges";
     longDescription = ''

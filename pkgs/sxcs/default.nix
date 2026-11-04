@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxcursor
     libxrender
   ];
+
   nativeBuildInputs = [ installShellFiles ];
 
   buildPhase = ''

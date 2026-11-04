@@ -67,7 +67,9 @@ buildGoModule (finalAttrs: {
         --$shell <($out/bin/weed autocomplete $shell)
     done
   '';
+
   versionCheckProgramArg = "version";
+
   meta = {
     description = "Simple and highly scalable distributed file system";
     longDescription = ''

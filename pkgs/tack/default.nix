@@ -6,6 +6,7 @@
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "tack";
   version = "1.0.1";
+
   src = fetchFromGitHub {
     owner = "manic-systems";
     repo = "tack";

@@ -96,6 +96,7 @@ buildGoModule (finalAttrs: {
   '';
 
   nativeCheckInputs = [ gitMinimal ];
+
   versionCheckProgram = "${placeholder "out"}/bin/${finalAttrs.meta.mainProgram}";
 
   passthru = {

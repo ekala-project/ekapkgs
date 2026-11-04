@@ -42,6 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [ python3 ];
 
   installFlags = [

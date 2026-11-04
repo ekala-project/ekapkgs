@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     autogen
   ];
+
   buildInputs = [ autogen.lib ];
 
   doCheck = true;

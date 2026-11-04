@@ -20,6 +20,7 @@ buildGoModule (finalAttrs: {
   };
 
   patches = [ ./fix-paths.patch ];
+
   postPatch = ''
     substituteInPlace config/bar.json --subst-var out
     substituteInPlace tools.go --subst-var out

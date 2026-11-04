@@ -42,10 +42,12 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
+
   nativeBuildInputs = [
     which
     pkg-config
   ];
+
   buildInputs = [
     libao
     libmodplug
@@ -71,11 +73,13 @@ stdenv.mkDerivation (finalAttrs: {
     "PREFIX=${placeholder "out"}"
     "HOMEBREW_PREFIX=/var/empty"
   ];
+
   preConfigure = ''
     makeFlagsArray+=(CURSES_CONFIG="$PKG_CONFIG ncurses")
   '';
 
   buildFlags = [ frontend ];
+
   installTargets = if frontend == "ncurses" then "install-frotz" else "install-${frontend}";
 
   meta = {

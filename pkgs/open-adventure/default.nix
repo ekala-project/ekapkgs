@@ -13,6 +13,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "open-adventure";
   version = "1.20";
+
   src = fetchFromGitLab {
     owner = "esr";
     repo = "open-adventure";

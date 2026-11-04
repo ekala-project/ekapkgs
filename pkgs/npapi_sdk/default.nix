@@ -6,7 +6,6 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "npapi-sdk";
-
   version = "0.27.2";
 
   src = fetchurl {

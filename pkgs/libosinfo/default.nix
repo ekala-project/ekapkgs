@@ -50,12 +50,14 @@ stdenv.mkDerivation (finalAttrs: {
     docbook_xsl
     perl
   ];
+
   buildInputs = [
     glib
     libsoup_3
     libxml2
     libxslt
   ];
+
   nativeCheckInputs = [
     check
     curl

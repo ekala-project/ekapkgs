@@ -18,9 +18,11 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [ dpkg ];
 
   unpackCmd = "dpkg-deb -x $curSrc .";
+
   sourceRoot = ".";
 
   dontConfigure = true;
+
   dontBuild = true;
 
   installPhase = ''

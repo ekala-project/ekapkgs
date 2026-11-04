@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     qt5.wrapQtAppsHook
   ];
+
   buildInputs = [
     alsa-lib
     ladspa-sdk

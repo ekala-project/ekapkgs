@@ -29,6 +29,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   makeFlags = [ "prefix=${placeholder "out"}" ];
 
   dontPatchShebangs = true;
+
   postFixup = ''
     # use dash posix sh implementation as recommended by upstream
     substituteInPlace $out/bin/xdg-terminal-exec \

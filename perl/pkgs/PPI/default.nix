@@ -13,9 +13,9 @@
   TestSubCalls,
 }:
 buildPerlPackage {
-
   pname = "PPI";
   version = "1.277";
+
   src = fetchurl {
     url = "mirror://cpan/authors/id/M/MI/MITHALDU/PPI-1.277.tar.gz";
     hash = "sha256-h8efg7aHbiBgUZZdUBnSUHxVH4GahnUAgOx+xDsuCvg=";
@@ -31,6 +31,7 @@ buildPerlPackage {
     TestObject
     TestSubCalls
   ];
+
   propagatedBuildInputs = [
     Clone
     IOString
@@ -44,6 +45,7 @@ buildPerlPackage {
     # Remove tests with hardcoded line numbers.
     rm t/29_logical_filename.t
   ";
+
   meta = {
     description = "Parse, Analyze and Manipulate Perl (without perl)";
     homepage = "https://github.com/Perl-Critic/PPI";
@@ -52,5 +54,4 @@ buildPerlPackage {
       gpl1Plus
     ];
   };
-
 }

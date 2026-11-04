@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     python3
   ];
+
   buildInputs = [
     openssl
     readline
@@ -47,6 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
       $out/bin/sqlsample.pl \
       $out/bin/malsample.pl
   '';
+
   meta = {
     description = "Open source database system";
     homepage = "https://www.monetdb.org/";

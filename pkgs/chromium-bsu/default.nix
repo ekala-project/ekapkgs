@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     pkg-config
   ];
+
   buildInputs = [
     sdl2-compat
     SDL2_image

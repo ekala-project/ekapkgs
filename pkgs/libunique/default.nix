@@ -15,11 +15,13 @@
 }:
 
 stdenv.mkDerivation rec {
-
-  majorVer = "3.0";
-  minorVer = "2";
   version = "${majorVer}.${minorVer}";
   pname = "libunique3";
+
+  majorVer = "3.0";
+
+  minorVer = "2";
+
   srcName = "libunique-${version}";
 
   src = fetchurl {
@@ -31,6 +33,7 @@ stdenv.mkDerivation rec {
     pkg-config
     gobject-introspection
   ];
+
   buildInputs = [
     dbus
     dbus-glib

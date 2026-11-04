@@ -33,6 +33,7 @@ stdenv.mkDerivation {
   '';
 
   doCheck = true;
+
   checkPhase = ''
     runHook preCheck
 

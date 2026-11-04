@@ -30,6 +30,7 @@ stdenv.mkDerivation {
   ];
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ ncurses ];
 
   makeFlags = [ "PREFIX=$(out)" ];

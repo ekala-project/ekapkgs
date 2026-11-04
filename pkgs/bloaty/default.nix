@@ -83,6 +83,7 @@ stdenv.mkDerivation {
     # See https://github.com/google/bloaty/blob/main/tests/README.md
     cmake --build . --target check-bloaty
   '';
+
   installPhase = ''
     install -Dm755 {.,$out/bin}/bloaty
   '';

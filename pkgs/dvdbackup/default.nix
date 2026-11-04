@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   # see https://bugs.launchpad.net/dvdbackup/+bug/1869226
   patchFlags = [ "-p0" ];
+
   patches = [
     (fetchpatch {
       url = "https://git.slackbuilds.org/slackbuilds/plain/multimedia/dvdbackup/patches/dvdbackup-dvdread-6.1.patch";

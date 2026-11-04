@@ -97,6 +97,7 @@ stdenv.mkDerivation (finalAttrs: {
     tag = "v${finalAttrs.version}";
     sha256 = "sha256-MGTntR9SVmejgpAkZnhJOaIkZeCMNBGaQSorLOStdjo=";
   };
+
   inherit buildInputs propagatedBuildInputs;
 
   patches = [

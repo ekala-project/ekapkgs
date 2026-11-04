@@ -20,6 +20,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-dwOinrHvk0MRKlbn62MEfmcyXNf+ZfYzVNtv7teRsV4=";
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ pango ];
 
   meta = {

@@ -28,6 +28,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   # CoreML acquisition tests fail in the Nix sandbox.
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

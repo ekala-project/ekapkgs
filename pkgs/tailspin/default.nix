@@ -18,6 +18,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-kcd6rBoonoCKuybVIVtZqt+njHFhVDTjTyF2UURuOSI=";
 
   versionCheckProgram = "${placeholder "out"}/bin/tspin";
+
   doInstallCheck = true;
 
   meta = {

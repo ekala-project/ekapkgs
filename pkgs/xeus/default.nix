@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   doCheck = true;
+
   preCheck = "export LD_LIBRARY_PATH=$PWD";
 
   meta = {

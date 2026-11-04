@@ -18,6 +18,7 @@ postgresqlBuildExtension (finalAttrs: {
   };
 
   buildInputs = [ curl ];
+
   nativeBuildInputs = [ curl ];
 
   meta = {

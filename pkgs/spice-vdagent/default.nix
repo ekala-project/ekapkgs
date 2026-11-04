@@ -19,6 +19,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "spice-vdagent";
   version = "0.23.0";
+
   src = fetchurl {
     url = "https://www.spice-space.org/download/releases/spice-vdagent-${finalAttrs.version}.tar.bz2";
     hash = "sha256-Y+D5vVWXxGOKz9bxDXojVPWZvZ31sx5EMnDKzwfhakA=";
@@ -37,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     alsa-lib
     spice-protocol

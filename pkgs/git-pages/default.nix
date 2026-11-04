@@ -23,6 +23,7 @@ buildGoModule (finalAttrs: {
     "-s"
     "-X main.versionOverride=${finalAttrs.src.tag}"
   ];
+
   versionCheckProgramArg = "-version";
 
   meta = {

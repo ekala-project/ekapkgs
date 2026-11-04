@@ -11,6 +11,7 @@
 stdenv.mkDerivation {
   pname = "libykclient";
   version = "unstable-2019-03-18";
+
   src = fetchFromGitHub {
     owner = "Yubico";
     repo = "yubico-c-client";
@@ -23,6 +24,7 @@ stdenv.mkDerivation {
     pkg-config
     help2man
   ];
+
   buildInputs = [ curl ];
 
   meta = {

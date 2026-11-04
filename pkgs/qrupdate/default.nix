@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeFlags =
     assert (blas.isILP64 == lapack.isILP64);
+
     [
       "-DCMAKE_Fortran_FLAGS=${
         toString (

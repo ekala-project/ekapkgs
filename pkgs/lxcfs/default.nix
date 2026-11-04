@@ -41,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     (python3.pythonOnBuildForHost.withPackages (p: [ p.jinja2 ]))
     pkg-config
   ];
+
   buildInputs = [ fuse ];
 
   preConfigure = ''

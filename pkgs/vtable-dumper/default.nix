@@ -17,9 +17,11 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ elfutils ];
+
   makeFlags = [ "prefix=$(out)" ];
 
   env.NIX_CFLAGS_COMPILE = "-I${elfutils.dev}/include";
+
   env.NIX_LDFLAGS = "-L${lib.getLib elfutils}/lib -lelf";
 
   meta = {

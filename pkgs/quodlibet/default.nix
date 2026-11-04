@@ -48,7 +48,6 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "quodlibet${tag}";
   version = "4.7.1";
-
   pyproject = true;
 
   outputs = [

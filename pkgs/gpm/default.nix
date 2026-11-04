@@ -37,6 +37,7 @@ stdenv.mkDerivation {
     bison
     texinfo
   ];
+
   buildInputs = [ ncurses ];
 
   hardeningDisable = [ "format" ];
@@ -56,6 +57,7 @@ stdenv.mkDerivation {
       sha256 = "0g1jhz9bjw7vqjv922xkhs8xkjxdqh11nj38jj3c8nv5lcil76nx";
     })
   ];
+
   preConfigure = ''
     ./autogen.sh
   '';

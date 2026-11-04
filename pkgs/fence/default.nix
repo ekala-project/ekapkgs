@@ -33,6 +33,7 @@ buildGoModule (finalAttrs: {
   subPackages = [ "cmd/fence" ];
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

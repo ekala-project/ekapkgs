@@ -39,6 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
   hardeningDisable = [ "format" ];
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     libdv
     libjpeg

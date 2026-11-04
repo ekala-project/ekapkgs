@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   propagatedBuildInputs = [ hiredis ];
 
   cmakeEntries = {

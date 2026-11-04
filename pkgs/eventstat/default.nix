@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ ncurses ];
+
   installFlags = [
     "BINDIR=${placeholder "out"}/bin"
     "MANDIR=${placeholder "out"}/share/man/man8"

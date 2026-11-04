@@ -39,6 +39,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   postInstall = ''
     installManPage doc/rosenpass.1
   '';
+
   meta = {
     description = "Build post-quantum-secure VPNs with WireGuard";
     homepage = "https://rosenpass.eu/";

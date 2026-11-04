@@ -29,6 +29,7 @@ stdenv.mkDerivation rec {
   };
 
   doCheck = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
+
   checkTarget = "test";
 
   meta = {

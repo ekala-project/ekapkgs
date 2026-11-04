@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gtk3.wrapGAppsHook
   ];
+
   buildInputs = [
     glfw3
     gtk3
@@ -32,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   dontUseSconsBuild = true;
+
   dontUseSconsInstall = true;
 
   makeFlags = [ "PREFIX=$(out)" ];

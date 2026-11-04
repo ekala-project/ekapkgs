@@ -38,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   installCheckTarget = "check-recursive";
+
   meta = {
     changelog = "https://gitlab.torproject.org/tpo/core/torsocks/-/releases/v${finalAttrs.version}";
     description = "Wrapper to safely torify applications";

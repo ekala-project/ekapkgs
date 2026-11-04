@@ -24,11 +24,13 @@ rustPlatform.buildRustPackage (finalAttrs: {
   env.OPENSSL_NO_VENDOR = "1";
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ openssl ];
 
   # Tests need network access.
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   passthru.tests.version = testers.testVersion {

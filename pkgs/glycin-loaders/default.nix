@@ -31,7 +31,6 @@ assert enabledLoaders != [ ];
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "glycin-loaders";
-
   inherit (libglycin) version src cargoDeps;
 
   nativeBuildInputs = [

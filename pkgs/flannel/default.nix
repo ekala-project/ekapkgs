@@ -7,6 +7,7 @@
 buildGoModule rec {
   pname = "flannel";
   version = "0.28.9";
+
   rev = "v${version}";
 
   vendorHash = "sha256-ck24fYMbt4CzQ4HydMK8f9O7D0mFcVY+iINevYFuVaM=";

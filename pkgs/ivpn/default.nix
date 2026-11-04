@@ -18,6 +18,7 @@ buildGoModule (finalAttrs: {
   };
 
   modRoot = "cli";
+
   vendorHash = "sha256-Q3CbeKrenZr1kGFhSrXW7dcnn3iGKWhWO2qofqAFwgk=";
 
   proxyVendor = true; # .c file

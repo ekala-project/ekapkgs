@@ -7,6 +7,7 @@
 mkKdeDerivation rec {
   pname = "kup";
   version = "0.10.0";
+
   src = fetchFromGitLab {
     domain = "invent.kde.org";
     owner = "system";

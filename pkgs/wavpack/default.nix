@@ -29,6 +29,7 @@ stdenv.mkDerivation rec {
     autoreconfHook
     gettext
   ];
+
   buildInputs = [ libiconv ];
 
   # autogen.sh:9 - need writable source for config.rpath

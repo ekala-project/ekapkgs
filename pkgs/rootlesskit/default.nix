@@ -16,6 +16,7 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = "sha256-LbC8kAAF9nbkyzw+nmleaVuD8kEayDBCX4/i4UV21bQ=";
+
   meta = {
     homepage = "https://github.com/rootless-containers/rootlesskit";
     description = ''Kind of Linux-native "fake root" utility, made for mainly running Docker and Kubernetes as an unprivileged user'';

@@ -25,6 +25,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     just
     pkg-config
   ];
+
   buildInputs = [
     libxkbcommon
   ];
@@ -35,13 +36,16 @@ rustPlatform.buildRustPackage (finalAttrs: {
     "--package"
     "pop-launcher-bin"
   ];
+
   cargoTestFlags = [
     "--package"
     "pop-launcher-bin"
   ];
 
   dontUseJustBuild = true;
+
   dontUseJustCheck = true;
+
   justFlags = [
     "--set"
     "base-dir"

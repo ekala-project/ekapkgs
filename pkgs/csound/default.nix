@@ -44,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     bison
     gettext
   ];
+
   buildInputs = [
     libsndfile
     libsamplerate

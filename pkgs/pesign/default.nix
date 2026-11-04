@@ -46,6 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
     nspr
     mandoc
   ];
+
   nativeBuildInputs = [ pkg-config ];
 
   makeFlags = [ "INSTALLROOT=$(out)" ];

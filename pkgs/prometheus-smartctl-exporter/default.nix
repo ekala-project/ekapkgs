@@ -26,6 +26,7 @@ buildGoModule (finalAttrs: {
   ldflags = [
     "-X github.com/prometheus/common/version.Version=${finalAttrs.version}"
   ];
+
   meta = {
     description = "Export smartctl statistics for Prometheus";
     mainProgram = "smartctl_exporter";

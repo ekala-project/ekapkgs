@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
     "devdoc"
   ];
+
   outputBin = "devdoc"; # demo app
 
   src = fetchFromGitLab {

@@ -34,6 +34,7 @@ stdenv.mkDerivation {
   ];
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     gtk3
     libxml2
@@ -41,7 +42,9 @@ stdenv.mkDerivation {
     perl
     sqlite
   ];
+
   doCheck = true;
+
   buildFlags = [ "GCC_BASE:=${GCC_BASE}" ];
 
   # Test failures with "fortify3" on, such as:

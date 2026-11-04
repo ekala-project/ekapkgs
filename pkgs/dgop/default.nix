@@ -32,6 +32,7 @@ buildGoModule (finalAttrs: {
       --fish <($out/bin/dgop completion fish) \
       --zsh <($out/bin/dgop completion zsh)
   '';
+
   meta = {
     description = "API & CLI for System & Process Monitoring";
     homepage = "https://github.com/AvengeMedia/dgop";

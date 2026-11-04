@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   dontUnpack = true;
 
   nativeBuildInputs = [ makeWrapper ];
+
   propagatedBuildInputs = [ java ];
 
   # the jar is not in share/java, because it's a standalone jar and should

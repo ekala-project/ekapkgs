@@ -89,6 +89,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional (!withRuby) "--without-ruby";
 
   setOutputFlags = false;
+
   makeFlags = [ "V=1" ];
 
   outputs = [

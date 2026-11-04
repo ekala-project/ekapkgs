@@ -16,6 +16,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "gtk-gnutella";
   version = "1.3.1";
+
   strictDeps = true;
 
   src = fetchFromGitHub {
@@ -31,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     pkg-config
   ];
+
   buildInputs = [
     glib
     gnutls
@@ -40,6 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   configureScript = "./build.sh";
+
   configureFlags = [
     "--configure-only"
     "--topless"

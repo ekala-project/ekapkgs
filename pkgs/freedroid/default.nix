@@ -32,6 +32,7 @@ stdenv.mkDerivation rec {
     imagemagick
     autoreconfHook
   ];
+
   buildInputs = [
     SDL
     SDL_image

@@ -34,6 +34,7 @@ gccStdenv.mkDerivation {
   buildPhase = ''
     make RM="rm -f" proparser.c ${extraTools} opt
   '';
+
   installPhase = ''
     mkdir -p $out/bin
     install -m0755 SPASS ${extraTools} $out/bin/

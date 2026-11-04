@@ -62,6 +62,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     "--skip=test_vis"
     "--skip=test_vis_invalid"
   ];
+
   cargoTestFlags = finalAttrs.cargoBuildFlags;
 
   env.TOPIARY_LANGUAGE_DIR = "${placeholder "out"}/share/queries";

@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     mkdir -p $out/etc
     cp ndppd.conf-dist $out/etc/ndppd.conf
   '';
+
   meta = {
     description = "Daemon that proxies NDP (Neighbor Discovery Protocol) messages between interfaces";
     homepage = "https://github.com/DanielAdolfsson/ndppd";

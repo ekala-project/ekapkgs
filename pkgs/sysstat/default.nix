@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     "IGNORE_FILE_ATTRIBUTES=y"
     "CHOWN=true"
   ];
+
   installTargets = [
     "install_base"
     "install_nls"

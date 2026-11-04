@@ -51,6 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doInstallCheck = true;
+
   buildInputs = [ libusb1 ];
 
   cmakeFlags = lib.optionals stdenv.hostPlatform.isLinux [

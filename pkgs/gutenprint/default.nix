@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     makeWrapper
     pkg-config
@@ -33,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     cups
     perl
   ]; # for cups-config
+
   buildInputs = [
     ijs
     zlib

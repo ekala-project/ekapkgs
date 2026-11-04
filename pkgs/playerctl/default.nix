@@ -37,6 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (withDocs && !stdenv.buildPlatform.canExecute stdenv.hostPlatform) [
     mesonEmulatorHook
   ];
+
   buildInputs = [ glib ];
 
   mesonEntries = {

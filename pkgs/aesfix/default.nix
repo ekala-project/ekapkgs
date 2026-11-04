@@ -12,6 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
     url = "https://citpsite.s3.amazonaws.com/memory-content/src/aesfix-${finalAttrs.version}.tar.gz";
     sha256 = "sha256-exd+h2yu5qrkjwEjEC8R32WUpzhIP5pH8sdv6BzARdQ=";
   };
+
   installPhase = ''
     runHook preInstall
     mkdir -p $out/bin

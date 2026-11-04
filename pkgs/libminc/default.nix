@@ -28,10 +28,12 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     cmake
   ];
+
   buildInputs = [
     zlib
     nifticlib
   ];
+
   propagatedBuildInputs = [
     netcdf
     hdf5
@@ -45,6 +47,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   doCheck = !stdenv.hostPlatform.isDarwin;
+
   # -j1: see https://github.com/BIC-MNI/libminc/issues/110
   checkPhase = ''
     ctest -j1 --output-on-failure

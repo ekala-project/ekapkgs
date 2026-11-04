@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [ perl ];
 
   installPhase = ''

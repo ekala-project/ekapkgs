@@ -36,6 +36,7 @@ stdenv.mkDerivation {
   postPatch = ''
     patchShebangs ./data/db/android/create_db.py
   '';
+
   meta = {
     description = "Chinese PinYin and Bopomofo conversion library";
     homepage = "https://github.com/openSUSE/pyzy";

@@ -120,9 +120,11 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
+
   separateDebugInfo = true;
 
   depsBuildBuild = [ buildPackages.stdenv.cc ];
+
   nativeBuildInputs = [
     docutils
     doxygen
@@ -265,6 +267,7 @@ stdenv.mkDerivation (finalAttrs: {
   env.FONTCONFIG_FILE = makeFontsConf { fontDirectories = [ ]; };
 
   doCheck = true;
+
   doInstallCheck = true;
 
   postPatch = ''

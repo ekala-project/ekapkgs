@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
   ];
+
   propagatedBuildInputs = lib.optional stdenv.hostPlatform.isLinux gtk3;
 
   patches = [

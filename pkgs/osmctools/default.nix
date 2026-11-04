@@ -18,6 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [ zlib ];
 
   # Fix build with gcc15 (-std=gnu23)

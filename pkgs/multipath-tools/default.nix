@@ -62,10 +62,12 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   preCheck = ''
     # skip test attempting to access /sys/dev/block
     substituteInPlace tests/Makefile --replace-fail ' devt ' ' '
   '';
+
   checkInputs = [ cmocka ];
 
   doInstallCheck = true;

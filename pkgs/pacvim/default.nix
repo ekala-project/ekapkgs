@@ -9,12 +9,14 @@
 stdenv.mkDerivation {
   pname = "pacvim";
   version = "2018-05-16";
+
   src = fetchFromGitHub {
     owner = "jmoon018";
     repo = "PacVim";
     rev = "ca7c8833c22c5fe97974ba5247ef1fcc00cedb8e";
     sha256 = "1kq6j7xmsl5qfl1246lyglkb2rs9mnb2rhsdrp18965dpbj2mhx2";
   };
+
   patches = [
     # Fix pending upstream inclusion for ncurses-6.3 support:
     #   https://github.com/jmoon018/PacVim/pull/53
@@ -26,6 +28,7 @@ stdenv.mkDerivation {
   ];
 
   buildInputs = [ ncurses ];
+
   makeFlags = [ "PREFIX=$(out)" ];
 
   meta = {

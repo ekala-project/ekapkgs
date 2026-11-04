@@ -15,6 +15,7 @@ python3Packages.buildPythonApplication rec {
   };
 
   build-system = with python3Packages; [ hatchling ];
+
   dependencies = with python3Packages; [
     colorama
     gitpython

@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
   ];
+
   buildInputs = [ pam ];
 
   meta = {

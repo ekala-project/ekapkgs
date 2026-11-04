@@ -8,13 +8,16 @@
 buildPerlPackage {
   pname = "DBI";
   version = "1.648";
+
   src = fetchurl {
     url = "mirror://cpan/authors/id/H/HM/HMBRAND/DBI-1.648.tgz";
     hash = "sha256-7yZqrWAQzi6rt+Rl69c8owILxYFQ9pib2Jwrj5usaoY=";
   };
+
   env = lib.optionalAttrs stdenv.cc.isGNU {
     NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
   };
+
   postInstall = lib.optionalString (perl ? crossVersion) ''
     mkdir -p $out/${perl.libPrefix}/cross_perl/${perl.version}/DBI
     cat > $out/${perl.libPrefix}/cross_perl/${perl.version}/DBI.pm <<EOF
@@ -53,6 +56,7 @@ buildPerlPackage {
     1;
     EOF
   '';
+
   meta = {
     description = "Database independent interface for Perl";
     homepage = "https://dbi.perl.org";

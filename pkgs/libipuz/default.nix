@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   cargoRoot = "libipuz/rust";
+
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit (finalAttrs)
       pname

@@ -16,6 +16,7 @@ stdenv.mkDerivation rec {
   };
 
   buildInputs = [ apacheHttpd ];
+
   nativeBuildInputs = [ perl ];
 
   configurePhase = ''

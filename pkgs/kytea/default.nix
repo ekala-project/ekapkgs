@@ -5,7 +5,6 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-
   pname = "kytea";
   version = "0.4.7";
 
@@ -31,5 +30,4 @@ stdenv.mkDerivation (finalAttrs: {
 
     platforms = lib.platforms.unix;
   };
-
 })

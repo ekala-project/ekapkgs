@@ -8,6 +8,7 @@ let
   self = python3Packages.buildPythonApplication {
     pname = "setconf";
     version = "0.7.7";
+    pyproject = true;
 
     src = fetchFromGitHub {
       owner = "xyproto";
@@ -17,8 +18,6 @@ let
     };
 
     build-system = with python3Packages; [ setuptools ];
-
-    pyproject = true;
 
     meta = {
       homepage = "https://github.com/xyproto/setconf";

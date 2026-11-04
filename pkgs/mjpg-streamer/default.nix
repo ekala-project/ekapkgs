@@ -31,6 +31,7 @@ stdenv.mkDerivation {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [ libjpeg ];
 
   preConfigure = ''

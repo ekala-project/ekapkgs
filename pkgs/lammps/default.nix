@@ -65,9 +65,11 @@ stdenv.mkDerivation (finalAttrs: {
     tag = "stable_${finalAttrs.version}";
     hash = "sha256-kI4CubDgXwnDDeXNan88RzG+iGMJMnsqfpfhWtJFhAI=";
   };
+
   preConfigure = ''
     cd cmake
   '';
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
@@ -84,6 +86,7 @@ stdenv.mkDerivation (finalAttrs: {
     inherit extraBuildInputs;
     inherit extraNativeBuildInputs;
   };
+
   cmakeFlags = [
     (lib.cmakeBool "BUILD_SHARED_LIBS" true)
   ]

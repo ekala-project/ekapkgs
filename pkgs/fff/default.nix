@@ -31,7 +31,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [ bashInteractive ];
+
   dontBuild = true;
 
   makeFlags = [ "PREFIX=$(out)" ];

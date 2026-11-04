@@ -32,6 +32,7 @@ stdenv.mkDerivation {
   '';
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     alsa-lib
     freetype

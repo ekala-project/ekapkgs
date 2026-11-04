@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     install -Dm644 fontconfig/46-twemoji-color.conf $out/etc/fonts/conf.d/46-twemoji-color.conf
     runHook postInstall
   '';
+
   meta = {
     description = "Color emoji SVGinOT font using Twitter Unicode 15 emoji with diversity and country flags";
     longDescription = ''

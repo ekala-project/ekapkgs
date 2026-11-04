@@ -59,13 +59,16 @@ stdenv.mkDerivation rec {
     libmnl
     libnftnl
   ];
+
   nativeBuildInputs = [
     pkg-config
     makeWrapper
   ];
 
   dontAddPrefix = true;
+
   configurePlatforms = [ ];
+
   configureFlags = [
     "--host-os=${stdenv.hostPlatform.uname.system}"
     "--host-os-version=${linuxHeaders.version}"

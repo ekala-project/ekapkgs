@@ -11,7 +11,6 @@
 }:
 mkKdeDerivation rec {
   pname = "kdepim-addons";
-
   inherit (sources.${pname}) version;
 
   cargoRoot = "plugins/webengineurlinterceptor/adblock";

@@ -23,7 +23,9 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ libxcb ];
+
   propagatedBuildInputs = [ libxcb ];
 
   meta = {

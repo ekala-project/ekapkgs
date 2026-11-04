@@ -7,6 +7,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "termbox";
   version = "1.1.4";
+
   src = fetchFromGitHub {
     owner = "termbox";
     repo = "termbox";

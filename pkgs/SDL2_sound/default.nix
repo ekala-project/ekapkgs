@@ -19,6 +19,7 @@ stdenv.mkDerivation rec {
     tag = "v${version}";
     hash = "sha256-Ael8OTLqmPNsX+Q+NwbXgVB9xZ0Wzv1p+IpIDWw1q+s=";
   };
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

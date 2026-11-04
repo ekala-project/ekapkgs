@@ -23,7 +23,6 @@ let
 in
 
 stdenv.mkDerivation rec {
-
   pname = "lugaru";
   version = "1.2";
 

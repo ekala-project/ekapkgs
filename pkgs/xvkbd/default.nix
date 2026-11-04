@@ -15,12 +15,14 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "xvkbd";
   version = "4.1";
+
   src = fetchurl {
     url = "https://t-sato.in.coocan.jp/xvkbd/xvkbd-${finalAttrs.version}.tar.gz";
     sha256 = "1x5yldv9y99cw5hzzs73ygdn1z80zns9hz0baa355r711zghfbcm";
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     libxt
     libxaw

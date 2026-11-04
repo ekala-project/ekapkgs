@@ -8,6 +8,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "openspecfun";
   version = "0.5.7";
+
   src = fetchFromGitHub {
     owner = "JuliaLang";
     repo = "openspecfun";

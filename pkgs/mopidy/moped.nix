@@ -18,6 +18,7 @@ pythonPackages.buildPythonApplication (finalAttrs: {
   };
 
   env.LC_ALL = "en_US.UTF-8";
+
   buildInputs = [ glibcLocales ];
 
   build-system = [ pythonPackages.setuptools ];

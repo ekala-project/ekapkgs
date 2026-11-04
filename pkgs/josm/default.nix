@@ -41,6 +41,7 @@ stdenv.mkDerivation {
   dontUnpack = true;
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = lib.optionals (!stdenv.hostPlatform.isDarwin) [ java ];
 
   installPhase =

@@ -31,6 +31,7 @@ buildGoModule (finalAttrs: {
     makeBinaryWrapper
     installShellFiles
   ];
+
   postInstall = ''
     wrapProgram $out/bin/diffnav \
       --prefix PATH : ${lib.makeBinPath [ delta ]}

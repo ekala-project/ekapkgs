@@ -43,6 +43,7 @@ stdenv.mkDerivation {
   env.NIX_CFLAGS_COMPILE = lib.optionalString stdenv.hostPlatform.isDarwin "-mmacosx-version-min=10.9";
 
   nativeBuildInputs = [ unzip ];
+
   buildPhase = ''
     # use STL (xbmc requires it)
     sed '1i#define TIXML_USE_STL 1' -i tinyxml.h
@@ -58,6 +59,7 @@ stdenv.mkDerivation {
   '';
 
   doCheck = true;
+
   checkPhase = ''
     ./xmltest
     result=$?

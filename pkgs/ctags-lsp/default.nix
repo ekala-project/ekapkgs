@@ -10,6 +10,7 @@
 buildGoModule (finalAttrs: {
   pname = "ctags-lsp";
   version = "0.11.0";
+
   vendorHash = null;
 
   src = fetchFromGitHub {

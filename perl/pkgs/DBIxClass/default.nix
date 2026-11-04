@@ -24,16 +24,19 @@
 buildPerlPackage {
   pname = "DBIx-Class";
   version = "0.082843";
+
   src = fetchurl {
     url = "mirror://cpan/authors/id/R/RI/RIBASUSHI/DBIx-Class-0.082843.tar.gz";
     hash = "sha256-NB4Lbssp2MSRdKbAnXxtvzhym6QBXuf9cDYKT/7h8lE=";
   };
+
   buildInputs = [
     DBDSQLite
     TestDeep
     TestException
     TestWarn
   ];
+
   propagatedBuildInputs = [
     ClassAccessorGrouped
     ClassC3Componentised
@@ -50,6 +53,7 @@ buildPerlPackage {
     SubName
     namespaceclean
   ];
+
   meta = {
     description = "Extensible and flexible object <-> relational mapper";
     license = with lib.licenses; [

@@ -23,6 +23,7 @@ stdenv.mkDerivation {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [
     boost
     libusb1

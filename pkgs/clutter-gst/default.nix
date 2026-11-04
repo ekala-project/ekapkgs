@@ -39,11 +39,13 @@ stdenv.mkDerivation rec {
   ];
 
   strictDeps = true;
+
   nativeBuildInputs = [
     pkg-config
     glib
     gobject-introspection
   ];
+
   propagatedBuildInputs = [
     clutter
     gtk3

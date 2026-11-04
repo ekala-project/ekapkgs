@@ -66,12 +66,15 @@ buildGoModule (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     gitMinimal
     versionCheckHook
     writableTmpDirAsHomeHook
   ];
+
   versionCheckProgramArg = "version";
+
   versionCheckKeepEnvironment = [ "HOME" ];
 
   meta = {

@@ -167,6 +167,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   dontWrapQtApps = stdenv.hostPlatform.isLinux;
+
   postFixup = lib.optionalString stdenv.hostPlatform.isLinux ''
     mkdir -p $out/libexec
     mv $out/bin/mscore $out/libexec

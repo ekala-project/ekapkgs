@@ -30,11 +30,13 @@ stdenv.mkDerivation (finalAttrs: {
     bison
     flex
   ];
+
   buildInputs = [
     libpcap
     cyrus_sasl
     tcp_wrappers
   ];
+
   propagatedBuildInputs = [
     procps
     which

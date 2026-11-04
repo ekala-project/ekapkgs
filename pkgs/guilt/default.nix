@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     ./guilt-help-mandir.patch
     ./darwin-fix.patch
   ];
+
   nativeBuildInputs = [
     asciidoc
     docbook-xml-dtd.v4_5
@@ -39,12 +40,14 @@ stdenv.mkDerivation (finalAttrs: {
     perl
     xmlto
   ];
+
   buildInputs = [
     gawk
     git
     sed
   ]
   ++ lib.optionals stdenv.hostPlatform.isDarwin [ openssl ];
+
   makeFlags = [
     "PREFIX=$(out)"
   ];

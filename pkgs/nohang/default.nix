@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
   dontBuild = true;
 
   installTargets = [ "base" ];
+
   installFlags = [
     "DESTDIR=${placeholder "out"}"
     "PREFIX=/"

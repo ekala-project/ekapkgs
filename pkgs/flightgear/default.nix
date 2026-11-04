@@ -52,6 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     qt5.wrapQtAppsHook
   ];
+
   buildInputs = [
     freealut
     libjpeg

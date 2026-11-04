@@ -79,6 +79,7 @@ postgresqlBuildExtension (finalAttrs: {
   env.NIX_LDFLAGS = "-L${lib.getLib json_c}/lib";
 
   setOutputFlags = false;
+
   preConfigure = ''
     ./autogen.sh
   '';

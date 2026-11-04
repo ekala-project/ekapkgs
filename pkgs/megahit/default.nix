@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [ zlib ];
 
   cmakeFlags = lib.optionals stdenv.hostPlatform.isStatic [

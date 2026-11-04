@@ -42,7 +42,9 @@ stdenvNoCC.mkDerivation {
   strictDeps = true;
 
   dontUnpack = true;
+
   dontBuild = true;
+
   dontConfigure = true;
 
   installPhase = ''

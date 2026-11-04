@@ -14,6 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
     url = "https://github.com/zlin/wgetpaste/releases/download/${finalAttrs.version}/wgetpaste-${finalAttrs.version}.tar.xz";
     sha256 = "sha256-vW0G7ZAaPWPJyMVxJghP8JlPCZAb+xY4uHlT6sHpQz8=";
   };
+
   # currently zsh-autocompletion support is not installed
 
   prePatch = ''

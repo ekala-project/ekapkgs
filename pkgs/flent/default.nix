@@ -48,6 +48,7 @@ python3Packages.buildPythonApplication rec {
   '';
 
   passthru.updateScript = nix-update-script { };
+
   meta = {
     description = "FLExible Network Tester";
     homepage = "https://flent.org";

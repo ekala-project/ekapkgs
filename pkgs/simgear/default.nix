@@ -40,6 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ cmake ];
+
   buildInputs = [
     plib
     boost

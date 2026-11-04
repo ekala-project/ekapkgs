@@ -10,12 +10,14 @@
 stdenv.mkDerivation (finalAttrs: {
   version = "3.0";
   pname = "wordnet";
+
   src = fetchurl {
     url = "https://wordnetcode.princeton.edu/${finalAttrs.version}/WordNet-${finalAttrs.version}.tar.bz2";
     sha256 = "08pgjvd2vvmqk3h641x63nxp7wqimb9r30889mkyfh2agc62sjbc";
   };
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [
     tcl
     tk

@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ wayland-scanner ];
+
   buildInputs = [ wayland ];
 
   makeFlags = [

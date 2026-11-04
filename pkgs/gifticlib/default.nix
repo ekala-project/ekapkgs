@@ -29,6 +29,7 @@ stdenv.mkDerivation {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [
     expat
     nifticlib
@@ -37,7 +38,9 @@ stdenv.mkDerivation {
 
   # without the test data, this is only a few basic tests
   doCheck = !stdenv.hostPlatform.isDarwin;
+
   nativeCheckInputs = [ ctestCheckHook ];
+
   checkFlags = [
     "-LE"
     "NEEDS_DATA"

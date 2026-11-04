@@ -16,6 +16,7 @@ stdenv.mkDerivation {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ libnfc ];
 
   meta = {

@@ -35,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   enableParallelChecking = false;
 
   cmakeEntries = {

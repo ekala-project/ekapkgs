@@ -16,7 +16,9 @@ stdenvNoCC.mkDerivation {
   };
 
   dontPatch = true;
+
   dontConfigure = true;
+
   dontBuild = true;
 
   installPhase = ''

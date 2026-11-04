@@ -18,11 +18,13 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = "sha256-wIp/ShUddz+RIcsEuKWUfxsV/wNB2X1jZtIltBZ0ROM=";
+
   subPackages = [ "." ];
 
   nativeBuildInputs = [ installShellFiles ];
 
   env.CGO_ENABLED = 0;
+
   ldflags = [
     "-s"
     "-w"

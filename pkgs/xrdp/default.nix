@@ -69,7 +69,6 @@ let
       ./bootstrap
       export XRDP_CFLAGS="-I${xrdp.src}/common -I${libdrm.dev}/include -I${libdrm.dev}/include/libdrm"
     '';
-
   };
 
   xrdp = stdenv.mkDerivation rec {

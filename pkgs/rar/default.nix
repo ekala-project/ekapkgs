@@ -58,6 +58,7 @@ stdenv.mkDerivation {
 
     runHook postInstall
   '';
+
   meta = {
     description = "Utility for RAR archives";
     homepage = "https://www.rarlab.com/";

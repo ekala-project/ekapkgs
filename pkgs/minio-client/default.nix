@@ -26,6 +26,7 @@ buildGoModule (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     $out/bin/mc --version | grep ${finalAttrs.version} > /dev/null
   '';

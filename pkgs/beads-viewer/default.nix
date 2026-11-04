@@ -35,6 +35,7 @@ buildGoModule (finalAttrs: {
   ];
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   passthru.tests.version = testers.testVersion {

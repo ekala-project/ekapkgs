@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gtk3.wrapGAppsHook
   ];
+
   buildInputs = [
     gtk3
   ];

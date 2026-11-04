@@ -65,6 +65,7 @@ stdenv.mkDerivation (finalAttrs: {
       perl
       espeak
     ];
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   preConfigure = lib.optionalString (!extraScripts) ''

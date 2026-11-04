@@ -28,6 +28,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
+
   meta = {
     description = "Easy to integrate Vulkan memory allocation library";
     homepage = "https://gpuopen.com/vulkan-memory-allocator/";

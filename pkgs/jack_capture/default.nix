@@ -19,6 +19,7 @@ stdenv.mkDerivation {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     libjack2
     libsndfile

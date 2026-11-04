@@ -17,10 +17,13 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-AoUAAzbooKzaiMy9izYk7MSY/frfEuB9wMcdorXWIQw=";
 
   env.YAZI_GEN_COMPLETIONS = true;
+
   env.VERGEN_GIT_SHA = "Nixpkgs";
+
   env.VERGEN_BUILD_DATE = "2025-12-29";
 
   nativeBuildInputs = [ installShellFiles ];
+
   buildInputs = [ rust-jemalloc-sys ];
 
   postInstall = ''

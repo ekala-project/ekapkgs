@@ -22,10 +22,12 @@ rustPlatform.buildRustPackage (finalAttrs: {
   auditable = false;
 
   cargoHash = "sha256-PZQcFflja6EK9VxR7eD1qzwl3+jbfF5kVE3yuvESk+I=";
+
   cargoBuildFlags = [
     "--package"
     "wasm-tools"
   ];
+
   cargoTestFlags = [
     "--workspace"
     "--exclude"

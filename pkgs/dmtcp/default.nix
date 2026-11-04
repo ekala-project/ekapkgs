@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     perl
     python3
   ];
+
   env.HAS_PYTHON3 = "yes";
 
   patches = [ ./ld-linux-so-buffer-size.patch ];

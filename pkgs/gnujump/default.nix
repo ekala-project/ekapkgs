@@ -14,12 +14,14 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "gnujump";
   version = "1.0.8";
+
   src = fetchurl {
     url = "mirror://gnu/gnujump/gnujump-${finalAttrs.version}.tar.gz";
     sha256 = "05syy9mzbyqcfnm0hrswlmhwlwx54f0l6zhcaq8c1c0f8dgzxhqk";
   };
 
   nativeBuildInputs = [ copyDesktopItems ];
+
   buildInputs = [
     libGL
     libGLU

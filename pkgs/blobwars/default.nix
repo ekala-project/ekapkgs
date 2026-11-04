@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     gettext
   ];
+
   buildInputs = [
     sdl2-compat
     SDL2_image
@@ -35,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     SDL2_ttf
     zlib
   ];
+
   env.NIX_CFLAGS_COMPILE = toString [ "-Wno-error" ];
 
   makeFlags = [

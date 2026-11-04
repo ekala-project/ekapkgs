@@ -41,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
   propagatedBuildInputs = [ libGLU ];
 
   cmakeDir = "cmake";
+
   cmakeEntries = {
     BUILD_SHARED_LIBS = true;
     GLEW_EGL = true;

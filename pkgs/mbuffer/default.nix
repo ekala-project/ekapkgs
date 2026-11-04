@@ -9,6 +9,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "mbuffer";
   version = "20260511";
+
   outputs = [
     "out"
     "man"
@@ -22,14 +23,17 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     openssl
   ];
+
   nativeBuildInputs = [
     which
   ];
+
   nativeCheckInputs = [
     openssl
   ];
 
   doCheck = true;
+
   strictDeps = true;
 
   __darwinAllowLocalNetworking = true;

@@ -37,6 +37,7 @@ buildGoModule (finalAttrs: {
   subPackages = [ "cmd" ];
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     $out/bin/argocd-autopilot version | grep ${finalAttrs.src.rev} > /dev/null
   '';

@@ -19,6 +19,7 @@ buildGoModule (finalAttrs: {
 
   # TODO: libpostal is not yet available in ekapkgs
   excludedPackages = [ "internal/libpostal" ];
+
   tags = [ "nolibpostal" ];
 
   meta = {

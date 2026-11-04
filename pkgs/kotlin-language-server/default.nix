@@ -11,6 +11,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "kotlin-language-server";
   version = "1.3.13";
+
   src = fetchzip {
     url = "https://github.com/fwcd/kotlin-language-server/releases/download/${finalAttrs.version}/server.zip";
     hash = "sha256-ypiOeXA+14Js31WPGJAdSjskQJR9sBPVWGecLkKHiN4=";
@@ -29,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     gradle
     makeWrapper
   ];
+
   buildInputs = [
     java
     gradle

@@ -39,6 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   checkPhase = ''
     echo "***Muparserx self-test***"
     echo "quit" | ./example > test_result.log

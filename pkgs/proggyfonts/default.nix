@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [ mkfontscale ];
 
   dontConfigure = true;
+
   dontBuild = true;
 
   installPhase = ''

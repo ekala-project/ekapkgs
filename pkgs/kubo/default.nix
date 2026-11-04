@@ -10,6 +10,7 @@
 buildGoModule rec {
   pname = "kubo";
   version = "0.43.1"; # When updating, also check if the repo version changed and adjust repoVersion below
+
   rev = "v${version}";
 
   passthru.repoVersion = "18";

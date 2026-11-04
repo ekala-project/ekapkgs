@@ -42,6 +42,7 @@ buildGoModule (finalAttrs: {
     wrapProgram "$out/bin/ijq" \
       --prefix PATH : "${lib.makeBinPath [ jq ]}"
   '';
+
   meta = {
     description = "Interactive wrapper for jq";
     mainProgram = "ijq";

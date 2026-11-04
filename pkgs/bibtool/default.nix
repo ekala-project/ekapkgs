@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   checkTarget = "test";
 
   meta = {

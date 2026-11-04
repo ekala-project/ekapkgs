@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ zlib ];
+
   buildInputs = [
     bash
     coreutils

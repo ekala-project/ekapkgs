@@ -30,7 +30,9 @@ stdenv.mkDerivation rec {
     autoconf
     automake
   ];
+
   buildInputs = [ libtool ];
+
   propagatedBuildInputs = [ gmp.withCxx ];
 
   configureFlags = [

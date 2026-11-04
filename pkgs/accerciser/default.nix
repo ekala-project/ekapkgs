@@ -18,7 +18,6 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "accerciser";
   version = "3.48.0";
-
   pyproject = false;
 
   src = fetchurl {

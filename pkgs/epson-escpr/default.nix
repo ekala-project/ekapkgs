@@ -27,6 +27,7 @@ stdenv.mkDerivation {
     ];
     sha256 = "sha256-hVbX4OXPe4y37Szju3uVdXlVdjX4DFSN/A2Emz3eCcQ=";
   };
+
   # the patches above are expecting unix line endings, but one of the files
   # being patched has dos line endings in the source tarball
   prePatch = ''
@@ -49,6 +50,7 @@ stdenv.mkDerivation {
   patchFlags = [
     "-p1"
   ];
+
   buildInputs = [ cups ];
 
   meta = {

@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   checkPhase = ''
     runHook preCheck
     bin/runTests

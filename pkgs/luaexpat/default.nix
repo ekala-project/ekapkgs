@@ -9,11 +9,13 @@
 lua.pkgs.buildLuarocksPackage {
   pname = "luaexpat";
   version = "1.5.2-1";
+
   knownRockspec =
     (fetchurl {
       url = "mirror://luarocks/luaexpat-1.5.2-1.rockspec";
       sha256 = "0wdbph2c92zmvvyp3q669rbjy1xjm7jy1i13lin8b636vswykw6p";
     }).outPath;
+
   src = fetchFromGitHub {
     owner = "lunarmodules";
     repo = "luaexpat";

@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
   ];
+
   buildInputs = [ wayland ];
 
   meta = {

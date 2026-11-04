@@ -13,6 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
     url = "mirror://sourceforge/cdpr/cdpr/${finalAttrs.version}/cdpr-${finalAttrs.version}.tgz";
     sha256 = "1idyvyafkk0ifcbi7mc65b60qia6hpsdb6s66j4ggqp7if6vblrj";
   };
+
   patches = [
     # Pull fix pending upstream inclusion for gcc-10 compatibility:
     #  https://sourceforge.net/p/cdpr/bugs/3/

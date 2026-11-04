@@ -117,6 +117,7 @@ stdenv.mkDerivation {
     makeWrapper
     git
   ];
+
   buildInputs = [
     curl
     sdl2-compat

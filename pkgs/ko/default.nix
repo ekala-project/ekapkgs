@@ -39,6 +39,7 @@ buildGoModule (finalAttrs: {
   ];
 
   nativeCheckInputs = [ gitMinimal ];
+
   preCheck = ''
     # Feed in all the tests for testing
     # This is because subPackages above limits what is built to just what we

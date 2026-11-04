@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
   ];
+
   buildInputs = [
     (lib.getDev sdl12-compat)
     SDL_image
@@ -40,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   # Fix sdl12-compat include problems
   env.NIX_CFLAGS_COMPILE = "-I${lib.getDev sdl12-compat}/include/sdl12-compat -I${SDL_image}/include/sdl12-compat";
+
   # Fix linking errors
   makeFlags = [
     "ZAZ_LIBS+=-lSDL"

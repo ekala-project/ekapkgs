@@ -33,7 +33,9 @@ let
   leptonicaSonameAlias = stdenvNoCC.mkDerivation {
     pname = "leptonica-liblept-soname-alias";
     inherit (leptonica) version;
+
     dontUnpack = true;
+
     installPhase = ''
       mkdir -p $out/lib
       ln -s ${lib.getLib leptonica}/lib/libleptonica.so.6 $out/lib/liblept.so.5

@@ -31,6 +31,7 @@ buildGoModule (finalAttrs: {
   # Upstream's suite launches the full TUI and is timing/network sensitive.
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

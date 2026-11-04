@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [ libcap ];
 
   configureFlags = [

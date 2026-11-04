@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [ pkg-config ];
 
   buildInputs = [ libusb1 ];
+
   meta = {
     description = "Tooling for working with the FEL mode on Allwinner SoCs";
     homepage = "https://github.com/xboot/xfel";

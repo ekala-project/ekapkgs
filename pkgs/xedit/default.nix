@@ -35,6 +35,7 @@ stdenv.mkDerivation rec {
     pkg-config
     util-macros
   ];
+
   buildInputs = [
     libx11
     libxaw

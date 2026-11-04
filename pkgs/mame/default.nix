@@ -37,6 +37,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "mame";
   version = "0.289";
+
   srcVersion = builtins.replaceStrings [ "." ] [ "" ] finalAttrs.version;
 
   src = fetchFromGitHub {
@@ -200,7 +201,9 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
+
   versionCheckProgramArg = "-h";
 
   passthru.updateScript = writeScript "mame-update-script" ''

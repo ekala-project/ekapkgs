@@ -9,7 +9,6 @@ python3Packages.buildPythonApplication rec {
   pname = "mypy";
   version = "1.20.1";
   pyproject = true;
-
   disabled = python3Packages.isPyPy;
 
   src = fetchFromGitHub {

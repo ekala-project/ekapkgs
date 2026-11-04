@@ -42,6 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
   env = lib.optionalAttrs stdenv.cc.isGNU {
     NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
   };
+
   installCheckPhase = ''
     $out/bin/gphotofs --help > /dev/null
   '';

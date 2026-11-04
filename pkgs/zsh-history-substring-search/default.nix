@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   installPhase = ''
     install -D zsh-history-substring-search.plugin.zsh \
       "$out/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.plugin.zsh"

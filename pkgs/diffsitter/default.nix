@@ -34,6 +34,7 @@ rustPlatform.buildRustPackage rec {
   cargoHash = "sha256-t/XF35nQMTbi7HpW+JkemMEYptTI/Kg7tXLIQmLxQxw=";
 
   buildNoDefaultFeatures = true;
+
   buildFeatures = [
     "dynamic-grammar-libs"
   ];

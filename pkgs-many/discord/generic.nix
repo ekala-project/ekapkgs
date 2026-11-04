@@ -163,6 +163,7 @@ if stdenv.hostPlatform.isLinux then
     ];
 
     strictDeps = true;
+
     dontUnpack = true;
 
     libPath = lib.makeLibraryPath (
@@ -248,8 +249,14 @@ if stdenv.hostPlatform.isLinux then
             "''${gappsWrapperArgs[@]}" \
             --add-flags "\''${NIXOS_OZONE_WL:+\''${WAYLAND_DISPLAY:+--ozone-platform=wayland --enable-features=WaylandWindowDecorations --enable-wayland-ime=true}}" \
             ${lib.optionalString withTTS ''
-              --run 'if [[ "''${NIXOS_SPEECH:-default}" != "False" ]]; then NIXOS_SPEECH=True; else unset NIXOS_SPEECH; fi' \
-              --add-flags "\''${NIXOS_SPEECH:+--enable-speech-dispatcher}" \
+                        --run 'if [[ "''${NIXOS_SPEECH:-default}" != "False" ]];
+
+              then NIXOS_SPEECH=True;
+
+              else unset NIXOS_SPEECH;
+
+              fi' \
+                        --add-flags "\''${NIXOS_SPEECH:+--enable-speech-dispatcher}" \
             ''} \
             ${lib.optionalString enableAutoscroll "--add-flags \"--enable-blink-features=MiddleClickAutoscroll\""} \
             --prefix XDG_DATA_DIRS : "${gtk3}/share/gsettings-schemas/${gtk3.name}/" \

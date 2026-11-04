@@ -18,6 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ python3 ];
+
   nativeBuildInputs = [
     python3.pkgs.wrapPython
     installShellFiles

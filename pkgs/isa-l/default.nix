@@ -35,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
       "-DVERSION=\"${finalAttrs.version}\""
     ];
   };
+
   cmakeEntries = {
     ISAL_BUILD_IGZIP_CLI = true;
   };

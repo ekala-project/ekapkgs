@@ -20,10 +20,12 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     pkg-config
     installShellFiles
   ];
+
   buildInputs = [ libbsd ];
 
   postPatch = ''

@@ -51,11 +51,13 @@ stdenv.mkDerivation (finalAttrs: {
     perl
     unzip
   ]; # sdl2-compat for `sdl2-config`.
+
   buildInputs = [
     ncurses
     sdl2-compat
   ]
   ++ (lib.optional stdenv.hostPlatform.isLinux alsa-lib);
+
   runtimeDependencies = [
     ncurses
     sdl2-compat

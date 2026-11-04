@@ -25,6 +25,7 @@ buildGoModule (finalAttrs: {
   ];
 
   doInstallCheck = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
+
   installCheckPhase = ''
     runHook preInstallCheck
     if [[ $($out/bin/dasel version) == "${finalAttrs.version}" ]]; then

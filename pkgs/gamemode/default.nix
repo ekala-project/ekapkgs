@@ -77,6 +77,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   nativeCheckInputs = [
     appstream
   ];

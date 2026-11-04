@@ -22,6 +22,7 @@ stdenv.mkDerivation {
     mkdir -p $out/bin
     cp bin/xmlformat.pl $out/bin/xmlformat
   '';
+
   meta = {
     description = "Configurable formatter (or 'pretty-printer') for XML documents";
     homepage = "https://github.com/someth2say/xmlformat";

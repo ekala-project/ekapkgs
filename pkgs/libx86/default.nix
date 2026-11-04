@@ -7,10 +7,12 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "libx86";
   version = "1.1";
+
   src = fetchurl {
     url = "https://www.codon.org.uk/~mjg59/libx86/downloads/libx86-${finalAttrs.version}.tar.gz";
     sha256 = "0j6h6bc02c6qi0q7c1ncraz4d1hkm5936r35rfsp4x1jrc233wav";
   };
+
   patches = [
     ./constants.patch
     ./non-x86.patch

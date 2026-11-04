@@ -7,6 +7,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "prettyping";
   version = "1.1.0";
+
   src = fetchFromGitHub {
     owner = "denilsonsa";
     repo = "prettyping";

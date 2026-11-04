@@ -32,6 +32,7 @@ stdenv.mkDerivation {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = lib.optional stdenv.hostPlatform.isLinux libuuid;
 
   meta = {

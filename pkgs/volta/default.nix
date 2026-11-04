@@ -39,6 +39,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   nativeInstallCheckInputs = [
   ];
+
   # Tries to create /var/empty/.volta as $HOME is not writable
   doInstallCheck = !stdenv.hostPlatform.isDarwin;
 

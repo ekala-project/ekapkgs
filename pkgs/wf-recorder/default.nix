@@ -35,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     wayland-scanner
     scdoc
   ];
+
   buildInputs = [
     wayland
     wayland-protocols

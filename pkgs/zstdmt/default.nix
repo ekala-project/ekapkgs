@@ -45,7 +45,9 @@ stdenv.mkDerivation (finalAttrs: {
       };
 
   cmakeDir = "../build/cmake";
+
   dontUseCmakeBuildDir = true;
+
   preConfigure = ''
     mkdir -p build_ && cd $_
   '';

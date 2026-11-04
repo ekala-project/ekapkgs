@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   buildInputs = [ freetype ];
+
   nativeBuildInputs = [ perl ];
 
   patches = [

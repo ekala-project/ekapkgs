@@ -26,6 +26,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildInputs = [ sqlite ];
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   passthru.updateScript = nix-update-script { };

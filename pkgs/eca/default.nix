@@ -47,6 +47,7 @@ stdenv.mkDerivation {
   '';
 
   dontBuild = true;
+
   dontStrip = stdenv.hostPlatform.isDarwin;
 
   installPhase = ''
@@ -56,6 +57,7 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

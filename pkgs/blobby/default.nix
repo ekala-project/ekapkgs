@@ -32,6 +32,7 @@ stdenv.mkDerivation {
     pkg-config
     zip
   ];
+
   buildInputs = [
     sdl2-compat
     SDL2_image

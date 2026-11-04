@@ -23,7 +23,9 @@ stdenv.mkDerivation (finalAttrs: {
 
   # OptiPNG does not like --static, --build or --host
   dontDisableStatic = true;
+
   dontAddStaticConfigureFlags = true;
+
   configurePlatforms = [ ];
 
   configureFlags = [

@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3
     makeWrapper
   ];
+
   buildInputs = [
     glib
     glib-networking

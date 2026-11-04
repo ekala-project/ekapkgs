@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     automake
     pkg-config
   ];
+
   buildInputs = [
     cairo
     pango

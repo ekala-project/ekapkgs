@@ -13,6 +13,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "ntk";
   version = "1.3.1001";
+
   src = fetchFromGitHub {
     owner = "linuxaudio";
     repo = "ntk";
@@ -24,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     waf.hook
   ];
+
   buildInputs = [
     cairo
     libjpeg

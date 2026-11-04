@@ -36,9 +36,11 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   unpackCmd = "unzstd $curSrc -o $(stripHash $curSrc)";
+
   sourceRoot = ".";
 
   strictDeps = true;
+
   nativeBuildInputs = [
     installShellFiles
     zstd

@@ -64,6 +64,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   patches = [ ./find-headers.patch ];
+
   setupHook = ./setup-hook.sh;
 
   postFixup = ''

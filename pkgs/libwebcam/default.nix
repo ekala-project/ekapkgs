@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     udevCheckHook
   ];
+
   buildInputs = [ libxml2 ];
 
   postPatch = ''

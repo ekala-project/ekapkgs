@@ -34,11 +34,13 @@ stdenv.mkDerivation (finalAttrs: {
   cmakeEntries = {
     CMAKE_POLICY_VERSION_MINIMUM = "3.10";
   };
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
     pkg-config
   ];
+
   buildInputs = [
     zlib
     libpng

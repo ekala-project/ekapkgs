@@ -55,6 +55,7 @@ stdenv.mkDerivation rec {
     polkit.bin
     adwaita-icon-theme
   ];
+
   nativeBuildInputs = [
     gettext
     pkg-config

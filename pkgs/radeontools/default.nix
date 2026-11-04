@@ -21,6 +21,7 @@ stdenv.mkDerivation rec {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [ libpciaccess ];
 
   meta = {

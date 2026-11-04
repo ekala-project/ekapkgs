@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   depsBuildBuild = [ buildPackages.stdenv.cc ];
+
   nativeBuildInputs = [ perl ];
 
   buildInputs = [

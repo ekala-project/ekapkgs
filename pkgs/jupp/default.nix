@@ -9,6 +9,7 @@
 stdenv.mkDerivation rec {
   pname = "jupp";
   version = "41";
+
   srcName = "joe-3.1${pname}${version}";
 
   src = fetchurl {

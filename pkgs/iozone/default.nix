@@ -34,6 +34,7 @@ stdenv.mkDerivation rec {
   };
 
   preBuild = "pushd src/current";
+
   postBuild = "popd";
 
   buildFlags = target;

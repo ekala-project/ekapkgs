@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   dontConfigure = true;
+
   dontBuild = true;
 
   # Upstream doesn't provide a setup.py or alike, so we follow:

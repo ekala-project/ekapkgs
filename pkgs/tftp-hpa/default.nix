@@ -9,6 +9,7 @@
 stdenv.mkDerivation {
   pname = "tftp-hpa";
   version = "5.2-unstable-2024-06-10";
+
   src = fetchgit {
     url = "git://git.kernel.org/pub/scm/network/tftp/tftp-hpa.git";
     hash = "sha256-lTMldYO/cZdLj0UjOPPBHfYf2GBG0O+5lhP9ikqn3tY=";
@@ -30,16 +31,16 @@ stdenv.mkDerivation {
     automake
   ];
 
+  passthru = {
+    updateInfo = {
+      downloadPage = "https://www.kernel.org/pub/software/network/tftp/";
+    };
+  };
+
   meta = {
     description = "TFTP tools - a lot of fixes on top of BSD TFTP";
     platforms = lib.platforms.linux;
     license = lib.licenses.bsd3;
     homepage = "https://www.kernel.org/pub/software/network/tftp/";
-  };
-
-  passthru = {
-    updateInfo = {
-      downloadPage = "https://www.kernel.org/pub/software/network/tftp/";
-    };
   };
 }

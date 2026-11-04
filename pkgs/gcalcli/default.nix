@@ -18,6 +18,7 @@ python3Packages.buildPythonApplication rec {
     tag = "v${version}";
     hash = "sha256-FU1EHLQ+/2sOGeeGwONsrV786kHTFfMel7ocBcCe+rI=";
   };
+
   postPatch = lib.optionalString stdenv.hostPlatform.isLinux ''
     substituteInPlace gcalcli/argparsers.py \
       --replace-fail "'notify-send" "'${lib.getExe libnotify}"

@@ -33,6 +33,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   env.OPENSSL_NO_VENDOR = 1;
+
   buildInputs = [
     curl
     zlib

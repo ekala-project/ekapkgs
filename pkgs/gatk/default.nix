@@ -10,12 +10,14 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "gatk";
   version = "4.7.0.0";
+
   src = fetchzip {
     url = "https://github.com/broadinstitute/gatk/releases/download/${finalAttrs.version}/gatk-${finalAttrs.version}.zip";
     sha256 = "sha256-tOiI2O2Ey5fz/I+FbiqqbnXcZXnJ5k0efI7MQ1tRie0=";
   };
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [ python3 ];
 
   dontUnpack = true;
@@ -26,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     install -m755 -D $src/gatk-package-${finalAttrs.version}-spark.jar $out/bin/
     install -m755 -D $src/gatk $out/bin/
   '';
+
   postFixup = ''
     wrapProgram $out/bin/gatk --prefix PATH : ${lib.makeBinPath [ java ]}
   '';

@@ -16,7 +16,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [ libiconv ];
+
   patches = [
     ./ptrdiff.patch
     ./c++17.patch

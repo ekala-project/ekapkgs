@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [ boost ];
 
   # Required by RQuantLib, may be beneficial for others too
@@ -37,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
   postInstall = ''
     cp ./quantlib-config $out/bin/
   '';
+
   meta = {
     description = "Free/open-source library for quantitative finance";
     homepage = "https://quantlib.org";

@@ -15,6 +15,7 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = null;
+
   subPackages = [ "." ];
 
   ldflags = [

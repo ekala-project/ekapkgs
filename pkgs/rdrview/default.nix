@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     curl
     libseccomp
   ];
+
   nativeBuildInputs = [ installShellFiles ];
 
   installPhase = ''
@@ -39,5 +40,4 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.asl20;
     mainProgram = "rdrview";
   };
-
 })

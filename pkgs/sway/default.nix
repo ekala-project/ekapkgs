@@ -54,6 +54,7 @@ symlinkJoin {
   paths = (optional withBaseWrapper baseWrapper) ++ [ sway ];
 
   strictDeps = false;
+
   nativeBuildInputs = [ makeWrapper ] ++ (optional withGtkWrapper gtk3.wrapGAppsHook);
 
   buildInputs = optionals withGtkWrapper [

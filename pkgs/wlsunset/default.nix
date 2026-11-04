@@ -23,9 +23,11 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   depsBuildBuild = [
     pkg-config
   ];
+
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook
@@ -34,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     wayland-scanner
     scdoc
   ];
+
   buildInputs = [
     wayland
     wayland-protocols

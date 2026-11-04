@@ -8,6 +8,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "ladspa-sdk";
   version = "1.17";
+
   src = fetchurl {
     url = "https://www.ladspa.org/download/ladspa_sdk_${finalAttrs.version}.tgz";
     hash = "sha256-J9JPJ55Lgb0X7L3MOOTEKZG7OIgmwLIABnzg61nT2ls=";

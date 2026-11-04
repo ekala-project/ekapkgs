@@ -18,6 +18,7 @@ stdenv.mkDerivation {
     rev = "3547c7691742c6eaa31f8402e0ccbb81387c1b99"; # there are no tags/releases
     sha256 = "0y0n1ybij3yg9lfgzcwfmjz1sjg913zcqrv391xx83dm0j80sdpb";
   };
+
   patches = [
     # Pull patch pending upstream inclusion for -fno-common toolchain
     # support: https://github.com/antirez/hping/pull/64

@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     doxygen
     pkg-config
   ];
+
   buildInputs = [
     bzip2
     fuse

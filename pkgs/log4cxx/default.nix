@@ -35,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     db
     expat
   ];
+
   nativeBuildInputs = [
     cmake.configurePhaseHook
     libtool

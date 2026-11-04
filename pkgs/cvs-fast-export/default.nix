@@ -25,10 +25,12 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     makeWrapper
     asciidoc
   ];
+
   buildInputs = [ python3 ];
 
   postPatch = ''

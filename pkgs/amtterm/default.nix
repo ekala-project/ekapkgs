@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
       gtk3
       vte
     ];
+
   nativeBuildInputs = [
     makeWrapper
     pkg-config

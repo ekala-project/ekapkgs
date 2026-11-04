@@ -38,7 +38,9 @@ buildGoModule (finalAttrs: {
   };
 
   modRoot = "backend";
+
   subPackages = [ "cmd/server" ];
+
   inherit vendorHash;
 
   frontend = stdenvNoCC.mkDerivation (frontendAttrs: {
@@ -83,6 +85,7 @@ buildGoModule (finalAttrs: {
   });
 
   tags = [ "embed" ];
+
   env.CGO_ENABLED = 0;
 
   ldflags = [
@@ -110,10 +113,12 @@ buildGoModule (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook
   ];
+
   versionCheckProgramArg = [ "--version" ];
 
   meta = {

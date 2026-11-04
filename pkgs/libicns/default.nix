@@ -24,6 +24,7 @@ stdenv.mkDerivation {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [
     libpng
     openjpeg

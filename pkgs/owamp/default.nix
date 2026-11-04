@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoconf
     automake
   ];
+
   buildInputs = [ mandoc ];
 
   preConfigure = ''

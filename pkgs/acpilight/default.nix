@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     udevCheckHook
   ];
+
   doInstallCheck = true;
 
   meta = {

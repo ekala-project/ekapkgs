@@ -53,8 +53,11 @@ let
     '';
 
     dontFixup = true;
+
     outputHash = "sha256-ZJpNcIIYWV0lrBtbYwlwFSbuP1T84OtSb2kUukJJdeo=";
+
     outputHashAlgo = "sha256";
+
     outputHashMode = "recursive";
   };
 in

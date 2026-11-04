@@ -17,6 +17,7 @@ stdenv.mkDerivation rec {
   };
 
   buildInputs = [ zlib ];
+
   nativeBuildInputs = [
     perl
     python3

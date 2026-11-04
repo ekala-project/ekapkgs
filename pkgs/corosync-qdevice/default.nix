@@ -49,8 +49,11 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeInstallCheckInputs = [ versionCheckHook ];
+
   versionCheckProgram = "${placeholder "out"}/bin/corosync-qnetd";
+
   versionCheckProgramArg = "-v";
+
   doInstallCheck = true;
 
   meta = {

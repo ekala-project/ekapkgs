@@ -41,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     libxslt
   ];
+
   buildInputs = [
     zlib
     readline

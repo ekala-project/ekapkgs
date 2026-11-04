@@ -66,6 +66,7 @@ let
     inherit src version;
 
     pnpmRoot = "sticker-creator";
+
     pnpmWorkspaces = [ "signal-art-creator" ];
 
     pnpmDeps = fetchPnpmDeps {
@@ -86,6 +87,7 @@ let
     };
 
     strictDeps = true;
+
     nativeBuildInputs = [
       nodejs
       pnpmConfigHook

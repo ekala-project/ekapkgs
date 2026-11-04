@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     flex
     pkg-config
   ];
+
   buildInputs = [
     gd
     libjpeg
@@ -36,6 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   preCheck = ''
     sed -i -e "s|#!/bin/bash|#!${runtimeShell}|" test/renderercheck.sh
   '';

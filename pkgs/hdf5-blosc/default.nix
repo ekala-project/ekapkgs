@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [
     c-blosc
     hdf5
@@ -56,6 +57,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   doCheck = true;
+
   meta = {
     description = "Filter for HDF5 that uses the Blosc compressor";
     homepage = "https://github.com/Blosc/hdf5-blosc";

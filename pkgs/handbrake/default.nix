@@ -308,8 +308,11 @@ stdenv.mkDerivation rec {
 
   # meson/ninja are used only for the subprojects, not the toplevel
   dontUseMesonConfigure = true;
+
   dontUseMesonInstall = true;
+
   dontUseNinjaBuild = true;
+
   dontUseNinjaInstall = true;
 
   makeFlags = [ "--directory=build" ];

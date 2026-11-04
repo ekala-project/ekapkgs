@@ -11,18 +11,22 @@
 stdenv.mkDerivation {
   pname = "libilbm";
   version = "0-unstable-2024-03-02";
+
   src = fetchFromGitHub {
     owner = "svanderburg";
     repo = "libilbm";
     rev = "586f5822275ef5780509a851cb90c7407b2633d9";
     hash = "sha256-EcsrspL/N40yFE15UFWGienpJHhoq1zd8zZe6x4nK6o=";
   };
+
   buildInputs = [ libiff ];
+
   nativeBuildInputs = [
     autoreconfHook
     pkg-config
     help2man
   ];
+
   meta = {
     description = "Parser for the ILBM: IFF Interleaved BitMap format";
     longDescription = ''

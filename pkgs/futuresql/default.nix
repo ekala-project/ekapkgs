@@ -19,7 +19,9 @@ stdenv.mkDerivation rec {
     cmake.configurePhaseHook
     kdePackages.extra-cmake-modules
   ];
+
   buildInputs = [ qtbase ];
+
   cmakeFlags = [ "-DQT_MAJOR_VERSION=6" ];
 
   # a library, nothing to wrap

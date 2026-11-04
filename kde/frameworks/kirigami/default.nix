@@ -35,6 +35,7 @@ stdenv.mkDerivation {
   ];
 
   dontUnpack = true;
+
   dontWrapQtApps = true;
 
   passthru = {

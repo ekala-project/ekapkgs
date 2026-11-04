@@ -25,6 +25,7 @@ stdenv.mkDerivation {
   '';
 
   buildInputs = [ ncurses ];
+
   nativeBuildInputs = [
     autoreconfHook
     flex

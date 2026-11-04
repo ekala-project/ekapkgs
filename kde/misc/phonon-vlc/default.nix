@@ -15,6 +15,7 @@ mkKdeDerivation rec {
   };
 
   extraNativeBuildInputs = [ qttools ];
+
   extraBuildInputs = [ libvlc ];
 
   cmakeFlags = [

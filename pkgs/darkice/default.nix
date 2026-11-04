@@ -25,12 +25,14 @@ stdenv.mkDerivation (finalAttrs: {
     tag = "v${finalAttrs.version}";
     sha256 = "sha256-THsw7N80hkcKQmU3spUhTEuCHbGw+pkh3MPp5Isnk7c=";
   };
+
   sourceRoot = "source/darkice/trunk";
 
   nativeBuildInputs = [
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [
     libopus
     libvorbis

@@ -17,8 +17,11 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ python3 ];
+
   nativeBuildInputs = [ python3 ];
+
   dontBuild = true;
+
   strictDeps = true;
 
   installPhase = ''
