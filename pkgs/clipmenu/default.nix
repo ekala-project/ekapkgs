@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   makeFlags = [ "PREFIX=$(out)" ];
+
   nativeBuildInputs = [
     makeWrapper
     xsel

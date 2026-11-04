@@ -16,6 +16,7 @@ buildGoModule (finalAttrs: {
   };
 
   proxyVendor = true;
+
   vendorHash = "sha256-eJ//34o+bHRLYxukPJsOK9VspeMDBHeiz2nB2GQLQD0=";
 
   subPackages = [ "nats" ];
@@ -25,11 +26,13 @@ buildGoModule (finalAttrs: {
     "-w"
     "-X=main.version=${finalAttrs.version}"
   ];
+
   preCheck = ''
     # Remove tests that depend on CLI output
     substituteInPlace internal/asciigraph/asciigraph_test.go \
       --replace-fail "TestPlot" "SkipPlot"
   '';
+
   meta = {
     description = "NATS Command Line Interface";
     homepage = "https://github.com/nats-io/natscli";

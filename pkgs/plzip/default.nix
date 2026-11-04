@@ -10,6 +10,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "plzip";
   version = "1.13";
+
   outputs = [
     "out"
     "man"
@@ -25,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     lzip
     texinfo
   ];
+
   buildInputs = [ lzlib ];
 
   doCheck = true;

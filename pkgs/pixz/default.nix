@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoconf
     automake
   ];
+
   buildInputs = [
     libtool
     asciidoc
@@ -34,15 +35,18 @@ stdenv.mkDerivation (finalAttrs: {
     libarchive
     xz
   ];
+
   preBuild = ''
     echo "XML_CATALOG_FILES='$XML_CATALOG_FILES'"
   '';
+
   src = fetchFromGitHub {
     owner = "vasi";
     repo = "pixz";
     tag = "v${finalAttrs.version}";
     sha256 = "163axxs22w7pghr786hda22mnlpvmi50hzhfr9axwyyjl9n41qs2";
   };
+
   preConfigure = ''
     ./autogen.sh
   '';

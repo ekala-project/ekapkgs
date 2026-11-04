@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ]
   ++ lib.optionals stdenv.hostPlatform.isDarwin [ makeWrapper ];
+
   buildInputs = [
     zlib
     bzip2

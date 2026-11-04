@@ -54,6 +54,7 @@ stdenv.mkDerivation (finalAttrs: {
     wrapProgram $out/bin/masscan \
       --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [ libpcap ]}"
   '';
+
   installCheckPhase = ''
     $out/bin/masscan --selftest
   '';

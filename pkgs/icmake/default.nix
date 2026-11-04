@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [ gcc ];
 
   preConfigure = ''

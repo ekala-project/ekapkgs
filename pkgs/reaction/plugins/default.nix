@@ -18,6 +18,7 @@
           patches
           cargoHash
           ;
+
         buildAndTestSubdir = "plugins/${name}";
 
         meta = {

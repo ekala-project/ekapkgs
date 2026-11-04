@@ -24,8 +24,10 @@ buildGoModule (finalAttrs: {
   ];
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
   ];
+
   meta = {
     changelog = "https://github.com/ashish0kumar/tint/releases/tag/v${finalAttrs.version}";
     description = "Command-line tool to recolor images using theme palettes";

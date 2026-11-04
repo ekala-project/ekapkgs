@@ -59,6 +59,7 @@ in
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "lutris";
   version = "0.5.22";
+  format = "other";
 
   src = fetchFromGitHub {
     owner = "lutris";
@@ -66,8 +67,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-4mNknvfJQJEPZjQoNdKLQcW4CI93D6BUDPj8LtD940A=";
   };
-
-  format = "other";
 
   nativeBuildInputs = [
     appstream-glib

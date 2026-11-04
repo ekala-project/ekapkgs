@@ -33,6 +33,7 @@ stdenv.mkDerivation {
   ];
 
   depsBuildBuild = [ pkg-config ];
+
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook
@@ -41,6 +42,7 @@ stdenv.mkDerivation {
     makeWrapper
     wayland-scanner
   ];
+
   buildInputs = [
     cairo
     pango

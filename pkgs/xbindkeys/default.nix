@@ -11,6 +11,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "xbindkeys";
   version = "1.8.7";
+
   src = fetchurl {
     url = "https://www.nongnu.org/xbindkeys/xbindkeys-${finalAttrs.version}.tar.gz";
     sha256 = "1wl2vc5alisiwyk8m07y1ryq8w3ll9ym83j27g4apm4ixjl8d6x2";
@@ -23,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [
     libx11
     guile

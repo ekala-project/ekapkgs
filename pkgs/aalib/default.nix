@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     "man"
     "info"
   ];
+
   setOutputFlags = false;
 
   patches = [

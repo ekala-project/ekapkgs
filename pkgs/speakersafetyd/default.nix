@@ -25,6 +25,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     pkg-config
     udevCheckHook
   ];
+
   buildInputs = [ alsa-lib ];
 
   postPatch = ''
@@ -46,6 +47,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   dontCargoInstall = true;
+
   doInstallCheck = true;
 
   meta = {

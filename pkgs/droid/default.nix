@@ -60,6 +60,7 @@ stdenv.mkDerivation {
   ];
 
   dontUnpack = true;
+
   dontStrip = true;
 
   installPhase = ''
@@ -73,6 +74,7 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

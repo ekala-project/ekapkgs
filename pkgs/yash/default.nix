@@ -19,11 +19,15 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     asciidoc
     gettext
   ];
+
   buildInputs = [ ncurses ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ gettext ];
+
+  passthru.shellPath = "/bin/yash";
 
   meta = {
     homepage = "https://yash.osdn.jp/index.html.en";
@@ -32,6 +36,4 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
   };
-
-  passthru.shellPath = "/bin/yash";
 })

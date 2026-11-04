@@ -44,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxrandr
     libbsd
   ];
+
   meta = {
     homepage = "https://github.com/resurrecting-open-source-projects/scrot";
     description = "Command-line screen capture utility";

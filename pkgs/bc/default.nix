@@ -14,6 +14,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "bc";
   version = "1.08.2";
+
   src = fetchurl {
     url = "mirror://gnu/bc/bc-${finalAttrs.version}.tar.lz";
     hash = "sha256-eeMeAiqEsx3YCYFQY9S46lkLQJY3pSxQ7J9Cwr8zJxE=";
@@ -22,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   configureFlags = [ "--with-readline" ];
 
   depsBuildBuild = [ buildPackages.stdenv.cc ];
+
   nativeBuildInputs = [
     autoreconfHook
     ed
@@ -31,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     buildPackages.readline
     buildPackages.ncurses
   ];
+
   buildInputs = [
     readline
     flex

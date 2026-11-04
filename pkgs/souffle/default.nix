@@ -60,6 +60,7 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
     perl
   ];
+
   buildInputs = [
     bash-completion
     ncurses
@@ -68,6 +69,7 @@ stdenv.mkDerivation (finalAttrs: {
     libffi
     python3
   ];
+
   # these propagated inputs are needed for the compiled Souffle mode to work,
   # since generated compiler code uses them. TODO: maybe write a g++ wrapper
   # that adds these so we can keep the propagated inputs clean?

@@ -43,7 +43,9 @@ stdenv.mkDerivation (finalAttrs: {
   ++ (lib.lists.optional (rtl-sdr != null) "RTLSDR=yes");
 
   doCheck = true;
+
   checkTarget = "cprtest";
+
   # TODO there is a crctests target in Make, it describes how to compile ./crctests, but doesn't run
   # it. Compilation also fails with:
   #

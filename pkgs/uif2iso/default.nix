@@ -26,11 +26,13 @@ stdenv.mkDerivation {
   ];
 
   nativeBuildInputs = [ unzip ];
+
   buildInputs = [ zlib ];
 
   installPhase = ''
     make -C . prefix="$out" install;
   '';
+
   meta = {
     description = "Tool for converting single/multi part UIF image files to ISO";
     homepage = "http://aluigi.org/mytoolz.htm#uif2iso";

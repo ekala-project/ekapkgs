@@ -40,6 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     ninja
   ];
+
   buildInputs = [
     netcdf
     hdf5
@@ -47,7 +48,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   enableParallelChecking = false;
+
   preCheck = ''
     export HDF5_PLUGIN_PATH=${netcdf}/lib/hdf5-plugins
   '';

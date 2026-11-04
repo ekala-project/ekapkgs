@@ -66,6 +66,7 @@ in
 stdenv.mkDerivation (finalAttrs: {
   pname = "inkscape";
   version = "1.4.4";
+
   outputs = [
     "out"
     "man"

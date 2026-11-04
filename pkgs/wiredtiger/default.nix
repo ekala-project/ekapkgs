@@ -45,6 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   env.NIX_CFLAGS_COMPILE = "-Wno-array-bounds";
+
   meta = {
     homepage = "https://source.wiredtiger.com";
     description = "High performance, scalable, NoSQL, extensible platform for data management";

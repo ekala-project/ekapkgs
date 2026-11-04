@@ -14,6 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-6qmoAW9jm7xMRHZUMQLpe0N+UeVnQP8dC4+Iq+d5Eaw=";
   };
+
   meta = {
     homepage = "https://roy.marples.name/projects/parpd";
     changelog = "https://github.com/NetworkConfiguration/parpd/releases/tag/v${finalAttrs.version}";

@@ -23,6 +23,7 @@ buildGoModule (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-6Txk4AHiykCqiHoLqBfoQmeFQjLP8k5xiFtGF1SdWMM=";
   };
+
   vendorHash = "sha256-pgL25vTwQcpwljwqEKdUar8sjJS8YYPWpBBCnGh08+o=";
 
   nativeBuildInputs = [ installShellFiles ];

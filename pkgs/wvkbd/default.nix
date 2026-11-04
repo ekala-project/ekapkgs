@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     scdoc
     wayland-scanner
   ];
+
   buildInputs = [
     cairo
     glib
@@ -37,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     pango
     wayland
   ];
+
   installFlags = [ "PREFIX=$(out)" ];
 
   strictDeps = true;

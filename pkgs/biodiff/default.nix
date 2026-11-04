@@ -22,6 +22,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildInputs = lib.optional (wfa2-lib != null) wfa2-lib;
 
   buildNoDefaultFeatures = true;
+
   buildFeatures = lib.optional (wfa2-lib != null) "wfa2";
 
   meta = {

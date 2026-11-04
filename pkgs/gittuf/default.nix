@@ -25,6 +25,7 @@ buildGoModule rec {
     git
     openssh
   ];
+
   checkFlags = [
     "-skip=TestLoadRepository"
     "-skip=TestSSH"

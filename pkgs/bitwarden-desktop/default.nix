@@ -65,13 +65,16 @@ buildNpmPackage rec {
   inherit nodejs;
 
   makeCacheWritable = true;
+
   npmFlags = [
     "--engine-strict"
     "--legacy-peer-deps"
   ];
 
   npmWorkspace = "apps/desktop";
+
   npmDepsFetcherVersion = 2;
+
   npmDepsHash = "sha256-JI5U4Q7zrF7UZXxVtsaJRJK6QAuLQuievd0z1/3GJfE=";
 
   cargoDeps = rustPlatform.fetchCargoVendor {
@@ -84,6 +87,7 @@ buildNpmPackage rec {
       ;
     hash = "sha256-m0b8HxCAh/Xk0rsQXtmJRX0Lq6tiu2SZTxHDTXgy/uA=";
   };
+
   cargoRoot = "apps/desktop/desktop_native";
 
   env.ELECTRON_SKIP_BINARY_DOWNLOAD = "1";

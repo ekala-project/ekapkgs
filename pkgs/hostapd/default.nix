@@ -18,6 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     libnl
     openssl
@@ -114,6 +115,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   preInstall = "mkdir -p $out/bin";
+
   postInstall = ''
     install -vD hostapd.8 -t $man/share/man/man8
     install -vD hostapd_cli.1 -t $man/share/man/man1

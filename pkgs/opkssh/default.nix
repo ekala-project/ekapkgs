@@ -18,6 +18,7 @@ buildGoModule (finalAttrs: {
   ldflags = [ "-X main.Version=${finalAttrs.version}" ];
 
   vendorHash = "sha256-BmU/8Y6CweVnOeHftQhacKKLccQk1uNljzHe+/zkUn4=";
+
   meta = {
     homepage = "https://github.com/openpubkey/opkssh";
     description = "Enables SSH to be used with OpenID Connect";

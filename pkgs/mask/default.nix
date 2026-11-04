@@ -40,6 +40,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     # requires swift which currently fails to build
     "--skip=swift"
   ];
+
   meta = {
     description = "CLI task runner defined by a simple markdown file";
     mainProgram = "mask";

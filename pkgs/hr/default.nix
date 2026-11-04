@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   dontBuild = true;
+
   installFlags = [
     "PREFIX=$(out)"
     "MANPREFIX=$(out)/share"

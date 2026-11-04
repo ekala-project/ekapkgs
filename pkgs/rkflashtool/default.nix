@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ libusb1 ];
+
   nativeBuildInputs = [ pkg-config ];
 
   installPhase = ''

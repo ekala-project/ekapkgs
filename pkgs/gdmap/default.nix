@@ -29,6 +29,7 @@ stdenv.mkDerivation {
     pkg-config
     gtk3.wrapGAppsHook
   ];
+
   buildInputs = [
     gtk3
     cairo

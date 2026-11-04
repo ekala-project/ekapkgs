@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   makeFlags = [
     "CC=${stdenv.cc.targetPrefix}c++"
   ];
+
   env.NIX_CFLAGS_COMPILE = "-Wno-error=format-security";
 
   installPhase = ''

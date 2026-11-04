@@ -66,7 +66,9 @@ gccStdenv.mkDerivation rec {
   ];
 
   doCheck = true;
+
   nativeCheckInputs = [ ctestCheckHook ];
+
   checkFlags = [
     "-R"
     # Only do tests that don't require downloading 120MB of testdata

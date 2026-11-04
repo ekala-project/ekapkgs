@@ -53,6 +53,7 @@ python3Packages.buildPythonApplication rec {
   '';
 
   strictDeps = false;
+
   dontWrapGApps = true;
 
   preFixup = ''

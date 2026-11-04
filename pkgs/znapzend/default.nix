@@ -14,11 +14,14 @@ let
   MojoLogClearable = perl.pkgs.buildPerlModule rec {
     pname = "Mojo-Log-Clearable";
     version = "1.001";
+
     src = fetchurl {
       url = "mirror://cpan/authors/id/D/DB/DBOOK/Mojo-Log-Clearable-${version}.tar.gz";
       hash = "sha256-guBqKdWemc4mC/xp77Wd7qeV2iRqY4wrQ5NRsHtsCnI=";
     };
+
     buildInputs = with perl.pkgs; [ ModuleBuildTiny ];
+
     propagatedBuildInputs = with perl.pkgs; [
       Mojolicious
       RoleTiny

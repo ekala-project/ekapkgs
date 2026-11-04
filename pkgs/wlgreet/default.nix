@@ -22,6 +22,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-ITo9qvcT5aOybWLV7kn9BZbux6uxx1RwRGWCGQYdZ2I=";
 
   nativeBuildInputs = [ autoPatchelfHook ];
+
   buildInputs = [ gcc-unwrapped ];
 
   runtimeDependencies = map lib.getLib [

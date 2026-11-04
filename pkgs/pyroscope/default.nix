@@ -19,6 +19,7 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = "sha256-gRuo2xKRC6iiX8wbI1B3rQtk4xJBq3eLM/H49DTtt3U=";
+
   proxyVendor = true;
 
   subPackages = [
@@ -36,10 +37,13 @@ buildGoModule (finalAttrs: {
   # We're overriding the version in 'ldFlags', so we should check that the
   # derivation 'version' string is found in 'pyroscope --version'.
   nativeInstallCheckInputs = [ versionCheckHook ];
+
   doInstallCheck = true;
+
   versionCheckProgram = "${placeholder "out"}/bin/${finalAttrs.meta.mainProgram}";
 
   nativeBuildInputs = [ installShellFiles ];
+
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd pyroscope \
       --bash <($out/bin/pyroscope completion bash) \

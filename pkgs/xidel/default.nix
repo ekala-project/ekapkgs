@@ -50,6 +50,7 @@ stdenv.mkDerivation {
   };
 
   nativeBuildInputs = [ fpc ];
+
   buildInputs = [ openssl ];
 
   env.NIX_LDFLAGS = toString [ "-lcrypto" ];

@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
     "devdoc"
   ];
+
   outputMan = "devdoc";
 
   propagatedBuildInputs = [

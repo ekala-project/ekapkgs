@@ -49,7 +49,9 @@ rustPlatform.buildRustPackage (finalAttrs: {
   env.ASSET_OUT_DIR = "target";
 
   doCheck = true;
+
   doInstallCheck = true;
+
   versionCheckProgramArg = "version";
 
   postInstall = ''

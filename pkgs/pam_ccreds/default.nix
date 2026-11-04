@@ -15,6 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
     url = "https://www.padl.com/download/pam_ccreds-${finalAttrs.version}.tar.gz";
     sha256 = "1h7zyg1b1h69civyvrj95w22dg0y7lgw3hq4gqkdcg35w1y76fhz";
   };
+
   patchPhase = ''
     sed 's/-o root -g root//' -i Makefile.in
   '';

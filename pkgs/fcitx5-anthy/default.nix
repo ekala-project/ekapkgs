@@ -28,6 +28,7 @@ stdenv.mkDerivation rec {
     pkg-config
     zstd
   ];
+
   buildInputs = [
     fcitx5
     anthy

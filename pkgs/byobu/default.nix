@@ -40,6 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   strictDeps = true;
 
   postPatch = ''

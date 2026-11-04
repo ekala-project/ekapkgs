@@ -18,6 +18,7 @@ stdenvNoCC.mkDerivation rec {
   makeFlags = [
     "PREFIX=$(out)"
   ];
+
   meta = {
     description = "Joypad autoconfig files";
     homepage = "https://www.libretro.com/";

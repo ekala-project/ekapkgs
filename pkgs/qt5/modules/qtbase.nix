@@ -226,6 +226,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   setOutputFlags = false;
+
   preConfigure = ''
     export LD_LIBRARY_PATH="$PWD/lib:$PWD/plugins/platforms''${LD_LIBRARY_PATH:+:}$LD_LIBRARY_PATH"
 
@@ -506,5 +507,4 @@ stdenv.mkDerivation (finalAttrs: {
     ];
     platforms = lib.platforms.linux;
   };
-
 })

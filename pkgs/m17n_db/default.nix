@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ gettext ];
+
   buildInputs = [
     gettext
     gawk

@@ -16,8 +16,11 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   dontPatch = true;
+
   dontBuild = true;
+
   dontConfigure = true;
+
   dontFixup = true;
 
   installPhase = ''

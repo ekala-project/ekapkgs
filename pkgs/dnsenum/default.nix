@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     NetWhoisIP
     WWWMechanize
   ];
+
   nativeBuildInputs = [ makeWrapper ];
 
   installPhase = ''

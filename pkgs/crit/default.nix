@@ -33,6 +33,7 @@ buildGoModule (finalAttrs: {
 
   # Preflight tests shell out to `git init`.
   nativeCheckInputs = [ git ];
+
   preCheck = ''
     export HOME=$(mktemp -d)
     git config --global user.email crit@example.com
@@ -47,6 +48,7 @@ buildGoModule (finalAttrs: {
   ];
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

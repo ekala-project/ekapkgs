@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     fribidi
     xkbutils
   ];
+
   nativeBuildInputs = [
     autoreconfHook
     pkg-config

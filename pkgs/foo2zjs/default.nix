@@ -73,6 +73,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   nativeCheckInputs = [ time ];
+
   doInstallCheck = true;
 
   preInstall = ''

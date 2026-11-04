@@ -29,11 +29,13 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     which
   ];
+
   buildInputs = [
     gtk3
     blas
     lapack
   ];
+
   meta = {
     homepage = "https://www.xnec2c.org/";
     description = "Graphical antenna simulation";

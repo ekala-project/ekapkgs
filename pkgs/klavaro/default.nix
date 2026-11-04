@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
     pkg-config
   ];
+
   buildInputs = [
     curl
     gtk3

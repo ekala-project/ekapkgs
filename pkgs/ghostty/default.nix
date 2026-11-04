@@ -99,6 +99,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   # Don't use the ekapkgs zig setup-hook phases since we need custom flags
   dontUseZigBuild = true;
+
   dontUseZigInstall = true;
 
   configurePhase = ''

@@ -21,7 +21,6 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "pitivi";
   version = "2023.03";
-
   pyproject = false;
 
   src = fetchurl {

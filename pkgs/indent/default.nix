@@ -39,8 +39,11 @@ stdenv.mkDerivation (finalAttrs: {
   makeFlags = [ "AR=${stdenv.cc.targetPrefix}ar" ];
 
   strictDeps = true;
+
   nativeBuildInputs = [ texinfo ];
+
   buildInputs = [ libintl ];
+
   depsBuildBuild = [ buildPackages.stdenv.cc ];
 
   env.NIX_CFLAGS_COMPILE = toString (

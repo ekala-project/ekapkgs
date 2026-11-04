@@ -38,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   preBuild = "mkdir -p $out";
+
   makeFlags = [ "prefix=$(out)" ];
 
   meta = {

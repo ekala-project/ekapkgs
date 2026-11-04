@@ -8,6 +8,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "getdata";
   version = "0.12.0";
+
   src = fetchFromGitHub {
     owner = "ketiltrout";
     repo = "getdata";
@@ -16,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [ libtool ];
 
   meta = {

@@ -32,11 +32,13 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     which
   ];
+
   buildInputs = [
     tpm2-tss
     glib
     dbus
   ];
+
   nativeCheckInputs = [ cmocka ];
 
   # Emulate the required behavior of ./bootstrap in the original

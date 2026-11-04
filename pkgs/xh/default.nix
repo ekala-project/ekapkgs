@@ -49,6 +49,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   postInstallCheck = ''
     $out/bin/xh --help > /dev/null
     $out/bin/xhs --help > /dev/null

@@ -16,6 +16,7 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = null;
+
   ldflags = [ "-X main.progVersion=${finalAttrs.version}" ];
 
   meta = {

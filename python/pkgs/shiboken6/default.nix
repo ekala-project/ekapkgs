@@ -19,7 +19,6 @@ in
 toPythonModule (
   stdenv'.mkDerivation (finalAttrs: {
     pname = "shiboken6";
-
     inherit (shiboken6-generator) version src;
 
     sourceRoot = "${finalAttrs.src.name}/sources/shiboken6";

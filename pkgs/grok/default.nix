@@ -37,6 +37,7 @@ stdenv.mkDerivation {
   };
 
   dontUnpack = true;
+
   dontStrip = true;
 
   nativeBuildInputs = [
@@ -64,6 +65,7 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

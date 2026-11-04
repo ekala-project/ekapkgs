@@ -30,7 +30,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   depsBuildBuild = [ pkg-config ];
+
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook
@@ -41,6 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     gtk3.wrapGAppsHook
     wayland-scanner
   ];
+
   buildInputs = [
     systemdMinimal
     pango

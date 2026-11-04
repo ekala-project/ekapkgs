@@ -13,6 +13,7 @@ buildGoModule (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-EVIT6au5B3wzb5xTc2o/sY7p3+tT5lWjlzQX5HdQNkA=";
   };
+
   vendorHash = null;
 
   # upstream disable CGO in release build
@@ -42,13 +43,16 @@ buildGoModule (finalAttrs: {
       ];
     in
     [ "-skip=^${builtins.concatStringsSep "$|^" skippedTests}$" ];
+
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
 
   postInstall = ''
     mv $out/bin/cmd $out/bin/diun
   '';
+
   meta = {
     description = "CLI application to receive notifications when a Docker image is updated on a Docker registry";
     homepage = "https://crazymax.dev/diun";

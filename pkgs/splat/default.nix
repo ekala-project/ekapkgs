@@ -64,5 +64,4 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.qsl.net/kd2bd/splat.html";
     platforms = lib.platforms.x86_64;
   };
-
 })

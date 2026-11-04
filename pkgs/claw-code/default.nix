@@ -26,6 +26,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     "--package"
     "rusty-claude-cli"
   ];
+
   cargoTestFlags = finalAttrs.cargoBuildFlags;
 
   # Upstream's test block is broken at this rev; the release binary compiles.
@@ -43,8 +44,11 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
+
   versionCheckProgramArg = "--version";
+
   # Upstream has no tagged release; the binary reports the workspace version,
   # not our 0-unstable-<date> derivation version.
   preVersionCheck = ''

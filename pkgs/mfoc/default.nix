@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [ libnfc ];
 
   meta = {

@@ -30,12 +30,14 @@ in
 stdenv.mkDerivation (finalAttrs: {
   version = "0.8.10";
   pname = "davix" + lib.optionalString enableThirdPartyCopy "-copy";
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
     pkg-config
     python3
   ];
+
   buildInputs = [
     curl
     libxml2

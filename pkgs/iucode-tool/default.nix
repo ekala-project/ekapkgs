@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = lib.optional stdenv.hostPlatform.isMusl argp-standalone;
 
   meta = {

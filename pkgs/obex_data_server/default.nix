@@ -21,10 +21,12 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     pkg-config
     dbus-glib # required for dbus-binding-tool
   ];
+
   buildInputs = [
     libusb-compat-0_1
     glib

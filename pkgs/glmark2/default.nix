@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   depsBuildBuild = [ pkg-config ];
+
   nativeBuildInputs = [
     pkg-config
     makeWrapper
@@ -38,6 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     wayland-scanner
   ];
+
   buildInputs = [
     libjpeg
     libpng

@@ -20,6 +20,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   env.RUSTFLAGS = "--cfg reqwest_unstable";
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     runHook preInstallCheck
     $out/bin/tgrab --help > /dev/null

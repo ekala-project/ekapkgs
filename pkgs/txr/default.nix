@@ -18,6 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [ libffi ];
 
   doCheck = true;
+
   checkTarget = "tests";
 
   postPatch = ''

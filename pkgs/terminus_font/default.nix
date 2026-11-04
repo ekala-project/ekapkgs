@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     "install-otb"
     "fontdir"
   ];
+
   enableParallelInstalling = false;
 
   meta = {

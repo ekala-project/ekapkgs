@@ -18,6 +18,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ openssl ];
 
   checkFlags = [ "--skip=tools::tests::download_and_install_binaries" ];

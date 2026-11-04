@@ -17,6 +17,7 @@ buildGoModule (finalAttrs: {
   };
 
   deleteVendor = true;
+
   vendorHash = "sha256-sHNP1YwnZYu0UfgLx5+gxJmesY8Brt7rr9cptlyk9Bk=";
 
   patches = [

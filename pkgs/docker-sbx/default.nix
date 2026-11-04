@@ -101,9 +101,13 @@ stdenvNoCC.mkDerivation {
       '';
 
   nativeInstallCheckInputs = [ versionCheckHook ];
+
   doInstallCheck = true;
+
   versionCheckProgramArg = "version";
+
   versionCheckKeepEnvironment = [ "HOME" ];
+
   preVersionCheck = "export HOME=$TMPDIR";
 
   meta = {

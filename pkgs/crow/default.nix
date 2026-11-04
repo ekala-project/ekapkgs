@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   propagatedBuildInputs = [ asio ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
@@ -35,9 +36,11 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   doCheck = true;
+
   nativeCheckInputs = [
     python3
   ];
+
   checkInputs = [
     catch2_3
   ];

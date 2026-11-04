@@ -18,6 +18,7 @@ buildGoModule (finalAttrs: {
   };
 
   proxyVendor = true;
+
   vendorHash = "sha256-+kSAupLQwTzJdgnhlqulEtRcDj9gqSq8uTnWNyDLZew=";
 
   subPackages = [ "cmd/sqlc" ];
@@ -35,6 +36,7 @@ buildGoModule (finalAttrs: {
       --fish <($out/bin/sqlc completion fish) \
       --zsh <($out/bin/sqlc completion zsh)
   '';
+
   meta = {
     description = "Generate type-safe code from SQL";
     homepage = "https://sqlc.dev/";

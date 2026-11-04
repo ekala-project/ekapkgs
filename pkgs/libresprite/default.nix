@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     fetchSubmodules = true;
     hash = "sha256-jXjrA859hR46Cp5qi6Z1C+hLWCUR7yGlASOGlTveeW8=";
   };
+
   patches = [
     # From https://github.com/LibreSprite/LibreSprite/pull/565
     ./cmake4.diff
@@ -43,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     # Nix provides libarchive directly via buildInputs.
     ./no-brew.patch
   ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

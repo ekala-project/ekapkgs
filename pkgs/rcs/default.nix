@@ -18,7 +18,9 @@ stdenv.mkDerivation rec {
   };
 
   ac_cv_path_ED = "${ed}/bin/ed";
+
   DIFF = "${diffutils}/bin/diff";
+
   DIFF3 = "${diffutils}/bin/diff3";
 
   disallowedReferences = lib.optionals (stdenv.hostPlatform != stdenv.buildPlatform) [

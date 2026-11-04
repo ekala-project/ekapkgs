@@ -17,11 +17,14 @@ stdenv.mkDerivation (finalAttrs: {
     tag = "v${finalAttrs.version}";
     sha256 = "17ckkxfzbqvvfdnh10if4aqdcq98q3vl6dn1v6f4lhr4ifnyjdlk";
   };
+
   buildInputs = [ ncurses ];
+
   env.NIX_CFLAGS_COMPILE = toString [
     "-Wno-error=stringop-overflow"
     "-Wno-error=stringop-truncation"
   ];
+
   patches = [
     # gcc7 compat
     (fetchpatch {

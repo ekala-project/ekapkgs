@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     autoconf
   ];
+
   buildInputs = [
     libpcap
     ncurses

@@ -16,16 +16,19 @@ in
 stdenv.mkDerivation (finalAttrs: {
   pname = "agg";
   version = "2.5";
+
   src = fetchurl {
     url = "https://www.antigrain.com/agg-${finalAttrs.version}.tar.gz";
     sha256 = "07wii4i824vy9qsvjsgqxppgqmfdxq0xa87i5yk53fijriadq7mb";
   };
+
   nativeBuildInputs = [
     pkg-config
     autoconf
     automake
     libtool
   ];
+
   buildInputs = [
     freetype
     sdl12-compat

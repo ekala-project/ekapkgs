@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
   env.NIX_LDFLAGS = lib.optionalString stdenv.hostPlatform.isDarwin "-largp";
 
   setupHook = ./setup-hook.sh;
+
   meta = {
     description = "Free utility to extract files from RAR archives";
     longDescription = ''

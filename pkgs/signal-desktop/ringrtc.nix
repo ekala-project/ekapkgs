@@ -41,6 +41,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     "--features"
     "electron"
   ];
+
   doCheck = false;
 
   env = {
@@ -53,6 +54,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     cmake
     pkg-config
   ];
+
   buildInputs = [
     webrtc
     cubeb'

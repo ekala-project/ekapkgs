@@ -311,6 +311,7 @@ stdenv.mkDerivation (finalAttrs: {
     flex
     gtk3.wrapGAppsHook
   ];
+
   propagatedBuildInputs = pythonPkgs;
 
   buildInputs = [

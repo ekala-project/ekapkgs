@@ -37,7 +37,9 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   doCheck = true;
+
   checkTarget = "test";
+
   nativeCheckInputs = lib.optionals stdenv.hostPlatform.isLinux [ util-linux ];
 
   meta = {

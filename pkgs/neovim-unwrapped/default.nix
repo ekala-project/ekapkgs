@@ -54,6 +54,7 @@ let
     stdenv.mkDerivation {
       pname = "tree-sitter-${language}";
       version = "neovim-0.12.5";
+
       inherit src;
 
       nativeBuildInputs = [ jq ];

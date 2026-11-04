@@ -11,24 +11,29 @@
 stdenv.mkDerivation (finalAttrs: {
   version = "2.12.0";
   pname = "librem";
+
   src = fetchFromGitHub {
     owner = "baresip";
     repo = "rem";
     tag = "v${finalAttrs.version}";
     sha256 = "sha256-MsXSUxFH89EqxMe4285xFV1Tsqmv2l5RnEeli48O3XQ=";
   };
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [
     zlib
     openssl
     libre
   ];
+
   cmakeEntries = {
     RE_INCLUDE_DIR = "${libre}/include/re";
   };
+
   makeFlags = [
     "LIBRE_MK=${libre}/share/re/re.mk"
     "PREFIX=$(out)"
@@ -36,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   ++ lib.optional (stdenv.cc.cc != null) "SYSROOT_ALT=${lib.getDev stdenv.cc.cc}"
   ++ lib.optional (stdenv.cc.libc != null) "SYSROOT=${lib.getDev stdenv.cc.libc}";
+
   meta = {
     description = "Library for real-time audio and video processing";
     homepage = "https://github.com/baresip/rem";

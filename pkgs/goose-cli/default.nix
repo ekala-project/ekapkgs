@@ -64,6 +64,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   doCheck = true;
+
   checkPhase = ''
     export HOME=$(mktemp -d)
     export XDG_CONFIG_HOME=$HOME/.config
@@ -77,6 +78,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   meta = {

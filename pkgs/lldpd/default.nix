@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     removeReferencesTo
   ];
+
   buildInputs = [
     libevent
     readline

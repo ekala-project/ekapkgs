@@ -22,6 +22,7 @@ stdenv.mkDerivation rec {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     makeWrapper
     perl
@@ -30,6 +31,7 @@ stdenv.mkDerivation rec {
     docbook-xsl
     docbook-xml-dtd.v4_4
   ];
+
   buildInputs = [
     (perl.withPackages (p: [
       p.IPCRun

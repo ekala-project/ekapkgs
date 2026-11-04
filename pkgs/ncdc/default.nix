@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     perl
     pkg-config
   ];
+
   buildInputs = [
     ncurses
     zlib
@@ -38,6 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   configureFlags = [ "--with-geoip" ];
+
   meta = {
     changelog = "https://dev.yorhel.nl/ncdc/changes";
     description = "Modern and lightweight direct connect client with a friendly ncurses interface";

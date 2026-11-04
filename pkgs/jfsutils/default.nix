@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [ libuuid ];
 
   # Workaround build failure on -fno-common toolchains like upstream

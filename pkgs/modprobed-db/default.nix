@@ -21,10 +21,12 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     pkg-config
     installShellFiles
   ];
+
   buildInputs = [
     kmod
     libevdev

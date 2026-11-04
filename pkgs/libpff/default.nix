@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     autoreconfHook
   ];
+
   outputs = [
     "bin"
     "dev"

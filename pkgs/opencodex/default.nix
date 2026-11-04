@@ -22,12 +22,15 @@ bun.buildPackage {
   sourceRoot = "package";
 
   bunStdenv = stdenvNoCC;
+
   bunInstallFlags = [
     "--linker=isolated"
     "--backend=symlink"
     "--production"
   ];
+
   node_modulesHash = "sha256-ocGgJYx4d+FZlO8I1EunI1pY1pFIKGDManvLsBfhsLE=";
+
   node_modulesAttrs = {
     sourceRoot = "package";
     postUnpack = ''
@@ -61,6 +64,7 @@ bun.buildPackage {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

@@ -30,8 +30,10 @@ buildGoModule (finalAttrs: {
     "-X github.com/prometheus/common/version.BuildUser=nix@nixpkgs"
     "-X github.com/prometheus/common/version.BuildDate=unknown"
   ];
+
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
 
   meta = {

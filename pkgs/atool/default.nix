@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ perl ];
+
   configureScript = "${bash}/bin/bash configure";
 
   meta = {

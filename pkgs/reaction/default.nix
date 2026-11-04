@@ -57,6 +57,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   '';
 
   versionCheckProgramArg = "--version";
+
   doInstallCheck = true;
 
   passthru = {

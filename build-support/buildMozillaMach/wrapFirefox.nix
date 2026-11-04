@@ -183,9 +183,11 @@ let
 
     in
     stdenv.mkDerivation (finalAttrs: {
-      __structuredAttrs = true;
-      strictDeps = true;
       inherit pname version;
+
+      __structuredAttrs = true;
+
+      strictDeps = true;
 
       desktopItem = makeDesktopItem (
         if lib.strings.hasPrefix "thunderbird" libName then
@@ -275,6 +277,7 @@ let
         lndir
         jq
       ];
+
       buildInputs = [ browser.gtk3 ];
 
       makeWrapperArgs = [
@@ -480,6 +483,7 @@ let
       preferLocalBuild = true;
 
       libs = lib.makeLibraryPath libs + ":" + lib.makeSearchPathOutput "lib" "lib64" libs;
+
       gtk_modules = map (x: x + x.gtkModule) gtk_modules;
 
       passthru = {
@@ -487,6 +491,7 @@ let
       };
 
       disallowedRequisites = [ stdenv.cc ];
+
       meta = browser.meta // {
         mainProgram = launcherName;
         hydraPlatforms = [ ];

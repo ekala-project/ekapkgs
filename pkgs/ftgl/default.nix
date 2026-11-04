@@ -31,6 +31,7 @@ stdenv.mkDerivation rec {
     doxygen
     pkg-config
   ];
+
   buildInputs = [
     freetype
     libGL

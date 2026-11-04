@@ -12,6 +12,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "fyi";
   version = "1.0.4";
+
   src = fetchFromCodeberg {
     owner = "dnkl";
     repo = "fyi";

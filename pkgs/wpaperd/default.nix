@@ -30,6 +30,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     installShellFiles
     scdoc
   ];
+
   buildInputs = [
     wayland
     libGL

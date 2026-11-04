@@ -16,7 +16,6 @@ buildPythonPackage {
     meta
     nativeBuildInputs
     ;
-
   pyproject = true;
 
   build-system = [

@@ -27,7 +27,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   propagatedBuildInputs = [ qdldl ];
+
   cmakeEntries = {
     OSQP_VERSION = finalAttrs.version;
   };

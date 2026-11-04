@@ -25,6 +25,7 @@ buildGoModule (finalAttrs: {
   ];
 
   vendorHash = "sha256-JuM/SRYjkuGTHQmA3aqugACr7VUmxUuvd8Cl1ywb1HM=";
+
   proxyVendor = true;
 
   # Exclude drivers from the bad group

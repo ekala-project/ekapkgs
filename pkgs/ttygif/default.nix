@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ makeWrapper ];
+
   postInstall = ''
     wrapProgram $out/bin/ttygif \
       --prefix PATH : ${

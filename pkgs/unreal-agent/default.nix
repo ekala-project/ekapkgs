@@ -28,6 +28,7 @@ buildGoModule (finalAttrs: {
 
   # The runner exposes help but no version flag.
   doInstallCheck = true;
+
   installCheckPhase = ''
     runHook preInstallCheck
     $out/bin/unreal-agent-runner -h >/dev/null

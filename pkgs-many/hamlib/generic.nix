@@ -55,7 +55,9 @@ stdenv.mkDerivation (finalAttrs: {
       };
 
   strictDeps = true;
+
   depsBuildBuild = [ buildPackages.stdenv.cc ];
+
   nativeBuildInputs = [
     swig
     pkg-config

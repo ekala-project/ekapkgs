@@ -23,6 +23,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "mate-power-manager";
   version = "1.28.1";
+
   outputs = [
     "out"
     "man"

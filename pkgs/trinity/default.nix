@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   env.NIX_CFLAGS_COMPILE = "-fomit-frame-pointer";
 
   installFlags = [ "DESTDIR=$(out)" ];
+
   meta = {
     description = "Linux System call fuzz tester";
     mainProgram = "trinity";

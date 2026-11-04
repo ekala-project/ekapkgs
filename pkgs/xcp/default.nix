@@ -26,6 +26,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # disable tests depending on special filesystem features
   checkNoDefaultFeatures = true;
+
   checkFeatures = [
     "test_no_reflink"
     "test_no_sparse"
@@ -37,6 +38,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # had concurrency issues on 64 cores, also tests are quite fast compared to build
   dontUseCargoParallelTests = true;
+
   checkFlags = lib.optionals stdenv.hostPlatform.isDarwin [
     # ---- test_socket_file::test_with_parallel_file_driver stdout ----
     # STDOUT: 12:20:56 [WARN] Socket copy not supported by this OS: /private/tmp/nix-build-xcp-0.24.1.drv-0/source/targ>

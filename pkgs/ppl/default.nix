@@ -40,6 +40,7 @@ stdenv.mkDerivation {
     perl
     m4
   ];
+
   propagatedBuildInputs = [ gmp.withCxx ];
 
   configureFlags = [

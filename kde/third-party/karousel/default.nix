@@ -30,7 +30,9 @@ stdenv.mkDerivation (finalAttrs: {
     nodejs
     typescript_5
   ];
+
   buildInputs = [ kwin ];
+
   dontWrapQtApps = true;
 
   installPhase = ''

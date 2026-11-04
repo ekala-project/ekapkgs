@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ texinfo ];
+
   nativeBuildInputs = [
     autoreconfHook
     autoconf-archive

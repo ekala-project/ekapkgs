@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     "nms"
     "sneakers"
   ];
+
   installFlags = [ "prefix=$(out)" ];
 
   meta = {

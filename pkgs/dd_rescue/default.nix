@@ -27,6 +27,7 @@ stdenv.mkDerivation rec {
       --replace "-o root" "" \
       --replace "-g root" ""
   '';
+
   makeFlags = [ "LIBDIR=$out" ];
 
   postInstall = ''

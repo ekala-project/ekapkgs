@@ -50,6 +50,7 @@ stdenv.mkDerivation {
   ];
 
   dontBuild = true;
+
   # Bun-compiled executable; stripping corrupts the embedded payload.
   dontStrip = true;
 
@@ -60,10 +61,12 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook
   ];
+
   versionCheckProgramArg = "--version";
 
   meta = {

@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     wayland-scanner
   ];
+
   buildInputs = [
     cairo
     pango

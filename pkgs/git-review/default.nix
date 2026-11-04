@@ -40,6 +40,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   # out how to work around this yet.
 
   pythonImportsCheck = [ "git_review" ];
+
   meta = {
     description = "Tool to submit code to Gerrit";
     homepage = "https://opendev.org/opendev/git-review";

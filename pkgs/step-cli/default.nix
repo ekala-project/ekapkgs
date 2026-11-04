@@ -42,6 +42,7 @@ buildGoModule {
   vendorHash = "sha256-UNrUy0aWl7w5SmlsxLpmx6WxI2AElHE6llAMLRLi0r0=";
 
   nativeBuildInputs = [ installShellFiles ];
+
   nativeCheckInputs = [
     openssl
     unixtools.xxd

@@ -15,7 +15,6 @@
 }:
 
 stdenv.mkDerivation rec {
-
   pname = "fluxbox";
   version = "1.3.7";
 

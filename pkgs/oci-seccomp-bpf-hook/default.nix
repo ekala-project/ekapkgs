@@ -12,23 +12,27 @@
 buildGoModule (finalAttrs: {
   pname = "oci-seccomp-bpf-hook";
   version = "1.3.0";
+
   src = fetchFromGitHub {
     owner = "containers";
     repo = "oci-seccomp-bpf-hook";
     tag = "v${finalAttrs.version}";
     sha256 = "sha256-seizupkZHWCPsnPMiLlEZrw1cPQNsfsGxYg2S9ZGBbw=";
   };
+
   vendorHash = null;
 
   outputs = [
     "out"
     "man"
   ];
+
   nativeBuildInputs = [
     go-md2man
     installShellFiles
     pkg-config
   ];
+
   buildInputs = [
     bcc
     libseccomp

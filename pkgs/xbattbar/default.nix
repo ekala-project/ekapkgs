@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   # extremely oldschool and does not work on NixOS, while the sysfs script
   # does.
   patches = [ ./sys-by-default.patch ];
+
   # - perl shebang patches for acpi/sys scripts
   # - unhardcode path to checker scripts
   # - add missing return type in main function

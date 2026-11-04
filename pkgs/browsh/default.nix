@@ -20,7 +20,6 @@ in
 
 buildGoModule rec {
   inherit version;
-
   pname = "browsh";
 
   sourceRoot = "${src.name}/interfacer";

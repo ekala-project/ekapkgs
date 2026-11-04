@@ -143,6 +143,7 @@ buildRuntimeEnv {
   inherit (steam-unwrapped) version;
 
   extraPkgs = pkgs: [ steam-unwrapped ] ++ extraPkgs pkgs;
+
   inherit
     extraLibraries
     extraProfile

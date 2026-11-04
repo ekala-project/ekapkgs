@@ -31,13 +31,16 @@ llvmPackages.stdenv.mkDerivation (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-Tbd/yY90yb2+/ODYVL3SudHaJCGJKatZ9FuGM2uAX+8=";
   };
+
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit (finalAttrs) pname version src;
     hash = "sha256-IUvXHLxrhc2Au57wsE53Q+NL1cZzFcaRG3HDV8s3xWw=";
   };
 
   strictDeps = true;
+
   env.LIBCLANG_PATH = "${llvmPackages.libclang.lib}/lib";
+
   depsBuildBuild = [ pkg-config ];
 
   nativeBuildInputs = [

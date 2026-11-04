@@ -18,6 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ python3 ];
+
   makeFlags = [ "VERSION=${finalAttrs.version}" ];
 
   postPatch = ''
@@ -44,6 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
       ln -s $out/share/passff-host/passff.json $out$manifestDir/
     done
   '';
+
   meta = {
     description = "Host app for the WebExtension PassFF";
     homepage = "https://codeberg.org/PassFF/passff-host";

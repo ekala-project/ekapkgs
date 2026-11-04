@@ -87,6 +87,7 @@ assert builtins.all (
 stdenv.mkDerivation (finalAttrs: {
   pname = "imv";
   version = "5.0.1";
+
   outputs = [
     "out"
   ];
@@ -129,9 +130,11 @@ stdenv.mkDerivation (finalAttrs: {
   ++ map (b: backends."${b}") withBackends;
 
   doCheck = true;
+
   nativeCheckInputs = [
     tinyxxd
   ];
+
   checkInputs = [
     cmocka
   ];

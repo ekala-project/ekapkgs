@@ -45,6 +45,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   __impureHostDeps = lib.optionals stdenv.hostPlatform.isDarwin [
     "/System/Library/Fonts/Supplemental/Arial.ttf"
   ];
+
   versionCheckProgram = "${placeholder "out"}/bin/dovi_tool";
 
   meta = {

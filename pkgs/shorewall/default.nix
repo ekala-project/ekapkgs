@@ -39,6 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
       hash = "sha256-6Cw6lTi2VIGVOY3DnIOwG89m61oigUyRWpJLmtwIjNE=";
     })
   ];
+
   sourceRoot = ".";
 
   buildInputs = [
@@ -53,6 +54,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ (with perlPackages; [
     DigestSHA1
   ]);
+
   prePatch = ''
     # Patch configure and install.sh files
     patchShebangs .
@@ -61,6 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
     sed -i shorewall-core-${finalAttrs.version}/lib.cli \
         -e '/^ *PATH=.*/d'
   '';
+
   configurePhase = ''
     shorewall-core-${finalAttrs.version}/configure \
       HOST=linux \
@@ -78,6 +81,7 @@ stdenv.mkDerivation (finalAttrs: {
       INITFILE= \
       DEFAULT_PAGER=
   '';
+
   installPhase = ''
     export DESTDIR=/
     shorewall-core-${finalAttrs.version}/install.sh

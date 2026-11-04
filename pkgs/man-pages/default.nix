@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   dontBuild = true;
+
   enableParallelInstalling = true;
 
   makeFlags = [

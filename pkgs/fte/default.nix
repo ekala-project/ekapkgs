@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ unzip ];
+
   buildInputs = [
     perl
     libx11
@@ -43,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
   hardeningDisable = [ "all" ];
 
   env.NIX_CFLAGS_COMPILE = "-DHAVE_STRLCAT -DHAVE_STRLCPY";
+
   installFlags = [ "INSTALL_NONROOT=1" ];
 
   # not setting it cause fte to not find xfte

@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     perl
   ];
+
   buildInputs = [ systemd ];
 
   makeFlags = [

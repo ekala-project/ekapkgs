@@ -59,6 +59,7 @@ stdenv.mkDerivation rec {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [ ncurses ];
 
   installPhase = ''

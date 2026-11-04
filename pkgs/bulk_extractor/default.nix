@@ -40,6 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3
     autoreconfHook
   ];
+
   buildInputs = [
     exiv2
     flex

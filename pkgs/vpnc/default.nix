@@ -57,6 +57,7 @@ stdenv.mkDerivation {
   '';
 
   enableParallelInstalling = false;
+
   strictDeps = true;
 
   meta = {

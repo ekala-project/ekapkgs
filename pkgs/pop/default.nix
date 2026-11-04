@@ -42,7 +42,9 @@ buildGoModule (finalAttrs: {
 
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
+
   meta = {
     description = "Send emails from your terminal";
     homepage = "https://github.com/charmbracelet/pop";

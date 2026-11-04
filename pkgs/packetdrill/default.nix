@@ -29,6 +29,7 @@ stdenv.mkDerivation {
     cmake.configurePhaseHook
     libpcap
   ];
+
   buildInputs = [ libpcap ];
 
   installPhase = ''

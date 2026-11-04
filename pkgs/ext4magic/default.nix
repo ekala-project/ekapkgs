@@ -38,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     zlib
     bzip2
   ];
+
   installFlags = [ "PREFIX=$(out)" ];
 
   meta = {

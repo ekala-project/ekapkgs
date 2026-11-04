@@ -39,6 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildFlags = [ "PRAAT_AUDIO=pulse" ];
+
   installFlags = [ "PREFIX=${placeholder "out"}" ];
 
   postInstall = ''

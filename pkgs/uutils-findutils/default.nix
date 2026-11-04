@@ -27,6 +27,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   versionCheckProgram = "${placeholder "out"}/bin/find";
+
   doInstallCheck = true;
 
   meta = {

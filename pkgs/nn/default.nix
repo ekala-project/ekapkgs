@@ -20,6 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   # triangle.c: In function 'triangulate':
   # triangle.c:15619:1: error: number of arguments doesn't match prototype
   env.NIX_CFLAGS_COMPILE = "-std=gnu17";
+
   meta = {
     description = "C code for Natural Neighbours interpolation of 2D scattered data";
     homepage = "https://github.com/sakov/nn-c/";

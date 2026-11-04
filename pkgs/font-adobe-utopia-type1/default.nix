@@ -14,6 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [ mkfontscale ];
 
   meta = {

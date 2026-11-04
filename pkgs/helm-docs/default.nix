@@ -18,6 +18,7 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-9VSjxnc804A+PTMy0ZoNWNkHAjh3/kMK0XoEfI/LgEY=";
 
   subPackages = [ "cmd/helm-docs" ];
+
   ldflags = [
     "-w"
     "-s"

@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [ pkg-config ];
 
   configFile = lib.optionalString (conf != null) (builtins.toFile "config.def.h" conf);
+
   preBuild = lib.optionalString (conf != null) "cp ${finalAttrs.configFile} config.def.h";
 
   buildInputs = [

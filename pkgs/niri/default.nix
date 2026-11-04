@@ -76,6 +76,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     ++ lib.optional withDinit "dinit"
     ++ lib.optional withScreencastSupport "xdp-gnome-screencast"
     ++ lib.optional withSystemd "systemd";
+
   buildNoDefaultFeatures = true;
 
   postInstall = ''

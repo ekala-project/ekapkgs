@@ -56,6 +56,7 @@ stdenv.mkDerivation (finalAttrs: {
   dontDisableStatic = true;
 
   configurePlatforms = [ "host" ];
+
   configureFlags = [
     "--enable-release"
   ];

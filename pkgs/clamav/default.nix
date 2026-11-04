@@ -49,6 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
     cargo
     python3
   ];
+
   buildInputs = [
     zlib
     bzip2

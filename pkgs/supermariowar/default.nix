@@ -55,6 +55,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     ln -s $out/games/smw-server $out/bin/smw-server
   '';
+
   meta = {
     description = "Fan-made multiplayer Super Mario Bros. style deathmatch game";
     homepage = "https://github.com/mmatyas/supermariowar";

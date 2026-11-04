@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
     "devdoc"
   ];
+
   outputBin = "dev";
 
   src = fetchurl {

@@ -24,6 +24,7 @@
 stdenv.mkDerivation {
   pname = "gnome-shell-extension-${pname}";
   version = toString version;
+
   src = fetchzip {
     url = "https://extensions.gnome.org/extension-data/${
       builtins.replaceStrings [ "@" ] [ "" ] uuid
@@ -39,7 +40,9 @@ stdenv.mkDerivation {
       echo "${metadata}" | base64 --decode > $out/metadata.json
     '';
   };
+
   nativeBuildInputs = [ glib ];
+
   buildPhase = ''
     runHook preBuild
     if [ -d schemas ]; then
@@ -47,18 +50,21 @@ stdenv.mkDerivation {
     fi
     runHook postBuild
   '';
+
   installPhase = ''
     runHook preInstall
     mkdir -p $out/share/gnome-shell/extensions/
     cp -r -T . $out/share/gnome-shell/extensions/${uuid}
     runHook postInstall
   '';
-  meta = {
-    inherit description homepage license;
-    platforms = lib.platforms.linux;
-  };
+
   passthru = {
     extensionPortalSlug = pname;
     extensionUuid = uuid;
+  };
+
+  meta = {
+    inherit description homepage license;
+    platforms = lib.platforms.linux;
   };
 }

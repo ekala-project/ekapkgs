@@ -44,6 +44,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     tag = "rust-v${finalAttrs.version}";
     hash = "sha256-fYzQEit5MxsEZw/UaISMbEIsy5iaAcqb7ElEOq9eVgs=";
   };
+
   sourceRoot = "${finalAttrs.src.name}/codex-rs";
 
   cargoHash = "sha256-U20V8MkGJZd+qTOQETzqB25QJPYxJGV89LiR1kToW7A=";
@@ -116,6 +117,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   meta = {

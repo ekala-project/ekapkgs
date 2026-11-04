@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     libxrandr
     libxcursor
@@ -59,5 +60,4 @@ stdenv.mkDerivation (finalAttrs: {
       strives to be small, compact and fast.
     '';
   };
-
 })

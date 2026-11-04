@@ -124,6 +124,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   dontConfigure = true;
+
   dontBuild = true;
 
   installPhase = ''

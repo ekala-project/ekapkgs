@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   installPhase = ''
     install -D --target-directory=$out/share/zsh/site-functions src/*
 

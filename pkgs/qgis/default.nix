@@ -18,7 +18,6 @@ let
   };
 in
 symlinkJoin {
-
   inherit (qgis-unwrapped) version outputs;
   pname = "qgis";
 

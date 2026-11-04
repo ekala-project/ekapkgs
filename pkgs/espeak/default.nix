@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ unzip ];
+
   buildInputs = [ portaudio ];
 
   patches = [

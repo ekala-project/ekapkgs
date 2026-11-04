@@ -8,6 +8,7 @@
 stdenv.mkDerivation rec {
   pname = "zopfli";
   version = "1.0.3";
+
   outputs = [
     "out"
     "lib"

@@ -19,7 +19,6 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "drawing";
   version = "1.0.2";
-
   pyproject = false;
 
   src = fetchFromGitHub {

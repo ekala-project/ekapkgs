@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     automake
     libtool
   ];
+
   buildInputs = [
     zlib
     libxcrypt

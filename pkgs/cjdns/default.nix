@@ -42,6 +42,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildInputs = [ libsodium ];
 
   env.SODIUM_USE_PKG_CONFIG = 1;
+
   env.NIX_CFLAGS_COMPILE = toString (
     [
       "-O2"

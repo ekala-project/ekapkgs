@@ -60,8 +60,11 @@ let
     '';
 
     dontFixup = true;
+
     outputHash = "sha256-swYXZvJRKRyc2YshM2TO3gU7s1foI7eBEl/MOW09+hI=";
+
     outputHashAlgo = "sha256";
+
     outputHashMode = "recursive";
   };
 in

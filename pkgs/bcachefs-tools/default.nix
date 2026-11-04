@@ -107,6 +107,7 @@ stdenv.mkDerivation (finalAttrs: {
   preCheck = lib.optionalString (!fuseSupport) ''
     rm tests/test_fuse.py
   '';
+
   checkFlags = [ "BCACHEFS_TEST_USE_VALGRIND=no" ];
 
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''

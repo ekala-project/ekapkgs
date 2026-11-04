@@ -41,6 +41,7 @@ stdenv.mkDerivation {
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ stdenv.cc.cc.lib ];
 
   dontBuild = true;
+
   # bun --compile binary: its payload trailer must stay at EOF.
   dontStrip = true;
 
@@ -53,10 +54,12 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook
   ];
+
   versionCheckProgramArg = "--version";
 
   meta = {

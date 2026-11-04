@@ -16,12 +16,14 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [ unzip ];
+
   propagatedBuildInputs = [ tnt ];
 
   unpackPhase = ''
     mkdir "${pname}-${version}"
     unzip "$src"
   '';
+
   installPhase = ''
     mkdir -p $out/include
     cp *.h $out/include

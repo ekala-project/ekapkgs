@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ libsigcxx ];
 
   patches = [ ./libpar2-0.4-external-verification.patch ];

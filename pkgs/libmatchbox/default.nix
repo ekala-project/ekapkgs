@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     pkg-config
   ];
+
   propagatedBuildInputs = [
     libice
     libjpeg

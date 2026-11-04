@@ -22,7 +22,9 @@ stdenv.mkDerivation rec {
   ];
 
   strictDeps = true;
+
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     xorg.libX11
     xorg.libXext

@@ -30,6 +30,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   cargoBuildFlags = [ "-p=biome_cli" ];
+
   cargoTestFlags = finalAttrs.cargoBuildFlags ++ [
     "--"
     "--skip=commands::check::print_json"

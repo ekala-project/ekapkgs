@@ -34,7 +34,9 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   outputHashAlgo = "sha256";
+
   outputHashMode = "recursive";
+
   outputHash = "0nbpn21cxdd6gsgr3fadzjsnz84f2swpf81wmscmjgvd56ngndzh";
 
   meta = {

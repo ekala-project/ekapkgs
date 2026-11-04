@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     imake
     gccmakedep
   ];
+
   buildInputs = [
     libx11
     libxext
@@ -43,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     "install"
     "install.man"
   ];
+
   meta = {
     description = "Launch a given program when your X session has been idle for a given time";
     homepage = "http://www.ibiblio.org/pub/linux/X11/screensavers";

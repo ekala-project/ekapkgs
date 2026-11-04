@@ -36,6 +36,7 @@ buildGoModule (finalAttrs: {
     pkg-config
     ronn
   ];
+
   buildInputs = [
     libusb1
     avahi

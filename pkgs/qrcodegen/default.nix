@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   makeFlags = lib.optionals stdenv.cc.isClang [ "AR=llvm-ar" ];
 
   doCheck = true;
+
   checkPhase = ''
     runHook preCheck
 

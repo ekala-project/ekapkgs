@@ -26,11 +26,13 @@ stdenv.mkDerivation (finalAttrs: {
     grep
     gawk
   ];
+
   nativeBuildInputs = [ makeWrapper ];
 
   installFlags = [
     "prefix=$(out)"
   ];
+
   postInstall = ''
     wrapProgram "$out/bin/hblock" \
       --prefix PATH : ${

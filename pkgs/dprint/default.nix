@@ -70,6 +70,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   nativeInstallCheckInputs = [
     writableTmpDirAsHomeHook
   ];
+
   doInstallCheck = true;
 
   meta = {

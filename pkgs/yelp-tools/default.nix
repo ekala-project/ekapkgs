@@ -14,7 +14,6 @@
 python3.pkgs.buildPythonApplication rec {
   pname = "yelp-tools";
   version = "42.1";
-
   format = "other";
 
   src = fetchurl {

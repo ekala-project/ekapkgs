@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
   ];
+
   buildInputs = [
     libx11
     libxext

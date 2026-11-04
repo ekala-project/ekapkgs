@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxml2
     fuse
   ];
+
   nativeBuildInputs = [
     autoreconfHook
     pkg-config

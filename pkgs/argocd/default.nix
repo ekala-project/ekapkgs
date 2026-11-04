@@ -44,6 +44,7 @@ buildGoModule (finalAttrs: {
   };
 
   proxyVendor = true; # darwin/linux hash mismatch
+
   vendorHash = "sha256-yzVSMdupFdrYUWMCPFhiYTnjCDGZo4Se0osXbCvB7gM=";
 
   # Set target as ./cmd per cli-local
@@ -78,6 +79,7 @@ buildGoModule (finalAttrs: {
     echo using $KUBECTL_VERSION
     ldflags="''${ldflags} -X github.com/argoproj/argo-cd/v3/common.kubectlVersion=''${KUBECTL_VERSION}"
   '';
+
   installPhase = ''
     runHook preInstall
     mkdir -p $out/bin
@@ -86,6 +88,7 @@ buildGoModule (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     $out/bin/argocd version --client | grep ${finalAttrs.src.rev} > /dev/null
   '';

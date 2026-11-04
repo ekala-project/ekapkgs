@@ -35,6 +35,7 @@
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "bottles-unwrapped";
   version = "67.4";
+  pyproject = false;
 
   src = fetchFromGitHub {
     owner = "bottlesdevs";
@@ -118,7 +119,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
       procps
     ];
 
-  pyproject = false;
   dontWrapGApps = true;
 
   preFixup = ''

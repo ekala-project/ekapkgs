@@ -81,6 +81,7 @@ rustPlatform.buildRustPackage {
     libxi
     libxcursor
   ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
@@ -124,6 +125,7 @@ rustPlatform.buildRustPackage {
     "--package"
     "airshipper"
   ];
+
   cargoTestFlags = [
     "--package"
     "airshipper"

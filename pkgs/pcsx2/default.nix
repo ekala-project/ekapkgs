@@ -50,6 +50,7 @@ in
 llvmPackages.stdenv.mkDerivation (finalAttrs: {
   pname = "pcsx2";
   version = "2.8.2";
+
   src = fetchFromGitHub {
     pname = "pcsx2-source";
     owner = "PCSX2";

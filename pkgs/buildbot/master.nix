@@ -52,7 +52,9 @@ let
       pyproject = false;
 
       dontUnpack = true;
+
       dontBuild = true;
+
       doCheck = false;
 
       nativeBuildInputs = [

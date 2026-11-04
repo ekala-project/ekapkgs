@@ -21,11 +21,13 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = lib.optionals stdenv.hostPlatform.isStatic [ pkg-config ];
 
   depsBuildBuild = [ buildPackages.stdenv.cc ];
+
   buildInputs = [ libedit ];
 
   hardeningDisable = [ "strictflexarrays3" ];
 
   configureFlags = [ "--with-libedit" ];
+
   preConfigure = lib.optionalString stdenv.hostPlatform.isStatic ''
     export LIBS="$(''${PKG_CONFIG:-pkg-config} --libs --static libedit)"
   '';

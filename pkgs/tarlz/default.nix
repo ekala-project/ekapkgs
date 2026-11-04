@@ -10,6 +10,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "tarlz";
   version = "0.29";
+
   outputs = [
     "out"
     "man"
@@ -20,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     lzip
     texinfo
   ];
+
   buildInputs = [ lzlib ];
 
   src = fetchurl {

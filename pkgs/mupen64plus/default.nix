@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     nasm
   ];
+
   buildInputs = [
     boost
     dash
@@ -48,6 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildPhase = ''
     dash m64p_build.sh PREFIX="$out" COREDIR="$out/lib/" PLUGINDIR="$out/lib/mupen64plus" SHAREDIR="$out/share/mupen64plus"
   '';
+
   installPhase = ''
     dash m64p_install.sh DESTDIR="$out" PREFIX=""
   '';

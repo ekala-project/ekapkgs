@@ -21,6 +21,7 @@ buildGoModule (finalAttrs: {
   ];
 
   vendorHash = "sha256-IbnLypkKqtm+wceNXakdeML66fHNmuBRi+cWSFmUKWk=";
+
   meta = {
     description = "Streaming replication for SQLite";
     mainProgram = "litestream";

@@ -43,6 +43,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
 
     runHook postInstall
   '';
+
   postInstall = ''
     installManPage \
       man1/*.1

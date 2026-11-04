@@ -39,6 +39,7 @@ buildGoModule (finalAttrs: {
       --fish <($out/bin/kube-bench completion fish) \
       --zsh <($out/bin/kube-bench completion zsh)
   '';
+
   versionCheckProgramArg = "version";
 
   meta = {

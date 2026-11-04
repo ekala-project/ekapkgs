@@ -72,6 +72,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   strictDeps = true;
 
   postFixup = ''

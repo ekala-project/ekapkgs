@@ -36,6 +36,7 @@ stdenv.mkDerivation {
   };
 
   dontUnpack = true;
+
   # bun-compiled binary: stripping corrupts the embedded bytecode.
   dontStrip = true;
 
@@ -56,6 +57,7 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

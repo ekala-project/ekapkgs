@@ -28,10 +28,12 @@ stdenvNoCC.mkDerivation rec {
     iconv
     wget
   ];
+
   nativeBuildInputs = [
     makeWrapper
     installShellFiles
   ];
+
   installPhase = ''
     installManPage DOC/podget.7
     install -m 755 -D podget $out/bin/podget

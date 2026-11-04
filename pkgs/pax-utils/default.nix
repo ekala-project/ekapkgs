@@ -37,6 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   depsBuildBuild = [ buildPackages.stdenv.cc ];
+
   nativeBuildInputs = [
     docbook-xml-dtd.v4_4
     docbook_xsl
@@ -46,7 +47,9 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     xmlto
   ];
+
   buildInputs = lib.optionals withLibcap [ libcap ];
+
   propagatedBuildInputs = [ (python3.withPackages (p: with p; [ pyelftools ])) ];
 
   meta = {

@@ -86,6 +86,7 @@ stdenv.mkDerivation (finalAttrs: {
   env.CARGO_BUILD_TARGET = stdenv.hostPlatform.rust.rustcTargetSpec;
 
   doCheck = true;
+
   strictDeps = true;
 
   meta = {

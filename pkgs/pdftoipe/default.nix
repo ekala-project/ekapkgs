@@ -21,6 +21,7 @@ stdenv.mkDerivation rec {
   sourceRoot = "${src.name}/pdftoipe";
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ poppler ];
 
   installPhase = ''

@@ -18,14 +18,17 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   strictDeps = true;
+
   depsBuildBuild = [
     pkg-config
     lvm2
     udev
   ];
+
   nativeBuildInputs = [
     rustPlatform.bindgenHook
   ];
+
   buildInputs = [
     lvm2
     udev

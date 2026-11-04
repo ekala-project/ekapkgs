@@ -15,6 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     bdftopcf
     mkfontscale

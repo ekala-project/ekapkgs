@@ -35,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     protobuf
     perl
   ];
+
   buildInputs = [
     protobuf
     ncurses

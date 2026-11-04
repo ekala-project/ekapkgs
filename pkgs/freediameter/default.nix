@@ -38,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     libidn.v2
     lksctp-tools
   ];
+
   meta = {
     description = "Implementation of the Diameter Protocol";
     homepage = "https://github.com/freeDiameter/freeDiameter";

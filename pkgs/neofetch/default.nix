@@ -19,8 +19,11 @@ stdenvNoCC.mkDerivation {
   };
 
   strictDeps = true;
+
   buildInputs = [ bash ];
+
   nativeBuildInputs = [ makeWrapper ];
+
   postPatch = ''
     patchShebangs --host neofetch
   '';

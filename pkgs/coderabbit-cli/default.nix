@@ -36,6 +36,7 @@ stdenv.mkDerivation {
   };
 
   nativeBuildInputs = [ unzip ] ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
+
   # TODO(corepkgs): add libsecret for credential storage
 
   unpackPhase = ''
@@ -51,10 +52,12 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook
   ];
+
   versionCheckProgramArg = [ "--version" ];
 
   meta = {

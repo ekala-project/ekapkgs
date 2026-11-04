@@ -18,6 +18,7 @@ mkKdeDerivation rec {
   patches = [ ./full-paths.patch ];
 
   extraNativeBuildInputs = [ pkg-config ];
+
   extraBuildInputs = [
     glib
     polkit

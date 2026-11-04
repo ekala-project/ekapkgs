@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [ perl ];
+
   nativeBuildInputs = [
     autoreconfHook
     makeWrapper

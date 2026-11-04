@@ -7,7 +7,6 @@
   postgresql,
 }:
 buildPerlPackage {
-
   pname = "DBD-Pg";
   version = "3.17.0";
 
@@ -27,6 +26,7 @@ buildPerlPackage {
   ];
 
   buildInputs = [ postgresql ];
+
   propagatedBuildInputs = [ DBI ];
 
   nativeBuildInputs = [ postgresql.pg_config ];
@@ -42,5 +42,4 @@ buildPerlPackage {
     ];
     platforms = lib.platforms.unix;
   };
-
 }

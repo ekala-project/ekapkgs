@@ -16,6 +16,7 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = null;
+
   subPackages = [ "." ];
 
   meta = {

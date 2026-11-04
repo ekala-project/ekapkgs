@@ -22,12 +22,14 @@ buildGoModule (finalAttrs: {
   subPackages = [ "cmd/mongocli" ];
 
   nativeBuildInputs = [ installShellFiles ];
+
   postInstall = lib.optionalString (stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     installShellCompletion --cmd mongocli \
       --bash <($out/bin/mongocli completion bash) \
       --fish <($out/bin/mongocli completion fish) \
       --zsh <($out/bin/mongocli completion zsh)
   '';
+
   meta = {
     description = "Manage your MongoDB via ops manager and cloud manager";
     homepage = "https://github.com/mongodb/mongodb-cli";

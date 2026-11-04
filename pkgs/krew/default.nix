@@ -45,10 +45,13 @@ buildGoModule (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     writableTmpDirAsHomeHook
   ];
+
   versionCheckKeepEnvironment = [ "HOME" ];
+
   versionCheckProgramArg = "version";
 
   meta = {

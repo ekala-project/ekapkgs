@@ -37,6 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     udevCheckHook
   ];
+
   buildInputs = [
     bzip2
     ncurses
@@ -45,6 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeCheckInputs = [ check ];
+
   doCheck = true;
 
   meta = {

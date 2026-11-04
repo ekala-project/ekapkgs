@@ -22,5 +22,6 @@ mkKdeDerivation {
     gpl2Plus
     gpl3Only
   ];
+
   meta.mainProgram = "alpaka";
 }

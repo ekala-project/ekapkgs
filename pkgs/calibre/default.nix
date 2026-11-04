@@ -101,7 +101,9 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   dontUseQmakeConfigure = true;
+
   dontUseCmakeConfigure = true;
+
   dontUseNinjaBuild = true;
 
   nativeBuildInputs = [
@@ -221,6 +223,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   # Wrap manually
   dontWrapQtApps = true;
+
   dontWrapGApps = true;
 
   preFixup =
@@ -245,14 +248,18 @@ stdenv.mkDerivation (finalAttrs: {
     '';
 
   doInstallCheck = true;
+
   installCheckInputs = with python3Packages; [
     psutil
   ];
+
   nativeInstallCheckInputs = [
     versionCheckHook
   ];
+
   # `calibre --version` drops a trailing `.0`, so check against a binary reporting the full version
   versionCheckProgram = "${placeholder "out"}/bin/ebook-convert";
+
   installCheckPhase =
     let
       excludedTestNames = [

@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     ncurses
     readline
   ];
+
   nativeBuildInputs = [ autoreconfHook ];
 
   meta = {

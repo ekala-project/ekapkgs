@@ -14,6 +14,7 @@ stdenv.mkDerivation rec {
   };
 
   doCheck = true;
+
   preCheck = ''
     patchShebangs tests contrib/tests
   '';

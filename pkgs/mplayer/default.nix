@@ -89,6 +89,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   depsBuildBuild = [ buildPackages.stdenv.cc ];
+
   nativeBuildInputs = [
     pkg-config
     yasm
@@ -96,6 +97,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (cacaSupport && libcaca != null) [
     libcaca
   ];
+
   buildInputs = [
     freetype
     ffmpeg
@@ -137,6 +139,7 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   configurePlatforms = [ ];
+
   configureFlags = [
     (lib.enableFeature true "freetype")
     (lib.enableFeature fontconfigSupport "fontconfig")

@@ -13,6 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   version = "1.16";
 
   nativeBuildInputs = [ unzip ];
+
   buildInputs = [
     libx11
     libGLU
@@ -27,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   postPatch = "cd src";
+
   installPhase = ''
     mkdir -p $out/lib/
     cp ../lib/{libAntTweakBar.so,libAntTweakBar.so.1,libAntTweakBar.a} $out/lib/

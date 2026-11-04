@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   env.NIX_CFLAGS_COMPILE = "-Wno-error=incompatible-pointer-types";
+
   makeFlags = [ "PREFIX=$(out)" ];
 
   buildInputs = [

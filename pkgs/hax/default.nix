@@ -34,6 +34,7 @@ stdenv.mkDerivation {
   ];
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   meta = {

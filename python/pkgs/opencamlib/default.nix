@@ -47,6 +47,7 @@ buildPythonPackage (finalAttrs: {
   '';
 
   dontUseCmakeConfigure = true;
+
   env.CMAKE_ARGS = "-DVERSION_STRING=${finalAttrs.version} -DBoost_USE_STATIC_LIBS=OFF";
 
   pythonImportsCheck = [ "opencamlib" ];

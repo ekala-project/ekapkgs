@@ -25,6 +25,7 @@ stdenv.mkDerivation {
     cmake.configurePhaseHook
     pkg-config
   ];
+
   buildInputs = [
     gtkmm3
     libsigcxx

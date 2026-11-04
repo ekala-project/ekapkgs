@@ -22,7 +22,9 @@ stdenv.mkDerivation (finalAttrs: {
     kpackage
     zip
   ];
+
   buildInputs = [ kwin ];
+
   dontWrapQtApps = true;
 
   buildFlags = [ "build" ];

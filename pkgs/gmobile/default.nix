@@ -52,6 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
     json-glib
     libuev
   ];
+
   strictDeps = true;
 
   meta = {

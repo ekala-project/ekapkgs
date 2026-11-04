@@ -7,11 +7,17 @@
 stdenv.mkDerivation rec {
   pname = "fxload";
   version = libusb1.version;
+
   dontUnpack = true;
+
   dontBuild = true;
+
   dontConfigure = true;
+
   dontInstall = true;
+
   dontPatch = true;
+
   dontPatchELF = true;
 
   # fxload binary exist inside the `examples/bin` directory of `libusb1`

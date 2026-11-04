@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     intltool
   ];
+
   buildInputs = [
     gnupg
     gtk3

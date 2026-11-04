@@ -18,7 +18,6 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "piper";
   version = "0.8";
-
   pyproject = false;
 
   src = fetchFromGitHub {

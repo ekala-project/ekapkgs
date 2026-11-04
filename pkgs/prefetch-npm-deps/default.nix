@@ -28,6 +28,7 @@ rustPlatform.buildRustPackage {
     makeWrapper
     pkg-config
   ];
+
   buildInputs = [ curl ];
 
   postInstall = ''

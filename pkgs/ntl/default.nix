@@ -21,9 +21,11 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   depsBuildBuild = [
     perl # needed for ./configure
   ];
+
   buildInputs = [
     gmp
   ];
@@ -39,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   # reference: http://shoup.net/ntl/doc/tour-unix.html
   dontAddStaticConfigureFlags = true; # perl config doesn't understand it.
+
   configureFlags = [
     "DEF_PREFIX=$(out)"
     "NATIVE=off" # don't target code to current hardware (reproducibility, portability)
@@ -62,6 +65,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   enableParallelChecking = true;
+
   doCheck = true; # takes some time
 
   meta = {

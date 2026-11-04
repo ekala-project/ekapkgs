@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     pkg-config
   ];
+
   buildInputs = [
     libusb-compat-0_1
     libftdi1

@@ -25,6 +25,7 @@ stdenv.mkDerivation rec {
     pkg-config
     check
   ];
+
   buildInputs = [ expat ];
 
   meta = {

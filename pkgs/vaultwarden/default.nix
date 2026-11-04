@@ -28,6 +28,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   env.VW_VERSION = finalAttrs.version;
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     openssl
   ]

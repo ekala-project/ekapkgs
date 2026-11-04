@@ -31,6 +31,7 @@ stdenv.mkDerivation {
     libxslt
     docbook_xsl
   ];
+
   buildInputs = [
     libev
     libx11
@@ -42,9 +43,11 @@ stdenv.mkDerivation {
   prePatch = ''
     substituteInPlace Makefile --replace-fail 'PKG_CONFIG =' 'PKG_CONFIG ?='
   '';
+
   makeFlags = [ "CC=${stdenv.cc.targetPrefix}cc" ];
 
   installFlags = [ "PREFIX=$(out)" ];
+
   meta = {
     description = "Rewrite of unclutter using the X11 Xfixes extension";
     homepage = "https://github.com/Airblader/unclutter-xfixes";

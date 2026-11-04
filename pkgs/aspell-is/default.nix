@@ -23,6 +23,7 @@ stdenv.mkDerivation {
   ];
 
   dontAddPrefix = true;
+
   configurePlatforms = [ ];
 
   unpackPhase = ''

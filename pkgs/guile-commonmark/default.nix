@@ -25,6 +25,7 @@ stdenv.mkDerivation {
     texinfo # for makeinfo
     guile
   ];
+
   buildInputs = [
     guile
   ];

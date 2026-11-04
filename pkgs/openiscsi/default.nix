@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     perl
     udevCheckHook
   ];
+
   buildInputs = [
     kmod
     open-isns
@@ -58,6 +59,7 @@ stdenv.mkDerivation (finalAttrs: {
     systemddir = "${placeholder "out"}/lib/systemd";
     dbroot = "/etc/iscsi";
   };
+
   meta = {
     description = "High performance, transport independent, multi-platform implementation of RFC3720";
     license = lib.licenses.gpl2Plus;

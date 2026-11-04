@@ -15,6 +15,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "apache-directory-studio";
   version = "2.0.0-M17";
+
   versionWithDate = "2.0.0.v20210717-M17";
 
   src =
@@ -43,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     glib
     libsecret
   ];
+
   nativeBuildInputs = [
     makeWrapper
     autoPatchelfHook

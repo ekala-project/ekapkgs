@@ -14,6 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   makeFlags = [ "tunctl" ];
+
   installPhase = ''
     mkdir -p $out/bin
     cp tunctl $out/bin

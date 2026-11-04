@@ -14,6 +14,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   };
 
   outputHashMode = "recursive";
+
   outputHash = "sha256-gGHowq7g7MZmnhrpqG+3wNLwQCtpiBB88euIKeQIpJ0=";
 
   installPhase = ''

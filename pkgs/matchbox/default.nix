@@ -14,7 +14,9 @@ stdenv.mkDerivation (finalAttrs: {
   version = "1.2";
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ libmatchbox ];
+
   env.NIX_LDFLAGS = toString [
     "-lX11"
     "-L${libx11}/lib"

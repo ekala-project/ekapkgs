@@ -10,6 +10,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "libmpd";
   version = "11.8.17";
+
   outputs = [
     "out"
     "dev"
@@ -25,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     doxygen
   ];
+
   buildInputs = [
     glib
   ];

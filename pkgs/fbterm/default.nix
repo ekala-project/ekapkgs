@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     ncurses
   ];
+
   buildInputs = [
     gpm
     freetype

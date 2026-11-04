@@ -38,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     flex
     byacc
   ];
+
   buildInputs = [
     libjson
     json_c

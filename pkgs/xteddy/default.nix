@@ -12,6 +12,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "xteddy";
   version = "2.2-5";
+
   src = fetchFromGitLab {
     domain = "salsa.debian.org";
     owner = "games-team";
@@ -24,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     makeWrapper
   ];
+
   buildInputs = [
     imlib2
     libx11

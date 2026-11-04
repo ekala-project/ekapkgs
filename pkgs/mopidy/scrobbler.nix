@@ -27,6 +27,7 @@ pythonPackages.buildPythonApplication (finalAttrs: {
 
   # no tests implemented
   doCheck = false;
+
   pythonImportsCheck = [ "mopidy_scrobbler" ];
 
   meta = {

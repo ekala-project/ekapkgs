@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     texinfo
     perl
   ];
+
   buildInputs = [ ncurses ];
 
   # Build only the binary, skip docs that require texlive/ghostscript

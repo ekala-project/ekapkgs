@@ -53,6 +53,7 @@ stdenv.mkDerivation rec {
     libxml2
     gtk3.wrapGAppsHook
   ];
+
   buildInputs = [
     gtk3
     glib

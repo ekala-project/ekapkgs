@@ -47,10 +47,12 @@ stdenv.mkDerivation (finalAttrs: {
   + (lib.optionalString (configOpts != null) "ln -sf ${configOpts} ./config/config.opts");
 
   makeFlags = [ "LEX=flex" ];
+
   installFlags = [
     "INSTALL=install"
     "DESTDIR=${placeholder "out"}"
   ];
+
   postInstall = lib.concatMapStrings (path: ''
     for f in : $(find ${path} -type f); do
       test "$f" == ":" && continue;

@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [ popt ] ++ lib.optionals aclSupport [ acl ];
 
   outputs = [

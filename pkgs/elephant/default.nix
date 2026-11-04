@@ -40,6 +40,7 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-5AL1731OKp2AZgknZAvcfyL+TuU3DIPozjSItE5nOM8=";
 
   buildInputs = [ protobuf ];
+
   nativeBuildInputs = [
     makeWrapper
     protoc-gen-go

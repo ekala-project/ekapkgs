@@ -30,6 +30,7 @@ stdenv.mkDerivation rec {
     };
 
   dontConfigure = true;
+
   dontBuild = true;
 
   installPhase = ''
@@ -39,6 +40,7 @@ stdenv.mkDerivation rec {
   '';
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     runHook preInstallCheck
     $out/bin/boundary --help
@@ -47,7 +49,9 @@ stdenv.mkDerivation rec {
   '';
 
   dontPatchELF = true;
+
   dontPatchShebangs = true;
+
   dontStrip = true;
 
   meta = {

@@ -27,9 +27,11 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     validatePkgConfig
   ];
+
   buildInputs = [ simdutf ];
 
   doCheck = true;
+
   checkInputs = [
     simdjson
     gtest

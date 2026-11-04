@@ -75,6 +75,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3
     perl
   ];
+
   buildInputs = [
     curl
     python3
@@ -139,6 +140,7 @@ stdenv.mkDerivation (finalAttrs: {
   + (lib.optionalString enablePAM ''
     mkdir -p $out/lib/security
   '');
+
   postConfigure = lib.optionalString enablePAM ''
     rm -rf $out
   '';

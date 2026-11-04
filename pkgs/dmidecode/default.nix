@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
     "prefix=$(out)"
     "CC=${stdenv.cc.targetPrefix}cc"
   ];
+
   outputs = [
     "out"
     "man"

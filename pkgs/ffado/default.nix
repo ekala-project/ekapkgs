@@ -88,6 +88,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   prefixKey = "PREFIX=";
+
   sconsFlags = [
     "CUSTOM_ENV=True" # tell SConstruct to use nixpkgs' CC/CXX/CFLAGS
     "DETECT_USERSPACE_ENV=False"
@@ -122,7 +123,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   dontWrapQtApps = true;
+
   strictDeps = true;
+
   doInstallCheck = true;
 
   preFixup = lib.optionalString withMixer ''

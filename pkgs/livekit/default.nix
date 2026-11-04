@@ -22,6 +22,7 @@ buildGoModule (finalAttrs: {
   postInstall = ''
     mv $out/bin/server $out/bin/livekit-server
   '';
+
   meta = {
     description = "End-to-end stack for WebRTC. SFU media server and SDKs";
     homepage = "https://livekit.io/";

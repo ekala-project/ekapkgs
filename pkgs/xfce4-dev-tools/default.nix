@@ -52,6 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   dontUseMesonConfigure = true;
+
   configureFlags = [ "--enable-maintainer-mode" ];
 
   setupHook = ./setup-hook.sh;

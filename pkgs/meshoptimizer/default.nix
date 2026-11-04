@@ -17,6 +17,7 @@ in
 stdenv.mkDerivation (finalAttrs: {
   pname = "meshoptimizer";
   version = "1.3";
+
   src = fetchFromGitHub {
     owner = "zeux";
     repo = "meshoptimizer";
@@ -43,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
   // lib.optionalAttrs (!stdenv.hostPlatform.isStatic) {
     MESHOPT_BUILD_SHARED_LIBS = true;
   };
+
   meta = {
     description = "Mesh optimization library that makes meshes smaller and faster to render";
     homepage = "https://github.com/zeux/meshoptimizer";

@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   env.NIX_CFLAGS_COMPILE = "-Wno-error=format-overflow";
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [
     numactl
     python3

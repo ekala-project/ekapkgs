@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   depsBuildBuild = [ pkg-config ];
+
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook
@@ -37,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     wayland-protocols
     wayland-scanner
   ];
+
   buildInputs = [
     freetype
     harfbuzz

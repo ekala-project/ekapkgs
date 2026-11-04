@@ -101,6 +101,7 @@ stdenv.mkDerivation rec {
   ];
 
   propagatedUserEnvPkgs = [ hicolor-icon-theme ];
+
   buildInputs = [
     (cairo.override { xcbSupport = true; })
     librsvg

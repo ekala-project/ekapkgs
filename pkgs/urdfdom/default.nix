@@ -32,10 +32,12 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     validatePkgConfig
   ];
+
   buildInputs = [
     tinyxml-2
     console-bridge
   ];
+
   propagatedBuildInputs = [ urdfdom-headers ];
 
   meta = {

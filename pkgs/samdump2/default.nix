@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     which
   ];
+
   buildInputs = [
     openssl
   ];

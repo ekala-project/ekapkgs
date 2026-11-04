@@ -20,7 +20,9 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   nativeBuildInputs = [ sphinx ];
+
   buildInputs = [ python3 ];
+
   makeFlags = [
     "PREFIX=$(out)"
     "VERSION=$(version)"

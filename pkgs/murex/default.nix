@@ -19,14 +19,14 @@ buildGoModule (finalAttrs: {
 
   subPackages = [ "." ];
 
+  passthru = {
+    shellPath = "/bin/murex";
+  };
+
   meta = {
     description = "Bash-like shell and scripting environment with advanced features designed for safety and productivity";
     mainProgram = "murex";
     homepage = "https://murex.rocks";
     license = lib.licenses.gpl2Only;
-  };
-
-  passthru = {
-    shellPath = "/bin/murex";
   };
 })

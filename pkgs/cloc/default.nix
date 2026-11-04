@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
     perlPackages.perl
   ];
+
   buildInputs = with perlPackages; [
     perl
     AlgorithmDiff

@@ -18,6 +18,7 @@
 perlPackages.buildPerlPackage rec {
   pname = "SpamAssassin";
   version = "4.0.1";
+
   rulesRev = "r1916528";
 
   src = fetchurl {

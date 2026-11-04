@@ -27,6 +27,7 @@ in
 stdenv.mkDerivation {
   pname = "netbeans";
   inherit version;
+
   src = fetchurl {
     url = "mirror://apache/netbeans/netbeans/${version}/netbeans-${version}-bin.zip";
     hash = "sha256-HV8+tA9YjFot8ZVpvJ2Z/Q+AKO654Iv8jInGgsOhtfs=";
@@ -76,6 +77,7 @@ stdenv.mkDerivation {
     makeWrapper
     unzip
   ];
+
   buildInputs = [
     perl
     libicns

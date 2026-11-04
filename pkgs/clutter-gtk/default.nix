@@ -32,6 +32,7 @@ stdenv.mkDerivation rec {
     clutter
     gtk3
   ];
+
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook

@@ -39,6 +39,7 @@ stdenv.mkDerivation {
   ];
 
   buildInputs = [ SDL ];
+
   makefile = "Makefile.ldc";
 
   installPhase = ''

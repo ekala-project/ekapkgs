@@ -7,6 +7,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "kakoune-unwrapped";
   version = "2026.05.21";
+
   src = fetchFromGitHub {
     repo = "kakoune";
     owner = "mawww";
@@ -28,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     $out/bin/kak -ui json -e "kill 0"
   '';

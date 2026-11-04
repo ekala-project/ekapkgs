@@ -7,6 +7,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "pixiewps";
   version = "1.4.2";
+
   src = fetchFromGitHub {
     owner = "wiire-a";
     repo = "pixiewps";

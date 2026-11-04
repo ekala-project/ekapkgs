@@ -38,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
   ];
+
   buildInputs = [
     vulkan-headers
     vulkan-loader
@@ -49,6 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     wayland
     wayland-protocols
   ];
+
   meta = {
     description = "Extensible Vulkan benchmarking suite";
     homepage = "https://github.com/vkmark/vkmark";

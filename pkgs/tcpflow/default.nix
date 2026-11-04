@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     automake
     autoconf
   ];
+
   buildInputs = [
     openssl
     zlib

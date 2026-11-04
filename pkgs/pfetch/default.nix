@@ -23,6 +23,7 @@ stdenvNoCC.mkDerivation rec {
 
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
 
   meta = {

@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildFlags = [
     "all"
   ];
+
   installFlags = [
     "DESTDIR=$(out)"
     "PREFIX=/"
@@ -50,6 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
     ''
       wrapProgram $out/bin/mancha ${makeWrapperArgs}
     '';
+
   meta = {
     description = "Lightweight and featureful terminal web browser";
     homepage = "https://sr.ht/~bptato/chawan/";

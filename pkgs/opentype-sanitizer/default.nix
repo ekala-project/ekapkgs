@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     lz4
     woff2
   ];
+
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook

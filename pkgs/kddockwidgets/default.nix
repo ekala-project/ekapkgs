@@ -24,11 +24,13 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [
     spdlog
     fmt
     nlohmann_json
   ];
+
   propagatedBuildInputs = with qt6; [
     qtbase
     qtdeclarative

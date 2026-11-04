@@ -12,6 +12,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "tpm2-openssl";
   version = "1.3.0";
+
   src = fetchFromGitHub {
     owner = "tpm2-software";
     repo = "tpm2-openssl";
@@ -35,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
   postPatch = ''
     echo ${finalAttrs.version} > VERSION
   '';
+
   meta = {
     description = "OpenSSL Provider for TPM2 integration";
     homepage = "https://github.com/tpm2-software/tpm2-openssl";

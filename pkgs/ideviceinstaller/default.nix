@@ -39,6 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
   preAutoreconf = ''
     export RELEASE_VERSION=${finalAttrs.version}
   '';
+
   meta = {
     homepage = "https://github.com/libimobiledevice/ideviceinstaller";
     description = "List/modify installed apps of iOS devices";

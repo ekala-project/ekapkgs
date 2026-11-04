@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     udevCheckHook
   ];
+
   buildInputs = [ util-linux ];
 
   prePatch = ''

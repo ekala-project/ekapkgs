@@ -18,7 +18,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [ libiconv ];
+
   configureFlags = lib.optional stdenv.hostPlatform.isDarwin "LDFLAGS=-liconv";
 
   meta = {

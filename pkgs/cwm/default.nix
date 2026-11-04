@@ -11,7 +11,6 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-
   pname = "cwm";
   version = "7.9";
 
@@ -28,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     bison
   ];
+
   buildInputs = [
     libx11
     libxinerama

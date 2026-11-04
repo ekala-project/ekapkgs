@@ -22,6 +22,7 @@ stdenv.mkDerivation {
   installPhase = ''
     install -D onesixtyone $out/bin/onesixtyone
   '';
+
   meta = {
     description = "Fast SNMP Scanner";
     homepage = "https://github.com/trailofbits/onesixtyone";

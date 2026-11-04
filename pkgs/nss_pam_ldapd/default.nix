@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
     autoreconfHook
   ];
+
   buildInputs = [
     openldap
     pam

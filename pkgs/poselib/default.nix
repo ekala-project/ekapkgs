@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     pkg-config
   ];
+
   meta = {
     description = "A collection of minimal solvers for camera pose estimation";
     homepage = "https://github.com/PoseLib/PoseLib";

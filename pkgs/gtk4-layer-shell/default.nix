@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
     "devdoc"
   ];
+
   outputBin = "devdoc";
 
   src = fetchFromGitHub {

@@ -73,6 +73,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   doInstallCheck = true;
+
   # sudo binary fails because it checks if it is suid 0
   versionCheckProgram = "${placeholder "out"}/bin/su";
 

@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     installShellFiles
     which
   ];
+
   buildInputs = [
     ncurses
   ];

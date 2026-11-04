@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (withGstreamer || withOmemo) [
     pkg-config
   ];
+
   buildInputs =
     lib.optionals withGstreamer (
       with gstreamer;
@@ -48,6 +49,7 @@ stdenv.mkDerivation (finalAttrs: {
       kdePackages.qca
       libomemo-c
     ];
+
   cmakeFlags = [
     (lib.cmakeBool "BUILD_DOCUMENTATION" false)
     (lib.cmakeBool "BUILD_EXAMPLES" false)
@@ -58,7 +60,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   nativeCheckInputs = [ ctestCheckHook ];
+
   disabledTests = [
     "tst_QXmppIceConnection"
     "tst_QXmppTransferManager"

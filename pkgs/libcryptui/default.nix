@@ -44,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     intltool
     autoreconfHook
   ];
+
   buildInputs = [
     glib
     gtk3'
@@ -52,9 +53,11 @@ stdenv.mkDerivation (finalAttrs: {
     dbus-glib
     gcr_3
   ];
+
   propagatedBuildInputs = [ dbus-glib ];
 
   env.GNUPG = lib.getExe gnupg;
+
   env.GPGME_CONFIG = lib.getExe' (lib.getDev gpgme) "gpgme-config";
 
   preAutoreconf = ''

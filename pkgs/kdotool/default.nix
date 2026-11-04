@@ -21,6 +21,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-11V+J8/LlHGdA/FSc7aD9IeVBIFwYM0LXXiFtc/FuLY=";
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ dbus ];
 
   meta = {

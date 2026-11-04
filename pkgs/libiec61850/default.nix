@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = lib.optionals withTls [ mbedtls ];
 
   passthru.updateScript = gitUpdater { rev-prefix = "v"; };

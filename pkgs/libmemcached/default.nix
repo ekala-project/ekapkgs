@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ libevent ];
+
   propagatedBuildInputs = [ cyrus_sasl ];
 
   env.NIX_CFLAGS_COMPILE = "-fpermissive";

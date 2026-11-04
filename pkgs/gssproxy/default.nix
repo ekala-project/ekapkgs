@@ -17,6 +17,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "gssproxy";
   version = "0.9.2";
+
   strictDeps = true;
 
   src = fetchFromGitHub {

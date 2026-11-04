@@ -63,6 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     updateAutotoolsGnuConfigScriptsHook
   ];
+
   buildInputs = [
     ncurses
     boehmgc

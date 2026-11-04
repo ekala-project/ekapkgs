@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     guile
     guile-fibers
   ];
+
   nativeBuildInputs = [
     pkg-config
     guile

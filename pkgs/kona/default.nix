@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   makeFlags = [ "PREFIX=$(out)" ];
+
   preInstall = ''mkdir -p "$out/bin"'';
 
   meta = {

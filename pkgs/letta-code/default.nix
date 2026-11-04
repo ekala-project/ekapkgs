@@ -24,6 +24,7 @@ let
     inherit version src;
 
     nativeBuildInputs = [ bun ];
+
     dontConfigure = true;
 
     buildPhase = ''
@@ -42,8 +43,11 @@ let
     '';
 
     dontFixup = true;
+
     outputHash = "sha256-GGclxecZR/HEvLxWkZ8e39cKr6SL9iGLiY1ZbsYzYUk=";
+
     outputHashAlgo = "sha256";
+
     outputHashMode = "recursive";
   };
 in

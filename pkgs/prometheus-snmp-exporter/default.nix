@@ -21,6 +21,7 @@ buildGoModule rec {
   buildInputs = [ net-snmp ];
 
   doCheck = true;
+
   meta = {
     description = "SNMP Exporter for Prometheus";
     homepage = "https://github.com/prometheus/snmp_exporter";

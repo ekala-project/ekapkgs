@@ -18,7 +18,9 @@ mkKdeDerivation rec {
   };
 
   extraNativeBuildInputs = [ qttools ];
+
   extraBuildInputs = [ qtdeclarative ];
+
   extraPropagatedBuildInputs = [
     qt5compat
     qtmultimedia

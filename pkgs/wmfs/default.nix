@@ -12,7 +12,6 @@
 }:
 stdenv.mkDerivation {
   pname = "wmfs";
-
   version = "201902";
 
   src = fetchFromGitHub {

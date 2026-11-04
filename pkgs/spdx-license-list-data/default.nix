@@ -31,7 +31,9 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   outputs = [ "out" ] ++ _types;
 
   dontPatch = true;
+
   dontConfigure = true;
+
   dontBuild = true;
 
   installPhase = ''

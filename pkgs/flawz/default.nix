@@ -32,6 +32,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     openssl
     sqlite
   ];
+
   outputs = [
     "out"
     "man"

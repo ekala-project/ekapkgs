@@ -44,16 +44,18 @@ let
 in
 buildVscode {
   pname = "vscode";
-
-  executableName = "code";
-  longName = "Visual Studio Code";
-  shortName = "Code";
   inherit
     version
     rev
     commandLineArgs
     useVSCodeRipgrep
     ;
+
+  executableName = "code";
+
+  longName = "Visual Studio Code";
+
+  shortName = "Code";
 
   src = fetchurl {
     name = "VSCode_${downloadVersion}_${plat}.${archive_fmt}";

@@ -35,6 +35,7 @@ stdenv.mkDerivation {
     nlopt
     boost
   ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

@@ -39,6 +39,7 @@ theStdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     autoreconfHook
   ];
+
   meta = {
     homepage = "https://salsa.debian.org/debian/reprepro/";
     description = "Debian package repository producer";

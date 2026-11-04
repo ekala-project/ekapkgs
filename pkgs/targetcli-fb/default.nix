@@ -28,6 +28,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
     wrapGAppsNoGuiHook
     gobject-introspection
   ];
+
   buildInputs = [ glib ];
 
   dependencies = with python3Packages; [

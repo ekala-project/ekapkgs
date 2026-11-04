@@ -41,10 +41,13 @@ buildGoModule (finalAttrs: {
         --zsh <(${emulator} $out/bin/gibo completion zsh)
     ''
   );
+
   nativeInstallCheckInputs = [
     writableTmpDirAsHomeHook
   ];
+
   versionCheckProgramArg = "version";
+
   versionCheckKeepEnvironment = [ "HOME" ];
 
   meta = {

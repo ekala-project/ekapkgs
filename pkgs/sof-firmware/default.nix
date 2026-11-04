@@ -24,6 +24,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
 
     runHook postInstall
   '';
+
   meta = {
     changelog = "https://github.com/thesofproject/sof-bin/releases/tag/v${finalAttrs.version}";
     description = "Sound Open Firmware";

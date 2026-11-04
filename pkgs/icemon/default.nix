@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     qt6.wrapQtAppsHook
   ];
+
   buildInputs = [
     icecream
     qt6.qtbase

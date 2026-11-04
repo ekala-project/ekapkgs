@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   # 'make check' requires internet connection
   doCheck = true;
+
   checkTarget = "test";
 
   meta = {

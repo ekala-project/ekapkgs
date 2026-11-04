@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     flex
     pkg-config
   ];
+
   buildInputs = [
     readline
     zlib

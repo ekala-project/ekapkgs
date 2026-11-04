@@ -10,6 +10,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "bastet";
   version = "0.43.2";
+
   buildInputs = [
     ncurses
     boost

@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     python311
     waf.hook
   ];
+
   buildInputs = [
     fftw
     libjack2
@@ -37,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
+
   wafFlags = lib.optional (stdenv.buildPlatform != stdenv.hostPlatform) "--disable-tests";
 
   postPatch = ''

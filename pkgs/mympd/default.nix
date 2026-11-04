@@ -35,9 +35,11 @@ stdenv.mkDerivation (finalAttrs: {
     jq
     lua.v5_3 # luac is needed for cross builds
   ];
+
   preConfigure = ''
     env MYMPD_BUILDDIR=$PWD/build ./build.sh createassets
   '';
+
   buildInputs = [
     libmpdclient
     openssl
@@ -51,13 +53,16 @@ stdenv.mkDerivation (finalAttrs: {
     CMAKE_INSTALL_SYSCONFDIR = "/etc";
     CMAKE_INSTALL_LOCALSTATEDIR = "/var/lib/mympd";
   };
+
   hardeningDisable = [
     # causes redefinition of _FORTIFY_SOURCE
     "fortify3"
   ];
+
   # 5 tests out of 23 fail, probably due to the sandbox...
 
   strictDeps = true;
+
   meta = {
     homepage = "https://jcorporation.github.io/myMPD";
     description = "Standalone and mobile friendly web mpd client with a tiny footprint and advanced features";

@@ -71,9 +71,13 @@ stdenv.mkDerivation rec {
   };
 
   src = base;
+
   dontUnpack = true;
+
   dontConfigure = true;
+
   dontBuild = true;
+
   dontFixup = true;
 
   nativeBuildInputs = [ makeWrapper ];

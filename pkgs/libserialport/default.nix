@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = lib.optional stdenv.hostPlatform.isLinux udev;
 
   meta = {

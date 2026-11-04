@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   propagatedBuildInputs = [ nlohmann_json ];
 
   cmakeEntries = {
@@ -45,6 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   checkInputs = [ doctest ];
+
   doCheck = true;
 
   passthru.tests = {

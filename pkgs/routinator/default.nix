@@ -17,14 +17,14 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   cargoHash = "sha256-rDFwfRXd8oMNh8iOPEWM1eADFQjys0GwPVr2r5hLW4Y=";
 
+  passthru.tests = {
+  };
+
   meta = {
     description = "RPKI Validator written in Rust";
     homepage = "https://github.com/NLnetLabs/routinator";
     changelog = "https://github.com/NLnetLabs/routinator/blob/v${finalAttrs.version}/Changelog.md";
     license = lib.licenses.bsd3;
     mainProgram = "routinator";
-  };
-
-  passthru.tests = {
   };
 })

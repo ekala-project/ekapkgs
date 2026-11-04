@@ -22,6 +22,7 @@ stdenv.mkDerivation rec {
     ./hardcoded-compiler.patch
     ./bin-ext.patch
   ];
+
   patchFlags = [ "-p3" ];
 
   postPatch = lib.optionalString stdenv.hostPlatform.isStatic ''
@@ -42,6 +43,7 @@ stdenv.mkDerivation rec {
   ++ lib.optional stdenv.hostPlatform.isDarwin "LDFLAGS=-Wl,-install_name,$(out)/lib/liblmdb.so";
 
   doCheck = true;
+
   checkTarget = "test";
 
   postInstall = ''

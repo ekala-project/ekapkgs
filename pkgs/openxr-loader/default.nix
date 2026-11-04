@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3
     pkg-config
   ];
+
   buildInputs = [
     vulkan-headers
     libGL

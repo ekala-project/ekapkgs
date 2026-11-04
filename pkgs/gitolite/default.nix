@@ -24,7 +24,9 @@ stdenv.mkDerivation (finalAttrs: {
     net-tools
     perl
   ];
+
   nativeBuildInputs = [ makeWrapper ];
+
   propagatedBuildInputs = [ git ];
 
   dontBuild = true;

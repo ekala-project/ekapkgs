@@ -42,6 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     systemdSupport
     trayEnabled
     ;
+
   src = fetchFromGitHub {
     owner = "swaywm";
     repo = "sway";
@@ -61,6 +62,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
+
   depsBuildBuild = [
     pkg-config
   ];

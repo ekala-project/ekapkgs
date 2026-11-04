@@ -23,6 +23,7 @@ stdenv.mkDerivation (self: {
   };
 
   doCheck = false;
+
   nativeBuildInputs = [
     texinfo
   ]
@@ -46,9 +47,13 @@ stdenv.mkDerivation (self: {
   );
 
   purgeNixReferences = false;
+
   coreCompression = true;
+
   markRegionGC = self.threadSupport;
+
   disableImmobileSpace = false;
+
   linkableRuntime = stdenv.hostPlatform.isx86;
 
   disabledTestFiles = [

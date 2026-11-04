@@ -43,6 +43,7 @@ stdenv.mkDerivation {
     pkg-config
     autoreconfHook
   ];
+
   buildInputs = [
     glib
     gtk3

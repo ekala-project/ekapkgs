@@ -48,6 +48,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   buildNoDefaultFeatures = true;
+
   buildFeatures = [
     "use_zlib"
     "use_zstd_thin"

@@ -41,6 +41,7 @@ buildGoModule {
     # darwin handles file permissions.
     "-skip=^TestCompressSelectedFiles"
   ];
+
   meta = {
     description = "Pretty fancy and modern terminal file manager";
     homepage = "https://github.com/yorukot/superfile";

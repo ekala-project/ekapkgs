@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   doCheck = true;
 
   nativeBuildInputs = [

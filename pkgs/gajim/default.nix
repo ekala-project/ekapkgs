@@ -38,6 +38,7 @@ in
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "gajim";
   version = "2.5.0";
+  pyproject = true;
 
   src = fetchFromGitLab {
     domain = "dev.gajim.org";
@@ -46,8 +47,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     tag = finalAttrs.version;
     hash = "sha256-3/HQNizXLjeQpCdEK14LMflyNUKF1BI8eli3BGxiH40=";
   };
-
-  pyproject = true;
 
   buildInputs = [
     gtk4

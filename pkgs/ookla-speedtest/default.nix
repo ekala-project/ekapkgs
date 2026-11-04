@@ -43,6 +43,7 @@ stdenv.mkDerivation {
   sourceRoot = ".";
 
   dontBuild = true;
+
   dontConfigure = true;
 
   installPhase = ''

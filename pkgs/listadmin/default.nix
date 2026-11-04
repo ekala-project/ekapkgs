@@ -18,6 +18,7 @@ stdenvNoCC.mkDerivation rec {
   };
 
   buildInputs = [ perl ];
+
   nativeBuildInputs = [
     makeWrapper
     installShellFiles
@@ -45,6 +46,7 @@ stdenvNoCC.mkDerivation rec {
   '';
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     $out/bin/listadmin --help 2> /dev/null
   '';

@@ -7,6 +7,7 @@
 buildGoModule rec {
   pname = "vegeta";
   version = "12.13.0";
+
   rev = "03ca49e9b419c106db29d687827c4c823d8b8ece";
 
   src = fetchFromGitHub {

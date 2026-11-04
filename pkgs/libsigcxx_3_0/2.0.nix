@@ -13,6 +13,7 @@ stdenv.mkDerivation (finalAttrs: {
   version = "2.12.1";
 
   __structuredAttrs = true;
+
   strictDeps = true;
 
   src = fetchurl {

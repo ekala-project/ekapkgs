@@ -29,6 +29,7 @@ stdenv.mkDerivation rec {
 
   buildInputs =
     assert (blas.isILP64 == lapack.isILP64);
+
     [
       blas
       lapack

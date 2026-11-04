@@ -18,6 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   propagatedBuildInputs = [
     dbus-glib
     telepathy-glib

@@ -75,6 +75,7 @@ stdenv.mkDerivation {
   ];
 
   dontWrapGApps = true;
+
   preFixup = ''
     qtWrapperArgs+=("''${gappsWrapperArgs[@]}")
   '';

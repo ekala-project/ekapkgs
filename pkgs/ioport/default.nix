@@ -15,6 +15,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ perl ];
+
   enableParallelBuilding = false;
 
   meta = {

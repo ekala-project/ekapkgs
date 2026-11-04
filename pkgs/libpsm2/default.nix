@@ -20,6 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     udevCheckHook
   ];
+
   buildInputs = [ numactl ];
 
   makeFlags = [

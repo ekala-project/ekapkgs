@@ -14,10 +14,12 @@
 buildPerlModule {
   pname = "Net-SNMP";
   version = "6.0.1";
+
   src = fetchurl {
     url = "mirror://cpan/authors/id/D/DT/DTOWN/Net-SNMP-v6.0.1.tar.gz";
     hash = "sha256-FMN7wcuz883H1sE+DyeoWfFM3P1epUoEZ6iLwlmwt0E=";
   };
+
   patches = [
     (fetchpatch2 {
       url = "https://src.fedoraproject.org/rpms/perl-Net-SNMP/raw/rawhide/f/Net-SNMP-v6.0.1-Switch_from_Socket6_to_Socket.patch";
@@ -40,18 +42,23 @@ buildPerlModule {
       hash = "sha256-dznhj1Fcy0iBBl92p825InjkNZixR2MURVQ/b9bVjtc=";
     })
   ];
+
   postPatch = ''
     patch -p1 --fuzz=3 < ${./net-snmp-add-sha-algorithms.patch}
   '';
+
   preCheck = lib.optionalString stdenv.hostPlatform.isLinux ''
     export NIX_REDIRECTS=/etc/protocols=${iana-etc}/etc/protocols
   '';
+
   nativeCheckInputs = lib.optionals stdenv.hostPlatform.isLinux [ libredirect.hook ];
+
   propagatedBuildInputs = [
     CryptDES
     CryptRijndael
     DigestHMAC
   ];
+
   meta = {
     description = "Object oriented interface to SNMP";
   };

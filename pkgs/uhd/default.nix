@@ -59,6 +59,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   inherit (finalAttrs.finalPackage.passthru) pythonPath;
+
   passthru = {
     runtimePython = python3.withPackages (ps: finalAttrs.finalPackage.passthru.pythonPath);
     pythonPath =
@@ -110,6 +111,7 @@ stdenv.mkDerivation (finalAttrs: {
     python3.pkgs.mako
     python3.pkgs.wrapPython
   ];
+
   buildInputs =
     finalAttrs.pythonPath
     ++ [
@@ -156,6 +158,7 @@ stdenv.mkDerivation (finalAttrs: {
   postFixup = lib.optionalString (enablePythonApi && enableUtils) ''
     wrapPythonPrograms
   '';
+
   disallowedReferences = optionals (!enablePythonApi && !enableUtils) [
     python3
   ];

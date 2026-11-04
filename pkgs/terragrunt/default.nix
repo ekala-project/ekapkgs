@@ -37,7 +37,9 @@ buildGoModule (finalAttrs: {
 
   nativeInstallCheckInputs = [
   ];
+
   versionCheckProgramArg = "--version";
+
   doInstallCheck = true;
 
   meta = {

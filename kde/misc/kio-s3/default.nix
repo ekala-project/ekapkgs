@@ -19,6 +19,7 @@ mkKdeDerivation rec {
   };
 
   extraNativeBuildInputs = [ pkg-config ];
+
   extraBuildInputs = [
     aws-sdk-cpp-s3
     kcmutils

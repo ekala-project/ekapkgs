@@ -20,11 +20,13 @@ in
 buildGoModule {
   pname = "influx-cli";
   version = version;
+
   inherit src;
 
   nativeBuildInputs = [ installShellFiles ];
 
   vendorHash = "sha256-NsOkQwMH/AANUBReXmGR0fFQAtosA9iSla5JXyhrPYE=";
+
   subPackages = [ "cmd/influx" ];
 
   ldflags = [

@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
     "DESTDIR=$(out)"
     "PREFIX="
   ];
+
   versionCheckProgramArg = "-h";
 
   meta = {

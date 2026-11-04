@@ -14,6 +14,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "etherape";
   version = "0.9.22";
+
   src = fetchurl {
     url = "mirror://sourceforge/etherape/etherape-${finalAttrs.version}.tar.gz";
     sha256 = "sha256-6UxVArQKeyKMCsptMa/eyQELx/0QG6ZIpiacEBXnIGs=";
@@ -26,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     (lib.getBin libxml2)
   ];
+
   buildInputs = [
     libtool
     gtk3

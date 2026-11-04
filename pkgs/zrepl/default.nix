@@ -38,6 +38,7 @@ buildGoModule (finalAttrs: {
     wrapProgram $out/bin/zrepl \
       --prefix PATH : ${lib.makeBinPath [ openssh ]}
   '';
+
   passthru.tests = {
   };
 

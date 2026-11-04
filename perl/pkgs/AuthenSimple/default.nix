@@ -9,10 +9,12 @@
 buildPerlPackage {
   pname = "Authen-Simple";
   version = "0.5";
+
   src = fetchurl {
     url = "mirror://cpan/authors/id/C/CH/CHANSEN/Authen-Simple-0.5.tar.gz";
     hash = "sha256-As3atH+L8aHL1Mm/jSWPbQURFJnDP4MV5yRIEvcmE6o=";
   };
+
   postPatch = ''
     patch -p1 <<-EOF
       --- a/t/09password.t
@@ -26,12 +28,14 @@ buildPerlPackage {
       -    [ 'crypt',     '{CRYPT}lk9Mh5KHGjAaM',                   '{CRYPT}'      ],
     EOF
   '';
+
   propagatedBuildInputs = [
     ClassAccessor
     ClassDataInheritable
     CryptPasswdMD5
     ParamsValidate
   ];
+
   meta = {
     description = "Simple Authentication";
   };

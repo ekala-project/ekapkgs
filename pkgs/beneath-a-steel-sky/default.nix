@@ -50,6 +50,7 @@ stdenv.mkDerivation {
   nativeBuildInputs = [ unzip ];
 
   dontBuild = true;
+
   dontFixup = true;
 
   installPhase = ''

@@ -11,7 +11,6 @@
 }:
 mkKdeDerivation rec {
   pname = "kdeplasma-addons";
-
   inherit (sources.${pname}) version;
 
   cargoRoot = "kdeds/kameleon/qmk/kameleon-qmk-helper";

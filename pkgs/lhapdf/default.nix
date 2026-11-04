@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (python3 != null && lib.versionAtLeast python3.version "3.10") [
     python3.pkgs.cython
   ];
+
   buildInputs = [ python3 ];
 
   configureFlags = lib.optionals (python3 == null) [ "--disable-python" ];

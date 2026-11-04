@@ -10,7 +10,6 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-
   pname = "lolcode";
   version = "0.11.2";
 
@@ -35,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     doxygen
   ];
+
   buildInputs = [ readline ];
 
   # Maybe it clashes with lci scientific logic software package...
@@ -51,5 +51,4 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "lolcode-lci";
     platforms = lib.platforms.unix;
   };
-
 })

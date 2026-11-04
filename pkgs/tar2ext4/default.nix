@@ -16,6 +16,7 @@ buildGoModule (finalAttrs: {
   };
 
   sourceRoot = "${finalAttrs.src.name}/cmd/tar2ext4";
+
   vendorHash = null;
 
   meta = {

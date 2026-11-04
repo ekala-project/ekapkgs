@@ -16,6 +16,7 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = "sha256-du6PXKBrb3qrvD6rBFWfY3pK2gVu7/nvvom5mHs+JJs=";
+
   versionCheckProgramArg = "version";
 
   meta = {

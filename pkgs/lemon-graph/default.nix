@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ python3 ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

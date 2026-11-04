@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   nativeBuildInputs = [ mkfontscale ];
+
   meta = {
     description = "Collection of otf fonts designed for the display of syriac text";
     homepage = "https://gitlab.freedesktop.org/xorg/font/misc-meltho";

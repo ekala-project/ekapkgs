@@ -29,7 +29,9 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
     "out"
   ];
+
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [
     openssl
     libpcap

@@ -42,6 +42,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   buildNoDefaultFeatures = true;
+
   buildFeatures = lib.optional withSystemd "systemd";
 
   outputs = [

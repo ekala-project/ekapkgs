@@ -8,6 +8,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "sol2";
   version = "3.5.0";
+
   src = fetchFromGitHub {
     owner = "ThePhD";
     repo = "sol2";

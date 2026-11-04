@@ -67,6 +67,7 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace configure.ac \
       --replace '-lSDL2main' '-lSDL2'
   '';
+
   meta = {
     description = "Music tracker application, free reimplementation of Impulse Tracker";
     homepage = "https://schismtracker.org/";

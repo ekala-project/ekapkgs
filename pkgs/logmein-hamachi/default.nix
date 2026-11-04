@@ -42,6 +42,7 @@ stdenv.mkDerivation rec {
   '';
 
   dontStrip = true;
+
   dontPatchELF = true;
 
   meta = {

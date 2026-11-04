@@ -15,7 +15,6 @@ in
 buildPythonApplication (finalAttrs: {
   pname = "gnome-browser-connector";
   version = "42.1";
-
   pyproject = false;
 
   src = fetchurl {

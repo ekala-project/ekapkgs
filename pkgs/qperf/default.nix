@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     perl
     rdma-core
   ];
+
   buildInputs = [ rdma-core ];
 
   postUnpack = ''

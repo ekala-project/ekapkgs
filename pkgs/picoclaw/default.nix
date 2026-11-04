@@ -42,7 +42,9 @@ buildGoModule (finalAttrs: {
   # Tests require runtime configuration and network access.
 
   doInstallCheck = true;
+
   versionCheckProgramArg = [ "version" ];
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

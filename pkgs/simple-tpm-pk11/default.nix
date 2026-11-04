@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     libtool
   ];
+
   buildInputs = [
     trousers
     openssl

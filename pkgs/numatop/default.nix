@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeCheckInputs = [ check ];
 
   doCheck = true;
+
   meta = {
     description = "Tool for runtime memory locality characterization and analysis of processes and threads on a NUMA system";
     mainProgram = "numatop";

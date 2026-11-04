@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
   configureFlags = [ "--with-perl=${perl}/bin/perl" ];
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     libpcap
     bison

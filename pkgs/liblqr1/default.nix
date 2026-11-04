@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   propagatedBuildInputs = [ glib ];
 
   meta = {

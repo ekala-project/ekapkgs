@@ -51,9 +51,11 @@ stdenv.mkDerivation {
     pygobject3
     pillow
   ];
+
   preFixup = ''
     buildPythonPath "$out ''${pythonPath[*]}"
   '';
+
   postFixup = ''
     wrapPythonPrograms
   '';

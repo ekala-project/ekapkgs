@@ -32,6 +32,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   buildAndTestSubdir = "crates/emmylua_ls";
 
   cargoHash = "sha256-MAMHJDzU7WRfsl4IQ6eKt1mc1e90s2RQG8fwE8Ay3qc=";
+
   versionCheckProgram = "${placeholder "out"}/bin/emmylua_ls";
 
   meta = {

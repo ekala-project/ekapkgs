@@ -5,7 +5,6 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "ladspa-header";
-
   inherit (ladspa-sdk) version src;
 
   dontBuild = true;

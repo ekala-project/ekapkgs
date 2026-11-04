@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   configureFlags = [ "--disable-gifview" ];
 
   doCheck = true;
+
   checkPhase = ''
     ./src/gifsicle --info logo.gif
   '';

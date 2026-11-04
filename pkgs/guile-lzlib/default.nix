@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     texinfo
   ];
+
   propagatedBuildInputs = [
     guile
     lzlib

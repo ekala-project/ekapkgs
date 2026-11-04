@@ -28,6 +28,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "mate-utils";
   version = "1.28.3";
+
   outputs = [
     "out"
     "man"

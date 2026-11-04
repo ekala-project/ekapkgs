@@ -7,6 +7,7 @@
 buildGoModule rec {
   pname = "serf";
   version = "0.11.0";
+
   rev = "a2bba5676d6e37953715ea10e583843793a0c507";
 
   src = fetchFromGitHub {

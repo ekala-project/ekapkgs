@@ -150,6 +150,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   checkTarget = "test";
+
   postCheck = "unset NEOMUTT_TEST_DIR";
 
   meta = {

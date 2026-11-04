@@ -16,6 +16,7 @@ stdenv.mkDerivation rec {
   patches = [ ./no-resolve-symlinks.patch ];
 
   dontBuild = true;
+
   dontCheckForBrokenSymlinks = true;
 
   installPhase = ''

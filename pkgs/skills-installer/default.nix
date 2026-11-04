@@ -21,14 +21,18 @@ let
   node_modules = stdenv.mkDerivation {
     pname = "skills-installer-node_modules";
     inherit version src;
+
     nativeBuildInputs = [ bun ];
+
     dontConfigure = true;
+
     buildPhase = ''
       runHook preBuild
       export BUN_INSTALL_CACHE_DIR=$(mktemp -d)
       bun install --frozen-lockfile --ignore-scripts --no-progress
       runHook postBuild
     '';
+
     installPhase = ''
         runHook preInstall
       find node_modules -maxdepth 1 -type l -delete
@@ -39,9 +43,13 @@ let
         [ -f bun.lock ] && cp bun.lock $out/ || true
         runHook postInstall
     '';
+
     dontFixup = true;
+
     outputHash = "sha256-5dRGbVsBQ5ZFjfpg1lxlTSATBLxwaZlQtyUXh+bYOE4=";
+
     outputHashAlgo = "sha256";
+
     outputHashMode = "recursive";
   };
 in

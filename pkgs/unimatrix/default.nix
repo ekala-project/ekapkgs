@@ -25,6 +25,7 @@ python3Packages.buildPythonApplication {
   '';
 
   dontConfigure = true;
+
   dontBuild = true;
 
   meta = {

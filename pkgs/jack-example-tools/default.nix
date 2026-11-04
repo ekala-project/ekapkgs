@@ -38,6 +38,7 @@ stdenv.mkDerivation (final: {
     meson.configurePhaseHook
     ninja
   ];
+
   buildInputs = [
     jack2
     (libopus.override { withCustomModes = true; })

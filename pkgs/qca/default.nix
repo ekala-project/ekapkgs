@@ -27,6 +27,7 @@ stdenv.mkDerivation rec {
     qtbase
     qt5compat
   ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

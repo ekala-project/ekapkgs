@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   patches = [ ./nagios.patch ];
+
   nativeBuildInputs = [ unzip ];
 
   buildInputs = [
@@ -48,7 +49,9 @@ stdenv.mkDerivation (finalAttrs: {
   preInstall = ''
     substituteInPlace Makefile --replace-fail '$(MAKE) install-basic' ""
   '';
+
   installTargets = "install install-config";
+
   postInstall = ''
     # don't make default files use hardcoded paths to commands
     sed -i 's@command_line *[^ ]*/\([^/]*\) @command_line \1 @'  $out/etc/objects/commands.cfg

@@ -10,6 +10,7 @@
 stdenv.mkDerivation rec {
   pname = "hsqldb";
   version = "2.7.4";
+
   underscoreMajMin = lib.replaceStrings [ "." ] [ "_" ] (lib.versions.majorMinor version);
 
   src = fetchurl {
@@ -21,6 +22,7 @@ stdenv.mkDerivation rec {
     unzip
     makeWrapper
   ];
+
   buildInputs = [ java ];
 
   installPhase = ''

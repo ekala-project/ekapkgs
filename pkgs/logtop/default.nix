@@ -19,12 +19,14 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     ncurses
     uthash
   ];
 
   makeFlags = [ "CC=${stdenv.cc.targetPrefix}cc" ];
+
   installFlags = [ "DESTDIR=$(out)" ];
 
   postConfigure = ''

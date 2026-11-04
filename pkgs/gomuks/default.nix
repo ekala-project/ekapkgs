@@ -20,6 +20,7 @@ buildGoModule rec {
   vendorHash = "sha256-0my58bVKLWbdTwhAnXMruNjujd07NXFn4bkRe1cUYpE=";
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [ olm ];
 
   meta = {

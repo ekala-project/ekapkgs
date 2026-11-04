@@ -21,10 +21,12 @@
 buildPerlPackage {
   pname = "SQL-Translator";
   version = "1.63";
+
   src = fetchurl {
     url = "mirror://cpan/authors/id/V/VE/VEESH/SQL-Translator-1.63.tar.gz";
     hash = "sha256-WIWwTJNJi+MqGX3JcjlHUdXeYJNBiTqWZW3oikJgMTM=";
   };
+
   buildInputs = [
     FileShareDirInstall
     JSONMaybeXS
@@ -33,6 +35,7 @@ buildPerlPackage {
     XMLWriter
     YAML
   ];
+
   propagatedBuildInputs = [
     CarpClan
     DBI
@@ -44,9 +47,11 @@ buildPerlPackage {
     GraphViz
     GD
   ];
+
   postPatch = ''
     patchShebangs script
   '';
+
   meta = {
     description = "SQL DDL transformations and more";
     license = with lib.licenses; [

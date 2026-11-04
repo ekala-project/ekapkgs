@@ -73,6 +73,7 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     pythonPackages.pytestCheckHook
     writableTmpDirAsHomeHook
   ];
+
   doCheck = true;
 
   # In order to spare double wrapping, we use:

@@ -19,11 +19,15 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     udevCheckHook
   ];
+
   dontConfigure = true;
+
   dontBuild = true;
 
   installTargets = "install_package";
+
   installFlags = "DESTDIR=${placeholder "out"}";
+
   meta = {
     description = "Hardware description for XR devices";
     homepage = "https://gitlab.freedesktop.org/monado/utilities/xr-hardware";

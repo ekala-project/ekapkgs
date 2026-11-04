@@ -26,6 +26,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   '';
 
   buildAndTestSubdir = "crates/arti";
+
   cargoHash = "sha256-JK6ubp697jZ98ErNrZdFe0mXIez3lUZ5SmAHkyD97WQ=";
 
   nativeBuildInputs = [ pkg-config ];

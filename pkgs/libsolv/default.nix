@@ -52,6 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
   ];
+
   buildInputs = [
     zlib
     xz

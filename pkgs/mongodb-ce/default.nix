@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
       or (throw "Unsupported platform for mongodb-ce: ${stdenv.hostPlatform.system}");
 
   nativeBuildInputs = lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
+
   dontStrip = true;
 
   buildInputs = [

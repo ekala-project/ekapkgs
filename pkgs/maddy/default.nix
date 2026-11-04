@@ -68,6 +68,7 @@ buildGoModule (finalAttrs: {
   '';
 
   env.NIX_CFLAGS_COMPILE = lib.optionalString stdenv.cc.isClang "-Wno-error=strict-prototypes";
+
   meta = {
     description = "Composable all-in-one mail server";
     homepage = "https://maddy.email";

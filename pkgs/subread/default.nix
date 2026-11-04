@@ -43,5 +43,4 @@ stdenv.mkDerivation (finalAttrs: {
     ];
     homepage = "https://subread.sourceforge.net/";
   };
-
 })

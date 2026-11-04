@@ -63,6 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
   setupHook = replaceVars ./setup-hook.sh {
     inherit tradcpp;
   };
+
   meta = {
     description = "Obsolete C preprocessor interface to the make utility";
     homepage = "https://gitlab.freedesktop.org/xorg/util/imake";

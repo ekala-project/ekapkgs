@@ -29,15 +29,18 @@ python3Packages.buildPythonApplication rec {
     gtk3.wrapGAppsHook
     gobject-introspection
   ];
+
   buildInputs = [
     glibcLocales
     gtk3
     libsoup_3
     libsecret
   ];
+
   propagatedBuildInputs = with python3Packages; [
     pygobject3
   ];
+
   checkInputs = with python3Packages; [
     freezegun
   ];

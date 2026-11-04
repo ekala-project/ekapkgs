@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     flex
   ];
+
   buildInputs = [ guile ];
 
   src = fetchurl {
@@ -41,6 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   env.NIX_CFLAGS_COMPILE = "-I${lib.getDev guile}/include/guile/${guile.effectiveVersion}";
+
   env.NIX_LDFLAGS = "-L${guile}/lib -lguile-${guile.effectiveVersion}";
 
   meta = {

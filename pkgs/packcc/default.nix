@@ -33,12 +33,15 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   checkTarget = "check";
+
   nativeCheckInputs = [
     bats
     python3
     uncrustify
   ];
+
   meta = {
     description = "Parser generator for C";
     longDescription = ''

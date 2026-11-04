@@ -22,6 +22,7 @@ stdenvNoCC.mkDerivation {
   nativeCheckInputs = [ bats ];
 
   dontConfigure = true;
+
   dontBuild = true;
 
   patchPhase = ''

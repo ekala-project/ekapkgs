@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-ZOwBBbVNP0PaYUvrjdvbWu88fZOZ6IJ8BHAiajcOjP8=";
   };
+
   buildInputs = [
     perl
     systemc
@@ -36,6 +37,7 @@ stdenv.mkDerivation (finalAttrs: {
       ]
     ))
   ];
+
   nativeBuildInputs = [
     makeWrapper
     flex
@@ -57,6 +59,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   checkTarget = "test";
 
   preConfigure = "autoconf";

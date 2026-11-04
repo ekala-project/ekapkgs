@@ -17,6 +17,7 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     xorg.libX11
     xorg.libXres

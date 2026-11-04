@@ -22,7 +22,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [ autoconf ];
+
   buildInputs = [ ncurses ];
 
   # https://github.com/Aloxaf/fzf-tab/issues/337
@@ -89,6 +91,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     runHook postInstall
   '';
+
   meta = {
     homepage = "https://github.com/Aloxaf/fzf-tab";
     description = "Replace zsh's default completion selection menu with fzf";

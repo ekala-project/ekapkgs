@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     udevCheckHook
   ];
+
   postInstall = builtins.readFile ./postInstall.sh;
 
   meta = {

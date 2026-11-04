@@ -105,6 +105,7 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
   ]
   ++ lib.optional withQT libsForQt5.wrapQtAppsHook;
+
   buildInputs = [
     zlib
     gettext

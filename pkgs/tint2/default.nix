@@ -88,6 +88,7 @@ stdenv.mkDerivation rec {
     substituteInPlace src/launcher/apps-common.c src/launcher/icon-theme-common.c \
       --replace-fail /usr/share/ /run/current-system/sw/share/
   '';
+
   meta = {
     mainProgram = "tint2";
     homepage = "https://gitlab.com/nick87720z/tint2";

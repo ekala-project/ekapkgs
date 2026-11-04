@@ -18,6 +18,7 @@ assert withFlint -> flint != null;
 stdenv.mkDerivation (finalAttrs: {
   pname = "eclib";
   version = "20250627"; # upgrade might break the sage interface
+
   # sage tests to run:
   # src/sage/interfaces/mwrank.py
   # src/sage/libs/eclib
@@ -34,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     url = "https://github.com/JohnCremona/eclib/releases/download/${finalAttrs.version}/eclib-${finalAttrs.version}.tar.bz2";
     hash = "sha256-uI1LUmEuSRxUFZRtnjXyBiyhAV7n+74LYfFY+nTLS8k=";
   };
+
   buildInputs = [
     pari
     ntl
@@ -42,10 +44,13 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals withFlint [
     flint
   ];
+
   nativeBuildInputs = [
     autoreconfHook
   ];
+
   doCheck = true;
+
   meta = {
     description = "Elliptic curve tools";
     homepage = "https://github.com/JohnCremona/eclib";

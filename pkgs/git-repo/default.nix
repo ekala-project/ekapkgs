@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   patches = [ ./import-ssl-module.patch ];
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [ python3 ];
 
   postPatch = ''

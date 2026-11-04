@@ -19,10 +19,12 @@
 buildPerlModule {
   pname = "Task-FreecellSolver-Testing";
   version = "0.0.12";
+
   src = fetchurl {
     url = "mirror://cpan/authors/id/S/SH/SHLOMIF/Task-FreecellSolver-Testing-0.0.12.tar.gz";
     hash = "sha256-PRkQt64SVBfG4HeUeOtK8/yc+J4iGVhfiiBBFGP5k6c=";
   };
+
   buildInputs = [
     # CodeTidyAll  # missing: massive dep tree
     # TestDataSplit  # missing: needs IOAll, MooXlate
@@ -33,6 +35,7 @@ buildPerlModule {
     # TestTrailingSpace  # missing: needs FileFindObjectRule
     TestTrap
   ];
+
   propagatedBuildInputs = [
     EnvPath
     FileWhich
@@ -45,6 +48,7 @@ buildPerlModule {
     TemplateToolkit
     YAMLLibYAML
   ];
+
   meta = {
     description = "Install the CPAN dependencies of the Freecell Solver test suite";
     license = with lib.licenses; [ mit ];

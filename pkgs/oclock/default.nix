@@ -41,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   installFlags = [ "appdefaultdir=$(out)/share/X11/app-defaults" ];
+
   meta = {
     description = "simple analog clock using the X11 SHAPE extension to make a round window";
     homepage = "https://gitlab.freedesktop.org/xorg/app/oclock";

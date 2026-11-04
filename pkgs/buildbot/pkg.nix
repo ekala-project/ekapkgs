@@ -10,6 +10,7 @@ buildPythonPackage {
   pname = "buildbot_pkg";
   inherit (buildbot) src version;
   pyproject = true;
+  disabled = !isPy3k;
 
   postPatch = ''
     cd pkg
@@ -26,8 +27,6 @@ buildPythonPackage {
   doCheck = false;
 
   pythonImportsCheck = [ "buildbot_pkg" ];
-
-  disabled = !isPy3k;
 
   meta = {
     homepage = "https://buildbot.net/";

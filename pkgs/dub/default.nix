@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     libevent
     rsync
   ];
+
   buildInputs = [ curl ];
 
   buildPhase = ''

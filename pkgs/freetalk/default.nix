@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     texinfo
   ];
+
   buildInputs = [
     guile
     glib

@@ -13,12 +13,14 @@
 stdenv.mkDerivation rec {
   pname = "frame";
   version = "2.5.0";
+
   src = fetchurl {
     url = "https://launchpad.net/frame/trunk/v${version}/+download/${pname}-${version}.tar.xz";
     sha256 = "bc2a20cd3ac1e61fe0461bd3ee8cb250dbcc1fa511fad0686d267744e9c78f3a";
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     stdenv
   ]

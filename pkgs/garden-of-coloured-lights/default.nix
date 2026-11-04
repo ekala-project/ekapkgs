@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoconf
     automake
   ];
+
   buildInputs = [ allegro ];
 
   prePatch = ''

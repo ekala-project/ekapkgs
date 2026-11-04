@@ -30,6 +30,7 @@ buildGoModule (finalAttrs: {
   '';
 
   vendorHash = "sha256-QO+fz8m2rILKTokimf+v4x0lon5lZy7zC+5qjTMdcs0=";
+
   nativeBuildInputs = [ scdoc ];
 
   buildPhase = ''

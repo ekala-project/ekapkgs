@@ -32,6 +32,7 @@ bun.buildPackage {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   meta = {

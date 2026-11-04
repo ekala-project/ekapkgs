@@ -14,6 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   patchPhase = "rm *.o";
+
   installPhase = "mkdir -p $out/sbin; cp 915resolution $out/sbin/";
 
   meta = {

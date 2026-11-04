@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ libmodbus ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

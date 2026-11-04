@@ -9,7 +9,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
   pname = "glances";
   version = "4.5.7";
   pyproject = true;
-
   disabled = python3Packages.isPyPy;
 
   src = fetchFromGitHub {

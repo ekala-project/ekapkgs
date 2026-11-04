@@ -30,5 +30,4 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://os.ghalkes.nl/dwdiff.html";
     license = lib.licenses.gpl3Only;
   };
-
 })

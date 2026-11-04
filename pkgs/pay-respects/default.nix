@@ -27,6 +27,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     "-p pay-respects-module-runtime-rules"
     "-p pay-respects-module-request-ai"
   ];
+
   cargoTestFlags = [
     "-p pay-respects"
     "-p pay-respects-module-runtime-rules"

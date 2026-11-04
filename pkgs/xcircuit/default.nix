@@ -34,6 +34,7 @@ stdenv.mkDerivation {
     automake
     pkg-config
   ];
+
   hardeningDisable = [ "format" ];
 
   configureFlags = [

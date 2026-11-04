@@ -77,15 +77,15 @@ stdenv.mkDerivation (finalAttrs: {
 
   checkTarget = "test";
 
-  meta = {
-    description = "Text-to-speech engine";
-    platforms = lib.platforms.unix;
-    license = lib.licenses.free;
-  };
-
   passthru = {
     updateInfo = {
       downloadPage = "http://www.festvox.org/packed/festival/";
     };
+  };
+
+  meta = {
+    description = "Text-to-speech engine";
+    platforms = lib.platforms.unix;
+    license = lib.licenses.free;
   };
 })

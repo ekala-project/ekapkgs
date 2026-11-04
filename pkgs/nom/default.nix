@@ -23,6 +23,7 @@ buildGoModule (finalAttrs: {
 
   # only run xdg-specific test on linux
   checkFlags = lib.optional stdenv.hostPlatform.isDarwin "-skip=^TestNewDefaultWithXDGConfigHome$";
+
   meta = {
     homepage = "https://github.com/guyfedwards/nom";
     changelog = "https://github.com/guyfedwards/nom/releases/tag/v${finalAttrs.version}";

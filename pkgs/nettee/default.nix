@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
   postInstall = ''
     rm $out/bin/*.sh
   '';
+
   versionCheckProgramArg = "-version";
 
   meta = {

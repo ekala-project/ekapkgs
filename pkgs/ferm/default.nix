@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
     perl
   ];
+
   buildInputs = [ perl ];
 
   makeFlags = [

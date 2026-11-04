@@ -63,6 +63,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
+
   dontWrapQtApps = true;
 
   cmakeFlags = [

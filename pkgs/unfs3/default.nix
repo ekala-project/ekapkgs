@@ -33,8 +33,11 @@ stdenv.mkDerivation rec {
   configureFlags = [ "--disable-shared" ];
 
   nativeInstallCheckInputs = [ ];
+
   versionCheckProgram = "${placeholder "out"}/bin/unfsd";
+
   versionCheckProgramArg = "-h";
+
   doInstallCheck = true;
 
   meta = {

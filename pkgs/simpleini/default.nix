@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
   cmakeEntries = {
     SIMPLEINI_USE_SYSTEM_GTEST = true;
   };
+
   meta = {
     description = "Cross-platform C++ library providing a simple API to read and write INI-style configuration files";
     longDescription = ''

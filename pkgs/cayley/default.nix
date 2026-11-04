@@ -7,6 +7,7 @@
 buildGoModule rec {
   pname = "cayley";
   version = "0.7.7";
+
   rev = "dcf764fef381f19ee49fad186b4e00024709f148";
 
   src = fetchFromGitHub {

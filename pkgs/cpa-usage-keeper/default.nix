@@ -19,8 +19,11 @@ let
   frontend = buildNpmPackage {
     pname = "cpa-usage-keeper-frontend";
     inherit version src;
+
     sourceRoot = "${src.name}/web";
+
     npmDepsHash = "sha256-Fy8eVMC+6YhSDjzsphdqu3Wg8fqQGzMWw55dayN4XMI=";
+
     npmDepsFetcherVersion = 2;
 
     installPhase = ''

@@ -8,7 +8,6 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-
   pname = "es";
   version = "0.10.0";
 
@@ -20,13 +19,19 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     autoreconfHook
     bison
   ];
+
   buildInputs = [ readline ];
 
   configureFlags = [ "--with-readline" ];
+
+  passthru = {
+    shellPath = "/bin/es";
+  };
 
   meta = {
     description = "Extensible shell with higher order functions";
@@ -40,9 +45,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://wryun.github.io/es-shell/";
     license = lib.licenses.publicDomain;
     platforms = lib.platforms.all;
-  };
-
-  passthru = {
-    shellPath = "/bin/es";
   };
 })

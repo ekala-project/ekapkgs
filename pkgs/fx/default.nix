@@ -41,6 +41,7 @@ buildGoModule (finalAttrs: {
   ];
 
   doInstallCheck = true;
+
   versionCheckKeepEnvironment = [ "HOME" ];
 
   meta = {

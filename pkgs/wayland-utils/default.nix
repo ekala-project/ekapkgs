@@ -21,7 +21,9 @@ stdenv.mkDerivation rec {
   };
 
   strictDeps = true;
+
   depsBuildBuild = [ pkg-config ];
+
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook
@@ -29,6 +31,7 @@ stdenv.mkDerivation rec {
     pkg-config
     wayland-scanner
   ];
+
   buildInputs = [
     libdrm
     wayland

@@ -32,9 +32,11 @@ stdenv.mkDerivation rec {
   ];
 
   buildInputs = [ gtk3 ];
+
   nativeBuildInputs = [
     pkg-config
   ];
+
   propagatedBuildInputs = [
     cogl
     pango

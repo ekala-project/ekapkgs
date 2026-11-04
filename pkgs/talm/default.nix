@@ -43,7 +43,9 @@ buildGoModule (finalAttrs: {
 
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
+
   meta = {
     description = "Manage Talos Linux the GitOps way";
     homepage = "https://github.com/cozystack/talm";

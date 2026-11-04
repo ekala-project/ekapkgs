@@ -18,6 +18,7 @@
 python3Packages.buildPythonApplication {
   pname = "apparmor-utils";
   inherit (libapparmor) version src;
+  pyproject = false;
 
   postPatch = ''
     patchShebangs common
@@ -35,8 +36,6 @@ python3Packages.buildPythonApplication {
   + (lib.optionalString stdenv.hostPlatform.isMusl ''
     sed -i Makefile -e "/\<vim\>/d"
   '');
-
-  pyproject = false;
 
   doCheck = true;
 

@@ -17,8 +17,11 @@ buildGoModule (finalAttrs: {
   };
 
   modRoot = "./go";
+
   subPackages = [ "cmd/dolt" ];
+
   vendorHash = "sha256-pC5r7Ia6niyBGbATv9ByEi6/cECPGOllW8yInGr8oxY=";
+
   proxyVendor = true;
 
   buildInputs = [ icu ];

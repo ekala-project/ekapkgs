@@ -27,10 +27,12 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     intltool
   ];
+
   buildInputs = [
     libxml2
     gtk3
   ];
+
   meta = {
     description = "Gnome docking library";
     homepage = "https://developer.gnome.org/gdl/";

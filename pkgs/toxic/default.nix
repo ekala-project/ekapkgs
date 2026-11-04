@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   makeFlags = [ "PREFIX=$(out)" ];
+
   installFlags = [ "PREFIX=$(out)" ];
 
   nativeBuildInputs = [

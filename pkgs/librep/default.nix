@@ -54,7 +54,9 @@ stdenv.mkDerivation (finalAttrs: {
   configureFlags = lib.optionals stdenv.hostPlatform.isDarwin [ "CFLAGS=-std=gnu89" ];
 
   setupHook = ./setup-hook.sh;
+
   doInstallCheck = true;
+
   versionCheckProgram = "${placeholder "out"}/bin/${finalAttrs.meta.mainProgram}";
 
   meta = {

@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   doCheck = !stdenv.hostPlatform.isDarwin;
+
   checkTarget = "test";
 
   meta = {

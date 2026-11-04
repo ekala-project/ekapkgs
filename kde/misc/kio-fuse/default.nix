@@ -15,6 +15,7 @@ mkKdeDerivation rec {
   };
 
   extraNativeBuildInputs = [ pkg-config ];
+
   extraBuildInputs = [ fuse3 ];
 
   meta.license = lib.licenses.gpl3Plus;

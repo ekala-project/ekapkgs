@@ -45,6 +45,7 @@ stdenv.mkDerivation (finalAttrs: {
     python
     wrapPython
   ]);
+
   buildInputs = [
     openssl
     zlib
@@ -55,6 +56,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals (luajit != null) [
     luajit
   ];
+
   pythonPath = with python3Packages; [
     pygments
     markdown

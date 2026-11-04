@@ -30,6 +30,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   # Workspace tests exercise fixtures outside the rust/ source root.
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

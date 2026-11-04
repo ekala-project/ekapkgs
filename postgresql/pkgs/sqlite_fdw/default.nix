@@ -18,6 +18,7 @@ postgresqlBuildExtension (finalAttrs: {
   };
 
   buildInputs = [ sqlite ];
+
   makeFlags = [ "USE_PGXS=1" ];
 
   meta = {

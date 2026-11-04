@@ -18,6 +18,7 @@ stdenv.mkDerivation {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [ wayland-scanner ];
 
   patchPhase = ''
@@ -27,6 +28,7 @@ stdenv.mkDerivation {
   '';
 
   doCheck = true;
+
   checkTarget = "check";
 
   installFlags = [

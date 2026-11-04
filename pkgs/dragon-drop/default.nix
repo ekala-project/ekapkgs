@@ -18,10 +18,13 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ gtk3 ];
 
   makeFlags = [ "NAME=dragon-drop" ];
+
   installFlags = [ "PREFIX=${placeholder "out"}" ];
+
   postInstall = ''
     ln -s $out/bin/dragon-drop $out/bin/xdragon
   '';

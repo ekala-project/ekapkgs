@@ -21,22 +21,28 @@ stdenv.mkDerivation (finalAttrs: {
     rev = "51b5255eead47203ae78636796a6e6d5713e6705";
     sha256 = "sha256-/8k5NNnfl3PZWFXECtiNdLi2CwACp2b5uiIpSOmWcDI=";
   };
+
   sourceRoot = "${finalAttrs.src.name}/BasiliskII/src/Unix";
+
   patches = [ ./remove-redhat-6-workaround-for-scsi-sg.h.patch ];
+
   nativeBuildInputs = [
     autoconf
     automake
     pkg-config
     gtk3 # for glib-compile-resources
   ];
+
   buildInputs = [
     sdl2-compat
     gtk3
     mpfr
   ];
+
   preConfigure = ''
     NO_CONFIGURE=1 ./autogen.sh
   '';
+
   configureFlags = [
     "--enable-sdl-video"
     "--enable-sdl-audio"

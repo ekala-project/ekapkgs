@@ -18,6 +18,7 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = null;
+
   env.CGO_ENABLED = 0;
 
   subPackages =

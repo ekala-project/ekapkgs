@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     python3
   ];
+
   buildInputs = [
     rinutils
   ];

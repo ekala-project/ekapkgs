@@ -8,17 +8,20 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "wayland-logout";
   version = "1.4";
+
   src = fetchFromGitHub {
     owner = "soreau";
     repo = "wayland-logout";
     tag = "v${finalAttrs.version}";
     hash = "sha256-VSAw6go4v937HWazXfMz8OdHgOnUtrlDXkslsV4eDIg=";
   };
+
   nativeBuildInputs = [
     meson
     meson.configurePhaseHook
     ninja
   ];
+
   meta = {
     description = ''
       A utility designed to kill a single instance of a wayland compositor

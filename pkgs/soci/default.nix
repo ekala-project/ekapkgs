@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     ninja
   ];
+
   buildInputs = [
     sqlite
     libpq

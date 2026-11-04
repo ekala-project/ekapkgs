@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     docbook2x
     pkg-config
   ];
+
   buildInputs = [
     libarchive
     libcap_ng

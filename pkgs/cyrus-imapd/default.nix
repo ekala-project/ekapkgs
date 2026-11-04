@@ -73,6 +73,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     autoreconfHook
   ];
+
   buildInputs = [
     flex
     perl
@@ -169,6 +170,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   checkInputs = lib.optionals (cunit != null) [ cunit ];
+
   doCheck = true;
 
   meta = {

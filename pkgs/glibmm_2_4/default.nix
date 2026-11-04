@@ -35,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
     m4
     glib # for glib-compile-schemas
   ];
+
   propagatedBuildInputs = [
     glib
     libsigcxx_2_0

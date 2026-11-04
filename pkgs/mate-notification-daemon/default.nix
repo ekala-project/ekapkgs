@@ -22,6 +22,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "mate-notification-daemon";
   version = "1.28.5";
+
   outputs = [
     "out"
     "man"

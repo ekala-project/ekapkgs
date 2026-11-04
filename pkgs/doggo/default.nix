@@ -18,7 +18,9 @@ buildGoModule (finalAttrs: {
   };
 
   vendorHash = "sha256-pIPIK2IYultYXzMw/cTwrDhNNOHfelniY+pQL52tI34=";
+
   nativeBuildInputs = [ installShellFiles ];
+
   subPackages = [ "cmd/doggo" ];
 
   ldflags = [
@@ -32,6 +34,7 @@ buildGoModule (finalAttrs: {
       --fish <($out/bin/doggo completions fish) \
       --zsh <($out/bin/doggo completions zsh)
   '';
+
   meta = {
     homepage = "https://github.com/mr-karan/doggo";
     description = "Command-line DNS Client for Humans. Written in Golang";

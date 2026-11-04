@@ -14,7 +14,6 @@
 python3Packages.buildPythonApplication rec {
   pname = "gnome-doc-utils";
   version = "0.20.10";
-
   pyproject = false;
 
   src = fetchurl {
@@ -40,11 +39,13 @@ python3Packages.buildPythonApplication rec {
     pkg-config
     libxslt.dev
   ];
+
   buildInputs = [
     libxml2
     libxslt
     bash
   ];
+
   propagatedBuildInputs = [ python3Packages.libxml2 ];
 
   configureFlags = [ "--disable-scrollkeeper" ];

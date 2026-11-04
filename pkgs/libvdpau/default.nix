@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     url = "https://gitlab.freedesktop.org/vdpau/libvdpau/-/archive/${finalAttrs.version}/libvdpau-${finalAttrs.version}.tar.bz2";
     sha256 = "sha256-pdUKQrjCiP68BxUatkOsjeBqGERpZcckH4m06BCCGRM=";
   };
+
   patches = [ ./tracing.patch ];
 
   outputs = [
@@ -32,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
   ];
+
   buildInputs = [
     xorgproto
     libxext

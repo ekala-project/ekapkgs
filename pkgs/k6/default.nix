@@ -24,6 +24,7 @@ buildGoModule rec {
   nativeBuildInputs = [ installShellFiles ];
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     $out/bin/k6 version | grep ${version} > /dev/null
   '';

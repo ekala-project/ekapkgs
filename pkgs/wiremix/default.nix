@@ -21,6 +21,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     pkg-config
     rustPlatform.bindgenHook
   ];
+
   buildInputs = [ pipewire ];
 
   meta = {

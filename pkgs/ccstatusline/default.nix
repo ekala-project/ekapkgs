@@ -21,14 +21,18 @@ let
   node_modules = stdenv.mkDerivation {
     pname = "ccstatusline-node_modules";
     inherit version src;
+
     nativeBuildInputs = [ bun ];
+
     dontConfigure = true;
+
     buildPhase = ''
       runHook preBuild
       export BUN_INSTALL_CACHE_DIR=$(mktemp -d)
       bun install --frozen-lockfile --ignore-scripts --no-progress
       runHook postBuild
     '';
+
     installPhase = ''
       runHook preInstall
       mkdir -p $out
@@ -37,9 +41,13 @@ let
       [ -f bun.lock ] && cp bun.lock $out/ || true
       runHook postInstall
     '';
+
     dontFixup = true;
+
     outputHash = "sha256-WwYBXa0qP8f4QbAQB9rGvUi6tJTeKsQHXrNI7PytZa8=";
+
     outputHashAlgo = "sha256";
+
     outputHashMode = "recursive";
   };
 in

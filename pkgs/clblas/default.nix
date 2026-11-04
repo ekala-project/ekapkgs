@@ -59,6 +59,7 @@ stdenv'.mkDerivation (finalAttrs: {
     gfortran
     python3
   ];
+
   buildInputs = [
     blas
     boost
@@ -79,5 +80,4 @@ stdenv'.mkDerivation (finalAttrs: {
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
   };
-
 })

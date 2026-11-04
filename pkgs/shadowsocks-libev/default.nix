@@ -17,10 +17,10 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-  strictDeps = true;
-
   pname = "shadowsocks-libev";
   version = "3.3.6";
+
+  strictDeps = true;
 
   # Git tag includes CMake build files which are much more convenient.
   src = fetchFromGitHub {
@@ -38,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     c-ares
     pcre2
   ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

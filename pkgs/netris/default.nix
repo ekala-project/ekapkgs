@@ -25,6 +25,7 @@ stdenv.mkDerivation {
   ];
 
   configureScript = "./Configure";
+
   dontAddPrefix = true;
 
   configureFlags = [

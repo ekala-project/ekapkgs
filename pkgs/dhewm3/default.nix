@@ -42,6 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     copyDesktopItems
   ];
+
   buildInputs = [
     sdl2-compat
     libGLU

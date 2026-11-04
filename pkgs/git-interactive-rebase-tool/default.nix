@@ -19,6 +19,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # Compilation during tests fails if this env var is not set.
   preCheck = "export GIRT_BUILD_GIT_HASH=${finalAttrs.version}";
+
   postCheck = "unset GIRT_BUILD_GIT_HASH";
 
   meta = {

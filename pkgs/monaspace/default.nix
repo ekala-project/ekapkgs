@@ -60,6 +60,7 @@ let
 
         runHook postInstall
       '';
+
       inherit meta;
     };
 

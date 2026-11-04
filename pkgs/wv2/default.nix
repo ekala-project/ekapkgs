@@ -13,6 +13,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "wv2";
   version = "0.4.2";
+
   src = fetchurl {
     url = "mirror://sourceforge/wvware/wv2-${finalAttrs.version}.tar.bz2";
     sha256 = "1p1qxr8z5bsiq8pvlina3c8c1vjcb5d96bs3zz4jj3nb20wnsawz";
@@ -37,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     pkg-config
   ];
+
   buildInputs = [
     libgsf
     glib

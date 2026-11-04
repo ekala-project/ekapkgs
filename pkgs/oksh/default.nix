@@ -27,15 +27,15 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ ncurses ];
 
+  passthru = {
+    shellPath = "/bin/oksh";
+  };
+
   meta = {
     description = "Portable OpenBSD ksh, based on the Public Domain Korn Shell (pdksh)";
     mainProgram = "oksh";
     homepage = "https://github.com/ibara/oksh";
     license = lib.licenses.publicDomain;
     platforms = lib.platforms.all;
-  };
-
-  passthru = {
-    shellPath = "/bin/oksh";
   };
 }

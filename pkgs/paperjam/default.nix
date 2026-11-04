@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   # provide backward compatible PointerHolder, suppress deprecation warnings
   env.NIX_CFLAGS_COMPILE = "-DPOINTERHOLDER_TRANSITION=1";
+
   env.NIX_LDFLAGS = lib.optionalString stdenv.hostPlatform.isDarwin "-liconv";
 
   meta = {

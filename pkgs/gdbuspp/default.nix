@@ -11,6 +11,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "gdbuspp";
   version = "3";
+
   src = fetchFromGitHub {
     owner = "OpenVPN";
     repo = "gdbuspp";
@@ -33,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   # fix build for gcc 15
   env.NIX_CFLAGS_COMPILE = "-Wno-error=free-nonheap-object";
+
   meta = {
     description = "GDBus++ - a glib2 D-Bus wrapper for C++";
     longDescription = ''

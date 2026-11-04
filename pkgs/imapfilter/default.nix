@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
     tag = "v${finalAttrs.version}";
     sha256 = "sha256-EiYVkEyOrgX2WwWzFyQcuVheYZs1s3CGl01fMwtXBog=";
   };
+
   makeFlags = [
     "SSLCAFILE=/etc/ssl/certs/ca-bundle.crt"
     "PREFIX=$(out)"

@@ -16,6 +16,7 @@ stdenvNoCC.mkDerivation rec {
   };
 
   strictDeps = true;
+
   installPhase = ''
     install -D zsh-autocomplete.plugin.zsh $out/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
     cp -R Completions $out/share/zsh-autocomplete/Completions

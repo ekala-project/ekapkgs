@@ -74,14 +74,14 @@ stdenv.mkDerivation (finalAttrs: {
       tools/{an,ua} $out/bin
   '';
 
+  passthru = {
+    withSSL = true;
+  };
+
   meta = {
     homepage = "https://www.washington.edu/imap/";
     description = "UW IMAP toolkit - IMAP-supporting software developed by the UW";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
-  };
-
-  passthru = {
-    withSSL = true;
   };
 })

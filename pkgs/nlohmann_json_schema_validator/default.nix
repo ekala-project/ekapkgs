@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ nlohmann_json ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

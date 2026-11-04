@@ -57,6 +57,7 @@ stdenv.mkDerivation (finalAttrs: {
       "ncurses_sys_prefix = '/usr'" \
       "ncurses_sys_prefix = '${lib.getDev ncurses}'"
   '';
+
   mesonEntries = {
     doc = buildDocs;
     python2 = false;

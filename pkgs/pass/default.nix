@@ -90,7 +90,9 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ git ];
+
   installCheckTarget = "test";
 
   meta = {

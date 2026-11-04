@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
   ];
+
   buildInputs = [
     libassuan
     libgpg-error

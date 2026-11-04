@@ -17,6 +17,7 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [ unzip ];
+
   buildInputs = [ mpg123 ];
 
   sourceRoot = ".";

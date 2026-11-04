@@ -95,6 +95,7 @@ stdenv.mkDerivation (finalAttrs: {
   # Checks need to be run after "make install", otherwise plug-ins are not in
   # the search path, etc.
   doInstallCheck = !stdenv.hostPlatform.isDarwin;
+
   installCheckPhase = "make check";
 
   meta = {

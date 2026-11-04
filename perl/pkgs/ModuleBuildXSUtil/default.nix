@@ -14,6 +14,7 @@ buildPerlModule {
   };
 
   propagatedBuildInputs = [ DevelCheckCompiler ];
+
   meta = {
     description = "Module::Build class for building XS modules";
     homepage = "https://github.com/hideo55/Module-Build-XSUtil";
@@ -22,5 +23,4 @@ buildPerlModule {
       gpl1Plus
     ];
   };
-
 }

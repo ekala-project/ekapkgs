@@ -65,6 +65,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   env.NIX_CFLAGS_COMPILE = "-I${glib.dev}/include/gio-unix-2.0";
+
   env.ZENITY = lib.getExe zenity;
 
   meta = {

@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [ java ];
 
   installPhase = ''
@@ -51,6 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
       +${java}/bin/java $JAVA_OPTS -cp $SOAPUI_CLASSPATH com.eviware.soapui.SoapUI "$@"
     '')
   ];
+
   meta = {
     description = "Most Advanced REST & SOAP Testing Tool in the World";
     homepage = "https://www.soapui.org/";

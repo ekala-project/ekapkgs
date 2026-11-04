@@ -82,5 +82,4 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3Plus;
     broken = stdenv.hostPlatform.isDarwin;
   };
-
 })

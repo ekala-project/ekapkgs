@@ -16,7 +16,9 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [ libpng ];
+
   patches = map fetchurl (import ./debian-patches.nix) ++ [ ./c++17-register-usage-fix.patch ];
 
   env.NIX_CFLAGS_COMPILE = "-std=gnu17";
@@ -27,6 +29,7 @@ stdenv.mkDerivation rec {
   '';
 
   configureFlags = [ "--enable-libplotter" ];
+
   hardeningDisable = [ "format" ];
 
   doCheck = true;

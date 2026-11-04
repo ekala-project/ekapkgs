@@ -23,7 +23,9 @@ let
     stdenv.mkDerivation (finalAttrs: {
       pname = "wiringpi-${subprj}";
       inherit version src;
+
       sourceRoot = "${src.name}/${subprj}";
+
       inherit buildInputs;
 
       # Fix build with gcc 15
@@ -34,6 +36,7 @@ let
         sed -i "/chown root/d" Makefile
         sed -i "/chmod/d" Makefile
       '';
+
       makeFlags = [
         "DESTDIR=${placeholder "out"}"
         "PREFIX=/."

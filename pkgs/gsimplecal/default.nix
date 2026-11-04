@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
     automake
     autoconf
   ];
+
   buildInputs = [ gtk3 ];
 
   preConfigure = "./autogen.sh";

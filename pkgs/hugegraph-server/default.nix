@@ -56,9 +56,13 @@ maven.buildMavenPackage (finalAttrs: {
   '';
 
   buildOffline = true;
+
   mvnHash = "sha256-DH8zPxqWqmO9WZDuvHjdWoInKXMgbrfS+epvPJihwgM=";
+
   mvnJdk = java.v11;
+
   mvnParameters = "-DskipTests -Dmaven.javadoc.skip=true -Drat.skip=true";
+
   manualMvnArtifacts = [ "org.apache:apache-jar-resource-bundle:1.4" ];
 
   # Several transitive POMs (sjk-nps, sjk-jfr5) declare `system`-scope deps with
@@ -80,6 +84,7 @@ maven.buildMavenPackage (finalAttrs: {
   '';
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [ java.v11 ];
 
   installPhase = ''

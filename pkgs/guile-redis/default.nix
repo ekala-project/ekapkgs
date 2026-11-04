@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [ guile ];
+
   meta = {
     description = "Redis module for Guile";
     homepage = "https://github.com/aconchillo/guile-redis";

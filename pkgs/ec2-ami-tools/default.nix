@@ -10,7 +10,6 @@
 
 stdenv.mkDerivation rec {
   pname = "ec2-ami-tools";
-
   version = "1.5.19";
 
   nativeBuildInputs = [
@@ -55,5 +54,4 @@ stdenv.mkDerivation rec {
     description = "Command-line tools to create and manage Amazon EC2 virtual machine images";
     license = lib.licenses.amazonsl;
   };
-
 }

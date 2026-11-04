@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   env.CFLAGS = toString [ "-I${linuxHeaders}/include" ];
+
   meta = {
     homepage = "https://github.com/linux-msm/qbootctl";
     description = "Qualcomm bootctl HAL for Linux";

@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
     "devdoc"
   ];
+
   outputBin = "dev"; # oil-bugreport
 
   nativeBuildInputs = [ pkg-config ];

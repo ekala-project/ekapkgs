@@ -25,7 +25,9 @@ stdenv.mkDerivation {
   buildFlags = [ "release" ];
 
   dontAddPrefix = true;
+
   dontAddStaticConfigureFlags = true;
+
   configurePlatforms = [ ];
 
   installFlags = [

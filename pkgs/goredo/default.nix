@@ -21,6 +21,7 @@ buildGoModule (finalAttrs: {
   vendorHash = null;
 
   modRoot = "./src";
+
   subPackages = [ "." ];
 
   postBuild = ''

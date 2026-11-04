@@ -23,6 +23,7 @@ stdenvNoCC.mkDerivation {
   ];
 
   dontBuild = true;
+
   meta = {
     description = "Assets needed for RetroArch";
     homepage = "https://libretro.com";

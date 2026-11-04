@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     popt
     pkg-config
   ];
+
   buildInputs = [ gdk-pixbuf ];
 
   meta = {

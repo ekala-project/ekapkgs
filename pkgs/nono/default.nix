@@ -28,9 +28,11 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # keyring uses sync-secret-service (dbus) on Linux, apple-native on Darwin.
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ dbus ];
+
   nativeBuildInputs = lib.optionals stdenv.hostPlatform.isLinux [ pkg-config ];
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   passthru.tests.version = testers.testVersion {

@@ -41,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   cmakeBuildDir = "build-directory";
+
   cmakeEntries = {
     ALLOW_IN_SOURCE_BUILD = true;
     JAS_ENABLE_HEIC_CODEC = false;

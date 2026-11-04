@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   doCheck = true;
+
   checkTarget = "xtest";
 
   meta = {

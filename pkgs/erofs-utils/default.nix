@@ -17,6 +17,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "erofs-utils";
   version = "1.9.2";
+
   outputs = [
     "out"
     "man"
@@ -33,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [
     util-linux
     xxhash

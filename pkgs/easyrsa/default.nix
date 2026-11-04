@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ makeWrapper ];
+
   nativeInstallCheckInputs = [ openssl.bin ];
 
   installPhase = ''
@@ -43,6 +44,7 @@ stdenv.mkDerivation (finalAttrs: {
     EOF
     chmod +x $out/bin/easyrsa-init
   '';
+
   postInstallCheck = ''
     set -euo pipefail
     export EASYRSA_BATCH=1

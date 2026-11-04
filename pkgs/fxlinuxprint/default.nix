@@ -29,12 +29,15 @@ stdenv.mkDerivation rec {
     dpkg
     autoPatchelfHook
   ];
+
   buildInputs = [ cups ];
 
   sourceRoot = ".";
+
   unpackCmd = "dpkg-deb -x $curSrc/fxlinuxprint_${version}_${debPlatform}.deb .";
 
   dontConfigure = true;
+
   dontBuild = true;
 
   installPhase = ''

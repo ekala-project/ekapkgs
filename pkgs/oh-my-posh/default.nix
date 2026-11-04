@@ -40,6 +40,7 @@ buildGoModule (finalAttrs: {
     mkdir -p $out/share/oh-my-posh
     cp -r $src/themes $out/share/oh-my-posh/
   '';
+
   meta = {
     description = "Prompt theme engine for any shell";
     mainProgram = "oh-my-posh";

@@ -16,8 +16,11 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   sourceRoot = "${finalAttrs.src.name}/fonts";
 
   dontPatch = true;
+
   dontConfigure = true;
+
   dontBuild = true;
+
   dontFixup = true;
 
   installPhase = ''

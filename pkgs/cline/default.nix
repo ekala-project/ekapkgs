@@ -52,6 +52,7 @@ stdenv.mkDerivation {
   ++ lib.optionals stdenv.hostPlatform.isLinux [ autoPatchelfHook ];
 
   dontBuild = true;
+
   dontStrip = true;
 
   installPhase = ''
@@ -83,6 +84,7 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

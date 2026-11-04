@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [
     gmp
   ];
+
   nativeBuildInputs = [
     bison
     flex

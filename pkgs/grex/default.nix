@@ -18,6 +18,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-UR+JieKyVSzjegOQqXWXYLfXy2DVpKw/ApLZwtA1ZUY=";
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     $out/bin/grex --help > /dev/null
   '';

@@ -36,6 +36,7 @@ stdenv.mkDerivation rec {
     pkg-config
     docbook2x
   ];
+
   buildInputs = [
     boost
     libxml2

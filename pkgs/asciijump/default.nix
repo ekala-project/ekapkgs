@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   nativeBuildInputs = [ ctags ];
+
   buildInputs = [ slang ];
 
   postInstall = ''

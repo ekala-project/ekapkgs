@@ -72,6 +72,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   installTargets = [ "copyfiles" ];
+
   installFlags = [ "COPYDIR=$(out)/share/openarena" ];
 
   preInstall = ''

@@ -30,6 +30,7 @@ buildGoModule (finalAttrs: {
   '';
 
   buildInputs = [ libxkbcommon ];
+
   nativeBuildInputs = [
     installShellFiles
     pkg-config

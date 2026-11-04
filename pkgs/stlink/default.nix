@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ libusb1 ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

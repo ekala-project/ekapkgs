@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
   ];
+
   buildInputs = [
     sdl2-compat
     SDL2_mixer

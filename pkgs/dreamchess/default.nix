@@ -24,6 +24,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "dreamchess";
   version = "0.3.0";
+
   src = fetchFromGitHub {
     owner = "dreamchess";
     repo = "dreamchess";
@@ -50,6 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
     libxcb
     libx11
   ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
@@ -58,6 +60,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     makeWrapper
   ];
+
   cmakeEntries = {
     CMAKE_VERBOSE_MAKEFILE = true;
     OpenGL_GL_PREFERENCE = "GLVND";

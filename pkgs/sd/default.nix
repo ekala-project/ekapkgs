@@ -19,6 +19,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-iOCIX7hq8RqRihVQrVoU2qCTSziuJePxsexkDSCZS9c=";
 
   cargoBuildFlags = [ "--package=sd-cli" ];
+
   cargoTestFlags = [ "--package=sd-cli" ];
 
   nativeBuildInputs = [ installShellFiles ];

@@ -19,7 +19,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   buildInputs = [ boost ];
+
   nativeBuildInputs = [
     python3
     cmake

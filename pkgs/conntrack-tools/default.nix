@@ -37,6 +37,7 @@ stdenv.mkDerivation rec {
   ++ lib.optionals systemdSupport [
     systemd
   ];
+
   nativeBuildInputs = [
     flex
     bison

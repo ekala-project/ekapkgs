@@ -24,6 +24,7 @@ buildZigPackage {
   nativeBuildInputs = [ makeWrapper ];
 
   doCheck = true;
+
   nativeCheckInputs = [ curl ];
 
   postInstall = ''
@@ -33,6 +34,7 @@ buildZigPackage {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   meta = {

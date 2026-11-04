@@ -17,6 +17,7 @@ perlPackages.buildPerlPackage rec {
     "out"
     "man"
   ];
+
   buildInputs = [ perlPackages.DateCalc ];
 
   preConfigure = ''

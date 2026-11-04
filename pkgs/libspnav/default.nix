@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
   buildInputs = [ libx11 ];
 
   configureFlags = [ "--disable-debug" ];
+
   makeFlags = [
     "CC=${stdenv.cc.targetPrefix}cc"
     "AR=${stdenv.cc.targetPrefix}ar"

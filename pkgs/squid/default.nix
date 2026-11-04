@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     perl
     openldap
@@ -61,7 +62,9 @@ stdenv.mkDerivation (finalAttrs: {
   ) "--enable-linux-netfilter";
 
   doCheck = true;
+
   nativeCheckInputs = [ cppunit ];
+
   preCheck = ''
     echo "#!$SHELL" > fake-true
     chmod +x fake-true

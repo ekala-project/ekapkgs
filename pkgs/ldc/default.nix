@@ -78,6 +78,7 @@ stdenv.mkDerivation (finalAttrs: {
     "out"
     "include"
   ];
+
   outputInclude = "include";
 
   cmakeEntries = {

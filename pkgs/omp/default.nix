@@ -116,8 +116,11 @@ let
     '';
 
     dontFixup = true;
+
     outputHash = "sha256-sKRhnXGi2AUOxtifWfsLlczvoUTPdIZHb7gPAMnsg14=";
+
     outputHashAlgo = "sha256";
+
     outputHashMode = "recursive";
   };
 in

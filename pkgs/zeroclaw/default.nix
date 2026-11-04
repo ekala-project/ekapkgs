@@ -42,6 +42,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     sourceRoot = "${src.name}/web";
     hash = "sha256-vY5eHo9VkW7h1d0zQwS70FAClDjCTO9frJ5GzgI9INM=";
   };
+
   npmRoot = "web";
 
   # gen-api renders the gateway's OpenAPI spec and generates the TS API
@@ -52,6 +53,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

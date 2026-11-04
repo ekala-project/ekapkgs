@@ -20,6 +20,7 @@ stdenv.mkDerivation rec {
     help2man
     installShellFiles
   ];
+
   postBuild = ''
     make man
   '';

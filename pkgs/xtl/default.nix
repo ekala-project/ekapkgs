@@ -26,7 +26,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   doCheck = true;
+
   nativeCheckInputs = [ doctest ];
+
   checkTarget = "xtest";
 
   meta = {

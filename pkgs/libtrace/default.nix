@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
     bison
     flex
   ];
+
   buildInputs = [
     zlib
     bzip2

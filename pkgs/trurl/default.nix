@@ -36,13 +36,16 @@ stdenv.mkDerivation rec {
     "dev"
     "man"
   ];
+
   separateDebugInfo = stdenv.hostPlatform.isLinux;
 
   nativeBuildInputs = [
     curl
     perl
   ];
+
   buildInputs = [ curl ];
+
   makeFlags = [ "PREFIX=$(out)" ];
 
   strictDeps = true;

@@ -50,6 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
   propagatedBuildInputs = [ ncurses ];
 
   buildFlags = lib.optional stdenv.hostPlatform.isStatic "static";
+
   installTargets = lib.optional stdenv.hostPlatform.isStatic "install-static";
 
   preBuild = ''

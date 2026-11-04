@@ -105,6 +105,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   dontWrapGApps = true;
+
   makeWrapperArgs = [
     "\${gappsWrapperArgs[@]}"
     "--prefix"
@@ -124,9 +125,11 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = stdenv.buildPlatform.canExecute stdenv.hostPlatform;
+
   checkTarget = "test";
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     python3Packages.pythonImportsCheckHook
     versionCheckHook

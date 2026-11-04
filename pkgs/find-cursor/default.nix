@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     installShellFiles
     git
   ];
+
   buildInputs = [
     libx11
     libxdamage
@@ -33,7 +34,9 @@ stdenv.mkDerivation (finalAttrs: {
     libxcomposite
     libxext
   ];
+
   preInstall = "mkdir -p $out/share/man/man1";
+
   installFlags = [ "PREFIX=${placeholder "out"}" ];
 
   meta = {

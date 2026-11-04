@@ -20,6 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
     ./ftop-fix_buffer_overflow.patch
     ./ftop-fix_printf_format.patch
   ];
+
   patchFlags = [ "-p0" ];
 
   postPatch = ''

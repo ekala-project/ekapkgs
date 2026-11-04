@@ -29,6 +29,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     pkg-config
     udevCheckHook
   ];
+
   buildInputs = [ systemd ];
 
   # upstream doesn't have tests, don't build twice just to find that out

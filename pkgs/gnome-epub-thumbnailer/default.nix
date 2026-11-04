@@ -38,6 +38,7 @@ stdenv.mkDerivation (finalAttrs: {
     librsvg
     libxml2
   ];
+
   meta = {
     description = "Thumbnailer for EPub and MOBI books";
     homepage = "https://gitlab.gnome.org/GNOME/gnome-epub-thumbnailer";

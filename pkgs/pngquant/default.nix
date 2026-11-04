@@ -26,11 +26,13 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   cargoHash = "sha256-W+/y79KkSVHqBybouUazGVfTQAuelXvn6EXtu+TW7j4=";
+
   cargoPatches = [
     ./add-Cargo.lock.patch
   ];
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     libpng
     zlib

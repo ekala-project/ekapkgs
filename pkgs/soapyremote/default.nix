@@ -23,6 +23,7 @@ stdenv.mkDerivation {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [
     soapysdr
     avahi

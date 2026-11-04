@@ -24,6 +24,7 @@ stdenv.mkDerivation rec {
     unzip
     copyDesktopItems
   ];
+
   buildInputs = [ java ];
 
   desktopItems = lib.optional (!stdenv.hostPlatform.isDarwin) (makeDesktopItem {

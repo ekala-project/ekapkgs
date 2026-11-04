@@ -32,11 +32,13 @@ stdenv.mkDerivation (finalAttrs: {
     ctags
     pkg-config
   ];
+
   buildInputs = [
     libretls
     openssl
     ncurses
   ];
+
   strictDeps = true;
 
   meta = {

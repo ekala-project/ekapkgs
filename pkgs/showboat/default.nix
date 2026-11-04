@@ -30,7 +30,9 @@ buildGoModule (finalAttrs: {
   # Tests require python3 and other executors on PATH.
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
+
   versionCheckProgramArg = "--version";
 
   passthru.tests.version = testers.testVersion {

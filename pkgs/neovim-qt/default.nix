@@ -11,6 +11,7 @@ in
 stdenvNoCC.mkDerivation {
   pname = "neovim-qt";
   version = unwrapped.version;
+
   buildCommand = ''
     makeWrapper ${unwrapped}/bin/nvim-qt $out/bin/nvim-qt \
       --prefix PATH : ${neovim}/bin

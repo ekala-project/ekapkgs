@@ -9,7 +9,6 @@
 }:
 
 stdenv.mkDerivation (finalAttrs: {
-
   pname = "bgs";
   version = "0.8";
 

@@ -29,6 +29,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doInstallCheck = true;
+
   meta = {
     description = "Flow-based network traffic analyser capable of Cisco NetFlow";
     homepage = "https://github.com/irino/softflowd";

@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   makeFlags = [
     "PREFIX=${placeholder "out"}"
   ];
+
   meta = {
     description = "Set color temperature of screen";
     mainProgram = "xsct";

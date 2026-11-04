@@ -32,6 +32,7 @@ stdenv.mkDerivation {
     autoreconfHook
     pkg-config
   ];
+
   propagatedBuildInputs = [ libogg ];
 
   preConfigure = ''

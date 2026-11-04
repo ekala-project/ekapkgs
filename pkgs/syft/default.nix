@@ -26,6 +26,7 @@ buildGoModule (finalAttrs: {
       find "$out" -name .git -print0 | xargs -0 rm -rf
     '';
   };
+
   # hash mismatch with darwin
   proxyVendor = true;
 

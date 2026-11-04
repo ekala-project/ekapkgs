@@ -64,6 +64,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
 
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
 
   meta = {

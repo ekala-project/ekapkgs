@@ -18,6 +18,7 @@ stdenv.mkDerivation rec {
   };
 
   sourceRoot = ".";
+
   buildPhase = ''
     runHook preBuild
     $CC $NIX_CFLAGS -o pstree pstree.c

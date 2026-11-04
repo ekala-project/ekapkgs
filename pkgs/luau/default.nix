@@ -46,6 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
 
     runHook postCheck
   '';
+
   meta = {
     description = "Fast, small, safe, gradually typed embeddable scripting language derived from Lua";
     homepage = "https://luau-lang.org/";

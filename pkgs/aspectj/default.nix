@@ -12,6 +12,7 @@ in
 stdenvNoCC.mkDerivation {
   pname = "aspectj";
   inherit version;
+
   src = fetchurl {
     url = "https://github.com/eclipse/org.aspectj/releases/download/V${versionSnakeCase}/aspectj-${version}.jar";
     hash = "sha256-p+UOtuP8hNymfvmL/SPg99YrhU7m5GDudtLISqL5TWQ=";

@@ -26,6 +26,7 @@ stdenv.mkDerivation rec {
     fzf
     gawk
   ];
+
   nativeBuildInputs = [ makeWrapper ];
 
   installPhase = ''
@@ -39,6 +40,7 @@ stdenv.mkDerivation rec {
         ]
       }
   '';
+
   meta = {
     description = "TUI Application launcher with Desktop Entry support";
     mainProgram = "sway-launcher-desktop";

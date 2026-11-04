@@ -19,6 +19,7 @@ bun.buildPackage {
   };
 
   node_modulesHash = "sha256-G5+3dmh3EBpzTlnaZIzdiUjHVCJWqF5KrpOgc/TJ61E=";
+
   node_modulesAttrs.buildPhase = ''
     runHook preBuild
     export BUN_INSTALL_CACHE_DIR=$(mktemp -d)
@@ -28,6 +29,7 @@ bun.buildPackage {
   '';
 
   nativeBuildInputs = [ autoPatchelfHook ];
+
   buildInputs = [ sqlite ] ++ lib.optionals stdenv.hostPlatform.isLinux [ stdenv.cc.cc.lib ];
 
   autoPatchelfIgnoreMissingDeps = [
@@ -63,6 +65,7 @@ bun.buildPackage {
   '';
 
   doInstallCheck = true;
+
   installCheckPhase = ''
     runHook preInstallCheck
     HOME=$(mktemp -d) $out/bin/gno --help | grep -qi "gno"

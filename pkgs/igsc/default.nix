@@ -9,6 +9,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "igsc";
   version = "1.3.2";
+
   src = fetchFromGitHub {
     owner = "intel";
     repo = "igsc";
@@ -20,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     metee
     udev
   ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
@@ -29,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     METEE_LIB_PATH = "${metee}/lib";
     METEE_HEADER_PATH = "${metee}/include";
   };
+
   meta = {
     mainProgram = "igsc";
     description = "Intel graphics system controller firmware update library";

@@ -24,6 +24,7 @@ stdenv.mkDerivation {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [
     openal
     libvorbis

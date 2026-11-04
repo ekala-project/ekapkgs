@@ -18,6 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ copyDesktopItems ];
+
   buildInputs = [
     tcl
     tk
@@ -25,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   # Some light path patching.
   patches = [ ./dirdiff-2.1-vars.patch ];
+
   postPatch = ''
     for file in dirdiff Makefile; do
       substituteInPlace "$file" \

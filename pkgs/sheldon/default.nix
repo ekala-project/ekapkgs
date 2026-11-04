@@ -28,6 +28,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ++ lib.optionals stdenv.hostPlatform.isDarwin [
     curl
   ];
+
   nativeBuildInputs = [
     installShellFiles
     pkg-config

@@ -18,6 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   patchFlags = [ "-p0" ];
+
   patches = lib.optionals stdenv.hostPlatform.isDarwin [
     (fetchpatch {
       url = "https://raw.githubusercontent.com/macports/macports-ports/18fd229516a46e7272003acbe555735b2a902db7/gis/routino/files/patch-Makefile_conf.diff";

@@ -84,6 +84,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   INCDIR = "$(out)/include";
+
   INSTALLDIR = "$(out)/lib";
 
   preInstall = ''

@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
   patches = [ ./no-var-spool-install.patch ];
 
   postPatch = ''

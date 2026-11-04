@@ -15,6 +15,7 @@ buildGoModule (finalAttrs: {
     tag = "v${finalAttrs.version}";
     sha256 = "sha256-mevZN35RUpaPmAYw3lfmzvdT2H+yucD8g3/bX9Rl00s=";
   };
+
   vendorHash = "sha256-I3n1FPINb/nhi4QUzRFEspn7REN1dQEPg8Bhb3PemQU=";
 
   patches = [

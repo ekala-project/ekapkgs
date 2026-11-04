@@ -21,6 +21,7 @@ buildGoModule (finalAttrs: {
     "-s"
     "-X=github.com/openrdap/rdap.version=${finalAttrs.version}"
   ];
+
   meta = {
     description = "Command line client for the Registration Data Access Protocol (RDAP)";
     homepage = "https://www.openrdap.org/";

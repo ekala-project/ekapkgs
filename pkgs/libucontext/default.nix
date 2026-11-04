@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     meson.configurePhaseHook
     ninja
   ];
+
   meta = {
     homepage = "https://github.com/kaniini/libucontext";
     description = "ucontext implementation featuring glibc-compatible ABI";

@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     gtk3.wrapGAppsHook
     installShellFiles
   ];
+
   buildInputs = [
     wayland
     gtk3

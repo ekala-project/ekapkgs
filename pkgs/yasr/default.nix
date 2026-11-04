@@ -7,7 +7,6 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "yasr";
-
   version = "0.6.9";
 
   src = fetchurl {

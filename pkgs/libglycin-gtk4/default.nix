@@ -21,14 +21,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libglycin-gtk4";
+  inherit (libglycin) version src cargoDeps;
 
   outputs = [
     "out"
     "dev"
     "devdoc"
   ];
-
-  inherit (libglycin) version src cargoDeps;
 
   nativeBuildInputs = [
     meson

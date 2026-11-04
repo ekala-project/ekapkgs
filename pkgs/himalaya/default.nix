@@ -20,7 +20,6 @@ rustPlatform.buildRustPackage {
     buildFeatures
     buildNoDefaultFeatures
     ;
-
   pname = "himalaya";
 
   src = fetchFromGitHub {

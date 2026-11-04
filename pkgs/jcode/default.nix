@@ -39,6 +39,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   env.JCODE_RELEASE_BUILD = "1";
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

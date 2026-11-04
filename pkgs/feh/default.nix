@@ -51,6 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional enableAutoreload "inotify=1";
 
   installTargets = [ "install" ];
+
   postInstall = ''
     wrapProgram "$out/bin/feh" --prefix PATH : "${
       lib.makeBinPath [
@@ -61,6 +62,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   nativeCheckInputs = lib.singleton (perl.withPackages (p: [ p.TestCommand ]));
+
   doCheck = true;
 
   meta = {

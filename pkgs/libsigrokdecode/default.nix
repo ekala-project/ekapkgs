@@ -25,12 +25,15 @@ stdenv.mkDerivation {
     autoreconfHook
     python3
   ];
+
   buildInputs = [
     glib
     python3
     libxcrypt
   ];
+
   nativeCheckInputs = [ check ];
+
   doCheck = true;
 
   meta = {

@@ -68,11 +68,15 @@ stdenv.mkDerivation rec {
     "CXX=${stdenv.cc.targetPrefix}c++"
     "STRIP=${stdenv.cc.targetPrefix}strip"
   ];
+
   buildFlags = [ "build" ];
 
   nativeInstallCheckInputs = [ ];
+
   doInstallCheck = true;
+
   versionCheckProgram = "${placeholder "out"}/bin/stockfish";
+
   versionCheckProgramArg = "--help";
 
   meta = {
@@ -92,5 +96,4 @@ stdenv.mkDerivation rec {
     ];
     license = lib.licenses.gpl3Only;
   };
-
 }

@@ -111,6 +111,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   doCheck = true;
+
   preCheck = ''
     export TESTSUITEFLAGS="-j$NIX_BUILD_CORES"
     export RECHECK=yes

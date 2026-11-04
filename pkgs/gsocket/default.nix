@@ -18,7 +18,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [ openssl ];
+
   dontDisableStatic = true;
 
   meta = {

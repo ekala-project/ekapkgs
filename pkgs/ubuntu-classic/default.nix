@@ -21,6 +21,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
 
     runHook postInstall
   '';
+
   meta = {
     description = "Ubuntu Classic font";
     longDescription = "The Ubuntu typeface has been specially

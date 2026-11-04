@@ -14,6 +14,7 @@ stdenv.mkDerivation (finalAttrs: {
     url = "https://www.draisberghof.de/usb_modeswitch/${finalAttrs.pname}-${finalAttrs.version}.tar.bz2";
     hash = "sha256-C7EtZK7l5GfDGvYaU/uCj/eqWcVKgsqF7u3kxWkL+mY=";
   };
+
   makeFlags = [
     "PREFIX=$(out)"
     "DESTDIR=$(out)"

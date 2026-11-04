@@ -22,7 +22,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [ util-linux ];
 
   postPatch = ''

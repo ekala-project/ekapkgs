@@ -39,8 +39,11 @@ buildGoModule (finalAttrs: {
 
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
+
   versionCheckProgram = "${placeholder "out"}/bin/${mainProgram}";
+
   versionCheckProgramArg = "version";
 
   ldflags = [

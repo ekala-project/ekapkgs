@@ -19,6 +19,7 @@ stdenv.mkDerivation {
     cmake
     cmake.configurePhaseHook
   ];
+
   meta = {
     description = "Header-only library that provides 0 cost initialization for immutable containers, fixed-size containers, and various algorithms";
     homepage = "https://github.com/serge-sans-paille/frozen";

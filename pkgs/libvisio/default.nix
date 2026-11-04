@@ -33,12 +33,14 @@ stdenv.mkDerivation rec {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     pkg-config
     doxygen
     perl
     gperf
   ];
+
   buildInputs = [
     boost
     libwpd

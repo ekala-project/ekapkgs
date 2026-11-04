@@ -19,6 +19,7 @@
 buildGoModule (finalAttrs: {
   pname = "gonic";
   version = "0.22.0";
+
   src = fetchFromGitHub {
     owner = "sentriz";
     repo = "gonic";

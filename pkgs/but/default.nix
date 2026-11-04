@@ -48,10 +48,13 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   cargoBuildFlags = [ "--package=but" ];
+
   buildFeatures = [ "but/packaged-but-distribution" ];
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
+
   versionCheckProgramArg = "--version";
 
   passthru.tests.version = testers.testVersion {

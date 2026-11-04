@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ libusb1 ];
 
   makeFlags = [

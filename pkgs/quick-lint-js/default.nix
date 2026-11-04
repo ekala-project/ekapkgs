@@ -34,7 +34,9 @@ let
       cmake.configurePhaseHook
       ninja
     ];
+
     inherit cmakeFlags;
+
     ninjaFlags = "quick-lint-js-build-tools";
 
     installPhase = ''
@@ -42,7 +44,6 @@ let
       cmake --install . --component build-tools
       runHook postInstall
     '';
-
   };
 in
 stdenv.mkDerivation (finalAttrs: {

@@ -59,6 +59,7 @@ stdenv.mkDerivation (finalAttrs: {
     SDL2_ttf
     zlib
   ];
+
   makeFlags = [
     "PREFIX=$(out)"
     "POVRAY=povray Work_Threads=$(NIX_BUILD_CORES)"

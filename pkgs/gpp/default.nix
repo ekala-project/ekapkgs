@@ -19,6 +19,7 @@ stdenv.mkDerivation {
   nativeBuildInputs = [ autoreconfHook ];
 
   installCheckPhase = "$out/bin/gpp --help";
+
   doInstallCheck = true;
 
   meta = {

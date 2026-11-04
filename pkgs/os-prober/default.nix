@@ -17,6 +17,7 @@
 stdenv.mkDerivation (finalAttrs: {
   version = "1.84";
   pname = "os-prober";
+
   src = fetchFromGitLab {
     domain = "salsa.debian.org";
     owner = "installer-team";
@@ -26,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ makeWrapper ];
+
   installPhase = ''
     # executables
     install -Dt $out/bin os-prober linux-boot-prober
@@ -50,6 +52,7 @@ stdenv.mkDerivation (finalAttrs: {
         cp -r os-probes/mounted/powerpc/20macosx $out/lib/os-probes/mounted;
     fi;
   '';
+
   postFixup = ''
     for file in $(find $out  -type f ! -name newns) ; do
       substituteInPlace $file \

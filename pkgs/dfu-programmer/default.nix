@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs --build bootstrap.sh
     patchShebangs --build update-bash-completion.sh
   '';
+
   meta = {
     license = lib.licenses.gpl2;
     description = "Device Firmware Update based USB programmer for Atmel chips with a USB bootloader";

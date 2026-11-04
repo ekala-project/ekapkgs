@@ -23,11 +23,14 @@ rustPlatform.buildRustPackage (finalAttrs: {
     "--package"
     "eludris"
   ];
+
   cargoTestFlags = [
     "--package"
     "eludris"
   ];
+
   buildInputs = [ openssl ];
+
   nativeBuildInputs = [ pkg-config ];
 
   meta = {

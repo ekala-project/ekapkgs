@@ -26,6 +26,7 @@ stdenv.mkDerivation (finalAttrs: {
     libtool
     re2c
   ];
+
   buildInputs = [ sqlite ];
 
   strictDeps = true;

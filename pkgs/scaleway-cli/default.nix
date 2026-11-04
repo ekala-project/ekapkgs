@@ -39,6 +39,7 @@ buildGoModule (finalAttrs: {
   ];
 
   nativeBuildInputs = [ installShellFiles ];
+
   nativeCheckInputs = [ writableTmpDirAsHomeHook ];
 
   checkFlags = [
@@ -58,6 +59,7 @@ buildGoModule (finalAttrs: {
     $out/bin/scw autocomplete script basename=scw shell=zsh >>scw.zsh
     installShellCompletion scw.{bash,fish,zsh}
   '';
+
   __darwinAllowLocalNetworking = true;
 
   meta = {

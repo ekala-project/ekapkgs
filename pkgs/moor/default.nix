@@ -27,6 +27,7 @@ buildGoModule (finalAttrs: {
     "-X"
     "main.versionString=v${finalAttrs.version}"
   ];
+
   postInstall = ''
     installManPage ./moor.1
   '';

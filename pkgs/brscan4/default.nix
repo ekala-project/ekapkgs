@@ -20,6 +20,7 @@ in
 stdenv.mkDerivation rec {
   pname = "brscan4";
   version = "0.4.10-1";
+
   src =
     {
       "i686-linux" = fetchurl {
@@ -43,7 +44,9 @@ stdenv.mkDerivation rec {
     patchelf
     udevRules
   ];
+
   buildInputs = [ libusb-compat-0_1 ];
+
   dontBuild = true;
 
   postPatch = ''
@@ -97,6 +100,7 @@ stdenv.mkDerivation rec {
   '';
 
   dontStrip = true;
+
   dontPatchELF = true;
 
   meta = {

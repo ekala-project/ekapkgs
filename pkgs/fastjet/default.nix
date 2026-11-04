@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     "--enable-allcxxplugins"
   ]
   ++ lib.optional withPython "--enable-pyext";
+
   meta = {
     description = "Software package for jet finding in pp and e+e− collisions";
     mainProgram = "fastjet-config";

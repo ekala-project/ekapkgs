@@ -61,6 +61,7 @@ stdenv.mkDerivation (finalAttrs: {
     ];
 
   doCheck = !stdenv.hostPlatform.isDarwin;
+
   checkPhase = ''
     runHook preCheck
     ./testver
@@ -73,6 +74,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   patches = [ ./find-headers.patch ];
+
   setupHook = ./setup-hook.sh;
 
   meta = {

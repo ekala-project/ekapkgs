@@ -19,6 +19,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "mate-media";
   version = "1.28.1";
+
   outputs = [
     "out"
     "man"

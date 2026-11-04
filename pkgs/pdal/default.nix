@@ -86,6 +86,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   enableParallelChecking = false;
 
   postInstall = ''

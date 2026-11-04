@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [ gtk3 ];
 
   # screen-message installs its binary in $(prefix)/games per default

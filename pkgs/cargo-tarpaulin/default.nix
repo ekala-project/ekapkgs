@@ -24,6 +24,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
   ];
+
   buildInputs = [
     openssl
   ]
@@ -32,6 +33,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   doInstallCheck = true;
+
   versionCheckProgramArg = "--version";
 
   meta = {

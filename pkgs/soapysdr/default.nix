@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     makeWrapper
   ];
+
   buildInputs = [
     ncurses
   ]

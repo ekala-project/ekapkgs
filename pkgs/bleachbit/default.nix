@@ -12,7 +12,6 @@
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "bleachbit";
   version = "6.0.2";
-
   pyproject = false;
 
   src = fetchurl {
@@ -55,6 +54,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
   ];
 
   dontWrapGApps = true;
+
   preFixup = ''
     makeWrapperArgs+=("''${gappsWrapperArgs[@]}")
   '';

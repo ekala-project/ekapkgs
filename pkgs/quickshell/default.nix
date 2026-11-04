@@ -75,6 +75,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   cmakeBuildType = "RelWithDebInfo";
+
   dontStrip = false;
 
   meta = {

@@ -39,7 +39,9 @@ rustPlatform.buildRustPackage (finalAttrs: {
       --fish <(fclones complete fish) \
       --zsh <(fclones complete zsh)
   '';
+
   versionCheckProgramArg = "--version";
+
   meta = {
     description = "Efficient Duplicate File Finder and Remover";
     homepage = "https://github.com/pkolaczk/fclones";

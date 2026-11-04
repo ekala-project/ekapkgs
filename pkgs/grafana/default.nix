@@ -43,6 +43,7 @@ buildGoModule (finalAttrs: {
   };
 
   missingHashes = ./missing-hashes.json;
+
   # Since this is not a dependency attribute the buildPackages has to be specified.
   # The yarn-berry satellite input calls zlib-ng.override { withZlibCompat } which
   # broke when corepkgs moved zlib-ng to mkManyVariants; override libzip to use

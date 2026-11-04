@@ -7,7 +7,6 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "txt2tags";
   version = "3.9";
-
   pyproject = true;
 
   src = fetchFromGitHub {

@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     byacc
     flex
   ];
+
   buildInputs = [ curl ];
 
   meta = {

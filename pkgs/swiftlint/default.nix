@@ -22,7 +22,9 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   };
 
   dontPatch = true;
+
   dontConfigure = true;
+
   dontBuild = true;
 
   nativeBuildInputs = [
@@ -48,6 +50,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       --fish <($out/bin/swiftlint --generate-completion-script fish) \
       --zsh <($out/bin/swiftlint --generate-completion-script zsh)
   '';
+
   passthru = {
     tests = {
       lint =

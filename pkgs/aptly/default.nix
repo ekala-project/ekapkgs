@@ -36,6 +36,7 @@ buildGoModule (finalAttrs: {
   preBuild = ''
     echo ${finalAttrs.version} > VERSION
   '';
+
   excludedPackages = [
     "system"
   ];

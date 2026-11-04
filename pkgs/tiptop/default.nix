@@ -41,6 +41,7 @@ stdenv.mkDerivation (finalAttrs: {
     flex
     bison
   ];
+
   buildInputs = [
     libxml2
     ncurses

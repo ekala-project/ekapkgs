@@ -38,6 +38,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   doInstallCheck = true;
+
   versionCheckProgramArg = "--version";
 
   meta = {

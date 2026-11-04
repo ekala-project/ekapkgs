@@ -101,7 +101,9 @@ stdenv.mkDerivation (finalAttrs: {
   __darwinAllowLocalNetworking = true;
 
   doCheck = true;
+
   checkFlags = [ "V=1" ]; # verbose output in case some test fails
+
   doInstallCheck = true;
 
   postInstall = ''

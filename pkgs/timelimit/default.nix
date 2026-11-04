@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeCheckInputs = [ perl ];
+
   doCheck = true;
 
   installFlags = [ "PREFIX=$(out)" ];

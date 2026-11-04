@@ -21,6 +21,7 @@ stdenv.mkDerivation {
   };
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [
     libiconv
     ncurses

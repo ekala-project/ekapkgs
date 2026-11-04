@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoconf
     automake
   ];
+
   buildInputs = [ libtool ];
 
   preConfigure = "./autogen.sh";

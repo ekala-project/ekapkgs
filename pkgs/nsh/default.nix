@@ -17,6 +17,10 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   cargoHash = "sha256-kbHNFVu5OIg/eKefhsYRGvlXFduB0aBVflPV9hkM4Ec=";
 
+  passthru = {
+    shellPath = "/bin/nsh";
+  };
+
   meta = {
     description = "Command-line shell like fish, but POSIX compatible";
     mainProgram = "nsh";
@@ -26,9 +30,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
       lib.licenses.cc0 # or
       lib.licenses.mit
     ];
-  };
-
-  passthru = {
-    shellPath = "/bin/nsh";
   };
 })

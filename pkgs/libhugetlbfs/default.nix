@@ -50,6 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     "libs"
     "tools"
   ];
+
   installTargets = [
     "install"
     "install-docs"

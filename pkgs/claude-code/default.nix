@@ -38,7 +38,9 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   };
 
   dontUnpack = true;
+
   dontBuild = true;
+
   # otherwise the bun runtime is executed instead of the binary
   dontStrip = true;
 
@@ -79,11 +81,14 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     writableTmpDirAsHomeHook
     versionCheckHook
   ];
+
   versionCheckKeepEnvironment = [ "HOME" ];
+
   versionCheckProgramArg = "--version";
 
   meta = {

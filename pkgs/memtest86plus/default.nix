@@ -18,6 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
   # Binaries are booted directly by BIOS/UEFI or bootloader
   # and should not be patched/stripped
   dontPatchELF = true;
+
   dontStrip = true;
 
   passthru.efi = "${finalAttrs.finalPackage}/mt86plus.efi";

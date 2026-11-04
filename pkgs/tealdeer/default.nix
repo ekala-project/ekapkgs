@@ -28,6 +28,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   '';
 
   checkFeatures = [ "ignore-online-tests" ];
+
   dontUseCargoParallelTests = true;
 
   meta = {

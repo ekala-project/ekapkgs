@@ -28,6 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   hardeningDisable = [ "format" ];
 
   doCheck = true;
+
   meta = {
     description = "Program invocation and execution supervisor";
     longDescription = ''

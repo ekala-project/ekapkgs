@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   cmakeEntries = {
     BUILD_TESTS = false;
     CMAKE_PROJECT_VERSION = "${finalAttrs.version}";

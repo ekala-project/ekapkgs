@@ -59,6 +59,7 @@ buildGoModule (finalAttrs: {
     install -Dm444 release/config/sing-box.rules $out/share/polkit-1/rules.d/sing-box.rules
     install -Dm444 release/config/sing-box-split-dns.xml $out/share/dbus-1/system.d/sing-box-split-dns.conf
   '';
+
   meta = {
     homepage = "https://sing-box.sagernet.org";
     description = "Universal proxy platform";

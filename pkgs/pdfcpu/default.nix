@@ -67,9 +67,11 @@ buildGoModule (finalAttrs: {
 
   # No tests
   doInstallCheck = true;
+
   installCheckInputs = [
     writableTmpDirAsHomeHook
   ];
+
   # NOTE: Can't use `versionCheckHook` since a writeable $HOME is required and
   # `versionCheckHook` uses --ignore-environment
   installCheckPhase = ''

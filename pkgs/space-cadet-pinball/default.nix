@@ -35,6 +35,7 @@ stdenv.mkDerivation rec {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [
     sdl2-compat
     SDL2_mixer

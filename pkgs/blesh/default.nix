@@ -41,9 +41,12 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   '';
 
   doCheck = true;
+
   # auto-detection runs `make -n check` without makeFlags, which fails without BLE_GIT_COMMIT_ID
   checkTarget = "check";
+
   nativeCheckInputs = [ bashInteractive ];
+
   preCheck = ''
     export HOME=$TMPDIR
     # upstream skips its flaky sleep-timing tests under GitHub CI

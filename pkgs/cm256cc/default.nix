@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [ boost ];
 
   # https://github.com/f4exb/cm256cc/issues/16

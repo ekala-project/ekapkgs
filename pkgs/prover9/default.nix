@@ -32,6 +32,7 @@ stdenv.mkDerivation {
   env.NIX_CFLAGS_COMPILE = "-Wno-error=implicit-int";
 
   doCheck = true;
+
   checkPhase = ''
     runHook preCheck
 
@@ -54,6 +55,7 @@ stdenv.mkDerivation {
 
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
 
   meta = {

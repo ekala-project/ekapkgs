@@ -23,7 +23,9 @@ stdenv.mkDerivation {
   # mainboard are for user-configurable data, so do not look for them in Nix
   # store.
   dmidecodeProgram = lib.getExe' dmidecode "dmidecode";
+
   modprobeProgram = lib.getExe' kmod "modprobe";
+
   postPatch = ''
     substituteInPlace src/util/edac-ctl.in \
       --replace-fail 'find_prog ("dmidecode")' "\"$dmidecodeProgram\"" \
@@ -36,7 +38,9 @@ stdenv.mkDerivation {
   # a Perl script. Perl from buildInputs is used by patchShebangsAuto in
   # fixupPhase to update the hash bang line.
   strictDeps = true;
+
   nativeBuildInputs = [ perl ];
+
   buildInputs = [
     perl
     sysfsutils

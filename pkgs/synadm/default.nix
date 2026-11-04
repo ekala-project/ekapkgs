@@ -34,6 +34,7 @@ python3Packages.buildPythonApplication (finalAttrs: {
     $out/bin/synadm -h > /dev/null
     runHook postCheck
   '';
+
   meta = {
     description = "Command line admin tool for Synapse";
     mainProgram = "synadm";

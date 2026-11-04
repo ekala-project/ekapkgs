@@ -128,10 +128,12 @@ buildNpmPackage' {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     writableTmpDirAsHomeHook
     versionCheckHook
   ];
+
   versionCheckKeepEnvironment = [ "HOME" ];
 
   meta = {

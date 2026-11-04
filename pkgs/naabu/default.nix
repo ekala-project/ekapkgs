@@ -19,6 +19,7 @@ buildGoModule (finalAttrs: {
   vendorHash = "sha256-Qay0jAWRnK5oRfOmYLrfWFR5eOT5glcsQ9BgSr2LiS8=";
 
   buildInputs = [ libpcap ];
+
   subPackages = [ "cmd/naabu/" ];
 
   ldflags = [

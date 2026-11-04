@@ -203,6 +203,7 @@ stdenv.mkDerivation (finalAttrs: {
   env.PKG_CONFIG_UDEV_UDEVDIR = "${placeholder "out"}/lib/udev";
 
   separateDebugInfo = true;
+
   strictDeps = true;
 
   doInstallCheck = true;

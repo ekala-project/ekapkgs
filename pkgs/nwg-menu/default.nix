@@ -31,6 +31,7 @@ buildGoModule (finalAttrs: {
     gtk-layer-shell
     pango
   ];
+
   nativeBuildInputs = [
     pkg-config
     gtk3.wrapGAppsHook

@@ -20,6 +20,7 @@ stdenv.mkDerivation {
   };
 
   buildInputs = [ cups ];
+
   nativeBuildInputs = [
     autoreconfHook
   ];

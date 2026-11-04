@@ -21,10 +21,12 @@ rustPlatform.buildRustPackage (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-MihZAAZ+K95jBE1gp0kne/+Z3rBUDqlphmyBI0FI1jE=";
   };
+
   nativeBuildInputs = [
     pkg-config
     installShellFiles
   ];
+
   buildInputs = [
     pango
     libgbm
@@ -32,6 +34,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     libGL
     wayland
   ];
+
   cargoHash = "sha256-SAI+KXRV4E130ROmNyXraaO31D341CRWXGuIPV8depA=";
 
   postInstall = ''

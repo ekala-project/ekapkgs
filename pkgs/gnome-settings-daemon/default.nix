@@ -108,6 +108,7 @@ stdenv.mkDerivation (finalAttrs: {
     udev_dir = "${placeholder "out"}/lib/udev";
     systemd = withSystemd;
   };
+
   # TODO: uncomment once gnome-session-ctl is available
   # ++ lib.optionals withSystemd [
   #   "-Dgnome_session_ctl_path=${gnome-session-ctl}/libexec/gnome-session-ctl"

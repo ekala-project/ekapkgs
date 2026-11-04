@@ -19,6 +19,7 @@ mkDerivation (
   args
   // {
     inherit pname version src;
+
     patches = (args.patches or [ ]) ++ (patches.${pname} or [ ]);
 
     buildInputs = args.buildInputs or [ ];
@@ -27,6 +28,7 @@ mkDerivation (
       perl
       qmake
     ];
+
     propagatedBuildInputs =
       (lib.warnIf (args ? qtInputs) "qt5.qtModule's qtInputs argument is deprecated" args.qtInputs or [ ])
       ++ (args.propagatedBuildInputs or [ ]);

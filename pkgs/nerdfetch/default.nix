@@ -15,8 +15,11 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   };
 
   dontUnpack = true;
+
   dontConfigure = true;
+
   dontBuild = true;
+
   installPhase = ''
     mkdir -p $out/bin
       cp $src/nerdfetch $out/bin

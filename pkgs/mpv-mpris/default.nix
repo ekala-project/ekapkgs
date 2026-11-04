@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
   installFlags = [ "SCRIPTS_DIR=${placeholder "out"}/share/mpv/scripts" ];
 
   stripDebugList = [ "share/mpv/scripts" ];
+
   passthru.scriptName = "mpris.so";
 
   meta = {

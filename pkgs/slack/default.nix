@@ -114,7 +114,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   dontUnpack = true;
+
   dontBuild = true;
+
   dontPatchELF = true;
 
   installPhase = ''

@@ -35,6 +35,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   cargoRoot = "deps/extension";
+
   cargoDeps = rustPlatform.fetchCargoVendor {
     name = "sqlcipher-signal-exentsion";
     inherit (finalAttrs) src cargoRoot;
@@ -42,6 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     nodejs
     pnpmConfigHook

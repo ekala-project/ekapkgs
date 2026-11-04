@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ libdvdread ];
+
   nativeBuildInputs = [ pkg-config ];
 
   meta = {

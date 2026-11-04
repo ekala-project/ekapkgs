@@ -36,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     buildPackages.stdenv.cc
     pkg-config
   ];
+
   nativeBuildInputs = [
     pkg-config
     gettext

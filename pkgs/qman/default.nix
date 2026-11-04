@@ -20,6 +20,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "qman";
   version = "1.5.1";
+
   strictDeps = true;
 
   src = fetchFromGitHub {
@@ -63,12 +64,14 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   doInstallCheck = true;
+
   versionCheckKeepEnvironment = [
     "TERM"
   ];
 
   nativeInstallCheckInputs = [
   ];
+
   meta = {
     description = "A more modern man page viewer for our terminals";
     homepage = "https://github.com/plp13/qman";

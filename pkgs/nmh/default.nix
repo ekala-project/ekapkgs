@@ -61,8 +61,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeInstallCheckInputs = [
   ];
+
   doInstallCheck = true;
+
   versionCheckProgram = "${placeholder "out"}/bin/install-mh";
+
   versionCheckProgramArg = "-version";
 
   meta = {
@@ -90,5 +93,4 @@ stdenv.mkDerivation (finalAttrs: {
       maildir.
     '';
   };
-
 })

@@ -59,6 +59,7 @@ stdenv.mkDerivation (finalAttrs: {
   # (see https://github.com/steveicarus/iverilog/issues/917)
   # so disable the full suite for now.
   doCheck = true;
+
   doInstallCheck = !stdenv.hostPlatform.isAarch64;
 
   nativeInstallCheckInputs = [

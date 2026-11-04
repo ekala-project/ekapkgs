@@ -22,11 +22,13 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   nativeBuildInputs = [ autoreconfHook ];
+
   buildInputs = [
     zlib
     bzip2
     xz
   ];
+
   meta = {
     description = "C library for simple and efficient file IO";
     homepage = "https://github.com/LibtraceTeam/wandio";

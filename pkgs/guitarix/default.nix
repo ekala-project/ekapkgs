@@ -95,6 +95,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optional withZitaResampler zita-resampler;
 
   patchFlags = [ "-p2" ];
+
   patches = [
     (fetchpatch2 {
       name = "make-boost-system-stub-optional.patch";

@@ -13,7 +13,6 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libdjinterop";
-
   version = "0.26.1";
 
   src = fetchFromGitHub {

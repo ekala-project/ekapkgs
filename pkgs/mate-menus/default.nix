@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-GAc9DPsXdswmyNKlbY6cyHBWO2OSKCBygtzttNHN/p4=";
   };
+
   nativeBuildInputs = [
     autoconf-archive
     autoreconfHook

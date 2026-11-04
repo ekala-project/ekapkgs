@@ -41,6 +41,7 @@ stdenv.mkDerivation {
     pkg-config
     installShellFiles
   ];
+
   buildInputs = [ ncurses ];
 
   preConfigure = "./autogen.sh";

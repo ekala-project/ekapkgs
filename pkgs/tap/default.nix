@@ -5,7 +5,6 @@
 }:
 
 buildGoModule (finalAttrs: {
-
   pname = "tap";
   version = "0.1.10";
 

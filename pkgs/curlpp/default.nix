@@ -9,6 +9,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "curlpp";
   version = "0.8.1";
+
   src = fetchFromGitHub {
     owner = "jpbarrette";
     repo = "curlpp";
@@ -22,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   buildInputs = [ curl ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

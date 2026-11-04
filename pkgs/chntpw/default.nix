@@ -8,7 +8,6 @@
 
 stdenv.mkDerivation rec {
   pname = "chntpw";
-
   version = "140201";
 
   src = fetchurl {

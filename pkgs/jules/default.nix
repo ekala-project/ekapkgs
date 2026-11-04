@@ -48,7 +48,9 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
+
   # Jules uses the "version" subcommand, not a --version flag.
   versionCheckProgramArg = [ "version" ];
 

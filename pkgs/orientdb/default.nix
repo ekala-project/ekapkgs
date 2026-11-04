@@ -25,6 +25,7 @@ maven.buildMavenPackage (finalAttrs: {
   mvnParameters = "-DskipTests -Dmaven.test.skip=true";
 
   nativeBuildInputs = [ makeWrapper ];
+
   buildInputs = [ java ];
 
   installPhase = ''

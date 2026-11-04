@@ -24,6 +24,7 @@ stdenv.mkDerivation rec {
     tar -C ${pname}-${version} -xzf $src
     runHook postUnpack
   '';
+
   installPhase = ''
     runHook preInstall
     mkdir $out

@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ perl ];
+
   buildInputs = [ ncurses ];
 
   meta = {

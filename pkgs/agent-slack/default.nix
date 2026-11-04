@@ -18,7 +18,9 @@ bun.buildPackage {
   };
 
   bunStdenv = stdenvNoCC;
+
   bunInstallFlags = [ "--production" ];
+
   node_modulesHash = "sha256-gpTy1hm3aLTR/mqlpTWQr3PCUc7wqkjcxh4PTH1aMcE=";
 
   bunBuildCommand = ''
@@ -35,6 +37,7 @@ bun.buildPackage {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   meta = {

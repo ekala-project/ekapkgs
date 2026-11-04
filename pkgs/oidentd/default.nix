@@ -9,6 +9,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "oidentd";
   version = "3.1.0";
+
   nativeBuildInputs = [
     bison
     flex

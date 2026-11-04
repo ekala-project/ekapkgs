@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
     pcre2
     perl
   ];
+
   buildInputs = [
     courier-unicode
     libidn.v2

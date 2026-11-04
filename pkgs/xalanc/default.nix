@@ -36,6 +36,7 @@ stdenv.mkDerivation {
     cmake
     cmake.configurePhaseHook
   ];
+
   buildInputs = [
     xercesc
     getopt

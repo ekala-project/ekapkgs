@@ -7,6 +7,7 @@
 python3.pkgs.buildPythonApplication (finalAttrs: {
   pname = "gyp";
   version = "0.0.0-unstable-2024-09-09";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "nodejs";
@@ -14,8 +15,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     tag = "v0.19.1";
     hash = "sha256-pfRnYsr9zFfHJFO8bj5d5VPhBfWTB4+wCP/dnvNcrrw=";
   };
-
-  pyproject = true;
 
   build-system = [ python3.pkgs.setuptools ];
 

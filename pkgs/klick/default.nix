@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     scons
   ];
+
   buildInputs = [
     rubberband
     libsamplerate

@@ -29,10 +29,12 @@ stdenv.mkDerivation (finalAttrs: {
     protobuf
     protobufc
   ];
+
   buildInputs = [
     openssl
     protobufc
   ];
+
   mesonEntries = {
     tests = false;
   };

@@ -19,6 +19,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-+Baf6BFb8DtRoVBM/P2pVidiq+BA+tWt0XqKYwsSh7o=";
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ udev ];
 
   meta = {

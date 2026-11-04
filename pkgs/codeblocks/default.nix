@@ -15,9 +15,10 @@ let
   boost' = boost;
 in
 stdenv.mkDerivation (finalAttrs: {
-  name = "${finalAttrs.pname}-${lib.optionalString contribPlugins "full-"}${finalAttrs.version}";
   pname = "codeblocks";
   version = "25.03";
+
+  name = "${finalAttrs.pname}-${lib.optionalString contribPlugins "full-"}${finalAttrs.version}";
 
   src = fetchurl {
     url = "mirror://sourceforge/codeblocks/Sources/${finalAttrs.version}/codeblocks_${finalAttrs.version}.tar.xz";

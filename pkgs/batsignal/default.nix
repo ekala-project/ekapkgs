@@ -22,7 +22,9 @@ stdenv.mkDerivation (finalAttrs: {
     libnotify
     glib
   ];
+
   nativeBuildInputs = [ pkg-config ];
+
   installFlags = [ "PREFIX=${placeholder "out"}" ];
 
   env.NIX_CFLAGS_COMPILE = toString [

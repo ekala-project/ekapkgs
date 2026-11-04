@@ -21,7 +21,9 @@ rustPlatform.buildRustPackage (finalAttrs: {
   };
 
   cargoRoot = "rust";
+
   buildAndTestSubdir = "rust";
+
   cargoHash = "sha256-tAE34Nf9Wp7zc8TNHkHWYt4IQFy9qYbAWKzDqMuc/V8=";
 
   nativeBuildInputs = [
@@ -30,6 +32,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   ];
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

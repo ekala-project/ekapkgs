@@ -50,6 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   buildInputs = [ boost ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
@@ -92,6 +93,7 @@ stdenv.mkDerivation (finalAttrs: {
   );
 
   doCheck = true;
+
   checkPhase = ''
     runHook preCheck
 

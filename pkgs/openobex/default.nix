@@ -24,10 +24,12 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     udevCheckHook
   ];
+
   buildInputs = [
     bluez
     libusb-compat-0_1
   ];
+
   patchPhase = ''
     sed -i "s!/lib/udev!$out/lib/udev!" udev/CMakeLists.txt
     sed -i "/if ( PKGCONFIG_UDEV_FOUND )/,/endif ( PKGCONFIG_UDEV_FOUND )/d" udev/CMakeLists.txt

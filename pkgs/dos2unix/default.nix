@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     perl
     gettext
   ];
+
   makeFlags = [ "prefix=${placeholder "out"}" ];
 
   meta = {

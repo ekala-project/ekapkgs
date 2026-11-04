@@ -25,6 +25,7 @@ stdenv.mkDerivation {
     cmake.configurePhaseHook
     makeWrapper
   ];
+
   buildInputs = [
     sdl2-compat
     libGL
@@ -41,6 +42,7 @@ stdenv.mkDerivation {
     install -Dm644 $src/packaging/io.jor.nanosaur2.png -t $out/share/icons/hicolor/256x256/apps
     runHook postInstall
   '';
+
   meta = {
     description = "Port of Nanosaur2, a 2004 Macintosh game by Pangea Software, for modern operating systems";
     longDescription = ''

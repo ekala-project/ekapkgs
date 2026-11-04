@@ -46,6 +46,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoHash = "sha256-V1CeZBjgXmy1u0+1ZJcqKemAKl+LJZP/83vdthWjAq4=";
 
   cargoBuildFlags = cliFlags;
+
   cargoTestFlags = cliFlags ++ [
     "--bin"
     "ai-memory"
@@ -104,6 +105,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook

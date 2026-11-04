@@ -350,19 +350,21 @@ stdenv.mkDerivation (finalAttrs: {
     ''}
 
     ${optionalString (!headless) ''
-      # Create and fix desktop item
-      mkdir -p $out/share/applications
-      sed -i -e "s|Icon=VBox|Icon=$libexec/VBox.png|" $libexec/virtualbox.desktop
-      ln -sfv $libexec/virtualbox.desktop $out/share/applications
-      # Icons
-      mkdir -p $out/share/icons/hicolor
-      for size in `ls -1 $libexec/icons`; do
-        mkdir -p $out/share/icons/hicolor/$size/apps
-        ln -s $libexec/icons/$size/*.png $out/share/icons/hicolor/$size/apps
-      done
-      # Translation
-      mkdir -p "$out/share/virtualbox"
-      ln -sv $libexec/nls "$out/share/virtualbox/nls"
+          # Create and fix desktop item
+          mkdir -p $out/share/applications
+          sed -i -e "s|Icon=VBox|Icon=$libexec/VBox.png|" $libexec/virtualbox.desktop
+          ln -sfv $libexec/virtualbox.desktop $out/share/applications
+          # Icons
+          mkdir -p $out/share/icons/hicolor
+          for size in `ls -1 $libexec/icons`;
+
+      do
+            mkdir -p $out/share/icons/hicolor/$size/apps
+            ln -s $libexec/icons/$size/*.png $out/share/icons/hicolor/$size/apps
+          done
+          # Translation
+          mkdir -p "$out/share/virtualbox"
+          ln -sv $libexec/nls "$out/share/virtualbox/nls"
     ''}
 
     ${optionalString withModsrc ''

@@ -46,6 +46,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "lilypond";
   version = "2.26.0";
+
   outputs = [
     "out"
     "man"
@@ -126,6 +127,14 @@ stdenv.mkDerivation (finalAttrs: {
     update-source-version lilypond "$version"
   '';
 
+  env = lib.optionalAttrs stdenv.hostPlatform.isDarwin {
+    FONTCONFIG_FILE = (
+      makeFontsConf {
+        fontDirectories = [ freefont_ttf ];
+      }
+    );
+  };
+
   # documentation makefile uses "out" for different purposes, hence we explicitly set it to an empty string
   makeFlags = [ "out=" ];
 
@@ -139,13 +148,5 @@ stdenv.mkDerivation (finalAttrs: {
       ofl # mf/
     ];
     platforms = lib.platforms.all;
-  };
-
-  env = lib.optionalAttrs stdenv.hostPlatform.isDarwin {
-    FONTCONFIG_FILE = (
-      makeFontsConf {
-        fontDirectories = [ freefont_ttf ];
-      }
-    );
   };
 })

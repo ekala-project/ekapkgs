@@ -56,6 +56,7 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   makeFlags = [ "--directory=src" ];
+
   installFlags = [
     "--directory=src"
     "PREFIX=$(out)"

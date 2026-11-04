@@ -43,6 +43,7 @@ stdenv.mkDerivation (finalAttrs: {
     installManPage nawk.1
     runHook postInstall
   '';
+
   meta = {
     homepage = "https://github.com/onetrueawk/awk";
     description = "One, true implementation of AWK";

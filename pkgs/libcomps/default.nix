@@ -54,6 +54,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   dontUseCmakeBuildDir = true;
+
   cmakeDir = "libcomps";
 
   postFixup = ''

@@ -20,6 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
     tag = "ntv2_${builtins.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
     hash = "sha256-/BfFbBScS75TpUZEeYzAHd1PtnZgnCNfGtjwYPJJjkg=";
   };
+
   patches = [
     ./use-system-mbedtls.patch
     ./device-info-list.patch
@@ -38,6 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     pkg-config
   ];
+
   buildInputs = [
     mbedtls
     udev

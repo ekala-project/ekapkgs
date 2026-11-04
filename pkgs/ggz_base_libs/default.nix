@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   nativeBuildInputs = [ intltool ];
+
   buildInputs = [
     openssl
     expat

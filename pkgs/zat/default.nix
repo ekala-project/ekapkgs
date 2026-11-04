@@ -19,6 +19,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # Smoke test: zat has no --version flag, so run it against its own source.
   doInstallCheck = true;
+
   installCheckPhase = ''
     runHook preInstallCheck
     $out/bin/zat src/main.rs > /dev/null

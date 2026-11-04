@@ -32,6 +32,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     autoconf
     automake
@@ -78,6 +79,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   enableParallelChecking = true;
+
   doCheck = true;
 
   meta = {

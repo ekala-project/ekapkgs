@@ -18,7 +18,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     xorgproto
     libx11

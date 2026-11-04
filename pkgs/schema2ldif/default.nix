@@ -25,6 +25,7 @@ stdenvNoCC.mkDerivation rec {
   '';
 
   buildInputs = [ perlPackages.perl ];
+
   nativeBuildInputs = [ makeWrapper ];
 
   installPhase = ''

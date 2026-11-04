@@ -10,8 +10,8 @@
 
 buildGoModule (finalAttrs: {
   pname = "yubikey-agent";
-
   version = "0.1.6";
+
   src = fetchFromGitHub {
     owner = "FiloSottile";
     repo = "yubikey-agent";

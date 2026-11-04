@@ -33,8 +33,11 @@ let
     (buildGoModule {
       pname = "gocmdbridge";
       version = "1.0.0";
+
       inherit src;
+
       vendorHash = "sha256-PUMQdVlf6evLjzs263SAecIA3aMuMbjIr1xEztiwmro=";
+
       setSourceRoot = ''
         sourceRoot=$(echo */src/libs/gocmdbridge/server)
       '';

@@ -67,7 +67,6 @@ let
   ];
 in
 stdenv.mkDerivation {
-
   pname = "godot";
   inherit version;
 
@@ -89,6 +88,7 @@ stdenv.mkDerivation {
     "out"
     "man"
   ];
+
   separateDebugInfo = true;
 
   env = {

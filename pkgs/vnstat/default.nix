@@ -25,6 +25,7 @@ stdenv.mkDerivation rec {
   '';
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     gd
     ncurses

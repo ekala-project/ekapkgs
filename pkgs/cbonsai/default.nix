@@ -22,9 +22,11 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     scdoc
   ];
+
   buildInputs = [ ncurses ];
 
   makeFlags = [ "CC=${stdenv.cc.targetPrefix}cc" ];
+
   installFlags = [ "PREFIX=$(out)" ];
 
   meta = {

@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     curl
     expat
@@ -29,7 +30,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   makeFlags = [ "PREFIX=$(out)" ];
+
   installTargets = "install install-desktop";
+
   meta = {
     description = "Feed reader for terminal";
     homepage = "https://codeberg.org/newsraft/newsraft";

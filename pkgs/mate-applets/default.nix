@@ -27,6 +27,7 @@
 stdenv.mkDerivation (finalAttrs: {
   pname = "mate-applets";
   version = "1.28.1";
+
   outputs = [
     "out"
     "man"

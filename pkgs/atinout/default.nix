@@ -11,7 +11,9 @@ stdenv.mkDerivation {
   version = "0.9.2-alpha";
 
   env.NIX_CFLAGS_COMPILE = lib.optionalString (!stdenv.cc.isClang) "-Werror=implicit-fallthrough=0";
+
   LANG = if stdenv.hostPlatform.isDarwin then "en_US.UTF-8" else "C.UTF-8";
+
   nativeBuildInputs = [
     ronn
     mount

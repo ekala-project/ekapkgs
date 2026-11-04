@@ -8,6 +8,7 @@
 buildGoModule (finalAttrs: {
   pname = "protoc-gen-go-grpc";
   version = "1.6.2";
+
   modRoot = "cmd/protoc-gen-go-grpc";
 
   src = fetchFromGitHub {

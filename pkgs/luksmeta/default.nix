@@ -22,6 +22,7 @@ stdenv.mkDerivation rec {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [ cryptsetup ];
 
   meta = {

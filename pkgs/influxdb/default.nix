@@ -12,12 +12,14 @@ let
   flux = rustPlatform.buildRustPackage (finalAttrs: {
     pname = "libflux";
     version = libflux_version;
+
     src = fetchFromGitHub {
       owner = "influxdata";
       repo = "flux";
       tag = "v${libflux_version}";
       hash = "sha256-935aN2SxfNZvpG90rXuqZ2OTpSGLgiBDbZsBoG0WUvU=";
     };
+
     patches = [
       ./fix-unsigned-char.patch
     ];
@@ -26,10 +28,13 @@ let
       substituteInPlace flux-core/src/lib.rs \
         --replace-fail "deny(warnings, missing_docs))]" "deny(warnings), allow(dead_code, mismatched_lifetime_syntaxes, unused_assignments))]"
     '';
+
     sourceRoot = "${finalAttrs.src.name}/libflux";
 
     cargoHash = "sha256-A6j/lb47Ob+Po8r1yvqBXDVP0Hf7cNz8WFZqiVUJj+Y=";
+
     nativeBuildInputs = [ rustPlatform.bindgenHook ];
+
     pkgcfg = ''
       Name: flux
       Version: ${libflux_version}
@@ -37,6 +42,7 @@ let
       Cflags: -I/out/include
       Libs: -L/out/lib -lflux -lpthread
     '';
+
     postInstall = ''
       mkdir -p $out/include $out/pkgconfig
       cp -r $NIX_BUILD_TOP/${finalAttrs.src.name}/libflux/include/influxdata $out/include
@@ -44,7 +50,6 @@ let
       substituteInPlace $out/pkgconfig/flux.pc \
         --replace-fail /out $out
     '';
-
   });
 in
 buildGoModule (finalAttrs: {

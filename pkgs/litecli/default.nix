@@ -7,7 +7,6 @@
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "litecli";
   version = "1.17.1";
-
   pyproject = true;
 
   src = fetchFromGitHub {

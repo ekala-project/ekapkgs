@@ -319,6 +319,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   # Wrapping is done with an external wrapper
   dontWrapPythonPrograms = true;
+
   dontWrapQtApps = true;
 
   postInstall =

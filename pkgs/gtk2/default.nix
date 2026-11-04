@@ -46,6 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
     "dev"
     "devdoc"
   ];
+
   outputBin = "dev";
 
   setupHooks = [

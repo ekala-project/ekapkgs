@@ -10,7 +10,6 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libivykis";
-
   version = "0.43.2";
 
   src = fetchurl {
@@ -22,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     pkg-config
   ];
+
   buildInputs = [
     file
     protobufc

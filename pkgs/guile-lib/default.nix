@@ -19,11 +19,13 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   strictDeps = true;
+
   nativeBuildInputs = [
     autoreconfHook
     guile
     pkg-config
   ];
+
   buildInputs = [
     guile
     texinfo

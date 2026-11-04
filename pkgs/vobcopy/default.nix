@@ -27,6 +27,7 @@ stdenv.mkDerivation {
   nativeBuildInputs = [
     autoreconfHook
   ];
+
   buildInputs = [
     gettext # Fails on Darwin otherwise
     libdvdread

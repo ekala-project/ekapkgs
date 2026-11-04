@@ -12,6 +12,7 @@ stdenv.mkDerivation (finalAttrs: {
   version = "4.0";
 
   nativeBuildInputs = [ gccmakedep ];
+
   buildInputs = [
     libx11
     imake

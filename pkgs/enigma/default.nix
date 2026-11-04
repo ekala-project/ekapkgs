@@ -42,6 +42,7 @@ stdenv.mkDerivation (finalAttrs: {
     makeWrapper
     imagemagick
   ];
+
   buildInputs = [
     sdl2-compat
     SDL2_image

@@ -26,6 +26,7 @@ pythonPackages.buildPythonApplication (finalAttrs: {
 
   # no tests implemented
   doCheck = false;
+
   pythonImportsCheck = [ "mopidy_jellyfin" ];
 
   meta = {

@@ -14,7 +14,9 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   sourceRoot = "${finalAttrs.src.name}/src/trunk";
+
   makeFlags = [ "prefix=$(out)" ];
+
   installTargets = [
     "install-libnut"
     "install-nututils"

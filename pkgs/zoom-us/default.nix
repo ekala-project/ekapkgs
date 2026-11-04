@@ -70,6 +70,7 @@ let
     inherit version src;
 
     dontUnpack = true;
+
     dontPatchELF = true;
 
     installPhase = ''

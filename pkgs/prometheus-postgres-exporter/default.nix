@@ -32,6 +32,7 @@ buildGoModule rec {
     ];
 
   doCheck = true;
+
   meta = {
     inherit (src.meta) homepage;
     description = "Prometheus exporter for PostgreSQL";

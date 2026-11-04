@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [ lzip ];
 
   doCheck = true;
+
   configureFlags = [ "CXX=${stdenv.cc.targetPrefix}c++" ];
 
   outputs = [

@@ -61,6 +61,7 @@ stdenv.mkDerivation (finalAttrs: {
   makefile = "Makefile.linux";
 
   dontConfigure = true;
+
   sourceRoot = "XADMaster";
 
   installPhase = ''

@@ -39,6 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     m4
     gzip
   ];
+
   # enable all features (undocumented, based on manual review of configure script)
   buildInputs = [
     bzip2
@@ -52,6 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
   ]
   # ndbm compat library
   ++ lib.optional stdenv.hostPlatform.isLinux gdbm;
+
   configureFlags = lib.optional (tcl != null) "--with-tcl=${tcl}/lib/tclConfig.sh";
 
   # INSTALL says "parallel make will fail"
@@ -62,6 +64,7 @@ stdenv.mkDerivation (finalAttrs: {
   # configure does not support --sbindir and the likes (as introduced by multiple-outputs.sh)
   # so man, doc outputs must be handled manually
   preConfigurePhases = [ "prePreConfigurePhase" ];
+
   prePreConfigurePhase = ''
     preConfigureHooks="''${preConfigureHooks//_multioutConfig/}"
     prependToVar configureFlags --mandir="$man"/share/man

@@ -55,6 +55,7 @@ stdenv.mkDerivation (finalAttrs: {
   strictDeps = true;
 
   env.CXXFLAGS = "-std=c++11";
+
   configureFlags = [
     "--enable-liblilv"
   ];

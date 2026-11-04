@@ -26,12 +26,14 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   strictDeps = true;
+
   propagatedBuildInputs = [
     glib
     gobject-introspection
     dbus
     libgcrypt
   ];
+
   nativeBuildInputs = [
     pkg-config
     intltool

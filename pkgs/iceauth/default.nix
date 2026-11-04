@@ -33,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     xorgproto
     libice
   ];
+
   meta = {
     description = "libICE authority file utility";
     longDescription = ''

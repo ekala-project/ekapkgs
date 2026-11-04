@@ -36,6 +36,7 @@ rustPlatform.buildRustPackage {
   ++ lib.optionals (withDefaultFeatures && stdenv.hostPlatform.isLinux) [ libx11 ];
 
   buildNoDefaultFeatures = !withDefaultFeatures;
+
   buildFeatures = additionalFeatures [ ];
 
   preCheck = ''

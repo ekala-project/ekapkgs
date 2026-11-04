@@ -13,10 +13,12 @@
 buildPerlPackage {
   pname = "Email-MIME";
   version = "1.953";
+
   src = fetchurl {
     url = "mirror://cpan/authors/id/R/RJ/RJBS/Email-MIME-1.953.tar.gz";
     hash = "sha256-mPsGeFBpmiJLq8NI8c7+MNdExg2okC56XOnYt+c99zU=";
   };
+
   propagatedBuildInputs = [
     EmailAddressXS
     EmailMIMEContentType
@@ -26,6 +28,7 @@ buildPerlPackage {
     MIMETypes
     ModuleRuntime
   ];
+
   meta = {
     description = "Easy MIME message handling";
     homepage = "https://github.com/rjbs/Email-MIME";

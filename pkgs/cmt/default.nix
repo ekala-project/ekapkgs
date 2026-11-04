@@ -21,6 +21,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   installFlags = [ "INSTALL_PLUGINS_DIR=${placeholder "out"}/lib/ladspa" ];
+
   preInstall = ''
     mkdir -p $out/lib/ladspa
   '';

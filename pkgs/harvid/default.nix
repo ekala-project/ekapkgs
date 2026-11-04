@@ -46,6 +46,7 @@ stdenv.mkDerivation (finalAttrs: {
     "PREFIX=$(out)"
     "VERSION=v${finalAttrs.version}"
   ];
+
   passthru.updateScript = nix-update-script { };
 
   meta = {

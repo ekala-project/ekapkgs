@@ -23,13 +23,14 @@
   TryTiny,
 }:
 buildPerlPackage {
-
   pname = "Moose";
   version = "2.2206";
+
   src = fetchurl {
     url = "mirror://cpan/authors/id/E/ET/ETHER/Moose-2.2206.tar.gz";
     hash = "sha256-Z5csTivDn72jhRgXevDme7vrVIVi5OxLdZoaelg+UFs=";
   };
+
   buildInputs = [
     DistCheckConflicts
     CPANMetaCheck
@@ -38,6 +39,7 @@ buildPerlPackage {
     TestNeeds
     TestRequires
   ];
+
   propagatedBuildInputs = [
     ClassLoadXS
     DataOptList
@@ -53,6 +55,7 @@ buildPerlPackage {
     SubExporter
     TryTiny
   ];
+
   meta = {
     description = "Postmodern object system for Perl 5";
     homepage = "https://metacpan.org/pod/Moose";
@@ -62,5 +65,4 @@ buildPerlPackage {
     ];
     mainProgram = "moose-outdated";
   };
-
 }

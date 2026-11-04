@@ -19,6 +19,7 @@ stdenv.mkDerivation (finalAttrs: {
     url = "mirror://sourceforge/project/nsis/NSIS%203/${finalAttrs.version}/nsis-${finalAttrs.version}-src.tar.bz2";
     sha256 = "11miw8jbhqcn5wmndcjdjfs0r7jm08x5cfvxyj64xkx29a77mvgk";
   };
+
   srcWinDistributable = fetchzip {
     url = "mirror://sourceforge/project/nsis/NSIS%203/${finalAttrs.version}/nsis-${finalAttrs.version}.zip";
     sha256 = "0rp9bycykjgx2aq656sdba1h4v14nfyiic2lgp1xm93l2czx9k9q";
@@ -32,6 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   nativeBuildInputs = [ scons ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ makeWrapper ];
+
   buildInputs = [ zlib ] ++ lib.optionals stdenv.hostPlatform.isDarwin [ libiconv ];
 
   env = {
@@ -67,6 +69,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   prefixKey = "PREFIX=";
+
   installTargets = [ "install-compiler" ];
 
   # NSIS can crash when compiling Unicode installers under non-UTF-8 locales on macOS

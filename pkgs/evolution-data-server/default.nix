@@ -113,6 +113,7 @@ stdenv.mkDerivation (finalAttrs: {
   ++ lib.optionals withGtk4 [
     gtk4
   ];
+
   # TODO: webkitgtk is not wired up; OAuth2 support is disabled
   # ++ lib.optionals (withGtk4 && enableOAuth2) [
   #   webkitgtk

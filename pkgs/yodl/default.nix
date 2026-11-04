@@ -80,6 +80,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   nativeInstallCheckInputs = [ ];
+
   doInstallCheck = true;
 
   meta = {

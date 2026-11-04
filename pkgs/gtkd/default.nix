@@ -39,6 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     which
   ];
+
   propagatedBuildInputs = [
     at-spi2-core
     cairo

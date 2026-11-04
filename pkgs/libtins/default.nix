@@ -41,6 +41,7 @@ stdenv.mkDerivation rec {
     cmake.configurePhaseHook
     gtest
   ];
+
   buildInputs = [
     openssl
     libpcap
@@ -57,6 +58,7 @@ stdenv.mkDerivation rec {
   ];
 
   doCheck = true;
+
   checkTarget = "tests test";
 
   meta = {

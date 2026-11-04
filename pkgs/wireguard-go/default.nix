@@ -43,6 +43,7 @@ buildGoModule (finalAttrs: {
   postInstall = ''
     mv $out/bin/wireguard $out/bin/wireguard-go
   '';
+
   meta = {
     description = "Userspace Go implementation of WireGuard";
     homepage = "https://git.zx2c4.com/wireguard-go/about/";

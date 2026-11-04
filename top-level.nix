@@ -200,6 +200,7 @@ final: prev: {
   opencascade-occt_7_6 = final.opencascade-occt.overrideAttrs rec {
     pname = "opencascade-occt";
     version = "7.6.2";
+
     src = final.fetchurl {
       name = "occt-V${builtins.replaceStrings [ "." ] [ "_" ] version}.tar.gz";
       url = "https://git.dev.opencascade.org/gitweb/?p=occt.git;a=snapshot;h=V${

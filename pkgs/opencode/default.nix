@@ -57,7 +57,9 @@ stdenv.mkDerivation {
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [ stdenv.cc.cc.lib ];
 
   dontConfigure = true;
+
   dontBuild = true;
+
   # otherwise strip removes the compressed typescript code
   dontStrip = true;
 
@@ -84,6 +86,7 @@ stdenv.mkDerivation {
   '';
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook
@@ -91,6 +94,7 @@ stdenv.mkDerivation {
   ++ lib.optionals stdenv.hostPlatform.isDarwin [
     (writeShellScriptBin "sysctl" "echo 0")
   ];
+
   versionCheckKeepEnvironment = "PATH";
 
   meta = {

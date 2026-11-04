@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
   preCheck = ''
     export LOCALDOMAIN="dummydomain"
   '';
+
   doCheck = !stdenv.hostPlatform.isDarwin;
 
   meta = {

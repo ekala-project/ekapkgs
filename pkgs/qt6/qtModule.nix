@@ -19,15 +19,18 @@ stdenv.mkDerivation (
   args
   // {
     inherit pname version src;
+
     patches = args.patches or patches.${pname} or [ ];
 
     buildInputs = args.buildInputs or [ ];
+
     nativeBuildInputs = (args.nativeBuildInputs or [ ]) ++ [
       cmake
       cmake.configurePhaseHook
       ninja
       perl
     ];
+
     propagatedBuildInputs =
       (lib.warnIf (args ? qtInputs) "qt6.qtModule's qtInputs argument is deprecated" args.qtInputs or [ ])
       ++ (args.propagatedBuildInputs or [ ]);
@@ -45,6 +48,7 @@ stdenv.mkDerivation (
     moveToDev = false;
 
     outputs = args.outputs or [ "out" ];
+
     separateDebugInfo = args.separateDebugInfo or false;
 
     dontWrapQtApps = args.dontWrapQtApps or true;

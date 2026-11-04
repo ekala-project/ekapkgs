@@ -13,6 +13,7 @@
 python3Packages.buildPythonPackage (finalAttrs: {
   pname = "umu-launcher-unwrapped";
   version = "1.4.4";
+  pyproject = false;
 
   src = fetchFromGitHub {
     owner = "Open-Wine-Components";
@@ -58,7 +59,6 @@ python3Packages.buildPythonPackage (finalAttrs: {
       xxhash
     ];
 
-  pyproject = false;
   configureScript = "./configure.sh";
 
   configureFlags = [

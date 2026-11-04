@@ -20,6 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ sdl2-compat ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

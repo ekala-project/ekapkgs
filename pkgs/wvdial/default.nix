@@ -29,6 +29,7 @@ stdenv.mkDerivation {
   ];
 
   buildInputs = [ wvstreams ];
+
   nativeBuildInputs = [ pkg-config ];
 
   makeFlags = [

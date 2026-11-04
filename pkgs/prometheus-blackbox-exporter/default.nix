@@ -7,6 +7,7 @@
 buildGoModule rec {
   pname = "blackbox_exporter";
   version = "0.28.0";
+
   rev = "v${version}";
 
   src = fetchFromGitHub {

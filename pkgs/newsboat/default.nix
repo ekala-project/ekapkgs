@@ -77,6 +77,7 @@ stdenv.mkDerivation (finalAttrs: {
   makeFlags = [ "prefix=$(out)" ];
 
   doCheck = true;
+
   checkTarget = "test";
 
   postInstall = lib.optionalString stdenv.hostPlatform.isDarwin ''

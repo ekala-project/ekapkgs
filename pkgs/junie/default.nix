@@ -101,14 +101,18 @@ stdenv.mkDerivation {
   );
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [
     versionCheckHook
     writableTmpDirAsHomeHook
   ];
+
   versionCheckProgramArg = "--version";
+
   # OpenJDK resolves user.home via getpwuid() and ignores $HOME; in the Nix
   # sandbox that path is unusable, so point it at a scratch dir.
   versionCheckKeepEnvironment = [ "JAVA_TOOL_OPTIONS" ];
+
   preVersionCheck = ''
     export JAVA_TOOL_OPTIONS="-Duser.home=$(mktemp -d)"
   '';

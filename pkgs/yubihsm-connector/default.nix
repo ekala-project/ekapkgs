@@ -42,6 +42,7 @@ buildGoModule (finalAttrs: {
   '';
 
   doInstallCheck = true;
+
   versionCheckProgramArg = "version";
 
   meta = {

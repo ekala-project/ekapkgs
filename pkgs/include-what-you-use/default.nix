@@ -27,6 +27,7 @@ stdenv.mkDerivation (finalAttrs: {
     llvmPackages.llvm
     python3
   ];
+
   buildInputs = [
     llvmPackages.libclang
     llvmPackages.clang-unwrapped

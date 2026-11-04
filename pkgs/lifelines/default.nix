@@ -27,6 +27,7 @@ stdenv.mkDerivation {
     ncurses
     perl
   ];
+
   nativeBuildInputs = [
     autoreconfHook
     bison

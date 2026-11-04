@@ -37,6 +37,7 @@ buildGoModule (finalAttrs: {
       --fish <($out/bin/oras completion fish) \
       --zsh <($out/bin/oras completion zsh)
   '';
+
   versionCheckProgramArg = "version";
 
   meta = {

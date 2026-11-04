@@ -27,6 +27,7 @@ stdenv.mkDerivation {
     cmake.configurePhaseHook
     pkg-config
   ];
+
   buildInputs = [
     libuuid
     openssl

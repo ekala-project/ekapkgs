@@ -36,9 +36,11 @@ rustPlatform.buildRustPackage (finalAttrs: {
   env.OPENSSL_NO_VENDOR = 1;
 
   nativeInstallCheckInputs = [ ];
+
   doInstallCheck = true;
 
   checkFeatures = [ "isolated-tests" ];
+
   checkFlags = [
     # requires networking
     "--skip=cli::remote::test::test_should_make_remote_args_from_one_bookmark_and_one_remote_with_local_dir"

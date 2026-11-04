@@ -12,11 +12,13 @@
 lua.pkgs.buildLuarocksPackage {
   pname = "lgi";
   version = "0.9.2-1";
+
   knownRockspec =
     (fetchurl {
       url = "mirror://luarocks/lgi-0.9.2-1.rockspec";
       sha256 = "1gqi07m4bs7xibsy4vx8qgyp3yb1wnh0gdq1cpwqzv35y6hn5ds3";
     }).outPath;
+
   src = fetchFromGitHub {
     owner = "pavouk";
     repo = "lgi";
@@ -25,6 +27,7 @@ lua.pkgs.buildLuarocksPackage {
   };
 
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [
     glib
     gobject-introspection

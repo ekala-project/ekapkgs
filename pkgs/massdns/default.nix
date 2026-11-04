@@ -18,7 +18,9 @@ stdenv.mkDerivation (finalAttrs: {
     "PREFIX=$(out)"
     "PROJECT_FLAGS=-DMASSDNS_REVISION='\"v${finalAttrs.version}\"'"
   ];
+
   buildFlags = if stdenv.hostPlatform.isLinux then "all" else "nolinux";
+
   meta = {
     description = "Resolve large amounts of domain names";
     homepage = "https://github.com/blechschmidt/massdns";

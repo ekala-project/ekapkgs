@@ -34,6 +34,7 @@ stdenv.mkDerivation (finalAttrs: {
     gettext
     pkg-config
   ];
+
   buildInputs = [
     libidn.v2
     libiconv
@@ -49,6 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     "HAVE_ICONV=1"
     "CONFIG_FILE=/etc/whois.conf"
   ];
+
   buildFlags = [ "whois" ];
 
   installTargets = [ "install-whois" ];

@@ -19,10 +19,13 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   makeFlags = [ "prefix=${placeholder "out"}" ];
+
   dontBuild = true;
+
   doCheck = true;
 
   preInstall = "rm INSTALL";
+
   # `make install` fails on case-insensitive file systems (e.g. APFS by
   # default) because this target exists
 

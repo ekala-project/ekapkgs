@@ -24,6 +24,7 @@ stdenv.mkDerivation (finalAttrs: {
     coreutils
     gettext
   ];
+
   nativeBuildInputs = [
     autoreconfHook
     updateAutotoolsGnuConfigScriptsHook

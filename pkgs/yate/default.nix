@@ -17,6 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   # TODO zaptel ? postgres ?
   nativeBuildInputs = [ pkg-config ];
+
   buildInputs = [ openssl ];
 
   # /dev/null is used when linking which is a impure path for the wrapper
@@ -46,5 +47,4 @@ stdenv.mkDerivation (finalAttrs: {
       "x86_64-linux"
     ];
   };
-
 })

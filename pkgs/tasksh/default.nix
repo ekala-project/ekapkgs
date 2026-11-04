@@ -16,6 +16,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildInputs = [ readline ];
+
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook

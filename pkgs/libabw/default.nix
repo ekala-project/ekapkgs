@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
     perl
     pkg-config
   ];
+
   buildInputs = [
     boost
     librevenge

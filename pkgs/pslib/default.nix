@@ -30,6 +30,7 @@ stdenv.mkDerivation rec {
     cmake.configurePhaseHook
     pkg-config
   ];
+
   buildInputs = [
     zlib
     libpng

@@ -125,15 +125,19 @@ let
 in
 runCommand "${unwrapped.name}-wrapped"
   {
+    inherit (unwrapped) meta pname version;
+
     __structuredAttrs = true;
+
     strictDeps = true;
 
-    inherit (unwrapped) meta pname version;
     paths = [ unwrapped ];
+
     nativeBuildInputs = [
       makeWrapper
       lndir
     ];
+
     passthru = {
       inherit unwrapped;
       inherit (unwrapped) kdeIntegration;

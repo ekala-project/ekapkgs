@@ -27,7 +27,9 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     pkg-config
   ];
+
   buildInputs = [ popt ];
+
   depsBuildBuild = [ buildPackages.stdenv.cc ];
 
   # mandoc is not available, skip building docs

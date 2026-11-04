@@ -107,6 +107,7 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   doCheck = true;
+
   nativeCheckInputs = [
     cxxtest
     ruby

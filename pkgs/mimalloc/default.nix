@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   doCheck = !stdenv.hostPlatform.isStatic;
+
   preCheck =
     let
       ldLibraryPathEnv = if stdenv.hostPlatform.isDarwin then "DYLD_LIBRARY_PATH" else "LD_LIBRARY_PATH";
@@ -35,6 +36,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
     ninja
   ];
+
   cmakeFlags = lib.mapAttrsToList lib.cmakeBool {
     MI_INSTALL_TOPLEVEL = true;
     MI_SECURE = secureBuild;

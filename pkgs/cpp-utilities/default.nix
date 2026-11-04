@@ -22,7 +22,9 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   nativeCheckInputs = [ cppunit ];
+
   buildInputs = lib.optionals stdenv.hostPlatform.isDarwin [
     libiconv # needed on Darwin, see https://github.com/Martchus/cpp-utilities/issues/4
   ];
@@ -37,6 +39,7 @@ stdenv.mkDerivation (finalAttrs: {
       "LD_LIBRARY_PATH=$PWD"
     )
   '';
+
   # tests fail on Darwin
   doCheck = !stdenv.hostPlatform.isDarwin;
 

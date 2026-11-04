@@ -30,6 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     autoreconfHook
     installShellFiles
   ];
+
   buildInputs = [
     pixman
     libxcb-image

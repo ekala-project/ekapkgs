@@ -50,6 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
     libx11
     libxmu
   ];
+
   meta = {
     description = "Easy to use task manager for Xfce";
     homepage = "https://gitlab.xfce.org/apps/xfce4-taskmanager";

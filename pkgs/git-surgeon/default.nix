@@ -22,6 +22,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   # TODO(corepkgs): install the bundled agent skills (upstream uses installAgentSkills)
 
   doInstallCheck = true;
+
   nativeInstallCheckInputs = [ versionCheckHook ];
 
   passthru.tests.version = testers.testVersion {

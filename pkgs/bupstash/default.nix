@@ -25,6 +25,7 @@ rustPlatform.buildRustPackage rec {
     pkg-config
     installShellFiles
   ];
+
   buildInputs = [ libsodium ];
 
   postBuild = ''

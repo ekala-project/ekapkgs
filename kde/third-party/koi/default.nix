@@ -48,6 +48,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     wrapQtAppsHook
   ];
+
   buildInputs = [
     kconfig
     kcoreaddons

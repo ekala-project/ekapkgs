@@ -33,16 +33,20 @@ stdenv.mkDerivation rec {
     utf8cpp
     libtool
   ];
+
   buildInputs = [
     libxml2
     icu
   ];
+
   buildFlags = [
     "CPPFLAGS=-I${utf8cpp}/include/utf8cpp"
   ];
 
   nativeCheckInputs = [ python3 ];
+
   doCheck = true;
+
   checkPhase = ''
     python3 tests/run_tests.py
   '';

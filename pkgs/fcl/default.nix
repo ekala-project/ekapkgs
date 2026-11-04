@@ -23,6 +23,7 @@ stdenv.mkDerivation (finalAttrs: {
     cmake
     cmake.configurePhaseHook
   ];
+
   propagatedBuildInputs = [
     eigen
     libccd
