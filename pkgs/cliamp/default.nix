@@ -9,26 +9,29 @@
   libogg,
   libvorbis,
   flac,
+  mpg123,
   ffmpeg,
   yt-dlp,
 }:
 
 buildGoModule (finalAttrs: {
   pname = "cliamp";
-  version = "1.63.2";
+  version = "2.3.0";
 
   src = fetchFromGitHub {
     owner = "bjarneo";
     repo = "cliamp";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-HqFDT8jGvrKqb6bupvXqZ5ECpvColRB5dXPwcKCX4RQ=";
+    hash = "sha256-+q3/AfxHtEYH/gzaiimn0gDx98vlytVsJFfYnq04U9Y=";
   };
 
-  vendorHash = "sha256-WYyv0w5KFA15axb+NA9tClfc1H4Znj8kI2boR8XziXg=";
+  vendorHash = "sha256-cythuV9J/Iu+ibRVza8dQ6RHjYKa0hVllc2t6dh3hhs=";
+
+  env.CGO_ENABLED = "1";
 
   ldflags = [
     "-s"
-    "-X main.version=${finalAttrs.version}"
+    "-X main.version=v${finalAttrs.version}"
   ];
 
   nativeBuildInputs = [
@@ -40,6 +43,7 @@ buildGoModule (finalAttrs: {
     libogg
     libvorbis
     flac
+    mpg123
   ]
   ++ lib.optionals stdenv.hostPlatform.isLinux [
     alsa-lib
@@ -53,11 +57,15 @@ buildGoModule (finalAttrs: {
           yt-dlp
         ]
       }
+
+    install -Dm644 $src/cliamp.desktop $out/share/applications/cliamp.desktop
+    install -Dm644 $src/Cliamp.png $out/share/icons/hicolor/256x256/apps/cliamp.png
   '';
 
   meta = {
-    description = "Terminal Winamp - a retro terminal music player inspired by Winamp 2.x";
+    description = "Retro terminal music player";
     homepage = "https://github.com/bjarneo/cliamp";
+    changelog = "https://github.com/bjarneo/cliamp/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
     mainProgram = "cliamp";
