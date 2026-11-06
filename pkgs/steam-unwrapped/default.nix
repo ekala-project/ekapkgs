@@ -39,6 +39,11 @@ stdenv.mkDerivation (finalAttrs: {
     rm $out/share/applications/steam.desktop
     substitute steam.desktop $out/share/applications/steam.desktop \
       --replace-fail /usr/bin/steam steam
+
+    # Remove PrefersNonDefaultGPU / X-KDE-RunOnDiscreteGpu — these cause
+    # XWayland rendering failures on Hyprland with NVIDIA discrete GPUs
+    sed -i -e '/^PrefersNonDefaultGPU/d' -e '/^X-KDE-RunOnDiscreteGpu/d' \
+      $out/share/applications/steam.desktop
   '';
 
   meta = {
