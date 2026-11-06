@@ -553,6 +553,7 @@
   ./programs/sshuttle.nix
   ./programs/stalonetray.nix
   ./programs/starship.nix
+  ./programs/steam.nix
   ./programs/step-cli.nix
   ./programs/stgit.nix
   ./programs/st.nix
