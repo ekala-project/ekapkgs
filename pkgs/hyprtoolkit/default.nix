@@ -58,6 +58,7 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
     pixman
     wayland
     wayland-protocols
+    wayland-scanner
   ];
 
   meta = {
