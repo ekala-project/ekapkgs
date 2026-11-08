@@ -53,18 +53,17 @@ stdenv.mkDerivation (finalAttrs: {
 
   prePatch = ''
     substituteInPlace ./support/tools/ffado-diag.in \
-      --replace /lib/modules/ "/run/booted-system/kernel-modules/lib/modules/"
+      --replace-warn /lib/modules/ "/run/booted-system/kernel-modules/lib/modules/"
 
     # prevent build tools from leaking into closure
     substituteInPlace support/tools/SConscript --replace-fail \
       'support/tools/ffado-diag --static' \
-      "echo '"'See `nix-store --query --tree $(out)`.'"'"
+      "echo 'See nix-store --query --tree on the ffado output'"
 
     # distutils was removed in python 3.12+, replace with sysconfig
     substituteInPlace SConstruct \
       --replace-fail 'import distutils.sysconfig' 'import sysconfig' \
-      --replace-fail 'distutils.sysconfig' 'sysconfig' \
-      --replace-fail 'get_python_lib()' "get_path('purelib')"
+      --replace-fail 'distutils.sysconfig.get_python_lib( prefix="$PREFIX" )' "sysconfig.get_path('purelib')"
   ''
   + lib.optionalString (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) ''
     # skip the CC sanity check, since that requires invoking cross-compiled binaries during build
@@ -96,10 +95,10 @@ stdenv.mkDerivation (finalAttrs: {
     "ENABLE_ALL=True"
     "BUILD_TESTS=True"
     "BUILD_MIXER=${if withMixer then "True" else "False"}"
-    "UDEVDIR=$(out)/lib/udev/rules.d"
-    "PYPKGDIR=$(out)/${python.sitePackages}"
-    "BINDIR=$(bin)/bin"
-    "INCLUDEDIR=$(dev)/include"
+    "UDEVDIR=${placeholder "out"}/lib/udev/rules.d"
+    "PYPKGDIR=${placeholder "out"}/${python.sitePackages}"
+    "BINDIR=${placeholder "bin"}/bin"
+    "INCLUDEDIR=${placeholder "dev"}/include"
     "PYTHON_INTERPRETER=${python.interpreter}"
   ];
 
