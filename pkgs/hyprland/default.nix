@@ -15,6 +15,7 @@
   hyprlang,
   hyprutils,
   hyprwire,
+  hyprland-protocols,
   hyprwayland-scanner,
   lcms2,
   libGL,
@@ -81,6 +82,10 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
       --replace-fail  "@PREFIX@/" ""
     substituteInPlace example/hyprland.desktop.in \
       --replace-fail  "@PREFIX@/" ""
+
+    # Relax glaze version constraint — ekapkgs ships v9.x
+    substituteInPlace start/CMakeLists.txt hyprpm/CMakeLists.txt \
+      --replace-fail 'find_package(glaze 7...<8 QUIET)' 'find_package(glaze QUIET)'
   '';
 
   env = {
@@ -120,6 +125,7 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
       cairo
       glaze
       glslang
+      hyprland-protocols
       hyprcursor.dev
       hyprgraphics
       hyprlang
@@ -140,6 +146,7 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
       tomlplusplus
       wayland
       wayland-protocols
+      wayland-scanner.dev
     ]
     (optionals enableXWayland [
       libxcb
