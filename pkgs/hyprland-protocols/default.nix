@@ -2,24 +2,22 @@
   lib,
   gcc15Stdenv,
   fetchFromGitHub,
-  meson,
-  ninja,
+  cmake,
 }:
 gcc15Stdenv.mkDerivation (finalAttrs: {
   pname = "hyprland-protocols";
-  version = "0.7.0";
+  version = "0.8.0";
 
   src = fetchFromGitHub {
     owner = "hyprwm";
     repo = "hyprland-protocols";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-+KEVnKBe8wz+a6dTLq8YDcF3UrhQElwsYJaVaHXJtoI=";
+    hash = "sha256-g09dB6NCTzD4F6YgYrGXRhUfG52xwxUtlMAbHvv/1gE=";
   };
 
   nativeBuildInputs = [
-    meson
-    meson.configurePhaseHook
-    ninja
+    cmake
+    cmake.configurePhaseHook
   ];
 
   meta = {
