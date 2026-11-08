@@ -19,7 +19,9 @@
   hyprwayland-scanner,
   lcms2,
   libGL,
+  libcanberra,
   libdrm,
+  libei,
   libgbm,
   libinput,
   libuuid,
@@ -31,6 +33,8 @@
   pkgconf,
   python3,
   re2,
+  readline,
+  sdbus-cpp_2,
   systemdMinimal,
   tomlplusplus,
   wayland,
@@ -62,14 +66,14 @@ let
 in
 gcc15Stdenv.mkDerivation (finalAttrs: {
   pname = "hyprland" + optionalString debug "-debug";
-  version = "0.55.4";
+  version = "0.57.1";
 
   src = fetchFromGitHub {
     owner = "hyprwm";
     repo = "hyprland";
     fetchSubmodules = true;
     tag = "v${finalAttrs.version}";
-    hash = "sha256-IuT0HnOr/0rAw+GXr+OwWx89FjA4Og1FqP7vywEwRJM=";
+    hash = "sha256-Ne6hx/5W1sl+IwFskGAySAwt/n+dRziUPgYKmhyrpyU=";
   };
 
   postPatch = ''
@@ -86,6 +90,13 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
     # Relax glaze version constraint — ekapkgs ships v9.x
     substituteInPlace start/CMakeLists.txt hyprpm/CMakeLists.txt \
       --replace-fail 'find_package(glaze 7...<8 QUIET)' 'find_package(glaze QUIET)'
+
+    # The following C++26 library features require GCC 16; use C++20 equivalents
+    substituteInPlace src/ipc/s1/S1.cpp \
+      --replace-fail 'request.subview(i, 2)' 'std::string_view(request).substr(i, 2)'
+    substituteInPlace src/helpers/MiscFunctions.cpp \
+      --replace-fail 'std::ranges::starts_with(str_view, prefixes)' \
+        '(std::ranges::mismatch(str_view, prefixes).in2 == std::ranges::end(prefixes))'
   '';
 
   env = {
@@ -130,9 +141,12 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
       hyprgraphics
       hyprlang
       hyprutils
+      hyprwire
       lcms2
       libGL
+      libcanberra
       libdrm
+      libei
       libgbm
       libinput
       libuuid
@@ -143,10 +157,12 @@ gcc15Stdenv.mkDerivation (finalAttrs: {
       pango
       pciutils
       re2
+      readline
+      sdbus-cpp_2
       tomlplusplus
       wayland
       wayland-protocols
-      wayland-scanner.dev
+      wayland-scanner
     ]
     (optionals enableXWayland [
       libxcb
