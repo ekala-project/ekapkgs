@@ -36,9 +36,9 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
   ];
 
-  mesonEntries = {
-    doCheck = false;
+  doCheck = false;
 
+  mesonEntries = {
     build_tests = "${lib.boolToString finalAttrs.finalPackage.doCheck}";
     build_examples = true;
   };
