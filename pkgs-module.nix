@@ -21,7 +21,6 @@ let
     cudaPkgsModule
     pythonPkgsModule
     haskellPkgsModule
-    haskellPkgsModule
     rPkgsModule
     vimModule
   ];
