@@ -84,7 +84,6 @@
   ./services/alsa.nix
   ./services/at-spi2-core.nix
   ./services/colord.nix
-  ./services/docker.nix
   ./services/evolution-data-server.nix
   ./services/gcr-ssh-agent.nix
   ./services/gdm.nix
