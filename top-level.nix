@@ -38,6 +38,8 @@ final: prev: {
   docbook_xsl = final.docbook-xsl;
   libxcb-renderutil = final.xcbutilrenderutil;
   libfm-extra = final.libfm.override { extraOnly = true; };
+  # astyle as a shared library with its header, as used by kdevelop
+  libastyle = final.astyle.override { asLibrary = true; };
   # openal is an alias for openal-soft
   openal = final.openal-soft;
 
