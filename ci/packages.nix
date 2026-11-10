@@ -1,4 +1,5 @@
-# Enumerates every package in the repository.
+# Enumerates every package in the repository: every top-level attribute, plus
+# the members of the package sets listed in `scopes`.
 #
 # Aliases are disabled. They are shims for a package already covered under its
 # canonical name, so evaluating them only repeats work.
@@ -72,7 +73,20 @@ let
     value = pkgs.${name};
   }) names;
 
-  targets = map (pair: pair.value) topLevel;
+  # Package sets that are not derivations themselves, so `probe` skips them and
+  # walking the top level never reaches their members. Each member is probed
+  # like a top-level package; non-derivations (builders, stubs) are ignored.
+  scopes = [ "kdePackages" ];
+
+  scoped = lib.concatMap (
+    scope:
+    map (name: {
+      name = "${scope}.${name}";
+      value = pkgs.${scope}.${name};
+    }) (builtins.attrNames pkgs.${scope})
+  ) scopes;
+
+  targets = map (pair: pair.value) (topLevel ++ scoped);
 in
 {
   inherit probe targets;
