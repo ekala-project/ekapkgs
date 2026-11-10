@@ -8,7 +8,7 @@ mkKdeDerivation {
 
   extraBuildInputs = [
     libarchive
-    (libzip.override { withOpenssl = true; })
+    libzip
   ];
   meta.mainProgram = "ark";
 }
