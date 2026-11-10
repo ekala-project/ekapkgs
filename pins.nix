@@ -1,41 +1,13 @@
+# Pins are read from flake.lock; update them with `nix flake update`.
 let
-  # Inherit pinning from flake.lock
-  lock = builtins.fromJSON (builtins.readFile ./flake.lock);
-  getInfo =
-    attr:
-    let
-      node = lock.nodes.${attr}.locked;
-    in
-    if node.type == "path" then
-      builtins.fetchTree {
-        inherit (node) type path narHash;
-      }
-    else if node.type == "git" then
-      builtins.fetchTree {
-        inherit (node)
-          type
-          url
-          narHash
-          rev
-          ;
-      }
-    else
-      builtins.fetchTree {
-        inherit (node)
-          type
-          owner
-          repo
-          narHash
-          rev
-          ;
-      };
+  fetchLocked = import ./fetch-locked.nix { };
 in
 {
-  lib = getInfo "nix-lib";
-  corepkgs = getInfo "corepkgs";
-  python = getInfo "python";
-  haskell = getInfo "haskell";
-  cuda = getInfo "cuda";
-  r-pkgs = getInfo "r-pkgs";
-  vim-plugins = getInfo "vim-plugins";
+  lib = fetchLocked "nix-lib";
+  corepkgs = fetchLocked "corepkgs";
+  python = fetchLocked "python";
+  haskell = fetchLocked "haskell";
+  cuda = fetchLocked "cuda";
+  r-pkgs = fetchLocked "r-pkgs";
+  vim-plugins = fetchLocked "vim-plugins";
 }
