@@ -21,7 +21,6 @@
   ntfs3g,
   udftools,
   xfsprogs,
-  zfs,
 }:
 let
   # https://github.com/KDE/kpmcore/blob/v25.12.1/src/util/externalcommand_whitelist.h
@@ -47,7 +46,7 @@ let
     # reiser{4,fs}progs intentionally omitted due to filesystem removal from Linux.
     udftools
     xfsprogs
-    zfs
+    # zfs # TODO: not yet in ekapkgs
 
     # FIXME: Missing command: hfsck hformat fsck.nilfs2 {fsck,mkfs,debugfs,tunefs}.ocfs2
     # FIXME: audit to see if these are all still required
