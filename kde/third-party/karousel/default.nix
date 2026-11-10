@@ -5,7 +5,7 @@
   kpackage,
   kwin,
   nodejs,
-  typescript_5,
+  typescript,
 }:
 
 stdenv.mkDerivation (finalAttrs: {
@@ -28,7 +28,7 @@ stdenv.mkDerivation (finalAttrs: {
   nativeBuildInputs = [
     kpackage
     nodejs
-    typescript_5
+    typescript
   ];
 
   buildInputs = [ kwin ];
