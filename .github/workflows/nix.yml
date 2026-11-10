@@ -32,6 +32,8 @@ jobs:
         extra_nix_config: |
           extra-substituters = https://ekala-corepkgs.cachix.org
           extra-trusted-public-keys = ekala-corepkgs.cachix.org-1:DcZV+vegWoEzacbSdXFXU4S7728C0eS9RfGpKeyHd6w=
+    - name: Check EkaOS module lists
+      run: ./ci/module-lists.sh
     - name: Evaluate all packages
       run: ./ci/eval.sh
 
