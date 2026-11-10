@@ -31,7 +31,7 @@ let
     cuda_cudart
     libcublas
     libcurand
-    cuda_cccl
+    cccl
     (cudaPackages.cuda_profiler_api or cudaPackages.cuda_nvprof)
   ];
 in
