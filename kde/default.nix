@@ -106,7 +106,6 @@ let
         kdsoap-ws-discovery-client = self.callPackage ./misc/kdsoap-ws-discovery-client { };
         kirigami-addons = self.callPackage ./misc/kirigami-addons { };
         kirigami-app-components = self.callPackage ./misc/kirigami-app-components { };
-        kio-extras-kf5 = self.callPackage ./misc/kio-extras-kf5 { };
         kio-fuse = self.callPackage ./misc/kio-fuse { };
         kio-s3 = self.callPackage ./misc/kio-s3 { };
         kio-snapshot = self.callPackage ./misc/kio-snapshot { };

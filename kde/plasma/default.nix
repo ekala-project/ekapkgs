@@ -27,7 +27,6 @@
   ksystemstats = callPackage ./ksystemstats { };
   kwallet-pam = callPackage ./kwallet-pam { };
   kwayland = callPackage ./kwayland { };
-  kwayland-integration = callPackage ./kwayland-integration { };
   kwin = callPackage ./kwin { };
   kwin-x11 = callPackage ./kwin-x11 { };
   kwrited = callPackage ./kwrited { };
