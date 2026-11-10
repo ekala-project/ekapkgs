@@ -42,7 +42,13 @@
 
       lib = {
         mkFlake = import ./lib/mk-flake.nix treefmt-nix;
+        # Same interface as corepkgs' lib.ekaosSystem, plus the ekapkgs
+        # package set and EkaOS modules. See ekaos/default.nix.
+        ekaosSystem = import ./ekaos;
       };
+
+      # Kept at the top level as well, where it was originally exposed.
+      ekaosSystem = self.lib.ekaosSystem;
 
       formatter = corepkgs.formatter;
       nixConfig = {
