@@ -3,7 +3,7 @@
   replaceVars,
   mlt,
   glaxnimate,
-  ffmpeg-full,
+  ffmpeg,
   ffmpegthumbs,
   pkg-config,
   shared-mime-info,
@@ -23,8 +23,7 @@ mkKdeDerivation {
 
   patches = [
     (replaceVars ./dependency-paths.patch {
-      inherit mlt glaxnimate;
-      ffmpeg = ffmpeg-full;
+      inherit mlt glaxnimate ffmpeg;
     })
   ];
 
@@ -49,7 +48,8 @@ mkKdeDerivation {
     qqc2-desktop-style
     kio-extras
 
-    ffmpeg-full
+    # ffmpeg.full is marked broken in corepkgs
+    ffmpeg
     ffmpegthumbs
     libv4l
     mlt
