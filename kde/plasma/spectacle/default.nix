@@ -4,8 +4,7 @@
   qtwayland,
   qtmultimedia,
   opencv,
-  tesseractLanguages ? [ ],
-  tesseract5,
+  tesseract,
 }:
 mkKdeDerivation {
   pname = "spectacle";
@@ -13,17 +12,13 @@ mkKdeDerivation {
   extraNativeBuildInputs = [ pkg-config ];
 
   extraBuildInputs = [
-    (tesseract5.override { enableLanguages = tesseractLanguages; })
+    # TODO: ekapkgs tesseract has no enableLanguages; add language data support
+    tesseract
     qtwayland
     qtmultimedia
-    (opencv.override {
-      enableCuda = false; # fails to compile, disabled in case someone sets config.cudaSupport
-      enabledModules = [
-        "core"
-        "imgproc"
-      ]; # https://invent.kde.org/graphics/spectacle/-/blob/master/CMakeLists.txt?ref_type=heads#L83
-      runAccuracyTests = false; # tests will fail because of missing plugins but that's okay
-    })
+    # ekapkgs opencv has no enabledModules; spectacle only needs core and imgproc
+    # https://invent.kde.org/graphics/spectacle/-/blob/master/CMakeLists.txt?ref_type=heads#L83
+    opencv
   ];
 
   meta.mainProgram = "spectacle";

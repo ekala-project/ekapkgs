@@ -1,8 +1,7 @@
 {
   mkKdeDerivation,
   qtwebengine,
-  tesseractLanguages ? [ ],
-  tesseract5,
+  tesseract,
   leptonica,
 }:
 mkKdeDerivation {
@@ -10,7 +9,8 @@ mkKdeDerivation {
 
   extraBuildInputs = [
     qtwebengine
-    (tesseract5.override { enableLanguages = tesseractLanguages; })
+    # TODO: ekapkgs tesseract has no enableLanguages; add language data support
+    tesseract
     leptonica
   ];
   meta.mainProgram = "skanpage";
