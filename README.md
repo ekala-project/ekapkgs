@@ -34,20 +34,20 @@ pkgs.hello
 
 ### EkaOS system configuration
 
-Ekapkgs provides `ekaosSystem` for building complete system configurations,
-analogous to NixOS's `nixosSystem`:
+`ekaos/default.nix` evaluates an EkaOS system configuration (analogous to
+NixOS's `nixosSystem`) using corepkgs' EkaOS evaluator plus the ekapkgs
+modules:
 
 ```nix
-{
-  inputs.ekapkgs.url = "github:ekala-project/ekapkgs";
-
-  outputs = { ekapkgs, self, ... }: {
-    ekaosConfigurations.myhost = ekapkgs.ekaosSystem {
-      system = "x86_64-linux";
-      config.allowUnfree = true;
-      modules = [ ./configuration.nix ];
-    };
+let
+  ekapkgs = fetchTarball "https://github.com/ekala-project/ekapkgs/archive/master.tar.gz";
+in
+import "${ekapkgs}/ekaos" {
+  pkgs = import ekapkgs {
+    system = "x86_64-linux";
+    config.allowUnfree = true;
   };
+  configuration = ./configuration.nix;
 }
 ```
 
@@ -59,24 +59,31 @@ Ekapkgs merges packages from across the Ekala ecosystem:
 |--------|----------|
 | [corepkgs](https://github.com/ekala-project/corepkgs) | Stdenv, compilers, toolchains, core libraries, EkaOS modules |
 | [haskell-pkgs](https://github.com/ekala-project/haskell-pkgs) | GHC and Haskell package set |
-| [python-pkgs](https://github.com/ekala-project/python-pkgs) | Python interpreters and package set |
+| [python-packages](https://github.com/ekala-project/python-packages) | Python interpreters and package set |
 | [cuda-pkgs](https://github.com/ekala-project/cuda-pkgs) | CUDA toolkit and GPU libraries |
 | [r-pkgs](https://github.com/ekala-project/r-pkgs) | R interpreter and CRAN packages |
 | [vim-plugins](https://github.com/ekala-project/vim-plugins) | Vim and Neovim plugin set |
-| **ekapkgs** | 5,700+ user-facing packages, EkaOS service modules |
+| **ekapkgs** | Over 8,000 user-facing packages (including KDE, Perl and PostgreSQL extensions), EkaOS program and service modules |
 
-The combined set provides over 5,700 packages with EkaOS modules for
-system services including OpenSSH, PostgreSQL, nginx, Kubo/IPFS,
-Ollama, Transmission, and more.
+Together with corepkgs and the satellite repositories, the combined set
+provides tens of thousands of packages, along with EkaOS modules for
+system services such as OpenSSH, PostgreSQL and nginx (from corepkgs) and
+Kubo/IPFS, Ollama, Plex and Transmission (from ekapkgs).
 
 ## Structure
 
 ```
 pkgs/            # User-facing packages (auto-imported to pkgs scope)
+pkgs-many/       # Packages with multiple variants
+kde/             # KDE Frameworks, Gear and Plasma (kdePackages)
+perl/pkgs/       # Perl packages (perlPackages)
+python/pkgs/     # Python packages (python3Packages)
+postgresql/pkgs/ # PostgreSQL extensions
 ekaos/
   modules/
-    programs/    # EkaOS program modules (648 modules)
+    programs/    # EkaOS program modules (fish, helix, hyprland, steam, etc.)
     services/    # EkaOS service modules (kubo, ollama, plex, etc.)
+    home/        # Home modules
 build-support/   # Desktop file utilities and hooks
 top-level.nix    # Overlay for overrides and aliases at pkgs scope
 pkgs-module.nix  # Aggregates all ecosystem overlays
