@@ -355,6 +355,9 @@ final: prev: {
   # VTK with Python support (used by FreeCAD)
   vtk = final.toPythonModule final.pkgs.vtk;
 
+  # yt-dlp as an importable module for this Python (used by kdePackages.audiotube)
+  yt-dlp = final.toPythonModule (final.pkgs.yt-dlp.override { python3Packages = final; });
+
   pydbus = final.buildPythonPackage rec {
     pname = "pydbus";
     version = "0.6.0";
