@@ -37,7 +37,7 @@ mkKdeDerivation rec {
     "--prefix PYTHONPATH : ${
       python3Packages.makePythonPath [
         python3Packages.pillow
-        python3Packages.lottie
+        # python3Packages.lottie # TODO: not yet in ekapkgs
       ]
     }"
   ];
