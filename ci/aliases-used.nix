@@ -12,10 +12,8 @@
 let
   pins = import ../pins.nix;
   lib = import pins.lib;
-  pkgsModule = import ../pkgs-module.nix;
 
   pkgs = import ../. {
-    modules = [ pkgsModule ];
     config.aliases.nixpkgs = true;
   };
 

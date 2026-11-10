@@ -29,16 +29,9 @@
     }:
     let
       forAllSystems = nix-lib.lib.genAttrs (import systems);
-      pkgsModule = import ./pkgs-module.nix;
     in
     {
-      legacyPackages = forAllSystems (
-        system:
-        import ./. {
-          inherit system;
-          modules = [ pkgsModule ];
-        }
-      );
+      legacyPackages = forAllSystems (system: import ./. { inherit system; });
 
       lib = {
         mkFlake = import ./lib/mk-flake.nix treefmt-nix;
