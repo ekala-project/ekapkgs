@@ -11,10 +11,7 @@
 let
   pins = import ../pins.nix;
   lib = import pins.lib;
-  pkgsModule = import ../pkgs-module.nix;
-  pkgs = import ../. {
-    modules = [ pkgsModule ];
-  };
+  pkgs = import ../. { };
   mkProjection = overlay: base: lib.fix (self: base // overlay self base);
 
   # Check whether a value is a derivation whose drvPath can be forced.
