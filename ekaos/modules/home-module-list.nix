@@ -21,4 +21,5 @@
   ./home/services/udiskie.nix
   ./home/services/cliphist.nix
   ./home/services/mpd.nix
+  ./home/services/postgresql.nix
 ]
