@@ -6,16 +6,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "static-web-server";
-  version = "2.44.0";
+  version = "2.44.3";
 
   src = fetchFromGitHub {
     owner = "static-web-server";
     repo = "static-web-server";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-1DhPGQUBPQ2nKVYj6YfZK8bEZZlr0rGL+G+b6ss0CUQ=";
+    hash = "sha256-mvZ4TN55lScDNI694sfFvSrCKcTns2EAdTndGUH89ZE=";
   };
 
-  cargoHash = "sha256-bBg51aT1qGYvwElFXkomB8CFg8UFr8atycyaMMtSNBw=";
+  cargoHash = "sha256-e9S3YUeRYpO23NqsHXfVBSIuMb9QbxQHn2EE31Gf4gA=";
 
   # static-web-server already has special handling for files with modification
   # time = Unix epoch, but the nix store is Unix epoch + 1 second.
