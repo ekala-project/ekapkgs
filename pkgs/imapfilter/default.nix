@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "imapfilter";
-  version = "2.8.5";
+  version = "2.8.7";
 
   src = fetchFromGitHub {
     owner = "lefcha";
     repo = "imapfilter";
     tag = "v${finalAttrs.version}";
-    sha256 = "sha256-EiYVkEyOrgX2WwWzFyQcuVheYZs1s3CGl01fMwtXBog=";
+    sha256 = "sha256-NVF5gW5Z5/nflAIfNHtSwiNjS3PgiEgtkcZA5D6RpNQ=";
   };
 
   makeFlags = [
