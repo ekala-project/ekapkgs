@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "galera";
-  version = "26.4.20";
+  version = "26.4.29";
 
   src = fetchFromGitHub {
     owner = "codership";
     repo = "galera";
     tag = "release_${finalAttrs.version}";
-    hash = "sha256-R2YQtAuqPkOtcvjS5PPcqAqu153N2+0/WjZt96ZSI1A=";
+    hash = "sha256-S9aLFGtZ3zKHbxWFK9BtCGjY9pscZqzFHS/tCIStevU=";
     fetchSubmodules = true;
   };
 
