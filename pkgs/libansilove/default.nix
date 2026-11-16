@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libansilove";
-  version = "1.4.2";
+  version = "1.4.6";
 
   src = fetchFromGitHub {
     owner = "ansilove";
     repo = "libansilove";
     tag = finalAttrs.version;
-    hash = "sha256-kbQ7tbQbJ8zYhdbfiVZY26woyR4NNzqjCJ/5nrunlWs=";
+    hash = "sha256-NUtP6Lhyqj9GkNGWO+NsxaglpIMLupzTHyVGeeVtsj4=";
   };
 
   nativeBuildInputs = [
