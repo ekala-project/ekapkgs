@@ -17,16 +17,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "strata";
-  version = "1.1.1";
+  version = "1.2.2-nightly.20261116";
 
   src = fetchFromGitHub {
     owner = "lgse";
     repo = "strata";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-mWFYDKlVR6/LytRBGmgZlWX70N+Qlt3Ev5W5TmJ8UdE=";
+    hash = "sha256-d6avzOhMLpUdMnq2jYwzRj0uhtf62VAOCzMwUWovgFM=";
   };
 
-  cargoHash = "sha256-+8Ztfdf/523VTH4nozy9b5Fde+GTk0xWRMbBUBA5rKs=";
+  cargoHash = "sha256-Lj5iWNPiYX9/8V01a8grbo/MZBEgtHYg2ct5S8ETDdI=";
 
   nativeBuildInputs = [
     pkg-config
