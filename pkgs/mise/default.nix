@@ -11,16 +11,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "mise";
-  version = "2026.10.2";
+  version = "2026.11.9";
 
   src = fetchFromGitHub {
     owner = "jdx";
     repo = "mise";
-    tag = "v${finalAttrs.version}";
-    hash = "sha256-ZMrPP9GcEW8r7Txn5+FLByH98qBOkU3C/csC5vLQIN8=";
+    tag = "vfox-v${finalAttrs.version}";
+    hash = "sha256-5WULNOQYzTFqiY6rH6Dl/ySKj3+6NltxLR2Z7Tqpb0U=";
   };
 
-  cargoHash = "sha256-MV1vSGthpVHznFVUBjkRgxfj1r6HAZZF8XVDyjIlGt0=";
+  cargoHash = "sha256-A9Wp+HhrEn8iBkgn6o9q9Tvv6feT/5xYoG+NblqNBkk=";
 
   nativeBuildInputs = [
     cmake
