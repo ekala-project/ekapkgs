@@ -10,7 +10,7 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "dprint";
-  version = "0.60.1";
+  version = "0.65.0";
 
   # Prefer repository rather than crate here
   #   - They have Cargo.lock in the repository
@@ -19,10 +19,10 @@ rustPlatform.buildRustPackage (finalAttrs: {
     owner = "dprint";
     repo = "dprint";
     tag = finalAttrs.version;
-    hash = "sha256-frvCKrRWH2m1DhYf26LflyL5npG0xkcW9s9+Ji4Nl1Q=";
+    hash = "sha256-TA2Nw7eXdQQLI7WhIPZ5vxN5n4zuZhVLrEczIzo2uPs=";
   };
 
-  cargoHash = "sha256-wPN+gsanyM57BK9KYkRoFN3tf8ZboIaYf+pJxK2CW40=";
+  cargoHash = "sha256-SbBRlOlmy641YK4YN13+XtPpjYlTysVBGphoPJv2Tzk=";
 
   nativeBuildInputs = [ installShellFiles ];
 
