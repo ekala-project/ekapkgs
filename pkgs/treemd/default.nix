@@ -6,16 +6,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "treemd";
-  version = "0.9.1";
+  version = "0.11.0";
 
   src = fetchFromGitHub {
     owner = "Epistates";
     repo = "treemd";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-PeuaOoYF2sWttVkQ9fUU0awAFSdaR5vIzCZR8hCMTsA=";
+    hash = "sha256-55HsSUYOmnxIoPCZ9hLMg3Tb9ywEnyxzMNjXMg8B4ZQ=";
   };
 
-  cargoHash = "sha256-IJpPqCXY93gVD43zDHlr81FlOowTD3lzKbO9KL0GLZU=";
+  cargoHash = "sha256-RW/a4j+sZ4r1RZCJty+IPUPSs4khQuTVrkZ+cWS1hvo=";
 
   doInstallCheck = true;
 
