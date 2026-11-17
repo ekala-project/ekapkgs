@@ -8,11 +8,11 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "astyle";
-  version = "3.6.19";
+  version = "3.6.26";
 
   src = fetchurl {
     url = "mirror://sourceforge/astyle/astyle-${finalAttrs.version}.tar.bz2";
-    hash = "sha256-rl703fH4goi8yPbVMmZwf4CoH8xt7PTaX+XI5CCgqxw=";
+    hash = "sha256-PwVDKXwkpdU7W3RH5+9nSAS0HGcXG4t+uz48TSA+MLc=";
   };
 
   nativeBuildInputs = [
