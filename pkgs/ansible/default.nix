@@ -6,13 +6,13 @@
 
 python3Packages.buildPythonPackage {
   pname = "ansible";
-  version = "14.4.0";
+  version = "15.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "ansible";
-    version = "14.4.0";
-    hash = "sha256-8LO4hx1vTk7dfkd2OxgUSjLCFfc1VpvkTEmnDgSJNRk=";
+    version = "15.0.0";
+    hash = "sha256-KHGPwICnUOtPq6qH6DfOj79pL4zn6Sn5P40p38hTDEM=";
   };
 
   # we make ansible-core depend on ansible, not the other way around,
