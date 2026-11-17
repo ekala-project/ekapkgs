@@ -12,16 +12,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "qdrant";
-  version = "1.16.3";
+  version = "1.20.2";
 
   src = fetchFromGitHub {
     owner = "qdrant";
     repo = "qdrant";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-p2xQStTwbC6MoEsaM1JXlBHK2CqwIfD7x+WwciuY49s=";
+    hash = "sha256-m4InR9PpMOR3pqumAdBQoC6wFtoWF964qTQJ4/PP1tM=";
   };
 
-  cargoHash = "sha256-DEOMoG13eDDEadScwQOD6jxuJBxaU2+fUNK/QLXLG8M=";
+  cargoHash = "sha256-gYvZ5l+ZMn8FI9hoZbGo6wRJPFODL0+kaWzW8xefJCQ=";
 
   nativeBuildInputs = [
     protobuf
