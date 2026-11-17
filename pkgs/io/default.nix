@@ -35,7 +35,7 @@
 
 stdenv.mkDerivation {
   pname = "io";
-  version = "2019.05.22-alpha";
+  version = "2026.11.17";
 
   src = fetchFromGitHub {
     owner = "IoLanguage";
