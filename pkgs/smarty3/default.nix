@@ -6,13 +6,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "smarty3";
-  version = "5.8.5";
+  version = "5.9.0";
 
   src = fetchFromGitHub {
     owner = "smarty-php";
     repo = "smarty";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-MKLrToUVpLDWH9UkwtnAlYyPY2ow7TskITQKNRLGXjc=";
+    hash = "sha256-28jC4RNwt68p4CdrwG/VtHtbKgtoi6hOwDYCMASSptM=";
   };
 
   installPhase = ''
