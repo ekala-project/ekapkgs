@@ -9,16 +9,16 @@
 
 bun.buildPackage {
   pname = "qmd";
-  version = "2.8.3";
+  version = "2.9.0";
 
   src = fetchFromGitHub {
     owner = "tobi";
     repo = "qmd";
-    tag = "v2.8.3";
-    hash = "sha256-/7Z94r/9rXqzKlz/YkB6/nToSCPamV4Dnxm8EhelTDo=";
+    tag = "v2.9.0";
+    hash = "sha256-EMBy/6UJQhp0C/kTwnxc0eXnb4iDH6TEK/FaZH4fhRU=";
   };
 
-  node_modulesHash = "sha256-B4M7Uiocy4F7c7IncERU5QyNNAal+cgNDVohybwRNJA=";
+  node_modulesHash = "sha256-KU4uNlpCQEeplEiOi1/zUMRiyTMpjsRYL19YcfabI2Q=";
 
   nativeBuildInputs = [ autoPatchelfHook ];
 
