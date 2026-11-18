@@ -11,16 +11,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "workmux";
-  version = "0.1.269";
+  version = "0.1.283";
 
   src = fetchFromGitHub {
     owner = "raine";
     repo = "workmux";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-Lmy69m6PTftoZVasYDei5zeUnv2ND3E+kvFDAuuQfNM=";
+    hash = "sha256-ka7tEJswtVYIRlpv0bel/ph7aGzE9ijtzc3QIYu7mig=";
   };
 
-  cargoHash = "sha256-9PcUNrRpG3jwOAFd5PO9wl2ydiJEccKNKnL2ThVS6nk=";
+  cargoHash = "sha256-OjEzMwcwGrPmBhOO1Xkf69vtlH9KIjejMBBbjV0/YAs=";
 
   # TODO(corepkgs): install the bundled agent skills (upstream uses installAgentSkills)
   nativeBuildInputs = [ installShellFiles ];
