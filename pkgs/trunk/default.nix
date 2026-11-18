@@ -8,13 +8,13 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "trunk";
-  version = "0.21.14";
+  version = "0.22.2";
 
   src = fetchFromGitHub {
     owner = "trunk-rs";
     repo = "trunk";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-0T8ZkBA1Zf4z2HXYeBwJ+2EGoUpxGrqSb4fS4CnL28A=";
+    hash = "sha256-gQaUAY3A8LSIMjhO+9ch8yrswxkl+NqUrjeLekDR1ec=";
   };
 
   nativeBuildInputs = [ pkg-config ];
@@ -23,7 +23,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   checkFlags = [ "--skip=tools::tests::download_and_install_binaries" ];
 
-  cargoHash = "sha256-/5zvbSlMzZHxnAwuu0Jd6WVVjxJtIAQpRwZZHgYyPbs=";
+  cargoHash = "sha256-VkRN5kUQODutEu8uS495lLu5o5KlIaP6ATpA1/ugI0w=";
 
   meta = {
     homepage = "https://github.com/trunk-rs/trunk";
