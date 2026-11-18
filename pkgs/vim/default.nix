@@ -12,13 +12,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "vim";
-  version = "9.2.1355";
+  version = "9.2.1365";
 
   src = fetchFromGitHub {
     owner = "vim";
     repo = "vim";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-ABPiqsdx5dM7Z0f46ekpLB9VP2YjqbhGAmDLtyGNPxg=";
+    hash = "sha256-E9CfGn/g55Z1A8JyP6/U8MAkHJKefAxq47kqFDEQOzg=";
   };
 
   outputs = [
