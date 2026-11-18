@@ -6,18 +6,18 @@
 
 buildGoModule (finalAttrs: {
   pname = "opkssh";
-  version = "0.16.0";
+  version = "0.20.0";
 
   src = fetchFromGitHub {
     owner = "openpubkey";
     repo = "opkssh";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-c+ZcC9m+PfwFyLSz+dwahYdQe+wKHQHECT+gNp1rdQU=";
+    hash = "sha256-omwwWKLu3HwOAvdTmzfQyuHgDiatR9Bvh6u6dP8MmKA=";
   };
 
   ldflags = [ "-X main.Version=${finalAttrs.version}" ];
 
-  vendorHash = "sha256-BmU/8Y6CweVnOeHftQhacKKLccQk1uNljzHe+/zkUn4=";
+  vendorHash = "sha256-EHT04zE9+z2I7CQ3bqIjNfnHOGW9kNJgKT1FkElUxtE=";
 
   meta = {
     homepage = "https://github.com/openpubkey/opkssh";
