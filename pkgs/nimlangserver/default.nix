@@ -7,12 +7,12 @@
 }:
 
 let
-  version = "1.14.0";
+  version = "1.18.0";
 
   sources = {
     x86_64-linux = {
       url = "https://github.com/nim-lang/langserver/releases/download/v${version}/nimlangserver-linux-amd64.tar.gz";
-      hash = "sha256-RXDTK6++NVhByjyvujPc1ggN3F1dH6797YlsEW2XouU=";
+      hash = "sha256-UQGuJ3+fOR0C6bhBaucGD44UeNhIufkWF1FZ3GAys5g=";
     };
     aarch64-linux = {
       url = "https://github.com/nim-lang/langserver/releases/download/v${version}/nimlangserver-linux-arm64.tar.gz";
