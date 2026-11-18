@@ -17,7 +17,7 @@
 let
   inherit (stdenvNoCC.hostPlatform) isLinux;
 
-  version = "0.46.0";
+  version = "0.54.0";
 
   platformMap = {
     x86_64-linux = "linux-amd64";
@@ -29,9 +29,9 @@ let
   platform = platformMap.${system} or (throw "docker-sbx: unsupported system ${system}");
 
   hashes = {
-    x86_64-linux = "sha256-7dhuLyFVnhkHI/2ITDodztFhpVWv3/hcWSHtRefW1W4=";
-    aarch64-linux = "sha256-sg2i5eK6emcVGhmCGWDGV8CNj6jc/fXpdR8oTW5V/6g=";
-    aarch64-darwin = "sha256-HaoHenk7wEjvaayzPLidJ84Glu+t9E32RmRj8qeditw=";
+    x86_64-linux = "sha256-7e0pAXEhqFfJjUqRytWT9qngD0AQ6DBnm9OF9KXtuk0=";
+    aarch64-linux = "sha256-QEmDQf1rf2fY9v9LGhfHP1FoEfxhhKO9VU+bNEKpERU=";
+    aarch64-darwin = "sha256-6REkFdiUXC2tLLLuJp4a0un+029kZcMEa6xibIpSScQ=";
   };
 in
 stdenvNoCC.mkDerivation {
