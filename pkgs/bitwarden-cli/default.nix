@@ -17,13 +17,13 @@ let
 in
 buildNpmPackage' {
   pname = "bitwarden-cli";
-  version = "2026.7.0";
+  version = "2026.11.0";
 
   src = fetchFromGitHub {
     owner = "bitwarden";
     repo = "clients";
-    tag = "cli-v2026.7.0";
-    hash = "sha256-8PYjRa1lhs53FCfqPBqH9712X1ek02wbkI+kW5tkepE=";
+    tag = "web-v2026.11.0";
+    hash = "sha256-l/YdVJveeQC0dNCCzeM5ns19QKyOcSohUgA2RNP/VMU=";
   };
 
   postPatch = ''
@@ -31,7 +31,7 @@ buildNpmPackage' {
     rm -r bitwarden_license
   '';
 
-  npmDepsHash = "sha256-1G9rW+e8ux6H8XugmoVjI1EucPfMg8syeNP5SQldC3M=";
+  npmDepsHash = "sha256-Q/uIYgx7Xe4Sdp+kY3LBrKZco5wK9lA9WcN/qAdCG/M=";
 
   nativeBuildInputs = [
     installShellFiles
