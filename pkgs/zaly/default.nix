@@ -5,7 +5,7 @@
 }:
 
 let
-  version = "0.0.6";
+  version = "0.3.3";
 in
 bun.buildPackage {
   pname = "zaly";
@@ -14,11 +14,11 @@ bun.buildPackage {
   src = fetchFromGitHub {
     owner = "folke";
     repo = "zaly";
-    tag = "cli-v${version}";
-    hash = "sha256-OAtIIfvkJM6k/IOfB+dHu928hBE5z8/VV77ZjP6hPjY=";
+    tag = "v${version}";
+    hash = "sha256-+gY6zsCDrQwNdH2fVDZoq66FCpfoPZmz+XoBy7cYR38=";
   };
 
-  node_modulesHash = "sha256-Z9zDpKZ7yeac+b8qFKbG1n+Gi5nB6BImz/28ZnzSemQ=";
+  node_modulesHash = "sha256-RbsV8CAf9JOgeWBQSXpDBEOVMJ70fivycATQSNLSdgY=";
 
   node_modulesCopyMode = "overlay";
 
