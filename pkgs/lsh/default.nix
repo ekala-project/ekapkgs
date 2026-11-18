@@ -5,16 +5,16 @@
 }:
 buildGoModule (finalAttrs: {
   pname = "lsh";
-  version = "1.7.0";
+  version = "1.9.1";
 
   src = fetchFromGitHub {
     owner = "latitudesh";
     repo = "cli";
     tag = "v${finalAttrs.version}";
-    sha256 = "sha256-e+YIl5FjXsDDNUut1cUmQMsL9DPynT/t8rxy3AFpZy4=";
+    sha256 = "sha256-IZysQ/IlxepXZnRkjayiCt/BMe8C8qaanzN+yETsZcE=";
   };
 
-  vendorHash = "sha256-btjvNJ8WuMPzriA1Z1xB64kAvOjoVuzksIbqSLD1ahg=";
+  vendorHash = "sha256-FbqoG1UDqMppDnNwVwr3yRvJn+UCr/LEh/XjrLwLoPA=";
 
   subPackages = [ "." ];
 
