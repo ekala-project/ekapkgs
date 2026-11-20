@@ -32,5 +32,6 @@ stdenv.mkDerivation {
     mainProgram = "ykclient";
     homepage = "https://developers.yubico.com/yubico-c-client";
     license = lib.licenses.bsd2;
+    platforms = lib.platforms.unix;
   };
 }

@@ -30,5 +30,6 @@ rustPlatform.buildRustPackage rec {
     # broken due to signature mismatch in libc crate on darwin:
     # https://github.com/rust-lang/libc/issues/4360
     broken = stdenv.hostPlatform.isDarwin;
+    platforms = lib.platforms.unix;
   };
 }

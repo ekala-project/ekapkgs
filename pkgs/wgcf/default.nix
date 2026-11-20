@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/ViRb3/wgcf";
     license = lib.licenses.mit;
     mainProgram = "wgcf";
+    platforms = lib.platforms.unix;
   };
 })

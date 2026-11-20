@@ -51,5 +51,6 @@ buildGoModule (finalAttrs: {
     description = "Keyless Git signing using Sigstore";
     license = lib.licenses.asl20;
     mainProgram = "gitsign";
+    platforms = lib.platforms.unix;
   };
 })

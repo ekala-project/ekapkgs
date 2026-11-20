@@ -32,5 +32,6 @@ buildGoModule (finalAttrs: {
     description = "Simple gRPC benchmarking and load testing tool";
     homepage = "https://ghz.sh";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

@@ -43,5 +43,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/dani-garcia/vaultwarden";
     license = lib.licenses.agpl3Only;
     mainProgram = "vaultwarden";
+    platforms = lib.platforms.unix;
   };
 })

@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/codesenberg/bombardier/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "bombardier";
+    platforms = lib.platforms.unix;
   };
 })

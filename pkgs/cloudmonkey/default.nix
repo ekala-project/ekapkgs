@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/apache/cloudstack-cloudmonkey";
     license = lib.licenses.asl20;
     mainProgram = "cloudstack-cloudmonkey";
+    platforms = lib.platforms.unix;
   };
 })

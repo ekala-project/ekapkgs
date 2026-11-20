@@ -38,5 +38,6 @@ buildGoModule (finalAttrs: {
     description = "Command line utility for interacting with Google Drive";
     license = lib.licenses.mit;
     mainProgram = "gdrive";
+    platforms = lib.platforms.unix;
   };
 })

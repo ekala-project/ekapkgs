@@ -60,5 +60,6 @@ python3Packages.buildPythonApplication rec {
     homepage = "https://streamlink.github.io/";
     license = lib.licenses.bsd2;
     mainProgram = "streamlink";
+    platforms = lib.platforms.unix;
   };
 }

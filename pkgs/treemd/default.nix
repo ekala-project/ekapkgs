@@ -25,5 +25,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/Epistates/treemd/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "treemd";
+    platforms = lib.platforms.unix;
   };
 })

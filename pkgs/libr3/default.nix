@@ -34,5 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "High-performance path dispatching library";
     homepage = "https://github.com/c9s/r3";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

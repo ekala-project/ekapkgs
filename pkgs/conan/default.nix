@@ -135,5 +135,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/conan-io/conan/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
     mainProgram = "conan";
+    platforms = lib.platforms.unix;
   };
 })

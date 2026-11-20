@@ -79,5 +79,6 @@ buildGoModule (finalAttrs: {
       lgpl3
     ];
     mainProgram = "resticprofile";
+    platforms = lib.platforms.unix;
   };
 })

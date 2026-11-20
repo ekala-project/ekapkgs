@@ -37,5 +37,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/jesseduffield/lazydocker";
     license = lib.licenses.mit;
     mainProgram = "lazydocker";
+    platforms = lib.platforms.unix;
   };
 })

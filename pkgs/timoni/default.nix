@@ -48,5 +48,6 @@ buildGoModule (finalAttrs: {
     description = "Package manager for Kubernetes, powered by CUE and inspired by Helm";
     mainProgram = "timoni";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

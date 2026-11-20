@@ -48,5 +48,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/bytecodealliance/wasm-tools";
     license = lib.licenses.asl20;
     mainProgram = "wasm-tools";
+    platforms = lib.platforms.unix;
   };
 })

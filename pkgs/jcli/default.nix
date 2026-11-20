@@ -51,5 +51,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/jenkins-zh/jenkins-cli";
     changelog = "https://github.com/jenkins-zh/jenkins-cli/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

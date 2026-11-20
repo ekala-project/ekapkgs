@@ -73,5 +73,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://iredis.xbin.io/";
     license = lib.licenses.bsd3;
     mainProgram = "iredis";
+    platforms = lib.platforms.unix;
   };
 })

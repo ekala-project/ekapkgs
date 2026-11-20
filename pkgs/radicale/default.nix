@@ -53,5 +53,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/Kozea/Radicale/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     description = "CalDAV and CardDAV server";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

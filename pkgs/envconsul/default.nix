@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     description = "Read and set environmental variables for processes from Consul";
     license = lib.licenses.mpl20;
     mainProgram = "envconsul";
+    platforms = lib.platforms.unix;
   };
 })

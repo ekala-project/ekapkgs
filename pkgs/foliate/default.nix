@@ -56,5 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/johnfactotum/foliate/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
     mainProgram = "foliate";
+    platforms = lib.platforms.unix;
   };
 })

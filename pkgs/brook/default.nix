@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     description = "Cross-platform Proxy/VPN software";
     license = lib.licenses.gpl3Only;
     mainProgram = "brook";
+    platforms = lib.platforms.unix;
   };
 })

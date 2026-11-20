@@ -36,5 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for Posting Electronic Mail";
     homepage = "https://libesmtp.github.io/";
     license = lib.licenses.lgpl21Plus;
+    platforms = lib.platforms.unix;
   };
 })

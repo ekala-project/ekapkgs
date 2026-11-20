@@ -30,5 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       lib.licenses.cc0 # or
       lib.licenses.mit
     ];
+    platforms = lib.platforms.unix;
   };
 })

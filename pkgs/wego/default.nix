@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     description = "Weather app for the terminal";
     license = lib.licenses.isc;
     mainProgram = "wego";
+    platforms = lib.platforms.unix;
   };
 })

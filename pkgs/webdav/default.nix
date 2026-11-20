@@ -23,5 +23,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/hacdias/webdav/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "webdav";
+    platforms = lib.platforms.unix;
   };
 })

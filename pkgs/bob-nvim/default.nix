@@ -33,5 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/MordechaiHadad/bob";
     license = lib.licenses.mit;
     mainProgram = "bob";
+    platforms = lib.platforms.unix;
   };
 })

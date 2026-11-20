@@ -32,5 +32,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/est31/cargo-udeps";
     license = lib.licenses.mit;
     mainProgram = "cargo-udeps";
+    platforms = lib.platforms.unix;
   };
 })

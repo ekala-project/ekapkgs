@@ -33,5 +33,6 @@ python3Packages.buildPythonApplication rec {
     description = "Command-line utility that creates projects from project templates";
     mainProgram = "cookiecutter";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 }

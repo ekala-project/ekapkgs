@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/badboy/mdbook-mermaid";
     changelog = "https://github.com/badboy/mdbook-mermaid/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mpl20;
+    platforms = lib.platforms.unix;
   };
 })

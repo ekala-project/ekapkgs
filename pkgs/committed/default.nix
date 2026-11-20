@@ -41,5 +41,6 @@ rustPlatform.buildRustPackage {
       lib.licenses.asl20 # or
       lib.licenses.mit
     ];
+    platforms = lib.platforms.unix;
   };
 }

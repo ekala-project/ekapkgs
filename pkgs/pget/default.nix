@@ -27,5 +27,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/Code-Hex/pget?tab=readme-ov-file";
     license = lib.licenses.mit;
     mainProgram = "pget";
+    platforms = lib.platforms.unix;
   };
 })

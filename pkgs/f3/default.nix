@@ -54,5 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fight Flash Fraud";
     homepage = "https://fight-flash-fraud.readthedocs.io/en/stable/";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

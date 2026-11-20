@@ -42,5 +42,6 @@ python3.pkgs.buildPythonApplication {
     homepage = "https://github.com/infosec-au/altdns";
     license = lib.licenses.asl20;
     mainProgram = "altdns";
+    platforms = lib.platforms.unix;
   };
 }

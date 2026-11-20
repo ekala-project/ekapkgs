@@ -85,5 +85,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
     ];
     mainProgram = "sniffnet";
+    platforms = lib.platforms.unix;
   };
 })

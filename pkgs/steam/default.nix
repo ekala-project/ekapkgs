@@ -194,6 +194,7 @@ buildRuntimeEnv {
             mainProgram = "steam-run";
             name = "steam-run";
             license = lib.licenses.mit;
+            platforms = lib.platforms.linux;
           };
         };
     in

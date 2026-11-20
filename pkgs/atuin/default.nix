@@ -53,5 +53,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/atuinsh/atuin";
     license = lib.licenses.mit;
     mainProgram = "atuin";
+    platforms = lib.platforms.unix;
   };
 })

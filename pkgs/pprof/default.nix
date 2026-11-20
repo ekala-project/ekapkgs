@@ -51,5 +51,6 @@ buildGoModule {
       This is not an official Google product.
     '';
     mainProgram = "pprof";
+    platforms = lib.platforms.unix;
   };
 }

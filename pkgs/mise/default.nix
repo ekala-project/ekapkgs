@@ -53,5 +53,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/jdx/mise/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "mise";
+    platforms = lib.platforms.unix;
   };
 })

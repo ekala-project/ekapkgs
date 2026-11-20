@@ -33,5 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/figsoda/mmtc/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mpl20;
     mainProgram = "mmtc";
+    platforms = lib.platforms.unix;
   };
 })

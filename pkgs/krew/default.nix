@@ -59,5 +59,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "krew";
     homepage = "https://github.com/kubernetes-sigs/krew";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

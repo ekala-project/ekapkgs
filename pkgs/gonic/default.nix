@@ -56,5 +56,6 @@ buildGoModule (finalAttrs: {
     description = "Music streaming server / subsonic server API implementation";
     license = lib.licenses.gpl3Plus;
     mainProgram = "gonic";
+    platforms = lib.platforms.unix;
   };
 })

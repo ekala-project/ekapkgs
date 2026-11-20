@@ -43,5 +43,6 @@ buildGoModule {
     homepage = "https://github.com/jonhoo/icebreaker";
     license = lib.licenses.mit;
     mainProgram = "icebreaker";
+    platforms = lib.platforms.unix;
   };
 }

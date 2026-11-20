@@ -27,5 +27,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/minamijoyo/tfupdate";
     changelog = "https://github.com/minamijoyo/tfupdate/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

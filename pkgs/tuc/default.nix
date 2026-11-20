@@ -21,5 +21,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "tuc";
     homepage = "https://github.com/riquito/tuc";
     license = lib.licenses.gpl3;
+    platforms = lib.platforms.unix;
   };
 })

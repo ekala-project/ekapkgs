@@ -27,5 +27,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/justjanne/powerline-go/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
     mainProgram = "powerline-go";
+    platforms = lib.platforms.unix;
   };
 })

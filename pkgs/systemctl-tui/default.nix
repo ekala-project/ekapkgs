@@ -28,5 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/rgwood/systemctl-tui/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "systemctl-tui";
+    platforms = lib.platforms.unix;
   };
 })

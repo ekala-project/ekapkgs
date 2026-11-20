@@ -27,5 +27,6 @@ buildGoModule (finalAttrs: {
     description = "Process manager for Procfile-based applications";
     license = lib.licenses.mit;
     mainProgram = "hivemind";
+    platforms = lib.platforms.unix;
   };
 })

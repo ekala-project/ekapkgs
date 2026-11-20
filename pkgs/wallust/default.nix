@@ -43,5 +43,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     license = lib.licenses.mit;
     downloadPage = "https://codeberg.org/explosion-mental/wallust/releases/tag/${finalAttrs.version}";
     mainProgram = "wallust";
+    platforms = lib.platforms.unix;
   };
 })

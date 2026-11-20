@@ -30,5 +30,6 @@ stdenv.mkDerivation rec {
     mainProgram = "luksmeta";
     homepage = "https://github.com/latchset/luksmeta/";
     license = lib.licenses.lgpl21Plus;
+    platforms = lib.platforms.linux;
   };
 }

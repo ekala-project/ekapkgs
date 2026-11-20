@@ -44,5 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Real-time adjustable equalizer plugin for ALSA";
     homepage = "https://github.com/bassdr/alsaequal";
     license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.linux;
   };
 })

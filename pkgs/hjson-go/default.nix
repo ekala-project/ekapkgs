@@ -28,5 +28,6 @@ buildGoModule rec {
     changelog = "https://github.com/hjson/hjson-go/releases/tag/v${version}";
     license = lib.licenses.mit;
     mainProgram = "hjson-cli";
+    platforms = lib.platforms.unix;
   };
 }

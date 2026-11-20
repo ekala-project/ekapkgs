@@ -114,5 +114,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
       blur, as well as options to layer quotes and a clock onto the background.
     '';
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

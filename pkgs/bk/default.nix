@@ -37,5 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Terminal epub reader written in rust";
     license = lib.licenses.mit;
     mainProgram = "bk";
+    platforms = lib.platforms.unix;
   };
 })

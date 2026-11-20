@@ -78,5 +78,6 @@ python3Packages.buildPythonApplication rec {
     '';
     homepage = "https://gtimelog.org/";
     license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.unix;
   };
 }

@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/wader/jq-lsp";
     license = lib.licenses.mit;
     mainProgram = "jq-lsp";
+    platforms = lib.platforms.unix;
   };
 })

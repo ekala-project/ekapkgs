@@ -85,5 +85,6 @@ stdenv.mkDerivation rec {
       gpl2Only
       lgpl21Only
     ];
+    platforms = lib.platforms.unix;
   };
 }

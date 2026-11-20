@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/kvesta/vesta/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.asl20;
     mainProgram = "vesta";
+    platforms = lib.platforms.unix;
   };
 })

@@ -22,5 +22,6 @@ buildGoModule {
     homepage = "https://github.com/jesseduffield/horcrux";
     license = lib.licenses.mit;
     mainProgram = "horcrux";
+    platforms = lib.platforms.unix;
   };
 }

@@ -58,5 +58,6 @@ stdenvNoCC.mkDerivation rec {
     homepage = "https://github.com/psb1558/Junicode-font";
     description = "Unicode font for medievalists";
     license = lib.licenses.ofl;
+    platforms = lib.platforms.unix;
   };
 }

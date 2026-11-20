@@ -56,5 +56,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://emboss.sourceforge.net/";
     # The last successful Darwin Hydra build was in 2024
     broken = stdenv.hostPlatform.isDarwin;
+    platforms = lib.platforms.unix;
   };
 })

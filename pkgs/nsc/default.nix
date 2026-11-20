@@ -58,5 +58,6 @@ buildGoModule rec {
     homepage = "https://github.com/nats-io/nsc";
     license = lib.licenses.asl20;
     mainProgram = "nsc";
+    platforms = lib.platforms.unix;
   };
 }

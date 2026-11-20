@@ -84,5 +84,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://dprint.dev";
     license = lib.licenses.mit;
     mainProgram = "dprint";
+    platforms = lib.platforms.unix;
   };
 })

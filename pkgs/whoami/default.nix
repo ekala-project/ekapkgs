@@ -27,5 +27,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/traefik/whoami";
     changelog = "https://github.com/traefik/whoami/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

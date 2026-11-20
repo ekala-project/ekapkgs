@@ -49,5 +49,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://goreleaser.com";
     license = lib.licenses.mit;
     mainProgram = "goreleaser";
+    platforms = lib.platforms.unix;
   };
 })

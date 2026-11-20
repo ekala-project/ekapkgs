@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     description = "Tool for automatically generating markdown documentation for Helm charts";
     mainProgram = "helm-docs";
     license = lib.licenses.gpl3Only;
+    platforms = lib.platforms.unix;
   };
 })

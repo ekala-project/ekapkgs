@@ -34,5 +34,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/transifex/cli";
     license = lib.licenses.asl20;
     mainProgram = "tx";
+    platforms = lib.platforms.unix;
   };
 })

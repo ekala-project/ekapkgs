@@ -49,5 +49,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/charmbracelet/gum/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "gum";
+    platforms = lib.platforms.unix;
   };
 })

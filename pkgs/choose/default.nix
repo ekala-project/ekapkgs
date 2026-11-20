@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "choose";
     homepage = "https://github.com/theryangeary/choose";
     license = lib.licenses.gpl3;
+    platforms = lib.platforms.unix;
   };
 })

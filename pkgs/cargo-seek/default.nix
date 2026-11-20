@@ -38,5 +38,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/tareqimbasher/cargo-seek/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "cargo-seek";
+    platforms = lib.platforms.unix;
   };
 })

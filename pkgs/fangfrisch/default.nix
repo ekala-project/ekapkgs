@@ -44,5 +44,6 @@ python3.pkgs.buildPythonApplication {
     changelog = "https://github.com/rseichter/fangfrisch/blob/${version}/CHANGELOG.rst";
     license = lib.licenses.gpl3Only;
     mainProgram = "fangfrisch";
+    platforms = lib.platforms.unix;
   };
 }

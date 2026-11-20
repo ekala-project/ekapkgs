@@ -24,5 +24,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/railwayapp/nixpacks";
     license = lib.licenses.mit;
     mainProgram = "nixpacks";
+    platforms = lib.platforms.unix;
   };
 })

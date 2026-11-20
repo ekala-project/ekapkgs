@@ -41,5 +41,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/mrjosh/helm-ls";
     license = lib.licenses.mit;
     mainProgram = "helm_ls";
+    platforms = lib.platforms.unix;
   };
 })

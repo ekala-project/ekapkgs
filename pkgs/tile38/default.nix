@@ -36,5 +36,6 @@ buildGoModule (finalAttrs: {
     '';
     homepage = "https://tile38.com/";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

@@ -33,5 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/sigoden/aichat";
     license = lib.licenses.mit;
     mainProgram = "aichat";
+    platforms = lib.platforms.unix;
   };
 })

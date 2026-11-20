@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "dotslash";
+    platforms = lib.platforms.unix;
   };
 })

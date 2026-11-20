@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/rcoh/angle-grinder";
     license = lib.licenses.mit;
     mainProgram = "agrind";
+    platforms = lib.platforms.unix;
   };
 })

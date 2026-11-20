@@ -103,5 +103,6 @@ perlPackages.buildPerlPackage rec {
     homepage = "https://www.rexify.org";
     description = "Friendly automation framework";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 }

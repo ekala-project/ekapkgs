@@ -68,5 +68,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       gpl3Only # everything else
     ];
     mainProgram = "prs";
+    platforms = lib.platforms.unix;
   };
 })

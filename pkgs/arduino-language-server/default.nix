@@ -36,5 +36,6 @@ buildGoModule rec {
     homepage = "https://github.com/arduino/arduino-language-server";
     changelog = "https://github.com/arduino/arduino-language-server/releases/tag/${version}";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 }

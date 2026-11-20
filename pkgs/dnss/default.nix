@@ -22,5 +22,6 @@ buildGoModule {
     homepage = "https://blitiri.com.ar/git/r/dnss/";
     license = lib.licenses.asl20;
     mainProgram = "dnss";
+    platforms = lib.platforms.unix;
   };
 }

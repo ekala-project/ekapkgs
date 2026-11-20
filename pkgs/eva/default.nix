@@ -20,5 +20,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/oppiliappan/eva";
     license = lib.licenses.mit;
     mainProgram = "eva";
+    platforms = lib.platforms.unix;
   };
 })

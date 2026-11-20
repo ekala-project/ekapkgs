@@ -33,5 +33,6 @@ buildPythonPackage {
     description = "Buildbot Packaging Helper";
     teams = [ lib.teams.buildbot ];
     license = lib.licenses.gpl2;
+    platforms = lib.platforms.unix;
   };
 }

@@ -55,5 +55,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://testssl.sh/";
     license = lib.licenses.gpl2Only;
     mainProgram = "testssl.sh";
+    platforms = lib.platforms.unix;
   };
 })

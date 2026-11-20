@@ -38,5 +38,6 @@ rustPlatform.buildRustPackage.override { stdenv = clangStdenv; } (finalAttrs: {
     homepage = "https://github.com/jfernandez/bpftop";
     license = lib.licenses.asl20;
     mainProgram = "bpftop";
+    platforms = lib.platforms.linux;
   };
 })

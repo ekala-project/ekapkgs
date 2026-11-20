@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/sibprogrammer/xq";
     changelog = "https://github.com/sibprogrammer/xq/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

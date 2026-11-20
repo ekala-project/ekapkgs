@@ -49,5 +49,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "pizauth";
+    platforms = lib.platforms.unix;
   };
 })

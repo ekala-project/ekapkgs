@@ -26,5 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/dimo414/bkt";
     license = lib.licenses.mit;
     mainProgram = "bkt";
+    platforms = lib.platforms.unix;
   };
 })

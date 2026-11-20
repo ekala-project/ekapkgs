@@ -25,5 +25,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/projectdiscovery/wappalyzergo/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "wappalyzergo";
+    platforms = lib.platforms.unix;
   };
 })

@@ -44,5 +44,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://sosedoff.github.io/pgweb/";
     license = lib.licenses.mit;
     mainProgram = "pgweb";
+    platforms = lib.platforms.unix;
   };
 })

@@ -37,5 +37,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     mainProgram = "uddup";
     homepage = "https://github.com/rotemreiss/uddup";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

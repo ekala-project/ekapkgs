@@ -24,5 +24,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
     ];
     changelog = "https://github.com/BLAKE3-team/BLAKE3/releases/tag/${finalAttrs.version}";
+    platforms = lib.platforms.unix;
   };
 })

@@ -53,5 +53,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/ariga/atlas/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     mainProgram = "atlas";
+    platforms = lib.platforms.unix;
   };
 })

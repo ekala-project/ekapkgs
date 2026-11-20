@@ -40,5 +40,6 @@ buildGoModule rec {
     homepage = "https://github.com/MetaCubeX/mihomo/tree/Alpha";
     license = lib.licenses.gpl3Only;
     mainProgram = "mihomo";
+    platforms = lib.platforms.unix;
   };
 }

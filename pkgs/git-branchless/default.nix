@@ -62,5 +62,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       lib.licenses.mit
     ];
     mainProgram = "git-branchless";
+    platforms = lib.platforms.unix;
   };
 })

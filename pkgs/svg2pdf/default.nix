@@ -30,5 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "svg2pdf";
+    platforms = lib.platforms.unix;
   };
 })

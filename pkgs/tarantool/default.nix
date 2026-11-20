@@ -72,5 +72,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.tarantool.io/";
     license = lib.licenses.bsd2;
     mainProgram = "tarantool";
+    platforms = lib.platforms.unix;
   };
 })

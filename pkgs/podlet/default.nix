@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/containers/podlet/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mpl20;
     mainProgram = "podlet";
+    platforms = lib.platforms.unix;
   };
 })

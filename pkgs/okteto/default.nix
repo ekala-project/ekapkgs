@@ -72,10 +72,11 @@ buildGoModule (finalAttrs: {
       --zsh <($out/bin/okteto completion zsh)
   '';
 
-  passthru.meta = {
+  meta = {
     description = "Develop your applications directly in your Kubernetes Cluster";
     homepage = "https://okteto.com/";
     license = lib.licenses.asl20;
     mainProgram = "okteto";
+    platforms = lib.platforms.unix;
   };
 })

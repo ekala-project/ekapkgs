@@ -37,5 +37,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     mainProgram = "txt2tags";
     homepage = "https://txt2tags.org/";
     license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.unix;
   };
 })

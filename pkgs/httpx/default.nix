@@ -39,5 +39,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/projectdiscovery/httpx/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
     mainProgram = "httpx";
+    platforms = lib.platforms.unix;
   };
 })

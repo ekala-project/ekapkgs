@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/jmhobbs/terminal-parrot";
     license = lib.licenses.mit;
     mainProgram = "terminal-parrot";
+    platforms = lib.platforms.unix;
   };
 })

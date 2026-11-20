@@ -64,5 +64,6 @@ buildGoModule (finalAttrs: {
       To work, use secret-service freedesktop.org API (e.g. Gnome keyring) or pass.
     '';
     mainProgram = "protonmail-bridge";
+    platforms = lib.platforms.unix;
   };
 })

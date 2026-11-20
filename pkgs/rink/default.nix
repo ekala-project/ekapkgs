@@ -50,5 +50,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mpl20
       gpl3Plus
     ];
+    platforms = lib.platforms.unix;
   };
 })

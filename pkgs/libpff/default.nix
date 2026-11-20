@@ -32,5 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     downloadPage = "https://github.com/libyal/libpff/releases";
     changelog = "https://github.com/libyal/libpff/blob/${finalAttrs.version}/ChangeLog";
     license = lib.licenses.lgpl3Only;
+    platforms = lib.platforms.unix;
   };
 })

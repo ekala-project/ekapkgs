@@ -30,5 +30,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     description = "Mopidy extension for controlling playback from MPD clients";
     license = lib.licenses.asl20;
     maintainers = [ lib.maintainers.tomahna ];
+    platforms = lib.platforms.unix;
   };
 })

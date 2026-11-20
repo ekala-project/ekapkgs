@@ -50,5 +50,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/gabrie30/ghorg";
     license = lib.licenses.asl20;
     mainProgram = "ghorg";
+    platforms = lib.platforms.unix;
   };
 })

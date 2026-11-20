@@ -38,5 +38,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/zaghaghi/openapi-tui";
     license = lib.licenses.mit;
     mainProgram = "openapi-tui";
+    platforms = lib.platforms.unix;
   };
 })

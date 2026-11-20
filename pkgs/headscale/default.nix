@@ -70,5 +70,6 @@ buildGoModule (finalAttrs: {
     '';
     license = lib.licenses.bsd3;
     mainProgram = "headscale";
+    platforms = lib.platforms.unix;
   };
 })

@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/swaggo/swag";
     license = lib.licenses.mit;
     mainProgram = "swag";
+    platforms = lib.platforms.unix;
   };
 })

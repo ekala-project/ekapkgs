@@ -61,5 +61,6 @@ python3Packages.buildPythonApplication {
     mainProgram = "ablog";
     homepage = "https://ablog.readthedocs.io/en/latest/";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 }

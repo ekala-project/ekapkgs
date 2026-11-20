@@ -57,5 +57,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/go-delve/delve/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "dlv";
+    platforms = lib.platforms.unix;
   };
 })

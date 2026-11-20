@@ -34,5 +34,6 @@ python3Packages.buildPythonApplication {
     homepage = "https://github.com/legendary-gl/legendary";
     license = lib.licenses.gpl3Plus;
     mainProgram = "legendary";
+    platforms = lib.platforms.unix;
   };
 }

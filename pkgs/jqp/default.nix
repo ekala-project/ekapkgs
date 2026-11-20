@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "jqp";
     homepage = "https://github.com/noahgorstein/jqp";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

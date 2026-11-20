@@ -36,5 +36,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/01mf02/jaq/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
     mainProgram = "jaq";
+    platforms = lib.platforms.unix;
   };
 })

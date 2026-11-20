@@ -45,5 +45,6 @@ buildPythonPackage (finalAttrs: {
     description = "Mailman archiver plugin for HyperKitty";
     homepage = "https://gitlab.com/mailman/mailman-hyperkitty";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

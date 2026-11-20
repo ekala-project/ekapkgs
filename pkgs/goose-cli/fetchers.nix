@@ -16,6 +16,7 @@
       meta = {
         inherit (args) version;
         sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
+        platforms = lib.platforms.unix;
       };
     };
 }

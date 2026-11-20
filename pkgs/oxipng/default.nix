@@ -26,5 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Multithreaded lossless PNG compression optimizer";
     license = lib.licenses.mit;
     mainProgram = "oxipng";
+    platforms = lib.platforms.unix;
   };
 })

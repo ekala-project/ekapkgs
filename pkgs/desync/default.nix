@@ -63,5 +63,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/folbricht/desync";
     changelog = "https://github.com/folbricht/desync/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 })

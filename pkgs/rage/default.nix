@@ -43,5 +43,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ]; # either at your option
     mainProgram = "rage";
+    platforms = lib.platforms.unix;
   };
 })

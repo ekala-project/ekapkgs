@@ -59,5 +59,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/eza-community/eza/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.eupl12;
     mainProgram = "eza";
+    platforms = lib.platforms.unix;
   };
 })

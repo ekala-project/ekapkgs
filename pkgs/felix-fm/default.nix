@@ -52,5 +52,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/kyoheiu/felix/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "fx";
+    platforms = lib.platforms.unix;
   };
 })

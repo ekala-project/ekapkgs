@@ -41,5 +41,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/gopasspw/gopass-hibp/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "gopass-hibp";
+    platforms = lib.platforms.unix;
   };
 })

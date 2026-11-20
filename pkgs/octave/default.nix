@@ -199,5 +199,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.gnu.org/software/octave/";
     license = lib.licenses.gpl3Plus;
     description = "Scientific Programming Language";
+    platforms = lib.platforms.unix;
   };
 })

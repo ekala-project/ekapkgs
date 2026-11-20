@@ -30,5 +30,6 @@ python3Packages.buildPythonPackage rec {
     mainProgram = "lesscpy";
     homepage = "https://github.com/lesscpy/lesscpy";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 }

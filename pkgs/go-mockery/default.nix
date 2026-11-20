@@ -74,5 +74,6 @@ buildGoModule (finalAttrs: {
     description = "Mock code autogenerator for Golang";
     mainProgram = "mockery";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 })

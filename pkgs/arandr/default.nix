@@ -76,5 +76,6 @@ buildPythonApplication (finalAttrs: {
     homepage = "https://christian.amsuess.com/tools/arandr/";
     license = lib.licenses.gpl3Plus;
     mainProgram = "arandr";
+    platforms = lib.platforms.unix;
   };
 })

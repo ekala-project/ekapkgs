@@ -29,5 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/kdheepak/taskwarrior-tui";
     license = lib.licenses.mit;
     mainProgram = "taskwarrior-tui";
+    platforms = lib.platforms.unix;
   };
 })

@@ -39,5 +39,6 @@ stdenv.mkDerivation {
     homepage = "https://gitlab.com/phoneybadger/pokemon-colorscripts";
     license = lib.licenses.mit;
     mainProgram = "pokemon-colorscripts";
+    platforms = lib.platforms.unix;
   };
 }

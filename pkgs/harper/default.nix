@@ -33,5 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/Automattic/harper/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     mainProgram = "harper-ls";
+    platforms = lib.platforms.unix;
   };
 })

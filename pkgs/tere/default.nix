@@ -61,5 +61,6 @@ rustPlatform.buildRustPackage {
     homepage = "https://github.com/mgunyho/tere";
     license = lib.licenses.eupl12;
     mainProgram = "tere";
+    platforms = lib.platforms.unix;
   };
 }

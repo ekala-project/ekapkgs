@@ -33,5 +33,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
       cronyx
       mit
     ];
+    platforms = lib.platforms.unix;
   };
 })

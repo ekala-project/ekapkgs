@@ -25,5 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Minimal, Header only Modern c++ library for terminal goodies";
     homepage = "https://agauniyal.github.io/rang/";
     license = lib.licenses.unlicense;
+    platforms = lib.platforms.unix;
   };
 })

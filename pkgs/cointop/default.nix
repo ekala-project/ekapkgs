@@ -34,5 +34,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://cointop.sh";
     license = lib.licenses.asl20;
     mainProgram = "cointop";
+    platforms = lib.platforms.unix;
   };
 })

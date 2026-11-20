@@ -60,5 +60,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C++ library for value-oriented design using the unidirectional data-flow architecture -- Redux for C++";
     homepage = "https://sinusoid.es/lager/";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

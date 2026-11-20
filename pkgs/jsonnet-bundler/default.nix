@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/jsonnet-bundler/jsonnet-bundler";
     license = lib.licenses.asl20;
     mainProgram = "jb";
+    platforms = lib.platforms.unix;
   };
 })

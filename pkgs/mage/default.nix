@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "mage";
     homepage = "https://magefile.org/";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

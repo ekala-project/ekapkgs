@@ -34,5 +34,6 @@ buildGoModule (finalAttrs: {
     description = "Terminal UI for wireshark-cli, inspired by Wireshark";
     mainProgram = "termshark";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

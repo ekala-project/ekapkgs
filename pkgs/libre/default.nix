@@ -37,5 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for real-time communications with async IO support and a complete SIP stack";
     homepage = "https://github.com/baresip/re";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 })

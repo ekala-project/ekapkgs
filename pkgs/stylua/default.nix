@@ -33,5 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/johnnymorganz/stylua/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mpl20;
     mainProgram = "stylua";
+    platforms = lib.platforms.unix;
   };
 })

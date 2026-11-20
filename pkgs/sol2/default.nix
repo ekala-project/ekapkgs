@@ -37,5 +37,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/ThePhD/sol2";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

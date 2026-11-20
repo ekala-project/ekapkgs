@@ -44,5 +44,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "cargo-asm";
+    platforms = lib.platforms.unix;
   };
 })

@@ -40,5 +40,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/psanford/wormhole-william/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "wormhole-william";
+    platforms = lib.platforms.unix;
   };
 })

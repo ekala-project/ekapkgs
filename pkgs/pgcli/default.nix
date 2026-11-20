@@ -54,5 +54,6 @@ python3Packages.buildPythonApplication rec {
     homepage = "https://pgcli.com";
     changelog = "https://github.com/dbcli/pgcli/raw/v${version}/changelog.rst";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 }

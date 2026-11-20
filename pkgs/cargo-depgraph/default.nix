@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://sr.ht/~jplatte/cargo-depgraph";
     changelog = "https://git.sr.ht/~jplatte/cargo-depgraph/tree/${finalAttrs.src.rev}/item/CHANGELOG.md";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

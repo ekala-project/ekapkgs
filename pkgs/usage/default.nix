@@ -34,5 +34,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/jdx/usage/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "usage";
+    platforms = lib.platforms.unix;
   };
 })

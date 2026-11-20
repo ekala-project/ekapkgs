@@ -65,5 +65,6 @@ python3Packages.buildPythonApplication rec {
     homepage = "https://github.com/cruft/cruft";
     license = lib.licenses.mit;
     mainProgram = "cruft";
+    platforms = lib.platforms.unix;
   };
 }

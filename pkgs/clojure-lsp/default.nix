@@ -35,5 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     sourceProvenance = [ lib.sourceTypes.binaryBytecode ];
     mainProgram = "clojure-lsp";
+    platforms = lib.platforms.unix;
   };
 })

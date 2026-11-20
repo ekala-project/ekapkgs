@@ -40,5 +40,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://umo.ci";
     license = lib.licenses.asl20;
     mainProgram = "umoci";
+    platforms = lib.platforms.unix;
   };
 })

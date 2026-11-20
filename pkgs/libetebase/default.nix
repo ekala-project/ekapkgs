@@ -37,5 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     license = lib.licenses.bsd3;
     broken = stdenv.hostPlatform.isDarwin;
     pkgConfigModules = [ "etebase" ];
+    platforms = lib.platforms.unix;
   };
 })

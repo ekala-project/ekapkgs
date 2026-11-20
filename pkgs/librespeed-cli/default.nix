@@ -29,5 +29,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/librespeed/speedtest-cli/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.lgpl3Only;
     mainProgram = "librespeed-cli";
+    platforms = lib.platforms.unix;
   };
 })

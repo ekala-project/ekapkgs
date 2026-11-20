@@ -25,6 +25,7 @@ let
       changelog = "https://github.com/xyproto/setconf/releases/tag/${self.src.rev}";
       mainProgram = "setconf";
       license = lib.licenses.gpl2Only;
+      platforms = lib.platforms.unix;
     };
   };
 in

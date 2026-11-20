@@ -65,5 +65,6 @@ python3Packages.buildPythonApplication {
     '';
     homepage = "https://www.nicotine-plus.org";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 }

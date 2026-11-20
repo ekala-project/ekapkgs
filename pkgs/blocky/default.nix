@@ -34,5 +34,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/0xERR0R/blocky/releases";
     license = lib.licenses.asl20;
     mainProgram = "blocky";
+    platforms = lib.platforms.unix;
   };
 })

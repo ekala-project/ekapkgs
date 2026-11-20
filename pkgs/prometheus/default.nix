@@ -151,5 +151,6 @@ buildGoModule (finalAttrs: {
     license = lib.licenses.asl20;
     changelog = "https://github.com/prometheus/prometheus/blob/v${finalAttrs.version}/CHANGELOG.md";
     mainProgram = "prometheus";
+    platforms = lib.platforms.unix;
   };
 })

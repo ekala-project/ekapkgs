@@ -51,5 +51,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/ankitpokhrel/jira-cli/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "jira";
+    platforms = lib.platforms.unix;
   };
 })

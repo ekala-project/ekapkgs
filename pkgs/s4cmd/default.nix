@@ -41,5 +41,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/bloomreach/s4cmd";
     description = "Super S3 command line tool";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

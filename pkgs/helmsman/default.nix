@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "helmsman";
     homepage = "https://github.com/Praqma/helmsman";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

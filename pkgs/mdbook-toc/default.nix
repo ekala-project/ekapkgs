@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "mdbook-toc";
     homepage = "https://github.com/badboy/mdbook-toc";
     license = lib.licenses.mpl20;
+    platforms = lib.platforms.unix;
   };
 })

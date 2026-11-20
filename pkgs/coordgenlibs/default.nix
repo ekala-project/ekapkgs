@@ -63,5 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/schrodinger/coordgenlibs";
     changelog = "https://github.com/schrodinger/coordgenlibs/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 })

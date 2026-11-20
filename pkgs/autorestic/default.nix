@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/cupcakearmy/autorestic";
     license = lib.licenses.asl20;
     mainProgram = "autorestic";
+    platforms = lib.platforms.unix;
   };
 })

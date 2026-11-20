@@ -47,5 +47,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/dbcli/litecli/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.bsd3;
     mainProgram = "litecli";
+    platforms = lib.platforms.unix;
   };
 })

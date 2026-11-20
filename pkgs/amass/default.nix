@@ -27,5 +27,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://owasp.org/www-project-amass/";
     license = lib.licenses.asl20;
     mainProgram = "amass";
+    platforms = lib.platforms.unix;
   };
 })

@@ -43,5 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "XML parser for Vala and C programs";
     homepage = "https://birdfont.org/xmlbird.php";
     license = lib.licenses.lgpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

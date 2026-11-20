@@ -36,5 +36,6 @@ buildGoModule (finalAttrs: {
     description = "Code search tool similar to ack and the_silver_searcher(ag)";
     mainProgram = "pt";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "terraformer";
     homepage = "https://github.com/GoogleCloudPlatform/terraformer";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

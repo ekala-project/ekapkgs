@@ -39,5 +39,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "mob";
     homepage = "https://github.com/remotemobprogramming/mob";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

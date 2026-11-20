@@ -38,5 +38,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://carapace.sh/";
     license = lib.licenses.mit;
     mainProgram = "carapace";
+    platforms = lib.platforms.unix;
   };
 })

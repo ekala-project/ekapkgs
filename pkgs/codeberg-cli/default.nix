@@ -39,5 +39,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://codeberg.org/Aviac/codeberg-cli";
     license = lib.licenses.agpl3Plus;
     mainProgram = "berg";
+    platforms = lib.platforms.unix;
   };
 })

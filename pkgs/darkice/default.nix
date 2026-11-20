@@ -53,5 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://darkice.org/";
     description = "Live audio streamer";
     license = lib.licenses.gpl3;
+    platforms = lib.platforms.linux;
   };
 })

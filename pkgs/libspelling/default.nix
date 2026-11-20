@@ -67,5 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.gnome.org/GNOME/libspelling";
     license = lib.licenses.lgpl21Plus;
     changelog = "https://gitlab.gnome.org/GNOME/libspelling/-/raw/${finalAttrs.version}/NEWS";
+    platforms = lib.platforms.unix;
   };
 })

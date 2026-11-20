@@ -34,5 +34,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://osrg.github.io/gobgp/";
     license = lib.licenses.asl20;
     mainProgram = "gobgp";
+    platforms = lib.platforms.unix;
   };
 })

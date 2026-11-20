@@ -39,5 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.mit;
     homepage = "https://github.com/stefanha/git-publish";
     mainProgram = "git-publish";
+    platforms = lib.platforms.unix;
   };
 })

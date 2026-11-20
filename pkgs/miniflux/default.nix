@@ -45,5 +45,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://miniflux.app/";
     license = lib.licenses.asl20;
     mainProgram = "miniflux";
+    platforms = lib.platforms.unix;
   };
 })

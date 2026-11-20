@@ -28,5 +28,6 @@ buildGoModule rec {
     changelog = "https://github.com/aydinnyunus/exifLooter/releases/tag/v${version}";
     license = lib.licenses.asl20;
     mainProgram = "exiflooter";
+    platforms = lib.platforms.unix;
   };
 }

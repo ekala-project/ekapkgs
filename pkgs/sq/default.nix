@@ -43,5 +43,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/neilotoole/sq/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "sq";
+    platforms = lib.platforms.unix;
   };
 })

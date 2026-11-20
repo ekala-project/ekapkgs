@@ -31,5 +31,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/thomasschafer/scooter/commits/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "scooter";
+    platforms = lib.platforms.unix;
   };
 })

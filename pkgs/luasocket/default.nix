@@ -26,5 +26,6 @@ lua.pkgs.buildLuarocksPackage {
     homepage = "https://github.com/lunarmodules/luasocket";
     license = lib.licenses.mit;
     description = "Network support for the Lua language";
+    platforms = lib.platforms.unix;
   };
 }

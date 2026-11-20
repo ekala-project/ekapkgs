@@ -50,5 +50,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/pranshuparmar/witr";
     license = lib.licenses.asl20;
     mainProgram = "witr";
+    platforms = lib.platforms.unix;
   };
 })

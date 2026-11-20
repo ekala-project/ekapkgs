@@ -27,5 +27,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/bensadeh/tailspin/blob/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "tspin";
+    platforms = lib.platforms.unix;
   };
 })

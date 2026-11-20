@@ -28,5 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "faketty";
+    platforms = lib.platforms.unix;
   };
 })

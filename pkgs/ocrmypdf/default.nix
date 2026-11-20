@@ -87,5 +87,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     ];
     changelog = "https://github.com/ocrmypdf/OCRmyPDF/blob/${finalAttrs.src.tag}/docs/releasenotes/version17.md";
     mainProgram = "ocrmypdf";
+    platforms = lib.platforms.unix;
   };
 })

@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "jp";
     homepage = "https://github.com/jmespath/jp";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

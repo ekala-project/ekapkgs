@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
       isc
     ];
     mainProgram = "zgrab2";
+    platforms = lib.platforms.unix;
   };
 })

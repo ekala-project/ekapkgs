@@ -65,5 +65,6 @@ buildGoModule (finalAttrs: {
     description = "Universal proxy platform";
     license = lib.licenses.gpl3Plus;
     mainProgram = "sing-box";
+    platforms = lib.platforms.unix;
   };
 })

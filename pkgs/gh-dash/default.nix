@@ -37,5 +37,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://www.gh-dash.dev";
     license = lib.licenses.mit;
     mainProgram = "gh-dash";
+    platforms = lib.platforms.unix;
   };
 })

@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/projectdiscovery/proxify";
     changelog = "https://github.com/projectdiscovery/proxify/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

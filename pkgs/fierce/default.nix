@@ -32,5 +32,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/mschwager/fierce/blob/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.gpl3Plus;
     mainProgram = "fierce";
+    platforms = lib.platforms.unix;
   };
 })

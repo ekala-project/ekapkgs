@@ -30,5 +30,6 @@ buildGoModule {
     description = "Linter for Go source code";
     mainProgram = "golint";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 }

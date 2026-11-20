@@ -61,5 +61,6 @@ symlinkJoin {
       ;
     mainProgram = "mpv";
     license = mpv-unwrapped.meta.license or lib.licenses.gpl2Plus;
+    platforms = lib.platforms.unix;
   };
 }

@@ -39,5 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/eafer/rdrview";
     license = lib.licenses.asl20;
     mainProgram = "rdrview";
+    platforms = lib.platforms.linux;
   };
 })

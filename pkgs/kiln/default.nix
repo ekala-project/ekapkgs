@@ -34,5 +34,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://kiln.adnano.co/";
     license = lib.licenses.mit;
     mainProgram = "kiln";
+    platforms = lib.platforms.unix;
   };
 })

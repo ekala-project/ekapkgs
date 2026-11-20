@@ -29,5 +29,6 @@ buildGoModule rec {
     '';
     license = lib.licenses.gpl3;
     mainProgram = "gnss-share";
+    platforms = lib.platforms.unix;
   };
 }

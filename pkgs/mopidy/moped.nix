@@ -36,5 +36,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     license = lib.licenses.mit;
     maintainers = [ ];
     hydraPlatforms = [ ];
+    platforms = lib.platforms.unix;
   };
 })

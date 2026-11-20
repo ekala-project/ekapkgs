@@ -52,5 +52,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/netmute/ctags-lsp";
     license = lib.licenses.mit;
     mainProgram = "ctags-lsp";
+    platforms = lib.platforms.unix;
   };
 })

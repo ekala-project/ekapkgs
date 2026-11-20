@@ -47,5 +47,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://ohmyposh.dev";
     changelog = "https://github.com/JanDeDobbeleer/oh-my-posh/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

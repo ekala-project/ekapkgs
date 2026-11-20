@@ -75,5 +75,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://gohugo.io";
     license = lib.licenses.asl20;
     mainProgram = "hugo";
+    platforms = lib.platforms.unix;
   };
 })

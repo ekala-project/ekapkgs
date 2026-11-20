@@ -27,5 +27,6 @@ rustPlatform.buildRustPackage {
     homepage = "https://github.com/wez/evremap";
     license = lib.licenses.mit;
     mainProgram = "evremap";
+    platforms = lib.platforms.linux;
   };
 }

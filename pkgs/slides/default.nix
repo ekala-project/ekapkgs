@@ -36,5 +36,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/maaslalani/slides/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "slides";
+    platforms = lib.platforms.unix;
   };
 })

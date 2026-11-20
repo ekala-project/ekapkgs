@@ -51,5 +51,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/charmbracelet/pop/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "pop";
+    platforms = lib.platforms.unix;
   };
 })

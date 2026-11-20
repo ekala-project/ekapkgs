@@ -60,5 +60,6 @@ python3Packages.buildPythonApplication rec {
     homepage = "https://pysolfc.sourceforge.io";
     license = lib.licenses.gpl3;
     broken = true; # depends on pygame which is broken on Python 3.14
+    platforms = lib.platforms.unix;
   };
 }

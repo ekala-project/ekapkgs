@@ -59,5 +59,6 @@ python3Packages.buildPythonApplication rec {
     homepage = "https://github.com/fenderglass/Flye";
     license = lib.licenses.bsd3;
     mainProgram = "flye";
+    platforms = lib.platforms.unix;
   };
 }

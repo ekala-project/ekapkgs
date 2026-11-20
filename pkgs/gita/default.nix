@@ -60,5 +60,6 @@ python3Packages.buildPythonApplication rec {
     changelog = "https://github.com/nosarthur/gita/releases/tag/${src.tag}";
     license = lib.licenses.mit;
     mainProgram = "gita";
+    platforms = lib.platforms.unix;
   };
 }

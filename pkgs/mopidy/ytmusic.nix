@@ -46,5 +46,6 @@ python.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/jmcdo29/mopidy-ytmusic";
     license = lib.licenses.asl20;
     maintainers = [ lib.maintainers.nickhu ];
+    platforms = lib.platforms.unix;
   };
 })

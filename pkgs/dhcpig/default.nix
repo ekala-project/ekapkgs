@@ -33,5 +33,6 @@ python3.pkgs.buildPythonApplication rec {
     homepage = "https://github.com/kamorin/DHCPig";
     license = lib.licenses.gpl2Plus;
     mainProgram = "dhcpig";
+    platforms = lib.platforms.unix;
   };
 }

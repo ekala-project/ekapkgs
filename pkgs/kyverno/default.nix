@@ -49,5 +49,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://kyverno.io/";
     changelog = "https://github.com/kyverno/kyverno/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

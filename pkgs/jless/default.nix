@@ -30,5 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://jless.io";
     changelog = "https://github.com/PaulJuliusMartinez/jless/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

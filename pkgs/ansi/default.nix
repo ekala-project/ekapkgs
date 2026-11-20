@@ -24,5 +24,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/phip1611/ansi-escape-sequences-cli";
     license = with lib.licenses; [ mit ];
     mainProgram = "ansi";
+    platforms = lib.platforms.unix;
   };
 }

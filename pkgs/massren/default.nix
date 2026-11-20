@@ -37,5 +37,6 @@ buildGoModule (finalAttrs: {
     license = lib.licenses.mit;
     homepage = "https://github.com/laurent22/massren";
     mainProgram = "massren";
+    platforms = lib.platforms.unix;
   };
 })

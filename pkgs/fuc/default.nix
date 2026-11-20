@@ -40,5 +40,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Modern, performance focused unix commands";
     homepage = "https://github.com/SUPERCILEX/fuc";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

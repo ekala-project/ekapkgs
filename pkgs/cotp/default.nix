@@ -26,5 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Trustworthy, encrypted, command-line TOTP/HOTP authenticator app with import functionality";
     license = lib.licenses.gpl3Only;
     mainProgram = "cotp";
+    platforms = lib.platforms.unix;
   };
 })

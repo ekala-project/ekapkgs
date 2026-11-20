@@ -55,5 +55,6 @@ python3Packages.buildPythonPackage rec {
     changelog = "https://github.com/benoitc/gunicorn/releases/tag/${version}";
     license = lib.licenses.mit;
     mainProgram = "gunicorn";
+    platforms = lib.platforms.unix;
   };
 }

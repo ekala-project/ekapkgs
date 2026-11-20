@@ -43,5 +43,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/finefindus/artem/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mpl20;
     mainProgram = "artem";
+    platforms = lib.platforms.unix;
   };
 })

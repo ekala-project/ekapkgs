@@ -27,5 +27,6 @@ buildGoModule {
     mainProgram = "unconvert";
     homepage = "https://github.com/mdempsky/unconvert";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 }

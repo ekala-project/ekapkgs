@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     description = "Simple and easy to use DDNS";
     license = lib.licenses.mit;
     mainProgram = "ddns-go";
+    platforms = lib.platforms.unix;
   };
 })

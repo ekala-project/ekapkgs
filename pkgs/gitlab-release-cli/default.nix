@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://gitlab.com/gitlab-org/release-cli";
     license = lib.licenses.mit;
     mainProgram = "release-cli";
+    platforms = lib.platforms.unix;
   };
 })

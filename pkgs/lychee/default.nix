@@ -97,5 +97,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "lychee";
+    platforms = lib.platforms.unix;
   };
 })

@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/dfinity/keysmith";
     license = lib.licenses.mit;
     mainProgram = "keysmith";
+    platforms = lib.platforms.unix;
   };
 })

@@ -40,5 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
       gpl2Plus
     ];
     mainProgram = "ucarp";
+    platforms = lib.platforms.unix;
   };
 })

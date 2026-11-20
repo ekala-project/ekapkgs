@@ -93,5 +93,6 @@ buildGoModule (finalAttrs: {
     '';
     license = lib.licenses.asl20;
     mainProgram = "tkn";
+    platforms = lib.platforms.unix;
   };
 })

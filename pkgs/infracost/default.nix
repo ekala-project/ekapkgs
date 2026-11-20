@@ -74,5 +74,6 @@ buildGoModule (finalAttrs: {
     '';
     license = lib.licenses.asl20;
     mainProgram = "infracost";
+    platforms = lib.platforms.unix;
   };
 })

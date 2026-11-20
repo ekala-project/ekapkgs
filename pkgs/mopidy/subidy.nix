@@ -37,5 +37,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     description = "Mopidy extension for playing music from a Subsonic-compatible Music Server";
     license = lib.licenses.bsd3;
     maintainers = with lib.maintainers; [ wenngle ];
+    platforms = lib.platforms.unix;
   };
 })

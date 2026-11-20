@@ -44,5 +44,6 @@ rustPlatform.buildRustPackage {
     description = "Prefetch dependencies from npm (for use with fetchNpmDeps)";
     mainProgram = "prefetch-npm-deps";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 }

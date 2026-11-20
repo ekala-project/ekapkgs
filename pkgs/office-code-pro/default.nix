@@ -34,5 +34,6 @@ stdenvNoCC.mkDerivation rec {
     '';
     homepage = "https://github.com/phooky/Office-Code-Pro";
     license = lib.licenses.ofl;
+    platforms = lib.platforms.unix;
   };
 }

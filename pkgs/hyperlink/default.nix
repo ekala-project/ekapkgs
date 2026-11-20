@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/untitaker/hyperlink";
     license = lib.licenses.mit;
     mainProgram = "hyperlink";
+    platforms = lib.platforms.unix;
   };
 }

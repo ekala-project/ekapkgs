@@ -56,5 +56,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/teamtype/teamtype/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.agpl3Plus;
     mainProgram = "teamtype";
+    platforms = lib.platforms.unix;
   };
 })

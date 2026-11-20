@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "gokart";
     homepage = "https://github.com/praetorian-inc/gokart";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

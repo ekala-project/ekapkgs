@@ -35,5 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
       mit
     ];
     mainProgram = "novnc";
+    platforms = lib.platforms.unix;
   };
 })

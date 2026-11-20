@@ -50,10 +50,11 @@ stdenv.mkDerivation (finalAttrs: {
     test_data_dir = "none";
   };
 
-  passthru.meta = {
+  meta = {
     description = "Reference implementation of the ZIM specification";
     homepage = "https://github.com/openzim/libzim";
     changelog = "https://github.com/openzim/libzim/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.unix;
   };
 })

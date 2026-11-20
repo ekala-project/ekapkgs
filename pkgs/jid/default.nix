@@ -27,5 +27,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "jid";
     homepage = "https://github.com/simeji/jid";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

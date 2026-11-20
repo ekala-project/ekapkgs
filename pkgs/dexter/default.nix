@@ -44,5 +44,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/remoteoss/dexter/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "dexter";
+    platforms = lib.platforms.unix;
   };
 })

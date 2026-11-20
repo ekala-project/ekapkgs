@@ -34,5 +34,6 @@ buildGoModule (finalAttrs: {
     '';
     homepage = "https://github.com/wjdp/htmltest";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

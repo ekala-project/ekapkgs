@@ -47,6 +47,7 @@ buildGoModule (
       changelog = "https://github.com/rqlite/rqlite/blob/${finalAttrs.src.tag}/CHANGELOG.md";
       license = lib.licenses.mit;
       mainProgram = "rqlite";
+      platforms = lib.platforms.unix;
     };
   }
 )

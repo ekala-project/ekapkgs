@@ -43,5 +43,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     mainProgram = "awslogs";
     homepage = "https://github.com/jorgebastida/awslogs";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 })

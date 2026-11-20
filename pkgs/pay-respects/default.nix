@@ -42,5 +42,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://codeberg.org/iff/pay-respects/src/tag/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.agpl3Plus;
     mainProgram = "pay-respects";
+    platforms = lib.platforms.unix;
   };
 })

@@ -25,5 +25,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/poolpOrg/filter-rspamd";
     license = lib.licenses.isc;
     mainProgram = "filter-rspamd";
+    platforms = lib.platforms.unix;
   };
 })

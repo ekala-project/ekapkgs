@@ -36,5 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/sunaku/tamzen-font";
     license = lib.licenses.free;
+    platforms = lib.platforms.unix;
   };
 })

@@ -32,5 +32,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Download pictures (or videos) along with their captions and other metadata from Instagram";
     license = lib.licenses.mit;
     mainProgram = "instaloader";
+    platforms = lib.platforms.unix;
   };
 })

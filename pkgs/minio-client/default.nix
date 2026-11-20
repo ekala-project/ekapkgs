@@ -36,5 +36,6 @@ buildGoModule (finalAttrs: {
     description = "Replacement for ls, cp, mkdir, diff and rsync commands for filesystems and object storage";
     mainProgram = "mc";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

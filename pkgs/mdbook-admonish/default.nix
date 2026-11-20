@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "mdbook-admonish";
     license = lib.licenses.mit;
     homepage = "https://github.com/tommilligan/mdbook-admonish";
+    platforms = lib.platforms.unix;
   };
 })

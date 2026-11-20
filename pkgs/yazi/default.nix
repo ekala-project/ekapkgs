@@ -60,5 +60,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/sxyazi/yazi";
     license = lib.licenses.mit;
     mainProgram = "yazi";
+    platforms = lib.platforms.unix;
   };
 })

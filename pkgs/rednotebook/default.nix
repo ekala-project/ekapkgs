@@ -53,5 +53,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Modern journal that includes a calendar navigation, customizable templates, export functionality and word clouds";
     license = lib.licenses.gpl2Plus;
     mainProgram = "rednotebook";
+    platforms = lib.platforms.unix;
   };
 })

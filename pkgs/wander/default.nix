@@ -38,5 +38,6 @@ buildGoModule (finalAttrs: {
     license = lib.licenses.mit;
     homepage = "https://github.com/robinovitch61/wander";
     mainProgram = "wander";
+    platforms = lib.platforms.unix;
   };
 })

@@ -52,5 +52,6 @@ buildGoModule (finalAttrs: {
     description = "Database migrations. CLI and Golang library";
     license = lib.licenses.mit;
     mainProgram = "migrate";
+    platforms = lib.platforms.unix;
   };
 })

@@ -36,5 +36,6 @@ buildGoModule (finalAttrs: {
     description = "Modern Testing Framework for Go";
     mainProgram = "ginkgo";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

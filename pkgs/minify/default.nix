@@ -39,5 +39,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/tdewolff/minify/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "minify";
+    platforms = lib.platforms.unix;
   };
 })

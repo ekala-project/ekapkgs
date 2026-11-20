@@ -42,5 +42,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/ClementTsang/bottom";
     license = lib.licenses.mit;
     mainProgram = "btm";
+    platforms = lib.platforms.unix;
   };
 })

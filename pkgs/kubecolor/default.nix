@@ -51,5 +51,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/kubecolor/kubecolor";
     changelog = "https://github.com/kubecolor/kubecolor/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

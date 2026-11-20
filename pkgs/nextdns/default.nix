@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://nextdns.io";
     license = lib.licenses.mit;
     mainProgram = "nextdns";
+    platforms = lib.platforms.unix;
   };
 })

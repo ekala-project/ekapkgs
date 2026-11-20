@@ -32,5 +32,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/impliedchaos/mopidy-bandcamp";
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [ desttinghim ];
+    platforms = lib.platforms.unix;
   };
 })

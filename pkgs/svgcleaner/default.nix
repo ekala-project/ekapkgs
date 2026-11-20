@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage {
     changelog = "https://github.com/RazrFalcon/svgcleaner/releases";
     license = lib.licenses.gpl2Plus;
     mainProgram = "svgcleaner";
+    platforms = lib.platforms.unix;
   };
 }

@@ -28,5 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/MitMaro/git-interactive-rebase-tool/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "interactive-rebase-tool";
+    platforms = lib.platforms.unix;
   };
 })

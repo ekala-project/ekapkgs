@@ -35,5 +35,6 @@ buildGoModule (finalAttrs: {
       asl20
     ];
     mainProgram = "tap";
+    platforms = lib.platforms.unix;
   };
 })

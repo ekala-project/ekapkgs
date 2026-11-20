@@ -34,5 +34,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://grpc.io/";
     license = lib.licenses.asl20;
     mainProgram = "protoc-gen-go-grpc";
+    platforms = lib.platforms.unix;
   };
 })

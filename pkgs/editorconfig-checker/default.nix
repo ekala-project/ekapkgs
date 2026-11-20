@@ -34,5 +34,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "editorconfig-checker";
     homepage = "https://editorconfig-checker.github.io/";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

@@ -26,5 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
     ];
     mainProgram = "mdq";
+    platforms = lib.platforms.unix;
   };
 })

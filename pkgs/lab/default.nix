@@ -55,5 +55,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://zaquestion.github.io/lab";
     license = lib.licenses.cc0;
     mainProgram = "lab";
+    platforms = lib.platforms.unix;
   };
 })

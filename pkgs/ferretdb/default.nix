@@ -31,5 +31,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "ferretdb";
     homepage = "https://www.ferretdb.com/";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

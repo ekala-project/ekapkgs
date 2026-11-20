@@ -59,5 +59,6 @@ stdenv.mkDerivation rec {
     description = "Qt5/Qt6 library to write cross-platform clients for Matrix";
     homepage = "https://quotient-im.github.io/libQuotient/";
     license = lib.licenses.lgpl21;
+    platforms = lib.platforms.unix;
   };
 }

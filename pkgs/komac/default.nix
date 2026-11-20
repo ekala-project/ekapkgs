@@ -57,5 +57,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/russellbanks/Komac/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
     mainProgram = "komac";
+    platforms = lib.platforms.unix;
   };
 })

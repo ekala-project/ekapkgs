@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/open-policy-agent/regal";
     changelog = "https://github.com/open-policy-agent/regal/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

@@ -55,5 +55,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/minio/minio/releases/tag/RELEASE.${finalAttrs.version}";
     license = lib.licenses.agpl3Plus;
     mainProgram = "minio";
+    platforms = lib.platforms.unix;
   };
 })

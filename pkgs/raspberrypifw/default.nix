@@ -32,5 +32,6 @@ stdenvNoCC.mkDerivation rec {
     # Hash mismatch on source, mystery.
     # Maybe due to https://github.com/NixOS/nix/issues/847
     broken = stdenvNoCC.hostPlatform.isDarwin;
+    platforms = lib.platforms.unix;
   };
 }

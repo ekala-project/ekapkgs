@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/openrdap/rdap/releases/tag/v${finalAttrs.src.tag}";
     license = lib.licenses.mit;
     mainProgram = "rdap";
+    platforms = lib.platforms.unix;
   };
 })

@@ -36,5 +36,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/amnezia-vpn/amneziawg-go";
     license = lib.licenses.mit;
     mainProgram = "amneziawg-go";
+    platforms = lib.platforms.unix;
   };
 })

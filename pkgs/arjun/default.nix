@@ -33,5 +33,6 @@ python3.pkgs.buildPythonApplication rec {
     changelog = "https://github.com/s0md3v/Arjun/blob/${src.rev}/CHANGELOG.md";
     license = lib.licenses.gpl3Only;
     mainProgram = "arjun";
+    platforms = lib.platforms.unix;
   };
 }

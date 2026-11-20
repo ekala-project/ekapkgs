@@ -47,5 +47,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "C library for Dolby Vision metadata parsing and writing";
     homepage = "https://crates.io/crates/dolby_vision";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

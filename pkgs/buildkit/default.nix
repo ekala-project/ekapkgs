@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/moby/buildkit/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     mainProgram = "buildctl";
+    platforms = lib.platforms.unix;
   };
 })

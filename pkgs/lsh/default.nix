@@ -23,5 +23,6 @@ buildGoModule (finalAttrs: {
     description = "Command-Line Interface for Latitude.sh";
     homepage = "https://github.com/latitudesh/cli";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

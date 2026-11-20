@@ -115,5 +115,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/latchset/clevis/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
     mainProgram = "clevis";
+    platforms = lib.platforms.linux;
   };
 })

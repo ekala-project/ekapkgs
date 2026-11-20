@@ -45,5 +45,6 @@ python3.pkgs.buildPythonApplication rec {
     changelog = "https://github.com/guelfoweb/knock/releases/tag/${version}";
     license = lib.licenses.gpl3Only;
     mainProgram = "knockpy";
+    platforms = lib.platforms.unix;
   };
 }

@@ -26,5 +26,6 @@ buildGoModule rec {
     description = "SNMP Exporter for Prometheus";
     homepage = "https://github.com/prometheus/snmp_exporter";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 }

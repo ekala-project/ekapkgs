@@ -40,5 +40,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/nat-n/poethepoet/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "poe";
+    platforms = lib.platforms.unix;
   };
 })

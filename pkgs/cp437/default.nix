@@ -27,5 +27,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/keaston/cp437";
     license = lib.licenses.bsd3;
     mainProgram = "cp437";
+    platforms = lib.platforms.unix;
   };
 })

@@ -28,5 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
     ];
     mainProgram = "nomino";
+    platforms = lib.platforms.unix;
   };
 })

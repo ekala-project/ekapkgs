@@ -57,5 +57,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/latchset/tang/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Plus;
     mainProgram = "tangd";
+    platforms = lib.platforms.linux;
   };
 })

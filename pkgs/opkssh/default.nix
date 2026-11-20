@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     description = "Enables SSH to be used with OpenID Connect";
     license = lib.licenses.asl20;
     mainProgram = "opkssh";
+    platforms = lib.platforms.unix;
   };
 })

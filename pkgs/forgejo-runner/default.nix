@@ -109,5 +109,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://code.forgejo.org/forgejo/runner/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.gpl3Plus;
     mainProgram = "forgejo-runner";
+    platforms = lib.platforms.unix;
   };
 })

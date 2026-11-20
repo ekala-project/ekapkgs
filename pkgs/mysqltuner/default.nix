@@ -38,5 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/major/MySQLTuner-perl";
     license = lib.licenses.gpl3Plus;
     mainProgram = "mysqltuner";
+    platforms = lib.platforms.unix;
   };
 })

@@ -35,5 +35,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/future-architect/vuls/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.gpl3Only;
     mainProgram = "vuls";
+    platforms = lib.platforms.unix;
   };
 })

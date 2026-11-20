@@ -35,5 +35,6 @@ python3Packages.buildPythonPackage (finalAttrs: {
     changelog = "https://github.com/mystor/git-revise/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "git-revise";
+    platforms = lib.platforms.unix;
   };
 })

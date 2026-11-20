@@ -39,5 +39,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/grafana/tempo/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     homepage = "https://grafana.com/oss/tempo/";
+    platforms = lib.platforms.unix;
   };
 })

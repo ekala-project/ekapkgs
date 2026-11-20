@@ -32,5 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
       "https://github.com/mapbox/protozero/releases/tag/v${finalAttrs.version}"
       "https://github.com/mapbox/protozero/blob/v${finalAttrs.version}/CHANGELOG.md"
     ];
+    platforms = lib.platforms.unix;
   };
 })

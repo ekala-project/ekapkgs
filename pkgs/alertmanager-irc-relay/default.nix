@@ -32,5 +32,6 @@ buildGoModule rec {
     '';
     homepage = "https://github.com/google/alertmanager-irc-relay";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 }

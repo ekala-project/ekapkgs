@@ -28,5 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/mozilla/geckodriver";
     license = lib.licenses.mpl20;
     mainProgram = "geckodriver";
+    platforms = lib.platforms.unix;
   };
 })

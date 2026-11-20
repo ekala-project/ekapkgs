@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     description = "Convert ELF/DWARF symbol and type information into vol3's intermediate JSON";
     license = lib.licenses.vol-sl;
     mainProgram = "dwarf2json";
+    platforms = lib.platforms.unix;
   };
 })

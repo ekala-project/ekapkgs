@@ -42,5 +42,6 @@ buildGoModule rec {
     homepage = "https://k6.io/";
     changelog = "https://github.com/grafana/k6/releases/tag/v${version}";
     license = lib.licenses.agpl3Plus;
+    platforms = lib.platforms.unix;
   };
 }

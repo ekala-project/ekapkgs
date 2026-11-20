@@ -36,5 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://spbooth.github.io/xmountains";
     license = lib.licenses.hpndSellVariant;
     mainProgram = "xmountains";
+    platforms = lib.platforms.unix;
   };
 })

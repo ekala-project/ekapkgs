@@ -63,5 +63,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
     ];
     mainProgram = "gix";
+    platforms = lib.platforms.unix;
   };
 })

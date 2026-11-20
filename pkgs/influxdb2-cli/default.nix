@@ -45,5 +45,6 @@ buildGoModule {
     license = lib.licenses.mit;
     homepage = "https://influxdata.com/";
     mainProgram = "influx";
+    platforms = lib.platforms.unix;
   };
 }

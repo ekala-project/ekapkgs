@@ -98,5 +98,6 @@ stdenv.mkDerivation (finalAttrs: {
       Infotec, KONICA_MINOLTA, Kyocera, Lanier, Lexmark, NRG,
       Oce, Oki, Ricoh, Samsung, Savin, Sharp, Toshiba and Utax.
     '';
+    platforms = lib.platforms.unix;
   };
 })

@@ -29,5 +29,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/wustho/epy";
     mainProgram = "epy";
     license = lib.licenses.gpl3;
+    platforms = lib.platforms.unix;
   };
 })

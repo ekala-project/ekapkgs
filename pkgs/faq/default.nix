@@ -44,5 +44,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "faq";
     homepage = "https://github.com/jzelinskie/faq";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

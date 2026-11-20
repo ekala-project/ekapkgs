@@ -30,5 +30,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
       gpl2Only
       cc-by-sa-30
     ];
+    platforms = lib.platforms.unix;
   };
 })

@@ -34,5 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://getcomposer.org/";
     license = lib.licenses.mit;
     mainProgram = "composer";
+    platforms = lib.platforms.unix;
   };
 })

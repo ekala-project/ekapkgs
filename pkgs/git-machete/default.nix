@@ -52,5 +52,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/VirtusLab/git-machete/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
     mainProgram = "git-machete";
+    platforms = lib.platforms.unix;
   };
 })

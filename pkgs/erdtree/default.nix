@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/solidiquis/erdtree/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
     mainProgram = "erd";
+    platforms = lib.platforms.unix;
   };
 })

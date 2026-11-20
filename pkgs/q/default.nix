@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/natesales/q";
     license = lib.licenses.gpl3Only;
     mainProgram = "q";
+    platforms = lib.platforms.unix;
   };
 })

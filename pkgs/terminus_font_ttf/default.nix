@@ -34,5 +34,6 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     '';
     homepage = "https://files.ax86.net/terminus-ttf";
     license = lib.licenses.ofl;
+    platforms = lib.platforms.unix;
   };
 })

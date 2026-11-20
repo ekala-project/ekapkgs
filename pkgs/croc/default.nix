@@ -54,5 +54,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/schollz/croc/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "croc";
+    platforms = lib.platforms.unix;
   };
 })

@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/orhun/rustypaste-cli/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "rpaste";
+    platforms = lib.platforms.unix;
   };
 })

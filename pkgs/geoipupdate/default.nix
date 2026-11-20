@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/maxmind/geoipupdate";
     license = lib.licenses.asl20;
     mainProgram = "geoipupdate";
+    platforms = lib.platforms.unix;
   };
 })

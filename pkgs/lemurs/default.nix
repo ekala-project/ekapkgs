@@ -33,5 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "lemurs";
+    platforms = lib.platforms.linux;
   };
 })

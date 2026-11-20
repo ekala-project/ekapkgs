@@ -26,5 +26,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/ssut/payload-dumper-go/releases/tag/${finalAttrs.version}";
     license = lib.licenses.asl20;
     mainProgram = "payload-dumper-go";
+    platforms = lib.platforms.unix;
   };
 })

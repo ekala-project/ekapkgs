@@ -30,5 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "carl";
     # v0.6.0 tag was removed upstream
     broken = true;
+    platforms = lib.platforms.unix;
   };
 })

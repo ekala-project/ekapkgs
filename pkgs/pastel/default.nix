@@ -26,5 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "pastel";
+    platforms = lib.platforms.unix;
   };
 })

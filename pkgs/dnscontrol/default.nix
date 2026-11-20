@@ -52,5 +52,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/DNSControl/dnscontrol/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "dnscontrol";
+    platforms = lib.platforms.unix;
   };
 })

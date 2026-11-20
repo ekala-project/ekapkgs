@@ -25,5 +25,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/PixelSergey/meow";
     license = lib.licenses.mit;
     mainProgram = "meow";
+    platforms = lib.platforms.unix;
   };
 })

@@ -39,5 +39,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "dump_syms";
     license = lib.licenses.asl20;
     homepage = "https://github.com/mozilla/dump_syms/";
+    platforms = lib.platforms.unix;
   };
 })

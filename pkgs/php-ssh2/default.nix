@@ -23,5 +23,6 @@ php.buildPecl {
     homepage = "https://github.com/php/pecl-networking-ssh2";
     license = lib.licenses.php301;
     broken = true; # autoreconf fails: configure.ac not found
+    platforms = lib.platforms.unix;
   };
 }

@@ -27,5 +27,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "reflex";
     homepage = "https://github.com/cespare/reflex";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

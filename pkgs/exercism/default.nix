@@ -34,5 +34,6 @@ buildGoModule (finalAttrs: {
     description = "Go based command line tool for exercism.io";
     license = lib.licenses.mit;
     mainProgram = "exercism";
+    platforms = lib.platforms.unix;
   };
 })

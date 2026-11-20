@@ -39,5 +39,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/vultr/vultr-cli/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.asl20;
     mainProgram = "vultr-cli";
+    platforms = lib.platforms.unix;
   };
 })

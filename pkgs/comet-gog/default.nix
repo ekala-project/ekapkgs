@@ -46,5 +46,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/imLinguin/comet";
     license = lib.licenses.gpl3Plus;
     mainProgram = "comet";
+    platforms = lib.platforms.unix;
   };
 })

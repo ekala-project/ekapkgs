@@ -37,5 +37,6 @@ perlPackages.buildPerlPackage rec {
     description = "Postfix activity overview";
     mainProgram = "pflogsumm";
     license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.unix;
   };
 }

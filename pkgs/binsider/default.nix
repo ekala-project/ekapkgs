@@ -34,5 +34,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "binsider";
+    platforms = lib.platforms.unix;
   };
 })

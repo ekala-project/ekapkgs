@@ -21,5 +21,6 @@ buildGoModule (finalAttrs: {
     description = "Vault-less password store";
     license = lib.licenses.bsd3;
     mainProgram = "gokey";
+    platforms = lib.platforms.unix;
   };
 })

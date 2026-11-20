@@ -34,5 +34,6 @@ buildGoModule rec {
     description = "Invidious TUI client";
     license = lib.licenses.mit;
     mainProgram = "invidtui";
+    platforms = lib.platforms.unix;
   };
 }
