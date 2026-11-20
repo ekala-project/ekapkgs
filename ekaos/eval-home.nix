@@ -2,7 +2,8 @@
 #
 # Wraps core-pkgs' eval-home.nix, adding ekapkgs-specific home modules
 # (zsh, fish, tmux, kitty, foot, ghostty, wezterm, emacs, neomutt,
-# mpv, zathura, dunst, mako, gammastep, darkman, udiskie, cliphist, mpd).
+# mpv, zathura, dunst, mako, gammastep, darkman, udiskie, cliphist, mpd,
+# postgresql).
 #
 # Usage:
 #   let
