@@ -53,5 +53,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Nonequispaced fast Fourier transform";
     homepage = "https://www-user.tu-chemnitz.de/~potts/nfft/";
     license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.unix;
   };
 })

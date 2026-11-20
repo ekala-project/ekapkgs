@@ -52,5 +52,6 @@ stdenv.mkDerivation rec {
     homepage = "http://lablgtk.forge.ocamlcore.org/";
     license = lib.licenses.lgpl21Plus;
     mainProgram = "lablgtk2";
+    platforms = lib.platforms.unix;
   };
 }

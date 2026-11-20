@@ -42,5 +42,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/iyear/tdl";
     license = lib.licenses.agpl3Only;
     mainProgram = "tdl";
+    platforms = lib.platforms.unix;
   };
 })

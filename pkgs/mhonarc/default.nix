@@ -25,5 +25,6 @@ perlPackages.buildPerlPackage {
     description = "Mail-to-HTML converter";
     mainProgram = "mhonarc";
     license = lib.licenses.gpl2Only;
+    platforms = lib.platforms.unix;
   };
 }

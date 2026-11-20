@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/mgdm/htmlq";
     license = lib.licenses.mit;
     mainProgram = "htmlq";
+    platforms = lib.platforms.unix;
   };
 })

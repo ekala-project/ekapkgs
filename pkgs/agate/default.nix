@@ -42,5 +42,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       # or
       mit
     ];
+    platforms = lib.platforms.unix;
   };
 })

@@ -50,5 +50,6 @@ buildGoModule rec {
     description = "Quick and easy server validation";
     license = lib.licenses.asl20;
     mainProgram = "goss";
+    platforms = lib.platforms.unix;
   };
 }

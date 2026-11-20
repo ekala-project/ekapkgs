@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "urlhunter";
     homepage = "https://github.com/utkusen/urlhunter";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

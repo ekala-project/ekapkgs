@@ -37,5 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "ferium";
     homepage = "https://github.com/gorilla-devs/ferium";
     license = lib.licenses.mpl20;
+    platforms = lib.platforms.unix;
   };
 })

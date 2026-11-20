@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/lucagrulla/cw";
     license = lib.licenses.asl20;
     mainProgram = "cw";
+    platforms = lib.platforms.unix;
   };
 })

@@ -35,5 +35,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://yokadi.github.io/index.html";
     mainProgram = "yokadi";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

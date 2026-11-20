@@ -41,5 +41,6 @@ buildGoModule rec {
     homepage = "https://cayley.io/";
     license = lib.licenses.asl20;
     mainProgram = "cayley";
+    platforms = lib.platforms.unix;
   };
 }

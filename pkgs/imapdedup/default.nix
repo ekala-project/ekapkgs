@@ -24,5 +24,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/quentinsf/IMAPdedup";
     license = lib.licenses.gpl2Only;
     mainProgram = "imapdedup";
+    platforms = lib.platforms.unix;
   };
 })

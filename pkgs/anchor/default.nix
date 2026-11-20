@@ -42,5 +42,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/otter-sec/anchor/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.asl20;
     mainProgram = "anchor";
+    platforms = lib.platforms.unix;
   };
 })

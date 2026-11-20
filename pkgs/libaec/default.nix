@@ -28,5 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Deutsches-Klimarechenzentrum/libaec";
     description = "Adaptive Entropy Coding library";
     license = lib.licenses.bsd2;
+    platforms = lib.platforms.unix;
   };
 })

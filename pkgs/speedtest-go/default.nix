@@ -26,5 +26,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/showwin/speedtest-go/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "speedtest-go";
+    platforms = lib.platforms.unix;
   };
 })

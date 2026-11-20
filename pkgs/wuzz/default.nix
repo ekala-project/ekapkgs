@@ -32,5 +32,6 @@ buildGoModule (finalAttrs: {
     description = "Interactive cli tool for HTTP inspection";
     license = lib.licenses.agpl3Only;
     mainProgram = "wuzz";
+    platforms = lib.platforms.unix;
   };
 })

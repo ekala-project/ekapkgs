@@ -42,5 +42,6 @@ buildGoModule (finalAttrs: {
     description = "Easily install prebuilt binaries from GitHub";
     homepage = "https://github.com/zyedidia/eget";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

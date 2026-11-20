@@ -88,5 +88,6 @@ stdenv.mkDerivation {
     license = lib.licenses.free;
     # Source download dead
     broken = true;
+    platforms = lib.platforms.unix;
   };
 }

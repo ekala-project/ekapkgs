@@ -24,5 +24,6 @@ stdenv.mkDerivation rec {
     homepage = "http://shapelib.maptools.org/";
     license = lib.licenses.gpl2;
     changelog = "http://shapelib.maptools.org/release.html";
+    platforms = lib.platforms.unix;
   };
 }

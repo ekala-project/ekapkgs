@@ -29,5 +29,6 @@ buildGoModule {
     homepage = "https://github.com/kelseyhightower/confd";
     license = lib.licenses.mit;
     mainProgram = "confd";
+    platforms = lib.platforms.unix;
   };
 }

@@ -32,5 +32,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/nikolassv/bartib";
     license = lib.licenses.gpl3Plus;
     mainProgram = "bartib";
+    platforms = lib.platforms.unix;
   };
 })

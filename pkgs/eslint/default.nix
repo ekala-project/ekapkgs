@@ -40,5 +40,6 @@ buildNpmPackage rec {
     description = "Find and fix problems in your JavaScript code";
     homepage = "https://eslint.org";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 }

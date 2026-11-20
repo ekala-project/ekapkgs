@@ -41,5 +41,6 @@ stdenv.mkDerivation (finalAttrs: {
       cc-by-40
       mit
     ];
+    platforms = lib.platforms.unix;
   };
 })

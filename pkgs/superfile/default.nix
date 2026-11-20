@@ -48,5 +48,6 @@ buildGoModule {
     changelog = "https://github.com/yorukot/superfile/blob/${tag}/changelog.md";
     license = lib.licenses.mit;
     mainProgram = "superfile";
+    platforms = lib.platforms.unix;
   };
 }

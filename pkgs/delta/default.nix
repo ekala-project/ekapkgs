@@ -60,5 +60,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/dandavison/delta/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "delta";
+    platforms = lib.platforms.unix;
   };
 })

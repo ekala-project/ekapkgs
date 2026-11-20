@@ -22,5 +22,6 @@ buildGoModule {
     homepage = "https://github.com/cloverstd/tcping";
     license = lib.licenses.mit;
     mainProgram = "tcping";
+    platforms = lib.platforms.unix;
   };
 }

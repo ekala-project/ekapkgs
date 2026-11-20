@@ -32,5 +32,6 @@ lua.pkgs.buildLuarocksPackage {
     homepage = "http://github.com/luaposix/luaposix/";
     license = lib.licenses.mit;
     description = "Lua bindings for POSIX";
+    platforms = lib.platforms.unix;
   };
 }

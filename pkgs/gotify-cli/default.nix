@@ -32,5 +32,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/gotify/cli";
     description = "Command line interface for pushing messages to gotify/server";
     mainProgram = "gotify";
+    platforms = lib.platforms.unix;
   };
 })

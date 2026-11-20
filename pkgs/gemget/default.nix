@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/makew0rld/gemget";
     license = lib.licenses.mit;
     mainProgram = "gemget";
+    platforms = lib.platforms.unix;
   };
 })

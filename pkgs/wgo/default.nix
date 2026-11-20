@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "wgo";
     homepage = "https://github.com/bokwoon95/wgo";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

@@ -42,5 +42,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/cilium/cilium-cli/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     mainProgram = "cilium";
+    platforms = lib.platforms.unix;
   };
 })

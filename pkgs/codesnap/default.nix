@@ -37,5 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/mistricky/CodeSnap/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "codesnap";
+    platforms = lib.platforms.unix;
   };
 })

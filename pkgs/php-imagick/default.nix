@@ -52,5 +52,6 @@ stdenv.mkDerivation rec {
     description = "PHP extension to create and modify images using the ImageMagick API";
     homepage = "https://pecl.php.net/package/imagick";
     license = lib.licenses.php301;
+    platforms = lib.platforms.unix;
   };
 }

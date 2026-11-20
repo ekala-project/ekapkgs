@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/git-chglog/git-chglog";
     license = lib.licenses.mit;
     mainProgram = "git-chglog";
+    platforms = lib.platforms.unix;
   };
 })

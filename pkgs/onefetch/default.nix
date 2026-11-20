@@ -63,5 +63,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/o2sh/onefetch/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "onefetch";
+    platforms = lib.platforms.unix;
   };
 })

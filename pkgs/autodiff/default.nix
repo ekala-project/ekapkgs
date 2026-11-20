@@ -49,5 +49,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Automatic differentiation made easier for C++";
     homepage = "https://github.com/autodiff/autodiff/tree/main";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

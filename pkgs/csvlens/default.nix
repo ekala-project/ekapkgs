@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/YS-L/csvlens/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "csvlens";
+    platforms = lib.platforms.unix;
   };
 })

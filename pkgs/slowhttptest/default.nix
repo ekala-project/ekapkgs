@@ -23,5 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/shekyan/slowhttptest";
     license = lib.licenses.asl20;
     mainProgram = "slowhttptest";
+    platforms = lib.platforms.unix;
   };
 })

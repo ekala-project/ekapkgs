@@ -54,6 +54,7 @@ let
       changelog = "https://github.com/samtay/so/blob/main/CHANGELOG.md";
       mainProgram = "so";
       license = lib.licenses.mit;
+      platforms = lib.platforms.unix;
     };
   };
 in

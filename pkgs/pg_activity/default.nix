@@ -33,5 +33,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     mainProgram = "pg_activity";
     homepage = "https://github.com/dalibo/pg_activity";
     license = lib.licenses.postgresql;
+    platforms = lib.platforms.unix;
   };
 })

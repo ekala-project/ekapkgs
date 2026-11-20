@@ -67,5 +67,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/openstack/liberasurecode";
     license = lib.licenses.bsd2;
     pkgConfigModules = [ "erasurecode-1" ];
+    platforms = lib.platforms.unix;
   };
 })

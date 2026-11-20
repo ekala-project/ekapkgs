@@ -39,5 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://gitlab.com/kalilinux/packages/redfang";
     license = lib.licenses.gpl2Only;
     mainProgram = "fang";
+    platforms = lib.platforms.linux;
   };
 })

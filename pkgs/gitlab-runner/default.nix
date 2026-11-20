@@ -116,5 +116,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://gitlab.com/gitlab-org/gitlab-runner/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "gitlab-runner";
+    platforms = lib.platforms.unix;
   };
 })

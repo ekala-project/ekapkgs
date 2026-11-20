@@ -37,5 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/fujiapple852/trippy/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.asl20;
     mainProgram = "trip";
+    platforms = lib.platforms.unix;
   };
 })

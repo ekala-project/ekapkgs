@@ -26,5 +26,6 @@ lua.pkgs.buildLuarocksPackage {
     homepage = "https://github.com/lunarmodules/luafilesystem";
     license = lib.licenses.mit;
     description = "File System Library for the Lua Programming Language";
+    platforms = lib.platforms.unix;
   };
 }

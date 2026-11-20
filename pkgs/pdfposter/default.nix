@@ -28,5 +28,6 @@ python3Packages.buildPythonApplication rec {
     mainProgram = "pdfposter";
     homepage = "https://pdfposter.readthedocs.io";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 }

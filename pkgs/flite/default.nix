@@ -50,5 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.festvox.org/flite/";
     license = lib.licenses.bsdOriginal;
     mainProgram = "flite";
+    platforms = lib.platforms.unix;
   };
 })

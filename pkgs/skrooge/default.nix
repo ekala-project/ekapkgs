@@ -62,5 +62,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Personal finances manager, powered by KDE";
     license = lib.licenses.gpl3;
     homepage = "https://skrooge.org/";
+    platforms = lib.platforms.unix;
   };
 })

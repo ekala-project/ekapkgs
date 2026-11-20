@@ -40,5 +40,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/noborus/xlsxsql/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "xlsxsql";
+    platforms = lib.platforms.unix;
   };
 })

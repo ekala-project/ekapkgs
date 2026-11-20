@@ -26,5 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.isc;
     mainProgram = "rw";
+    platforms = lib.platforms.unix;
   };
 })

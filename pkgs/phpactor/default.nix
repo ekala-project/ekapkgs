@@ -34,5 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://phpactor.readthedocs.io/";
     license = lib.licenses.mit;
     mainProgram = "phpactor";
+    platforms = lib.platforms.unix;
   };
 })

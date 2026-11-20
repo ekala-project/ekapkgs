@@ -33,5 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "pipes-rs";
     homepage = "https://github.com/lhvy/pipes-rs";
     license = lib.licenses.blueOak100;
+    platforms = lib.platforms.unix;
   };
 })

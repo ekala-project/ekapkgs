@@ -46,5 +46,6 @@ buildGoModule (finalAttrs: {
     description = "Cross-platform backup tool with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication";
     mainProgram = "kopia";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

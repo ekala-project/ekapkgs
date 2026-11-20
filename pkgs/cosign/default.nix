@@ -59,5 +59,6 @@ buildGoModule (finalAttrs: {
     description = "Container Signing CLI with support for ephemeral keys and Sigstore signing";
     mainProgram = "cosign";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

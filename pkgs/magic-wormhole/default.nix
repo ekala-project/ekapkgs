@@ -81,5 +81,6 @@ python3Packages.buildPythonApplication {
     homepage = "https://magic-wormhole.readthedocs.io/";
     license = lib.licenses.mit;
     mainProgram = "wormhole";
+    platforms = lib.platforms.unix;
   };
 }

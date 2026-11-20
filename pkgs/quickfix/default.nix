@@ -38,5 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.quickfixengine.org";
     license = lib.licenses.free; # similar to BSD 4-clause
     broken = stdenv.hostPlatform.isAarch64;
+    platforms = lib.platforms.unix;
   };
 })

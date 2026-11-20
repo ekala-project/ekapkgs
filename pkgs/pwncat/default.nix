@@ -24,5 +24,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/cytopia/pwncat/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "pwncat";
+    platforms = lib.platforms.unix;
   };
 })

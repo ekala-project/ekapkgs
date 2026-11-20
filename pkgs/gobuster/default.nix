@@ -30,5 +30,6 @@ buildGoModule rec {
     changelog = "https://github.com/OJ/gobuster/releases/tag/${src.tag}";
     license = lib.licenses.asl20;
     mainProgram = "gobuster";
+    platforms = lib.platforms.unix;
   };
 }

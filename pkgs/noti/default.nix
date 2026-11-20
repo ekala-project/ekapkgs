@@ -41,5 +41,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://codeberg.org/roble/noti";
     license = lib.licenses.mit;
     mainProgram = "noti";
+    platforms = lib.platforms.unix;
   };
 })

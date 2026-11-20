@@ -35,5 +35,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/git-big-picture/git-big-picture";
     license = lib.licenses.gpl3Plus;
     mainProgram = "git-big-picture";
+    platforms = lib.platforms.unix;
   };
 })

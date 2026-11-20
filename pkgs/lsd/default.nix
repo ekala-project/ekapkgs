@@ -37,5 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Next gen ls command";
     license = lib.licenses.asl20;
     mainProgram = "lsd";
+    platforms = lib.platforms.unix;
   };
 })

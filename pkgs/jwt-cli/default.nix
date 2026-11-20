@@ -41,5 +41,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/mike-engel/jwt-cli/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "jwt";
+    platforms = lib.platforms.unix;
   };
 })

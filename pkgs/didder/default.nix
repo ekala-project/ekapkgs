@@ -34,5 +34,6 @@ buildGoModule (finalAttrs: {
     license = lib.licenses.gpl3;
     homepage = "https://github.com/makew0rld/didder";
     mainProgram = "didder";
+    platforms = lib.platforms.unix;
   };
 })

@@ -198,5 +198,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://quodlibet.readthedocs.io/en/latest";
     license = lib.licenses.gpl2Plus;
     broken = stdenv.hostPlatform.isDarwin;
+    platforms = lib.platforms.unix;
   };
 })

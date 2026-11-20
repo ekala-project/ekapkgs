@@ -32,5 +32,6 @@ buildGoModule (finalAttrs: {
     description = "Fast reverse proxy";
     homepage = "https://github.com/fatedier/frp";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

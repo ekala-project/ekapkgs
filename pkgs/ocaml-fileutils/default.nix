@@ -40,5 +40,6 @@ stdenv.mkDerivation rec {
     description = "OCaml API to manipulate real files (POSIX like) and filenames";
     homepage = "https://github.com/gildor478/ocaml-fileutils";
     license = lib.licenses.lgpl21Plus;
+    platforms = lib.platforms.unix;
   };
 }

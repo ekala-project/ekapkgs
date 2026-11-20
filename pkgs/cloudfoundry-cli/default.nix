@@ -47,5 +47,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/cloudfoundry/cli";
     mainProgram = "cf";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

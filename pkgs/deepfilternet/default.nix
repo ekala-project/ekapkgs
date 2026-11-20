@@ -40,5 +40,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
     ];
     changelog = "https://github.com/Rikorose/DeepFilterNet/releases/tag/${finalAttrs.src.rev}";
+    platforms = lib.platforms.unix;
   };
 })

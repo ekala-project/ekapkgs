@@ -34,5 +34,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     description = "Mopidy extension for controlling Mopidy through D-Bus using the MPRIS specification";
     license = lib.licenses.asl20;
     maintainers = [ lib.maintainers.nickhu ];
+    platforms = lib.platforms.unix;
   };
 })

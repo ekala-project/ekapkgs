@@ -36,5 +36,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/farrokhi/dnsdiag/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.bsd2;
     mainProgram = "dnsdiag";
+    platforms = lib.platforms.unix;
   };
 })

@@ -33,5 +33,6 @@ stdenv.mkDerivation {
     '';
     homepage = "https://asmjit.com/";
     license = lib.licenses.zlib;
+    platforms = lib.platforms.unix;
   };
 }

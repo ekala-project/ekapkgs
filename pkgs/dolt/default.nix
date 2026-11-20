@@ -31,5 +31,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "dolt";
     homepage = "https://github.com/dolthub/dolt";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

@@ -92,5 +92,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "anubis";
     # TODO: needs npmHooks for offline npm deps
     broken = npmHooks == null;
+    platforms = lib.platforms.unix;
   };
 })

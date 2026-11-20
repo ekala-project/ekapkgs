@@ -44,5 +44,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Daemon for managing long running shell commands";
     changelog = "https://github.com/Nukesor/pueue/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

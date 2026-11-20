@@ -74,5 +74,6 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl21
     ];
     homepage = "http://nosignal.fi/ecasound/";
+    platforms = lib.platforms.linux;
   };
 })

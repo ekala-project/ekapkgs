@@ -50,5 +50,6 @@ python3Packages.buildPythonPackage {
     homepage = "https://www.ansible.com";
     changelog = "https://github.com/ansible-community/ansible-build-data/blob/14.3.1/14/CHANGELOG-v14.rst";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 }

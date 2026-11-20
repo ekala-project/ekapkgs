@@ -40,5 +40,6 @@ stdenv.mkDerivation rec {
     description = "Minimal Xml parser and printer for OCaml";
     homepage = "https://github.com/ncannasse/xml-light";
     license = lib.licenses.lgpl21;
+    platforms = lib.platforms.unix;
   };
 }

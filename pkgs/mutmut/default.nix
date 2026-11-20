@@ -38,5 +38,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/boxed/mutmut";
     changelog = "https://github.com/boxed/mutmut/blob/${finalAttrs.version}/HISTORY.rst";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 })

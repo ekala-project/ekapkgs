@@ -38,5 +38,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
     ];
     mainProgram = "cargo-about";
+    platforms = lib.platforms.unix;
   };
 })

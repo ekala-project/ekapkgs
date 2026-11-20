@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/akavel/up";
     license = lib.licenses.asl20;
     mainProgram = "up";
+    platforms = lib.platforms.unix;
   };
 })

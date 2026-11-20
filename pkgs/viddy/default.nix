@@ -28,5 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/sachaos/viddy";
     license = lib.licenses.mit;
     mainProgram = "viddy";
+    platforms = lib.platforms.unix;
   };
 })

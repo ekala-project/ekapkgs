@@ -40,5 +40,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/charmbracelet/glow/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "glow";
+    platforms = lib.platforms.unix;
   };
 })

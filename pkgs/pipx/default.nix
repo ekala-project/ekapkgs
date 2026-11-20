@@ -52,5 +52,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/pypa/pipx";
     changelog = "https://github.com/pypa/pipx/blob/main/docs/changelog.rst";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

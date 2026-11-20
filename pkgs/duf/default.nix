@@ -35,5 +35,6 @@ buildGoModule (finalAttrs: {
     description = "Disk Usage/Free Utility";
     license = lib.licenses.mit;
     mainProgram = "duf";
+    platforms = lib.platforms.unix;
   };
 })

@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/SoptikHa2/desed";
     license = lib.licenses.gpl3Only;
     mainProgram = "desed";
+    platforms = lib.platforms.unix;
   };
 })

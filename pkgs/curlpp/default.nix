@@ -34,5 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "C++ wrapper around libcURL";
     mainProgram = "curlpp-config";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

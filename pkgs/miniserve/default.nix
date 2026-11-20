@@ -44,5 +44,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/svenstaro/miniserve/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "miniserve";
+    platforms = lib.platforms.unix;
   };
 })

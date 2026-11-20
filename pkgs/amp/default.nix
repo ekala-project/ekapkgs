@@ -52,5 +52,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://amp.rs";
     license = lib.licenses.gpl3Only;
     mainProgram = "amp";
+    platforms = lib.platforms.unix;
   };
 })

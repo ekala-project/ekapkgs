@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "wasmserve";
     homepage = "https://github.com/hajimehoshi/wasmserve";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

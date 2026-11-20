@@ -23,5 +23,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/wait4x/wait4x";
     license = lib.licenses.asl20;
     mainProgram = "wait4x";
+    platforms = lib.platforms.unix;
   };
 })

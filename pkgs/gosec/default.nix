@@ -34,5 +34,6 @@ buildGoModule (finalAttrs: {
     description = "Golang security checker";
     mainProgram = "gosec";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

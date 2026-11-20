@@ -27,5 +27,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "cargo-watch";
     homepage = "https://github.com/watchexec/cargo-watch";
     license = lib.licenses.cc0;
+    platforms = lib.platforms.unix;
   };
 })

@@ -49,5 +49,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/gokcehan/lf/releases/tag/r${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "lf";
+    platforms = lib.platforms.unix;
   };
 })

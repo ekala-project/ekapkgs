@@ -39,5 +39,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/projectdiscovery/naabu/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     mainProgram = "naabu";
+    platforms = lib.platforms.unix;
   };
 })

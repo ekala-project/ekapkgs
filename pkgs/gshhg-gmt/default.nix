@@ -30,5 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
       Mapping Tools.
     '';
     license = lib.licenses.lgpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

@@ -37,5 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/jameslittle230/stork";
     license = lib.licenses.asl20;
     mainProgram = "stork";
+    platforms = lib.platforms.unix;
   };
 })

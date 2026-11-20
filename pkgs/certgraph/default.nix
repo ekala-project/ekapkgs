@@ -29,5 +29,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/lanrat/certgraph/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.gpl2Only;
     mainProgram = "certgraph";
+    platforms = lib.platforms.unix;
   };
 })

@@ -41,5 +41,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/ulyssa/iamb";
     changelog = "https://github.com/ulyssa/iamb/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

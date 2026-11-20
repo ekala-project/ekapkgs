@@ -20,5 +20,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "tuifeed";
     homepage = "https://github.com/veeso/tuifeed";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

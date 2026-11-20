@@ -74,5 +74,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://maddy.email";
     license = lib.licenses.gpl3Plus;
     mainProgram = "maddy";
+    platforms = lib.platforms.unix;
   };
 })

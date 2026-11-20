@@ -131,5 +131,6 @@ buildGoModule (finalAttrs: {
     '';
     license = with lib.licenses; [ asl20 ];
     mainProgram = "grype";
+    platforms = lib.platforms.unix;
   };
 })

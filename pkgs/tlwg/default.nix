@@ -34,5 +34,6 @@ stdenv.mkDerivation (finalAttrs: {
       lppl13c
       free
     ];
+    platforms = lib.platforms.unix;
   };
 })

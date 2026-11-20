@@ -40,5 +40,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://crazymax.dev/undock/";
     license = lib.licenses.mit;
     mainProgram = "undock";
+    platforms = lib.platforms.unix;
   };
 })

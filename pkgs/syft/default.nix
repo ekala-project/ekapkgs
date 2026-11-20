@@ -84,5 +84,6 @@ buildGoModule (finalAttrs: {
     '';
     license = lib.licenses.asl20;
     mainProgram = "syft";
+    platforms = lib.platforms.unix;
   };
 })

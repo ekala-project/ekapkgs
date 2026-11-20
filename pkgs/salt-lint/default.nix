@@ -34,5 +34,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://salt-lint.readthedocs.io/en/latest/";
     license = lib.licenses.mit;
     mainProgram = "salt-lint";
+    platforms = lib.platforms.unix;
   };
 })

@@ -24,5 +24,6 @@ rustPlatform.buildRustPackage {
     description = "Templating tool to simplify the creation of Catppuccin ports";
     license = lib.licenses.mit;
     mainProgram = "whiskers";
+    platforms = lib.platforms.unix;
   };
 }

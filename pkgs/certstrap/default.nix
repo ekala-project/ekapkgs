@@ -31,5 +31,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/square/certstrap";
     changelog = "https://github.com/square/certstrap/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

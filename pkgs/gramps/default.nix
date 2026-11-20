@@ -116,5 +116,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
       searchable and as precise as you need it to be.
     '';
     license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.unix;
   };
 })

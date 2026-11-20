@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/jpeddicord/askalono/blob/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.asl20;
     mainProgram = "askalono";
+    platforms = lib.platforms.unix;
   };
 })

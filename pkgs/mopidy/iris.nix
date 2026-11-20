@@ -61,5 +61,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     description = "Fully-functional Mopidy web client encompassing Spotify and many other backends";
     license = lib.licenses.asl20;
     maintainers = [ lib.maintainers.rvolosatovs ];
+    platforms = lib.platforms.unix;
   };
 })

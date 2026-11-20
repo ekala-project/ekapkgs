@@ -29,5 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/rbsec/sslscan";
     changelog = "https://github.com/rbsec/sslscan/blob/${finalAttrs.version}/Changelog";
     license = lib.licenses.gpl3Only;
+    platforms = lib.platforms.unix;
   };
 })

@@ -32,5 +32,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "kubeval";
     homepage = "https://github.com/instrumenta/kubeval";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

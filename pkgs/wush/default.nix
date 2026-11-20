@@ -31,5 +31,6 @@ buildGoModule {
     changelog = "https://github.com/coder/wush/releases/tag/v${version}";
     license = lib.licenses.cc0;
     mainProgram = "wush";
+    platforms = lib.platforms.unix;
   };
 }

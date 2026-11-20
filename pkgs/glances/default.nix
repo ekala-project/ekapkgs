@@ -42,5 +42,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Cross-platform curses-based monitoring tool";
     mainProgram = "glances";
     license = lib.licenses.lgpl3Only;
+    platforms = lib.platforms.unix;
   };
 })

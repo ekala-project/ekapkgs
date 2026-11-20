@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     description = "CLI client for Parseable server";
     license = lib.licenses.agpl3Plus;
     mainProgram = "pb";
+    platforms = lib.platforms.unix;
   };
 })

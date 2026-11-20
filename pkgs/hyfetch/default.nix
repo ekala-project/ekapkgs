@@ -68,5 +68,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/hykilpikonna/hyfetch/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "hyfetch";
+    platforms = lib.platforms.unix;
   };
 })

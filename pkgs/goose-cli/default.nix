@@ -88,5 +88,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     license = lib.licenses.asl20;
     sourceProvenance = [ lib.sourceTypes.fromSource ];
     mainProgram = "goose";
+    platforms = lib.platforms.unix;
   };
 })

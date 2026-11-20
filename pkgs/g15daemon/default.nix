@@ -32,6 +32,7 @@ let
     meta = {
       description = "Provides low-level access to Logitech G11/G15 keyboards and Z10 speakers";
       inherit license;
+      platforms = lib.platforms.linux;
     };
   };
 
@@ -53,6 +54,7 @@ let
     meta = {
       description = "Small graphics library optimised for drawing on an LCD";
       inherit license;
+      platforms = lib.platforms.linux;
     };
   };
 in
@@ -96,5 +98,6 @@ stdenv.mkDerivation rec {
     description = "Daemon that makes it possible to use the Logitech keyboard G-Buttons and draw on various Logitech LCDs";
     mainProgram = "g15daemon";
     inherit license;
+    platforms = lib.platforms.linux;
   };
 }

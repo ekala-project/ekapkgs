@@ -39,5 +39,6 @@ buildGoModule rec {
     homepage = "https://gittuf.dev";
     license = lib.licenses.asl20;
     mainProgram = "gittuf";
+    platforms = lib.platforms.unix;
   };
 }

@@ -27,5 +27,6 @@ buildNpmPackage rec {
     changelog = "https://github.com/microsoft/TypeScript/releases/tag/v${version}";
     license = lib.licenses.asl20;
     mainProgram = "tsc";
+    platforms = lib.platforms.unix;
   };
 }

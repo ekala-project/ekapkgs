@@ -36,5 +36,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://revive.run";
     downloadPage = "https://github.com/mgechev/revive";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

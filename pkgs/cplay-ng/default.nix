@@ -51,5 +51,6 @@ python3Packages.buildPythonApplication rec {
       design while evolving with a shifting environment.
     '';
     license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.unix;
   };
 }

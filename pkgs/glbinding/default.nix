@@ -28,5 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/cginternals/glbinding/";
     description = "C++ binding for the OpenGL API, generated using the gl.xml specification";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

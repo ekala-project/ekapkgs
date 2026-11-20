@@ -58,5 +58,6 @@ buildGoModule (finalAttrs: {
       It also provides building blocks and describe customizations for a CI/CD pipeline.
     '';
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

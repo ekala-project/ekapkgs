@@ -97,5 +97,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://pdfcpu.io";
     license = lib.licenses.asl20;
     mainProgram = "pdfcpu";
+    platforms = lib.platforms.unix;
   };
 })

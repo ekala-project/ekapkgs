@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     description = "Dead simple, no frills Go cross compile tool";
     mainProgram = "gox";
     license = lib.licenses.mpl20;
+    platforms = lib.platforms.unix;
   };
 })

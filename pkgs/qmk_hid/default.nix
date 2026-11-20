@@ -36,5 +36,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/FrameworkComputer/qmk_hid";
     license = lib.licenses.bsd3;
     mainProgram = "qmk_hid";
+    platforms = lib.platforms.linux;
   };
 })

@@ -36,5 +36,6 @@ python3.pkgs.buildPythonApplication rec {
     homepage = "https://github.com/OneDeadKey/kalamine/";
     license = lib.licenses.mit;
     mainProgram = "kalamine";
+    platforms = lib.platforms.unix;
   };
 }

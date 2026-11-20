@@ -32,5 +32,6 @@ buildGoModule (finalAttrs: {
     description = "Your AI powered terminal assistant";
     license = lib.licenses.mit;
     mainProgram = "yai";
+    platforms = lib.platforms.unix;
   };
 })

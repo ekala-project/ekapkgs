@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/atanunq/viu";
     license = lib.licenses.mit;
     mainProgram = "viu";
+    platforms = lib.platforms.unix;
   };
 })

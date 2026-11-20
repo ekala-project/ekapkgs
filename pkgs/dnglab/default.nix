@@ -29,5 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/dnglab/dnglab";
     license = lib.licenses.lgpl21Only;
     mainProgram = "dnglab";
+    platforms = lib.platforms.unix;
   };
 })

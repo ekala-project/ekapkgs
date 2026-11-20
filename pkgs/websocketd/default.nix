@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     homepage = "http://websocketd.com/";
     license = lib.licenses.bsd2;
     mainProgram = "websocketd";
+    platforms = lib.platforms.unix;
   };
 })

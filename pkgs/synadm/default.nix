@@ -47,5 +47,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     downloadPage = "https://codeberg.org/synadm/synadm";
     homepage = "https://synadm.readthedocs.io/";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

@@ -20,5 +20,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "mdbook-katex";
     homepage = "https://github.com/lzanini/mdbook-katex";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

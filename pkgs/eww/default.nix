@@ -70,5 +70,6 @@ rustPlatform.buildRustPackage rec {
     license = lib.licenses.mit;
     mainProgram = "eww";
     broken = stdenv.hostPlatform.isDarwin;
+    platforms = lib.platforms.unix;
   };
 }

@@ -86,5 +86,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/tweag/topiary/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "topiary";
+    platforms = lib.platforms.unix;
   };
 })

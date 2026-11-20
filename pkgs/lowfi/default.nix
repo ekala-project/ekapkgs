@@ -45,5 +45,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/talwat/lowfi";
     license = lib.licenses.mit;
     mainProgram = "lowfi";
+    platforms = lib.platforms.unix;
   };
 })

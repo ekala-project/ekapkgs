@@ -40,5 +40,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/orf/gping/releases/tag/gping-v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "gping";
+    platforms = lib.platforms.unix;
   };
 })

@@ -25,5 +25,6 @@ python3Packages.buildPythonApplication {
     homepage = "https://github.com/psypanda/hashID";
     mainProgram = "hashid";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 }

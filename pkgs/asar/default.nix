@@ -35,5 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/electron/asar";
     license = lib.licenses.mit;
     mainProgram = "asar";
+    platforms = lib.platforms.unix;
   };
 })

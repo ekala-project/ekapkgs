@@ -87,5 +87,6 @@ python3Packages.buildPythonPackage rec {
     homepage = "https://github.com/AnalogJ/lexicon";
     changelog = "https://github.com/AnalogJ/lexicon/blob/v${version}/CHANGELOG.md";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 }

@@ -37,5 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/svenstaro/genact/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "genact";
+    platforms = lib.platforms.unix;
   };
 })

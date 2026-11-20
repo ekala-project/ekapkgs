@@ -26,5 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "cbordump";
     homepage = "https://github.com/intel/tinycbor";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

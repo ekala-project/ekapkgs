@@ -32,5 +32,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "dumbpipe";
+    platforms = lib.platforms.unix;
   };
 })

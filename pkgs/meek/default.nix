@@ -43,5 +43,6 @@ buildGoModule (finalAttrs: {
     '';
     homepage = "https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/meek";
     license = lib.licenses.cc0;
+    platforms = lib.platforms.unix;
   };
 })

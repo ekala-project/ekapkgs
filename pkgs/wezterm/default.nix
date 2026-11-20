@@ -138,5 +138,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://wezterm.org";
     license = lib.licenses.mit;
     mainProgram = "wezterm";
+    platforms = lib.platforms.unix;
   };
 })

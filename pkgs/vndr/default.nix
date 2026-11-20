@@ -26,5 +26,6 @@ buildGoModule {
     mainProgram = "vndr";
     homepage = "https://github.com/LK4D4/vndr";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 }

@@ -24,5 +24,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "rpg-cli";
     homepage = "https://github.com/facundoolano/rpg-cli";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

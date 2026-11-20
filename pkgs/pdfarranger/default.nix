@@ -65,5 +65,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     mainProgram = "pdfarranger";
     license = lib.licenses.gpl3Plus;
     changelog = "https://github.com/pdfarranger/pdfarranger/releases/tag/${finalAttrs.src.tag}";
+    platforms = lib.platforms.unix;
   };
 })

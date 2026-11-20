@@ -48,5 +48,6 @@ buildGoModule {
     homepage = "https://github.com/shenwei356/csvtk";
     license = lib.licenses.mit;
     mainProgram = "csvtk";
+    platforms = lib.platforms.unix;
   };
 }

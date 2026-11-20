@@ -31,5 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Proof-of-work algorithm used as spam and denial-of-service counter measure";
     homepage = "http://hashcash.org";
     license = lib.licenses.gpl2Only;
+    platforms = lib.platforms.unix;
   };
 })

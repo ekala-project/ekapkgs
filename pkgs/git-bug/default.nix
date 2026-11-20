@@ -66,5 +66,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/git-bug/git-bug";
     license = lib.licenses.gpl3Plus;
     mainProgram = "git-bug";
+    platforms = lib.platforms.unix;
   };
 })

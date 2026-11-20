@@ -25,5 +25,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/oppiliappan/dijo";
     license = lib.licenses.mit;
     mainProgram = "dijo";
+    platforms = lib.platforms.unix;
   };
 })

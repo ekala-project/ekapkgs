@@ -35,5 +35,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "kibi";
+    platforms = lib.platforms.unix;
   };
 })

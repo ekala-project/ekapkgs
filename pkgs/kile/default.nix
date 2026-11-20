@@ -46,5 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.kde.org/applications/office/kile/";
     license = lib.licenses.gpl2Plus;
     mainProgram = "kile";
+    platforms = lib.platforms.unix;
   };
 })

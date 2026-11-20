@@ -46,5 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/todbot/hidapitester/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
     mainProgram = "hidapitester";
+    platforms = lib.platforms.linux;
   };
 })

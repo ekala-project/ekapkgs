@@ -57,5 +57,6 @@ buildGoModule (finalAttrs: {
     description = "Tool for containerized command line environments on Linux";
     license = lib.licenses.asl20;
     mainProgram = "toolbox";
+    platforms = lib.platforms.unix;
   };
 })

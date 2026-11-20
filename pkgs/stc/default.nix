@@ -66,5 +66,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/stclib/STC/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     pkgConfigModules = [ "stc" ];
+    platforms = lib.platforms.unix;
   };
 })

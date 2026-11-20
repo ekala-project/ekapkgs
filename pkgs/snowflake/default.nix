@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://snowflake.torproject.org/";
     changelog = "https://gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/-/raw/v${finalAttrs.version}/ChangeLog";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 })

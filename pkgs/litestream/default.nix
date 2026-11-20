@@ -27,5 +27,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "litestream";
     license = lib.licenses.asl20;
     homepage = "https://litestream.io/";
+    platforms = lib.platforms.unix;
   };
 })

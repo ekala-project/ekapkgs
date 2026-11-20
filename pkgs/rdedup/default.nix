@@ -37,5 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "rdedup";
     homepage = "https://github.com/dpc/rdedup";
     license = lib.licenses.mpl20;
+    platforms = lib.platforms.unix;
   };
 })

@@ -46,5 +46,6 @@ buildGoModule rec {
     changelog = "https://github.com/cilium/hubble/blob/${src.tag}/CHANGELOG.md";
     license = lib.licenses.asl20;
     mainProgram = "hubble";
+    platforms = lib.platforms.unix;
   };
 }

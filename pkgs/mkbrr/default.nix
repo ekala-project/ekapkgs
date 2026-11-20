@@ -44,5 +44,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/autobrr/mkbrr";
     license = lib.licenses.gpl2Plus;
     mainProgram = "mkbrr";
+    platforms = lib.platforms.unix;
   };
 })

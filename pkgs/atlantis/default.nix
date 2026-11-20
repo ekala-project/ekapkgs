@@ -29,5 +29,6 @@ buildGoModule (finalAttrs: {
     description = "Terraform Pull Request Automation";
     mainProgram = "atlantis";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

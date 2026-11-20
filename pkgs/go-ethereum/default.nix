@@ -60,5 +60,6 @@ buildGoModule (finalAttrs: {
       gpl3Only
     ];
     mainProgram = "geth";
+    platforms = lib.platforms.unix;
   };
 })

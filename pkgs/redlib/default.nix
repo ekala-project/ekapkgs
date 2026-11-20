@@ -67,5 +67,6 @@ rustPlatform.buildRustPackage {
     homepage = "https://github.com/redlib-org/redlib";
     license = lib.licenses.agpl3Only;
     mainProgram = "redlib";
+    platforms = lib.platforms.unix;
   };
 }

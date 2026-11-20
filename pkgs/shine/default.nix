@@ -23,5 +23,6 @@ stdenv.mkDerivation {
     mainProgram = "shineenc";
     homepage = "https://github.com/toots/shine";
     license = lib.licenses.lgpl2Only;
+    platforms = lib.platforms.unix;
   };
 }

@@ -32,5 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/nonstd-lite/expected-lite";
     changelog = "https://github.com/nonstd-lite/expected-lite/blob/${finalAttrs.src.rev}/CHANGES.txt";
     license = lib.licenses.boost;
+    platforms = lib.platforms.unix;
   };
 })

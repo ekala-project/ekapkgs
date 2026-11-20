@@ -48,5 +48,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://tldr.sh";
     license = lib.licenses.mit;
     mainProgram = "tldr";
+    platforms = lib.platforms.unix;
   };
 })

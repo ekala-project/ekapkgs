@@ -30,5 +30,6 @@ stdenvNoCC.mkDerivation {
     '';
     homepage = "https://moji.or.jp/ipafont/";
     license = lib.licenses.ipa;
+    platforms = lib.platforms.unix;
   };
 }

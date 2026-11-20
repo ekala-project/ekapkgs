@@ -58,5 +58,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "wv2-config";
     license = lib.licenses.lgpl2;
     homepage = "https://wvware.sourceforge.net";
+    platforms = lib.platforms.unix;
   };
 })

@@ -33,5 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/tbillington/kondo";
     license = lib.licenses.mit;
     mainProgram = "kondo";
+    platforms = lib.platforms.unix;
   };
 })

@@ -24,5 +24,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/medialab/xan";
     license = lib.licenses.mit;
     mainProgram = "xan";
+    platforms = lib.platforms.unix;
   };
 })

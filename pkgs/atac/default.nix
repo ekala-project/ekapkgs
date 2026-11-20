@@ -50,5 +50,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/Julien-cpsn/ATAC";
     license = lib.licenses.mit;
     mainProgram = "atac";
+    platforms = lib.platforms.unix;
   };
 })

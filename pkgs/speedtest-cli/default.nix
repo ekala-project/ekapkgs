@@ -20,5 +20,6 @@ python3Packages.buildPythonApplication rec {
     description = "Command line interface for testing internet bandwidth using speedtest.net";
     homepage = "https://github.com/sivel/speedtest-cli";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 }

@@ -38,5 +38,6 @@ buildGoModule (finalAttrs: {
     ];
     inherit (finalAttrs.src.meta) homepage;
     mainProgram = "cheat";
+    platforms = lib.platforms.unix;
   };
 })

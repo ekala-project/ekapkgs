@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/ismaelgv/rnr";
     changelog = "https://github.com/ismaelgv/rnr/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

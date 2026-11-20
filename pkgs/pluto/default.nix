@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     description = "Find deprecated Kubernetes apiVersions";
     mainProgram = "pluto";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

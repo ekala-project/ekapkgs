@@ -39,5 +39,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/cfv-project/cfv/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl2Plus;
     mainProgram = "cfv";
+    platforms = lib.platforms.unix;
   };
 })

@@ -95,5 +95,6 @@ stdenv.mkDerivation rec {
     homepage = "http://www.jhnc.org/findimagedupes/";
     description = "Finds visually similar or duplicate images";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 }

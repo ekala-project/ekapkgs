@@ -43,5 +43,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     mainProgram = "nerd-font-patcher";
     homepage = "https://nerdfonts.com/";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

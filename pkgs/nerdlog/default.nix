@@ -46,5 +46,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/dimonomid/nerdlog";
     license = lib.licenses.bsd2;
     mainProgram = "nerdlog";
+    platforms = lib.platforms.unix;
   };
 })

@@ -33,5 +33,6 @@ stdenvNoCC.mkDerivation {
     '';
     homepage = "https://www.theleagueofmoveabletype.com/junction";
     license = lib.licenses.ofl;
+    platforms = lib.platforms.unix;
   };
 }

@@ -56,5 +56,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/qdrant/qdrant";
     license = lib.licenses.asl20;
     mainProgram = "qdrant";
+    platforms = lib.platforms.unix;
   };
 })

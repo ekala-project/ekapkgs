@@ -26,5 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "diffr";
     homepage = "https://github.com/mookid/diffr";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

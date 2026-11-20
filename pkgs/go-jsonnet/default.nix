@@ -35,5 +35,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/google/go-jsonnet";
     license = lib.licenses.asl20;
     mainProgram = "jsonnet";
+    platforms = lib.platforms.unix;
   };
 })

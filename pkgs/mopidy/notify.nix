@@ -39,5 +39,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     description = "Mopidy extension for showing desktop notifications on track change";
     license = lib.licenses.asl20;
     maintainers = [ lib.maintainers.nim65s ];
+    platforms = lib.platforms.unix;
   };
 })

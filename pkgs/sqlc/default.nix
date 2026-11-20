@@ -42,5 +42,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://sqlc.dev/";
     license = lib.licenses.mit;
     mainProgram = "sqlc";
+    platforms = lib.platforms.unix;
   };
 })

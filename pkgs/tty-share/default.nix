@@ -29,5 +29,6 @@ buildGoModule (finalAttrs: {
     description = "Share terminal via browser for remote work or shared sessions";
     license = lib.licenses.mit;
     mainProgram = "tty-share";
+    platforms = lib.platforms.unix;
   };
 })

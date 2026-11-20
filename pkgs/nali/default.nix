@@ -45,5 +45,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/zu1k/nali";
     license = lib.licenses.mit;
     mainProgram = "nali";
+    platforms = lib.platforms.unix;
   };
 })

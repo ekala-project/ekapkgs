@@ -27,5 +27,6 @@ python3.pkgs.buildPythonPackage rec {
     '';
     license = lib.licenses.gpl3;
     mainProgram = "me_cleaner.py";
+    platforms = lib.platforms.unix;
   };
 }

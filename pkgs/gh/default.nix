@@ -53,5 +53,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/cli/cli/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "gh";
+    platforms = lib.platforms.unix;
   };
 })

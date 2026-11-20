@@ -44,5 +44,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://guumaster.github.io/hostctl/";
     license = lib.licenses.mit;
     mainProgram = "hostctl";
+    platforms = lib.platforms.unix;
   };
 })

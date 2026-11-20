@@ -38,5 +38,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/greenbone/greenbone-feed-sync/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.gpl3Only;
     mainProgram = "greenbone-feed-sync";
+    platforms = lib.platforms.unix;
   };
 })

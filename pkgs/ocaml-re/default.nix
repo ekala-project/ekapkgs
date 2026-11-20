@@ -41,5 +41,6 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/ocaml/ocaml-re";
     description = "Pure OCaml regular expressions, with support for Perl and POSIX-style strings";
     license = lib.licenses.lgpl2;
+    platforms = lib.platforms.unix;
   };
 }

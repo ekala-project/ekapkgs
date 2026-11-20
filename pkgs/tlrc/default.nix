@@ -31,5 +31,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/tldr-pages/tlrc/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "tldr";
+    platforms = lib.platforms.unix;
   };
 })

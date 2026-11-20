@@ -71,5 +71,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/ory/hydra/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.asl20;
     mainProgram = "hydra";
+    platforms = lib.platforms.unix;
   };
 })

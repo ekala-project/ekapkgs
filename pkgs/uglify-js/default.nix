@@ -29,5 +29,6 @@ buildNpmPackage rec {
     description = "JavaScript parser / mangler / compressor / beautifier toolkit";
     mainProgram = "uglifyjs";
     license = lib.licenses.bsd2;
+    platforms = lib.platforms.unix;
   };
 }

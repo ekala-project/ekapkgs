@@ -54,5 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://www.virkki.com/dupd";
     license = lib.licenses.gpl3;
     mainProgram = "dupd";
+    platforms = lib.platforms.unix;
   };
 })

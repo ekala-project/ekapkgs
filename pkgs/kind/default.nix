@@ -52,5 +52,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/kubernetes-sigs/kind";
     license = lib.licenses.asl20;
     mainProgram = "kind";
+    platforms = lib.platforms.unix;
   };
 })

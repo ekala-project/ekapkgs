@@ -39,5 +39,6 @@ buildNpmPackage rec {
     homepage = "https://github.com/nodejs/node-gyp";
     license = lib.licenses.mit;
     mainProgram = "node-gyp";
+    platforms = lib.platforms.unix;
   };
 }

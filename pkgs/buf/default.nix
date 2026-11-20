@@ -85,5 +85,6 @@ buildGoModule (finalAttrs: {
     description = "Create consistent Protobuf APIs that preserve compatibility and comply with design best-practices";
     license = lib.licenses.asl20;
     mainProgram = "buf";
+    platforms = lib.platforms.unix;
   };
 })

@@ -18,5 +18,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "rgxg";
     license = lib.licenses.zlib;
     homepage = "https://rgxg.github.io/";
+    platforms = lib.platforms.unix;
   };
 })

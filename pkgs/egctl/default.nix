@@ -61,5 +61,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://gateway.envoyproxy.io";
     license = lib.licenses.asl20;
     mainProgram = "egctl";
+    platforms = lib.platforms.unix;
   };
 })

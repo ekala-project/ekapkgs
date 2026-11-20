@@ -43,5 +43,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/mopidy/mopidy-spotify/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     maintainers = with lib.maintainers; [ getchoo ];
+    platforms = lib.platforms.unix;
   };
 })

@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/emersion/hydroxide";
     license = lib.licenses.mit;
     mainProgram = "hydroxide";
+    platforms = lib.platforms.unix;
   };
 })

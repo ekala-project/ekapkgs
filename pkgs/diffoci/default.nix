@@ -48,5 +48,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/reproducible-containers/diffoci/";
     license = lib.licenses.asl20;
     mainProgram = "diffoci";
+    platforms = lib.platforms.unix;
   };
 })

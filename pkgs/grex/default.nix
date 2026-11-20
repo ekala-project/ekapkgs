@@ -29,5 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/pemistahl/grex/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     mainProgram = "grex";
+    platforms = lib.platforms.unix;
   };
 })

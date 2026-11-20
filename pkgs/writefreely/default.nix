@@ -35,5 +35,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/writefreely/writefreely";
     license = lib.licenses.agpl3Only;
     mainProgram = "writefreely";
+    platforms = lib.platforms.unix;
   };
 })

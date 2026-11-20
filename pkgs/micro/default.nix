@@ -57,5 +57,6 @@ buildGoModule rec {
     description = "Modern and intuitive terminal-based text editor";
     license = lib.licenses.mit;
     mainProgram = "micro";
+    platforms = lib.platforms.unix;
   };
 }

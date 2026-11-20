@@ -23,5 +23,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     mainProgram = "fypp";
     homepage = "https://github.com/aradi/fypp";
     license = lib.licenses.gpl3Only;
+    platforms = lib.platforms.unix;
   };
 })

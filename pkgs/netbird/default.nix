@@ -55,5 +55,6 @@ buildGoModule (finalAttrs: {
     description = "Connect your devices into a single secure private WireGuard-based mesh network";
     license = lib.licenses.bsd3;
     mainProgram = "netbird";
+    platforms = lib.platforms.unix;
   };
 })

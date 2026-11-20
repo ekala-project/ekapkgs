@@ -87,5 +87,6 @@ stdenv.mkDerivation (finalAttrs: {
       about 130 PPD files, for printers from
       Dell, Genicom, Lexmark, Oce and Xerox.
     '';
+    platforms = lib.platforms.unix;
   };
 })

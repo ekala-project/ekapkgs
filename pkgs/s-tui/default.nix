@@ -30,5 +30,6 @@ python3Packages.buildPythonPackage (finalAttrs: {
     description = "Stress-Terminal UI monitoring tool";
     license = lib.licenses.gpl2Plus;
     mainProgram = "s-tui";
+    platforms = lib.platforms.unix;
   };
 })

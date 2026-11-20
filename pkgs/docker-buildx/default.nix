@@ -38,5 +38,6 @@ buildGoModule rec {
     mainProgram = "docker-buildx";
     homepage = "https://github.com/docker/buildx";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 }

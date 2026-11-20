@@ -44,5 +44,6 @@ rustPlatform.buildRustPackage {
     homepage = "https://github.com/chmln/handlr";
     license = lib.licenses.mit;
     mainProgram = "handlr";
+    platforms = lib.platforms.unix;
   };
 }

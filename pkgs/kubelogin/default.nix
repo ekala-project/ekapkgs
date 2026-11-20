@@ -39,5 +39,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "kubelogin";
     inherit (finalAttrs.src.meta) homepage;
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

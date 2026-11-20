@@ -25,5 +25,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/projectdiscovery/urlfinder/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "urlfinder";
+    platforms = lib.platforms.unix;
   };
 })

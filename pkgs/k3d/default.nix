@@ -78,5 +78,6 @@ buildGoModule (finalAttrs: {
     description = "Helper to run k3s (Lightweight Kubernetes. 5 less than k8s) in a docker container";
     mainProgram = "k3d";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

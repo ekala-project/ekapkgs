@@ -41,5 +41,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/pykickstart/pykickstart";
     changelog = "https://github.com/pykickstart/pykickstart/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.gpl2Only;
+    platforms = lib.platforms.unix;
   };
 })

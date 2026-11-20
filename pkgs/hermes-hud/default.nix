@@ -40,5 +40,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/joeynyc/hermes-hud/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "hermes-hud";
+    platforms = lib.platforms.unix;
   };
 })

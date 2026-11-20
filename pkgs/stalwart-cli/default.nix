@@ -35,5 +35,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       agpl3Only
     ];
     mainProgram = "stalwart-cli";
+    platforms = lib.platforms.unix;
   };
 })

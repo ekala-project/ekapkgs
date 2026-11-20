@@ -54,5 +54,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       unlicense
     ];
     mainProgram = "rgr";
+    platforms = lib.platforms.unix;
   };
 })

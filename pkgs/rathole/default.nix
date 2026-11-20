@@ -69,5 +69,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/rathole-org/rathole";
     license = lib.licenses.asl20;
     mainProgram = "rathole";
+    platforms = lib.platforms.unix;
   };
 })

@@ -26,5 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.chiark.greenend.org.uk/~sgtatham/xtruss";
     license = lib.licenses.mit;
     mainProgram = "xtruss";
+    platforms = lib.platforms.unix;
   };
 })

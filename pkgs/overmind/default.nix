@@ -36,5 +36,6 @@ buildGoModule (finalAttrs: {
     description = "Process manager for Procfile-based applications and tmux";
     mainProgram = "overmind";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

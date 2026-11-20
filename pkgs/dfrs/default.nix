@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/anthraxx/dfrs";
     license = lib.licenses.mit;
     mainProgram = "dfrs";
+    platforms = lib.platforms.unix;
   };
 })

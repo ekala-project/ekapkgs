@@ -88,5 +88,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     license = lib.licenses.gpl2Plus;
     mainProgram = "zim";
     broken = stdenv.hostPlatform.isDarwin; # https://github.com/NixOS/nixpkgs/pull/52658#issuecomment-449565790
+    platforms = lib.platforms.unix;
   };
 })

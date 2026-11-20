@@ -45,5 +45,6 @@ python3Packages.buildPythonPackage rec {
       gpl2Plus
     ];
     mainProgram = "git-filter-repo";
+    platforms = lib.platforms.unix;
   };
 }

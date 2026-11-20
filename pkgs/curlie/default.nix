@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://rs.github.io/curlie/";
     license = lib.licenses.mit;
     mainProgram = "curlie";
+    platforms = lib.platforms.unix;
   };
 })

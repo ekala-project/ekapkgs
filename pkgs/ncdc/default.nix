@@ -46,5 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://dev.yorhel.nl/ncdc";
     license = lib.licenses.mit;
     mainProgram = "ncdc";
+    platforms = lib.platforms.unix;
   };
 })

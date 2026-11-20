@@ -46,5 +46,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/darkoperator/dnsrecon";
     license = lib.licenses.gpl2Only;
     mainProgram = "dnsrecon";
+    platforms = lib.platforms.unix;
   };
 })

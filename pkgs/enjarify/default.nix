@@ -35,5 +35,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/google/enjarify/";
     license = lib.licenses.asl20;
     mainProgram = "enjarify";
+    platforms = lib.platforms.unix;
   };
 })

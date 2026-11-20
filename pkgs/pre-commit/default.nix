@@ -61,5 +61,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://pre-commit.com/";
     license = lib.licenses.mit;
     mainProgram = "pre-commit";
+    platforms = lib.platforms.unix;
   };
 })

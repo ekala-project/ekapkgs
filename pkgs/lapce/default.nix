@@ -105,5 +105,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/lapce/lapce/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     mainProgram = "lapce";
+    platforms = lib.platforms.unix;
   };
 })

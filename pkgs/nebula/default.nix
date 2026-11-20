@@ -59,5 +59,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/slackhq/nebula";
     changelog = "https://github.com/slackhq/nebula/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

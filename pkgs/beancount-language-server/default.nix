@@ -28,5 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "beancount-language-server";
     homepage = "https://github.com/polarmutex/beancount-language-server";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

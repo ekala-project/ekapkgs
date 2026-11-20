@@ -26,5 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "log4shib-config";
     license = lib.licenses.lgpl21;
     homepage = "http://log4cpp.sf.net";
+    platforms = lib.platforms.unix;
   };
 })

@@ -37,5 +37,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/buildpacks/pack/";
     license = lib.licenses.asl20;
     mainProgram = "pack";
+    platforms = lib.platforms.unix;
   };
 })

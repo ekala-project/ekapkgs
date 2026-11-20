@@ -30,5 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/martinmoene/string-view-lite";
     changelog = "https://github.com/martinmoene/string-view-lite/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.boost;
+    platforms = lib.platforms.unix;
   };
 })

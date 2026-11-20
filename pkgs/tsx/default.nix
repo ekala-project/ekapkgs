@@ -95,5 +95,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://tsx.hirok.io/";
     license = lib.licenses.mit;
     mainProgram = "tsx";
+    platforms = lib.platforms.unix;
   };
 })

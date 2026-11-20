@@ -36,5 +36,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "fselect";
+    platforms = lib.platforms.unix;
   };
 })

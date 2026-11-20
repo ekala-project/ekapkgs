@@ -116,5 +116,6 @@ rustPlatform.buildRustPackage rec {
     changelog = "https://github.com/squidowl/halloy/blob/${version}/CHANGELOG.md";
     license = lib.licenses.gpl3Only;
     mainProgram = "halloy";
+    platforms = lib.platforms.unix;
   };
 }

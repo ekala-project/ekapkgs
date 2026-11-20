@@ -43,5 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Peer-to-peer VPN";
     homepage = "https://www.ntop.org/products/n2n/";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.linux;
   };
 })

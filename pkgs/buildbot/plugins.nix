@@ -42,6 +42,7 @@
       description = "Buildbot UI";
       teams = [ lib.teams.buildbot ];
       license = lib.licenses.gpl2;
+      platforms = lib.platforms.unix;
     };
   };
 
@@ -67,6 +68,7 @@
       description = "Buildbot Console View Plugin";
       teams = [ lib.teams.buildbot ];
       license = lib.licenses.gpl2;
+      platforms = lib.platforms.unix;
     };
   };
 
@@ -92,6 +94,7 @@
       description = "Buildbot Waterfall View Plugin";
       teams = [ lib.teams.buildbot ];
       license = lib.licenses.gpl2;
+      platforms = lib.platforms.unix;
     };
   };
 
@@ -117,6 +120,7 @@
       description = "Buildbot Grid View Plugin";
       teams = [ lib.teams.buildbot ];
       license = lib.licenses.gpl2;
+      platforms = lib.platforms.unix;
     };
   };
 
@@ -142,6 +146,7 @@
       description = "Buildbot WSGI dashboards Plugin";
       teams = [ lib.teams.buildbot ];
       license = lib.licenses.gpl2;
+      platforms = lib.platforms.unix;
     };
   };
 
@@ -173,6 +178,7 @@
       maintainers = [ lib.maintainers.julienmalka ];
       teams = [ lib.teams.buildbot ];
       license = lib.licenses.gpl2;
+      platforms = lib.platforms.unix;
     };
   };
 }

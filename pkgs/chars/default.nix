@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "chars";
     homepage = "https://github.com/boinkor-net/chars";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

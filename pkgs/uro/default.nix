@@ -23,5 +23,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/s0md3v/uro";
     license = lib.licenses.asl20;
     mainProgram = "uro";
+    platforms = lib.platforms.unix;
   };
 })

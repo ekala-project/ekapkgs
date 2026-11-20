@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "k2tf";
     homepage = "https://github.com/sl1pm4t/k2tf";
     license = lib.licenses.mpl20;
+    platforms = lib.platforms.unix;
   };
 })

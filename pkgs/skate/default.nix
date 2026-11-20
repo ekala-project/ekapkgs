@@ -31,5 +31,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/charmbracelet/skate/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
     mainProgram = "skate";
+    platforms = lib.platforms.unix;
   };
 })

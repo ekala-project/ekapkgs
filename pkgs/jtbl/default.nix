@@ -34,5 +34,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/kellyjonbrazil/jtbl/blob/${finalAttrs.src.rev}/CHANGELOG";
     license = lib.licenses.mit;
     mainProgram = "jtbl";
+    platforms = lib.platforms.unix;
   };
 })

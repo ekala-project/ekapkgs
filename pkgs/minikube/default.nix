@@ -79,5 +79,6 @@ buildGoModule (finalAttrs: {
     description = "Tool that makes it easy to run Kubernetes locally";
     mainProgram = "minikube";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

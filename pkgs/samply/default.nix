@@ -26,5 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "samply";
+    platforms = lib.platforms.unix;
   };
 })

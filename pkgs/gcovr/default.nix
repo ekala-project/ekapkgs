@@ -78,5 +78,6 @@ python3Packages.buildPythonPackage (finalAttrs: {
     changelog = "https://github.com/gcovr/gcovr/blob/${finalAttrs.src.tag}/CHANGELOG.rst";
     license = lib.licenses.bsd0;
     mainProgram = "gcovr";
+    platforms = lib.platforms.unix;
   };
 })

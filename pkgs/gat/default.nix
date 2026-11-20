@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     license = lib.licenses.mit;
     homepage = "https://github.com/koki-develop/gat";
     mainProgram = "gat";
+    platforms = lib.platforms.unix;
   };
 })

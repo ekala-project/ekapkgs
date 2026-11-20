@@ -32,5 +32,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/AdguardTeam/dnsproxy";
     license = lib.licenses.asl20;
     mainProgram = "dnsproxy";
+    platforms = lib.platforms.unix;
   };
 })

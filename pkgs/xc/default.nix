@@ -42,5 +42,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://xcfile.dev/";
     changelog = "https://github.com/joerdav/xc/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

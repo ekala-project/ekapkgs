@@ -65,5 +65,6 @@ lua.pkgs.buildLuarocksPackage {
     homepage = "https://github.com/pavouk/lgi";
     license = lib.licenses.mit;
     description = "Lua bindings to GObject libraries";
+    platforms = lib.platforms.unix;
   };
 }

@@ -32,5 +32,6 @@ buildGoModule (finalAttrs: {
     # many undefined functions
     broken = stdenv.hostPlatform.isDarwin;
     mainProgram = "emptty";
+    platforms = lib.platforms.unix;
   };
 })

@@ -27,5 +27,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/nachoparker/dutree";
     license = lib.licenses.gpl3Plus;
     mainProgram = "dutree";
+    platforms = lib.platforms.unix;
   };
 })

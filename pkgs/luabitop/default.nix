@@ -20,5 +20,6 @@ lua.v5_2_compat.pkgs.buildLuarocksPackage {
     homepage = "http://bitop.luajit.org/";
     license = lib.licenses.mit;
     description = "Lua Bit Operations Module";
+    platforms = lib.platforms.unix;
   };
 }

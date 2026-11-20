@@ -35,5 +35,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/szclsya/mpdris2-rs/blob/${finalAttrs.src.rev}/Changes.md";
     license = lib.licenses.gpl3Plus;
     mainProgram = "mpdris2-rs";
+    platforms = lib.platforms.unix;
   };
 })

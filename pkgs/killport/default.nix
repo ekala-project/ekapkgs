@@ -43,5 +43,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/jkfran/killport";
     license = lib.licenses.mit;
     mainProgram = "killport";
+    platforms = lib.platforms.unix;
   };
 })

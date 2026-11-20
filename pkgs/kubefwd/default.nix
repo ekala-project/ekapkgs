@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://kubefwd.com";
     license = lib.licenses.asl20;
     mainProgram = "kubefwd";
+    platforms = lib.platforms.unix;
   };
 })

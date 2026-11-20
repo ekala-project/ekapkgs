@@ -41,5 +41,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "vgrep";
     homepage = "https://github.com/vrothberg/vgrep";
     license = lib.licenses.gpl3Only;
+    platforms = lib.platforms.unix;
   };
 })

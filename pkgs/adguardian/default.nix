@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "adguardian";
     homepage = "https://github.com/Lissy93/AdGuardian-Term";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

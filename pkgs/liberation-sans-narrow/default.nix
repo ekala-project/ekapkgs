@@ -44,5 +44,6 @@ stdenv.mkDerivation rec {
 
     license = lib.licenses.gpl2;
     homepage = "https://github.com/liberationfonts";
+    platforms = lib.platforms.unix;
   };
 }

@@ -34,5 +34,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/kamiyaa/joshuto/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.lgpl3Only;
     mainProgram = "joshuto";
+    platforms = lib.platforms.unix;
   };
 })

@@ -29,5 +29,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/wireservice/csvkit";
     description = "Suite of command-line tools for converting to and working with CSV";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

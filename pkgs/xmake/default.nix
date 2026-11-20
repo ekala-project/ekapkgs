@@ -22,5 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://xmake.io";
     license = lib.licenses.asl20;
     mainProgram = "xmake";
+    platforms = lib.platforms.unix;
   };
 })

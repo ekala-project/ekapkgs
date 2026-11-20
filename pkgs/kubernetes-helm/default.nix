@@ -41,5 +41,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://helm.sh/";
     license = lib.licenses.asl20;
     mainProgram = "helm";
+    platforms = lib.platforms.unix;
   };
 })

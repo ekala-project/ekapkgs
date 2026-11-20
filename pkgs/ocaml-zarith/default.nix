@@ -44,5 +44,6 @@ stdenv.mkDerivation rec {
     description = "Fast, arbitrary precision OCaml integers";
     homepage = "https://github.com/ocaml/Zarith";
     license = lib.licenses.lgpl2;
+    platforms = lib.platforms.unix;
   };
 }

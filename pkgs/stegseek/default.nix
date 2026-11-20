@@ -47,5 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/RickdeJager/stegseek";
     license = lib.licenses.gpl2Only;
     mainProgram = "stegseek";
+    platforms = lib.platforms.unix;
   };
 })

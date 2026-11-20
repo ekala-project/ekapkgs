@@ -49,5 +49,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/astral-sh/ruff/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "ruff";
+    platforms = lib.platforms.unix;
   };
 })

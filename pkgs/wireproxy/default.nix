@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/windtf/wireproxy";
     license = lib.licenses.isc;
     mainProgram = "wireproxy";
+    platforms = lib.platforms.unix;
   };
 })

@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/AlexxIT/go2rtc/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "go2rtc";
+    platforms = lib.platforms.unix;
   };
 })

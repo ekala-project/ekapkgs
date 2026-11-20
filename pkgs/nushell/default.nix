@@ -67,5 +67,6 @@ rustPlatform.buildRustPackage {
     homepage = "https://www.nushell.sh/";
     license = lib.licenses.mit;
     mainProgram = "nu";
+    platforms = lib.platforms.unix;
   };
 }

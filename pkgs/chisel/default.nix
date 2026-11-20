@@ -36,5 +36,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/jpillora/chisel";
     changelog = "https://github.com/jpillora/chisel/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

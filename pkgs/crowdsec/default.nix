@@ -89,5 +89,6 @@ buildGoModule (finalAttrs: {
       being shared among all users to further improve everyone's security.
     '';
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

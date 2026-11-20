@@ -44,5 +44,6 @@ python3Packages.buildPythonApplication rec {
     mainProgram = "hovercraft";
     homepage = "https://github.com/regebro/hovercraft";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 }

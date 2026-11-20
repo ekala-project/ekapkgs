@@ -27,5 +27,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/chriswalz/bit";
     license = lib.licenses.asl20;
     mainProgram = "bit";
+    platforms = lib.platforms.unix;
   };
 })

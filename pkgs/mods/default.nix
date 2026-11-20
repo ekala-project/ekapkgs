@@ -49,5 +49,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/charmbracelet/mods";
     license = lib.licenses.mit;
     mainProgram = "mods";
+    platforms = lib.platforms.unix;
   };
 })

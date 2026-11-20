@@ -58,5 +58,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "fj";
+    platforms = lib.platforms.unix;
   };
 })

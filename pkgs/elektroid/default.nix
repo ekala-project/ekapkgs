@@ -47,5 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Sample and MIDI device manager";
     homepage = "https://github.com/dagargo/elektroid";
     license = lib.licenses.gpl3Only;
+    platforms = lib.platforms.linux;
   };
 })

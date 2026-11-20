@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "jnv";
     homepage = "https://github.com/ynqa/jnv";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

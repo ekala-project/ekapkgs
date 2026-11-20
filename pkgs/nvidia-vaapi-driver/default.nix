@@ -54,5 +54,6 @@ stdenv.mkDerivation rec {
     description = "VA-API implementation using NVIDIA's NVDEC";
     changelog = "https://github.com/elFarto/nvidia-vaapi-driver/releases/tag/v${version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.linux;
   };
 }

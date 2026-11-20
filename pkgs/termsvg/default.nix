@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/MrMarble/termsvg";
     license = lib.licenses.gpl3Only;
     mainProgram = "termsvg";
+    platforms = lib.platforms.unix;
   };
 })

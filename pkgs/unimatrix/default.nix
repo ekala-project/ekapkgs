@@ -33,5 +33,6 @@ python3Packages.buildPythonApplication {
     homepage = "https://github.com/will8211/unimatrix";
     license = lib.licenses.gpl3Only;
     mainProgram = "unimatrix";
+    platforms = lib.platforms.unix;
   };
 }

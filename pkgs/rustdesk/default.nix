@@ -147,5 +147,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/rustdesk/rustdesk/releases/tag/${finalAttrs.version}";
     license = lib.licenses.agpl3Only;
     mainProgram = "rustdesk";
+    platforms = lib.platforms.unix;
   };
 })

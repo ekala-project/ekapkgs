@@ -30,5 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "wasm-component-ld";
+    platforms = lib.platforms.unix;
   };
 })

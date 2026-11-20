@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/square/certigo";
     license = lib.licenses.asl20;
     mainProgram = "certigo";
+    platforms = lib.platforms.unix;
   };
 })

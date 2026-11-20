@@ -21,5 +21,10 @@ stdenvNoCC.mkDerivation rec {
     runHook postInstall
   '';
 
-  meta = { };
+  meta = {
+    description = "Bitstream Vera TrueType font family";
+    homepage = "https://www.gnome.org/fonts/";
+    license = lib.licenses.bitstreamVera;
+    platforms = lib.platforms.all;
+  };
 }

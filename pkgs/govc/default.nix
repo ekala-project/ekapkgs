@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/vmware/govmomi/tree/main/govc";
     license = lib.licenses.asl20;
     mainProgram = "govc";
+    platforms = lib.platforms.unix;
   };
 })

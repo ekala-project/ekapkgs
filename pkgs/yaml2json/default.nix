@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     description = "Convert yaml to json";
     mainProgram = "yaml2json";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

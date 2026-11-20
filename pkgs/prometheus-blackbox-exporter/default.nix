@@ -35,5 +35,6 @@ buildGoModule rec {
     mainProgram = "blackbox_exporter";
     homepage = "https://github.com/prometheus/blackbox_exporter";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 }

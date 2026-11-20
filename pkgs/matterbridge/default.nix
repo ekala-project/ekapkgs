@@ -24,5 +24,6 @@ buildGoModule {
     homepage = "https://github.com/42wim/matterbridge";
     license = lib.licenses.asl20;
     mainProgram = "matterbridge";
+    platforms = lib.platforms.unix;
   };
 }

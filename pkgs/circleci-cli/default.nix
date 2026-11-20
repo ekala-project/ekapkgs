@@ -45,5 +45,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "circleci";
     license = lib.licenses.mit;
     homepage = "https://circleci.com/";
+    platforms = lib.platforms.unix;
   };
 })

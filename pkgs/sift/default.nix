@@ -43,5 +43,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "sift";
     homepage = "https://sift-tool.org";
     license = lib.licenses.gpl3;
+    platforms = lib.platforms.unix;
   };
 })

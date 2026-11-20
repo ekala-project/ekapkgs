@@ -48,5 +48,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
     ];
     mainProgram = "static-web-server";
+    platforms = lib.platforms.unix;
   };
 })

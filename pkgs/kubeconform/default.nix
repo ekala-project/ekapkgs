@@ -36,5 +36,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "kubeconform";
     homepage = "https://github.com/yannh/kubeconform/";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

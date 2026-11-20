@@ -45,5 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.ipa;
     # OSDN mirror is dead
     broken = true;
+    platforms = lib.platforms.unix;
   };
 })

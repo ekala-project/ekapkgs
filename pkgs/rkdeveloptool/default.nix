@@ -36,5 +36,6 @@ stdenv.mkDerivation {
     description = "Tool from Rockchip to communicate with Rockusb devices";
     license = lib.licenses.gpl2Only;
     mainProgram = "rkdeveloptool";
+    platforms = lib.platforms.unix;
   };
 }

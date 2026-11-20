@@ -50,5 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://ucon64.sourceforge.io/";
     license = lib.licenses.gpl2Plus;
     mainProgram = "ucon64";
+    platforms = lib.platforms.unix;
   };
 })

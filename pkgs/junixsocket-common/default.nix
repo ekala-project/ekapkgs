@@ -13,5 +13,6 @@ fetchMavenArtifact {
     description = "Java/JNI library that allows the use of Unix Domain Sockets (AF_UNIX sockets) and other socket types from Java";
     license = lib.licenses.asl20;
     sourceProvenance = [ lib.sourceTypes.binaryBytecode ];
+    platforms = lib.platforms.unix;
   };
 }

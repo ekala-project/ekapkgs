@@ -40,5 +40,6 @@ buildGoModule rec {
     '';
     homepage = "https://www.serf.io";
     license = lib.licenses.mpl20;
+    platforms = lib.platforms.unix;
   };
 }

@@ -45,5 +45,6 @@ buildGoModule rec {
     homepage = "https://github.com/Kong/deck";
     license = lib.licenses.asl20;
     mainProgram = "deck";
+    platforms = lib.platforms.unix;
   };
 }

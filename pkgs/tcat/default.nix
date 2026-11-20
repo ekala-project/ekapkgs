@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/rsc/tcat";
     license = lib.licenses.bsd3;
     mainProgram = "tcat";
+    platforms = lib.platforms.unix;
   };
 })

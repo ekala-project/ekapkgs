@@ -61,5 +61,6 @@ buildGoModule (finalAttrs: {
     license = lib.licenses.mit;
     changelog = "https://github.com/aptly-dev/aptly/releases/tag/v${finalAttrs.version}";
     mainProgram = "aptly";
+    platforms = lib.platforms.unix;
   };
 })

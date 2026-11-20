@@ -31,5 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.epl20;
     homepage = "https://github.com/coin-or/CoinUtils";
     description = "Collection of classes and helper functions that are generally useful to multiple COIN-OR projects";
+    platforms = lib.platforms.unix;
   };
 })

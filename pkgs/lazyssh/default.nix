@@ -32,5 +32,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/Adembc/lazyssh/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     mainProgram = "lazyssh";
+    platforms = lib.platforms.unix;
   };
 })

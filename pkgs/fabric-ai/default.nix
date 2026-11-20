@@ -39,5 +39,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/danielmiessler/fabric";
     license = lib.licenses.mit;
     mainProgram = "fabric";
+    platforms = lib.platforms.unix;
   };
 })

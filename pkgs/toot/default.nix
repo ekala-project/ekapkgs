@@ -38,5 +38,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     mainProgram = "toot";
     homepage = "https://github.com/ihabunek/toot";
     license = lib.licenses.gpl3Only;
+    platforms = lib.platforms.unix;
   };
 })

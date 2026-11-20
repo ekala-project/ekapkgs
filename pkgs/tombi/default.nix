@@ -49,5 +49,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/tombi-toml/tombi";
     license = lib.licenses.mit;
     mainProgram = "tombi";
+    platforms = lib.platforms.unix;
   };
 })

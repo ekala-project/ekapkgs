@@ -43,5 +43,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/ozwaldorf/lutgen-rs";
     mainProgram = "lutgen";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

@@ -31,5 +31,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/homeport/termshot/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "termshot";
+    platforms = lib.platforms.unix;
   };
 })

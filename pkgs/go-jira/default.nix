@@ -21,5 +21,6 @@ buildGoModule (finalAttrs: {
     description = "Simple command line client for Atlassian's Jira service written in Go";
     homepage = "https://github.com/go-jira/jira";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

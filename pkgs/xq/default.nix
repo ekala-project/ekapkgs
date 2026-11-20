@@ -20,5 +20,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/MiSawa/xq";
     license = lib.licenses.mit;
     mainProgram = "xq";
+    platforms = lib.platforms.unix;
   };
 })

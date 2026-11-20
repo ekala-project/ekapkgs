@@ -22,5 +22,6 @@ buildGoModule {
     mainProgram = "pup";
     homepage = "https://github.com/ericchiang/pup";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 }

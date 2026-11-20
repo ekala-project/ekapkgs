@@ -56,5 +56,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/cpplint/cpplint/releases/tag/${finalAttrs.version}";
     mainProgram = "cpplint";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 })

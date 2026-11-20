@@ -40,5 +40,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "git commit --fixup, but automatic";
     license = [ lib.licenses.bsd3 ];
     mainProgram = "git-absorb";
+    platforms = lib.platforms.unix;
   };
 })

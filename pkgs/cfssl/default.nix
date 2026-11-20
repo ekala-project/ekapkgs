@@ -39,5 +39,6 @@ buildGoModule (finalAttrs: {
     description = "Cloudflare's PKI and TLS toolkit";
     license = lib.licenses.bsd2;
     mainProgram = "cfssl";
+    platforms = lib.platforms.unix;
   };
 })

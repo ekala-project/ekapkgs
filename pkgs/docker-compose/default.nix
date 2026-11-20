@@ -41,5 +41,6 @@ buildGoModule rec {
     mainProgram = "docker-compose";
     homepage = "https://github.com/docker/compose";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 }

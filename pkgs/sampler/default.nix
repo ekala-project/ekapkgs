@@ -37,5 +37,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://sampler.dev";
     license = lib.licenses.gpl3;
     mainProgram = "sampler";
+    platforms = lib.platforms.unix;
   };
 })

@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://salsa.debian.org/mdosch/xmpp-dns";
     license = lib.licenses.bsd2;
     mainProgram = "xmpp-dns";
+    platforms = lib.platforms.unix;
   };
 })

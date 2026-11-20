@@ -45,5 +45,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/ajeetdsouza/zoxide/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = with lib.licenses; [ mit ];
     mainProgram = "zoxide";
+    platforms = lib.platforms.unix;
   };
 })

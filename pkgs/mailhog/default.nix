@@ -38,5 +38,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/mailhog/MailHog";
     changelog = "https://github.com/mailhog/MailHog/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

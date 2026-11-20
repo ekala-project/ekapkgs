@@ -45,5 +45,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/bootandy/dust/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     mainProgram = "dust";
+    platforms = lib.platforms.unix;
   };
 })

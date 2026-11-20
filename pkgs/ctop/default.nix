@@ -29,5 +29,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://ctop.sh/";
     license = lib.licenses.mit;
     mainProgram = "ctop";
+    platforms = lib.platforms.unix;
   };
 })

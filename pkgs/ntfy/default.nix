@@ -71,5 +71,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://ntfy.readthedocs.io/en/latest/";
     license = lib.licenses.gpl3Only;
     mainProgram = "ntfy";
+    platforms = lib.platforms.unix;
   };
 })

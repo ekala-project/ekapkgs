@@ -26,5 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "jql";
+    platforms = lib.platforms.unix;
   };
 })

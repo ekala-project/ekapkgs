@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://ipfs.io/";
     license = lib.licenses.mit;
     mainProgram = "ipget";
+    platforms = lib.platforms.unix;
   };
 })

@@ -50,5 +50,6 @@ python3Packages.buildPythonApplication rec {
     mainProgram = "gcalcli";
     homepage = "https://github.com/insanum/gcalcli";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 }

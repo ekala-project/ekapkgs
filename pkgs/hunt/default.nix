@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/LyonSyonII/hunt-rs";
     license = lib.licenses.mit;
     mainProgram = "hunt";
+    platforms = lib.platforms.unix;
   };
 }

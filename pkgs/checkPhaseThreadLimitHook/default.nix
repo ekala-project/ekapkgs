@@ -8,5 +8,6 @@ makeSetupHook {
 
   meta = {
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 } ./hook.sh

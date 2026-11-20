@@ -37,5 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Purely-functional configuration language that helps you define JSON data";
     homepage = "https://github.com/deltarocks/jrsonnet";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

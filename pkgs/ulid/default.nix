@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/oklog/ulid/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.asl20;
     mainProgram = "ulid";
+    platforms = lib.platforms.unix;
   };
 })

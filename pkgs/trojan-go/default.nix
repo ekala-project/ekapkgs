@@ -40,5 +40,6 @@ buildGoModule rec {
     changelog = "https://github.com/p4gefau1t/trojan-go/releases/tag/v${version}";
     license = lib.licenses.gpl3Only;
     mainProgram = "trojan-go";
+    platforms = lib.platforms.unix;
   };
 }

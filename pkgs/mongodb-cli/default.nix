@@ -36,5 +36,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://www.mongodb.com/docs/mongocli/current/release-notes/#mongodb-cli-${finalAttrs.version}";
     license = lib.licenses.asl20;
     mainProgram = "mongocli";
+    platforms = lib.platforms.unix;
   };
 })

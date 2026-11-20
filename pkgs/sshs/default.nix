@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/quantumsheep/sshs";
     license = lib.licenses.mit;
     mainProgram = "sshs";
+    platforms = lib.platforms.unix;
   };
 })

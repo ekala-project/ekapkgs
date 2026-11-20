@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "dotenv-linter";
     homepage = "https://dotenv-linter.github.io";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

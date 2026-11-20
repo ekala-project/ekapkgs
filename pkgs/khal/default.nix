@@ -63,5 +63,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://lostpackets.de/khal/";
     changelog = "https://github.com/pimutils/khal/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

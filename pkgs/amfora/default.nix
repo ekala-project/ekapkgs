@@ -29,5 +29,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/makew0rld/amfora";
     license = lib.licenses.gpl3;
     changelog = "https://github.com/makew0rld/amfora/blob/v${finalAttrs.version}/CHANGELOG.md";
+    platforms = lib.platforms.unix;
   };
 })

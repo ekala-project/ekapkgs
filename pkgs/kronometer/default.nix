@@ -39,5 +39,6 @@ stdenv.mkDerivation {
     description = "Stopwatch application";
     license = lib.licenses.gpl2Only;
     mainProgram = "kronometer";
+    platforms = lib.platforms.unix;
   };
 }

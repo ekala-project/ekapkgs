@@ -24,5 +24,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "swc";
     homepage = "https://github.com/swc-project/swc";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

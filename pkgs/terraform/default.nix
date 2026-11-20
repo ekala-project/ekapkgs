@@ -66,5 +66,6 @@ buildGoModule {
     changelog = "https://github.com/hashicorp/terraform/blob/v1.15.9/CHANGELOG.md";
     license = lib.licenses.bsl11;
     mainProgram = "terraform";
+    platforms = lib.platforms.unix;
   };
 }

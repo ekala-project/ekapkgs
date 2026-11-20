@@ -88,5 +88,6 @@ perlPackages.buildPerlPackage rec {
       It also contains scripts to directly
       generate print queues and handle jobs.
     '';
+    platforms = lib.platforms.unix;
   };
 }

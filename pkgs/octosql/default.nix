@@ -32,5 +32,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/cube2222/octosql";
     license = lib.licenses.mpl20;
     mainProgram = "octosql";
+    platforms = lib.platforms.unix;
   };
 })

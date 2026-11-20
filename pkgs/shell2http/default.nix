@@ -38,5 +38,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/msoap/shell2http";
     changelog = "https://github.com/msoap/shell2http/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

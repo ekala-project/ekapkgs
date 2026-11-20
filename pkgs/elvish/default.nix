@@ -45,5 +45,6 @@ buildGoModule (finalAttrs: {
       status, it is already suitable for most daily interactive use.
     '';
     license = lib.licenses.bsd2;
+    platforms = lib.platforms.unix;
   };
 })

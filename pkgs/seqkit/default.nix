@@ -21,5 +21,6 @@ buildGoModule (finalAttrs: {
     description = "Cross-platform and ultrafast toolkit for FASTA/Q file manipulation";
     homepage = "https://github.com/shenwei356/seqkit";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })
