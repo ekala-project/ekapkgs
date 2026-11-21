@@ -1,0 +1,22 @@
+{
+  "comment": "Playwright 1.61.1 chromium farm (revision pin only; FODs live in browser-downloads.nix)",
+  "browsers": {
+    "chromium": {
+      "revision": "1228",
+      "browserVersion": "149.0.7827.55",
+      "title": "Chrome for Testing"
+    },
+    "chromium-headless-shell": {
+      "revision": "1228",
+      "browserVersion": "149.0.7827.55",
+      "title": "Chrome Headless Shell"
+    },
+    "ffmpeg": {
+      "revision": "1011",
+      "revisionOverrides": {
+        "mac12": "1010",
+        "mac12-arm64": "1010"
+      }
+    }
+  }
+}
