@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     description = "Small utility which generates Go code from any file, useful for embedding binary data in a Go program";
     mainProgram = "go-bindata";
     license = lib.licenses.cc0;
+    platforms = lib.platforms.unix;
   };
 })

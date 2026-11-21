@@ -46,5 +46,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/seeyebe/gmap/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
     mainProgram = "gmap";
+    platforms = lib.platforms.unix;
   };
 })

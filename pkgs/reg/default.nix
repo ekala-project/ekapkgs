@@ -37,5 +37,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/genuinetools/reg";
     license = lib.licenses.mit;
     mainProgram = "reg";
+    platforms = lib.platforms.unix;
   };
 })

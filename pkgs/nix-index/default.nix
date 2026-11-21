@@ -49,5 +49,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/nix-community/nix-index";
     license = lib.licenses.bsd3;
     mainProgram = "nix-index";
+    platforms = lib.platforms.unix;
   };
 })

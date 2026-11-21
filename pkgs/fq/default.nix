@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "fq";
     homepage = "https://github.com/wader/fq";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

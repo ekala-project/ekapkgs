@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     description = "Zettelkasten plain text note-taking assistant";
     homepage = "https://github.com/zk-org/zk";
     mainProgram = "zk";
+    platforms = lib.platforms.unix;
   };
 })

@@ -59,5 +59,6 @@ buildGoModule rec {
       unfreeRedistributable
     ]; # Software is AGPLv3, web UI is unfree
     mainProgram = "sftpgo";
+    platforms = lib.platforms.unix;
   };
 }

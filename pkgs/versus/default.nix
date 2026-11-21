@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/INFURA/versus";
     license = lib.licenses.mit;
     mainProgram = "versus";
+    platforms = lib.platforms.unix;
   };
 })

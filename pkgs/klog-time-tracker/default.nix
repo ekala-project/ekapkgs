@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://klog.jotaen.net";
     license = lib.licenses.mit;
     mainProgram = "klog";
+    platforms = lib.platforms.unix;
   };
 })

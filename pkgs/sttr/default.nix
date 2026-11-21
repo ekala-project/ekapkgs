@@ -40,5 +40,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/abhimanyu003/sttr/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "sttr";
+    platforms = lib.platforms.unix;
   };
 })

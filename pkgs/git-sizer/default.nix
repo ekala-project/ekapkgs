@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/github/git-sizer";
     license = lib.licenses.mit;
     mainProgram = "git-sizer";
+    platforms = lib.platforms.unix;
   };
 })

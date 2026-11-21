@@ -116,5 +116,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/kpcyrd/rebuilderd";
     license = lib.licenses.gpl3Plus;
     mainProgram = "rebuilderd";
+    platforms = lib.platforms.unix;
   };
 })

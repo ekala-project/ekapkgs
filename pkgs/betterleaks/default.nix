@@ -49,5 +49,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/betterleaks/betterleaks/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "betterleaks";
+    platforms = lib.platforms.unix;
   };
 })

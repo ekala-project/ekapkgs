@@ -40,5 +40,6 @@ buildGoModule rec {
     description = "Distributed, Highly Available, Datacenter-Aware Scheduler";
     mainProgram = "nomad";
     license = lib.licenses.bsl11;
+    platforms = lib.platforms.unix;
   };
 }

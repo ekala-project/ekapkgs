@@ -57,6 +57,7 @@ python3Packages.buildPythonApplication {
     description = "Offline APT package manager";
     license = with lib.licenses; [ gpl3Plus ];
     mainProgram = "apt-offline";
+    platforms = lib.platforms.unix;
   };
 }
 # TODO: verify GUI and pkexec

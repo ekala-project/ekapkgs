@@ -90,5 +90,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/gopasspw/gopass-jsonapi/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "gopass-jsonapi";
+    platforms = lib.platforms.unix;
   };
 })

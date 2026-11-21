@@ -31,5 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for creating OpenSMTPD filters";
     homepage = "http://imperialat.at/dev/libopensmtpd/";
     license = lib.licenses.isc;
+    platforms = lib.platforms.unix;
   };
 })

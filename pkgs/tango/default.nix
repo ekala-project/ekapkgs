@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/yuanji-dev/tango";
     license = lib.licenses.mit;
     mainProgram = "tango";
+    platforms = lib.platforms.unix;
   };
 })

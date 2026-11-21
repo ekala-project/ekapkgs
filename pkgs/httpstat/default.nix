@@ -31,5 +31,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     mainProgram = "httpstat";
     homepage = "https://github.com/reorx/httpstat";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

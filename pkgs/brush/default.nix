@@ -25,5 +25,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/reubeno/brush/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "brush";
+    platforms = lib.platforms.unix;
   };
 })

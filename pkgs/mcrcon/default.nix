@@ -36,5 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
       libpng
     ];
     mainProgram = "mcrcon";
+    platforms = lib.platforms.unix;
   };
 })

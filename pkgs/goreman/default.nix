@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "goreman";
     homepage = "https://github.com/mattn/goreman";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

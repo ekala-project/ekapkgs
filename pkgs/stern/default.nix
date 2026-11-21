@@ -47,5 +47,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/stern/stern";
     license = lib.licenses.asl20;
     mainProgram = "stern";
+    platforms = lib.platforms.unix;
   };
 })

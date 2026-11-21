@@ -40,5 +40,6 @@ stdenv.mkDerivation rec {
     description = "Minimal support for Canonical S-expressions";
     homepage = "https://github.com/ocaml-dune/csexp";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 }

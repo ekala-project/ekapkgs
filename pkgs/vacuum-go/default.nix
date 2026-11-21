@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/daveshanley/vacuum/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "vacuum";
+    platforms = lib.platforms.unix;
   };
 })

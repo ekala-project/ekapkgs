@@ -49,5 +49,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/regexident/cargo-modules/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.mpl20;
     mainProgram = "cargo-modules";
+    platforms = lib.platforms.unix;
   };
 })

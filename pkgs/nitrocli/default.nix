@@ -48,5 +48,6 @@ rustPlatform.buildRustPackage {
     homepage = "https://github.com/d-e-s-o/nitrocli";
     license = lib.licenses.gpl3Plus;
     mainProgram = "nitrocli";
+    platforms = lib.platforms.unix;
   };
 }

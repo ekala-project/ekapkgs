@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/RasmusLindroth/tut";
     license = lib.licenses.mit;
     mainProgram = "tut";
+    platforms = lib.platforms.unix;
   };
 })

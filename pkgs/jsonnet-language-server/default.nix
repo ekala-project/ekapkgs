@@ -29,5 +29,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/grafana/jsonnet-language-server";
     changelog = "https://github.com/grafana/jsonnet-language-server/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.agpl3Only;
+    platforms = lib.platforms.unix;
   };
 })

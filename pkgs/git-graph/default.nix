@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/git-bahn/git-graph";
     license = lib.licenses.mit;
     mainProgram = "git-graph";
+    platforms = lib.platforms.unix;
   };
 })

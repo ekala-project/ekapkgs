@@ -33,5 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/RazrFalcon/resvg/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mpl20;
     mainProgram = "resvg";
+    platforms = lib.platforms.unix;
   };
 })

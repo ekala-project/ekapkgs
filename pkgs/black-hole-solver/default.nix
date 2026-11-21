@@ -39,5 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "black-hole-solve";
     homepage = "https://www.shlomifish.org/open-source/projects/black-hole-solitaire-solver/";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

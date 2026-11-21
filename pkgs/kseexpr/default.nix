@@ -47,5 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://invent.kde.org/graphics/kseexpr";
     description = "Embeddable expression evaluation engine";
     license = lib.licenses.lgpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

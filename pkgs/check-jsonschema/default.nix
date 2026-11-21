@@ -46,5 +46,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/python-jsonschema/check-jsonschema";
     changelog = "https://github.com/python-jsonschema/check-jsonschema/blob/${finalAttrs.src.tag}/CHANGELOG.rst";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

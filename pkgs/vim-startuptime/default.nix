@@ -27,5 +27,6 @@ buildGoModule (finalAttrs: {
     description = "Small Go program for better vim --startuptime alternative";
     license = lib.licenses.mit;
     mainProgram = "vim-startuptime";
+    platforms = lib.platforms.unix;
   };
 })

@@ -30,5 +30,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/mikeryan/crackle";
     license = lib.licenses.bsd2;
     mainProgram = "crackle";
+    platforms = lib.platforms.unix;
   };
 }

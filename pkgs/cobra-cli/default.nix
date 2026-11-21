@@ -59,5 +59,6 @@ buildGoModule rec {
     homepage = "https://github.com/spf13/cobra-cli/";
     changelog = "https://github.com/spf13/cobra-cli/releases/tag/${version}";
     license = lib.licenses.afl20;
+    platforms = lib.platforms.unix;
   };
 }

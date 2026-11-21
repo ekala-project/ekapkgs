@@ -58,5 +58,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/tramhao/termusic";
     license = lib.licenses.gpl3Only;
     mainProgram = "termusic";
+    platforms = lib.platforms.unix;
   };
 })

@@ -80,5 +80,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Removable disk automounter for udisks";
     license = lib.licenses.mit;
     mainProgram = "udiskie";
+    platforms = lib.platforms.linux;
   };
 })

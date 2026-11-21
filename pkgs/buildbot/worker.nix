@@ -60,5 +60,6 @@ buildPythonPackage {
     description = "Buildbot Worker Daemon";
     teams = [ lib.teams.buildbot ];
     license = lib.licenses.gpl2;
+    platforms = lib.platforms.unix;
   };
 }

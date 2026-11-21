@@ -48,6 +48,7 @@ rustPlatform.buildRustPackage (
       changelog = "https://github.com/helix-editor/helix/blob/${finalAttrs.version}/CHANGELOG.md";
       license = lib.licenses.mpl20;
       mainProgram = "hx";
+      platforms = lib.platforms.unix;
     };
   }
 )

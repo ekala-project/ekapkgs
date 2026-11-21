@@ -63,5 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Crossplatform access to image scanners (paper eaters only)";
     homepage = "https://openpaper.work/en/projects/";
     license = lib.licenses.lgpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

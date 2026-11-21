@@ -81,6 +81,7 @@ let
       description = "Unified tool to manage your AWS services";
       license = lib.licenses.asl20;
       mainProgram = "aws";
+      platforms = lib.platforms.unix;
     };
   });
 in

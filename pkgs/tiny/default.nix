@@ -37,5 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/osa1/tiny/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "tiny";
+    platforms = lib.platforms.unix;
   };
 })

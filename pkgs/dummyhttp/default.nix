@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage rec {
     homepage = "https://github.com/svenstaro/dummyhttp";
     license = with lib.licenses; [ mit ];
     mainProgram = "dummyhttp";
+    platforms = lib.platforms.unix;
   };
 }

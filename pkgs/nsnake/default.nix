@@ -25,5 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "nsnake";
     homepage = "https://github.com/alexdantas/nSnake";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

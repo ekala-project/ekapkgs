@@ -53,5 +53,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/exoscale/cli";
     license = lib.licenses.asl20;
     mainProgram = "exo";
+    platforms = lib.platforms.unix;
   };
 })

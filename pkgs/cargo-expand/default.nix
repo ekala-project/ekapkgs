@@ -28,5 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
     ];
     mainProgram = "cargo-expand";
+    platforms = lib.platforms.unix;
   };
 })

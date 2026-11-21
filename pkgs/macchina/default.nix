@@ -32,5 +32,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/Macchina-CLI/macchina/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "macchina";
+    platforms = lib.platforms.unix;
   };
 })

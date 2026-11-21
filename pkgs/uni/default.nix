@@ -29,5 +29,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/arp242/uni/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "uni";
+    platforms = lib.platforms.unix;
   };
 })

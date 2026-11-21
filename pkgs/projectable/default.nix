@@ -44,5 +44,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/dzfrias/projectable/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "prj";
+    platforms = lib.platforms.unix;
   };
 })

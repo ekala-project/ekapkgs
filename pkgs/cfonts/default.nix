@@ -19,5 +19,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Silly little command line tool for sexy ANSI fonts in the console";
     license = lib.licenses.gpl3Plus;
     mainProgram = "cfonts";
+    platforms = lib.platforms.unix;
   };
 })

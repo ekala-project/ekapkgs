@@ -31,5 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     inherit (finalAttrs.src.meta) homepage;
     license = lib.licenses.publicDomain;
     mainProgram = "clipnotify";
+    platforms = lib.platforms.unix;
   };
 })

@@ -48,5 +48,6 @@ buildGoModule (finalAttrs: {
     description = "Checks whether Kubernetes is deployed according to security best practices as defined in the CIS Kubernetes Benchmark";
     mainProgram = "kube-bench";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

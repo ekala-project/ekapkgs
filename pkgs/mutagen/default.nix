@@ -64,5 +64,6 @@ buildGoModule rec {
     changelog = "https://github.com/mutagen-io/mutagen/releases/tag/v${version}";
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 }

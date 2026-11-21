@@ -25,5 +25,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     }";
     license = lib.licenses.mit;
     mainProgram = "grass";
+    platforms = lib.platforms.unix;
   };
 })

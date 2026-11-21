@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/mrusme/reader/releases";
     license = lib.licenses.gpl3Plus;
     mainProgram = "reader";
+    platforms = lib.platforms.unix;
   };
 })

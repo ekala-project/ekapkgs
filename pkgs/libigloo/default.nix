@@ -23,5 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Generic C framework used and developed by the Icecast project";
     license = lib.licenses.gpl2Only;
     inherit (icecast.meta) maintainers;
+    platforms = lib.platforms.unix;
   };
 })

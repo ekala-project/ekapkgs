@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/sensepost/gowitness/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
     mainProgram = "gowitness";
+    platforms = lib.platforms.unix;
   };
 })

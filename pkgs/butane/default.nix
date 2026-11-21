@@ -32,5 +32,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "butane";
     license = lib.licenses.asl20;
     homepage = "https://github.com/coreos/butane";
+    platforms = lib.platforms.unix;
   };
 })

@@ -38,5 +38,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://github.com/s0md3v/Photon";
     license = lib.licenses.gpl3;
     mainProgram = "photon";
+    platforms = lib.platforms.unix;
   };
 })

@@ -55,5 +55,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://gitea.com/gitea/tea";
     license = lib.licenses.mit;
     mainProgram = "tea";
+    platforms = lib.platforms.unix;
   };
 })

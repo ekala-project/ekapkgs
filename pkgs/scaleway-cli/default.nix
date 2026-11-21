@@ -67,5 +67,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/scaleway/scaleway-cli";
     license = lib.licenses.mit;
     mainProgram = "scw";
+    platforms = lib.platforms.unix;
   };
 })

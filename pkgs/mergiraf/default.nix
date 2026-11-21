@@ -30,5 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://codeberg.org/mergiraf/mergiraf/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
     mainProgram = "mergiraf";
+    platforms = lib.platforms.unix;
   };
 })

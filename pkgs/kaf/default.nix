@@ -35,5 +35,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "kaf";
     homepage = "https://github.com/birdayz/kaf";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

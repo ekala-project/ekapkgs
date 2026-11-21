@@ -23,5 +23,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://brouits.free.fr/csv2latex/";
     license = lib.licenses.gpl2Only;
     mainProgram = "csv2latex";
+    platforms = lib.platforms.unix;
   };
 })

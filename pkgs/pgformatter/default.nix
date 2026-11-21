@@ -51,5 +51,6 @@ perlPackages.buildPerlPackage rec {
         artistic2
       ];
     mainProgram = "pg_format";
+    platforms = lib.platforms.unix;
   };
 }

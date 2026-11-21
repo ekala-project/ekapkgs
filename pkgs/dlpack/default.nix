@@ -25,5 +25,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Open in-memory tensor structure for sharing tensors among frameworks";
     homepage = "https://github.com/dmlc/dlpack";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

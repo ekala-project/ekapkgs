@@ -43,5 +43,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/CrociDB/bulletty/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "bulletty";
+    platforms = lib.platforms.unix;
   };
 })

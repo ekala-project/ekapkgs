@@ -29,5 +29,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/Chocapikk/wpprobe/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "wpprobe";
+    platforms = lib.platforms.unix;
   };
 })

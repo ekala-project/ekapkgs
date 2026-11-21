@@ -91,5 +91,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "elan";
+    platforms = lib.platforms.unix;
   };
 })

@@ -54,5 +54,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "istioctl";
     homepage = "https://istio.io/latest/docs/reference/commands/istioctl";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

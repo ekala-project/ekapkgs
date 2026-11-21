@@ -78,5 +78,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://pypi.org/project/rss2email/";
     license = lib.licenses.gpl2;
     mainProgram = "r2e";
+    platforms = lib.platforms.unix;
   };
 })

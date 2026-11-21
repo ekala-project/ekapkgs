@@ -45,5 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "rsibreak";
     license = lib.licenses.gpl2;
     homepage = "https://www.kde.org/applications/utilities/rsibreak/";
+    platforms = lib.platforms.unix;
   };
 })

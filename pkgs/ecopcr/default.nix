@@ -50,5 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://git.metabarcoding.org/obitools/ecopcr/wikis/home";
     license = lib.licenses.cecill20;
+    platforms = lib.platforms.unix;
   };
 })

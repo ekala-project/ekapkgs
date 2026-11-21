@@ -55,5 +55,6 @@ buildGoModule (finalAttrs: {
     description = "Bootstrap Kubernetes with k3s over SSH";
     mainProgram = "k3sup";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

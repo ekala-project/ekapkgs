@@ -44,5 +44,6 @@ buildGoModule rec {
     changelog = "https://github.com/tsenart/vegeta/releases/tag/${src.rev}";
     license = lib.licenses.mit;
     mainProgram = "vegeta";
+    platforms = lib.platforms.unix;
   };
 }

@@ -42,5 +42,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://sorairolake.github.io/qrtool/book/index.html";
     changelog = "https://sorairolake.github.io/qrtool/book/changelog.html";
     mainProgram = "qrtool";
+    platforms = lib.platforms.unix;
   };
 })

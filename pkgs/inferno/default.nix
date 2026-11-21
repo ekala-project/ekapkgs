@@ -33,5 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/jonhoo/inferno";
     changelog = "https://github.com/jonhoo/inferno/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.cddl;
+    platforms = lib.platforms.unix;
   };
 })

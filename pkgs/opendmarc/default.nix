@@ -70,5 +70,6 @@ stdenv.mkDerivation (finalAttrs: {
       bsd3
       sendmail
     ];
+    platforms = lib.platforms.unix;
   };
 })

@@ -34,5 +34,6 @@ lua.pkgs.buildLuarocksPackage {
     homepage = "https://lunarmodules.github.io/luaexpat";
     license = lib.licenses.mit;
     description = "XML Expat parsing for Lua";
+    platforms = lib.platforms.unix;
   };
 }

@@ -24,5 +24,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Essential Routines for Fundamental Astronomy";
     homepage = "https://github.com/liberfa/erfa";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 })

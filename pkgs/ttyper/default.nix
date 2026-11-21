@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/max-niederman/ttyper/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
     mainProgram = "ttyper";
+    platforms = lib.platforms.unix;
   };
 })

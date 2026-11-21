@@ -55,5 +55,6 @@ python3Packages.buildPythonApplication rec {
     homepage = "https://www.pixelbeat.org/programs/crudini/";
     license = lib.licenses.gpl2Only;
     mainProgram = "crudini";
+    platforms = lib.platforms.unix;
   };
 }

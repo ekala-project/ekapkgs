@@ -57,5 +57,6 @@ buildGoModule (finalAttrs: {
     downloadPage = "https://github.com/argoproj-labs/argocd-autopilot";
     homepage = "https://argocd-autopilot.readthedocs.io/en/stable/";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

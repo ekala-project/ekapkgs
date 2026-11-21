@@ -47,5 +47,6 @@ buildGoModule (finalAttrs: {
     description = "Network-wide ads & trackers blocking DNS server";
     license = lib.licenses.gpl3Only;
     mainProgram = "AdGuardHome";
+    platforms = lib.platforms.unix;
   };
 })

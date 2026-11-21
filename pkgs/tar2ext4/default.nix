@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/microsoft/hcsshim";
     license = lib.licenses.mit;
     mainProgram = "tar2ext4";
+    platforms = lib.platforms.unix;
   };
 })

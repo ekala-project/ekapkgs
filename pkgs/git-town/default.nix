@@ -53,5 +53,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://www.git-town.com/";
     license = lib.licenses.mit;
     mainProgram = "git-town";
+    platforms = lib.platforms.unix;
   };
 })

@@ -59,5 +59,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     mainProgram = "pyradio";
     changelog = "https://github.com/coderholic/pyradio/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

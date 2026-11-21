@@ -37,5 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "hyperfine";
+    platforms = lib.platforms.unix;
   };
 })

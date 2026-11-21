@@ -38,5 +38,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/pocketbase/pocketbase";
     license = lib.licenses.mit;
     mainProgram = "pocketbase";
+    platforms = lib.platforms.unix;
   };
 })

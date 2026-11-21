@@ -26,5 +26,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "hexyl";
+    platforms = lib.platforms.unix;
   };
 })

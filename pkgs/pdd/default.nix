@@ -43,5 +43,6 @@ python3Packages.buildPythonApplication rec {
     '';
     license = lib.licenses.gpl3Plus;
     mainProgram = "pdd";
+    platforms = lib.platforms.unix;
   };
 }

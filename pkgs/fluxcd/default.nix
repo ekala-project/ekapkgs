@@ -69,5 +69,6 @@ buildGoModule rec {
     homepage = "https://fluxcd.io";
     license = lib.licenses.asl20;
     mainProgram = "flux";
+    platforms = lib.platforms.unix;
   };
 }

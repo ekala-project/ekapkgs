@@ -39,5 +39,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "d2";
     homepage = "https://d2lang.com";
     license = lib.licenses.mpl20;
+    platforms = lib.platforms.unix;
   };
 })

@@ -1,4 +1,5 @@
 {
+  lib,
   stdenv,
   fetchFromGitHub,
   fetchzip,
@@ -43,5 +44,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/opentyrian/opentyrian";
     # This does not account of Tyrian data.
     # license = lib.licenses.gpl2;
+    platforms = lib.platforms.unix;
   };
 })

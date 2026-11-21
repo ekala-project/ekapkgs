@@ -25,5 +25,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/bnjbvr/cargo-machete";
     changelog = "https://github.com/bnjbvr/cargo-machete/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

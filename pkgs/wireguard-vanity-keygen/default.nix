@@ -28,5 +28,6 @@ buildGoModule rec {
     homepage = "https://github.com/axllent/wireguard-vanity-keygen";
     license = lib.licenses.mit;
     mainProgram = "wireguard-vanity-keygen";
+    platforms = lib.platforms.unix;
   };
 }

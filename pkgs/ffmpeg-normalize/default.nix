@@ -50,5 +50,6 @@ python3Packages.buildPythonApplication rec {
     homepage = "https://github.com/slhck/ffmpeg-normalize";
     license = lib.licenses.mit;
     mainProgram = "ffmpeg-normalize";
+    platforms = lib.platforms.unix;
   };
 }

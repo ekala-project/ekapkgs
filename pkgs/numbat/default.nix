@@ -60,5 +60,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "numbat";
+    platforms = lib.platforms.unix;
   };
 })

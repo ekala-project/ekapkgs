@@ -67,5 +67,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "bat";
+    platforms = lib.platforms.unix;
   };
 })

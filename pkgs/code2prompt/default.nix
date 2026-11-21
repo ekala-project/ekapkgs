@@ -34,5 +34,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/mufeedvh/code2prompt";
     license = lib.licenses.mit;
     mainProgram = "code2prompt";
+    platforms = lib.platforms.unix;
   };
 })

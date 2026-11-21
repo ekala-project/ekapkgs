@@ -35,5 +35,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "cbindgen";
     homepage = "https://github.com/mozilla/cbindgen";
     license = lib.licenses.mpl20;
+    platforms = lib.platforms.unix;
   };
 })

@@ -69,5 +69,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "http://offlineimap.org";
     license = lib.licenses.gpl2Plus;
     mainProgram = "offlineimap";
+    platforms = lib.platforms.unix;
   };
 })

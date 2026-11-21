@@ -54,5 +54,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/zizmorcore/zizmor/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "zizmor";
+    platforms = lib.platforms.unix;
   };
 })

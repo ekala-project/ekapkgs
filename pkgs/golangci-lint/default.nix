@@ -53,5 +53,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/golangci/golangci-lint/blob/v${finalAttrs.version}/CHANGELOG.md";
     mainProgram = "golangci-lint";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

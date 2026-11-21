@@ -49,5 +49,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://git.zx2c4.com/wireguard-go/about/";
     license = lib.licenses.mit;
     mainProgram = "wireguard-go";
+    platforms = lib.platforms.unix;
   };
 })

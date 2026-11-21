@@ -48,5 +48,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://taplo.tamasfe.dev";
     license = lib.licenses.mit;
     mainProgram = "taplo";
+    platforms = lib.platforms.unix;
   };
 })

@@ -40,5 +40,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/arl/gitmux";
     license = lib.licenses.mit;
     mainProgram = "gitmux";
+    platforms = lib.platforms.unix;
   };
 })

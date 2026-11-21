@@ -25,5 +25,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "gotty";
     homepage = "https://github.com/sorenisanerd/gotty";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

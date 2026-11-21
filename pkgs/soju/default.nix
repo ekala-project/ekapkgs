@@ -59,5 +59,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://codeberg.org/emersion/soju/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.agpl3Only;
     mainProgram = "sojuctl";
+    platforms = lib.platforms.unix;
   };
 })

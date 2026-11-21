@@ -47,5 +47,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://watchexec.github.io/";
     license = with lib.licenses; [ asl20 ];
     mainProgram = "watchexec";
+    platforms = lib.platforms.unix;
   };
 })

@@ -29,5 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "code-minimap";
+    platforms = lib.platforms.unix;
   };
 })

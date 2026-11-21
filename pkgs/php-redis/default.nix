@@ -50,5 +50,6 @@ stdenv.mkDerivation rec {
     description = "PHP extension for interfacing with Redis";
     homepage = "https://github.com/phpredis/phpredis/";
     license = lib.licenses.php301;
+    platforms = lib.platforms.unix;
   };
 }

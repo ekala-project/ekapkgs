@@ -37,5 +37,6 @@ perlPackages.buildPerlPackage rec {
       artistic2
     ];
     mainProgram = "exiftool";
+    platforms = lib.platforms.unix;
   };
 }

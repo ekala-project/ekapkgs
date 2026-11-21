@@ -40,5 +40,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/jlu5/icoextract/blob/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "icoextract";
+    platforms = lib.platforms.unix;
   };
 })

@@ -33,5 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "gen-ctl-io";
     homepage = "https://github.com/NanoComp/libctl";
     license = lib.licenses.gpl2Only;
+    platforms = lib.platforms.unix;
   };
 })

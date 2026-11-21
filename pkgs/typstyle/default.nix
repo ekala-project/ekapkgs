@@ -28,5 +28,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/typstyle-rs/typstyle";
     license = lib.licenses.asl20;
     mainProgram = "typstyle";
+    platforms = lib.platforms.unix;
   };
 })

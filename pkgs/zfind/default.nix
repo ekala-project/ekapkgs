@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/laktak/zfind/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "zfind";
+    platforms = lib.platforms.unix;
   };
 })

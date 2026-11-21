@@ -50,5 +50,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://developers.yubico.com/yubihsm-connector/";
     license = lib.licenses.asl20;
     mainProgram = "yubihsm-connector";
+    platforms = lib.platforms.unix;
   };
 })

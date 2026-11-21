@@ -66,5 +66,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://www.fail2ban.org/";
     description = "Program that scans log files for repeated failing login attempts and bans IP addresses";
     license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.unix;
   };
 })

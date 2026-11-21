@@ -20,5 +20,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/yannjor/krabby/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl3;
     mainProgram = "krabby";
+    platforms = lib.platforms.unix;
   };
 })

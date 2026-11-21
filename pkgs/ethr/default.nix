@@ -28,5 +28,6 @@ buildGoModule {
     homepage = "https://github.com/microsoft/ethr";
     license = lib.licenses.mit;
     mainProgram = "ethr";
+    platforms = lib.platforms.unix;
   };
 }

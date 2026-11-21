@@ -38,5 +38,6 @@ buildGoModule {
     mainProgram = "devd";
     homepage = "https://github.com/cortesi/devd";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 }

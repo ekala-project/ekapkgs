@@ -35,5 +35,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/projectdiscovery/dnsx/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "dnsx";
+    platforms = lib.platforms.unix;
   };
 })

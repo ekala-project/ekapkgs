@@ -51,5 +51,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/goshs-labs/goshs/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
     mainProgram = "goshs";
+    platforms = lib.platforms.unix;
   };
 })

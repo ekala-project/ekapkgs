@@ -207,5 +207,6 @@ python3Packages.buildPythonApplication {
     changelog = "https://github.com/Aider-AI/aider/blob/v0.86.1/HISTORY.md";
     license = lib.licenses.asl20;
     mainProgram = "aider";
+    platforms = lib.platforms.unix;
   };
 }

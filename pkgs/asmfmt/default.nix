@@ -38,5 +38,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/klauspost/asmfmt";
     changelog = "https://github.com/klauspost/asmfmt/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/nullt3r/udpx";
     changelog = "https://github.com/nullt3r/udpx/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

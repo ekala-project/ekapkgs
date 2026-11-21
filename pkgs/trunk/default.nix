@@ -30,5 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Build, bundle & ship your Rust WASM application to the web";
     mainProgram = "trunk";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

@@ -42,5 +42,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "grcov";
     homepage = "https://github.com/mozilla/grcov";
     license = lib.licenses.mpl20;
+    platforms = lib.platforms.unix;
   };
 })

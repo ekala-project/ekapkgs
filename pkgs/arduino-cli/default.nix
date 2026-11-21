@@ -57,6 +57,7 @@ let
         gpl3Only
         asl20
       ];
+      platforms = lib.platforms.unix;
     };
   });
 in

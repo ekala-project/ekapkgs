@@ -34,5 +34,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/mvdan/gofumpt/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd3;
     mainProgram = "gofumpt";
+    platforms = lib.platforms.unix;
   };
 })

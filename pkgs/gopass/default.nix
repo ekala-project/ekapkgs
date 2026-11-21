@@ -89,5 +89,6 @@ buildGoModule (finalAttrs: {
       well, providing a stellar user experience and a sane, simple interface.
     '';
     mainProgram = "gopass";
+    platforms = lib.platforms.unix;
   };
 })

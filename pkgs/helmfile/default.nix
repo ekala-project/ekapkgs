@@ -50,5 +50,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "helmfile";
     homepage = "https://helmfile.readthedocs.io/";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

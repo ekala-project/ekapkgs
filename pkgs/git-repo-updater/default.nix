@@ -27,5 +27,6 @@ python3Packages.buildPythonApplication rec {
     homepage = "https://github.com/earwig/git-repo-updater";
     license = lib.licenses.mit;
     mainProgram = "gitup";
+    platforms = lib.platforms.unix;
   };
 }

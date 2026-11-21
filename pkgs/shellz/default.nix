@@ -27,5 +27,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/evilsocket/shellz";
     license = lib.licenses.gpl3Only;
     mainProgram = "shellz";
+    platforms = lib.platforms.unix;
   };
 })

@@ -56,5 +56,6 @@ buildGoModule rec {
     homepage = "https://roboticoverlords.org/orbiton/";
     license = lib.licenses.bsd3;
     mainProgram = "o";
+    platforms = lib.platforms.unix;
   };
 }

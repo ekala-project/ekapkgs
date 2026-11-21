@@ -36,5 +36,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     homepage = "https://getmail6.org";
     changelog = "https://github.com/getmail6/getmail6/blob/${finalAttrs.src.tag}/docs/CHANGELOG";
     license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.unix;
   };
 })

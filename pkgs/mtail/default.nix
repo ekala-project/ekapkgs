@@ -48,5 +48,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/jaqx0r/mtail";
     license = lib.licenses.asl20;
     mainProgram = "mtail";
+    platforms = lib.platforms.unix;
   };
 })

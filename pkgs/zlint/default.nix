@@ -46,5 +46,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/zmap/zlint";
     changelog = "https://github.com/zmap/zlint/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

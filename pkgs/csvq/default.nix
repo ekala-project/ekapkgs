@@ -23,5 +23,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://mithrandie.github.io/csvq/";
     changelog = "https://github.com/mithrandie/csvq/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

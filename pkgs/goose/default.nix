@@ -38,5 +38,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://pressly.github.io/goose/";
     license = lib.licenses.bsd3;
     mainProgram = "goose";
+    platforms = lib.platforms.unix;
   };
 })

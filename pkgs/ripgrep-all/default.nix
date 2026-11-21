@@ -59,5 +59,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/phiresky/ripgrep-all";
     license = lib.licenses.agpl3Plus;
     mainProgram = "rga";
+    platforms = lib.platforms.unix;
   };
 })

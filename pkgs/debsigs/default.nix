@@ -29,5 +29,6 @@ perlPackages.buildPerlPackage rec {
     homepage = "https://gitlab.com/debsigs/debsigs";
     changelog = "https://gitlab.com/debsigs/debsigs/-/tags/release/${version}";
     license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.unix;
   };
 }

@@ -43,5 +43,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/gopasspw/git-credential-gopass/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "git-credential-gopass";
+    platforms = lib.platforms.unix;
   };
 })

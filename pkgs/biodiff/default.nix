@@ -30,5 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/8051Enthusiast/biodiff";
     changelog = "https://github.com/8051Enthusiast/biodiff/blob/v${finalAttrs.version}/CHANGELOG";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

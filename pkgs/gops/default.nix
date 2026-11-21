@@ -37,5 +37,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "gops";
     homepage = "https://github.com/google/gops";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 })

@@ -36,5 +36,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     description = "Mopidy extension for playing music from your local music archive";
     license = lib.licenses.asl20;
     maintainers = with lib.maintainers; [ ruuda ];
+    platforms = lib.platforms.unix;
   };
 })

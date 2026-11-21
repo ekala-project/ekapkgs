@@ -51,5 +51,6 @@ lua.pkgs.buildLuarocksPackage rec {
     homepage = "http://25thandclement.com/~william/projects/cqueues.html";
     description = "Continuation Queues: Embeddable asynchronous networking, threading, and notification framework for Lua";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 }

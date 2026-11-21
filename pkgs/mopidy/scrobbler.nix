@@ -35,5 +35,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     description = "Mopidy extension for scrobbling played tracks to Last.fm";
     license = lib.licenses.asl20;
     maintainers = with lib.maintainers; [ jakeisnt ];
+    platforms = lib.platforms.unix;
   };
 })

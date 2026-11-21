@@ -67,5 +67,6 @@ python3Packages.buildPythonApplication rec {
     changelog = "https://github.com/httpie/cli/blob/${version}/CHANGELOG.md";
     license = lib.licenses.bsd3;
     mainProgram = "http";
+    platforms = lib.platforms.unix;
   };
 }

@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/MarcoLucidi01/ytcast";
     license = lib.licenses.mit;
     mainProgram = "ytcast";
+    platforms = lib.platforms.unix;
   };
 })

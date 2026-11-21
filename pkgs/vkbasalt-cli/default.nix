@@ -34,5 +34,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
       gpl3Only
     ];
     mainProgram = "vkbasalt";
+    platforms = lib.platforms.unix;
   };
 })

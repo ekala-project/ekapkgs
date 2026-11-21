@@ -25,5 +25,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/itchyny/bed/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "bed";
+    platforms = lib.platforms.unix;
   };
 })

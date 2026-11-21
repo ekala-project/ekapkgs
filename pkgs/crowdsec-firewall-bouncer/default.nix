@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     '';
     license = lib.licenses.mit;
     mainProgram = "cs-firewall-bouncer";
+    platforms = lib.platforms.unix;
   };
 })

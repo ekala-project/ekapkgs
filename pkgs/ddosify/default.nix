@@ -32,5 +32,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://ddosify.com/";
     license = lib.licenses.agpl3Plus;
     mainProgram = "ddosify";
+    platforms = lib.platforms.unix;
   };
 })

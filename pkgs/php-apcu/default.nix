@@ -52,5 +52,6 @@ stdenv.mkDerivation {
     description = "Userland cache for PHP";
     homepage = "https://pecl.php.net/package/APCu";
     license = lib.licenses.php301;
+    platforms = lib.platforms.unix;
   };
 }

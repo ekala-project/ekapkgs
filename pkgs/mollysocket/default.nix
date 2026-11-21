@@ -48,5 +48,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/mollyim/mollysocket";
     license = lib.licenses.agpl3Plus;
     mainProgram = "mollysocket";
+    platforms = lib.platforms.unix;
   };
 })

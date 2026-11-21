@@ -48,5 +48,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "tokei";
+    platforms = lib.platforms.unix;
   };
 })

@@ -41,5 +41,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/projectdiscovery/nuclei/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
     mainProgram = "nuclei";
+    platforms = lib.platforms.unix;
   };
 })

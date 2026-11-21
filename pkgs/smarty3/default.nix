@@ -30,5 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://www.smarty.net";
     license = lib.licenses.lgpl21Plus;
+    platforms = lib.platforms.unix;
   };
 })

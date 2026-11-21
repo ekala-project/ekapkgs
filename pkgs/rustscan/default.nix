@@ -45,5 +45,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/RustScan/RustScan/releases/tag/${finalAttrs.version}";
     license = lib.licenses.gpl3Only;
     mainProgram = "rustscan";
+    platforms = lib.platforms.unix;
   };
 })

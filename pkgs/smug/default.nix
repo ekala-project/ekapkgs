@@ -38,5 +38,6 @@ buildGoModule (finalAttrs: {
     description = "tmux session manager";
     license = lib.licenses.mit;
     mainProgram = "smug";
+    platforms = lib.platforms.unix;
   };
 })

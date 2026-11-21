@@ -67,5 +67,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "ListenBrainz submission client for MPD";
     license = lib.licenses.agpl3Only;
     mainProgram = "listenbrainz-mpd";
+    platforms = lib.platforms.unix;
   };
 })

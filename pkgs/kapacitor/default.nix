@@ -107,5 +107,6 @@ buildGoModule rec {
     downloadPage = "https://github.com/influxdata/kapacitor/releases";
     license = lib.licenses.mit;
     changelog = "https://github.com/influxdata/kapacitor/blob/master/CHANGELOG.md";
+    platforms = lib.platforms.unix;
   };
 }

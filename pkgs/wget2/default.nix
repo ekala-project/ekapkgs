@@ -108,5 +108,6 @@ stdenv.mkDerivation (finalAttrs: {
       lgpl3Plus
     ];
     mainProgram = "wget2";
+    platforms = lib.platforms.unix;
   };
 })

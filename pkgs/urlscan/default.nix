@@ -33,5 +33,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/firecat53/urlscan/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.gpl2Plus;
     mainProgram = "urlscan";
+    platforms = lib.platforms.unix;
   };
 })

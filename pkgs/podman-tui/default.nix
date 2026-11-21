@@ -53,5 +53,6 @@ buildGoModule (finalAttrs: {
     description = "Podman Terminal UI";
     license = lib.licenses.asl20;
     mainProgram = "podman-tui";
+    platforms = lib.platforms.unix;
   };
 })

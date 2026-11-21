@@ -43,5 +43,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/ImageOptim/gifski/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.agpl3Plus;
     mainProgram = "gifski";
+    platforms = lib.platforms.unix;
   };
 })

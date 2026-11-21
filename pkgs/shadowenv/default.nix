@@ -37,5 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Reversible directory-local environment variable manipulations";
     license = lib.licenses.mit;
     mainProgram = "shadowenv";
+    platforms = lib.platforms.unix;
   };
 })

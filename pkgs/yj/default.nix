@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     license = lib.licenses.asl20;
     mainProgram = "yj";
     homepage = "https://github.com/sclevine/yj";
+    platforms = lib.platforms.unix;
   };
 })

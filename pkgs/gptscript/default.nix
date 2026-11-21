@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     description = "Build AI assistants that interact with your systems";
     license = lib.licenses.asl20;
     mainProgram = "gptscript";
+    platforms = lib.platforms.unix;
   };
 })

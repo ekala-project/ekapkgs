@@ -77,5 +77,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/printfn/fend/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
     mainProgram = "fend";
+    platforms = lib.platforms.unix;
   };
 })

@@ -27,5 +27,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/mfontanini/presenterm";
     license = lib.licenses.bsd2;
     mainProgram = "presenterm";
+    platforms = lib.platforms.unix;
   };
 })

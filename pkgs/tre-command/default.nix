@@ -37,5 +37,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/dduan/tre";
     license = lib.licenses.mit;
     mainProgram = "tre";
+    platforms = lib.platforms.unix;
   };
 })

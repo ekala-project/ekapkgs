@@ -31,5 +31,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "rke";
     changelog = "https://github.com/rancher/rke/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

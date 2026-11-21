@@ -62,6 +62,7 @@ let
 
       meta = {
         inherit description license maintainers;
+        platforms = lib.platforms.unix;
       };
     });
   inherit (lib)

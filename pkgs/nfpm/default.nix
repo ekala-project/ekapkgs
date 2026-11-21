@@ -47,5 +47,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/goreleaser/nfpm/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "nfpm";
+    platforms = lib.platforms.unix;
   };
 })

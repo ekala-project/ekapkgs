@@ -43,5 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "garden";
     homepage = "https://sourceforge.net/projects/garden/";
     license = lib.licenses.gpl3;
+    platforms = lib.platforms.unix;
   };
 })

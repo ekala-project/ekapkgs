@@ -36,5 +36,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/mvdan/xurls";
     mainProgram = "xurls";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 })

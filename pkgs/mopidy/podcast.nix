@@ -39,5 +39,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     maintainers = [
       lib.maintainers.daneads
     ];
+    platforms = lib.platforms.unix;
   };
 })

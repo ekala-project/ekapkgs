@@ -76,5 +76,6 @@ stdenv.mkDerivation (finalAttrs: {
       wtfpl
     ];
     mainProgram = "haruna";
+    platforms = lib.platforms.unix;
   };
 })

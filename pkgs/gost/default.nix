@@ -37,5 +37,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/go-gost/gost";
     license = lib.licenses.mit;
     mainProgram = "gost";
+    platforms = lib.platforms.unix;
   };
 })

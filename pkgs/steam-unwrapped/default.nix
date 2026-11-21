@@ -54,5 +54,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://store.steampowered.com/";
     license = lib.licenses.unfreeRedistributable;
     mainProgram = "steam";
+    platforms = lib.platforms.linux;
   };
 })

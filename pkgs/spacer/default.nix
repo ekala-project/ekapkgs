@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/samwho/spacer/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
     mainProgram = "spacer";
+    platforms = lib.platforms.unix;
   };
 })

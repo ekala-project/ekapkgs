@@ -70,5 +70,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/google/go-containerregistry";
     license = lib.licenses.asl20;
     mainProgram = "crane";
+    platforms = lib.platforms.unix;
   };
 })

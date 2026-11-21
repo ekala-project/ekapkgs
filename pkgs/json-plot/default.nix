@@ -35,5 +35,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/sgreben/jp";
     license = lib.licenses.mit;
     mainProgram = "jp";
+    platforms = lib.platforms.unix;
   };
 })

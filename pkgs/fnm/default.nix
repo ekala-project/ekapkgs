@@ -33,5 +33,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     mainProgram = "fnm";
     homepage = "https://github.com/Schniz/fnm";
     license = lib.licenses.gpl3Only;
+    platforms = lib.platforms.unix;
   };
 })

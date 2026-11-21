@@ -44,5 +44,6 @@ perlPackages.buildPerlPackage rec {
     homepage = "https://github.com/jpoliv/wakeonlan";
     license = lib.licenses.artistic1;
     mainProgram = "wakeonlan";
+    platforms = lib.platforms.unix;
   };
 }

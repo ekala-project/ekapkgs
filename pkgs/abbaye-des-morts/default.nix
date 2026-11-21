@@ -43,5 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Retro arcade video game";
     mainProgram = "abbayev2";
     license = lib.licenses.gpl3;
+    platforms = lib.platforms.unix;
   };
 })

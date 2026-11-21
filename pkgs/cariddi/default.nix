@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/edoardottt/cariddi/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.gpl3Plus;
     mainProgram = "cariddi";
+    platforms = lib.platforms.unix;
   };
 })

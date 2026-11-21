@@ -69,5 +69,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     mainProgram = "mopidy";
     license = lib.licenses.asl20;
     hydraPlatforms = [ ];
+    platforms = lib.platforms.unix;
   };
 })

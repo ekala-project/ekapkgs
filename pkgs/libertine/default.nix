@@ -54,5 +54,6 @@ stdenv.mkDerivation {
     description = "Linux Libertine Fonts";
     homepage = "http://linuxlibertine.sf.net";
     license = lib.licenses.ofl;
+    platforms = lib.platforms.unix;
   };
 }

@@ -30,5 +30,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Command-line tool to delete merged Git branches";
     homepage = "https://github.com/hartwork/git-delete-merged-branches/";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

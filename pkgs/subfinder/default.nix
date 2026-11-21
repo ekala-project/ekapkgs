@@ -42,5 +42,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/projectdiscovery/subfinder/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
     mainProgram = "subfinder";
+    platforms = lib.platforms.unix;
   };
 })

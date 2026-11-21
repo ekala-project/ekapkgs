@@ -28,5 +28,6 @@ stdenv.mkDerivation rec {
     description = "Lowlevel tools to tweak register and dump state on radeon GPUs";
     homepage = "https://airlied.livejournal.com/";
     license = lib.licenses.zlib;
+    platforms = lib.platforms.linux;
   };
 }

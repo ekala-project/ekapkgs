@@ -71,5 +71,6 @@ stdenv.mkDerivation (finalAttrs: {
       ];
     pkgConfigModules = [ "pocketsphinx" ];
     mainProgram = "pocketsphinx";
+    platforms = lib.platforms.unix;
   };
 })

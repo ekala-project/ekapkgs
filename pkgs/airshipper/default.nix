@@ -136,5 +136,6 @@ rustPlatform.buildRustPackage {
     mainProgram = "airshipper";
     homepage = "https://www.veloren.net";
     license = lib.licenses.gpl3;
+    platforms = lib.platforms.linux;
   };
 }

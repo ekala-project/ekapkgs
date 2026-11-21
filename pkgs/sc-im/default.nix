@@ -56,5 +56,6 @@ stdenv.mkDerivation rec {
     description = "Ncurses spreadsheet program for terminal";
     license = lib.licenses.bsdOriginal;
     mainProgram = "sc-im";
+    platforms = lib.platforms.unix;
   };
 }

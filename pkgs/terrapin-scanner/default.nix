@@ -27,5 +27,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/RUB-NDS/Terrapin-Scanner";
     license = lib.licenses.asl20;
     mainProgram = "Terrapin-Scanner";
+    platforms = lib.platforms.unix;
   };
 })

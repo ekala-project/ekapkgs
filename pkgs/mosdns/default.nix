@@ -39,5 +39,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/IrineSistiana/mosdns";
     license = lib.licenses.gpl3Only;
     mainProgram = "mosdns";
+    platforms = lib.platforms.unix;
   };
 })

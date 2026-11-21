@@ -38,5 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/krrishnarraj/clpeak/";
     license = lib.licenses.asl20;
     mainProgram = "clpeak";
+    platforms = lib.platforms.unix;
   };
 })

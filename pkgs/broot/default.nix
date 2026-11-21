@@ -58,5 +58,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/Canop/broot/releases/tag/v${finalAttrs.version}";
     license = with lib.licenses; [ mit ];
     mainProgram = "broot";
+    platforms = lib.platforms.unix;
   };
 })

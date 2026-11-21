@@ -44,5 +44,6 @@ buildGoModule (finalAttrs: {
     description = "Makefile replacement that sucks less";
     homepage = "https://www.goredo.cypherpunks.ru";
     license = lib.licenses.gpl3;
+    platforms = lib.platforms.unix;
   };
 })

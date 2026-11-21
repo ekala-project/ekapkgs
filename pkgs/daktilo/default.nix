@@ -63,5 +63,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "daktilo";
+    platforms = lib.platforms.linux;
   };
 })

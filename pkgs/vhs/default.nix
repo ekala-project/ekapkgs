@@ -56,5 +56,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/charmbracelet/vhs";
     changelog = "https://github.com/charmbracelet/vhs/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

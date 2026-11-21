@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/kivikakk/comrak";
     changelog = "https://github.com/kivikakk/comrak/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.bsd2;
+    platforms = lib.platforms.unix;
   };
 })

@@ -43,5 +43,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       asl20
       mit
     ];
+    platforms = lib.platforms.unix;
   };
 })

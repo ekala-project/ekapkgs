@@ -79,5 +79,6 @@ buildGoModule (finalAttrs: {
     description = "Command-line wrapper for git that makes you better at GitHub";
     homepage = "https://hub.github.com/";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

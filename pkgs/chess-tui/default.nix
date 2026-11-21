@@ -43,5 +43,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/thomas-mauran/chess-tui";
     license = lib.licenses.mit;
     mainProgram = "chess-tui";
+    platforms = lib.platforms.unix;
   };
 })

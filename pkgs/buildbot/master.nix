@@ -169,5 +169,6 @@ buildPythonApplication rec {
     changelog = "https://github.com/buildbot/buildbot/releases/tag/v${version}";
     teams = [ lib.teams.buildbot ];
     license = lib.licenses.gpl2Only;
+    platforms = lib.platforms.unix;
   };
 }

@@ -47,5 +47,6 @@ buildGoModule (finalAttrs: {
     ];
     homepage = "https://grafana.com/oss/loki/";
     changelog = "https://github.com/grafana/loki/releases/tag/v${finalAttrs.version}";
+    platforms = lib.platforms.unix;
   };
 })

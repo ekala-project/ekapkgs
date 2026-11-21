@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/nametake/golangci-lint-langserver";
     license = lib.licenses.mit;
     mainProgram = "golangci-lint-langserver";
+    platforms = lib.platforms.unix;
   };
 })

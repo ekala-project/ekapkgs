@@ -36,5 +36,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "cargo-edit";
+    platforms = lib.platforms.unix;
   };
 })

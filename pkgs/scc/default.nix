@@ -36,5 +36,6 @@ buildGoModule (finalAttrs: {
     license = with lib.licenses; [
       mit
     ];
+    platforms = lib.platforms.unix;
   };
 })

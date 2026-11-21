@@ -23,5 +23,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/rverton/webanalyze/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "webanalyze";
+    platforms = lib.platforms.unix;
   };
 })

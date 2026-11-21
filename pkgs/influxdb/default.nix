@@ -89,5 +89,6 @@ buildGoModule (finalAttrs: {
     description = "Open-source distributed time series database";
     license = lib.licenses.mit;
     homepage = "https://influxdata.com/";
+    platforms = lib.platforms.unix;
   };
 })

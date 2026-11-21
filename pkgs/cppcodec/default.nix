@@ -42,5 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://github.com/tplgy/cppcodec";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

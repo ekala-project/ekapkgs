@@ -76,5 +76,6 @@ buildGoModule (finalAttrs: {
       ko makes multi-platform builds easy, produces SBOMs by default, and includes support for simple YAML templating which makes it a powerful tool for Kubernetes applications.
     '';
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

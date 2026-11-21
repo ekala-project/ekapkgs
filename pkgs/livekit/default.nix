@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://livekit.io/";
     license = lib.licenses.asl20;
     mainProgram = "livekit-server";
+    platforms = lib.platforms.unix;
   };
 })

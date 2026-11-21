@@ -34,5 +34,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/projectdiscovery/notify";
     license = lib.licenses.mit;
     mainProgram = "notify";
+    platforms = lib.platforms.unix;
   };
 })

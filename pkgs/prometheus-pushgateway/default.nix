@@ -41,5 +41,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/prometheus/pushgateway";
     changelog = "https://github.com/prometheus/pushgateway/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

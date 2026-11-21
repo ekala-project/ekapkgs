@@ -22,5 +22,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/antonmedv/walk";
     license = lib.licenses.mit;
     mainProgram = "walk";
+    platforms = lib.platforms.unix;
   };
 })

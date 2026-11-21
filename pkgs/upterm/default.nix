@@ -56,5 +56,6 @@ buildGoModule (finalAttrs: {
     description = "Secure terminal-session sharing";
     homepage = "https://upterm.dev";
     license = lib.licenses.asl20;
+    platforms = lib.platforms.unix;
   };
 })

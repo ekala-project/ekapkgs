@@ -30,5 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/samhocevar/rinetd/blob/${finalAttrs.src.rev}/CHANGES.md";
     license = lib.licenses.gpl2Plus;
     mainProgram = "rinetd";
+    platforms = lib.platforms.unix;
   };
 })

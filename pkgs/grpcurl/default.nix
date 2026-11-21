@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/fullstorydev/grpcurl";
     license = lib.licenses.mit;
     mainProgram = "grpcurl";
+    platforms = lib.platforms.unix;
   };
 })

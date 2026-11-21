@@ -29,5 +29,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/charmbracelet/wishlist/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "wishlist";
+    platforms = lib.platforms.unix;
   };
 })

@@ -32,5 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3;
     description = "Simple named pipe management utility";
     mainProgram = "pipectl";
+    platforms = lib.platforms.unix;
   };
 })

@@ -31,5 +31,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://yitsushi.github.io/totp-cli/";
     license = lib.licenses.mit;
     mainProgram = "totp-cli";
+    platforms = lib.platforms.unix;
   };
 })

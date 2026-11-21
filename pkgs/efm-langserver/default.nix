@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "efm-langserver";
     homepage = "https://github.com/mattn/efm-langserver";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

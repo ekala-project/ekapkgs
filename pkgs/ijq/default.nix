@@ -48,5 +48,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "ijq";
     homepage = "https://codeberg.org/gpanders/ijq";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

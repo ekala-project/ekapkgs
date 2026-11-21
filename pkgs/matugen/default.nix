@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/InioX/matugen/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.gpl2Plus;
     mainProgram = "matugen";
+    platforms = lib.platforms.unix;
   };
 })

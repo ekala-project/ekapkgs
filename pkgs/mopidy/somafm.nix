@@ -33,5 +33,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     description = "Mopidy extension for playing music from SomaFM";
     license = lib.licenses.mit;
     maintainers = [ lib.maintainers.nickhu ];
+    platforms = lib.platforms.unix;
   };
 })

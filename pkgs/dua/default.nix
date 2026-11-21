@@ -53,5 +53,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/Byron/dua-cli/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "dua";
+    platforms = lib.platforms.unix;
   };
 })

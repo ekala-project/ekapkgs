@@ -45,5 +45,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://docs.sequoia-pgp.org/sqv/";
     license = lib.licenses.gpl2Plus;
     mainProgram = "sqv";
+    platforms = lib.platforms.unix;
   };
 })

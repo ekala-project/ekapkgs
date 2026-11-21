@@ -30,5 +30,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Neargye/magic_enum";
     changelog = "https://github.com/Neargye/magic_enum/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

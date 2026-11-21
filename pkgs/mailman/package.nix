@@ -92,5 +92,6 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://www.gnu.org/software/mailman/";
     description = "Free software for managing electronic mail discussion and newsletter lists";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

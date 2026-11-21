@@ -60,5 +60,6 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://docs.mailman3.org/projects/postorius";
     description = "Web-based user interface for managing GNU Mailman";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Command-line OTP authenticator application";
     license = lib.licenses.mit;
     mainProgram = "cloak";
+    platforms = lib.platforms.unix;
   };
 })

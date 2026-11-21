@@ -27,5 +27,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://gatus.io";
     license = lib.licenses.asl20;
     mainProgram = "gatus";
+    platforms = lib.platforms.unix;
   };
 })

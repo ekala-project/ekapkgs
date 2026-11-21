@@ -35,5 +35,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://www.nxtrace.org/";
     license = lib.licenses.gpl3Only;
     mainProgram = "nexttrace";
+    platforms = lib.platforms.unix;
   };
 })

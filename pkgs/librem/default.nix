@@ -46,5 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Library for real-time audio and video processing";
     homepage = "https://github.com/baresip/rem";
     license = lib.licenses.bsd3;
+    platforms = lib.platforms.unix;
   };
 })

@@ -59,5 +59,6 @@ buildGoModule (finalAttrs: {
     '';
     homepage = "https://github.com/homeport/dyff";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

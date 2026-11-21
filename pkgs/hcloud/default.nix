@@ -41,5 +41,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "hcloud";
     homepage = "https://github.com/hetznercloud/cli";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

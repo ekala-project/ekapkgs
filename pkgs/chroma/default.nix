@@ -31,5 +31,6 @@ buildGoModule (finalAttrs: {
     description = "General purpose syntax highlighter in pure Go";
     license = lib.licenses.mit;
     mainProgram = "chroma";
+    platforms = lib.platforms.unix;
   };
 })

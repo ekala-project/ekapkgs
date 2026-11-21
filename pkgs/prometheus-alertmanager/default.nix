@@ -58,5 +58,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/prometheus/alertmanager/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.asl20;
     mainProgram = "alertmanager";
+    platforms = lib.platforms.unix;
   };
 })

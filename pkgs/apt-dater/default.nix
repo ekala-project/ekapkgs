@@ -76,5 +76,6 @@ stdenv.mkDerivation {
     '';
     license = lib.licenses.gpl2Plus;
     mainProgram = "apt-dater";
+    platforms = lib.platforms.unix;
   };
 }

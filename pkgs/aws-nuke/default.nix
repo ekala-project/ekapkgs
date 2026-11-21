@@ -54,5 +54,6 @@ buildGoModule (finalAttrs: {
     # fork/exec exe/mockgen: exec format error
     # resources/autoscaling_mock_test.go:1: running "../mocks/generate_mocks.sh": exit status 1
     broken = !stdenv.buildPlatform.canExecute stdenv.hostPlatform;
+    platforms = lib.platforms.unix;
   };
 })

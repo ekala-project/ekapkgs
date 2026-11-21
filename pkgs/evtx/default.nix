@@ -38,5 +38,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       mit
     ];
     mainProgram = "evtx_dump";
+    platforms = lib.platforms.unix;
   };
 })

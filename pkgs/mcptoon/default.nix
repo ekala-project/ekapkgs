@@ -43,5 +43,6 @@ python3.pkgs.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/activeing123/mcptoon/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "mcptoon";
+    platforms = lib.platforms.unix;
   };
 })

@@ -33,5 +33,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/jstkdng/fbv";
     license = lib.licenses.gpl2Only;
     mainProgram = "fbv";
+    platforms = lib.platforms.unix;
   };
 })

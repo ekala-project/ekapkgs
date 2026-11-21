@@ -44,5 +44,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://benhoyt.com/writings/goawk/";
     license = lib.licenses.mit;
     mainProgram = "goawk";
+    platforms = lib.platforms.unix;
   };
 })

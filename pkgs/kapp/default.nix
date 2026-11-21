@@ -40,5 +40,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://carvel.dev/kapp/";
     license = lib.licenses.asl20;
     mainProgram = "kapp";
+    platforms = lib.platforms.unix;
   };
 })

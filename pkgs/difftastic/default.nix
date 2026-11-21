@@ -29,5 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/Wilfred/difftastic/blob/${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "difft";
+    platforms = lib.platforms.unix;
   };
 })

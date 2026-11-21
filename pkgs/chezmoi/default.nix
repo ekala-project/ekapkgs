@@ -43,5 +43,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/twpayne/chezmoi/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "chezmoi";
+    platforms = lib.platforms.unix;
   };
 })

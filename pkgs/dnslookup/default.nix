@@ -23,5 +23,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/ameshkov/dnslookup";
     license = lib.licenses.mit;
     mainProgram = "dnslookup";
+    platforms = lib.platforms.unix;
   };
 })

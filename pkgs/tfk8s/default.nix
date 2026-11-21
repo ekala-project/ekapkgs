@@ -49,5 +49,6 @@ buildGoModule rec {
     '';
     homepage = "https://github.com/jrhouston/tfk8s/";
     mainProgram = "tfk8s";
+    platforms = lib.platforms.unix;
   };
 }

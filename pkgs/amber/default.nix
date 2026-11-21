@@ -21,5 +21,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     description = "Code search-and-replace tool";
     homepage = "https://github.com/dalance/amber";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

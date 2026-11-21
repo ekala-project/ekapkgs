@@ -31,5 +31,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/ayoisaiah/f2";
     license = lib.licenses.mit;
     mainProgram = "f2";
+    platforms = lib.platforms.unix;
   };
 })

@@ -49,5 +49,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/dlvhdr/diffnav";
     license = lib.licenses.mit;
     mainProgram = "diffnav";
+    platforms = lib.platforms.unix;
   };
 })

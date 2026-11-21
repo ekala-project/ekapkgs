@@ -47,5 +47,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     '';
     license = lib.licenses.mit;
     mainProgram = "kalker";
+    platforms = lib.platforms.unix;
   };
 })

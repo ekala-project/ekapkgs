@@ -29,5 +29,6 @@ buildGoModule rec {
     homepage = "https://github.com/jorgerojas26/lazysql";
     license = lib.licenses.mit;
     mainProgram = "lazysql";
+    platforms = lib.platforms.unix;
   };
 }

@@ -60,5 +60,6 @@ buildPythonPackage (finalAttrs: {
     description = "Django project for Mailman 3 web interface";
     mainProgram = "mailman-web";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 })

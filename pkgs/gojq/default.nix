@@ -35,5 +35,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/itchyny/gojq/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "gojq";
+    platforms = lib.platforms.unix;
   };
 })

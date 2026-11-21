@@ -42,5 +42,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/rhysd/actionlint/raw/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.mit;
     mainProgram = "actionlint";
+    platforms = lib.platforms.unix;
   };
 })

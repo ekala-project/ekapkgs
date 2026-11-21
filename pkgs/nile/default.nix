@@ -45,5 +45,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     changelog = "https://github.com/imLinguin/nile/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.gpl3Only;
     mainProgram = "nile";
+    platforms = lib.platforms.unix;
   };
 })

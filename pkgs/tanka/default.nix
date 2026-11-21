@@ -65,5 +65,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://tanka.dev";
     license = lib.licenses.asl20;
     mainProgram = "tk";
+    platforms = lib.platforms.unix;
   };
 })

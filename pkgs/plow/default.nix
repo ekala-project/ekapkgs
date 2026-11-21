@@ -29,5 +29,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/six-ddc/plow/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.asl20;
     mainProgram = "plow";
+    platforms = lib.platforms.unix;
   };
 })

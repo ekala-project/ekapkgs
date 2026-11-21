@@ -22,5 +22,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://codeberg.org/swsnr/git-gone";
     license = lib.licenses.asl20;
     mainProgram = "git-gone";
+    platforms = lib.platforms.unix;
   };
 })

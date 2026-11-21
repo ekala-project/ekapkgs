@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://gitlab.com/shackra/goimapnotify/-/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.gpl3Plus;
     mainProgram = "goimapnotify";
+    platforms = lib.platforms.unix;
   };
 })

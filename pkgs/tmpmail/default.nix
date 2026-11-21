@@ -49,5 +49,6 @@ stdenvNoCC.mkDerivation rec {
     description = "Temporary email right from your terminal written in POSIX sh";
     license = lib.licenses.mit;
     mainProgram = "tmpmail";
+    platforms = lib.platforms.unix;
   };
 }

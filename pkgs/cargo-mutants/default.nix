@@ -25,5 +25,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/sourcefrog/cargo-mutants";
     changelog = "https://github.com/sourcefrog/cargo-mutants/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

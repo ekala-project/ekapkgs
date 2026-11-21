@@ -49,5 +49,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/ayn2op/discordo";
     license = lib.licenses.gpl3Plus;
     mainProgram = "discordo";
+    platforms = lib.platforms.unix;
   };
 })

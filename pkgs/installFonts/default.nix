@@ -8,5 +8,6 @@ makeSetupHook {
   meta = {
     description = "Copies standard font extension into their respective installation path";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 } ./install-fonts.sh

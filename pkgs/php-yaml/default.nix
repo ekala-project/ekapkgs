@@ -43,5 +43,6 @@ stdenv.mkDerivation rec {
     description = "YAML-1.1 parser and emitter";
     homepage = "https://github.com/php/pecl-file_formats-yaml";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 }

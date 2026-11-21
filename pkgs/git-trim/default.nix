@@ -48,5 +48,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/foriequal0/git-trim";
     license = lib.licenses.mit;
     mainProgram = "git-trim";
+    platforms = lib.platforms.unix;
   };
 })

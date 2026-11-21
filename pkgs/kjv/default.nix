@@ -45,5 +45,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/layeh/kjv";
     license = lib.licenses.unlicense;
     mainProgram = "kjv";
+    platforms = lib.platforms.unix;
   };
 }

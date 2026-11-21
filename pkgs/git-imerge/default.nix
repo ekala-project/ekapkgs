@@ -30,5 +30,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     description = "Perform a merge between two branches incrementally";
     license = lib.licenses.gpl2Plus;
     mainProgram = "git-imerge";
+    platforms = lib.platforms.unix;
   };
 })

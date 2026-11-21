@@ -63,5 +63,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Kaitai Struct C++ STL Runtime Library";
     homepage = "https://github.com/kaitai-io/kaitai_struct_cpp_stl_runtime";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

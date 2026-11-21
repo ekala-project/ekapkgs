@@ -23,5 +23,6 @@ buildGoModule (finalAttrs: {
     mainProgram = "rest-server";
     homepage = "https://github.com/restic/rest-server";
     license = lib.licenses.bsd2;
+    platforms = lib.platforms.unix;
   };
 })

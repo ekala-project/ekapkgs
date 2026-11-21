@@ -29,5 +29,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/Exzap/ZArchive";
     license = lib.licenses.mit0;
     mainProgram = "zarchive";
+    platforms = lib.platforms.unix;
   };
 })

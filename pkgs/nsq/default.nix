@@ -29,5 +29,6 @@ buildGoModule (finalAttrs: {
     description = "Realtime distributed messaging platform";
     changelog = "https://github.com/nsqio/nsq/raw/v${finalAttrs.version}/ChangeLog.md";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

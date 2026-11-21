@@ -28,5 +28,6 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "bdfresize";
     # openlab.ring.gr.jp is dead
     broken = true;
+    platforms = lib.platforms.unix;
   };
 })

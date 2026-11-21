@@ -30,5 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/JRMurr/tix";
     license = lib.licenses.mit;
     mainProgram = "tix";
+    platforms = lib.platforms.unix;
   };
 })

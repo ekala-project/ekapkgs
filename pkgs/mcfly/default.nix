@@ -29,5 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/cantino/mcfly/raw/v${finalAttrs.version}/CHANGELOG.txt";
     license = lib.licenses.mit;
     mainProgram = "mcfly";
+    platforms = lib.platforms.unix;
   };
 })

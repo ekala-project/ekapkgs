@@ -33,5 +33,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/uber-go/mock/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = lib.licenses.asl20;
     mainProgram = "mockgen";
+    platforms = lib.platforms.unix;
   };
 })

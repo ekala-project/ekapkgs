@@ -67,5 +67,6 @@ stdenv.mkDerivation {
       # rime-cantonese
       cc-by-40
     ];
+    platforms = lib.platforms.unix;
   };
 }

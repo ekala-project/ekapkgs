@@ -45,5 +45,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/xiph/rav1e/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.bsd2;
     mainProgram = "rav1e";
+    platforms = lib.platforms.unix;
   };
 })

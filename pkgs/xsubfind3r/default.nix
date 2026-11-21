@@ -28,5 +28,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/hueristiq/xsubfind3r/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "xsubfind3r";
+    platforms = lib.platforms.unix;
   };
 })

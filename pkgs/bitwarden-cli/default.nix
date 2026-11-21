@@ -142,5 +142,6 @@ buildNpmPackage' {
     homepage = "https://bitwarden.com";
     license = lib.licenses.gpl3Only;
     mainProgram = "bw";
+    platforms = lib.platforms.unix;
   };
 }

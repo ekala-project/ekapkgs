@@ -29,5 +29,6 @@ buildGoModule rec {
     description = "Routes network traffic from any application through a proxy";
     license = lib.licenses.gpl3Plus;
     mainProgram = "tun2socks";
+    platforms = lib.platforms.unix;
   };
 }

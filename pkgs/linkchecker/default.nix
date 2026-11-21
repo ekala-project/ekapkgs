@@ -60,5 +60,6 @@ python3Packages.buildPythonApplication (finalAttrs: {
     homepage = "https://linkcheck.github.io/linkchecker/";
     changelog = "https://github.com/linkchecker/linkchecker/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl2Plus;
+    platforms = lib.platforms.unix;
   };
 })

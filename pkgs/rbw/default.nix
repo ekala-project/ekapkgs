@@ -76,5 +76,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://git.tozt.net/rbw/plain/CHANGELOG.md?id=${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "rbw";
+    platforms = lib.platforms.unix;
   };
 })

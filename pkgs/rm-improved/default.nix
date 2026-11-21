@@ -27,5 +27,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/nivekuil/rip";
     license = lib.licenses.gpl3Plus;
     mainProgram = "rip";
+    platforms = lib.platforms.unix;
   };
 })

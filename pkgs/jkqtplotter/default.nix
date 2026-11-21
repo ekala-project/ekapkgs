@@ -31,5 +31,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Qt plotting framework";
     homepage = "https://github.com/jkriege2/JKQtPlotter";
     license = lib.licenses.lgpl21Plus;
+    platforms = lib.platforms.unix;
   };
 })

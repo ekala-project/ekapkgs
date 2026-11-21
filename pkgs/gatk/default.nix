@@ -52,5 +52,6 @@ stdenv.mkDerivation (finalAttrs: {
       originally developed for human genetics, the GATK has since evolved to handle
       genome data from any organism, with any level of ploidy.
     '';
+    platforms = lib.platforms.unix;
   };
 })

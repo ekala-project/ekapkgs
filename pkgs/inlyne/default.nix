@@ -89,5 +89,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/Inlyne-Project/inlyne/releases/tag/${finalAttrs.src.rev}";
     license = lib.licenses.mit;
     mainProgram = "inlyne";
+    platforms = lib.platforms.unix;
   };
 })

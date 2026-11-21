@@ -38,5 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
       * Linear algebra (direct algorithms, EVD/SVD), direct and iterative linear solvers
       * Fast Fourier Transform and many other algorithms
     '';
+    platforms = lib.platforms.unix;
   };
 })

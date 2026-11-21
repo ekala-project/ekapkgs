@@ -25,5 +25,6 @@ rustPlatform.buildRustPackage {
     homepage = "https://github.com/rhysd/hgrep";
     license = lib.licenses.mit;
     mainProgram = "hgrep";
+    platforms = lib.platforms.unix;
   };
 }

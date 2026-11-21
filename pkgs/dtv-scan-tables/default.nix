@@ -47,5 +47,6 @@ stdenv.mkDerivation (finalAttrs: {
       The package delivers a collection of transponder
       tables ready to be used by software like "dvbv5-scan".
     '';
+    platforms = lib.platforms.unix;
   };
 })

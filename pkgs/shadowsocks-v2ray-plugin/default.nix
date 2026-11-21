@@ -22,5 +22,6 @@ buildGoModule {
     homepage = "https://github.com/shadowsocks/v2ray-plugin/";
     license = lib.licenses.mit;
     mainProgram = "v2ray-plugin";
+    platforms = lib.platforms.unix;
   };
 }

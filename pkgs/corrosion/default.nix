@@ -75,5 +75,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/corrosion-rs/corrosion";
     changelog = "https://github.com/corrosion-rs/corrosion/blob/${finalAttrs.src.rev}/RELEASES.md";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

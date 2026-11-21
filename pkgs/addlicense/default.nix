@@ -24,5 +24,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/google/addlicense";
     license = lib.licenses.asl20;
     mainProgram = "addlicense";
+    platforms = lib.platforms.unix;
   };
 })

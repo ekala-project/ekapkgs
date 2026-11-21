@@ -41,5 +41,6 @@ buildGoModule (finalAttrs: {
     license = lib.licenses.bsd3;
     broken = stdenv.hostPlatform.isDarwin;
     mainProgram = "go-mtpfs";
+    platforms = lib.platforms.unix;
   };
 })

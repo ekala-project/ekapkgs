@@ -39,5 +39,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://codeberg.org/nat-418/knock";
     license = lib.licenses.bsd0;
     changelog = "https://codeberg.org/nat-418/knock/raw/branch/trunk/CHANGELOG.md";
+    platforms = lib.platforms.unix;
   };
 })

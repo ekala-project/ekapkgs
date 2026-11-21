@@ -29,5 +29,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/pabluk/libgravatar";
     changelog = "https://github.com/pabluk/libgravatar/releases/tag/${version}";
     license = lib.licenses.gpl3Plus;
+    platforms = lib.platforms.unix;
   };
 }

@@ -43,5 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fork of libsignal-protocol-c adding support for OMEMO XEP-0384 0.5.0+";
     homepage = "https://github.com/dino/libomemo-c";
     license = lib.licenses.gpl3Only;
+    platforms = lib.platforms.unix;
   };
 })

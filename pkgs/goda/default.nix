@@ -25,5 +25,6 @@ buildGoModule rec {
     description = "Go Dependency Analysis toolkit";
     license = lib.licenses.mit;
     mainProgram = "goda";
+    platforms = lib.platforms.unix;
   };
 }

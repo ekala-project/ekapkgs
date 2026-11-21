@@ -34,5 +34,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     description = "Mopidy extension for playing audio files from Jellyfin";
     license = lib.licenses.asl20;
     maintainers = [ lib.maintainers.pstn ];
+    platforms = lib.platforms.unix;
   };
 })

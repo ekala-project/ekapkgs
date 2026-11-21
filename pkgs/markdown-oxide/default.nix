@@ -21,5 +21,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/Feel-ix-343/markdown-oxide";
     license = lib.licenses.asl20;
     mainProgram = "markdown-oxide";
+    platforms = lib.platforms.unix;
   };
 })

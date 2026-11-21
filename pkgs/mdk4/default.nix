@@ -42,5 +42,6 @@ stdenv.mkDerivation {
     homepage = "https://github.com/aircrack-ng/mdk4";
     license = lib.licenses.gpl3Plus;
     mainProgram = "mdk4";
+    platforms = lib.platforms.linux;
   };
 }

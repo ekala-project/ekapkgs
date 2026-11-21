@@ -31,5 +31,6 @@ lua.pkgs.buildLuarocksPackage {
     homepage = "https://github.com/libmpack/libmpack-lua";
     license = lib.licenses.mit;
     description = "Lua binding to libmpack";
+    platforms = lib.platforms.unix;
   };
 }

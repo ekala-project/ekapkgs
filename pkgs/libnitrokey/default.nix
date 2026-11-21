@@ -50,5 +50,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Communicate with Nitrokey devices in a clean and easy manner";
     homepage = "https://github.com/Nitrokey/libnitrokey";
     license = lib.licenses.lgpl3;
+    platforms = lib.platforms.unix;
   };
 })

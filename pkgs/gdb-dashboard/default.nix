@@ -45,5 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     downloadPage = "https://github.com/cyrus-and/gdb-dashboard";
     changelog = "https://github.com/cyrus-and/gdb-dashboard/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

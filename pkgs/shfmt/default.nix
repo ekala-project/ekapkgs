@@ -55,5 +55,6 @@ buildGoModule (finalAttrs: {
     '';
     license = lib.licenses.bsd3;
     mainProgram = "shfmt";
+    platforms = lib.platforms.unix;
   };
 })

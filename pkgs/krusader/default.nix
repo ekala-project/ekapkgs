@@ -39,5 +39,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Norton/Total Commander clone for KDE";
     license = lib.licenses.gpl2Only;
     mainProgram = "krusader";
+    platforms = lib.platforms.unix;
   };
 })

@@ -30,5 +30,6 @@ buildGoModule (finalAttrs: {
     description = "Parallel S3 and local filesystem execution tool";
     license = lib.licenses.mit;
     mainProgram = "s5cmd";
+    platforms = lib.platforms.unix;
   };
 })

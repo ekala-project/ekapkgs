@@ -55,5 +55,6 @@ stdenv.mkDerivation {
     homepage = "http://www.fial.com/~scott/tamsyn-font/";
     downloadPage = "http://www.fial.com/~scott/tamsyn-font/download";
     license = lib.licenses.free;
+    platforms = lib.platforms.unix;
   };
 }

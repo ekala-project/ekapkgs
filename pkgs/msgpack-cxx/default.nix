@@ -48,5 +48,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/msgpack/msgpack-c";
     changelog = "https://github.com/msgpack/msgpack-c/blob/${finalAttrs.src.rev}/CHANGELOG.md";
     license = lib.licenses.boost;
+    platforms = lib.platforms.unix;
   };
 })

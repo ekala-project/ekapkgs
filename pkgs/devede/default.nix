@@ -93,5 +93,6 @@ buildPythonApplication (finalAttrs: {
     mainProgram = "devede_ng";
     homepage = "https://www.rastersoft.com/programas/devede.html";
     license = lib.licenses.gpl3;
+    platforms = lib.platforms.unix;
   };
 })

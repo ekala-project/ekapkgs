@@ -48,5 +48,6 @@ buildGoModule (finalAttrs: {
     description = "CLI for Google Chromecast, Home devices and Cast Groups";
     license = lib.licenses.asl20;
     mainProgram = "go-chromecast";
+    platforms = lib.platforms.unix;
   };
 })

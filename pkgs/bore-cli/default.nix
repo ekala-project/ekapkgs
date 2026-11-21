@@ -23,5 +23,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://github.com/ekzhang/bore";
     license = lib.licenses.mit;
     mainProgram = "bore";
+    platforms = lib.platforms.unix;
   };
 })

@@ -30,5 +30,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
     changelog = "https://github.com/asciinema/agg/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.asl20;
     mainProgram = "agg";
+    platforms = lib.platforms.unix;
   };
 })

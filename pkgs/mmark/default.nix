@@ -27,5 +27,6 @@ buildGoModule {
     homepage = "https://github.com/mmarkdown/mmark";
     license = lib.licenses.bsd2;
     mainProgram = "mmark";
+    platforms = lib.platforms.unix;
   };
 }

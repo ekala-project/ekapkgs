@@ -26,5 +26,6 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/firehol/iprange/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.gpl2Plus;
     mainProgram = "iprange";
+    platforms = lib.platforms.unix;
   };
 })

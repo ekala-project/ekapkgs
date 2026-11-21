@@ -22,5 +22,6 @@ perlPackages.buildPerlPackage rec {
     homepage = "https://github.com/pstray/rename";
     license = lib.licenses.gpl1Plus;
     mainProgram = "rename";
+    platforms = lib.platforms.unix;
   };
 }

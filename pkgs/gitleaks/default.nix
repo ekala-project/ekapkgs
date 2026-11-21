@@ -56,5 +56,6 @@ buildGoModule rec {
     changelog = "https://github.com/gitleaks/gitleaks/releases/tag/${src.tag}";
     license = lib.licenses.mit;
     mainProgram = "gitleaks";
+    platforms = lib.platforms.unix;
   };
 }

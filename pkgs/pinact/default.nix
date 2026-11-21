@@ -62,5 +62,6 @@ buildGoModule (finalAttrs: {
     homepage = "https://github.com/suzuki-shunsuke/pinact";
     changelog = "https://github.com/suzuki-shunsuke/pinact/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
+    platforms = lib.platforms.unix;
   };
 })

@@ -31,5 +31,6 @@ pythonPackages.buildPythonApplication (finalAttrs: {
     description = "Mopidy extension for recording played tracks and getting recommendations to Listenbrainz, a libre alternative to Last.fm";
     license = lib.licenses.asl20;
     maintainers = with lib.maintainers; [ bohanubis ];
+    platforms = lib.platforms.unix;
   };
 })

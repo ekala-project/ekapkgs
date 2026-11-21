@@ -29,5 +29,6 @@ rustPlatform.buildRustPackage (finalAttrs: {
       unlicense
     ];
     mainProgram = "hck";
+    platforms = lib.platforms.unix;
   };
 })

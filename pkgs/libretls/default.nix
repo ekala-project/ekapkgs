@@ -38,5 +38,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://git.causal.agency/libretls/about/";
     changelog = "https://git.causal.agency/libretls/tag/?h=${finalAttrs.version}";
     license = lib.licenses.isc;
+    platforms = lib.platforms.unix;
   };
 })

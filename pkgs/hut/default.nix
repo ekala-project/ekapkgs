@@ -49,5 +49,6 @@ buildGoModule (finalAttrs: {
     description = "CLI tool for Sourcehut / sr.ht";
     license = lib.licenses.agpl3Only;
     mainProgram = "hut";
+    platforms = lib.platforms.unix;
   };
 })
