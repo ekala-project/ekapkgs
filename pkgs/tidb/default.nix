@@ -9,16 +9,16 @@
 # matches exactly (go1.25); the default ekapkgs go (1.27) panics at startup.
 buildGoModule.override { go = go.v1_25; } (finalAttrs: {
   pname = "tidb";
-  version = "8.5.5";
+  version = "26.3.23";
 
   src = fetchFromGitHub {
     owner = "pingcap";
     repo = "tidb";
     tag = "v${finalAttrs.version}";
-    sha256 = "sha256-wrCdclS9qpc0mq5QZ6u5/APZyOTWvCJNCPCzM385MBM=";
+    sha256 = "sha256-Vc5FgDqfNOTHe9gpAziVC/Mr3/9hChbenJ9kv5Pf9WA=";
   };
 
-  vendorHash = "sha256-7g8U0gbG46AC4h1SyOTKKuNc5eVRqJsimzshj4O5FYw=";
+  vendorHash = "sha256-TpzuILLp9ICdp30xQNzpXC7x7H1TCizcaf7xPF7xTto=";
 
   ldflags = [
     "-X github.com/pingcap/tidb/pkg/parser/mysql.TiDBReleaseVersion=${finalAttrs.version}"
