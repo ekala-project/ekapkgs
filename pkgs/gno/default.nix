@@ -9,16 +9,16 @@
 
 bun.buildPackage {
   pname = "gno";
-  version = "2.9.0";
+  version = "2.17.0";
 
   src = fetchFromGitHub {
     owner = "gmickel";
     repo = "gno";
-    tag = "v2.9.0";
-    hash = "sha256-pHtJjuBXi6W9TWxXYIq8e/OmVv/J6P225reKpzzmLsA=";
+    tag = "v2.17.0";
+    hash = "sha256-3CkjYrj8qUEJRmNRA6F8FT/9H+wv5pR3VtzLawtQFjY=";
   };
 
-  node_modulesHash = "sha256-G5+3dmh3EBpzTlnaZIzdiUjHVCJWqF5KrpOgc/TJ61E=";
+  node_modulesHash = "sha256-HV/s8wDTLzs+SMqJVJY4LqGV56FnMpnZLopuD1BT150=";
 
   node_modulesAttrs.buildPhase = ''
     runHook preBuild
