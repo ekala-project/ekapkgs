@@ -11,15 +11,15 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "basiliskii";
-  version = "1.0.0-unstable-2026-06-30";
+  version = "2.5_20200525";
 
   # This src is also used to build pkgs/os-specific/linux/sheep-net
   # Therefore changes to it may effect the sheep-net package
   src = fetchFromGitHub {
     owner = "kanjitalk755";
     repo = "macemu";
-    rev = "51b5255eead47203ae78636796a6e6d5713e6705";
-    sha256 = "sha256-/8k5NNnfl3PZWFXECtiNdLi2CwACp2b5uiIpSOmWcDI=";
+    rev = "${finalAttrs.version}";
+    sha256 = "sha256-4z59pwEXDZGawhOZp+aXqU8yrUR/RsecHFFxHDfzkBI=";
   };
 
   sourceRoot = "${finalAttrs.src.name}/BasiliskII/src/Unix";
