@@ -9,11 +9,11 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "phpactor";
-  version = "2026.07.22.0";
+  version = "2026.11.22.0";
 
   src = fetchurl {
     url = "https://github.com/phpactor/phpactor/releases/download/${finalAttrs.version}/phpactor.phar";
-    hash = "sha256-jAFVOAuddVmhLzXd+NCcHcI+cvF5dJgDglH8Na0VV00=";
+    hash = "sha256-GuhOGDSHVKlK0osU0+w0Gt7Q0sCCvmHhVbwz/EJpBlk=";
   };
 
   dontUnpack = true;
