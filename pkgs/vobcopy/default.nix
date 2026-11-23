@@ -8,15 +8,15 @@
   libdvdcss,
 }:
 
-stdenv.mkDerivation {
+stdenv.mkDerivation (finalAttrs: {
   pname = "vobcopy";
-  version = "1.2.1";
+  version = "1.2.4-1";
 
   src = fetchFromGitHub {
     owner = "barak";
     repo = "vobcopy";
-    rev = "cb560b3a67358f51d51ecc0e511f49f09f304a13";
-    hash = "sha256-2EtSO39yOFoCZ5GMqtp+SvmzqSevlqYDo73p0lVHZ3o=";
+    rev = "debian/${finalAttrs.version}";
+    hash = "sha256-3VDvZZ+nDM/TfeeAzcLmGKguPJJ2I1dAYi87NPYbXPE=";
   };
 
   # Based on https://github.com/barak/vobcopy/issues/14, but also fixes
@@ -41,4 +41,4 @@ stdenv.mkDerivation {
     platforms = lib.platforms.all;
     mainProgram = "vobcopy";
   };
-}
+})
