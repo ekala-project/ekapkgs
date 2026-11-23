@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libeconf";
-  version = "0.8.4";
+  version = "0.8.8";
 
   src = fetchFromGitHub {
     owner = "openSUSE";
     repo = "libeconf";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-jIEsfX3Oz/koX0srLPGII99WaeFjKtXvB4kzMu7LbWs=";
+    hash = "sha256-FyEy65moNWG3djq5Tp4ZCZDqlwQH5yY9jQEJGEEe8bo=";
   };
 
   strictDeps = true;
