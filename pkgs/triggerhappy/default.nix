@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "triggerhappy";
-  version = "0.5.0";
+  version = "0.5.0-1";
 
   src = fetchFromGitHub {
     owner = "wertarbyte";
     repo = "triggerhappy";
-    tag = "release/${finalAttrs.version}";
-    sha256 = "0gb1qhrxwq7i5abd408d01a2dpf28nr1fph1fg7w7n0i5i1nnk90";
+    tag = "debian/${finalAttrs.version}";
+    sha256 = "sha256-kIRVbRvUopgSn4RENjHWpHAYxNCIN/72cFnAPMk09pI=";
   };
 
   nativeBuildInputs = [
