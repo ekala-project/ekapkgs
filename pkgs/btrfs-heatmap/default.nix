@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "btrfs-heatmap";
-  version = "9";
+  version = "9-1";
 
   src = fetchFromGitHub {
     owner = "knorrie";
     repo = "btrfs-heatmap";
-    tag = "v${finalAttrs.version}";
-    sha256 = "sha256-yCkuZqWwxrs2eS7EXY6pAOVVVSq7dAMxJtf581gX8vg=";
+    tag = "debian/${finalAttrs.version}";
+    sha256 = "sha256-nyVT3bd4WSvv6SRL59/uEL8wQs+XQo7iPPqIDeluHik=";
   };
 
   buildInputs = [ python3 ];
