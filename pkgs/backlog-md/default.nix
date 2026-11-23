@@ -7,13 +7,13 @@
 }:
 
 let
-  version = "1.53.0";
+  version = "1.57.4";
 
   src = fetchFromGitHub {
     owner = "MrLesk";
     repo = "Backlog.md";
     tag = "v${version}";
-    hash = "sha256-NFI59EXjmux1ZgP5KSv7zKhhnaJtMBERQYxHXatm31U=";
+    hash = "sha256-LLNIKwzdgsnK7SuXyFvTAZvMf8wOxuTBRnf3IdffRac=";
   };
 
   node_modules = stdenv.mkDerivation {
@@ -56,7 +56,7 @@ let
 
     dontFixup = true;
 
-    outputHash = "sha256-FWD+2HrGziyfDpfGPABaj89Pf6YQ41oc8owLXFDmbBs=";
+    outputHash = "sha256-6B6HENCu/UgpLCTbCH0jbwRH9kd5SMP+AIEh42eg0hU=";
 
     outputHashAlgo = "sha256";
 
