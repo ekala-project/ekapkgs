@@ -6,15 +6,15 @@
 
 buildGoModule (finalAttrs: {
   pname = "traefik";
-  version = "3.7.13";
+  version = "3.8.0";
 
   src = fetchzip {
     url = "https://github.com/traefik/traefik/releases/download/v${finalAttrs.version}/traefik-v${finalAttrs.version}.src.tar.gz";
-    hash = "sha256-xwq4iqD0UM9xClVN4OkntEio1jGXU0JTFkXj+kpFkwE=";
+    hash = "sha256-VInvElg1cea9a/3pi0bN7/KfcyYPlFHmWK1EEtxSJm0=";
     stripRoot = false;
   };
 
-  vendorHash = "sha256-jlrZ78urMkNoBtV1VcfAA++1H+XuUaUxMA8ZX4w1lhg=";
+  vendorHash = "sha256-P+qkZYG81wVF09i0h3a2f8Qx90/QUulnkuV9YcQ7JJY=";
 
   proxyVendor = true;
 
