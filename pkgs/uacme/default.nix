@@ -11,13 +11,13 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "uacme";
-  version = "1.8.1";
+  version = "1.8.1-1";
 
   src = fetchFromGitHub {
     owner = "ndilieto";
     repo = "uacme";
-    tag = "v${finalAttrs.version}";
-    hash = "sha256-TiijVeY7MXNaFE+ZYg8G6yYjafTwRA+y6zlwUNnPR48=";
+    tag = "debian/${finalAttrs.version}";
+    hash = "sha256-PyH+uwzqn9f2k1oqNVc9oEJAmVzGi3z/65OK2+AFcaA=";
   };
 
   configureFlags = [ "--with-openssl" ];
