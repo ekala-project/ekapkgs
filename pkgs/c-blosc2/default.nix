@@ -13,13 +13,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "c-blosc2";
-  version = "3.7.0";
+  version = "3.8.0";
 
   src = fetchFromGitHub {
     owner = "Blosc";
     repo = "c-blosc2";
     tag = "v${finalAttrs.version}";
-    sha256 = "sha256-nNwCWOgE+W/RQ+ms/Ov6EQp7DnZXlnYOHJZZWizzWew=";
+    sha256 = "sha256-8+sBLgsKBfAGNCWBQ9VTTvof6Ve5Jg28Ki62p0dbeIE=";
   };
 
   postPatch = ''
