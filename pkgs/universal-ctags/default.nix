@@ -18,13 +18,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "universal-ctags";
-  version = "6.2.1";
+  version = "6.2.20261122.0";
 
   src = fetchFromGitHub {
     owner = "universal-ctags";
     repo = "ctags";
-    tag = "v${finalAttrs.version}";
-    hash = "sha256-x5ZlWTNUc1J/yslKHc8rCIl9LtNTN/HTaAJpFyF0KRI=";
+    tag = "p${finalAttrs.version}";
+    hash = "sha256-7DeNex1XuwXpPXvendrTfqmonKK7I1x7Xv6TkoLsmP8=";
   };
 
   depsBuildBuild = [
