@@ -13,7 +13,7 @@
 }:
 
 let
-  version = "1.18.34";
+  version = "2.4.1";
 
   platformMap = {
     x86_64-linux = {
@@ -34,9 +34,9 @@ let
   platformInfo = platformMap.${platform} or (throw "opencode: unsupported system ${platform}");
 
   hashes = {
-    x86_64-linux = "sha256-DyJHlkcibR0t2ZWV0gCC7nvaOHC2LcapC0Hvwacdfpo=";
-    aarch64-linux = "sha256-u9s/AMLFHkLjFVJSMxUTCXJCJqh3bajpFF47D6PVMQ8=";
-    aarch64-darwin = "sha256-hSK3D1RRhLOo2XxcpPgUCTskdtcq6/2oxIvNBy7DHRs=";
+    x86_64-linux = "sha256-nd0Y4/r2Tq7M9qD8vJalx6FFIK5f1bYeW+UdiU9Hi0c=";
+    aarch64-linux = "sha256-yyjPlFQa62KksupZl6mbXda65ZWncvNvvieSmfIDKk8=";
+    aarch64-darwin = "sha256-laEB7alRCEePHbQ8/4/L1IEfbA55rx4WcwGEPGpI1zE=";
   };
 in
 stdenv.mkDerivation {
