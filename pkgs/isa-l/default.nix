@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "isa-l";
-  version = "2.32.1";
+  version = "2.32.1-post.1";
 
   strictDeps = true;
 
@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "intel";
     repo = "isa-l";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-JizQXhfDCL8aWEv52TBuXw06HA/8t7Ram/q9vSp5/DI=";
+    hash = "sha256-/baYTZ1n8otKOHx89FIisb1jzOfu40oVcOtc7jze6bc=";
   };
 
   nativeBuildInputs = [
