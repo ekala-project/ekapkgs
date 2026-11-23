@@ -17,13 +17,13 @@
 
 stdenv.mkDerivation rec {
   pname = "crawl";
-  version = "0.34.1";
+  version = "0.36-a0";
 
   src = fetchFromGitHub {
     owner = "crawl";
     repo = "crawl";
     tag = version;
-    hash = "sha256-exntfZbGEDBwFA8AHhOoBPIXw/MDrHx5oxrxPDixpCc=";
+    hash = "sha256-5pubBoCivmUybOBv0bnTRcipY9Rln2zjZo9kEs/e63Y=";
   };
 
   nativeBuildInputs = [
