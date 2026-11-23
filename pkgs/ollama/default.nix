@@ -9,17 +9,17 @@
 
 buildGoModule rec {
   pname = "ollama";
-  version = "0.35.1";
+  version = "0.40.17";
 
   src = fetchFromGitHub {
     owner = "ollama";
     repo = "ollama";
     tag = "v${version}";
-    hash = "sha256-5qJyJhqL/Zhfq2s/Z3x5Sq0GFgBai812cQkgNq82nm4=";
+    hash = "sha256-PyZVSRttWuHG8zrEuKo3Q1r6O1SI8whj1IJV32cHmcU=";
     fetchSubmodules = true;
   };
 
-  vendorHash = "sha256-NJjr949bcFvJvdcMDp6DmIa/QkpjfBXZNwPOtTZH09c=";
+  vendorHash = "sha256-z3P8LkArvwCZhvi4TERMBL7nyWWaDPsaDzpXQr9MwJ0=";
 
   # Ollama has complex build with CGo and llama.cpp
   # For simplicity, this builds the basic CPU-only version
