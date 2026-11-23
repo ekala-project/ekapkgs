@@ -7,13 +7,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "ytnef";
-  version = "2.1.2";
+  version = "2.1.5";
 
   src = fetchFromGitHub {
     owner = "Yeraze";
     repo = "ytnef";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-kQb45Da0T7wWi1IivA8Whk+ECL2nyFf7Gc0gK1HKj2c=";
+    hash = "sha256-p8H5f+fKqJ4yvuhjQVlIJ3By6C77ZM0pEHXeGfKeTZk=";
   };
 
   nativeBuildInputs = [ autoreconfHook ];
