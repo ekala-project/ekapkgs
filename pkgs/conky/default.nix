@@ -87,13 +87,13 @@ assert extrasSupport -> python3 != null;
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "conky";
-  version = "1.25.2";
+  version = "1.26.2";
 
   src = fetchFromGitHub {
     owner = "brndnmtthws";
     repo = "conky";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-XlHzcl1W4MJDjy2c+LsSwqOgV9r5QYEABEH7LApO5Bk=";
+    hash = "sha256-FXXNOW+2TNcy+kNvYoH0nD+cdBvgrRBB2NjkA0r1PE0=";
   };
 
   # pkg-config doesn't detect wayland-scanner in cross-compilation for some reason
