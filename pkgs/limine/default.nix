@@ -41,11 +41,11 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "limine";
-  version = "12.9.2";
+  version = "12.11.1";
 
   src = fetchurl {
     url = "https://github.com/Limine-Bootloader/Limine/releases/download/v${finalAttrs.version}/limine-${finalAttrs.version}.tar.gz";
-    hash = "sha256-QWv9A2imYES+0AYEFXUjd+EbdRMZChssYvhl9lKlrJ4=";
+    hash = "sha256-lbS1L7r+660U1fr55zv5dNpY9o1B0XE7zEUnErrd670=";
   };
 
   hardeningDisable = lib.optionals missingZerocallusedregs [
