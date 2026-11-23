@@ -6,13 +6,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "cd-discid";
-  version = "1.4";
+  version = "1.4-1";
 
   src = fetchFromGitHub {
     owner = "taem";
     repo = "cd-discid";
-    tag = finalAttrs.version;
-    hash = "sha256-HHpqMRJr4PkmKgqGTyr8JSErcnQ2jwBqyCr4MvDoP68=";
+    tag = "debian/${finalAttrs.version}";
+    hash = "sha256-dc1sfzpHHjXwzFNUkW8io1gpCl3eSIQiWekn6bu1wwU=";
   };
 
   makeFlags = [
