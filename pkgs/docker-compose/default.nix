@@ -6,20 +6,20 @@
 
 buildGoModule rec {
   pname = "docker-compose";
-  version = "5.6.0";
+  version = "5.8.0";
 
   src = fetchFromGitHub {
     owner = "docker";
     repo = "compose";
     tag = "v${version}";
-    hash = "sha256-yhaJA7dxNMLt0Bo7Hv6lo/FXpOoOcgs8hNLU+pM1C1w=";
+    hash = "sha256-6K4Bb1Qqah0O41eG0bFldBs6r7XNIBCV3x9JpZMnMs8=";
   };
 
   postPatch = ''
     rm -rf pkg/e2e/ relay/
   '';
 
-  vendorHash = "sha256-XuS1Fe3SVPxLzxnOMbn79Q4HqcZvpspgLa+CBNYyDzE=";
+  vendorHash = "sha256-VLVIXZXBi6kVKxtR8ku1AiRLhfLKSx3oEESZe7Sqlks=";
 
   ldflags = [
     "-X github.com/docker/compose/v5/internal.Version=${version}"
