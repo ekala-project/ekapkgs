@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "uasm";
-  version = "2.57";
+  version = "2.59";
 
   src = fetchFromGitHub {
     owner = "Terraspace";
     repo = "UASM";
-    tag = "v${finalAttrs.version}r";
-    hash = "sha256-HaiK2ogE71zwgfhWL7fesMrNZYnh8TV/kE3ZIS0l85w=";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-we4C/cWe9qHtPWrjfRXmm9V7aB0lZx3j8LOitqWRvLk=";
   };
 
   makefile =
