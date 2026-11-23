@@ -6,13 +6,13 @@
 
 buildGoModule (finalAttrs: {
   pname = "cortex";
-  version = "1.21.1";
+  version = "1.22.0";
 
   src = fetchFromGitHub {
     owner = "cortexproject";
     repo = "cortex";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-qi+9MLjCrlN7u4WKweKiCn58H0/gr+8TblZkNRk+7Uw=";
+    hash = "sha256-gA4o34YF9fMen1SotZSC5ZQjBzexqSFRkBO79O9Tu4o=";
   };
 
   vendorHash = null;
