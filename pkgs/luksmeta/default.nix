@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation rec {
   pname = "luksmeta";
-  version = "10";
+  version = "11";
 
   src = fetchFromGitHub {
     owner = "latchset";
     repo = "luksmeta";
     tag = "v${version}";
-    hash = "sha256-oasodAfUOgq2s0l+MIfCBTMo0ouXy73prVDnjLfMJA8=";
+    hash = "sha256-GN1RDcSKRHuUpKLnn53r57GrNfOfwfgdQzDWyCX0npk=";
   };
 
   nativeBuildInputs = [
