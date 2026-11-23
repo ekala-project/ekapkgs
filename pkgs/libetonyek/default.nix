@@ -28,13 +28,13 @@ let
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "libetonyek";
-  version = "0.1.13";
+  version = "0.1.14";
 
   src = fetchFromGitHub {
     owner = "LibreOffice";
     repo = "libetonyek";
     tag = "libetonyek-${finalAttrs.version}";
-    hash = "sha256-Dr4QhzZQzLNHf7OMMjUaR6WbnIQbu18LIiAjPD0sCsY=";
+    hash = "sha256-9NRlDnBqpOoAXgZoNW4aRreN+gyMr1NpbHC/RpUwZvM=";
   };
 
   nativeBuildInputs = [
