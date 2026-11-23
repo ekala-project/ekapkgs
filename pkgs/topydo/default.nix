@@ -7,14 +7,14 @@
 
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "topydo";
-  version = "0.16";
+  version = "0.16+dfsg1-1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "topydo";
     repo = "topydo";
-    tag = finalAttrs.version;
-    hash = "sha256-f31tp4VBMv1usViYN50IaGeyQpo3oRSf/WDz99UEpss=";
+    tag = "debian/${finalAttrs.version}";
+    hash = "sha256-+i0Bql+4cZ8K6aE4CkIBrf37QkBZHeh87cJZiWHeMi0=";
   };
 
   postPatch = ''
