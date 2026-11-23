@@ -8,16 +8,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "cli-proxy-api";
-  version = "8.0.8";
+  version = "8.1.2";
 
   src = fetchFromGitHub {
     owner = "router-for-me";
     repo = "CLIProxyAPI";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-FfkxVBzw3BCVUku4+U6ICC9fgmTOV7DAKUr54Ln90HM=";
+    hash = "sha256-9Sx2rhSrAfbAE+EpQr6yAKT1LLtEP7bJ16zTJW5VYxA=";
   };
 
-  vendorHash = "sha256-r3yWkdMcM40G9jV7MxW/qNv3E9WrHavFilW24quEf+8=";
+  vendorHash = "sha256-WUbMD30d1CU1KWFey8dIG0K/lO4TCObiuDJowITRwk8=";
 
   subPackages = [ "cmd/server" ];
 
