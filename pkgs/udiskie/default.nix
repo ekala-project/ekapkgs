@@ -16,14 +16,14 @@
 
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "udiskie";
-  version = "2.7.0";
+  version = "2.8.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "coldfix";
     repo = "udiskie";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-6vlh1Ggfk4Ehwcmqr0a1YtBjTfCqQqdctkXqdS1BSis=";
+    hash = "sha256-g8w7SK/utZJF1zlcnqg06M304372SKD17aQxbmw59uE=";
   };
 
   patches = [
