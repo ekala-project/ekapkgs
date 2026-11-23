@@ -6,16 +6,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "routinator";
-  version = "0.15.2";
+  version = "0.16.2";
 
   src = fetchFromGitHub {
     owner = "NLnetLabs";
     repo = "routinator";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-y/L9l++uB627lEHK+mASNwLohqWk+R0FUNYMKKNg38A=";
+    hash = "sha256-ypdbZgIJDP+VX9iKPYUck4eJvw066N8X0GRjPrHjuX0=";
   };
 
-  cargoHash = "sha256-rDFwfRXd8oMNh8iOPEWM1eADFQjys0GwPVr2r5hLW4Y=";
+  cargoHash = "sha256-ljIe4O2D66wUDTR/hZO+8OFR7qeF5D/qVaZSlf3BZ1g=";
 
   passthru.tests = {
   };
