@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "foonathan-memory";
-  version = "0.7";
+  version = "0.7-4";
 
   src = fetchFromGitHub {
     owner = "foonathan";
     repo = "memory";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-4AO662ck492aMJJWMFgbYWBrBFMioDp827WHtxOXB6Y=";
+    hash = "sha256-qGbI7SL6lDbJzn2hkqaYw35QAyvSPxcZTb0ltDkPUSo=";
   };
 
   patches = [
