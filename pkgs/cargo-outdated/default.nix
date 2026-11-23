@@ -7,16 +7,16 @@
 }:
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "cargo-outdated";
-  version = "0.19.0";
+  version = "0.20.0";
 
   src = fetchFromGitHub {
     owner = "kbknapp";
     repo = "cargo-outdated";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-V4zNFi/ZU98egCElU/dDLQZm/8f6oyvbeQYn7JFraDs=";
+    hash = "sha256-dFl0InY6KJhnMNdYlaVqsNt0zGi/jk/bO09X4LwXReY=";
   };
 
-  cargoHash = "sha256-51UjhAC2boNgW5kc7WxZOxcnXirw1E07CjLRcj/GEOM=";
+  cargoHash = "sha256-LdmGQGRiRBYveyOw0ljHVffhyX1bhnKCLxcIZrbacds=";
 
   nativeBuildInputs = [ pkg-config ];
 
