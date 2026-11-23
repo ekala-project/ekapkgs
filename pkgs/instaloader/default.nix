@@ -6,14 +6,14 @@
 
 python3Packages.buildPythonApplication (finalAttrs: {
   pname = "instaloader";
-  version = "4.15.3";
+  version = "4.16";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "instaloader";
     repo = "instaloader";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-DsVDeyevMnwfL8yGsxbma5KPl7KeEjex3aB4npDY3DM=";
+    hash = "sha256-x/XslLamjG0nHW5/GuTJGbDrRaqpgR1ptXHS7QzMN8Y=";
   };
 
   build-system = [
