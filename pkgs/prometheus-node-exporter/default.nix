@@ -6,13 +6,13 @@
 
 buildGoModule (finalAttrs: {
   pname = "node_exporter";
-  version = "1.13.0";
+  version = "1.13.1";
 
   src = fetchFromGitHub {
     owner = "prometheus";
     repo = "node_exporter";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-x5wuRMHANOR2OvnoTfBOLGHuUAOfsOZH8H8NrABCW54=";
+    hash = "sha256-duuWzokkQ38sPj5I7MTFKaWKP/YZAkyhC0EIn5O41Es=";
   };
 
   vendorHash = "sha256-6NhxA/aQJT8t19+Pb21HL0TOTxU729bqGpmq3IO8IVQ=";
