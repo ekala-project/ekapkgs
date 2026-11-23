@@ -11,16 +11,16 @@
 
 buildGoModule (finalAttrs: {
   pname = "crit";
-  version = "0.21.0";
+  version = "0.24.0";
 
   src = fetchFromGitHub {
     owner = "tomasz-tomczyk";
     repo = "crit";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-EoL719RMvNYLMx6KzkxBTmvrI5pw44YLNWckW+zn414=";
+    hash = "sha256-xZjjj/1Ezny4o2nqLConxtGkVcGCG+zKQkMx+/r8pvc=";
   };
 
-  vendorHash = "sha256-iEeHP8r32ipnAV54dflLKg/XPJXjO1M3KqslRcQnhZ0=";
+  vendorHash = "sha256-WUTBKcMEnOnMnHsABjP2iKr1pNJcHfG7RNw7cBx0Hl4=";
 
   subPackages = [ "cmd/crit" ];
 
