@@ -9,13 +9,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libnatspec";
-  version = "0.3.3";
+  version = "325624.100";
 
   src = fetchFromGitHub {
     owner = "Etersoft";
     repo = "libnatspec";
-    tag = "0.3.3-alt1";
-    hash = "sha256-lg3kjrvv7G+nX6xlR7TQKvXqQJFcQTHarSpD0qYLZsw=";
+    tag = "gb-sisyphus-task325624.100";
+    hash = "sha256-kwQ+sZU4ElJwPk0WiRtQIbqkLlxxuBV0YRIA0ibZvM8=";
   };
 
   nativeBuildInputs = [ autoreconfHook ];
