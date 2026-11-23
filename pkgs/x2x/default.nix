@@ -10,15 +10,15 @@
   libxi,
 }:
 
-stdenv.mkDerivation {
+stdenv.mkDerivation (finalAttrs: {
   pname = "x2x";
-  version = "1.30-unstable-2025-02-17";
+  version = "1.30-12";
 
   src = fetchFromGitHub {
     owner = "dottedmag";
     repo = "x2x";
-    rev = "08842516fa443a2cf799c6372f83466062f612c9";
-    hash = "sha256-0ZVpG4ZrygrFZ0mVmNLWWdyqM43LtQPGwvZZPC92zuY=";
+    rev = "debian/${finalAttrs.version}";
+    hash = "sha256-41pzalsiDVcWWtZRYtVky0O8d4v59o9LufKvPjiTzS4=";
   };
 
   nativeBuildInputs = [
@@ -40,4 +40,4 @@ stdenv.mkDerivation {
     platforms = lib.platforms.linux;
     mainProgram = "x2x";
   };
-}
+})
