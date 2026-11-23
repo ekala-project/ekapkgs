@@ -7,16 +7,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "jaq";
-  version = "3.1.1";
+  version = "3.2.0";
 
   src = fetchFromGitHub {
     owner = "01mf02";
     repo = "jaq";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-/yAwLcPwfW5UH+PCCrsFaM0Nuk1S5QONLsNgvVCBLX8=";
+    hash = "sha256-1WFGrORD70f9cB34p0pwcOHiqMR5DfdccoxANqkibzk=";
   };
 
-  cargoHash = "sha256-5+IBUOTO7XNWogQBNEt8XydLZ1xTvldvx5lIfh7K0QA=";
+  cargoHash = "sha256-Fpeu6NX9zRX4rAVN9F/zQJE6FX7DHCiMFImIFlsKYqo=";
 
   nativeBuildInputs = lib.optional (jotdown != null) jotdown;
 
