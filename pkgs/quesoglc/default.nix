@@ -12,11 +12,11 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "quesoglc";
-  version = "0.7.2";
+  version = "0.7.2-free";
 
   src = fetchurl {
     url = "mirror://sourceforge/quesoglc/quesoglc-${finalAttrs.version}.tar.bz2";
-    hash = "sha256-VP7y7mhRct80TQb/RpmkQRQ7h6vtDVFFJK3E+JukyTE=";
+    hash = "sha256-et6YcO8alvOSOI+jl6NJMIYLsh/PilTqCQ8L37iHrSE=";
   };
 
   buildInputs = [
