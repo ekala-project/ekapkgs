@@ -8,13 +8,13 @@
 
 let
   pname = "apt-offline";
-  version = "1.8.6";
+  version = "1.8.6-1";
 
   src = fetchFromGitHub {
     owner = "rickysarraf";
     repo = "apt-offline";
-    tag = "v${version}";
-    hash = "sha256-PnU8vbEY+EpEv8D6Ap/iJqfwOWxpNytT+XDFCFD8XqU=";
+    tag = "debian/${version}";
+    hash = "sha256-/SZj8Q4Fc0Gfsw28aeUVo6jiJ4HQ4/ZUJIhqSq/9Ca0=";
   };
 in
 python3Packages.buildPythonApplication {
