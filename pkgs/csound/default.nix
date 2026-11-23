@@ -22,7 +22,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "csound";
-  version = "7.0.0-beta.10";
+  version = "7.0.0";
 
   hardeningDisable = [ "format" ];
 
@@ -30,7 +30,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "csound";
     repo = "csound";
     tag = finalAttrs.version;
-    hash = "sha256-l3dSVt5rgyj98ZCZltqKAJx/0Afl4R03flLXBcivtwg=";
+    hash = "sha256-EGW7gUmC/R/ABwuyUNPbVdQoGqsmT7gSuH/AOMmybbw=";
   };
 
   cmakeEntries = {
