@@ -12,13 +12,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "policycoreutils";
-  version = "3.9";
+  version = "3.11";
 
   inherit (libsepol) se_url;
 
   src = fetchurl {
     url = "${finalAttrs.se_url}/${finalAttrs.version}/policycoreutils-${finalAttrs.version}.tar.gz";
-    hash = "sha256-RKKUE5h2z0x5actqddGTLLQlQ9dKdmF2De1Eogv36+g=";
+    hash = "sha256-BU5B7AOXMaXua3l6jguNbjRu4dCpusLyUttIwj+aixs=";
   };
 
   postPatch = ''
