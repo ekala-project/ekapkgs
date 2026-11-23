@@ -17,13 +17,13 @@
 
 stdenv.mkDerivation rec {
   pname = "mod_auth_openidc";
-  version = "2.4.20.3";
+  version = "2.4.20.5";
 
   src = fetchFromGitHub {
     owner = "OpenIDC";
     repo = "mod_auth_openidc";
     tag = "v${version}";
-    hash = "sha256-+BfNo71fnwVWc49726vPBVU5GsqijbelP8ouIc7UJIg=";
+    hash = "sha256-7OABctSDC3ex7t3m5inMARPZ3TDvYI4Qei3CHQnYez0=";
   };
 
   nativeBuildInputs = [
