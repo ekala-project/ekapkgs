@@ -7,13 +7,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libudev0-shim";
-  version = "1";
+  version = "2";
 
   src = fetchFromGitHub {
     owner = "archlinux";
     repo = "libudev0-shim";
     tag = "v${finalAttrs.version}";
-    sha256 = "1460qm6rp1cqnns39lj24z7191m8sbpvbjabqbzb55dkdd2kw50z";
+    sha256 = "sha256-P0ht5IuhkaTZeWbxqGTREnQGkIQVyFA89RnT612xRWY=";
   };
 
   buildInputs = [ udev ];
