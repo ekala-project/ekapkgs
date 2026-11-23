@@ -18,13 +18,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "libndctl";
-  version = "81";
+  version = "85";
 
   src = fetchFromGitHub {
     owner = "pmem";
     repo = "ndctl";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-geOfaI5XehucLanNS8KTIyOAXOS5YSjs61hfrWbmqSs=";
+    hash = "sha256-CSTGHhRurJlgDfzv03yp9wbj/P330hVW6vsesSrF1TE=";
   };
 
   outputs = [
