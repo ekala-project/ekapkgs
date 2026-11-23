@@ -18,13 +18,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "povray";
-  version = "3.8.0-beta.2";
+  version = "3.8-v4.0";
 
   src = fetchFromGitHub {
     owner = "POV-Ray";
     repo = "povray";
-    tag = "v${finalAttrs.version}";
-    sha256 = "sha256-BsWalXzEnymiRbBfE/gsNyWgAqzbxEzO/EQiJpbwoKs=";
+    tag = "nexus-v${finalAttrs.version}";
+    sha256 = "sha256-psIfM14CCBJPQ/AIr46KXl5qD83QoOF4plBgU70FCgs=";
   };
 
   nativeBuildInputs = [
