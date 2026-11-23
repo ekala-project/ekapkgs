@@ -6,13 +6,13 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "libacars";
-  version = "2.2.1";
+  version = "2.2.3";
 
   src = fetchFromGitHub {
     owner = "szpajder";
     repo = "libacars";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-nArUiGVxQFkyoZ2dECBift8yeFJOKJeVHU1FnKrJpYs=";
+    hash = "sha256-Z2wwHmZH0At8JsVdy0NFMnOHK0ibGAsp5kEg/yOwBFw=";
   };
 
   nativeBuildInputs = [
