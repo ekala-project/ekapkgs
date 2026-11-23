@@ -7,13 +7,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "otf2bdf";
-  version = "3.1";
+  version = "3.1_p1";
 
   src = fetchFromGitHub {
     owner = "jirutka";
     repo = "otf2bdf";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-HK9ZrnwKhhYcBvSl+3RwFD7m/WSaPkGKX6utXnk5k+A=";
+    hash = "sha256-8z1uqUhUPK+fMW3PLkvF3eSlSJpo0x+6NQ6vYsEMqoM=";
   };
 
   buildInputs = [ freetype ];
