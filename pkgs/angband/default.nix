@@ -13,13 +13,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "angband";
-  version = "4.2.6";
+  version = "4.2.6-267-g41319eef9";
 
   src = fetchFromGitHub {
     owner = "angband";
     repo = "angband";
     tag = finalAttrs.version;
-    hash = "sha256-lx2EfE3ylcH1vLAHwNT1me1l4e4Jspkw4YJIAOlu/0E=";
+    hash = "sha256-f+QQAR0Mxw5bUwpyN23JvxBzXQBGa0hSbfeWlZONzwU=";
   };
 
   nativeBuildInputs = [ autoreconfHook ];
