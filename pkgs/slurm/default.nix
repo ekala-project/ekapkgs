@@ -39,13 +39,13 @@ in
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "slurm";
-  version = "26-05-4-1";
+  version = "26-05-6-1";
 
   src = fetchFromGitHub {
     owner = "SchedMD";
     repo = "slurm";
     tag = "slurm-${builtins.replaceStrings [ "." ] [ "-" ] finalAttrs.version}";
-    hash = "sha256-R3kHM9CohiJljffYKEe4CdNltKNQkcRuPFqOT0y+3n0=";
+    hash = "sha256-4ccCnZ/fQhEXS8pDLxsHbM6YGHj8135bad67y18INOc=";
   };
 
   outputs = [
