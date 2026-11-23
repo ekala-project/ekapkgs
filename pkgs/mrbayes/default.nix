@@ -6,13 +6,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "mrbayes";
-  version = "3.2.8";
+  version = "3.2.10";
 
   src = fetchFromGitHub {
     owner = "NBISweden";
     repo = "MrBayes";
     tag = "v${finalAttrs.version}";
-    sha256 = "sha256-29wXB7COgnfPTkgaQ41T+nAAZ9l3+EwfuJl0217XPJ4=";
+    sha256 = "sha256-6KksQpZVYqKNYkU0Vh91lB2gb27EaQQXppYE/4tXaZE=";
   };
 
   meta = {
