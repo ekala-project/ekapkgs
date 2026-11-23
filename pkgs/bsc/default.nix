@@ -8,13 +8,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "bsc";
-  version = "3.3.12";
+  version = "3.4.1";
 
   src = fetchFromGitHub {
     owner = "IlyaGrebnov";
     repo = "libbsc";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-3dFwmThnDzbXB6m/rDfbSz4DZAlIsm4gUOT7YwexpKA=";
+    hash = "sha256-EivobXngAMxlaEt7F5zr1cm7HBrxx1y2SZ0heHSp1eo=";
   };
 
   nativeBuildInputs = [
