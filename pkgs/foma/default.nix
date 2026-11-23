@@ -11,13 +11,13 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "foma";
-  version = "0.10.0alpha-unstable-2025-09-10";
+  version = "0.10.0";
 
   src = fetchFromGitHub {
     owner = "mhulden";
     repo = "foma";
-    rev = "91f91866af843aec487313d028dbd1f76b5fb1a5";
-    hash = "sha256-CXRZNcEgsjD/9PowNynPyfLVbk8KDe3T52UetYMwC6w=";
+    rev = "v${finalAttrs.version}";
+    hash = "sha256-gIyY0wm9U0eUscX18TmNLFN0+7sX4Ll2vaHstvaFsJA=";
   };
 
   sourceRoot = "${finalAttrs.src.name}/foma";
