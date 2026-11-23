@@ -6,16 +6,16 @@
 
 rustPlatform.buildRustPackage (finalAttrs: {
   pname = "dumbpipe";
-  version = "0.39.0";
+  version = "0.40.2";
 
   src = fetchFromGitHub {
     owner = "n0-computer";
     repo = "dumbpipe";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-AoWWFlMjo1bZUq5RY4gjpEMydULHaCKSSxBh45a7pdI=";
+    hash = "sha256-/TEc0l2PpGgF17FQwpcSKhyLm3lsLY/9X8Ar7Jy3S9s=";
   };
 
-  cargoHash = "sha256-je2/GjCCDymYGhho6yf7SNQ3YkLCLQ5nEqHPNdDXjbQ=";
+  cargoHash = "sha256-RXiYFMfH9SaTXf6MbwPJCl4JkGphfMUdUtOLyoZ1hNI=";
 
   checkFlags = [
     "--skip=connect_listen_ctrlc_connect"
